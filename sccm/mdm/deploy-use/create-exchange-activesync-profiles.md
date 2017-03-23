@@ -42,7 +42,7 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).    
+ When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
 
 
 ## Create a New Exchange ActiveSync Email Profile  
@@ -95,7 +95,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
     -   **Identity certificate:** Click **Select** and then select a certificate to use for identity.  
 
         > [!NOTE]  
-        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
          This option is only available if you selected **Certificates** under **Authentication method**.  
 
@@ -104,7 +104,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
     	-   **Signing certificates:** Click **Select** and then select a certificate to use for signing. This option is applicable to iOS devices only.  
 
        	 > [!NOTE]  
-       	 >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+       	 >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
     	-   **Encryption certificates:** Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only. You can only select a PFX certificate to use as an encryption certificate. 
 
