@@ -108,7 +108,8 @@ Each preview release is supported up until three successive releases are availab
  |Deploy volume-purchased iOS apps to device collections|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|![Not added](media/Red_X.gif)|
  |PFX certificates for Configuration Manager Windows client computers|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![Not added](media/Red_X.gif)|
  |Configure Azure Services wizard|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|![Not added](media/Red_X.gif)|
- |Client settings to configure Windows Analytics for Upgrade Readiness|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#client-settings-to-configure-windows-analytics-for-upgrade-readiness)|![Not added](media/Red_X.gif)|
+ |Convert from BIOS to UEFI in an operating system upgrade task sequence| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#convert-from-bios-to-uefi-in-an-operating-system-upgrade-task-sequence) |![Not added](media/Red_X.gif)|
+ |Collapsible task sequence groups| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |![Not added](media/Red_X.gif)|
  |New compliance settings for iOS devices|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|![Not added](media/Red_X.gif)|
  |Create PFX certificates with S/MIME support|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|![Not added](media/Red_X.gif)|
  |Check for running executable files before installing an application|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|![Not added](media/Red_X.gif)|
