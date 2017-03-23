@@ -218,13 +218,13 @@ This version introduced the following improvements:
 
 ### Improvements to the Auto Apply Driver task sequence
 - [**Configurable timeout for Auto Apply Driver task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
-   - SMSTSDriverRequestResolveTimeOut
+   - SMSTSDriverRequestResolveTimeOut  
      Default: 60
-   - SMSTSDriverRequestConnectTimeOut
+   - SMSTSDriverRequestConnectTimeOut  
      Default: 60
-   - SMSTSDriverRequestSendTimeOut
+   - SMSTSDriverRequestSendTimeOut  
      Default: 60
-   - SMSTSDriverRequestReceiveTimeOut
+   - SMSTSDriverRequestReceiveTimeOut  
      Default: 480
 
 ### Windows 10 ADK tracked by build version
