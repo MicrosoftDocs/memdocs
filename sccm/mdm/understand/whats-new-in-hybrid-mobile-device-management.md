@@ -83,7 +83,7 @@ The following Intune features introduced in March 2017 work in hybrid deployment
 
    Beginning in Technical Preview 1703, you now have support for the following Volume Purchase Program (VPP) scenarios:
 
-   - Device licensing - Apps that support device licensing and are deployed to device collections will only require one license.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collection).
+   - Device licensing - Apps that support device licensing and are deployed to device collections will only require one license.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
    - Use of multiple VPP tokens to a single hybrid tenant with both tokens used for managing VPP apps.
    - Use of VPP education tokens with the ability to distinguish between business and education tokens.
 
