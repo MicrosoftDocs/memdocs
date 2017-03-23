@@ -43,7 +43,7 @@ robots: noindex
     * **Critical** - devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.
     * **Critical with event** - devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.|      
 
-5.  On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on, or click **Select all** to choose all device platforms. The supported platforms are: Windows 7, 8.1, 10, Windows Server 2008, 2012, 2012 R2 and 2016.
+5.  On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on, or click **Select all** to choose all device platforms. The supported platforms are: Windows 7, 8.1, 10, Windows Server 2008 R2, 2012, 2012 R2 and 2016.
 
 6.  On the **Rules** page, you define one or more rules that define the configuration that devices must have in order to be evaluated as compliant. When you create a compliance policy, some rules are enabled by default, but you can edit or delete these. For a full list of all the rules see the **Compliance policy rules** section later in this topic.
 
