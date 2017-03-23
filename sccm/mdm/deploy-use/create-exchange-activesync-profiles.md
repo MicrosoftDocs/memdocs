@@ -56,7 +56,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
 4.  On the General page of the wizard, configure the following:
 	- **Name** - Provide a descriptive name for the email profile.
 	- **Description** - Optionally, provide a description for the email profile that will help you identify it in the Configuration Manager console.
-	- **This email profile is for Android for Work** - Select this option if you will only be deploying this email profile to Android for Work devices.
+	- **This email profile is for Android for Work** - Select this option if you will only be deploying this email profile to Android for Work devices. If you select this checkbox, the **Supported Platforms** wizard page is not displayed. Only Android for Work email profiles are configured.
 4.  On the **Exchange ActiveSync** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
 
     -   **Exchange ActiveSync host:** Specify the hostname of your company Exchange Server that hosts Exchange ActiveSync services.  
