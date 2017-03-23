@@ -2,7 +2,7 @@
 title: "Accessibility | Microsoft Docs"
 description: "Learn about the features that make System Center Configuration Manager accessible for people with disabilities."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -37,9 +37,9 @@ System Center Configuration Manager includes features to help make it accessible
 
 -   To access the address bar when your focus is in the tree node, use Shift+Tab three times.  
 
--   On a wizard or property page, you can move between the boxes with keyboard shortcuts. Select the Alt key plus the underlined character (Alt+_) to select a specific box.  
+-   On a wizard or property page, you can move between the boxes with keyboard shortcuts. Select the Alt key plus the underlined character (Alt+_) to select a specific box.     
 
- -  Beginning with version 1606, to navigate to the different nodes of a workspace, enter the first letter of the name of a node. Each key press moves the cursor to the next node that begins with that letter. When you're using a screen reader, the reader reads out the name of that node.
+-  To navigate to the different nodes of a workspace, enter the first letter of the name of a node. Each key press moves the cursor to the next node that begins with that letter. When you're using a screen reader, the reader reads out the name of that node.
 
 > [!NOTE]  
 >  The information in this section might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](http://go.microsoft.com/fwlink/?LinkId=8431) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  

@@ -53,57 +53,55 @@ Beginning with version 1610, you change the data collection level from within th
  For System Center Configuration Manager version 1610, this level includes the following:
 
 
- -   Setup Information:
+-   Setup Information:
  	  - Build, install type, language packs, features that you enabled  
 
- 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 	
+ 	  - Update pack deployment status and errors, download progress, and prerequisite errors 	
 
- 	  -  Version of post-upgrade script
+ 	  - Version of post-upgrade script
 
- 	  -  Use of update fast ring
+ 	  - Use of update fast ring
 
-    -  ***[New]*** Pre-release use, setup media type, branch type
+    - ***[New]*** Pre-release use, setup media type, branch type
 
     - ***[New]*** Software Assurance expiration date
 
+- Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
--   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
+- Basic database configuration (processors, cluster configuration, and configuration of distributed views)
 
--   Basic database configuration (processors, cluster configuration, and configuration of distributed views)
+- Configuration Manager database schema (hash of all object definitions)
 
--   Configuration Manager database schema (hash of all object definitions)
+- Count of Configuration Manager client versions and operating system versions
 
--   Count of Configuration Manager client versions and operating system versions
+- Count of operating systems for managed devices and policies set by the Exchange Connector
 
--   Count of operating systems for managed devices and policies set by the Exchange Connector
+- Count of client languages and locales
 
--   Count of client languages and locales
+- Count of Windows 10 devices by branch and build
 
--   Count of Windows 10 devices by branch and build
+- Basic Configuration Manager site hierarchy data (site list, type, version, status, client count, and time zone)
 
--   Basic Configuration Manager site hierarchy data (site list, type, version, status, client count, and time zone)
+- Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
 
--   Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
+- Basic user discovery statistics (user discovery count and minimum/maximum/average group sizes)
 
--   Basic user discovery statistics (user discovery count and minimum/maximum/average group sizes)
+- Basic Endpoint Protection information (antimalware client versions)
 
--   Basic Endpoint Protection information (antimalware client versions)
+- Basic application and deployment type counts (total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use)
 
--   Basic application and deployment type counts (total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use)
+- Basic operating system deployment (OSD) counts (images)
 
--   Basic operating system deployment (OSD) counts (images)
+- Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
 
--   Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
+- Telemetry stats (when run, runtime, errors)
 
--   Telemetry stats (when run, runtime, errors)
+- Configured telemetry level, mode (online or offline), and fast update configuration
 
--  Configured telemetry level, mode (online or offline), and fast update configuration
+- Use of Network Discovery (enabled or disabled)
+- Admin Console:
 
--  Use of Network Discovery (enabled or disabled)
--  Admin Console:
-
-	 -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
-
+	 - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 - SQL version, service pack level, edition, collation ID, and character set
 

@@ -139,7 +139,9 @@ You can use the following optional parameters to specify a proxy server (More in
 
 8.  After the import completes, you can close the command prompt. (Only updates for the applicable hierarchy are imported).  
 
-9. Open  the Configuration Manager console and navigate to **Administration** >**Cloud Services** > **Updates and Servicing**. Updates that were imported are now available to install. For information about installing updates, see  [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+9. Open  the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Updates that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
+
+ For information about installing updates, see  [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
 
 ## <a name="bkmk_cmd"></a> Command line options  
  To view help information for the service connection point tool, open command prompt to the folder that contains the tool and run the command:  **serviceconnectiontool.exe**.  
