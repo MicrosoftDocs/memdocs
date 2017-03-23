@@ -18,7 +18,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606 or 1610. It is also available as a baseline version you can use when installing a new deployment.
+Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606 or 1610.
 -
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -123,13 +123,18 @@ Beginning with version 1702, clients use boundary groups to find a new software 
 - If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the Smart Card Logon EKU, you must configure permissions for key registration to ensure the certificate is validated correctly.
 For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).
 
+## New Windows Hello for Business notification for end users
+A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
 
 
 <!-- ## Migration  -->
 
 <!-- ## Client management  -->
 
-<!-- ## Compliance settings  -->
+## Compliance settings
+
+We've added many new settings for iOS devices to match those available with Microsoft Intune.
+For a list of all available settings, see [Create configuration items for iOS and Mac OS X devices managed with Intune](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).
 
 ## Application Management
 
@@ -138,7 +143,7 @@ For more information, see [Windows Hello for Business settings](/sccm/protect/de
 You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
 |||||
-|-|-|-|
+|-|-|-|-|
 |Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
 |Earlier than 1702|Yes|User|User license|
 |Earlier than 1702|No|User|User license|
@@ -161,6 +166,14 @@ For more information about volume-purchased iOS apps, see [Manage volume-purchas
 You can now deploy online licensed apps from the Windows Store for Business to Windows 10 PCs that you manage using the Configuration Manager client.
 For more information, see [Manage apps from the Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
+### Check for running executable files before installing an application
+
+In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
+
+If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
+
+If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
+
 ## Operating system deployment
 
 ### Expire stand-alone media
@@ -172,10 +185,10 @@ Any task sequence step that references a package, driver package, operating syst
 ### Support for additional content in stand-alone media
 Additional content is now supported in stand-alone media. You can select additional packages, driver packages, and applications to be staged on the media along with the other content referenced in the task sequence. Previously, only content referenced in the task sequence was staged on stand-alone media. For details, see [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media).
 
-## Hardware inventory collects UEFI information
+### Hardware inventory collects UEFI information
 A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
-## Improvements to Software Center settings and notification messages for high-impact task sequences
+### Improvements to Software Center settings and notification messages for high-impact task sequences
 This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
 
 - In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
@@ -186,42 +199,43 @@ your apps, data, and settings are automatically migrated. Previously, the defaul
 
 For details, see [Configure high-impact task sequence settings](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#set-a-task-sequence-as-a-high-impact-task-sequence)
 
-## Return to previous page when a task sequence fails
+### Return to previous page when a task sequence fails
 You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
 
 - When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
 - When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
 
+### Pre-cache content for available deployments and task sequences
+Beginning in version 1702, for available deployments and task sequences, you can choose to use pre-cache content. Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive. For details, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).
 
-## Pre-cache content for available deployments and task sequences
-Beginning in version 1702, for available deployments and task sequences, you can choose to use pre-cache content. Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive.
+### Convert from BIOS to UEFI during an in-place upgrade
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).
 
-
-
-
-<!-- ## Improvements to operating system deployment  - RAW DATA - WILL REMOVE SOON
-Beginning in version 1702, the following improvements to operating system deployment are available:
+### Improvements to the Install Applications task sequence step
+This version introduced the following improvements:
 - Increased the maximum number of applications that you can install to 99 in the **Install Applications** task sequence step. The previous maximum number was 9 applications.
 - When you add applications to the **Install Applications** task sequence step in the task sequence editor, you can now select multiple applications from the **Select the application to install** pane.
 
-- [**Configurable timeout for Auto Apply Driver task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
-   - SMSTSDriverRequestResolveTimeOut
+### Improvements to the Auto Apply Driver task sequence
+New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
+   - SMSTSDriverRequestResolveTimeOut  
      Default: 60
-   - SMSTSDriverRequestConnectTimeOut
+   - SMSTSDriverRequestConnectTimeOut  
      Default: 60
-   - SMSTSDriverRequestSendTimeOut
+   - SMSTSDriverRequestSendTimeOut  
      Default: 60
-   - SMSTSDriverRequestReceiveTimeOut
+   - SMSTSDriverRequestReceiveTimeOut  
      Default: 480
-- [**Package ID is now displayed in task sequence steps**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): Any task sequence step that references a package, driver package, operating system image, boot image, or operating system upgrade package will now display the package ID of the referenced object. When a task sequence step references an application it will display the object ID.
-- **Windows 10 ADK tracked by build version**: The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
-- **Default boot image source path can no longer be changed**: Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
--->
+
+### Windows 10 ADK tracked by build version
+The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
+
+### Default boot image source path can no longer be changed
+Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
 
 
 
-<!-- ## Software updates  -->
-
+## Software updates
 
 ### Deploy Office 365 apps to clients
 Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager. For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps).
