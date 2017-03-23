@@ -74,7 +74,7 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 
 **Android for Work**
 
-Performing selective wipe on an Android for Work device removes all data, apps, and settings in the work profile on that device. This retires the device from management with Configuration Manager and Intune. Full wipe is not supported for Android for Work.
+Performing selective wipe on an Android for Work device removes the work profile along with all data, apps, and settings in the work profile on that device. This retires the device from management with Configuration Manager and Intune. Full wipe is not supported for Android for Work.
 
  **Windows 10, Windows 8.1,  Windows RT 8.1, and Windows RT**  
 

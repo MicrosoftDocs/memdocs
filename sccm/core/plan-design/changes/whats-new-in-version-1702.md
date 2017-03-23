@@ -126,6 +126,8 @@ For more information, see [Windows Hello for Business settings](/sccm/protect/de
 ## New Windows Hello for Business notification for end users
 A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
 
+## Device health attestation updates
+Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).
 
 <!-- ## Migration  -->
 
@@ -251,3 +253,18 @@ Beginning in version 1702, Configuration Manager supports express installation f
 <!-- ## Inventory  -->
 
 <!-- ## Mobile device management - on-premises and hybrid  -->
+## Mobile device management
+
+## Android for Work supports
+Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
+- [Enroll Android for Work devices](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)
+- [Approve and deploy Android for Work apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
+- [Create configuration items for Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-for-work-configuration-items)
+- [Selective wipe on Android for Work devices](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
+- [Email profiles for Android for Work](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
+- [Compliance policies for Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
+
+## Protect devices
+
+### Detect outdated antimalware client versions
+Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions)
