@@ -2,7 +2,7 @@
 title: "Update Registration Tool | Microsoft Docs"
 description: "Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -60,4 +60,6 @@ When you must install an out-of-band release, and the update or hotfix file name
 
      After the update is registered, you can close the update registration tool.  
 
-3.  Open the Configuration Manager console and navigate to **Administration** > **Cloud Services** > **Updates and Servicing**. Hotfixes that were imported are now available to install. For information about installing updates, see [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
+3.  Open the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Hotfixes that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
+
+ For information about installing updates, see [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
