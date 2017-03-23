@@ -248,12 +248,29 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 ### Manage Express installation files for Windows 10 updates
 Beginning in version 1702, Configuration Manager supports express installation files for Windows 10 updates. When you use a supported version of Windows 10, you can use Configuration Manager settings to download only the changes between the current month's Windows 10 Cumulative Update and the previous month's update. Without express installation files, Configuration Manager downloads the full Windows 10 Cumulative Update (including all updates from previous months) each month. Using express installation files provides for smaller downloads and faster installation times on clients. For details, see [Manage express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
 
+## Conditional access device compliance policy improvements
+
+A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
+
+Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
+
+- Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
+- Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
+
+## New Mobile Threat Defense monitoring tools
+
+Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+
+- Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
+
+
+
 <!-- ## Reporting  -->
 
 <!-- ## Inventory  -->
 
 <!-- ## Mobile device management - on-premises and hybrid  -->
-## Mobile device management
+## Mobile device management - on-premises and hybrid
 
 ## Android for Work supports
 Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
@@ -263,6 +280,17 @@ Starting with 1702, Hybrid mobile device management with Microsoft Intune now su
 - [Selective wipe on Android for Work devices](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 - [Email profiles for Android for Work](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
 - [Compliance policies for Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
+
+
+### Improvements to certificate profiles
+
+You can now create a PFX certificate profile that supports S/MIME and deploy it to users.  The certificate can then used for S/MIME encryption and signing on all iOS devices that the user has enrolled.
+For more information, see [How to create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) and [Exchange ActiveSync email profiles](/sccm/mdm/deploy-use/create-exchange-activesync-profiles).
+
+Additionally, you can now specify multiple certification authorities (CAs) on multiple Certificate registration point site system roles and then assign which CAs process requests as part of the certificate profile.
+For more information, see [Certificate infrastructure](/sccm/protect/deploy-use/certificate-infrastructure).
+
+These new features for certificates are currently pre-release, and are subject to change.
 
 ## Protect devices
 
