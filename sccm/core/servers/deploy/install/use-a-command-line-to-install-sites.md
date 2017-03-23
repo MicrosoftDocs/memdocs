@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Use a command-line to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
+# Use a command-line to install System Center Configuration Manager sites
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  You can run System Center Configuration Manager Setup at a command prompt to install a variety of site types.
 
 ## Supported tasks for command-line installations
@@ -48,7 +53,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   Identification    
     -   Options    
     -   SQLConfigOptions    
-    -   HierarchyOptions    
+      -   HierarchyOptions    
     -   CloudConnectorOptions   
 
     To recover a site, you must also include the following sections of the script file:  
@@ -76,7 +81,8 @@ When you use media from the CD.Latest folder to run a scripted install of the fo
 - Install a new central administration site
 - Install a new primary site
 - Recover a central administration site
-- Recover a primary site
+- Recover a primary site 
+
 This value is not supported for use with installation media that that you get from the Microsoft Volume License site.
 See [command-line options](/sccm/core/servers/deploy/install/command-line-options-for-setup) for information on how to use this key name in the script file.
 
