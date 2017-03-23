@@ -28,7 +28,7 @@ To get the update for version 1702, you must use a service connection point site
 
 -   If the update displays as **Downloading** and does not change, review the **hman.log** and **dmpdownloader.log** for errors.
 
-    -   If the dmpdownloader.log indicates the dmpdownloader process is asleep and waiting for an interval before checking for updates, you can can restart the **SMS_Executive** service on the site server to restart the download of the update's redistribution files.
+    -   If the dmpdownloader.log indicates the dmpdownloader process is asleep and waiting for an interval before checking for updates, you can restart the **SMS_Executive** service on the site server to restart the download of the update's redistribution files.
 
     -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
 

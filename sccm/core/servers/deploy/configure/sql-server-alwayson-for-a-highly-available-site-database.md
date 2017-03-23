@@ -40,6 +40,10 @@ The following are scenarios that are supported with availability groups:
 
 -   You can move your site database from an availability group to a default or named instance of a standalone SQL Server  
 
+> [!Important]  
+> When you use Microsoft Intune with Configuration Manager in a hybrid configuration, the move of the site database to or from an availability group triggers a resynchronization of data with the cloud. This cannot be avoided. 
+
+
 
 > [!NOTE]  
 >  Successful configuration and use of availability groups requires you to be comfortable with configuring SQL Server and SQL Server availability groups. The procedures for System Center Configuration Manager in this topic rely on additional documentation and procedures found in the SQL Server documentation library.  
