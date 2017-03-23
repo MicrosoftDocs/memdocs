@@ -217,7 +217,8 @@ This version introduced the following improvements:
 - When you add applications to the **Install Applications** task sequence step in the task sequence editor, you can now select multiple applications from the **Select the application to install** pane.
 
 ### Improvements to the Auto Apply Driver task sequence
-New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available: 
+New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
+
    - SMSTSDriverRequestResolveTimeOut
      Default: 60
    - SMSTSDriverRequestConnectTimeOut
