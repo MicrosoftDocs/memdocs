@@ -243,7 +243,7 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 > [!IMPORTANT]
 > The Office 365 app that you create and deploy by using the Office 365 Application Wizard in Configuration Manager is not automatically managed by Configuration Manager until you enable the **Enable management of the Office 365 Client Again** software updates client agent setting. For details, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
 
-## Manage Express installation files for Windows 10 updates
+### Manage Express installation files for Windows 10 updates
 Beginning in version 1702, Configuration Manager supports express installation files for Windows 10 updates. When you use a supported version of Windows 10, you can use Configuration Manager settings to download only the changes between the current month's Windows 10 Cumulative Update and the previous month's update. Without express installation files, Configuration Manager downloads the full Windows 10 Cumulative Update (including all updates from previous months) each month. Using express installation files provides for smaller downloads and faster installation times on clients. For details, see [Manage express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
 
 ## Conditional access device compliance policy improvements
