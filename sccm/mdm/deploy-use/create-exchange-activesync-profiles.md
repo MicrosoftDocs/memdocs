@@ -2,7 +2,7 @@
 title: "Create Exchange ActiveSync email profiles | Microsoft Docs"
 description: "Learn how to create and configure email profiles in System Center Configuration Manager that work with Microsoft Intune."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -42,24 +42,23 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md).    
+ When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).    
 
 
 ## Create a New Exchange ActiveSync Email Profile  
 
 Start the Create Exchange ActiveSync Email Profile Wizard  
 
-1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
+1.  In the Configuration Manager console, click **Assets and Compliance**.  
 
 2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Email Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Profile**.
-
-4.  Follow the wizard instructions   
-
-### To configure Exchange ActiveSync settings for the Exchange ActiveSync email profile  
-
-1.  On the **Exchange ActiveSync** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
+3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Email Profile**.
+4.  On the General page of the wizard, configure the following:
+	- **Name** - Provide a descriptive name for the email profile.
+	- **Description** - Optionally, provide a description for the email profile that will help you identify it in the Configuration Manager console.
+	- **This email profile is for Android for Work** - Select this option if you will only be deploying this email profile to Android for Work devices.
+4.  On the **Exchange ActiveSync** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
 
     -   **Exchange ActiveSync host:** Specify the hostname of your company Exchange Server that hosts Exchange ActiveSync services.  
 
@@ -96,25 +95,26 @@ Start the Create Exchange ActiveSync Email Profile Wizard
     -   **Identity certificate:** Click **Select** and then select a certificate to use for identity.  
 
         > [!NOTE]  
-        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md).  
+        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
          This option is only available if you selected **Certificates** under **Authentication method**.  
 
-    -   **Use S/MIME** Send outgoing email using S/MIME encryption. This option is applicable to iOS devices only.  
+    -   **Use S/MIME** (for iOS devices only) - Send outgoing email using S/MIME encryption. Choose from the following options:
 
-    -   **Encryption certificates:** Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only.  
+    	-   **Signing certificates:** Click **Select** and then select a certificate to use for signing. This option is applicable to iOS devices only.  
+
+       	 > [!NOTE]  
+       	 >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+
+    	-   **Encryption certificates:** Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only. You can only select a PFX certificate to use as an encryption certificate. 
+
+		If you select both an encryption certificate, and a signing certificate, these must both be in PFX format.
 
         > [!NOTE]  
-        >  Before you can select the encryption certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md).  
+        >  Before you can select certificates, you must first configure them as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
-         This option is only available if you selected **Use S/MIME**.  
 
-    -   **Signing certificates:** Click **Select** and then select a certificate to use for signing. This option is applicable to iOS devices only.  
 
-        > [!NOTE]  
-        >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md).  
-
-         This option is only available if you selected **Use S/MIME**.  
 
 ###   Configure Synchronization Settings for the Exchange ActiveSync Email Profile.  
 
