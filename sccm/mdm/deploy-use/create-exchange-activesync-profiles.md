@@ -111,7 +111,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
 		If you select both an encryption certificate, and a signing certificate, these must both be in PFX format.
 
         > [!NOTE]  
-        >  Before you can select certificates, you must first configure them as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Before you can select certificates, you must first configure them as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 
 
