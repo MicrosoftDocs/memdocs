@@ -2,7 +2,7 @@
 title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 03/16/2017
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -77,6 +77,15 @@ The following Intune features introduced in March 2017 work in hybrid deployment
 
   The Microsoft Teams apps for iOS and Android are now enabled with Intune mobile app management (MAM) capabilities, so you can empower your teams to work freely across devices, while ensuring that conversations and corporate data is protected at every turn. For more details, see [the Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) on the Enterprise Mobility and Security blog.
 
+### New in Configuration Manager Technical Preview 1703
+
+- **Additional support for Apple Volume Purchase Program scenarios**
+
+   Beginning in Technical Preview 1703, you now have support for the following Volume Purchase Program (VPP) scenarios:
+
+   - Device licensing - Apps that support device licensing and are deployed to device collections will only require one license per device.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
+   - Use of multiple VPP tokens to a single hybrid tenant with both tokens used for managing VPP apps.
+   - Use of VPP education tokens with the ability to distinguish between business and education tokens.
 
 ## New hybrid features in February 2017
 
@@ -96,15 +105,19 @@ The following Intune features introduced in February 2017 work in hybrid deploym
 
 - **Android for Work Support**
 
-  You can now manage Android devices using Android for Work in hybrid MDM environments using Configuration Manager Technical Preview 1702. Supported Android devices can now be enrolled as Android for Work devices, which creates a work profile on the device to which apps approved in Play for Work can be deployed. You can also configure and deploy configuration items, compliance policies, and resource access profiles for these devices.
+  You can now manage Android devices using Android for Work in hybrid MDM environments using Configuration Manager Technical Preview 1702. Supported Android devices can now be enrolled as Android for Work devices, which creates a work profile on the device to which apps approved in Play for Work can be deployed. You can also configure and deploy configuration items, compliance policies, and resource access profiles for these devices. For more information, see [Android for Work support](/sccm/core/get-started/capabilities-in-technical-preview-1702#android-for-work-support).
 
 - **Non-Compliant Apps Compliance Settings**
 
-  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they will be marked “non-compliant” and will lose access to company resources according to conditional access policies in place.
+  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they will be marked “non-compliant” and will lose access to company resources according to conditional access policies in place. For more information [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
 
 - **PFX Certificate Creation and Distribution and S/MIME Support**
 
-  You can now create and deploy PFX certificates to users in a hybrid environment. These certificates can then be used for S/MIME email encryption and decryption by devices that the user has enrolled.
+  You can now create and deploy PFX certificates to users in a hybrid environment. These certificates can then be used for S/MIME email encryption and decryption by devices that the user has enrolled. For more information, see [Create PFX certificates with S MIME support](/sccm/core/get-started/capabilities-in-technical-preview-1702#create-pfx-certificates-with-s-mime-support).
+
+- **Support for additional iOS configuration settings**
+   
+    You now have 42 additional iOS settings that you can configure as part of a configuration item. Most of the settings (35 in all) have been added for supervised iOS devices. For more information, see  [New compliance settings for iOS devices](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices).
 
 ## New hybrid features in January 2017
 
