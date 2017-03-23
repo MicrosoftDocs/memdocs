@@ -255,6 +255,14 @@ Additionally, this helps organizations to mitigate data leakage through unsecure
 - Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
 - Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
 
+## New Mobile Threat Defense monitoring tools
+
+Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+
+- Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
+
+
+
 <!-- ## Reporting  -->
 
 <!-- ## Inventory  -->
