@@ -19,7 +19,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606 or 1610.
--
+
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >  Learn more about:    
