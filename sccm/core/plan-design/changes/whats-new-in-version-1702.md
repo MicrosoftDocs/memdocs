@@ -118,16 +118,6 @@ You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure
 ### Software update points are added to boundary groups
 Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
 
-## Protect data and infrastructure
-
-- If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the Smart Card Logon EKU, you must configure permissions for key registration to ensure the certificate is validated correctly.
-For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).
-
-### New Windows Hello for Business notification for end users
-A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
-
-### Device health attestation updates
-Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).
 
 <!-- ## Migration  -->
 
@@ -135,8 +125,11 @@ Device health attestation service for on-premises clients can now be configured 
 
 ## Compliance settings
 
+### New compliance settings for iOS
+
 We've added many new settings for iOS devices to match those available with Microsoft Intune.
 For a list of all available settings, see [Create configuration items for iOS and Mac OS X devices managed with Intune](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).
+
 
 ## Application Management
 
@@ -248,29 +241,12 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 ### Manage Express installation files for Windows 10 updates
 Beginning in version 1702, Configuration Manager supports express installation files for Windows 10 updates. When you use a supported version of Windows 10, you can use Configuration Manager settings to download only the changes between the current month's Windows 10 Cumulative Update and the previous month's update. Without express installation files, Configuration Manager downloads the full Windows 10 Cumulative Update (including all updates from previous months) each month. Using express installation files provides for smaller downloads and faster installation times on clients. For details, see [Manage express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
 
-## Conditional access device compliance policy improvements
-
-A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
-
-Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
-
-- Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
-- Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
-
-## New Mobile Threat Defense monitoring tools
-
-Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
-
-- Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
-
-
 
 <!-- ## Reporting  -->
 
 <!-- ## Inventory  -->
 
-<!-- ## Mobile device management - on-premises and hybrid  -->
-## Mobile device management - on-premises and hybrid
+## Mobile device management
 
 ### Android for Work support
 Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
@@ -296,3 +272,29 @@ These new features for certificates are currently pre-release, and are subject t
 
 ### Detect outdated antimalware client versions
 Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions).
+
+### Conditional access device compliance policy improvements
+
+A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
+
+Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
+
+- Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
+- Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
+
+### New Mobile Threat Defense monitoring tools
+
+Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+
+- Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
+
+### Device health attestation updates
+Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).
+
+### Certificate profiles for Windows Hello for Business
+
+If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the Smart Card Logon EKU, you must configure permissions for key registration to ensure the certificate is validated correctly.
+For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).
+
+### New Windows Hello for Business notification for end users
+A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
