@@ -2,7 +2,7 @@
 title: "Supported Active Directory domains | Microsoft Docs"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -39,14 +39,21 @@ All System Center Configuration Manager site systems must be members of a suppor
 You must uninstall the site system role (including the site if it's a site server) before making these changes.  
 
 **Domains with the following domain functional levels are supported:**  
+- Windows Server 2016
 
--   Windows Server 2008  
+- Windows Server 2012 R2  
 
--   Windows Server 2008 R2  
+- Windows Server 2012
 
--   Windows Server 2012  
+- Windows Server 2008 R2
 
--   Windows Server 2012 R2  
+- Windows Server 2008  
+
+
+
+
+
+
 
 ##  <a name="bkmk_Disjoint"></a> Disjoint namespace  
 Configuration Manager supports installing site systems and clients in a domain that has a disjoint namespace.  
@@ -60,7 +67,7 @@ The following table identifies the supported scenarios for a disjoint namespace.
 |**Scenario 1:**<br /><br /> The primary DNS suffix of the domain controller differs from the Active Directory DNS domain name. Computers that are members of the domain can be either disjoint or not disjoint.|In this scenario, the primary DNS suffix of the domain controller differs from the Active Directory DNS domain name. The domain controller is disjoint in this scenario. Computers that are members of the domain, such as site servers and computers, can have a primary DNS suffix that either matches the primary DNS suffix of the domain controller or matches the Active Directory DNS domain name.|  
 |**Scenario 2:**<br /><br /> A member computer in an Active Directory domain is disjoint, even though the domain controller is not disjoint.|In this scenario, the primary DNS suffix of a member computer on which a site system is installed differs from the Active Directory DNS domain name, even though the primary DNS suffix of the domain controller is the same as the Active Directory DNS domain name. In this scenario, you have a domain controller that is not disjoint and a member computer that is disjoint. Member computers that are running the Configuration Manager client can have a primary DNS suffix that either matches the primary DNS suffix of the disjoint site system server or matches the Active Directory DNS domain name.|  
 
- To allow a computer to access domain controllers that are disjoint, you must change the **msDS-AllowedDNSSuffixes** Active Directory attribute on the domain object container. You must add both of the DNS suffixes to the attribute.  
+ To allow a computer to access domain controllers that are disjoint, you must change the **msDS-AllowedDNSSuffixes** Active Directory attribute on the domain object container. You must add both DNS suffixes to the attribute.  
 
  In addition, to make sure that the DNS suffix search list contains all the DNS namespaces that are deployed within the organization, you must configure the search list for each computer in the domain that is disjoint. Make sure that you include the following in the list of namespaces: the primary DNS suffix of the domain controller, the DNS domain name, and any additional namespaces for other servers that Configuration Manager might interoperate with. You can use the Group Policy Management console to configure the **Domain Name System (DNS) suffix search** list.  
 
@@ -75,4 +82,3 @@ The following table identifies the supported scenarios for a disjoint namespace.
      **For example:** The single label domain of Contoso is configured to have a disjoint namespace in DNS of contoso.com. Therefore, when you specify the DNS suffix in Configuration Manager for a computer in the Contoso domain, you specify "Contoso.com" and not "Contoso".  
 
 -   The Distributed Component Object Model (DCOM) connections between site servers in the system context must be successful by using Kerberos authentication.  
-  

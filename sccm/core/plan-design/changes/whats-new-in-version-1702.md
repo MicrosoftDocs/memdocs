@@ -123,10 +123,10 @@ Beginning with version 1702, clients use boundary groups to find a new software 
 - If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the Smart Card Logon EKU, you must configure permissions for key registration to ensure the certificate is validated correctly.
 For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).
 
-## New Windows Hello for Business notification for end users
+### New Windows Hello for Business notification for end users
 A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
 
-## Device health attestation updates
+### Device health attestation updates
 Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).
 
 <!-- ## Migration  -->
@@ -272,7 +272,7 @@ Beginning in version 1702, you have new ways to monitor the compliance status wi
 <!-- ## Mobile device management - on-premises and hybrid  -->
 ## Mobile device management - on-premises and hybrid
 
-## Android for Work supports
+### Android for Work support
 Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
 - [Enroll Android for Work devices](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)
 - [Approve and deploy Android for Work apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
