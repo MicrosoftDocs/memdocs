@@ -17,12 +17,6 @@ ms.author: angrobe
 manager: angrobe
 ---
 
-# Sync data from Configuration Manager to the Microsoft Operations Management Suite
-
-*Applies to: System Center Configuration Manager (Current Branch)*
-
-You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS. This makes data from your Configuration Manager deployment visible in OMS.
-
 
 # Sync data from Configuration Manager to the Microsoft Operations Management Suite
 
@@ -31,8 +25,7 @@ You can use the Microsoft Operations Management Suite (OMS) Connector to sync da
 
 You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS Log Analytics  in Microsoft Azure. This makes data from your Configuration Manager deployment visible in OMS.
 > [!TIP]
-> TIP
-The OMS Connector is a pre-release feature. To learn more, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
+> The OMS Connector is a pre-release feature. To learn more, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
 
 Beginning with version 1702, you can use the OMS connector to connect to an OMS workspace that is on Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector. See [use the OMS connector with the Azure Government cloud](#fairfaxconfig) in this topic.
 
