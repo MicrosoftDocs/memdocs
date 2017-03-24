@@ -2,7 +2,7 @@
 title: Task sequence steps - Configuration Manager | Microsoft Docs
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -650,7 +650,7 @@ This step runs in either a standard operating system or Windows PE. However, the
 -   **Custom path**  
 
  **Save path as a variable**  
- You can save the path as a variable that you can  use in another task sequence step. When there is more than one package, Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, this is the root for where all the referenced content is stored (which can be multiple packages). When you refer to the variable in a subsequence step, such as Upgrade Operating System, it is used with a numerical suffix. In this example, %*mycontent01*% or %*mycontent02*% where the number corresponds to the order in which the package is listed in this step.  
+ You can save the path as a variable that you can  use in another task sequence step. Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, it is the root for where all the referenced content is stored (which can be multiple packages). When you refer to the variable, you will add a numerical suffix to the variable. For example, for the first package, you will refer to %*mycontent01*% variable. When you refer to the variable in a subsequence steps, such as Upgrade Operating System, you would use %*mycontent02*% or %*mycontent03*% where the number corresponds to the order in which the package is listed in the step.  
 
  **If a package download fails, continue downloading other packages in the list**  
  Specifies that if the package download fails that it will go to the next package in the list and start the download.  
