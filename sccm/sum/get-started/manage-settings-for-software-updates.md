@@ -4,7 +4,7 @@ title: Manage settings for software updates | Microsoft Docs
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -109,7 +109,7 @@ Configuration Manager also uses this setting to determine whether to initiate th
 
 On the **Maximum Run Time** tab, you can view and configure the following settings:  
 
-- **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs and 5 minutes for all other software update types. Values can range from 5 to 9999 minutes.  
+- **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs. For other software update types, the default is 10 minutes if you did a fresh install of Configuration Manager version 1511 or higher and 5 minutes when you upgraded from a previous version. Values can range from 5 to 9999 minutes.  
 
 > [!IMPORTANT]  
 >  Be sure to set the maximum run time value smaller than the configured maintenance window time. Otherwise, the software update installation will never initiate.  
