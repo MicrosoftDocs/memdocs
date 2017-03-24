@@ -2,7 +2,7 @@
 title: "Enroll devices with device enrollment manager - Configuration Manager | Microsoft Docs"
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 
 ---
@@ -21,27 +21,23 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Organizations can use System Center Configuration Manager and Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* account is a special Intune account with permission to enroll more than five devices.  
+Organizations can use Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* (DEM) account is a special user account that can enroll up to 1,000 devices. You add existing users to the DEM account to give them the special DEM capabilities. Each enrolled device uses a single license. We recommend that you use devices enrolled through this account as shared devices with no user affinity, rather than personal, dedicated devices.  
 
 ## Enroll corporate-owned devices with the device enrollment manager  
  You can assign a store manager or supervisor, for example, a device enrollment manager user account to allow her to do the following:  
 
--   Enroll devices for management  
-
--   Use Company Portal app to install company apps  
-
--   Install and uninstall software  
-
+-   Enroll up to 1000 devices for management  
+-   Use the Company Portal app to install company apps  
 -   Configure access to company data  
-
 
 The following limitations apply to devices managed using a device enrollment manager account:
 
 - The store manager cannot reset the device from the company portal.  
--  Devices cannot be workplace joined or Azure Active Directory joined. This prevents these devices from using conditional access.
+- Devices cannot be workplace joined or Azure Active Directory joined. This prevents these devices from using conditional access.
 -  To deploy company apps to devices managed with the device enrollment manager, deploy Company Portal app as a **Required Install** to the device enrollment manager's user account. The device enrollment manager can then launch the Company Portal app to install additional apps.
 - To improve performance, the Company Portal app only shows the local device. Remote management of other DEM devices can only be done from the Configuration Manager console by and administrator
 - The Company Portal website is not available for device enrollment manager accounts. Use the Company Portal app.
+- (iOS only) If you use DEM to enroll iOS devices, you can't use the Apple Configurator or Apple Device Enrollment Program (DEP) to enroll devices.
 
  **Examples of device enrollment manager scenario:**   
 A restaurant wants point-of-sale tablets for its wait staff and order-monitors for its kitchen staff. The employees never need access to company data or to log on as a user. The Intune administrator creates a device enrollment manager account and enrolls the company-owned devices using that account. Alternatively, the administrator could give the device enrollment manager credentials to a restaurant manager, allowing him or her to enroll and manage the devices.  
