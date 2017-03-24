@@ -60,7 +60,7 @@ For more information, see [Support for Current Branch versions](/sccm/core/serve
 ##  Long-Term Servicing Branch of System Center Configuration
 This is a licensed branch for use in production for Configuration Manager customers who are using the Current Branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016. For more about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
-The LTSB does not receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided.
+The LTSB is based on version 1606. This branch does not receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided. To install the LTSB, you must use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get as a DVD with System Center 2016 or System Center Configuration Manager.
 
 To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get as a DVD with System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use baseline media to install a new site that runs version 1606 of the Current Branch, or a new site that runs the Long-Term Servicing Branch.
 

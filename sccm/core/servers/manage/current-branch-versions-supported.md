@@ -32,9 +32,13 @@ Figure 1. Example of current branch servicing support.
 
 |Version|Availability Date|Support End Date|  
 |-------------|-----------------------|----------------------|  
-|1511|12/8/2015|12/8/2016|  
-|1602|3/11/2016|3/11/2017|
-|1606|7/22/2016|7/22/2017|
+|1702|3/27/2017|3/27/2018|
 |1610|11/18/2016|11/18/2017|
+|1606|7/22/2016|7/22/2017|
+|1602|3/11/2016|3/11/2017|
+|1511|12/8/2015|12/8/2016|  
+
+
+
 
 For information about version numbers and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
