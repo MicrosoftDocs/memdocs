@@ -92,7 +92,7 @@ Use the following procedure to create a custom notification for high-impact depl
 
   **User notification headline text**: Specifies the blue text that displays on the Software Center user notification. For example, in the default user notification, this section contains something like "Confirm you want to upgrade the operating system on this computer".
 
-  **User notification message text**: There are three text boxes that provide the body of the custom notification.
+  **User notification message text**: There are three text boxes that provide the body of the custom notification. All text boxes require that you add text.
   - 1st text box: Specifies the main body of text, typically containing instructions for the user. For example, in the default user notification, this section contains something like "Upgrading the operating system will take time and your computer might restart several times."
   - 2nd text box: Specifies the bold text under the main body of text. For example, in the default user notification, this section contains something like "This in-place upgrade installs the new operating system and automatically migrates your apps, data, and settings."
   - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."   
