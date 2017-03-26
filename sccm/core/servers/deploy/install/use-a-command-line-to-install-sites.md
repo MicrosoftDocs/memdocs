@@ -2,7 +2,7 @@
 title: "Command-line install | Microsoft Docs"
 description: "Learn how to run System Center Configuration Manager Setup at a command prompt for a variety of site installations."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Use a command-line to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
+# Use a command-line to install System Center Configuration Manager sites
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  You can run System Center Configuration Manager Setup at a command prompt to install a variety of site types.
 
 ## Supported tasks for command-line installations
@@ -23,7 +28,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 -   **Install a central administration site or primary site from a command prompt**  
   View [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md)
 
- -  **Modify the languages in use at a central administration site or primary site**  
+-  **Modify the languages in use at a central administration site or primary site**  
     To modify the languages that are installed at a site from a command prompt (including languages for mobile devices), you must:  
 
      -   Run Setup from **&lt;ConfigMgrInstallationPath\>\Bin\X64** on the site server,
@@ -34,7 +39,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     To create the language script file, use the information in [Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)  
 
- -  **Use an installation script file for unattended site installations or site recovery**  
+-  **Use an installation script file for unattended site installations or site recovery**  
     You can run Setup from a command prompt by using an installation script, and you run an unattended site installation. You can also use this option to recover a site.    
 
     To use a script with Setup:  
@@ -48,7 +53,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   Identification    
     -   Options    
     -   SQLConfigOptions    
-    -   HierarchyOptions    
+      -   HierarchyOptions    
     -   CloudConnectorOptions   
 
     To recover a site, you must also include the following sections of the script file:  
@@ -56,12 +61,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   Identification  
     -   Recovery
 
-    For more information about for backup and recovery, see the [Unattended site recovery script file keys](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) in the [Backup and recovery in Configuration Manager](../../../../protect/understand/backup-and-recovery.md) topic.  
+For more information about for backup and recovery, see the [Unattended site recovery script file keys](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) in the [Backup and recovery in Configuration Manager](../../../../protect/understand/backup-and-recovery.md) topic.  
 
-    For a list of keys and values to use in an unattended installation script file, see [Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
+For a list of keys and values to use in an unattended installation script file, see [Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 
 ## About the command-line script file  
-
  For unattended installations of Configuration Manager, you can run Setup with the command-line option **/SCRIPT**, and specify a script file that contains  installation options. The following tasks are supported by using this method:  
 
 -   Install a central administration site  
@@ -71,6 +75,18 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 > [!NOTE]  
 >  You cannot use the unattended script file to upgrade an evaluation site to a licensed installation of Configuration Manager.  
+
+### The CDLatest key name
+When you use media from the CD.Latest folder to run a scripted install of the following four installation options, your script  must include the **CDLatest** key with a value of  **1**:
+- Install a new central administration site
+- Install a new primary site
+- Recover a central administration site
+- Recover a primary site 
+
+This value is not supported for use with installation media that that you get from the Microsoft Volume License site.
+See [command-line options](/sccm/core/servers/deploy/install/command-line-options-for-setup) for information on how to use this key name in the script file.
+
+
 
 ### Create the script
 The installation script is automatically created when you [run Setup to install a site using the user interface](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md).  When you confirm the settings on the **Summary** page of the wizard, the following happens:  

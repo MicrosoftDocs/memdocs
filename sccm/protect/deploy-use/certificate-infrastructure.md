@@ -2,7 +2,7 @@
 title: "Configuring certificate infrastructure | Microsoft Docs"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,31 +17,23 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 ---
+
 # Certificate infrastructure
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+Here are the steps, details, and more information about how to configure certificates in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 
- Here are the steps, details, and more information about how to configure certificate enrollment in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
+Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
- After you complete these steps and verify the installation, you can configure and deploy certificate profiles. For more information, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+## Step 1 - Install and Configure the Network Device Enrollment Service and Dependencies (for SCEP certificates only)
 
-
-**Step 1:** Install and configure the Network Device Enrollment Service and dependencies. The Network Device Enrollment Service role service for Active Directory Certificate Services (AD CS) must be running on the Windows Server 2012 R2 operating system.
-	 **Important:** You must complete additional configuration steps before you can use the Network Device Enrollment Service with System Center Configuration Manager.
-**Step 2:** Install and configure the certificate registration point. You must install at least one certificate registration point. This registration point can be in a central administration site or a primary site.
-**Step 3:** Install the System Center Configuration Manager Policy Module. Install the Policy Module on the server that is running the Network Device Enrollment Service.
-
-## Supplemental Procedures to Configure Certificate Enrollment in Configuration Manager  
- Use the following information when the steps in the preceding table require supplemental procedures.  
-
-###  Step 1: Install and Configure the Network Device Enrollment Service and Dependencies  
  You must install and configure the Network Device Enrollment Service role service for Active Directory Certificate Services (AD CS), change the security permissions on the certificate templates, deploy a public key infrastructure (PKI) client authentication certificate, and edit the registry to increase the Internet Information Services (IIS) default URL size limit. If necessary, you must also configure the issuing certification authority (CA) to allow a custom validity period.  
 
 > [!IMPORTANT]  
 >  Before you configure System Center Configuration Manager to work with the Network Device Enrollment Service, verify the installation and configuration of the Network Device Enrollment Service. If these dependencies are not working correctly, you will have difficulty troubleshooting certificate enrollment by using System Center Configuration Manager.  
 
-##### To install and configure the Network Device Enrollment Service and dependencies  
+### To install and configure the Network Device Enrollment Service and dependencies  
 
 1.  On a server that is running Windows Server 2012 R2, install and configure the Network Device Enrollment Service role service for the Active Directory Certificate Services server role. For more information, see [Network Device Enrollment Service Guidance](http://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
 
@@ -102,10 +94,12 @@ manager: angrobe
 
 8.  Verify that the Network Device Enrollment Service is working by using the following link as an example: **https://server.contoso.com/certsrv/mscep/mscep.dll**. You should see the built-in Network Device Enrollment Service webpage. This webpage explains what the service is and explains that network devices use the URL to submit certificate requests.  
 
- Now that the Network Device Enrollment Service and dependencies are configured, you are ready to install and configure the certificate registration point.  
+ Now that the Network Device Enrollment Service and dependencies are configured, you are ready to install and configure the certificate registration point.
 
-###  Step 2: Install and Configure the Certificate Registration Point  
- You must install and configure at least one certificate registration point in the System Center Configuration Manager hierarchy, and you can install this site system role in the central administration site or in a primary site.  
+
+## Step 2 - Install and configure the certificate registration point.
+
+You must install and configure at least one certificate registration point in the System Center Configuration Manager hierarchy, and you can install this site system role in the central administration site or in a primary site.  
 
 > [!IMPORTANT]  
 >  Before you install the certificate registration point, see the **Site System Requirements** section in the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md) topic for operating system requirements and dependencies for the certificate registration point.  
@@ -122,18 +116,23 @@ manager: angrobe
 
 5.  On the **Proxy** page, click **Next**. The certificate registration point does not use Internet proxy settings.  
 
-6.  On the **System Role Selection** page, select **Certificate registration point** from the list of available roles, and then click **Next**.  
+6.  On the **System Role Selection** page, select **Certificate registration point** from the list of available roles, and then click **Next**. 
 
-7.  On the **Certificate Registration Point** page, accept or change the default settings, and then click **Add**.  
+8. On the **Certificate Registration Mode** page, select whether you want this certificate registration point to **Process SCEP certificate requests**, or **Process PFX certificate requests**. A certificate registration point cannot process both kinds of requests, but you can create multiple certificate registration points if you are working with both certificate types.
 
+7.  On the **Certificate Registration Point Settings** page, the settings you make depend on the type of certificate the certificate registration point will process:
+	-   If you selected **Process SCEP certificate requests**, then configure the following:
+		-   **Website name**, **HTTPS port number**, and **Virtual application name** for the certificate registration point. These fields are filled in automatically with default values. 
+		-   **URL for the Network Device Enrollment Service and root CA certificate** - Click **Add**, then in the **Add URL and Root CA Certificate** dialog box, specify the following:
+			- **URL for the Network Device Enrollment Service**: Specify the URL in the following format: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. For example, if the FQDN of your server that is running the Network Device Enrollment Service is server1.contoso.com, type **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
+			- **Root CA Certificate**: Browse to and select the certificate (.cer) file that you created and saved in **Step 1: Install and configure the Network Device Enrollment Service and dependencies**. This root CA certificate allows the certificate registration point to validate the client authentication certificate that the System Center Configuration Manager Policy Module will use.  
+	- If you selected **Process PFX certificate requests**, then configure the following:
+		- **Certification Authorities (CA) and account needed to conenct to each CA** - Click **Add** then in the **Add a Certificate Authority and Account** dialog box, specify the following:
+			- **Certificate Authority Server Name** - Enter the name of your certificate authority server.
+			- **Certificate Authority Account** - Click **Set** to select, or create the account that has permissions to enroll in templates on the certification authority.
+		- **Certificate Registration Point Connection Account** - Select or create the account that connects the certificate registration point to the Configuration Manager database. Alteratively, you can use the local computer account of the computer hosting the certificate registration point.
+		- **Active Directory Certificate Publishing Account** - Select an account, or create a new account that will be used to publish certificates to user objects in Active Directory.
 8.  In the **Add URL and Root CA Certificate** dialog box, specify the following, and then click **OK**:  
-
-    1.  **URL for the Network Device Enrollment Service**: Specify the URL in the following format: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. For example, if the FQDN of your server that is running the Network Device Enrollment Service is server1.contoso.com, type **https://server1.contoso.com/certsrv/mscep/mscep.dll**.  
-
-    2.  **Root CA Certificate**: Browse to and select the certificate (.cer) file that you created and saved in **Step 1: Install and configure the Network Device Enrollment Service and dependencies**. This root CA certificate allows the certificate registration point to validate the client authentication certificate that the System Center Configuration Manager Policy Module will use.  
-
-    > [!NOTE]  
-    >  If you are using more than one server that is running the Network Device Enrollment Service, click **Add** to specify the details for the other servers.  
 
 9. Click **Next** and complete the wizard.  
 
@@ -150,10 +149,10 @@ manager: angrobe
     > [!TIP]  
     >  This certificate is not immediately available in this folder. You might need to wait awhile (for example, half an hour) before System Center Configuration Manager copies the file to this location.  
 
- Now that the certificate registration point is installed and configured, you are ready to install the System Center Configuration Manager Policy Module for the Network Device Enrollment Service.  
 
-###  Step 3: Install the Configuration Manager Policy Module  
- You must install and configure the System Center Configuration Manager Policy Module on each server that you specified in **Step 2: Install and configure the certificate registration point** as **URL for the Network Device Enrollment Service** in the properties for the certificate registration point.  
+## Step 3 -  Install the System Center Configuration Manager Policy Module (for SCEP certificates only).
+
+You must install and configure the System Center Configuration Manager Policy Module on each server that you specified in **Step 2: Install and configure the certificate registration point** as **URL for the Network Device Enrollment Service** in the properties for the certificate registration point.  
 
 ##### To install the Policy Module  
 
@@ -163,7 +162,7 @@ manager: angrobe
 
     -   PolicyModuleSetup.exe  
 
-     In addition, if you have a LanguagePack folder on the installation media, copy this folder and its contents.  
+    In addition, if you have a LanguagePack folder on the installation media, copy this folder and its contents.  
 
 2.  From the temporary folder, run PolicyModuleSetup.exe to start the System Center Configuration Manager Policy Module Setup wizard.  
 
@@ -184,6 +183,7 @@ manager: angrobe
 
 9. Click **Next** and complete the wizard.  
 
- Now that you have completed the configuration steps to install the Network Device Enrollment Service and dependencies, the certificate registration point, and the System Center Configuration Manager Policy Module, you are ready to deploy certificates to users and devices by creating and deploying certificate profiles. For more information about how to create certificate profiles, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+ If you want to uninstall the System Center Configuration Manager Policy Module, use **Programs and Features** in Control Panel. 
 
- If you want to uninstall the System Center Configuration Manager Policy Module, use **Programs and Features** in Control Panel.  
+ 
+Now that you have completed the configuration steps, you are ready to deploy certificates to users and devices by creating and deploying certificate profiles. For more information about how to create certificate profiles, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  

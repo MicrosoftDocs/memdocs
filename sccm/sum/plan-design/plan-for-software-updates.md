@@ -69,9 +69,12 @@ Use the following sections to determine the software update point infrastructure
 -   **Internet-based clients**: Receive a list of software update points that you configure to allow connections only from the Internet, or a list of software update points that allow Internet and intranet client connections.  
 
 ###  <a name="BKMK_SUPSwitching"></a> Software update point switching  
- If you have multiple software update points at a site, and then one fails or becomes unavailable, clients will connect to a different software update point and continue to scan for the latest software updates. When a client is first assigned a software update point, it will stay assigned to that software update point unless it fails to scan for software updates on that software update point.  
+> [!NOTE]
+> Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
 
- The scan for software updates can fail with a number of different retry and non-retry error codes. When the scan fails with a retry error code, the client starts a retry process to scan for the software updates on the software update point. The high-level conditions that result in a retry error code are typically because the WSUS server is unavailable or because it is temporarily overloaded. The client uses the following process when it fails to scan for software updates:  
+If you have multiple software update points at a site, and then one fails or becomes unavailable, clients will connect to a different software update point and continue to scan for the latest software updates. When a client is first assigned a software update point, it will stay assigned to that software update point unless it fails to scan for software updates on that software update point.  
+
+The scan for software updates can fail with a number of different retry and non-retry error codes. When the scan fails with a retry error code, the client starts a retry process to scan for the software updates on the software update point. The high-level conditions that result in a retry error code are typically because the WSUS server is unavailable or because it is temporarily overloaded. The client uses the following process when it fails to scan for software updates:  
 
 1.  The client scans for software updates at its scheduled time, or when it is initiated through the control panel on the client, or by using the SDK. If the scan fails, the client waits 30 minutes to retry the scan, and it uses the same software update point.  
 

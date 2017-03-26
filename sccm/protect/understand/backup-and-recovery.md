@@ -2,7 +2,7 @@
 title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -105,9 +105,9 @@ Use the following sections to help you create your Configuration Manager backup 
     > [!IMPORTANT]  
     >  To help prevent tampering of the backup files, store the files in a secure location. The most secure backup path is to a local drive so you can set NTFS file system permissions on the folder. Configuration Manager does not encrypt the backup data that is stored in the backup path.  
 
-    -   **Local drive on site server for site data and database**: Specifies that the backup files for the site and site database are stored in the specified path on the local disk drive of the site server. You must create the local folder before the backup task runs.   The Local System account on the site server must have **Write** NTFS file system permissions to the local folder for the site server backup. The Local System account on the computer that is running SQL Server must have **Write** NTFS permissions to the folder for the site database backup.  
+    -   **Local drive on site server for site data and database**: Specifies that the backup files for the site and site database are stored in the specified path on the local disk drive of the site server. You must create the local folder before the backup task runs. The Local System account on the site server must have **Write** NTFS file system permissions to the local folder for the site server backup. The Local System account on the computer that is running SQL Server must have **Write** NTFS permissions to the folder for the site database backup.  
 
-    -   **Network path (UNC name) for site data and database**: Specifies that the backup files for the site and site database are stored in the specified UNC path. You must create the share before the backup task runs.The computer account of the site server and the computer account of the SQL Server, if SQL Server is installed on another computer, must have **Write** NTFS and share permissions to the shared network folder.  
+    -   **Network path (UNC name) for site data and database**: Specifies that the backup files for the site and site database are stored in the specified UNC path. You must create the share before the backup task runs. The computer account of the site server and the computer account of the SQL Server, if SQL Server is installed on another computer, must have **Write** NTFS and share permissions to the shared network folder.  
 
     -   **Local drives on site server and SQL Server**: Specifies that the backup files for the site are stored in the specified path on the local drive of the site server, and the backup files for the site database are stored in the specified path on the local drive of the site database server. You must create the local folders before the backup task runs. The computer account of the site server must have **Write** NTFS permissions to the folder that you create on the site server. The computer account of the SQL Server must have **Write** NTFS permissions to the folder that you create on the site database server. This option is available only when the site database is not installed on the site server.  
 
@@ -373,7 +373,7 @@ Use the following sections to help you create your Configuration Manager backup 
  Use the following sections to help you to create your script for unattended site recovery. The tables list the available setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description for the key.  
 
 #### Recover a central administration site unattended  
- Use the following information to configure an unattended Setup script file to recover a central administration sitee.  
+ Use the following information to configure an unattended Setup script file to recover a central administration site.  
 
  **Identification**  
 
@@ -384,6 +384,15 @@ Use the following sections to help you create your Configuration Manager backup 
     -   **Values:** RecoverCCAR  
 
     -   **Details:** Recovers a central administration site  
+
+-   **Key Name:** CDLatest  
+
+    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+
+    -   **Values:** 1
+        Any value other than 1 is considered to not be using CD.Latest.
+
+    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.  
 
 **RecoveryOptions**  
 
@@ -586,7 +595,7 @@ Use the following sections to help you create your Configuration Manager backup 
     -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.  
 
 #### Recover a Primary Site Unattended  
- Use the following information to configure an unattended Setup script file to recover a central administration sitee.  
+ Use the following information to configure an unattended Setup script file to recover a central administration site.  
 
  **Identification**  
 
@@ -597,6 +606,15 @@ Use the following sections to help you create your Configuration Manager backup 
     -   **Values:** RecoverPrimarySite  
 
     -   **Details:** Recovers a primary site  
+
+-   **Key Name:** CDLatest  
+
+    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+
+    -   **Values:** 1
+        Any value other than 1 is considered to not be using CD.Latest.
+
+    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
 
 **RecoveryOptions**  
 

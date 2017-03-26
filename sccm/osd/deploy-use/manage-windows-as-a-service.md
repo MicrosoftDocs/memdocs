@@ -3,7 +3,7 @@ title: "Manage Windows as a Service - Configuration Manager | Microsoft Docs"
 description: "View the state of Windows as a Service using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support."
 
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -129,6 +129,8 @@ Servicing plans use only the **Upgrades** software updates classification, not c
         -   **Release Ready (Current Branch)**: In the CB servicing model, feature updates are available as soon as Microsoft releases them.
 
         -   **Business Ready (Current Branch for Business)**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
+
+        For more information about servicing branches and what options is best for you, see [Servicing branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 
     -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the number of days that you configure for this setting.
 

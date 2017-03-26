@@ -15,6 +15,7 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translation.priority.ht:
   - cs-cz
   - de-de

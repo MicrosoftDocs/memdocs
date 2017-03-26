@@ -2,7 +2,7 @@
 title: "Windows client deployment prerequisites | Microsoft Docs"
 description: "Learn the prerequisites for deploying clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -60,7 +60,8 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Microsoft Silverlight 5.1.41212.0 (beginning in Configuration Manager version 1602)|Required to support the Application Catalog website user experience.|  
 |Microsoft .NET Framework version 4.5.2|Required to support client operations. Automatically installed on the client computer if it does not have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 3.5 SP2 components|Required to store information related to client operations.|  
-|Microsoft Windows Imaging Components|Required by Microsoft .NET Framework 4.0 for Windows Server 2003 or Windows XP SP2 for 64-bit computers.|  
+|Microsoft Windows Imaging Components|Required by Microsoft .NET Framework 4.0 for Windows Server 2003 or Windows XP SP2 for 64-bit computers.|
+|Microsoft Intune PC software client|You cannot run the Intune PC software client and the Configuration Manager client on the same PC. Ensure the Intune client is removed before you install the Configuration Manager client.|
 
 ####  <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
 

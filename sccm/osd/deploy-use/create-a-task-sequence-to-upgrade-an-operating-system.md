@@ -61,6 +61,42 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 
 9. Complete the wizard.  
 
+
+
+## Configure pre-cache content
+Beginning in version 1702, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
+> [!TIP]  
+> Introduced with version 1702, the pre-cache is a pre-release feature. To enable it, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
+
+For example, let's say you want to deploy a Windows 10 in-place upgrade task sequence, only want a single task sequence for all users, and have multiple architectures and/or languages. Prior to version 1702, if you create an available deployment, and then the user clicks **Install** in Software Center, the content downloads at that time. This adds additional time before the installation is ready to start. Also, all content referenced in the task sequence is downloaded. This includes the operating system upgrade package for all languages and architectures. If each is roughly 3 GB in size, the download package can be quite large.
+
+Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive.
+
+### To configure the pre-cache feature
+
+1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab of the package. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
+
+    The architecture and language values are used to match task sequence step conditions that you will create in the next step to determine whether the operating system upgrade package should be pre-cached.
+2. Create a task sequence with conditional steps for the different languages and architectures. For example, for the English version you could create a step like the following:
+
+    ![pre-cache properties](../media/precacheproperties2.png)
+
+    ![pre-cache options](../media/precacheoptions2.png)  
+
+3. Deploy the task sequence. For the pre-cache feature, configure the following:
+    - On the **General** tab, select **Pre-download content for this task sequence**.
+    - On the **Deployment settings** tab, configure the task sequence with the **Available** for **Purpose**. If you create a **Required** deployment, the pre-cache functionality will not work.
+    - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose a time in the future that gives clients enough time to pre-cache the content before the deployment is made available to users. For example, you can set the available time to be 3 hours in the future to allow enough time for the content to be pre-cached.  
+    - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content is not pre-cached on a client before a user starts the installation, these settings are used.
+
+
+### User experience
+- When the client receives the deployment policy, it will start to pre-cache the content. This includes all referenced content (any other package types) and only the operating system upgrade package that matches the client based on the conditions that you set in the task sequence.
+- When the deployment is made available to users (setting on the **Scheduling** tab of the deployment), a notification displays to inform users about the new deployment and the deployment becomes visible in Software Center. The user can go to Software Center and click **Install** to start the installation.
+- If the content is not fully pre-cached, then it will use the settings specified on the **Deployment Option** tab of the deployment. We recommend that there is sufficient time between when the deployment is created and the time in which the deployment becomes available to users to allow clients enough time to pre-cache the content.
+
+
+
 ## Download Package Content task sequence step  
  The [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent) step can be used before the **Upgrade Operating System** step in the following scenarios :  
 
