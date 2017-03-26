@@ -2,7 +2,7 @@
 title: "Manage volume-purchased iOS apps | Microsoft Docs"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,37 +25,47 @@ manager: angrobe
 
  The iOS app store lets you buy multiple licenses for an app that you want to run in your company. This helps you reduce the administrative overhead of tracking multiple copies of apps that you bought.  
 
- System Center Configuration Manager helps you deploy and manage iOS apps that you bought through the program by importing the license information from the app store and tracking the number of the licenses that you have used.  
+ System Center Configuration Manager helps you deploy and manage iOS apps that you bought through the program by importing the license information from the app store and tracking the number of the licenses that are being used.  
 
 ## Manage volume-purchased apps for iOS devices  
  You buy multiple licenses for iOS apps through the Apple Volume Purchase Program (VPP). This involves setting up an Apple VPP account from the Apple web site and uploading the Apple VPP token to Configuration Manager, which provides the following capabilities:  
 
--   Sync your volume purchase information with Configuration Manager.  
+-   Sync your volume purchase information with Configuration Manager. 
+ 
+- Sync apps from both the Apple Volume Purchase Program for Business, and the Apple Volume Purchase Program for Education.
+
+- Associate multiple Apple volume-purchase program tokens with Configuration Manager.
 
 -   Apps that you bought are displayed in the Configuration Manager console.  
 
 -   You can deploy apps, monitor these apps, and track the number of licenses for each app that has been used.  
 
--   Configuration Manager can help you reclaim licenses when required by uninstalling volume-purchased apps that you deployed to users.  
+-   Configuration Manager can help you reclaim licenses when required by uninstalling volume-purchased apps that you deployed.  
 
 ## Before you start  
  Before you begin, you'll need to get a VPP token from Apple and upload this to Configuration Manager.  
 
-> [!IMPORTANT]  
->  -   Currently, each organization can have only one VPP account and token.  
-> -   Only the Apple Volume Purchase Program for Business is supported.  
-> -   After you associate an Apple VPP account to Intune, you cannot subsequently associate a different account. For this reason, make sure that more than one person has the details of the account that you use.  
-> -   If you previously used a VPP token with a different MDM product in your existing Apple VPP account, you must generate a new one to use with Configuration Manager.  
-> -   Each token is valid for one year.  
-> -   By default, Configuration Manager syncs with the Apple VPP service twice a day to ensure that your licenses are synced with Configuration Manager.  
->   
->      Only changes to your licenses are synced. But, once every seven days, a full sync will be performed.  
->   
->      When you choose **Sync** to do a manual sync, this will always do a full sync.  
-> -   If you need to recover or restore you Configuration Manager database, we recommend that you do a manual sync afterwards to ensure that your synced license data is up to date.  
-> -   Although you can deploy iOS volume-purchased apps to user or device collections, VPP apps that you deploy to a device without a user (for instance, a device you enrolled without user affinity using the Device Enrollment Program (DEP) or Apple Configurator) will not be installed.  
+-   If you previously used a VPP token with a different MDM product in your existing Apple VPP account, you must generate a new one to use with Configuration Manager.  
+-   Each token is valid for one year.  
+-   By default, Configuration Manager syncs with the Apple VPP service twice a day to ensure that your licenses are synced with Configuration Manager.  
+      Only changes to your licenses are synced. But, once every seven days, a full sync will be performed.  
+      When you choose **Sync** to do a manual sync, this will always do a full sync.  
+-   If you need to recover or restore you Configuration Manager database, we recommend that you do a manual sync afterwards to ensure that your synced license data is up to date.  
+-   Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to let you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](enroll-hybrid-ios-mac.md).  
 
- Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to let you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](enroll-hybrid-ios-mac.md).  
+Beginning with System Center Configuration Manager 1702, you can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+
+|||||
+|-|-|-|
+|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+|Earlier than 1702|Yes|User|User license|
+|Earlier than 1702|No|User|User license|
+|Earlier than 1702|Yes|Device|User license|
+|Earlier than 1702|No|Device|User license|
+|1702 and later|Yes|User|User license|
+|1702 and later|No|User|User license|
+|1702 and later|Yes|Device|Device license|
+|1702 and later|No|Device|User license|
 
 ## Step 1 - To get and upload an Apple VPP token  
 
@@ -74,6 +84,8 @@ manager: angrobe
     -   **Description** - Optionally, enter a description that will help you identify this VPP token in the Configuration Manager console.  
 
     -   **Assigned categories to improve searching and filtering** - Optionally, you can assign categories to the VPP token to make it easier to search for in the Configuration Manager console.  
+    -   **Apple ID** - Enter the apple email ID associated with the VPP Token.
+    -   **Token type** - Select the type of VPP token you want to use. You can choose **Business** and **EDU** token types.
 
 5.  Choose **Next**, and then finish the wizard.  
 
@@ -91,12 +103,14 @@ The Configuration Manager application that is created has the Windows Store for 
     > [!IMPORTANT]  
     > You must choose a deployment purpose of **Required**. Available installations are not currently supported.
 
- When you deploy the app, a license is used by each user who installs the app.  
+ When you deploy the app, a license is used by each user, or for device installs, each device that installs the app.  If you target a device collection with an app that supports device licensing, a device license is claimed.  If you target a device collection with an app that does not support device licensing, a user license is claimed. 
+
+ When you create an app from the **License Information for Store Apps** node, the app is associated with licenses from the token for the app you selected.  For example, you might see two versions of the same app in the node. This is because each version of the app is associated with a different Apple VPP token.  You could then create apps from each token, and deploy them seperately.
 
  To reclaim a license, you must change the deployment action to **Uninstall**. The license will be reclaimed after the app uninstalls.  
 
 ## Step 3 - Monitor iOS VPP apps  
- The **License Information for Store Apps** node of the **Software Library** workspace displays information about your volume-purchased iOS apps. The information includes the total number of licenses that you own for each app and the number that have been deployed.
+ The **License Information for Store Apps** node of the **Software Library** workspace displays information about your volume-purchased iOS apps. The information includes the total number of licenses that you own for each app and the number that have been deployed. Additionally, the view shows which VPP token the app is associated with, and the type of the token
 
  You can also monitor the license usage of all VPP apps that you bought by using the **Apple Volume Purchase Program apps for iOS with license counts** report.  
 

@@ -2,7 +2,7 @@
 title: "Log files for Configuration Manager | Microsoft Docs"
 description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 1/12/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -498,10 +498,20 @@ M The log file SMS_DM.log on the site system server also records communication b
 
 The following table lists the log files that contain information related to the cloud management gateway.
 
-|Log name|Description|Computer with log file|  
-|--------------|-----------------|----------------------------|  
-|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.|Site system server|
+||||
+|-|-|-|
+|Log name|Description|Computer with log file|
+|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.<br>You can configure the logging level be editing the registry **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|The **SMS/Logs** folder on the site system server|
+|CMGSetup.log or CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Records details about the 2nd phase of the cloud management gateway deployment (local deployment in Azure)<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|CMGHttpHandler.log or CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Records details about the cloud management gateway http handler binding with Internet Information Services in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|CMGService.log or CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Records details about the cloud management gateway service core component in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |SMS_Cloud_ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
+
+<sup>1</sup> These are local Configuration Manager log files that cloud service manager sync from Azure storage every 5 minutes. The cloud management gateway will push logs to Azure storage every 5 minutes. so the maximum delay will be 10 minutes. Verbose switches will affect both local and remote logs.
+
+- For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
+- For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
+- For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**.
 
 ###  <a name="BKMK_CompSettingsLog"></a> Compliance settings and company resource access  
  The following table lists the log files that contain information related to compliance settings and company resource access.  

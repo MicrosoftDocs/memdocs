@@ -22,7 +22,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 The information in this topic is specific to using boundary groups with versions 1511, 1602, and 1606 of System Center Configuration Manager.
-If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/) in *Define site boundaries and boundary groups or System Center Configuration Manager* for information about how to use the redesigned boundary groups.  
+If you use version 1610 or later, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) for information about how to use the redesigned boundary groups.  
 
 
 ##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  
