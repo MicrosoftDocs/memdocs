@@ -43,17 +43,13 @@ robots: noindex
     * **Critical** - devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.
     * **Critical with event** - devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.|      
 
-5.  On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on, or click **Select all** to choose all device platforms.
+5.  On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on, or click **Select all** to choose all device platforms. The supported platforms are: Windows 7, 8.1, 10, Windows Server 2008 R2, 2012, 2012 R2 and 2016.
 
 6.  On the **Rules** page, you define one or more rules that define the configuration that devices must have in order to be evaluated as compliant. When you create a compliance policy, some rules are enabled by default, but you can edit or delete these. For a full list of all the rules see the **Compliance policy rules** section later in this topic.
 
 > [!NOTE]  
->  On Windows PCs, Windows Operating System version 8.1, is reported as 6.3 instead of 8.1.    If the OS version rule is set to Windows 8.1 for Windows, then the device will be reported as non-compliant even if the device has Windows OS 8.1. Make sure you are setting the right **reported** version of Windows for the Minimum and Maximum OS rules. The version number must match the version returned by the winver command. Windows Phones do not have this issue; the version is reported as 8.1 as expected.  
->   
->  Windows PCs with Windows 10 operating system, the version should be set as "10.0"+ the OS Build number returned by the winver command. For example, it could be something like 10.0.10586.  
-> Windows 10 Mobile does not have this issue.  
->   
->  ![CA&#95;Win10OSversion](media/CA_Win10OSversion.png)  
+>  On Windows PCs, Windows Operating System version 8.1, is reported as 6.3 instead of 8.1.    If the OS version rule is set to Windows 8.1 for Windows, then the device will be reported as non-compliant even if the device has Windows OS 8.1. Make sure you are setting the right **reported** version of Windows for the Minimum and Maximum OS rules. The version number must match the version returned by the winver command. Windows Phones do not have this issue; the version is reported as 8.1 as expected. 
+>  Windows PCs with Windows 10 operating system, the version should be set as "10.0"+ the OS Build number returned by the **winver** command.
 
 7.  On the **Summary** page of the wizard, review the settings you made, and then complete the wizard.
 
@@ -94,6 +90,36 @@ robots: noindex
     -   **Non-Compliant**: Displays a list of all noncompliant rules within the policy based on number of assets affected. You can click a rule to create a temporary node under the **Users** or **Devices** node of the **Assets and Compliance** workspace, which contains all users or devices that are not compliant with this rule. When you select a user or device, the **Asset Details** pane displays the users or devices that are affected by the selected issue. Double-click a user or device in the list to display further information about the issue.
 
     -   **Unknown**: Displays a list of all users and devices that did not report compliance for the selected policy deployment together with the current client status of devices.
+
+### To monitor the individual compliance status
+
+You can also see the individual device status:
+
+1.  In the Configuration Manager console, click on **Assets and compliance** workspace.
+
+2.  Click on **Devices**.
+3.  Right click on one of the columns to enable more columns.
+
+You can add the following columns:
+
+- **Azure Active Directory device ID:**  The unique identifier for the device in AAD.
+
+- **Compliance Error Details:**  Error message details when the end-to-end process goes wrong. If this column is blank, it means no errors were found, and the compliance status was successfully reported.
+
+- **Compliance Error Location:**  Provides more details on where the compliance failed. If this column is blank, it means no errors were found, and the compliance status was successfully reported. Examples of where the compliance process could fail: 
+	- ConfigMgr Client
+	- Management point
+	- Intune
+	- Azure Active Directory
+<br></br>
+- **Compliance Evaluation Time:** Last time the compliance was checked.
+
+- **Compliance Set Time:** Last time the compliance was updated to Azure Active Directory.
+
+- **Conditional Access Compliant:**  Whether the machine is compliant with conditional access policies or not.
+
+> [!IMPORTANT]
+> These columns are not displayed by default.
 
 ### To view Intune compliance policies charts
 1. Beginning in version 1610 of Configuration Manager, in the Configuration Manager console, click **Monitoring**.
@@ -233,7 +259,7 @@ App ID is an identifier that uniquely identifies the app within the Apple and Go
 - **Android**
 	- You can find the App ID in Google Play store URL used to create the app:
 		- Example App ID: ***…?id=com.companyname.appname&hl=en***
-<br></br>
+
 - **iOS**
 	- In iTunes store URL find the **ID#**, example: ***/id875948587?mt=8***
 	- In a web browser navigate to the following URL, replacing the number with the ID# just found: 

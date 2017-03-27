@@ -31,7 +31,7 @@ However, baseline media, like the baseline version 1606 that released in October
 
 -   You run the built-in Configuration Manager backup task: The folder is created or updated under the designated backup folder location.  
 
--  Begining with version 1606, the CD.Latest folder is created when you install a new site using baseline media (like verison 1606 or 1702).
+-  Beginning with version 1606, the CD.Latest folder is created when you install a new site using baseline media (like version 1606).
 
 The source files from the CD.Latest folder are supported for the following:  
 

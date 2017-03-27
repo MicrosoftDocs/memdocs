@@ -2,7 +2,7 @@
 title: "Setup command-line options | Microsoft Docs"
 description: "Use information in this article to configure scripts or to install System Center Configuration Manager from a command line."
 ms.custom: na
-ms.date: 13/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -151,6 +151,15 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   **Values:** InstallCAS  
 
     -   **Details:** Installs a central administration site.  
+
+-   **Key Name:** CDLatest  
+
+    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+
+    -   **Values:** 1
+        Any value other than 1 is considered to not be using CD.Latest.
+
+    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
 
 **Options**  
 
@@ -389,6 +398,15 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Values:** InstallPrimarySite  
 
     -   **Details:** Installs a primary site.  
+
+-   **Key Name:** CDLatest  
+
+    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+
+    -   **Values:** 1
+        Any value other than 1 is considered to not be using CD.Latest.
+
+    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
 
 **Options**  
 
@@ -708,6 +726,15 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Details:** Recovers a central administration site.  
 
+-   **Key Name:** CDLatest  
+
+    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+
+    -   **Values:** 1
+        Any value other than 1 is considered to not be using CD.Latest.
+
+    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.
+
 **RecoveryOptions**  
 
 -   **Key Name:** ServerRecoveryOptions  
@@ -969,6 +996,15 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Values:** <*RecoverPrimarySite*>  
 
     -   **Details:** Recovers a primary site.  
+
+-   **Key Name:** CDLatest  
+
+    -   **Required:** Yes – Only when using media from the CD.Latest folder.    
+
+    -   **Values:** 1
+        Any value other than 1 is considered to not be using CD.Latest.
+
+    -   **Details:** Your script must include this key and value when you run setup from media in a CD.Latest folder for the purpose of installing a primary or central administration site, or recovering a primary or central administration site. This value informs setup that media form CD.Latest is being used.    
 
 **RecoveryOptions**  
 

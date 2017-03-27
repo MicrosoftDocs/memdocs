@@ -43,16 +43,16 @@ manager: angrobe
 
  The following table lists the device types supported by compliance policies and how noncompliant settings are managed when the policy is used with a conditional access policy.  
 
-|Rule|Windows 8.1 and later|Windows Phone 8.1 and later|iOS 6.0 and later|Android 4.0 and later Samsung KNOX Standard 4.0 and later|  
+|Rule|Windows 8.1 and later|Windows Phone 8.1 and later|iOS 6.0 and later|Android 4.0 and later Samsung KNOX Standard 4.0 and later, Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
 |**PIN or password configuration**|Remediated|Remediated|Remediated|Quarantined|  
-|**Device encryption**|N/A|Remediated|Remediated (by setting PIN)|Quarantined|  
+|**Device encryption**|N/A|Remediated|Remediated (by setting PIN)|Quarantined<br>(Android for Work always encrypted)|  
 |**Jailbroken or rooted device**|N/A|N/A|Quarantined (not a setting)|Quarantined (not a setting)|  
 |**Email profile**|N/A|N/A|Quarantined|N/A|  
 |**Minimum OS version**|Quarantined|Quarantined|Quarantined|Quarantined|  
 |**Maximum OS version**|Quarantined|Quarantined|Quarantined|Quarantined|  
 |**Device Health Attestation (1602 update)**|Setting is not applicable to Windows 8.1<br /><br /> Windows 10 and Windows 10 Mobile are Quarantined.|N/A|N/A|N/A|  
-|**Apps that cannot be installed**|N/A|N/A|Quarantined|Quarantined| 
+|**Apps that cannot be installed**|N/A|N/A|Quarantined|Quarantined|
 
  **Remediated** = Compliance is enforced by the device operating system (for example, the user is forced to set a PIN).  There is never a case when the setting will be noncompliant.  
 

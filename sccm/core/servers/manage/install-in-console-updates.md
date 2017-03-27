@@ -88,7 +88,8 @@ Review the applicable update checklist for actions to take before you start the 
 - Update to 1606: See [Checklist for installing update 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
 
 - Update to 1610 from either 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
-<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
+
+- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md).
 
 ###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
 The information in this step applies only when you are installing an *update* for a System Center Configuration Manager site. If you are *upgrading* a System Center 2012 Configuration Manager site to System Center Configuration Manager, see [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).

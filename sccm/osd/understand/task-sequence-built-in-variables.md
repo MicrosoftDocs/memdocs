@@ -2,7 +2,7 @@
 title: Task sequence built-in variables | Microsoft Docs
 description: "Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -42,7 +42,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 |_SMSTSMachineName|Stores and specifies the computer name. Stores the name of the computer that the task sequence will use to log all status messages. To change the computer name in the new operating system, use the **OSDComputerName** variable.<br /><br /> Example:<br /><br /> **ABC**|  
 |_SMSTSMDataPath|Specifies the path defined by the SMSTSLocalDataDrive variable. When you define SMSTSLocalDataDrive before the task sequence starts, such as by setting a collection variable, Configuration Manager then defines the _SMSTSMDataPath variable once the Task Sequence starts.|  
 |_SMSTSMediaType|Specifies the type of media that is used to initiate the installation. Examples of types of media are Boot Media, Full Media, PXE, and Prestaged Media.|  
-|_SMSTSMP|Stores the name or IP address of a Configuration Manager management point.|  
+|_SMSTSMP|Stores the URL or IP address of a Configuration Manager management point.|  
 |_SMSTSMPPort|Stores the management point port number of a Configuration Manager management point.<br /><br /> Example:<br /><br /> **80**|  
 |_SMSTSOrgName|Stores the branding title name that is displayed in a task sequence progress user interface dialog box.<br /><br /> Example:<br /><br /> **XYZ Organization**|  
 |_SMSTSOSUpgradeActionReturnCode|Stores the exit code value returned from Setup to indicate success or failure.  This variable is set during the task sequence steps Operating System Upgrade task sequence step. This is useful with the /Compat Windows 10 Setup command-line option.<br /><br /> Example:<br /><br /> On the completion of /Compat, you can take actions in later steps depending on the failure or success exit code. On success, you could initiate the upgrade. Or, you could  set a marker in the environment (for example, add a file or  set a registry key) that can then be used to create a collection of computers that are ready to upgrade or that require action before they are upgraded.|  
@@ -70,6 +70,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 |TSErrorOnWarning|Use this variable to specify whether the task sequence engine considers a detected warning as an error during the Application Installation task sequence step. The task sequence sets the _TSAppInstallStatus variable to **Warning** when one or more applications, or a required dependency, did not install because a requirement was not met. When you set the TSErrorOnWarning variable to **True** and the _TSAppInstallStatus variable is set to Warning, it is treated as an error. A value of **False** is the default behavior.|  
 |SMSTSLanguageFolder|Use this variable to change the display language of a language neutral boot image.|  
 |SMSTSLocalDataDrive|Specifies where temporary files are stored on the destination computer while the task sequence is running.<br /><br /> This variable must be set before the task sequence starts, such as by setting a collection variable. Once the task sequence starts, Configuration Manager defines the _SMSTSMDataPath variable once the Task Sequence starts.|  
+|SMSTSMP|Use this variable to specify the URL or IP address of the Configuration Manager management point.|  
 |SMSTSMPListRequestTimeout|Use this variable to specify how many milliseconds a task sequence waits before it retries to install an application or software update after it fails to retrieve the management point list from location services. By default, the task sequence waits 60,000 milliseconds (60 seconds) before it retries the step, and retries up to three times. This variable is applicable only to the Install Application and Install Software Updates task sequence steps.|  
 |SMSTSMPListRequestTimeoutEnabled|Use this variable to enable repeated MPList requests to refresh the client if the client is not on the Intranet. <br />By default, this variable is set to True. When clients are on the internet, you can set this variable to False to avoid unnecessary delays. This variable is applicable only to the Install Application and Install Software Updates  task sequence steps.|  
 |SMSTSPeerDownload|Use this variable to enable the client to use Windows PE Peer Cache.<br /><br /> Example:<br /><br /> SMSTSPeerDownload  = **TRUE** enables this functionality.|  
