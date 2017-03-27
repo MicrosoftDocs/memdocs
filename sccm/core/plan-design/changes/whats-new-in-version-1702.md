@@ -87,7 +87,7 @@ The following are changes for Updates and Servicing:
   You can choose to download and install the other available updates, even when they are not the most current version. If you download an older update, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 - **Improved cleanup of older updates**   
-  We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
+  We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server. Because this is introduced with version 1702, cleanup begins to work after installing a subsequent update like an update rollup or future update version.  
 
 
 ### Data Warehouse service point
