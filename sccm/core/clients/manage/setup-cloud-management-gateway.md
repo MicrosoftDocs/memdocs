@@ -1,9 +1,9 @@
 ---
 title: "Set up Cloud Management Gateway | Microsoft Docs"
 description: ""
-author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.author: nbigman
 ms.date: 12/14/2016
 ms.topic: article
 ms.prod: configuration-manager
