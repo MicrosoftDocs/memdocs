@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Security and privacy for clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for clients in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This article contains security and privacy information for clients in System Center Configuration Manager and for mobile devices that are managed by the Exchange Server connector:  
 
 ##  <a name="BKMK_Security_Cliients"></a> Security best practices for clients  

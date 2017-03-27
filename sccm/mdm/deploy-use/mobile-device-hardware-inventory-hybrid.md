@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 caps.latest.revision: 7
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 
 ---

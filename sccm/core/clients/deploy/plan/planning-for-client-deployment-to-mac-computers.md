@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Planning for client deployment to Mac computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Planning for client deployment to Mac computers in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can install the Configuration Manager client on Mac computers that run the Mac OS X operating system and use the following management capabilities:  
 
 -   **Hardware inventory**  
