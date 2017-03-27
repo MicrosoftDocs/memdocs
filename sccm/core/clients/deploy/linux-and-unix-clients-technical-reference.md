@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
 caps.latest.revision: 6
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Linux and UNIX clients component services and commands for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Linux and UNIX clients component services and commands for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
  The following table identifies the client component services of the Configuration Manager client for Linux and UNIX.  
 

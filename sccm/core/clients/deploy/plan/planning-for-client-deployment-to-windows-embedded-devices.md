@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Planning for client deployment to Windows Embedded devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Planning for client deployment to Windows Embedded devices in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 <a name="BKMK_DeployClientEmbedded"></a> If your Windows Embedded device does not include the System Center Configuration Manager client, you can use any of the client installation methods if the device meets the required dependencies. If the embedded device supports write filters, you must disable these filters before you install the client, and then re-enable the filters again after the client is installed and assigned to a site.  
 
  Note that when you disable the filters, you should not disable the filter drivers. Typically these drivers are started automatically when the computer is started. Disabling the drivers will either prevent installation of the client, or interfere with write filter orchestration which will cause client operations to fail. These are the services associated with each write filter type that must remain running:  
