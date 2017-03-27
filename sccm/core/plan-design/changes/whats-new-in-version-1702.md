@@ -133,29 +133,6 @@ For a list of all available settings, see [Create configuration items for iOS an
 
 ## Application Management
 
-### Deploy volume-purchased iOS apps to device collections
-
-You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
-
-|||||
-|-|-|-|-|
-|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
-|Earlier than 1702|Yes|User|User license|
-|Earlier than 1702|No|User|User license|
-|Earlier than 1702|Yes|Device|User license|
-|Earlier than 1702|No|Device|User license|
-|1702 and later|Yes|User|User license|
-|1702 and later|No|User|User license|
-|1702 and later|Yes|Device|Device license|
-|1702 and later|No|Device|User license|
-
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
-### Support for iOS Volume Purchase Program for Education
-
-You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
 ### Improved support for Windows Store for Business apps
 
 You can now deploy online licensed apps from the Windows Store for Business to Windows 10 PCs that you manage using the Configuration Manager client.
@@ -168,6 +145,12 @@ In the **Properties** dialog box of a deployment type, on the **Install Behavior
 If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
 
 If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
+
+### App management improvments for hybrid MDM
+
+- [Deploy volume-purchased iOS apps to device collections](#deploy-volume-purchased-ios-apps-to-device-collections)
+- [Support for iOS Volume Purchase Program for Education](#support-for-ios-volume-purchase-program-for-education)
+
 
 ## Operating system deployment
 
@@ -272,6 +255,7 @@ To prevent issues when upgrading from prior versions of Configuration Manager, m
 
 ### Android for Work support
 Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
+
 - [Enroll Android for Work devices](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)
 - [Approve and deploy Android for Work apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
 - [Create configuration items for Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-for-work-configuration-items)
@@ -289,6 +273,29 @@ Additionally, you can now specify multiple certification authorities (CAs) on mu
 For more information, see [Certificate infrastructure](/sccm/protect/deploy-use/certificate-infrastructure).
 
 These new features for certificates are currently pre-release, and are subject to change.
+
+### Deploy volume-purchased iOS apps to device collections
+
+You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+
+|||||
+|-|-|-|-|
+|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+|Earlier than 1702|Yes|User|User license|
+|Earlier than 1702|No|User|User license|
+|Earlier than 1702|Yes|Device|User license|
+|Earlier than 1702|No|Device|User license|
+|1702 and later|Yes|User|User license|
+|1702 and later|No|User|User license|
+|1702 and later|Yes|Device|Device license|
+|1702 and later|No|Device|User license|
+
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+### Support for iOS Volume Purchase Program for Education
+
+You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ### Conditional access device compliance policy improvements
 
