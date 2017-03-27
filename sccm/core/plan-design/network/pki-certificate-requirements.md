@@ -28,7 +28,7 @@ The public key infrastructure (PKI) certificates that you might require for Syst
 -   For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
-> Effective February 14, 2017, Windows no longer trusts certain certificates signed with SHA-1. System Center Configuration Manager supports SHA-2 certificates and the use of SHA-2 certificates brings an important security advantage. Therefore, we recommend:
+> System Center Configuration Manager supports SHA-2 certificates and the use of SHA-2 certificates brings an important security advantage. Therefore, we recommend:
 > - That you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256 and SHA-512, among others).
 > - That any Internet-facing services use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.  
 >
