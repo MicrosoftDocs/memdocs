@@ -117,9 +117,9 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **New Mobile Threat Defense monitoring tools**
 
-    Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+    You have now have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
 
-    Learn more [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
+    For more information, see [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
 ## New hybrid features in February 2017
 
