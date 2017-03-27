@@ -25,13 +25,6 @@ Administrators can view the status of [Windows 10 Device Health Attestation](htt
 
 This functionality is available for PCs and on-premises resources managed by Configuration Manager and mobile devices managed with Microsoft Intune. Administrators can specify whether reporting is done via the cloud or on-premises infrastructure. On-premises device health attestation monitoring enables administrator to monitor client PCs without internet access.
 
-Configuration Manager Device Health Attestation displays the following:  
-
--   **Health Attestation Status** - Shows the share of devices in compliant, noncompliant, error, and unknown states  
--   **Devices Reporting Health Attestation** - Shows the percentage of devices reporting Health Attestation status  
--   **Noncompliant Devices by Client Type** - Shows share of mobile devices and computers that are noncompliant  
--   **Top Missing Health Attestation Settings** - Shows the number of devices missing the health attestation setting, listed per setting  
-
 ## Enable Health Attestation
 
  **Requirements:**  
@@ -58,19 +51,24 @@ Starting with Configuration Manager 1702, the on-premises device health attestat
 2. Right-click the primary or secondary site with the management point that support on-premises device health attestation clients, and select **Configure site components** > **Management Point**. The **Management Point Component Properties** page opens.
 3. On the **Advanced Options** tab, select **Add** and specify a valid on-premises device health attestation service URL. You can add multiple URLs. If multiple on-premises URLs are specified, clients receive the full set and randomly choose which to use.
 4.  In the Configuration Manager console, choose **Administration** > **Overview** > **Client Settings**.  Select the tab for **Computer Agent** settings.  
-5.  In the **Default Settings** dialog box, select **Computer Agent** and then scroll down to **Use on-premises Health Attestaion Service**.  
-6. Target the collections of devices that should report device health.
+5.  In the **Default Settings** dialog box, select **Computer Agent** and then scroll down to **Use on-premises Health Attestaion Service**, and set to **Yes**.
+6. Target the collections of devices that should report device health with the client agent settings to enable device health attestation reporting.
 
 You can also **Edit** or **Remove** device health attestation service URLs.
 
 > [!NOTE]
 > If you used device health attestation prior to upgrading to Configuration Manager 1702, the on-premises URLs specified in the client agent settings is pre-populate in the management point properties during the upgrade. On-premises clients will continue to use the URL specified in client agent settings until they are upgraded. They will then switch to one of the URLs specified on the management point.
 
-
-## How to view Health Attestation  
+## Monitor device health attestation
 
 1.  To view the device health attestation view, in the Configuration Manager console go to the **Monitoring** workspace of, click **Security** node, and then click **Health Attestation**.  
-
 2.  Device Health Attestation is displayed.  
 
- Client device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).
+Configuration Manager Device Health Attestation displays the following:  
+
+-   **Health Attestation Status** - Shows the share of devices in compliant, noncompliant, error, and unknown states  
+-   **Devices Reporting Health Attestation** - Shows the percentage of devices reporting Health Attestation status  
+-   **Noncompliant Devices by Client Type** - Shows share of mobile devices and computers that are noncompliant  
+-   **Top Missing Health Attestation Settings** - Shows the number of devices missing the health attestation setting, listed per setting
+
+Client Device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).  
