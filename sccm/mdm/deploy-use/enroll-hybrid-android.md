@@ -51,8 +51,8 @@ The following steps allow Configuration Manager to manage Android devices withou
    - **Manage supported devices as Android for Work** - (Enabled) All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
    - **Manage supported devices for users only in these groups as Android for Work** - (Enabled for some groups only) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
 
- > [!NOTE]
- > A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage all supported devices as Android for Work**.
+> [!NOTE]
+> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage all supported devices as Android for Work**.
 
 
 Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
@@ -61,6 +61,14 @@ You'll see the account name and organization name in the Intune portal when the 
 
 ### Enroll an Android for Work device
  How your end users enroll Android for Work devices is similar to enrollment for Android. Users can download and install the Company Portal app for Android on their mobile devices. The app prompts them to create a work profile as part of the enrollment process.  Once the work profile is created, users must switch to the managed version of the Company Portal. The managed Company Portal is tagged with a small orange briefcase in the bottom-right corner.
+
+### Manage Android for Work devices
+Once you have enabled Android for Work enrollment you can perform the following management tasks for Android for Work devices:
+- [Approve apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
+- [Create configuration items](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)
+- [Manage compliance settings](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)
+- [Manage email profiles](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
+- [Selectively wipe the work profile](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 
 > [!div class="button"]
 [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
