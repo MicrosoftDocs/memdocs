@@ -2,7 +2,7 @@
 title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager | Microsoft Docs"
 description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ---
 # Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager
@@ -72,19 +72,22 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 |Management agent|Device Administrator privilege is revoked.|Device Administrator privilege is revoked.|  
 |Email profiles|Not applicable.|For email profiles provisioned by Intune, the email account and email are removed.|  
 
+**Android for Work**
+
+Performing selective wipe on an Android for Work device removes the work profile along with all data, apps, and settings in the work profile on that device. This retires the device from management with Configuration Manager and Intune. Full wipe is not supported for Android for Work.
+
  **Windows 10, Windows 8.1,  Windows RT 8.1, and Windows RT**  
 
-|Content removed when retiring a device|Windows 10, Windows 8.1 and Windows RT 8.1|Windows RT|  
-|---------------------------------|-------------|-----------|
-|Company apps and associated data installed by using Configuration Manager and Intune.|Apps are uninstalled and sideloading keys are removed. Apps using Windows Selective Wipe will have the encryption key revoked and data will no longer be accessible.|Sideloading keys are removed but apps remain installed.|  
-|VPN and Wi-Fi profiles|Removed.|Not applicable.|  
-|Certificates|Removed and revoked.|Not applicable.|  
-|Settings|Requirements removed.||  
-|Management agent|Not applicable. Management agent is built-in.|Not applicable. Management agent is built-in.|  
-|Email profiles|Removes email that is EFS-enabled which includes the Mail app for Windows email and attachments.|Not applicable.|  
+|Content removed when retiring a device|Windows 10, Windows 8.1 and Windows RT 8.1|  
+|---------------------------------|-------------|
+|Company apps and associated data installed by using Configuration Manager and Intune.|Apps are uninstalled and sideloading keys are removed. Apps using Windows Selective Wipe will have the encryption key revoked and data will no longer be accessible.|  
+|VPN and Wi-Fi profiles|Removed.|  
+|Certificates|Removed and revoked.|  
+|Settings|Requirements removed.|
+|Management agent|Not applicable. Management agent is built-in.|  
+|Email profiles|Removes email that is EFS-enabled which includes the Mail app for Windows email and attachments.|  
 
- **Windows 10 Mobile, Windows Phone 8.0 and Windows Phone 8.1**  
-
+ **Windows 10 Mobile, Windows Phone 8.0 and Windows Phone 8.1**
 
  |Content removed when retiring a device|Windows 10 Mobile, Windows Phone 8 and Windows Phone 8.1|  
 |-|-|
@@ -97,53 +100,29 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
  The following settings are also removed from Windows 10 Mobile and Windows Phone 8.1 devices:  
 
 -   Require a password to unlock mobile devices  
-
 -   Allow simple passwords  
-
 -   Minimum password length  
-
 -   Required password type  
-
 -   Password expiration (days)  
-
 -   Remember password history  
-
 -   Number of repeated sign-in failures to allow before the device is wiped  
-
 -   Minutes of inactivity before password is required  
-
 -   Required password type – minimum number of character sets  
-
 -   Allow camera  
-
 -   Require encryption on mobile device  
-
 -   Allow removable storage  
-
 -   Allow web browser  
-
 -   Allow application store  
-
 -   Allow screen capture  
-
 -   Allow geolocation  
-
 -   Allow Microsoft Account  
-
 -   Allow copy and paste  
-
 -   Allow Wi-Fi tethering  
-
 -   Allow automatic connection to free Wi-Fi hotspots  
-
 -   Allow Wi-Fi hotspot reporting  
-
 -   Allow factory reset  
-
 -   Allow Bluetooth  
-
 -   Allow NFC  
-
 -   Allow Wi-Fi  
 
 ### To initiate a remote wipe from the Configuration Manager console  
@@ -187,10 +166,11 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 |Platform|Passcode Reset|  
 |--------------|--------------------|  
 |iOS|Supported for clearing the passcode from a device. Does not create a new temporary passcode.|  
-|Android|Supported and a temporary passcode is created.|  
+|Android|Supported and a temporary passcode is created.|
+|Android for Work | Not supported|
 |Windows 10|Not supported at this time.|  
 |Windows Phone 8 and Windows Phone 8.1|Supported|  
-|Windows RT 8.1 and Windows RT|Not Supported|  
+|Windows RT 8.1 |Not Supported|  
 |Windows 8.1|Not Supported|  
 
 ### To reset the passcode on a mobile device remotely in Configuration Manager  
@@ -218,7 +198,7 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 |Android|Supported|  
 |Windows 10|Not supported at this time.|  
 |Windows Phone 8 and Windows Phone 8.1|Supported|  
-|Windows RT 8.1 and Windows RT|Supported if the current user of the device is the same user who enrolled the device.|  
+|Windows RT 8.1 |Supported if the current user of the device is the same user who enrolled the device.|  
 |Windows 8.1|Supported if the current user of the device is the same user who enrolled the device.|  
 
 ### To lock a mobile device remotely through the Configuration Manager console  

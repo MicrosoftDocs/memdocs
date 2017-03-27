@@ -1,9 +1,8 @@
-
 ---
 title: "Client Peer Cache | System Center Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/13/2017
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -17,6 +16,7 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ---
+
 # Peer Cache for Configuration Manager clients
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -26,11 +26,14 @@ Beginning with System Center Configuration Manager version 1610, you can use **P
 > [!TIP]  
 > Introduced with version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
 
+## Overview
  - 	You use client settings to enable clients to use Peer Cache.
  - 	To share content, Peer Cache clients must both be members of the current boundary group of the client that's seeking the content. Peer Cache clients in neighbor boundary groups are not included with the pool of available content source locations when a client uses fallback to seek content from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - Clients that are not enabled for Peer Cache but are in the current boundary group with Peer Cache enabled clients, can get content from the Peer Cache enabled client.  
  - Every type of content that is held in the cache of a Configuration Manager client can be served to other clients by using Peer Cache.
  -	Peer Cache does not replace the use of other solutions like BranchCache but instead works side-by-side with it to give you more options for extending traditional content deployment solutions such as distribution points. This is a custom solution with no reliance on BranchCache, so if you don’t enable or use Windows BranchCache, it still works.
+
+### Operations
 
 After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group:
  -	A client that operates as a peer content source submits a list of available cached content to its management point.
@@ -40,9 +43,42 @@ After you deploy client settings that enable Peer Cache to a collection, members
 > [!NOTE]
 > If fallback to a neighbor boundary group for content occurs, the Peer Cache content source locations from the neighbor boundary group are not added to the client's pool of potential content source locations.  
 
-Though you can make all clients participate in Peer Cache, it's a best practice to choose only clients that are best suited for being peer cache sources.  The suitability of clients can be evaluated based on a client’s chassis type, disk space, network connectivity, and more. For more information that can help you select the best clients to use for Peer Cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
 
+Though you can make all clients participate as a peer cache source, it's a best practice to choose only clients that are best suited for being peer cache sources.  The suitability of clients can be evaluated based on a client’s chassis type, disk space, network connectivity, and more. For more information that can help you select the best clients to use for Peer Cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
+
+**Limited access to a peer cache source**  
+Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+  -  Is in low battery mode.
+  -  CPU load exceeds 80% at the time the content is requested.
+  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
+  -  There are no more available connections to the computer.   
+
+You can configure these settings using the client configuration server WMI class for the peer source feature (*SMS_WinPEPeerCacheConfig*) when you use the System Center Configuration Manager SDK.
+
+When the computer rejects a request for the content, the requesting computer will continue to seek content from alternate sources in its pool of available content source locations.   
+
+
+
+### Monitoring   
 To help you understand the use of Peer Cache, you can view the Client Data Sources dashboard. See [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
+
+Beginning with version 1702, you can use three reports to view peer cache use. In the console, go to **Monitoring** > **Reporting** > **Reports**. The reports all have a type of **Software Distribution Content**:
+1.  **Peer cache source content rejection**:  
+Use this report to understand how often the peer cache sources in a boundary group rejected a content request.
+ - **Known issue:** When drilling down on results like *MaxCPULoad* or *MaxDiskIO*, you might receive an error that suggests the report or details cannot be found. To work around this, use the following two reports which show the results directly. 
+
+2. **Peer cache source content rejection by condition**:  
+Use this report to understand rejection details for a specified boundary group or rejection type. You can specify
+
+  - **Known issue:** You cannot select from available parameters and instead must enter them manually. Enter the values for *Boundary Group Name* and *Rejection Type* as seen in the first report. For example, for *Rejection Type* you might enter *MaxCPULoad* or *MaxDiskIO*.
+
+3. **Peer cache source content rejection details**:   
+  Use this report to understand the content that was being requested when it was rejected.
+
+ - **Known issue:** You cannot select from available parameters and instead must enter them manually. Enter the value for *Rejection Type* as displayed in the first report (Peer cache source content rejection), and then enter the *Resource ID* for the content source that you want more information about.  To find the Resource ID of the content source:  
+
+    1. Find the computer name which displays as the *Peer cache source* in the results of the 2nd report (Peer cache source content rejection by condition).  
+    2. Next, go to **Assets and Compliance** > **Devices** and then search for that computers name. Use the value from the Resource ID column.  
 
 
 ## Requirements and considerations for Peer Cache

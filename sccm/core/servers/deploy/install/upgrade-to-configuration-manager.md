@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,6 +29,7 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
  > When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
+
 **Upgrade to version 1606**  
 On December 15th, 2016, the baseline media for version 1606 was rereleased to add support for additional upgrade scenarios. This new release supports the upgrade of the following to a fully licensed version of System Center Configuration Manager version 1606:  
 -   An evaluation install of System Center Configuration Manager version 1606

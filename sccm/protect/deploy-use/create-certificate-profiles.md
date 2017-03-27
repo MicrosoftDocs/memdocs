@@ -2,7 +2,7 @@
 title: "How to create SCEP certificate profiles | Microsoft Docs"
 description: "Learn how to use certificate profiles to provision managed devices with the certificates they need in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/22/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ ms.author: nbigman
 manager: angrobe
 
 ---
+
 # Create certificate profiles
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -52,7 +53,9 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
 -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
 
--   **Personal Information Exchange PKCS #12 (PFX) settings import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+
+- **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to create a new PFX certificate profile. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
 
 
 
@@ -179,4 +182,7 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 ###  Specify supported platforms for the certificate profile  
 
 1. On the **Supported Platforms** page of the Create Certificate Profile Wizard, select the operating systems where you want to install the certificate profile. Or, click **Select all** to install the certificate profile to all available operating systems.
-2. Review the **Summary** page of the wizard and choose **Finish**. The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
+2. Review the **Summary** page of the wizard and choose **Finish**. 
+ 
+ 
+The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
