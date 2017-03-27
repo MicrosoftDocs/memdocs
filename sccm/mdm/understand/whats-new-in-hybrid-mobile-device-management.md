@@ -2,7 +2,7 @@
 title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 03/16/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -81,9 +81,9 @@ The following Intune features introduced in March 2017 work in hybrid deployment
 
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1702.
 
-- [Android for Work Support](#android-for-work-support)
-- [Non-Compliant Apps Compliance Settings](#non-compliant-apps-compliance-settings)
-- [PFX Certificate Creation and Distribution and S/MIME Support](#pfx-certificate-creation-and-distribution-and-smime-support)
+- [Android for Work Support](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
+- [Non-Compliant Apps Compliance Settings](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
+- [PFX Certificate Creation and Distribution and S/MIME Support](/sccm/core/plan-design/changes/whats-new-in-version-1702##improvements-to-certificate-profiles)
 - [Android and iOS versions are no longer targetable in creation wizards for hybrid MDM](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
 
 The following additional hybrid features are also included in version 1702 of Configuration Manager (current branch):
@@ -111,6 +111,15 @@ The following additional hybrid features are also included in version 1702 of Co
 
   For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
+- **Support for line of business apps in Windows Store for Business**
+
+  You can now sync custom line of business apps from the Windows Store for Business.
+
+- **New Mobile Threat Defense monitoring tools**
+
+    Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+
+    Learn more [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
 ## New hybrid features in February 2017
 

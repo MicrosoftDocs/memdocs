@@ -146,7 +146,7 @@ If the application was deployed as **Available**, and an end user tries to insta
 
 If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
 
-### App management improvments for hybrid MDM
+### App management improvements for hybrid MDM
 
 - [Deploy volume-purchased iOS apps to device collections](#deploy-volume-purchased-ios-apps-to-device-collections)
 - [Support for iOS Volume Purchase Program for Education](#support-for-ios-volume-purchase-program-for-education)
@@ -296,6 +296,10 @@ For more information about volume-purchased iOS apps, see [Manage volume-purchas
 
 You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
 For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+### Support for line of business apps in Windows Store for Business
+
+You can now sync custom line of business apps from the Windows Store for Business.
 
 ### Conditional access device compliance policy improvements
 
