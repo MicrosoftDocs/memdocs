@@ -93,9 +93,9 @@ To import a PFX certificate, you'll need the Configuration Manager SDK. Any cert
         $NewEntry.UserName = $UserName  
     $Resource = $WMIConnection.psbase.InvokeMethod("ImportForUser",$NewEntry,$null)  
 
-    ```  
+```  
 
-   The following script variables must be modified for your script:  
+The following script variables must be modified for your script:  
 
    -   blob\ = The PFX base64-encrypted blob  
    -   $Password = The password for the PFX file  
