@@ -1,7 +1,7 @@
 ---
 title: "Setup Wizard | Microsoft Docs"
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -235,7 +235,7 @@ To expand the site, you use the System Center Configuration Manager Setup Wizard
 
 -   On the **Site Installation** page, you select the option to expand the stand-alone primary site.  
 
-To expand a stand-alone primary site, use the procedure *[To install a primary or central administration site](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_installpri)*, earlier in this article.
+To expand a stand-alone primary site, first see the [prerequisites to expand a site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), and then use the procedure *[To install a primary or central administration site](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_installpri)*, earlier in this article.
 
 
 ## <a name="bkmk_secondary"></a> Install a secondary site

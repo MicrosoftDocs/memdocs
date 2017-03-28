@@ -2,7 +2,7 @@
 title: Task sequence steps - Configuration Manager | Microsoft Docs
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 caps.latest.revision: 26
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Task sequence steps in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Task sequence steps in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
 
@@ -650,7 +655,7 @@ This step runs in either a standard operating system or Windows PE. However, the
 -   **Custom path**  
 
  **Save path as a variable**  
- You can save the path as a variable that you can  use in another task sequence step. When there is more than one package, Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, this is the root for where all the referenced content is stored (which can be multiple packages). When you refer to the variable in a subsequence step, such as Upgrade Operating System, it is used with a numerical suffix. In this example, %*mycontent01*% or %*mycontent02*% where the number corresponds to the order in which the package is listed in this step.  
+ You can save the path as a variable that you can  use in another task sequence step. Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, it is the root for where all the referenced content is stored (which can be multiple packages). When you refer to the variable, you will add a numerical suffix to the variable. For example, for the first package, you will refer to %*mycontent01*% variable. When you refer to the variable in a subsequence steps, such as Upgrade Operating System, you would use %*mycontent02*% or %*mycontent03*% where the number corresponds to the order in which the package is listed in the step.  
 
  **If a package download fails, continue downloading other packages in the list**  
  Specifies that if the package download fails that it will go to the next package in the list and start the download.  
@@ -975,14 +980,14 @@ This step runs in either a standard operating system or Windows PE. However, the
 ##  <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates  
  Use the **Install Software Updates** task sequence step to install software updates on the destination computer. The destination computer is not evaluated for applicable software updates until this task sequence step runs. At that time, the destination computer is evaluated for software updates like any other Configuration Manager-managed client. In particular, this step installs only the software updates that are targeted to collections of which the computer is currently a member.  
 >  [!IMPORTANT]
->We hightly recommend that you install the latest version of the Windows Update Agent for much better performance when using the Install Software Updates task sequence step.
+>We highly recommend that you install the latest version of the Windows Update Agent for much better performance when using the Install Software Updates task sequence step.
 >* For Windows 7, see [Knowledge base article 3161647](https://support.microsoft.com/kb/3161647).
 >* For Windows 8, see [Knowledge base article 3163023](https://support.microsoft.com/kb/3163023).
 
  This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Install Software Updates Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_InstallSoftwareUpdates).
 
  > [!NOTE]
- > You can use the SMSTSMPListRequestTimeoutEnabled and SMSTSMPListRequestTimeout built-in variables to enable and specify how many milliseconds a task sequence waits before it retries to install an application or software update after it fails to retrieve the management point list from location services. For more information, see [Task sequence built-in varliables](task-sequence-built-in-variables.md).
+ > You can use the SMSTSMPListRequestTimeoutEnabled and SMSTSMPListRequestTimeout built-in variables to enable and specify how many milliseconds a task sequence waits before it retries to install an application or software update after it fails to retrieve the management point list from location services. For more information, see [Task sequence built-in variables](task-sequence-built-in-variables.md).
 
 > [!NOTE]
 >On the options tab, you can configure this task sequence to retry if the computer unexpectedly restarts. For example, a software update installation that automatically restarts the computer. Beginning in Configuration Manager 1602, you can configure the SMSTSWaitForSecondReboot variable to  specify how long (in seconds) the task sequence should pause after the computer restarts when installing software updates. For more information, see [Task sequence built-in variables](task-sequence-built-in-variables.md).
@@ -1013,7 +1018,7 @@ This step runs in either a standard operating system or Windows PE. However, the
  Select this option to install all available software updates targeting the Configuration Manager collection that will receive the task sequence. All available software updates will be installed on the destination computers.  
 
  **Evaluate software updates from cached scan results**  
-Beginning in Configuration Manager version 1606, you have the option to do a full scan for software updates instead of using the cached scan results. By default, the task sequence uses cached results. You can clear the checkbox to have the client connect to the software update point to process and download the latest software updates catalog. You might chose this option when you use a task sequence to [capture and build an operating system image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md), where you know there will be a large number of software updates, especially many that have dependencies (need to install X before Y will appear as applicable). When you clear this setting and deploy the task sequence to a large number of clients, they will all connect to the software update point at at the same time. This might result in performance issues during the process and download of the catalog. In most cases, we recommend that you use the default setting.
+Beginning in Configuration Manager version 1606, you have the option to do a full scan for software updates instead of using the cached scan results. By default, the task sequence uses cached results. You can clear the checkbox to have the client connect to the software update point to process and download the latest software updates catalog. You might chose this option when you use a task sequence to [capture and build an operating system image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md), where you know there will be a large number of software updates, especially many that have dependencies (need to install X before Y will appear as applicable). When you clear this setting and deploy the task sequence to a large number of clients, they will all connect to the software update point at the same time. This might result in performance issues during the process and download of the catalog. In most cases, we recommend that you use the default setting.
 
 A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in Configuration Manager version 1606 to give you the ability to control the timeout for the software updates scan during the Install software updates task sequence step. The default value is 30 minutes. For more information, see [Task sequence built-in variables](task-sequence-built-in-variables.md).
 

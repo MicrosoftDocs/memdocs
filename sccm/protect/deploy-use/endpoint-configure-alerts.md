@@ -2,7 +2,7 @@
 title: "Configure Endpoint Protection alerts | Microsoft Docs"
 description: "Learn how to configure Endpoint Protection alerts in System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -80,6 +80,12 @@ author: NathBarnms.author: nathbarnmanager: angrobe
         -   **Interval for detection (hours):** Specify the detection interval, in hours, in which the number of malware detections must occur. Specify a number from **1** through **168**.
 
 9. Click **OK** to close the *<Collection Name\>***Properties** dialog box.  
+
+## Alert for outdated malware client
+
+Beginning with Configuration Manager version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
+
+To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
 > [!div class="button"]
 [Next step >](endpoint-definition-updates.md)

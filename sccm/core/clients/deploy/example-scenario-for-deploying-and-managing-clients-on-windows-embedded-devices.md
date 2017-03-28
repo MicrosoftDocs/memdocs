@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 caps.latest.revision: 8
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices*Applies to: System Center Configuration Manager (Current Branch)*
+# Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This scenario demonstrates how you can manage write-filter-enabled Windows Embedded devices with Configuration Manager.If your embedded devices do not support write filters, they behave as standard Configuration Manager clients and these procedures don't apply.  
 
 Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Windows Embedded to run interactive presentations. The building for the new visitor center is not close to the IT department, so the kiosks must be managed remotely. In addition to the software that runs the presentations, these devices must run up-to-date antimalware protection software to comply with the company security policies. The kiosks must run 7 days a week, with no downtime while the visitor center is open.  

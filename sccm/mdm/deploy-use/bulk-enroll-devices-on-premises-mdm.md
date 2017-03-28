@@ -26,14 +26,15 @@ manager: angrobe
 
 Bulk enrollment in System Center Configuration Manager On-premises Mobile Device Management is a more automated means for  enrolling devices, as compared to user enrollment, which requires users to enter their credentials to enroll the device.  Bulk enrollment uses an enrollment package to authenticate the device during enrollment. The package (a .ppkg file) contains a certificate profile and optionally a Wi-Fi profile if the device needs intranet connectivity to support enrollment.  
 
- > [!NOTE]  
+> [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
 >   
->  -   Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
+> -   Windows 10 Team  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 The following tasks explain how to bulk-enroll computers and devices for On\-premises Mobile Device Management:  
 

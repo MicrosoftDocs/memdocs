@@ -2,7 +2,7 @@
 title: "View diagnostics data | Microsoft Docs"
 description: "View diagnostic and usage data to confirm that your System Center Configuration Manager hierarchy contains no sensitive information."
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,7 +34,7 @@ When viewing the raw data, a common hashed value will appear in each row of data
 
 #### To see how the one-way hash works  
 
-1.  Get your hierarchy ID by running the following SQL statement in SQL Management Studio against the Configuration Manager database: **select [dbo].[fnGetHierarchyID](\)**  
+1.  Get your hierarchy ID by running the following SQL statement in SQL Management Studio against the Configuration Manager database: **select [dbo].[fnGetHierarchyID]\(\)**  
 
 2.  Use the following Windows PowerShell script to do the one-way hash of the GUID that's obtained from the database. You can then compare this against the hierarchy ID in the raw data to see how we obscure this data.  
 
@@ -42,12 +42,12 @@ When viewing the raw data, a common hashed value will appear in each row of data
     Param( [Parameter(Mandatory=$True)] [string]$value )  
       $guid = [System.Guid]::NewGuid()  
       if( [System.Guid]::TryParse($value,[ref] $guid) -eq $true ) {  
-         #many of the values we hash are Guids  
-         $bytesToHash = $guid.ToByteArray()  
+      #many of the values we hash are Guids  
+      $bytesToHash = $guid.ToByteArray()  
     } else {  
-         #otherwise hash as string (unicode)  
-         $ue = New-Object System.Text.UnicodeEncoding  
-         $bytesToHash = $ue.GetBytes($value)   
+      #otherwise hash as string (unicode)  
+      $ue = New-Object System.Text.UnicodeEncoding  
+      $bytesToHash = $ue.GetBytes($value)   
     }  
       # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)   
     $hashAlgorithm = [System.Security.Cryptography.SHA256Cng]::Create()    

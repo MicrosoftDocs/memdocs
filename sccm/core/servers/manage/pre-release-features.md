@@ -30,7 +30,7 @@ To give consent, in the console go to **Administration** > **Site Configuration*
 When you install an update that includes pre-release features, those features are visible in the Updates and Servicing Wizard with the regular features included in the update:
   - **If you have given consent:** You can enable pre-release features from within the Updates and Servicing Wizard when you are installing the update. To do so, select the pre-release features as you would any other feature.     
 
-    Optionally, you can wait to enable a pre-release feature later from the **Administration** > **Cloud Services** > **Updates and Servicing** > **Features** node of the console. In the **Features** node choose the feature and then choose **Turn on**. (This option is grayed out until you give consent.)  
+    Optionally, you can wait to enable a pre-release feature later from the **Administration** > **Updates and Servicing** > **Features** node of the console. In the **Features** node choose the feature and then choose **Turn on**. This option is grayed out until you give consent. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
   -   **If you have not given consent:** When your're installing an update, pre-release features are visible in the Updates and Servicing Wizard but are grayed out and cannot be enabled. After the update is installed, you can view these features in the **Features** node, but you cannot enable them until after you have given consent in **Hierarchy Settings**.
 
 If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must give consent again at the central administration site.

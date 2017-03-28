@@ -1,13 +1,13 @@
 ---
 title: "Monitor cloud management gateway - Configuration Manager | Microsoft Docs"
 description: ""
-ms.date: 11/18/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 
@@ -45,10 +45,4 @@ Outbound traffic alerts will help you know when traffic approaches a 14-day (2 w
 
 ## Monitor logs
 
-The cloud management gateway service generates entries in the following log files:
-
--   **Cloudmgr.log** – Contains entries for deploying the cloud management gateway service, on-going service status, and usage data associated with the service.
-
--   **SMS\_Cloud\_ProxyConnector.log** – Contains entries for setting up connections between the cloud management gateway service and the cloud management gateway connection point.
-
-For more information, see [Configuration Manager logs](/sccm/core/plan-design/hierarchy/log-files).
+The cloud management gateway service generates entries in a number of log files. For more information, see [Configuration Manager logs](/sccm/core/plan-design/hierarchy/log-files).

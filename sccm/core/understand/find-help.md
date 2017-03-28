@@ -1,4 +1,4 @@
-  ---
+---
 title: "Find help for using System Center Configuration Manager | Microsoft Docs"
 description: "Find resources for additional information about System Center Configuration Manager."
 ms.custom: na
