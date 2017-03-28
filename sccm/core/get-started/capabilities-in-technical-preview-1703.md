@@ -43,6 +43,31 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 
 For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
+## Direct links to applications in Software Center
+
+You can now provide end users with a direct link to an application in Software Center. This means they no longer must open Software Center and search for an application before they can install it.
+This is available only for Configuration Manager applications, not packages and programs or task sequences.
+
+### Try it out                 
+
+Use the following URL format to open Software Center to a particular application:
+
+**Softwarecenter:SoftwareId=*Application Identifier***
+
+### How to get the application identifier of an application.
+
+1.	In the Configuration Manager console, click **Software Library**.
+2.	In the Software Library workspace, expand **Application Management**, and then click **Applications**.
+3.	In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
+4.	Note the **CI Unique ID** of the application you want to provide a link to, for example:
+**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
+5.	Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.
+6.	Finally, to finish constructing the link, precede it with **Softwarecenter:SoftwareID=**. Using the example above, the final link will read:
+**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
+
+By using this link, end users can open Software Center directly to the application you specified.
+
+
 ## PFX certificates for Configuration Manager Windows client computers
 
 You can now deploy PFX certificate profiles you imported to Configuration Manager client computers running Windows 10.
