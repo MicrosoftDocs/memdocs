@@ -67,7 +67,7 @@ You can deploy System Center Configuration Manager terms and conditions to user 
 
 ## To monitor terms and conditions  
 
-1.  Beginning in version 1602, you can monitor terms and conditions deployments in the Configuration Manager console. In the Configuration Manager console, go to **Monitoring** > **Overview** > **Deployments**.  
+1.  You can monitor terms and conditions deployments in the Configuration Manager console. In the Configuration Manager console, go to **Monitoring** > **Overview** > **Deployments**.  
 
 2.  Select the terms and conditions deployment. from the list of deployments  
 

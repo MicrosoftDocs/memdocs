@@ -37,6 +37,6 @@ To manage computers and devices with System Center Configuration Manager On-prem
 >   
 >  -   Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
+> -   Windows 10 Team 
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
