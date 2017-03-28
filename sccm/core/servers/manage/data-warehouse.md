@@ -2,7 +2,7 @@
 title: "Data warehouse| Microsoft Docs"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,6 +49,14 @@ When the site system role installs, it installs and configures the data warehous
   - SQL Server AlwaysOn availability group: This configuration is not supported.
   - SQL Server Cluster: SQL Server failover clusters are not supported. This is because the data warehouse database has not been deeply tested on SQL Server failover clusters.
   - When the data warehouse database is remote from the site server database, you must have a separate license for the SQL Server that hosts the database.
+
+> [!IMPORTANT]  
+> The Data Warehouse is not supported when the computer that runs the Data Warehouse service point or that hosts the data warehouse database runs one of the following languages:
+> - JPN – Japanese
+> - KOR – Korean
+> - CHS – Simple Chinese
+> - CHT – Traditional Chinese
+> This issue will be resolved in a future release.
 
 
 ## Install the Data Warehouse
