@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  3/27/2017
+ms.date:  3/28/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -154,6 +154,11 @@ For more information about volume-purchased iOS apps, see [Manage volume-purchas
 ### Support for iOS Volume Purchase Program for Education
 
 You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+### Support for multiple volume-purchase program tokens
+
+You can now associate multiple Apple volume-purchase program tokens with Configuration Manager.
 For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 ### Improved support for Windows Store for Business apps
