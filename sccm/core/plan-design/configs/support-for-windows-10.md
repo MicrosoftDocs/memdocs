@@ -40,6 +40,7 @@ For example, a Configuration Manager version will drop from the matrix after [su
 |Enterprise 2016 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |1607 (CB)	<br />(*see editions*)      |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |1607 (CBB)	<br />(*see editions*)      |![Not supported](media/Red_X.png)   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1703 (CB)	<br />(*see editions*) <br />This Windows version is not yet available. This information is provided to assist you in planning to support this version.      |![Not supported](media/Red_X.png)   |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |
 
 
 
