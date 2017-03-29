@@ -250,7 +250,7 @@ Use the following procedure to modify the properties of a servicing plan.
 
     -   **Detail level**: Specify the level of detail for the state messages that are reported by client computers.  
 
-   **Download Settings**: On the Download Settings tab, configure the following settings:  
+    **Download Settings**: On the Download Settings tab, configure the following settings:  
 
     - Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
 
