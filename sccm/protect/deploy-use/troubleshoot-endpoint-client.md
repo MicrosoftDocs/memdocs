@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: NathBarn
+ms.author: nathbarn
+manager: angrobe
 
 ---
-# Troubleshooting Windows Defender or Endpoint Protection client*Applies to: System Center Configuration Manager (Current Branch)*
+# Troubleshooting Windows Defender or Endpoint Protection client
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
 
@@ -158,8 +163,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 ##  Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
 
- You receive a message notifying you that â€œ**Windows Defender or**  
- **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**â€  
+ You receive a message notifying you that **Windows Defender or Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.** 
 
  **Solution**  
 
@@ -167,7 +171,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 -   Close all applications and restart your computer.  
 
-### Step 2: Make sure the "Windows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
+### Step 2: Make sure the "Windows Defender" or "Endpoint Protection service" is set to automatic and is started  
 
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
 
