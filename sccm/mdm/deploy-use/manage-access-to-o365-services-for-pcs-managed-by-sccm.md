@@ -46,7 +46,7 @@ manager: angrobe
 
 -   Windows 8.1  
 
--   Windows 10 is not yet fully supported.  If you try to set to conditional access for Windows 10 PCs, you may encounter some issues.  See [Known issues](#bkmk_KnownIssues) for more details.  
+-   Windows 10 
 
 ## Configure conditional access  
  To setup conditional access, you must first create a compliance policy and configure conditional access policy. When you configure conditional access policies for PCs you can require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  
@@ -130,6 +130,7 @@ manager: angrobe
 
  End-users who are blocked due to noncompliance will view compliance information in the System Center Configuration Manager Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
 
+<!---
 ##  <a name="bkmk_KnownIssues"></a> Known issues  
  You may see the following issues when using this feature:  
 
@@ -138,6 +139,6 @@ manager: angrobe
 -   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
 
 -   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
-
+--->
 ### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
