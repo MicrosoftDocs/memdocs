@@ -252,15 +252,15 @@ Use the following procedure to modify the properties of a servicing plan.
 
    **Download Settings**: On the Download Settings tab, configure the following settings:  
 
-    -   Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
+    - Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
 
-    -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
+    - Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
     -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
     -   Specify whether to have clients download software updates from Microsoft Update if software updates are not available on distribution points.
-    > [!IMPORTANT]
-    > Do not use this setting for Windows 10 Servicing updates. Configuration Manager (at least through version 1610) will fail to download the Windows 10 Servicing updates from Microsoft Update.
+        > [!IMPORTANT]
+        > Do not use this setting for Windows 10 Servicing updates. Configuration Manager (at least through version 1610) will fail to download the Windows 10 Servicing updates from Microsoft Update.
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.   
 
