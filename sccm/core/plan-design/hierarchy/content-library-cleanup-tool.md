@@ -35,8 +35,8 @@ You can find **ContentLibraryCleanup.exe** in the *%CM_Installation_Path%\cd.lat
 You can run the tool in the following two modes. We recommend you run the tool in *What-If* mode so you can review the results before you run the tool in *delete mode*:
   1.	**What-If mode**:   
       If you do not specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point.
-      - When run in this mode the tool does not delete any data.
-      - Information about the content that would be deleted is written to the tools log file, and you are not prompted to confirm each potential deletion.  
+   - When run in this mode the tool does not delete any data.
+   - Information about the content that would be deleted is written to the tools log file, and you are not prompted to confirm each potential deletion.  
       </br>   
 
   2. **Delete mode**:   
