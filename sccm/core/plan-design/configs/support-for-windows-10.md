@@ -2,7 +2,7 @@
 title: "Support for Windows 10 | Microsoft Docs"
 description: "Learn which Windows 10 versions are supported to run the System Center Configuration Manager client."
 ms.custom: na
-ms.date: 2/10/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,19 +26,25 @@ manager: angrobe
 - This supplements [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
 - If you use the Long-Term Servicing Branch of Configuration Manager, see [Supported Configurations for the Long-Term Servicing Branch](/sccm/core/understand/supported-configurations-for-ltsb).
 
-Configuration Manager attempts to provide support for each new Windows 10 version as soon as possible after that Windows version releases. Because the products have separate development and release schedules, the support that Configuration Manager provides depends on when the versions and branches of each product release.  
+Configuration Manager attempts to provide support for each new Windows 10 version as soon as possible after that Windows version releases. Because the products have separate development and release schedules, the support that Configuration Manager provides depends on when the versions and branches of each product release.
+
+For example, a Configuration Manager version will drop from the matrix after [support for that version](/sccm/core/servers/manage/current-branch-versions-supported) ends. Similarly, support for Windows 10 versions like the Enterprise 2015 LTSB or 1607 (CBB) will drop from the matrix when they are removed from the Configuration Manager supported configurations list. See [Deprecated operating systems](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) for more information.
 
 
 
-|Windows 10 versions |Configuration Manager 1602|Configuration Manager 1606|Configuration Manager 1610|
+|Windows 10 versions                    |Configuration Manager 1606          |Configuration Manager 1610          |    Configuration Manager 1702 |
 |---------------------|-----|-----|-----|
-|Enterprise 2015 LTSB |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|1507 <br />Enterprise, Education, Pro | ![Supported](media/green_check.png)| ![Supported](media/green_check.png)|![Supported](media/green_check.png) |
-|1511 <br />Enterprise, Education, Pro <br />(CB), (CBB) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|Enterprise 2016 LTSB	|![Not supported](media/Red_X.png) |![Supported](media/green_check.png) | ![Supported](media/green_check.png)|
-|1607 <br />Enterprise, Education, Pro<br /> (CB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
-|1607 <br />Enterprise, Education, Pro <br />(CBB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/Red_X.png) |![Supported](media/green_check.png) |
+|Enterprise 2015 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1507 <br />(*see editions*)            |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1511 (CB), (CBB)<br />(*see editions*) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|Enterprise 2016 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1607 (CB)	<br />(*see editions*)      |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1607 (CBB)	<br />(*see editions*)      |![Not supported](media/Red_X.png)   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1703 (CB)	<br />(*see editions*) <br />This Windows version is not yet available. This information is provided to assist you in planning to support this version.      |![Not supported](media/Red_X.png)   |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |
 
+
+
+**Editions:** Enterprise, Pro, Education, Pro Education   
 
 |Key|
 |--|
