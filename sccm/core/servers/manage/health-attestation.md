@@ -29,8 +29,8 @@ This functionality is available for PCs and on-premises resources managed by Con
 
  **Requirements:**  
 
--   Client devices running Windows 10 or Windows Server 2016 with [Device Health Attestation enabled](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
--    TPM 2 enabled  
+-   Client devices running Windows 10 version 1607 or Windows Server 2016 version 1607 with [Device Health Attestation enabled](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
+-    TPM 1.2 or TPM 2 enabled devices
 -   Communication between the Configuration Manager client agent and has.spserv.microsoft.com (port 443) Health Attestation service (cloud management) or with the device health attestation-enabled management point (on-premises)
 
 ### How to enable Health Attestation service communication on Configuration Manager client computers
