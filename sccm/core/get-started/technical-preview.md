@@ -88,8 +88,6 @@ Each preview release is supported up until three successive releases are availab
  **Active baseline versions of the Technical Preview:**  
  You can install a baseline version for up to 1 year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
 
--   **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is available from the [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) website.
-
 -   **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 is available as both an in-console update for the Configuration Manager Technical Preview, and as a   baseline version that is available from the [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) website.
 
 

@@ -31,7 +31,7 @@ System Center Configuration Manager (also known as ConfgMgr or SCCM) offers diff
 
 ###  Manage devices with the Configuration Manager client  
 
-This option, which requires installation of the Configuration Manager client application on the devices, provides the most features for managing PCs, servers, and other devices in your environment. For more information, see [Client installation methods in System Center Configuration Manager](/sccm/core/client/deploy/plan/client-installation-methods).  
+This option, which requires installation of the Configuration Manager client application on the devices, provides the most features for managing PCs, servers, and other devices in your environment. For more information, see [Client installation methods in System Center Configuration Manager](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
 ###  Manage devices with on-premises Configuration Manager infrastructure  
 

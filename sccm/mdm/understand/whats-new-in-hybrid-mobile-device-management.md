@@ -2,7 +2,7 @@
 title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -77,15 +77,47 @@ The following Intune features introduced in March 2017 work in hybrid deployment
 
   The Microsoft Teams apps for iOS and Android are now enabled with Intune mobile app management (MAM) capabilities, so you can empower your teams to work freely across devices, while ensuring that conversations and corporate data is protected at every turn. For more details, see [the Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) on the Enterprise Mobility and Security blog.
 
-### New in Configuration Manager Technical Preview 1703
+### New in Configuration Manager (current branch)
 
-- **Additional support for Apple Volume Purchase Program scenarios**
+The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1702.
 
-   Beginning in Technical Preview 1703, you now have support for the following Volume Purchase Program (VPP) scenarios:
+- [Android for Work Support](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
+- [Non-Compliant Apps Compliance Settings](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
+- [PFX Certificate Creation and Distribution and S/MIME Support](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
+- [Android and iOS versions are no longer targetable in creation wizards for hybrid MDM](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
 
-   - Device licensing - Apps that support device licensing and are deployed to device collections will only require one license per device.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
-   - Use of multiple VPP tokens to a single hybrid tenant with both tokens used for managing VPP apps.
-   - Use of VPP education tokens with the ability to distinguish between business and education tokens.
+The following additional hybrid features are also included in version 1702 of Configuration Manager (current branch):
+
+- **Improved support for Apple Volume Purchase Program (VPP)**
+
+  - You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+
+    | Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
+    |-|-|-|-|
+    |Earlier than 1702|Yes|User|User license|
+    |Earlier than 1702|No|User|User license|
+    |Earlier than 1702|Yes|Device|User license|
+    |Earlier than 1702|No|Device|User license|
+    |1702 and later|Yes|User|User license|
+    |1702 and later|No|User|User license|
+    |1702 and later|Yes|Device|Device license|
+    |1702 and later|No|Device|User license|
+
+  - You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
+
+  - You can now associate multiple Apple volume-purchase program tokens with Configuration Manager.
+
+  For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+- **Support for line of business apps in Windows Store for Business**
+
+  You can now sync custom line of business apps from the Windows Store for Business.
+
+- **New Mobile Threat Defense monitoring tools**
+
+    You have now have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+
+    For more information, see [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
 ## New hybrid features in February 2017
 
