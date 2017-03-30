@@ -55,8 +55,6 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
 -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
 
-- **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to create a new PFX certificate profile. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
-
 
 
 ### Configure a trusted CA certificate  
