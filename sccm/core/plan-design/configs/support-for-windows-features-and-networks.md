@@ -43,7 +43,6 @@ These clients also cache the content. In this manner, successive clients on the 
     -   Distribution points on servers that are configured to support BranchCache require no additional configuration.   
     -   You cannot add Windows BranchCache to a cloud-based distribution point, but cloud-based distribution points support the download of content by clients that are configured for Windows BranchCache.  
 
-
 -   **Configure clients:**    
     -   The clients that can support BranchCache must be configured for BranchCache distributed cache mode.  
     -   The operating system setting for BITS client settings must be enabled to support BranchCache.   <br /> <br />
