@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 3/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -44,7 +44,7 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 |Support for paid apps from the store|No|Yes|
 |Support required deployments to user or device collections|Yes|Yes|
 |Support available deployments to user or device collections|Yes|Yes|
-|Support line-of-business apps from the store|No|Yes|
+|Support line-of-business apps from the store|Yes|Yes|
 
 To deploy online licensed apps to Windows 10 PCs with the Configuration Manager client, they must be running the Windows 10 Creators Update, or later.
 

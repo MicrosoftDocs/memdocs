@@ -2,7 +2,7 @@
 title: "Capabilities in Technical Preview 1703 Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1703."
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -45,7 +45,7 @@ For more information about volume-purchased iOS apps, see [Manage volume-purchas
 
 ## Direct links to applications in Software Center
 
-You can now provide end users with a direct link to an application in Software Center. This means they no longer must open Software Center and search for an application before they can install it.
+You can now provide end users with a direct link to an application in Software Center. This means they no longer must open Software Center and search for an application before they can install it. 
 This is available only for Configuration Manager applications, not packages and programs or task sequences.
 
 ### Try it out                 
