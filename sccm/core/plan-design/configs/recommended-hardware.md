@@ -2,7 +2,7 @@
 title: "Recommended hardware | Microsoft Docs"
 description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -163,14 +163,12 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
  **Support for PowerShell:**  
 
- When you install support for PowerShell on a computer that runs the Configuration Manager console, you can run PowerShell cmdlets on that computer to manage Configuration Manager. The following minimum versions are supported:  
+ When you install support for PowerShell on a computer that runs the Configuration Manager console, you can run PowerShell cmdlets on that computer to manage Configuration Manager.
 
--   PowerShell 3.0  
-
--   PowerShell 4.0  
+ - PowerShell 3.0 or later is supported
 
 In addition to PowerShell, Windows Management Framework (WMF) 3.0 and 4.0 are supported.   
-You can install PowerShell before or after the Configuration Manager console installs.  
+
 
 ##  <a name="bkmk_ScaleLab"></a> Lab deployments  
  Use the following minimum hardware recommendations for lab and test deployments of Configuration Manager. These recommendations apply to all site types, up to 100 clients:  
