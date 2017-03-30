@@ -77,6 +77,16 @@ The following Intune features introduced in March 2017 work in hybrid deployment
 
   The Microsoft Teams apps for iOS and Android are now enabled with Intune mobile app management (MAM) capabilities, so you can empower your teams to work freely across devices, while ensuring that conversations and corporate data is protected at every turn. For more details, see [the Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) on the Enterprise Mobility and Security blog.
 
+### New in Configuration Manager Technical Preview 1703
+
+- **Additional support for Apple Volume Purchase Program scenarios**
+
+   Beginning in Technical Preview 1703, you now have support for the following Volume Purchase Program (VPP) scenarios:
+
+   - Device licensing - Apps that support device licensing and are deployed to device collections will only require one license per device.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
+   - Use of multiple VPP tokens to a single hybrid tenant with both tokens used for managing VPP apps.
+   - Use of VPP education tokens with the ability to distinguish between business and education tokens.
+
 ### New in Configuration Manager (current branch)
 
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1702.
