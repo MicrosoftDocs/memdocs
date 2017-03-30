@@ -97,6 +97,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1703](get-started/capabilities-in-technical-preview-1703.md)
 ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
 ###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
