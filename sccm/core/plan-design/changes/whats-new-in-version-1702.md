@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  3/28/2017
+ms.date:  3/30/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -263,16 +263,6 @@ Starting with 1702, Hybrid mobile device management with Microsoft Intune now su
 - [Email profiles for Android for Work](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
 - [Compliance policies for Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
 
-
-### Improvements to certificate profiles
-
-You can now create a PFX certificate profile that supports S/MIME and deploy it to users.  The certificate can then used for S/MIME encryption and signing on all iOS devices that the user has enrolled.
-For more information, see [How to create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) and [Exchange ActiveSync email profiles](/sccm/mdm/deploy-use/create-exchange-activesync-profiles).
-
-Additionally, you can now specify multiple certification authorities (CAs) on multiple Certificate registration point site system roles and then assign which CAs process requests as part of the certificate profile.
-For more information, see [Certificate infrastructure](/sccm/protect/deploy-use/certificate-infrastructure).
-
-These new features for certificates are currently pre-release, and are subject to change.
 
 ### Deploy volume-purchased iOS apps to device collections
 
