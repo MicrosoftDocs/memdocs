@@ -2,7 +2,7 @@
 title: "Support for Windows features | Microsoft Docs"
 description: "Learn which Windows and networking features System Center Configuration Manager supports."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,27 +26,30 @@ This topic identifies System Center Configuration Manager support for common Win
 
 
 ##  <a name="bkmk_branchcache"></a> BranchCache  
-Windows BranchCache is integrated with Configuration Manager. You can configure the BranchCache settings on a deployment type for applications, on the deployment for a package, and for task sequences.  
+You can use Windows BranchCache with Configuration Manager when you enable BranchCache on distribution points, and configure clients to use BranchCache in distributed cache mode.
 
-When all the requirements for BranchCache are met, this feature enables clients in remote locations to obtain content from local clients that have a current cache of the content.  
+You can configure the BranchCache settings on a deployment type for applications, on the deployment for a package, and for task sequences.  
+
+When the requirements for BranchCache are met, this feature enables clients in remote locations to obtain content from local clients that have a current cache of the content.  
 
 For example, when the first BranchCache-enabled client computer requests content from a distribution point that is configured as a BranchCache server, the client computer downloads and caches the content. This content is then made available for clients on the same subnet that requested this content.
 
 These clients also cache the content. In this manner, successive clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
 
-**To support BranchCache with Configuration Manager:**  
+**Requirements to support BranchCache with Configuration Manager:**  
+-   **Configure distribution points:**  
+    Add the **Windows BranchCache** feature to the site system server that is configured as a distribution point.    
 
--   Add the **Windows BranchCache** feature to the site system server that is configured as a distribution point.  
-
-    -   Distribution points on servers that are configured to support BranchCache require no additional configuration.  
-
+    -   Distribution points on servers that are configured to support BranchCache require no additional configuration.   
     -   You cannot add Windows BranchCache to a cloud-based distribution point, but cloud-based distribution points support the download of content by clients that are configured for Windows BranchCache.  
 
-**To enable clients to use BranchCache:**  
 
--   The clients that can support BranchCache must be configured for BranchCache distributed mode.  
+-   **Configure clients:**    
+    -   The clients that can support BranchCache must be configured for BranchCache distributed cache mode.  
+    -   The operating system setting for BITS client settings must be enabled to support BranchCache.   <br /> <br />
+        
+    For information on how you can configure clients to support BranchCache, see the [Configure clients](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache) section in [Configure BranchCache for Windows 10 updates](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache).
 
--   The operating system setting for BITS client settings must be enabled to support BranchCache.  
 
 **Configuration Manager supports the following client operating systems with Windows BranchCache:**  
 
@@ -105,7 +108,7 @@ Configuration Manager does not support the following over DirectAccess:
 ##  <a name="bkmk_IPv6"></a> Internet Protocol version 6  
  In addition to Internet Protocol version 4 (IPv4), Configuration Manager supports Internet Protocol version 6 (IPv6) with the following exceptions:  
 
-|Function|Exception to IPv6 support|  
+|Function| Exception to IPv6 support|  
 |--------------|-------------------------------|  
 |Cloud-based distribution points|IPv4 is required to support Microsoft Azure and cloud-based distribution points.|  
 |Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
