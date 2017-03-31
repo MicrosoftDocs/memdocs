@@ -625,7 +625,7 @@ description: Learn how to use System Center Configuration Manager.
                 </ul>
             </li>
             <li>
-                <a href="#social">Social</a>
+                <a href="#social">Community</a>
                 <ul id="social">
                     <li>
                         <a href="#social-all">All</a>
