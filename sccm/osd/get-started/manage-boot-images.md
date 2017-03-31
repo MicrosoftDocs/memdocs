@@ -25,11 +25,36 @@ manager: angrobe
 A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) image that is used  during an operating system deployment. Boot images are used to start a computer in WinPE, which is a minimal operating system with limited components and services that prepare the destination computer for Windows installation.  Use the following sections to manage boot images.
 
 ##  <a name="BKMK_BootImageDefault"></a> Default boot images  
- Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>.  
+Beginning in version 1702, when you upgrade the Windows ADK version and then update to the latest version of Configuration Manager, the default boot images are updated. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, and all customizations remain unchanged. Custom boot images are not updated. Prior to version 1702, you must manually update the boot image to use the new version of the Windows ADK.
 
- When you upgrade Configuration Manager to a new version, Configuration Manager might replace the default boot images, and customized boot images based on the default boot images,  in this location with updated files. The options that you configure on the default boot images at the site (such as optional components) are carried forward when the boot images are updated, including drivers. The source driver objects must be valid, including the driver source files, or the drivers will not be added to the updated boot images on the site. Other boot images that are not based on the default boot images, even if based on the same Windows ADK version, will not be updated. After boot images are updated, you will need to redistribute them to distribution points. Any media using the boot images will need to be recreated. If you do not want your customized/default boot images automatically updated, you should store them in a different location.  
+When you run upgrade Configuration Manager to a new major version using the setup process, Configuration Manager might update the default boot images, as well as customized boot images based on the default boot images that are stored in the default location.
 
- The Configuration Manager Trace Log Tool is added to all  boot images that you add to  the **Software Library**. When you are in WinPE, you can start the Configuration Manager Trace Log Tool by typing **CMTrace** from a command prompt.  
+The options that you configure on the default boot images at the site (such as optional components) are carried forward when the boot images are updated, including drivers. The source driver objects must be valid, including the driver source files, or the drivers will not be added to the updated boot images on the site. Other boot images that are not based on the default boot images, even if based on the same Windows ADK version, will not be updated. After boot images are updated, you will need to redistribute them to distribution points. Any media using the boot images will need to be recreated. If you do not want your customized/default boot images automatically updated, you should store them in a different location.  
+
+
+## <a name="BKMK_BootImageDefault"></a> Default boot images
+Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>. The default boot images are updated or regenerated depending on the action that you take.
+
+**Use updates and servicing to install the latest version of Configuration Manager**
+Beginning in version 1702, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images are not modified. 
+
+Prior to version 1702, Configuration Manager updates the existing boot image (boot.wim) with the client components, drivers, customizations, etc. but will not use the latest Windows PE version from the Windows ADK. You must manually modify the boot image to use the new version of the Windows ADK.
+
+**Upgrade from Configuration Manager 2012 to Configuration Manager Current Branch (CB)**
+When you upgrade Configuration Manager 2012 to Configuration Manager CB by using the setup process, Configuration Manager will regenerate the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, and all customizations remain unchanged. Custom boot images are not modified.
+
+**Update distribution points with the boot image**
+When you use the **Update Distribution Points** action from the **Boot Images** node in the Configuration Manager console, Configuration Manager updates the default boot images with the client components, drivers, customizations, etc. but will not use the latest Windows PE version from the Windows ADK. Custom boot images are not modified.
+
+Also, consider the following for any of the above actions:
+- The source driver objects must be valid, including the driver source files, or the drivers will not be added to the boot images on the site.
+- Boot images that aren’t based on the default boot images, even if they use the same Windows PE version, will not be modified.
+- You must redistribute the modified boot images to distribution points.
+- You must recreate any media that uses the modified boot images.
+- If you do not want your customized/default boot images automatically updated, do not store them in the default location.
+
+> [!NOTE]
+> The Configuration Manager Trace Log Tool is added to all boot images that you add to the **Software Library**. When you are in Windows PE, you can start the Configuration Manager Trace Log Tool by typing **CMTrace** from a command prompt.  
 
 ##  <a name="BKMK_BootImageCustom"></a> Customize a boot image  
  You can customize a boot image, or [Modify a boot image](#BKMK_ModifyBootImages), from the Configuration Manager console when it is based on a Windows PE  version from the supported version of Windows ADK. When a site is upgraded with a new version and a new version of Windows ADK is installed, custom boot images (not in the default boot image location) are not updated with the new version of Windows ADK. When that happens, you will no longer be able to customize the boot images in the Configuration Manager console. However, they will continue to work as they did before the upgrade.  
