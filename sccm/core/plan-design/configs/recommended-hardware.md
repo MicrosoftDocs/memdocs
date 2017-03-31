@@ -167,7 +167,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
  - PowerShell 3.0 or later is supported
 
-In addition to PowerShell, Windows Management Framework (WMF) 3.0 and 4.0 are supported.   
+In addition to PowerShell, Windows Management Framework (WMF) version 3.0 or later is supported.   
 
 
 ##  <a name="bkmk_ScaleLab"></a> Lab deployments  
