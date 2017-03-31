@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  3/30/2017
+ms.date:  3/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -212,6 +212,8 @@ The Windows 10 ADK is now tracked by build version to ensure a more supported ex
 ### Default boot image source path can no longer be changed
 Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
 
+### Default boot images are regenerated after upgrading Configuration Manager to a new version
+Beginning in this release, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images are not modified. For details, see [Manage boot images](/sccm/osd/get-started/manage-boot-images#default-boot-images).
 
 ## Software updates
 
