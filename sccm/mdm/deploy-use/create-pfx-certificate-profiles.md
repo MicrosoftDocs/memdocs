@@ -2,7 +2,7 @@
 title: "Create PFX certificate profiles | Microsoft Docs"
 description: "Learn how to use PFX files in System Center Configuration Manager to generate user-specific certificates that support encrypted data exchange."
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,7 +33,7 @@ Certificate profiles work with Active Directory Certificate Services and the Net
 - For other prerequisites, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
 ## PFX certificate profiles
-System Center Configuration Manager allows you to provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange. PFX certificates can be created within Configuration Manager or imported.
+System Center Configuration Manager allows you to import, then provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange.
 
 > [!TIP]  
 >  A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
@@ -54,10 +54,10 @@ System Center Configuration Manager allows you to provision personal information
 
     -   **Description**: Provide a description that gives an overview of the certificate profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
 
-    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of:  
+    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose:  
 
         -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate.  
-        -   **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this option to create a new PFX certificate.
+       
 
 ### Import a PFX certificate
 
@@ -102,28 +102,7 @@ The following script variables must be modified for your script:
    -   $ProfileName = The name of the PFX profile  
    -   ComputerName = Name of host computer   
 
-### Create a new PFX certificate
 
-When you create and deploy a PFX certificate, the same certificate will be installed on all devices that the user enrolls.
-
-1. On the **Supported Platforms** page of the wizard, choose the device platforms on which this certificate will be installed, then click **Next**.
-2. On the **Certification Authorities** page of the wizard, confiugre the following:
-	- **Primary Site** - Select the Configuration Manager primary site from which you want to select a certification authority.
-	- **Certification authorities** - After you select a primary site, select the certification authority you want from the list, then click **Next**.
-3. On the **PFX Certificate** page of the wizard, configure the following values:
-	- **Renewal threshold (%)** - Specify the percentage of the certificate lifetime that remains before the device requests renewal of the certificate.
-	- **Certificate template name** - Click **Browse** to select the name of a certificate template that has been added to an issuing CA. To successfully browse to certificate templates, the user account that you are using to run the Configuration Manager console must have **Read** permission to the certificate template. Alternatively, type the name of the certificate template. 
-	- **Subject name format** - From the list, select how Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name. Choose from **Common name**, or **Fully distinguished name**.
-	- **Subject alternative name** - Specify how Configuration Manager automatically creates the values for the subject alternative name (SAN) in the certificate request. For example, if you selected a user certificate type, you can include the user principal name (UPN) in the subject alternative name. Choose from:
-		- **Email address** 
-		- **User principle name (UPN)** 
-	- **Certificate validity period** - 
-	- **Windows Key Storage Provider** (displayed only if you selected Windows as a supported platform) - 
-		- 	**Install to Trusted Platform Module (TPM) if present**  
-    	-   **Install to Trusted Platform Module (TPM), otherwise fail** 
-    	-   **Install to Windows Hello for Business otherwise fail** 
-    	-   **Install to Software Key Storage Provider** 
-4. Click **Next**.
 
 ### Finish up
 
