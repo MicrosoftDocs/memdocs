@@ -2,7 +2,7 @@
 title: "Client Peer Cache | System Center Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -65,7 +65,7 @@ To help you understand the use of Peer Cache, you can view the Client Data Sourc
 Beginning with version 1702, you can use three reports to view peer cache use. In the console, go to **Monitoring** > **Reporting** > **Reports**. The reports all have a type of **Software Distribution Content**:
 1.  **Peer cache source content rejection**:  
 Use this report to understand how often the peer cache sources in a boundary group rejected a content request.
- - **Known issue:** When drilling down on results like *MaxCPULoad* or *MaxDiskIO*, you might receive an error that suggests the report or details cannot be found. To work around this, use the following two reports which show the results directly. 
+ - **Known issue:** When drilling down on results like *MaxCPULoad* or *MaxDiskIO*, you might receive an error that suggests the report or details cannot be found. To work around this, use the following two reports which show the results directly.
 
 2. **Peer cache source content rejection by condition**:  
 Use this report to understand rejection details for a specified boundary group or rejection type. You can specify
@@ -82,9 +82,11 @@ Use this report to understand rejection details for a specified boundary group o
 
 
 ## Requirements and considerations for Peer Cache
-- Peer Cache is supported on any Windows OS that is supported as Configuration Manager client. Non-Windows operating systems are not supported for Peer Cache.
+-   Peer Cache is supported on any Windows OS that is supported as Configuration Manager client. Non-Windows operating systems are not supported for Peer Cache.
 
-- Clients can only transfer content from Peer Cache clients that are in their current boundary group.
+-   Clients can only transfer content from Peer Cache clients that are in their current boundary group.
+
+-   Each site where clients use Peer Cache must be configured with a [Network Access Account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). The account is used by the Peer Cache source computer to authenticate download requests from peers, and requires only domain user permissions for this purpose.
 
 - 	Because the current boundary of a Peer Cache content source is determined by that client's last hardware inventory submission, a client that roams to a network location and is in a different boundary group might still be considered a member of its former boundary group for the purposes of Peer Cache. This can result in a client being offered a Peer Cache content source that is not in its immediate network location. We recommend excluding clients that are prone to this configuration from participating as a Peer Cache source.
 
