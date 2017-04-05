@@ -107,8 +107,9 @@ You can install a baseline version for up to 1 year after its release. However, 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in technical previews  
  The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
- |Capability|Technical Preview version|Current Branch version|  
+ |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Feature 1 for 1704 |[Tech Preview 1704](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|![Not added](media/Red_X.gif)|
  |Deploy volume-purchased iOS apps to device collections|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[Version 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
  |Direct links to applications in Software Center|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![Not added](media/Red_X.gif)
  |PFX certificates for Configuration Manager Windows client computers|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![Not added](media/Red_X.gif)|
@@ -203,11 +204,11 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Support for Passport for Work as a KSP |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[Version 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
  |On-premises Device Health Attestation|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[Version 1606](/sccm/core/servers/manage/health-attestation)|  
  |SmartLock setting for Android devices|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[Version 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
+ <!--  TP 1603 Aged out of support and all features in Current Branch Builds:
  |Improvements to Software Center|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
  |Improvements to remote control|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
  |Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
-
-
+-->
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from this table.
 
 
