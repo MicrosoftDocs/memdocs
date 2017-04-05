@@ -109,7 +109,7 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- |Feature 1 for 1704 |[Tech Preview 1704](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|![Not added](media/Red_X.gif)|
+ |Feature 1 for 1704 |[Tech Preview 1704](capabilities-in-technical-preview-1704.md)|![Not added](media/Red_X.gif)|
  |Deploy volume-purchased iOS apps to device collections|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[Version 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
  |Direct links to applications in Software Center|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![Not added](media/Red_X.gif)
  |PFX certificates for Configuration Manager Windows client computers|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![Not added](media/Red_X.gif)|
