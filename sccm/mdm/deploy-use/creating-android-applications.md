@@ -25,9 +25,7 @@ A System Center Configuration Manager application has one or more deployment typ
  You can create applications by using the following methods:  
 
 -   Automatically create the application and deployment types by reading the application installation files.  
-
 -   Manually create the application and then add deployment types later.  
-
 -   Import an application from a file.  
 
 See [Start the create application wizard](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) for the steps required to create Configuration Manager applications and deployment types. Also, keep the following considerations in mind when you create and deploy applications for Android devices.  
