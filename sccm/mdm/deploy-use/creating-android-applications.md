@@ -25,12 +25,10 @@ A System Center Configuration Manager application has one or more deployment typ
  You can create applications by using the following methods:  
 
 -   Automatically create the application and deployment types by reading the application installation files.  
-
 -   Manually create the application and then add deployment types later.  
-
 -   Import an application from a file.  
 
-See [Start the create application wizard](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) for the steps required to create Configuration Manager applications and deployment types. Also, keep the following considerations in mind  when you create and deploy applications for Android devices.  
+See [Start the create application wizard](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) for the steps required to create Configuration Manager applications and deployment types. Also, keep the following considerations in mind when you create and deploy applications for Android devices.  
 
 ## General considerations for Android apps
 
@@ -52,12 +50,12 @@ As a Configuration Manager admin, you can also approve and deploy apps in the [P
 Follow these steps to approve apps in the Play for Work store, sync them to the Configuration Manager console, and deploy them to managed Android for Work devices. To deploy apps to users' work profiles, you'll need to approve the apps in Play for Work, and then sync the apps with the Configuration Manager console.
 
 1. Open a browser and go to: https://play.google.com/work.
-2. Sign in using the Google admin account you bound to your Intune tenant.
-3. Browse for apps you'd like to deploy in your environment and click **Approve** for each of them to make the app available for Android for Work.
-4. In the Configuration Manager console, go to **Administrator** > **Overview** > **Cloud Services** > **Android for Work** and click **Sync**.
-5. Wait for up to 10 minutes for apps to sync, and then go **Software Library** > **Overview** > **Application Management** > **License Information for Store Apps**.
-6. Click on an app synced from Play for Work and then click **Create Application**.
-7. Complete the wizard and click **Close**.
-8. Go to **Software Library** > **Overview** > **Application Management** > **Applications**, select an Android for Work apps, and deploy as usual.
+2. Sign in by using the Google admin account that you bound to your Intune tenant.
+3. Browse for apps you'd like to deploy in your environment, and choose **Approve** for each of them to make the app available for Android for Work.
+4. In the Configuration Manager console, go to **Administrator** > **Overview** > **Cloud Services** > **Android for Work** and choose **Sync**.
+5. Wait up to 10 minutes for apps to sync, and then go to **Software Library** > **Overview** > **Application Management** > **License Information for Store Apps**.
+6. Choose an app synced from Play for Work and then choose **Create Application**.
+7. Finish the wizard and choose **Close**.
+8. Go to **Software Library** > **Overview** > **Application Management** > **Applications**, choose an Android for Work app, and deploy as usual.
 
 To sync Play for Work apps with Configuration Manager, you must approve at least one app on the Play for Work website first.
