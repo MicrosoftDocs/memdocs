@@ -85,7 +85,7 @@ These settings apply to both Android and Samsung KNOX devices.
 
 ### Device   
 
-|Setting name|Details|  
+|Setting|Details|  
 |------------------|-------------|  
 |**Voice dialing**|Enables or disables the voice dialing feature on the device.|
 |**Voice assistant**|Allows the use of voice assistant software on the device.|
@@ -99,13 +99,13 @@ These settings apply to both Android and Samsung KNOX devices.
 
 ### Store
 
-|Setting name|Details|  
+|Setting|Details|  
 |------------------|-------------|  
 |**Application store**|Lets the user access the Google Play store on the device.|
 
 ### Browser
 
-|Setting name|Details|  
+|Setting|Details|  
 |------------------|-------------|  
 |**Allow web browser**|Allows the device's default web browser to be used.|
 |**Autofill**|Allows the autofill function of the web browser to be used.|
@@ -127,7 +127,7 @@ These settings apply to both Android and Samsung KNOX devices.
 |**SMS and MMS messaging**|Allows the use of SMS and MMS messaging on the device.|
 |**Removable storage**|Lets the device use removable storage, like an SD card.|
 |**Camera**|Allows the use of the device camera.<br /><br /> Applies to Android and Samsung KNOX devices.|
-|**Near field commmunication (NFC)**|Allows tasks that use near field communication if the device supports it.|
+|**Near field communication (NFC)**|Allows tasks that use near field communication if the device supports it.|
 |**YouTube**|Allows the use of the YouTube app on the device.<br /><br /> Applies to Samsung KNOX devices only.|  
 |**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX devices only.|  
 
