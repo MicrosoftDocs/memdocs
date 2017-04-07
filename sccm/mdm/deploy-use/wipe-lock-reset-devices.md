@@ -80,7 +80,7 @@ Doing a selective wipe on an Android for Work device removes the work profile al
 
 |Content removed when you're retiring a device|Windows 10, Windows 8.1 and Windows RT 8.1|  
 |---------------------------------|-------------|
-|Company apps and associated data installed by using Configuration Manager and Intune|Apps are uninstalled and sideloading keys are removed. Apps that use Windows Selective Wipe will have the encryption key revoked and data will no longer be accessible.|  
+|Company apps and associated data installed by using Configuration Manager and Intune|Apps are uninstalled and sideloading keys are removed. Apps that use Windows Selective Wipe will have the encryption key revoked, and data will no longer be accessible.|  
 |VPN and Wi-Fi profiles|Removed.|  
 |Certificates|Removed and revoked.|  
 |Settings|Requirements are removed.|
