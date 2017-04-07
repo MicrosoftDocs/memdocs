@@ -2,7 +2,7 @@
 title: "Pre-release features| Microsoft Docs"
 description: "Pre-release features in System Center Configuration Manager"
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,6 +34,8 @@ When you install an update that includes pre-release features, those features ar
   -   **If you have not given consent:** When you're installing an update, pre-release features are visible in the Updates and Servicing Wizard but are grayed out and cannot be enabled. After the update is installed, you can view these features in the **Features** node, but you cannot enable them until after you have given consent in **Hierarchy Settings**.
 
 If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must give consent again at the central administration site.
+
+ When you enable a pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate, but it can take up to 30 minutes to complete, depending on the HMAN processing cycle. After the change is processed, you must restart the console before you can view new UI related to that feature.
 
 **The following pre-release features are available:**
 
