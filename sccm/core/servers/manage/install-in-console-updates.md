@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 3/7/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -310,6 +310,10 @@ When you install an update that includes one or more optional features, you will
 To view available features and their status, in the console navigate to **Administration** > **Updates and Servicing** > **Features**.
 
 When a feature is not optional, it's installed automatically and does not appear in the **Features** node.  
+
+
+When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate, but it can take up to 30 minutes to complete, depending on the HMAN processing cycle. After the change is processed, you must restart the console before you can view new UI related to that feature.
+
 
 ##  <a name="bkmk_prerelease"></a> Use pre-release features from updates
 Pre-release features are features that are included in the Current Branch for early testing in a production environment. These features should not be considered production ready, but can be used in your production environement. To learn more about pre-release features, including how to enable them in your environement, see [Pre-release featuers](/sccm/core/servers/manage/pre-release-features).                |
