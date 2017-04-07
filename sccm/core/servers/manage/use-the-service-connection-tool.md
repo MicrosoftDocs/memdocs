@@ -2,7 +2,7 @@
 title: "Service Connection Tool | Microsoft Docs"
 description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Use the Service Connection Tool for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use the **service connection tool** when your Configuration Manager  site system servers are not connected to the Internet but you still would like to keep yourself up-to-date with the latest updates to Configuration Manager.  
+Use the **service connection tool** when your service connection point is in offline mode, or when your Configuration Manager site system servers are not connected to the Internet. The tool can help you keep your site up-to-date with the latest updates to Configuration Manager.  
 
- The tool enables you to connect to the Configuration Manager cloud service to manually upload usage information for your hierarchy, and to download updates. Uploading usage data is necessary to enable the cloud service to provide the correct updates for your deployment.  
+When run, the tool manually connects to the Configuration Manager cloud service to upload usage information for your hierarchy, and to download updates. Uploading usage data is necessary to enable the cloud service to provide the correct updates for your deployment.  
 
 ## Prerequisites for using the service connection tool
 The following are prerequisites, and known issues.
@@ -75,11 +75,11 @@ You will also need to copy the ServiceConnectionTool folder with all of its cont
 ### Overview
 **There are three primary steps to using the service connection tool:**  
 
-1.  **Prepare**:  This step puts your usage data into a .cab file and stores it on a USB drive (or alternate transfer location you specify).  
+1.  **Prepare**:  This step runs on the computer that hosts the service connection point. When the tool is run it puts your usage data into a .cab file and stores it on a USB drive (or alternate transfer location you specify).  
 
-2.  **Connect**: This step has you run the tool on a remote computer that connects to the Internet to upload data and download updates.  
+2.  **Connect**: For this step you run the tool on a remote computer that connects to the Internet so you can upload your usage data and then download updates.  
 
-3.  **Import**: This step imports updates for Configuration Manager to your site so you can then view and install updates from the Configuration Manager console.  
+3.  **Import**: This step runs on the computer that hosts the service connection point. When run, the tool imports the you downloaded and adds them to your site so you can then view and install those updates from the Configuration Manager console.  
 
 Beginning with version 1606, when connecting to Microsoft you can upload multiple .cab files at one time (each from a different hierarchy), and specify a proxy server and a user for the proxy server.   
 
