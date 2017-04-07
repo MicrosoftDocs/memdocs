@@ -30,7 +30,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 3. On the **Home** tab, in the **Create** group, choose **Create Configuration Item**.  
 
-4. On the **General** page of the **Create Configuration Item Wizard**, specify a name and an optional description for the configuration item.  
+4. On the **General** page of the Create Configuration Item Wizard, specify a name and an optional description for the configuration item.  
 
 5. Under **Specify the type of configuration item that you want to create**, choose **Android and Samsung KNOX**.  
 
