@@ -36,7 +36,7 @@ The options that you configure on the default boot images at the site (such as o
 Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>. The default boot images are updated or regenerated depending on the action that you take.
 
 **Use updates and servicing to install the latest version of Configuration Manager**
-Beginning in version 1702, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images are not modified. 
+Beginning in version 1702, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images are not modified.
 
 Prior to version 1702, Configuration Manager updates the existing boot image (boot.wim) with the client components, drivers, customizations, etc. but will not use the latest Windows PE version from the Windows ADK. You must manually modify the boot image to use the new version of the Windows ADK.
 
@@ -44,7 +44,7 @@ Prior to version 1702, Configuration Manager updates the existing boot image (bo
 When you upgrade Configuration Manager 2012 to Configuration Manager CB by using the setup process, Configuration Manager will regenerate the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, and all customizations remain unchanged. Custom boot images are not modified.
 
 **Update distribution points with the boot image**
-When you use the **Update Distribution Points** action from the **Boot Images** node in the Configuration Manager console, Configuration Manager updates the default boot images with the client components, drivers, customizations, etc. but will not use the latest Windows PE version from the Windows ADK. Custom boot images are not modified.
+When you use the **Update Distribution Points** action from the **Boot Images** node in the Configuration Manager console, Configuration Manager updates the default boot images with the client components, drivers, customizations, etc. but will not use the latest Windows PE version from the Windows ADK. Custom boot images are not modified. 
 
 Also, consider the following for any of the above actions:
 - The source driver objects must be valid, including the driver source files, or the drivers will not be added to the boot images on the site.
