@@ -23,7 +23,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Email profiles works with Microsoft Intune to let you provision devices with email profiles and restrictions by using Exchange ActiveSync. This lets your users access corporate email on their devices with minimal setup required on their part.  
+Email profiles works with Microsoft Intune to let you set up devices with email profiles and restrictions by using Exchange ActiveSync. This lets your users access corporate email on their devices with minimal setup required on their part.  
 
  You can configure the following device types with email profiles:  
 
@@ -37,33 +37,38 @@ Email profiles works with Microsoft Intune to let you provision devices with ema
 
 To deploy email profiles to devices, they must be enrolled in Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
 
->[!NOTE]
->Intune provides two Android for Work email profiles, one for each of the Gmail and Nine Work email apps. These apps are available in the Google Play Store, and they support connections to Exchange. To enable the email connectivity, deploy one of these email apps to your users' devices, and then create and deploy the appropriate profile. Email apps like Nine Work might not be free. Review the app’s licensing details or contact the app company with any questions.
+> [!NOTE]
+> Intune provides two Android for Work email profiles, one for each of the Gmail and Nine Work email apps. These apps are available in the Google Play Store, and they support connections to Exchange. To enable the email connectivity, deploy one of these email apps to your users' devices, and then create and deploy the appropriate profile. Email apps like Nine Work might not be free. Review the app’s licensing details or contact the app company with any questions.
 
  In addition to configuring an email account on the device, you can configure synchronization settings for contacts, calendars, and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption, and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
+ When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
 
 ## Create an Exchange ActiveSync email profile  
 
 To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard. 
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1.  In the Configuration Manager console, choose **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Email Profiles**.  
+2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then choose **Email Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Email Profile** to start the wizard.
+3.  On the **Home** tab, in the **Create** group, choose **Create Exchange ActiveSync Email Profile** to start the wizard.
+
 4.  On the **General** page of the wizard, configure the following:
+
 	- **Name**. Provide a descriptive name for the email profile.
+
 	- **Description**. Optionally, provide a description for the email profile that will help you identify it in the Configuration Manager console.
-	- **This email profile is for Android for Work**. Select this option if you will deploy this email profile to only Android for Work devices. If you check this box, the **Supported Platforms** wizard page is not displayed. Only Android for Work email profiles are configured.
+
+	- **This email profile is for Android for Work**. Choose this option if you will deploy this email profile to only Android for Work devices. If you check this box, the **Supported Platforms** wizard page is not shown. Only Android for Work email profiles are configured.
+
 4.  On the **Exchange ActiveSync** page of the wizard, specify the following information:  
 
     -   **Exchange ActiveSync host**. Specify the hostname of your company Exchange Server that hosts Exchange ActiveSync services.  
 
-    -   **Account name**. Specify the display name for the email account as it will be displayed to users on their devices.  
+    -   **Account name**. Specify the display name for the email account as it will be shown to users on their devices.  
 
-    -   **Account user name**. Select how the email account username is configured on client devices. You can select one of the following options from the drop-down list:  
+    -   **Account user name**. Choose how the email account username is configured on client devices. You can choose one of the following options from the drop-down list:  
 
         -   **User Principal Name**. Use the full user principal name to sign in to Exchange.  
 
@@ -71,7 +76,7 @@ To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard
 
         -   **Primary SMTP Address**. Use the user's primary SMTP address to sign in to Exchange.  
 
-    -   **Email address**. Select how the email address for the user on each client device is generated. You can select one of the following options from the drop-down list:  
+    -   **Email address**. Choose how the email address for the user on each client device is generated. You can choose one of the following options from the drop-down list:  
 
         -   **Primary SMTP Address**. Use the user's primary SMTP address to sign in to Exchange.  
 
@@ -91,82 +96,78 @@ To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard
 
         -   **Username and Password**. The device user must supply a password to connect to Exchange ActiveSync. (The username is configured as part of the email profile.)  
 
-    -   **Identity certificate**. Click **Select** and then select a certificate to use for identity.  
+    -   **Identity certificate**. Choose **Select** and then choose a certificate to use for identity.  
 
         > [!NOTE]  
-        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+        > Before you can choose the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
-         This option is available only if you selected **Certificates** under **Authentication method**.  
+         This option is available only if you chose **Certificates** under **Authentication method**.  
 
     -   **Use S/MIME** (for iOS devices only). Send outgoing email by using S/MIME encryption. Choose from the following options:
 
+    	-   **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. This option is applicable to iOS devices only. You can choose only a PFX certificate to use as an encryption certificate.
 
-    	-   **Encryption certificates**. Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only. You can only select a PFX certificate to use as an encryption certificate.
-
-		If you select both an encryption certificate and a signing certificate, these must both be in PFX format.
+		If you choose both an encryption certificate and a signing certificate, these must both be in PFX format.
 
         > [!NOTE]  
-        >  Before you can select certificates, you must first configure them as an SCEP or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
-
-
-
+        > Before you can choose certificates, you must first configure them as an SCEP or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 ## Configure synchronization settings for the Exchange ActiveSync email profile  
 
-1.  On the **Configure synchronization settings** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
+On the **Configure synchronization settings** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
 
-    -   **Schedule**. Select the schedule by which devices will synchronize data from the Exchange server. This option is applicable to Windows Phone devices only. Choose from:  
+-   **Schedule**. Choose the schedule by which devices will sync data from the Exchange server. This option is applicable to Windows Phone devices only. Choose from:  
 
-        -   **Not Configured**. A synchronization schedule is not enforced. This lets users configure their own synchronization schedule.  
+   -   **Not Configured**. A synchronization schedule is not enforced. This lets users configure their own synchronization schedule.  
 
-        -   **As messages arrive**. Data like emails and calendar items will be automatically synchronized when they arrive.  
+   -   **As messages arrive**. Data like emails and calendar items will be automatically synced when they arrive.  
 
-        -   **15 minutes**. Data like emails and calendar items will be automatically synchronized every 15 minutes.  
+   -   **15 minutes**. Data like emails and calendar items will be automatically synced every 15 minutes.  
 
-        -   **30 minutes**. Data like emails and calendar items will be automatically synchronized every 30 minutes.  
+   -   **30 minutes**. Data like emails and calendar items will be automatically synced every 30 minutes.  
 
-        -   **60 minutes**. Data like emails and calendar items will be automatically synchronized every 60 minutes.  
+   -   **60 minutes**. Data like emails and calendar items will be automatically synced every 60 minutes.  
 
-        -   **Manual**. The device user must initiate synchronization manually.  
+   -   **Manual**. The device user must initiate synced manually.  
 
-    -   **Number of days of email to synchronize**. From the drop-down list, select the number of days of email that you want to synchronize. Choose one of the following values:  
+-   **Number of days of email to synchronize**. From the drop-down list, choose the number of days of email that you want to sync. Choose one of the following values:  
 
-        -   **Not Configured**. The setting is not enforced. It lets users configure how much email is downloaded to their device.  
+   -   **Not Configured**. The setting is not enforced. It lets users configure how much email is downloaded to their device.  
 
-        -   **Unlimited**. Synchronize all available email.  
+   -   **Unlimited**. Sync all available email.  
 
-        -   **1 day**  
+   -   **1 day**  
 
-        -   **3 days**  
+   -   **3 days**  
 
-        -   **1 week**  
+   -   **1 week**  
 
-        -   **2 weeks**  
+   -   **2 weeks**  
 
-        -   **1 month**  
+   -   **1 month**  
 
-    -   **Allow messages to be moved to other email accounts**. Select this option to let users move email messages between different accounts that they have configured on their device. This option is applicable to iOS devices only.  
+-   **Allow messages to be moved to other email accounts**. Choose this option to let users move email messages between different accounts that they have configured on their device. This option is applicable to iOS devices only.  
 
-    -   **Allow email to be sent from third-party applications**. Select this option to let users send email from certain non-default, third-party email applications. This option is applicable to iOS devices only.  
+-   **Allow email to be sent from third-party applications**. Choose this option to let users send email from certain non-default, third-party email applications. This option is applicable to iOS devices only.  
 
-    -   **Synchronize recently used email addresses**. Select this option to synchronize the list of email addresses that have been recently used on the device. This option is applicable to iOS devices only.  
+-   **Synchronize recently used email addresses**. Choose this option to sync the list of email addresses that have been recently used on the device. This option is applicable to iOS devices only.  
 
-    -   **Use SSL** Select this option to use Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.  
+-   **Use SSL**. Choose this option to use Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.  
 
-    -   **Content type to synchronize**. Select the content types that you want to synchronize to devices. This option is applicable to Windows Phone devices only. Choose from:  
+-   **Content type to synchronize**. Choose the content types that you want to sync to devices. This option is applicable to Windows Phone devices only. Choose from:  
 
-        -   **Email**  
+   -   **Email**  
 
-        -   **Contacts**  
+   -   **Contacts**  
 
-        -   **Calendar**  
+   -   **Calendar**  
 
-        -   **Tasks**  
+   -   **Tasks**  
 
 ## Specify supported platforms for the Exchange ActiveSync email profile  
 
-1.  On the **Supported Platforms** page of the Create Exchange ActiveSync Email Profile Wizard, select the operating systems on which the email profile will be installed, or click **Select all** to install the email profile on all available operating systems.  
+1.  On the **Supported Platforms** page of the Create Exchange ActiveSync Email Profile Wizard, choose the operating systems on which the email profile will be installed, or choose **Select all** to install the email profile on all available operating systems.  
 
-2.  Complete the wizard.
+2.  Finish the wizard.
 
 For information about how to deploy the Exchange ActiveSync email profiles, see [How to deploy profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md).  
