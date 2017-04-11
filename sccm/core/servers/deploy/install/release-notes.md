@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 03/27/17
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
