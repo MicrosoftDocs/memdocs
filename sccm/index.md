@@ -625,11 +625,11 @@ description: Learn how to use System Center Configuration Manager.
                 </ul>
             </li>
             <li>
-                <a href="#social">Social</a>
-                <ul id="social">
+                <a href="#community">Community</a>
+                <ul id="community">
                     <li>
-                        <a href="#social-all">All</a>
-                        <ul id="social-all" class="cardsF">
+                        <a href="#community-all">All</a>
+                        <ul id="community-all" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">

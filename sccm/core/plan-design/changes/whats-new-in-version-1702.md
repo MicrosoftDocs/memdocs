@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  3/27/2017
+ms.date:  3/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -23,9 +23,9 @@ Update 1702 for System Center Configuration Manager current branch is available 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >  Learn more about:    
->  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
->  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
+>   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
@@ -133,29 +133,6 @@ For a list of all available settings, see [Create configuration items for iOS an
 
 ## Application Management
 
-### Deploy volume-purchased iOS apps to device collections
-
-You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
-
-|||||
-|-|-|-|-|
-|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
-|Earlier than 1702|Yes|User|User license|
-|Earlier than 1702|No|User|User license|
-|Earlier than 1702|Yes|Device|User license|
-|Earlier than 1702|No|Device|User license|
-|1702 and later|Yes|User|User license|
-|1702 and later|No|User|User license|
-|1702 and later|Yes|Device|Device license|
-|1702 and later|No|Device|User license|
-
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
-### Support for iOS Volume Purchase Program for Education
-
-You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
-For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
 ### Improved support for Windows Store for Business apps
 
 You can now deploy online licensed apps from the Windows Store for Business to Windows 10 PCs that you manage using the Configuration Manager client.
@@ -168,6 +145,13 @@ In the **Properties** dialog box of a deployment type, on the **Install Behavior
 If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
 
 If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
+
+### App management improvements for hybrid MDM
+
+- [Deploy volume-purchased iOS apps to device collections](#deploy-volume-purchased-ios-apps-to-device-collections)
+- [Support for iOS Volume Purchase Program for Education](#support-for-ios-volume-purchase-program-for-education)
+- [Support for multiple volume-purchase program tokens](#support-for-multiple-volume-purchase-program-tokens)
+
 
 ## Operating system deployment
 
@@ -228,7 +212,8 @@ The Windows 10 ADK is now tracked by build version to ensure a more supported ex
 ### Default boot image source path can no longer be changed
 Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
 
-
+### Default boot images are regenerated after upgrading Configuration Manager to a new version
+Beginning in this release, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images are not modified. For details, see [Manage boot images](/sccm/osd/get-started/manage-boot-images#BKMK_BootImageDefault).
 
 ## Software updates
 
@@ -248,8 +233,31 @@ Beginning in version 1702, Configuration Manager supports express installation f
 
 ## Mobile device management
 
+### Android and iOS versions are no longer targetable in creation wizards for hybrid MDM
+
+Beginning in version 1702 for hybrid mobile device management (MDM), you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. Instead, you choose one of the following device types:
+
+- Android
+- Samsung KNOX Standard 4.0 and higher
+- iPhone
+- iPad
+
+This change affects the wizards for creating the following items:
+
+- Configuration items
+- Compliance policies
+- Certificate profiles
+- Email profiles
+- VPN profiles
+- Wi-Fi profiles
+
+With this change, hybrid deployments can provide support more quickly for new Android and iOS versions without needing a new Configuration Manager release or extension. Once a new version is supported in Intune standalone, users will be able to upgrade their mobile devices to that version.
+
+To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target a specific version, you can create the new item, and then specify the targeted version on the properties page of the newly created item.
+
 ### Android for Work support
 Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
+
 - [Enroll Android for Work devices](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)
 - [Approve and deploy Android for Work apps](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
 - [Create configuration items for Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-for-work-configuration-items)
@@ -258,20 +266,37 @@ Starting with 1702, Hybrid mobile device management with Microsoft Intune now su
 - [Compliance policies for Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
 
 
-### Improvements to certificate profiles
+### Deploy volume-purchased iOS apps to device collections
 
-You can now create a PFX certificate profile that supports S/MIME and deploy it to users.  The certificate can then used for S/MIME encryption and signing on all iOS devices that the user has enrolled.
-For more information, see [How to create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) and [Exchange ActiveSync email profiles](/sccm/mdm/deploy-use/create-exchange-activesync-profiles).
+You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
-Additionally, you can now specify multiple certification authorities (CAs) on multiple Certificate registration point site system roles and then assign which CAs process requests as part of the certificate profile.
-For more information, see [Certificate infrastructure](/sccm/protect/deploy-use/certificate-infrastructure).
+|||||
+|-|-|-|-|
+|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+|Earlier than 1702|Yes|User|User license|
+|Earlier than 1702|No|User|User license|
+|Earlier than 1702|Yes|Device|User license|
+|Earlier than 1702|No|Device|User license|
+|1702 and later|Yes|User|User license|
+|1702 and later|No|User|User license|
+|1702 and later|Yes|Device|Device license|
+|1702 and later|No|Device|User license|
 
-These new features for certificates are currently pre-release, and are subject to change.
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
-## Protect devices
+### Support for iOS Volume Purchase Program for Education
 
-### Detect outdated antimalware client versions
-Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions).
+You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+### Support for multiple volume-purchase program tokens
+
+You can now associate multiple Apple volume-purchase program tokens with Configuration Manager.
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+### Support for line of business apps in Windows Store for Business
+
+You can now sync custom line of business apps from the Windows Store for Business.
 
 ### Conditional access device compliance policy improvements
 
@@ -279,14 +304,19 @@ A new device compliance policy rule is available to help you block access to cor
 
 Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 
-- Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
-- Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
+- Learn more [how device compliance policies work](/sccm/mdm/deploy-use/device-compliance-policies).
+- Learn more [how to create device compliance policies](/sccm/mdm/deploy-use/create-compliance-policy).
 
 ### New Mobile Threat Defense monitoring tools
 
 Beginning in version 1702, you have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
 
 - Learn more [how to monitor Mobile Threat Defense compliance](https://docs.microsoft.com/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
+
+## Protect devices
+
+### Detect outdated antimalware client versions
+Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions).
 
 ### Device health attestation updates
 Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).
