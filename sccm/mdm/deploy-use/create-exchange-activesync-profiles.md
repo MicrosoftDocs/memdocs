@@ -103,9 +103,9 @@ To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard
 
          This option is available only if you chose **Certificates** under **Authentication method**.  
 
-    -   **Use S/MIME** (for iOS devices only). Send outgoing email by using S/MIME encryption. Choose from the following options:
+    -   **Use S/MIME**. Send outgoing email by using S/MIME encryption. This option is applicable to iOS devices only. Choose from the following options:
 
-    	-   **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. This option is applicable to iOS devices only. You can choose only a PFX certificate to use as an encryption certificate.
+    	-   **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. You can choose only a PFX certificate to use as an encryption certificate.
 
 		If you choose both an encryption certificate and a signing certificate, these must both be in PFX format.
 
