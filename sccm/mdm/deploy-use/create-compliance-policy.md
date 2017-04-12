@@ -39,12 +39,13 @@ robots: noindex
 
   * **Type of compliance policy**. Select the type of policy you want to create, depending on whether the device is managed by Configuration Manager. **This applies to version  or later**.<br /><br /> For devices managed by Intune, choose the **Compliance rules for devices managed without configuration manager client** option. When you select this option, you can also select the type of platform that you want this policy to apply to.
 
-  * **Noncompliance severity for reports**. Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are the following:<br /><br />
-    * **None**. Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.
-    * **Information**. Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.   
-    * **Warning**. Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.
-    * **Critical**. Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.
-    * **Critical with event**. Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.|      
+  * **Noncompliance severity for reports**. Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are the following:
+
+     * **None**. Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.
+     * **Information**. Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.   
+     * **Warning**. Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.
+     * **Critical**. Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.
+     * **Critical with event**. Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.      
 
 5.  On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on, or choose **Select all** to choose all device platforms. The supported platforms are: Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2, and 2016.
 
