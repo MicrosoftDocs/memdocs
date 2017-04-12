@@ -23,7 +23,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Email profiles works with Microsoft Intune to let you set up devices with email profiles and restrictions by using Exchange ActiveSync. This lets your users access corporate email on their devices with minimal setup required on their part.  
+By using Microsoft Intune and Exchange ActiveSync, you can set up devices with email profiles and restrictions. This lets your users access corporate email on their devices with minimal setup required on their part.  
 
  You can configure the following device types with email profiles:  
 
@@ -35,14 +35,14 @@ Email profiles works with Microsoft Intune to let you set up devices with email 
 - Samsung KNOX Standard (4 and later)
 - Android for Work
 
-To deploy email profiles to devices, they must be enrolled in Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
+To deploy email profiles to devices, you must enroll the devices in Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
 
 > [!NOTE]
-> Intune provides two Android for Work email profiles, one for each of the Gmail and Nine Work email apps. These apps are available in the Google Play Store, and they support connections to Exchange. To enable the email connectivity, deploy one of these email apps to your users' devices, and then create and deploy the appropriate profile. Email apps like Nine Work might not be free. Review the app’s licensing details or contact the app company with any questions.
+> Intune provides two Android for Work email profiles, one each for the Gmail email app and the Nine Work email app. These apps are available in the Google Play Store, and they support connections to Exchange. To enable the email connectivity, deploy one of these email apps to your users' devices, and then create and deploy the appropriate profile. Email apps like Nine Work might not be free. Review the app’s licensing details or contact the app company with any questions.
 
  In addition to configuring an email account on the device, you can configure synchronization settings for contacts, calendars, and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
+ When you create an email profile, you can include a wide range of security settings. These settings include certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
 
 ## Create an Exchange ActiveSync email profile  
 
@@ -64,7 +64,7 @@ To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard
 
 4.  On the **Exchange ActiveSync** page of the wizard, specify the following information:  
 
-    -   **Exchange ActiveSync host**. Specify the hostname of your company Exchange Server that hosts Exchange ActiveSync services.  
+    -   **Exchange ActiveSync host**. Specify the host name of your company Exchange server that hosts Exchange ActiveSync services.  
 
     -   **Account name**. Specify the display name for the email account as it will be shown to users on their devices.  
 
@@ -118,33 +118,33 @@ On the **Configure synchronization settings** page of the Create Exchange Active
 
 -   **Schedule**. Choose the schedule by which devices will sync data from the Exchange server. This option is applicable to Windows Phone devices only. Choose from:  
 
-   -   **Not Configured**. A synchronization schedule is not enforced. This lets users configure their own synchronization schedule.  
+    -   **Not Configured**. A synchronization schedule is not enforced. This lets users configure their own synchronization schedule.  
 
-   -   **As messages arrive**. Data like emails and calendar items will be automatically synced when they arrive.  
+    -   **As messages arrive**. Data like emails and calendar items will be automatically synced when they arrive.  
 
-   -   **15 minutes**. Data like emails and calendar items will be automatically synced every 15 minutes.  
+    -   **15 minutes**. Data like emails and calendar items will be automatically synced every 15 minutes.  
 
-   -   **30 minutes**. Data like emails and calendar items will be automatically synced every 30 minutes.  
+    -   **30 minutes**. Data like emails and calendar items will be automatically synced every 30 minutes.  
 
-   -   **60 minutes**. Data like emails and calendar items will be automatically synced every 60 minutes.  
+    -   **60 minutes**. Data like emails and calendar items will be automatically synced every 60 minutes.  
 
-   -   **Manual**. The device user must initiate synced manually.  
+    -   **Manual**. The device user must initiate synchronization manually.  
 
 -   **Number of days of email to synchronize**. From the drop-down list, choose the number of days of email that you want to sync. Choose one of the following values:  
 
-   -   **Not Configured**. The setting is not enforced. It lets users configure how much email is downloaded to their device.  
+    -   **Not Configured**. The setting is not enforced. It lets users configure how much email is downloaded to their device.  
 
-   -   **Unlimited**. Sync all available email.  
+    -   **Unlimited**. Sync all available email.  
 
-   -   **1 day**  
+    -   **1 day**  
 
-   -   **3 days**  
+    -   **3 days**  
 
-   -   **1 week**  
+    -   **1 week**  
 
-   -   **2 weeks**  
+    -   **2 weeks**  
 
-   -   **1 month**  
+    -   **1 month**  
 
 -   **Allow messages to be moved to other email accounts**. Choose this option to let users move email messages between different accounts that they have configured on their device. This option is applicable to iOS devices only.  
 
@@ -152,21 +152,21 @@ On the **Configure synchronization settings** page of the Create Exchange Active
 
 -   **Synchronize recently used email addresses**. Choose this option to sync the list of email addresses that have been recently used on the device. This option is applicable to iOS devices only.  
 
--   **Use SSL**. Choose this option to use Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.  
+-   **Use SSL**. Choose this option to use Secure Sockets Layer (SSL) communication for sending emails, receiving emails, and communicating with the Exchange server.  
 
 -   **Content type to synchronize**. Choose the content types that you want to sync to devices. This option is applicable to Windows Phone devices only. Choose from:  
 
-   -   **Email**  
+    -   **Email**  
 
-   -   **Contacts**  
+    -   **Contacts**  
 
-   -   **Calendar**  
+    -   **Calendar**  
 
-   -   **Tasks**  
+    -   **Tasks**  
 
 ## Specify supported platforms for the Exchange ActiveSync email profile  
 
-1.  On the **Supported Platforms** page of the Create Exchange ActiveSync Email Profile Wizard, choose the operating systems on which the email profile will be installed, or choose **Select all** to install the email profile on all available operating systems.  
+1.  On the **Supported Platforms** page of the Create Exchange ActiveSync Email Profile Wizard, choose the operating systems on which the email profile will be installed. Or choose **Select all** to install the email profile on all available operating systems.  
 
 2.  Finish the wizard.
 
