@@ -147,7 +147,7 @@ Use the following procedure to view distribution point configuration status.
 4.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
 
 ## Client Data Sources dashboard
-Beginning with version 1610, you can use the **Client Data Sources** dashboard to help understand the use of [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) in your environment. The dashboard will start displaying data after clients download content using Peer Cache and report that information back to the site. This can take up to 24 hours.
+Beginning with version 1610, you can use the **Client Data Sources** dashboard to help understand the use of [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) in your environment. The dashboard will start displaying data after clients download content and report that information back to the site. This can take up to 24 hours.
 
 > [!TIP]  
 > With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
