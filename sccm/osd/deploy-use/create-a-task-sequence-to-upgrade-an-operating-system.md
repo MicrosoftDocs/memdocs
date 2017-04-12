@@ -64,7 +64,7 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 
 
 ## Configure pre-cache content
-Beginning in version 1702, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
+Beginning in version 1702, for available deployments of task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
 > [!TIP]  
 > Introduced with version 1702, the pre-cache is a pre-release feature. To enable it, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
 
