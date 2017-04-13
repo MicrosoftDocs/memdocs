@@ -109,11 +109,11 @@ To verify the specific software being blocked or audited, see the following loca
 
 ## Security and privacy information for Device Guard
 
-•	In this pre-release version, do not deploy Device Guard policies with the enforcement mode **Audit Only** in a production environment. This mode is intended to help you test the capability in a lab setting only.
-•	Devices that have a policy deployed to them in **Audit Only** mode, or devices that have a policy deployed to them in **Enforcement Enabled** mode, that have not yet been restarted to enforce the policy are vulnerable to untrusted software being installed.
+- In this pre-release version, do not deploy Device Guard policies with the enforcement mode **Audit Only** in a production environment. This mode is intended to help you test the capability in a lab setting only.
+- Devices that have a policy deployed to them in **Audit Only** mode, or devices that have a policy deployed to them in **Enforcement Enabled** mode, that have not yet been restarted to enforce the policy are vulnerable to untrusted software being installed.
 In this situation, the software might continue to be allowed to run even if the device restarts, or receives a policy in **Enforcement Enabled** mode.
-•	To ensure that the Device Guard policy is effective, prepare the device in a lab environment, deploy the **Enforcement Enabled** policy, then restart the device before you give the device to an end user.
-•	Do not deploy a policy with **Enforcement Enabled**, and then later deploy a policy with **Audit Only** to the same device. This might result in untrusted software being allowed to run.
+- To ensure that the Device Guard policy is effective, prepare the device in a lab environment, deploy the **Enforcement Enabled** policy, then restart the device before you give the device to an end user.
+- Do not deploy a policy with **Enforcement Enabled**, and then later deploy a policy with **Audit Only** to the same device. This might result in untrusted software being allowed to run.
 
 
 
