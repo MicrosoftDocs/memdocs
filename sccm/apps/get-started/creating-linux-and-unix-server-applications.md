@@ -2,7 +2,7 @@
 title: "Create Linux and UNIX server applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Linux and Unix devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -136,7 +136,7 @@ The following table lists the properties for packages and programs that are not 
 
     -   **Maximum transfer rate during throttling window (Kbps)**  
 
-    -   **Maximum transfer rate during throttling window (Kbps)**  
+    -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
 The following configuration for Background Intelligent Transfer is not supported, and is ignored by the client for Linux and UNIX:  
 
