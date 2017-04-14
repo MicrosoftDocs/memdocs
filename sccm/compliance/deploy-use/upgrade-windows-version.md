@@ -1,8 +1,8 @@
 ---
-title: "Upgrade Windows devices to a new version | Microsoft Docs"
-description: "Upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a newer edition automatically."
+title: "Upgrade Windows devices to a different version | Microsoft Docs"
+description: "Automatically upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a different edition."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 04/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,7 +24,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-The System Center Configuration Manager **Edition Upgrade Policy** lets you automatically upgrade devices that run one of the following Windows 10 versions to a newer edition:
+The System Center Configuration Manager **Edition Upgrade Policy** lets you automatically upgrade devices that run one of the following Windows 10 versions to a different edition:
 
 - Windows 10 Desktop
 - Windows 10 Mobile
