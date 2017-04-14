@@ -2,7 +2,7 @@
 title: "How to manage Windows Device Guard | Microsoft Docs"
 description: "Learn how to use System Center Configuration Manager to manage Windows Device Guard."
 ms.custom: na
-ms.date: 04/13/2017
+ms.date: 04/14/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
