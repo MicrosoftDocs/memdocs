@@ -44,7 +44,6 @@ author: Dougebyms.author: dougebymanager: angrobe
 -   The service connection point must be installed  and  configured for **Online, persistent connection** mode to see data on the Windows 10 servicing dashboard. When you are  in offline mode, you  will not  see data updates in the dashboard until you  get Configuration Manager servicing updates.   
      For more information, see [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
--   Specify the group policy setting, **Defer Upgrades and Updates**, to determine whether a computer is CB or CBB.  
 
 -   Internet Explorer 9 or later must be installed on the computer that runs the Configuration Manager console.  
 
@@ -113,14 +112,15 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     -   **Target Collection**: Specifies the target collection to be used for the servicing plan. Members of the collection receive the Windows 10 upgrades that are defined in the servicing plan.  
 
-    > [!NOTE]  
-    >  Beginning in Configuration Manager version 1602, when you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
-    > The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership is not reevaluated for the high-risk deployment settings.  
-    > For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
-    > When you select a collection that contains a site role, the following applies:  
-    >   
-    >  -   If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.  
-    > -   If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
+        > [!NOTE]  
+        >  Beginning in Configuration Manager version 1602, when you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties.  
+        High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+        > The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership is not reevaluated for the high-risk deployment settings.  
+        > For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
+        > When you select a collection that contains a site role, the following applies:  
+
+        > - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.  
+        > - If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
 
 6.  On the Deployment Ring page, configure the following settings:  
 
