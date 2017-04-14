@@ -102,13 +102,13 @@ The following settings are also removed from Windows 10 Mobile and Windows Phone
 - **Require a password to unlock mobile devices**  
 - **Allow simple passwords**  
 - **Minimum password length**  
-- **Required password type** 
+- **Required password type**
 - **Password expiration (days)**  
 - **Remember password history**  
 - **Number of repeated sign-in failures to allow before the device is wiped**  
 - **Minutes of inactivity before password is required**  
 - **Required password type – minimum number of character sets**  
-- **Allow camera** 
+- **Allow camera**
 - **Require encryption on mobile device**  
 - **Allow removable storage**  
 - **Allow web browser**  
@@ -120,7 +120,7 @@ The following settings are also removed from Windows 10 Mobile and Windows Phone
 - **Allow Wi-Fi tethering**  
 - **Allow automatic connection to free Wi-Fi hotspots**  
 - **Allow Wi-Fi hotspot reporting**  
-- **Allow factory reset** 
+- **Allow factory reset**
 - **Allow Bluetooth**  
 - **Allow NFC**
 - **Allow Wi-Fi**
@@ -146,7 +146,7 @@ The data and apps that EFS selective wipe currently supports are:
 
 - Mail app for Windows.  
 
-- Work folders. 
+- Work folders.
 
 - Files and folders encrypted by EFS. For more information, see [Best practices for the Encrypting File System](http://support.microsoft.com/kb/223316).  
 
@@ -165,13 +165,15 @@ If a user forgets their passcode, you can help them by removing the passcode fro
 
 |Platform|Passcode reset|  
 |--------------|--------------------|  
-|iOS|Supported for clearing the passcode from a device. Does not create a new temporary passcode.|  
+|iOS|Supported for clearing the passcode from a device. Does not create a new temporary passcode.|
+|macOS| Not supported.|
 |Android|Supported, and a temporary passcode is created.|
 |Android for Work | Not supported.|
-|Windows 10|Not supported at this time.|  
-|Windows Phone 8 and Windows Phone 8.1|Supported.|  
+|Windows 10 PCs|Not supported.|  
+|Windows 10 mobile|Supported for Windows 10 Creator version and later mobile devices that are Azure AD joined.|
+|Windows Phone 8.1|Supported.|  
 |Windows RT 8.1 |Not supported.|  
-|Windows 8.1|Not supported.|  
+|Windows 8.1 PCs |Not supported.|  
 
 #### To reset the passcode on a mobile device remotely in Configuration Manager  
 
