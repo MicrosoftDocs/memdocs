@@ -2,7 +2,7 @@
 title: "Pre-release features| Microsoft Docs"
 description: "Pre-release features in System Center Configuration Manager"
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 4/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,10 +35,13 @@ When you install an update that includes pre-release features, those features ar
 
 If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must give consent again at the central administration site.
 
+ When you enable a pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate, but it can take up to 30 minutes to complete, depending on the HMAN processing cycle. After the change is processed, you must restart the console before you can view new UI related to that feature.
+
 **The following pre-release features are available:**
 
  |Feature          |Added as pre-release | Added as a full feature|  
 |------------------|---------------------|---------------------|
+| Device Guard management with Configuration Manager |  [Version 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Check for running executable files before installing an application  |   [Version 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Data Warehouse service point  |  [Version 1702](/sccm/core/servers/manage/data-warehouse) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Peer Cache for content distribution to clients |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
