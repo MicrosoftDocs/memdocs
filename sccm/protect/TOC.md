@@ -56,7 +56,7 @@
 ### [Troubleshooting client](deploy-use/troubleshoot-endpoint-client.md)
 
 ## [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
-
+## [Device Guard settings](deploy-use/use-device-guard-with-configuration-manager.md)
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
