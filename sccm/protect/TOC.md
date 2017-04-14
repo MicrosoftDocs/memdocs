@@ -44,7 +44,6 @@
 ##### [Microsoft updates](deploy-use/endpoint-definitions-microsoft-updates.md)
 ##### [Malware Protection Center](deploy-use/endpoint-definitions-protection-center.md)
 ##### [Network share updates](deploy-use/endpoint-definitions-network.md)
-### [Device Guard settings](deploy-use/use-device-guard-with-configuration-manager.md)
 
 #### [Deploy policy](deploy-use/endpoint-antimalware-policies.md)
 #### [Configure client](deploy-use/endpoint-protection-configure-client.md)
@@ -55,6 +54,7 @@
 ### [Endpoint Protection scenario](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection client help](deploy-use/endpoint-protection-client-help.md)
 ### [Troubleshooting client](deploy-use/troubleshoot-endpoint-client.md)
+### [Device Guard settings](deploy-use/use-device-guard-with-configuration-manager.md)
 
 ## [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
