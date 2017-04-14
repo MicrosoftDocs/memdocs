@@ -121,9 +121,9 @@ Servicing plans use only the **Upgrades** software updates classification, not c
         >  
         > For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
         >
-        > When you select a collection that contains a site role, the following applies:  
-
-        >    - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.  
+        > When you select a collection that contains a site role, the following applies:    
+        >   
+        >    - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.    
         >    - If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
 
 6.  On the Deployment Ring page, configure the following settings:  
