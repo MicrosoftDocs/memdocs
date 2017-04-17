@@ -27,6 +27,8 @@ manager: angrobe
 ## Introduction
 Windows Device Guard is a group of Windows 10 features that are designed to protect PCs against malware and other untrusted software. It prevents malicious code from running by ensuring that only approved code, that you know, can be run.
 
+Device Guard encompasses both software and hardware based security functionality. Configurable code integrity is a software based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, configurable code integrity does not have any hardware or firmware prerequisites. Device Guard policies deployed with Configuration Manager enable a configurable code integrity policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined below. Optionally, hypervisor based protection of code integrity policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
+
 To learn more about Device Guard, read [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
 
 You can use Configuration Manager to deploy a Device Guard policy that lets you configure the mode in which Device Guard will run on PCs in a collection. 
@@ -63,10 +65,9 @@ When you deploy a policy, typically, the following executables will be allowed t
 
 Before you configure or deploy Device Guard policies, read the following information:
 
-- To use Device Guard, PCs you manage must be running the Windows 10 Creators Update, or later.
-- Once a policy is successfully processed on a client PC, Configuration Manager is configured as a Managed Installer on that client, and software deployed through SCCM after the policy is processed is automatically trusted. Software installed by Configuration Managed before the Device Guard policy is processed is not automatically trusted.
 - Device Guard management is a pre-release feature for Configuration Manager, and is subject to change.
-- When you enable Device Guard with Configuration Manager, note that the policy does not prevent users with local administrator rights from circumventing the Device Guard policy or otherwise executing untrusted software.
+- To use Device Guard, PCs you manage must be running the Windows 10 Enterprise with the Creators Update, or later.
+- Once a policy is successfully processed on a client PC, Configuration Manager is configured as a Managed Installer on that client, and software deployed through SCCM after the policy is processed is automatically trusted. Software installed by Configuration Managed before the Device Guard policy is processed is not automatically trusted.
 - In this pre-release version, once a client PC receives a deployment of a Device Guard policy, it will randomize the processing time of this policy over a two-hour period. 
 - Client PCs must have connectivity to their Domain Controller in order for a Device Guard policy to be processed successfully.
 - The default compliance evaluation schedule for Device Guard policies, configurable during deployment, is every 1 day. If issues in policy processing are observed, it may be beneficial to configure the compliance evaluation schedule to be shorter, for example every 1 hour. This schedule dictates how often clients will re-attempt to process a Device Guard policy in the case of a failure.
@@ -114,6 +115,10 @@ To verify the specific software being blocked or audited, see the following loca
 In this situation, the software might continue to be allowed to run even if the device restarts, or receives a policy in **Enforcement Enabled** mode.
 - To ensure that the Device Guard policy is effective, prepare the device in a lab environment, deploy the **Enforcement Enabled** policy, then restart the device before you give the device to an end user.
 - Do not deploy a policy with **Enforcement Enabled**, and then later deploy a policy with **Audit Only** to the same device. This might result in untrusted software being allowed to run.
+- When you use Configuration Manager to enable configurable code integrity on client PCs with Device Guard policies, note that the policy **does not** prevent users with local administrator rights from circumventing the Device Guard policy or otherwise executing untrusted software. 
+- The only way to prevent users with local administrator rights from disabling configurable code integrity is to deploy a signed binary policy, which is possible through Group Policy but not currently supported in Configuration Manager.
+- Setting up Configuration Manager as a Managed Installer on client PCs uses AppLocker policy. AppLocker is only used to identify Managed Installers and all enforcement happens with configurable code integrity. 
+
 
 
 
