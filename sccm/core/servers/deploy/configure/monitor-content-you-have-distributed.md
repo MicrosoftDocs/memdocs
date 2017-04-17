@@ -2,7 +2,7 @@
 title: "Monitor content | Microsoft Docs"
 description: "Understand how to monitor distributed content by using the Configuration Manager console."
 ms.custom: na
-ms.date: 2/8/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -150,7 +150,7 @@ Use the following procedure to view distribution point configuration status.
 Beginning with version 1610, you can use the **Client Data Sources** dashboard to help understand the use of [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) in your environment. The dashboard will start displaying data after clients download content and report that information back to the site. This can take up to 24 hours.
 
 > [!TIP]  
-> With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). The **Client Data Sources** dashboard will become visible only after you enable it. It can take up to 24 hours after you enable it to start displaying data. 
+> **Peer Cache** and the **Client Data Sources** dashboard are pre-release features introduced in version 1610. You must enable Peer Cache before the Client Data Sources dashboard becomes visible in the console. To enable Peer Cache, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). It can take up to 24 hours after you enable it to start displaying data.
 
 In the console, go to **Monitoring** > **Distribution Status** > **Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.
 
