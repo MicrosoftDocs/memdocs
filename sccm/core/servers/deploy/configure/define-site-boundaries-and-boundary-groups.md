@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-BBoundaries for System Center Configuration Manager define network locations on your intranet that can contain devices that you want to manage. Boundary groups are logical groups of boundaries that you configure.
+Boundaries for System Center Configuration Manager define network locations on your intranet that can contain devices that you want to manage. Boundary groups are logical groups of boundaries that you configure.
 
  A  hierarchy can include any number of boundary groups, and each boundary group can contain any combination of the following boundary types:  
 
@@ -40,7 +40,7 @@ Clients that are on the Internet or configured as Internet-only clients do not u
 
 **To get started:**
 - First, [define network locations as boundaries](/sccm/core/servers/deploy/configure/boundaries).
-- Then continue by [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) to associate clients in those boundaries to the site system servers they can use. 
+- Then continue by [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) to associate clients in those boundaries to the site system servers they can use.
 
 
 
