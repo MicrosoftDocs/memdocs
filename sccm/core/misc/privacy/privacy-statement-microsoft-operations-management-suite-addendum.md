@@ -10,8 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa91afee-45b5-46eb-ad8a-e9c7d3122b38
 caps.latest.revision: 4
-author: arob98
-ms.author: angrobe
+author: brenduns
+ms.author: brenduns
 manager: angrobe
 ---
 # System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum
@@ -21,7 +21,7 @@ manager: angrobe
 This privacy statement should be read in conjunction with the [System Center Configuration Manager privacy statement](https://www.microsoft.com/en-us/privacystatement/SystemCenterConfigurationManager/Default.aspx) as the provisions in that document are applicable. This privacy statement covers the features for the Microsoft Operations Management Suite Connector within System Center Configuration Manager. This disclosure focuses on high-level aspects of the Connector, and is not intended to be an exhaustive list.
 
 ### **What this feature does:**
-The Microsoft Operations Management Suite Connector syncs data such as collections from System Center Configuration Manager to Microsoft Operations Management Suite Suite. Collections are used in System Center Configuration Manager to organize resources into manageable units. This enables system administrators to create an organized structure that can be used to perform various management tasks on multiple resources, such as computers and servers, at one time.
+The Microsoft Operations Management Suite Connector syncs data such as collections from System Center Configuration Manager to Microsoft Operations Management Suite. Collections are used in System Center Configuration Manager to organize resources into manageable units. This enables system administrators to create an organized structure that can be used to perform various management tasks on multiple resources, such as computers and servers, at one time.
 
 ### Information collected, processed, or transmitted:
 The Microsoft Azure subscription ID and secret key are stored in the Configuration Manager database when an administrator configures the feature. Both the Azure Active Directory client secret and the Microsoft Operations Management Suite workspace shared key are stored in the on-premise System Center Configuration Manager database.
