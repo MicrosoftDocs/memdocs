@@ -29,5 +29,5 @@
 
 ## [Create user data and profiles configuration items](deploy-use/create-user-data-and-profiles-configuration-items.md)
 ## [Create remote connection profiles](deploy-use/create-remote-connection-profiles.md)
-## [Upgrade Windows devices to a newer version](deploy-use/upgrade-windows-version.md)
+## [Upgrade Windows devices to a new edition](deploy-use/upgrade-windows-version.md)
 ## [Monitor compliance settings](deploy-use/monitor-compliance-settings.md)

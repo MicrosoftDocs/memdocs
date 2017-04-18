@@ -2,7 +2,7 @@
 title: "Upgrade Windows devices to a different version with Configuration Manager | Microsoft Docs"
 description: "Automatically upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a different edition with Configuration Manager."
 ms.custom: na
-ms.date: 04/14/2017
+ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
