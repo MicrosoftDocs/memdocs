@@ -52,4 +52,4 @@ When you run **Update Distribution Points** on a selected boot image, you can no
 
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Boot Images**.
 2. Select a boot image and click **Update Distribution Points**.
-3. On the **General** page of the wizard, select **Reload boot image using the current version of Windows PE from the installed Windows ADK.
+3. On the **General** page of the wizard, select **Reload boot image using the current version of Windows PE from the installed Windows ADK**.
