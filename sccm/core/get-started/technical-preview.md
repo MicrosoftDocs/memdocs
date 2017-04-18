@@ -108,7 +108,8 @@ You can install a baseline version for up to 1 year after its release. However, 
  The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
  |Capability |Technical Preview version |Current Branch version|  
- |----------------|---------------------|--------------------|
+|----------------|---------------------|--------------------|
+ |Configure Android apps with app configuration policies  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![Not added](media/Red_X.gif)|
  |Hardware inventory collects Secure Boot information |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![Not added](media/Red_X.gif)|
  |Add child task sequences to a task sequence|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![Not added](media/Red_X.gif)|
  |Reload boot images with current Windows PE version |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#reload-boot-images-with-current-windows-pe-version)|![Not added](media/Red_X.gif)|

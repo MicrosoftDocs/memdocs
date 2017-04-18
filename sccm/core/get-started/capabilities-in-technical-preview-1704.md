@@ -24,6 +24,13 @@ This article introduces the features that are available in the Technical Preview
 
 **The following are new features you can try out with this version.**  
 
+## Configure Android apps with app configuration policies
+You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute settings that might be required when a user runs an app on Android for Work devices. Android app configuration policies are available only on devices running Android for Work and apply to approved apps from the Play for Work store.
+
+### Try it out                 
+
+In the Configuration Manager console, choose **Software Library** > **Application Management** > **App Configuration Policies** and choose **Create App Configuration Policy**. On the **General** page of the wizard, you can now **Select a configuration policy type**. Specify the platform targeted by the app configuration policy: **Configuration policy for Android for Work apps**. You can then either **Specify name and value pairs** or **Browse to a property list JSON file**. The new app configuration policy is shown in the **Software Library** workspace, in the **App Configuration Policies** node. To associate an app configuration policy with the deployment of an Android for Work app, deploy the application as you normally would by using the procedure in the [Deploy applications](/sccm/apps/deploy-use/deploy-applications) topic.
+
 ## Hardware inventory collects Secure Boot information
 Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
@@ -46,7 +53,7 @@ Consider the following when you add a child task sequence to a task sequence:
 2. Click **Browse** to select the child task sequence.  
 
 ## Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, the version of the Configuration Manager client, and operating system version of the boot image. You can use this information to help you decide whether to reload the boot image.  
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manage. You can use this information to help you decide whether to reload the boot image.  
 
 ### To reload a boot image with the current Windows PE version
 
