@@ -2,7 +2,7 @@
 title: "Setup reference | Microsoft Docs"
 description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 4/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,10 +23,6 @@ manager: angrobe
 
 System Center Configuration Manager Setup provides links to several topics that are detailed in the following sections. The information presented here can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation.  
 
--   [Before you begin](#bkmk_start)  
--   [Assess server readiness](#bkmk_assess)  
--   [Clients for additional operating systems](#bkmk_Addclients)  
--   [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
 ##  <a name="bkmk_start"></a> Before you begin  
 Before you install new Configuration Manager sites, make sure you have reviewed the following information, which can help set the stage for a successful deployment design:  
@@ -50,10 +46,7 @@ You can download client software for Configuration Manager from the Microsoft Do
 
 Use the following links to download clients for the version of Configuration Manager you use:  
 
--   [System Center Configuration Manager (current branch)](http://www.microsoft.com/download/details.aspx?id=47719)  
--   [System Center 2012 R2 Configuration Manager SP1 and System Center 2012 Configuration Manager SP2](http://go.microsoft.com/fwlink/?LinkID=626550)  
--   [System Center 2012 R2 Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=316448)  
--   [System Center 2012 Configuration Manager SP1](http://www.microsoft.com/en-pk/download/details.aspx?id=36212)  
+-   See [Microsoft System Center Configuration Manager - Clients for Additional Operating Systems](http://www.microsoft.com/download/details.aspx?id=47719)  
 
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first System Center Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  
@@ -78,4 +71,4 @@ Data collection includes these three levels:
 
 For more information, including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-[System Center Configuration Manager Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=626527)
+[System Center Configuration Manager Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=626527) (http://go.microsoft.com/fwlink/?LinkID=626527).
