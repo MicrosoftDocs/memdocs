@@ -183,7 +183,7 @@
 ##   Technical references
 ###  [Accounts](plan-design/hierarchy/accounts.md)
 ###  [Communications between endpoints](plan-design/hierarchy/communications-between-endpoints.md)
-###  [Hierarchy maintenance tool](servers/manage/hierarchy-maintenance-tool-preinst.exe.md	)
+###  [Hierarchy maintenance tool](servers/manage/hierarchy-maintenance-tool-preinst.exe.md)
 ###  [International support](plan-design/hierarchy/international-support.md)
 ###  [Interoperability between different versions](plan-design/hierarchy/interoperability-between-different-versions.md)
 ###  [Language packs](servers/deploy/install/language-packs.md)
