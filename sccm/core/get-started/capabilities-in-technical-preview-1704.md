@@ -25,7 +25,7 @@ This article introduces the features that are available in the Technical Preview
 **The following are new features you can try out with this version.**  
 
 ## Hardware inventory collects Secure Boot information
-New properties have been added that collect Secure Boot information in the hardware inventory class **SMS_Firmware** (introduced in version 1702). This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
 ## Add child task sequences to a task sequence
 In this version, you can add a new task sequence step that runs another task sequence, which creates a parent/child relationship between the task sequences. This allows you to create more modular task sequences that you can re-use.  
@@ -46,8 +46,10 @@ Consider the following when you add a child task sequence to a task sequence:
 2. Click **Browse** to select the child task sequence.  
 
 ## Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (located in the installation directory of the Windows ADK) in the boot image. The **General** page of the wizard provides information about the latest Windows ADK version and the Windows ADK version currently in the boot image. You can use this information to help you decide whether to reload Windows ADK in the boot image.  
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server and the Windows ADK version from which Windows PE was used in the boot image. You can use this information to help you decide whether to reload Windows PE in the boot image with the current version.  
 
 ### To reload a boot image with the current Windows PE version
 
-Go to the Boot Images node, select a boot image, and click Update Distribution Points. On the General page of the wizard, compare the displayed versions, and then select the checkbox to reload from Windows ADK.
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Boot Images**.
+2. Select a boot image and click **Update Distribution Points**.
+3. On the **General** page of the wizard, select **Reload boot image using the current version of Windows PE from the installed Windows ADK.
