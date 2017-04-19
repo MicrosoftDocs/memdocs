@@ -52,7 +52,6 @@ The following Intune features introduced in April 2017 work in hybrid deployment
 
   An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](whats-new-in-intune-app-ui.md).
 
-
 ## New hybrid features in March 2017
 
 ### New in Microsoft Intune
