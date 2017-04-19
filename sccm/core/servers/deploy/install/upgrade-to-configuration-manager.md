@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -70,6 +70,9 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
  The following check lists can help you plan a successful upgrade to  System Center Configuration Manager.  
 
 ### Before you upgrade  
+
+**Review your System Center 2012 Configuration Manager environment** and resolve issues as detailed in the KB4018655: [Configuration Manager clients reinstall every five hours because of a recurring retry task and may cause an inadvertent client upgrade](https://support.microsoft.com/help/4018655).
+
 **Ensure that your computing environment meets the supported configurations** that are required for upgrading to System Center Configuration Manager:  
 
 Review the server operating systems in use to host site system roles:  
