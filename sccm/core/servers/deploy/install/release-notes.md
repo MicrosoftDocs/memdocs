@@ -230,3 +230,10 @@ This only happens when you add the same **User Collection** to the **Exempted Co
 This issue affects System Center Configuration Manager conditional access for **Exchange On-Premises** with update 1602, and is expected to be resolved in a future update.  
 
 **Workaround:** Add the **User Collection** to **Targeted Collections** page before selecting **User Collection** on the **Exempted Collection** page, or make sure you are not adding the same **User Collection** to both Targeted and Exempted Collections.
+
+## Endpoint Protection
+<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+### Antimalware policy fails to apply on Windows Server 2016 Core
+Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
+
+**Workaround:**  None.  As an administrator, you can use group policy to manage settings for Windows Server 2016 Core.
