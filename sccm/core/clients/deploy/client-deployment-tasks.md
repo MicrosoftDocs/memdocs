@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54dd2e8e-66f3-4a10-987a-ed7dde4d32f6
 caps.latest.revision: 3
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Client deployment tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Client deployment tasks for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can deploy  the System Center Configuration Manager client to PCs, servers, and other devices in your organization using many different methods depending on your needs. The information in the following pages provides detailed instructions for how to deploy the Configuration Manager client to various types of target platforms:  
 
 -   [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  

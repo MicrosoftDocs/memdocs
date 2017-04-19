@@ -30,7 +30,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 ###  Enable DEP enrollment in Configuration Manager with Intune  
 
 1.  **Start managing iOS devices with Configuration Manager**   
-    Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup).
+    Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/enroll-hybrid-ios-mac.md).
 
 2.  **Create a DEP token request**   
     In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration**, expand **Cloud Services**, and click **Windows Intune Subscriptions**. Click **Create DEP Token Request** on the **Home** tab, click **Browse** to specify the download location for the DEP token request, and then click **Download**. Save the DEP token request (.pem) file locally. The .pem file is used to request a trusted token (.p7m) from the Apple Device Enrollment Program portal.  
@@ -70,12 +70,14 @@ Companies can purchase iOS devices through Apple's device enrollment program and
             > DEP with user affinity requires ADFS WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user token.
 
             -   **No user affinity**: The device is not affiliated with a user. Use this affiliation for devices that perform tasks without accessing local user data. Apps requiring user affiliation won’t work.  
+             ![Screenshot of DEP profile name, description and User Affinity prompt](../media/dep-general.png)
 
-    2.  On the **Device Enrollment Program** page, specify the following information, and then click **Next**.  
+    2.  On the **Device Enrollment Program Settings** page, specify the following information, and then click **Next**.  
 
         -   **Department**: This information appears when users tap "About Configuration" during activation.  
 
-        -   **Support phone number**: Displayed when the user clicks the **Need Help** button during activation.  
+        -   **Support phone number**: Displayed when the user clicks the **Need Help** button during activation.
+       ![Screenshot of assigning DEP profile to iOS devices](../media/dep-settings.png)
 
         -   **Preparation mode**: This state is set during activation and cannot be changed without factory resetting the device:  
 
@@ -100,6 +102,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
         -   **Zoom** - If enabled, Setup Assistant prompts for this service during activation
         -   **Siri** - If enabled, Setup Assistant prompts for this service during activation  
         -   **Send diagnostic data to Apple** - If enabled, Setup Assistant prompts for this service during activation  
+        ![Screenshot of assigning DEP profile to iOS devices](../media/dep-setup-assistant.png)
 
     4.  On the **Additional Management** page, specify whether a USB connection can be used for additional management settings. When you select **Require certificate**, you must import an Apple Configurator management certificate to use for this profile.  Set to **Disallow** to prevent syncing files with iTunes or management via Apple Configurator. Microsoft recommends you set to **Disallow**, export any further configuration from Apple Configurator, and then deploy as a Custom iOS configuration profile, rather than use this setting to allow manual deployment with or without a certificate.  
 
@@ -113,7 +116,10 @@ Companies can purchase iOS devices through Apple's device enrollment program and
     Go to the [Device Enrollment Program portal](https://deploy.apple.com) (https://deploy.apple.com) and sign in with your company Apple ID. Go to **Deployment Program** > **Device Enrollment Program** > **Manage Devices**. Specify how you will **Choose Devices**, provide device information and specify details by device **Serial Number**, **Order Number**, or **Upload CSV File**. Next, select **Assign to Server** and select the <*ServerName*> that you specified in step 3, and then click **OK**.  
 
 3.  **Synchronize DEP-managed devices**   
-    In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **iOS** > **Device Information**. On the **Home** tab, click **DEP Sync**. A sync request is sent to Apple. After synchronization completes, the DEP-managed devices are displayed. The **Enrollment Status** for managed devices reads **Not contacted** until the device is powered on and runs the Setup Assistant to enroll the device.  
+    In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **Predeclared Devices**. On the **Home** tab, click **DEP Sync**. A sync request is sent to Apple. After synchronization completes, the DEP-managed devices are displayed.
 
-4.  **Distribute devices to users**   
-    You can now give your corporate-owned devices to users. When an iOS device is turned on it will be enrolled for management by Intune.
+4.  **Assign DEP profile**<br>In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Select the DEP enrollment profile and then, in the **Home** tab, click **Assign to devices**. Select the devices that will use this enrollment profile, click **Add**, and then click **OK**.   
+     ![Screenshot of assigning DEP profile to iOS devices](../media/dep-assign-profile.png)
+
+5.  **Distribute devices to users**   
+    You can now give your corporate-owned devices to users. The **Enrollment Status** for managed devices reads **Not contacted** until the device is powered on and runs the Setup Assistant to enroll the device. When an iOS device is turned on it will be enrolled for management by Intune.

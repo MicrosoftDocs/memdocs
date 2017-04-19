@@ -2,7 +2,7 @@
 title: "Client settings | Microsoft Docs"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 # About client settings in System Center Configuration Manager
@@ -324,7 +324,7 @@ Many of the client settings are self-explanatory. Others are described here.
     -   NOIDMIF files should be in the Windows\System32\CCM\Inventory\Noidmif folder.  
 
     > [!NOTE]  
-    >  This setting is available only in the default client settings. 
+    >  This setting is available only in the default client settings.
 
 -   **Maximum random delay**
 
@@ -596,6 +596,13 @@ Many of the client settings are self-explanatory. Others are described here.
 -   **Period of time for which all pending deployments with deadline in this time will also be installed**  
 
      Use this setting to specify the timeframe for the previous setting. You can enter a value from 1 to 23 hours and from 1 to 365 days. By default, this setting is configured for 7 days.  
+
+-   **Enable installation of Express installation files on clients**
+
+-   **Port used to download content for Express installation files**
+
+-   **Enable management of the Office 365 Client Again**
+    Use this setting to enable the management of the Office 365 Client Agent. When you set the value to **Yes**, it allows you to configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager.
 
 ##  User and device affinity  
 

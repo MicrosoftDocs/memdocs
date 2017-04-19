@@ -2,12 +2,12 @@
 title: "Create Exchange ActiveSync email profiles | Microsoft Docs"
 description: "Learn how to create and configure email profiles in System Center Configuration Manager that work with Microsoft Intune."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - configmgr-other
+  - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
@@ -27,39 +27,37 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
  You can configure the following device types with email profiles:  
 
--   Devices that run Windows Phone 8  
+- Windows 10
+- Windows Phone 8.1
+- Windows Phone 8.0
+- iPhones running iOS 5, iOS 6, iOS 7 and iOS 8  
+- iPads running iOS 5, iOS 6, iOS 7 and iOS 8  
+- Samsung KNOX Standard (4 and higher)
+- Android for Work
 
--   Devices that run Windows Phone 8.1  
+To deploy email profiles to devices, they must be enrolled in Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
 
--   Devices that run Windows  10 Mobile  
-
--   IPhone devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
-
--   IPad devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
-
-> [!IMPORTANT]  
->  To deploy profiles to iOS, Android Samsung KNOX Standard, Windows Phone, and Windows 8.1 or Windows 10 devices, these devices must be enrolled into Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>[!NOTE]
+>Intune provides two Android for Work email profiles, one for each of the Gmail and Nine Work email apps. These apps are available in the Google Play Store, and support connections to Exchange. To enable the email connectivity, deploy one of these email apps to your users' devices, and then create and deploy the appropriate profile. Email apps such as Nine Work might not be free. Review the app’s licensing details or contact the app company with any questions.
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).    
-
+ When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
 
 ## Create a New Exchange ActiveSync Email Profile  
 
 Start the Create Exchange ActiveSync Email Profile Wizard  
 
-1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
+1.  In the Configuration Manager console, click **Assets and Compliance**.  
 
 2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Email Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Profile**.
-
-4.  Follow the wizard instructions   
-
-### To configure Exchange ActiveSync settings for the Exchange ActiveSync email profile  
-
-1.  On the **Exchange ActiveSync** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
+3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Email Profile**.
+4.  On the General page of the wizard, configure the following:
+	- **Name** - Provide a descriptive name for the email profile.
+	- **Description** - Optionally, provide a description for the email profile that will help you identify it in the Configuration Manager console.
+	- **This email profile is for Android for Work** - Select this option if you will only be deploying this email profile to Android for Work devices. If you select this checkbox, the **Supported Platforms** wizard page is not displayed. Only Android for Work email profiles are configured.
+4.  On the **Exchange ActiveSync** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
 
     -   **Exchange ActiveSync host:** Specify the hostname of your company Exchange Server that hosts Exchange ActiveSync services.  
 
@@ -69,7 +67,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
 
         -   **User Principal Name** Use the full user principal name to log onto Exchange.  
 
-        -   **sAMAccountName** Use  
+        -   **AccountName** Use the full user account name from Active Directory
 
         -   **Primary SMTP Address** Use the users primary SMTP address to log onto Exchange.  
 
@@ -96,25 +94,22 @@ Start the Create Exchange ActiveSync Email Profile Wizard
     -   **Identity certificate:** Click **Select** and then select a certificate to use for identity.  
 
         > [!NOTE]  
-        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
          This option is only available if you selected **Certificates** under **Authentication method**.  
 
-    -   **Use S/MIME** Send outgoing email using S/MIME encryption. This option is applicable to iOS devices only.  
+    -   **Use S/MIME** (for iOS devices only) - Send outgoing email using S/MIME encryption. Choose from the following options:
 
-    -   **Encryption certificates:** Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only.  
 
-        > [!NOTE]  
-        >  Before you can select the encryption certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+    	-   **Encryption certificates:** Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only. You can only select a PFX certificate to use as an encryption certificate.
 
-         This option is only available if you selected **Use S/MIME**.  
-
-    -   **Signing certificates:** Click **Select** and then select a certificate to use for signing. This option is applicable to iOS devices only.  
+		If you select both an encryption certificate, and a signing certificate, these must both be in PFX format.
 
         > [!NOTE]  
-        >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Before you can select certificates, you must first configure them as a Simple Certificate Enrollment Protocol (SCEP) or PFX certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
-         This option is only available if you selected **Use S/MIME**.  
+
+
 
 ###   Configure Synchronization Settings for the Exchange ActiveSync Email Profile.  
 

@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 
 ---
@@ -64,5 +64,5 @@ With Configuration Manager and Intune, you can enable BYOD ("bring your own devi
 
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
- > [!div class="button"]
- [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
+> [!div class="button"]
+[< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

@@ -3,8 +3,10 @@
 title: Plan for software updates | Microsoft Docs
 description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
 keywords:
-author: dougebyms.author: dougebymanager: angrobe
-ms.date: 03/01/2017
+author: dougeby
+ms.author: dougeby
+manager: angrobe
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -14,7 +16,10 @@ ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 
 ---
 
-# Plan for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for software updates in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you use software updates in a System Center Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation.
 
 ## Capacity planning recommendations for software updates  
@@ -69,9 +74,12 @@ Use the following sections to determine the software update point infrastructure
 -   **Internet-based clients**: Receive a list of software update points that you configure to allow connections only from the Internet, or a list of software update points that allow Internet and intranet client connections.  
 
 ###  <a name="BKMK_SUPSwitching"></a> Software update point switching  
- If you have multiple software update points at a site, and then one fails or becomes unavailable, clients will connect to a different software update point and continue to scan for the latest software updates. When a client is first assigned a software update point, it will stay assigned to that software update point unless it fails to scan for software updates on that software update point.  
+> [!NOTE]
+> Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
 
- The scan for software updates can fail with a number of different retry and non-retry error codes. When the scan fails with a retry error code, the client starts a retry process to scan for the software updates on the software update point. The high-level conditions that result in a retry error code are typically because the WSUS server is unavailable or because it is temporarily overloaded. The client uses the following process when it fails to scan for software updates:  
+If you have multiple software update points at a site, and then one fails or becomes unavailable, clients will connect to a different software update point and continue to scan for the latest software updates. When a client is first assigned a software update point, it will stay assigned to that software update point unless it fails to scan for software updates on that software update point.  
+
+The scan for software updates can fail with a number of different retry and non-retry error codes. When the scan fails with a retry error code, the client starts a retry process to scan for the software updates on the software update point. The high-level conditions that result in a retry error code are typically because the WSUS server is unavailable or because it is temporarily overloaded. The client uses the following process when it fails to scan for software updates:  
 
 1.  The client scans for software updates at its scheduled time, or when it is initiated through the control panel on the client, or by using the SDK. If the scan fails, the client waits 30 minutes to retry the scan, and it uses the same software update point.  
 
@@ -135,7 +143,8 @@ Enable this option on a device collection or on a set of selected devices. Once 
 -   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 ###  <a name="BKMK_PlanningForWSUS"></a> Plan for WSUS installation  
- Software updates requires that a supported version of WSUS is installed on all site system servers that you configure for the software update point site system role. Additionally, when you do not install the software update point on the site server, you must install the WSUS Administration Console on the site server computer, if it is not already installed. This allows the site server to communicate with WSUS that runs on the software update point.  
+
+Software updates requires that a supported version of WSUS is installed on all site system servers that you configure for the software update point site system role. Additionally, when you do not install the software update point on the site server, you must install the WSUS Administration Console on the site server computer, if it is not already installed. This allows the site server to communicate with WSUS that runs on the software update point.  
 
  When you use WSUS on Windows Server 2012, you must configure additional permissions to allow **WSUS Configuration Manager** in Configuration Manager to connect to the WSUS in order to perform periodic health checks. Choose one of the following options to configure the permissions:  
 
@@ -151,9 +160,9 @@ Enable this option on a device collection or on a set of selected devices. Once 
  When you install WSUS, you have the option to use the existing IIS Default website, or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website, instead of sharing the same web site that is used by the other Configuration Manager site systems or other applications. This is especially true when you install the software update point site system role on the site server. When you run WSUS in Windows Server 2012, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS. You must specify these port settings when you create the software update point at a site.  
 
 ####  <a name="BKMK_WSUSInfrastructure"></a> Use an existing WSUS infrastructure  
- You can use a WSUS server that was active in your environment before you installed Configuration Manager. When the software update point is configured, you must specify the synchronization settings. Configuration Manager connects to the WSUS that runs on the software update point and configures the WSUS server with the same settings. When the WSUS server was previously synchronized with products or classifications that you did not configure as part of the software update point synchronization settings, the software updates metadata for the products and classifications are synchronized for all of the software updates metadata in the WSUS database regardless of the synchronization settings for the software update point. This might result in unexpected software updates metadata in the site database. You will experience the same behavior when you add products or classifications directly in the WSUS Administration console, and then immediately initiate synchronization. Every hour, by default, Configuration Manager connects to the WSUS that runs on the software update point and resets any settings that were modified outside of Configuration Manager.  
+ You can select a WSUS server that was active in your environment before you installed Configuration Manager as a software update point. When the software update point is configured, you must specify the synchronization settings. Configuration Manager connects to the WSUS server that runs on the software update point server and configures WSUS with the same settings. If you synchronized WSUS before it was configured as a software update point with products or classifications that you did not configure as part of the software update point synchronization settings, the software updates metadata for the products and classifications are synchronized for all of the software updates metadata in the WSUS database regardless of the synchronization settings that you configured for the software update point. This might result in unexpected software updates metadata in the site database. You will experience the same behavior when you add products or classifications directly in the WSUS Administration console, and then immediately initiate a synchronization. Every hour, by default, Configuration Manager connects to WSUS on the software update point and resets any settings that were modified outside of Configuration Manager. The software updates that do not meet the products and classifications that you specify in synchronization settings are set to expired, and then they are removed from the site database.
 
- The software updates that do not meet the products and classifications that you specify in synchronization settings are set to expired, and then they are removed from the site database.  
+ When a WSUS server is configured as a software update point, you are no longer able to use it as a stand-alone WSUS server. If you need a separate stand-alone WSUS server that is not managed by Configuration Manager, you must configure it on a different server. 
 
 ####  <a name="BKMK_WSUSAsReplica"></a> Configure WSUS as a replica server  
  When you create a software update point site system role on a primary site server, you cannot use a WSUS server that is configured as a replica. When the WSUS server is configured as a replica, Configuration Manager fails to configure the WSUS server, and the WSUS synchronization fails as well. When a software update point is created on a secondary site, Configuration Manager configures WSUS to be a replica server of the WSUS that runs on the software update point at the parent primary site. The first software update point that you install at a primary site is the default software update point. Additional software update points at the site are configured as replicas of the default software update point.  

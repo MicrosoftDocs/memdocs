@@ -2,7 +2,7 @@
 title: "Windows Hello for Business settings | Microsoft Docs"
 description: "Learn how to integrate Windows Hello for Business with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -37,13 +37,13 @@ You can control Windows Hello for Business settings on domain-joined Windows 10 
 
 Note that in addition to this configuration, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile).
 
-### Recommended approach -  Configure a Windows Hello for Business profile  
+## Recommended approach -  Configure a Windows Hello for Business profile  
 
-In the admin console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  
+In the Configuration Manager console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  
 
 ![Windows Hello for Business settings](../media/Hello-for-Business-settings.png)
 
-### Configure Windows Hello for Business with Group Policy in Active Directory  
+## Configure Windows Hello for Business with Group Policy in Active Directory  
 
 You can use an Active Directory Group Policy to configure your Windows 10 domain-joined devices to provision user Hello for Business credentials when a user logs to Windows:
 
@@ -69,12 +69,10 @@ You can now link the Group Policy object you just created to a location of your 
 
    A specific security group containing Windows 10 domain-joined computers that will be automatically registered with Azure AD.    
 
-#### Configure Windows Hello for Business by deploying a PowerShell script with Configuration Manager    
+## Configure Windows Hello for Business by deploying a PowerShell script with Configuration Manager    
 You can create and deploy the following PowerShell script by using Configuration Manager application management.    
 
-```    
-powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"  
-```  
+**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}" ** 
 
 For more information about Configuration Manager application management, see [Introduction to application management in System Center Configuration Manager](/sccm/apps/understand/introduction-to-application-management).  
 
@@ -85,9 +83,26 @@ For more information about Configuration Manager application management, see [In
 
 -   In the certificate profile, select a template that uses Smart Card logon EKU.  
 
+-	If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
+You must first have created the **Key Admins** group and added all Configuration Manager management point computers as members to this group.
+
+	1.	Login to a domain controller or management workstations with Domain Admin, or equivalent credentials.
+	2.	Open **Active Directory Users and Computers**.
+	3.	From the navigation pane, right-click your domain name, and then click **Properties**.
+	4.	On the **Security** tab of the *<domain name>* **Properties** dialog box, click **Advanced**. 
+if the **Security** tab is not displayed, turn on **Advanced Features** from the **View** menu of **Active Directory Users and Computers**.
+	5.	Click **Add**.
+	6.	In the **Permission Entry for** *<domain name>* dialog box, click **Select a principal**.
+	7.	In the **Select User, Computer, Service Account, or Group** dialog box, type **Key Admins** in the **Enter the object name to select** text box.  Click **OK**.
+	8.	From the **Applies to** list, select **Descendant User objects**.
+	9.	Scroll to the bottom of the page and click **Clear all**.
+	10.	In the **Properties** section, select **Read msDS-KeyCredentialLink**.
+	11.	Click **OK** three times to complete the task.
+
+
  For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
-### See also  
+## See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 
  [Manage identity verification using Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  

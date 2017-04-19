@@ -3,7 +3,7 @@ title: "Manage Windows as a Service - Configuration Manager | Microsoft Docs"
 description: "View the state of Windows as a Service using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support."
 
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -128,7 +128,9 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
         -   **Release Ready (Current Branch)**: In the CB servicing model, feature updates are available as soon as Microsoft releases them.
 
-        -   **Business Ready (Current Branch for Business**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
+        -   **Business Ready (Current Branch for Business)**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
+
+        For more information about servicing branches and what options is best for you, see [Servicing branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 
     -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the number of days that you configure for this setting.
 
@@ -195,7 +197,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority.  
 
-11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations).  
+11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
 
     > [!NOTE]  
     >  This page is available only when you create a new software update deployment package.  
@@ -248,17 +250,17 @@ Use the following procedure to modify the properties of a servicing plan.
 
     -   **Detail level**: Specify the level of detail for the state messages that are reported by client computers.  
 
-   **Download Settings**: On the Download Settings tab, configure the following settings:  
+    **Download Settings**: On the Download Settings tab, configure the following settings:  
 
-    -   Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
+    - Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
 
-    -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
+    - Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
     -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
     -   Specify whether to have clients download software updates from Microsoft Update if software updates are not available on distribution points.
-    > [!IMPORTANT]
-    > Do not use this setting for Windows 10 Servicing updates. Configuration Manager (at least through version 1610) will fail to download the Windows 10 Servicing updates from Microsoft Update.
+        > [!IMPORTANT]
+        > Do not use this setting for Windows 10 Servicing updates. Configuration Manager (at least through version 1610) will fail to download the Windows 10 Servicing updates from Microsoft Update.
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.   
 

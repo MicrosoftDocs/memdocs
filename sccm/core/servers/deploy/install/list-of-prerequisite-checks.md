@@ -2,7 +2,7 @@
 title: "Prerequisite checks | Microsoft Docs"
 description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,7 +20,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The following sections detail the available prerequisite checks. 
+The following sections detail the available prerequisite checks.
 
 For information about using Prerequisite Checker, see [Prerequisite Checker](prerequisite-checker.md).  
 
@@ -112,7 +112,7 @@ The following table lists checks that Prerequisite Checker performs for system r
 |**Domain membership**|Verifies that the Configuration Manager computer is a member of a Windows domain.|Error|Central administration site, <br>Primary site, <br>Secondary site, <br>SMS Provider, <br>SQL Server|
 |**Domain membership**|Verifies that the Configuration Manager computer is a member of a Windows domain.|Warning|Management point, <br>Distribution point|
 |**FAT Drive on Site Server**|Checks whether the disk drive is formatted with the FAT file system. For better security, install site server components on disk drives formatted with the NTFS file system.|Warning|Primary site|
-|**Free disk space on site server**|To install the site server, the site server computer must have at least 5 GB of free disk space. You must have an additional 1 GB of free space if you install the SMS Provider site system role on the same computer.|Error|Central administration site, <br>Primary site, <br>Secondary site|
+|**Free disk space on site server**|To install the site server, the site server computer must have at least 15 GB of free disk space. You must have an additional 1 GB of free space if you install the SMS Provider site system role on the same computer.|Error|Central administration site, <br>Primary site, <br>Secondary site|
 |**Pending system restart**|Checks whether another program requires the server to be restarted before you run Setup.|Error|Central administration site, <br>Primary site, <br>Secondary site, <br>Configuration Manager console, <br>SMS Provider, <br>SQL Server, <br>Management point, <br>Distribution point|
 |**Read-Only Domain Controller**|Site database servers and secondary site servers are not supported on a read-only domain controller (RODC). For more information, see [Problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base.|Error|Central administration site, <br>Primary site, <br>Secondary site|
 |**Schema extensions**|Determines whether the Active Directory Domain Services schema has been extended, and if so, the version of the schema extensions that were used. Configuration Manager Active Directory schema extensions are not required for site server installation, but we recommend them for the full use of all Configuration Manager features. For more information about the advantages of extending the schema, see [Prepare Active Directory for site publishing](../../../../core/plan-design/network/extend-the-active-directory-schema.md).|Warning|Central administration site, <br>Primary site|

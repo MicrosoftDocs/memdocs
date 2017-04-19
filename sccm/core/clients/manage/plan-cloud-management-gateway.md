@@ -1,7 +1,7 @@
 ---
 title: "Plan for cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 12/19/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -38,7 +38,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 - Cloud management gateway only supports the management point and software update point roles.
 -   The following features in Configuration Manager are currently unsupported for cloud management gateway:
 
-    -   Client deployment and upgrade using client push
+    -   Client deployment
     -   Automatic site assignment
     -   User policies
     -   Application catalog (including software approval requests)

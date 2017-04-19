@@ -8,7 +8,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - configmgr-client
+  - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
@@ -37,6 +37,6 @@ To manage computers and devices with System Center Configuration Manager On-prem
 >   
 >  -   Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
+> -   Windows 10 Team 
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   

@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Determine whether to block clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Determine whether to block clients in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 If a client computer or client mobile device is no longer trusted, you can block the client in the System Center 2012 Configuration Manager console. Blocked clients are rejected by the Configuration Manager infrastructure so that they cannot communicate with site systems to download policy, upload inventory data, or send state or status messages.  
 
  You must block and unblock a client from its assigned site rather than from a secondary site or a central administration site.  

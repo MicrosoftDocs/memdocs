@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 
 ---
@@ -67,7 +67,7 @@ You can deploy System Center Configuration Manager terms and conditions to user 
 
 ## To monitor terms and conditions  
 
-1.  Beginning in version 1602, you can monitor terms and conditions deployments in the Configuration Manager console. In the Configuration Manager console, go to **Monitoring** > **Overview** > **Deployments**.  
+1.  You can monitor terms and conditions deployments in the Configuration Manager console. In the Configuration Manager console, go to **Monitoring** > **Overview** > **Deployments**.  
 
 2.  Select the terms and conditions deployment. from the list of deployments  
 
@@ -117,4 +117,4 @@ You can deploy System Center Configuration Manager terms and conditions to user 
      We recommend you increase the version number and require acceptance any time you make significant changes to your terms and conditions. Keep the current version number if you are fixing typos or changing formatting, for example.
 
 > [!div class="button"]
- [< Previous step](configure-intune-subscription.md)  [Next step >](create-service-connection-point.md)
+[< Previous step](configure-intune-subscription.md)  [Next step >](create-service-connection-point.md)

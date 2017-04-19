@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 caps.latest.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+author: robstackmsft
+ms.author: robstack
 Robots: NOINDEX,NOFOLLOW
 ---
 # Use the client software from the version 1606 baseline media for extended interoperability with future versions of a Current Branch site

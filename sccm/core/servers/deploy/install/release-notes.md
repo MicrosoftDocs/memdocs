@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: 41
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Release notes for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Release notes for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 With System Center Configuration Manager, product release notes are limited to urgent issues that are not yet fixed in the product (available through a in-console update), or detailed in a Microsoft Knowledge Base article.  
 
  For known issues that affect core scenarios, this information is conveyed in the on-line product documentation in the System Center Configuration Manager documentation library.  
@@ -26,7 +31,27 @@ With System Center Configuration Manager, product release notes are limited to u
 
 ## Setup and upgrade  
 
+### After you update a Configuration Manager console using ConsoleSetup.exe from the site server folder, recent language pack changes are not available
+<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed langauge packs might not be availble. This occurs when:
+- Your site runs version 1610 or 1702.
+- The console is updated in-place by using ConsoleSetup.exe from the site server installation folder.
+
+When this issue occurs, the reinstalled console does not use the latest set of language packs that were configured. No errors are returned, but language packs avaialble to the console will not have changed.  
+
+**Workaround:** Uninstall the current console, and then reinstall the console as a new installation. You can use ConsoleSetup.exe from the site servers installation folder. During the installation, be sure to select the language pack files you want to use.
+
+
+### With version 1702, the default site boundary group is configured for use for site assignment
+<!--  SMS 486380   Applicability should only be to 1702. -->
+With version 1702, the default site boundary groups Reference tab has a check for **Use this boundary group for site assignment**, lists the site as the **Assigned site**, and is grayed out so that the configuration cannot be edited or removed.
+
+**Workaround:** None. You can ignore this setting. Although the group is enabled for site assignment, the default site boundary group is not used for site assignment. With 1702, this configuration ensures the default site boundary group is associated with the correct site.
+
+
+
 ### When installing a Long-Term Service Branch site using version 1606, a Current Branch site is installed
+<!-- Consider move to core content  -->
 When you use the version 1606 baseline media from the October 2016 release to install a Long-Term Servicing Branch (LTSB) site, Setup installs a Current Branch site instead. This occurs because the option to install a service connection point with the site install is not selected.
 
  - Although a service connection point is not required, it must be selected to install during Setup to install a LTSB site.
@@ -41,21 +66,19 @@ To confirm which branch installed, in the console at **Administration** > **Site
 
 
 
-
-
 ### The  SQL Server backup model in use by Configuration Manager can change from full to simple  
+<!-- Confirm applicability for upgrade to later baselines. 1511 is out of support. 1606 is minmum supported baseline  -->
+
  When you upgrade to System Center Configuration Manager version 1511, the SQL Server backup model in use by Configuration Manager can change from full to simple.  
 
 -   If you use a custom SQL Server backup task with the full backup model (instead of the built-in Backup task for Configuration Manager), the upgrade can change your backup model from full to simple.  
 
 **Workaround**: After upgrade to version 1511, review your SQL Server configuration and restore it to full if necessary.  
 
-### When you add a service window to a new site server, service windows that were   configured for another site server are deleted  
- When you use service windows with System Center Configuration Manager version 1511, you can only configure service windows for  a single site server in a hierarchy. After configuring service windows on one server, when you then configure a service window on a second site server, the service windows on the first site server are silently deleted, with no warning or errors.  
 
-**Workaround**: Install the hotfix from the [Microsoft Knowledge Base article 3142341](http://support.microsoft.com/kb/3142341). This issue is also resolved when you install the 1602 update for System Center Configuration Manager.  
 
 ### An update is stuck with a state of Downloading in the Updates and Servicing node of the Configuration Manager console  
+<!-- Source bug pending. Consider move to core content.  -->
 During the automatic download of updates by an on-line service connection point, an update can become stuck with a stat of Downloading. When the download of an update is stuck, entries similar to the following appear in the indicated log files:  
 
 DMPdownloader log:  
@@ -74,50 +97,10 @@ ConfigMgrSetup.log:
 
 -   **Value for State**:  Set to **146944** Decimal or **0x00023e00** Hexadecimal  
 
-### Pre-release features introduced in System Center Configuration Manager 1602  
-
-Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready.  
-
-Beginning with update 1606, you must give consent before you can use pre-release features. For more information, see [Use pre-release features from updates](../../../../core/servers/manage/install-in-console-updates.md).
-
-System Center Configuration Manager version 1602 introduces two pre-release features:  
-
--   Conditional access for PCs managed by System Center Configuration Manager. For more information, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).
-    - After you install update 1602, the feature type displays as released even though it is pre-release.
-    - If you then update from 1602 to 1606, the feature type displays as released even through it remains pre-release.
-    - If you update from version 1511 directly to 1606, the feature type displays as pre-release.
-
-
--   Servicing a cluster aware collection. For more information, see [Service a server group](../../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../../../core/get-started/capabilities-in-technical-preview-1605.md).  
-
-
-
-
-### Recovery options for a secondary site are not available in the console  
-After recovery of a secondary site fails, the option **Recover Secondary Site** might no longer be available in the Configuration Manager console.  
-
-This issue affects System Center Configuration Manager version 1511 and 1602, and is expected to be resolved in a future update.  
-
-**Workaround**: Use one of the following methods to recover (reinstall) the secondary site:  
-
--   Use **Preinst.exe** and the **/delsite** command to remove the secondary site, and then reinstall the secondary site. For information about preinst.exe, see [Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)  
-
--   Run the following script to start the secondary site recovery. You run this script on the database at the primary parent site of the secondary site you want to recover:  
-
-    ```  
-    declare @SiteCode NVARCHAR(3)=N'<replace with secondary site code>'   
-
-    UPDATE Sites SET Status = 9  
-                    , DetailedStatus = 3  
-    FROM Sites WHERE SiteCode = @SiteCode  
-
-    UPDATE SCP SET SCP.Value1 = 9  
-                    , SCP.Value2 = N'3'  
-    FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
-    WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
-  ```  
 
 ###  Setup fails when using redist files from the CD.Latest folder with a manifest verification error
+<!-- Source bug pending  -->
+
 When you run Setup from a CD.Latest folder created for version 1606 and use the redist files included with that CD.Latest folder, Setup fails with the following errors in the Configuration Manager Setup log:
 
   - ERROR: File hash check failed for defaultcategories.dll
@@ -151,55 +134,16 @@ The exception is similar to the following:
 
 
 
-
-
+<!-- No current Backup and Recovery relenotes
 ## Backup and recovery
-### Pre\-production client is not available after a site restore
-With version 1602, when you use pre-production clients and you restore the top-tier site of your hierarchy from a backup, the pre\-production client version is not available after the site is restored.  
-
-**Workaround:**  After restoring the top-tier site of your hierarchy you must manually copy the pre\-production client files so that Configuration Manager can process them and restore them to use:
-1. On the top-tier site server computer, copy the contents of the *&lt;CM_Install_Location\>\\Client* folder to the *&lt;CM_Install_Location\>\\StagingClient* folder.
-
-2. Create an empty file named **client.acu** and copy or paste this file into the *&lt;CM_Install_Location\>\\Inboxes\\hman.box* folder on the site server. (This file can be a text file that has been renamed, so long as it no longer has the txt extension). After this file is placed in the hman.box folder, the Hierarchy Manager on the site server will start and process the client files and restore the pre\-production client files for use.
-
-This issue is resolved in version 1606.
+-->
 
 
+<!-- No current  Client deployment and upgrade relenotes
 ## Client deployment and upgrade  
+-->
 
-### Expansion to central administration site stops automatic client upgrades  
-In version 1511 only, you will not be able to run automatic client upgrades for any site that is expanded from a primary site to a central administration site. When the site is expanded, the authoritative site on the client upgrade package is not correctly set to the new central administration site, which prevents automatic client upgrades from running successfully. This issue only exists for version 1511. In version 1602 and later, this issue is fixed.  
 
-**Workaround:** Run the following SQL script on the central administration site database. After you run the script, automatic client upgrades should begin running normally.  
-
-  ```  
-  DECLARE @RootSite AS NVARCHAR(3)  
-  DECLARE @SourceServer AS NVARCHAR(255)  
-  DECLARE @FullClientPkgSource AS NVARCHAR(255)  
-  DECLARE @UpgradePkgSource AS NVARCHAR(255)  
-
-  SELECT @RootSite = SiteCode, @SourceServer = SiteServer  
-  FROM sites  
-  WHERE ISNULL(ReportToSite, N'') = N''  
-
-  SELECT @FullClientPkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\Client'  
-  SELECT @UpgradePkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\ClientUpgrade'  
-
-  UPDATE SMSPackages_G  
-  SET Source = @FullClientPkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT FullPackageID FROM ClientDeploymentSettings)  
-
-  UPDATE SMSPackages_G  
-  SET Source = @UpgradePkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT UpgradePackageID FROM ClientDeploymentSettings)  
-
-  UPDATE ProgramOffers_G  
-  SET SourceSite = @RootSite  
-  WHERE OfferID IN  
-      (SELECT UpgradeAdvertisementID FROM ClientDeploymentSettings)  
-  ```  
 
 ## Operating system deployment  
 

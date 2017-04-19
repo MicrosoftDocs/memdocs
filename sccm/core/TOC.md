@@ -25,9 +25,12 @@
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
+###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
 ###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
+<!--
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
+-->
 ###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
 
 ##   [Supported configurations](plan-design/configs/supported-configurations.md)
@@ -52,6 +55,7 @@
 #### [Use a cloud-based distribution point](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
+#### [Content library cleanup tool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
@@ -69,10 +73,13 @@
 
 ##   [Diagnostics and usage data](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [How diagnostics and usage data is used](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
+###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
+###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+<!--
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
-###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
-###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
+-->
 ###  [How diagnostics and usage data is collected](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [How to view diagnostics and usage data](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [Customer Experience Improvement Program (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -90,6 +97,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1703](get-started/capabilities-in-technical-preview-1703.md)
 ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
 ###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
@@ -102,10 +110,12 @@
 ###  [Capabilities in 1605](get-started/capabilities-in-technical-preview-1605.md)
 ###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
 ###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
+<!--
 ###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
 ###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
 ###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
 ###  [Capabilities in 1511](get-started/capabilities-in-technical-preview-1511.md)
+-->
 
 ##   [Migrate data between hierarchies](migration/migrate-data-between-hierarchies.md)
 ###  [Planning for migration](migration/planning-for-migration.md)
@@ -120,7 +130,8 @@
 #### [Planning to monitor migration](migration/planning-to-monitor-migration-activity.md)
 #### [Planning to complete migration](migration/planning-to-complete-migration.md)
 ###  [Configure source hierarchies and source sites](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [Operations for migrating](migration/operations-for-migration.md)###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
+###  [Operations for migrating](migration/operations-for-migration.md)
+###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
@@ -133,7 +144,8 @@
 #### [Prepare to install sites](servers/deploy/install/prepare-to-install-sites.md)
 #### [Prerequisites for installing sites](servers/deploy/install/prerequisites-for-installing-sites.md)
 #### [Use the Setup Wizard](servers/deploy/install/use-the-setup-wizard-to-install-sites.md)
-#### [Use a command line](servers/deploy/install/use-a-command-line-to-install-sites.md)
+#### [Use a command-line](servers/deploy/install/use-a-command-line-to-install-sites.md)
+##### [Command-line options](servers/deploy/install/command-line-options-for-setup.md)
 #### [Install consoles](servers/deploy/install/install-consoles.md)
 #### [Upgrade an Evaluation install](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [Upgrade to System Center Configuration Manager](servers/deploy/install/upgrade-to-configuration-manager.md)
@@ -157,6 +169,8 @@
 #### [Select discovery methods](servers/deploy/configure/select-discovery-methods-to-use.md)
 #### [Configure discovery methods](servers/deploy/configure/configure-discovery-methods.md)
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
+#### [Boundaries](servers/deploy/configure/boundaries.md)
+#### [Boundary groups](servers/deploy/configure/boundary-groups.md)
 ###  [Use SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
@@ -164,6 +178,7 @@
 
 #    Manage infrastructure
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
+###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
 ###  [The CD.Latest folder](servers/manage/the-cd.latest-folder.md)
 ##   [Upgrade on-premises infrastructure](servers/manage/upgrade-on-premises-infrastructure.md)
@@ -176,14 +191,11 @@
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
-<!--
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
--->
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
-<!-- Deprecated from Content:
+<!-- Deprecated from Content - still published but out of TOC:
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
-###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 -->
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 

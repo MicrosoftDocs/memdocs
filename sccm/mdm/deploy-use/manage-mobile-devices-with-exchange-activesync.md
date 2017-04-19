@@ -7,13 +7,13 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - configmgr-client
+  - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 caps.latest.revision: 8
-author: Mtillman
-ms.author: mtillman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 
 ---

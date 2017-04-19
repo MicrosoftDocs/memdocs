@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - configmgr-client
+  - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
@@ -24,14 +24,15 @@ manager: angrobe
 
 With System Center Configuration Manager On-premises Mobile Device Management, users can enroll devices if they have been granted enrollment permission (by way of updated client settings), and their devices have the required root certificate installed to have trusted communications with the servers hosting the required site system roles. For more information on how to set up enrollment, see [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md).  
 
- > [!NOTE]  
+> [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
 >   
->  -  Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 The following tasks explain how to enroll and verify enrollment of computers and devices for On\-premises Mobile Device Management:  
 

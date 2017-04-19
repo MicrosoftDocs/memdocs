@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 # About client installation properties published to Active Directory Domain Services

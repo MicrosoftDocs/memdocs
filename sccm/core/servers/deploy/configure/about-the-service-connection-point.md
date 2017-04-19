@@ -2,7 +2,7 @@
 title: "Service connection point | Microsoft Docs"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,15 +38,16 @@ The System Center Configuration Manager service connection point is a site syste
 
   For information about data that each level collects and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data), and then follow the link for the version of Configuration Manager that you use.  
 
-    For additional information, see [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  For additional information, see [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available based on usage data you upload.  
 
- **Each hierarchy supports a single instance of this role:**  
+- **Each hierarchy supports a single instance of this role:**  
 
-    -   The site system role can only be installed at the top-tier site of your hierarchy, which is a central administration site or stand-alone primary site.  
+ -   The site system role can only be installed at the top-tier site of your hierarchy, which is a central administration site or stand-alone primary site.  
 
-    -   If you expand a stand-alone primary site to a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.  
+  -   If you expand a stand-alone primary site to a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.  
+
 
 ##  <a name="bkmk_modes"></a> Modes of operation  
  The service connection point supports two modes of operation:  
@@ -114,3 +115,10 @@ To enable operation, the computer that hosts the service connection point and an
 When you run **Setup** to install the top-tier site of a hierarchy, you have the option to install the service connection point.
 
 After setup runs, or if you are reinstalling the site system role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard to install the site system on a server at the top-tier site of your hierarchy, that is, the central administration site or a stand-alone primary site. Both wizards are on the **Home** tab in the console at **Administration** > **Site Configuration** > **Servers and Site System Roles**.
+
+## Log files used by the service connection point
+To view information about uploads to Microsoft, view the **Dmpuploader.log** on the computer that runs the service connection point.  For downloads, including download progress of updates, view **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Service connection point](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) in the Configuration Manager log files topic.
+
+You can also use the following flowcharts to understand the process flow and key log entries for update downloads and replication of updates to other sites:
+ - [Flowchart - Download updates](/sccm/core/servers/manage/download-updates-flowchart)
+ - [Flowchart - Update replication](/sccm/core/servers/manage/update-replication-flowchart)

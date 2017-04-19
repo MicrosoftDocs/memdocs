@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Prerequisites for remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prerequisites for remote control in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Remote control in System Center Configuration Manager has external dependencies and dependencies in the product.  
 
 ## Dependencies external to Configuration Manager  

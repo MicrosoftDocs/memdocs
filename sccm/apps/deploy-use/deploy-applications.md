@@ -76,6 +76,7 @@ You cannot change the action of a deployment after it has been created.
 
 - **Send wake-up packets**--If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed. This packet wakes the computers at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.
 - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**--This option is only available for deployments with a purpose of **Required**.
+- **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** - For more information about how to configure a list of executables that can prevent an application from installing, see **How to check for running executable files before installing an application** later in this topic.
 - **Require administrator approval if users request this application**--If this option is selected, the administrator must approve any user requests for the application before it can be installed. This option is grayed out when the deployment purpose is **Required** or when the application is deployed to a device collection.
 
 	> [!NOTE]
@@ -150,6 +151,27 @@ The maximum snooze time is always based on the notification values configured in
 Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required:
 
 ![Required Software dialog](media/client-toast-notification.png)
+
+## How to check for running executable files before installing an application
+
+>[!Tip]
+>Introduced with version 1702, this is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
+
+In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed. To configure this:
+
+1. Open the **Properties** dialog box for any deployment type.
+2. On the **Install Behavior** tab of the *<deployment type name>* **Properties** dialog box, click **Add**.
+3. In the **Add or Edit Executable File** dialog box, enter the name of the executable file that, if running, will block install of the application. Optionally, you can also enter a friendly name for the application to help you identify it in the list.
+4. Click **OK**, then close the *<deployment type name>* **Properties** dialog box.
+5. Next, when you deploy an application, on the **Deployment Settings** page of the Deploy Software Wizard, select **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then continue to deploy the application.
+
+After the application reaches client PCs, the following behavior applies:
+
+- If the application was deployed as **Available**, and an end user tries to install it, they will be prompted to close any running executables you specified before they can proceed with the installation.
+
+- If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached. You can schedule these dialogs in **Client Settings** > **Computer Agent**. If you don’t want the end user to see these messages, select **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment’s properties.
+
+- If the application was deployed as **Required** and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is not selected, then the installation of the app will fail if one or more of the specified applications are running.
 
 ## For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)

@@ -2,7 +2,7 @@
 title: "Introduction to certificate profiles | Microsoft Docs"
 description: "Learn how certificate profiles in System Center Configuration Manager work with Active Directory Certificate Services."
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 03/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,6 +17,7 @@ ms.author: angrobe
 manager: angrobe
 
 ---
+
 # Introduction to certificate profiles in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -41,16 +42,16 @@ Certificate profiles provide the following management capabilities:
 ## Types of certificate profiles  
  There are three types of certificate profiles:  
 
--   **Trusted CA certificate** - Allows you to deploy a trusted root CA or intermediate CA certificate to form a certificate chain of trust when the device must authenticate a server.  
+-   **Trusted CA certificate** - Lets you deploy a trusted root CA or intermediate CA certificate to form a certificate chain of trust when the device must authenticate a server.  
 
--   **Simple Certificate Enrollment Protocol (SCEP)** - Allows you to request a certificate for a device or user by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2.
--   -   **Personal information exchange (.pfx)** - Allows you to request a .pfx (also known as PKCS #12) certificate for a device or user.
+-   **Simple Certificate Enrollment Protocol (SCEP)** - Lets you request a certificate for a device or user by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2.
+-   **Personal information exchange (.pfx)** - Lets you request a .pfx (also known as PKCS #12) certificate for a device or user.
 
     > [!NOTE]  
     >  You must create a certificate profile of the type **Trusted CA certificate** before you can create a **Simple Certificate Enrollment Protocol (SCEP)** certificate profile.  
 
 ## Requirements and supported platforms  
- To deploy certificate profiles that use the SCEP, you must install the certificate registration point on a site system server in the central administration site, or in a primary site. You must also install a policy module for NDES, the Configuration Manager Policy Module, on a server that runs Windows Server 2012 R2 with the Active Directory Certificate Services role and a working NDES that is accessible to the devices that require the certificates. For the devices that are enrolled by Microsoft Intune, this requires the NDES to be accessible from the Internet, for example, in a screened subnet (also known as a DMZ).  
+ To deploy certificate profiles that use SCEP, you must install the certificate registration point on a site system server in the central administration site, or in a primary site. You must also install a policy module for NDES, the Configuration Manager Policy Module, on a server that runs Windows Server 2012 R2 with the Active Directory Certificate Services role and a working NDES that is accessible to the devices that require the certificates. For the devices that are enrolled by Microsoft Intune, this requires the NDES to be accessible from the Internet, for example, in a screened subnet (also known as a DMZ).  
 
  For more information about how the Network Device Enrollment Service supports a policy module so that Configuration Manager can deploy certificates, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
 

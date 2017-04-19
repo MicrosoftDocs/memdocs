@@ -2,7 +2,7 @@
 title: "Create prestaged media with System Center Configuration Manager | Microsoft Docs"
 description: "Create prestaged media in System Center Configuration Manager to simplify deployment of Windows in several scenarios."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 caps.latest.revision: 12
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Create prestaged media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create prestaged media with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Prestaged media in System Center Configuration Manager is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
 Prestaged media contains the boot image used to start the destination computer and the operating system image that is applied to the destination computer. You can also specify applications, packages, and driver packages to include as part of the prestaged media. The task sequence that deploys the operating system is not included in the media. Prestaged media is applied to the hard drive of a new computer before the computer is sent to the end user. Use prestaged media for the following operating system deployment scenarios:  
 
@@ -38,7 +43,7 @@ Prestaged media contains the boot image used to start the destination computer a
 |Hard drive on the destination computer|The hard drive of the destination computer must be formatted before the pre-staged media is staged onto the hard drive of the computer. If the hard drive is not formatted when the media is applied, the task sequence that deploys the operating system will fail when it attempts to start the destination computer.|  
 
 > [!NOTE]  
->  The Create Task Sequence Media Wizard sets the following task sequence variable condition on the media: **_SMSTSMedia = OEMMedia**. You can use this condition in your task sequence.  
+>  The Create Task Sequence Media Wizard sets the following task sequence variable condition on the media: **_SMSTSMediaType = OEMMedia**. You can use this condition in your task sequence.  
 
  Use the following procedure to create prestaged media.  
 
