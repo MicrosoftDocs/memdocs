@@ -53,7 +53,7 @@ Consider the following when you add a child task sequence to a task sequence:
 2. Click **Browse** to select the child task sequence.  
 
 ## Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manage. You can use this information to help you decide whether to reload the boot image. Also, a new column (**Client Version**) has been added when you view boot images in the **Boot Images** node so you know what version of the Configuration Manager client each boot image uses.
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manager client. You can use this information to help you decide whether to reload the boot image. Also, a new column (**Client Version**) has been added when you view boot images in the **Boot Images** node so you know what version of the Configuration Manager client each boot image uses.
 
 ### To reload a boot image with the current Windows PE version
 
