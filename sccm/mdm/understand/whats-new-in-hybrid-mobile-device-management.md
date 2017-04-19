@@ -50,11 +50,15 @@ This article provides details on the new mobile device management (MDM) features
 
   An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
 
+- **Block apps from accessing SharePoint Online**
+
+  You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
+
 ### New in Configuration Manager Technical Preview 1704
 
 - **Configure Android apps with app configuration policies**
 
-  You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute settings that might be required when a user runs an app on Android for Work devices. Android app configuration policies are available only on devices running Android for Work and apply to approved apps from the Play for Work store. For information on how to try out this feature, see [Configure Android apps with app configuration policies](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies).
+  You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute pre-configured settings when a user runs an app on Android for Work devices. Android app configuration policies are available only on devices running Android for Work and apply to approved apps from the Play for Work store. For information on how to try out this feature, see [Configure Android apps with app configuration policies](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies).
 
 ## March 2017
 
