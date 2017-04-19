@@ -32,11 +32,31 @@ This article provides details on the new mobile device management (MDM) features
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
-## New hybrid features in March 2017
+## April 2017
 
 ### New in Microsoft Intune
 
-The following Intune features introduced in March 2017 work in hybrid deployments:
+- **MyApps available for Managed Browser**
+
+  Microsoft MyApps now have better support within the Managed Browser. Managed Browser users who are not targeted for management will be brought directly to the MyApps service, where they can access their admin-provisioned SaaS apps. Users who are targeted for Intune management will continue to be able to access MyApps from the built-in Managed Browser bookmark.
+
+- **New icons for the Managed Browser and the Company Portal**
+
+  The Managed Browser is receiving updated icons for both the Android and iOS versions of the app. The new icon will contain the updated Intune badge to make it more consistent with other apps in Enterprise Mobility + Security (EM+S). You can see the new icon for the Managed Browser on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
+
+  The Company Portal is also receiving updated icons for the Android, iOS, and Windows versions of the app to improve consistency with other apps in EM+S. These icons will be gradually released across platforms from April to late May.
+
+- **Sign-in progress indicator in Android Company Portal**
+
+  An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
+
+- **Block apps from accessing SharePoint Online**
+
+    You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
+
+## March 2017
+
+### New in Microsoft Intune
 
 - **New user experience for the Company Portal app for Android**
 
@@ -48,7 +68,7 @@ The following Intune features introduced in March 2017 work in hybrid deployment
   - Navigating Apps: **All Apps** view shows a tabbed view of **Featured**, **All**, and **Categories** for easier navigation.
   - Support: **My Devices** and **Contact IT** tabs are updated to improve readability.
 
-  For more details about these changes, see [UI updates for Intune end user apps](/intune/enduser/whats-new-in-intune-app-ui).
+  For more details about these changes, see [UI updates for Intune end user apps](/intune/whats-new/whats-new-in-intune-app-ui).
 
 - **Signing Script for Windows 10 Company Portal**
 
@@ -129,11 +149,9 @@ The following additional hybrid features are also included in version 1702 of Co
 
     For more information, see [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
-## New hybrid features in February 2017
+## February 2017
 
 ### New in Microsoft Intune
-
-The following Intune features introduced in February 2017 work in hybrid deployments:
 
 - **Modernizing the Company Portal website**
 
@@ -161,11 +179,9 @@ The following Intune features introduced in February 2017 work in hybrid deploym
    
     You now have 42 additional iOS settings that you can configure as part of a configuration item. Most of the settings (35 in all) have been added for supervised iOS devices. For more information, see  [New compliance settings for iOS devices](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices).
 
-## New hybrid features in January 2017
+## January 2017
 
 ### New in Microsoft Intune
-
-The following Intune features introduced in January 2017 work in hybrid deployments:
 
 - **Android 7.1.1 support**
 
@@ -182,11 +198,9 @@ The following Intune features introduced in January 2017 work in hybrid deployme
   Beginning in Technical Preview 1701 for hybrid mobile device management (MDM), you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. With this change, hybrid deployments can provide support more quickly for new Android and iOS versions without needing a new Configuration Manager release or extension. To learn more, see [Android and iOS versions are no longer targetable in creation wizards](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm).
 
 
-## New hybrid features in December 2016
+## December 2016
 
 ### New in Microsoft Intune
-
-The following Intune features introduced in Decmember 2016 work in hybrid deployments:
 
 - **Multi-Factor authentication (MFA) on enrollment is moving to the Azure portal**
 
@@ -213,11 +227,9 @@ The following Intune features introduced in Decmember 2016 work in hybrid deploy
   | Passcode reset | | |		
 
 
-## New hybrid features in November 2016
+## November 2016
 
 ### New in Microsoft Intune
-
-The following Intune features introduced in November 2016 work in hybrid deployments:
 
 - **New Microsoft Intune Company Portal available for Windows 10 devices**
 
