@@ -53,10 +53,17 @@ Consider the following when you add a child task sequence to a task sequence:
 2. Click **Browse** to select the child task sequence.  
 
 ## Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manage. You can use this information to help you decide whether to reload the boot image.  
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manager client. You can use this information to help you decide whether to reload the boot image. Also, a new column (**Client Version**) has been added when you view boot images in the **Boot Images** node so you know what version of the Configuration Manager client each boot image uses.
 
 ### To reload a boot image with the current Windows PE version
 
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Boot Images**.
 2. Select a boot image and click **Update Distribution Points**.
 3. On the **General** page of the wizard, select **Reload boot image using the current version of Windows PE from the installed Windows ADK**.
+
+## Improvements to operating system deployment
+We have made the following improvements to operating system deployment, which were the result of your user voice feedback.
+
+- [New **OS Version** column for operating system images](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): We have added a new column named **OS Version** to display the version of the operating system for the image when you view information in the **Operating System Images** and **Operating System Upgrade Packages** nodes. Only the version of the first index in the .WIM is displayed. Go to the **Details** tab for the image to review operating system versions for other indexes.
+
+- [More efficient logging in Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless): Beginning in this version, we are no longer writing entries to the smsts.log file for CCM_CIVersionInfo.PolicyID information. Prior to this version, there could be a lot of entries with this information, which made it hard to find more relevant information in the log file.
