@@ -2,7 +2,7 @@
 title: "How to Create VPN profiles in System Center Configuration Manager  | Microsoft Docs"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
 ms.custom:
-ms.date: 12/28/2016
+ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
-author: nbigman
+author: robstackmsft
 caps.handback.revision: 0
-ms.author: nbigman
+ms.author: robstack
 ms.manager: angrobe
 
 ---
@@ -35,7 +35,7 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
 
 1.  Complete the **General** page. Note the following:  
 
-   	- Do not use the characters \\/:*?<>&#124;, or the space character in the VPN profile name. These characters are not supported by the Windows Server VPN profile.  
+   	- Do not use the characters \\/:*?&lt;>&#124;, or the space character in the VPN profile name. These characters are not supported by the Windows Server VPN profile.  
 
   	 -   Select **Import an existing VPN profile item from a file** to import VPN profile information that has been exported to an XML file (Windows 8.1 and Windows RT only).  
 
@@ -48,20 +48,20 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
         > [!NOTE]  
         >  Devices that run iOS do not support using multiple VPN servers. If you configure multiple VPN servers and then deploy the VPN profile to an iOS device, only the default server is used.  
 
-     This table provides options for connection types. See your VPN server documentation for more information.  
+     This table provides options for connection types. See your VPN server documentation for more information.
 
-    |Option|More information|Connection type|  
-    |------------|----------------------|---------------------|  
-    |**Realm**|The authentication realm that you want to use. An authentication realm is a grouping of authentication resources that is used by the Pulse Secure connection type.|Pulse Secure|  
-    |**Role**|The user role that has access to this connection.|Pulse Secure|  
-    |**Login group or domain**|The name of the login group or domain that you want to connect to.|Dell SonicWALL Mobile Connect|  
-    |**Fingerprint**|A string, for example "Contoso Fingerprint Code" that will be used to verify that the VPN server can be trusted.<br /><br /> A fingerprint can be:<br /><br /> - Sent to the client so it knows to trust any server presenting that same fingerprint when connecting.<br /><br /> - If the device doesn't already have the fingerprint it will prompt the user to trust the VPN server they are connecting to while showing the fingerprint (the user manually verifies the fingerprint and chooses **trust** to connect).|Check Point Mobile VPN|  
-    |**Send all network traffic through the VPN connection**|If this option is not selected, you can specify additional routes for the connection (for **Microsoft SSL (SSTP)**, **Microsoft Automatic**, **IKEv2**, **PPTP** and **L2TP** connection types), which is known as split or VPN tunneling.<br /><br /> Only connections to the company network are sent over a VPN tunnel. VPN tunneling is not used when you connect to resources on the Internet.|All|  
-    |**Connection specific DNS suffix**|The connection-specific Domain Name System (DNS) suffix for the connection.|- <br />                            Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - <br />                            IKEv2<br /><br /> - <br />                            PPTP<br /><br /> - <br />                            L2TP|  
-    |**Bypass VPN when connected to company Wi-Fi network**|The VPN connection will not be used when the device is connected to the company Wi-Fi network.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
-    |**Bypass VPN when connected to home Wi-Fi network**|The VPN connection will not be used when the device is connected to a home Wi-Fi network.|All|  
-    |**Per App VPN (iOS 7 and later, Mac OS X 10.9 and later )**|Associate this VPN connection with an iOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you deploy it.|- <br />                        Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
-    |**Custom XML (optional)**|Specify custom XML commands that configure the VPN connection.<br /><br /> Examples:<br /><br /> For **Pulse Secure**:<br /><br /> **<pulse-schema><isSingleSignOnCredential\>true</isSingleSignOnCredential\></pulse-schema>**<br /><br /> For **CheckPoint Mobile VPN**:<br /><br /> **<CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" /\>**<br /><br /> For **Dell SonicWALL Mobile Connect**:<br /><br /> **<MobileConnect\><Compression\>false</Compression\><debugLogging\>True</debugLogging\><packetCapture\>False</packetCapture\></MobileConnect\>**<br /><br /> For **F5 Edge Client**:<br /><br /> **<f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>**<br /><br /> Refer to each manufacturers VPN documentation for more information about how to write custom XML commands.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+|Option          | More information| Connection type|  
+|----------------|----------------------|---------------------|  
+|**Realm**     |The authentication realm that you want to use. An authentication realm is a grouping of authentication resources that is used by the Pulse Secure connection type.|Pulse Secure|    
+|**Role**        |The user role that has access to this connection. |Pulse Secure|  
+|**Login group or domain** |The name of the login group or domain that you want to connect to.|Dell SonicWALL Mobile Connect|  
+|**Fingerprint**  |A string, for example "Contoso Fingerprint Code" that will be used to verify that the VPN server can be trusted.<br /><br /> A fingerprint can be:<br /><br /> - Sent to the client so it knows to trust any server presenting that same fingerprint when connecting.<br /><br /> - If the device doesn't already have the fingerprint it will prompt the user to trust the VPN server they are connecting to while showing the fingerprint (the user manually verifies the fingerprint and chooses **trust** to connect).|Check Point Mobile VPN|  
+|**Send all network traffic through the VPN connection** |If this option is not selected, you can specify additional routes for the connection (for **Microsoft SSL (SSTP)**, **Microsoft Automatic**, **IKEv2**, **PPTP** and **L2TP** connection types), which is known as split or VPN tunneling.<br /><br /> Only connections to the company network are sent over a VPN tunnel. VPN tunneling is not used when you connect to resources on the Internet. |All|  
+|**Connection specific DNS suffix** |The connection-specific Domain Name System (DNS) suffix for the connection.|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
+|**Bypass VPN when connected to company Wi-Fi network**  |The VPN connection will not be used when the device is connected to the company Wi-Fi network.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
+|**Bypass VPN when connected to home Wi-Fi network**  |The VPN connection will not be used when the device is connected to a home Wi-Fi network.|All|  
+|**Per App VPN (iOS 7 and later, Mac OS X 10.9 and later )** |Associate this VPN connection with an iOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you deploy it.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+|**Custom XML (optional)** |Specify custom XML commands that configure the VPN connection.<br /><br /> Examples:<br /><br /> For **Pulse Secure**:<br /><br /> **&lt;pulse-schema>&lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\>&lt;/pulse-schema>**<br /><br /> For **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3">**<br /><br /> For **Dell SonicWALL Mobile Connect**:<br /><br /> **&lt;MobileConnect\>&lt;Compression\>false&lt;/Compression\>&lt;debugLogging\>True&lt;/debugLogging\>&lt;packetCapture\>False&lt;/packetCapture\>&lt;/MobileConnect\>**<br /><br /> For **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> Refer to each manufacturers VPN documentation for more information about how to write custom XML commands.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
 
 > [!NOTE]  
 >  For information specific to creating VPN profiles for mobile devices, see [Create VPN Profiles](../../mdm/deploy-use/create-vpn-profiles.md)  
