@@ -71,4 +71,4 @@ Data collection includes these three levels:
 
 For more information, including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-To view the System Center Configuration Manager Privacy Statement, see [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
+To view the System Center Configuration Manager Privacy Statement on-line, go to [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
