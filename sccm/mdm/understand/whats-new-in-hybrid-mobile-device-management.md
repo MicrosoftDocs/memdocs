@@ -2,7 +2,7 @@
 title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 04/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -52,7 +52,13 @@ This article provides details on the new mobile device management (MDM) features
 
 - **Block apps from accessing SharePoint Online**
 
-    You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
+  You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
+
+### New in Configuration Manager Technical Preview 1704
+
+- **Configure Android apps with app configuration policies**
+
+  You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute pre-configured settings when a user runs an app on Android for Work devices. Android app configuration policies are available only on devices running Android for Work and apply to approved apps from the Play for Work store. For information on how to try out this feature, see [Configure Android apps with app configuration policies](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies).
 
 ## March 2017
 
