@@ -49,6 +49,9 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 ![Test client upgrades](media/test-client-upgrades.png)
 
+>[!NOTE]
+>To change these settings, your account must be a member of the **Full Administrator** security role, and the **All** security scope.
+
 
 ##  To install a Configuration Manager update that includes a new version of the client  
 
@@ -75,3 +78,6 @@ You can test a new Configuration Manager client version in a pre-production coll
 2.  Review the client versions in production and pre-production, make sure the correct the pre-production collection is specified, and then  click **Promote**, then **Yes**.  
 
 3.  After the dialog box closes, the updated client version will replace the client version in use in your hierarchy. You can then upgrade the clients for your whole site. See [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) for more information.  
+
+>[!NOTE]
+>To enable the pre-production client, or to promote a pre-production client to a production client, your account must be a member of a security role that has **Read** and **Modify** permissions for the **Update Packages** object.
