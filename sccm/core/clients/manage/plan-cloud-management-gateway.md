@@ -1,13 +1,13 @@
 ---
 title: "Plan for cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 03/28/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 

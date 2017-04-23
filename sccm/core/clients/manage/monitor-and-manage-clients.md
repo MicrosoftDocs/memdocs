@@ -2,7 +2,7 @@
 title: "Monitor clients | Microsoft Docs"
 description: "Learn how to monitor and manage clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/27/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 caps.latest.revision: 5
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---

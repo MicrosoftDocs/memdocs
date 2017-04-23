@@ -2,7 +2,7 @@
 title: "Configure clients find management points DNS publishing | Microsoft Docs"
 description: "Set client computers to find management points by using DNS publishing in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 caps.latest.revision: 6
-author: arob98
-ms.author: angrobe
+author: robstackmsft	
+ms.author: robstack
 manager: angrobe
 
 ---

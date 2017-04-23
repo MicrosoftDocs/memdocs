@@ -2,7 +2,7 @@
 title: "Upgrade clients | Microsoft Docs"
 description: "Get information about how to upgrade clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/01/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 caps.latest.revision: 8
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
