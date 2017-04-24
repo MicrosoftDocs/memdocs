@@ -2,7 +2,7 @@
 title: "Deploy UNIX/Linux clients | Microsoft Docs"
 description: "Learn how to deploy a client to a UNIX or Linux server in System Center Configuration Manager."
 ms.custom: na
-ms.date: 23/04/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
