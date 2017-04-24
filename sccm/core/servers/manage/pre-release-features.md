@@ -2,7 +2,7 @@
 title: "Pre-release features| Microsoft Docs"
 description: "Pre-release features in System Center Configuration Manager"
 ms.custom: na
-ms.date: 4/13/2017
+ms.date: 4/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Pre-release features in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
- Pre-release features are features that are included in the Current Branch for early testing in a production environment. These features should not be considered production ready, but can be used in your production environment.
+Pre-release features are features that are included in the Current Branch for early testing in a production environment. They are fully supported but are still in active development and might receive changes until they move out of the pre-release category.
 
  Before you can use pre-release features, you must give consent to use Pre-release features from within the Configuration Manager console before you can select and enable their use.  
 
