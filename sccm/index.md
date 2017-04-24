@@ -117,9 +117,10 @@ description: Learn how to use System Center Configuration Manager.
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Configuration Manager SDK</h3>
-                                                <p><a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">Configuration Manager programming fundamentals</a></p>
-                                                <p><a href="/sccm/develop/reference/configuration-manager-reference">Configuration Manager reference</a></p>
+                                                <h3>Other releases and branches</h3>
+                                                <p><a href="/sccm/core/get-started/technical-preview">Technical Preview of System Center Configuration Manager</a></p>
+                                                <p><a href="/sccm/core/understand/introduction-to-the-ltsb">Long-Term Servicing Branch of System Center Configuration Manager</a></p>
+                                                <p><a href="https://technet.microsoft.com/library/gg682144.aspx">System Center 2012/2012 R2 Configuration Manager</a></p>
                                             </div>
                                         </div>
                                     </div>
