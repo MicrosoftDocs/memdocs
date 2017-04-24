@@ -2,7 +2,7 @@
 title: "PKI certificate requirements | Microsoft Docs"
 description: "Find requirements for PKI certificates that you might need for System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/23/2017
+ms.date: 04/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,6 +31,8 @@ The public key infrastructure (PKI) certificates that you might require for Syst
 > System Center Configuration Manager supports Secure Hash Algorithm 2 (SHA-2) certificates. SHA-2 certificates bring an important security advantage. Therefore, we recommend the following:
 > - Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512, among others.
 > - All Internet-facing services should use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.  
+>
+>Effective February 14, 2017, Windows no longer trusts certain certificates signed with SHA-1. In general, we recommend that you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256 and SHA-512, among others). Additionally, we recommend that any Internet-facing services use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate."
 >
 > In most cases, the change to SHA-2 certificates has no impact on operations. For more information, see [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 

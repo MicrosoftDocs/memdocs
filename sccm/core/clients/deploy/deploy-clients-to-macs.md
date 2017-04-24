@@ -2,7 +2,7 @@
 title: "Deploy Mac clients | Microsoft Docs"
 description: "Learn how to deploy clients to Mac computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 caps.latest.revision: 12
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
