@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 # About client installation properties in System Center Configuration Manager
@@ -162,7 +162,7 @@ Example: `ccmsetup.exe /downloadtimeout:100`
 
 ### /UsePKICert
 
- When specified, the client uses a PKI certificate that includes client authentication, if available. If a valid certificate cannot be found, the client uses an HTTP connection and a self-signed certificate, which is also the behavior when you don't use this property. 
+ When specified, the client uses a PKI certificate that includes client authentication, if available. If a valid certificate cannot be found, the client uses an HTTP connection and a self-signed certificate, which is also the behavior when you don't use this property.
 
 > [!NOTE]  
 >  In some scenarios you do not have to specify this property when you are installing a client, and still use a client certificate. These scenarios include installing a client by using client push, and software update point–based client installation. However, you must specify this property whenever you manually install a client and use the **/mp** property to specify a management point that is configured to accept only HTTPS client connections. You also must specify this property when you install a client for Internet-only communication, by using the CCMALWAYSINF=1 property (together with the properties for the Internet-based management point and the site code). For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
@@ -181,9 +181,9 @@ Example: `ccmsetup.exe /downloadtimeout:100`
 
 ### /config:&lt;configuration file\>
 
-Specifies the name of a text file containing client installation properties. 
+Specifies the name of a text file containing client installation properties.
 
-- If you don't specify the **/noservice** CCMSetup property, this file must be located in the CCMSetup folder, which is %Windir%\\Ccmsetup for 32-bit and 64-bit operating systems. 
+- If you don't specify the **/noservice** CCMSetup property, this file must be located in the CCMSetup folder, which is %Windir%\\Ccmsetup for 32-bit and 64-bit operating systems.
 - If you specify the **/noservice** property, this file must be located in the same folder from which you run CCMSetup.exe.  
 
 Example: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
@@ -195,7 +195,7 @@ Example [Client Install] section entry: `Install=INSTALL=ALL SMSSITECODE=ABC SMS
 ### /skipprereq:&lt;filename\>
 
  Specifies that CCMSetup.exe must not install the specified prerequisite program when the Configuration Manager client is installed. This property supports entering multiple values. Use the semicolon character (;) to separate each value.  
- 
+
 
  Examples: `CCMSetup.exe /skipprereq:silverlight.exe` or `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe`  
 

@@ -67,6 +67,7 @@
 
 ##   [Plan for network infrastructure](plan-design/network/configure-firewalls-ports-domains.md)
 ###  [Prepare the Active Directory schema](plan-design/network/extend-the-active-directory-schema.md)
+#### [Schema extensions](plan-design/network/schema-extensions.md)
 ###  [Prepare Windows Servers to support site systems](plan-design/network/prepare-windows-servers.md)
 ###  [Websites for site system servers](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI certificate requirements](plan-design/network/pki-certificate-requirements.md)
@@ -97,6 +98,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1704](get-started/capabilities-in-technical-preview-1704.md)
 ###  [Capabilities in 1703](get-started/capabilities-in-technical-preview-1703.md)
 ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
 ###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
@@ -138,8 +140,10 @@
 ##   Install infrastructure
 ###  [Get installation media](servers/deploy/install/get-install-media.md)
 ###  Before you run Setup
+#### [Setup reference](servers/deploy/install/setup-reference.md)
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
+#### [Prerequisite checks](servers/deploy/install/list-of-prerequisite-checks.md)
 ###  [Installing sites](servers/deploy/install/installing-sites.md)
 #### [Prepare to install sites](servers/deploy/install/prepare-to-install-sites.md)
 #### [Prerequisites for installing sites](servers/deploy/install/prerequisites-for-installing-sites.md)
@@ -150,6 +154,7 @@
 #### [Upgrade an Evaluation install](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [Upgrade to System Center Configuration Manager](servers/deploy/install/upgrade-to-configuration-manager.md)
 #### [Scenarios to streamline your installation](servers/deploy/install/scenarios-to-streamline-your-installation.md)
+#### [Uninstalling sites and hierarchies](servers/deploy/install/uninstall-sites-and-hierarchies.md)
 
 ##   [Configure sites and hierarchies](servers/deploy/configure/configure-sites-and-hierarchies.md)
 ###  [Add site system roles](servers/deploy/configure/add-site-system-roles.md)
@@ -171,10 +176,24 @@
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [Boundaries](servers/deploy/configure/boundaries.md)
 #### [Boundary groups](servers/deploy/configure/boundary-groups.md)
+#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
 ###  [Use SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
+##   Technical references
+###  [Accounts](plan-design/hierarchy/accounts.md)
+###  [Communications between endpoints](plan-design/hierarchy/communications-between-endpoints.md)
+###  [Hierarchy maintenance tool](servers/manage/hierarchy-maintenance-tool-preinst.exe.md)
+###  [International support](plan-design/hierarchy/international-support.md)
+###  [Interoperability between different versions](plan-design/hierarchy/interoperability-between-different-versions.md)
+###  [Language packs](servers/deploy/install/language-packs.md)
+###  [Log files](plan-design/hierarchy/log-files.md)
+###  [Ports](plan-design/hierarchy/ports.md)
+###  [Proxy server support](plan-design/network/proxy-server-support.md)
+###  [Release notes](servers/deploy/install/release-notes.md)
+###  [Unicode and ASCII support](plan-design/hierarchy/unicode-and-ascii-support.md)
+
 
 #    Manage infrastructure
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
