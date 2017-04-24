@@ -547,13 +547,13 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 2.  **Alternate port available**: An alternate port can be defined within Configuration Manager for this value. If a custom port has been defined, substitute that custom port when defining the IP filter information for IPsec policies or for configuring firewalls.  
 
-3.  **Windows Server Update Services (WSUS)**: WSUS can be installed either on the default Web site (port 80) or a custom Web site (port 8530).  
+3.  **Windows Server Update Services (WSUS)**: WSUS can be installed to use either ports 80/443 or ports 8530/8531 for client communication. When you run WSUS in Windows Server 2012 or Windows Server 2016, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS.  
 
      After installation, the port can be changed. You do not have to use the same port number throughout the site hierarchy.  
 
     -   If the HTTP port is 80, the HTTPS port must be 443.  
 
-    -   If the HTTP port is anything else, the HTTPS port must be 1 or higher, for example, 8530 or 8531.  
+    -   If the HTTP port is anything else, the HTTPS port must be 1 or higher, for example, 8530 and 8531.   
 
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  

@@ -4,7 +4,7 @@
 title: "Maintain Mac clients | Microsoft Docs"
 description: Maintenance tasks for Configuration Manager Mac clients.
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -14,8 +14,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 caps.latest.revision: 12
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 # optional metadata
