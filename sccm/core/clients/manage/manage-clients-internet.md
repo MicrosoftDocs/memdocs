@@ -1,13 +1,13 @@
 ---
 title: "Manage clients on the Internet - Configuration Manager | Microsoft Docs"
 description: "Learn about managing clients with cloud management gateway and Internet-based client management in Configuration Manager."
-ms.date: 11/18/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 

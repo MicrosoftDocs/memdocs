@@ -2,7 +2,7 @@
 title: "Configure client settings | Microsoft Docs"
 description: "Select client settings in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 caps.latest.revision: 5
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 # How to configure client settings in System Center Configuration Manager

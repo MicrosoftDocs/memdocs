@@ -2,7 +2,7 @@
 title: "Site system roles for clients | Microsoft Docs"
 description: "Determine site system roles for clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
