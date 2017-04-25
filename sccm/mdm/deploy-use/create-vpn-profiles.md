@@ -72,7 +72,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
         |Authentication method|Supported&nbsp;connection&nbsp;types|  
         |---------------------------|--------------------------------|  
-        |**Certificates**<br /><br /> **Notes:**<br />- If the client certificate authenticates to a RADIUS server, such as a Network Policy Server, the Subject Alternative Name in the certificate must be set to the User Principal Name.<br/>- For Android deployments, select the EKU identifier and the certificate issuer thumbprint hash value.  Otherwise, users must select the appropriate certificate manually.  |- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+        |**Certificates**<br /><br /> **Notes:**<br />- If the client certificate authenticates to a RADIUS server, such as a Network Policy Server, the Subject Alternative Name in the certificate must be set to the User Principal Name.<br/><br />- For Android deployments, select the EKU identifier and the certificate issuer thumbprint hash value.  Otherwise, users must select the appropriate certificate manually.  |- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
         |**Username and Password**|- Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
         |**Microsoft EAP-TTLS**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - PPTP<br /><br /> - IKEv2<br /><br /> - L2TP|  
         |**Microsoft protected EAP (PEAP)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
@@ -105,18 +105,15 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
          ![Configure conditional access for VPN](media/vpn-conditional-access.png)
 
+         When supported by the version of Windows running Configuration Manager _and_ the selected authorization method, you can click **Configure** to open the Windows properties dialog box and configure authentication method properties.  If **Configure** is disabled, use alternate means to configure authentication method properties.
 
-> [!NOTE]  
-> For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the Configuration Manager console supports this authentication method) where you can configure the authentication method properties.  
-
-
-1.  On the **Proxy Settings** page of the **Create VPN Profile Wizard**, select the **Configure proxy settings for this VPN profile** check box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
+2.  On the **Proxy Settings** page of the **Create VPN Profile Wizard**, select the **Configure proxy settings for this VPN profile** check box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
 
 	> [!NOTE]  
 	>  On Windows 8.1 computers, the VPN profile will not display the proxy information until you connect to the VPN with that computer.  
 
 
-2. Configure Further DNS Settings (if required)  
+3. Configure Further DNS Settings (if required)  
  On the **Configure Automatic VPN connection** page , you can configure the following:  
 
 	-   **Enable VPN on-demand** Use if you want to configure further DNS settings for Windows Phone 8.1 devices. This setting applies only to Windows Phone 8.1 devices and should only be enabled on VPN profiles that are going to be deployed to Windows Phone 8.1 devices.
@@ -149,9 +146,9 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 	>  If the **Send all network traffic through the VPN connection** option is not selected, and the VPN connection is using split-tunneling, a VPN connection can automatically be opened if you configure routes, or a connection specific DNS suffix.  
 
 
-1. On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select the operating systems on which the VPN profile will be installed, or click **Select all** to install the VPN profile on all available operating systems.  
+4. On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select the operating systems on which the VPN profile will be installed, or click **Select all** to install the VPN profile on all available operating systems.  
 
-2. Complete the wizard. The new VPN profile is displayed in the **VPN Profiles** node in the **Assets and Compliance** workspace.  
+5. Complete the wizard. The new VPN profile is displayed in the **VPN Profiles** node in the **Assets and Compliance** workspace.  
 
 
 **Deploy:** See [Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) for information about deploying VPN profiles.
