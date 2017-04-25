@@ -106,9 +106,8 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
          ![Configure conditional access for VPN](media/vpn-conditional-access.png)
 
 
-> [!NOTE]  
-> For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the Configuration Manager console supports this authentication method) where you can configure the authentication method properties.  
-
+        > [!NOTE]  
+        > For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the Configuration Manager console supports this authentication method) where you can configure the authentication method properties.  
 
 1.  On the **Proxy Settings** page of the **Create VPN Profile Wizard**, select the **Configure proxy settings for this VPN profile** check box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
 
