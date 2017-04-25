@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Download Skycure iOS app configuration policy | Microsoft Docs
-description: Download Skycure iOS app configuration policy to use with the Skycure iOS app deployed to end-users.
-keywords:
+title: "Download Skycure iOS app configuration policy | Microsoft Docs"
+description: "Download Skycure iOS app configuration policy"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 542369dd-b95b-4dd9-8681-5139fe8b53ae
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: d211b876-4d3a-473c-999f-843c0a16cd22
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Download Skycure iOS app configuration policy
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 ##Before you begin
 
@@ -56,4 +48,4 @@ You need to log in to the Skycure Management Console to perform the next steps.
 
 ## Next steps
 
-[Add Skycure apps, Microsoft Authenticator app and the iOS configuration policy](https://docs.microsoft.com/intune/deploy-use/add-skycure-apps-microsoft-authenticator-and-ios-app-configuration-policy)
+[Add Skycure apps, Microsoft Authenticator app and the iOS configuration policy](https://docs.microsoft.com/sccm/mdm/deploy-use/add-skycure-apps-microsoft-authenticator-and-ios-app-configuration-policy)

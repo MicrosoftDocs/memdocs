@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Create Skycure Mobile Threat Defense compliance policy | Microsoft Docs
-description: Create Skycure Mobile Threat Defense compliance policy in the Intune classic console.
-keywords:
+title: "Create Skycure Mobile Threat Defense compliance policy | Microsoft Docs"
+description: "Create Skycure Mobile Threat Defense compliance policy"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 6616d457-3634-4007-9b20-1bff33ec2074
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 56ff1728-1119-4e8a-aae6-ed5c7fafa052
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Create Skycure Mobile Threat Defense compliance policy
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 Intune with Skycure Mobile Threat Defense lets you detect threats on mobile devices and assess risk on those devices. You can create an Intune compliance policy rule that assesses risk to determine if the device is compliant. You can then use conditional access policy to block access to services based on device compliance.
 
@@ -36,9 +28,9 @@ Intune with Skycure Mobile Threat Defense lets you detect threats on mobile devi
 
 Prerequisites for compliance policy with Skycure device threat protection:
 
--   [Setup Skycure integration with Intune](https://docs.microsoft.com/intune/deploy-use/setup-the-skycure-integration-with-Intune)
+-   [Setup Skycure integration with Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-the-skycure-integration-with-Intune)
 
--   [Enable the Skycure connection in Intune](https://docs.microsoft.com/intune/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
+-   [Enable the Skycure connection in Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
 
 As part of the Skycure Mobile Threat Defense setup, in the Skycure console, you created a policy that classifies various threats as high, medium and low. You now need to set the maximum allowed threat level in the Intune compliance policy.
 

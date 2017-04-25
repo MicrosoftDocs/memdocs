@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Add Skycure apps, Microsoft Authenticator app and iOS configuration policy | Microsoft Docs
-description: Add Skycure apps, Microsoft Authenticator app and iOS configuration policy into Intune classic console.
-keywords:
+title: "Add Skycure apps into Intune | Microsoft Docs"
+description: "Add Skycure apps, Microsoft Authenticator app and iOS configuration policy"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 3ec576a1-0aab-42ff-a905-863448744afc
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 018d26f4-4a75-4e27-bb04-54f54106cb2f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Add Skycure apps, Microsoft Authenticator app and iOS configuration policy
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 You need to use Intune to add and deploy the Skycure apps so end-users can receive notifications when a threat is identified in their mobile devices, and to receive guidance to remediate the threats.
 
@@ -110,4 +102,4 @@ Additionally, you need the [Microsoft Authenticator](https://docs.microsoft.com/
 
 ## Next steps
 
-[Deploy Skycure apps, Microsoft Authenticator app and iOS app configuration policy](https://docs.microsoft.com/intune/deploy-use/deploy-skycure-apps-microsoft-authenticator-app-and-ios-app-configuration-policy)
+[Deploy Skycure apps, Microsoft Authenticator app and iOS app configuration policy](https://docs.microsoft.com/sccm/mdm/deploy-use/deploy-skycure-apps-microsoft-authenticator-app-and-ios-app-configuration-policy)

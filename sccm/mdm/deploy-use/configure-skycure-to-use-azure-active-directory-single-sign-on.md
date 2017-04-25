@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Configure Skycure to use Azure Active Directory Single Sign On | Microsoft Docs
-description: Configure Skycure to use Azure Active Directory Single Sign On (SSO)
-keywords:
+title: "Configure Skycure with Azure AD SSO | Microsoft Docs"
+description: "Configure Skycure to use Azure AD Single Sign One (SSO)"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: d044bd1a-d8f7-442a-a49b-4cf3025ca3d3
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 34d5d359-5c7c-4225-a205-8ce890b6f890
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Configure Skycure to use Azure Active Directory Single Sign On (SSO)
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 Azure AD SSO is used when you integrate Intune with Skycure. Here are the main benefits:
 
@@ -88,4 +80,4 @@ You might want to create a dedicated user group which contain users running Skyc
 
 ## Next steps
 
-[Download Skycure iOS app configuration policy](https://docs.microsoft.com/intune/deploy-use/download-skycure-ios-app-configuration-policy)
+[Download Skycure iOS app configuration policy](https://docs.microsoft.com/sccm/mdm/deploy-use/download-skycure-ios-app-configuration-policy)

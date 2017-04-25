@@ -1,36 +1,28 @@
 ---
-# required metadata
-
-title: Enable Skycure Mobile Threat Defense in Intune | Microsoft Docs
-description: Enable Skycure Mobile Threat Defense in the Intune classic console.
-keywords:
+title: "Enable Skycure Mobile Threat Defense in Intune | Microsoft Docs"
+description: "Enable Skycure Mobile Threat Defense in Intune"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: f7a3525d-02de-4c13-a411-677ca5327667
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 0cc4e59d-819a-47a2-a26f-4f8d0f8df7bf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Enable Skycure Mobile Threat Defense in Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
-To enable the Skycure mobile threat defense (MTD) connection in Intune, you should have already configured the [Intune Connector in the Skycure console](https://docs.microsoft.com/intune/deploy-use/setup-the-skycure-integration-with-Intune).
+To enable the Skycure mobile threat defense (MTD) connection in Intune, you should have already configured the [Intune Connector in the Skycure console](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-the-skycure-integration-with-Intune).
 
 ## To enable the Skycure MTD connection in Intune
 
@@ -47,4 +39,4 @@ This completes the setup of the Skycure and Intune integration in the Intune adm
 
 ## Next steps
 
-[Create Skycure Mobile Threat Defense compliance policy](https://docs.microsoft.com/intune/deploy-use/create-skycure-mobile-threat-defense-compliance-policy)
+[Create Skycure Mobile Threat Defense compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-skycure-mobile-threat-defense-compliance-policy)

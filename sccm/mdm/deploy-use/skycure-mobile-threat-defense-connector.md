@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Skycure mobile threat defense connector | Microsoft Docs
-description: Protect access to company resources based on device, network and application risk with the Skycure Mobile Threat Defense connector and Intune.
-keywords:
+title: "Skycure Mobile Threat Defense connector | Microsoft Docs"
+description: "Understand how Skycure Mobile Threat Defense connector works with Intune"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: c40079d1-1f0e-4637-828a-1d852b28a5cd
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 7a004e6c-604a-448c-bfb8-cfda63749f5b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Skycure Mobile Threat Defense connector
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 You can control mobile device access to corporate resources using conditional access based on risk assessment conducted by Skycure, a mobile threat defense solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running Skycure, including:
 
@@ -122,16 +114,16 @@ For more information, check [Skycure website](https://www.skycure.com/skycure-mi
 
 Here are the steps you need to complete to integrate Intune with Skycure:
 
-1.  [Configure Skycure to use Azure Active Directory Single Sign On (SSO)](https://docs.microsoft.com/intune/deploy-use/configure-skycure-to-use-azure-active-directory-single-sign-on)
+1.  [Configure Skycure to use Azure Active Directory Single Sign On (SSO)](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-skycure-to-use-azure-active-directory-single-sign-on)
 
-2.  [Download Skycure iOS app configuration policy](https://docs.microsoft.com/intune/deploy-use/download-skycure-ios-app-configuration-policy)
+2.  [Download Skycure iOS app configuration policy](https://docs.microsoft.com/sccm/mdm/deploy-use/download-skycure-ios-app-configuration-policy)
 
-3.  [Add Skycure apps, Microsoft Authenticator and iOS app configuration policy](https://docs.microsoft.com/intune/deploy-use/add-skycure-apps-microsoft-authenticator-and-ios-app-configuration-policy)
+3.  [Add Skycure apps, Microsoft Authenticator and iOS app configuration policy](https://docs.microsoft.com/sccm/mdm/deploy-use/add-skycure-apps-microsoft-authenticator-and-ios-app-configuration-policy)
 
-4.  [Deploy Skycure apps, Microsoft Authenticator and iOS app configuration policy](https://docs.microsoft.com/intune/deploy-use/deploy-skycure-apps-microsoft-authenticator-app-and-ios-app-configuration-policy)
+4.  [Deploy Skycure apps, Microsoft Authenticator and iOS app configuration policy](https://docs.microsoft.com/intune/deploy-use/sccm/mdm/deploy-skycure-apps-microsoft-authenticator-app-and-ios-app-configuration-policy)
 
-5.  [Setup Skycure integration with Intune](https://docs.microsoft.com/intune/deploy-use/setup-the-skycure-integration-with-Intune)
+5.  [Setup Skycure integration with Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-the-skycure-integration-with-Intune)
 
-6.  [Enable Skycure Mobile Threat Defense in Intune](https://docs.microsoft.com/intune/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
+6.  [Enable Skycure Mobile Threat Defense in Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
 
-7.  [Create Skycure Mobile Threat Defense compliance policy in Intune](https://docs.microsoft.com/intune/deploy-use/create-skycure-mobile-threat-defense-compliance-policy)
+7.  [Create Skycure Mobile Threat Defense compliance policy in Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/create-skycure-mobile-threat-defense-compliance-policy)

@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Deploy Skycure apps, Microsoft Authenticator app and iOS configuration policy | Microsoft Docs
-description: Deploy Skycure apps, Microsoft Authenticator app and iOS configuration policy into Intune classic console.
-keywords:
+title: "Deploy Skycure apps with Intune | Microsoft Docs"
+description: "Deploy Skycure apps, Microsoft Authenticator app and iOS app configuration policy in the Intune classic console."
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: e8a7ce22-a956-4c12-adf7-30207c825fa8
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 45826fbc-6df5-41b2-8e80-d1353f904b43
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Deploy Skycure apps, Microsoft Authenticator app and iOS app configuration policy
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Before you begin
 
@@ -70,4 +62,4 @@ ms.custom: intune-classic
 
 ## Next steps
 
-[Setup the Skycure integration with Intune](https://docs.microsoft.com/intune/deploy-use/setup-the-skycure-integration-with-Intune)
+[Setup the Skycure integration with Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-the-skycure-integration-with-Intune)

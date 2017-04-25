@@ -1,34 +1,26 @@
 ---
-# required metadata
-
-title: Setup the Skycure integration with Intune | Microsoft Docs
-description: Setup the Skycure integration with Microsoft Intune.
-keywords:
+title: "Setup Skycure integration with Intune | Microsoft Docs"
+description: "How to setup Skycure integration with Intune"
+ms.custom: na
+ms.date: 04/25/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 56634626-0f91-4e92-a00d-e986035a1897
+caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/16/2017
-ms.topic: article
-ms.prod:
-ms.service: microsoft-intune
-ms.technology:
-ms.assetid: 93722f66-7641-4a3f-b1fb-3a0a58a36675
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: heenamac
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 
 ---
 
 # Setup the Skycure integration with Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 You need to add Skycure apps into Azure AD to have Single Sign On capabilities.
 
@@ -114,4 +106,4 @@ Skycure syncs the devices running its Mobile Threat Defense service with the Azu
 
 ## Next steps
 
-[Enable Skycure Mobile Threat Defense in Intune](https://docs.microsoft.com/intune/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
+[Enable Skycure Mobile Threat Defense in Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
