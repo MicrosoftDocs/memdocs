@@ -37,7 +37,7 @@ The source files from the CD.Latest folder are supported for the following:
 
 1.  **Backup and recovery:** To recover a site, you must use the source files from a CD.Latest folder that matches your site. When you run a site backup using the built-in site backup task, the CD.Latest folder is included as part of the backup.
 
-    -   **When you reinstall a site as part of a site recovery,** you install the site from the CD.Latest folder included in your backup. This installs the site using the file versions that match your site backup and site database.  If you do not have access the correct CD.Latest folder version, you can obtain a CD.Latest folder with the correct file versions by installing a site in a lab environement, and then updating that site to match the version you want to recover.
+    -   **When you reinstall a site as part of a site recovery,** you install the site from the CD.Latest folder included in your backup. This installs the site using the file versions that match your site backup and site database.  If you do not have access the correct CD.Latest folder version, you can obtain a CD.Latest folder with the correct file versions by installing a site in a lab environment, and then updating that site to match the version you want to recover.
 
         > [!IMPORTANT]  
         >  If you do not have the correct CD.Latest folder and its contents available, you cannot recover a site and it must be reinstalled.  
