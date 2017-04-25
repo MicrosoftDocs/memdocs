@@ -2,7 +2,7 @@
 title: "Restrict access based on risk | Microsoft Docs"
 description: "Restrict access to company resources based on device, network and application risk."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 caps.latest.revision:
-author: mtillman
-ms.author: mtillman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 
 ---
@@ -23,12 +23,7 @@ manager: angrobe
 
 You can control access from mobile devices to corporate resources, based on risk assessment conducted by Lookout, a device threat protection solution that is integrated with Microsoft Intune. The risk is based on telemetry that the Lookout service collects from devices for operating system (OS) vulnerabilities, installed malicious apps, and malicious network profiles. 
 
-Based on Lookout's reported risk assessment enabled through System center configuration manager (SCCM) compliance policies, you can  configure conditional access policies and allow or block devices that have been determined to be noncompliant due to threats detected on those devices.  
-
-## What problem does this solve?
-Companies and organizations need to protect sensitive data from emerging threats that include physical, app-based, and network-based threats, as well as OS vulnerabilities.
-
-Historically, companies and organizations have taken an active position of protecting PCs against malicious attacks. Mobile is an emerging area that often goes unprotected. Although the mobile platforms have built-in protection of the OS using techniques such as app isolation and vetted consumer app stores, these platforms continue to be vulnerable to sophisticated attacks. As mobile devices are increasingly used by employees to do work and need access to information that can be sensitive and valuable, these devices need to be protected from a variety of sophisticated attacks.
+Based on Lookout's reported risk assessment enabled through System center configuration manager (SCCM) compliance policies, you can  configure conditional access policies and allow or block devices that have been determined to be noncompliant due to threats detected on those devices.
 
 The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) gives you the ability to control the access to company resources and data based on risk assessment that device threat protection solutions like Lookout provides.
 
