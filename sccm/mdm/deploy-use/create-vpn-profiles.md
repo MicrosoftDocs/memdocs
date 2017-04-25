@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ---
 # VPN Profiles on mobile devices in System Center Configuration Manager
@@ -70,10 +70,10 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
     -   **Authentication method:** Select the authentication method that the VPN connection will use. Available methods depend on the connection type as shown in this table.  
 
-        |Authentication method|Supported connection types|  
+        |Authentication method|Supported&nbsp;connection&nbsp;types|  
         |---------------------------|--------------------------------|  
-        |**Certificates**<br /><br /> **Note:** If the client certificate is used to authenticate to a RADIUS server, such as a Network Policy Server, the Subject Alternative Name in the certificate must be set to the User Principal Name.|- <br />                            Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
-        |**Username and Password**|- <br />                            Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+        |**Certificates**<br /><br /> **Notes:**<br />- If the client certificate authenticates to a RADIUS server, such as a Network Policy Server, the Subject Alternative Name in the certificate must be set to the User Principal Name.<br/>- For Android deployments, select the EKU identifier and the certificate issuer thumbprint hash value.  Otherwise, users must select the appropriate certificate manually.  |- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+        |**Username and Password**|- Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
         |**Microsoft EAP-TTLS**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - PPTP<br /><br /> - IKEv2<br /><br /> - L2TP|  
         |**Microsoft protected EAP (PEAP)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
         |**Microsoft secured password (EAP-MSCHAP v2)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
