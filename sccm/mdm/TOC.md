@@ -72,7 +72,7 @@
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
 ## [Manage access based on device risk](deploy-use/mobile-threat-defense.md)
-### [Lookout in Configuration Manager](lookout-mobile-threat-defense-in-configuration-manager.md)
+### [Lookout in Configuration Manager](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
 #### [Set up Lookout Mobile Threat Defense](deploy-use/set-up-your-subscription-with-lookout.md)
 #### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md)
 #### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
