@@ -33,7 +33,7 @@ This topic includes best practices for software updates in System Center Configu
  When the Configuration Manager and WSUS databases use the same SQL Server and share the same instance of SQL Server, you cannot easily determine the resource usage between the two applications. When you use a different SQL Server instance for Configuration Manager and WSUS, it is easier to troubleshoot and diagnose resource usage issues that might occur for each application.  
 
 ### Specify the "Store updates locally" setting for the WSUS installation  
- When you install WSUS 3.0, select the **Store updates locally** setting. When this setting is selected, the license terms that are associated with software updates are downloaded during the synchronization process and stored on the local hard drive for the WSUS server. When this setting is not selected, client computers might fail to scan for software updates compliance for software updates that have license terms. When you install the software update point, WSUS Synchronization Manager verifies that this setting is enabled every 60 minutes, by default.  
+ When you install WSUS, select the **Store updates locally** setting. When this setting is selected, the license terms that are associated with software updates are downloaded during the synchronization process and stored on the local hard drive for the WSUS server. When this setting is not selected, client computers might fail to scan for software updates compliance for software updates that have license terms. When you install the software update point, WSUS Synchronization Manager verifies that this setting is enabled every 60 minutes, by default.  
 
 ## Operational Best Practices  
  Use the following best practices when you use software updates:  

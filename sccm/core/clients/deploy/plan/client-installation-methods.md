@@ -2,7 +2,7 @@
 title: "Client installation methods | Microsoft Docs"
 description: "Learn client installation methods for System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -22,7 +22,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can use different methods to install the Configuration Manager (also known as ConfigMgr or SCCM) client software. You can use one method or a combination of methods. In this topic you can read about each method, to learn which will work best in your organization.  
+You can use different methods to install the Configuration Manager client software. You can use one method or a combination of methods. In this topic you can read about each method, to learn which will work best in your organization.  
 
 ## Client push installation  
 

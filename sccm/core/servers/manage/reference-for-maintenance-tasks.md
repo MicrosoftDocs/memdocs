@@ -143,7 +143,7 @@ This task applies to devices that are enrolled by using Microsoft Intune (hybrid
 -   **Primary site**: Enabled    
 -   **Secondary site**: Enabled  
 
-**Delete Aged Notification Task History**: Use this task to delete information about client notification tasks from the site database when it hasn't been updated for a specified time. For more information about client notification, see [Client deployment tasks for System Center Configuration Manager](../../../core/clients/deploy/client-deployment-tasks.md).  
+**Delete Aged Notification Task History**: Use this task to delete information about client notification tasks from the site database when it hasn't been updated for a specified time. For more information about client notification, see [Client deployment tasks for System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
 -   Central administration site: Not available    
 -   **Primary site**: Enabled    
