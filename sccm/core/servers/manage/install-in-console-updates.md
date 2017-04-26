@@ -316,7 +316,7 @@ When you enable a new feature or pre-release feature, the Configuration Manager 
 
 
 ##  <a name="bkmk_prerelease"></a> Use pre-release features from updates
-Pre-release features are features that are included in the Current Branch for early testing in a production environment. These features should not be considered production ready, but can be used in your production environement. To learn more about pre-release features, including how to enable them in your environement, see [Pre-release featuers](/sccm/core/servers/manage/pre-release-features).                |
+Pre-release features are features that are included in the Current Branch for early testing in a production environment. These features should not be considered production ready, but can be used in your production environment. To learn more about pre-release features, including how to enable them in your environment, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).             
 
 
 ## Known issues
