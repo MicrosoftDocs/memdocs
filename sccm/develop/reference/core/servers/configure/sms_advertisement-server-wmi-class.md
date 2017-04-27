@@ -11,7 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 463bed7d-80e4-4fd9-a7d7-dfb10b538a43searchScope: - ConfigMgr SDK
+ms.assetid: 463bed7d-80e4-4fd9-a7d7-dfb10b538a43
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 18
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -73,7 +75,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |[Unlock Method in Class SMS_Advertisement](../../../../../develop/reference/core/servers/configure/unlock-method-in-class-sms_advertisement.md)|Sets the source site to the current site, unlocking the advertisement. **Warning:**  This method is deprecated.|  
 
 ## Properties  
- `ActionInProgress`  
+### `ActionInProgress`  
  Data type: `UInt32`  
 
  Access type: Read-only  
@@ -88,7 +90,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |1|UPDATE|  
 |2|ADD|  
 
- `AdvertFlags`  
+### `AdvertFlags`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -104,6 +106,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |0x00000200 (9)|ONUSERLOGON. Announce the advertisement to the user on logon.|  
 |0x00000400 (10)|ONUSERLOGOFF. Announce the advertisement to the user on logoff.|  
 |0x00008000 (15)|WINDOWS_CE. The advertisement is for a device client.|  
+|0x00010000 (16)|ENABLE_PEER_CACHING <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |0x00020000 (17)|DONOT_FALLBACK. Do not fall back to unprotected distribution points.|  
 |0x00040000 (18)|ENABLE_TS_FROM_CD_AND_PXE. The task sequence is available to removable media and the pre-boot execution environment (PXE) service point.|  
 |0x00100000 (20)|OVERRIDE_SERVICE_WINDOWS. Override maintenance windows in announcing the advertisement to the user.|  
@@ -123,7 +126,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Set ONSLOWNET when assignments are mandatory over a slow network connection, for example, when a computer connects using a modem.  
 
- `AdvertisementID`  
+### `AdvertisementID`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -132,7 +135,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Unique auto-generated key that identifies the advertisement. The default value is "".  
 
- `AdvertisementName`  
+### `AdvertisementName`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -150,7 +153,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects indicating the time when the advertisement becomes mandatory on the clients.  
 
- `AssignedScheduleEnabled`  
+### `AssignedScheduleEnabled`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -159,7 +162,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` if the schedule defined in the `AssignedSchedule` property is active. The default value is `false`.  
 
- `AssignedScheduleIsGMT`  
+### `AssignedScheduleIsGMT`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -168,7 +171,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` if the schedule defined in the `AssignedSchedule` property is in Universal Metric Time (UMT). The default value is `false`.  
 
- `AssignmentID`  
+### `AssignmentID`  
  Data type: `UInt32`  
 
  Access type: Read-only  
@@ -392,7 +395,6 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 |0x00002000 (13)|RERUN_IF_FAILED. Rerun the program if execution previously failed.|  
 |0x00004000 (14)|RERUN_IF_SUCCEEDED. Rerun the program if execution previously succeeded.|  
 |0x00008000 (15)|PERSIST_ON_WRITE_FILTER_DEVICES <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
-|0x00010000 (16)|ENABLE_PEER_CACHING <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |0x00020000 (17)|DON’T_FALLBACK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |0x00040000 (18)|DP_ALLOW_METERED_NETWORK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 
