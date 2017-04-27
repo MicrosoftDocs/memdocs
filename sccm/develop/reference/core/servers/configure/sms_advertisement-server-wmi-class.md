@@ -1,7 +1,7 @@
 ---
 title: "SMS_Advertisement Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "04/27/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
