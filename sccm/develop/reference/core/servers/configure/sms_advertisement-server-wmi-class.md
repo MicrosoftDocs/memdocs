@@ -15,9 +15,9 @@ ms.assetid: 463bed7d-80e4-4fd9-a7d7-dfb10b538a43
 searchScope:
  - ConfigMgr SDK
 caps.latest.revision: 18
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
 # SMS_Advertisement Server WMI Class
 The `SMS_Advertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents an advertisement used to announce software package programs that are available for running on clients.  
@@ -180,7 +180,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  ID of the assignment associated with the advertisement.  
 
- `CollectionID`  
+### `CollectionID`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -189,7 +189,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Existing collection to which the advertisement is targeted.  
 
- `Comment`  
+### `Comment`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -198,7 +198,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Simple description or note about the advertisement. The default value is "".  
 
- `DeviceFlags`  
+### `DeviceFlags`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -213,7 +213,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |0x02000000 (25)|Assign only if the device is currently connected to a high-bandwidth connection (default above 60 KBps).|  
 |0x04000000 (26)|Assign only if the device is docked, that is, it is attached to a desktop that is using ActiveSync.|  
 
- `ExpirationTime`  
+### `ExpirationTime`  
  Data type: `DateTime`  
 
  Access type: Read/Write  
@@ -222,7 +222,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Date and time when the advertisement is no longer available to clients. The default value is 19900101000000.000000+****.  
 
- `ExpirationTimeEnabled`  
+### `ExpirationTimeEnabled`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -231,7 +231,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` if the advertisement expires at the time indicated by the `ExpirationTime` property. The default value is `false`.  
 
- `ExpirationTimeIsGMT`  
+### `ExpirationTimeIsGMT`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -240,7 +240,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` if the time defined in the `ExpirationTime` property is in UMT. The default value is `false`.  
 
- `HierarchyPath`  
+### `HierarchyPath`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -249,7 +249,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Reserved.  
 
- `IncludeSubCollection`  
+### `IncludeSubCollection`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -258,7 +258,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` (default) if the advertisement is advertised to the subcollections of the specified collection.  
 
- `ISVData`  
+### `ISVData`  
  Data type: `Uint8` Array  
 
  Access type: Read/Write  
@@ -267,7 +267,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Information that allows a single ISV to store data relating to an `SMS_Program` instance. There are no restrictions or defined formats for this data. However, it is important to not overwrite the property after its ISV ownership has been established. Therefore, the calling application should read the existing data in this property first. If the data does not belong to the application, it should not be modified. Any ISV or application owner who is using this property should include an identifier in the data so that ownership can be easily established.  
 
- `ISVDataSize`  
+### `ISVDataSize`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -276,7 +276,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  The size of the data represented by the `ISVData` property. The default value is 0.  
 
- `ISVString`  
+### `ISVString`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -285,7 +285,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  String for partner extensibility.  
 
- `MandatoryCountdown`  
+### `MandatoryCountdown`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -294,7 +294,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Duration, in minutes, to show operating system deployment user notification mandatory schedule countdown. The default value is 0.  
 
- `OfferType`  
+### `OfferType`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -308,7 +308,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |0|Required|  
 |2|Available|  
 
- `PackageID`  
+### `PackageID`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -317,7 +317,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  ID for an existing package associated with the advertisement. The value must be in uppercase.  
 
- `PresentTime`  
+### `PresentTime`  
  Data type: `DateTime`  
 
  Access type: Read/Write  
@@ -326,7 +326,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  Date and time when the advertisement is made available to clients. The default value is 19900101000000.000000+****.  
 
- `PresentTimeEnabled`  
+### `PresentTimeEnabled`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -335,7 +335,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` (default) if the present time is enforced by Configuration Manager.  
 
- `PresentTimeIsGMT`  
+### `PresentTimeIsGMT`  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -344,7 +344,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  `true` if the time defined in the `PresentTime` property is in UMT. The default value is `false`.  
 
- `Priority`  
+### `Priority`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -359,7 +359,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |2|NORMAL|  
 |3|LOW|  
 
- `ProgramName`  
+### `ProgramName`  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -368,7 +368,7 @@ Class SMS_Advertisement : SMS_BaseClass
 
  A program within the specified package (`PackageID`) to be advertised.  
 
- `RemoteClientFlags`  
+### `RemoteClientFlags`  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -398,7 +398,7 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 |0x00020000 (17)|DON’T_FALLBACK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |0x00040000 (18)|DP_ALLOW_METERED_NETWORK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 
- `SourceSite`  
+### `SourceSite`  
  Data type: `String`  
 
  Access type: Read-only  
@@ -407,7 +407,7 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 
  Three-letter site code of the site where the advertisement originates.  
 
- `TimeFlags`  
+### `TimeFlags`  
  Data type: `UInt32`  
 
  Access type: Read-only  
