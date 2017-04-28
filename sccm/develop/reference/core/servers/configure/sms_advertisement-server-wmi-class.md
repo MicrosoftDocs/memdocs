@@ -19,7 +19,7 @@ author: "lleonard-msft"
 ms.author: "alleonar"
 manager: "angrobe"
 ---
-# SMS_Advertisement Server WMI Class
+# SMS_Advertisement server WMI class
 The `SMS_Advertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents an advertisement used to announce software package programs that are available for running on clients.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
@@ -440,11 +440,11 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 
 ## Requirements  
 
-## Runtime Requirements  
+## Runtime requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+## Development requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
+## See also  
  [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)
