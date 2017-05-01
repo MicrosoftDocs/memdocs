@@ -4,7 +4,7 @@ description: ""
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/23/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -19,13 +19,27 @@ ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 
 Beginning in version 1610, the process for setting up cloud management gateway in Configuration Manager includes the following steps:
 
-## Step 1: Create a custom SSL certificate
+## Step 1: Configure required certificates
 
-You can create a custom SSL certificate for cloud management gateway in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
+## Option 1 (preferred) - Use the server authentication certificate from a public and globally trusted certificate provider (like VeriSign)
 
--   When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
+When you use this method, clients will automatically trust the certificate, and you do not need to create a custom SSL certificate yourself.
 
--  When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
+1. Create a canonical name record (CNAME) in your organization’s public domain name service (DNS) to create an alias for the cloud management gateway service to a friendly name that will be used in the public certificate.
+For example, Contoso names their cloud management gateway service **GraniteFalls** which in Azure will be **GraniteFalls.CloudApp.Net**. In Contoso’s public DNS contoso.com namespace, the DNS administrator creates a new CNAME record for **GraniteFalls.Contoso.com** for the real host name , **GraniteFalls.CloudApp.net**.
+2. Next request a server authentication certificate from a public provider using the Common Name (CN) of the CNAME alias.
+For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.
+3. Create the cloud management gateway service in the Configuration Manager console using this certificate.
+	- On the **Settings** page of the Create Cloud Management Gateway Wizard when you add the server certificate for this cloud service (from **Certificate file**), the wizard will extract the hostname from the certificate CN as the service name, and then append that to **cloudapp.net** (or **usgovcloudapp.net** for the Azure US Government cloud) as the Service FQDN to create the service in Azure.
+For example, when creating the cloud management gateway at Contoso, the hostname **GraniteFalls** is extracted from the certificate CN, so that the actual service in Azure is created as **GraniteFalls.CloudApp.net**.
+
+### Option 2 - Create a custom SSL certificate for cloud management gateway in the same way as for a cloud-based distribution point
+
+You can create a custom SSL certificate for cloud management gateway in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) but do the following things differently:
+
+- When setting up the new certificate template, give **Read **and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
+- When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
+
 
 ## Step 2: Export the client certificate's root
 
