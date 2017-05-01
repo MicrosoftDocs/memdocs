@@ -87,7 +87,7 @@ Configuration Manager supports the use of data deduplication with distribution p
 For more information, see [Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) on the Configuration Manager team blog, and [Data Deduplication Overview](http://technet.microsoft.com/library/hh831602.aspx) in the Windows Server TechNet library.  
 
 ##  <a name="bkmk_DA"></a> DirectAccess  
-Configuration Manager supports the DirectAccess feature in Windows Server 2008 R2 for communication between site system servers and clients.  
+Configuration Manager supports the DirectAccess feature in Windows Server 2008 R2 and above for communication between clients and site server systems.  
 
 -   When all the requirements for DirectAccess are met, DirectAccess enables Configuration Manager clients on the Internet to communicate with their assigned site as if they were on the intranet.  
 
