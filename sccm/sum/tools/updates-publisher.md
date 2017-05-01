@@ -44,19 +44,19 @@ When you open Updates Publisher, it defaults to the Overview node of the *Update
 Updates Publisher has four workspaces to help organize it.
 
 
-**Updates Workspace:** Use this workspace to [create](sccm/sum/tools/create-updates-with-updates-publisher) and [manage](sccm/sum/tools/manage-updates-with-updates-publisher) software updates and update bundles. This includes assigning updates and bundles to a publication, publishing, and exporting to another Updates Publisher repository.
+**Updates Workspace:** Use this workspace to [create](/sccm/sum/tools/create-updates-with-updates-publisher) and [manage](/sccm/sum/tools/manage-updates-with-updates-publisher) software updates and update bundles. This includes assigning updates and bundles to a publication, publishing, and exporting to another Updates Publisher repository.
 
-**Publications Workspace:** This is where you [manage publications](sccm/sum/tools/updates-publisher-publications). A publication is group of updates you create to simplify the export and publishing of the updates.
+**Publications Workspace:** This is where you [manage publications](/sccm/sum/tools/updates-publisher-publications). A publication is group of updates you create to simplify the export and publishing of the updates.
 
 Managing publications includes publishing updates to a server so your clients can find and install them, exporting updates and bundles for use by other Updates Publisher installations, or modifying the contents of or details of a publication.
 
 
 
-**Rules Workspace:** Here is where you [manage applicability rules](sccm/sum/tools/updates-publisher-applicability-rules) that can be saved and then used with updates you deploy. There are two types of rules:
+**Rules Workspace:** Here is where you [manage applicability rules](/sccm/sum/tools/updates-publisher-applicability-rules) that can be saved and then used with updates you deploy. There are two types of rules:
 
 -   Installable rules – These rules help determine if a client should install an update.
 -   Installed rules – These rules verify if an update is already installed.
 
-**Catalogs Workspace:** Use this workspace to add and [manage software update catalogs](sccm/sum/tools/updates-publisher-catalogs). This includes the import of software updates from those catalogs to the Updates Publisher repository.
+**Catalogs Workspace:** Use this workspace to add and [manage software update catalogs](/sccm/sum/tools/updates-publisher-catalogs). This includes the import of software updates from those catalogs to the Updates Publisher repository.
 ## First steps
-To get started, first [install](sccm/sum/tools/install-updates-publisher), and then [configure options](sccm/sum/tools/updates-publisher-options) for Updates Publisher.
+To get started, first [install](/sccm/sum/tools/install-updates-publisher), and then [configure options](/sccm/sum/tools/updates-publisher-options) for Updates Publisher.

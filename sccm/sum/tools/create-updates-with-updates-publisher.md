@@ -32,7 +32,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
     -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher creates a hash of the file. The hash and file name are then used in the update metadata for the update that you are creating.
 
-    -   Specify the source location of the content for this update. When you have a local copy of the content, you can select the checkbox **Use a local source to publish software update content** to use the [local source publishing path](sccm/sum/tools/updates-publisher-options#advanced) (and Advanced option). If this option is not selected, you must specify a URL where the update can be found on the web. This path or URL is added to the update metadata.
+    -   Specify the source location of the content for this update. When you have a local copy of the content, you can select the checkbox **Use a local source to publish software update content** to use the [local source publishing path](/sccm/sum/tools/updates-publisher-options#advanced) (and Advanced option). If this option is not selected, you must specify a URL where the update can be found on the web. This path or URL is added to the update metadata.
 
         Later, when the update is published to a WSUS server, Updates Publisher gets the binaries for the update from the indicated source location.
 
