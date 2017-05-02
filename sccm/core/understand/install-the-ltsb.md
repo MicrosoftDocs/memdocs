@@ -1,8 +1,8 @@
 ---
 title: "Install a site using the 1606 baseline media  | Microsoft Docs"
-description: "Learn about using the 1606 baseline media to install or upgrade sites for System Center Configuration Manager."
+description: "Install or upgrade to the LTSB for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,13 +21,18 @@ manager: angrobe
 
 *Applies to:  System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
 
-Use this topic to learn about running Configuration Manager Setup when you use the version 1606 baseline media from Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use this media to install a new site, or upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1. During Setup, you can choose to install the Current Branch or Long-Term Servicing Branch (LTSB).
+When you run Setup from the version 1606 baseline media for Configuration Manager, you can install the Long-Term Servicing Branch or a Current branch site of System Center Configuration Manager.
+
+The baseline media is available on DVD as part of Microsoft System Center 2016, or from System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. To learn about baseline media, see [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+
 
 When you use the version 1606 baseline media, the site you install or upgrade to is:
 - A *Current Branch site* that is equivalent to a site that was first installed using the 1511 baseline media, and then updated to version 1606 plus the 1606 hotfix rollup - KB3186654.
 -	An *LTSB site* that is equivalent to the Current Branch site that runs version 1606 plus the 1606 hotfix rollup - KB3186654. The baseline media already includes the hotfix rollup.  But, the LTSB does not support all of the features or capabilities available with the Current Branch, as detailed in [Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md).
 
 If you are not familiar with the different branches of System Center Configuration Manager, see [Which branch of Configuration Manager should I use](which-branch-should-i-use.md).
+
+
 
 
 ## Changes to Setup with the 1606 baseline media
@@ -93,6 +98,7 @@ For more information, see [Use a command line to install System Center Configura
 When you use the 1606 baseline media to install a new site of either branch, use the site planning, preparation, and installation procedures documented in the [Installing System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites) topic with the addition of the following considerations for Setup:
 
 - During Setup you must choose the branch of Configuration Manager that you want to install, and you can specify details for your Software Assurance agreement.
+- All sites in the same hierarchy must run the same branch. It is not supported to have a hierarchy with a mix of LTSB and Current Branch at different sites.
 -	New scripted installation. For more information, see "New scripted installation options" earlier in this article.
 
 ## Expand a stand-alone primary site
