@@ -47,7 +47,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 ## Create VPN profiles
 [How to Create VPN profiles in System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) provides general information about how to creat VPN profiles.
 
-###   Windows 10 VPN features that available when using Configuration Manager with Intune  
+###   Windows 10 VPN features available when using Configuration Manager with Intune  
 
 
 > [!NOTE]  
@@ -80,7 +80,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
         |**Smart Card or other certificate**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
         |**MSCHAP v2**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
         |**RSA SecurID** (iOS only)|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>PPTP</li><li>L2TP</li></ul>|  
-        |**Use machine certificates**|IKEv2|  
+        |**Use machine certificates**|<ul><li>IKEv2</li></ul>|  
 
          Depending on the selected options, you might be asked to specify more information, like:  
 
@@ -141,9 +141,9 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 	> [!NOTE]  
 	>  For Windows Phone 8.1 devices only  
 	>   
-	>  Suppose that the **Send all network traffic through the VPN connection** option is selected, and the VPN connection is using full tunneling. For the first profile that's set up on the device, the VPN connection will automatically open. If you want a different profile to automatically open a connection, you must make it the default profile on the device.  
+	>  When the *Send all network traffic through the VPN connection* option is selected *and* the VPN connection uses full tunneling, the VPN connection automatically opens using the first device profile. To open a connection with a different profile, set the desired profile as the default.  
 	>   
-	>  Suppose that the **Send all network traffic through the VPN connection** option is not selected, and the VPN connection is using split-tunneling. A VPN connection can automatically be opened if you configure routes or a connection-specific DNS suffix.  
+	>  When the *Send all network traffic through the VPN connection* option is *not* selected *and* the VPN connection uses split-tunneling,  VPN connections open automatically for configured routes or connection-specific DNS suffixes.  
 
 
 4. On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select the operating systems on which the VPN profile will be installed, or choose **Select all** to install the VPN profile on all available operating systems.  
