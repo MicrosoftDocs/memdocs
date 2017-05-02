@@ -31,8 +31,7 @@ The following sections detail requirements to install and use Updates Publisher,
 Install and run Updates Publisher on a 64-bit editions of the following operating systems. There are no minimum cumulative update or service pack requirements.
 
 -   Windows Server 2016 (Standard, Datacenter)
--   Windows Server 2014 (Standard, Datacenter)
--   Windows Server 2012 (Standard, Datacenter)
+-   Windows Server 2012 R2 (Standard, Datacenter)
 -   Windows 10 (Pro, Education, Pro Education, Enterprise)
 -   Windows 8.1 (Professional, Enterprise)
 
