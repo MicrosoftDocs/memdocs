@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 Use the System Center Configuration Manager **custom Windows Desktops and Servers** configuration item to manage settings  for Windows computers and servers that are managed by the Configuration Manager client.  
 
@@ -43,7 +48,7 @@ Use the System Center Configuration Manager **custom Windows Desktops and Server
 
  A detection method in Configuration Manager contains rules that are used to detect whether an application is installed on a computer. This detection occurs before the configuration item is assessed for compliance. To detect whether an application is installed, you can detect the presence of a Windows Installer file for the application, use a custom script, or select **Always assume application is installed** to assess the configuration item for compliance regardless of whether the application is installed.  
 
- Use these procedures to configure detection methods in System Center 2012 Configuration Manager.  
+ Use these procedures to configure detection methods in System Center Configuration Manager.  
 
 ### To detect an application installation by using the Windows Installer File  
 
