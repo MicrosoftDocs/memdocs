@@ -2,7 +2,7 @@
 title: "Which branch should I use | Microsoft Docs"
 description: "Learn the differences between available branches of System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 caps.latest.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Which branch of Configuration Manager should I use?*Applies to: System Center Configuration Manager (Current Branch, Long-Term Servicing Branch, and Technical Preview)*
+# Which branch of Configuration Manager should I use?
+
+*Applies to: System Center Configuration Manager (Current Branch, Long-Term Servicing Branch, and Technical Preview)*
+
 
 Beginning in October of 2016, there are three branches of System Center Configuration Manager available. Use this topic to help choose the right branch for you.
 
@@ -31,7 +36,7 @@ This is a licensed branch for use in a production environment where you want the
 
 The Current Branch is updated several times a year with new features. Each update version is supported for one year after its release. You must update to a newer version of the Current Branch on or before expiration of that one-year period. Updates to newer versions are available as in-console updates.
 
-To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager.
+To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager. Later baseline versions, like 1702 do not support install of the LTSB.
 
 You can also use the baseline media to install a new site that is an evaluation edition of the Current Branch. If you want to install only an evaluation edition, you can get software from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
 
