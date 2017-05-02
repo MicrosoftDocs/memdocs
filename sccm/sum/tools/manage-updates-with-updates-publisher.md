@@ -19,7 +19,8 @@ robots: NOINDEX, NOFOLLOW
 ---
 # Manage software updates in Updates Publisher
 
-*Applies to: System Center Updates Publisher*
+*Applies to: System Center Updates Publisher*   
+
 In System Center Updates Publisher, you use the **Updates Workspace** to manage
 software updates and bundles that you have imported to the repository.  
 
