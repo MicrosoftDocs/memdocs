@@ -2,7 +2,7 @@
 title: "Updates | Microsoft Docs"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,7 +43,7 @@ If you use the Technical Preview branch, see [Technical Preview for System Cente
 
 
 ##  <a name="bkmk_Baselines"></a> Baseline and update versions  
- The first release of System Center Configuration Manager current branch was version 1511, which was a baseline version. A more recent baseline version is 1606.
+ The first release of System Center Configuration Manager current branch was version 1511, which was a baseline version. More recent baseline versions include version 1606, and 1702:
 
 -   Use the latest baseline version when you install a new site in a new hierarchy.  
 
@@ -71,7 +71,7 @@ The following versions of Configuration Manager are available as a baseline, an 
 
 |Version |Availability date|[Support end date](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|in-console update|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|No|Yes|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|Yes|Yes|
 |[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|11/18/2016| 11/18/2017|No|Yes|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|7/22/2016| 7/22/2017|No|Yes|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016| 7/22/2017|Yes|No|

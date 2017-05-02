@@ -2,7 +2,7 @@
 title: "The CD.Latest folder | Microsoft Docs"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,7 +31,7 @@ However, baseline media, like the baseline version 1606 that released in October
 
 -   You run the built-in Configuration Manager backup task: The folder is created or updated under the designated backup folder location.  
 
--  Beginning with version 1606, the CD.Latest folder is created when you install a new site using baseline media (like version 1606).
+-  Beginning with version 1606, the CD.Latest folder is created when you install a new site using baseline media (like version 1606 or 1702).
 
 The source files from the CD.Latest folder are supported for the following:  
 
