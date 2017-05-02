@@ -1,6 +1,6 @@
 ---
-title: "TOCNAME | Microsoft Docs"
-description: ""
+title: "Manage updates | Microsoft Docs"
+description: "Manage the udpates you deploy and create with System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
