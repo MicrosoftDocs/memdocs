@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  3/31/2017
+ms.date:  05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -18,7 +18,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610.
+Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  

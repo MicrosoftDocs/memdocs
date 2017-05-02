@@ -2,7 +2,7 @@
 title: "Checklist for 1702 | System Center Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1702."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -21,6 +21,9 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version.
+
+> [!TIP]  
+Version 1702 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions) that you can use to install the first site of a new hierarchy.
 
 To get the update for version 1702, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
