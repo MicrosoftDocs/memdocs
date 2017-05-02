@@ -69,4 +69,4 @@ See [System Center Configuration Manager licensing and branches](learn-more-edit
 
 If you decide that the Configuration Manager LTSB is the correct branch for your environment, [install a new LTSB](/sccm/core/understand/install-the-ltsb#install-a-new-site) site as part of a new hierarchy, or [upgrade a System Center 2012 Configuration Manager site](/sccm/core/understand/install-the-ltsb#upgrade-from-system-center-2012-configuration-manager) and hierarchy.
 
-If you do not have installation media, see [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/System-Center-2016) for information on how to get System Center 2016, which includes media you can use to install the System Center Configuration Manager LTSB.  
+If you do not have installation media, see [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/system-center) for information on how to get System Center 2016, which includes media you can use to install the System Center Configuration Manager LTSB.  
