@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: [Change the MDM Authority to Intune standalone | Microsoft Docs]
-description: Learn how to change the MDM Authority from Configuration Manager (hybrid) to Intune standalone.
+title: "Change the MDM Authority to Intune standalone | Microsoft Docs"
+description: "Learn how to change the MDM Authority from Configuration Manager (hybrid) to Intune standalone."
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:
@@ -119,7 +119,8 @@ After the change in MDM authority is complete, review the following to validate 
     - Configuration profiles
 - Make sure the new settings that are intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.
     > [!TIP]   
-    > As a best practice, you should create all management settings and configurations, as well as deployments, after the change to the MDM Authority has completed. This will help ensure that devices are protected and actively managed during the interim period.
+    > As a best practice, you should create all management settings and configurations, as well as deployments, after the change to the MDM Authority has completed. This will help ensure that devices are protected and actively managed during the interim period.   
+
 -  After you change the MDM Authority, perform the following steps to validate that new devices are enrolled successfully to the new authority:
     - Enroll a new device
     - Make sure the newly enrolled device shows up in the Intune administration console
