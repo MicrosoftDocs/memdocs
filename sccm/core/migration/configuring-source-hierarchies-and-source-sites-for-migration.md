@@ -54,7 +54,7 @@ To enable migration of data to your System Center Configuration Manager environm
 
 6.  Specify source site access accounts that have the following permissions:  
 
-    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy.  
+    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy. Distribution point sharing and upgrades will require **Modify** and **Delete** permissions to the Site in the source hierarchy.
 
     -   Source Site Database Account: **Read** and **Execute** permission to the SQL Server database for the specified top-level site in the source hierarchy.  
 
@@ -89,7 +89,7 @@ Use the following procedure to configure additional source sites for Configurati
 
 5.  In the **Source Site Credentials** dialog box, for the source site access accounts, specify accounts that have the following permissions:  
 
-    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy.  
+    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy. Distribution point sharing and upgrades will require **Modify** and **Delete** permissions to the Site in the source hierarchy.  
 
     -   Source Site Database Account: **Read** and **Execute** permission to the SQL Server database for the specified top-level site in the source hierarchy.  
 
