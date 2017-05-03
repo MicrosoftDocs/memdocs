@@ -107,12 +107,9 @@ After the change in MDM authority is complete, review the following steps:
   iOS devices require additional time to renew and set up the APNs certificate. Therefore, iOS devices will not receive the initial check-in request. Even if iOS devices are powered on and online during (or shortly after) the change in MDM authority, there will be a delay of up to 8 hours (depending on the timing of the next scheduled regular check-in) before iOS devices are registered with the service under the new MDM authority.    
 
   > [!IMPORTANT]
-  > Between the time when you change the MDM authority and when the renewed APNs certificate is uploaded to the new authority, new device enrollments and device check-in for iOS devices will fail. Therefore, it is important that you review and upload the APNs certificate to the new authority as soon as possible after the change in MDM authority.
-
+  > Between the time when you change the MDM authority and when the renewed APNs certificate is uploaded to the new authority, new device enrollments and device check-in for iOS devices will fail. Therefore, it is important that you review and upload the APNs certificate to the new authority as soon as possible after the change in MDM authority.    
 - Users can quickly change to the new MDM authority by manually starting a check-in from the device to the service. Users can easily do this by using the Company Portal app and initiating a device compliance check.
-- To validate that things are working correctly after devices have checked-in and synchronized with the service after the change in MDM authority, look for the devices the [Microsoft Intune administration console](http://manage.microsoft.com). The devices that were previously managed by Configuration Manager (hybrid) will now be displayed as managed devices.
-<!-- After the change in MDM authority and devices check-in with the service, note the following:      - The updated compliance status of devices will only display in the Azure portal immediately.
-- There will be a delay for compliance status of devices to display in the Intune administrative console.-->
+- To validate that things are working correctly after devices have checked-in and synchronized with the service after the change in MDM authority, look for the devices the [Microsoft Intune administration console](http://manage.microsoft.com). The devices that were previously managed by Configuration Manager (hybrid) will now be displayed as managed devices.    
 - There is an interim period when a device is offline during the change in MDM authority and when that device checks in to the service. To help ensure that the device remains protected and functional during this interim period, the following will remain on the device for up to 7 days (or until the device connects with the new MDM authority and receives new settings that will overwrite the existing ones):
     - E-mail profile
     - VPN profile
@@ -122,9 +119,11 @@ After the change in MDM authority is complete, review the following steps:
 - Make sure the new settings that are intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.
     > [!TIP]   
     > As a best practice, you should create all management settings and configurations, as well as deployments, shortly after the change to the MDM authority has completed. This will help ensure that devices are protected and actively managed during the interim period.   
-
--  After you change the MDM authority, perform the following steps to validate that new devices are enrolled successfully to the new authority:
+-  After you change the MDM authority, perform the following steps to validate that new devices are enrolled successfully to the new authority:   
     - Enroll a new device
     - Make sure the newly enrolled device shows up in the Intune administration console.
     - Perform an action, such as Remote Lock, from the administration console to the device. If it is successful, the device is being managed by the new MDM authority.
 - If you have issues with specific devices, you can un-enroll and re-enroll the devices to get them connected to the new authority and managed as quickly as possible.
+
+<!-- After the change in MDM authority and devices check-in with the service, note the following:      - The updated compliance status of devices will only display in the Azure portal immediately.
+- There will be a delay for compliance status of devices to display in the Intune administrative console.-->
