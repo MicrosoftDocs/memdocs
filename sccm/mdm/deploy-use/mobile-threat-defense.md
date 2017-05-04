@@ -29,7 +29,7 @@ Mobile Threat Defense connectors allow you to leverage your chosen Mobile Threat
 Companies need to protect sensitive data from emerging threats including physical, app-based, and network-based threats, as well as operating system vulnerabilities.
 Historically, companies have been proactive when protecting PCs from attack, while mobile devices go un-monitored and unprotected. Mobile platforms have built-in protection such as app isolation and vetted consumer app stores, but these platforms remain vulnerable to sophisticated attacks. Today, more employees use devices for work and need access to sensitive information. Devices need to be protected from increasingly sophisticated attacks.
 
-The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) gives you the ability to control the access to company resources and data based on risk assessment that device threat protection solutions like Mobile Threat Defense partners provide.
+The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) gives you the ability to control the access to company resources and data based on risk assessment that device threat protection solutions like Mobile Threat Defense partners provide.
 
 ## How the Intune Mobile Threat Defense connectors work?
 
@@ -45,7 +45,7 @@ Access is granted when the device is remediated:
 
 ![Mobile Threat Defense Access granted](../media/mtp/MTD-image-2.png)
 
-## Mobile Threat Defense partners
+## Next steps
 
 Learn how to protect access to company resource based on device, network, and application risk with:
 

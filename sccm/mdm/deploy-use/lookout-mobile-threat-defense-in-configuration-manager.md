@@ -25,7 +25,7 @@ You can control access from mobile devices to corporate resources, based on risk
 
 Based on Lookout's reported risk assessment enabled through System center configuration manager (SCCM) compliance policies, you can  configure conditional access policies and allow or block devices that have been determined to be noncompliant due to threats detected on those devices.
 
-The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) gives you the ability to control the access to company resources and data based on risk assessment that device threat protection solutions like Lookout provides.
+The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) gives you the ability to control the access to company resources and data based on risk assessment that device threat protection solutions like Lookout provides.
 
 ## How do the hybrid MDM deployment and Lookout device threat protection help protect company resources?
 Lookout’s mobile app (Lookout for work), running on mobile devices, captures file system, network stack, device and application telemetry (where available) and sends it to the Lookout device threat protection cloud service to calculate an aggregate device risk for mobile threats. You can also change the classification of the risk level for the threats in the Lookout console to suit your requirements.  
@@ -40,7 +40,7 @@ If the device is determined as noncompliant with the compliance policy, access t
 For information about platforms and languages that Lookout supports, see this [article](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
 
 ## Prerequisites:
-* [Hybrid MDM deployment](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)
+* [Hybrid MDM deployment](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)
 * A subscription to Microsoft Intune, and Azure Active Directory.
 * A enterprise subscription to Lookout Mobile EndPoint Security.  For more information, see [Lookout Mobile Endpoint Security](https://www.lookout.com/products/mobile-endpoint-security)
 
