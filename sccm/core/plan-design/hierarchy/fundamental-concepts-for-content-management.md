@@ -2,7 +2,7 @@
 title: "Content management fundamentals | Microsoft Docs"
 description: "Use tools and options in System Center Configuration Manager to manage the content that you deploy."
 ms.custom: na
-ms.date: 3/15/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,9 +19,12 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Fundamental concepts for content management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager supports a robust system of tools and options to manage the content you deploy as applications, packages, software updates, and operating system deployments.  
 
- The content that you deploy is stored on both site servers and on distribution point site system servers. This content can require a large amount of network bandwidth when it's being transferred between locations. To effectively plan and use content management infrastructure, we recommend that you understand the available options and configurations, and then consider how to use them to best fit your networking environment and content deployment needs.  
+The content that you deploy is stored on both site servers and on distribution point site system servers. This content can require a large amount of network bandwidth when it's being transferred between locations. To effectively plan and use content management infrastructure, we recommend that you understand the available options and configurations, and then consider how to use them to best fit your networking environment and content deployment needs.  
 
-Following are the key concepts for content management. When a concept requires additional or complex information, links are provided to direct you to those details.  
+> [!TIP]    
+> You can learn more about the content distribution process and find help in diagnosing and resolving general content distribution problems. See [Understanding and Troubleshooting Content Distribution in Microsoft Configuration Manager](https://support.microsoft.com/help/4000401/content-distribution-in-mcm) at support.microsoft.com.
+
+Following are key concepts for content management. When a concept requires additional or complex information, links are provided to direct you to those details.
 
 ## Accounts used for content management  
  The following accounts can be used with content management:  
