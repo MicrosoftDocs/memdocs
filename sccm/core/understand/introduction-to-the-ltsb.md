@@ -26,6 +26,8 @@ The Long-Term Servicing Branch (LTSB) of System Center Configuration Manager is 
 
 Based on Configuration Manager version 1606, the LTSB has reduced functionality when compared to the Current Branch of Configuration Manager.
 
+ > [!TIP]   
+ > If you were looking for information about the branches of **Windows Server**, see [Windows Server 2016 new Current Branch for Business servicing option]( https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
 ## Features that are not available in the LTSB of Configuration Manager
 The Current Branch of Configuration Manager supports the following functionality that is not available when you use the LTSB:
@@ -61,7 +63,7 @@ Customers with active Software Assurance (SA) on System Center Configuration Man
 
 Customers that have perpetual rights to System Center Configuration Manager, or that allow SA or subscription to lapse after October 1, can install the version of System Center Configuration Manager LTSB that is current at the time of lapse.
 
-[Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs can be found here](http://go.microsoft.com/fwlink/?LinkId=800052)
+[Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs can be found here](http://go.microsoft.com/fwlink/?LinkId=800052).
 
 See [System Center Configuration Manager licensing and branches](learn-more-editions.md) for more information about licensing for Configuration Manager branches.
 
