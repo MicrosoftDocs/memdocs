@@ -221,11 +221,11 @@ When you have iOS devices, you must configure the APNs certificate in Configurat
 1. In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and choose **Configure Platforms** &gt; **Android**.  
 2. Select **Enable Android enrollment** and click **OK**
 
-## Enable Windows enrollment
+### Enable Windows enrollment
 1. In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and choose **Configure Platforms** &gt; **Windows**.  
 2. Select **Enable Windows enrollment** and click **OK**
 
-## Enable Android enrollment
+### Enable Android enrollment
 1. In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and choose **Configure Platforms** &gt; **Windows Phone**.  
 2. Select the platform that you want to enable, and click **OK**
 
