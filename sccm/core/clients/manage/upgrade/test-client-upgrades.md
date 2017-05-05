@@ -2,7 +2,7 @@
 title: "Test client upgrades pre-production collection | Microsoft Docs"
 description: "Test client upgrades in a pre-production collection in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,7 +33,7 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 2.  Install a Configuration Manager update that includes a new version of the client.  
 
-3.  promote the new client to production.  
+3.  Promote the new client to production.  
 
 ##  To configure automatic client upgrades to use a pre-production collection  
 
@@ -81,3 +81,4 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 >[!NOTE]
 >To enable the pre-production client, or to promote a pre-production client to a production client, your account must be a member of a security role that has **Read** and **Modify** permissions for the **Update Packages** object.
+>Client upgrades honor any Configuration Manager maintenance windows you have configured.
