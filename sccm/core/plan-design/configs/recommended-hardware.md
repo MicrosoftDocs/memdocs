@@ -2,7 +2,7 @@
 title: "Recommended hardware | Microsoft Docs"
 description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -44,7 +44,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |Stand-alone primary site server with a database site role on the same server<sup>1</sup>|16|96|80|  
 |Stand-alone primary site server with a remote site database|8|16|-|  
-|Remote database server for a stand-alone primary site|16|64|90|  
+|Remote database server for a stand-alone primary site|16|72|90|  
 |Central administration site server with a database site role on the same server<sup>1</sup>|20|128|80|  
 |Central administration site server with a remote site database|8|16|-|  
 |Remote database server for a central administration site|16|96|90|  
