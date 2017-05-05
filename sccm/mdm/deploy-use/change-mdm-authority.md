@@ -189,7 +189,8 @@ When you have iOS devices, you must configure the APNs certificate in Configurat
 
     1.  In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscriptions**, and select **Create APNs certificate request** to open the **Request Apple Push Notification Service Certificate Signing Request** dialog box.  
     2.  **Browse** to the path to save the new certificate signing request (.csr) file. Save the certificate signing request (.csr) file locally.  
-    3.  Click **Download**. The new Microsoft Intune .csr file downloads and is saved by Configuration Manager.  
+    3.  Click **Download**. The new Microsoft Intune .csr file downloads and is saved by Configuration Manager.   
+
     > [!IMPORTANT]
     > You must download a new certificate signing request. Do not use an existing file or it will fail.  
 
@@ -219,15 +220,15 @@ When you have iOS devices, you must configure the APNs certificate in Configurat
 
 ### Enable Android enrollment
 1. In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and choose **Configure Platforms** &gt; **Android**.  
-2. Select **Enable Android enrollment** and click **OK**
+2. Select **Enable Android enrollment** and click **OK**.
 
 ### Enable Windows enrollment
 1. In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and choose **Configure Platforms** &gt; **Windows**.  
-2. Select **Enable Windows enrollment** and click **OK**
+2. Select **Enable Windows enrollment** and click **OK**.
 
 ### Enable Android enrollment
 1. In the Configuration Manager console, go to **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and choose **Configure Platforms** &gt; **Windows Phone**.  
-2. Select the platform that you want to enable, and click **OK**
+2. Select the platform that you want to enable, and click **OK**.
 
 
 ### Next steps
