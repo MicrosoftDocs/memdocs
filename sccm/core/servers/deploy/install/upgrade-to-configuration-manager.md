@@ -33,7 +33,6 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 **Upgrade to version 1702**   
 When you have version 1702 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1702:   
 -	  An evaluation install of System Center Configuration Manager version 1702
--	  A release candidate install of System Center Configuration Manager
 -	  System Center 2012 Configuration Manager with Service Pack 1
 -	  System Center 2012 Configuration Manager with Service Pack 2
 -	  System Center 2012 R2 Configuration Manager
