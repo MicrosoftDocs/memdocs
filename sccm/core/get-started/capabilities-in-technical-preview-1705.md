@@ -34,7 +34,14 @@ This article introduces the features that are available in the Technical Preview
 
 ### Procedure 1
 ### Try it out!  
- Try to complete the following and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
+ Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
  -  Task 1
  -  Task 2              
 -->
+
+## Console display on high DPI devices
+With this release, issues with how the Configuration Manager console scales and displays different parts of the UI when viewed on high DPI devices (like a Surface book) should be fixed.
+
+
+## Peer Cache improvements
+Beginning with this technical preview, Peer Cache [no longer uses the Network Access Account](/sccm/core/plan-design/hierarchy/client-peer-cache) to authenticate download requests from peers.
