@@ -41,3 +41,7 @@ This article introduces the features that are available in the Technical Preview
 
 ## Console display on high DPI devices
 With this release, issues with how the Configuration Manager console scales and displays different parts of the UI when viewed on high DPI devices (like a Surface book) should be fixed.
+
+
+## Peer Cache improvements
+Beginning with this technical preview, Peer Cache [no longer uses the Network Access Account](/sccm/core/plan-design/hierarchy/client-peer-cache) to authenticate download requests from peers.
