@@ -43,7 +43,7 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
 -   [Download the Windows ADK for Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
 
--   [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)
+-   [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
 
 
 ### User State Migration Tool (USMT)  
