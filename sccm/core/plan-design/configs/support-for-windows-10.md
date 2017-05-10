@@ -16,7 +16,7 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 ---
-# Support for Windows 10 for System Center Configuration Manager
+# Support for Windows 10 for System Center Configuration Manager  
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
