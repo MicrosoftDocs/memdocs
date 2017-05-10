@@ -58,7 +58,7 @@ When you deploy operating systems with Configuration Manager, the [Windows ADK i
 
 The following table list the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-|Windows 10 versions |Configuration Manager 1606 |Configuration Manager 1610  |Configuration Manager 1702 |
+|Windows 10 ADK versions |Configuration Manager 1606 |Configuration Manager 1610  |Configuration Manager 1702 |
 |--------------------|-----|-----|-----|
 |1507  |![Not supported](media/Red_X.png)         |![Not supported](media/Red_X.png)  |![Not supported](media/Red_X.png)|
 |1511  |![Backwards compatible](media/blue_compat.png)|![Not supported](media/Red_X.png)  |![Not supported](media/Red_X.png)|
