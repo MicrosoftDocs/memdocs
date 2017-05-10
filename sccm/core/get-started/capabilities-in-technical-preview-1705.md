@@ -1,6 +1,6 @@
 ---
 title: "Technical Preview 1705 | Microsoft Docs"
-description: "Learn about features available in the Technical Preview vresion 1705 for System Center Configuration Manager."
+description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/19/2017
 ms.prod: configuration-manager
@@ -39,7 +39,7 @@ This article introduces the features that are available in the Technical Preview
  -  Task 2              
 -->
 
-## Console display on high DPI devices
+## High DPI console support
 With this release, issues with how the Configuration Manager console scales and displays different parts of the UI when viewed on high DPI devices (like a Surface book) should be fixed.
 
 
