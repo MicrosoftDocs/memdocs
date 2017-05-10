@@ -1,8 +1,8 @@
 ---
-title: "Technical Preview for System Center Configuration Manager | Microsoft Docs"
+title: "Technical Preview for Configuration Manager | Microsoft Docs"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 4/3/2017
+ms.date: 05/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -108,7 +108,10 @@ You can install a baseline version for up to 1 year after its release. However, 
  The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
  |Capability |Technical Preview version |Current Branch version|  
-|----------------|---------------------|--------------------|
+ |----------------|---------------------|--------------------|
+ |Console display on high DPI devices  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#console-display-on-high-dpi-devices)|![Not added](media/Red_X.gif)|
+ |Peer Cache improvements  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |![Not added](media/Red_X.gif)|
+ |Improved boundary groups for software update points|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
  |Configure Android apps with app configuration policies  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![Not added](media/Red_X.gif)|
  |Hardware inventory collects Secure Boot information |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![Not added](media/Red_X.gif)|
  |Add child task sequences to a task sequence|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![Not added](media/Red_X.gif)|
@@ -201,6 +204,8 @@ You can install a baseline version for up to 1 year after its release. However, 
  |New restart options for Windows 10 clients after software update installation|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_RestartOptions)|[Version 1606](/sccm/sum/plan-design/plan-for-software-updates#restart-options-for-Windows-10-clients-after-software-update-installation)|  
  |On-premises Device Health Attestation |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_DHA)|[Version 1606](/sccm/core/servers/manage/health-attestation)|  
  |Pre-declare corporate-owned devices with IMEI or iOS serial number|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_IMEI)|[Version 1606](/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id)|  
+
+ <!--  TP 1604 and earlier has aged out of support and all features are in Current Branch builds:
  |Manage volume-purchased apps from the Windows Store for Business| [Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_WindowsVPP)|[Version 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
  |Improvements to Microsoft Passport for Work management|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_PFW)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
  |Option for clients to switch to a new software update point|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_switchsup)|[Version 1606](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs)|  
@@ -208,7 +213,6 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Support for Passport for Work as a KSP |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[Version 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
  |On-premises Device Health Attestation|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[Version 1606](/sccm/core/servers/manage/health-attestation)|  
  |SmartLock setting for Android devices|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[Version 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
- <!--  TP 1603 Aged out of support and all features in Current Branch Builds:
  |Improvements to Software Center|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
  |Improvements to remote control|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
  |Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
