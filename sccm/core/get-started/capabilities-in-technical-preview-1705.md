@@ -40,6 +40,7 @@ This article introduces the features that are available in the Technical Preview
 -->
 
 ## High DPI console support
+
 With this release, issues with how the Configuration Manager console scales and displays different parts of the UI when viewed on high DPI devices (like a Surface book) should be fixed.
 
 
