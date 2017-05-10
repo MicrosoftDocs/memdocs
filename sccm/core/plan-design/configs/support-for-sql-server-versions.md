@@ -2,7 +2,7 @@
 title: "Supported SQL Server versions | Microsoft Docs"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -103,14 +103,14 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   A primary site  
 -   A secondary site  
 
-
+<!-- Support for this service pack version has been dropped by Microsoft    
 ### SQL Server 2012 SP2: Standard, Enterprise   
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   A central administration site  
 -   A primary site  
 -   A secondary site  
-
+-->
 
 ### SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
   This version of SQL Server is not supported [beginning with version 1702](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database).  
@@ -149,10 +149,13 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 -   A secondary site  
 
+<!-- Support for this service pack version has been dropped by Microsoft   
 ### SQL Server 2012 Express SP2   
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   A secondary site  
+-->
+
 
 ##  <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server  
  The following are required by all installations of SQL Server that you use for a site database (including SQL Server Express). When Configuration Manager installs SQL Server Express as part of a secondary site installation, these configurations are automatically created for you.  
