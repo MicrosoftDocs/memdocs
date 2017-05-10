@@ -39,14 +39,19 @@ The following instances are supported:
 -   A SQL Server cluster. See [Use a SQL Server cluster to host the site database](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
 -   A SQL Server AlwaysOn availability group. This option requires Configuration Manager version 1602 or later. For details, see [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
-> [!NOTE]  
->  A SQL Server cluster in a Network Load Balancing (NLB) cluster configuration isn't supported. Also, SQL Server database mirroring technology and peer-to-peer replication aren't supported. SQL Server standard transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](https://technet.microsoft.com/library/mt608546.aspx).  
-
 
  **Secondary sites:**  
  The site database can use the default instance of a full installation of SQL Server or SQL Server Express.  
 
  SQL Server must be located on the site server computer.  
+
+ **Limitations to support**   
+ The following configurations are not supported:
+ -   A SQL Server cluster in a Network Load Balancing (NLB) cluster configuration
+ -   A SQL Server cluster on a Cluster Shared Volume (CSV)
+ -   SQL Server datbase mirroring technology, and peer-to-peer replication
+
+SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](https://technet.microsoft.com/library/mt608546.aspx).  
 
 ##  <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server  
  In a hierarchy with multiple sites, different sites can use different versions of SQL Server to host the site database so long as the following are true:
