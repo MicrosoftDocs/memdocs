@@ -242,4 +242,4 @@ This issue affects System Center Configuration Manager conditional access for **
 ### Antimalware policy fails to apply on Windows Server 2016 Core
 Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
 
-**Workaround:**  None.  As an administrator, you can use group policy to manage settings for Windows Server 2016 Core.
+**Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017. 
