@@ -141,9 +141,9 @@ After installation is complete, the active site keeps the passive replica and it
 -   Each site supports only one passive replica.
 
 -   The replica computer must meet the prerequisites for a primary site server.
-  -   It must be installed using source files that match the active primary sites version. This typically means files from the active sites CD.Latest folder.
+  -   It installs using source files that match the active primary sites version.
 
-  -   The computer can run a different operating system or service pack version, so long as it remains supported by your version of Configuration Manager.
+  -   The active primary and replica primary computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
 
 -   The active primary site must use a remote site database. This server must also be remote from the computer that will host the passive replica.  
 
@@ -156,17 +156,17 @@ After installation is complete, the active site keeps the passive replica and it
 <!--  TO BE DETERMINED
 -   Co-located site system roles are limited (See  ???)
  -->
--   Failover between nodes is manual. There is no automatic failover to the replica.
+-   Failover from the active site to the passive replica is manual. There is no automatic failover to the replica.
 
 <!-- TO BE DETERMINED
-- The active primary site must have at least one SMS_Provider installed to a remote computer. This provides a connection point to the site database for the Configuration Manager console to use in the event that the active primary site is not accessible. 
+- The active primary site must have at least one SMS_Provider installed to a remote computer. This provides a connection point to the site database for the Configuration Manager console to use in the event that the active primary site is not accessible.
  -->
 
 ### Add a passive replica
-1.	To add a passive replica, in the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.  
+1.	**n the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.  
 2.	On the **General** page, specify the server that will become the passive replica. This server cannot host any other site system roles at this time.
 3.	On the **System Role Selection** page, select only **Primary site server (Passive)**.
-4.	To complete the wizard, you must provide the following information, so the wizard can then run Setup on the specified passive replica server, to install the site:
+4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site on the specified passive replica server:
 		-		Choose to copy installation files from the active primary to the new replica, or specify a path to a location that contains the contents of the active primary sites **CD.Latest** folder.
 		- 	Specify the same site database server and database name as used by the primary site.
 5.  Configuration Manager then installs the passive primary site replica on the specified server.  
@@ -177,10 +177,13 @@ For detailed installation status, go to **Administration** > **Site Configuratio
 - Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
 
 ### Promote the passive site server to be active
-When you want to change the passive server to be active, you can do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. When the active primary site server is not accessible, you can connect a Configuration Manager console to the passive site server to complete the process of failover:
+When you want to change the passive server to be active, you can do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**.
+<!-- TO BE DETERMINED
+When the active primary site server is not accessible, you can connect a Configuration Manager console to the passive site server to complete the process of failover
+-->
 1.	In the **Nodes** pane of the Configuration Manager console, select the passive site server, and then from the Ribbon, choose **Make active**.
 2.	The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**. After the promotion is complete, the **Status** column shows **OK** for both the new *Active* server, and for the new *Passive* server.
-4.	After the promotion to active is complete, the status for both servers display as **OK**.
+4.	After the promotion is complete, the status for both servers displays as **OK**.
 5.	In **Administration** > **Site Configuration** > **Sites**, the name of the primary site server now displays the name of the new *Active* primary site server.  
 
 For detailed status, go to **Monitoring** > **Site Server Status**:
