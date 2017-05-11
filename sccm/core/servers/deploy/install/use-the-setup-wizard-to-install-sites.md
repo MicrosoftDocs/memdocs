@@ -305,7 +305,7 @@ To expand a stand-alone primary site, first see the [prerequisites to expand a s
     > [!IMPORTANT]  
     > When Configuration Manager installs SQL Server Express, it installs SQL Server Express 2012 with no service pack:  
 
-    > -   For the secondary site to be supported, after it installs, you must upgrade SQL Server Express 2012 by installing service pack 2 (or later).
+    > -   For the secondary site to be supported, after it installs, you must upgrade SQL Server Express 2012 to [a supported version](/sccm/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions).
     > -   Additionally, if the new secondary site installation fails to finish but first completes the installation of SQL Server Express 2012, you must update that instance of SQL Server Express before Configuration Manager can successfully retry the secondary site installation.  
 
      **Use an existing SQL Server instance**  
