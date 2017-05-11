@@ -69,8 +69,8 @@ When you run the tool, you use command line parameters to specify the SQL Server
 If the update package is in a *download success* state, the tool does not clean up the package. As an option, you can force the removal of a successfully downloaded update by using the force delete parameter (See command line parameters later in this topic).
 
 After the tool runs:
--   If a package was deleted, you must check for updates to download the package again.
--   If a package was not deleted, you do not need to take action as the update will reinitialize and restart replication or installation.
+-   If a package was deleted, restart the top-tier sites SMS_Executive service and then check for updates to download the package again.
+-   If a package was not deleted, you do not need to take any action as the update will reinitialize and restart replication or installation.
 
 **Command line parameters:**  
 
