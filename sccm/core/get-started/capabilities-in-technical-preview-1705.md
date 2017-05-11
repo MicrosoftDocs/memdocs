@@ -66,9 +66,6 @@ You can run the tool from any computer, but will need to have access to the comp
 
 When you run the tool, you use command line parameters to specify the SQL Server at the top-tier site of the hierarchy, the site database name, and the GUID of the update package you want to reset. The tool then identifies the additional servers it needs to access, based on the updates status.   
 
-<!-- Pending future build. Start of next section:
-When it runs, the tool checks the package hash to confirm the update package is valid. If the hash is not valid, the tool deletes the downloaded update package, so it can download again. When the hash is valid, the downloaded package is not deleted.
--->
 If the update package is in a *download success* state, the tool does not clean up the package. As an option, you can force the removal of a successfully downloaded update by using the force delete parameter (See command line parameters later in this topic).
 
 After the tool runs, the update will download again (if it was deleted), or replication of a validated package will begin again automatically.   
