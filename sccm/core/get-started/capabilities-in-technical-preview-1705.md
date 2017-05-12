@@ -50,7 +50,7 @@ When you run the tool, it runs against the update that you specify. By default, 
 
 ### Prerequisites
 The account you use to run the tool requires the following permissions:
--   **SysAdmin** server role on the site database of the central administration site and each primary site in your hierarchy. The tool does not interact with secondary sites.
+-   **Read** and **Write" permissions to the site database of the central administration site and each primary site in your hierarchy. The tool does not interact with secondary sites.
 -  **Full Administrator** security role in the Configuration Manager console.
 -   **Local Administrator** on the top-level site of your hierarchy.
 -   **Local Administrator** on the computer that hosts the service connection point.
@@ -66,7 +66,7 @@ You can run the tool from any computer, but will need to have access to the comp
 
 When you run the tool, you use command line parameters to specify the SQL Server at the top-tier site of the hierarchy, the site database name, and the GUID of the update package you want to reset. The tool then identifies the additional servers it needs to access, based on the updates status.   
 
-If the update package is in a *download success* state, the tool does not clean up the package. As an option, you can force the removal of a successfully downloaded update by using the force delete parameter (See command line parameters later in this topic).
+If the update package is in a *post download* state, the tool does not clean up the package. As an option, you can force the removal of a successfully downloaded update by using the force delete parameter (See command line parameters later in this topic).
 
 After the tool runs:
 -   If a package was deleted, restart the top-tier sites SMS_Executive service and then check for updates to download the package again.
