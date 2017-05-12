@@ -2,7 +2,7 @@
 title: "Manage volume-purchased iOS apps | Microsoft Docs"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
-ms.date: 05/03/2017
+ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -52,6 +52,7 @@ manager: angrobe
       When you choose **Sync** to do a manual sync, this will always do a full sync.  
 -   If you need to recover or restore you Configuration Manager database, we recommend that you do a manual sync afterwards to ensure that your synced license data is up to date.  
 -   Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to let you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](enroll-hybrid-ios-mac.md).  
+-   Configuration Manager supports adding up to 3000 VPP tokens.
 
 Beginning with System Center Configuration Manager 1702, you can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
