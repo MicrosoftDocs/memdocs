@@ -40,7 +40,7 @@ This article introduces the features that are available in the Technical Preview
 -->
 
 ## Update reset tool  
-You can use the update reset tool, **CMUpdateReset.exe**, to fix issues when in-console updates have problems downloading or replicating. This tool is included with Technical Preview version 1705. You can find it on the site server of your technical preview site after you install the preview in the ***\cd.latest\SMSSETUP\TOOLS*** folder.
+You can use the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**, to fix issues when in-console updates have problems downloading or replicating. This tool is included with Technical Preview version 1705. You can find it on the site server of your technical preview site after you install the preview in the ***\cd.latest\SMSSETUP\TOOLS*** folder.
 
 This tool is intended for use with Configuration Manager Technical Preview versions 1606 and later.
 
@@ -50,8 +50,7 @@ When you run the tool, it runs against the update that you specify. By default, 
 
 ### Prerequisites
 The account you use to run the tool requires the following permissions:
--   **Read** and **Write" permissions to the site database of the central administration site and each primary site in your hierarchy. The tool does not interact with secondary sites.
--  **Full Administrator** security role in the Configuration Manager console.
+-   **Read** and **Write** permissions to the site database of the central administration site and each primary site in your hierarchy. To set these permissions, you can add the user account as a member of the **db_datawriter** and **db_datareader** [fixed database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) on the Configuration Manager database of each site. The tool does not interact with secondary sites.
 -   **Local Administrator** on the top-level site of your hierarchy.
 -   **Local Administrator** on the computer that hosts the service connection point.
 
@@ -62,7 +61,7 @@ You will need the GUID of the update package that you want to reset. To get the 
 > To copy the GUID, select the row for the update package you want to reset, and then use CTRL+C to copy that row. If you paste your copied selection into a text editor, you can then copy only the GUID for use as a command line parameter when you run the tool.
 
 ### Run the tool    
-You can run the tool from any computer, but will need to have access to the computers noted in the Prerequisites section.
+The tool must be run on the top-level site of the hierarchy.
 
 When you run the tool, you use command line parameters to specify the SQL Server at the top-tier site of the hierarchy, the site database name, and the GUID of the update package you want to reset. The tool then identifies the additional servers it needs to access, based on the updates status.   
 
