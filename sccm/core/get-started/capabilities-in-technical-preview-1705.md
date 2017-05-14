@@ -120,31 +120,32 @@ This release includes improvements for how software update points work with boun
 
 For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
 
-## Site server high availability
-High availability for the System Center Configuration Manager site server is a Configuration Manager based solution to keep your mission critical sites, like a stand-alone primary site, fault tolerant.
+## Site server role high availability
+High availability for the site server role is a Configuration Manager based solution to make a backup of your primary site server available for immediate use.
 
-With this release, site server high availability is accomplished by installing an additional site as a passive replica backup to the active primary site. Then, you manually failover the active site to the passive primary site to make that replica the new active primary site.
+Site server role high availability is accomplished by installing an additional site as a passive replica of the active primary site.
 
-<!--Then you can service the original primary site computer without disruption to your Configuration Manager operations.
--->
+The passive replica installs as a new primary site that uses the same site database as your active site. Because it is passive, it does not actively write data to the site database so long as it is the passive primary site. The passive primary site does not support installation of optional site system roles while it is passive, but does receive a copy of the sites content library.
+
+To make the passive replica your active site, you manually promote the passive site to be the active site. This switches the active site to be the passive primary site. The site system roles that were available on the original active primary site remain available so long as that computer is accessible. Only the site server role is switched.
 
 To install the passive primary site, you use the **Create Site System Server Wizard** to configure a server with the **Primary site server (Passive)** site system role. The wizard then runs Configuration Manager setup on the specified server to install the passive replica.
 
-The resulting passive replica is a copy of your primary site server with the same local site system roles. The replica is also configured to use the same remote system roles and servers. Additionally, the replica receives a copy of the sites content library.
 
 After installation is complete, the active site keeps the passive replica and its content library in sync with the changes or configurations you make. This ensures that the passive replica is ready for use when its needed.
+
 
 ### Prerequisites and limitations
 -   The passive replica is supported only for primary sites.
 
--   Each site supports only one passive replica.
+-   Each site supports only one passive replica, and the both servers must be in the same domain.   
 
 -   The replica computer must meet the prerequisites for a primary site server.
   -   It installs using source files that match the active primary sites version.
 
   -   The active primary and replica primary computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
 
--   The active primary site must use a remote site database. This server must also be remote from the computer that will host the passive replica.  
+-   The active primary site must use a remote site database. This server must also be remote from the computer that will host the passive replica.
 
 	-		The SQL Server that hosts the databse can use a default instance, named instance, SQL Server cluster, or an Always On Availability Group. 	
 
@@ -152,17 +153,16 @@ After installation is complete, the active site keeps the passive replica and it
 
 -   The passive primary site server can be on-premises or cloud-based in Azure.  	
 
-<!--  TO BE DETERMINED
--   Co-located site system roles are limited (See  ???)
- -->
--   Failover from the active site to the passive replica is manual. There is no automatic failover to the replica.
+-   Promotion of the passive primary to be the active primary site is manual. There is no automatic failover to the passive replica.
 
-<!-- TO BE DETERMINED
-- The active primary site must have at least one SMS_Provider installed to a remote computer. This provides a connection point to the site database for the Configuration Manager console to use in the event that the active primary site is not accessible.
- -->
+- All site system roles can be installed on the active primary site server computer.
+
+  -   No optional site system roles install on the passive primary. Although the active site supports all site system roles, those that use a database (like the reporting point) must have that database on a server that is remote from the active and passive primary site computers.
+
+  -   The SMS_Provider is not installed on the passive replica. Because you must connect to an SMS_Provider for the site to promote the passive replica to be active, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
 
 ### Add a passive replica
-1.	**n the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.  
+1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.  
 2.	On the **General** page, specify the server that will become the passive replica. This server cannot host any other site system roles at this time.
 3.	On the **System Role Selection** page, select only **Primary site server (Passive)**.
 4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site on the specified passive replica server:
@@ -170,16 +170,16 @@ After installation is complete, the active site keeps the passive replica and it
 		- 	Specify the same site database server and database name as used by the primary site.
 5.  Configuration Manager then installs the passive primary site replica on the specified server.  
 
+When an active server is switched to be the passive server, only the *site system role* is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.   
+
 For detailed installation status, go to **Administration** > **Site Configuration** > **Sites**:
 - The status for the replica server displays as **Installing**.
 
 - Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
 
 ### Promote the passive site server to be active
-When you want to change the passive server to be active, you can do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**.
-<!-- TO BE DETERMINED
-When the active primary site server is not accessible, you can connect a Configuration Manager console to the passive site server to complete the process of failover
--->
+When you want to change the passive server to be active, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
+
 1.	In the **Nodes** pane of the Configuration Manager console, select the passive site server, and then from the Ribbon, choose **Make active**.
 2.	The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**. After the promotion is complete, the **Status** column shows **OK** for both the new *Active* server, and for the new *Passive* server.
 4.	After the promotion is complete, the status for both servers displays as **OK**.
