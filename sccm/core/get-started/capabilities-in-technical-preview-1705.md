@@ -206,5 +206,5 @@ The **Content Library** tab:
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
 
--   I can install a passive replica of my primary site, and then use the console to fail my site over to using that server.
--   I can confirm that content is synchronized between my active server and the passive replica.
+-   I can install a passive replica of my primary site.
+-   I can use the console to promote the passive replica to be active, and confirm the change of status for both site servers.
