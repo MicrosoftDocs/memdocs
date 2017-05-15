@@ -114,7 +114,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |High DPI console support  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![Not added](media/Red_X.gif)|
  |Peer Cache improvements  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |![Not added](media/Red_X.gif)|
  |Improved boundary groups for software update points|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
- |Site server high availability|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#site-server-high-availability) |![Not added](media/Red_X.gif)|
+ |Site server role high availability|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
  |Configure Android apps with app configuration policies  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![Not added](media/Red_X.gif)|
  |Hardware inventory collects Secure Boot information |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![Not added](media/Red_X.gif)|
  |Add child task sequences to a task sequence|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![Not added](media/Red_X.gif)|
