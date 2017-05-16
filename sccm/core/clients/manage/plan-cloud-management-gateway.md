@@ -1,5 +1,5 @@
 ---
-title: "Plan for cloud management gateway | Microsoft Docs"
+title: "Plan for the cloud management gateway | Microsoft Docs"
 description: ""
 ms.date: 05/16/2017
 ms.prod: configuration-manager
@@ -11,7 +11,7 @@ ms.author: robstack
 manager: angrobe
 ---
 
-# Plan for cloud management gateway in Configuration Manager
+# Plan for the cloud management gateway in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
