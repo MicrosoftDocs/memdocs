@@ -231,7 +231,7 @@ To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/server
 
 Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server
 
-> [TIP]  
+> [!TIP]  
 > If you use a primary passive replica (introduced with Technical Preview 1705), you do not need to stop the passive replica. Only the active primary site must be stopped.
 
 After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
