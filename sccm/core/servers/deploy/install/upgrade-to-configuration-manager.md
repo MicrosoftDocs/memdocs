@@ -109,7 +109,7 @@ For more information, see [Windows Update](http://go.microsoft.com/fwlink/p/?Lin
 The following site system roles are no longer used in System Center Configuration Manager and must be uninstalled before you upgrade from System Center 2012 Configuration Manager:  
 
 -   Out of Band Management point  
--   Service Health Validator point  
+-   System Health Validator point  
 
 **Disable database replicas for management points at primary sites:**  
 Configuration Manager cannot successfully upgrade a primary site that has a database replica for management points enabled. Disable database replication before you:  
