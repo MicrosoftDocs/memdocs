@@ -2,7 +2,7 @@
 title: "Technical Preview 1705 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/19/2017
+ms.date: 05/22/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -42,7 +42,7 @@ This article introduces the features that are available in the Technical Preview
 ## Update reset tool  
 You can use the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**, to fix issues when in-console updates have problems downloading or replicating. This tool is included with Technical Preview version 1705. You can find it on the site server of your technical preview site after you install the preview in the ***\cd.latest\SMSSETUP\TOOLS*** folder.
 
-This tool is intended for use with Configuration Manager Technical Preview versions 1606 and later.
+You can use this tool with Technical Preview versions 1606 or later. This backwards support is provided so the tool can be used with a range of  technical preview update scenarios, and without having to wait until the next technical preview becomes available.
 
 You can use this tool when an in-console update has not yet installed and is in a failed state. A failed state can mean the update download remains in progress but is stuck and taking an excessively long time, perhaps hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.  
 
@@ -80,11 +80,15 @@ After the tool runs:
 | **-P &lt;Package GUID>**                         | *Required* <br> You must specify the GUID for the update package you want to reset.   |  
 | **-I &lt;SQL Server instance name>**             | *Optional* <br> Use this to identify the instance of SQL Server that hosts the site database. |
 | **-FDELETE**                              | *Optional* <br> Use this to force deletion of a successfully downloaded update package. |  
- **Example:**
- You want to force deletion of problematic update package. Your SQL Servers FQDN is *server1.fabrikam.com*, the site datbase is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ **Examples:**  
+ In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site datbase is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+
+ In a more extreme scenario, you want to force deletion of problematic update package. Your SQL Servers FQDN is *server1.fabrikam.com*, the site datbase is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
 ### Test the tool with the Technical Preview  
-You can test this tool on an update package for a technical preview prior to the update completing its prerequisite check. A completed prerequisite check state is identified by the one of the following Status for the package in **Administration** > **Updates and Servicing**:  
+You can use this tool with Technical Preview versions 1606 or later. This backwards support is provided so that the tool can be used with a larger number of technical preview update scenarios, without having to wait until the next technical preview version is available.
+
+Run the tool on an update package for a technical preview prior to that update completing its prerequisite check. A completed prerequisite check state is identified by the one of the following Status for the package in **Administration** > **Updates and Servicing**:  
 -   **Prerequisite check passed**
 -   **Prerequisite check passed with warning**
 -   **Prerequisite check failed**
@@ -208,3 +212,30 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 -   I can install a passive replica of my primary site.
 -   I can use the console to promote the passive replica to be active, and confirm the change of status for both site servers.
+
+
+## Improvements for SQL Server Always On Availability Groups  
+With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
+
+-   Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  For steps on how to accomplish this, see the SQL Server documentation.
+
+-   This release does not support failover to use the asynchronous commit replica as your site database.
+> [!CAUTION]  
+> Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+
+-   You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
+
+### Configure an asynchronous commit replica
+To add an asynchronous replica to an availability group you use with Configuration Manager, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.)
+
+### Use the asynchronous replica to recover your site
+Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database.  
+
+To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
+
+Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
+
+> [!TIP]  
+> If you use a primary passive replica (introduced in this Technical Preview as [Site server role high availability](#site-server-role-high-availability)), you do not need to stop the passive replica. Only the active primary site must be stopped.
+
+After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
