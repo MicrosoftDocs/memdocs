@@ -2,7 +2,7 @@
 title: "Technical Preview 1705 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/19/2017
+ms.date: 05/22/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -208,3 +208,30 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 -   I can install a passive replica of my primary site.
 -   I can use the console to promote the passive replica to be active, and confirm the change of status for both site servers.
+
+
+## Improvements for SQL Server Always On Availability Groups  
+With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
+
+-   Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  For steps on how to accomplish this, see the SQL Server documentation.
+
+-   This release does not support failover to use the asynchronous commit replica as your site database.
+> [!CAUTION]  
+> Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+
+-   You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
+
+### Configure an asynchronous commit replica
+To add an asynchronous replica to an availability group you use with Configuration Manager, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.)
+
+### Use the asynchronous replica to recover your site
+Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database.  
+
+To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
+
+Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server
+
+> [TIP]  
+> If you use a primary passive replica (introduced with Technical Preview 1705), you do not need to stop the passive replica. Only the active primary site must be stopped.
+
+After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
