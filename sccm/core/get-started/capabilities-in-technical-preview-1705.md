@@ -111,9 +111,9 @@ This release includes improvements for how software update points work with boun
 
   -   If fallback to a neighbor group is configured for the minimum of 120 minutes, software update points from that neighbor boundary group will be part of the client's pool of available servers.
 
--   After failing to reach its original server for two hours, the client switches to a five-minute cycle for contacting a new software update point.
+-   After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point.
 
-    This means if a client fails to connect with a new server, after five minutes it selects the next server from its pool of available servers and attempts to contact that one.
+    This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
   -   This cycle continues until the client connects to a software update point it can use.
   -   Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.
