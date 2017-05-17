@@ -2,7 +2,7 @@
 title: "Internet-based client management | Microsoft Docs"
 description: "Create a plan to manage Internet-based clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -28,7 +28,7 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
  Use the following sections to help you plan for Internet-based client management.  
 
-##  <a name="BKMK_IBCM_FeaturesNotSupported"></a> Features that Are Not Supported on the Internet  
+##  Features that Are Not Supported on the Internet  
  Not all client management functionality is appropriate for the Internet; therefore they are not supported when clients are managed on the Internet. The features that are not supported for Internet management typically rely on Active Directory Domain Services or are not appropriate for a public network, such as network discovery and Wake-on-LAN (WOL).  
 
  The following features are not supported when clients are managed on the Internet:  
@@ -49,7 +49,7 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
  When you have a software update point that is configured to accept connections from the Internet, Configuration Manager Internet-based clients on the Internet always scan against this software update point, to determine which software updates are required. However, when these clients are on the Internet, they first try to download the software updates from Microsoft Update, rather than from an Internet-based distribution point. Only if this fails, will they then try to download the required software updates from an Internet-based distribution point. Clients that are not configured for Internet-based client management never try to download the software updates from Microsoft Update, but always use Configuration Manager distribution points.  
 
-##  <a name="BKMK_PlanforInternetSiteSystems"></a> Considerations for client communications from the Internet or untrusted forest  
+##  Considerations for client communications from the Internet or untrusted forest  
  The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest (secondary sites do not support client connections from untrusted locations):  
 
 -   Application Catalog website point  
@@ -90,7 +90,7 @@ Although there is no requirement to have a trust between a client's forest and t
 -   **Tunneling**:   
     If your proxy web server cannot support the requirements for SSL bridging, or you want to configure Internet support for mobile devices that are enrolled by Configuration Manager, SSL tunneling is also supported. It is a less secure option because the SSL packets from the Internet are forwarded to the site systems without SSL termination, so they cannot be inspected for malicious content. When you use SSL tunneling, there are no certificate requirements for the proxy web server.  
 
-##  <a name="BKMK_PlanforInternetClients"></a> Planning for Internet-Based Clients  
+##  Planning for Internet-Based Clients  
  You must decide whether the client computers that will be managed over the Internet will be configured for management on the intranet and the Internet, or for Internet-only client management. You can only configure the client management option during the installation of a client computer. If you change your mind later, you must reinstall the client.  
 
 > [!NOTE]  
@@ -110,7 +110,7 @@ Although there is no requirement to have a trust between a client's forest and t
 
  The benefit in automatic switching between Internet-based client management and intranet client management is that client computers can automatically use all Configuration Manager features whenever they are connected to the intranet and continue to be managed for essential management functions when they are on the Internet. Additionally, a download that began on the Internet can seamlessly resume on the intranet, and vice versa.  
 
-##  <a name="BKMK_PrerequisitsForInternetClientMgmt"></a> Prerequisites for Internet-Based Client Management  
+##  Prerequisites for Internet-Based Client Management  
  Internet-based client management in Configuration Manager has the following external dependencies:  
 
 -   Clients that will be managed on the Internet must have an Internet connection.  
