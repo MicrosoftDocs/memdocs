@@ -167,8 +167,8 @@ Additional content is now supported in stand-alone media. You can select additio
 ### Hardware inventory collects UEFI information
 A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
-### Improvements to Software Center settings and notification messages for high-impact task sequences
-This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
+### Improvements to Software Center warning messages for high-impact task sequences
+This release includes the following improvements to Software Center warning messages for high-impact deployment task sequences:
 
 - In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
