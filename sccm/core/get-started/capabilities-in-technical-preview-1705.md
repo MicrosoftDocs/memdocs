@@ -229,9 +229,9 @@ Before you use an asynchronous replica to recover your site database, you must s
 
 To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
 
-Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server
+Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
 
 > [!TIP]  
-> If you use a primary passive replica (introduced with Technical Preview 1705), you do not need to stop the passive replica. Only the active primary site must be stopped.
+> If you use a primary passive replica (introduced in this Technical Preview as [Site server role high availability](#site-server-role-high-availability)), you do not need to stop the passive replica. Only the active primary site must be stopped.
 
 After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
