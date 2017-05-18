@@ -43,6 +43,9 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
 -   [Download the Windows ADK for Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
 
+-   [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+
+
 ### User State Migration Tool (USMT)  
  Configuration Manager uses a USMT package that contains the USMT 10 source files to capture and restore the user state as part of your operating system deployment. Configuration Manager Setup at the top-level site automatically creates the USMT package. USMT 10 can capture user state from Windows 7, Windows 8, Windows 8.1, and Windows 10. USMT 10 is distributed in the Windows Assessment and Deployment Kit (Windows ADK) for Windows 10.  
 

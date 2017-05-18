@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  3/31/2017
+ms.date:  05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -18,7 +18,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610.
+Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -167,8 +167,8 @@ Additional content is now supported in stand-alone media. You can select additio
 ### Hardware inventory collects UEFI information
 A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
-### Improvements to Software Center settings and notification messages for high-impact task sequences
-This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
+### Improvements to Software Center warning messages for high-impact task sequences
+This release includes the following improvements to Software Center warning messages for high-impact deployment task sequences:
 
 - In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.

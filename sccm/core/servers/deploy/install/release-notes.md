@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 05/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -139,9 +139,18 @@ The exception is similar to the following:
 -->
 
 
-<!-- No current  Client deployment and upgrade relenotes
+
 ## Client deployment and upgrade  
--->
+
+### Client installation fails with error code 0x8007064c
+<!--- SMS 486973 -->
+
+When you deploy the client to Windows computers, the installation fails. The ccmsetup.log file contains an entry "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
+
+**Workaround**
+This is caused by a corrupted, previously installed version of Silverlight. You can try running the following tool on the affected computer to fix this:
+[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed) 
+
 
 
 
@@ -242,4 +251,4 @@ This issue affects System Center Configuration Manager conditional access for **
 ### Antimalware policy fails to apply on Windows Server 2016 Core
 Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
 
-**Workaround:**  None.  As an administrator, you can use group policy to manage settings for Windows Server 2016 Core.
+**Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017. 

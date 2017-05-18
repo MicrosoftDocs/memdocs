@@ -10,11 +10,12 @@
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
 ### [Fundamentals of role-based administration](understand/fundamentals-of-role-based-administration.md)
 ##  [Introduction to the Long-Term Servicing Branch](understand/introduction-to-the-ltsb.md)
-### [Licensing for System Center Configuration Manager](understand/learn-more-editions.md)
-### [Which branch of Configuration Manager should I use](understand/which-branch-should-i-use.md)
 ### [Supported Configurations for the Long-Term Servicing Branch](understand/supported-configurations-for-ltsb.md)
 ### [Install the Long-Term Service Branch](understand/install-the-ltsb.md)
+### [Manage the Long-Term Servicing Branch](understand/manage-the-ltsb.md)
 ### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch.md)
+##  [Which branch of Configuration Manager should I use](understand/which-branch-should-i-use.md)
+##  [Licensing for System Center Configuration Manager](understand/learn-more-editions.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ### [Configuration Manager on Azure](understand/configuration-manager-on-azure.md)
 ##  [FAQ for product and licensing](understand/product-and-licensing-faq.md)
@@ -98,6 +99,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1705](get-started/capabilities-in-technical-preview-1705.md)
 ###  [Capabilities in 1704](get-started/capabilities-in-technical-preview-1704.md)
 ###  [Capabilities in 1703](get-started/capabilities-in-technical-preview-1703.md)
 ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
@@ -110,9 +112,10 @@
 ###  [Capabilities in 1607](get-started/capabilities-in-technical-preview-1607.md)
 ###  [Capabilities in 1606](get-started/capabilities-in-technical-preview-1606.md)
 ###  [Capabilities in 1605](get-started/capabilities-in-technical-preview-1605.md)
+
+<!-- No longer in support, and all features are in the Current Branch
 ###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
 ###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
-<!--
 ###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
 ###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
 ###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)

@@ -18,8 +18,8 @@ author: robstackmsftms.author: robstackmanager: angrobe
 # Queries technical reference for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Queries in System Center Configuration Manager return information from the site database based on criteria that you specify. You can use queries to retrieve information about resources in your site or about inventory data and status messages.  
 
-## Queries topics  
- Use the following topics to help you use queries in Configuration Manager.  
+## Topics about using queries in Configuration Manager  
+ Use the following topics to help you use queries in Configuration Manager:  
 
 -   [Introduction to queries in System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md)  
 
