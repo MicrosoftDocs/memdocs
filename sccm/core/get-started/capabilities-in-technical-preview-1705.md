@@ -239,3 +239,33 @@ Stopping the site is equivalent to stopping the Site Component Manager service (
 > If you use a primary passive replica (introduced in this Technical Preview as [Site server role high availability](#site-server-role-high-availability)), you do not need to stop the passive replica. Only the active primary site must be stopped.
 
 After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
+
+## Improved user notifications for Office updates
+Improvements have been made to the user experience when a client installs an Office update. This includes improved pop-up notifications, business bar notifications, and an enhanced countdown experience. Prior to this release, when an Office update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
+
+### Prerequisites
+This update applies to Office 365 ProPlus clients.
+
+### Known issues
+When a client evaluates an Office 365 update assignment for the first time and the update has a deadline scheduled in the past, scheduled immediately, or scheduled within 30 minutes, the Office 365 user experience can be inconsistent. For example, the client might receive a 30 minute countdown dialog for the update, but the actual enforcement could start before the end of the countdown. To avoid this behavior, consider the following:
+- Deploy the Office update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
+- Configure a maintenance window during non-business hours on the collection or configure an enforcement grace period on the deployment.
+
+### Try it out!
+Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+- Deploy to a client an Office update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
+
+
+## Manage Microsoft Surface driver updates
+You can now use Configuration Manager to manage Microsoft Surface driver updates.
+
+### Try it out!
+Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+1. Enable Synchronization for Microsoft Surface drivers
+2. Synchronize Microsoft Surface drivers
+3. Deploy synchronized Microsoft Surface drivers
+
+#### To manage Microsoft Surface drivers
+1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](sccm/sum/get-started/configure-classifications-and-products), select **Microsoft Surface** as the product and **Drivers** as the classification.
+2. [Synchronize software updates](sccm/sum/get-started/configure-classifications-and-products).
+3. [Deploy the updates](sccm/sum/deploy-use/deploy-software-updates). In the deployment, select the Microsoft Surface drivers.
