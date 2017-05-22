@@ -240,20 +240,20 @@ Stopping the site is equivalent to stopping the Site Component Manager service (
 
 After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
 
-## Improved user notifications for Office updates
-Improvements have been made to the user experience when a client installs an Office update. This includes improved pop-up notifications, business bar notifications, and an enhanced countdown experience. Prior to this release, when an Office update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
+## Improved user notifications for Office 365 updates
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. Prior to this release, when an Office 365 update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
 
 ### Prerequisites
 This update applies to Office 365 ProPlus clients.
 
 ### Known issues
 When a client evaluates an Office 365 update assignment for the first time and the update has a deadline scheduled in the past, scheduled immediately, or scheduled within 30 minutes, the Office 365 user experience can be inconsistent. For example, the client might receive a 30 minute countdown dialog for the update, but the actual enforcement could start before the end of the countdown. To avoid this behavior, consider the following:
-- Deploy the Office update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
+- Deploy the Office 365 update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
 - Configure a maintenance window during non-business hours on the collection or configure an enforcement grace period on the deployment.
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-- Deploy to a client an Office update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
+- Deploy to a client an Office 365 update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
 
 
 ## Manage Microsoft Surface driver updates
@@ -266,6 +266,41 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 3. Deploy synchronized Microsoft Surface drivers
 
 #### To manage Microsoft Surface drivers
-1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select **Microsoft Surface** as the product and **Drivers** as the classification.
+1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select the checkbox on the **Classifications** tab to enable Surface drivers.
 2. [Synchronize software updates](/sccm/sum/get-started/configure-classifications-and-products).
-3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates). In the deployment, select the Microsoft Surface drivers.
+3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates).
+
+## Configure Windows Update for Business deferral policies
+You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+
+### Prerequisites
+Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+
+#### To create a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
+3. On the **General** page, provide a name and description for the policy.
+4. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates.    
+    Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
+    - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
+    - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Features Updates starting:**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Feature Updates by clearing the checkbox.   
+5. Choose whether to defer or pause Quality Updates.     
+    Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
+    - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Quality Updates starting:**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Quality Updates by clearing the checkbox.
+6. Choose whether to exclude Windows Update drivers during updates.
+7. Complete the wizard to create the new deferral policy.
+
+#### To deploy a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
+3. Configure the following settings:
+    - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
+    - **Collection**: Click **Browse** to select the collection where you want to deploy the configuration baseline.
+    - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
+    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
+    - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
+    - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
+4.  Complete the wizard to deploy the profile.
