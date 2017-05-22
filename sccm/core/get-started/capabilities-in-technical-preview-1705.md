@@ -269,3 +269,43 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select **Microsoft Surface** as the product and **Drivers** as the classification.
 2. [Synchronize software updates](/sccm/sum/get-started/configure-classifications-and-products).
 3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates). In the deployment, select the Microsoft Surface drivers.
+
+## Configure Windows Update for Business deferral policies
+You can now configure deferral policies to have Windows 10 Feature Updates or Quality Updates managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+
+### Prerequisites
+Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+
+#### To create a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
+3. On the **General** page, provide a name and description for the policy.
+4. On the **Deferral Policies** page, you can configure the following settings:    
+
+    **Defer Feature Updates**    
+    Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
+    - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
+    - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Features Updates starting:**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Feature Updates by clearing the checkbox.   
+
+    **Defer Quality Updates**    
+    Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
+    - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Quality Updates starting:**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Quality Updates by clearing the checkbox.
+
+    **Do not include drivers with Windows Updates**: Choose whether to exclude Windows Update drivers during updates.
+
+5. Complete the wizard to create the new deferral policy.
+
+#### To deploy a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
+3. Configure the following settings:
+    - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
+    - **Collection**: Click **Browse** to select the collection where you want to deploy the configuration baseline.
+    - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
+    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
+    - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
+    - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
+4.  Complete the wizard to deploy the profile.
