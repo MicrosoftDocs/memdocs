@@ -280,12 +280,12 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
 2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
 3. On the **General** page, provide a name and description for the policy.
-4. On the **Deferral Policies** page, choose whether to defer Feature Updates:    
+4. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates.    
     Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
     - **Pause Features Updates starting:**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Feature Updates by clearing the checkbox.   
-5. Choose whether to defer Quality Updates:     
+5. Choose whether to defer or pause Quality Updates.     
     Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
     - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
     - **Pause Quality Updates starting:**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Quality Updates by clearing the checkbox.
