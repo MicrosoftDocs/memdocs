@@ -266,9 +266,9 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 3. Deploy synchronized Microsoft Surface drivers
 
 #### To manage Microsoft Surface drivers
-1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select **Microsoft Surface** as the product and **Drivers** as the classification.
+1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select the checkbox on the **Classifications** tab to enable Surface drivers.
 2. [Synchronize software updates](/sccm/sum/get-started/configure-classifications-and-products).
-3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates). In the deployment, select the Microsoft Surface drivers.
+3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates). 
 
 ## Configure Windows Update for Business deferral policies
 You can now configure deferral policies to have Windows 10 Feature Updates or Quality Updates managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
