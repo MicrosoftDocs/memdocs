@@ -261,14 +261,10 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-1. Enable Synchronization for Microsoft Surface drivers
-2. Synchronize Microsoft Surface drivers
-3. Deploy synchronized Microsoft Surface drivers
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
-#### To manage Microsoft Surface drivers
-1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize software updates](/sccm/sum/get-started/configure-classifications-and-products).
-3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates).
 
 ## Configure Windows Update for Business deferral policies
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
