@@ -2,7 +2,7 @@
 title: "Technical Preview 1705 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/22/2017
+ms.date: 05/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -109,7 +109,7 @@ This release includes improvements for how software update points work with boun
 
 -   Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 
-  -   All software update points in the clients current boundary group are added to the clients pool immediately.
+  -   All software update points in the client's current boundary group are added to the clients pool immediately.
 
   -   Because a client tries to use its original server for 120 minutes before seeking a new one, no additional servers are contacted until after two hours have elapsed.
 
@@ -167,7 +167,7 @@ After installation is complete, the active site keeps the passive replica and it
 
 ### Add a passive replica
 1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.  
-2.	On the **General** page, specify the server that will become the passive replica. This server cannot host any other site system roles at this time.
+2.	On the **General** page, specify the server that will become the passive replica. The server you specify cannot host any other site system roles when installing the passive replica.
 3.	On the **System Role Selection** page, select only **Primary site server (Passive)**.
 4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site on the specified passive replica server:
 		-		Choose to copy installation files from the active primary to the new replica, or specify a path to a location that contains the contents of the active primary sites **CD.Latest** folder.
