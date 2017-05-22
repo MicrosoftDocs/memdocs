@@ -304,3 +304,110 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
 4.  Complete the wizard to deploy the profile.
+
+
+## Configure and deploy Windows Defender Application Guard policies
+
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection.
+This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
+
+
+### Before you start
+
+To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more details, see the blog post referenced later.
+This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
+
+### Try it out!
+
+Ensure you have read the blog post to understand the basics about Windows Defender Application Guard.
+
+To create a policy, and to browse the available settings:
+
+1.	In the Configuration Manager console, choose **Assets and Compliance**.
+2.	In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**. 
+3.	In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
+4.	Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
+5.	When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
+
+### Further reading
+
+To read more about Windows Defender Application Guard, see [this blog post]( https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97).
+Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
+
+
+
+
+## New capabilities for Azure AD and cloud management
+
+In this release, you can configure cloud services to use Azure AD to support the following scenario: 
+
+- Manually install the Configuration Manager client from the internet and have it assign to a Configuration Manager site.
+- Use Intune to deploy the Configuration Manager client to devices on the internet.
+
+### Advantages
+
+Using cloud services and Azure AD removes the need to use client authentication certificates.
+
+You can discover Azure AD users into your site to use in collections, and other Configuration Manager operations.
+
+### Before you start
+
+- You must have an Azure AD tenant.
+- Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined). 
+- To use Microsoft Intune to deploy the Configuration Manager client:
+	- You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
+	- In Intune, you have created and deployed an app containing the Configuration Manager client. For details about how to do this, see How to install clients to Intune MDM-managed Windows devices.
+- To use Configuration Manager to deploy the client:
+	- At least one management point must be configured for HTTPS mode.
+	- You must set up a Cloud Management Gateway.
+
+
+### Set up the Cloud Management Gateway
+
+Set up the Cloud Management Gateway to let clients access your Configuration Manager site from the internet without using certs.
+
+You'll find help about how to do this in the following topics:
+
+- [Plan for cloud management gateway in Configuration Manager](/sccm/core/clients/manage/plan-cloud-management-gateway).
+- [Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
+- [Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
+
+### Set up the Azure Services app in Configuration Manager Cloud Services 
+
+This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. To do this:
+
+1.	In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
+2.	On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
+3.	On the **Azure Services** page of the Azure Services Wizard, select **Cloud Management** to allow clients to authenticate with the hierarchy using Azure AD.
+4.	On the **General** page of the wizard, specify a name, and a description for your Azure service.
+5.	On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the server and client apps that will be used to configure the Azure service:
+	- In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
+		- **Create**: To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
+		- **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue. 
+	- Repeat the same process for the client app
+You need to grant the *Read directory data* application permission when you use Application Import, to set the correct permissions in the portal. If you use Application Creation the permissions are automatically created with the application, but you still need to grant permission to the application in the Azure portal
+6.	On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**.
+In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD.
+7.	Complete the wizard.
+
+At this point, you have connected your Configuration Manager site to Azure AD. 
+
+
+### Install the CM client from the Internet
+
+Before you start, ensure that the client installation source files are stored locally on the device to which you want to install the client.
+Then, use the instructions in [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) using the following installation command line (replace the values in the example with your own values):
+
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72057594037927938 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
+
+- **/NoCrlCheck** :  If your management point or cloud management gateway uses a non-public server certificate, then the client might not be able to reach the CRL location.
+- **/Source**:Local folder:   Location of the client installation files.
+- **CCMHOSTNAME**:  The name of your Internet management point
+- **SMSMP**: The name of your lookup management point – this can be on your intranet.
+- **SMSSiteCode**: The site code of your Configuration Manager site
+- **AADTENANTID**, **AADTENANTNAME**: The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
+- **AADCLIENTAPPID**: The Azure AD client app ID.
+- **AADResourceUri**: The identifier URI of the onboarded Azure AD server app.
+
+
+
