@@ -241,19 +241,19 @@ Stopping the site is equivalent to stopping the Site Component Manager service (
 After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
 
 ## Improved user notifications for Office 365 updates
-Improvements have been made to the user experience when a client installs an Office update. This includes improved pop-up notifications, business bar notifications, and an enhanced countdown experience. Prior to this release, when an Office update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. Prior to this release, when an Office 365 update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
 
 ### Prerequisites
 This update applies to Office 365 ProPlus clients.
 
 ### Known issues
 When a client evaluates an Office 365 update assignment for the first time and the update has a deadline scheduled in the past, scheduled immediately, or scheduled within 30 minutes, the Office 365 user experience can be inconsistent. For example, the client might receive a 30 minute countdown dialog for the update, but the actual enforcement could start before the end of the countdown. To avoid this behavior, consider the following:
-- Deploy the Office update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
+- Deploy the Office 365 update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
 - Configure a maintenance window during non-business hours on the collection or configure an enforcement grace period on the deployment.
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-- Deploy to a client an Office update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
+- Deploy to a client an Office 365 update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
 
 
 ## Manage Microsoft Surface driver updates
