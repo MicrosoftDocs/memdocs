@@ -266,7 +266,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 3. Deploy synchronized Microsoft Surface drivers
 
 #### To manage Microsoft Surface drivers
-1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select the checkbox on the **Classifications** tab to enable Surface drivers.
+1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
 2. [Synchronize software updates](/sccm/sum/get-started/configure-classifications-and-products).
 3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates).
 
