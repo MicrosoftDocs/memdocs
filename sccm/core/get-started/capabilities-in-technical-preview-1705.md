@@ -240,7 +240,7 @@ Stopping the site is equivalent to stopping the Site Component Manager service (
 
 After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
 
-## Improved user notifications for Office updates
+## Improved user notifications for Office 365 updates
 Improvements have been made to the user experience when a client installs an Office update. This includes improved pop-up notifications, business bar notifications, and an enhanced countdown experience. Prior to this release, when an Office update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
 
 ### Prerequisites
