@@ -217,7 +217,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 ## Improvements for SQL Server Always On Availability Groups  
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
 
--   Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  For steps on how to accomplish this, see the SQL Server documentation.
+-   Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  See [site database recovery options](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
 
 -   This release does not support failover to use the asynchronous commit replica as your site database.
 > [!CAUTION]  
@@ -226,10 +226,10 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
 -   You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
-To add an asynchronous replica to an availability group you use with Configuration Manager, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.)
+To add an asynchronous replica to an [availability group you use with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary repilcas to availability groups.
 
 ### Use the asynchronous replica to recover your site
-Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database.  
+Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
 
 To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
 
@@ -238,7 +238,7 @@ Stopping the site is equivalent to stopping the Site Component Manager service (
 > [!TIP]  
 > If you use a primary passive replica (introduced in this Technical Preview as [Site server role high availability](#site-server-role-high-availability)), you do not need to stop the passive replica. Only the active primary site must be stopped.
 
-After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
+
 
 ## Improved user notifications for Office 365 updates
 Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. Prior to this release, when an Office 365 update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
