@@ -109,7 +109,7 @@ This release includes improvements for how software update points work with boun
 
 -   Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 
-  -   All software update points in the client's current boundary group are added to the clients pool immediately.
+  -   All software update points in the client's current boundary group are added to the client's pool immediately.
 
   -   Because a client tries to use its original server for 120 minutes before seeking a new one, no additional servers are contacted until after two hours have elapsed.
 
@@ -226,7 +226,7 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
 -   You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
-To add an asynchronous replica to an [availability group you use with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary repilcas to availability groups.
+To add an asynchronous replica to an [availability group you use with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary replicas to availability groups.
 
 ### Use the asynchronous replica to recover your site
 Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
@@ -280,11 +280,11 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
-    - **Pause Features Updates starting:**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Feature Updates by clearing the checkbox.   
+    - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Feature Updates by clearing the checkbox.   
 5. Choose whether to defer or pause Quality Updates.     
     Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
     - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
-    - **Pause Quality Updates starting:**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Quality Updates by clearing the checkbox.
+    - **Pause Quality Updates starting**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Quality Updates by clearing the checkbox.
 6. Choose whether to exclude Windows Update drivers during updates.
 7. Complete the wizard to create the new deferral policy.
 
@@ -320,7 +320,7 @@ Ensure you have read the blog post to understand the basics about Windows Defend
 To create a policy, and to browse the available settings:
 
 1.	In the Configuration Manager console, choose **Assets and Compliance**.
-2.	In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**. 
+2.	In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3.	In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
 4.	Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
 5.	When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
@@ -335,7 +335,7 @@ Additionally, to learn more about Windows Defender Application Guard Standalone 
 
 ## New capabilities for Azure AD and cloud management
 
-In this release, you can configure cloud services to use Azure AD to support the following scenario: 
+In this release, you can configure cloud services to use Azure AD to support the following scenario:
 
 - Manually install the Configuration Manager client from the internet and have it assign to a Configuration Manager site.
 - Use Intune to deploy the Configuration Manager client to devices on the internet.
@@ -349,7 +349,7 @@ You can discover Azure AD users into your site to use in collections, and other 
 ### Before you start
 
 - You must have an Azure AD tenant.
-- Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined). 
+- Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined).
 - To use Microsoft Intune to deploy the Configuration Manager client:
 	- You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
 	- In Intune, you have created and deployed an app containing the Configuration Manager client. For details about how to do this, see How to install clients to Intune MDM-managed Windows devices.
@@ -368,7 +368,7 @@ You'll find help about how to do this in the following topics:
 - [Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
 - [Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
 
-### Set up the Azure Services app in Configuration Manager Cloud Services 
+### Set up the Azure Services app in Configuration Manager Cloud Services
 
 This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. To do this:
 
@@ -379,14 +379,15 @@ This connects your Configuration Manager site to Azure AD and is a prerequisite 
 5.	On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the server and client apps that will be used to configure the Azure service:
 	- In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
 		- **Create**: To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
-		- **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue. 
-	- Repeat the same process for the client app
-You need to grant the *Read directory data* application permission when you use Application Import, to set the correct permissions in the portal. If you use Application Creation the permissions are automatically created with the application, but you still need to grant permission to the application in the Azure portal
+		- **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue.
+	- Repeat the same process for the client app.
+
+  You need to grant the *Read directory data* application permission when you use Application Import, to set the correct permissions in the portal. If you use Application Creation the permissions are automatically created with the application, but you still need to grant permission to the application in the Azure portal.
 6.	On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**.
 In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD.
 7.	Complete the wizard.
 
-At this point, you have connected your Configuration Manager site to Azure AD. 
+At this point, you have connected your Configuration Manager site to Azure AD.
 
 
 ### Install the CM client from the Internet
@@ -396,14 +397,50 @@ Then, use the instructions in [How to deploy clients to Windows computers in Sys
 
 **ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72057594037927938 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
 
-- **/NoCrlCheck** :  If your management point or cloud management gateway uses a non-public server certificate, then the client might not be able to reach the CRL location.
-- **/Source**:Local folder:   Location of the client installation files.
-- **CCMHOSTNAME**:  The name of your Internet management point
+- **/NoCrlCheck**: If your management point or cloud management gateway uses a non-public server certificate, then the client might not be able to reach the CRL location.
+- **/Source**: Local folder:   Location of the client installation files.
+- **CCMHOSTNAME**: The name of your Internet management point.
 - **SMSMP**: The name of your lookup management point – this can be on your intranet.
-- **SMSSiteCode**: The site code of your Configuration Manager site
+- **SMSSiteCode**: The site code of your Configuration Manager site.
 - **AADTENANTID**, **AADTENANTNAME**: The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
 - **AADCLIENTAPPID**: The Azure AD client app ID.
 - **AADResourceUri**: The identifier URI of the onboarded Azure AD server app.
 
+## Use Azure Services Wizard to configure a connection to OMS
+Beginning with the 1705 technical preview release, you use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. The wizard replaces previous workflows to configure this connection.
 
+- 	The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
 
+-   Configuration Manager connects to OMS for features like [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), or [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
+
+### Prerequisites for the OMS Connector
+Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites). That information is repeated here:  
+
+- 	Providing Configuration Manager permission to OMS.
+
+- 	The OMS connector must be installed on the computer that hosts a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) that is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation).
+
+- 	You must install a Microsoft Monitoring Agent for OMS installed on the service connection point along with the OMS connector. The Agent and the OMS connector must be configured to use the same **OMS Workspace**. To install the agent, see [Download and install the agent](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent) in the OMS documentation.
+- 	After you install the connector and agent, you must configure OMS to use Configuration Manager data. To do so, in the OMS Portal you [Import Configuration Manager collections](/azure/log-analytics/log-analytics-sccm#import-collections).
+
+### Use the Azure Services Wizard to configure the connection to OMS
+
+1.	In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
+
+2.	On the **Azure Services** page, select the Operation Management Suite cloud service. Provide a friendly name for the **Azure service name** and an optional description, and then click **Next**.
+
+3.	On the **App** page, specify your Azure environment (the technical preview supports only the Public Cloud). Then, click **Browse** to open the Server App window.
+
+4.	Select a web app:
+
+    - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.
+    > [!NOTE] 	
+    >When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
+
+5.	If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your** Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
+
+6.	The wizard connects to the OMS service using the information you've input. Select the device collections that you want to sync with OMS and then click **Add**.
+
+7.	Verify your connection settings on the **Summary** screen, then select **Next**. The **Progress** screen shows the connection status, then should **Complete**.
+
+8.	After the wizard completes, the Configuration Manager console shows that you have configured **Operation Management Suite** as a **Cloud Service Type**.

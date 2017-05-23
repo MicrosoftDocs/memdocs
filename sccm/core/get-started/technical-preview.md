@@ -20,7 +20,7 @@ manager: angrobe
 # Technical Preview for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
- 
+
 **Welcome to the System Center Configuration Manager Technical Preview**. This topic provides details about the evolving preview release that introduces new functionality and capabilities we are working on. With each version of the technical preview, new features are introduced that are not included in the current branch of System Center Configuration Manager at the time the technical preview version is made available. These features might eventually be included in an update to the current branch release, but before we finalize the features and add them, we want you to have a chance to try them out and give us feedback.  
 
  Because this is a technical preview, details and functionality are subject to change.  
@@ -121,6 +121,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Improved user notifications for Office 365 updates|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-user-notifications-for-office-365-updates) |![Not added](media/Red_X.gif)|
  |Manage Microsoft Surface driver updates |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#manage-microsoft-surface-driver-updates) |![Not added](media/Red_X.gif)|
  |Configure Windows Update for Business deferral policies|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-windows-update-for-business-deferral-policies) |![Not added](media/Red_X.gif)|
+ |Use Azure Services Wizard to configure a connection to OMS|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) |![Not added](media/Red_X.gif)|
  |Configure Android apps with app configuration policies  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![Not added](media/Red_X.gif)|
  |Hardware inventory collects Secure Boot information |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![Not added](media/Red_X.gif)|
  |Add child task sequences to a task sequence|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![Not added](media/Red_X.gif)|
