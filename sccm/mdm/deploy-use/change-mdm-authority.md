@@ -79,7 +79,7 @@ When you have iOS devices, you must configure the APNs certificate in Intune.
     <br/>
     **Microsoft Intune administration console**   -->
     In the [Microsoft Intune administration console](http://manage.microsoft.com), go to **Administration** &gt; **Mobile Device Management** &gt; **iOS and Mac OS X** &gt; **Upload an APNs Certificate**, and then choose **Download the APNs certificate request**. Save the certificate signing request (.csr) file locally.
-    > [!NOTE]    
+    > [!IMPORTANT]    
     > You must download a new certificate signing request. Do not use an existing file or it will fail.
 
     ![Download the APNs certificate request](/sccm/mdm/deploy-use/media/mdm-change-download-apns-certificate.png)
