@@ -261,14 +261,10 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-1. Enable Synchronization for Microsoft Surface drivers
-2. Synchronize Microsoft Surface drivers
-3. Deploy synchronized Microsoft Surface drivers
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
-#### To manage Microsoft Surface drivers
-1. Enable the Microsoft Surface drivers. Using the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products), select the checkbox on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize software updates](/sccm/sum/get-started/configure-classifications-and-products).
-3. [Deploy the updates](/sccm/sum/deploy-use/deploy-software-updates).
 
 ## Configure Windows Update for Business deferral policies
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
@@ -297,7 +293,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
 3. Configure the following settings:
     - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
-    - **Collection**: Click **Browse** to select the collection where you want to deploy the configuration baseline.
+    - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
     - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
     - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
     - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
