@@ -293,7 +293,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
 3. Configure the following settings:
     - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
-    - **Collection**: Click **Browse** to select the collection where you want to deploy the configuration baseline.
+    - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
     - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
     - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
     - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
