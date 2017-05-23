@@ -139,27 +139,25 @@ This version introduces the ability to expand and collapse task sequence groups.
 
 
 ## Client settings to configure Windows Analytics for Upgrade Readiness
-Beginning with this version, you can use device client settings to simplify the configuration of Windows Analytics when you use [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) with Configuration Manager. Windows Analytics collects and reports telemetry data about your Configuration Manager clients to your Operations Manager Suite (OMS) workspace. The telemetry data you collect can help you prioritize decisions about Windows upgrades for your managed devices.
-
-Telemetry data that Configuration Manager collects is in the form of the Event Tracing for Windows (ETW) log files. These log file are submitted to the Configuration Manager site when the client submits hardware inventory. These files are then transferred to your OMS workspace. The log files and their data are removed from your Configuration Manager site after the logs transfer to OMS.
+Beginning with this version, you can use device client settings to simplify the configuration of the Windows telemetry necessary to use [Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) solutions like [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) with Configuration Manager. Configuration Manager can retrieve data from Windows Analytics that can provide valuable insights into the current state of your environment based on the Windows telemetry data reported by your client computers. Windows telemetry data is reported by client computers to the Windows telemetry service, and then relevant data is subsequently transferred to Windows Analytics solutions that are hosted in one of your organization's OMS workspaces. Upgrade Readiness is a Windows Analytics solution that can help you prioritize decisions about Windows upgrades for your managed devices.
 
 For information about Windows telemetry settings, see [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
 
 ### Prerequisites
-- You must have configured your site to use Log Analytics from the OMS Upgrade Readiness. For information see [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) in the content library for the Current Branch.
-- Clients must use hardware inventory to submit the telemetry data.
+- You must have configured your site to use the Upgrade Readiness cloud service. For more information see [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 ### Configure Windows Analytics client settings
-To configure Windows Analytics, in the Configuration Manager console go to **Administration** > **Client Settings**, double-click **Default Client Settings** and then select **Windows Analytics**.  
+To configure Windows Analytics, in the Configuration Manager console go to **Administration** > **Client Settings**, double-click **Create Custom Device Client Settings** and then check **Windows Analytics**.  
 
-Then, configure the following:
+Then, configure the following after navigating to the **Windows Analytics** settings tab:
 - **Commercial ID**  
-The commercial ID maps information from devices you manage to your OMS workspace. If you have already configured commercial ID for use with Upgrade Readiness for use with Configuration Manager, use that ID. If you do not yet have a commercial ID, see [Generate your commercial ID key]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key).
+The commercial ID key maps information from devices you manage to the OMS workspace that hosts your organization's Windows Analytics data. If you have already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you do not yet have a commercial ID key, see [Generate your commercial ID key]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key).
 
 - Set a **Telemetry level for Windows 10 devices**   
-For information about what is collected by each Windows 10 telemetry level, see  [Telemetry levels]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels) in the Windows on-line documentation.
+For information about what is collected by each Windows 10 telemetry level, see  [Configure Windows telemetry in your organization]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels).
 
 - Choose to **opt-in to commercial data collection on Windows 7, 8 and 8.1 devices**   
 For information about data collected from these operating systems when you opt-in, see download  the [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) pdf file from Microsoft.
 
 - **Configure Internet Explore data collection**
+On devices running Windows 8.1 or earlier, Internet Explorer data collection can allow Upgrade Readiness to detect web app incompatibilities that could prevent a smooth upgrade to Windows 10. Internet Explorer data collection can be enabled on a per internet zone basis. For more information about internet zones, see [About URL Security Zones](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx).

@@ -22,7 +22,7 @@ manager: angrobe
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  Imported information will set **Ownership** of the devices that enroll as **Corporate** in lists of devices. An Intune license is still required for each user that accesses the service.  
 
-When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. 
+When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned.
 
 ## How to predeclare corporate-owned devices
 
@@ -56,7 +56,7 @@ When you upload serial numbers for company-owned iOS devices, they must be paire
 
 ## Format for uploading .csv files
 
-The .csv file you use to identify devices by IMEI or serial number must have the following format, excluding the top row which provided for guidance only. Each row must contain either an IMEI number or iOS serial number. Only the serial numbers of iOS devices can be predeclared; use IMEI number for other device platforms. This table contains sample data:
+The .csv file you use to identify devices by IMEI or serial number must have the following format, excluding the top row which provided for guidance only. Each row must contain an ID number, either an IMEI number or iOS serial number. You can include both. IMEI numbers can be used for Android, iOS, and Windows devices. iOS serial numbers are also supported.  This table contains sample data:
 
 | IMEI #  | iOS Serial #  | OS | Details |
 |------------ |---------------|-----|-----|

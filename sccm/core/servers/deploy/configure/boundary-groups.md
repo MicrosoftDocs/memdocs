@@ -2,7 +2,7 @@
 title: "Define boundary groups | Microsoft Docs"
 description: "Understand boundary groups that link clients to site systems in System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -98,7 +98,9 @@ However, If the content is distributed on-demand and not available on a distribu
 ## Software update points
 Beginning with version 1702, clients use boundary groups to find a new software update point. You can add individual software update points to different boundary groups to control which servers a client can find.
 
-When you update from a version prior to 1702, all existing software update points are added to the default site boundary group at each site. This maintains the pre-update behavior where clients select a software update point from the pool of available software update points that you have configured for your hierarchy.  This behavior is maintained until you choose to add individual software update points to different boundary groups with a controlled selection and fallback behavior.
+When you update from a version prior to 1702, all existing software update points are added to the default site boundary group at each site. This maintains the pre-update behavior where clients select a software update point from the pool of available software update points that you have configured for your hierarchy.  This behavior is maintained until you choose to add individual software update points to different boundary groups for controlled selection and fallback behavior.
+
+If you install a new site that runs version 1702 or later, you must assign software update points to a boundary group before clients can find and use them.
 
 
 Fallback for software update points is configured like other site system roles, but has the following caveats:
