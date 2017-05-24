@@ -157,6 +157,10 @@ Review the following information to prepare for the change to the MDM authority:
 - Make sure that the IT Admin user is in this user collection too.  
 - Before the change, the MDM Authority will show as **Set to Microsoft Intune** (standalone) in the Intune administration console.
 - The MDM authority should display **Set to Microsoft Intune** (standalone tenant) in the Microsoft Intune administration console prior to the change in MDM authority.
+    > [!NOTE]    
+    > If your MDM authority displays **Managed by Intune and Office 365**, then your Office 365 managed MDM devices will no longer be managed when you change your MDM authority to **Configuration Manager** (hybrid). We recommend that you license those users for Intune or Enterprise Mobility Suite before you change the MDM authority.   
+    
+
 - There should be no noticeable impact to end-users during the change in MDM authority. However, you might want to communicate this change to users to make sure that their devices are powered on and that they connect with the service soon after the change. This will ensure that as many devices as possible will connect and register with the service through the new authority as soon as possible.
 - If you are using Intune standalone to manage iOS devices prior to the change in MDM authority, you must make sure that the same Apple Push Notification service (APNs) certificate that was previously used in Intune is renewed and used to set up the tenant again in Configuration Manager (hybrid).    
 
