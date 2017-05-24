@@ -2,7 +2,7 @@
 title: "Technical Preview 1705 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/23/2017
+ms.date: 05/24/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -350,6 +350,7 @@ You can discover Azure AD users into your site to use in collections, and other 
 
 - You must have an Azure AD tenant.
 - Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined).
+- In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected with this) are enabled on the computer that hosts this site system role.
 - To use Microsoft Intune to deploy the Configuration Manager client:
 	- You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
 	- In Intune, you have created and deployed an app containing the Configuration Manager client. For details about how to do this, see How to install clients to Intune MDM-managed Windows devices.
@@ -395,15 +396,15 @@ At this point, you have connected your Configuration Manager site to Azure AD.
 Before you start, ensure that the client installation source files are stored locally on the device to which you want to install the client.
 Then, use the instructions in [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) using the following installation command line (replace the values in the example with your own values):
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72057594037927938 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
 
 - **/NoCrlCheck**: If your management point or cloud management gateway uses a non-public server certificate, then the client might not be able to reach the CRL location.
 - **/Source**: Local folder:   Location of the client installation files.
-- **CCMHOSTNAME**: The name of your Internet management point.
+- **CCMHOSTNAME**: The name of your Internet management point. You can find this by running **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** from a command prompt on a managed client.
 - **SMSMP**: The name of your lookup management point – this can be on your intranet.
 - **SMSSiteCode**: The site code of your Configuration Manager site.
 - **AADTENANTID**, **AADTENANTNAME**: The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
-- **AADCLIENTAPPID**: The Azure AD client app ID.
+- **AADCLIENTAPPID**: The Azure AD client app ID. For help finding this, see [Use portal to create an Azure Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
 - **AADResourceUri**: The identifier URI of the onboarded Azure AD server app.
 
 ## Use Azure Services Wizard to configure a connection to OMS
