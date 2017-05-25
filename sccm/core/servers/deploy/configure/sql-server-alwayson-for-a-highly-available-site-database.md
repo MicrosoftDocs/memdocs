@@ -2,7 +2,7 @@
 title: "SQL Server Always On | Microsoft Docs"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
-ms.date: 1/4/2017
+ms.date: 5/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,7 +26,7 @@ Configuration Manager supports using availability groups:
 -     At primary sites and the central administration site.
 -     On-premises, or in Microsoft Azure.
 
-When you use Microsoft Azure to host the availability group, you can further increase availability of your site database by using   *Azure Availability Sets*. For more information on Azure Availability Sets, see [Manage the availability of virtual machines]( https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
+When you use availability groups in Microsoft Azure, you can further increase availability of your site database by using *Azure Availability Sets*. For more information on Azure Availability Sets, see [Manage the availability of virtual machines](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
 
 >  [!Important]   
 >  Before you continue, be comfortable with configuring SQL Server and SQL Server availability groups. The information that follows references the SQL Server documentation library and procedures.
