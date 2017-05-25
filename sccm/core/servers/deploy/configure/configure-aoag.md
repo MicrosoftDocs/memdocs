@@ -2,7 +2,7 @@
 title: "Configure Availability Groups | Microsoft Docs"
 description: "Set up and manage SQL Server Always On Availability groups with SCCM."
 ms.custom: na
-ms.date: 1/4/2017
+ms.date: 5/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -70,7 +70,7 @@ See [View or Change the Recovery Model of a Database](/sql/relational-databases/
 
   3.	If it’s necessary to set configurations on secondary replicas, you must manually failover the primary replica to the secondary replica before continuing because you can only configure the database of a primary replica. For more information see [Perform a Planned Manual Failover of an Availability Group](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
 
-6.	After all replicas meet the requirements, the availability group is ready to be used with Configuration Manager. 
+6.	After all replicas meet the requirements, the availability group is ready to be used with Configuration Manager.
 
 ## Configure a site to use the database in the availability group
 After you [create and configure the availability group](#create-and-configure-an-availability-group), use Configuration Manager site maintenance to configure the site to use the database that is hosted by the availability group.
