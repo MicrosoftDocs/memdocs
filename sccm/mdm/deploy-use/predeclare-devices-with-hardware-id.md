@@ -56,7 +56,7 @@ When you upload serial numbers for company-owned iOS devices, they must be paire
 
 ## Format for uploading .csv files
 
-The .csv file you use to identify devices by IMEI or serial number must have the following format, excluding the top row which provided for guidance only. Each row must contain an ID number, either an IMEI number or iOS serial number. You can include both. IMEI numbers can be used for Android, iOS, and Windows devices. iOS serial numbers are also supported.  This table contains sample data:
+The .csv file you use to identify devices by IMEI or iOS serial number must have the following format, excluding the top row which is provided for guidance only. Each row must contain an ID number, either an IMEI number or an iOS serial number. For iOS devices, you can include both. IMEI numbers can be used for Android, iOS, and Windows devices. This table contains sample data:
 
 | IMEI #  | iOS Serial #  | OS | Details |
 |------------ |---------------|-----|-----|

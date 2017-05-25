@@ -29,21 +29,15 @@ Endpoint Protection in System Center Configuration Manager lets you to manage an
  When you use Endpoint Protection with Configuration Manager, you have the following benefits:  
 
 -   Configure antimalware policies, Windows Firewall settings, and manage Windows Defender Advanced Threat Protection to selected groups of computers  
-
 -   Use Configuration Manager software updates to download the latest antimalware definition files to keep client computers up-to-date  
-
 -   Send email notifications, use in-console monitoring, and view reports to keep administrative users informed when malware is detected on client computers  
 
-Beginning with Windows 10 and Windows Server 2016, computers don’t require any additional client for endpoint protection management. On Windows 8.1 and earlier computers, Endpoint Protection installs its own client in addition to the Configuration Manager client. The Endpoint Protection client has the following capabilities:  
+Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is already installed. For these operating systems, a management client for Windows Defender is installed when the Configuration Manager client installs. On Windows 8.1 and earlier computers, the Endpoint Protection client is installed with the Configuration Manager client. Windows Defender and the Endpoint Protection client have the following capabilities:  
 
 -   Malware and spyware detection and remediation  
-
 -   Rootkit detection and remediation  
-
 -   Critical vulnerability assessment and automatic definition and engine updates  
-
 -   Network vulnerability detection through Network Inspection System  
-
 -   Integration with Cloud Protection Service to report malware to Microsoft. When you join this service, the Endpoint Protection client or Windows Defender can download the latest definitions from the Malware Protection Center when unidentified malware is detected on a computer.  
 
 > [!NOTE]  

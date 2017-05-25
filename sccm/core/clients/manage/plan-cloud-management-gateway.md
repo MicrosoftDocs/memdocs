@@ -1,7 +1,7 @@
 ---
-title: "Plan for cloud management gateway | Microsoft Docs"
+title: "Plan for the cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 04/23/2017
+ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -11,7 +11,7 @@ ms.author: robstack
 manager: angrobe
 ---
 
-# Plan for cloud management gateway in Configuration Manager
+# Plan for the cloud management gateway in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -83,10 +83,112 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
     -   Internet-based clients managed with cloud management gateway will get software update content from Windows Update at no charge.
 
-    -   Any other necessary content (for example, applications) must be distributed to a cloud-based distribution point. Currently, cloud management gateway supports only Cloud Distribution Point for sending content to clients.
+    -   Any other necessary content (for example, applications) must be distributed to a cloud-based distribution point. Currently, the cloud management gateway supports only Cloud Distribution Point for sending content to clients.
 
     - See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution) for more details.
 
 ## Next steps
 
 [Set up cloud management gateway](setup-cloud-management-gateway.md)
+
+
+## Frequently asked questions about the Cloud Management Gateway (CMG)
+
+### Why use the cloud management gateway?
+
+Use this role to simplify Internet-based client management in three steps from the Configuration Manager console.
+
+1. Deploy the CMG to Azure using the [Create Cloud Management Gateway](/sccm/core/clients/manage/setup-cloud-management-gateway) wizard.
+2. Configure the [cloud management gateway connection point](/sccm/core/servers/deploy/configure/install-site-system-roles) site system role.
+3. [Configure roles for cloud management gateway traffic](/sccm/core/clients/manage/setup-cloud-management-gateway#step-7-configure-roles-for-cloud-management-gateway-traffic), like the management point, and software update point.
+
+### How does the cloud management gateway work?
+
+- The cloud management gateway connection point enables a consistent and high performance connection from the Internet to the cloud management gateway.
+- Configuration Manager publishes settings to the CMG including connection information and security settings.
+- The CMG authenticates and forwards Configuration Manager client requests to the cloud management gateway connection point. These requests are forwarded to roles in the corporate network according to URL mappings.
+
+### How is the cloud management gateway deployed?
+
+The cloud service manager component on the service connection point handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD.
+
+#### Certificate requirements
+
+You'll need the following certificates to secure the CMG:
+
+- **Management certificate** - This can be any certificate including self-signed certificates. You can use a public certificate uploaded to Azure AD or a  [PFX with private key](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) imported into Configuration Manager to authenticate with Azure AD. 
+- **Web service certificate** -  We recommend that you use a public CA certificate to gain native trust by clients. The CName needs to be created in the public DNS registar. Wild card certificates are not supported.
+- **Root/SubCA certificates upload to CMG** - The CMG needs to do full chain validation on client PKI certificates. If you use an enterprise CA for issuing client PKI certificates and their root or subordinate CA is not available on the internet, then you must upload it to the CMG.
+
+#### Deployment process
+
+There two phases to the deployment:
+
+- Deploy the cloud service
+	- Upload your [Azure Service Definition Schema](https://msdn.microsoft.com/library/azure/ee758711.aspx) (csdef) file
+	- Upload your [Azure Service Configuration Schema](https://msdn.microsoft.com/library/azure/ee758710.aspx) (cscfg) file.
+- Set up the CMG component on your Azure AD server, and configure endpoints, HTTP handlers, and services in Internet Information Services (IIS)
+
+If you change the configuration of the CMG, a configuration deployment is initiated to the CMG.
+
+### How does the cloud management gateway help ensure security?
+
+The CMG helps ensure security in the following ways:
+
+- Accepts and manages connections from CMG connection points including mutual SSL authentication using internal certificates and connection IDs.
+- Accepts and forwards client requests
+	- Pre-authenticates connections using mutual SSL on the client PKI certificate.
+	- The certificate trust list checks the root of the client PKI certificate. You can specify this setting in the client communicate settings in site properties. Also performs the same validation as the management point for the client.
+	- Validates received URLs
+	- Filters received URLs to check if any connecting CMG connection point can service the URL request.  
+	- Checks content length check for each publishing endpoint.
+	- Uses 'round-robin' to load balance between CMG connection points from the same site.
+
+- Secures the CMG connection point
+	- Builds consistent HTTP/TCP connections to all virtual instances of the connecting CMG. Checks and maintains connections every minute.
+	- Mutually autheticates SSL authentication with CMG using internal certificates.
+	- Forwards HTTP requests based on URL mappings.
+	- Reports connection status to show admin service health status.
+	- Reports endpoint traffic report per endpoint every 5 minutes.
+
+- Secure the publishing endpoint
+Configuration Manager client facing roles like the management point, and software update point host endpoints in IIS to service client requests. Every endpoint published to the CMG has an URL mapping.
+The external URL is the one the client uses to communicate with the CMG.
+The internal URL is the CMG connection point used to forward requests to the internal server. 
+
+#### Example:
+When you enable CMG traffic on a management point, Configuration Manager creates a set of URL mappings internally for each management point server, like ccm_system, ccm_incoming, and sms_mp.
+The external URL for the management point ccm_system endpoint might look like **https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**. 
+The URL is unique for each management point. The Configuration Manager client then puts the CMG enabled MP name like **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>** into its internet management point list. 
+All published external URLs are uploaded to the CMG automatically then CMG is able to do URL filtering. All URL mapping replicates to CMG connection point so it can forward to internal servers according to client requesting external URL.
+
+### What ports are used by the cloud management gateway? 
+
+- No inbound ports required on premise network. Deployment of CMG will create a bunch on CMG automatically. 
+- Besides 443, some outbound ports are required by the CMG connection point.
+
+|||||
+|-|-|-|-|
+|Data flow|Server|Server ports|Client|
+|CMG deployment|Azure|443|Configuration Manager service connection point|
+|Build CMG channel|CMG|VM instance: 1 Port: 443<br>VM instance: N (N>=2 and N<= 16) Ports: 10124~N 10140~N|CMG Connection point|
+|Client to CMG|CMG|443|Client|
+|CMG connector to site role (currently management points and software update points)|Site role|Protocol/Ports configured on the site role|CMG connection point|
+
+### How can you improve performance of the cloud management gateway?
+
+- If possible, configure the CMG, CMG connection point and the Configuration Manager site server in same network region to reduce latency.
+- Currently, the connection between the Configuration Manager client and the CMG is not region-aware.
+- To gain high availability, we recommend at least 2 virtual instances of the CMG and two CMG connection points per site 
+- You can scale the CMG to support more clients by adding more VM instances. They are load balanced by the Azure AD load balancer.
+- Create more CMG connection points to distribute the load among them. The CMG will 'round-robin' the traffic to its connecting CMG connection points.
+- Support client number per CMG VM instance is 6k in the 1702 release. When the CMG channel is under high load, the request will still be handled but might take longer than normal.
+
+### How can you monitor the cloud management gateway?
+
+For troubleshooting deployment, use **CloudMgr.log** and **CMGSetup.log**.
+For troubleshooting service health, use **CMGService.log** and **SMS_CLOUD_PROXYCONNECTOR.log**.
+For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.Log**, and **SMS_CLOUD_PROXYCONNECTOR.log**.
+
+For a list of all CMG-related log files, see [Log files in Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway)
+
