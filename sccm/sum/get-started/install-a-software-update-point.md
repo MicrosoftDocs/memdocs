@@ -3,7 +3,9 @@
 title: Install and configure a software update point | Microsoft Docs
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
 keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: dougeby
+ms.author: dougeby
+manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
@@ -16,7 +18,10 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ---
 
 
-# Install and configure a software update point  *Applies to: System Center Configuration Manager (Current Branch)*
+# Install and configure a software update point  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 > [!IMPORTANT]  
 >  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  
@@ -25,6 +30,9 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
 > [!IMPORTANT]  
 >  You can install more than one software update points on a site. The first software update point that you install is configured as the synchronization source, which synchronizes the updates from Microsoft Update or from the upstream synchronization source. The other software update points on the site are configured as replicas of the first software update point. Therefore, some settings are not available after you install and configure the initial software update point.  
+
+> [!IMPORTANT]  
+>  Installing the software update point site system role on a server that has been configured and used as a standalone WSUS server is not supported.  Nor is using a software update point to directly manage WSUS clients.  Existing WSUS servers are only supported as upstream sync sources for the active software update point.  See [Synchronize from an upstream data source location](#BKMK_wsussync)
 
  You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** , depending on whether you add the site system role to a new or existing site server, select **Software update point**, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
@@ -86,7 +94,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
     > [!NOTE]  
     >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as https://WSUSServer:8531, where 8531 is the port that is used to connect to the WSUS server.  
+-   **<a name="BKMK_wsussync"></a>Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as https://WSUSServer:8531, where 8531 is the port that is used to connect to the WSUS server.  
 
 -   **Do not synchronize from Microsoft Update or upstream data source**: Use this setting to manually synchronize software updates when the software update point at the top-level site is disconnected from the Internet. For more information, see [Synchronize software updates from a disconnected software update point](synchronize-software-updates-disconnected.md).  
 
