@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 
 ---

@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: c72612d4-0b3d-4e71-b3c9-35782701b78a
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ---
 # How to create Wi-Fi profiles for mobile devices in System Center Configuration Manager
