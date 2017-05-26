@@ -60,7 +60,7 @@ Prepare backup and recovery approaches to avoid data loss. For Configuration Man
 -   [SMS Writer service](#BKMK_SMSWriterService)  
 
 > [!NOTE]  
->  If you use a SQL Server AlwaysOn availability group to host the site database, modify your backup and recovery plans as described in the [Changes for Backup and Recovery when you use a SQL Server AlwaysOn availability group](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#bkmk_BnR) section of the [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) topic.  
+>  If you use a SQL Server Always On availability group to host the site database, modify your backup and recovery plans as described in [Prepare to use SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
 ##  <a name="BKMK_SiteBackup"></a> Back up a Configuration Manager site  
  Configuration Manager has a backup maintenance task that:  
