@@ -149,7 +149,7 @@ When you deploy the client to Windows computers, the installation fails. The ccm
 
 **Workaround**
 This is caused by a corrupted, previously installed version of Silverlight. You can try running the following tool on the affected computer to fix this:
-[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed) 
+[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 
 
@@ -247,8 +247,15 @@ This issue affects System Center Configuration Manager conditional access for **
 **Workaround:** Add the **User Collection** to **Targeted Collections** page before selecting **User Collection** on the **Exempted Collection** page, or make sure you are not adding the same **User Collection** to both Targeted and Exempted Collections.
 
 ## Endpoint Protection
-<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+<!--  Product Studio bug 485370 added 04 19 2017 -->
 ### Antimalware policy fails to apply on Windows Server 2016 Core
 Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
 
-**Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017. 
+**Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017.
+
+<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release -->
+### Windows Defender Advanced Threat Protection policies fail on older client agents
+
+Windows Defender Advanced Threat Protection policies created from a Configuration Manager version 1610 or later site server fail to apply to Configuration Manager version 1606 and earlier clients.  The clients are not on-boarded and the policy evaluation reports an error. The **Deployment state** in Windows Defender Advanced Threat Protection configuration shows **Error**.
+
+**WORKAROUND**: Upgrade the Configuration Manager client to version 1610 or later.
