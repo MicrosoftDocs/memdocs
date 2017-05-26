@@ -118,6 +118,9 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 3.  **Synchronize DEP-managed devices**   
     In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **Predeclared Devices**. On the **Home** tab, click **DEP Sync**. A sync request is sent to Apple. After synchronization completes, the DEP-managed devices are displayed.
 
+> [!NOTE]
+> In the Hybrid configuration, the DEP Sync operation is manually triggered by clicking the **DEP Sync** button in the Configuration Manager console. This button is located under the All Corporate-owned Devices option.
+
 4.  **Assign DEP profile**<br>In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Select the DEP enrollment profile and then, in the **Home** tab, click **Assign to devices**. Select the devices that will use this enrollment profile, click **Add**, and then click **OK**.   
      ![Screenshot of assigning DEP profile to iOS devices](../media/dep-assign-profile.png)
 
