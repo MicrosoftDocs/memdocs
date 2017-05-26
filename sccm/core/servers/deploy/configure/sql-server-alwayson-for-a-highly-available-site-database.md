@@ -243,7 +243,7 @@ The reporting services point does not support using the listener virtual name of
 
 When you install a reporting service point on each replica of the availability group, reporting can always connect to an active reporting point server.
 
-**Switch the reporting services point used by the console::**  
+**Switch the reporting services point used by the console:**  
 To run reports, in the console go to **Monitoring** > **Overview** > **reporting** > **Reports**, and then choose **Report Options**. In the Report Options dialog box, select the desired reporting services point.
 
 ## Next steps
