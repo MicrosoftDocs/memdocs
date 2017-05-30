@@ -23,7 +23,7 @@ manager: angrobe
 
 Run a Configuration Manager site recovery after a Configuration Manager site fails or data loss occurs in the site database. Repairing and resynchronizing data are the core tasks of a site recovery and are required to prevent interruption of operations.
 
-The sections in this topic can help you recover a Configuration Manager site. To create a backup, see [Backup for Configuration Manager](backup-and-recovery).
+The sections in this topic can help you recover a Configuration Manager site. To create a backup, see [Backup for Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
 ## Considerations before recovering a site
 **You must use the same version and edition of SQL Server:** For example, restoring a database that ran on SQL Server 2014 to SQL Server 2016is not supported. Similarly, restoring a site database that ran on a Standard edition of SQL Server 2016 to an Enterprise edition of SQL Server 2016 is not supported.

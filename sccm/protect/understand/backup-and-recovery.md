@@ -23,7 +23,7 @@ manager: angrobe
 
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.  
 
-The sections in this topic can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](recovery).  
+The sections in this topic can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](/sccm/protect/understand/recovery).  
 
 ## Considerations before creating a backup  
 -   **If you use a SQL Server Always On availability group to host the site database:** Modify your backup and recovery plans as described in [Prepare to use SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).
