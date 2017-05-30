@@ -25,10 +25,10 @@ ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 
 ---
 # Change your MDM authority
-Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices.
+You can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices, beginning in Configuration Manager version 1610 and Microsoft Intune version 1705.
 
 ## Change the MDM authority to Intune standalone
-Use this topic to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone without having to un-enroll and re-enroll existing managed devices.
+Use this section to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone without having to unenroll and reenroll existing managed devices.
 
 ### Key Considerations
 After you change to the new MDM authority, there will likely be transition time (up to 8 hours) before the device checks in and synchronizes with the service. You will be required to configure settings in the new MDM authority (Intune standalone) to ensure that enrolled devices will continue to be managed and protected after the change. Note the following:
@@ -46,7 +46,7 @@ Review the following information to prepare for the change to the MDM authority:
 - If you are using Configuration Manager (hybrid tenant) to manage iOS devices prior to the change in MDM authority, you must make sure that the same Apple Push Notification service (APNs) certificate that was previously used in Configuration Manager is renewed and used to set up the tenant again in Intune standalone.    
 
     > [!IMPORTANT]  
-    > If a different APNs certificate is used for Intune standalone, then ALL previously enrolled iOS devices will become un-enrolled and you will have to go through the process to re-enroll them. Prior to making the MDM authority change, make sure that you know exactly what APNs certificate was used to manage iOS devices in Configuration Manager. Find the same certificate listed in Apple Push Certificates Portal (https://identity.apple.com) and make sure the user whose Apple ID was used to create the original APNs certificate is identified and available to renew the same APNs certificate as part of the change to the new MDM authority.  
+    > If a different APNs certificate is used for Intune standalone, then ALL previously enrolled iOS devices will become unenrolled and you will have to go through the process to reenroll them. Prior to making the MDM authority change, make sure that you know exactly what APNs certificate was used to manage iOS devices in Configuration Manager. Find the same certificate listed in Apple Push Certificates Portal (https://identity.apple.com) and make sure the user whose Apple ID was used to create the original APNs certificate is identified and available to renew the same APNs certificate as part of the change to the new MDM authority.  
 
 ### Change the MDM authority to Intune standalone
 The process to change the MDM authority to Intune standalone includes the following high-level steps:  
@@ -136,7 +136,7 @@ After the change in MDM authority is complete, review the following steps:
     - Enroll a new device
     - Make sure the newly enrolled device shows up in the Intune administration console.
     - Perform an action, such as Remote Lock, from the administration console to the device. If it is successful, the device is being managed by the new MDM authority.
-- If you have issues with specific devices, you can un-enroll and re-enroll the devices to get them connected to the new authority and managed as quickly as possible.
+- If you have issues with specific devices, you can unenroll and reenroll the devices to get them connected to the new authority and managed as quickly as possible.
 
 <!-- After the change in MDM authority and devices check-in with the service, note the following:      - The updated compliance status of devices will only display in the Azure portal immediately.
 - There will be a delay for compliance status of devices to display in the Intune administrative console.-->
@@ -167,7 +167,7 @@ Review the following information to prepare for the change to the MDM authority:
 - If you are using Intune standalone to manage iOS devices prior to the change in MDM authority, you must make sure that the same Apple Push Notification service (APNs) certificate that was previously used in Intune is renewed and used to set up the tenant again in Configuration Manager (hybrid).    
 
     > [!IMPORTANT]  
-    > If a different APNs certificate is used for hybrid, then ALL previously enrolled iOS devices will become un-enrolled and you will have to go through the process to re-enroll them. Prior to making the MDM authority change, make sure that you know exactly what APNs certificate was used to manage iOS devices in Intune. Find the same certificate listed in Apple Push Certificates Portal (https://identity.apple.com) and make sure the user whose Apple ID was used to create the original APNs certificate is identified and available to renew the same APNs certificate as part of the change to the new MDM authority.  
+    > If a different APNs certificate is used for hybrid, then ALL previously enrolled iOS devices will become unenrolled and you will have to go through the process to reenroll them. Prior to making the MDM authority change, make sure that you know exactly what APNs certificate was used to manage iOS devices in Intune. Find the same certificate listed in Apple Push Certificates Portal (https://identity.apple.com) and make sure the user whose Apple ID was used to create the original APNs certificate is identified and available to renew the same APNs certificate as part of the change to the new MDM authority.  
 
 ### Change the MDM authority to Configuration Manager
 The process to change the MDM authority to Configuration Manager (hybrid) includes the following high-level steps:  
