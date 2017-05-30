@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Prepare System Center Configuration Manager to use SQL Server Always On availability groups as a high availability and disaster recovery solution for the site database.
+Prepare System Center Configuration Manager to use SQL Server Always On availability groups as a high availability and disaster recovery solution for the site database.  
 Configuration Manager supports using availability groups:
 -     At primary sites and the central administration site.
 -     On-premises, or in Microsoft Azure.
