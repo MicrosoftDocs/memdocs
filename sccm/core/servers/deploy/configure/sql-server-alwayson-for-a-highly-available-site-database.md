@@ -67,7 +67,7 @@ For example, to configure Service Accounts and permissions for SQL Server 2016, 
               GRANT CONNECT ON endpoint::[endpoint_name]  
               TO [domain\servername$]
 
-For more information see [Create a Database Mirroring Endpoint for Always On Availability Groups.](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
+For more information see [Create a Database Mirroring Endpoint for Always On Availability Groups](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
 ### Availability group configurations
 **Replica members:**  
