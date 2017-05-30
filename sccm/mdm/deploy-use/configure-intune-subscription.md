@@ -2,7 +2,7 @@
 title: "Configure your Intune subscription using System Center Configuration Manager | Microsoft Docs"
 description: "Configure your Intune subscription using System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 05/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -47,7 +47,7 @@ The Intune subscription does the following:
 5.  On the **Subscription** page, click **Sign in** and sign in by using your work or school account. In the **Set the Mobile Device Management Authority** dialog, select the check box to only manage mobile devices by using Configuration Manager through the Configuration Manager console. To continue with your subscription, you must select this option.
 
     > [!IMPORTANT]
-    >  Once you select Configuration Manager as your management authority, you can only change your management authority to Microsoft Intune beginning in Configuration Manager version 1610 and Microsoft Intune version 1705 without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority).
+    >  Once you select Configuration Manager as your management authority, you can only change your management authority to Microsoft Intune in Configuration Manager version 1610 or later and Microsoft Intune version 1705 without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority).
 
 6.  Click the privacy links to review them, and then click **Next**.
 
