@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 
 ---
