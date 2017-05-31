@@ -4,7 +4,7 @@
 title: "Prepare to deploy client software to Macs | Microsoft Docs"
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -97,6 +97,9 @@ For an example deployment that creates and installs this web server certificate,
  For an example deployment that creates and installs the client certificate for management points, see the [Deploying the Client Certificate for Windows Computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)  
 
  For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
+
+>[!IMPORTANT]
+>  To deploy the client to devices running macOS Sierra, the Subject name of the management point certificate must be configured correctly, for example, by using the FQDN of the management point server.
 
 ## Prepare the client certificate template for Macs  
 

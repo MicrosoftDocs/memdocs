@@ -2,7 +2,7 @@
 title: "Which branch should I use | Microsoft Docs"
 description: "Learn the differences between available branches of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,23 +12,31 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 caps.latest.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Which branch of Configuration Manager should I use?*Applies to: System Center Configuration Manager (Current Branch, Long-Term Servicing Branch, and Technical Preview)*
+# Which branch of Configuration Manager should I use?
+
+*Applies to: System Center Configuration Manager (Current Branch, Long-Term Servicing Branch, and Technical Preview)*
+
 
 Beginning in October of 2016, there are three branches of System Center Configuration Manager available. Use this topic to help choose the right branch for you.
+
+> [!TIP]  
+> All sites in a hierarchy must run the same branch. It is not supported to have a hierarchy with different branches at different sites.
 
 ## Current Branch of System Center Configuration Manager
 This is a licensed branch for use in a production environment where you want the option to get the latest features and functionalities. This is the branch to use if you have one of the following: System Center Datacenter, System Center Standard, System Center Configuration Manager, or equivalent subscription rights. For more about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
 
 >  [!TIP]
-> The Current Branch can also be installed as an evaluation edition that does not require a license. An evaluation edition can be used for 180 days, and it supports upgrade to a licensed edition of the Current Branch.
+> The Current Branch can be installed as an evaluation edition that does not require a license. An evaluation edition can be used for 180 days, and it supports upgrade to a licensed edition of the Current Branch.
 
 The Current Branch is updated several times a year with new features. Each update version is supported for one year after its release. You must update to a newer version of the Current Branch on or before expiration of that one-year period. Updates to newer versions are available as in-console updates.
 
-To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager.
+To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager. Later baseline versions, like 1702 do not support install of the LTSB.
 
 You can also use the baseline media to install a new site that is an evaluation edition of the Current Branch. If you want to install only an evaluation edition, you can get software from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
 
@@ -129,3 +137,14 @@ For more information, see [Technical Preview for System Center Configuration Man
 **Update options**
 -	You can install any in-console update for a new Technical Preview version.
 -	There is no option to convert a Technical Preview to the Current Branch or LTSB.
+
+
+## Identify your branch and version
+When you view version information for a Configuration Manager site, you also confirm the branch.
+
+**Version**   
+To check the version of your site, in the console go to **About System Center Configuration Manager** at the upper-left corner of the console where the **Site version** appears. See []() for a list of site versions.
+
+**Branch**  
+To confirm the branch of your site (as the LTSB or Current Branch), in the console go to **Administration** > **Site Configuration** > **Sites**, and open **Hierarchy Settings**. If there is an option to convert to the Current Branch and it is active, the site runs the LTSB version. When the site runs the Current Branch, this option is grayed out.
+For information about the different versions of Configuration Manager, see "Baseline and update versions" in [Updates for Configuration Manager](/sccm/core/servers/manage/updates).

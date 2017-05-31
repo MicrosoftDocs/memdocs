@@ -2,7 +2,7 @@
 title: "Manage collections | Microsoft Docs"
 description: "Do common collections management tasks in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/22/2017
+ms.date: 4/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -36,7 +36,7 @@ Use the overview information in this topic to help you perform management tasks 
 |---------------------|-------------|----------------------|  
 |**Show Members**|Displays all of the resources that are members of the selected collection in a temporary node under the **Devices** node.|No additional information.|  
 |**Add Selected Items**|Provides the following options to perform one of the following actions:<br /><br /> - <br />                    **Add Selected Items to Existing Device Collection** - Opens the **Select Collection** dialog box where you can select the collection to which you want to add the members of the selected collection. The selected collection is included in this collection by using an **Include Collections** membership rule.<br /><br /> - **Add Selected Items to New Device Collection** - Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using an **Include Collections** membership rule.|[How to create collections in System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md)|  
-|**Install Client**|Opens the **Install Client Wizard** which uses client push installation to install a Configuration Manager client on all computers in the selected collection.|[Client deployment tasks for System Center Configuration Manager](../../../../core/clients/deploy/client-deployment-tasks.md)|  
+|**Install Client**|Opens the **Install Client Wizard** which uses client push installation to install a Configuration Manager client on all computers in the selected collection.|[How to deploy clients to Windows computers](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
 |**Manage Affinity Requests**|Opens the **Manage User Device Affinity Requests** dialog box where you can approve or reject pending requests to establish user device affinities for devices in the selected collection.|[Link users and devices with user device affinity in System Center Configuration Manager](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
 |**Clear Required PXE Deployments**|Clears any required PXE boot deployments from all members of the selected collection.|[Introduction to operating system deployment](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
 |**Update Membership**|Evaluates the membership for the selected collection. For collections with many members, this update might take some time to finish. Use the **Refresh** action to update the display with the new collections members after the update is completed.|No additional information.|  

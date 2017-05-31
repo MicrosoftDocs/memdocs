@@ -33,7 +33,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
     Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/enroll-hybrid-ios-mac.md).
 
 2.  **Create a DEP token request**   
-    In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration**, expand **Cloud Services**, and click **Windows Intune Subscriptions**. Click **Create DEP Token Request** on the **Home** tab, click **Browse** to specify the download location for the DEP token request, and then click **Download**. Save the DEP token request (.pem) file locally. The .pem file is used to request a trusted token (.p7m) from the Apple Device Enrollment Program portal.  
+    In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration**, expand **Cloud Services**, and click **Microsoft Intune Subscriptions**. Click **Create DEP Token Request** on the **Home** tab, click **Browse** to specify the download location for the DEP token request, and then click **Download**. Save the DEP token request (.pem) file locally. The .pem file is used to request a trusted token (.p7m) from the Apple Device Enrollment Program portal.  
 
 3.  **Get a Device Enrollment Program token**   
     Go to the [Device Enrollment Program portal](https://deploy.apple.com) (https://deploy.apple.com) and sign in with your company Apple ID. This Apple ID must be used in future to renew your DEP token.  
@@ -49,7 +49,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
      This certificate (.p7m) file is used to establish a trust relationship between Intune and Apple’s Device Enrollment Program servers.  
 
 4.  **Add the DEP token to Configuration Manager**   
-    In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration** and click **Windows Intune Subscriptions**. Click **Configure Platforms** on the **Home** tab and click **iOS**. Select **Enable Device Enrollment Program**, browse to the certificate (.p7m) file, click **Open**, click **Upload**, and then click **OK**.  
+    In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration** and click **Microsoft Intune Subscriptions**. Click **Configure Platforms** on the **Home** tab and click **iOS**. Select **Enable Device Enrollment Program**, browse to the certificate (.p7m) file, click **Open**, click **Upload**, and then click **OK**.  
 
 #### Set up enrollment for Apple Device Enrollment Program (DEP) iOS devices  
 
@@ -117,6 +117,9 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 
 3.  **Synchronize DEP-managed devices**   
     In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **Predeclared Devices**. On the **Home** tab, click **DEP Sync**. A sync request is sent to Apple. After synchronization completes, the DEP-managed devices are displayed.
+
+> [!NOTE]
+> In the Hybrid configuration, the DEP Sync operation is manually triggered by clicking **DEP Sync** in the Configuration Manager console.
 
 4.  **Assign DEP profile**<br>In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Select the DEP enrollment profile and then, in the **Home** tab, click **Assign to devices**. Select the devices that will use this enrollment profile, click **Add**, and then click **OK**.   
      ![Screenshot of assigning DEP profile to iOS devices](../media/dep-assign-profile.png)

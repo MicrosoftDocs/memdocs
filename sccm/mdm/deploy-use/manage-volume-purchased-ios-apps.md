@@ -2,7 +2,7 @@
 title: "Manage volume-purchased iOS apps | Microsoft Docs"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -52,6 +52,7 @@ manager: angrobe
       When you choose **Sync** to do a manual sync, this will always do a full sync.  
 -   If you need to recover or restore you Configuration Manager database, we recommend that you do a manual sync afterwards to ensure that your synced license data is up to date.  
 -   Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to let you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](enroll-hybrid-ios-mac.md).  
+-   Configuration Manager supports adding up to 3000 VPP tokens.
 
 Beginning with System Center Configuration Manager 1702, you can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
@@ -107,7 +108,7 @@ The Configuration Manager application that is created has the Windows Store for 
 
  When you create an app from the **License Information for Store Apps** node, the app is associated with licenses from the token for the app you selected.  For example, you might see two versions of the same app in the node. This is because each version of the app is associated with a different Apple VPP token.  You could then create apps from each token, and deploy them seperately.
 
- To reclaim a license, you must change the deployment action to **Uninstall**. The license will be reclaimed after the app uninstalls.  
+ To reclaim a license, you must create a new deployment for the app with a deployment action of **Uninstall**. You cannot change the deployment action in the original deployment. The license will be reclaimed after the app uninstalls.  
 
 ## Step 3 - Monitor iOS VPP apps  
  The **License Information for Store Apps** node of the **Software Library** workspace displays information about your volume-purchased iOS apps. The information includes the total number of licenses that you own for each app and the number that have been deployed. Additionally, the view shows which VPP token the app is associated with, and the type of the token

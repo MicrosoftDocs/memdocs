@@ -40,23 +40,7 @@ manager: angrobe
 
 -   Each install remains active for 90 days before it becomes inactive.  
 
--   English is the only language supported.  
-
--   Only a stand-alone primary site is supported. There is no support for a central administration site, multiple primary sites, or secondary sites.  
-
--   Only the following versions of SQL Server are supported:  
-
-    -   SQL Server 2016 (with no Service Pack, and later)
-    -   SQL Server 2014 (with no Service Pack, and later)
-    -   SQL Server 2012 (with Service Pack 2, or later)
-
-
--   The site supports up to 10 clients, which must run one of the following:  
-
-      -   Windows 10  
-      -   Windows 8.1  
-      -   Windows 8  
-      -   Windows 7  
+-   English is the only language supported.
 
 
 -   Only the following install flags (switches) are supported:  
@@ -74,6 +58,23 @@ manager: angrobe
 -   There is no support for upgrade to this preview build.  
 
 -   There is no support for upgrade to a production build (current branch) from this preview build. However, when updates are available for a preview version,  you can find and install them from the **Updates and Servicing** node of the Configuration Manager console. For a video of the in-console upgrade process, see [Installing ConfigMgr Update Packages](https://www.youtube.com/embed/KBd_EGFbUT8) on youtube.com.  
+-   Only a stand-alone primary site is supported. There is no support for a central administration site, multiple primary sites, or secondary sites.  
+
+The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not imply an extension of support for a product or version that is beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
+
+-   Only the following versions of SQL Server are supported:  
+
+    -   SQL Server 2016 (with no Service Pack, and later)
+    -   SQL Server 2014 (with Service Pack 1, and later)
+    -   SQL Server 2012 (with Service Pack 3, or later)
+
+
+-   The site supports up to 10 clients, which must run one of the following:  
+
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
 ##  <a name="bkmk_install"></a> Install and update the Technical Preview  
  The System Center Configuration Manager Technical Preview is distinct from the current release of System Center Configuration Manager.  
@@ -87,7 +88,7 @@ Each preview release is supported up until three successive releases are availab
 
 **Active baseline versions of the Technical Preview:**  
 You can install a baseline version for up to 1 year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
--  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is available from the TechNet Evaluation Center website.
+-  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 -  **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 was available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you have media for installing 1610, we recommend you download version 1703 and install that version instead.
 

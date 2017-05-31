@@ -209,9 +209,9 @@ Many of the client settings are self-explanatory. Others are described here.
 
      If the BitLocker PIN entry is configured on computers, this option can bypass the requirement to enter a PIN when the computer restarts after a software installation.  
 
-    -   **Always**: Configuration Manager temporarily suspends the BitLocker requirement to enter a PIN on the next computer startup after it has installed software that requires a restart and has initiated a restart of the computer. This setting applies only to computer restarts that are initiated by Configuration Manager and does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement is resumed after Windows startup.  
+    -   **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart and initiated a restart of the computer. This setting applies only to a computer restart that is initiated by Configuration Manager and does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement is resumed after Windows startup.
 
-    -   **Never**: Configuration Manager does not suspend the BitLocker requirement to enter a PIN on the next computer startup after it has installed software that requires a restart. In this scenario, the software installation cannot finish until the user enters the PIN to finish the standard startup process and load Windows.  
+    -   **Never**: Configuration Manager does not suspend BitLocker on the next computer startup after it has installed software that requires a restart. In this scenario, the software installation cannot finish until the user enters the PIN to complete the standard startup process and load Windows.
 
 -   **Additional software manages the deployment of applications and software updates**  
 

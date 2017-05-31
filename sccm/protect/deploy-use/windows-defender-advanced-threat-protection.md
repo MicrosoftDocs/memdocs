@@ -22,8 +22,8 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
  **Prerequisites**  
 
 -   Subscription to the Windows Defender Advanced Threat Protection online service  
-
--   Clients running Windows 10, version 1607 and later  
+-   Clients computers running Windows 10, version 1607 and later  
+-   Clients computers running the Configuration Manager 1610 version or later client agent
 
 ## How to create an onboarding configuration file  
 

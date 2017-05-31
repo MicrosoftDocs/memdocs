@@ -2,7 +2,7 @@
 title: "Windows Hello for Business settings | Microsoft Docs"
 description: "Learn how to integrate Windows Hello for Business with System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,9 @@ author: robstackmsftms.author: robstackmanager: angrobe
 # Windows Hello for Business settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
 
-Hello for Business lets you use a **user gesture** to login, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.  
+Hello for Business lets you use a **user gesture** to login, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.
+
+[Find out more about Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)
 
  Configuration Manager integrates with Windows Hello for Business in two ways:  
 
@@ -37,7 +39,7 @@ You can control Windows Hello for Business settings on domain-joined Windows 10 
 
 Note that in addition to this configuration, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile).
 
-## Recommended approach -  Configure a Windows Hello for Business profile  
+## Configure a Windows Hello for Business profile  
 
 In the Configuration Manager console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  
 
@@ -102,7 +104,6 @@ if the **Security** tab is not displayed, turn on **Advanced Features** from the
 
  For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
-## See also  
- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 
- [Manage identity verification using Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
+
+
