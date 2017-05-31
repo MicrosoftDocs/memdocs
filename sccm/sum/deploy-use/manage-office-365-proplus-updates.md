@@ -3,7 +3,7 @@ title: Manage Office 365 ProPlus updates | Microsoft Docs
 description: "Configuration Manager synchronizes Office 365 client updates from the WSUS catalog to the site server to make updates available to deploy to clients."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 03/24/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -132,6 +132,9 @@ This is especially helpful because Office 365 updates are not applicable for cli
 4. On the **Import Client Settings** page, choose whether to import the Office 365 client settings from an existing XML configuration file or to manually specify the settings, and then click **Next**.  
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
+    > [!IMPORTANT]    
+    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/en-us/library/cc179219&#40;v=office.16&#41;.aspx).
+
 5. On the **Client Products** page, select the Office 365 suite that you use, select the applications that you want to include, select any additional Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
 7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**.  
@@ -141,7 +144,7 @@ If you choose not to deploy the package in the wizard, skip to step 9.
 10. You can deploy or edit the application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**.   
 
 > [!IMPORTANT]
-> The Office 365 app that you create and deploy by using the Office 365 Application Wizard in Configuration Manager is not automatically managed by Configuration Manager until you enable the **Enable management of the Office 365 Client Again** software updates client agent setting. For details, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
+> The Office 365 app that you create and deploy by using the Office 365 Application Wizard in Configuration Manager is not automatically managed by Configuration Manager until you enable the **Enable management of the Office 365 Client Agent** software updates client agent setting. For details, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
 
 >[!NOTE]
 >After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Office 365 apps, click **Create an ADR** from the Office 365 Client Management dashboard, and select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).

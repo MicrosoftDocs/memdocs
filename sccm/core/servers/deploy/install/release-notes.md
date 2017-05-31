@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 05/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -139,9 +139,18 @@ The exception is similar to the following:
 -->
 
 
-<!-- No current  Client deployment and upgrade relenotes
+
 ## Client deployment and upgrade  
--->
+
+### Client installation fails with error code 0x8007064c
+<!--- SMS 486973 -->
+
+When you deploy the client to Windows computers, the installation fails. The ccmsetup.log file contains an entry "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
+
+**Workaround**
+This is caused by a corrupted, previously installed version of Silverlight. You can try running the following tool on the affected computer to fix this:
+[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
+
 
 
 
@@ -188,6 +197,14 @@ After you create and deploy a high-risk task deployment to users, a high-risk di
 **Workaround**:  
 The user must close the dialog box for the first high-risk deployment to see the dialog box for the next high-risk deployment.
 
+## Software update deployment
+
+### Importing an Office 365 client settings from a configuration file fails when it contains unsupported languages
+When you import the Office 365 client settings from an existing XML configuration file, and the file contains languages that are not supported by the Office 365 ProPlus client, an error will occur. For details, see [deploy Office 365 apps to clients from the Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
+
+**Workaround**:    
+Use only the [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/en-us/library/cc179219&#40;v=office.16&#41;.aspx) in the XML configuration file.  
+
 ## Mobile device management  
 
 ### Cannot create an enrollment profile on a primary site  
@@ -213,6 +230,12 @@ When an administrator deploys a set of terms to multiple user collections, and a
 
 **Workaround**: Make sure each user is only included in one collection to which the terms are deployed.  
 
+### Android for Work email profiles that use certificate authentication are not applied to devices
+<!--  487657 -->
+When an Android for Work email profile is created, there are two options for authentication. One is username and password, and the other is certificates. At this time, the certificates option is not working. If the profile is created with the authentication method set to **certificates**, the profile is not applied to the device and the user will be prompted to enter email account details manually.
+
+**WORKAROUND**: None. Admins must either use the **username and password** option, or wait until this issue has been resolved.
+
 ## Reports and monitoring  
 
 ### The Health Attestation Report is empty even though health attestation data was previously collected  
@@ -232,8 +255,15 @@ This issue affects System Center Configuration Manager conditional access for **
 **Workaround:** Add the **User Collection** to **Targeted Collections** page before selecting **User Collection** on the **Exempted Collection** page, or make sure you are not adding the same **User Collection** to both Targeted and Exempted Collections.
 
 ## Endpoint Protection
-<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+<!--  Product Studio bug 485370 added 04 19 2017 -->
 ### Antimalware policy fails to apply on Windows Server 2016 Core
 Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
 
-**Workaround:**  None.  As an administrator, you can use group policy to manage settings for Windows Server 2016 Core.
+**Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017.
+
+<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release -->
+### Windows Defender Advanced Threat Protection policies fail on older client agents
+
+Windows Defender Advanced Threat Protection policies created from a Configuration Manager version 1610 or later site server fail to apply to Configuration Manager version 1606 and earlier clients.  The clients are not on-boarded and the policy evaluation reports an error. The **Deployment state** in Windows Defender Advanced Threat Protection configuration shows **Error**.
+
+**WORKAROUND**: Upgrade the Configuration Manager client to version 1610 or later.
