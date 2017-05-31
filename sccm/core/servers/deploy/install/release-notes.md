@@ -203,7 +203,7 @@ The user must close the dialog box for the first high-risk deployment to see the
 When you import the Office 365 client settings from an existing XML configuration file, and the file contains languages that are not supported by the Office 365 ProPlus client, an error will occur. For details, see [deploy Office 365 apps to clients from the Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
 
 **Workaround**:    
-Use only the [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/en-us/library/cc179219&#40;v=office.16&#41;.aspx) in the XML configuration file.  
+Use only the [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx) in the XML configuration file.  
 
 ## Mobile device management  
 

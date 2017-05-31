@@ -133,7 +133,7 @@ This is especially helpful because Office 365 updates are not applicable for cli
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
     > [!IMPORTANT]    
-    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/en-us/library/cc179219&#40;v=office.16&#41;.aspx).
+    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx).
 
 5. On the **Client Products** page, select the Office 365 suite that you use, select the applications that you want to include, select any additional Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
