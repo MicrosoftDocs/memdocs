@@ -25,7 +25,7 @@ ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 
 ---
 # Change your MDM authority
-You can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices, beginning in Configuration Manager version 1610 and Microsoft Intune version 1705.
+Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices.
 
 ## Change the MDM authority to Intune standalone
 Use this section to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone without having to unenroll and reenroll existing managed devices.
