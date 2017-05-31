@@ -2,7 +2,7 @@
 title: "Unattended recovery | Microsoft Docs"
 description: "Use a script to recover your sites in System Center Configuration Manager."
 ms.custom: na
-ms.date: 5/30/2017
+ms.date: 5/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,9 +20,9 @@ manager: angrobe
 # Unattended site recovery for Configuration Manager   
 
 *Applies to: System Center Configuration Manager (Current Branch)*
- To perform an [unattended recovery](/sccm/protect/understand/recovery#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and use Setup with the /script command option. The script provides the same type of information that the Setup Wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
+ To perform an [unattended recovery](/sccm/protect/understand/recovery#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and then use Setup with the **/script** command option. The script provides the same type of information that the Setup Wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
 
- You can run Configuration Manager Setup unattended by using an initialization file with the /script Setup command-line option. Unattended setup is supported for recovery of a Configuration Manager central administration site and primary site. To use the /script setup command-line option, you must create an initialization file and specify the initialization file name after the /script setup command-line option. The name of the file is unimportant as long as it has the .ini file name extension. When you reference the setup initialization file from the command line, you must provide the full path to the file. For example, if your setup initialization file is named setup.ini, and it is stored in the C:\setup folder, your command line would be:
+ To use the /script setup command-line option, you must create an initialization file and specify the initialization file name after the /script setup command-line option. The name of the file is unimportant as long as it has the **.ini** file name extension. When you reference the setup initialization file from the command line, you must provide the full path to the file. For example, if your setup initialization file is named *setup.ini*, and it is stored in the *C:\setup folder*, your command line would be:
 
  **setup /script c:\setup\setup.ini**.
 
@@ -33,7 +33,7 @@ manager: angrobe
 
  Use the following sections to help you to create your script for unattended site recovery. The tables list the available setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description for the key.
 
-#### Recover a central administration site unattended
+## Recover a central administration site unattended
  Use the following information to configure an unattended Setup script file to recover a central administration site.
 
  **Identification**
@@ -202,7 +202,7 @@ manager: angrobe
     -   **Values:** &lt;*SSBPortNumber*>
     -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.
 
-#### Recover a Primary Site Unattended
+## Recover a Primary Site Unattended
  Use the following information to configure an unattended Setup script file to recover a central administration site.
 
  **Identification**

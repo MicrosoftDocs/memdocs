@@ -2,7 +2,7 @@
 title: "Backup sites | Microsoft Docs"
 description: "Learn to back up your sites before the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
-ms.date: 5/30/2017
+ms.date: 5/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -76,7 +76,7 @@ Site backup status information is written to the **Smsbkup.log** file. This file
 5.  Choose **Enable this task** > **Set Paths** to specify the backup destination. You have the following options:  
 
     > [!IMPORTANT]  
-    >  To help prevent tampering of the backup files, store the files in a secure location. The most secure backup path is to a local drive so you can set NTFS file system permissions on the folder. Configuration Manager does not encrypt the backup data that is stored in the backup path.  
+    >  To help prevent tampering of the backup files, store the files in a secure location. The most secure backup path is to a local drive, so you can set NTFS file system permissions on the folder. Configuration Manager does not encrypt the backup data that is stored in the backup path.  
 
     -   **Local drive on site server for site data and database**: Specifies that the backup files for the site and site database are stored in the specified path on the local disk drive of the site server. You must create the local folder before the backup task runs. The Local System account on the site server must have **Write** NTFS file system permissions to the local folder for the site server backup. The Local System account on the computer that is running SQL Server must have **Write** NTFS permissions to the folder for the site database backup.  
 
@@ -130,7 +130,7 @@ The AfterBackup.bat file lets you archive the backup snapshot at the end of ever
 When the AfterBackup.bat file is not present, the backup task skips it without effect on the backup operation. To verify that the site backup task successfully ran the AfterBackup.bat file, see the **Component Status** node in the **Monitoring** workspace and review the status messages for SMS_SITE_BACKUP. When the task successfully started the AfterBackup.bat command file, you see message ID 5040.  
 
 > [!TIP]  
->  To create the AfterBackup.bat file to archive your site server backup files, you must use a copy command tool, like [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408), in the batch file. For example, you could create the AfterBackup.bat file, and on the first line, you could add something similar to: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  To create the AfterBackup.bat file to archive your site server backup files, you must use a copy command tool, like [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408), in the batch file. For example, you could create the AfterBackup.bat file, and on the first line, you could add something like: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
  Although the intended use of the AfterBackup.bat is to archive backup snapshots, you can create an AfterBackup.bat file to perform additional tasks at the end of every backup operation.  
 
@@ -155,7 +155,7 @@ The content library in Configuration Manager is the location where all content f
  Verify that you include both the content library and package source locations in your file system backup for the site server.  
 
 ### Back up custom software updates  
- System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
+ System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you should include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
 
  Use the following procedure to back up the Updates Publisher database.  
 
@@ -185,7 +185,7 @@ You can use Configuration Manager task sequences to capture and restore the user
 
 
 
-## SMS Writer service  
+## About the SMS Writer service  
 The SMS Writer is a service that interacts with the Volume Shadow Copy Service (VSS) during the backup process. The SMS Writer service must be running for the Configuration Manager site back up to successfully complete.  
 
 ### Purpose  
@@ -201,3 +201,6 @@ The SMS Writer service must run under the Local System account.
 
 ### Volume Shadow Copy service  
 The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/p/?LinkId=241968) topic in the Windows Server TechCenter.  
+
+## Next steps
+After you create a backup, practice [site recovery](/sccm/protect/understand/recovery) with that backup. This can help you become familiar with the recovery process before you need to rely on it, and can help confirm the backup was successful for its intended purpose.  
