@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Prepare System Center Configuration Manager to use SQL Server Always On availability groups as a high availability and disaster recovery solution for the site database.
+Prepare System Center Configuration Manager to use SQL Server Always On availability groups as a high availability and disaster recovery solution for the site database.  
 Configuration Manager supports using availability groups:
 -     At primary sites and the central administration site.
 -     On-premises, or in Microsoft Azure.
@@ -67,7 +67,7 @@ For example, to configure Service Accounts and permissions for SQL Server 2016, 
               GRANT CONNECT ON endpoint::[endpoint_name]  
               TO [domain\servername$]
 
-For more information see [Create a Database Mirroring Endpoint for Always On Availability Groups.](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
+For more information see [Create a Database Mirroring Endpoint for Always On Availability Groups](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
 ### Availability group configurations
 **Replica members:**  

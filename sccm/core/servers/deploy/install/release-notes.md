@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 05/11/2017
+ms.date: 05/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -196,6 +196,14 @@ After you create and deploy a high-risk task deployment to users, a high-risk di
 
 **Workaround**:  
 The user must close the dialog box for the first high-risk deployment to see the dialog box for the next high-risk deployment.
+
+## Software updates
+
+### Importing an Office 365 client settings from a configuration file fails when it contains unsupported languages
+When you import the Office 365 client settings from an existing XML configuration file, and the file contains languages that are not supported by the Office 365 ProPlus client, an error will occur. For details, see [deploy Office 365 apps to clients from the Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
+
+**Workaround**:    
+Use only the [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx) in the XML configuration file.  
 
 ## Mobile device management  
 
