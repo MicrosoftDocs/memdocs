@@ -2,7 +2,7 @@
 title: "Technical Preview 1705 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/24/2017
+ms.date: 06/01/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -20,6 +20,9 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1705. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+
+**Known Issues in this Technical Preview:**
+-   **Operations Manager Suite connector does not upgrade**. When you upgrade from a previous version of the Technical Preview that had the OMS connector configured, that connector is not upgraded and is no longer available in the console. After upgrade, you must [use the Azure Services wizard](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) and reestablish connection to your OMS workspace.
 
 <!--  Known Issues Template
 **Known Issues in this Technical Preview:**
@@ -101,117 +104,6 @@ With this release, issues with how the Configuration Manager console scales and 
 
 ## Peer Cache improvements
 Beginning with this technical preview, Peer Cache [no longer uses the Network Access Account](/sccm/core/plan-design/hierarchy/client-peer-cache) to authenticate download requests from peers.
-
-
-## Improved boundary groups for software update points
-This release includes improvements for how software update points work with boundary groups. The following summarizes the new fallback behavior:
--   Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups, with a minimum time of 120 minutes.
-
--   Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
-
-  -   All software update points in the client's current boundary group are added to the client's pool immediately.
-
-  -   Because a client tries to use its original server for 120 minutes before seeking a new one, no additional servers are contacted until after two hours have elapsed.
-
-  -   If fallback to a neighbor group is configured for the minimum of 120 minutes, software update points from that neighbor boundary group will be part of the client's pool of available servers.
-
--   After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point.
-
-    This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
-
-  -   This cycle continues until the client connects to a software update point it can use.
-  -   Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.
-
-For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
-
-## Site server role high availability
-High availability for the site server role is a Configuration Manager based solution to make a backup of your primary site server available for immediate use.
-
-Site server role high availability is accomplished by installing an additional site as a passive replica of the active primary site.
-
-The passive replica installs as a new primary site that uses the same site database as your active site. Because it is passive, it does not actively write data to the site database so long as it is the passive primary site. The passive primary site does not support installation of optional site system roles while it is passive, but does receive a copy of the sites content library.
-
-To make the passive replica your active site, you manually promote the passive site to be the active site. This switches the active site to be the passive primary site. The site system roles that were available on the original active primary site remain available so long as that computer is accessible. Only the site server role is switched.
-
-To install the passive primary site, you use the **Create Site System Server Wizard** to configure a server with the **Primary site server (Passive)** site system role. The wizard then runs Configuration Manager setup on the specified server to install the passive replica.
-
-
-After installation is complete, the active site keeps the passive replica and its content library in sync with the changes or configurations you make. This ensures that the passive replica is ready for use when its needed.
-
-
-### Prerequisites and limitations
--   The passive replica is supported only for primary sites.
-
--   Each site supports only one passive replica, and the both servers must be in the same domain.   
-
--   The replica computer must meet the prerequisites for a primary site server.
-  -   It installs using source files that match the active primary sites version.
-
-  -   The active primary and replica primary computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
-
--   The active primary site must use a remote site database. This server must also be remote from the computer that will host the passive replica.
-
-	-		The SQL Server that hosts the databse can use a default instance, named instance, SQL Server cluster, or an Always On Availability Group. 	
-
-	-		The passive replica is configured with the same database as the active primary. It does not use that database until after it is promoted to be the active primary site.
-
--   The passive primary site server can be on-premises or cloud-based in Azure.  	
-
--   Promotion of the passive primary to be the active primary site is manual. There is no automatic failover to the passive replica.
-
-- All site system roles can be installed on the active primary site server computer.
-
-  -   No optional site system roles install on the passive primary. Although the active site supports all site system roles, those that use a database (like the reporting point) must have that database on a server that is remote from the active and passive primary site computers.
-
-  -   The SMS_Provider is not installed on the passive replica. Because you must connect to an SMS_Provider for the site to promote the passive replica to be active, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
-
-### Add a passive replica
-1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.  
-2.	On the **General** page, specify the server that will become the passive replica. The server you specify cannot host any other site system roles when installing the passive replica.
-3.	On the **System Role Selection** page, select only **Primary site server (Passive)**.
-4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site on the specified passive replica server:
-		-		Choose to copy installation files from the active primary to the new replica, or specify a path to a location that contains the contents of the active primary sites **CD.Latest** folder.
-		- 	Specify the same site database server and database name as used by the primary site.
-5.  Configuration Manager then installs the passive primary site replica on the specified server.  
-
-When an active server is switched to be the passive server, only the *site system role* is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.   
-
-For detailed installation status, go to **Administration** > **Site Configuration** > **Sites**:
-- The status for the replica server displays as **Installing**.
-
-- Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
-
-### Promote the passive site server to be active
-When you want to change the passive server to be active, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
-
-1.	In the **Nodes** pane of the Configuration Manager console, select the passive site server, and then from the Ribbon, choose **Make active**.
-2.	The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**. After the promotion is complete, the **Status** column shows **OK** for both the new *Active* server, and for the new *Passive* server.
-4.	After the promotion is complete, the status for both servers displays as **OK**.
-5.	In **Administration** > **Site Configuration** > **Sites**, the name of the primary site server now displays the name of the new *Active* primary site server.  
-
-For detailed status, go to **Monitoring** > **Site Server Status**:
--   The **Mode** column identifies which server is *Active* or *Passive*.
-
--   During the act to promote a passive server to active, select the primary site server that you are promoting, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
-
-### Daily monitoring
-When you have a passive replica of your primary site, monitor it daily to ensure it remains in sync with the active primary site, and ready to use.  To do so, go to **Monitoring** > **Site Server Status**. Here you can view both the active and replica primary site servers.  
-
-The **Summary** tab:
--   The **Mode** column identifies which server is *Active* or *Passive*.
--   The **Status** column lists **OK** when the server replicas are current.
--   View additional details about the state of content synchronization. Clicking **Show status** from the Content Sync State, opens the Content Library tab where you can try to fix content sync issues.
-
-The **Content Library** tab:
--   View the **State** for content that synchronizes from the active server to the passive replica.  
--   You can select content with a State of **Failed**, and then choose **Recover selected items** from the Ribbon. This action tries to resynchronize that content from the contents source to the passive replica. During recovery, the State displays as **Restoring**, and when it is in sync, it displays as **Success**.
-
-
-### Try it out!
-Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-
--   I can install a passive replica of my primary site.
--   I can use the console to promote the passive replica to be active, and confirm the change of status for both site servers.
 
 
 ## Improvements for SQL Server Always On Availability Groups  

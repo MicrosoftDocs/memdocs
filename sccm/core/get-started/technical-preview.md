@@ -2,7 +2,7 @@
 title: "Technical Preview for Configuration Manager | Microsoft Docs"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/23/2017
+ms.date: 06/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -115,8 +115,6 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Update reset tool  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![Not added](media/Red_X.gif)|
  |High DPI console support  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![Not added](media/Red_X.gif)|
  |Peer Cache improvements  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |![Not added](media/Red_X.gif)|
- |Improved boundary groups for software update points|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
- |Site server role high availability|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
  |Improvements for SQL Server Always On Availability Groups |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improvements-for-sql-server-always-on-availability-groups) |![Not added](media/Red_X.gif)|
  |Improved user notifications for Office 365 updates|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-user-notifications-for-office-365-updates) |![Not added](media/Red_X.gif)|
  |Manage Microsoft Surface driver updates |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#manage-microsoft-surface-driver-updates) |![Not added](media/Red_X.gif)|
