@@ -2,7 +2,7 @@
 title: "Technical Preview 1705 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/01/2017
+ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -23,6 +23,7 @@ This article introduces the features that are available in the Technical Preview
 
 **Known Issues in this Technical Preview:**
 -   **Operations Manager Suite connector does not upgrade**. When you upgrade from a previous version of the Technical Preview that had the OMS connector configured, that connector is not upgraded and is no longer available in the console. After upgrade, you must [use the Azure Services wizard](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) and reestablish connection to your OMS workspace.
+-   **Surface drivers do not synchronize successfully**. Even though support for surface drivers are listed in **What's New** in the Configuration Manager console for the technical preview, this feature does not yet work as expected.
 
 <!--  Known Issues Template
 **Known Issues in this Technical Preview:**
@@ -148,7 +149,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 - Deploy to a client an Office 365 update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
 
 
-## Manage Microsoft Surface driver updates
+<!--## Manage Microsoft Surface driver updates
 You can now use Configuration Manager to manage Microsoft Surface driver updates.
 
 ### Try it out!
@@ -156,7 +157,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
 2. [Synchronize Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
-
+-->
 
 ## Configure Windows Update for Business deferral policies
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
@@ -327,7 +328,7 @@ Prerequisites to configure a connection to OMS are unchanged from those [documen
 4.	Select a web app:
 
     - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
-    
+
     > [!NOTE] 	
     > When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
 
