@@ -326,11 +326,11 @@ Prerequisites to configure a connection to OMS are unchanged from those [documen
 
 4.	Select a web app:
 
-    - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.
+    - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
     > [!NOTE] 	
-    >When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
+    > When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
 
-5.	If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your** Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
+5.	If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
 
 6.	The wizard connects to the OMS service using the information you've input. Select the device collections that you want to sync with OMS and then click **Add**.
 
