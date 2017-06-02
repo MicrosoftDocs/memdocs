@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1610), and to upgrade from Microsoft System Center 2012 Configuration Manager. 
+With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1610), and to upgrade from Microsoft System Center 2012 Configuration Manager.
 
 Supported scenarios include:  
 
@@ -107,9 +107,7 @@ Follow this sequence:
     -   A child primary site automatically installs the same updates that you install at a central administration site.  
     -   Secondary sties do not automatically install new versions. You must upgrade them manually from within the console.  
 
-   
-
-    After this step, when you install updates at the central administration site, child primary sites will only install that update when allowed by their maintenance window.  
+  After this step, when you install updates at the central administration site, child primary sites will only install that update when allowed by their maintenance window.  
 
 4.  **Install the update version at your top-level site.** This updates your top-level site. After a central administration site installs the update version, each child primary site automatically installs the update unless the installation is blocked by a maintenance window.  
 
