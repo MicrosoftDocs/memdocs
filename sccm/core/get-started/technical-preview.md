@@ -117,7 +117,6 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Peer Cache improvements  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |![Not added](media/Red_X.gif)|
  |Improvements for SQL Server Always On Availability Groups |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improvements-for-sql-server-always-on-availability-groups) |![Not added](media/Red_X.gif)|
  |Improved user notifications for Office 365 updates|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-user-notifications-for-office-365-updates) |![Not added](media/Red_X.gif)|
- |Manage Microsoft Surface driver updates |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#manage-microsoft-surface-driver-updates) |![Not added](media/Red_X.gif)|
  |Configure Windows Update for Business deferral policies|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-windows-update-for-business-deferral-policies) |![Not added](media/Red_X.gif)|
  |Use Azure Services Wizard to configure a connection to OMS|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) |![Not added](media/Red_X.gif)|
  |Configure Android apps with app configuration policies  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![Not added](media/Red_X.gif)|
