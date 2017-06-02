@@ -6,7 +6,7 @@ description: "Learn how to change the MDM authority from Configuration Manager (
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:
