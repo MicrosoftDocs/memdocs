@@ -79,7 +79,7 @@ The following versions of Configuration Manager are available as a baseline, an 
 | 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Yes|No|  
 
 
-*(Note 1)* This 1606 baseline media is available as part of Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release.
+*(Note 1)* The 1606 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC).
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
 
