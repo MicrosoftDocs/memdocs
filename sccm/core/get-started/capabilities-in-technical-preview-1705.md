@@ -327,6 +327,7 @@ Prerequisites to configure a connection to OMS are unchanged from those [documen
 4.	Select a web app:
 
     - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
+    
     > [!NOTE] 	
     > When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
 
