@@ -24,6 +24,8 @@ This article introduces the features that are available in the Technical Preview
 **Known Issues in this Technical Preview:**
 -   **Operations Manager Suite connector does not upgrade**. When you upgrade from a previous version of the Technical Preview that had the OMS connector configured, that connector is not upgraded and is no longer available in the console. After upgrade, you must [use the Azure Services wizard](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) and reestablish connection to your OMS workspace.
 -   **Surface drivers do not synchronize successfully**. Even though support for surface drivers are listed in **What's New** in the Configuration Manager console for the technical preview, this feature does not yet work as expected.
+-   **Windows Update for Business deferral policies does not work**. Even though the ability to configure Windows Update for Business deferral policies are listed in **What's New** in the Configuration Manager console for the technical preview, the wizard does not open and you are unable to configure the policies.
+
 
 <!--  Known Issues Template
 **Known Issues in this Technical Preview:**
@@ -159,7 +161,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 -->
 
-## Configure Windows Update for Business deferral policies
+<!--## Configure Windows Update for Business deferral policies
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 ### Prerequisites
@@ -193,7 +195,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
 4.  Complete the wizard to deploy the profile.
-
+-->
 
 ## Configure and deploy Windows Defender Application Guard policies
 
