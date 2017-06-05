@@ -33,7 +33,7 @@ Use the information in this topic to help you upgrade the server infrastructure 
 
 -   In-place upgrade to a later Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  
 -   In-place upgrade from:
-    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016)).
+    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-or-windows-server-2012-r2-to-2016)).
     - Windows Server 2012 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-or-windows-server-2012-r2-to-2016)).
     - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
     - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
