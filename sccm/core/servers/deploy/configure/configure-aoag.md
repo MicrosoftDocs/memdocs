@@ -23,7 +23,7 @@ manager: angrobe
 
 Use the information in this topic to configure and manage the availability groups you use with Configuration Manager.
 
-Before you start:
+Before you start:  
 -   Be familiar with the information from [Prepare to use SQL Server Always On availability groups with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 -   Be familiar with SQL Server documentation that covers the use of availability groups and related procedures that are required to complete the following scenarios.
 
