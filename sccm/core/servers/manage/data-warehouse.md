@@ -2,7 +2,7 @@
 title: "Data warehouse| Microsoft Docs"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 5/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -45,6 +45,7 @@ When the site system role installs, it installs and configures the data warehous
 - The computer account of the computer where you install the site system role is used to synchronize data with the data warehouse database. This account requires the following permissions:  
   - **Administrator** on the computer that will host the data warehouse database.
   - **DB_owner** permission on the data warehouse database.
+  - **DB_reader** and **execute** permissions to the top-tier sites site database.
 -	The data warehouse database is supported on a default or named instance of SQL Server 2012 or later. The edition must be Enterprise or Datacenter.
   - SQL Server AlwaysOn availability group: This configuration is not supported.
   - SQL Server Cluster: SQL Server failover clusters are not supported. This is because the data warehouse database has not been deeply tested on SQL Server failover clusters.

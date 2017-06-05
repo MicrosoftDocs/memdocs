@@ -1,7 +1,7 @@
 ---
 title: "Plan for the cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 05/16/2017
+ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -86,11 +86,6 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
     -   Any other necessary content (for example, applications) must be distributed to a cloud-based distribution point. Currently, the cloud management gateway supports only Cloud Distribution Point for sending content to clients.
 
     - See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution) for more details.
-
-## Next steps
-
-[Set up cloud management gateway](setup-cloud-management-gateway.md)
-
 
 ## Frequently asked questions about the Cloud Management Gateway (CMG)
 
@@ -191,4 +186,8 @@ For troubleshooting service health, use **CMGService.log** and **SMS_CLOUD_PROXY
 For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.Log**, and **SMS_CLOUD_PROXYCONNECTOR.log**.
 
 For a list of all CMG-related log files, see [Log files in Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway)
+
+## Next steps
+
+[Set up cloud management gateway](setup-cloud-management-gateway.md)
 
