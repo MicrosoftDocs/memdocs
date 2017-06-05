@@ -2,7 +2,7 @@
 title: "Backup sites | Microsoft Docs"
 description: "Learn to back up your sites before the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -63,9 +63,7 @@ Site backup status information is written to the **Smsbkup.log** file. This file
 
 #### To enable the site backup maintenance task  
 
-1.  In the Configuration Manager console, open **Administration** > **Site Configuration**  
-
-     \> **Sites**.  
+1.  In the Configuration Manager console, open **Administration** > **Site Configuration** > **Sites**.  
 
 2.  Select the site in which you want to enable the site backup maintenance task.  
 
@@ -203,4 +201,4 @@ The SMS Writer service must run under the Local System account.
 The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/p/?LinkId=241968) topic in the Windows Server TechCenter.  
 
 ## Next steps
-After you create a backup, practice [site recovery](/sccm/protect/understand/recovery) with that backup. This can help you become familiar with the recovery process before you need to rely on it, and can help confirm the backup was successful for its intended purpose.  
+After you create a backup, practice [site recovery](/sccm/protect/understand/recovery) with that backup. This can help you become familiar with the recovery process before you need to rely on it and can help confirm the backup was successful for its intended purpose.  

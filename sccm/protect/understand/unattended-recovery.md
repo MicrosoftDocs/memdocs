@@ -2,7 +2,7 @@
 title: "Unattended recovery | Microsoft Docs"
 description: "Use a script to recover your sites in System Center Configuration Manager."
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,7 +26,7 @@ manager: angrobe
 
  **setup /script c:\setup\setup.ini**.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 >  You must have Administrator rights to run Setup. When you run Setup with the unattended script, start the Command Prompt in an Administrator context by using **Run as administrator**.
 
  The script contains section names, key names, and values. Required section key names vary depending on the recovery type that you are scripting. The order of the keys within sections, and the order of sections within the file, is not important. The keys are not case sensitive. When you provide values for keys, the name of the key must be followed by an equals sign (=) and the value for the key.
@@ -86,9 +86,9 @@ manager: angrobe
     -   **Values:** &lt;ReferenceSiteFQDN\>
     -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change tracking retention period or when you recover the site without a backup.
 
-         When you do not specify a reference site and the backup is older than the change tracking retention period, all primary sites are reinitialized with the restored data from the central administration site.
+         When you do not specify a reference site, and the backup is older than the change tracking retention period, all primary sites are reinitialized with the restored data from the central administration site.
 
-         When you do not specify a reference site and the backup is within the change tracking retention period, only changes since the backup are replicated from primary sites. When there are conflicting changes from different primary sites, the central administration site uses the first one that it receives.
+         When you do not specify a reference site, and the backup is within the change tracking retention period, only changes since the backup are replicated from primary sites. When there are conflicting changes from different primary sites, the central administration site uses the first one that it receives.
 
          This key is required when the **DatabaseRecoveryOptions** setting has a value of **40**.
 
@@ -135,7 +135,7 @@ manager: angrobe
     -   **Required:** Yes
     -   **Values:** &lt;*ConfigMgrInstallationPath*>
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.
-        > [!NOTE]
+        > [!NOTE]   
         >  You can specify the original path or a new  path to use for the Configuration Manager installation.
 
 -   **Key name:** SDKServer
@@ -193,7 +193,7 @@ manager: angrobe
     -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
     -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.
 
-        > [!IMPORTANT]
+        > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.
 
 -   **Key name:** SQLSSBPort
@@ -295,7 +295,7 @@ manager: angrobe
     -   **Values:** &lt;*ConfigMgrInstallationPath*>
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.
 
-        > [!NOTE]
+        > [!NOTE]   
         >  You can specify the original path or a new  path to use for the Configuration Manager installation.
 
 -   **Key name:** SDKServer
@@ -354,7 +354,7 @@ manager: angrobe
     -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
     -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.
 
-        > [!IMPORTANT]
+        > [!IMPORTANT]    
         >  You must specify the instance name and site database name if you do not use the default instance.
 
 -   **Key name:** SQLSSBPort

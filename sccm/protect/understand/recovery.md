@@ -2,7 +2,7 @@
 title: "Site recovery | Microsoft Docs"
 description: "Learn to recover your sites in System Center Configuration Manager."
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -50,8 +50,8 @@ Then select the **Recover a site** option. You have the following recovery optio
 
 -   **Recover the site server using an existing backup: ** Use this option when you have a backup of the Configuration Manager site server that was created on the site server as part of the **Backup Site Server** maintenance task before the site failure. The site is reinstalled, and the site settings are configured, based on the site that was backed up.
 -   **Reinstall the site server:** Use this option when you do not have a backup of the site server. The site server is reinstalled, and you must specify the site settings, just as you would during an initial installation.
-  -   You must use the same site code and site database name that you used when the failed site was first installed to successfully recover the site.
-  -   You can reinstall the site on a new computer that runs a new operating system
+  -   You must use the same site code and site database name that you used when the failed site was first installed.
+  -   You can reinstall the site on a new computer that runs a new operating system.
   -   The computer must use the same name, FQDN, of the original site server.   
 
 ### Site database recovery options
@@ -59,7 +59,7 @@ When you run Setup, you have the following recovery options for the site databas
 - 	**Recover the site database using a backup set:** Use this option when you have a backup of the Configuration Manager site database that was created as part of the **Backup Site Server** maintenance task run on the site before the site database failure. When you have a hierarchy, the changes that were made to the site database after the last site database backup are retrieved from the central administration site for a primary site, or from a reference primary site for a central administration site. When you recover the site database for a stand-alone primary site, you lose site changes after the last backup.
 
    When you recover the site database for a site in a hierarchy, the recovery behavior is different for a central administration site and primary site, and when the last backup is inside or outside of the SQL Server change tracking retention period. For more information, see the [Site database recovery scenarios](##site-database-recovery-scenarios) section in this topic.
-  > [!NOTE]
+  > [!NOTE]   
   > The recovery fails if you select to restore the site database by using a backup set, but the site database already exists.  
 
 -   **Create a new database for this site:** Use this option when you do not have a backup of the Configuration Manager site database. When you have a hierarchy, a new site database is created, and the data is recovered by using replicated data from the central administration site for a primary site, or a reference primary site for a central administration site. This option is not available when you are recovering a stand-alone primary site or a central administration site that does not have primary sites.
@@ -67,7 +67,7 @@ When you run Setup, you have the following recovery options for the site databas
 -   **Use a site database that has been manually recovered:** Use this option when you have already recovered the Configuration Manager site database but must complete the recovery process.
     -   Configuration Manager can recover the site database from the Configuration Manager backup maintenance task or from a site database backup that you perform by using DPM or another process. After you restore the site database by using a method outside Configuration Manager, you must run Setup and select this option to complete the site database recovery.
 
-    > [!NOTE]
+    > [!NOTE]   
     > When you use DPM to back up your site database, use the DPM procedures to restore the site database to a specified location before you continue the restore process in Configuration Manager. For more information about DPM, see the [Data Protection Manager Documentation Library]() on TechNet.    
 
     -   When you have a hierarchy, the changes that were made to the site database after the last site database backup are retrieved from the central administration site for a primary site, or from a reference primary site for a central administration site. When you recover the site database for a stand-alone primary site, you lose site changes after the last backup.     
@@ -102,7 +102,7 @@ After a site database is restored from a backup, the Configuration Manager attem
 
 
 -   **Database backup older than change tracking retention period**
-    -   **Global data:** The central administration site reinitializes the global data from the reference primary site, if you specify it. Then all other primary sites reinitialize the global data from the central administration site. If no reference site is specified, all primary sites reinitialize the global data from the central administration site (the data that was restored from backup).
+    -   **Global data:** The central administration site reinitializes the global data from the reference primary site if you specify it. Then all other primary sites reinitialize the global data from the central administration site. If no reference site is specified, all primary sites reinitialize the global data from the central administration site (the data that was restored from backup).
     -   **Site data:** The central administration site reinitializes the site data from each primary site.
 
 
@@ -136,7 +136,7 @@ From the copy of the CD.Latest folder, run the Configuration Manager Setup Wizar
 
   2.	Run Configuration Manager Setup by using the command **/script** option. For example, if you named your setup initialization file ConfigMgrUnattend.ini and saved it in the C:\Temp directory of the computer on which you are running Setup, the command would be as follows: **Setup /script C:\temp\ConfigMgrUnattend.ini**.
 
-  > [!NOTE]
+  > [!NOTE]   
   >  After you recover a central administration site, replication of some site data from child sites can fail to be established. This can include hardware inventory, software inventory, and status messages.
   >
   >  If this occurs, you must reinitialize the **ConfigMgrDRSSiteQueue** for database replication.  To do so, use **SQL Server Manager** to run the following query on the Configuration Manager site database on the central administration site:
@@ -190,7 +190,7 @@ When you have created custom Reporting Services reports, and Reporting Services 
 ### Recover content files
  The site database contains information about where the content files are stored on the site server, but the content files are not backed up or restored as part of the backup and recovery process. To fully recover content files, you must restore the content library and package source files to the original location. There are several methods for recovering your content files, but the easiest method is to restore the files from a file system backup of the site server.
 
- If you do not have a file system backup for the package source files, you have to manually copy or download them as you did originally when you first created the package. You can run the following query in SQL Server to find the package source location for all packages and applications: `SELECT * FROM v_Package`. You can identify the package source site by looking at the first three characters of the package ID. For example, if the package ID is CEN00001, the site code for the source site is CEN. When you restore the package source files, they must be restored to the same location in which they were before the failure.
+ If you do not have a file system backup for the package source files, you must manually copy or download them as you did originally when you first created the package. You can run the following query in SQL Server to find the package source location for all packages and applications: `SELECT * FROM v_Package`. You can identify the package source site by looking at the first three characters of the package ID. For example, if the package ID is CEN00001, the site code for the source site is CEN. When you restore the package source files, they must be restored to the same location in which they were before the failure.
 
  If you do not have a file system backup that contains the content library, you have the following restore options:
 
