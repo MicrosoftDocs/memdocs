@@ -34,7 +34,7 @@ Use the information in this topic to help you upgrade the server infrastructure 
 -   In-place upgrade to a later Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  
 -   In-place upgrade from:
     - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016)).
-    - Windows Server 2012 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016)).
+    - Windows Server 2012 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-or-windows-server-2012-r2-to-2016)).
     - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
     - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
 
@@ -69,7 +69,7 @@ When you upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows
 
 - 	Ensure each server that hosts a site system role continues to meet all of the [prerequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
-  After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
+- After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
 **Known issue for remote Configuration Manager consoles:**  
 After you upgrade the site server or a server that hosts an instance of the SMS_Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS_Provider:
