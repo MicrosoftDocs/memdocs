@@ -2,7 +2,7 @@
 title: "Upgrade on-premises infrastructure | Microsoft Docs"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,7 +34,6 @@ Use the information in this topic to help you upgrade the server infrastructure 
 -   In-place upgrade to a later Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  
 -   In-place upgrade from:
     - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016)).
-    - Windows Server 2012 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016)).
     - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
     - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
 
@@ -47,8 +46,8 @@ To upgrade a server, use the upgrade procedures provided by the operating system
   -  [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in the Windows Server documentation.  
   - [Upgrade and conversion options for Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths) in the Windows Server documentation.
 
-### Upgrade Windows Server 2012 or Windows Server 2012 R2 to 2016  
-When you upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016, the following apply:
+### Upgrade Windows Server 2012 R2 to 2016
+This operating system upgrade scenario has the following conditions:  
 
 **Before upgrade:**  
 - 	Remove the System Center Endpoint Protection (SCEP) client. Windows Server 2016 has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server 2016.
