@@ -88,57 +88,48 @@ Use the following procedure to configure the details for the task sequence displ
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **Advanced** tab, the following settings are available:
 
-- **Run another program first**    
+    - **Run another program first**    
     Select this check box to run another program (in another package) before the task sequence is run. By default, this check box is cleared. The program that you specify to run first does not need to be advertised separately.
 
-    > [!IMPORTANT] 
-    This setting applies only to task sequences that run in the full operating system. Configuration Manager ignores this setting if the task sequence is started by using PXE or boot media.
+        > [!IMPORTANT]     
+        This setting applies only to task sequences that run in the full operating system. Configuration Manager ignores this setting if the task sequence is started by using PXE or boot media.
 
-- **Package**     
-    When you select **Run another program first**, enter or browse for the package that contains the program that must run before this task sequence.
+    - **Package**     
+        When you select **Run another program first**, enter or browse for the package that contains the program that must run before this task sequence.
 
-- **Program**     
-When you select **Run another program first**, select the program that must run before this task sequence from the **Program** drop-down list.
+    - **Program**     
+    When you select **Run another program first**, select the program that must run before this task sequence from the **Program** drop-down list.
 
-    > [!NOTE]    
-    > If the selected program fails to run on a client, the task sequence will not be run.
-    > If the selected program runs successfully, it will not be run again, even if the task sequence is rerun on the same client.
+        > [!NOTE]    
+        > If the selected program fails to run on a client, the task sequence will not be run. If the selected program runs successfully, it will not be run again, even if the task sequence is rerun on the same client.
  
-- **Disable this task sequence on computers where it is deployed**    
-If you select this option, all deployments that contain this task sequence are temporarily disabled. The task sequence is removed from the list of advertisements available to run and will not run until it has been re-enabled. By default, this option is cleared.
+    - **Disable this task sequence on computers where it is deployed**    
+    If you select this option, all deployments that contain this task sequence are temporarily disabled. The task sequence is removed from the list of advertisements available to run and will not run until it has been re-enabled. By default, this option is cleared.
 
-Maximum run time 
-A whole number, greater than zero, that represents the time (in minutes) required to run the task sequence on the destination computer. 
+    - **Maximum allowed run time**    
+    Specifies the maximum time (in minutes) that is expected to run the task sequence on the destination computer. You must use a whole number equal to or greater than zero. By default, this value is set to 120 minutes.
 
-
-- **Maximum allowed run time**    
-Specifies the maximum time (in minutes) that is expected to run the task sequence on the destination computer. You must use a whole number equal to or greater than zero. By default, this value is set to 120 minutes.
-
-    > [!IMPORTANT]    
-    > If you are using maintenance windows for the collection on which this task sequence is run, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the maximum run time is set to **0**, the task sequence will start during the maintenance window and continue to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (that is, not set to **0**) that exceeds the length of any available maintenance window, then that task sequence will not be run. For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+        > [!IMPORTANT]    
+        > If you are using maintenance windows for the collection on which this task sequence is run, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the maximum run time is set to **0**, the task sequence will start during the maintenance window and continue to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (that is, not set to **0**) that exceeds the length of any available maintenance window, then that task sequence will not be run. For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
  
-    It is not recommended that you set this value to **0** because this value is used for two important purposes:
-    - To monitor the results of the program.
-    - To determine if a task sequence will be started when maintenance windows have been defined on the computer.
-
-    If the value is set as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence will start as long as the countdown duration does not exceed the maintenance window value.
+        If the value is set as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence will start as long as the countdown duration does not exceed the maintenance window value.
 
     > [!NOTE]    
     > If the maximum run time is reached, Configuration Manager will stop the task sequence if it is set to run with administrative rights and the allow users to interact with this program setting is not selected. If the task sequence itself is not stopped, Configuration Manager stops monitoring the task sequence after the maximum allowed run time is reached. 
 
-- **Use a boot image**   
-    Enable this option to use the selected boot image when the task sequence is run. 
+    - **Use a boot image**   
+        Enable this option to use the selected boot image when the task sequence is run. 
 
-    Click **Browse** to select a different boot image. Clear this option to disable the use of the selected boot image when the task sequence is run.
+        Click **Browse** to select a different boot image. Clear this option to disable the use of the selected boot image when the task sequence is run.
 
-- **This task sequence can run on any platform**     
-    If you select this option, Configuration Manager does not check the platform type of the destination computer when the task sequence is deployed. This option is selected by default.
+    - **This task sequence can run on any platform**     
+        If you select this option, Configuration Manager does not check the platform type of the destination computer when the task sequence is deployed. This option is selected by default.
 
-- **This task sequence can only run on the specified client platforms**    
-    This option specifies the processors, operating systems, and service packs on which this task sequence can run. When you select this option, at least one platform must also be selected from the list. By default, no platforms are selected. Configuration Manager uses this information when is evaluates which destination computers in a collection receive the deployed task sequence.
+    - **This task sequence can only run on the specified client platforms**    
+        This option specifies the processors, operating systems, and service packs on which this task sequence can run. When you select this option, at least one platform must also be selected from the list. By default, no platforms are selected. Configuration Manager uses this information when is evaluates which destination computers in a collection receive the deployed task sequence.
 
-    > [!NOTE]    
-    > When a task sequence is run from boot media or by PXE boot, this option is ignored and the task sequence runs as though the option **This program can run on any platform** is selected.
+        > [!NOTE]    
+        > When a task sequence is run from boot media or by PXE boot, this option is ignored and the task sequence runs as though the option **This program can run on any platform** is selected.
 
 ## Configure high-impact task sequence settings
 Beginning in Configuration Manager version 1702, you can set a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
