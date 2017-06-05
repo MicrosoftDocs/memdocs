@@ -143,7 +143,7 @@ When you have modified predefined or created custom Reporting Services reports, 
 
  For more information about backing up your custom reports in Reporting Services, see [Backup and Restore Operations for a Reporting Services Installation](https://technet.microsoft.com/library/ms155814\(v=sql.120\).aspx) in the SQL Server 2014 Books Online.  
 
-### Backup content files  
+### Back up content files  
 The content library in Configuration Manager is the location where all content files are stored for software updates, applications, operating system deployment, and so on. The content library is located on the site server and on each distribution point. The Backup Site Server maintenance task does not include a backup for the content library or the package source files. When a site server fails, the information about the content library files is restored to the site database, but you must restore the content library and package source files on the site server.  
 
 -   **Content library**: The content library must be restored before you can redistribute content to distribution points. When you start content redistribution, Configuration Manager copies the files from the content library on the site server to the distribution points. The content library for the site server is in the SCCMContentLib folder, which is typically located on the drive with the most free disk space at the time when the site was installed.  
