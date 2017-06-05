@@ -48,7 +48,7 @@ Start Setup from a copy of the **CD.Latest** folder that you created outside of 
 
 Then select the **Recover a site** option. You have the following recovery options for the failed site server:
 
--   **Recover the site server using an existing backup: ** Use this option when you have a backup of the Configuration Manager site server that was created on the site server as part of the **Backup Site Server** maintenance task before the site failure. The site is reinstalled, and the site settings are configured, based on the site that was backed up.
+-   **Recover the site server using an existing backup:** Use this option when you have a backup of the Configuration Manager site server that was created on the site server as part of the **Backup Site Server** maintenance task before the site failure. The site is reinstalled, and the site settings are configured, based on the site that was backed up.
 -   **Reinstall the site server:** Use this option when you do not have a backup of the site server. The site server is reinstalled, and you must specify the site settings, just as you would during an initial installation.
   -   You must use the same site code and site database name that you used when the failed site was first installed.
   -   You can reinstall the site on a new computer that runs a new operating system.
