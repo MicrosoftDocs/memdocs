@@ -47,7 +47,8 @@ To upgrade a server, use the upgrade procedures provided by the operating system
   - [Upgrade and conversion options for Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths) in the Windows Server documentation.
 
 ### Upgrade Windows Server 2012 R2 to 2016
-This operating system upgrade scenario has the following conditions:  
+This operating system upgrade scenario has the following conditions:
+
 
 **Before upgrade:**  
 - 	Remove the System Center Endpoint Protection (SCEP) client. Windows Server 2016 has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server 2016.
