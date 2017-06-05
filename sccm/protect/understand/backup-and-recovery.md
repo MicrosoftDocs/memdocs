@@ -17,13 +17,13 @@ ms.author: brenduns
 manager: angrobe
 ---
 
-# Backup a Configuration Manager site
+# Back up a Configuration Manager site
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.  
 
-The sections in this topic can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](/sccm/protect/understand/recovery).  
+The sections in this topic can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](/sccm/protect/understand/recover-sites).  
 
 ## Considerations before creating a backup  
 -   **If you use a SQL Server Always On availability group to host the site database:** Modify your backup and recovery plans as described in [Prepare to use SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).
@@ -38,7 +38,7 @@ You can use System Center 2012 Data Protection Manager (DPM) to back up your sit
 You must create a new protection group in DPM for the site database computer. On the **Select Group Members** page of the Create New Protection Group Wizard, you select the SMS Writer service from the data source list, and then select the site database as an appropriate member. For more information about using DPM to back up your site database, see the [Data Protection Manager Documentation Library](http://go.microsoft.com/fwlink/?LinkId=272772) on TechNet.  
 
 > [!IMPORTANT]  
->  Configuration Manager does not support DPM backup for a SQL Server cluster that uses a named instance, but does support DPM backup on a SQL Server cluster that uses the default instance of SQL Server.  
+>  Configuration Manager does not support DPM back up for a SQL Server cluster that uses a named instance, but does support DPM back up on a SQL Server cluster that uses the default instance of SQL Server.  
 
  After you restore the site database, follow the steps in Setup to recover the site. Select the **Use a site database that has been manually recovered** recovery option to use the site database that you recovered with Data Protection Manager.  
 
@@ -51,7 +51,7 @@ You can automate backup for Configuration Manager sites by scheduling the predef
 -   Backs up specific folders and files
 -   Backs up the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-Plan to run the default site backup task at a minimum of every 5 days. This is because Configuration Manager uses a *SQL Server change tracking retention period* of 5 days.  (See [SQL Server change tracking retention period](/sccm/protect/understand/recovery#bkmk_SQLretention) in the Recover sites topic.)
+Plan to run the default site backup task at a minimum of every 5 days. This is because Configuration Manager uses a *SQL Server change tracking retention period* of 5 days.  (See [SQL Server change tracking retention period](/sccm/protect/understand/recover-sites#bkmk_SQLretention) in the Recover sites topic.)
 
 To simplify the backup process, you can create an **AfterBackup.bat** file to perform post-backup actions automatically after the backup maintenance task runs successfully. The AfterBackup.bat file is usually used to archive the backup snapshot to a secure location. You can also use the AfterBackup.bat file to copy files to your backup folder and start other, supplemental backup tasks.  
 
@@ -201,4 +201,4 @@ The SMS Writer service must run under the Local System account.
 The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/p/?LinkId=241968) topic in the Windows Server TechCenter.  
 
 ## Next steps
-After you create a backup, practice [site recovery](/sccm/protect/understand/recovery) with that backup. This can help you become familiar with the recovery process before you need to rely on it and can help confirm the backup was successful for its intended purpose.  
+After you create a backup, practice [site recovery](/sccm/protect/understand/recover-sites) with that backup. This can help you become familiar with the recovery process before you need to rely on it and can help confirm the backup was successful for its intended purpose.  
