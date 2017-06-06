@@ -99,6 +99,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
 ###  [Capabilities in 1705](get-started/capabilities-in-technical-preview-1705.md)
 ###  [Capabilities in 1704](get-started/capabilities-in-technical-preview-1704.md)
 ###  [Capabilities in 1703](get-started/capabilities-in-technical-preview-1703.md)
@@ -181,7 +182,7 @@
 #### [Boundary groups](servers/deploy/configure/boundary-groups.md)
 #### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
 ###  [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
-###  [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md) 
+###  [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)

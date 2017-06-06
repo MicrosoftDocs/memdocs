@@ -60,3 +60,6 @@ This release includes improvements for how software update points work with boun
   -   Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.
 
 For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
+
+
+## Feature 2
