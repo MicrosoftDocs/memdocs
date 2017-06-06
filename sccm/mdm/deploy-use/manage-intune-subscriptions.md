@@ -2,7 +2,7 @@
 title: "Manage an Intune subscription associated with System Center Configuration Manager | Microsoft Docs"
 description: "Manage an Intune subscription associated with System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,5 +49,4 @@ If you add a Microsoft Intune (either a trial subscription or paid subscription)
 You can now create a new service connection point, add a new Intune subscription to Configuration Manager, and set Configuration Manager as the MDM Authority.
 
 ## How to change MDM authority to Intune
-
-Beginning in version 1610, you can to switch the MDM authority from Configuration Manager to Intune. Information about this feature is coming soon.
+Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority).
