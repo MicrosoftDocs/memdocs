@@ -2,7 +2,7 @@
 title: "Upgrade on-premises infrastructure | Microsoft Docs"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -46,8 +46,9 @@ To upgrade a server, use the upgrade procedures provided by the operating system
   -  [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in the Windows Server documentation.  
   - [Upgrade and conversion options for Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths) in the Windows Server documentation.
 
-### Upgrade Windows Server 2012 R2 to 2016  
+### Upgrade Windows Server 2012 R2 to 2016
 This operating system upgrade scenario has the following conditions:
+
 
 **Before upgrade:**  
 - 	Remove the System Center Endpoint Protection (SCEP) client. Windows Server 2016 has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server 2016.
@@ -66,7 +67,7 @@ This operating system upgrade scenario has the following conditions:
   - 	Application Catalog website point
 
 
-- 	Ensure each server that hosts a site system role continues to meet all of the [prequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
+- 	Ensure each server that hosts a site system role continues to meet all of the [prerequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
   After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
@@ -78,7 +79,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
 3. Expand the tree below Root, select the **SMS** node, and then choose **Security**.  Ensure the **SMS Admins** group has the following permissions:
   - 	Enable Account
   - 	Remote Enable
-4. On the **Security tab** below the **SMS** node, select the **site_**&lt;*sitecode*> node, and then choose **Security**. Ensure the **SMS Admins** group has the following permissions:
+4. On the **Security tab** below the **SMS** node, select the **site_&lt;sitecode**> node, and then choose **Security**. Ensure the **SMS Admins** group has the following permissions:
   -   Execute Methods
   -   Provider Write
   -   Enable Account
@@ -105,7 +106,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
     - 	Application Catalog website point
 
 
-  - 	Ensure each server that hosts a site system role continues to meet all of the [prequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
+  - 	Ensure each server that hosts a site system role continues to meet all of the [prerequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
   After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 

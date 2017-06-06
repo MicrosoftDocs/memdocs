@@ -2,7 +2,7 @@
 title: "Technical Preview for Configuration Manager | Microsoft Docs"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/01/2017
+ms.date: 06/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -105,9 +105,16 @@ You can install a baseline version for up to 1 year after its release. However, 
 
 
 
-##  <a name="bkmk_tpCaps"></a> Capabilities delivered in technical previews  
+##  <a name="bkmk_tpCaps"></a> Capabilities delivered in the most recent technical preview  
  The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
+ |Capability |Technical Preview version |Current Branch version|  
+ |----------------|---------------------|--------------------|
+ |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
+
+## Capabilities delivered in previous technical previews
+ When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
+ 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Not added](media/Red_X.gif)|
@@ -223,7 +230,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Improvements to remote control|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
  |Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
 -->
- When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from this table.
+
 
 
 ## See Also  
