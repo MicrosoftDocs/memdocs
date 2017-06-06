@@ -111,10 +111,11 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
+ |Site server role high availability|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)
 
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
- 
+
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Not added](media/Red_X.gif)|
