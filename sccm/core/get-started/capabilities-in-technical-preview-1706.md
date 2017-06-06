@@ -22,7 +22,7 @@ manager: angrobe
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
-<!--  Known Issues Template
+<!--  Known Issues Template   
 **Known Issues in this Technical Preview:**
 -   **Issue Name**. Details
     Workaround details.
