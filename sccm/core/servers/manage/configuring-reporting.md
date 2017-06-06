@@ -70,8 +70,11 @@ Before you can create, modify, and run reports in the System Center Configuratio
 > [!IMPORTANT]  
 >  When selecting a site to install the reporting services point, keep in mind that users who will access the reports must be in the same security scope as the site where the reporting services point is installed.  
 
-> [!IMPORTANT]  
+> [!NOTE]  
 >  After you install a reporting services point on a site system, do not change the URL for the report server. For example, if you create the reporting services point, and then in Reporting Services Configuration Manager you modify the URL for the report server, the Configuration Manager console will continue to use the old URL and you will be unable to run, edit, or create reports from the console. When you must change the URL report server, remove the reporting services point, change the URL, and then reinstall the reporting services point.  
+
+> [!IMPORTANT]    
+> When you install a reporting services point, you must specify a Reporting Services Point Account. Later, when users from a different domain try to run a report, the report will fail to run unless there is a two-way trust established between the domains.
 
  Use the following procedure to install the reporting services point.  
 
@@ -117,7 +120,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
 
     -   **Reporting Services Point Account**: Click **Set**, and then select an account to use when SQL Server Reporting Services on the reporting services point connects to the Configuration Manager site database to retrieve the data that are displayed in a report. Select **Existing account** to specify a Windows user account that has previously been configured as a Configuration Manager account, or select **New account** to specify a Windows user account that is not currently configured as a Configuration Manager account. Configuration Manager automatically grants the specified user access to the site database. The user is displayed in the **Accounts** subfolder of the **Security** node in the **Administration** workspace with the **ConfigMgr Reporting Services Point** account name.  
 
-         The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**, and have the **Read tokenGroupsGlobalAndUniversal** permission set to **Allow**.  
+         The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**, and have the **Read tokenGroupsGlobalAndUniversal** permission set to **Allow**. There must be a two-way trust established for users from a different domain than that of the Reporting Servicies Point Account to successfully run reports.
 
          The specified Windows user account and password are encrypted and stored in the Reporting Services database. Reporting Services retrieves the data for reports from the site database by using this account and password.  
 
