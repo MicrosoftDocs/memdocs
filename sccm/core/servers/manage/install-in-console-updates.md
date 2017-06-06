@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -91,7 +91,9 @@ Review the applicable update checklist for actions to take before you start the 
 
 - Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md).
 
-###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
+<!-- Removed as update guidance 6/6/2017.
+
+### Step 2: Test the database upgrade before installing an update  
 The information in this step applies only when you are installing an *update* for a System Center Configuration Manager site. If you are *upgrading* a System Center 2012 Configuration Manager site to System Center Configuration Manager, see [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
 
 Before you install a new update in your hierarchy, like update 1610, you can test the upgrade of your site database. The name of the command-line option that you use to test installing an update to a backup of your site database is **testdbupgrade**.  
@@ -125,8 +127,9 @@ If installing an update fails, you should not need to perform a site recovery. I
 
     > [!NOTE]  
     >  It is not supported to restore the copy of the site database that you use for the test upgrade for use as a site database at any site.  
+-->
 
-###  <a name="bkmk_step3"></a> Step 3: Run the prerequisite checker before installing an update  
+###  Step 2: Run the prerequisite checker before installing an update  
 Before you install an update, consider running the prerequisite check for that update. If you run the prerequisite before installing an update:  
 
 -   The update files are replicated to other sites in advance of installing the update.  
