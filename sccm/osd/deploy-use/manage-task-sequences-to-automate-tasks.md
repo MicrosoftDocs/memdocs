@@ -396,19 +396,22 @@ The following notification message will be displayed when the end-user opens the
  After you import the task sequence, edit the task sequence to specify any passwords that were in the original task sequence. For security reasons, passwords are not exported.  
 
 ##  <a name="BKMK_CreateTSVariables"></a> Create task sequence variables for computers and collections  
- You can define custom task sequence variables for computers and collections. Variables that are defined for a computer are referred to as per-computer task sequence variables. Variables defined for a collection are referred to as per-collection task sequence variables. If there is a conflict, per-computer variables take precedence over per-collection variables. This means that task sequence variables that are assigned to a specific computer automatically have a higher priority than variables that are assigned to the collection that contains the computer.  
+You can define custom task sequence variables for computers and collections. Variables that are defined for a computer are referred to as per-computer task sequence variables. Variables defined for a collection are referred to as per-collection task sequence variables. If there is a conflict, per-computer variables take precedence over per-collection variables. This means that task sequence variables that are assigned to a specific computer automatically have a higher priority than variables that are assigned to the collection that contains the computer.  
 
- For example, if collection ABC has a variable assigned to it and computer XYZ, which is a member of collection ABC, has a variable with the same name assigned to it, the variable that is assigned to computer XYZ has higher priority than that of the variable that is assigned to collection ABC.  
+For example, if collection ABC has a variable assigned to it and computer XYZ, which is a member of collection ABC, has a variable with the same name assigned to it, the variable that is assigned to computer XYZ has higher priority than that of the variable that is assigned to collection ABC.  
 
- You can hide per-computer and per-collection variables so that they are not visible in the Configuration Manager console. If you no longer want these variables to be hidden, you must delete them and redefine them without selecting the option to hide them. When you use the option **Do not display this value in the Configuration Manager console**, the value of the variable is not displayed, but can still be used by the task sequence when it runs.  
+You can hide per-computer and per-collection variables so that they are not visible in the Configuration Manager console. If you no longer want these variables to be hidden, you must delete them and redefine them without selecting the option to hide them. When you use the option **Do not display this value in the Configuration Manager console**, the value of the variable is not displayed in the console, but can still be used by the task sequence when it runs.  
 
- You can manage per-computer variables at a primary site or at a central administration site. Configuration Manager does not support more than 1,000 assigned variables for a computer.  
+> [!WARNING]    
+> The **Do not display this value in the Configuration Manager console** setting applies to the Configuration Manager console, but the values for the variables are still displayed in the task sequence log file (SMSTS.LOG). 
 
-> [!WARNING]  
+You can manage per-computer variables at a primary site or at a central administration site. Configuration Manager does not support more than 1,000 assigned variables for a computer.  
+
+> [!IMPORTANT]  
 >  When you use per-collection variables for task sequences, consider the following:  
 >   
->  -   Because changes to collections are always replicated throughout the hierarchy, any changes that you make to collection variables will apply to not just members of the current site but to all members of the collection throughout the hierarchy.  
-> -   When you delete a collection, this action also deletes the task sequence variables that are configured for the collection.  
+> - Because changes to collections are always replicated throughout the hierarchy, any changes that you make to collection variables will apply to not just members of the current site but to all members of the collection throughout the hierarchy.  
+> - When you delete a collection, this action also deletes the task sequence variables that are configured for the collection.  
 
  Use the following procedures to create task sequence variables for a computer or collection.  
 
