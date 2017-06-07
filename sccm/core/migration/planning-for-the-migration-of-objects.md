@@ -138,7 +138,7 @@ You can migrate the following operating system deployment objects from a support
     > [!NOTE]  
     >  When you migrate a task sequence, Configuration Manager might migrate objects that are not required in the destination hierarchy. These objects include boot images and Configuration Manager 2007 client installation packages.  
 
--   Drivers and driver packages.  
+-   Drivers and driver packages. When you migrate driver packages, the computer account of the SMS Provider in the destination hierarchy must have full control to the package source.
 
 ##  <a name="Plan_Migrate_Compliance_settings"></a> Plan to migrate desired configuration management  
 You can migrate configuration items and configuration baselines.  
