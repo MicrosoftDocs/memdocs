@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: 10
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Manage task sequences to automate tasks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage task sequences to automate tasks in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md).  
 
  Use the following sections to manage task sequences.
@@ -68,12 +73,70 @@ Beginning in Configuration Manager version 1702, you can return to a previous pa
 
  For a list of the available task sequence steps, see [Task sequence steps](../understand/task-sequence-steps.md).  
 
+## Configure Software Center properties
+Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **General** tab, the following settings for Software Center are available:
+  - **Restart required**: Lets the user know whether a restart is required during the installation.
+  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
+
+## Configure advanced task sequence settings
+Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **Advanced** tab, the following settings are available:
+
+    - **Run another program first**    
+    Select this check box to run another program (in another package) before the task sequence is run. By default, this check box is cleared. The program that you specify to run first does not need to be advertised separately.
+
+        > [!IMPORTANT]     
+        This setting applies only to task sequences that run in the full operating system. Configuration Manager ignores this setting if the task sequence is started by using PXE or boot media.
+
+    - **Package**     
+        When you select **Run another program first**, enter or browse for the package that contains the program that must run before this task sequence.
+
+    - **Program**     
+    When you select **Run another program first**, select the program that must run before this task sequence from the **Program** drop-down list.
+
+        > [!NOTE]    
+        > If the selected program fails to run on a client, the task sequence will not be run. If the selected program runs successfully, it will not be run again, even if the task sequence is rerun on the same client.
+ 
+    - **Disable this task sequence on computers where it is deployed**    
+    If you select this option, all deployments that contain this task sequence are temporarily disabled. The task sequence is removed from the list of advertisements available to run and will not run until it has been re-enabled. By default, this option is cleared.
+
+    - **Maximum allowed run time**    
+    Specifies the maximum time (in minutes) that is expected to run the task sequence on the destination computer. You must use a whole number equal to or greater than zero. By default, this value is set to 120 minutes.
+
+        > [!IMPORTANT]    
+        > If you are using maintenance windows for the collection on which this task sequence is run, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the maximum run time is set to **0**, the task sequence will start during the maintenance window and continue to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (that is, not set to **0**) that exceeds the length of any available maintenance window, then that task sequence will not be run. For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+ 
+        If the value is set as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence will start as long as the countdown duration does not exceed the maintenance window value.
+
+    > [!NOTE]    
+    > If the maximum run time is reached, Configuration Manager will stop the task sequence if it is set to run with administrative rights and the allow users to interact with this program setting is not selected. If the task sequence itself is not stopped, Configuration Manager stops monitoring the task sequence after the maximum allowed run time is reached. 
+
+    - **Use a boot image**   
+        Enable this option to use the selected boot image when the task sequence is run. 
+
+        Click **Browse** to select a different boot image. Clear this option to disable the use of the selected boot image when the task sequence is run.
+
+    - **This task sequence can run on any platform**     
+        If you select this option, Configuration Manager does not check the platform type of the destination computer when the task sequence is deployed. This option is selected by default.
+
+    - **This task sequence can only run on the specified client platforms**    
+        This option specifies the processors, operating systems, and service packs on which this task sequence can run. When you select this option, at least one platform must also be selected from the list. By default, no platforms are selected. Configuration Manager uses this information when is evaluates which destination computers in a collection receive the deployed task sequence.
+
+        > [!NOTE]    
+        > When a task sequence is run from boot media or by PXE boot, this option is ignored and the task sequence runs as though the option **This program can run on any platform** is selected.
+
 ## Configure high-impact task sequence settings
 Beginning in Configuration Manager version 1702, you can set a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
 
 ### Set a task sequence as a high-impact task sequence
 Use the following procedure to set a task sequence as high-impact.
-> [!NOTE]
+> [!NOTE]    
 > Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
@@ -85,7 +148,7 @@ Use the following procedure to create a custom notification for high-impact depl
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **User Notification** tab, select **Use custom text**.
->  [!NOTE]
+>  [!NOTE]    
 >  You can only set user notification text when the **This is a high-impact task sequence** is selected.
 
 4. Configure the following settings (max of 255 characters for each text box):
@@ -96,23 +159,15 @@ Use the following procedure to create a custom notification for high-impact depl
   - 1st text box: Specifies the main body of text, typically containing instructions for the user. For example, in the default user notification, this section contains something like "Upgrading the operating system will take time and your computer might restart several times."
   - 2nd text box: Specifies the bold text under the main body of text. For example, in the default user notification, this section contains something like "This in-place upgrade installs the new operating system and automatically migrates your apps, data, and settings."
   - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."   
+    
+Let's say you configure the following custom notification in properties.
 
-  Let's say you configure the following custom notification in properties.
+![Custom notification for a task sequence](..\media\user-notification.png)
 
-    ![Custom notification for a task sequence](..\media\user-notification.png)
+The following notification message will be displayed when the end-user opens the installation from Software Center.
 
-    The following notification message will be displayed when the end-user opens the installation from Software Center.
+![Custom notification for a task sequence](..\media\user-notification-enduser.png)
 
-    ![Custom notification for a task sequence](..\media\user-notification-enduser.png)
-
-### Configure Software Center properties
-Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
-1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
-2. Select the task sequence to edit, and click **Properties**.
-3. On the **General** tab, the following settings for Software Center are available:
-  - **Restart required**: Lets the user know whether a restart is required during the installation.
-  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
-  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
 
 ##  <a name="BKMK_DistributeTS"></a> Distribute content referenced by a task sequence  
  Before clients run a task sequence that references content, you must distribute that content to distribution points. At any time, you can select the task sequence and distribute its content to build a new list of reference packages for distribution. If you make changes to the task sequence with updated content, you must redistribute the content before it is available to clients. Use the following procedure to distribute the content that is referenced by a task sequence.  
@@ -386,7 +441,7 @@ Use the following procedure to configure the details for the task sequence displ
 6.  After you have added all the variables to the collection, click **OK**.  
 
 ##  <a name="BKMK_AdditionalActionsTS"></a> Additional actions to manage task sequences  
- You can manage task sequences by using additional actions when you select the task sequence by using the following procedure.  
+ You can manage task sequences by using additional actions when you select a task sequence.  
 
 #### To select a task sequence to manage  
 
@@ -405,7 +460,6 @@ Use the following procedure to configure the details for the task sequence displ
 |**Enable**|Enables the task sequence so that it can be run. You do not need to redeploy a deployed task sequence after it is enabled.|  
 |**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
 |**Move**|Moves the selected task sequence to another folder.|  
-|**Properties**|Opens the **Properties** dialog box for the selected task sequence. Use this dialog box to change the behavior of the task sequence object. However, you cannot change the steps of the task sequence by using this dialog box.|  
 
 ## Next steps
 [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md)
