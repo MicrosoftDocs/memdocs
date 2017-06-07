@@ -30,10 +30,10 @@ Stand-alone media in Configuration Manager contains everything that is required 
 
 -   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)  
 
- Stand-alone media includes the  task sequence that automates the steps to install the operating system and all other required content, including the boot image, operating system image, and device drivers. Because everything to deploy the operating system is stored on the stand-alone media, the disk space required for stand-alone media is significantly larger than the disk space required for other types of media. When you create stand-alone media on a central administration site, the client will retrieve its assigned site code from active directory. Stand-alone media created at child sites will automatically assign to the client the site code for that site.  
+Stand-alone media includes the task sequence that automates the steps to install the operating system and all other required content, including the boot image, operating system image, and device drivers. Because everything to deploy the operating system is stored on the stand-alone media, the disk space required for stand-alone media is significantly larger than the disk space required for other types of media. When you create stand-alone media on a central administration site, the client will retrieve its assigned site code from active directory. Stand-alone media created at child sites will automatically assign to the client the site code for that site.  
 
 ##  <a name="BKMK_CreateStandAloneMedia"></a> Create stand-alone media  
- Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that the following conditions are met:  
+Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that the following conditions are met:  
 
 ### Create a task sequence to deploy an operating system
 As part of the stand-alone media, you must specify the task sequence to deploy an operating system. For the steps to create a new task sequence, see [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).
