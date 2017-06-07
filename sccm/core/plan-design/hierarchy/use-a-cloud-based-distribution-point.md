@@ -38,7 +38,7 @@ When you use a cloud-based distribution, you:
 
 Based on the thresholds that you configure, Configuration Manager can raise alerts that warn you when the combined amount of content that you have stored on the distribution point is near the specified storage amount, or when transfers of data by clients are close to the thresholds that you defined.  
 
-Cloud-based distribution points support several features tht are also offered by on-premises distribution points:  
+Cloud-based distribution points support several features that are also offered by on-premises distribution points:  
 
 -   You manage cloud-based distribution points individually or as members of distribution point groups.  
 
