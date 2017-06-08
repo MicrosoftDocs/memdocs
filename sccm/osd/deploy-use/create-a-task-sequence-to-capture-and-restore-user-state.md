@@ -2,7 +2,7 @@
 title: Create a task sequence to capture and restore user state | Microsoft Docs
 description: "Use System Center Configuration Manager task sequences to capture and restore the user-state data in operating system deployment scenarios."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Create a task sequence to capture and restore user state in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create a task sequence to capture and restore user state in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can use System Center Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. Depending on the type of task sequence you create, the capture and restore steps might be automatically added as part of the task sequence. In other scenarios, you might need to manually add the capture and restore steps to the task sequence. This topic provides the steps that you must add to an existing task sequence to capture and restore user state data.  
 
 ##  <a name="BKMK_CaptureRestoreUserState"></a> How to capture and restore user state data  
@@ -71,7 +76,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
         -   Click **Capture all user profiles with standard options** to capture all user profiles.  
 
-        -   Click **Customize user profile capture** to specify individual user profiles to capture.  
+        -   Click **Customize user profile capture** to specify individual user profiles to capture. Select the configuration file (miguser.xml, migsys.xml, or migapp.xml) that contains the user profile information. You cannot use the config.xml configuration file here, but you can manually add it to the USMT command line using the OSDMigrageAdditionalCaptureOptions and OSDMigrateAdditionalRestoreOptions variables.
 
     -   Select **Enable verbose logging** to specify how much information to write to log files if an error occurs.  
 
@@ -124,7 +129,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
         -   Click **Restore all captured user profiles with standard options** to restore all user profiles.  
 
-        -   Click **Customize user profile capture** to restore individual user profiles.  
+        -   Click **Customize user profile restore** to restore individual user profiles. Select the configuration file (miguser.xml, migsys.xml, or migapp.xml) that contains the user profile information. You cannot use the config.xml configuration file here, but you can manually add it to the USMT command line using the OSDMigrageAdditionalCaptureOptions and OSDMigrateAdditionalRestoreOptions variables.
 
     -   Select **Restore local computer user profiles** to provide a new password for the restored profiles. You cannot migrate passwords for local profiles.  
 
