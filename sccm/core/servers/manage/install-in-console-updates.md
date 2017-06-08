@@ -246,6 +246,8 @@ To monitor the update installation on a secondary site, select the secondary sit
 After a secondary site is successfully updated, if the status in the console does not refresh or suggests the update has failed, you can use the **Retry installation** option. This option does not reinstall the update for a secondary site that did successfully install the update, but will force the console to update the status.
 
 ### Post Installation tasks
+Beginning with version 1610, you can view information about post installation tasks.
+
 When a site installs an update, there are several tasks that cannot start until after the update completes installation on the site server. Following is a list of the post installation tasks that are critical for site and hierarchy operations, and therefore are actively monitored. Some additional tasks are not directly monitored, like the reinstallation of site system roles. You can view the status of the critical post installation tasks when you select **Post Installation** task while monitoring the update installation for a site.
 
 Not all tasks complete immediately. Some, like turning on new features, require each site to complete the installation of the update on the site server before the task can start. Therefore, some new functionality you might expect will be delayed until these tasks complete.
