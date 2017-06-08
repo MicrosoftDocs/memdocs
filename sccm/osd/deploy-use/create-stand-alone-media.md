@@ -2,7 +2,7 @@
 title: "Create stand-alone media with System Center Configuration Manager | Microsoft Docs"
 description: "Use stand-alone media to deploy the operating system on a computer without a connection to a Configuration Manager site or the network."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,10 +30,10 @@ Stand-alone media in Configuration Manager contains everything that is required 
 
 -   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)  
 
- Stand-alone media includes the  task sequence that automates the steps to install the operating system and all other required content, including the boot image, operating system image, and device drivers. Because everything to deploy the operating system is stored on the stand-alone media, the disk space required for stand-alone media is significantly larger than the disk space required for other types of media. When you create stand-alone media on a central administration site, the client will retrieve its assigned site code from active directory. Stand-alone media created at child sites will automatically assign to the client the site code for that site.  
+Stand-alone media includes the task sequence that automates the steps to install the operating system and all other required content, including the boot image, operating system image, and device drivers. Because everything to deploy the operating system is stored on the stand-alone media, the disk space required for stand-alone media is significantly larger than the disk space required for other types of media. When you create stand-alone media on a central administration site, the client will retrieve its assigned site code from active directory. Stand-alone media created at child sites will automatically assign to the client the site code for that site.  
 
 ##  <a name="BKMK_CreateStandAloneMedia"></a> Create stand-alone media  
- Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that the following conditions are met:  
+Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that the following conditions are met:  
 
 ### Create a task sequence to deploy an operating system
 As part of the stand-alone media, you must specify the task sequence to deploy an operating system. For the steps to create a new task sequence, see [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).
@@ -48,10 +48,19 @@ The following actions are not supported for stand-alone media:
 - Dynamic package installs via the Install Packages task.
 - Dynamic application installs via the Install Application task.
 
-If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:<br /><br /> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"<br /><br /> For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:<br /><br />
-```
-WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
-```
+> [!NOTE]    
+> If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:    
+>     
+> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"    
+> 
+> For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:    
+>    
+> *WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE*
+
+
+> [!IMPORTANT]    
+> When you use the **Setup Windows and ConfigMgr** task sequence step in the operating system task sequence, do not select the **Use pre-production client package when available** setting for stand-alone media. If this setting is selected and the pre-production client package is available, it will be used in the stand-alone media. This is not supported. For details about this setting, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+
 
 ### Distribute all content associated with the task sequence
 You must distribute all content that is required by the task sequence the  to at least one distribution point. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For details, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
