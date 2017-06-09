@@ -3,7 +3,9 @@
 title: Manually deploy software updates | Microsoft Docs
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
 keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: dougeby
+ms.author: dougeby
+manager: angrobe
 ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
@@ -14,7 +16,10 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 ---
 
-#  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  *Applies to: System Center Configuration Manager (Current Branch)*
+#  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  A manual software update deployment is the process of selecting software updates from the Configuration Manager console and manually initiating the deployment process. Or, you can add selected software updates to an update group, and then manually deploy the update group. You will typically use manual deployment to get your client devices up-to-date with required software updates before you create ADRs that will manage ongoing monthly software update deployments. You will also use a manual method to deploy out-of-band software updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
  The following sections provide the steps to manually deploy software updates.  
@@ -248,15 +253,15 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 10. On the Download Settings page, configure the following settings:  
 
-    -   Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
+    - Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
 
-    -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
+    - Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
-    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Specify whether to have clients that are connected to the intranet download software updates from Microsoft Update if software updates are not available on distribution points.  
+    - **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates**: Select this setting to have clients that are connected to the intranet download software updates from Microsoft Update if software updates are not available on distribution points. Internet-based clients can always go to Microsoft Update for software updates content.
 
-    -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
+    - Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
     > [!NOTE]  
     >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, the deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
