@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 06/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -28,9 +28,9 @@ Only updates that apply to your infrastructure and version are downloaded and ma
 -   In **offline mode**, the service connection point does not connect to the Microsoft cloud service. You must manually [use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) to download and then import available updates.  
 
 > [!NOTE]  
->  In addition to the updates that you get when synchronizing with the Microsoft cloud service, out-of-band fixes that are installed by using the [Update Registration Tool](http://technet.microsoft.com/library/mt691544.aspx) are also imported into your console where you can then select them to install.  
+>  In addition to the updates that you get when you synchronize with the Microsoft cloud service, out-of-band fixes that install by using the [Update Registration Tool](http://technet.microsoft.com/library/mt691544.aspx) are imported into your console, where you can then select them to install.  
 
-After updates are synchronized you can view them in the Configuration Manager console by going to the **Administration** > **Updates and Servicing** node:  
+After updates synchronize, you can view them in the Configuration Manager console by going to the **Administration** > **Updates and Servicing** node:  
 
 -   Updates you have not installed display as **Available**.
 
@@ -51,7 +51,7 @@ To better understand what happens when updates are downloaded, see:
 -   [Flowchart - Update replication for System Center Configuration Manager](../../../core/servers/manage/update-replication-flowchart.md)  
 
 ## Assign permissions to view and manage updates and features
-To view updates in the console, a user must be assigned a role-based administration security role that includes the security class named **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.    
+Before a user can view updates in the console, that user must have a role-based administration security role that includes the security class **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.    
 
 **About the Update packages class:**  
 By default, **Update packages** (SMS_CM_Updatepackages) is part of the following built-in security roles with the listed permissions:
@@ -66,7 +66,7 @@ By default, **Update packages** (SMS_CM_Updatepackages) is part of the following
   - Use an account that is assigned a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.
   - The account must be assigned the **Default** scope.
 
-**Permissoins to only view updates**:
+**Permissions to only view updates**:
   - Use an account that is assigned a security role that includes **Update packages** class with only the **Read** permission.
   - The account must be assigned the **Default** scope.
 
@@ -204,7 +204,7 @@ Use the following to monitor progress:
     -   **Replication**
     -   **Prerequisites Check**
     -   **Installation**
-    -   **Post Installation** (This phase is available beginning with version 1610.)
+    -   **Post Installation** (This phase is available beginning with version 1610. See [Post Installation tasks](#post-installation-tasks) for more information.)
 
 -   You can view the **CMUpdate.log** file in **&lt;ConfigMgr_Installation_Directory>\Logs**  
 
@@ -244,6 +244,67 @@ After a secondary sites parent primary site is updated, you can then update the 
 To monitor the update installation on a secondary site, select the secondary site server. Then on the **Home** tab, in the **Site** group, choose **Show Install Status**. You can also add the **Version** column to the console display so that you can view the version of each secondary site.  
 
 After a secondary site is successfully updated, if the status in the console does not refresh or suggests the update has failed, you can use the **Retry installation** option. This option does not reinstall the update for a secondary site that did successfully install the update, but will force the console to update the status.
+
+### Post Installation tasks
+Beginning with version 1610, you can view information about post installation tasks.
+
+When a site installs an update, there are several tasks that cannot start until after the update completes installation on the site server. Following is a list of the post installation tasks that are critical for site and hierarchy operations, and therefore are actively monitored. Some additional tasks are not directly monitored, like the reinstallation of site system roles. You can view the status of the critical post installation tasks when you select **Post Installation** task while monitoring the update installation for a site.
+
+Not all tasks complete immediately. Some, like turning on new features, require each site to complete the installation of the update on the site server before the task can start. Therefore, some new functionality you might expect will be delayed until these tasks complete.
+
+The post installation tasks include:
+
+-   **Installing SMS_EXECUTIVE service**
+  -   Critical service that runs on the site server.
+  -   Reinstallation of this service should complete quickly.
+
+
+-   **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
+  -   Critical site component thread of SMS_EXECUTIVE service.
+  -   Reinstallation of this service should complete quickly.
+
+
+-   **Installing SMS_HIERARCHY_MANAGER component**
+  -   Critical site component that runs on the site server.
+  -   Responsible for reinstalling site system roles on site system servers.  Status for individual site system role reinstallation does not display.
+  -   Reinstallation of this service should complete quickly.
+
+
+-   **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
+  -   Critical site component that runs on the site server.
+  -   Reinstallation of this service should complete quickly.
+
+
+-   **Installing SMS_POLICY_PROVIDER component**
+  -   Critical site component that runs only on primary sites.
+  -   Reinstallation of this service should complete quickly.
+
+
+-   **Monitoring replication initialization**   
+  -   This displays at only the central administration site and child primary sites.
+  -   Dependent on the SMS_REPLICATION_CONFIGURATION_MONITOR.
+  -   Should complete quickly.
+
+
+-   **Updating Configuration Manager Client Preproduction Package**    
+  -   This displays even when client preproduction (also called client piloting) is not enabled for use.
+  -   Does not start until all sites in the hierarchy finish installing the update.
+
+
+-   **Updating Client folder on Site Server**
+  -   This does not display if you use the client in preproduction.  
+  -   Should complete quickly.
+
+
+-   **Updating Configuration Manager Client Package**
+  -   This does not display if you use the client in preproduction.  
+  -   Finishes only after all sites install the update.  
+
+
+-   **Turning on Features**
+  -   This displays only at the top-tier site of the hierarchy.
+  -   Does not start until all sites in the hierarchy finish installing the update.
+  -   Individual features are not displayed.
 
 
 ##  <a name="bkmk_retry"></a> Retry installation of a failed update  
