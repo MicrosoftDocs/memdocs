@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Install in-console updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install in-console updates for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager synchronizes with the Microsoft cloud service to get updates. You can then install these updates from within the Configuration Manager console.
 
 ## Get available updates
@@ -25,10 +30,11 @@ Only updates that apply to your infrastructure and version are downloaded and ma
 
      By default, Configuration Manager checks for new updates every 24 hours. You can also check for updates immediately by choosing **Check for Updates** in the **Administration** > **Updates and Servicing** node of the Configuration Manager console. (Prior to version 1702, this node was under **Administration** > **Cloud Services**.)
 
--   In **offline mode**, the service connection point does not connect to the Microsoft cloud service. You must manually [use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) to download and then import available updates.  
+-   In **offline mode**, the service connection point does not connect to the Microsoft cloud service. To download and then import available updates, [use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
 
 > [!NOTE]  
->  In addition to the updates that you get when you synchronize with the Microsoft cloud service, out-of-band fixes that install by using the [Update Registration Tool](http://technet.microsoft.com/library/mt691544.aspx) are imported into your console, where you can then select them to install.  
+>   You can import out-of-band fixes into your console. To do so, use the [Update Registration Tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes). These out-of-band fixes supplement the updates you get when you synchronize with the Microsoft Cloud service. 
+
 
 After updates synchronize, you can view them in the Configuration Manager console by going to the **Administration** > **Updates and Servicing** node:  
 
@@ -51,13 +57,13 @@ To better understand what happens when updates are downloaded, see:
 -   [Flowchart - Update replication for System Center Configuration Manager](../../../core/servers/manage/update-replication-flowchart.md)  
 
 ## Assign permissions to view and manage updates and features
-Before a user can view updates in the console, that user must have a role-based administration security role that includes the security class **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.    
+To view updates in the console, a user must have a role-based administration security role that includes the security class **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.    
 
 **About the Update packages class:**  
 By default, **Update packages** (SMS_CM_Updatepackages) is part of the following built-in security roles with the listed permissions:
  -  **Full Administrator** with **Modify** and **Read** permissions:
-    -   A user with this security role and access to the **All** security scope can view updates, install updates and enable features during the installation, and enable individual features after the update is installed.
-    - A user with this security role and access to the **Default** security scope can view updates, install updates and enable features during the installation, and view features after an update is installed. But this user cannot enable the features after the update is installed.
+    -   A user with this security role and access to the **All** security scope can view and install updates. The user can also enable features during the installation, and enable individual features after the update is installed.
+    - A user with this security role and access to the **Default** security scope can view and install updates. The user can also enable features during the installation, and view features after an update is installed. But this user cannot enable the features after the update is installed.
 
 - **Read-only Analyst** with **Read** permissions:
   -  A user with this security role and access to the **Default** scope can view updates but not install them. This user can also view features after an update has installed but cannot enable them.
@@ -101,25 +107,25 @@ If installing an update fails, you should not need to perform a site recovery. I
 
 #### To run testdbupgrade before installing an update  
 
-1.  Get a set of source files from the **CD.Latest** folder of a site that runs the version that you plan to update to. This might require you to first install a site in a lab or test environment that runs that version of System Center Configuration Manager.  
+1.  Get source files for Configuration Manager from the **CD.Latest** folder of a site that that already runs the version that you plan to update to. This might require you to first install a site in a lab or test environment that runs that version of System Center Configuration Manager.  
 
-     The **CD.Latest** folder for a site has the source files for that version. You must use these source files to run the test upgrade of your site database. For more information, see [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
+     The **CD.Latest** folder for a site has the source files for that version. Use these source files to run the test upgrade of your site database. For more information, see [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
 
-     For example, if your site runs version 1606 and you want to update to 1610, you must get a CD.Latest folder from a site that has already updated to version 1610. Typically, you can install a new and temporary site in a lab, and upgrade that to version 1610 to create the CD.Latest folder with the required files.  
+     For example, your site runs version 1606 and you want to update to 1610. To update, you must get a CD.Latest folder from a site that has already updated to version 1610. To get the files, you can install a new and temporary site in a lab and then update that site to version 1610. The update creates the CD.Latest folder with the required files.  
 
-2.  Copy the CD.Latest folder to a location on the SQL Server instance that you will use to run the test database upgrade.
+2.  Copy the CD.Latest folder to a location on the SQL Server instance that you use to run the test database upgrade.
 
-3.  Create a backup of the site database that you want to test upgrade, and then restore a copy of that database to an instance of SQL Server that does not host a Configuration Manager site. The SQL Server instnace must use the same edition of SQL Server as your site database.  
+3.  Create a backup of the site database that you want to test upgrade. Then, restore a copy of that database to an instance of SQL Server that does not host a Configuration Manager site. The SQL Server instance must use the same edition of SQL Server as your site database.  
 
-4.  After you restore the database copy, run **Setup** from the CD.Latest folder that you copied from your lab or test environment. When you run Setup, use the **/TESTDBUPGRADE** command-line option. If the SQL Server instance that hosts the database copy is not the default instance, you must also provide the command-line arguments to identify the instance that hosts the site database copy.  
+4.  After you restore the database copy, run **Setup** from the CD.Latest folder that you copied from your lab or test environment. When you run Setup, use the **/TESTDBUPGRADE** command-line option. If the SQL Server instance that hosts the database copy is not the default instance, provide the command-line arguments to identify the instance that hosts the site database copy.  
 
-     For example, assume you plan to upgrade a site database with the database name SMS_ABC. You restore a copy of this site database to a supported instance of SQL Server with the instance name DBTest. To test an upgrade of this copy of the site database, use the following command line: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
+     For example, assume you plan to upgrade a site database with the database name SMS_ABC. You restore a copy of this site database to a supported instance of SQL Server that has an instance name DBTest. To test an upgrade of this copy of the site database, use the following command line: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
 
      You can find Setup.exe in the following location on the source media for System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
 
 5.  On the instance of SQL Server where you run the database upgrade test, monitor the ConfigMgrSetup.log in the root of the system drive for progress and success.  
 
-     If the test upgrade fails, fix any issues related to the site database upgrade failure, create a new backup of the site database, and then test the upgrade of the new copy of the site database.  
+     If the test upgrade fails, fix any issues related to the site database upgrade failure. Then, create a new backup of the site database and then test the upgrade of the new copy of the site database.  
 
      After the process is successful, you can delete the database copy.  
 
@@ -129,17 +135,17 @@ If installing an update fails, you should not need to perform a site recovery. I
 ###  <a name="bkmk_step3"></a> Step 3: Run the prerequisite checker before installing an update  
 Before you install an update, consider running the prerequisite check for that update. If you run the prerequisite before installing an update:  
 
--   The update files are replicated to other sites in advance of installing the update.  
+-   The update files are replicated to other sites before installing the update.  
 
--   The prerequisite check will automatically run again when you choose to install the update.  
+-   The prerequisite check automatically runs again when you choose to install the update.  
 
-Later, when you install the update, you have the option to configure the update to ignore prerequisite check warnings.  
+Later, when you install the update, you can configure the update to ignore prerequisite check warnings.  
 
 #### To run the prerequisite checker before installing an update  
 
 1.  In the Configuration Manager console, go to **Administration** > **Updates and Servicing**.   
 
-2.  Right click on the update package you want to run the prerequisite check for.  
+2.  Right-click on the update package you want to run the prerequisite check for.  
 
 3.  Choose **Run prerequisite check**.  
 
@@ -152,15 +158,15 @@ Later, when you install the update, you have the option to configure the update 
 ##  <a name="bkmk_install"></a> Install in-console updates  
  When you are ready to install updates from within the Configuration Manager console, you begin with the top-tier site of your hierarchy. This is either the central administration site or a stand-alone primary site.  
 
- We recommend that you plan to install the update outside normal business hours for each site. The process of installing the update and its actions to reinstall site components and site system roles will then have the least effect on your business operations.  
+ We recommend that you install the update outside normal business hours for each site to minimize the effect on business operations. This is because the update installation might include actions like reinstalling site components and site system roles.  
 
 -   Child primary sites start the update automatically after the central administration site completes installation of the update. This is the default and recommended process. However, you can use [Service windows for site servers](/sccm/core/servers/manage/service-windows) to control when a primary site installs updates.  
 
--   You must manually update secondary sites from within the Configuration Manager console after the primary parent site update is complete. Automatic update of secondary site servers is not supported.  
+-   Manually update secondary sites from within the Configuration Manager console after the primary parent site update is complete. Automatic update of secondary site servers is not supported.  
 
 -   When you use a Configuration Manager console after the site is updated, you are prompted to update the console.  
 
--  After the site server successfully completes installation of an update, it automatically updates all applicable site system roles.  The only caveat to this is for distribution points. When installing an update, all distribution points do not reinstall and go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients.
+-  After the site server successfully completes installation of an update, it automatically updates all applicable site system roles.  The only caveat is for distribution points. When installing an update, all distribution points do not reinstall and go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. Distribution points that have not begun to update or that have completed the update remain on-line and able to provide content to clients.
 
 
 ###  <a name="bkmk_overview"></a> Overview of in-console update installation  
@@ -168,12 +174,12 @@ Later, when you install the update, you have the option to configure the update 
 You are presented with the Updates Wizard that displays a list of the product areas that the update applies to.  
 
 -   On the **General** page of the wizard, you can configure **Prerequisite warnings**.  
-      -   Prerequisite errors always stop the update installation. You must fix errors before you can successfully retry the update installation. See [Retry installation of a failed update](#bkmk_retry) for more information.  
+      -   Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. See [Retry installation of a failed update](#bkmk_retry) for more information.  
 
-    -   Prerequisite warnings can also stop the update installation. You should fix warnings before you retry the update installation. See [Retry installation of a failed update](#bkmk_retry) for more information.  
-    -   Selecting the option **Ignore any prerequisite check warnings and install this update regardless of missing requirements**, sets a condition for the update installation that ignores prerequisite warnings. This allows the update installation to continue. If you do not select this option, the update installation will stop when a warning is encountered. Unless you have previously run the prerequisite check and fixed prerequisite warnings for a site, we do not recommend use of this option.  
+    -   Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+    -   The option **Ignore any prerequisite check warnings and install this update regardless of missing requirements** sets a condition for the update installation that ignores prerequisite warnings. This allows the update installation to continue. If you do not select this option, the update installation stops when a warning is encountered. Unless you have previously run the prerequisite check and fixed prerequisite warnings for a site, we do not recommend use of this option.  
 
-      In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the Ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, if you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard), and that update installation stops with a state of prerequisite warning but no errors, you can later choose **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update installation that then ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.
+      In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the Ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later you can choose **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update installation that then ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.
 
 
 
@@ -186,7 +192,7 @@ As part of the update installation, Configuration Manager:
 
 -   Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](https://technet.microsoft.com/library/mt627885.aspx).  
 
--   Will not need to restart site system servers as part of the update (unless .NET is installed as part of a site system roles prerequisite).  
+-   Will not restart site system servers as part of the update unless .NET is installed as part of a site system roles prerequisite.  
 
 > [!TIP]  
 >  When updates are installed,  Configuration Manager also updates the CD.Latest folder. This folder is used during a site recovery.  
@@ -199,19 +205,19 @@ Use the following to monitor progress:
 
 -   In the Configuration Manager console: **Monitoring** > **Overview** > **Updates and Servicing Status** node. This node shows the installation status of only the update package that is currently being installed.  
 
-  The update pack installation is broken down to the following phases for ease of monitoring. For each phase, additional details include which log file to view for more information.:  
-    -   **Download** (This phase applies only to the top-tier site where the service connection point site system role is installed.)
-    -   **Replication**
-    -   **Prerequisites Check**
-    -   **Installation**
-    -   **Post Installation** (This phase is available beginning with version 1610. See [Post Installation tasks](#post-installation-tasks) for more information.)
+    The update pack installation is broken down to the following phases for ease of monitoring. For each phase, additional details include which log file to view for more information:  
+    -   **Download** (This phase applies only to the top-tier site where the service connection point site is installed.)   
+    -   **Replication**   
+    -   **Prerequisites Check**   
+    -   **Installation**    
+    -   **Post Installation** ([Post Installation tasks](#post-installation-tasks) are available beginning with version 1610.)
 
 -   You can view the **CMUpdate.log** file in **&lt;ConfigMgr_Installation_Directory>\Logs**  
 
 **4. When the update installation completes**  
 After the first site update completes installation:  
 
--   Child primary sites will install the update automatically. No further action is required.  
+-   Child primary sites install the update automatically. No further action is required.  
 
 -   Secondary sites must be manually updated from within the Configuration Manager console.
 > [!TIP]
@@ -235,7 +241,7 @@ After the console update completes, you can verify the console and site version 
 At the top-tier site of your hierarchy, in the Configuration Manager console go to **Administration** > **Updates and Servicing**, select an **Available** update, and then click **Install Update Pack**.  
 
 ###  <a name="bkmk_secondary"></a> To start the update installation at a secondary site  
-After a secondary sites parent primary site is updated, you can then update the secondary site from within the Configuration Manager console.  To do so, you use the **Upgrade Secondary Site Wizard**.  
+After a secondary site's parent primary site updates, you can update the secondary site from within the Configuration Manager console.  To do so, you use the **Upgrade Secondary Site Wizard**.  
 
 1.  In the Configuration Manager console go to **Administration** > **Site Configuration** > **Sites**, select the site you want to update, and then on the Home tab, in the **Site** group, choose **Upgrade**.  
 
@@ -243,14 +249,14 @@ After a secondary sites parent primary site is updated, you can then update the 
 
 To monitor the update installation on a secondary site, select the secondary site server. Then on the **Home** tab, in the **Site** group, choose **Show Install Status**. You can also add the **Version** column to the console display so that you can view the version of each secondary site.  
 
-After a secondary site is successfully updated, if the status in the console does not refresh or suggests the update has failed, you can use the **Retry installation** option. This option does not reinstall the update for a secondary site that did successfully install the update, but will force the console to update the status.
+After a secondary site successfully updates, if the status in the console does not refresh or suggests the update has failed, use the **Retry installation** option. This option does not reinstall the update for a secondary site that did successfully install the update, but forces the console to update the status.
 
 ### Post Installation tasks
 Beginning with version 1610, you can view information about post installation tasks.
 
-When a site installs an update, there are several tasks that cannot start until after the update completes installation on the site server. Following is a list of the post installation tasks that are critical for site and hierarchy operations, and therefore are actively monitored. Some additional tasks are not directly monitored, like the reinstallation of site system roles. You can view the status of the critical post installation tasks when you select **Post Installation** task while monitoring the update installation for a site.
+When a site installs an update, there are several tasks that cannot start until after the update completes installation on the site server. Following is a list of the post installation tasks that are critical for site and hierarchy operations. Because they are critical, they are actively monitored. Additional tasks that are not directly monitored include the reinstallation of site system roles. To view the status of the critical post installation tasks, select **Post Installation** task while monitoring the update installation for a site.
 
-Not all tasks complete immediately. Some, like turning on new features, require each site to complete the installation of the update on the site server before the task can start. Therefore, some new functionality you might expect will be delayed until these tasks complete.
+Not all tasks complete immediately. Some tasks do not start until each site completes installation of the update. Therefore, new functionality you might expect can be delayed until these tasks complete. For example, because turning on new features does not start until all sites complete update installation, new features might not be visible for some time. 
 
 The post installation tasks include:
 
@@ -320,19 +326,19 @@ You can retry the installation of an update for the entire hierarchy when that u
     -   Installation failed
     -   Replication of the content to the site failed   
 
-    Go to **Administration** > **Updates and Servicing**, select the update, and then choose one of the following:  
+    Go to **Administration** > **Updates and Servicing**, select the update, and then choose one of the following options:  
 
-    -   **Retry** - When you run **Retry** from this node, the update install starts again and will automatically ignore prerequisite warnings. It will also re-replicate content for the update if replication previously failed.
+    -   **Retry** - When you run **Retry** from this node, the update install starts again and automatically ignores prerequisite warnings. Content for the update also re-replicates if replication previously failed.
     - **Ignore prerequisite warnings** - Beginning with version 1606, if the update install stops due to a warning, you can then choose **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.   
 
 2.  **Retry installation for the site:**  
  You can retry the installation of an update at a specific site when that update is in one of the following states:  
 
-    -   Prerequisite check passed with one or more warnings, and option to ignore prerequisite check warnings was not set in the Update Wizard (The updates value for **Ignore Prereq Warning** in the Updates and servicing node is **No**.)  
+    -   Prerequisite check passed with one or more warnings, and option to ignore prerequisite check warnings was not set in the Update Wizard. (The updates value for **Ignore Prereq Warning** in the Updates and servicing node is **No**.)  
     -   Prerequisite failed    
     -   Installation failed    
 
-    Go to **Monitoring** > **Overview** > **Site Servicing Status**, select the update and then click one of the following:
+    Go to **Monitoring** > **Overview** > **Site Servicing Status**, select the update, and then click one of the following options:
 
        - **Retry** - When you run **Retry** from this node, you restart the installation of the update at only that site. Unlike running **Retry** from the **Updates and Servicing** node, this retry does not ignore prerequisite warnings.
        -    **Ignore prerequisite warnings** - Beginning with version 1606, if the update install stops due to a warning, you can then click **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.
@@ -349,7 +355,7 @@ Use the following checklist to complete common tasks and configurations that are
 For more information, see
 [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) and [About the Replication Link Analyzer](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA).  
 
- **Confirm that site servers and remote site system servers have restarted (if required):** Review your site infrastructure and ensure that applicable site servers and site system servers (remote from the site server) have restarted successfully.  Typically, this is expected only when Configuration Manager installs .NET as a prerequisite for a site system role.  
+ **Confirm that site servers and remote site system servers have restarted (if necessary):** Review your site infrastructure and ensure that applicable site servers and site system servers have restarted successfully. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.  
 
  **Update stand-alone Configuration Manager consoles:** Ensure that all remote Configuration Manager consoles are update to the same version. You are prompted to update the console when:  
 
@@ -359,14 +365,14 @@ For more information, see
 
 **Reconfigure database replicas for management points at primary sites:** If you use database replicas for management points at primary sites, you must uninstall the database replicas before you update the site. After you update a primary site, reconfigure the database replica for management points. For more information, see [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
-**Reconfigure any database maintenance tasks you disabled before the update:** If you disabled database [maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) at a site prior to the update, reconfigure those tasks at the site. Use the same settings that were in place before the update.  
+**Reconfigure any database maintenance tasks you disabled before the update:** If you disabled database [maintenance tasks](../../../core/servers/manage/maintenance-tasks.md) at a site before installing the update, reconfigure those tasks at the site. Use the same settings that were in place before the update.  
 
-**Upgrade clients:** For information about how to upgrade existing clients and how to install new clients, see [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+**Upgrade clients:** For information, see [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 **Additional configurations:** Review the changes that you made before you started the update, and then restore those configurations to your sites and hierarchy.  
 
 ##  <a name="bkmk_options"></a> Enable optional features from updates  
-When you install an update that includes one or more optional features, you will have the opportunity to enable those features in your hierarchy.  You can do so at the time the update is installed, or you can return to the console later and enable the optional features.
+When an update includes one or more optional features, you have the opportunity to enable those features in your hierarchy.  You can enable features when the update installs, or you can return to the console later and enable the optional features.
 
 To view available features and their status, in the console navigate to **Administration** > **Updates and Servicing** > **Features**.
 
@@ -377,31 +383,31 @@ When you enable a new feature or pre-release feature, the Configuration Manager 
 
 
 ##  <a name="bkmk_prerelease"></a> Use pre-release features from updates
-Pre-release features are features that are included in the Current Branch for early testing in a production environment. These features should not be considered production ready, but can be used in your production environment. To learn more about pre-release features, including how to enable them in your environment, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).             
+Pre-release features are included in the Current Branch for early testing in a production environment. You can use these features in your production environment, but they are not considered production ready. Learn more about [pre-release features](/sccm/core/servers/manage/pre-release-features), including how to enable them in your environment.             
 
 
 ## Known issues
 
 ###  <a name="bkmk_faq"></a> Why don't I see certain updates in my console?  
- If you cannot find a specific update (or any updates) in your console after a successful sync with the Microsoft cloud service, this might be because:  
+ If you cannot find a specific update in your console after a successful sync with the Microsoft cloud service, this might be because:  
 
 -   The update requires a configuration that your infrastructure does not use, or your current product version does not fulfill a prerequisite for receiving the update.  
 
-     If you believe that you have the required configurations or you meet other prerequisites for a missing update, confirm that your service connection point is in online mode. Then, use the **Check for Updates** option in the **Updates and Servicing** node to force a check.  If you are in offline mode, you must use the service connection tool to manually sync with the cloud service.  
+     If you believe that you have the required configurations and prerequisites for a missing update, confirm that your service connection point is in online mode. Then, use the **Check for Updates** option in the **Updates and Servicing** node to force a check.  If you are in offline mode, you must use the service connection tool to manually sync with the cloud service.  
 
 -   Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console.
 
     See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#assign-permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.
 
-### Why do I see two updates for version 1610
-When viewing updates in the console, you might see two updates to install version 1610. These updates have different dates. This happens when one of the following is true:   
+### Why do I see two updates for version 1610?
+When viewing updates in the console, you might see two updates to install version 1610. These updates have different dates. Both appear when one of the following conditions is true:   
 -	You installed an earlier version (like 1606) after version 1610 became available
 
--	You hierarchy runs version 1511 or 1602 and you have not been able to download version 1606
+-	Your hierarchy runs version 1511 or 1602 and you have not been able to download version 1606
 
 There are two update releases for version 1610 because this update was re-released after some minor changes to some file binaries were made. These changes do not affect the functionality of Configuration Manager or the update.
 
-When both updates are available in your console, we recommend you install the update with the more recent date. However, because both updates deliver the same functionality, if you already installed one of them you do not need to take further action.
--	If you previously installed the older update, you do not need to install the update with the newer date. However, if you do install the newer update after having installed the first update, the binaries in question will update, but no additional change occurs, and no additional actions on your part are needed.
+When both updates are available in your console, we recommend you install the update with the more recent date. However, because both updates deliver the same functionality, when you have already installed one of them you do not need to take further action.
+-	If you previously installed the older update, you do not need to install the update with the newer date. However, if you install the newer update after installing the first update, the binaries in question will update. No additional change occurs, and no additional actions on your part are needed.
 
--	If you previously installed the newest update and then install the update with the older date, no additional action is needed. This is because the newer binaries you already installed will not be overwritten by those same binaries from the original update.
+-	If you previously installed the newest update and then install the update with the older date, no additional action is needed. This is because the newer binaries you already installed are not overwritten by those same binaries from the original update.
