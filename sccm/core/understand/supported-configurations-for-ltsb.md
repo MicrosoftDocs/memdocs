@@ -46,6 +46,7 @@ The LTSB supports the use of the following Windows computer operating systems as
 
 **Supported operating systems:**
 - Windows Server 2016
+- Windows Server 2012 R2 (x64): Standard, Datacenter
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter
 - Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter  *(See note 1)*
