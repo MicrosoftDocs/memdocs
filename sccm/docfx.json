@@ -14,6 +14,7 @@
     "resource": [
       {
         "files": [
+          "**/media/**", 
           "**/*.png",
           "**/*.jpg",
           "**/*.gif"
