@@ -37,8 +37,8 @@ If you still plan to test the upgrade of a site database when you install an in-
 Before you install a new update in your hierarchy, like update 1702, you can test the upgrade of your site database.
 
 To run the upgrade test, use the Configuration Manager Setup from the source files from [the CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) of a site that runs the version of Configuration Manager that you are updating to. This requirement means that to test the database update for update to 1702:
--   You must have at least one site that runs version 1702 from which you can get that CD.Latest folder. 
--   If you do not have a site that runs the required version, consider installing a site in a lab environment, and then update that site to the new version. This creates the CD.Latest folder with the correct version of source files. 
+-   You must have at least one site that runs version 1702 from which you can get that CD.Latest folder.
+-   If you do not have a site that runs the required version, consider installing a site in a lab environment, and then update that site to the new version. This creates the CD.Latest folder with the correct version of source files.
 
 The upgrade test is run against a backup of your site database that you restored to a separate instance of SQL Server.  You run Setup from the **CD.Latest** folder with the **testdbupgrade** command-line switch to test upgrade that restored copy of the database. After the test upgrade completes, the upgraded database is discarded. It cannot be used by a Configuration Manager site.
 
@@ -64,4 +64,4 @@ If an update install fails, you should not need to recover the site. Instead, yo
 
 
 ## Next steps
-After the test database update completes successfully, discard the updated database. It cannot be used by a Configuration Manager site. You can then return to your active site and [begin the update installation]().
+After the test database update completes successfully, discard the updated database. It cannot be used by a Configuration Manager site. You can then return to your active site and [begin the update installation](/sccm/core/servers/manage/install-in-console-updates).
