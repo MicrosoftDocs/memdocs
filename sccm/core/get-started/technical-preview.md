@@ -118,6 +118,7 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Include trust for specific files and folders in a Device Guard policy|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|![Not added](media/Red_X.gif)|
  |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Not added](media/Red_X.gif)|
  |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
  |Update reset tool  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![Not added](media/Red_X.gif)|

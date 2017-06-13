@@ -157,3 +157,20 @@ The **Content Library** tab:
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
 -   I can install a primary site in passive mode.
 -   I can use the console to promote the passive mode site server to make it the active mode site server, and confirm the change of status for both site servers.
+
+
+## Include trust for specific files and folders in a Device Guard policy
+
+In this release, we’ve added further capabilities to [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) policy management
+
+You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
+
+1.	Overcome issues with managed installer behaviors
+2.	Trust line-of-business apps that cannot be deployed with Configuration Manager
+3.	Trust apps that are included in an operating system deployment image.
+
+### Try it out!
+
+1.	While you are creating a Device Guard policy, on the Inclusions tab of the Create Device Guard policy wizard, click **Add**.
+2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
+3.	Complete the wizard.
