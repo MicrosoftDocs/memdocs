@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,7 +26,7 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  
 
  > [!TIP]
- > When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
+ > When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
 
@@ -145,7 +145,7 @@ For more information about site maintenance tasks, see:
 **Run Setup Prerequisite Checker**:  
 Before you upgrade a site, you can run the **Prerequisite Checker** independently from Setup to validate that your site meets the prerequisites. Later, when you upgrade the site, Prerequisite Checker runs again.  
 
-If you use the baseline media for version 1606 from the October 2016 release, the independent prerequisite check evaluates the site for upgrade to both the Current Branch and the Long-Term Servicing Branch (LTSB) of System Center Configuration Manage. Because some features are not supported by the LTSB, you might see entries in the *ConfigMgrPrereq.log* that are similar to the following:
+If you use the baseline media for version 1606 from the October 2016 release, the independent prerequisite check evaluates the site for upgrade to both the Current Branch and the Long-Term Servicing Branch (LTSB) of System Center Configuration Manage. Because some features are not supported by the LTSB, you might see entries in the *ConfigMgrPrereq.log* that are like the following:
  - INFO: The site is a LTSB edition.
  - Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. Asset Intelligence is not supported on the LTSB edition. You must uninstall the Asset Intelligence synchronization point site system role before you can continue.
 
@@ -265,7 +265,7 @@ When a site upgrades to System Center Configuration Manager, some configurations
      Custom summarization schedules for software updates or software update groups are reset to the default value of 1 hour. After the upgrade finishes, reset custom summarization values to the required frequency.  
 
 ##  <a name="bkmk_test"></a> Test the site database upgrade  
-The following information applies only when you are upgrading a prior versoin like System Center 2012 Configuration Manager to System Center Configuration Manager. If your site already runs System Center Configuration Manager and you are installing a new update, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+The following information applies only when you are upgrading a prior version like System Center 2012 Configuration Manager to System Center Configuration Manager.
 
 Before you upgrade a site, test a copy of that site's database for the upgrade.  
 
