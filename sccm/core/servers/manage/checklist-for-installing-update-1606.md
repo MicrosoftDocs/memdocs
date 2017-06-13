@@ -2,7 +2,7 @@
 title: "Checklist for 1606 | Microsoft Docs"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 or 1602 to version 1606."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -72,11 +72,7 @@ For database replication, you can use the Replication Link Analyzer to help reso
 
  **Install all applicable critical updates  for operating systems on computers that host the site, the site database server, and remote site system roles:** Before you install an update for Configuration Manager, install any critical updates for each applicable site system. If an update that you install requires a restart, restart the applicable computers before you start the upgrade.  
 
- **Disable database replicas for management points at primary sites:** Configuration Manager cannot successfully update a primary site that has a database replica for management points enabled. Disable database replication before you:  
-
--   Create a backup of the site database to test the database upgrade.  
-
--   Install an update for Configuration Manager.  
+ **Disable database replicas for management points at primary sites:** Configuration Manager cannot successfully update a primary site that has a database replica for management points enabled. Disable database replication before you install an update for Configuration Manager.  
 
 For more information, see   [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
@@ -105,7 +101,7 @@ For more information, see [Maintenance tasks for System Center Configuration Man
 
 For more information, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
 
-
+<!-- Removed from update guidance 6/6/2017
  **Test the database upgrade on a copy of the most recent site database backup:** Before you update a System Center Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
 
 -   You should test the site database upgrade process because when you upgrade a site, the site database might be modified.  
@@ -121,6 +117,7 @@ For more information, see [Backup and recovery for System Center Configuration M
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
 
 Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+-->
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.   
 
