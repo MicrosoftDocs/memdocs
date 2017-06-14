@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 06/08/2017
+ms.date: 06/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,7 +33,7 @@ Only updates that apply to your infrastructure and version are downloaded and ma
 -   In **offline mode**, the service connection point does not connect to the Microsoft cloud service. To download and then import available updates, [use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
 
 > [!NOTE]  
->   You can import out-of-band fixes into your console. To do so, use the [Update Registration Tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes). These out-of-band fixes supplement the updates you get when you synchronize with the Microsoft Cloud service. 
+>   You can import out-of-band fixes into your console. To do so, use the [Update Registration Tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes). These out-of-band fixes supplement the updates you get when you synchronize with the Microsoft Cloud service.
 
 
 After updates synchronize, you can view them in the Configuration Manager console by going to the **Administration** > **Updates and Servicing** node:  
@@ -82,9 +82,6 @@ By default, **Update packages** (SMS_CM_Updatepackages) is part of the following
 
 
 
-
-
-
 ##  <a name="bkmk_beforeinstall"></a> Before you install an in-console update  
  Review the following steps before you install an update from within the Configuration Manager console.  
 
@@ -97,42 +94,9 @@ Review the applicable update checklist for actions to take before you start the 
 
 - Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md).
 
-###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
-The information in this step applies only when you are installing an *update* for a System Center Configuration Manager site. If you are *upgrading* a System Center 2012 Configuration Manager site to System Center Configuration Manager, see [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
+<!-- Removed as update guidance 6/6/2017. The Test DB Upgrade details are no longer recommended nor required. They live on in a new topic for customers who still want to use them. -->
 
-Before you install a new update in your hierarchy, like update 1610, you can test the upgrade of your site database. The name of the command-line option that you use to test installing an update to a backup of your site database is **testdbupgrade**.  
-
-If installing an update fails, you should not need to perform a site recovery. Instead, you can retry the update installation. So, although the test upgrade of the database is less critical than it was in past product versions like System Center 2012 Configuration Manager, we still recommend it.
-
-
-#### To run testdbupgrade before installing an update  
-
-1.  Get source files for Configuration Manager from the **CD.Latest** folder of a site that that already runs the version that you plan to update to. This might require you to first install a site in a lab or test environment that runs that version of System Center Configuration Manager.  
-
-     The **CD.Latest** folder for a site has the source files for that version. Use these source files to run the test upgrade of your site database. For more information, see [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
-
-     For example, your site runs version 1606 and you want to update to 1610. To update, you must get a CD.Latest folder from a site that has already updated to version 1610. To get the files, you can install a new and temporary site in a lab and then update that site to version 1610. The update creates the CD.Latest folder with the required files.  
-
-2.  Copy the CD.Latest folder to a location on the SQL Server instance that you use to run the test database upgrade.
-
-3.  Create a backup of the site database that you want to test upgrade. Then, restore a copy of that database to an instance of SQL Server that does not host a Configuration Manager site. The SQL Server instance must use the same edition of SQL Server as your site database.  
-
-4.  After you restore the database copy, run **Setup** from the CD.Latest folder that you copied from your lab or test environment. When you run Setup, use the **/TESTDBUPGRADE** command-line option. If the SQL Server instance that hosts the database copy is not the default instance, provide the command-line arguments to identify the instance that hosts the site database copy.  
-
-     For example, assume you plan to upgrade a site database with the database name SMS_ABC. You restore a copy of this site database to a supported instance of SQL Server that has an instance name DBTest. To test an upgrade of this copy of the site database, use the following command line: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
-
-     You can find Setup.exe in the following location on the source media for System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
-
-5.  On the instance of SQL Server where you run the database upgrade test, monitor the ConfigMgrSetup.log in the root of the system drive for progress and success.  
-
-     If the test upgrade fails, fix any issues related to the site database upgrade failure. Then, create a new backup of the site database and then test the upgrade of the new copy of the site database.  
-
-     After the process is successful, you can delete the database copy.  
-
-    > [!NOTE]  
-    >  It is not supported to restore the copy of the site database that you use for the test upgrade for use as a site database at any site.  
-
-###  <a name="bkmk_step3"></a> Step 3: Run the prerequisite checker before installing an update  
+###  Step 2: Run the prerequisite checker before installing an update  
 Before you install an update, consider running the prerequisite check for that update. If you run the prerequisite before installing an update:  
 
 -   The update files are replicated to other sites before installing the update.  
@@ -207,10 +171,14 @@ Use the following to monitor progress:
 
     The update pack installation is broken down to the following phases for ease of monitoring. For each phase, additional details include which log file to view for more information:  
     -   **Download** (This phase applies only to the top-tier site where the service connection point site is installed.)   
+
     -   **Replication**   
+
     -   **Prerequisites Check**   
+
     -   **Installation**    
-    -   **Post Installation** ([Post Installation tasks](#post-installation-tasks) are available beginning with version 1610.)
+
+    -   **Post Installation** ([Post Installation tasks](#post-installation-tasks) are available beginning with version 1610.)  
 
 -   You can view the **CMUpdate.log** file in **&lt;ConfigMgr_Installation_Directory>\Logs**  
 
@@ -256,7 +224,7 @@ Beginning with version 1610, you can view information about post installation ta
 
 When a site installs an update, there are several tasks that cannot start until after the update completes installation on the site server. Following is a list of the post installation tasks that are critical for site and hierarchy operations. Because they are critical, they are actively monitored. Additional tasks that are not directly monitored include the reinstallation of site system roles. To view the status of the critical post installation tasks, select **Post Installation** task while monitoring the update installation for a site.
 
-Not all tasks complete immediately. Some tasks do not start until each site completes installation of the update. Therefore, new functionality you might expect can be delayed until these tasks complete. For example, because turning on new features does not start until all sites complete update installation, new features might not be visible for some time. 
+Not all tasks complete immediately. Some tasks do not start until each site completes installation of the update. Therefore, new functionality you might expect can be delayed until these tasks complete. For example, because turning on new features does not start until all sites complete update installation, new features might not be visible for some time.
 
 The post installation tasks include:
 
