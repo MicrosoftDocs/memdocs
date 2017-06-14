@@ -243,6 +243,10 @@ Many of the client settings are self-explanatory. Others are described here.
     > -   Error codes and descriptions of **0X87D00327** and **Script is not signed** or **0X87D00320** and **The script host has not been installed yet** with the error type of **Discovery Error** in reports. An example is **Details of errors of configuration items in a configuration baseline for an asset**.  
     > -   The message **Script is not signed (Error: 87D00327; Source: CCM)** in the **DcmWmiProvider.log** file.  
 
+-   **Show notifications for new deployments**  
+
+     Choose **Yes** if you want to display a notification for deployments that have been available less than a week.  This message will display each time the client agent starts.
+
 -   **Disable deadline randomization**  
 
      This setting determines whether the client uses an activation delay of up to 2 hours to install required software updates when the deadline is reached. By default, the activation delay is disabled.  
