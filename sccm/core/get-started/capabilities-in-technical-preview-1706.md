@@ -175,6 +175,7 @@ You can now optionally add trust for specific files for folders in a Device Guar
 2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
 3.	Complete the wizard.
 
+
 ## Hide task sequence progress
 In this release, you can control when task sequence progress is displayed to end-users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
  
@@ -184,3 +185,19 @@ In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understa
 #### To display task sequence progress
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
 
+## Specify a different content location for install content and uninstall content
+
+In Configuration Manager today, you specify the installation location that contains the setup files for an app. When you specify an install location, this is also used as the uninstall location for the application content.
+Based on your feedback, when you want to uninstall a deployed application, and the app content is not on the client computer, then the client will download all of the app setup files again before the application is uninstalled.
+To solve this problem, you can now specify both an installation content location and an optional uninstall content location. Additionally, you can choose not to specify an uninstall content location.
+
+### Try it Out!
+
+1. In the deployment type properties of an application, click the **Content** tab.
+2. Configure the **Install content location** as normal.
+3. For **Uninstall content settings**, choose one of the following:
+	- **Use install content location** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
+	- **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
+	- **Use different uninstall content location** - Choose this if you want to specify an uninstall content location that's different from the install content location.
+5. If you selected **Use different uninstall content location**, browse to, or enter the location of the application content that will be used to uninstall the application.
+6. Click **OK** to close the deployment type properties dialog box.
