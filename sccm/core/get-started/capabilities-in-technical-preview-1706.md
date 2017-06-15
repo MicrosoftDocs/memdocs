@@ -176,6 +176,15 @@ You can now optionally add trust for specific files for folders in a Device Guar
 3.	Complete the wizard.
 
 
+## Hide task sequence progress
+In this release, you can control when task sequence progress is displayed to end-users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
+ 
+#### To hide task sequence progress
+In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress. 
+
+#### To display task sequence progress
+In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
+
 ## Specify a different content location for install content and uninstall content
 
 In Configuration Manager today, you specify the installation location that contains the setup files for an app. When you specify an install location, this is also used as the uninstall location for the application content.
