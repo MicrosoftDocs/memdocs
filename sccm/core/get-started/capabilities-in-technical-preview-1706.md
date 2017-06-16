@@ -180,9 +180,9 @@ You can now optionally add trust for specific files for folders in a Device Guar
 
 ## Hide task sequence progress
 In this release, you can control when task sequence progress is displayed to end-users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
- 
+
 #### To hide task sequence progress
-In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress. 
+In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
 
 #### To display task sequence progress
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
@@ -214,15 +214,49 @@ This preview introduces several improvements to the [accessibility features](/sc
 -   Ctrl + T - Sets focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.
 -   Ctrl + I -  Sets focus to the breadcrumb bar, below the ribbon.
 -   Ctrl + L - Sets focus to the **Search** field, when available.
--   Ctrl + D - Sets focus to the details pane, when available. 
--   Alt – Changes focus in and out of the ribbon. 
+-   Ctrl + D - Sets focus to the details pane, when available.
+-   Alt – Changes focus in and out of the ribbon.
 
 **General improvements:**
--   Improved navigation in the navigation pane when you type the letters of a node name. 
+-   Improved navigation in the navigation pane when you type the letters of a node name.
 -   Keyboard navigation through the main view and the ribbon are now circular.
 -   Keyboard navigation in the details pane is now circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
--   After refreshing a Workspace view, the focus is set to the main pane of that workspace. 
--   Fixed an issue to enable screen readers to announce the names of list items. 
--   Added accessible names for multiple controls on the page that enables screen readers to announce important information. 
+-   After refreshing a Workspace view, the focus is set to the main pane of that workspace.
+-   Fixed an issue to enable screen readers to announce the names of list items.
+-   Added accessible names for multiple controls on the page that enables screen readers to announce important information.
 
 
+## Changes to the Azure Services Wizard to support Upgrade Readiness
+<!-- 1353331 -->
+Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.   
+
+Although the method to configure the connection has changed, prerequisites for the connection and how you use Upgrade Readiness remain unchanged.   
+
+### Prerequisites for Upgrade Readiness
+The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics#create-a-connection-to-upgrade-readiness) are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
+
+**Prerequisites**
+-	In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
+-	Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+-	Create a client key for the registered management tool in Azure Active Directory.
+-	In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+
+> [!IMPORTANT]       
+> When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
+
+After the prerequisites are configured, you are ready to use the Wizard to create the connection.
+
+### Use the Azure Services Wizard to configure Upgrade Readiness
+1.	In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
+
+2.	On the **Azure Services** page, select the **Upgrade Readiness Connector**, and then click **Next**.
+
+3.	On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud ). Then, click **Import** to open the **Import Apps** window.
+
+4.	In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
+    -	Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
+    -	Click **Verify**, and if successful, click **OK** to continue.
+
+5.	 On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
+
+6.	Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
