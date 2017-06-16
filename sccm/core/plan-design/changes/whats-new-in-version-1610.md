@@ -11,10 +11,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 caps.latest.revision: 40
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
-# What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# What&#39;s new in version 1610 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Update 1610 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
@@ -132,7 +137,7 @@ If you configure an enforcement grace period and select the checkbox, once the a
 
 
 ## Improved functionality in dialog boxes about required software
-WWhen a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values: 
+When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values: 
 - **Later**. Specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
 - **Fixed time**. Specifies that the notification will be scheduled to display again after the selected time (for example, in 30 minutes).
 
