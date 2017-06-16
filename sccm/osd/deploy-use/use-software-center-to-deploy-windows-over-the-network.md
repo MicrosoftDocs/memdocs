@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 caps.latest.revision: 5
-author: mabrigg
-ms.author: mabrigg
+author: mattbriggs
+ms.author: mattbriggs
 manager: angrobe
 
 ---

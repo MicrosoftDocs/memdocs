@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: mabrigg
-ms.author: mabrigg
+author: mattbriggs
+ms.author: mattbriggs
 manager: angrobe
 
 ---
