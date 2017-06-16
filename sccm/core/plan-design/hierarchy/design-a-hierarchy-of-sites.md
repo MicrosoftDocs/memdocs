@@ -2,7 +2,7 @@
 title: "Design a site hierarchy - Configuration Manager | Microsoft Docs"
 description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -60,7 +60,7 @@ Then, after considering content management options that can reduce the number of
 
 -   The central administration site is the top-level site in a hierarchy.  
 
--   When you configure a hierarchy that has more than one primary site, you must install a central administration site, and it must be the first site that you install.  
+-   When you configure a hierarchy that has more than one primary site, you must install a central administration site. If you will need two or more primary sites immediately, install the central administration site first. When you already have a primary site and want to then install a central administration site, you must [expand the stand-alone primary site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to install the central administration site. 
 
 -   The central administration site supports only primary sites as child sites.  
 
