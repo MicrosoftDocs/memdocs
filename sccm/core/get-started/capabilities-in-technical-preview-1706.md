@@ -2,7 +2,7 @@
 title: "Technical Preview 1706 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/16/2017
+ms.date: 06/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -41,6 +41,7 @@ This article introduces the features that are available in the Technical Preview
 -->
 
 ## Improved boundary groups for software update points
+<!-- 1324591 -->
 This release includes improvements for how software update points work with boundary groups. The following summarizes the new fallback behavior:
 -   Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups, with a minimum time of 120 minutes.
 
@@ -63,6 +64,7 @@ For more information, see [software update points](/sccm/core/servers/deploy/con
 
 
 ## Site server role high availability
+<!-- 1128774 -->
 High availability for the site server role is a Configuration Manager based solution to install an additional primary site server in *Passive* mode. The passive mode site server is in addition to your existing primary site server that is in *Active* mode. A passive mode site server is available for immediate use, when needed.
 
 A primary site server in passive mode:
@@ -175,6 +177,7 @@ You can now optionally add trust for specific files for folders in a Device Guar
 2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
 3.	Complete the wizard.
 
+
 ## Hide task sequence progress
 In this release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
  
@@ -183,4 +186,43 @@ In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understa
 
 #### To display task sequence progress
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
+
+## Specify a different content location for install content and uninstall content
+
+In Configuration Manager today, you specify the installation location that contains the setup files for an app. When you specify an install location, this is also used as the uninstall location for the application content.
+Based on your feedback, when you want to uninstall a deployed application, and the app content is not on the client computer, then the client will download all of the app setup files again before the application is uninstalled.
+To solve this problem, you can now specify both an installation content location and an optional uninstall content location. Additionally, you can choose not to specify an uninstall content location.
+
+### Try it Out!
+
+1. In the deployment type properties of an application, click the **Content** tab.
+2. Configure the **Install content location** as normal.
+3. For **Uninstall content settings**, choose one of the following:
+	- **Use install content location** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
+	- **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
+	- **Use different uninstall content location** - Choose this if you want to specify an uninstall content location that's different from the install content location.
+5. If you selected **Use different uninstall content location**, browse to, or enter the location of the application content that will be used to uninstall the application.
+6. Click **OK** to close the deployment type properties dialog box.
+
+
+## Accessibility improvements  
+<!--1253000 -->
+This preview introduces several improvements to the [accessibility features](/sccm/core/understand/accessibility-features) in the Configuration Manager console. These include:     
+
+**New keyboard shortcuts to move around the console:**
+-   Ctrl + M - Sets focus on the main (central) pane.
+-   Ctrl + T - Sets focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.
+-   Ctrl + I -  Sets focus to the breadcrumb bar, below the ribbon.
+-   Ctrl + L - Sets focus to the **Search** field, when available.
+-   Ctrl + D - Sets focus to the details pane, when available. 
+-   Alt – Changes focus in and out of the ribbon. 
+
+**General improvements:**
+-   Improved navigation in the navigation pane when you type the letters of a node name. 
+-   Keyboard navigation through the main view and the ribbon are now circular.
+-   Keyboard navigation in the details pane is now circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
+-   After refreshing a Workspace view, the focus is set to the main pane of that workspace. 
+-   Fixed an issue to enable screen readers to announce the names of list items. 
+-   Added accessible names for multiple controls on the page that enables screen readers to announce important information. 
+
 
