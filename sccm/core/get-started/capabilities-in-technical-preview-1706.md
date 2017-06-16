@@ -2,7 +2,7 @@
 title: "Technical Preview 1706 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/16/2017
+ms.date: 06/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -41,6 +41,7 @@ This article introduces the features that are available in the Technical Preview
 -->
 
 ## Improved boundary groups for software update points
+<!-- 1324591 -->
 This release includes improvements for how software update points work with boundary groups. The following summarizes the new fallback behavior:
 -   Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups, with a minimum time of 120 minutes.
 
@@ -63,6 +64,7 @@ For more information, see [software update points](/sccm/core/servers/deploy/con
 
 
 ## Site server role high availability
+<!-- 1128774 -->
 High availability for the site server role is a Configuration Manager based solution to install an additional primary site server in *Passive* mode. The passive mode site server is in addition to your existing primary site server that is in *Active* mode. A passive mode site server is available for immediate use, when needed.
 
 A primary site server in passive mode:
@@ -201,3 +203,26 @@ To solve this problem, you can now specify both an installation content location
 	- **Use different uninstall content location** - Choose this if you want to specify an uninstall content location that's different from the install content location.
 5. If you selected **Use different uninstall content location**, browse to, or enter the location of the application content that will be used to uninstall the application.
 6. Click **OK** to close the deployment type properties dialog box.
+
+
+## Accessibility improvements  
+<!--1253000 -->
+This preview introduces several improvements to the [accessibility features](/sccm/core/understand/accessibility-features) in the Configuration Manager console. These include:     
+
+**New keyboard shortcuts to move around the console:**
+-   Ctrl + M - Sets focus on the main (central) pane.
+-   Ctrl + T - Sets focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.
+-   Ctrl + I -  Sets focus to the breadcrumb bar, below the ribbon.
+-   Ctrl + L - Sets focus to the **Search** field, when available.
+-   Ctrl + D - Sets focus to the details pane, when available. 
+-   Alt – Changes focus in and out of the ribbon. 
+
+**General improvements:**
+-   Improved navigation in the navigation pane when you type the letters of a node name. 
+-   Keyboard navigation through the main view and the ribbon are now circular.
+-   Keyboard navigation in the details pane is now circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
+-   After refreshing a Workspace view, the focus is set to the main pane of that workspace. 
+-   Fixed an issue to enable screen readers to announce the names of list items. 
+-   Added accessible names for multiple controls on the page that enables screen readers to announce important information. 
+
+
