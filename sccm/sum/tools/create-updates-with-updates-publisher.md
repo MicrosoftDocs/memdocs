@@ -30,7 +30,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
 2.  On the **Package** page, use the following information to help you configure the update:
 
-    -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a the file hash. The hash and file name are then used in the update metadata for the update that you are creating.
+    -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a file hash. The hash and file name are then used in the update metadata for the update that you are creating.
 
     -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path is not required.
 
