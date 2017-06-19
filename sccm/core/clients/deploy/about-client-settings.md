@@ -59,7 +59,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
 - **Configure client cache size**
 
-  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** to specify **Maximum cache size** (megabytes or percentage of disk). If this option is **No**, the default size is 5,120 MB.
+  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** to specify **Maximum cache size** (megabytes or percentage of disk). The client cache size can expand to the maximum size in MB or the percentage of the disk, **whichever is less**. If this option is **No**, the default size is 5,120 MB.
 
 ## Client policy  
 
