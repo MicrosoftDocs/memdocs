@@ -113,6 +113,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
  |Site server role high availability|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
  |Include trust for specific files and folders in a Device Guard policy|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|![Not added](media/Red_X.gif)|
+ |Hide task sequence progress|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#hide-task-sequence-progress)|![Not added](media/Red_X.gif)|
  |Specify a different content location for install content and uninstall content|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#specify-a-different-content-location-for-install-content-and-uninstall-content)|![Not added](media/Red_X.gif)|
  |Accessibility improvements |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|![Not added](media/Red_X.gif)|
  |Azure Services Wizard support for Upgrade Readiness |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|![Not added](media/Red_X.gif)|
