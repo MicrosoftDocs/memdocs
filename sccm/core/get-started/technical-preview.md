@@ -116,6 +116,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Specify a different content location for install content and uninstall content|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#specify-a-different-content-location-for-install-content-and-uninstall-content)|![Not added](media/Red_X.gif)|
  |Accessibility improvements |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|![Not added](media/Red_X.gif)|
  |Azure Services Wizard support for Upgrade Readiness |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|![Not added](media/Red_X.gif)|
+ |Client Peer Cache support for express installation files for Windows 10 and Office 365|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Not added](media/Red_X.gif)|
 
 
 

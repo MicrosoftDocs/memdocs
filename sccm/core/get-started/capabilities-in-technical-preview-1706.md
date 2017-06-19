@@ -260,3 +260,7 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 5.	 On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
 
 6.	Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
+
+
+## Client Peer Cache support for express installation files for Windows 10 and Office 365
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
