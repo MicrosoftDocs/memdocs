@@ -296,7 +296,7 @@ In Configuration Manager, you could previously deploy scripts to client devices 
 
 - Import PowerShell Scripts to Configuration Manager
 - Edit the scripts from the Configuration Manager console
-- Mark scripts as Approved or Denied to improve security
+- Mark scripts as Approved or Denied, to improve security
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run in near real time on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
 
@@ -311,7 +311,7 @@ To use scripts, you must be a member of the appropriate Configuration Manager se
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
-By default, users cannot approve a script they have authored. Since scripts are powerful, versatile, and can be deployed to a many devices, we’ve introduced a new concept of providing the ability to separate the roles between the person that authors the script and the person that approves the script. This gives additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing, particularly during the Technical Preview release.
+By default, users cannot approve a script they have authored. Since scripts are powerful, versatile, and can be deployed to many devices, we’ve introduced a new concept of providing the ability to separate the roles between the person that authors the script and the person that approves the script. This gives additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing, particularly during the Technical Preview release.
 
 To allow users to approve their own scripts:
 
