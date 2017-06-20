@@ -105,7 +105,7 @@ To install a passive mode site server, you use the **Create Site System Server W
     -   Site system roles that use a database (like the reporting point) must have that database on a server that is remote from both the active mode and passive mode site servers.
 
     -   The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
-    
+
 **Known Issue**:   
 With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
 -   131071 – Site server installation failed
@@ -169,7 +169,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 
 ## Include trust for specific files and folders in a Device Guard policy
-
+<!-- 1324676 -->
 In this release, we’ve added further capabilities to [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) policy management
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
@@ -186,6 +186,7 @@ You can now optionally add trust for specific files for folders in a Device Guar
 
 
 ## Hide task sequence progress
+<!-- 1354291 -->
 In this release, you can control when task sequence progress is displayed to end-users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
 
 #### To hide task sequence progress
@@ -195,7 +196,7 @@ In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understa
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
 
 ## Specify a different content location for install content and uninstall content
-
+<!-- 1097546 -->
 In Configuration Manager today, you specify the installation location that contains the setup files for an app. When you specify an install location, this is also used as the uninstall location for the application content.
 Based on your feedback, when you want to uninstall a deployed application, and the app content is not on the client computer, then the client will download all of the app setup files again before the application is uninstalled.
 To solve this problem, you can now specify both an installation content location and an optional uninstall content location. Additionally, you can choose not to specify an uninstall content location.
@@ -270,4 +271,5 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 
 
 ## Client Peer Cache support for express installation files for Windows 10 and Office 365
+<!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
