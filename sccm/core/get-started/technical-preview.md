@@ -117,7 +117,8 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Specify a different content location for install content and uninstall content|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#specify-a-different-content-location-for-install-content-and-uninstall-content)|![Not added](media/Red_X.gif)|
  |Accessibility improvements |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|![Not added](media/Red_X.gif)|
  |Azure Services Wizard support for Upgrade Readiness |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|![Not added](media/Red_X.gif)|
-
+ |PXE network boot support for IPv6 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|![Not added](media/Red_X.gif)|
+ |Manage Microsoft Surface driver updates |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|![Not added](media/Red_X.gif)| 
 
 
 ## Capabilities delivered in previous technical previews
