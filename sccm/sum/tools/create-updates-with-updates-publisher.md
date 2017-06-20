@@ -30,11 +30,11 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
 2.  On the **Package** page, use the following information to help you configure the update:
 
-    -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher creates a hash of the file. The hash and file name are then used in the update metadata for the update that you are creating.
+    -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a file hash. The hash and file name are then used in the update metadata for the update that you are creating.
 
-    -   Specify the source location of the content for this update. When you have a local copy of the content, you can select the checkbox **Use a local source to publish software update content** to use the [local source publishing path](/sccm/sum/tools/updates-publisher-options#advanced) (and Advanced option). If this option is not selected, you must specify a URL where the update can be found on the web. This path or URL is added to the update metadata.
+    -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path is not required.
 
-        Later, when the update is published to a WSUS server, Updates Publisher gets the binaries for the update from the indicated source location.
+        Later, when the update is published to a WSUS server, Updates Publisher downloads the binaries for the update from the indicated source location.  If no path is provided then Update Publisher will search the [local source publishing path](/sccm/sum/tools/updates-publisher-options#advanced) for the update binary.
 
     -   Specify the **Binary language** of the software update.
 
@@ -52,7 +52,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
 3.  On the **Information** page, specify details about the update that are included when the update is published or exported. Details include localized properties like the updates name (title) and description. Then, you specify more general details such as the classification, vendor, product, and where to learn more about the update.
 
-    **Localized properties: **
+	 __Localized properties:__
 
     -   **Language**: Select a language and then specify a title and description. You can then select additional languages, one at time, with each language supporting its own title and description.
 
@@ -60,48 +60,48 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
     -   **Description**: A friendly description of the update. You might include what the update installs, and why or when it should be used.
 
-  **Classification:** The following are common descriptions for the different classifications.
+	 **Classification:** The following are common descriptions for the different classifications.
 
-  -   **Update**: An update to an application or file that is currently installed.
+    -   **Update**: An update to an application or file that is currently installed.
 
-  -   **Critical**: A broadly released update for a specific problem that addresses a critical bug that is not related to security.
+    -   **Critical**: A broadly released update for a specific problem that addresses a critical bug that is not related to security.
 
-  -   **Feature Pack**: New product features that are distributed outside of a product release and are typically included in the next full product release.
+    -   **Feature Pack**: New product features that are distributed outside of a product release and are typically included in the next full product release.
 
-  -   **Security**: A broadly released update for a product-specific issue that is related to security.
+    -   **Security**: A broadly released update for a product-specific issue that is related to security.
 
-  -   **Update Rollup**: A cumulative set of hotfixes that are packaged together for easy deployment. These hotfixes can include security updates, critical updates, updates, and so on. An update rollup generally addresses a specific area, such as security or a product feature.
+    -   **Update Rollup**: A cumulative set of hotfixes that are packaged together for easy deployment. These hotfixes can include security updates, critical updates, updates, and so on. An update rollup generally addresses a specific area, such as security or a product feature.
 
-  -   **Service Pack**: A cumulative set of hotfixes that are applied to an application. These hotfixes can include security updates, critical updates, software updates, and so on.
+    -   **Service Pack**: A cumulative set of hotfixes that are applied to an application. These hotfixes can include security updates, critical updates, software updates, and so on.
 
-  -   **Tool**: Specifies a tool or feature that helps complete one or more tasks.
+    -   **Tool**: Specifies a tool or feature that helps complete one or more tasks.
 
-  -   **Driver**: An update for driver software.
+	 -   **Driver**: An update for driver software.
 
- **Vendor**: Specify a vendor for the update. You can use the dropdown list to use values from updates that are in the repository. When you specify a vendor, the wizard creates a folder with that vendor name under **All Software Updates** in the **Updates Workspace** if that folder does not already exist. The following are Windows Server Update Services (WSUS) reserved names that cannot be entered for updates you create:
- -   Microsoft Corporation
- -   Microsoft
- -   Update
- -   Software Update
- -   Tools
- -   Tool
- -   Critical
- -   Critical Updates
- -   Security
- -   Security Updates
- -   Feature Pack
- -   Update Rollup
- -   Service Pack
- -   Driver
- -   Driver Update
- -   Bundle
- -   Bundle Update  <br /><br />
+	**Vendor:** Specify a vendor for the update. You can use the dropdown list to use values from updates that are in the repository. When you specify a vendor, the wizard creates a folder with that vendor name under **All Software Updates** in the **Updates Workspace** if that folder does not already exist. The following are Windows Server Update Services (WSUS) reserved names that cannot be entered for updates you create:
+ >*   Microsoft Corporation
+ >*   Microsoft
+ >*   Update
+ >*   Software Update
+ >*   Tools
+ >*   Tool
+ >*   Critical
+ >*   Critical Updates
+ >*   Security
+ >*   Security Updates
+ >*   Feature Pack
+ >*   Update Rollup
+ >*   Service Pack
+ >*   Driver
+ >*   Driver Update
+ >*   Bundle
+ >*   Bundle Update
 
- **Product**: Specify the type of product that the update is for. You can use the dropdown list to use values from updates that are in the repository. The same list of WSUS reserved names that cannot be used for **Vendor**, cannot be used for **Product**.
+**Product**: Specify the type of product that the update is for. You can use the dropdown list to use values from updates that are in the repository. The same list of WSUS reserved names that cannot be used for **Vendor**, cannot be used for **Product**.
 
  **More info URL**: Specify the URL where you can find more information about this update. You must use lowercase letters for **https** or **http** when you enter this URL.
 
-1.  On the **Optional Info** page, you can configure details that provide additional information about the update.
+4.  On the **Optional Info** page, you can configure details that provide additional information about the update.
 
     -   **Bulletin ID**: Bulletin IDs are usually, but not always, provided by update vendors.
 
@@ -124,21 +124,21 @@ Because these two wizards have a similar workflow, the procedure to create an up
         -   **Always requires reboot**: The computer always performs a system restart after installing the software update.
         -   **Can request reboot**: After installing the software update, the computer requests a system restart only if a restart is necessary. The user has the option to postpone the restart. This is the default value. <br /><br />
 
-2.  On the **Prerequisite** page, specify the prerequisites that must be installed on a computer before this update can install. The rules are called **detectoids**. Detectoids are high-level rules like one that requires the computers CPU to be a 64-bit processor. Detectoids can also specify specific updates that must be installed before this update can install.
+5.  On the **Prerequisite** page, specify the prerequisites that must be installed on a computer before this update can install. Prerequisites can be **detectoids** or other updates. Detectoids are high-level rules like one that requires the computers CPU to be a 64-bit processor. Detectoids can also specify specific updates that must be installed before this update can install.
 
     -   For better performance, use detectoids instead of creating *installable* and *installed rules* that perform the same check or action.
 
- Use the search option for **Available software updates and detectoids** to help you find specific detectoids. For example, search on **CPU** to find the detectoids that let you limit installation based on specific CPU architecture.
+	Use the search option for **Available software updates and detectoids** to help you find specific updates or detectoids. For example, search on **CPU** to find the detectoids that let you limit installation based on specific CPU architecture.
 
- You can select one or more detectoids at a time to add as a prerequisite. When adding prerequisites, the selected detectoids are added as one or more groups. To qualify for installation, a computer must meet the requirement of at least one member of each group that you configure:
+	You can select one or more items at a time to add as a prerequisite. When adding prerequisites, the selected detectoids are added as one or more groups. To qualify for installation, a computer must meet the requirement of at least one member of each group that you configure:
 
- -   When you click **Add Prerequisite,** all detectoids you have selected are added to separate, individual, groups. To qualify for this update, a computer must meet the prerequisite in this group and pass requirements for any additional groups that are configured.
+ -   When you click **Add Prerequisite,** all items you have selected are added to separate, individual, groups. To qualify for this update, a computer must meet the prerequisite in this group and pass requirements for any additional groups that are configured.
 
- -   When you click **Add Group,** all detectoids you have selected are added to a single group. To qualify for this update, a computer must meet at least one of the prerequisites in this group and pass requirements for any additional groups that are configured.
+ -   When you click **Add Group,** all items you have selected are added to a single group. To qualify for this update, a computer must meet at least one of the prerequisites in this group and pass requirements for any additional groups that are configured.
 
-1.  On the **Supersedence** page, specify the updates that are replaced (superseded) by this update. When this update is published, Configuration Manager will mark each update that is superseded as **Expired**. Clients will then install this update instead of the superseded updates.
+6.  On the **Supersedence** page, specify the updates that are replaced (superseded) by this update. When this update is published, Configuration Manager will mark each update that is superseded as **Expired**. Clients will then install this update instead of the superseded updates.
 
-2.  On the **Applicability** page use the **Rule Editor** to define a set of rules that determine whether a device needs this update. (This page is similar to the **Installed** page, that follows it.)
+7.  On the **Applicability** page use the **Rule Editor** to define a set of rules that determine whether a device needs this update. (This page is similar to the **Installed** page, that follows it.)
 
     To add a new rule, click on ![New Rule](media/newrule.png). This opens the Applicability Rule page where you can configure rules.
 
@@ -159,15 +159,15 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
         After you create a rule, you can use the other icons to modify the rule, and if there are multiple rules, to define relationships between those rules.
 
- When you are done creating and adding rules, click **OK** in the **Create Rule Set** dialog box to save that set. You can then create a **New** rule and add that to the set as well.
+	When you are done creating and adding rules, click **OK** in the **Create Rule Set** dialog box to save that set. You can then create a **New** rule and add that to the set as well.
 
- When you have multiple rules or rule sets to add to an update, you can use the logical operators in the **Rule Editor** to determine conditions between the rules, and in which order they process.
+	When you have multiple rules or rule sets to add to an update, you can use the logical operators in the **Rule Editor** to determine conditions between the rules, and in which order they process.
 
-1.  On the **Installed** page use the **Rule Editor to** define a set of rules that determine whether a device has already installed the update you are configuring. (This page is similar to the **Applicability** page, that proceeds this page.)
+8.  On the **Installed** page use the **Rule Editor to** define a set of rules that determine whether a device has already installed the update you are configuring. (This page is similar to the **Applicability** page, that proceeds this page.)
 
     This page of the wizard supports configuring rules with the same options and criteria as the **Applicability** page.
 
-When the wizard completes, the new update is added to a node in the **Updates Workspace** that is identified by the **Vendor** name you used for that update.
+	When the wizard completes, the new update is added to a node in the **Updates Workspace** that is identified by the **Vendor** and **Product** name you used for that update.
 
 ## Use the Create Bundle wizard
 Because this wizard uses the same workflow as the [Create Update wizard](#use-the-create-update-wizard), use that workflow, but note the following difference for bundles:
