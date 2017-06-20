@@ -332,3 +332,22 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 ## Client Peer Cache support for express installation files for Windows 10 and Office 365
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
+
+## Device Health Attestation assessment for compliance policies for conditional access
+<!-- 1235616 -->
+Starting with this release, you can create a conditional access compliance policy based on device health attestation. **Device Health Attestation** compliance policy rules can now be used for conditional access to company resources.  
+
+### Try it out
+Select a Device Health Attestation rule as part of a compliance policy assessment.
+
+## Android for Work apps can be deployed as Available
+<!-- 1338403 -->
+Apps can now be deployed to Android for Work work profile as **Available**.  Learn more about how to [deploy applications](/sccm/apps/deploy-use/deploy-applications).
+
+## Android and iOS enrollment restrictions
+<!-- 1290826 -->
+Starting with this release, admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program or Apple Configurator only.
+
+### Try it out
+1. Set the Android configuration properties of your Microsoft Intune subscription to prevent personal Android devices from enrolling
+2. Set the iOS configuration properties of your Microsoft Intune subscription to prevent personal iOS devices from enrolling
