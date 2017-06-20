@@ -177,9 +177,9 @@ You can now optionally add trust for specific files for folders in a Device Guar
 2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
 3.	Complete the wizard.
 
-
+<!-- 1354291 -->
 ## Hide task sequence progress
-In this release, you can control when task sequence progress is displayed to end-users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
+In this release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, use the **Set Task Sequence Variable** step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress. You can use the Set Task Sequence Variable step multiple times in a task sequence to change the value for the variable. This lets you hide or display task sequence progress in different sections of the task sequence.
 
 #### To hide task sequence progress
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
@@ -260,3 +260,63 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 5.	 On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
 
 6.	Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
+
+<!-- 1269793 -->
+## PXE network boot support for IPv6
+You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6.
+
+#### To enable PXE boot support for IPv6
+Use the following procedure to enable the option for IPv6 support for PXE.
+
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Distribution Points**, and click **Properties** for PXE-enabled distribution points.
+2. On the **PXE** tab, select **Support IPv6** to enable IPv6 support for PXE.
+
+<!-- 1098490 -->
+## Manage Microsoft Surface driver updates
+You can now use Configuration Manager to manage Microsoft Surface driver updates.
+
+### Prerequisites
+All software update points must run Windows Server 2016.
+
+### Try it out!
+Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
+
+<!-- 1290890 -->
+## Configure Windows Update for Business deferral policies
+You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+
+### Prerequisites
+Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+
+#### To create a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
+3. On the **General** page, provide a name and description for the policy.
+4. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates.    
+    Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
+    - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
+    - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.   
+5. Choose whether to defer or pause Quality Updates.     
+    Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
+    - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Quality Updates starting**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Quality Updates by clearing the checkbox.
+6. Select **Install updates from other Microsoft Products** to enable the group policy setting that make deferral settings applicable to Microsoft Update, as well as Windows Updates.
+7. Select **Include drivers with Windows Update** to automatically update drivers from Windows Updates. If you clear this setting, driver updates are not downloaded from Windows Updates.
+8. Complete the wizard to create the new deferral policy.
+
+#### To deploy a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
+3. Configure the following settings:
+    - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
+    - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
+    - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
+    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
+    - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
+    - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
+4.  Complete the wizard to deploy the profile.
