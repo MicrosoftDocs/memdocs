@@ -90,11 +90,15 @@ To install a passive mode site server, you use the **Create Site System Server W
 
     -   The site server in passive mode is configured to use the same site database as the active mode site server. However, the passive mode site server does not use that database until after it is promoted to active mode.
 
--   The computer that will run the passive mode site server must meet the prerequisites for a primary site server.
+-   The computer that will run the passive mode site server:
 
-    -   It installs using source files that match the version of the active mode site server.
+    -   Must meet the [prerequisites for installing a primary site](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
-    -   The active and passive mode site server computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
+    -   Installs using source files that match the version of the active mode site server.
+
+    -   Cannot have a site system role from any site prior to installing the passive mode site.
+
+-   The active and passive mode site server computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
 
 -   Promotion of the passive mode site server to active mode server is manual. There is no automatic failover.
 
