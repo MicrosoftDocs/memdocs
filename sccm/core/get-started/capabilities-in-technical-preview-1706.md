@@ -263,13 +263,13 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 
 <!-- 1269793 -->
 ## PXE network boot support for IPv6
-When you have an IPv6-only network, you can now boot a device to start a task sequence operating system deployment by using PXE.
+You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6.
 
 #### To enable PXE boot support for IPv6
-On the properties of a Distribution Point, PXE and/or Multicast tabs, enable the option for IPv6 support.
+Use the following procedure to enable the option for IPv6 support for PXE.
 
-1. In the console, go to **Administration** > **Overview** > **Distribution Points**, and click **Properties**.
-2. On the **PXE** tab, select **setting here** to enable PXE boot support for IPv6.
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Distribution Points**, and click **Properties** for PXE-enabled distribution points.
+2. On the **PXE** tab, select **Support IPv6** to enable IPv6 support for PXE.
 
 <!-- 1098490 -->
 ## Manage Microsoft Surface driver updates
@@ -304,8 +304,9 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
     - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
     - **Pause Quality Updates starting**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You an unpause Quality Updates by clearing the checkbox.
-6. Choose whether to exclude Windows Update drivers during updates.
-7. Complete the wizard to create the new deferral policy.
+6. Select **Install updates from other Microsoft Products** to enable the group policy setting that make deferral settings applicable to Microsoft Update, as well as Windows Updates.
+7. Select **Include drivers with Windows Update** to automatically update drivers from Windows Updates. If you clear this setting, driver updates are not downloaded from Windows Updates.
+8. Complete the wizard to create the new deferral policy.
 
 #### To deploy a Windows Update for Business deferral policy
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
