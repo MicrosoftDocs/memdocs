@@ -269,10 +269,7 @@ In this release, we’ve added two new client settings to Configuration Manager.
 - Control which Configuration Manager clients can access a configured cloud management gateway.
 - Automatically register Windows 10 domain-joined Configuration Manger clients with Azure Active Directory.
 
-After configuring these settings, you can:
-
-- Enable Internet-based devices to install the client and register with the site using the cloud management gateway, and Azure AD authentication.
-- Enable internet-based devices without client certificates to be managed through the cloud management gateway using AAD authentication.
+These new settings help you accomplish the capabilities described in the [Configuration Manager 1705 Technical Preview](/sccm/core/get-started/capabilities-in-technical-preview-1705#new-capabilities-for-azure-ad-and-cloud-management).
 
 ### Before you start
 
@@ -288,7 +285,6 @@ If you remove the connection, devices are not un-registered, but no new devices 
 2.	Deploy the client settings to the required collection of devices.
 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
-
 
 ## Create and run PowerShell scripts from the Configuration Manager console
 
