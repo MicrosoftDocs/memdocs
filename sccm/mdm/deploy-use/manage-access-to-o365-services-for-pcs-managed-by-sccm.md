@@ -21,31 +21,25 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-
-
- Beginning with version 1602 of Configuration Manager, you can configure conditional access for PCs managed by System Center Configuration Manager.  
+Beginning with version 1602 of Configuration Manager, you can configure conditional access for PCs managed by System Center Configuration Manager.  
 
 > [!IMPORTANT]  
->  This is a pre-release feature available in update 1602,update 1606, and update 1610. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. For more information, see [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+> This is a pre-release feature available in update 1602,update 1606, and update 1610. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. For more information, see [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 > - After you install update 1602, the feature type displays as released even though it is pre-release.
 > - If you then update from 1602 to 1606, the feature type displays as released even through it remains pre-release.
 > - If you update from version 1511 directly to 1606, the feature type displays as pre-release.
 
- If you are looking for information on how to configure conditional access for devices enrolled  and managed by Intune, or PCs that are domain joined and are not evaluated for compliance, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md).  
-
+If you are looking for information on how to configure conditional access for devices enrolled  and managed by Intune, or PCs that are domain joined and are not evaluated for compliance, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md).
 
 ## Supported Services  
 
--   Exchange Online  
-
--   SharePoint Online  
+-   Exchange Online
+-   SharePoint Online
 
 ## Supported PCs  
 
--   Windows 7  
-
--   Windows 8.1  
-
+-   Windows 7
+-   Windows 8.1
 -   Windows 10 
 
 ## Configure conditional access  
@@ -55,7 +49,7 @@ manager: angrobe
 
 -   ADFS Sync, and an O365 subscription. The O365 subscription is for setting up Exchange Online and SharePoint Online.  
 
--   A Microsoft Intune Subscription. The Microsoft Intune Subscription should be configured in Configuration Manager Console. This still requires that you are in a hybrid deployment.  
+-   A Microsoft Intune Subscription. The Microsoft Intune Subscription should be configured in Configuration Manager Console. The Intune subscription is used to relay device compliance state to Azure Active Directory and for user licensing.  
 
  The PCs must meet the following requirements:  
 
@@ -140,5 +134,7 @@ manager: angrobe
 
 -   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
 --->
-### See also  
- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
+## See also
+
+- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
+- [Conditional access troubleshooting flow-chart for Configuration Manager](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0)
