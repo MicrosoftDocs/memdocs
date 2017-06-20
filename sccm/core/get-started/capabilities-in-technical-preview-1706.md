@@ -105,6 +105,12 @@ To install a passive mode site server, you use the **Create Site System Server W
     -   Site system roles that use a database (like the reporting point) must have that database on a server that is remote from both the active mode and passive mode site servers.
 
     -   The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
+    
+**Known Issue**:   
+With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
+-   131071 – Site server installation failed
+-   720895 – Site server role uninstallation failed
+-  	851967 – Failover failed
 
 ### Add a site server in passive mode
 1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
@@ -125,6 +131,8 @@ For detailed installation status, go to **Administration** > **Site Configuratio
 
 -   Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
 
+
+
 ### Promote the passive mode site server to active mode
 When you want to change the passive mode site server to active mode, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
 1.	In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
@@ -140,7 +148,6 @@ For detailed status, go to **Monitoring** > **Site Server Status**.
     -   While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
 
 When an site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
-
 
 
 ### Daily monitoring
