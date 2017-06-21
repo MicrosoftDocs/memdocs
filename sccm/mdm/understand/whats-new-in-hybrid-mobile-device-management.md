@@ -43,7 +43,7 @@ Beginning in Configuration Manager version 1610 and Microsoft Intune version 170
 
 ### New in Configuration Manager Technical Preview 1706
 
-- **New mobile application management policy settings**
+- **New mobile application management policy settings**    
 The following mobile application management (MAM) policy settings are now available:
 
     - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
@@ -55,10 +55,10 @@ The following mobile application management (MAM) policy settings are now availa
 - **New Windows configuration item settings**  <!-- 1354715 -->    
     New Windows configuration items are available for the Password, Device, Store, and Microsoft Edge setting categories. For more information, see [New Windows configuration item settings](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-windows-configuration-item-settings).
 
-- **Actions for non-compliance**
+- **Actions for non-compliance**    
     You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1706#actions-for-non-compliance).
 
-- **New device compliance policy rules**
+- **New device compliance policy rules**    
     You can now configure new options for compliance policies that were previously only available in Intune standalone. For details, see [Device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-device-compliance-policy-rules).
 
 - **Android and iOS enrollment restrictions** <!-- 1290826 -->    
