@@ -333,7 +333,8 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
 
-## New Windows configuration item settings <!-- 1354715 -->
+## New Windows configuration item settings 
+<!-- 1354715 -->
 
 In this release, we've added the following new settings you can use in Windows configuration items:
 
