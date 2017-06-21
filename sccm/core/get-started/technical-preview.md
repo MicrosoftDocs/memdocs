@@ -111,7 +111,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Device compliance policy improvements|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-compliance-policy-improvements)|![Not added](media/Red_X.gif)|
- |New mobile application management policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Not added](media/Red_X.gif)| 
+ |New mobile application management policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Not added](media/Red_X.gif)|
  |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
  |Site server role high availability|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
  |Include trust for specific files and folders in a Device Guard policy|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|![Not added](media/Red_X.gif)|
@@ -127,9 +127,6 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Client Peer Cache support for express installation files for Windows 10 and Office 365|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Not added](media/Red_X.gif)|
  |Android for Work apps can be deployed as Available|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-apps-can-be-deployed-as-available)|![Not added](media/Red_X.gif)|
  |Android and iOS Enrollment Restrictions|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|![Not added](media/Red_X.gif)|
- |Android for Work application management policy for copy-paste|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|![Not added](media/Red_X.gif)|
-|Android for Work apps can be deployed as Available|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-apps-can-be-deployed-as-available)|![Not added](media/Red_X.gif)|
-|Android and iOS Enrollment Restrictions|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|![Not added](media/Red_X.gif)|
  |Android for Work application management policy for copy-paste|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|![Not added](media/Red_X.gif)|
  |New Windows configuration item settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|![Not added](media/Red_X.gif)|
 
