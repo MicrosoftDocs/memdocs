@@ -1,8 +1,8 @@
 ---
-title: "Checklist for 1702 | System Center Configuration Manager"
-description: "Learn about actions to take before updating to System Center Configuration Manager version 1702."
+title: "Checklist for 1706 | System Center Configuration Manager"
+description: "Learn about actions to take before updating to System Center Configuration Manager version 1706."
 ms.custom: na
-ms.date: 06/06/2017
+ms.date: 07/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -10,24 +10,21 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: 7
+ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
+caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ---
-# Checklist for installing update 1702 for System Center Configuration Manager
+# Checklist for installing update 1706 for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version.
+When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1706 to update your hierarchy from a previous version.
 
-> [!TIP]  
-Version 1702 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions) that you can use to install the first site of a new hierarchy.
+To get the update for version 1706, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
-To get the update for version 1702, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
-
--   When the update is listed as **Available**, the update is ready to install. Before installing version 1702, review the following information [about installing update 1702](#about-installing-update-1702) and the [checklist](#checklist) for configurations to make before starting the update.
+-   When the update is listed as **Available**, the update is ready to install. Before installing version 1706, review the following information [about installing update 1706](#about-installing-update-1706) and the [checklist](#checklist) for configurations to make before starting the update.
 
 -   If the update displays as **Downloading** and does not change, review the **hman.log** and **dmpdownloader.log** for errors.
 
@@ -39,10 +36,10 @@ For more information about installing updates, see [In-console updates and servi
 
 For information about the versions of the Current Branch, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) in [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
-## About installing update 1702
+## About installing update 1706
 
 **Sites:**  
-You install update 1702 at the top-level site of your hierarchy. This means you initiate the installation from your central administration site if you have one, or from your stand-alone primary site. After the update is installed at the top-tier site, child sites have the following update behavior:
+You install update 1706 at the top-level site of your hierarchy. This means you initiate the installation from your central administration site if you have one, or from your stand-alone primary site. After the update is installed at the top-tier site, child sites have the following update behavior:
 
 -   Child primary sites install the update automatically after the central administration site finishes the installation of the update. You can use service windows to control when a site installs the update. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
@@ -64,11 +61,11 @@ The first time you use a Configuration Manager console after the update has fini
 
 ## Checklist
 
-**Ensure that all sites run a version of System Center Configuration Manager that supports update to 1702:**   
-Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702. To update to 1702, you must use version 1602, 1606, or 1610.
+**Ensure that all sites run a version of System Center Configuration Manager that supports update to 1706:**   
+Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1706. To update to 1706, you must use version 1606, 1610, or 1702.
 
 **Review the status of your Software Assurance or equivalent subscription rights:**   
-You must have an active Software Assurance (SA) agreement to install update 1702. When you install this update, the **Licensing** tab presents the option to confirm your **Software Assurance expiration date**.
+You must have an active Software Assurance (SA) agreement to install update 1706. When you install this update, the **Licensing** tab presents the option to confirm your **Software Assurance expiration date**.
 
 This is an optional value that you can specify as a convenient reminder of your license expiration date. This date is visible when you install future updates. You might have previously specified this value during setup or installation of an update, or by using the **Licensing** tab of the **Hierarchy Settings**, from within the Configuration Manager console.
 
@@ -135,25 +132,6 @@ Before you update a site, back up the site database to ensure that you have a su
 
 For more information, see [Backup and recovery for System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
-<!-- Removed from update guidance 6/6/2017
-**Test the database upgrade on a copy of the most recent site database backup:** 
-Before you update a System Center Configuration Manager central administration site or primary site, you can test the site database upgrade process on a copy of the site database.
-
--   We recommend that you test the site database upgrade process because when you upgrade a site, the site database might be modified.
-
--   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected.
-
--   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality.
-
--   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site.
-
--   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.
-
-Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
-
-Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
--->
-
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.
 
@@ -169,7 +147,7 @@ This can help you control when sites in your hierarchy install the update. For m
 **Run the setup prerequisite checker:**   
 When the update is listed in the console as **Available,** you can independently run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to **Administration > Overview > Cloud Services > Updates and Servicing.** Next, right-click  **Configuration Manager 1702 update package**, and then choose **Run prerequisite check**.
+To run a prerequisite check from the console, go to **Administration > Overview > Cloud Services > Updates and Servicing.** Next, right-click  **Configuration Manager 1706 update package**, and then choose **Run prerequisite check**.
 
 For more information about starting and then monitoring the prerequisite check, see **Step 3: Run the prerequisite checker before installing an update** in the topic [Install in-console updates for System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
@@ -186,7 +164,7 @@ For more information, see [Updates for System Center Configuration Manager](/sc
 ## Post update Checklist
 Review the following actions to take after the update installation is finished.
 1.	Make sure that site-to-site replication is active. In the console, view **Monitoring** > **Site Hierarchy**, and **Monitoring** > **Database Replication** for indications of problems or confirmation that replication links are active.
-2.	Make sure each site server and site system role has updated to version 1702. In the console, you can add the optional column **Version** to the display of some nodes including **Sites** and **Distribution Points**.
+2.	Make sure each site server and site system role has updated to version 1706. In the console, you can add the optional column **Version** to the display of some nodes including **Sites** and **Distribution Points**.
 
  When necessary, a site system role will reinstall automatically to update to the new version. Consider restarting remote site systems that do not update successfully.
 3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
