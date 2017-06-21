@@ -111,7 +111,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Device compliance policy improvements|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-compliance-policy-improvements)|![Not added](media/Red_X.gif)|
- |New mobile application management (MAM) policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-(mam)-policy-settings)|![Not added](media/Red_X.gif)|
+ |New mobile application management (MAM) policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-&#40;mam&#41;-policy-settings)|![Not added](media/Red_X.gif)|
  |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
  |Site server role high availability|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
  |Include trust for specific files and folders in a Device Guard policy|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|![Not added](media/Red_X.gif)|
@@ -257,4 +257,3 @@ You can install a baseline version for up to 1 year after its release. However, 
 ## See Also  
 [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
-
