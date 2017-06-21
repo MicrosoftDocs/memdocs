@@ -124,6 +124,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Device Health Attestation assessment for compliance policies for conditional access|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![Not added](media/Red_X.gif)|
  |Android for Work apps can be deployed as Available|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-apps-can-be-deployed-as-available)|![Not added](media/Red_X.gif)|
  |Android and iOS Enrollment Restrictions|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|![Not added](media/Red_X.gif)|
+|Android for Work application management policy for copy-paste|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for copy-paste)|![Not added](media/Red_X.gif)|
 
 
 ## Capabilities delivered in previous technical previews

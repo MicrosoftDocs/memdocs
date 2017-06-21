@@ -352,3 +352,19 @@ Starting with this release, admins can now specify that users cannot enroll pers
 1. In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.
 2. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** and then select **Android** or **iOS**.
 3. Select **Block personally owned devices**.
+
+## Android for Work application management policy for copy-paste
+We have updated the setting descriptions for Android for Work configuration items for the **Allow data sharing between  work and personal profile**.
+
+|Before 1706 Technical Preview | New option name | Behavior|
+|-|-|-|
+|Prevent any sharing across boundaries| Default sharing restrictions| Work-to-personal: Default (expected to be blocked on all versions) <br>Personal-to-work: Default (allowed on 6.x+, blocked on 5.x)|
+|No restrictions|	Apps in personal profile can handle sharing requests from work profile|	Work-to-personal: Allowed  <br>Personal-to-work: Allowed|
+|Apps in work profile can handle sharing requests from personal profile	|Apps in work profile can handle sharing requests from personal profile	|Work-to-personal: Default<br>Personal-to-work: Allowed<br>(Only useful on 5.x where personal-to-work is blocked)|
+
+None of these options directly prevent copy-paste behavior. We added a custom setting to the service and Company Portal app in 1704 that can be configured to prevent copy-paste. This can be set through custom URI.
+
+-	OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
+-	Value type: Boolean
+
+Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior between Android for Work personal and work profiles.
