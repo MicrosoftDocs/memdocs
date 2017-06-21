@@ -263,7 +263,7 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 
 <!-- 1269793 -->
 ## PXE network boot support for IPv6
-You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6.
+You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6. This option does not require WDS and will stop WDS if it is present.
 
 #### To enable PXE boot support for IPv6
 Use the following procedure to enable the option for IPv6 support for PXE.
