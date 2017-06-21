@@ -377,9 +377,9 @@ After you have run a script to client devices, use this procedure to monitor the
 2. In the **Monitoring** workspace, click **Script Results**.
 3. In the **Script Results** list, you view the results for each script you ran on client devices. A script exit code of **0**, generally indicates that the script ran successfully.
 
-<!-- 1269793 -->
 ## PXE network boot support for IPv6
-You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6.
+<!-- 1269793 -->
+You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6. This option does not require WDS and will stop WDS if it is present.
 
 #### To enable PXE boot support for IPv6
 Use the following procedure to enable the option for IPv6 support for PXE.
@@ -387,8 +387,8 @@ Use the following procedure to enable the option for IPv6 support for PXE.
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Distribution Points**, and click **Properties** for PXE-enabled distribution points.
 2. On the **PXE** tab, select **Support IPv6** to enable IPv6 support for PXE.
 
-<!-- 1098490 -->
 ## Manage Microsoft Surface driver updates
+<!-- 1098490 -->
 You can now use Configuration Manager to manage Microsoft Surface driver updates.
 
 ### Prerequisites
@@ -400,8 +400,8 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
-<!-- 1290890 -->
 ## Configure Windows Update for Business deferral policies
+<!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 ### Prerequisites
@@ -440,6 +440,140 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 ## Client Peer Cache support for express installation files for Windows 10 and Office 365
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
+
+## New Windows configuration item settings
+<!-- 1354715 -->
+
+In this release, we've added the following new settings you can use in Windows configuration items:
+
+### Password
+
+- **Device Encryption**
+
+### Device
+
+- **Region settings modification (desktop only)**
+- **Power and sleep settings modification**
+- **Language settings modification**
+- **System time modification**
+- **Device name modification**
+
+### Store
+
+- **Auto-update apps from store**
+- **Use private store only**
+- **Store originated app launch**
+
+### Microsoft Edge
+
+- **Block access to about:flags**
+- **SmartScreen prompt override**
+- **SmartScreen prompt override for files**
+- **WebRTC localhost IP address**
+- **Default search engine**
+- **OpenSearch XML URL**
+- **Homepages (desktop only)**
+
+For more information about compliance settings, see [Ensure device compliance](/sccm/compliance/understand/ensure-device-compliance).
+
+
+## Device compliance policy improvements
+
+### Actions for non-compliance
+
+Beginning with this release, you can configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant.
+
+These are the supported actions for non-compliance:
+
+- Send e-mail to end user
+- Mark devices non-compliant
+
+#### Try it Out!
+
+##### To add an email template
+
+Configuration Manager provides e-mail templates, but you can also create your own. The e-mail  template is used later in the process of creating actions for non-compliance to communicate with users.
+
+1. In the Configuration Manager console, choose **Assets and Compliance**.
+
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance notification templates**.
+
+3. On the **Home** tab, in the **Create Compliance Notification Template**.
+
+4. You must enter the following information:
+	a. Name: E-mail template name.
+	b. From: E-mail address sending the e-mail notification.
+	c. Subject: An subject that explains the e-mail notification being sent.
+	d. Message body: More details on the e-mail notification.
+
+5. Click **OK** to save the new e-mail template.
+
+6. On the **Add Action** page, you can select your new e-mail template from the list.
+
+7. Once you select your e-mail template, click **OK**.
+
+##### To create actions for non-compliance
+
+1. In the Configuration Manager console, choose **Assets and Compliance**.
+
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance Policies**.
+
+3. On the **Home** tab, in the **Create** group, choose **Create Compliance Policy**.
+
+4. Select the **Supported Platforms** you want, then click **Next** twice. You can skip the **Rules** page.
+
+5. On the **Noncompliance Actions** page, you define what happens when a device becomes non compliant, click **New**.
+6. You can choose two options: **Send e-mail to end user** or **Mark device non-compliant**.
+
+7. If selecting **Send e-mail to end user**, you must enter the following:
+	a. **Grace period (in days):** You can enter 0-365 days.
+	b. **Additional recipients (via e-mail)**
+	c. **Select the message template:** You can choose the default e-mail templates or the custom ones you added.
+
+8. If selecting **Mark device non-compliant**, you must enter the following:
+	a. **Grace period (in days):** You can enter 0-365 days.
+
+9. Once you chose the action and entered the settings for it, click **Next** twice, then **Close**.
+
+### New device compliance policy rules
+
+* **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
+
+  	**Supported on:**
+  	* Windows Phone 8+
+  	* Windows 8.1+
+  	* iOS 6+
+<br></br>
+* **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
+
+ 	**Supported on:**
+  	* Android 4.0+
+  	* Samsung KNOX Standard 4.0+
+<br></br>
+* **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
+
+  	**Supported on:**
+  	* Android 4.0+
+  	* Samsung KNOX Standard 4.0+
+<br></br>
+* **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
+
+  	**Supported on:**
+  	* Android 4.2 through 4.4
+  	* Samsung KNOX Standard 4.0+
+
+See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
+
+## New mobile application management policy settings
+Beginning with this release, you can use three new mobile application management (MAM) policy settings:
+
+- **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
+
+- **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
+
+- **Disable printing:** Prevents the app from printing work or school data.
+
+See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 ## Android for Work apps can be deployed as Available
 <!-- 1338403 -->
