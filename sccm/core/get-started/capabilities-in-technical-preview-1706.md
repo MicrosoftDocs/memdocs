@@ -368,3 +368,9 @@ None of these options directly prevent copy-paste behavior. We added a custom se
 -	Value type: Boolean
 
 Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior between Android for Work personal and work profiles.
+
+### Try it out
+1. In the Configuration Manager console, select **Assets and Compliance** > **Overview** > **Compliance settings** > **Configuration items**.
+2. Choose **Create** to create a new configuration item, and specify **Name** and **Android for Work**.
+3. In the device setting groups to configure, select **Work Profile**, and choose **Next**.
+4. Select the value for **Allow data sharing between work and personal profiles**, and then complete the wizard.
