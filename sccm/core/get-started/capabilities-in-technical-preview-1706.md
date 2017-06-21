@@ -346,8 +346,9 @@ Apps can now be deployed to Android for Work work profile as **Available**.  Lea
 
 ## Android and iOS enrollment restrictions
 <!-- 1290826 -->
-Starting with this release, admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program or Apple Configurator only.
+Starting with this release, admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only.
 
 ### Try it out
-1. Set the Android configuration properties of your Microsoft Intune subscription to prevent personal Android devices from enrolling
-2. Set the iOS configuration properties of your Microsoft Intune subscription to prevent personal iOS devices from enrolling
+1. In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.
+2. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** and then select **Android** or **iOS**.
+3. Select **Block personally owned devices**.
