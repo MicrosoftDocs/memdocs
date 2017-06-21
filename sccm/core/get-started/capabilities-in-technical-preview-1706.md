@@ -106,6 +106,12 @@ To install a passive mode site server, you use the **Create Site System Server W
 
     -   The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
 
+**Known Issue**:   
+With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
+-   131071 – Site server installation failed
+-   720895 – Site server role uninstallation failed
+-  	851967 – Failover failed
+
 ### Add a site server in passive mode
 1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
 
@@ -125,6 +131,8 @@ For detailed installation status, go to **Administration** > **Site Configuratio
 
 -   Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
 
+
+
 ### Promote the passive mode site server to active mode
 When you want to change the passive mode site server to active mode, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
 1.	In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
@@ -140,7 +148,6 @@ For detailed status, go to **Monitoring** > **Site Server Status**.
     -   While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
 
 When an site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
-
 
 
 ### Daily monitoring
@@ -162,7 +169,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 
 ## Include trust for specific files and folders in a Device Guard policy
-
+<!-- 1324676 -->
 In this release, we’ve added further capabilities to [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) policy management
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
@@ -179,7 +186,8 @@ You can now optionally add trust for specific files for folders in a Device Guar
 
 
 ## Hide task sequence progress
-In this release, you can control when task sequence progress is displayed to end-users by using a new variable. In your task sequence, you can use the Set Task Sequence Variable step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress.  
+<!-- 1354291 -->
+In this release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, use the **Set Task Sequence Variable** step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress. You can use the Set Task Sequence Variable step multiple times in a task sequence to change the value for the variable. This lets you hide or display task sequence progress in different sections of the task sequence.
 
 #### To hide task sequence progress
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
@@ -188,7 +196,7 @@ In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understa
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
 
 ## Specify a different content location for install content and uninstall content
-
+<!-- 1097546 -->
 In Configuration Manager today, you specify the installation location that contains the setup files for an app. When you specify an install location, this is also used as the uninstall location for the application content.
 Based on your feedback, when you want to uninstall a deployed application, and the app content is not on the client computer, then the client will download all of the app setup files again before the application is uninstalled.
 To solve this problem, you can now specify both an installation content location and an optional uninstall content location. Additionally, you can choose not to specify an uninstall content location.
@@ -362,3 +370,68 @@ After you have run a script to client devices, use this procedure to monitor the
 1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Results**.
 3. In the **Script Results** list, you view the results for each script you ran on client devices. A script exit code of **0**, generally indicates that the script ran successfully.
+
+<!-- 1269793 -->
+## PXE network boot support for IPv6
+You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6.
+
+#### To enable PXE boot support for IPv6
+Use the following procedure to enable the option for IPv6 support for PXE.
+
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Distribution Points**, and click **Properties** for PXE-enabled distribution points.
+2. On the **PXE** tab, select **Support IPv6** to enable IPv6 support for PXE.
+
+<!-- 1098490 -->
+## Manage Microsoft Surface driver updates
+You can now use Configuration Manager to manage Microsoft Surface driver updates.
+
+### Prerequisites
+All software update points must run Windows Server 2016.
+
+### Try it out!
+Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
+
+<!-- 1290890 -->
+## Configure Windows Update for Business deferral policies
+You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+
+### Prerequisites
+Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+
+#### To create a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
+3. On the **General** page, provide a name and description for the policy.
+4. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates.    
+    Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
+    - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
+    - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.   
+5. Choose whether to defer or pause Quality Updates.     
+    Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
+    - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
+    - **Pause Quality Updates starting**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Quality Updates by clearing the checkbox.
+6. Select **Install updates from other Microsoft Products** to enable the group policy setting that make deferral settings applicable to Microsoft Update, as well as Windows Updates.
+7. Select **Include drivers with Windows Update** to automatically update drivers from Windows Updates. If you clear this setting, driver updates are not downloaded from Windows Updates.
+8. Complete the wizard to create the new deferral policy.
+
+#### To deploy a Windows Update for Business deferral policy
+1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
+3. Configure the following settings:
+    - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
+    - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
+    - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
+    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
+    - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
+    - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
+4.  Complete the wizard to deploy the profile.
+
+## Client Peer Cache support for express installation files for Windows 10 and Office 365
+<!-- 1352486 -->
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
+
