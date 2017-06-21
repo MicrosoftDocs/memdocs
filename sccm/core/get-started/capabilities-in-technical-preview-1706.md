@@ -373,8 +373,8 @@ After you have run a script to client devices, use this procedure to monitor the
 2. In the **Monitoring** workspace, click **Script Results**.
 3. In the **Script Results** list, you view the results for each script you ran on client devices. A script exit code of **0**, generally indicates that the script ran successfully.
 
-<!-- 1269793 -->
 ## PXE network boot support for IPv6
+<!-- 1269793 -->
 You can now enable PXE network boot support for IPv6 to start a task sequence operating system deployment. When you use this setting, PXE-enabled distribution points will support both IPv4 and IPv6. This option does not require WDS and will stop WDS if it is present.
 
 #### To enable PXE boot support for IPv6
@@ -383,8 +383,8 @@ Use the following procedure to enable the option for IPv6 support for PXE.
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Distribution Points**, and click **Properties** for PXE-enabled distribution points.
 2. On the **PXE** tab, select **Support IPv6** to enable IPv6 support for PXE.
 
-<!-- 1098490 -->
 ## Manage Microsoft Surface driver updates
+<!-- 1098490 -->
 You can now use Configuration Manager to manage Microsoft Surface driver updates.
 
 ### Prerequisites
@@ -396,8 +396,8 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
-<!-- 1290890 -->
 ## Configure Windows Update for Business deferral policies
+<!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 ### Prerequisites
@@ -516,7 +516,7 @@ Configuration Manager provides e-mail templates, but you can also create your ow
   	* Android 4.0+
   	* Samsung KNOX Standard 4.0+
 <br></br>
-* **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device. 
+* **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
 
   	**Supported on:**
   	* Android 4.2 through 4.4
