@@ -129,6 +129,7 @@ You can install a baseline version for up to 1 year after its release. However, 
 |Android for Work apps can be deployed as Available|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-apps-can-be-deployed-as-available)|![Not added](media/Red_X.gif)|
 |Android and iOS Enrollment Restrictions|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|![Not added](media/Red_X.gif)|
  |Android for Work application management policy for copy-paste|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|![Not added](media/Red_X.gif)|
+ |New Windows configuration item settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|![Not added](media/Red_X.gif)|
 
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
@@ -254,3 +255,4 @@ You can install a baseline version for up to 1 year after its release. However, 
 ## See Also  
 [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
+
