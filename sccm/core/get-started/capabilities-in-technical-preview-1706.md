@@ -441,7 +441,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
 
-## New Windows configuration item settings 
+## New Windows configuration item settings
 <!-- 1354715 -->
 
 In this release, we've added the following new settings you can use in Windows configuration items:
@@ -564,8 +564,8 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 
 See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
 
-## New mobile application management (MAM) policy settings
-Beginning with this release, you can use three new MAM policy settings:
+## New mobile application management policy settings
+Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
 
@@ -609,4 +609,3 @@ Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior betwe
 2. Choose **Create** to create a new configuration item, and specify **Name** and **Android for Work**.
 3. In the device setting groups to configure, select **Work Profile**, and choose **Next**.
 4. Select the value for **Allow data sharing between work and personal profiles**, and then complete the wizard.
-
