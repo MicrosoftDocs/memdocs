@@ -2,7 +2,7 @@
 title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 06/02/2017
+ms.date: 06/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,6 +38,35 @@ This article provides details on the new mobile device management (MDM) features
 
 - **Change your MDM authority**
 Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority]( /sccm/mdm/deploy-use/change-mdm-authority).
+
+
+
+### New in Configuration Manager Technical Preview 1706
+
+- **New mobile application management policy settings**    
+The following mobile application management (MAM) policy settings are now available:
+
+    - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
+    - **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
+    - **Disable printing:** Prevents the app from printing work or school data.
+
+    See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
+
+- **New Windows configuration item settings**  <!-- 1354715 -->    
+    New Windows configuration items are available for the Password, Device, Store, and Microsoft Edge setting categories. For more information, see [New Windows configuration item settings](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-windows-configuration-item-settings).
+
+- **Actions for non-compliance**    
+    You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1706#actions-for-non-compliance).
+
+- **New device compliance policy rules**    
+    You can now configure new options for compliance policies that were previously only available in Intune standalone. For details, see [Device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-device-compliance-policy-rules).
+
+- **Android and iOS enrollment restrictions** <!-- 1290826 -->    
+    Admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only. For details, see [Android and iOS enrollment restrictions](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
+
+- **Android for Work apps can be deployed as Available**  <!-- 1338403 -->    
+    Apps can now be deployed to Android for Work work profile as **Available**. Learn more about how to [deploy applications](/sccm/apps/deploy-use/deploy-applications).
+
 
 ## April 2017
 
