@@ -290,7 +290,7 @@ If you remove the connection, devices are not un-registered, but no new devices 
 
 1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 	-	**Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
-	-	**Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**. 
+	-	**Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
 2.	Deploy the client settings to the required collection of devices.
 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
@@ -437,3 +437,37 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
 
+## Android for Work apps can be deployed as Available
+<!-- 1338403 -->
+Apps can now be deployed to Android for Work work profile as **Available**.  Learn more about how to [deploy applications](/sccm/apps/deploy-use/deploy-applications).
+
+## Android and iOS enrollment restrictions
+<!-- 1290826 -->
+Starting with this release, admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only.
+
+### Try it out
+1. In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.
+2. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** and then select **Android** or **iOS**.
+3. Select **Block personally owned devices**.
+
+## Android for Work application management policy for copy-paste
+We have updated the setting descriptions for Android for Work configuration items for the **Allow data sharing between  work and personal profile**.
+
+|Before 1706 Technical Preview | New option name | Behavior|
+|-|-|-|
+|Prevent any sharing across boundaries| Default sharing restrictions| Work-to-personal: Default (expected to be blocked on all versions) <br>Personal-to-work: Default (allowed on 6.x+, blocked on 5.x)|
+|No restrictions|	Apps in personal profile can handle sharing requests from work profile|	Work-to-personal: Allowed  <br>Personal-to-work: Allowed|
+|Apps in work profile can handle sharing requests from personal profile	|Apps in work profile can handle sharing requests from personal profile	|Work-to-personal: Default<br>Personal-to-work: Allowed<br>(Only useful on 5.x where personal-to-work is blocked)|
+
+None of these options directly prevent copy-paste behavior. We added a custom setting to the service and Company Portal app in 1704 that can be configured to prevent copy-paste. This can be set through custom URI.
+
+-	OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
+-	Value type: Boolean
+
+Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior between Android for Work personal and work profiles.
+
+### Try it out
+1. In the Configuration Manager console, select **Assets and Compliance** > **Overview** > **Compliance settings** > **Configuration items**.
+2. Choose **Create** to create a new configuration item, and specify **Name** and **Android for Work**.
+3. In the device setting groups to configure, select **Work Profile**, and choose **Next**.
+4. Select the value for **Allow data sharing between work and personal profiles**, and then complete the wizard.
