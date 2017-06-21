@@ -332,3 +332,38 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 ## Client Peer Cache support for express installation files for Windows 10 and Office 365
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
+
+## New Windows configuration item settings <!-- 1354715 -->
+
+In this release, we've added the following new settings you can use in Windows configuration items:
+
+### Password
+
+- **Device Encryption**
+
+### Device
+
+- **Region settings modification (desktop only)**
+- **Power and sleep settings modification**
+- **Language settings modification**
+- **System time modification**
+- **Device name modification**
+
+### Store
+
+- **Auto-update apps from store**
+- **Use private store only**
+- **Store originated app launch**
+
+### Microsoft Edge
+
+- **Block access to about:flags**
+- **SmartScreen prompt override**
+- **SmartScreen prompt override for files**
+- **WebRTC localhost IP address**
+- **Default search engine**
+- **OpenSearch XML URL**
+- **Homepages (desktop only)**
+
+For more information about compliance settings, see [Ensure device compliance](/sccm/compliance/understand/ensure-device-compliance).
+
