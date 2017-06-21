@@ -271,6 +271,7 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 
 
 ## New client settings for cloud services
+<!-- 1319883 -->
 
 In this release, we’ve added two new client settings to Configuration Manager. You’ll find these in the **Cloud Services** section.  These settings give you the following capabilities:
 
@@ -295,11 +296,12 @@ If you remove the connection, devices are not un-registered, but no new devices 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
 
 ## Create and run PowerShell scripts from the Configuration Manager console
+<!-- 1236459 -->
 
-In Configuration Manager, you could previously deploy scripts to client devices using packages and programs. In this technical preview, we've added new functionality that lets you take the following actions:
+In Configuration Manager, you can deploy scripts to client devices using packages and programs. In this technical preview, we've added new functionality that lets you take the following actions:
 
 - Import PowerShell Scripts to Configuration Manager
-- Edit the scripts from the Configuration Manager console
+- Edit the scripts from the Configuration Manager console (for unsigned scripts only)
 - Mark scripts as Approved or Denied, to improve security
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run in near real time on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
