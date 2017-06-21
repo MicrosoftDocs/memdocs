@@ -106,6 +106,12 @@ To install a passive mode site server, you use the **Create Site System Server W
 
     -   The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
 
+**Known Issue**:   
+With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
+-   131071 – Site server installation failed
+-   720895 – Site server role uninstallation failed
+-  	851967 – Failover failed
+
 ### Add a site server in passive mode
 1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
 
@@ -125,6 +131,8 @@ For detailed installation status, go to **Administration** > **Site Configuratio
 
 -   Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
 
+
+
 ### Promote the passive mode site server to active mode
 When you want to change the passive mode site server to active mode, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
 1.	In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
@@ -140,7 +148,6 @@ For detailed status, go to **Monitoring** > **Site Server Status**.
     -   While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
 
 When an site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
-
 
 
 ### Daily monitoring
@@ -162,7 +169,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 
 ## Include trust for specific files and folders in a Device Guard policy
-
+<!-- 1324676 -->
 In this release, we’ve added further capabilities to [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) policy management
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
@@ -177,8 +184,9 @@ You can now optionally add trust for specific files for folders in a Device Guar
 2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
 3.	Complete the wizard.
 
-<!-- 1354291 -->
+
 ## Hide task sequence progress
+<!-- 1354291 -->
 In this release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, use the **Set Task Sequence Variable** step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress. You can use the Set Task Sequence Variable step multiple times in a task sequence to change the value for the variable. This lets you hide or display task sequence progress in different sections of the task sequence.
 
 #### To hide task sequence progress
@@ -188,7 +196,7 @@ In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understa
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
 
 ## Specify a different content location for install content and uninstall content
-
+<!-- 1097546 -->
 In Configuration Manager today, you specify the installation location that contains the setup files for an app. When you specify an install location, this is also used as the uninstall location for the application content.
 Based on your feedback, when you want to uninstall a deployed application, and the app content is not on the client computer, then the client will download all of the app setup files again before the application is uninstalled.
 To solve this problem, you can now specify both an installation content location and an optional uninstall content location. Additionally, you can choose not to specify an uninstall content location.
@@ -320,3 +328,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
 4.  Complete the wizard to deploy the profile.
+
+## Client Peer Cache support for express installation files for Windows 10 and Office 365
+<!-- 1352486 -->
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
