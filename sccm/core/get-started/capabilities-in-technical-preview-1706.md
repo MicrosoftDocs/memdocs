@@ -437,6 +437,104 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
 
+## Device compliance policy improvements
+
+### Actions for non-compliance
+
+Beginning with this release, you can configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant.
+
+These are the supported actions for non-compliance:
+
+- Send e-mail to end user
+- Mark devices non-compliant
+
+#### Try it Out!
+
+##### To add an email template
+
+Configuration Manager provides e-mail templates, but you can also create your own. The e-mail  template is used later in the process of creating actions for non-compliance to communicate with users.
+
+1. In the Configuration Manager console, choose **Assets and Compliance**.
+
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance notification templates**.
+
+3. On the **Home** tab, in the **Create Compliance Notification Template**.
+
+4. You must enter the following information:
+	a. Name: E-mail template name.
+	b. From: E-mail address sending the e-mail notification.
+	c. Subject: An subject that explains the e-mail notification being sent.
+	d. Message body: More details on the e-mail notification.
+
+5. Click **OK** to save the new e-mail template.
+
+6. On the **Add Action** page, you can select your new e-mail template from the list.
+
+7. Once you select your e-mail template, click **OK**.
+
+##### To create actions for non-compliance
+
+1. In the Configuration Manager console, choose **Assets and Compliance**.
+
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance Policies**.
+
+3. On the **Home** tab, in the **Create** group, choose **Create Compliance Policy**.
+
+4. Select the **Supported Platforms** you want, then click **Next** twice. You can skip the **Rules** page.
+
+5. On the **Noncompliance Actions** page, you define what happens when a device becomes non compliant, click **New**.
+6. You can choose two options: **Send e-mail to end user** or **Mark device non-compliant**.
+
+7. If selecting **Send e-mail to end user**, you must enter the following:
+	a. **Grace period (in days):** You can enter 0-365 days.
+	b. **Additional recipients (via e-mail)**
+	c. **Select the message template:** You can choose the default e-mail templates or the custom ones you added.
+
+8. If selecting **Mark device non-compliant**, you must enter the following:
+	a. **Grace period (in days):** You can enter 0-365 days.
+
+9. Once you chose the action and entered the settings for it, click **Next** twice, then **Close**.
+
+### New device compliance policy rules
+
+* **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
+
+  	**Supported on:**
+  	* Windows Phone 8+
+  	* Windows 8.1+
+  	* iOS 6+
+<br></br>
+* **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
+
+ 	**Supported on:**
+  	* Android 4.0+
+  	* Samsung KNOX Standard 4.0+
+<br></br>
+* **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
+
+  	**Supported on:**
+  	* Android 4.0+
+  	* Samsung KNOX Standard 4.0+
+<br></br>
+* **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device. 
+
+  	**Supported on:**
+  	* Android 4.2 through 4.4
+  	* Samsung KNOX Standard 4.0+
+
+See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
+
+## New mobile application management (MAM) policy settings
+Beginning with this release, you can use three new MAM policy settings:
+
+- **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
+
+- **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
+
+- **Disable printing:** Prevents the app from printing work or school data.
+
+See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
+
 ## Android for Work apps can be deployed as Available
 <!-- 1338403 -->
 Apps can now be deployed to Android for Work work profile as **Available**.  Learn more about how to [deploy applications](/sccm/apps/deploy-use/deploy-applications).
