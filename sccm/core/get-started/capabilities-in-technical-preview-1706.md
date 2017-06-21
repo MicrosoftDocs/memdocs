@@ -124,7 +124,7 @@ With this release, **Status** for the following conditions appear in the console
 3.	On the **System Role Selection** page, select only **Primary site server in passive mode**.
 
 4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site server role on the specified server:
-    -   Choose to copy installation files from the active site server to the new passive mode site server, or specify a path to a location that contains the contents of the active site servers **CD.Latest** folder.
+    -   Choose to copy installation files from the active site server to the new passive mode site server, or specify a path to a location that contains the contents of the active site server's **CD.Latest** folder.
 
     -   Specify the same site database server and database name as used by the active mode site server.
 
@@ -151,7 +151,7 @@ For detailed status, go to **Monitoring** > **Site Server Status**.
 
     -   While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
 
-When an site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
+When a site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
 
 
 ### Daily monitoring
@@ -263,7 +263,7 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 
 2.	On the **Azure Services** page, select the **Upgrade Readiness Connector**, and then click **Next**.
 
-3.	On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud ). Then, click **Import** to open the **Import Apps** window.
+3.	On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
 
 4.	In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
     -	Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
