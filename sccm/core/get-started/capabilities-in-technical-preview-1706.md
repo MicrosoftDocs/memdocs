@@ -609,3 +609,10 @@ Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior betwe
 2. Choose **Create** to create a new configuration item, and specify **Name** and **Android for Work**.
 3. In the device setting groups to configure, select **Work Profile**, and choose **Next**.
 4. Select the value for **Allow data sharing between work and personal profiles**, and then complete the wizard.
+
+## Device Health Attestation assessment for compliance policies for conditional access
+<!-- 1097546 -->
+Starting with this relese you can use Device Health Attestation status as a compliance policy rule for conditional access to company resources.
+
+### Try it out
+Select a Device Health Attestation rule as part of a compliance policy assessment.
