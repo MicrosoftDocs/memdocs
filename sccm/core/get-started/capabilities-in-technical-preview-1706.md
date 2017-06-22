@@ -27,6 +27,9 @@ This article introduces the features that are available in the Technical Preview
 -   **Issue Name**. Details
     Workaround details.
 -->
+**Known Issues in this Technical Preview:**
+-   **Move distribution point** - The options in the console to move a distribution point between sites cannot be used with this release due to the technical preview limit of a single primary site.
+
 
 **The following are new features you can try out with this version.**  
 
