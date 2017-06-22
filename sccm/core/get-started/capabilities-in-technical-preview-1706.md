@@ -444,6 +444,21 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
 
+## Support for Entrust certification authorities
+<!-- 1350740 -->
+Configuration Manager now supports Entrust certification authorities; this enables PFX certificate delivery to devices enrolled into Microsoft Intune.
+
+You can configure Entrust as the certification authority when adding a Certificate Registration Point role in Configuration Manager. When adding a new certificate profile that issues PFX certificates, you can select either a Microsoft or Entrust certification authority. 
+
+**Known issue**: In the 1706 technical preview, PFX certificates are not issued for Microsoft certification authorities. This does not affect imported PFX certificates or SCEP profiles. 
+
+
+## Cisco (IPsec) support for macOS VPN profiles
+<!-- 1321367 -->
+
+You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles). 
+
+
 ## New Windows configuration item settings
 <!-- 1354715 -->
 
