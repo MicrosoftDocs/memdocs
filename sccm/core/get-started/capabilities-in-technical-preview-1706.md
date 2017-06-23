@@ -448,15 +448,15 @@ Beginning with this release, Peer Cache supports distribution of content express
 <!-- 1350740 -->
 Configuration Manager now supports Entrust certification authorities; this enables PFX certificate delivery to devices enrolled into Microsoft Intune.
 
-You can configure Entrust as the certification authority when adding a Certificate Registration Point role in Configuration Manager. When adding a new certificate profile that issues PFX certificates, you can select either a Microsoft or Entrust certification authority. 
+You can configure Entrust as the certification authority when adding a Certificate Registration Point role in Configuration Manager. When adding a new certificate profile that issues PFX certificates, you can select either a Microsoft or Entrust certification authority.
 
-**Known issue**: In the 1706 technical preview, PFX certificates are not issued for Microsoft certification authorities. This does not affect imported PFX certificates or SCEP profiles. 
+**Known issue**: In the 1706 technical preview, PFX certificates are not issued for Microsoft certification authorities. This does not affect imported PFX certificates or SCEP profiles.
 
 
 ## Cisco (IPsec) support for macOS VPN profiles
 <!-- 1321367 -->
 
-You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles). 
+You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
 ## New Windows configuration item settings
@@ -518,11 +518,11 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 
 3. On the **Home** tab, in the **Create Compliance Notification Template**.
 
-4. You must enter the following information:
-	a. Name: E-mail template name.
-	b. From: E-mail address sending the e-mail notification.
-	c. Subject: An subject that explains the e-mail notification being sent.
-	d. Message body: More details on the e-mail notification.
+4. You must enter the following information:  
+	 a. Name: E-mail template name.   
+	 b. From: E-mail address sending the e-mail notification.   
+	 c. Subject: A subject that explains the e-mail     notification being sent.   
+	 d. Message body: More details on the e-mail notification.
 
 5. Click **OK** to save the new e-mail template.
 
@@ -540,12 +540,12 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 
 4. Select the **Supported Platforms** you want, then click **Next** twice. You can skip the **Rules** page.
 
-5. On the **Noncompliance Actions** page, you define what happens when a device becomes non compliant, click **New**.
+5. On the **Noncompliance Actions** page, you define what happens when a device becomes non-compliant, click **New**.
 6. You can choose two options: **Send e-mail to end user** or **Mark device non-compliant**.
 
-7. If selecting **Send e-mail to end user**, you must enter the following:
-	a. **Grace period (in days):** You can enter 0-365 days.
-	b. **Additional recipients (via e-mail)**
+7. If selecting **Send e-mail to end user**, you must enter the following:  
+	a. **Grace period (in days):** You can enter 0-365 days.   
+	b. **Additional recipients (via e-mail)**  
 	c. **Select the message template:** You can choose the default e-mail templates or the custom ones you added.
 
 8. If selecting **Mark device non-compliant**, you must enter the following:
@@ -630,7 +630,7 @@ Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior betwe
 
 ## Device Health Attestation assessment for compliance policies for conditional access
 <!-- 1097546 -->
-Starting with this relese you can use Device Health Attestation status as a compliance policy rule for conditional access to company resources.
+Starting with this release you can use Device Health Attestation status as a compliance policy rule for conditional access to company resources.
 
 ### Try it out
 Select a Device Health Attestation rule as part of a compliance policy assessment.
