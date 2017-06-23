@@ -64,9 +64,6 @@ The following mobile application management (MAM) policy settings are now availa
 - **Android and iOS enrollment restrictions** <!-- 1290826 -->    
     Admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only. For details, see [Android and iOS enrollment restrictions](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
 
-- **Android for Work apps can be deployed as Available**  <!-- 1338403 -->    
-    Apps can now be deployed to Android for Work work profile as **Available**. Learn more about how to [deploy applications](/sccm/apps/deploy-use/deploy-applications).
-
 - **Support for Entrust certification authorities** <!-- 1350740 -->     
     Configuration Manager now supports Entrust certification authorities; this enables PFX certificate delivery to devices enrolled into Microsoft Intune.    
 
