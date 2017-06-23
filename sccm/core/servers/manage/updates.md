@@ -24,7 +24,7 @@ manager: angrobe
 
 System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to find and install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
 
-> [!TIP]
+> [!TIP]  
 > When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 
@@ -79,7 +79,7 @@ The following versions of Configuration Manager are available as a baseline, an 
 | 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Yes|No|  
 
 
-*(Note 1)* The 1606 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC).
+*(Note 1)* The 1606 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC). For example, on the VLSC you can search for *System Center Config Mgr (current branch and LTSB)*, and both 1606 and 1702 version baseline media are returned, and available for download.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
 
