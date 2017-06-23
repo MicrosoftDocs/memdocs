@@ -67,6 +67,16 @@ The following mobile application management (MAM) policy settings are now availa
 - **Android for Work apps can be deployed as Available**  <!-- 1338403 -->    
     Apps can now be deployed to Android for Work work profile as **Available**. Learn more about how to [deploy applications](/sccm/apps/deploy-use/deploy-applications).
 
+- **Support for Entrust certification authorities**
+    Configuration Manager now supports Entrust certification authorities; this enables PFX certificate delivery to devices enrolled into Microsoft Intune.    
+
+    You can configure Entrust as the certification authority when adding a Certificate Registration Point role in Configuration Manager. When adding a new certificate profile that issues PFX certificates, you can select either a Microsoft or Entrust certification authority.
+
+    **Known issue**: In the 1706 technical preview, PFX certificates are not issued for Microsoft certification authorities. This does not affect imported PFX certificates or SCEP profiles.
+
+- **Cisco (IPsec) support for macOS VPN profiles**
+    You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+
 
 ## April 2017
 
