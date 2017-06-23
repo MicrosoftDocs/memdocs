@@ -130,7 +130,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Android for Work application management policy for copy-paste|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|![Not added](media/Red_X.gif)|
  |New Windows configuration item settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|![Not added](media/Red_X.gif)|
  |Device Health Attestation assessment for compliance policies for conditional access|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![Not added](media/Red_X.gif)|
- |Support for Entrust certificate authorities|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certificate-authorities)|![Not added](media/Red_X.gif)|
+ |Support for Entrust certificate authorities|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![Not added](media/Red_X.gif)| 
  |Cisco (IPSec) support for macOS VPN profiles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![Not added](media/Red_X.gif)|
 
 ## Capabilities delivered in previous technical previews
