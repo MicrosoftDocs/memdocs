@@ -440,9 +440,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
 4.  Complete the wizard to deploy the profile.
 
-## Client Peer Cache support for express installation files for Windows 10 and Office 365
-<!-- 1352486 -->
-Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration or changes are required.
+
 
 ## Support for Entrust certification authorities
 <!-- 1350740 -->
