@@ -288,6 +288,9 @@ Software updates requires that a supported version of WSUS is installed on all s
 
 -   If a superseding software update was not approved for deployment in your production environment.  
 
+    > [!NOTE]  
+    >  When Configuration Manager expires a superseded software update it does not expire the update in WSUS and clients will continue scanning for it.  Additional maintenance may be required to minimize the size of the Update Catalog that clients consume.
+    
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
  The language settings for the software update point allow you to configure the languages for which the summary details (software updates metadata) are synchronized for software updates, and the software update file languages that will be downloaded for software updates.  
 
