@@ -2,7 +2,7 @@
 title: "Technical Preview 1706 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/23/2017
+ms.date: 06/26/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -28,8 +28,14 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
+
 -   **Move distribution point** - The options in the console to move a distribution point between sites cannot be used with this release due to the technical preview limit of a single primary site.
 
+-   **Device compliance settings** - You might experience opposite behavior when using the two of the new device compliance settings:
+	- **Block USB debugging on device**
+	- **Block apps from unknown sources**
+
+		For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
 
 **The following are new features you can try out with this version.**  
 
@@ -542,12 +548,11 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 6. You can choose two options: **Send e-mail to end user** or **Mark device non-compliant**.
 
 7. If selecting **Send e-mail to end user**, you must enter the following:  
-	a. **Grace period (in days):** You can enter 0-365 days.   
-	b. **Additional recipients (via e-mail)**  
-	c. **Select the message template:** You can choose the default e-mail templates or the custom ones you added.
+	a. **Grace period (in days):** You can enter 0-100 days.  
+	b. **Select the message template:** You can choose the default e-mail templates or the custom ones you added.
 
 8. If selecting **Mark device non-compliant**, you must enter the following:
-	a. **Grace period (in days):** You can enter 0-365 days.
+	a. **Grace period (in days):** You can enter 0-100 days.
 
 9. Once you chose the action and entered the settings for it, click **Next** twice, then **Close**.
 
