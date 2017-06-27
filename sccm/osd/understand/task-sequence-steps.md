@@ -623,7 +623,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   To dynamically download an applicable driver package, use two **Download Package Content** steps with conditions to detect the appropriate hardware type for each driver package. Configure each **Download Package Content** step to use the same variable, and use the variable for the **Staged content** value in drivers section on the **Upgrade Operating System** step.  
 
-> [!NOTE]
+> [!NOTE]    
 > When you deploy a task sequence that contains the Download Package Content step, do not select **Download all content locally before starting the task sequence** for **Deployment options** on the **Distribution Points** page of the Deploy Software Wizard.  
 
 This step runs in either a standard operating system or Windows PE. However, the option to save the package in the Configuration Manager client cache is not supported in WinPE.
