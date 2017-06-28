@@ -2,7 +2,7 @@
 title: "Supported site system servers | Microsoft Docs"
 description: "Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role."
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -178,8 +178,8 @@ Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseli
 ## Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, and Datacenter  
  Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
- Beginning with Configuration Manager version 1702, this operating system is not supported for site servers or most site system roles, but does remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multicast).
- 
+ Beginning with Configuration Manager version 1702, this operating system is not supported for site servers or most site system roles, but does remain supported for the distribution point site system role (including pull-distribution points, and for PXE and multicast).
+
  Versions prior to 1702 continue to support its use for the following.
 
 
