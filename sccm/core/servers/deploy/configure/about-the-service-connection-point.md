@@ -2,7 +2,7 @@
 title: "Service connection point | Microsoft Docs"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 6/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -85,6 +85,8 @@ To enable operation, the computer that hosts the service connection point and an
 **Updates and servicing**  
 
 -   *.akamaiedge.net  
+
+-   *.akamaitechnologies.com 
 
 -   *.manage.microsoft.com
 
