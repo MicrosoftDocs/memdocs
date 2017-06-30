@@ -36,6 +36,10 @@ This article provides details on the new mobile device management (MDM) features
 
 ### New in Microsoft Intune
 
+- **Change your MDM authority**
+  
+  Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority]( /sccm/mdm/deploy-use/change-mdm-authority).
+
 - **Managed browser and app proxy integration** 
   
   The Intune Managed Browser can now integrate with the Azure AD Application Proxy service to let users access internal web sites even when they are working remotely. Users of the browser simply enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](/intune/app-configuration-managed-browser).
@@ -65,10 +69,6 @@ This article provides details on the new mobile device management (MDM) features
 - **Account picker now available for the Company Portal app for iOS**
   
   Users of iOS devices might see our new account picker when they sign into the Company Portal if they use their work or school account to sign into other Microsoft apps. For more information, see [what's new in app UI](/intune/whats-new-app-ui).
-
-- **Change your MDM authority**
-  
-  Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority]( /sccm/mdm/deploy-use/change-mdm-authority).
 
 ### New in Configuration Manager Technical Preview 1706
 
