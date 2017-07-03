@@ -2,7 +2,7 @@
 title: "Log files for Configuration Manager | Microsoft Docs"
 description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 7/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -501,7 +501,7 @@ The following table lists the log files that contain information related to the 
 ||||
 |-|-|-|
 |Log name|Description|Computer with log file|
-|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.<br>You can configure the logging level be editing the registry **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|The **SMS/Logs** folder on the site system server|
+|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.<br>You can configure the logging level be editing the registry **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|The *installdir* folder on the primary site server or CAS.|
 |CMGSetup.log or CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Records details about the 2nd phase of the cloud management gateway deployment (local deployment in Azure)<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |CMGHttpHandler.log or CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Records details about the cloud management gateway http handler binding with Internet Information Services in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |CMGService.log or CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Records details about the cloud management gateway service core component in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
