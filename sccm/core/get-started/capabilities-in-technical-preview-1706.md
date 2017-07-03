@@ -2,7 +2,7 @@
 title: "Technical Preview 1706 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/26/2017
+ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -219,10 +219,10 @@ To solve this problem, you can now specify both an installation content location
 1. In the deployment type properties of an application, click the **Content** tab.
 2. Configure the **Install content location** as normal.
 3. For **Uninstall content settings**, choose one of the following:
-	- **Use install content location** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
+	- **Same as install content** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
 	- **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
-	- **Use different uninstall content location** - Choose this if you want to specify an uninstall content location that's different from the install content location.
-5. If you selected **Use different uninstall content location**, browse to, or enter the location of the application content that will be used to uninstall the application.
+	- **Different from install content** - Choose this if you want to specify an uninstall content location that's different from the install content location.
+5. If you selected **Different from install content**, browse to, or enter the location of the application content that will be used to uninstall the application.
 6. Click **OK** to close the deployment type properties dialog box.
 
 
