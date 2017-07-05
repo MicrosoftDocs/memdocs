@@ -2,7 +2,7 @@
 title: "Data warehouse| Microsoft Docs"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -22,11 +22,12 @@ manager: angrobe
 
 Beginning with version 1702 you can use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
-> [!TIP]  
-> Introduced with version 1702, the Data Warehouse service point is a pre-release feature. To enable it, see [Use pre-release features](/sccm/core/servers/manage/pre-release-features).
+> [!TIP]
+> The Data Warehouse service point is a pre-release feature introduced in version 1702. To enable it, see [Use pre-release features](/sccm/core/servers/manage/pre-release-features).
 
-The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
+> Beginning with version 1706, this feature is no longer a pre-release feature.
 
+The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point. Data that is synchronized to the data warehouse database is retained for three years. Periodically, a built-in task removes data that is older than three years.
 
 Data that is synchronized includes the following from the Global Data and Site Data groups:
 - Infrastructure health
@@ -46,10 +47,16 @@ When the site system role installs, it installs and configures the data warehous
   - **Administrator** on the computer that will host the data warehouse database.
   - **DB_owner** permission on the data warehouse database.
   - **DB_reader** and **execute** permissions to the top-tier sites site database.
--	The data warehouse database is supported on a default or named instance of SQL Server 2012 or later. The edition must be Enterprise or Datacenter.
-  - SQL Server AlwaysOn availability group: This configuration is not supported.
-  - SQL Server Cluster: SQL Server failover clusters are not supported. This is because the data warehouse database has not been deeply tested on SQL Server failover clusters.
-  - When the data warehouse database is remote from the site server database, you must have a separate license for the SQL Server that hosts the database.
+- The data warehouse database requires the use of SQL Server 2012 or later, with an edition of Standard, Enterprise or Datacenter.
+- The following are supported to host the warehouse database:  
+  - A default instance
+  - Named instance
+  - SQL Server Always On Availability group
+  - SQL Server failover cluster
+-	When the data warehouse database is remote from the site server database, you must have a separate license for each SQL Server that hosts the database.
+- If use [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews), the data warehouse service point site system role is supported only at the central administration site, and not at a child primary site.
+
+
 
 > [!IMPORTANT]  
 > The Data Warehouse is not supported when the computer that runs the Data Warehouse service point or that hosts the data warehouse database runs one of the following languages:
