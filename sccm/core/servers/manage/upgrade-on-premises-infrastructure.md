@@ -2,7 +2,7 @@
 title: "Upgrade on-premises infrastructure | Microsoft Docs"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 06/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,10 +33,10 @@ Use the information in this topic to help you upgrade the server infrastructure 
 
 -   In-place upgrade to a later Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  
 -   In-place upgrade from:
-    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-or-windows-server-2012-r2-to-2016)).
-    - Windows Server 2012 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-or-windows-server-2012-r2-to-2016)).
-    - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
-    - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
+    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#bkmk_2016)).
+    - Windows Server 2012 to Windows Server 2016 ([See additional details](#bkmk_2016)).
+    - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#bkmk_2012r2)).
+    - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#bkmk_from2008r2).
 
     > [!WARNING]  
     >  Before you upgrade to Windows Server 2012 R2, *you must uninstall WSUS 3.2* from the server.  
@@ -47,8 +47,8 @@ To upgrade a server, use the upgrade procedures provided by the operating system
   -  [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in the Windows Server documentation.  
   - [Upgrade and conversion options for Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths) in the Windows Server documentation.
 
-### Upgrade Windows Server 2012 R2 to 2016
-This operating system upgrade scenario has the following conditions:
+### <a name="bkmk_2016"></a>  Upgrade Windows Server 2012 or Windows Server 2012 R2 to 2016
+When you upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016, the following apply:
 
 
 **Before upgrade:**  
@@ -67,10 +67,9 @@ This operating system upgrade scenario has the following conditions:
   - 	Application Catalog web service point
   - 	Application Catalog website point
 
-
 - 	Ensure each server that hosts a site system role continues to meet all of the [prerequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
-- After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
+-   After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
 **Known issue for remote Configuration Manager consoles:**  
 After you upgrade the site server or a server that hosts an instance of the SMS_Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS_Provider:
@@ -87,7 +86,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
   -   Remote Enable
 5. Save the permissions to restore access for the Configuration Manager console.
 
-### Windows Server 2012 to Windows Server 2012 R2
+### <a name="bkmk_2012r2"></a> Windows Server 2012 to Windows Server 2012 R2
 
 **Before upgrade:**
 -  Unlike the other supported scenarios, this scenario does not require extra considerations before upgrade.
@@ -98,7 +97,6 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
     - Management point
     - Application Catalog web service point
     - Application Catalog website point
-
 
   - 	Ensure the **Windows Process Activation** and **WWW/W3svc** services are enabled, set for automatic start, and running for the following site system roles (these services are disabled during upgrade):
     - 	Site server
@@ -111,7 +109,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
 
   After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
-### Upgrade Windows Server 2008 R2 to Windows Server 2012 R2
+### <a name="bkmk_from2008r2"></a>  Upgrade Windows Server 2008 R2 to Windows Server 2012 R2
 This operating system upgrade scenario has the following conditions:  
 
 **Before upgrade:**
