@@ -266,7 +266,7 @@ The Configuration Manager client for Mac computers records information in the fo
 |CCMNotifications-&lt;*date_time*>.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
 |CCMPrefPane-&lt;*date_time*>.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
 
-M The log file SMS_DM.log on the site system server also records communication between Mac computers and the management point that is set up for mobile devices and Mac computers.  
+The log file SMS_DM.log on the site system server also records communication between Mac computers and the management point that is set up for mobile devices and Mac computers.  
 
 ##  <a name="BKMK_ServerLogs"></a> Configuration Manager site server log files  
  The following sections list log files that are on the site server or that are related to specific site system roles.  
