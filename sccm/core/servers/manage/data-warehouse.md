@@ -48,7 +48,7 @@ When the site system role installs, it installs and configures the data warehous
   - **DB_owner** permission on the data warehouse database.
   - **DB_reader** and **execute** permissions to the top-tier sites site database.
 - The data warehouse database requires the use of SQL Server 2012 or later, with an edition of Standard, Enterprise or Datacenter.
-- The following are supported to host the warehouse database:  
+- The following SQL Server configurations are supported to host the warehouse database:  
   - A default instance
   - Named instance
   - SQL Server Always On Availability group
