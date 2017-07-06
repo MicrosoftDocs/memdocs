@@ -199,7 +199,7 @@ You can now optionally add trust for specific files for folders in a Device Guar
 
 
 ## Hide task sequence progress
-<!-- 1354291 -->
+<!-- 1354291 --> 
 In this release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, use the **Set Task Sequence Variable** step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress. You can use the Set Task Sequence Variable step multiple times in a task sequence to change the value for the variable. This lets you hide or display task sequence progress in different sections of the task sequence.
 
 #### To hide task sequence progress
