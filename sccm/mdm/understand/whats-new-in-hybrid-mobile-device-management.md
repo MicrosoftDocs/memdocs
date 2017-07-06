@@ -37,43 +37,43 @@ This article provides details on the new mobile device management (MDM) features
 ### New in Microsoft Intune
 
 - **Change your MDM authority**
-  
+
   Beginning in Configuration Manager version 1610 and Microsoft Intune version 1705, you can change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority]( /sccm/mdm/deploy-use/change-mdm-authority).
 
-- **Managed browser and app proxy integration** 
-  
+- **Managed browser and app proxy integration**
+
   The Intune Managed Browser can now integrate with the Azure AD Application Proxy service to let users access internal web sites even when they are working remotely. Users of the browser simply enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](/intune/app-configuration-managed-browser).
 
 - **Company Portal app for Android now has a new end user experience for App Protection Policies**
-  
+
   Based on customer feedback, we've modified the Company Portal app for Android to show an **Access Company Content** button. The intent is to prevent end users from unnecessarily going through the enrollment process when they only need to access apps that support App Protection Policies, a feature of Intune mobile application management. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
 
 - **New menu action to easily remove Company Portal**
-  
+
   Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page and in the [Android end user documentation](/intune-user-help/unenroll-your-device-from-intune-android).
 
-- **Improvements to app syncing with Windows 10 Creators Update** 
-  
+- **Improvements to app syncing with Windows 10 Creators Update**
+
   The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
 
 - **New guided experience for Windows 10 Company Portal**
-  
+
   The Company Portal app for Windows 10 will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Azure Active Directory (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they do not complete registration and enrollment, but will experience limited functionality.
 
   This update is only visible on devices running Windows 10 Anniversary Update (build 1607) or higher. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
 
 - **Improvements to the app tiles in the Company Portal app for iOS**
-  
+
   We updated the design of the app tiles on the homepage to reflect the branding color you set for the Company Portal. For more information, see [what's new in app UI](/intune/whats-new-app-ui).
 
 - **Account picker now available for the Company Portal app for iOS**
-  
+
   Users of iOS devices might see our new account picker when they sign into the Company Portal if they use their work or school account to sign into other Microsoft apps. For more information, see [what's new in app UI](/intune/whats-new-app-ui).
 
 ### New in Configuration Manager Technical Preview 1706
 
 - **New mobile application management policy settings**    
-  
+
   The following mobile application management (MAM) policy settings are now available:
 
   - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
@@ -83,23 +83,19 @@ This article provides details on the new mobile device management (MDM) features
   See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 - **New Windows configuration item settings**  <!-- 1354715 -->    
-  
+
   New Windows configuration items are available for the Password, Device, Store, and Microsoft Edge setting categories. For more information, see [New Windows configuration item settings](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-windows-configuration-item-settings).
 
-- **Actions for non-compliance**    
-  
-  You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1706#actions-for-non-compliance).
-
 - **New device compliance policy rules**    
-  
+
   You can now configure new options for compliance policies that were previously only available in Intune standalone. For details, see [Device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-device-compliance-policy-rules).
 
 - **Android and iOS enrollment restrictions** <!-- 1290826 -->      
-  
+
   Admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only. For details, see [Android and iOS enrollment restrictions](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
 
 - **Support for Entrust certification authorities** <!-- 1350740 -->     
-  
+
   Configuration Manager now supports Entrust certification authorities; this enables PFX certificate delivery to devices enrolled into Microsoft Intune.    
 
   You can configure Entrust as the certification authority when adding a Certificate Registration Point role in Configuration Manager. When adding a new certificate profile that issues PFX certificates, you can select either a Microsoft or Entrust certification authority.
@@ -107,7 +103,7 @@ This article provides details on the new mobile device management (MDM) features
   **Known issue**: In the 1706 technical preview, PFX certificates are not issued for Microsoft certification authorities. This does not affect imported PFX certificates or SCEP profiles.
 
 - **Cisco (IPsec) support for macOS VPN profiles**  <!-- 1321367 -->    
-  
+
   You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
