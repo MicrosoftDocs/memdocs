@@ -40,9 +40,9 @@ Version 1706 drops support for the following products:
 ## Site infrastructure
 
 ### Client Peer Cache support for express installation files for Windows 10 and Office 365  
-Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configuration are required to support this.
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required to support this change.
 
- 
+
 
 <!-- ## Migration  -->
 
