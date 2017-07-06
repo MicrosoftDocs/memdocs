@@ -206,7 +206,7 @@ In this release, you can control when task sequence progress is displayed to end
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
 
 #### To display task sequence progress
-In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
+In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to display task sequence progress.
 
 ## Specify a different content location for install content and uninstall content
 <!-- 1097546 -->
