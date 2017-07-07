@@ -42,8 +42,10 @@ Version 1706 drops support for the following products:
 ### Client Peer Cache support for express installation files for Windows 10 and Office 365  
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required to support this change.
 
-## Tempoarty Header 
-No details are available. 
+### Updates for the data warehouse
+The data warehouse is no longer a pre-release feature. We have also updated the prerequisites to include support for the database on SQL Server Always on availability groups, and failover clusters. For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
+
+## H2 placeholder - Pending future revisions
 
 
 <!-- ## Migration  -->
