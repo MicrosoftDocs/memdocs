@@ -38,7 +38,7 @@ This article provides details on the new mobile device management (MDM) features
 
 - **Notice added for Android supported versions**
 
-    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#android-supported-versions).
+    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#end-of-support-for-android-4.3-and-lower).
 
 ## June 2017
 
@@ -289,7 +289,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 ## Notices
 
-### <a name="Android supported versions"></a>End of support for Android 4.3 and lower
+### End of support for Android 4.3 and lower
 <!---1171127--->
 *July, 6, 2017*
 
