@@ -617,11 +617,14 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   Packages  
 
- This step works well in a task sequence to upgrade an operating system in the following scenarios :  
+ This step works well in a task sequence to upgrade an operating system in the following scenarios:  
 
 -   To use a single upgrade task sequence that can work with both x86 and x64 platforms. To do  this, include two **Download Package Content** steps in the **Prepare for Upgrade** group with conditions to detect the client architecture and download only the appropriate operating system upgrade package. Configure each **Download Package Content** step to use the same variable, and use the variable for the media path on the **Upgrade Operating System** step.  
 
 -   To dynamically download an applicable driver package, use two **Download Package Content** steps with conditions to detect the appropriate hardware type for each driver package. Configure each **Download Package Content** step to use the same variable, and use the variable for the **Staged content** value in drivers section on the **Upgrade Operating System** step.  
+
+> [!NOTE]    
+> When you deploy a task sequence that contains the Download Package Content step, do not select **Download all content locally before starting the task sequence** for **Deployment options** on the **Distribution Points** page of the Deploy Software Wizard.  
 
 This step runs in either a standard operating system or Windows PE. However, the option to save the package in the Configuration Manager client cache is not supported in WinPE.
 
@@ -648,11 +651,11 @@ This step runs in either a standard operating system or Windows PE. However, the
  **Place into the following location**  
  Choose to save the package in  one of the following locations:  
 
--   **Task sequence working directory**  
+ -   **Task sequence working directory**  
 
--   **Configuration Manager client cache**: You use this option to store the content in the clients cache. This allows the client to act as a peer cache source for other peer cache clients. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+ -   **Configuration Manager client cache**: You use this option to store the content in the clients cache. This allows the client to act as a peer cache source for other peer cache clients. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
--   **Custom path**  
+ -   **Custom path**  
 
  **Save path as a variable**  
  You can save the path as a variable that you can  use in another task sequence step. Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, it is the root for where all the referenced content is stored (which can be multiple packages). When you refer to the variable, you will add a numerical suffix to the variable. For example, for the first package, you will refer to %*mycontent01*% variable. When you refer to the variable in a subsequence steps, such as Upgrade Operating System, you would use %*mycontent02*% or %*mycontent03*% where the number corresponds to the order in which the package is listed in the step.  
