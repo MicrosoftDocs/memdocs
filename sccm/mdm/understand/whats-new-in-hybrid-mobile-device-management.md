@@ -38,7 +38,7 @@ This article provides details on the new mobile device management (MDM) features
 
 - **Notice added for Android supported versions**
 
-    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#end-of-support-for-android-4.3-and-lower).
+    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#android-supported-versions).
 
 ## June 2017
 
@@ -289,7 +289,8 @@ The following additional hybrid features are also included in version 1702 of Co
 
 ## Notices
 
-### End of support for Android 4.3 and lower <!---1171127--->
+### <a name="Android supported versions"></a>End of support for Android 4.3 and lower
+<!---1171127--->
 *July, 6, 2017*
 
 Managed apps and the Company Portal app for Android will require Android 4.4 and higher to access company resources. Devices that aren't updated before the beginning of October will no longer be able to access the Company Portal or those apps. By December, all enrolled devices will be force retired in December, resulting in loss of access to company resources. If you are using app protection policies without MDM, apps will not receive updates, and the quality of their experience will diminish over time.
