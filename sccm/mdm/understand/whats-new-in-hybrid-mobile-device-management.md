@@ -38,7 +38,7 @@ This article provides details on the new mobile device management (MDM) features
 
 - **Notice added for Android supported versions**
 
-    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#end-of-support-for-android-4.3-and-lower).
+    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#notices).
 
 ## June 2017
 
