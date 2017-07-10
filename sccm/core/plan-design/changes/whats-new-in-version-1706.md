@@ -49,9 +49,6 @@ The data warehouse is no longer a pre-release feature. We have also updated the 
 We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](/sccm/core/understand/accessibility-features).
 
 
-## H2 placeholder - Pending future revisions
-
-
 <!-- ## Migration  -->
 
 
