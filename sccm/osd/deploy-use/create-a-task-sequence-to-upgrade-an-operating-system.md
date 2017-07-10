@@ -16,14 +16,14 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Create a task sequence to upgrade an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use task sequences in System Center Configuration Manager to automatically upgrade an operating system from Windows 7 or later to Windows 10, or Windows Server 2012 to Windows Server 2016, on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
+Use task sequences in System Center Configuration Manager to automatically upgrade an operating system from Windows 7 or later to Windows 10, or Windows Server 2012 or later to Windows Server 2016, on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
 ##  <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an operating system  
  To upgrade the operating system on computers, you can create a task sequence and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard will add the steps to upgrade the operating system, apply software updates, and install applications. Before  you create the  task sequence, the following must be in place:  
 
 -   **Required**  
 
-     - The Windows 10 or Windows Server 2016 [operating system upgrade package](../get-started/manage-operating-system-upgrade-packages.md) must be available in the Configuration Manager console.
+     - The [operating system upgrade package](../get-started/manage-operating-system-upgrade-packages.md) must be available in the Configuration Manager console.
      - When you upgrade to Windows Server 2016, you must select the **Ignore any dismissable compatibility messages** setting in the Upgrade Operating System task sequence step or the upgrade will fail.
 
 -   **Required (if used)**  
