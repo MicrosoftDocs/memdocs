@@ -184,7 +184,6 @@
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [Boundaries](servers/deploy/configure/boundaries.md)
 #### [Boundary groups](servers/deploy/configure/boundary-groups.md)
-#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
 ###  [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
@@ -202,7 +201,9 @@
 ###  [Proxy server support](plan-design/network/proxy-server-support.md)
 ###  [Release notes](servers/deploy/install/release-notes.md)
 ###  [Unicode and ASCII support](plan-design/hierarchy/unicode-and-ascii-support.md)
-
+<!-- Deprecated from Content - still published but out of TOC:
+#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
+-->
 
 #    Manage infrastructure
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
@@ -223,7 +224,6 @@
 ###  [Checklist for installing update 1706](servers/manage/checklist-for-installing-update-1706.md)
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
-
 <!-- Deprecated from Content - still published but out of TOC:
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)

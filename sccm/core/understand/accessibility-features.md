@@ -2,7 +2,7 @@
 title: "Accessibility | Microsoft Docs"
 description: "Learn about the features that make System Center Configuration Manager accessible for people with disabilities."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,22 +12,51 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 caps.latest.revision: 6
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Accessibility features in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Accessibility features in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 System Center Configuration Manager includes features to help make it accessible for people with disabilities.
 
 
 ## <a name="bkmk_aconsole"></a> Accessibility features for the Configuration Manager console  
--   To access a workspace, use the following keyboard shortcuts:  
 
-|Workspace|Keyboard shortcut|  
-|------|--------|  
-|Assets and Compliance|Ctrl+1|  
-|Software Library|Ctrl+2|  
-|Monitoring|Ctrl+3|  
-|Administration|Ctrl+4|  
+**Shortcuts and improvements with version 1706 and later**
+
+|Keyboard shortcut|  Purpose|
+|--------|--------|  
+|Ctrl + M|Set the focus on the main (central) pane.|
+|Ctrl + T|Set the focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.|
+|Ctrl + I|Set the focus to the breadcrumb bar, below the ribbon.|
+|Ctrl + L|Set the focus to the **Search** field, when available.|
+|Ctrl + D|Set the focus to the details pane, when available.|
+|Alt     |Change the focus in and out of the ribbon.|
+
+
+- Improved navigation in the navigation pane when you type the letters of a node name.
+- Keyboard navigation through the main view and the ribbon is now circular.
+- Keyboard navigation in the details pane is now circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
+- After refreshing a Workspace view, the focus is set to the main pane of that workspace.
+- Fixed an issue to enable screen readers to announce the names of list items.
+- Added accessible names for multiple controls on the page that enables screen readers to announce important information.
+
+
+**The following shortcuts are available for all versions**
+
+- To access a workspace, use the following keyboard shortcuts:  
+
+|Keyboard shortcut| Workspace|
+|--------|--------|  
+|Ctrl + 1| Assets and Compliance|
+|Ctrl + 2|  Software Library|
+|Ctrl + 3|  Monitoring|
+|Ctrl + 4|  Administration|
+
 
 -   To access a workspace menu, select the Tab key until the Expand/Collapse icon is in focus. Then, select the Down arrow key to access the workspace menu.  
 
@@ -45,7 +74,7 @@ System Center Configuration Manager includes features to help make it accessible
 >  The information in this section might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](http://go.microsoft.com/fwlink/?LinkId=8431) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  
 
 ##  <a name="bkmk_ahelp"></a> Accessibility features for Configuration Manager Help  
- Configuration Manager Help includes features that make it accessible to a wider range of users, including those who have limited dexterity, low vision, or other disabilities.  
+ Configuration Manager Help includes features that make it accessible to a wider range of users, including users who have limited dexterity, low vision, or other disabilities.  
 
 |To do this|Use this keyboard shortcut|  
 |----------------|--------------------------------|  

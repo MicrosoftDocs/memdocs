@@ -45,6 +45,10 @@ Beginning with this release, Peer Cache supports distribution of content express
 ### Updates for the data warehouse
 The data warehouse is no longer a pre-release feature. We have also updated the prerequisites to include support for the database on SQL Server Always on availability groups, and failover clusters. For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
 
+### Accessibility improvements
+We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1706#accessibility-improvements).
+
+
 ## H2 placeholder - Pending future revisions
 
 
