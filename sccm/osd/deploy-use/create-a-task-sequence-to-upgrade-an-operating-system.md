@@ -16,14 +16,15 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Create a task sequence to upgrade an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
+Use task sequences in System Center Configuration Manager to automatically upgrade an operating system from Windows 7 or later to Windows 10, or Windows Server 2012 to Windows Server 2016, on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
 ##  <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an operating system  
- To upgrade the operating system on computers to Windows 10, you can create a task sequence  and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard will add the steps to upgrade the operating system, apply software updates, and install applications. Before  you create the  task sequence, the following must be in place:  
+ To upgrade the operating system on computers, you can create a task sequence and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard will add the steps to upgrade the operating system, apply software updates, and install applications. Before  you create the  task sequence, the following must be in place:  
 
 -   **Required**  
 
-     - The Windows 10 [operating system upgrade package](../get-started/manage-operating-system-upgrade-packages.md) must be available in the Configuration Manager console.  
+     - The Windows 10 or Windows Server 2016 [operating system upgrade package](../get-started/manage-operating-system-upgrade-packages.md) must be available in the Configuration Manager console.
+     - When you upgrade to Windows Server 2016, you must select the **Ignore any dismissable compatibility messages** setting in the Upgrade Operating System task sequence step or the upgrade will fail.
 
 -   **Required (if used)**  
 
@@ -54,6 +55,8 @@ Use task sequences   in System Center Configuration Manager to automatically upg
     -   **Edition index**: If there are multiple operating system edition indexes available in the package, select the desired edition index. By default, the first item is selected.  
 
     -   **Product key**: Specify the product key for the Windows operating system to install. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of 5 characters must be separated by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. When the upgrade is for a volume license edition, the product key is not required. You only need a product key when the upgrade is for a retail Windows edition.  
+
+    -   **Ignore any dismissable compatibility messages**: Select this setting if you are upgrading to Windows Server 2016. If you do not select this setting, the task sequence will fail to complete because Windows Setup is waiting for the user to click **Confirm** on a Windows app compatability dialog.   
 
 7.  On the **Include Updates** page, specify whether to install required software updates, all software updates, or no software updates, and then click **Next**. If you specify to install software updates, Configuration Manager installs only those software updates that are targeted to the collections that the destination computer is a member of.  
 
