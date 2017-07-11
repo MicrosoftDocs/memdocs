@@ -12,14 +12,14 @@ ms.technology:
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 ---
 
-## Manage Express installation files for Windows 10 updates
+# Manage Express installation files for Windows 10 updates
 Beginning in Configuration Manager version 1702, Configuration Manager supports express installation files for Windows 10 updates. When you use a supported version of Windows 10, you can use Configuration Manager settings to download only the changes between the current month's Windows 10 Cumulative Update and the previous month's update. Without express installation files, Configuration Manager downloads the full Windows 10 Cumulative Update (including all updates from previous months) each month. Using express installation files provides for smaller downloads and faster installation times on clients.
 
 > [!IMPORTANT]
 > While the settings to support the use of express installation files is available in Configuration Manager version 1702, the operating system client support is available in Windows 10 version 1607 with a Windows Update Agent update. This update is included with the updates released on April 11, 2017 (Patch Tuesday). For more information about these updates, see [support article 4015217](http://support.microsoft.com/kb/4015217). Future updates will leverage express for smaller downloads. Windows 10 version 1607 without the update and prior versions do not support express installation files.
 
 
-### To enable the download of express installation files for Windows 10 updates on the server
+### To enable the download of express installation files for Windows 10 updates
 To start synchronizing the metadata for Windows 10 express installation files, you must enable it in the Software Update Point Properties.
 1.	In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.
 2.	Select the central administration site or the stand-alone primary site.
