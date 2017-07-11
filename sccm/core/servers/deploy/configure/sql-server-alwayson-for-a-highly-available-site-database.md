@@ -32,7 +32,7 @@ When you use availability groups in Microsoft Azure, you can further increase av
 >  Before you continue, be comfortable with configuring SQL Server and SQL Server availability groups. The information that follows references the SQL Server documentation library and procedures.
 
 ## Supported scenarios
-The following are supported scenarios for using availably groups with Configuration Manager. Details and procedures for each can be found in [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
+The following are supported scenarios for using availability groups with Configuration Manager. Details and procedures for each can be found in [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
 
 -      [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group).
@@ -58,16 +58,11 @@ Each replica in the availability group must run a version of SQL Server that is 
 You must use an *Enterprise* edition of SQL Server.
 
 **Account:**  
-Each instance of SQL Server can run under a domain user account  (**service account**) or **Local System**. Each replica in a group can have a different configuration. Per [SQL Server best practices](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd), use an account with the lowest possible permissions.
+Each instance of SQL Server can run under a domain user account (**service account**) or a non-domain account. Each replica in a group can have a different configuration. Per [SQL Server best practices](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd), use an account with the lowest possible permissions.
 
-For example, to configure Service Accounts and permissions for SQL Server 2016, see [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) on MSDN.
+-   To configure Service Accounts and permissions for SQL Server 2016, see [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) on MSDN.
+-  	To use a non-domain account, you must use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).
 
-  If you use **Local System** to run a replica, you must configure endpoint authentication. This includes delegation of rights to enable a connection to the replica server endpoint.
-  -     Delegate SQL Server rights by adding the computer account of each SQL Server as a login on the other SQL Servers in the node, and granting that account SA rights.  
-  -     Delegate Endpoint rights to each remote server on the local endpoint by running the following script on each replica:    
-
-              GRANT CONNECT ON endpoint::[endpoint_name]  
-              TO [domain\servername$]
 
 For more information see [Create a Database Mirroring Endpoint for Always On Availability Groups](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
