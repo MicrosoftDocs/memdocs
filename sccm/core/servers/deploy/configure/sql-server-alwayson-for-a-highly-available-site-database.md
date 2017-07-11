@@ -2,7 +2,7 @@
 title: "SQL Server Always On | Microsoft Docs"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -37,7 +37,9 @@ The following are supported scenarios for using availably groups with Configurat
 
 -      [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group).
 -     [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group).
--     [Add or remove replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members).
+-     [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members).
+-     [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca) (Requires Configuration Manager version 1706 or later.)
+-     [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site) (Requires Configuration Manager version 1706 or later.)
 -     [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group).
 
 
@@ -71,7 +73,16 @@ For more information see [Create a Database Mirroring Endpoint for Always On Ava
 
 ### Availability group configurations
 **Replica members:**  
-The availability group must have one primary replica and can have up to two synchronous secondary replicas.  Each replica member must:
+- 	The availability group must have one primary replica.
+- 	Prior to version 1706, you can have up to two synchronous secondary replicas.
+- 	Beginning with version 1706, you can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.
+
+    You can use an asynchronous commit replica to recover your synchronous replica. See [site database recovery options]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
+    > [!CAUTION]  
+    > Configuration Manager does not support failover to use the asynchronous commit replica as your site database.
+Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.
+
+Each replica member must:
 -   Use the **default instance**  
     *Beginning with version 1702, you can use a* ***named instance***.
 
@@ -80,7 +91,7 @@ The availability group must have one primary replica and can have up to two sync
 -	  Be set for **Manual Failover** 	  
 
     >  [!TIP]
-    >  Configuration Manager supports using the availability group replicas when set to **Automatic Failover**. However, **Manual Failover** must be set when:
+    >  Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. However, **Manual Failover** must be set when:
     >  -  You run Setup to specify use of the site database in the availability group.
     >  -  When you install any update to Configuration Manager (not just updates that apply to the site database).  
 
