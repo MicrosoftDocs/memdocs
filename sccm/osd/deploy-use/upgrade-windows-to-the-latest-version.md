@@ -62,7 +62,7 @@ This topic provides the steps in System Center Configuration Manager to upgrade 
 
      Use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to automate the upgrade of the operating system.  
 
-    > [IMPORTANT]
+    > [!IMPORTANT]
     > When you use stand-alone media, you must include a boot image in the task sequence for it to be available in the Task Sequence Media Wizard.
 
     > [!NOTE]  

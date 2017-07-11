@@ -26,7 +26,12 @@ To start synchronizing the metadata for Windows 10 express installation files, y
 3.	On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**. On the **Update Files** tab, select **Download full files for all approved updates and express installation files for Windows 10**.
 
 ### To enable support for clients to download and install express installation files
-To enable express installation files support on clients, you must enable express installation files on clients in the Software Updates section of client settings. This creates a new HTTP listener that listens for requests to download express installation files on the port that you specify. Once you deploy client settings to enable this functionality on the client, it will attempt to download the delta between the current month's Windows 10 Cumulative Update and the previous month's update (clients must run a version of Windows 10 that supports express installation files).
+To enable express installation files support on clients, you must enable express installation files in the Software Updates section of client settings. This creates a new HTTP listener that listens for requests to download express installation files on the port that you specify.
+
+> [!NOTE]    
+> This is a local port that clients will use to listen for requests from Delivery Optimization (DO) or Background Intelligent Transfer Service (BITS) to download express content from the distribution point. You do not need to open this port on firewalls because all traffic is on the local computer.
+
+Once you deploy client settings to enable this functionality on the client, it will attempt to download the delta between the current month's Windows 10 Cumulative Update and the previous month's update (clients must run a version of Windows 10 that supports express installation files).
 1.	Enable support for express installation files in the Software Update Point Component properties (previous procedure).
 2.	In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
 3.	Select the appropriate client settings, then on the **Home** tab, click **Properties**.

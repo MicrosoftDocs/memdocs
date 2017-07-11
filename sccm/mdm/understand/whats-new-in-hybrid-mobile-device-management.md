@@ -24,7 +24,7 @@ This article provides details on the new mobile device management (MDM) features
 
 ##  Compatibility with Configuration Manager versions  
 
- Each section of this article lists hybrid features under 3 different categories. Use the following guidance to determine compatibility of the features in each category  with different versions of Configuration Manager:  
+ Each section of this article lists hybrid features under three different categories. Use the following guidance to determine compatibility of the features in each category  with different versions of Configuration Manager:  
 
 |Feature categories|Description|
 |-|-|
@@ -52,17 +52,17 @@ This article provides details on the new mobile device management (MDM) features
 
   The Intune Managed Browser can now integrate with the Azure AD Application Proxy service to let users access internal web sites even when they are working remotely. Users of the browser simply enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](/intune/app-configuration-managed-browser).
 
-- **Company Portal app for Android now has a new end user experience for App Protection Policies**
+- **Company Portal app for Android now has a new end-user experience for App Protection Policies**
 
-  Based on customer feedback, we've modified the Company Portal app for Android to show an **Access Company Content** button. The intent is to prevent end users from unnecessarily going through the enrollment process when they only need to access apps that support App Protection Policies, a feature of Intune mobile application management. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
+  Based on customer feedback, we've modified the Company Portal app for Android to show an **Access Company Content** button. The intent is to prevent end-users from unnecessarily going through the enrollment process when they only need to access apps that support App Protection Policies, a feature of Intune mobile application management. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
 
 - **New menu action to easily remove Company Portal**
 
-  Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page and in the [Android end user documentation](/intune-user-help/unenroll-your-device-from-intune-android).
+  Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page and in the [Android end-user documentation](/intune-user-help/unenroll-your-device-from-intune-android).
 
 - **Improvements to app syncing with Windows 10 Creators Update**
 
-  The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
+  The Company Portal app for Windows 10 now automatically initiates a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This reduces the issue of app installs stalling during the "Pending Sync" state. In addition, users are able to manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
 
 - **New guided experience for Windows 10 Company Portal**
 
@@ -100,7 +100,7 @@ This article provides details on the new mobile device management (MDM) features
 
 - **Android and iOS enrollment restrictions** <!-- 1290826 -->      
 
-  Admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only. For details, see [Android and iOS enrollment restrictions](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
+  Admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices, or iOS devices enrolled with Device Enrollment Program only. For details, see [Android and iOS enrollment restrictions](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
 
 - **Support for Entrust certification authorities** <!-- 1350740 -->     
 
@@ -121,7 +121,7 @@ This article provides details on the new mobile device management (MDM) features
 
 - **MyApps available for Managed Browser**
 
-  Microsoft MyApps now have better support within the Managed Browser. Managed Browser users who are not targeted for management will be brought directly to the MyApps service, where they can access their admin-provisioned SaaS apps. Users who are targeted for Intune management will continue to be able to access MyApps from the built-in Managed Browser bookmark.
+  Microsoft MyApps now have better support within the Managed Browser. Managed Browser users who are not targeted for management will be brought directly to the MyApps service, where they can access their admin-provisioned SaaS apps. Users who are targeted for Intune management continue to be able to access MyApps from the built-in Managed Browser bookmark.
 
 - **New icons for the Managed Browser and the Company Portal**
 
@@ -129,9 +129,9 @@ This article provides details on the new mobile device management (MDM) features
 
   The Company Portal is also receiving updated icons for the Android, iOS, and Windows versions of the app to improve consistency with other apps in EM+S. These icons will be gradually released across platforms from April to late May.
 
-- **Sign-in progress indicator in Android Company Portal**
+- **Sign in progress indicator in Android Company Portal**
 
-  An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
+  An update to the Android Company Portal app shows a sign in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
 
 - **Block apps from accessing SharePoint Online**
 
@@ -157,15 +157,15 @@ This article provides details on the new mobile device management (MDM) features
   - Navigating Apps: **All Apps** view shows a tabbed view of **Featured**, **All**, and **Categories** for easier navigation.
   - Support: **My Devices** and **Contact IT** tabs are updated to improve readability.
 
-  For more details about these changes, see [UI updates for Intune end user apps](/intune/whats-new/whats-new-in-intune-app-ui).
+  For more information about these changes, see [UI updates for Intune end-user apps](/intune/whats-new/whats-new-in-intune-app-ui).
 
 - **Signing Script for Windows 10 Company Portal**
 
-  If you need to download and sideload the Windows 10 Company Portal app, you can now use a script to simplify and streamline the app-signing process for your organization.  To download the script and the instructions for using it, see  [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) on TechNet Gallery. For more details about this announcement, see [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) on the Intune Support Team Blog.
+  If you need to download and sideload the Windows 10 Company Portal app, you can now use a script to simplify and streamline the app-signing process for your organization.  To download the script and the instructions for using it, see  [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) on TechNet Gallery. For more information about this announcement, see [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) on the Intune Support Team Blog.
 
 - **Improved support for Android users based in China**
 
-  Due to the absence of the Google Play Store in China, Android devices must obtain apps from Chinese marketplaces. The Company Portal will support this workflow by redirecting Android users in China to download the Company Portal and Outlook apps from local app stores. This will improve the user experience when Conditional Access policies are enabled, both for Mobile Device Management and for Mobile Application Management. The Company Portal and Outlook apps for Android are available on the following Chinese app stores:
+  Due to the absence of the Google Play Store in China, Android devices must obtain apps from Chinese marketplaces. The Company Portal supports this workflow by redirecting Android users in China to download the Company Portal and Outlook apps from local app stores. This improves the user experience when Conditional Access policies are enabled, both for Mobile Device Management and for Mobile Application Management. The Company Portal and Outlook apps for Android are available on the following Chinese app stores:
 
   - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
   - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
@@ -192,7 +192,7 @@ This article provides details on the new mobile device management (MDM) features
 
    Beginning in Technical Preview 1703, you now have support for the following Volume Purchase Program (VPP) scenarios:
 
-   - Device licensing - Apps that support device licensing and are deployed to device collections will only require one license per device.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
+   - Device licensing - Apps that support device licensing and are deployed to device collections now only require one license per device.  Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
    - Use of multiple VPP tokens to a single hybrid tenant with both tokens used for managing VPP apps.
    - Use of VPP education tokens with the ability to distinguish between business and education tokens.
 
@@ -209,7 +209,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Improved support for Apple Volume Purchase Program (VPP)**
 
-  - You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+  - You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license is claimed when you deploy it, as follows:
 
     | Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
     |-|-|-|-|
@@ -228,13 +228,13 @@ The following additional hybrid features are also included in version 1702 of Co
 
   For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
-- **Support for line of business apps in Windows Store for Business**
+- **Support for line-of-business apps in Windows Store for Business**
 
-  You can now sync custom line of business apps from the Windows Store for Business.
+  You can now sync custom line-of-business apps from the Windows Store for Business.
 
 - **New Mobile Threat Defense monitoring tools**
 
-    You have now have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
+    You now have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
 
     For more information, see [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
@@ -258,7 +258,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Non-Compliant Apps Compliance Settings**
 
-  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they will be marked “non-compliant” and will lose access to company resources according to conditional access policies in place. For more information [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
+  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they are be marked “non-compliant” and lose access to company resources according to conditional access policies in place. For more information [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
 
 - **PFX Certificate Creation and Distribution and S/MIME Support**
 
