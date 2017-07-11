@@ -2,7 +2,7 @@
 title: "Configure Availability Groups | Microsoft Docs"
 description: "Set up and manage SQL Server Always On Availability groups with SCCM."
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -102,15 +102,15 @@ To complete this procedure, the account you use to run Configuration Manager Set
 
 
 
-## Add and remove replica members  
-When your site database is hosted in an availability group, use the following procedures to add or remove replica members. Configuration Manager supports a single primary, and up to two secondary nodes.
+## Add and remove synchronous replica members  
+When your site database is hosted in an availability group, use the following procedures to add or remove synchronous replica members. For information about the type and number of replicas that are supported, see **Availability group configurations** under [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) in the prepare to use availability group topic.
 
 To complete the following procedures, the account you use must be:
 -   A member of the **Local Administrators** group on each computer that is a member of the availability group.
 -   A **sysadmin** on each SQL Server that hosts or will host the site database.
 
 
-### To add a new replica member
+### To add a new synchronous replica member
 1.	Add the new server as a secondary replica to the availability group. See [Add a Secondary Replica to an Availability Group (SQL Server)](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) in the SQL Server documentation library.
 
 2.	Stop the Configuration Manager site by running **Preinst.exe /stopsite**. See [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
@@ -129,6 +129,21 @@ To complete the following procedures, the account you use must be:
 
 ### To remove a replica member
 For this procedure, use the information in [Remove a Secondary Replica from an Availability Group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) from the SQL Server documentation.
+
+## Configure an asynchronous commit replica
+Beginning with Configuration Manager version 1706, you can add an asynchronous replica to an availability group you use with Configuration Manager. To do so, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See the [SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))  for information on how to add secondary replicas to availability groups.
+
+## Use the asynchronous replica to recover your site
+With Configuration Manager version 1706 and later, you can use an asynchronous replica to recover your site database. To do so, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
+
+To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
+
+Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
+
+<!-- For inclusion with passive primary site support:
+> [!TIP]  
+> If you use a primary passive replica (introduced in version [TBD],  you do not need to stop the passive replica. Only the active primary site must be stopped.
+-->  
 
 ## Stop using an availability group
 Use the following procedure when you no longer want to host your site database in an availability group. This involves moving the site database back to a single instance of SQL Server.

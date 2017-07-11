@@ -48,6 +48,12 @@ The data warehouse is no longer a pre-release feature. We have also updated the 
 ### Accessibility improvements
 We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](/sccm/core/understand/accessibility-features).
 
+### Improvements  for SQL Server Always On Availability Groups
+With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
+  -	  Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
+  -	  This release does not support failover to use the asynchronous commit replica as your site database.
+For more information, see [Prepare to use Always On Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+
 
 <!-- ## Migration  -->
 
