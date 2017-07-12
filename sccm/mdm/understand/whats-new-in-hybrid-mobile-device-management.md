@@ -291,7 +291,9 @@ The following additional hybrid features are also included in version 1702 of Co
 
 ### Platform Support Reminder: Windows Phone 8.1 mainstream support ended July 11, 2017
 <!-- 1327781 -->
-On July 11, 2017,  the Windows Phone 8.1 platform reached end of mainstream support. Windows 8.1 PC support is not impacted.
+*July 11, 2017*
+
+The Windows Phone 8.1 platform has reached end of mainstream support. Windows 8.1 PC support is not impacted.
 
 There is no immediate impact to any Windows Phone 8.1 device that is managed by the Intune service, including those enrolled in hybrid MDM. Devices that are enrolled will continue to work and all policies, configurations, and apps will continue to work as expected. Please note, there are no improvements targeted for the Windows Phone 8.1 platform within the Intune service, and for the Windows Phone 8.1 Company Portal app.
 
