@@ -62,7 +62,7 @@ Use the following procedure to learn how to add this configuration item to a con
 
 4.  On the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-5.  In the **Deploy Configuration Baselines** dialog box, configure the following Metings:  
+5.  In the **Deploy Configuration Baselines** dialog box, configure the following settings:  
 
     -   **Selected configuration baselines** - Ensure that the **Windows 10 Passwords** configuration baseline was automatically added to this list.  
 
