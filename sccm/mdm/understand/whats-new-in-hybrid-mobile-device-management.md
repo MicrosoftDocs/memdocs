@@ -36,9 +36,9 @@ This article provides details on the new mobile device management (MDM) features
 
 ### New in Microsoft Intune
 
-- **Notice added for Android supported versions**
+- **End of support notices added for Android and Windows Phone**
 
-    A new notice has been added for supported versions of Android. For details, see [End of support for Android 4.3 and lower](#notices).
+    New notices have been added for end of support for Android and Windows Phone versions. For details, see [Notices](#notices).
 
 ## June 2017
 
@@ -288,6 +288,14 @@ The following additional hybrid features are also included in version 1702 of Co
 
 
 ## Notices
+
+### Platform Support Reminder: Windows Phone 8.1 mainstream support ended July 11, 2017
+<!-- 1327781 -->
+On July 11, 2017,  the Windows Phone 8.1 platform reached end of mainstream support. Windows 8.1 PC support is not impacted.
+
+There is no immediate impact to any Windows Phone 8.1 device that is managed by the Intune service, including those enrolled in hybrid MDM. Devices that are enrolled will continue to work and all policies, configurations, and apps will continue to work as expected. Please note, there are no improvements targeted for the Windows Phone 8.1 platform within the Intune service, and for the Windows Phone 8.1 Company Portal app.
+
+We recommend upgrading eligible Windows Phone 8.1 devices to Windows 10 Mobile at your earliest opportunity.  
 
 ### End of support for Android 4.3 and lower
 <!---1171127--->
