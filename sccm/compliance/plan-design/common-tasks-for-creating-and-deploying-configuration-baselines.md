@@ -2,7 +2,7 @@
 title: "Common tasks for configuration baselines - Configuration Manager | Microsoft Docs"
 description: "Learn about how to create and deploy System Center Configuration Manager configuration baselines."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 07/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -42,9 +42,7 @@ In the following procedure, you'll learn how to add this configuration item to a
 
 6.  In the **Add Configuration Items** dialog box, select the **Windows 10 Password Enforcement** configuration item that you previously created, then click **Add**.  
 
-7.  Click OK to close the **Add Configuration Items** dialog box and return to the **Create Configuration Baseline** dialog box which should appear similar to this screenshot:  
-
-     ![Create Configuration Baseline dialog box](/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png)  
+7.  Click OK to close the **Add Configuration Items** dialog box and return to the **Create Configuration Baseline** dialog box.
 
 8.  Click **OK** to close the **Create Configuration Baseline** dialog box.  
 
@@ -72,12 +70,10 @@ In the following procedure, you'll learn how to add this configuration item to a
 
     -   If required, configure the schedule by which the configuration baseline will be evaluated. Otherwise, keep the default of **7 Days**.  
 
-6.  The dialog box will now look something like:  
-
-     ![Deploy configuration baselines dialog box](/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png)  
-
 7.  Click **OK** to close the **Deploy Configuration Baselines** dialog box and create the deployment.  
 
  If you want to take a quick look at compliance statistics for this deployment, in the **Monitoring** workspace, click **Deployments**. At the bottom of the screen, you'll see a **Compliance Statistics** chart.  
 
- For more detailed information about how to monitor configuration baselines, see [Monitor compliance settings](../../compliance/deploy-use/monitor-compliance-settings.md)  
+## Next steps 
+
+For more detailed information about how to monitor configuration baselines, see [Monitor compliance settings](../../compliance/deploy-use/monitor-compliance-settings.md).  
