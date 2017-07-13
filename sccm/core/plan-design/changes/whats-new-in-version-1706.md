@@ -54,6 +54,11 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
   -	  This release does not support failover to use the asynchronous commit replica as your site database.
 For more information, see [Prepare to use Always On Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
+### Update reset tool
+Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use this tool with any version of the current branch that remains in support, to fix issues when in-console updates have problems downloading or replicating.  
+
+For more infomration, see [Update replication tool](/sccm/core/serves/manage/update-reset-tool).
+
 
 <!-- ## Migration  -->
 

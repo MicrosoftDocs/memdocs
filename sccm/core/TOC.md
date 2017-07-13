@@ -213,6 +213,7 @@
 ##   [Upgrade on-premises infrastructure](servers/manage/upgrade-on-premises-infrastructure.md)
 ##   [Updates for Configuration Manager](servers/manage/updates.md)
 ###  [Install in-console updates](servers/manage/install-in-console-updates.md)
+#### [Update reset tool](servers/manage/update-reset-tool.md)
 #### [Test database upgrade](servers/manage/test-database-upgrade.md)
 #### [Flowchart - Download updates](servers/manage/download-updates-flowchart.md)
 #### [Flowchart - Update replication](servers/manage/update-replication-flowchart.md)
