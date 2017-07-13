@@ -20,12 +20,14 @@ manager: angrobe
 ---
 # Update reset tool
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: System Center Configuration Manager (Current Branch)*  
+
+
 Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use the tool to fix issues when in-console updates have problems downloading or replicating. The tool is found in the ***\cd.latest\SMSSETUP\TOOLS*** folder of the site server.
 
 You can use this tool with any version of the current branch that remains in support.
 
-Use this tool when an in-console update has not yet installed and is in a failed state. A failed state means that the update download is in progress but stuck or taking an excessively long time. A long time is considered to be hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.  
+Use this tool when an [in-console update(/sccm/core/servers/manage/install-in-console-updates)] has not yet installed and is in a failed state. A failed state means that the update download is in progress but stuck or taking an excessively long time. A long time is considered to be hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.  
 
 When you run the tool, it runs against the update that you specify. By default, the tool does not delete successfully installed or downloaded updates.  
 
@@ -49,7 +51,7 @@ The tool must be run on the top-level site of the hierarchy.
 When you run the tool, use command-line parameters to specify:
   -   The SQL Server at the top-tier site of the hierarchy.
   -   The site database name at the top-tier site.
-  -   The GUID of the update package you want to reset. 
+  -   The GUID of the update package you want to reset.
 
 Based on the status of the update, the tool identifies the additional servers it needs to access.   
 
@@ -72,6 +74,3 @@ After the tool runs:
  In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  In a more extreme scenario, you want to force deletion of problematic update package. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
-
-
- 
