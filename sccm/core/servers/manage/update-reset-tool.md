@@ -27,7 +27,7 @@ Beginning with version 1706, Configuration Manager primary sites, and central ad
 
 You can use this tool with any version of the current branch that remains in support.
 
-Use this tool when an [in-console update(/sccm/core/servers/manage/install-in-console-updates)] has not yet installed and is in a failed state. A failed state means that the update download is in progress but stuck or taking an excessively long time. A long time is considered to be hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.  
+Use this tool when an [in-console update](/sccm/core/servers/manage/install-in-console-updates) has not yet installed and is in a failed state. A failed state means that the update download is in progress but stuck or taking an excessively long time. A long time is considered to be hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.  
 
 When you run the tool, it runs against the update that you specify. By default, the tool does not delete successfully installed or downloaded updates.  
 
