@@ -41,9 +41,12 @@ Intune standalone is now on the Microsoft Azure cloud platform and provides many
 - Web console - An HTML 5-based console built on web standards with support for most modern web browsers
 - Advanced reporting - ability to create customized reports    
 
-
 ## Hybrid MDM with Configuration Manager
-Hybrid MDM is a solution that uses Intune as the delivery channel for policies, profiles, and applications to devices but uses Configuration Manager on-premises infrastructure to store and administer content and manage the devices. You may choose hybrid MDM if you already have a significant investment in Configuration Manager and want to extend it to manage mobile devices. A hybrid implementation gives you “single pane of glass” control. This means you can use the same on-premises infrastructure and administrative console to manage mobile devices with Intune as well as PCs and servers with the traditional Configuration Manager client.
+Hybrid MDM is a solution that uses Intune as the delivery channel for policies, profiles, and applications to devices but uses Configuration Manager on-premises infrastructure to store and administer content and manage the devices. A hybrid implementation gives you “single pane of glass” control. This means you can use the same on-premises infrastructure and administrative console to manage mobile devices with Intune as well as PCs and servers with the traditional Configuration Manager client. You may choose hybrid MDM for the following reasons:    
+- You already have a significant investment in Configuration Manager and want to extend it to manage mobile devices
+- You infrastructure requires that you have multiple NDES servers
+- You infrastructure requires that you have multiple Exchange connectors
+- You require S/MIME support
 
 ## Changing the MDM authority setting
 If you need to change the MDM authority setting, you can change it yourself without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority.md).
