@@ -1,0 +1,174 @@
+{
+    "redirections": [
+        {
+            "source_path": "sccm/compliance/plan-design/common-tasks-for-managing-compliance-on-devices-not-running-the-client.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-compliance-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-compliance-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps.md",
+            "redirect_url": "/sccm/mdm/deploy-use/configure-and-deploy-lookout-for-work-apps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/configure-endpoint-protection.md",
+            "redirect_url": "/sccm/protect/deploy-use/endpoint-protection-configure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/create-exchange-activesync-profiles.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-exchange-activesync-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/create-compliance-policy.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-compliance-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/create-pfx-certificate-profiles.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-pfx-certificate-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/device-compliance-policies.md",
+            "redirect_url": "/sccm/mdm/deploy-use/device-compliance-policies",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy.md",
+            "redirect_url": "/sccm/mdm/deploy-use/enable-device-threat-protection-rule-compliance-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/enable-lookout-connection-in-intune.md",
+            "redirect_url": "/sccm/mdm/deploy-use/enable-lookout-connection-in-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/introduction-to-email-profiles.md",
+            "redirect_url": "/sccm/mdm/deploy-use/create-exchange-activesync-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-access-based-on-device-network-app-risk",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-access-to-services.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-access-to-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-dynamics-crm-online-access.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-dynamics-crm-online-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-sharepoint-online-access.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-sharepoint-online-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-email-access.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-email-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/manage-skype-for-business-online-access.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-skype-for-business-online-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/set-up-your-subscription-with-lookout.md",
+            "redirect_url": "/sccm/mdm/deploy-use/set-up-your-subscription-with-lookout",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/troubleshoot-lookout-integration.md",
+            "redirect_url": "/sccm/mdm/deploy-use/troubleshoot-lookout-integration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md",
+            "redirect_url": "/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/deploy-use/manage-internet-access-using-managed-browser-policies.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-internet-access-using-managed-browser-policies",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/deploy-use/manage-volume-purchased-ios-apps.md",
+            "redirect_url": "/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/deploy-use/protect-apps-using-mam-policies.md",
+            "redirect_url": "/sccm/mdm/deploy-use/protect-apps-using-mam-policies",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/get-started/creating-android-applications.md",
+            "redirect_url": "/sccm/mdm/deploy-use/creating-android-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/get-started/creating-ios-applications.md",
+            "redirect_url": "/sccm/mdm/deploy-use/creating-ios-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/apps/get-started/creating-windows-phone-applications.md",
+            "redirect_url": "/sccm/mdm/deploy-use/creating-windows-phone-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/mdm/deploy-use/create-applications.md",
+            "redirect_url": "/sccm/mdm/deploy-use/creating-ios-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/clients/deploy/plan/plan-for-managing-internet-based-clients.md",
+            "redirect_url": "/sccm/core/clients/manage/plan-internet-based-client-management",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md",
+            "redirect_url": "/sccm/mdm/deploy-use/mobile-device-hardware-inventory-hybrid",
+            "redirect_document_id": false
+        }
+    ]
+}
