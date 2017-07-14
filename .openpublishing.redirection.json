@@ -161,6 +161,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "sccm/mdm/index.md",
+            "redirect_url": "/sccm/mdm/understand/hybrid-mobile-device-management",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "sccm/core/clients/deploy/plan/plan-for-managing-internet-based-clients.md",
             "redirect_url": "/sccm/core/clients/manage/plan-internet-based-client-management",
             "redirect_document_id": false
