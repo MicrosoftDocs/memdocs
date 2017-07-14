@@ -285,7 +285,7 @@ The post installation tasks include:
 When an update fails to be installed, review the in-console feedback to identify resolutions for warnings and errors. You can also view the ConfigMgrPrereq.log on the site server for more details. Before you retry the installation of an update, you must fix errors, and should fix warnings.  
 
 > [!TIP]  
-> If an update has problems downloading or replicating, you can use the [update reset tool](/sccm/core/servers/manage/update-reset-tool). This tools is available from sites that run version 1706 or later. 
+> If an update has problems downloading or replicating, you can use the [update reset tool](/sccm/core/servers/manage/update-reset-tool). This tool is available from sites that run version 1706 or later. 
 
 When you are ready to retry the installation of an update, select the failed update and then choose an applicable option. The update installation retry behavior depends on the node where you start the retry, and the retry option that you use.  
 

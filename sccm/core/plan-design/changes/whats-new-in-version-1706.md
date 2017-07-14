@@ -57,6 +57,9 @@ For more information, see [Prepare to use Always On Availability Groups](/sccm/c
 ### Update reset tool
 Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use this tool with any version of the current branch that remains in support, to fix issues when in-console updates have problems downloading or replicating. For more information, see [Update reset tool](/sccm/core/servers/manage/update-reset-tool).
 
+### High DPI console support  
+<!-- 1353476 -->
+With this release, issues with how the Configuration Manager console scales and displays different parts of the UI when viewed on high DPI devices (like a Surface book) should be fixed.
 
 <!-- ## Migration  -->
 
