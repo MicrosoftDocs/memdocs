@@ -2,7 +2,7 @@
 title: "Install Updates Publisher | Microsoft Docs"
 description: "Install System Center Updates Publisher in your environment"
 ms.custom: na
-ms.date: 4/29/2017
+ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -113,6 +113,7 @@ Because this folder contains all the files necessary to use Updates Publisher, y
 After installation completes, run **UpdatesPublisher.exe** from the *UpdatesPublisher* folder to start Updates Publisher.
 
 ## Next steps
- After you install Updates Publisher, we recommend you [configuring the options](/sccm/sum/tools/updates-publisher-options) for Updates Publisher. You must configure some options before you can use some features of Updates Publisher.
+ After you install Updates Publisher, we recommend you [configuring the options](updates-publisher-options.md) for Updates Publisher. You must configure some options before you can use some features of Updates Publisher.
 
- However, if you want to use the defaults and do not plan to deploy updates to an update server or to managed devices, you can jump right to [managing software update catalogs](/sccm/sum/tools/updates-publisher-catalogs), or [create software updates](/sccm/sum/tools/create-updates-with-updates-publisher) and create update catalogs of your own.
+ However, if you want to use the defaults and do not plan to deploy updates to an update server or to managed devices, you can jump right to [managing software update catalogs](updates-publisher-catalogs.md), or [create software updates](create-updates-with-updates-publisher.md) and create update catalogs of your own.
+

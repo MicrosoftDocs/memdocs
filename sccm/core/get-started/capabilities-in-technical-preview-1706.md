@@ -2,7 +2,7 @@
 title: "Technical Preview 1706 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/26/2017
+ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -206,7 +206,7 @@ In this release, you can control when task sequence progress is displayed to end
 In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
 
 #### To display task sequence progress
-In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to hide task sequence progress.
+In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to display task sequence progress.
 
 ## Specify a different content location for install content and uninstall content
 <!-- 1097546 -->
@@ -219,10 +219,10 @@ To solve this problem, you can now specify both an installation content location
 1. In the deployment type properties of an application, click the **Content** tab.
 2. Configure the **Install content location** as normal.
 3. For **Uninstall content settings**, choose one of the following:
-	- **Use install content location** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
+	- **Same as install content** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
 	- **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
-	- **Use different uninstall content location** - Choose this if you want to specify an uninstall content location that's different from the install content location.
-5. If you selected **Use different uninstall content location**, browse to, or enter the location of the application content that will be used to uninstall the application.
+	- **Different from install content** - Choose this if you want to specify an uninstall content location that's different from the install content location.
+5. If you selected **Different from install content**, browse to, or enter the location of the application content that will be used to uninstall the application.
 6. Click **OK** to close the deployment type properties dialog box.
 
 
@@ -499,64 +499,7 @@ In this release, we've added the following new settings you can use in Windows c
 For more information about compliance settings, see [Ensure device compliance](/sccm/compliance/understand/ensure-device-compliance).
 
 
-## Device compliance policy improvements
-
-### Actions for non-compliance
-
-Beginning with this release, you can configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant.
-
-These are the supported actions for non-compliance:
-
-- Send e-mail to end user
-- Mark devices non-compliant
-
-#### Try it Out!
-
-##### To add an email template
-
-Configuration Manager provides e-mail templates, but you can also create your own. The e-mail  template is used later in the process of creating actions for non-compliance to communicate with users.
-
-1. In the Configuration Manager console, choose **Assets and Compliance**.
-
-2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance notification templates**.
-
-3. On the **Home** tab, in the **Create Compliance Notification Template**.
-
-4. You must enter the following information:  
-	 a. Name: E-mail template name.   
-	 b. From: E-mail address sending the e-mail notification.   
-	 c. Subject: A subject that explains the e-mail     notification being sent.   
-	 d. Message body: More details on the e-mail notification.
-
-5. Click **OK** to save the new e-mail template.
-
-6. On the **Add Action** page, you can select your new e-mail template from the list.
-
-7. Once you select your e-mail template, click **OK**.
-
-##### To create actions for non-compliance
-
-1. In the Configuration Manager console, choose **Assets and Compliance**.
-
-2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance Policies**.
-
-3. On the **Home** tab, in the **Create** group, choose **Create Compliance Policy**.
-
-4. Select the **Supported Platforms** you want, then click **Next** twice. You can skip the **Rules** page.
-
-5. On the **Noncompliance Actions** page, you define what happens when a device becomes non-compliant, click **New**.
-6. You can choose two options: **Send e-mail to end user** or **Mark device non-compliant**.
-
-7. If selecting **Send e-mail to end user**, you must enter the following:  
-	a. **Grace period (in days):** You can enter 0-100 days.  
-	b. **Select the message template:** You can choose the default e-mail templates or the custom ones you added.
-
-8. If selecting **Mark device non-compliant**, you must enter the following:
-	a. **Grace period (in days):** You can enter 0-100 days.
-
-9. Once you chose the action and entered the settings for it, click **Next** twice, then **Close**.
-
-### New device compliance policy rules
+## New device compliance policy rules
 
 * **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
 

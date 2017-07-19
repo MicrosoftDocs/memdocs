@@ -22,9 +22,9 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This topic helps the IT admin enable hybrid enrollment of Android and Android for Work devices. The IT admin can then use System Center Configuration Manger to manage the devices through a configured Microsoft Intune subscription. From Google Play, users can download the Android company portal app that lets them enroll Android (including Samsung KNOX Standard) and Android for Work devices. 
+This topic helps the IT admin enable hybrid enrollment of Android and Android for Work devices. The IT admin can then use System Center Configuration Manger to manage the devices through a configured Microsoft Intune subscription. From Google Play, users can download the Android company portal app that lets them enroll Android (including Samsung KNOX Standard) and Android for Work devices.
 
-As a Configuration Manager admin, you can manage compliance settings, wipe or delete Android devices, deploy apps, and collect software and hardware inventory. If the Android company portal app is not installed on Android devices, then you will not have all the management capabilities (like inventory and compliance settings), but you can still deploy apps to Android devices.  
+As a Configuration Manager admin, you can manage compliance settings, wipe or delete Android devices, deploy apps, and collect software and hardware inventory. Without the Android Company Portal app installed on device, you don't have management capabilities like inventory and compliance settings, but you can still deploy apps to Android devices.  
 
 ## Enable Android enrollment  
 The following steps let Configuration Manager manage Android devices without a work profile (that is, "classic Android" enrollment).
@@ -37,28 +37,28 @@ The following steps let Configuration Manager manage Android devices without a w
  After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
 ## Enable Android for Work enrollment
-The following steps let Configuration Manager manage Android devices without a work profile (that is, "classic Android" enrollment).
+The following steps let Configuration Manager manage Android devices with a work profile.
 
-1. Create a Google account at https://accounts.google.com/SignUp to use as your Android for Work admin account. Or, sign in with the account that will be associated with all Android for Work management tasks for this Intune tenant. This might be a Google account that's shared among the admins who manage Android devices. This is the Google account that your organization uses to manage and publish apps in the Play for Work console. You will use this account to approve apps in the Play for Work store, so keep track of the account name and password.
+1. Create a Google account at https://accounts.google.com/SignUp to use as your Android for Work admin account. Or, sign in with the account associated with all Android for Work management tasks for this Intune tenant. This account might be a Google account that's shared among the admins who manage Android devices. This is the Google account that your organization uses to manage and publish apps in the Play for Work console. You use this account to approve apps in the Play for Work store, so keep track of the account name and password.
 2. Enable Android enrollment by binding the Google account to the Intune tenant that's managed in Configuration Manager:
    1. In the Configuration Manager console in the **Administration** workspace, choose **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions** and choose your Intune subscription.
    2. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** > **Android for Work**.
    3. In the dialog box, choose **Configure Android for Work in the Intune console**. The Intune console opens in your web browser.
    4. Use your Intune admin credentials to sign in to the Intune portal.
    5. Choose **Configure** to open Google Play's Android for Work website.
-   6. On Google's sign-in page, enter the Google account credentials from step 1, and then provide your company information.
+   6. On Google's sign in page, enter the Google account credentials from step 1, and then provide your company information.
 3. When you return to the Intune portal, Android for Work is enabled and you have three enrollment options for Android for Work devices:
    - **Manage all devices as Android** (disabled). All Android devices, including devices that support Android for Work, are enrolled as conventional Android devices.
    - **Manage supported devices as Android for Work** (enabled). All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
    - **Manage supported devices for users only in these groups as Android for Work** (enabled for some groups only). Lets you target Android for Work management to a limited set of users. Devices that support Android for Work are enrolled as Android for Work devices only when members of the selected groups enroll them. All other devices are enrolled as Android devices.
 
 > [!NOTE]
-> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage all supported devices as Android for Work** option.
+> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage all supported devices as Android for Work** option.
 
 
 After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
-You'll see the account name and organization name in the Intune portal when the binding is finished. At that point, you can close both browsers.
+When the binding finishes, you see the account name and organization name in the Intune portal. At that time, you can close both browsers.
 
 ### Enroll an Android for Work device
 How your users enroll Android for Work devices is similar to enrollment for Android. Users can download and install the Company Portal app for Android on their mobile devices. The app prompts them to create a work profile as part of the enrollment process. After the work profile is created, users must switch to the managed version of the Company Portal. The managed Company Portal is tagged with a small orange briefcase in the lower-right corner.
