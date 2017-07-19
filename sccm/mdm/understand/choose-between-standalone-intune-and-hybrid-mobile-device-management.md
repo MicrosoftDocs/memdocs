@@ -23,7 +23,7 @@ manager: angrobe
 One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I integrate Intune with Configuration Manager (hybrid MDM) or run Intune standalone in the cloud only configuration?" To answer that question, you should carefully compare the two options.
 
 ## Intune standalone
-Intune standalone is Microsoft’s recommend deployment topology.  Intune standalone is a cloud-only MDM solution and is managed using a web console that can be accessed from anywhere in the world. Intune datacenters are hosted in North America, Europe, and Asia. Because Intune is a cloud service, you can deploy Intune management to your devices in a relatively short timeframe.
+Intune standalone is Microsoft’s recommended deployment topology. Intune standalone is a cloud-only MDM solution and is managed using a web console that can be accessed from anywhere in the world. Intune datacenters are hosted in North America, Europe, and Asia. Because Intune is a cloud service, you can deploy Intune management to your devices in a relatively short timeframe.
 
 Customers generally find it faster and easier to deploy the standalone topology because there is no dependency for on-premise components. Intune standalone is now on the Microsoft Azure cloud platform and provides many advanced features, such as:
 - Integrated enterprise mobility management platform - An integrated cloud platform and admin experience in Azure portal for Intune, Azure AD Premium, and Azure Information Protection.
