@@ -40,7 +40,17 @@ If you are looking for information on how to configure conditional access for de
 
 -   Windows 7
 -   Windows 8.1
--   Windows 10 
+-   Windows 10
+
+## Supported Windows Servers
+
+-   2008 R2
+-   2012
+-   2012 R2
+-   2016
+
+	> [!IMPORTANT]
+	> For Windows Servers that may have multiple users signed in simultaneously, the same conditional access policies must be deployed to all of the users signed in.
 
 ## Configure conditional access  
  To setup conditional access, you must first create a compliance policy and configure conditional access policy. When you configure conditional access policies for PCs you can require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  
