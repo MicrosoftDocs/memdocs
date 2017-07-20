@@ -75,6 +75,20 @@ This release includes improvements for how software update points work with boun
 
 For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
 
+### Azure AD integration with Configuration Manager
+<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
+With this release, we have improved the integration of Configuration Manager and Azure Active Directory (Azure AD).  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate though Azure AD.
+
+The improved integration makes the following possible:  
+  -   Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the Azure services you use with Configuration Manager. This is done by using an Azure server app to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/configure/azure-services-wizard).
+
+-   Use Azure AD to authenticate clients on the Internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. <!-- This requires the cloud management gateway site system role. For more information, see []().  -->
+
+-   Install and manage the Configuration Manager client on computers that are located on the Internet. This requires the use of the cloud management gateway site system role. <!-- For more information, see [](). -->
+
+-   Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](/sccm/core/servers/configure/about-discovery-methods).
+
+
 <!-- ## Migration  -->
 
 
