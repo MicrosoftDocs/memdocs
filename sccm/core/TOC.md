@@ -189,7 +189,7 @@
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
-###  [Configure Azure Services](servers/deploy/configure/azure-services-wizard.md)
+###  [Configure Azure services](servers/deploy/configure/azure-services-wizard.md)
 ##   Technical references
 ###  [Accounts](plan-design/hierarchy/accounts.md)
 ###  [Communications between endpoints](plan-design/hierarchy/communications-between-endpoints.md)
