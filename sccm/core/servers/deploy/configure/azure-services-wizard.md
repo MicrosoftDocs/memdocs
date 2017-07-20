@@ -27,7 +27,7 @@ Beginning with Current Branch version 1706, the **Azure Services Wizard** is use
 This wizard provides a common configuration experience by using an **Azure web app** to provide subscription and configuration details. The web app replaces entering this same information each time you set up a new Configuration Manager component or service with Azure.
 
 The following Azure services are configured using the Configure Azure Services wizard:
--   **Cloud Management*   
+-   **Cloud Management**   
     [Enable clients to authenticate by using Azure Active Directory]() (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/configure-discovery-methods).
 -   **OMS Connector**
     [Connect to Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS) and sync data like collections to OMS Log Analytics.
