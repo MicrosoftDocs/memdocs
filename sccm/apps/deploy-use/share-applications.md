@@ -21,7 +21,7 @@ manager: angrobe
 
 # Share an application from Software Center
 
-Applies to: System Center Configuration Manager (Current Branch) <!-- 1706 -->
+*Applies to: System Center Configuration Manager (Current Branch)* <!-- 1706 -->
 
 You can copy a hyperlink to an application in Software Center using the  ![Share](media/share15.png)  **Share** button in the Application Details view. You can only share hyperlinks for applications. If the application becomes unavailable, the hyperlink opens a window with an application unavailable message.
 
