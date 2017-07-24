@@ -1,4 +1,3 @@
-
 ---
 title: "Azure services wizard | Microsoft Docs"
 description: "About the Azure services wizard for System Center Configuration Manager."
@@ -36,23 +35,29 @@ The following Azure services are configured using the Configure Azure Services w
 -   **Windows Store for Business**
     Connect to the on-line store for [Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) and get apps for your organization that you can deploy with Configuration Manager.
 
+When you use the wizard to configure a service, several common actions are available.
+These include:
+-   Configure the Azure environment:  On the **App** page of the wizard, you select the **Azure environment** that you use. See the content for each service to learn if it supports only the public Azure cloud, or if it can support a private cloud.
+-   Create or Import a server app:   On the **App** page of the wizard, you can **Create** and **Import** Azure web apps. The available options depend on the service you are configuring.  In addition, some services might require an additional app. For example, a service might also require a **Native Client app**.
+
+
 For information about Azure web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview)
 
-## Create a Web app for use with Configuration Manager
-Before you can complete the configuration of an Azure service in the Wizard, you must have a server app that the wizard can use. The server app, also called a web app, defines the common details about your Azure subscription that the set up for each service requires. By reusing the server app the process to configure additional services is simplified.
+## Create a web app for use with Configuration Manager
+Before you can complete the configuration of an Azure service in the Wizard, you must have a web app that the wizard can use. The web app, also called a web app, defines the common details about your Azure subscription that the set up for each service requires. By reusing the web app the process to configure additional services is simplified.
 
-You create the server app a single time, and then reuse it with each subsequent service you set up. The server app can be created before you configure a specific service, or during the process of configuring your first service. You can use the Azure Services wizard to create the app. You can also create the server app directly in Azure, and then use that app with Configuration Manager.
+You create the web app a single time, and then reuse it with each subsequent service you set up. The web app can be created before you configure a specific service, or during the process of configuring your first service. You can use the Azure Services wizard to create the app. You can also create the web app directly in Azure, and then use that app with Configuration Manager.
 
-When you have a server app ready for use, during the configuration of a service you **Import** that app to the wizard. If you do not have an app ready for use, you can **Create** the app from within the wizard at the time it is needed.
+When you have an app ready for use, during the configuration of a service that supports import of an app, you **Import** that app to the wizard. If you do not have an app ready for use or the wizard does not support Import for the service you are configuring, you can **Create** the app from within the wizard.
 
-### To create the server app from within the wizard.
+### To create the web app from within the wizard.
 1.	On the App page of  the Azure wizard, click **Create**.
 2.	Next provide a friendly name for the app, the homepage URL, App ID URI, and the Secret key validity period. By default, the secret key validity period is one year.
-3.	Then, sign-in to Azure. When you sign-in to Azure, Configuration Manager creates the web app in Azure for you. This includes the Client ID and secret key for use with the web app.
-4.	Later, you can view the server app information, and Client ID and secret key details from the Azure portal.
+3.  To continue, someone must now sign-in to Azure to complete the web app creation in Azure. The account that you use to sign-in to Azure does not need to be the same account that runs the Azure Services Wizard. After sign-in to Azure, Configuration Manager creates the web app in Azure for you. This includes the Client ID and secret key for use with the web app.
+4.	Later, you can view the web app information, and Client ID and secret key details from the Azure portal.
 
 
-## Modify the configuration of an Azure service
-You can view and edit the properties of an Azure service you have configured for use.
+## View the configuration of an Azure service
+You can view the properties of an Azure service you have configured for use.
 
 In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**. Next, choose the service you want to view or edit, and then click **Properties**.
