@@ -1,7 +1,7 @@
 ---
 title: "Setup Wizard | Microsoft Docs"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -134,7 +134,9 @@ If you're installing a central administration site as part of a site expansion s
 
 12. On the **Database Information** page, specify the following information:  
 
-    -   **SQL Server name (FQDN):** By default, this is set to be the site server computer.  
+    -   **SQL Server name (FQDN):** By default, this is set to be the site server computer.
+
+     If you use a custom port, add that port to the FQDN of the SQL Server. To do so, follow the FQDN of the sequel server with a comma and then the port number.   For example, for server *SQLServer1.fabrikam.com*, use the following to specify port *1551*:  **SQLServer1.fabrikam.com,1551**
 
     -   **Instance name:** By default, this is blank. It uses the default instance of SQL on the site server computer.  
 

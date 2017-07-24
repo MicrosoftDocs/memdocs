@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: 
+ms.technology:
  - configmgr-other
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
@@ -24,7 +24,7 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
  The Microsoft Program includes the following third-party software:  
 
-1.  Newtonsoft.Json.DLL version 4.5.6  
+1.  Newtonsoft.Json.DLL    
 
 2.  Open SSL implementation written by Eric Young (http://www.openssl.org/)  
 
@@ -50,7 +50,7 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
 As the recipient of the above third-party software, Microsoft sets forth a copy of the notices and other information below.  
 
-## Newtonsoft.Json.DLL version 4.5.6  
+## Newtonsoft.Json.DLL version  
  **NOTICES AND INFORMATION BEGIN HERE**  
 
  Copyright (c) 2007 James Newton-King  
@@ -63,7 +63,7 @@ As the recipient of the above third-party software, Microsoft sets forth a copy 
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
 
- **END OF NEWTONSOFT.JSON.DLL version 4.5.6 NOTICES AND INFORMATION**  
+ **END OF NEWTONSOFT.JSON.DLL version NOTICES AND INFORMATION**  
 
 ## OPENSSL  
  **NOTICES AND INFORMATION BEGIN HERE**  
@@ -513,7 +513,7 @@ Copyright 2016 Microsoft. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");  
 you may not use this file except in compliance with the License.  
 You may obtain a copy of the License at  
-       
+
 http://www.apache.org/licenses/LICENSE-2.0  
 
 Unless required by applicable law or agreed to in writing, software  
