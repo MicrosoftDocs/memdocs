@@ -39,15 +39,15 @@ Configuration Manager clients must be running the client from the 1706 release, 
 
 To use scripts, you must be a member of the appropriate Configuration Manager security role.
 
-To import, and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
-To approve, or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
-To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
+- To import, and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
+- To approve, or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
+- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and can be deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing.
 
-## Allow users to approve their own scripts:
+## Allow users to approve their own scripts
 
 1. In the Configuration Manager console, click **Administration**.
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
