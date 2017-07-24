@@ -1,7 +1,7 @@
 ---
 title: "Discovery methods | Microsoft Docs"
 ms.custom: na
-ms.date: 2/3/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -183,6 +183,28 @@ In the **Active Directory User Discovery Properties** dialog box, on the **Activ
 Actions for Active Directory User Discovery are recorded in the file **adusrdis.log** in the **&lt;InstallationPath\>\LOGS** folder on the site server.  
 
 For more information about how to configure this discovery method, see [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
+
+## <a name="azureaddisc"></a> Azure Active Directory User Discovery
+Beginning with version 1706, you can use Azure Active Directory (Azure AD) User Discovery, when you configure your environment to use Azure services.
+Use this discovery method to search your Azure AD for users who authenticate to your instance of Azure AD, to find the following attributes:  
+-   AD user
+-   objectId
+-   displayName
+-   mail
+-   mailNickname
+-   onPremisesSecurityIdentifier
+-   userPrincipalName
+-   AAD tenantID
+
+This method supports a full synchronization and delta synchronization of User data from Azure AD. This information can then be used along-side discovery data you collect from the other discovery methods.
+
+Actions for Azure AD User Discovery are recorded in the SMS_AZUREAD_DISCOVERY_AGENT.log file on the top-tier site server of the hierarchy.
+
+To configure Azure AD User Discovery, you use the Azure Services Wizard.  For information about how to configure this discovery method, see [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods).
+
+
+
+
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Heartbeat Discovery  
 **Configurable:** Yes  
@@ -401,7 +423,7 @@ When each of these three discovery methods runs at a specific site, the Configur
 
 Discovery searches the specified locations for objects and then tries to collect information about those objects. A DDR is created when sufficient information about a resource can be identified. The required information varies depending on the discovery method that is being used.  
 
-If you configure the same discovery method to run at different Configuration Manager sites to take advantage of querying local Active Directory servers, you can configure each site with a unique set of discovery options. Because discovery data is shared with each site in the hierarchy, avoid overlap between these configurations to efficiently discover each resource a single time. 
+If you configure the same discovery method to run at different Configuration Manager sites to take advantage of querying local Active Directory servers, you can configure each site with a unique set of discovery options. Because discovery data is shared with each site in the hierarchy, avoid overlap between these configurations to efficiently discover each resource a single time.
 
 For smaller environments, you might consider running each discovery method at only one site in your hierarchy to reduce administrative overhead and the potential for multiple discovery actions to rediscover the same resources. When you minimize the number of sites that run discovery, you can reduce the overall network bandwidth that discovery is using. You can also reduce the overall number of DDRs that are created and must be processed by your site servers.  
 

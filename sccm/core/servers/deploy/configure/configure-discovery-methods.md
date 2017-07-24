@@ -2,7 +2,7 @@
 title: "Configure discovery | Microsoft Docs"
 description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,7 +27,9 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 -   Server Discovery is an automatic discovery method that finds computers that you use as site systems. You can't configure or disable it.  
 
-**To enable any configurable  discovery method:**  
+**To enable a configurable discovery method:**  
+ > [!NOTE]  
+ > The following information does not apply to Azure Active Directory User Discovery. Instead, see [Configure Azure AD User Discovery](#azureaadisc) later in this topic.
 
 1.  In the Configuration Manager console, choose **Administration** > **Hierarchy Configuration**, and then choose **Discovery Methods**.  
 
@@ -205,6 +207,26 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 7.  Optionally, on the **Active Directory Attributes** tab, you can configure additional Active Directory attributes for computers that you want to discover. The default object attributes are also listed.  
 
 8.  When you have finished configuring Active Directory User Discovery for this site, choose **OK** to save the configuration.  
+
+## <a name= azureaadisc”></a> Configure Azure AD User Discovery
+Beginning with version 1706, you can configure Azure Active Directory User Discovery when you connect Configuration Manager to your [Azure subscription, and Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+#### To configure this method
+1.	Start the Wizard.
+2.	On **Azure Services** page, provide a friendly **Name** and optionally a **Description**. Then select **Cloud Management**.
+3.	On the **App** page, specify your **Azure environment**, and then:
+    - Click **Browse** to set up a **Web app**.  
+        - In the **Server App** dialog, select **Import** and then complete the **Import** Apps dialog.  Alternately you can select Create to then create a new app. If you choose to create an app, see [create a web app](/sccm/core/servers/deploy/configure/azure-services-wizard#create-a-web-app-for-use-with-configuration-manager), and then return here to continue.
+        - After you click **OK**, you return to the Server App dialog where you can see the details for the web app you imported. Select the app you want to use, then click **OK** to return to the **App** page.
+        - Click **Next**.
+    - Click **Browse** to set up a **Native Client app**.  
+        - In the **Client App** dialog, select **Import** and then complete the **Import Apps** dialog.  Alternately you can select **Create** to then create a new app. If you choose to create an app, see [create a web app](/sccm/core/servers/deploy/configure/azure-services-wizard#create-a-web-app-for-use-with-configuration-manager), and then return here to continue.
+        - After you click **OK**, you return to the Client App dialog where you can see the details for the Native Client app you imported. Select the app you want to use, then click **OK** to return to the **App** page.
+        - Click **Next**.
+    - Click **OK** to continue.
+4.	On the **Discovery** page, **Enable Azure Active Directory User Discovery** is selected by default. Click **Settings** to configure the polling cycle.
+5.	Complete the wizard.
+
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
  By default, Heartbeat Discovery is enabled when you install a Configuration Manager primary site. As a result, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point when you do not want to use the default of every seven days.  
