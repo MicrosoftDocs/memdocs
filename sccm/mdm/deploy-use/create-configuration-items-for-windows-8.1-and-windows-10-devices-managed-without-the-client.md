@@ -2,7 +2,7 @@
 title: "Create configuration items for Windows 8.1 and Windows 10 devices managed with Intune | Microsoft Docs"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,9 +19,7 @@ manager: angrobe
 
 ---
 # How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
+
   
  Use the System Center Configuration Manager**Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
@@ -84,7 +82,8 @@ manager: angrobe
 |**Idle time before device is locked**|Specify the amount of time a device can be idle (have no user input) before it is locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
 |**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
-|**Send password recovery PIN to Exchange Server**||  
+|**Send password recovery PIN to Exchange Server**|-|
+|**Device Encryption**|Enable encryption on targeted devices.|  
   
 ###  Device  
   
@@ -102,6 +101,11 @@ manager: angrobe
 |**Voice recording**|Allow the use of the voice recording features of the device.<br /><br /> (Windows 10 only)|
 |**Cortana**|Allow the use of the Cortana voice assistant.<br /><br /> (Windows 10 only)|
 |**Action Center Notifications**|Enable or disable the notification pane in Windows 10. <br /><br /> (Windows 10 only)|
+|**Region settings modification (desktop only)**|Prevents the end user from changing the region settings on the device.|
+|**Power and sleep settings modification (desktop only)**|Prevents the end user from changing power and sleep settings on the device.|
+|**Language settings modification (desktop only)**|Prevents the user from changing the language settings on the device.|
+|**System time modification**|Prevents the end user from changing the device date and time.|
+|**Device name modification**|Prevents the end user from changing the device name.|
   
 ### Email management  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -125,7 +129,10 @@ manager: angrobe
 |-------------|-------------|  
 |**Application store**|Allows access to the app store on the device.|  
 |**Enter a password to access the application store**|Users must enter a password to access the app store.|  
-|**In-app purchases**|Allows users to make in-app purchases.|  
+|**In-app purchases**|Allows users to make in-app purchases.|
+|**Auto-update apps from store**|Allows apps installed from the Windows Store to be automatically updated.|
+|**Use private store only**|Enable this to only allow end users to download apps from your private store.|
+|**Store originated app launch**|Used to disable all apps that were pre-installed on the device, or downloaded from the Windows Store.|
   
 ### Browser  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -222,8 +229,8 @@ manager: angrobe
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
 |**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
 |**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
-|**Wi-Fi hotspot reporting**||  
-|**Manual Wi-Fi configuration**||  
+|**Wi-Fi hotspot reporting**|-|  
+|**Manual Wi-Fi configuration**|-|  
   
 #### To configure a wireless network connection  
   
@@ -312,9 +319,9 @@ manager: angrobe
   
 #### To specify apps that will be allowed or blocked  
   
-1.  On the **Allowed and Blocked Apps list** page, specify the following information:  
+On the **Allowed and Blocked Apps list** page, specify the following information:  
   
-    |Setting|More information|  
+|Setting|More information|  
     |-------------|----------------------|  
     |**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
     |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps will be blocked from installing.|  
@@ -351,7 +358,8 @@ For information about how to configure enterprise data protection with Configura
 These settings are for devices running Windows 10 and later.  
   
 |Setting name|Details|  
-|------------------|-------------|  
+|------------------|-------------| 
+|Microsoft Edge|Allow the use of the Edge web browser on the device.| 
 |**Allow search suggestions in address bar**|Lets your search engine suggest sites as you type search phrases.|  
 |**Allow sending intranet traffic to Internet Explorer**||  
 |**Allow do not track**|Do not track informs websites that you do not want them to track your visit to a site.|  
@@ -360,7 +368,14 @@ These settings are for devices running Windows 10 and later.
 |**Allow cookies**|Allow or disable cookies.|  
 |**Allow Autofill**|Allow the use of the Autofill feature of the Edge browser.|  
 |**Allow Password Manager**|Allow the use of the password manager feature of the Edge browser.|  
-|**Enterprise Mode site list location**|Specifies where to find the list of web sites that will open in Enterprise mode. Users cannot edit this list.|  
+|**Enterprise Mode site list location**|Specifies where to find the list of web sites that will open in Enterprise mode. Users cannot edit this list.|
+|**Block access to about:flags**|Prevent the end user from accessing the about:flags page in Edge that contains developer and experimental settings.|
+|**SmartScreen prompt override**|Allow the end user to bypass SmartScreen filter warnings about potentially malicious websites.|
+|**SmartScreen prompt override for files**|Allow the end user to bypass SmartScreen filter warnings about downloading potentially malicious files.|
+|**WebRTC localhost IP address**|Block the users localhost IP address from being displayed when making phone calls using the web RTC protocol.|
+|**Default search engine**|Specify the default search engine to be used. End users can change this value at any time.|
+|**OpenSearch XML URL**|You can use an OpenSearch XML file to create a search service for Microsoft Edge.<br>For more details, see [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337).|
+|**Homepages (desktop only)**|Add a list of sites that you want to use as home pages in the Edge browser (desktop only).|  
 
 
 ### Windows Defender
