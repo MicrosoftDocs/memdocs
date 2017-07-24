@@ -37,7 +37,7 @@ manager: angrobe
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Windows platforms that will evaluate the configuration item.  
+7.  On the **Supported Platforms** page of the wizard, select the specific Windows platforms that evaluate the configuration item.  
   
 8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
   
@@ -46,7 +46,7 @@ manager: angrobe
   
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
   
-10. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
+10. For each settings group, you can also configure the severity that is reported when a configuration item is found to be noncompliant from:  
   
     -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
   
@@ -77,7 +77,7 @@ manager: angrobe
 |**Require password settings on devices**|Require a password on supported devices.|  
 |**Minimum password length (characters)**|The minimum length for the password.|  
 |**Password expiration in days**|The number of days before a password must be changed.|  
-|**Number of passwords remembered**|Prevents re-using previously used passwords.|  
+|**Number of passwords remembered**|Prevents the reuse of previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
 |**Idle time before device is locked**|Specify the amount of time a device can be idle (have no user input) before it is locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
@@ -117,7 +117,7 @@ manager: angrobe
 |**Allowed message formats**|Specify whether user emails can be HTML, or plain text only.|  
 |**Maximum size for plain text email (automatically downloaded)**|Controls the maximum size of plain text emails when automatically downloaded.|  
 |**Maximum size for HTML email (automatically downloaded)**|Controls the maximum size of HTML emails when automatically downloaded.|  
-|**Maximum size of an attachment (automatically downloaded)**|Configures the maximum size email that will be automatically downloaded.|  
+|**Maximum size of an attachment (automatically downloaded)**|Configures the maximum size email that is automatically downloaded.|  
 |**Calendar synchronization**|Allow synchronization of calendars to the device.|  
 |**Custom email account**|Allow using a non-Microsoft account on the device.|  
 |**Make Microsoft Account optional in Windows Mail app**|Configure this to remove the requirement for a Microsoft account in Windows Mail.|  
@@ -158,11 +158,11 @@ manager: angrobe
 |**Security level for intranet zone**|Configure the security level for the intranet zone.|  
 |**Security level for trusted sites zone**|Configure the security level for the trusted sites zone.|  
 |**Security level for restricted sites zone**|Configure the security level for the restricted sites zone.|  
-|**Namespaces for intranet zone**|Configure websites that will be added or removed from the intranet zone.|  
+|**Namespaces for intranet zone**|Configure websites that are added or removed from the intranet zone.|  
 |**Go to intranet site for single word entry**|Enables or disables the setting that allows Internet Explorer to automatically go to an Intranet site if a valid site name is entered without a preceding HTTP:|  
 |**Enterprise Mode menu option**|Allow users to activate and deactivate Enterprise Mode from the Internet Explorer **Tools** menu.|  
-|**Logging report location (URL)**|Specify a URL where visited websites will be logged when Enterprise Mode is active.|  
-|**Enterprise Mode site list location (URL)**|Specify the location of the list of websites that will use Enterprise Mode when it is active.|  
+|**Logging report location (URL)**|Specify a URL where visited websites are logged when Enterprise Mode is active.|  
+|**Enterprise Mode site list location (URL)**|Specify the location of the list of websites that use Enterprise Mode when it is active.|  
   
 ###  Cloud  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -236,15 +236,15 @@ manager: angrobe
   
 1.  On the **Configure mobile device wireless communication settings** page, click **Add**.  
   
-2.  In the **Wireless Network Connection** dialog box, specify the following information about the wireless connection that will be provisioned on mobile devices:  
+2.  In the **Wireless Network Connection** dialog box, specify the following information about the wireless connection that are provisioned on mobile devices:  
   
 |Setting|More information|  
 |-------------|----------------------|  
 |**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
 |**Network connection**|Choose from **Internet** or **Work**.|  
 |**Authentication**|Choose the authentication method for the wireless connection from:<br /><br /> - **Open**<br /><br /> - **Shared**<br /><br /> - **WPA**<br /><br /> - **WPA-PSK**<br /><br /> - **WPA2**<br /><br /> - **WPA2-PSK**|  
-|**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br /><br /> - **Disabled**<br /><br /> - **WEP**<br /><br /> - **TKIP**<br /><br /> - **AES**|  
-|**Key index**|Select a key index from **1** to **4** that will be used with a **Data encryption** setting of **WEP**.|  
+|**Data encryption**|Choose the encryption method used by this connection. The values you can select differ depending on the **Authentication** method you selected:<br /><br /> - **Disabled**<br /><br /> - **WEP**<br /><br /> - **TKIP**<br /><br /> - **AES**|  
+|**Key index**|Select a key index from **1** to **4** that is used with a **Data encryption** setting of **WEP**.|  
 |**This network connects to the Internet**|Select this option if you want to supply proxy settings that let mobile devices on a wireless connection connect to the Internet.|  
 |**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
 |**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
@@ -259,7 +259,7 @@ manager: angrobe
   
 -   **Certificate file** – Click Browse and then select the certificate file with the extension **.cer** that you want to import.  
   
--   **Destination store** – Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
+-   **Destination store** – Choose one or more destination stores where the imported certificate is added on the mobile device from:  
   
     -   **Root**  
   
@@ -273,7 +273,7 @@ manager: angrobe
   
     -   **Peer**  
   
--   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
+-   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that is associated with the certificate from:  
   
     -   **Mobile Operator**  
   
@@ -293,11 +293,11 @@ manager: angrobe
 |-------------|-------------|  
 |**User Account Control**|Enables or disables Windows User Account Control on the device.|  
 |**Network firewall**|Enables or disables Windows Firewall.<br /><br /> (Windows 8.1 only)|  
-|**Updates (Windows 8.1 and earlier)**|Choose how Windows software updates will be downloaded to computers. For example, you can automatically download updates, but let the user choose when to install them.|  
-|**Minimum classification of updates**|Choose the minimum classification of updates that will be downloaded to Windows computers, **None**, **Important**, or **Recommended**.|  
-|**Updates (Windows 10)**|Choose how Windows software updates will be downloaded to computers. For example, you can automatically download updates, but let the user choose when to install them.<br /><br /> (Windows 10 only)|  
-|**Install day**|Choose the day when updates will be installed.<br /><br /> (Windows 10 only)|  
-|**Install time**|Choose the time when updates will be installed.<br /><br /> (Windows 10 only)|  
+|**Updates (Windows 8.1 and earlier)**|Choose how Windows software updates are downloaded to computers. For example, you can automatically download updates, but let the user choose when to install them.|  
+|**Minimum classification of updates**|Choose the minimum classification of updates that are downloaded to Windows computers, **None**, **Important**, or **Recommended**.|  
+|**Updates (Windows 10)**|Choose how Windows software updates are downloaded to computers. For example, you can automatically download updates, but let the user choose when to install them.<br /><br /> (Windows 10 only)|  
+|**Install day**|Choose the day when updates are installed.<br /><br /> (Windows 10 only)|  
+|**Install time**|Choose the time when updates are installed.<br /><br /> (Windows 10 only)|  
 |**SmartScreen**|Enable or disable Windows Smart Screen.|  
 |**Virus protection**|Select to ensure that antivirus software is installed on the device.|  
 |**Virus protection signatures are up to date**|Select to ensure that the antivirus signature files are up to date.|  
@@ -317,15 +317,15 @@ manager: angrobe
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
-#### To specify apps that will be allowed or blocked  
+#### To specify apps that are allowed or blocked  
   
 On the **Allowed and Blocked Apps list** page, specify the following information:  
   
 |Setting|More information|  
     |-------------|----------------------|  
     |**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
-    |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps will be blocked from installing.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+    |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps are blocked from installing.|  
+    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use is **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
     |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
@@ -340,7 +340,7 @@ On the **Allowed and Blocked Apps list** page, specify the following information
 |**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).|
 |**Azure Operational Insights**|Azure Operational Insights, part of the Microsoft Operations Manager suite collects, stores, and analyzes log file data from Windows 10 Team devices.<br>To connect to Azure Operational insights, you must specify a Workspace ID and a Workspace Key.| 
 |**Miracast wireless projection**|Enable this option if you want to let the Windows 10 Team device use Miracast enabled devices to project.<br>If you enable this option, from **Choose Miracast channel** select the Miracast channel used to project content.|
-|**Meeting information displayed on welcome screen**|If you enable this option, you can choose the information that will be displayed on the **Meetings** tile of the **Welcome** screen. You can:<br><br>- **Show organizer and time only**<br>- **Show organizer, time and subject (subject hidden for private meetings)**|
+|**Meeting information displayed on welcome screen**|If you enable this option, you can choose the information that is displayed on the **Meetings** tile of the **Welcome** screen. You can:<br><br>- **Show organizer and time only**<br>- **Show organizer, time and subject (subject hidden for private meetings)**|
 |**Lockscreen background image URL**|Use this setting to display a custom background on the **Welcome** screen of Windows 10 Team devices from the URL you specify.<br>The image must be in PNG format and the URL must begin with **https://**.| 
   
 ### Windows Information Protection  
@@ -368,7 +368,7 @@ These settings are for devices running Windows 10 and later.
 |**Allow cookies**|Allow or disable cookies.|  
 |**Allow Autofill**|Allow the use of the Autofill feature of the Edge browser.|  
 |**Allow Password Manager**|Allow the use of the password manager feature of the Edge browser.|  
-|**Enterprise Mode site list location**|Specifies where to find the list of web sites that will open in Enterprise mode. Users cannot edit this list.|
+|**Enterprise Mode site list location**|Specifies where to find the list of web sites that open in Enterprise mode. Users cannot edit this list.|
 |**Block access to about:flags**|Prevent the end user from accessing the about:flags page in Edge that contains developer and experimental settings.|
 |**SmartScreen prompt override**|Allow the end user to bypass SmartScreen filter warnings about potentially malicious websites.|
 |**SmartScreen prompt override for files**|Allow the end user to bypass SmartScreen filter warnings about downloading potentially malicious files.|
@@ -397,11 +397,11 @@ These settings are for devices running Windows 10 and later.
 |**Scan archive files**|Allows Defender to scan archived files such as .zip or .cab files.|
 |**Scan email messages**|Allows Defender to scan email messages as they arrive on the device.|
 |**Scan removable drives**|Lets Defender scan removable drives like USB sticks.|
-|**Scan mapped drives**|Lets Defender scan files on mapped network drives.<br>If the files on the drive are read-only, Defender will be unable to remove any malware found in them.|
-|**Scan files opened from network shared folders**|Lets Defender scan files on shared network drives (for example, those accessed from a UNC path)<br>If the files on the drive are read-only, Defender will be unable to remove any malware found in them.|
+|**Scan mapped drives**|Lets Defender scan files on mapped network drives.<br>If the files on the drive are read-only, Defender is unable to remove any malware found in them.|
+|**Scan files opened from network shared folders**|Lets Defender scan files on shared network drives (for example, those accessed from a UNC path)<br>If the files on the drive are read-only, Defender is unable to remove any malware found in them.|
 |**Signature update interval**|Specifies the interval at which Defender checks for new signature files.
 |**Allow cloud protection**|Allows or blocks the Microsoft Active Protection Service from receiving information about malware activity from devices that you manage. This information is used to improve the service in the future.|
-|**Prompt users for samples submission**|Controls whether files that might require further analysis by Microsoft to determine if they are malicious are automatically sent to Microsoft.|
+|**Prompt users for samples submission**|Controls whether files that might require further analysis are automatically sent to Microsoft to determine if they are malicious.|
 |**Potentially Unwanted Application Detection**|Protects enrolled Windows desktop devices against running software that's classified by Windows Defender as potentially unwanted. You can protect against these applications running, or use audit mode to report when a potentially unwanted application is installed.|
 |**File and folder exclusions**|Adds one or more files and folders like C:\Path or %ProgramFiles%\Path\filename.exe to the exclusions list. These files and folders aren't included in any real-time or scheduled scans.|
 |**File extension exclusions**|Add one or more file extensions like jpg or txt to the exclusions list. Any files with these extensions are not included in any real-time or scheduled scans.|
