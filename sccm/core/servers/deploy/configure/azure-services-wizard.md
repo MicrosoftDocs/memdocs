@@ -27,7 +27,7 @@ This wizard provides a common configuration experience by using an **Azure web a
 
 The following Azure services are configured using the Configure Azure Services wizard:
 -   **Cloud Management**   
-    [Enable clients to authenticate by using Azure Active Directory]() (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/configure-discovery-methods).
+    [Enable clients to authenticate by using Azure Active Directory]() (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaddisc).
 -   **OMS Connector**
     [Connect to Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS) and sync data like collections to OMS Log Analytics.
 -   **Upgrade Readiness**
