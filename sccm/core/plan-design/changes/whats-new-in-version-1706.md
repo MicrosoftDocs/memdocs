@@ -104,6 +104,19 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 
 <!-- ## Application Management  -->
 
+### Run PowerShell scripts from the Configuration Manager console
+<!-- 1236459 -->
+
+In Configuration Manager, you can deploy scripts to client devices using packages and programs. In this release, we've added new functionality that lets you take the following actions:
+
+- Import PowerShell Scripts to Configuration Manager
+- Edit the scripts from the Configuration Manager console (for unsigned scripts only)
+- Mark scripts as Approved or Denied, to improve security
+- Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run in near real time on client devices.
+- Examine the results returned by the script in the Configuration Manager console.
+
+For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+
 
 <!--  ## Operating system deployment  -->
 
