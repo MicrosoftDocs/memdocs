@@ -38,3 +38,5 @@
 ### [Update and retire applications](deploy-use/update-and-retire-applications.md)
 ### [Revise and supersede applications](deploy-use/revise-and-supersede-applications.md)
 ### [Uninstall applications](deploy-use/uninstall-applications.md)
+
+## [Run and manage scripts](deploy-use/create-deploy-scripts.md)

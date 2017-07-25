@@ -170,3 +170,9 @@ Review the following actions to take after the update installation is finished.
 3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
 4.  Reconfigure database maintenance tasks that you disabled before starting the update.
 5.	If you configured client piloting before installing the update, upgrade clients per the plan you created.
+
+## Known issues 
+After you update to version 1706, each time the SMS_Executive starts the following warning status message is created by the SMS_CERTIFICATE_MANAGER:
+-	 Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls. INSERT fails.
+
+This message can be ignored.  It occurs when no cloud services were configured for use before updating to version 1706. This issue will be resolved in a future release.
