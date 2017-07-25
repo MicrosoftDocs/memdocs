@@ -43,7 +43,7 @@ The commercial ID key maps information from devices you manage to the OMS worksp
   -  **Telemetry level for Windows 10 devices**   
 For information about what is collected by each Windows 10 telemetry level, see  [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels).
 
-  -  **opt in to commercial data collection on Windows 7, 8 and 8.1 devices**   
+  -  **Opt in to commercial data collection on Windows 7, 8 and 8.1 devices**   
 For information about data collected from these operating systems when you opt-in, see download  the [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) pdf file from Microsoft.
 
   -  **Configure Internet Explore data collection**  
