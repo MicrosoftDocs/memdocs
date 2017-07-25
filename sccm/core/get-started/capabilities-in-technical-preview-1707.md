@@ -51,10 +51,9 @@ Beginning with this release, Peer Cache supports distribution of content express
 
 ### Before you start
 
-To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more details, see the blog post referenced later. This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
+To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more details, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
 
 ### Try it out!
-Ensure you have read the blog post to understand the basics about Windows Defender Application Guard.
 
 #### To create a policy, and to browse the available settings:
 
@@ -62,8 +61,8 @@ Ensure you have read the blog post to understand the basics about Windows Defend
 2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
 4. Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
-5. In this release, we’ve added the new **Network Definition** page to the wizard. Here, specify the corporate identity, and define your corporate network boundary.<br>Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
-You can find more information about how to specify network definitions in the [Windows Information Protection documentation]( https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+5. In this release, we’ve added the new **Network Definition** page to the wizard. On this page, specify the corporate identity, and define your corporate network boundary.<br>Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
+You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
 ### Further reading
@@ -71,5 +70,5 @@ To read more about Windows Defender Application Guard, see [this blog post](http
 
 
 
-## Placeholder Section
-Remove before publishing.
+<!-- ## Placeholder Section
+Remove before publishing. -->
