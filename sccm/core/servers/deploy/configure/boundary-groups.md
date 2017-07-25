@@ -117,10 +117,10 @@ Fallback for software update points is configured like other site system roles, 
 
   The continued use of an existing software update point even when that server is not in the client’s current boundary group is intentional. This is because a change of software update point can result in a large use of network bandwidth as the client synchronizes data with the new software update point. The delay in transition can help to avoid saturating your network if all your clients switch to a new software update point at the same time.
 
-- **A client always attempts to reach its last known-good software update point for 120 minutes before starting fallback.** After 120 minutes, if the client has not established contact, it then begins fallback. When fallback starts, the client receives a list of all software update points from its current boundary group. Additional software update points from neighbor boundary groups are available based on fallback configurations.
+- **A client always attempts to reach its last known-good software update point for 120 minutes before starting fallback.** After 120 minutes, if the client has not established contact, it then begins fallback. When fallback starts, the client receives a list of all software update points from its current boundary group. Additional software update points from neighbor boundary groups and site default boundary group are available based on fallback configurations.
 
 ### Fallback configurations for software update points
-**Beginning with version 1706:**   
+#### Beginning with version 1706   
 You can configure **Fallback times (in minutes)** for software update points to be less than 120 minutes. However, the client must still attempt to reach its original software update point for 120 minutes before it expands it search to additional servers. Because boundary group fallback times start when the client first fails to reach its original server, any boundary groups that are configured for less than 120 minutes are provided to the client when it expands its search after failing to reach its original server for 120 minutes.
 
 You can configure **Never fallback** to block fallback for a software update point to a neighbor boundary group.
@@ -129,11 +129,11 @@ After failing to reach its original server for two hours, the client then uses a
 
  -  **Example of fallback:**  
     A client’s current boundary group has fallback for software update points that is configured as *10* minutes for boundary group *A*, and *130* minutes for boundary group *B*. When the client fails to reach its last known-good software update point:
-    -   The client attempts to reach only its original server for the next 120 minutes.   
-    -   After trying to locate that original software update point for 120 minutes, the client can then expand its search. At that time, servers in the client’s current boundary group and any neighbor boundary groups that are configured for 120 minutes or less, are added to the available pool of software update points.
+    -   The client attempts to reach only its original server for the next 120 minutes.  After 10 minutes, the software update points from boundary group A are added to the pool of available servers. However, the client cannot attempt to contact them or any other server until the initial 120-minute period to reconnect with the original server has elapsed.
+    -   After trying to locate that original software update point for 120 minutes, the client can then expand its search. At that time, servers in the client’s current boundary group and any neighbor boundary groups that are configured for 120 minutes or less, are added to the available pool of software update points. This includes the servers in boundary group A which were previously added to the pool of available servers.
     -   	After 10 more minutes (130-minutes total time after the client first failed to reach its last known-good software update point), the client expands the search to include software update points from boundary group B.  
 
-**Prior to version 1706:**  
+#### Prior to version 1706
 Prior to version 1706, fallback configurations for software update points do not support a configurable time in minutes. Instead, fallback behavior is limited to:
 
   - **Fallback times (in minutes):**  This option is grayed out for software update points and cannot be configured. It is set to 120 minutes.
@@ -142,17 +142,11 @@ Prior to version 1706, fallback configurations for software update points do not
 When a client that already has a software update point fails to reach it, the client can then fallback to find another. When using fallback, the client receives a list of all software update points from its current boundary group. If it fails to find an available server for 120 minutes, it will then fallback to its neighbor boundary groups and the default site boundary group. Fallback to both boundary groups happens at the same time because the software update points fallback time to neighbor groups is set to 120 minutes and cannot be changed. 120 minutes is also the default period used for fallback to the default site boundary group. When a client falls back to both a neighbor and default site boundary group, the client attempts to contact software update points from the neighbor boundary group before trying to use one from the default site boundary group.
 
 ### Manually switch to a new software update point
-In addition to using fallback, you can use Client Notification to manually force a device to switch to a new software update point. The switch can be done for a single device, or for an entire device collection. Before switching one or more devices to a new server, consider when to use this option, perhaps doing so during a planned maintenance window. This is because a change of software update point can result in a large use of network bandwidth as each device synchronizes its data with the new software update point.
+In addition to using fallback, you can use *Client Notification* to manually force a device to switch to a new software update point.
 
-When you start a switch to a new server, the device uses fallback to find a new server. 
+When you switch to a new server, the devices use fallback to find that new server. Therefore, review your boundary group configurations, and ensure that your software update points are in the correct boundary groups before you start this change.
 
-#### To switch a device to use a new software update point
-1. In the Configuration Manager console, go to **Assets and Compliance**, and then locate the collection you want to switch, or that contains the device you want to switch.
-2. Right-click on the collection or device, and then choose **Client Notification**.
-3. For Client Notification, select **Switch to next Software Update Point**.  Configuration Manager then sends notification to the devices.
-
-
-
+For more information, see [Manually switch clients to a new software update point](/sccm/sum/plan-design/plan-for-software-updates#manually-switch-clients-to-a-new-software-update-point).
 
 
 ## Preferred management points
