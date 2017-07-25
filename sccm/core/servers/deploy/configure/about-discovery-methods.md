@@ -187,7 +187,6 @@ For more information about how to configure this discovery method, see [Configur
 ## <a name="azureaddisc"></a> Azure Active Directory User Discovery
 Beginning with version 1706, you can use Azure Active Directory (Azure AD) User Discovery, when you configure your environment to use Azure services.
 Use this discovery method to search your Azure AD for users who authenticate to your instance of Azure AD, to find the following attributes:  
--   AD user
 -   objectId
 -   displayName
 -   mail
