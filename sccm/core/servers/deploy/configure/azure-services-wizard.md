@@ -56,7 +56,7 @@ The Azure services web app connects your Configuration Manager site to Azure AD 
     **Web app:**   Browse opens the Server App window.    
 	  In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients.
 
-    If you do not have an available server app, use one of the following:
+    If you do not have an available app, use one of the following:
 		- **Create**: To create a new server app, click **Create**. Next provide a friendly name for the app, the homepage URL, App ID URI, and the Secret key validity period. By default, the secret key validity period is one year.
 
          To continue, someone must now sign-in to Azure to complete the web app creation in Azure. The account that you use to sign-in to Azure does not need to be the same account that runs the Azure Services Wizard. After sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
@@ -69,7 +69,7 @@ The Azure services web app connects your Configuration Manager site to Azure AD 
    **Native Client app:**  Browse opens the Client App window.  
      In the **Client App** window, select the client app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients.
 
-     If you do not have an available server app, use one of the following:.
+     If you do not have an available app, use one of the following:.
 
      - **Create**: To create a new Client app, click **Create**. Next provide a friendly name for the app and the Reply URL.   Secret key validity period. By default, the secret key validity period is one year.
 
