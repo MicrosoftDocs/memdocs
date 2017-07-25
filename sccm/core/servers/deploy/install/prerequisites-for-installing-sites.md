@@ -2,7 +2,7 @@
 title: "Prerequisites for sites | Microsoft Docs"
 description: "Learn about prerequisites for installing the different types of System Center Configuration Manager sites."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -94,6 +94,19 @@ A stand-alone primary site must meet the following prerequisites before you can 
 -   **The port for the SQL Server Service Broker (SSB) between the stand-alone primary site and the computer that will install the central administration site must be open**  
 
      To successfully replicate data between a central administration site and a primary site, Configuration Manager requires an open port between the two sites for SSB to use. When you install a central administration site and expand a stand-alone primary site, the prerequisite check does not verify that the port you specify for the SSB is open on the primary site.  
+
+**Known issues when you have configured Azure services:**  
+When you use one of the following Azure services with Configuration Manager, and plan to expand a site, after expanding the site you must remove and then recreate the connection to that service.
+
+Services:  
+-	    [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS)
+-	    [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
+-	    [Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+
+Use the following steps to resolve this issue:
+ 1.    In the Configuration Manager console, delete the Azure service from the Azure services node.
+ 2.    In the Azure portal, delete the Tenant that is associated with the service from the Azure Active Directory Tenants node.  This also deletes the Azure AD web app that is associated with the service.  
+ 3.   Reconfigure the connection to the Azure service for use with Configuration Manager.
 
 
 ## <a name="bkmk_secondary"></a> Secondary sites

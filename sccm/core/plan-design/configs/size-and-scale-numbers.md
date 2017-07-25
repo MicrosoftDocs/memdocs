@@ -2,7 +2,7 @@
 title: "Size and scale | Microsoft Docs"
 description: "Identify the number of site system roles and sites that you'll need to support the devices in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 07/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -128,7 +128,7 @@ the recommended hardware, or use more aggressive custom settings (like running h
 ###  <a name="bkmk_cas"></a> Hierarchy with a central administration site  
 A central administration site supports a total number of devices that includes up to the number of devices listed for the following three groups:  
 
--   700,000 desktops (computers that run Windows, Linux, and UNIX)  
+-   700,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
 
 -   25,000 devices that run Mac and Windows CE 7.0  
 
@@ -147,7 +147,7 @@ A central administration site supports a total number of devices that includes u
 ###  <a name="bkmk_chipri"></a> Child primary site  
 Each child primary site in a hierarchy with a central administration site supports the following:  
 
--   150,000 total clients and devices that aren't limited to a specific group or type, as long as support doesn't exceed the number that is supported for the hierarchy.  
+-   150,000 total clients and devices that aren't limited to a specific group or type, as long as support doesn't exceed the number that is supported for the hierarchy. Also see, support for [embedded devices](#embedded).
 
 For example, a primary site that supports 25,000 computers that run Mac and Windows CE 7.0 (because that is the limit for a hierarchy) can then support an additional 125,000 desktop computers. This brings the total number of supported devices up to the child primary site's supported maximum limit of 150,000.
 
@@ -156,7 +156,7 @@ A stand-alone primary site supports the following number of devices:
 
 -   175,000 total clients and devices, not to exceed:  
 
-    -   150,000 desktops (computers that run Windows, Linux, and UNIX)  
+    -   150,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
 
     -   25,000 devices that run Mac and Windows CE 7.0
 
@@ -166,7 +166,11 @@ A stand-alone primary site supports the following number of devices:
 
         -   150,000 cloud-based devices  
 
+
 For example, a stand-alone primary site that supports 150,000 desktops and 10,000 Mac or Windows CE 7.0 can support only an additional 15,000 devices. Those devices can be either cloud-based or managed by using on-premises MDM.  
+
+### <a name="embedded"></a> Primary sites and Windows Embedded devices
+Primary sites support Windows Embedded devices that have File-Based Write Filters (FBWF) enabled. When embedded devices do not have write filters enabled, a primary site can support a number of embedded devices up to the allowed number of devices for that site. Of the total number of devices that a primary site supports, a maximum of 10,000 of these can be Windows Embedded devices when those devices are configured for the exceptions listed in the important note found in the [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). A primary site supports only 3,000 Windows Embedded devices that have EWF enabled and that are not configured for the exceptions.
 
 ###  <a name="bkmk_sec"></a> Secondary sites  
 Secondary sites support the following:  
