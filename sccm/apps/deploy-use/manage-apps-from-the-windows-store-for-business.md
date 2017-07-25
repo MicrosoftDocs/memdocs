@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 7/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -110,10 +110,11 @@ On PCs running a version of Windows 10 earlier than the Creators Update (with th
 1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.
 2.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.
 A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
+
 > [!IMPORTANT]
 > For devices enrolled with Intune, deployed apps are only available to the user who originally enrolled the device. No other users can access the app.
 
-## Monitor Windows Store for Business Apps
+## Next steps
 
 In the **Software Library** workspace, expand **Application Management**, then click **License Information for Store Apps**.
 
