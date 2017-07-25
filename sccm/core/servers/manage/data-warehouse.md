@@ -81,7 +81,7 @@ When you install the role, Configuration Manager creates the data warehouse data
  - **Database name**:   
  Specify a name for the data warehouse database.  Configuration Manager will create the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
  - **SQL Server port used for connection**:   
- Specify the TCP/IP port number that is configured for the SQL Server that hosts the data warehouse datbase. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
+ Specify the TCP/IP port number that is configured for the SQL Server that hosts the data warehouse database. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
 
 **Synchronization schedule** page:   
 - **Synchronization schedule**:
