@@ -110,7 +110,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 <!-- ## Client management  -->
 
 
-<!-- ## Compliance settings -->
+## Compliance settings
 
 ### New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client
 <!-- 1354715 -->
