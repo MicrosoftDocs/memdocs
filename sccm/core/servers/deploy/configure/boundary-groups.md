@@ -119,7 +119,7 @@ Fallback for software update points is configured like other site system roles, 
 
 - **A client always attempts to reach its last known-good software update point for 120 minutes before starting fallback.** After 120 minutes, if the client has not established contact, it then begins fallback. When fallback starts, the client receives a list of all software update points from its current boundary group. Additional software update points from neighbor boundary groups are available based on fallback configurations.
 
-### Fallback configurations
+### Fallback configurations for software update points
 **Beginning with version 1706:**   
 You can configure **Fallback times (in minutes)** for software update points to be less than 120 minutes. However, the client must still attempt to reach its original software update point for 120 minutes before it expands it search to additional servers. Because boundary group fallback times start when the client first fails to reach its original server, any boundary groups that are configured for less than 120 minutes are provided to the client when it expands its search after failing to reach its original server for 120 minutes.
 
@@ -140,6 +140,20 @@ Prior to version 1706, fallback configurations for software update points do not
   - 	**Never fallback:** You can block fallback for a software update point to a neighbor boundary group when you use this configuration.
 
 When a client that already has a software update point fails to reach it, the client can then fallback to find another. When using fallback, the client receives a list of all software update points from its current boundary group. If it fails to find an available server for 120 minutes, it will then fallback to its neighbor boundary groups and the default site boundary group. Fallback to both boundary groups happens at the same time because the software update points fallback time to neighbor groups is set to 120 minutes and cannot be changed. 120 minutes is also the default period used for fallback to the default site boundary group. When a client falls back to both a neighbor and default site boundary group, the client attempts to contact software update points from the neighbor boundary group before trying to use one from the default site boundary group.
+
+### Manually switch to a new software update point
+In addition to using fallback, you can use Client Notification to manually force a device to switch to a new software update point. The switch can be done for a single device, or for an entire device collection. Before switching one or more devices to a new server, consider when to use this option, perhaps doing so during a planned maintenance window. This is because a change of software update point can result in a large use of network bandwidth as each device synchronizes its data with the new software update point.
+
+When you start a switch to a new server, the device uses fallback to find a new server. 
+
+#### To switch a device to use a new software update point
+1. In the Configuration Manager console, go to **Assets and Compliance**, and then locate the collection you want to switch, or that contains the device you want to switch.
+2. Right-click on the collection or device, and then choose **Client Notification**.
+3. For Client Notification, select **Switch to next Software Update Point**.  Configuration Manager then sends notification to the devices.
+
+
+
+
 
 ## Preferred management points
 

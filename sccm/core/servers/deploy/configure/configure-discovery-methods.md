@@ -208,24 +208,12 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 8.  When you have finished configuring Active Directory User Discovery for this site, choose **OK** to save the configuration.  
 
-## <a name= azureaadisc”></a> Configure Azure AD User Discovery
+## <a name="azureaadisc"></a> Configure Azure AD User Discovery
 Beginning with version 1706, you can configure Azure Active Directory User Discovery when you connect Configuration Manager to your [Azure subscription, and Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
-#### To configure this method
-1.	Start the Wizard.
-2.	On **Azure Services** page, provide a friendly **Name** and optionally a **Description**. Then select **Cloud Management**.
-3.	On the **App** page, specify your **Azure environment**, and then:
-    - Click **Browse** to set up a **Web app**.  
-        - In the **Server App** dialog, select **Import** and then complete the **Import** Apps dialog.  Alternately you can select Create to then create a new app. If you choose to create an app, see [create a web app](/sccm/core/servers/deploy/configure/azure-services-wizard#create-a-web-app-for-use-with-configuration-manager), and then return here to continue.
-        - After you click **OK**, you return to the Server App dialog where you can see the details for the web app you imported. Select the app you want to use, then click **OK** to return to the **App** page.
-        - Click **Next**.
-    - Click **Browse** to set up a **Native Client app**.  
-        - In the **Client App** dialog, select **Import** and then complete the **Import Apps** dialog.  Alternately you can select **Create** to then create a new app. If you choose to create an app, see [create a web app](/sccm/core/servers/deploy/configure/azure-services-wizard#create-a-web-app-for-use-with-configuration-manager), and then return here to continue.
-        - After you click **OK**, you return to the Client App dialog where you can see the details for the Native Client app you imported. Select the app you want to use, then click **OK** to return to the **App** page.
-        - Click **Next**.
-    - Click **OK** to continue.
-4.	On the **Discovery** page, **Enable Azure Active Directory User Discovery** is selected by default. Click **Settings** to configure the polling cycle.
-5.	Complete the wizard.
+Azure AD User Discovery is configured as part of *Could Management*. The procedure to do so is detailed in step **6** of the procedure [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
+
+
 
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
