@@ -45,10 +45,7 @@ This article introduces the features that are available in the Technical Preview
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required.
 
 ## Surface Device dashboard
-The Surface Device dashboard provides information about the Surfaces found in your environment.
-
-### Try it out!
-In the console, go to **Monitoring** > **Surface Devices**. When you have Surface devices, you can view the following:
+The Surface Device dashboard provides information about the Surfaces found in your environment. In the console, go to **Monitoring** > **Surface Devices**. When you have Surface devices, you can view the following:
 - percent of Surfaces
 - percent of Surface models
 - top five operating system versions
