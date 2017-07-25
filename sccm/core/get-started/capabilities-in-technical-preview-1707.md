@@ -44,10 +44,18 @@ This article introduces the features that are available in the Technical Preview
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required.
 
+## Surface Device dashboard
+The Surface Device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. You can view the following:
+- percent of Surfaces
+- percent of Surface models
+- top five operating system versions
+
+Click a section of the **Surface Models** chart for a complete list of the devices.  
+
 ## Configure and deploy Windows Defender Application Guard policies
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update. 
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
 
 ### Before you start
 
@@ -62,7 +70,7 @@ To create and deploy Windows Defender Application Guard policies, the Windows 10
 3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
 4. Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
 5. In this release, we’ve added the new **Network Definition** page to the wizard. On this page, specify the corporate identity, and define your corporate network boundary.<br>Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
-You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
 ### Further reading
