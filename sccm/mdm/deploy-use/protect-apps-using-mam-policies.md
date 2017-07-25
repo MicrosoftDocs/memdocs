@@ -2,7 +2,7 @@
 title: "Protect apps using mobile application management policies | Microsoft Docs"
 description: "Modify the functionality of apps that you deploy so they will meet your company compliance and security policies."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,38 +13,38 @@ ms.topic: article
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ---
-# Protect apps using mobile application management policies in System Center Configuration Manager
+# Protect apps using mobile app protection policies in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager application management policies let you modify the functionality of apps that you deploy to help bring them in line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app, or configure an app to open all URLs inside a managed browser. App management policies support:  
+System Center Configuration Manager mobile app protection policies let you modify the functionality of apps that you deploy to help bring them in line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app, or configure an app to open all URLs inside a managed browser. App management policies support:  
 
 -   Devices that run Android 4 and later  
 
 -   Devices that run iOS 7 and later  
 
-You can also use mobile app management policies to protect apps on devices that are not managed by Intune. Using this new capability, you can apply mobile app management policies to apps that connect to Office 365 services. This is not supported for apps that connect to on-premises Exchange or SharePoint.  
+You can also use mobile app protection policies to protect apps on devices that are not managed by Intune. Using this new capability, you can apply mobile app management policies to apps that connect to Office 365 services. This is not supported for apps that connect to on-premises Exchange or SharePoint.  
 
 To use this new capability, you need to use the Azure preview portal. The following topics can help you get started:  
--   [Get started with mobile app management policies in the Azure portal](https://technet.microsoft.com/library/mt627830.aspx)  
--   [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
+-   [Get started with mobile app protection policies in the Azure portal](https://technet.microsoft.com/library/mt627830.aspx)  
+-   [Create and deploy mobile app protection policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
 
- You don't deploy an application management policy directly as you do with configuration items and baselines in Configuration Manager. Instead, you associate the policy with the application deployment type that you want to restrict. When the app deployment type is deployed and installed on devices, the settings you specify take effect.  
+ You don't deploy a mobile app protection policy directly as you do with configuration items and baselines in Configuration Manager. Instead, you associate the policy with the application deployment type that you want to restrict. When the app deployment type is deployed and installed on devices, the settings you specify take effect.  
 
 To apply restrictions to an app, the app must incorporate the Microsoft Intune App Software Development Kit (SDK). There are two methods of obtaining this type of app:  
 
--   **Use a policy managed app** (Android and iOS): These apps have the App SDK built in. To add this type of app, you specify a link to the app from an app store such as the iTunes store or Google Play. No further processing is required for this type of app. For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
+-   **Use a policy managed app** (Android and iOS): These apps have the App SDK built in. To add this type of app, you specify a link to the app from an app store such as the iTunes store or Google Play. No further processing is required for this type of app. For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile app protection policy management](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
 
 -   **Use a "wrapped" app** (Android and iOS): These apps are repackaged to include the App SDK by using the **Microsoft Intune App Wrapping Tool**. This tool is typically used to process company apps that were created in-house. It cannot be used to process apps that were downloaded from the app store. See the following articles for more information:
-    - [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx)
+    - [Prepare iOS apps for mobile app protection policy management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx)
 
-    - [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx)  
+    - [Prepare Android apps for mobile app protection policy management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx)  
 
-## Create and deploy an app with a mobile application management policy  
+## Create and deploy an app with a mobile app protection policy  
 
 ##  Step 1: Obtain the link to a policy managed app or create a wrapped app  
 
@@ -128,7 +128,10 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 |**Require device compliance with corporate policy for access**|Allows the app to be used only when the device is not jailbroken or rooted.|  
 |**Recheck the access requirements after (minutes)**|Specifies the time period before the access requirements for the app are rechecked after the app is launched (in the **Timeout** field).<br /><br /> In the **Offline grace period** field, if the device is offline, specifies the time period before the access requirements for the app are rechecked.|  
 |**Encrypt app data**|Specifies that all data that is associated with this app is encrypted, including data that's stored externally, such as data stored on SD cards.<br /><br /> **Encryption for iOS**<br /><br /> For apps that are associated with a Configuration Manager mobile application management policy, data is encrypted at rest using device-level encryption that's provided by the OS. This is enabled through a device PIN policy that must be set by the IT admin. When a PIN is required, the data is encrypted per the settings in the mobile application management policy. As stated in Apple documentation, [the modules that are used by iOS 7 are FIPS 140-2 certified](http://support.apple.com/en-us/HT202739).<br /><br /> **Encryption for Android**<br /><br /> For apps that are associated with a Configuration Manager mobile application management policy, encryption is provided by Microsoft. Data is encrypted synchronously during file I/O operations according to the setting in the mobile application management policy. Managed apps on Android use AES-128 encryption in CBC mode utilizing the platform cryptography libraries. The encryption method is not FIPS 140-2 certified. Content on the device storage is always encrypted.|  
-    |**Block screen capture** (Android devices only)|Specifies that the screen capture capabilities of the device are blocked when using this app.|  
+    |**Block screen capture** (Android devices only)|Specifies that the screen capture capabilities of the device are blocked when using this app.|
+	|**Disable contact sync**| Prevents the app from saving data to the native Contacts app on the device. If you choose No, the app can save data to the native Contacts app on the device.|
+	|**Disable printing**| Prevents the app from printing work or school data. |
+	
 
 6)  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, and then choose **Next**.  
 For more information, see [Manage Internet access using managed browser policies](manage-internet-access-using-managed-browser-policies.md).  
