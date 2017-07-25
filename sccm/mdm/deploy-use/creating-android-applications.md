@@ -2,7 +2,7 @@
 title: "Create Android applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Android devices."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,7 +43,7 @@ The following deployment actions are supported:
 |Device type|Supported actions|
 |-|-|
 |Android|**Available**, **Required** The user must consent to both installation and uninstallation.|
-|Android for Work | **Required** |
+|Android for Work | **Required**, **Available** |
 
 ## Approve and deploy Android for Work apps
 As a Configuration Manager admin, you can also approve and deploy apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices.
