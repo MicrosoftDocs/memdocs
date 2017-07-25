@@ -2,7 +2,7 @@
 title: "Set up iOS and Mac hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Set up iOS device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,43 +26,54 @@ With Configuration Manager and Intune, you enable iOS and macOS device enrollmen
 
  You can also enroll corporate-owned iOS devices.  See [Enroll company-owned devices](enroll-company-owned-devices.md).  
 
-## Enable iOS device enrollment  
- To support enrollment of iOS  devices, you must follow these steps:  
+**Prerequisites**<br>
+Before you can set up enrollment for any platform, complete the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).
 
-#### Set up iOS device enrollment in Configuration Manager  
+To support enrollment of iOS  devices, you must follow these steps:  
 
-1.  **Prerequisites** - Before you can set up enrollment for any platform, complete the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).    
+## Download a certificate signing request
+A certificate signing request file is required to request an APNs certificate from Apple.  
 
-2.  **Download a certificate signing request** - A certificate signing request file is required to request an APNs certificate from Apple.  
+1.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services**> **Microsoft Intune Subscriptions**.  
 
-    1.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services**> **Microsoft Intune Subscriptions**.  
+2.  On the **Home** tab, click **Create APNs certificate request**. The **Request Apple Push Notification Service Certificate Signing Request** dialog box opens.  
 
-    2.  On the **Home** tab, click **Create APNs certificate request**. The **Request Apple Push Notification Service Certificate Signing Request** dialog box opens.  
+3.  **Browse** to the path to save the new certificate signing request file. Save the certificate signing request file locally.  
 
-    3.  **Browse** to the path to save the new certificate signing request file. Save the certificate signing request file locally.  
+4.  Click **Download**. The new Microsoft Intune certificate signing request file downloads and is saved by Configuration Manager. The certificate signing request file is used to request a trust relationship certificate from the Apple Push Certificates Portal.  
 
-    4.  Click **Download**. The new Microsoft Intune certificate signing request file downloads and is saved by Configuration Manager. The certificate signing request file is used to request a trust relationship certificate from the Apple Push Certificates Portal.  
+## Request an MDM Push certificate from Apple
+The MDM Push certificate is used to establish a trust relationship between the management service, Intune, and enrolled iOS mobile devices.  
 
-3.  **Request an APNs certificate from Apple** - The Apple Push Notification service (APNs) certificate is used to establish a trust relationship between the management service, Intune, and enrolled iOS mobile devices.  
+1.  In a browser, go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) and sign in with your company Apple ID. This Apple ID must be used in future to renew your APNs certificate.  
 
-    1.  In a browser, go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) and sign in with your company Apple ID. This Apple ID must be used in future to renew your APNs certificate.  
+2.  Complete the wizard using the certificate signing request (.csr) file. Download the MDM Push certificate and save the pem file locally. This certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune's mobile device management authority.  
 
-    2.  Complete the wizard using the certificate signing request (.csr) file. Download the APNs certificate and save the pem file locally. This APNs certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune's mobile device management authority.  
+> [!NOTE]  
+>  Do not upload the Apple Push Notification service (APNs) certificate to Intune until you enable iOS enrollment in the Configuration Manager console.  
 
-4.  **Enable enrollment and upload the APNs certificate** - To enable iOS enrollment, upload the APNs certificate.  
+## Enable enrollment and upload the MDM Push certificate
+To enable iOS enrollment, upload the APNs certificate.  
 
-    1.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.  
+1.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.  
 
-    2.  On the **Home** tab in the **Subscription** group, click **Configure Platforms** > **iOS**.  
+2.  On the **Home** tab in the **Subscription** group, click **Configure Platforms** > **iOS**.  
 
-        > [!NOTE]  
-        >  Do not upload the Apple Push Notification service (APNs) certificate until you enable iOS enrollment in the Configuration Manager console.  
+3.  In the **Microsoft Intune Subscription Properties** dialog box, select the **iOS** tab and click to select the **Enable iOS enrollment** checkbox.  
+4.  Click **Browse**, and go to the APNs certificate (.cer) file downloaded from Apple. Configuration Manager displays the APNs certificate information. Click **OK** to save the APNs certificate to Intune.  
 
-    3.  In the **Microsoft Intune Subscription Properties** dialog box, select the **iOS** tab and click to select the **Enable iOS enrollment** checkbox.  
+## Configure enrollment restrictions
+You can limit devices that can enroll by blocking personally owned devices. This prevents users from enrolling their devices using the Company Portal. If you block only the following devices can enroll:
+  - [Predeclared devices](predeclare-devices-with-hardware-id.md) enrolled using [Apple Configurator](ios-hybrid-enrollment-using-apple-configurator.md)
+  - [Device Enrollment Program (DEP)](predeclare-devices-with-hardware-id.md) managed devices
 
-    4.  Click **Browse**, and go to the APNs certificate (.cer) file downloaded from Apple. Configuration Manager displays the APNs certificate information. Click **OK** to save the APNs certificate to Intune.  
+1.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.  
 
- Once you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+2.  On the **Home** tab in the **Subscription** group, click **Configure Platforms** > **iOS**.  
+
+3. Choose **Block personally owned devices** to limit enrollment to company-owned devices.
+
+Once you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
 > [!div class="button"]
 [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

@@ -2,7 +2,7 @@
 title: "Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Prepare to manage Android mobile devices with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -32,7 +32,7 @@ The following steps let Configuration Manager manage Android devices without a w
 1. Before you can set up enrollment for any platform, finish the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).  
 2. In the Configuration Manager console in the **Administration** workspace, choose **Overview** > **Cloud Services** > **Microsoft Intune Subscription** and choose your Intune subscription.  
 3. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** > **Android**.  
-4. In the **Microsoft Intune Subscription Properties** dialog box, choose the **Android** tab and check the **Enable Android enrollment** box.  
+4. In the **Microsoft Intune Subscription Properties** dialog box, choose the **Android** tab and check the **Enable Android enrollment** box.  You can choose to **Block personally owned devices** to limit enrollment to [predeclared devices](predeclare-devices-with-hardware-id.md).
 
  After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
