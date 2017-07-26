@@ -144,6 +144,12 @@ You must install and configure at least one certificate registration point in th
            - The **MDM web service URL**
            - The username and password credentials for the URL.
 
+           When using the MDM API to define the Entrust web service URL, be sure to use at least version 9 of the API, as shown in the following sample:
+
+           `https://entrust.contoso.com:19443/mdmws/services/AdminServiceV9`
+
+           Earlier versions of the API do not support Entrust.
+
 9. Click **Next** and complete the wizard.  
 
 10. Wait a few minutes to let the installation finish, and then verify that the certificate registration point was installed successfully by using any of the following methods:  
