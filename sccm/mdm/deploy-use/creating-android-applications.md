@@ -43,7 +43,7 @@ The following deployment actions are supported:
 |Device type|Supported actions|
 |-|-|
 |Android|**Available**, **Required** The user must consent to both installation and uninstallation.|
-|Android for Work | **Required**, **Available** |
+|Android for Work | **Required** |
 
 ## Approve and deploy Android for Work apps
 As a Configuration Manager admin, you can also approve apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices.
