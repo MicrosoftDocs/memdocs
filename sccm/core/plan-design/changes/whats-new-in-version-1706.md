@@ -110,7 +110,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 <!-- ## Client management  -->
 
 
-<!-- ## Compliance settings -->
+## Compliance settings
 
 ### New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client
 <!-- 1354715 -->
@@ -139,7 +139,7 @@ In this release, we've added new configuration item settings for Windows 10 devi
 
 For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
-<!-- ## Application Management  -->
+## Application Management
 
 ### Run PowerShell scripts from the Configuration Manager console
 <!-- 1236459 -->
