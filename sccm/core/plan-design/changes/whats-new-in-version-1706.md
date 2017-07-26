@@ -110,7 +110,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 <!-- ## Client management  -->
 
 
-## Compliance settings
+<!-- ## Compliance settings -->
 
 ### New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client
 <!-- 1354715 -->
@@ -157,8 +157,25 @@ For more information, see [Create and run PowerShell scripts from the Configurat
 
 <!--  ## Operating system deployment  -->
 
-<!-- ## Software updates -->
+## Software updates
+### Manage Microsoft Surface driver updates
+<!-- 1098490 -->
+You can now use Configuration Manager to manage Microsoft Surface driver updates.
 
+#### Prerequisites
+All software update points must run Windows Server 2016.
+
+#### To manage Surface driver updates
+
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select the **Include Microsoft Surface drivers and firmware updates** checkbox on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
+
+### Configure Windows Update for Business deferral policies
+<!-- 1290890 -->
+You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+
+For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)
 
 <!-- ## Reporting  -->
 

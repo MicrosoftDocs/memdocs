@@ -67,7 +67,7 @@ For previous Configuration Manager versions, you must take the following steps t
 - The computer that runs the Office 365 Installer must have Internet access.  
 - The user that runs the Office 365 Installer must have **Read** and **Write** access to the content location share is provided in the wizard.
 - If you receive a 404 download error, copy the following files to the user %temp% folder:
-  - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
+  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 
