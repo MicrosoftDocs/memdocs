@@ -40,6 +40,26 @@ This article provides details on the new mobile device management (MDM) features
 
     New notices have been added for end of support for Android and Windows Phone versions. For details, see [Notices](#notices).
 
+
+### New in Configuration Manager (current branch)
+The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1706.
+
+- [New mobile application management policy settings](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [New Windows configuration item settings](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [New device compliance policy rules](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [Android and iOS enrollment restrictions](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [Support for Entrust certification authorities](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [Cisco (IPsec) support for macOS VPN profiles](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [Android for Work application management policy for copy-paste](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+- [Configure Android apps with app configuration policies](/sccm/core/plan-design/changes/whats-new-in-version-1706)
+
+
+
+
+
+The following additional hybrid features are also included in version 1706 of Configuration Manager (current branch):
+
+
 ## June 2017
 
 ### New in Microsoft Intune
