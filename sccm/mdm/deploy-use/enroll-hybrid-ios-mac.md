@@ -66,6 +66,7 @@ To enable iOS enrollment, upload the APNs certificate.
 You can limit devices that can enroll by blocking personally owned devices. This prevents users from enrolling their devices using the Company Portal. If you block only the following devices can enroll:
   - [Predeclared devices](predeclare-devices-with-hardware-id.md) enrolled using [Apple Configurator](ios-hybrid-enrollment-using-apple-configurator.md)
   - [Device Enrollment Program (DEP)](predeclare-devices-with-hardware-id.md) managed devices
+  - [Device enrollment manager](enroll-devices-with-device-enrollment-manager.md) managed devices
 
 1.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.  
 
