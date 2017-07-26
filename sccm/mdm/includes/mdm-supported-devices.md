@@ -1,8 +1,8 @@
 ﻿
 - Apple iOS 8.0 and later
 - Google Android 4.0 and later (including Samsung KNOX Standard 4.0 and higher)*
-- Windows Phone 8.1
-- Windows 10 Mobile 
+- Windows Phone 8.1 (Windows Embedded 8.1 Handheld is not supported)
+- Windows 10 Mobile
 - Windows 8.1 RT
 - PCs running Windows 8.1
 - PCs running Windows 10 (Home, Pro, Education, and Enterprise versions)

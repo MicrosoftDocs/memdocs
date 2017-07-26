@@ -85,7 +85,7 @@ For more information, see:
 
 If you need to upgrade your version of SQL Server, We recommend the following methods, from easy to more complex.
 1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommended).
-2. Install a new version of SQL Server on a new computer, and then [use the datbase move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server.
+2. Install a new version of SQL Server on a new computer, and then [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server.
 3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery).
 
 
