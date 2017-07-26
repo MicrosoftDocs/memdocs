@@ -2,7 +2,7 @@
 title: "How to manage Windows Device Guard | Microsoft Docs"
 description: "Learn how to use System Center Configuration Manager to manage Windows Device Guard."
 ms.custom: na
-ms.date: 04/14/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -25,11 +25,13 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Introduction
-Windows Device Guard is a group of Windows 10 features that are designed to protect PCs against malware and other untrusted software. It prevents malicious code from running by ensuring that only approved code, that you know, can be run.
+Device Guard is a group of Windows 10 features that are designed to protect PCs against malware and other untrusted software. It prevents malicious code from running by ensuring that only approved code, that you know, can be run.
 
 Device Guard encompasses both software and hardware based security functionality. Configurable code integrity is a software based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, configurable code integrity does not have any hardware or firmware prerequisites. Device Guard policies deployed with Configuration Manager enable a configurable code integrity policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined below. Optionally, hypervisor based protection of code integrity policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
 
-To learn more about Device Guard, read [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
+To learn more about Device Guard, read the [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
+
+## Using Device Guard with Configuration Manager
 
 You can use Configuration Manager to deploy a Device Guard policy that lets you configure the mode in which Device Guard will run on PCs in a collection. 
 
@@ -41,7 +43,7 @@ You can configure one of the following modes:
 >[!TIP]
 >In this version of Configuration Manager, Device Guard is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
-### What can run when you deploy a Device Guard policy?
+## What can run when you deploy a Device Guard policy?
 
 Windows Device Guard lets you strongly control what can run on PCs you manage. This can be particularly useful for PCs in high-security departments, where it's vital that unwanted software is not allowed to be run.
 
@@ -66,9 +68,8 @@ When you deploy a policy, typically, the following executables will be allowed t
 Before you configure or deploy Device Guard policies, read the following information:
 
 - Device Guard management is a pre-release feature for Configuration Manager, and is subject to change.
-- To use Device Guard, PCs you manage must be running the Windows 10 Enterprise with the Creators Update, or later.
+- To use Device Guard with Configuration Manager, PCs you manage must be running the Windows 10 Enterprise version 1703, or later.
 - Once a policy is successfully processed on a client PC, Configuration Manager is configured as a Managed Installer on that client, and software deployed through SCCM after the policy is processed is automatically trusted. Software installed by Configuration Managed before the Device Guard policy is processed is not automatically trusted.
-- In this pre-release version, once a client PC receives a deployment of a Device Guard policy, it will randomize the processing time of this policy over a two-hour period. 
 - Client PCs must have connectivity to their Domain Controller in order for a Device Guard policy to be processed successfully.
 - The default compliance evaluation schedule for Device Guard policies, configurable during deployment, is every 1 day. If issues in policy processing are observed, it may be beneficial to configure the compliance evaluation schedule to be shorter, for example every 1 hour. This schedule dictates how often clients will re-attempt to process a Device Guard policy in the case of a failure.
 - Regardless of the enforcement mode you select, when you deploy a Device Guard policy, client PCs will not be able to run HTML applications with the extension .hta.
@@ -83,6 +84,13 @@ Before you configure or deploy Device Guard policies, read the following informa
 	- **Enforcement Mode** - Choose one of the following enforcement methods for Device Guard on the client PC.
 		- **Enforcement Enabled** - Only allow trusted executables are allowed to run.
 		- **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
+5.	On the **Inclusions** tab of the **Create Device Guard Policy Wizard**, click **Add** if you want to optionally add trust for specific files or folders on PCs. 
+6.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
+	>[!TIP]
+	>When you add trust for specific files for folders in a Device Guard policy you can:
+	>- Overcome issues with managed installer behaviors
+	>- Trust line-of-business apps that cannot be deployed with Configuration Manager
+	>- Trust apps that are included in an operating system deployment image. 
 5.	Click **Next**, then complete the wizard.
 
 ## How to deploy a Device Guard policy

@@ -183,4 +183,18 @@ For details, see [Integration with Windows Update for Business in Windows 10](/s
 
 <!--  ## Mobile device management  -->
 
-<!--  ## Protect devices  -->
+## Protect devices
+
+### Include trust for specific files and folders in a Device Guard policy
+
+In this release, we’ve added further capabilities to Device Guard policy management
+
+You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
+ 
+- Overcome issues with managed installer behaviors
+- Trust line-of-business apps that cannot be deployed with Configuration Manager
+- Trust apps that are included in an operating system deployment image
+
+For more details, see [Device Guard management with Configuration Manager](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+
+
