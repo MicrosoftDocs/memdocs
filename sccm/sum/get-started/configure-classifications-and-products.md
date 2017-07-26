@@ -61,8 +61,5 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     > [!IMPORTANT]  
     >  Configuration Manager stores a list of products and product families from which you can choose when you first install the software update point. Products and product families that are released after Configuration Manager is released might not be available to select until you complete software updates synchronization, which updates the list of available products and product families from which you can choose.  
 
-    Beginning in Configuration Manager version 170
-
-
 ## Next steps
 Start software updates synchronization to retrieve software updates based on the new criteria. For details, see [Synchronize software updates](synchronize-software-updates.md).
