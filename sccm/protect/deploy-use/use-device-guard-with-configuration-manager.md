@@ -61,7 +61,7 @@ When you deploy a policy, typically, the following executables can run:
 	- Configuration Manager
 
 >[!IMPORTANT]
->These items do not include any software that is **not** built-into Windows that automatically updates from the internet or third-party software updates whether they are installed via any of the update mechanisms mentioned previously, or from the internet. Only software changes that are deployed though the Configuration Manager client can run.
+>These items do not include any software that is *not* built-into Windows that automatically updates from the internet or third-party software updates whether they are installed via any of the update mechanisms mentioned previously, or from the internet. Only software changes that are deployed though the Configuration Manager client can run.
 
 ## Before you start
 
@@ -86,12 +86,11 @@ Before you configure or deploy Device Guard policies, read the following informa
 		- **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 5.	On the **Inclusions** tab of the **Create Device Guard Policy Wizard**, click **Add** if you want to optionally add trust for specific files or folders on PCs. 
 6.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
-	>[!TIP]
-	>When you add trust for specific files for folders in a Device Guard policy you can:
-	>- Overcome issues with managed installer behaviors
-	>- Trust line-of-business apps that cannot be deployed with Configuration Manager
-	>- Trust apps that are included in an operating system deployment image. 
-5.	Click **Next**, then complete the wizard.
+When you add trust for specific files for folders in a Device Guard policy you can:
+	- Overcome issues with managed installer behaviors
+	- Trust line-of-business apps that cannot be deployed with Configuration Manager
+	- Trust apps that are included in an operating system deployment image. 
+7.	Click **Next**, then complete the wizard.
 
 ## How to deploy a Device Guard policy
 1.	In the Configuration Manager console, click **Assets and Compliance**.
@@ -101,7 +100,7 @@ Before you configure or deploy Device Guard policies, read the following informa
 5.	When you are finished, click **OK** to deploy the policy. 
 
 Once the policy is processed on a client PC, a restart is scheduled on that client according to the **Client Settings** for **Computer Restart**.
-**Until you restart the client PC, the policy does not take effect.**
+Until you restart the client PC, the policy does not take effect.**
 
 ## How to monitor a Device Guard policy
 
@@ -123,7 +122,7 @@ To verify the specific software being blocked or audited, see the following loca
 In this situation, the software might continue to be allowed to run even if the device restarts, or receives a policy in **Enforcement Enabled** mode.
 - To ensure that the Device Guard policy is effective, prepare the device in a lab environment. Then, deploy the **Enforcement Enabled** policy, and finally, restart the device before you give the device to an end user.
 - Do not deploy a policy with **Enforcement Enabled**, and then later deploy a policy with **Audit Only** to the same device. This configuration might result in untrusted software being allowed to run.
-- When you use Configuration Manager to enable configurable code integrity on client PCs with Device Guard policies, the policy **does not** prevent users with local administrator rights from circumventing the Device Guard policy or otherwise executing untrusted software. 
+- When you use Configuration Manager to enable configurable code integrity on client PCs with Device Guard policies, the policy does not prevent users with local administrator rights from circumventing the Device Guard policy or otherwise executing untrusted software. 
 - The only way to prevent users with local administrator rights from disabling configurable code integrity is to deploy a signed binary policy. This deployment is possible through Group Policy but not currently supported in Configuration Manager.
 - Setting up Configuration Manager as a Managed Installer on client PCs uses AppLocker policy. AppLocker is only used to identify Managed Installers and all enforcement happens with configurable code integrity. 
 
