@@ -31,9 +31,10 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
  To deploy profiles to iOS, Android, Windows Phone, and Windows 8.1 devices, these devices must be enrolled in Microsoft Intune. Devices on other platforms can also be enrolled to Intune. For information about how to enroll, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). This table shows the connection type that is supported for each device platform:  
 
- |Connection type|iOS    and macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
+ |Connection type|iOS and macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|Yes|Yes|No|No|No|No|Yes (OMA-URI)|  
+ |Cisco AnyConnect|Yes|Yes|No|No|No|No|Yes (OMA-URI)|
+ |Cisco (IPSec)|macOS only|No|No|No|No|No|No|  
  |Pulse Secure|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |F5 Edge Client|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |Dell SonicWALL Mobile Connect|Yes|Yes|Yes|No|Yes|Yes|Yes|  
