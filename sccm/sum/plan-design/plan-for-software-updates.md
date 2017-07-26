@@ -103,11 +103,15 @@ To look up the meaning of an error code, you must convert the decimal error code
 
 
 ###  <a name="BKMK_ManuallySwitchSUPs"></a>Manually switch clients to a new software update point
-Beginning in Configuration Manager version 1606, you can enable the option for Configuration Manager clients to switch to a new software update point when there are issues with the active software update point. This option results in changes only when a client receives multiple software update points from a management point.  
+Beginning in Configuration Manager version 1606, you can enable the option for Configuration Manager clients to switch to a new software update point when there are issues with the active software update point. This option results in changes only when a client receives multiple software update points from a management point.
 
-Enable this option on a device collection or on a set of selected devices. Once enabled, the clients will look for another software update point at the next scan. Depending on your WSUS configuration settings (update classifications, products, whether the software update points share a WSUS database, etc.), the switch to a new software update point will generate additional network traffic. Therefore, you should only use this option when necessary.  
+> [!IMPORTANT]    
+> When you switch devices to use a new server, the devices use fallback to find that new server. Therefore, review your boundary group configurations, and ensure that your software update points are in the correct boundary groups before you start this change. For details, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).
+>
+> The switch to a new software update point will generate additional network traffic. The amount of traffic depends on your WSUS configuration settings (update classifications, products, whether the software update points share a WSUS database, etc.). If you plan to switch multiple devices, consider doing so during maintenance windows to reduce the impact to your network during the synchronization to the new software update point server.
 
 #### To enable the option to switch software update points  
+Enable this option on a device collection or on a set of selected devices. Once enabled, the clients will look for another software update point at the next scan.
 
 1.  In the Configuration Manager console, go to **Assets and Compliance > Overview > Device collections**.  
 
@@ -290,7 +294,7 @@ Software updates requires that a supported version of WSUS is installed on all s
 
     > [!NOTE]  
     >  When Configuration Manager sets a superseded software update to **expired**, it does not set the update to **expired** in WSUS. However, when the WSUS cleanup task runs, the updates set to **expired** in Configuration Manager are set to a status of **Declined** on the WSUS server and the Windows Update Agent on computers will no longer scan for these updates. This means that clients will continue to scan for an expired update until the cleanup task runs. For information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
-    
+
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
  The language settings for the software update point allow you to configure the languages for which the summary details (software updates metadata) are synchronized for software updates, and the software update file languages that will be downloaded for software updates.  
 
