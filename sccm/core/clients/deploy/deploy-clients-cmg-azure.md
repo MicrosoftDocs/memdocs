@@ -19,7 +19,7 @@ manager: angrobe
 
 ---
 
-# Install, and assign the Configuration Manager clients from the Internet using Azure AD for authentication
+# Install and assign Configuration Manager clients from the Internet using Azure AD for authentication
 
 You can use Configuration Manager cloud services with Azure AD to support the following scenarios:
 
