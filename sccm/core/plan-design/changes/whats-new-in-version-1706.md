@@ -154,7 +154,6 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
-
 <!--  ## Operating system deployment  -->
 
 ## Software updates
@@ -181,7 +180,20 @@ For details, see [Integration with Windows Update for Business in Windows 10](/s
 
 <!-- ## Inventory  -->
 
-<!--  ## Mobile device management  -->
+## Mobile device management
+
+### Android and iOS enrollment restrictions
+<!-- 1290826 -->
+With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
+- For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
+- For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
+
+
+### Android for Work application management policy for copy-paste
+<!-- 1338403 -->
+With this release, the Android for Work configuration items for the **Allow data sharing between work and personal profile** settings descriptions have been updated.
+
+For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
 ## Protect devices
 
