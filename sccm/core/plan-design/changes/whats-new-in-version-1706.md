@@ -167,14 +167,14 @@ For more information, see [Create and run PowerShell scripts from the Configurat
 
 ### Android and iOS enrollment restrictions
 <!-- 1290826 -->
-Starting with 1706, admins can now specify that users cannot enroll personal Android or iOS devices in their hybrid environment. This allows you to limit enrolled devices to predeclared, company-owned devices or iOS devices enrolled with Device Enrollment Program only.
+With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
 - For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
 - For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
 
 
 ### Android for Work application management policy for copy-paste
 <!-- 1338403 -->
-Starting with this release, the setting descriptions for Android for Work configuration items for the **Allow data sharing between work and personal profile** are updated.
+With this release, the Android for Work configuration items for the **Allow data sharing between work and personal profile** settings descriptions have been updated.
 
 For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
