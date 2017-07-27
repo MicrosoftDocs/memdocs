@@ -92,6 +92,7 @@ The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **
 When you monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace, you might see errors indicating the deployment was unsuccessful like:
 - **Not applicable for this device**
 - **Data type conversion failed**
+
 These errors do not mean that the deployment failed. Verify at the targeted PC that the upgrade performed successfully.
 
 Once the policy reaches a targeted Windows PC and is evaluated, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
