@@ -51,65 +51,65 @@ Collections are groupings of users or devices. Use collections for tasks such as
 5.  On the **Membership Rules** page of the **Create Device Collection Wizard**, in the **Add Rule** list, select the type of membership rule that you want to use for this collection. You can configure multiple rules for each collection.  
 
         
-        ##### To configure a direct rule  
+##### To configure a direct rule  
 
-        1.  On the **Search for Resources** page of the **Create Direct Membership Rule Wizard**, specify the following information:  
+1.  On the **Search for Resources** page of the **Create Direct Membership Rule Wizard**, specify the following information:  
 
-            -   **Resource class**: Select the type of resource you want to search for and add to the collection. Select from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
+-   **Resource class**: Select the type of resource you want to search for and add to the collection. Select from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
 
-            -   **Attribute name**: Select the attribute associated with the selected resource class that you want to search for. For example, if you want to select computers by their NetBIOS name, select **System Resource** in the **Resource class** list and **NetBIOS name** in the **Attribute name** list.  
+-   **Attribute name**: Select the attribute associated with the selected resource class that you want to search for. For example, if you want to select computers by their NetBIOS name, select **System Resource** in the **Resource class** list and **NetBIOS name** in the **Attribute name** list.  
 
-            -   **Exclude resources marked as obsolete** - If a client computer is marked as obsolete, do not include this value in the search results.  
+-   **Exclude resources marked as obsolete** - If a client computer is marked as obsolete, do not include this value in the search results.  
 
-            -   **Exclude resources that do not have the Configuration Manager client installed** - these won't be displayed in the search results.  
+-   **Exclude resources that do not have the Configuration Manager client installed** - these won't be displayed in the search results.  
 
-            -   **Value:** Enter a value for which you want to search the selected attribute name. You can use the percent character **%** as a wildcard. For example, to search for computers that have a NetBIOS name beginning with "M", enter **M%** in this field.  
+-   **Value:** Enter a value for which you want to search the selected attribute name. You can use the percent character **%** as a wildcard. For example, to search for computers that have a NetBIOS name beginning with "M", enter **M%** in this field.  
 
-        2.  On the **Select Resources** page, select the resources that you want to add to the collection in the **Resources** list, and then choose **Next**.  
+2.  On the **Select Resources** page, select the resources that you want to add to the collection in the **Resources** list, and then choose **Next**.  
 
 
-        ##### To configure a query rule  
+##### To configure a query rule  
 
-        1.  In the **Query Rule Properties** dialog box, specify the following information:  
+1.  In the **Query Rule Properties** dialog box, specify the following information:  
 
-            -   **Name**: Specify a unique name.  
+-   **Name**: Specify a unique name.  
 
-            -   **Import Query Statement** - Opens the **Browse Query** dialog box where you can select a [Configuration Manager query](../../../../core/servers/manage/create-queries.md) to use as the query rule for the collection.   
+-   **Import Query Statement** - Opens the **Browse Query** dialog box where you can select a [Configuration Manager query](../../../../core/servers/manage/create-queries.md) to use as the query rule for the collection.   
 
-            -   **Resource class:** Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
+-   **Resource class:** Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
 
-            -   **Edit Query Statement** - Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
+-   **Edit Query Statement** - Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
     
-        ##### To configure an include collection rule  
+##### To configure an include collection rule  
 
-        In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
+In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
 
-        ##### To configure an exclude collection rule  
+##### To configure an exclude collection rule  
 
-        In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
+In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
 
-    -   **Use incremental updates for this collection** - Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
+-   **Use incremental updates for this collection** - Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
 
-        > [!IMPORTANT]  
-        >  Collections configured by using query rules that use the following classes do not support incremental updates:  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (for collections of users only)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (for collections of users only)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  Collections configured by using query rules that use the following classes do not support incremental updates:  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (for collections of users only)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (for collections of users only)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **Schedule a full update on this collection** - Schedule a regular full evaluation of the collection membership.  
+-   **Schedule a full update on this collection** - Schedule a regular full evaluation of the collection membership.  
 
 6.  Complete the wizard to create the new collection. The new collection is displayed in the **Device Collections** node of the **Assets and Compliance** workspace.  
 
@@ -128,60 +128,60 @@ Collections are groupings of users or devices. Use collections for tasks such as
 
     -   In the **Add Rule** list, select the type of membership rule you want to use for this collection. You can configure multiple rules for each collection.  
 
-         ##### To configure a direct rule  
+##### To configure a direct rule  
 
-        1.  On the **Search for Resources** page of the **Create Direct Membership Rule Wizard**, specify:  
+1.  On the **Search for Resources** page of the **Create Direct Membership Rule Wizard**, specify:  
 
-            -   **Resource class**: Select the type of resource you want to search for and add to the collection. Select from **User Resource** values to search for user information collected by Configuration Manager or **User Group Resource** to search for user group information collected by Configuration Manager.  
+-   **Resource class**: Select the type of resource you want to search for and add to the collection. Select from **User Resource** values to search for user information collected by Configuration Manager or **User Group Resource** to search for user group information collected by Configuration Manager.  
 
-            -   **Attribute name**: Select the attribute associated with the resource class that you want to search for. For example, if you want to select users by their Organizational Unit (OU) name, select **User Resource** in the **Resource class** list and **User OU Name** in the **Attribute name** list.  
+-   **Attribute name**: Select the attribute associated with the resource class that you want to search for. For example, if you want to select users by their Organizational Unit (OU) name, select **User Resource** in the **Resource class** list and **User OU Name** in the **Attribute name** list.  
 
-            -   **Value:** Enter a value that you want to search for. You can use the percent character **%** as a wildcard. For example, to search for users in the Contoso OU, enter **Contoso** in this field.  
+-   **Value:** Enter a value that you want to search for. You can use the percent character **%** as a wildcard. For example, to search for users in the Contoso OU, enter **Contoso** in this field.  
 
-        2.  On the **Select Resources** page, select the resources that you want to add to the collection in the **Resources** list.  
+2.  On the **Select Resources** page, select the resources that you want to add to the collection in the **Resources** list.  
 
-        ##### To configure a query rule  
+##### To configure a query rule  
 
-        1.  In the **Query Rule Properties** dialog, provide:  
+1.  In the **Query Rule Properties** dialog, provide:  
 
-            -   **Name**: A unique name.  
+-   **Name**: A unique name.  
 
-            -   **Import Query Statement** - Opens the **Browse Query** dialog box where you can select a [Configuration Manager query](../../../../core/servers/manage/queries-technical-reference.md) to use as the query rule for the collection.  
+-   **Import Query Statement** - Opens the **Browse Query** dialog box where you can select a [Configuration Manager query](../../../../core/servers/manage/queries-technical-reference.md) to use as the query rule for the collection.  
 
-            -   **Resource class**: Select the type of resource you want to search for and add to the collection. Select from **User Resource** values to search for user information collected by Configuration Manager or **User Group Resource** to search for user group information collected by Configuration Manager.  
+-   **Resource class**: Select the type of resource you want to search for and add to the collection. Select from **User Resource** values to search for user information collected by Configuration Manager or **User Group Resource** to search for user group information collected by Configuration Manager.  
 
-            -   **Edit Query Statement** - Opens the **Query Statement Properties** dialog box where you can [author a query](../../../../core/servers/manage/queries-technical-reference.md) to use as the rule for the collection.  
+-   **Edit Query Statement** - Opens the **Query Statement Properties** dialog box where you can [author a query](../../../../core/servers/manage/queries-technical-reference.md) to use as the rule for the collection.  
 
-        ##### To configure an include collection rule  
+##### To configure an include collection rule  
 
-        In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
+In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
 
-        ##### To configure an exclude collection rule  
+##### To configure an exclude collection rule  
 
-        In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
+In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
 
 
-    -   **Use incremental updates for this collection** - Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
+-   **Use incremental updates for this collection** - Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
 
-        > [!IMPORTANT]  
-        >  Collections configured by using query rules that use the following classes do not support incremental updates:  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (for collections of users only)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (for collections of users only)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  Collections configured by using query rules that use the following classes do not support incremental updates:  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (for collections of users only)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (for collections of users only)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **Schedule a full update on this collection** -  Schedule a regular full evaluation of the collection membership.  
+-   **Schedule a full update on this collection** -  Schedule a regular full evaluation of the collection membership.  
 
 6.  Complete the wizard. The new collection is displayed in the **User Collections** node of the **Assets and Compliance** workspace.  
 
