@@ -102,7 +102,7 @@ translation.priority.ht:
 
 |Setting name|Details|  
 |------------------|-------------|  
-|**Allow data sharing between work and personal profiles**|Choose from:<br>- **Not Configured**<br>- **Default sharing restrictions**<br>- **Apps in work profile can handle request from personal profile**<br>- **Apps in personal profile can handle request from work profile**<br><br>See [Copy-Paste settings](#copy-paste-configuration-item-settings)|  
+|**Allow data sharing between work and personal profiles**|Choose from:<br>- **Not Configured**<br>- **Default sharing restrictions**<br>- **Apps in work profile can handle request from personal profile**<br>- **Apps in personal profile can handle request from work profile**<br><br>(See also [Copy-Paste settings](#copy-paste-configuration-item-settings) using custom URI)|  
 |**Hide work profile notifications when device is locked (Android 6.0+)**||
 |**Set default app permission policy (Android 6.0+)**|Choose from:<br>- **Not Configured**<br>- **Always prompt**<br>- **Auto Grant**<br>- **Auto Deny**|
 
