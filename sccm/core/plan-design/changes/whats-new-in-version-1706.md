@@ -93,9 +93,9 @@ The improved integration makes the following possible:
 
   This is done by using an [Azure server web app](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
--   Use Azure AD to authenticate clients on the Internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. <!-- This requires the cloud management gateway site system role. For more information, see []().  -->
+-   Use Azure AD to authenticate clients on the Internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the Internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Install and manage the Configuration Manager client on computers that are located on the Internet. This requires the use of the cloud management gateway site system role. <!-- For more information, see [](). -->
+-   Install and manage the Configuration Manager client on computers that are located on the Internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the Internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 -   Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
@@ -154,7 +154,6 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
-
 <!--  ## Operating system deployment  -->
 
 ## Software updates
@@ -175,12 +174,39 @@ All software update points must run Windows Server 2016.
 <!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
-For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)
+For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).
 
 <!-- ## Reporting  -->
 
 <!-- ## Inventory  -->
 
-<!--  ## Mobile device management  -->
+## Mobile device management
 
-<!--  ## Protect devices  -->
+### Android and iOS enrollment restrictions
+<!-- 1290826 -->
+With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
+- For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
+- For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
+
+
+### Android for Work application management policy for copy-paste
+<!-- 1338403 -->
+With this release, the Android for Work configuration items for the **Allow data sharing between work and personal profile** settings descriptions have been updated.
+
+For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
+
+## Protect devices
+
+### Include trust for specific files and folders in a Device Guard policy
+
+In this release, we’ve added further capabilities to Device Guard policy management.
+
+You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
+ 
+- Overcome issues with managed installer behaviors
+- Trust line-of-business apps that cannot be deployed with Configuration Manager
+- Trust apps that are included in an operating system deployment image
+
+For more details, see [Device Guard management with Configuration Manager](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+
+

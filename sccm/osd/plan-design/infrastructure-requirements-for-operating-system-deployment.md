@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: 24
-author: Dougebyms.author: dougebymanager: angrobe
+author: mattbriggs
+ms.author: mabrigg
+manager: angrobe
 
 ---
-# Infrastructure requirements for operating system deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Infrastructure requirements for operating system deployment in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Operating system deployment in System Center 2012 Configuration Manager has external dependencies and dependencies within the product. Use the following sections to help you prepare for operating system deployment.  
 
 ##  <a name="BKMK_ExternalDependencies"></a> Dependencies External to Configuration Manager  
@@ -24,13 +29,15 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 ### Windows ADK for Windows 10  
  Windows ADK is a set of tools and documentation that support the configuration and deployment of Windows operating systems. Configuration Manager uses Windows ADK to automate Windows installations, capture Windows images, migrate user profiles and data, and so on.  
 
- The following features of the Windows ADK must be installed on site server of the top-level site of the hierarchy, on the site server of each primary site in the hierarchy, and on the SMS Provider site system server:  
+ The following features of the Windows ADK must be installed on-site server of the top-level site of the hierarchy, on the site server of each primary site in the hierarchy, and on the SMS Provider site system server:  
 
 -   User State Migration Tool (USMT) <sup>1</sup>  
 
 -   Windows Deployment Tools  
 
--   Windows Preinstallation Environment (Windows PE)  
+-   Windows Preinstallation Environment (Windows PE)
+
+For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support For Windows 10 as a client](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 
  <sup>1</sup> USMT is not required on the SMS Provider site system server.  
 
@@ -47,7 +54,7 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
 
 ### User State Migration Tool (USMT)  
- Configuration Manager uses a USMT package that contains the USMT 10 source files to capture and restore the user state as part of your operating system deployment. Configuration Manager Setup at the top-level site automatically creates the USMT package. USMT 10 can capture user state from Windows 7, Windows 8, Windows 8.1, and Windows 10. USMT 10 is distributed in the Windows Assessment and Deployment Kit (Windows ADK) for Windows 10.  
+ Configuration Manager uses an USMT package that contains the USMT 10 source files to capture and restore the user state as part of your operating system deployment. Configuration Manager Setup at the top-level site automatically creates the USMT package. USMT 10 can capture user state from Windows 7, Windows 8, Windows 8.1, and Windows 10. USMT 10 is distributed in the Windows Assessment and Deployment Kit (Windows ADK) for Windows 10.  
 
  For more information, see:  
 
@@ -160,7 +167,7 @@ You must install the following WSUS 4.0 hotfixes:
  Windows Deployment Services (WDS) must be installed on the same server as the distribution points that you configure to support PXE or multicast. WDS is included in the operating system of the server. For PXE deployments, WDS is the service that performs the PXE boot. When the distribution point is installed and enabled for PXE, Configuration Manager installs a provider into WDS that uses the WDS PXE boot functions.  
 
 > [!NOTE]  
->  The installation of WDS might fail if the server requires a restart.  
+>  If the server requires a restart, the installation of WDS might fail. 
 
  Other WDS configurations that must be considered include the following:  
 
