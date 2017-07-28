@@ -11,7 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 27193c49-d811-4f93-b119-f2faf39fffeasearchScope: - ConfigMgr SDK
+ms.assetid: 27193c49-d811-4f93-b119-f2faf39fffea
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -43,7 +45,7 @@ Class SMS_ CollectionRuleIncludeCollection : SMS_BaseClass
 
  Qualifiers: None  
 
- The ID of the collection to exclude from the membership results.  
+ The ID of the collection to include in the membership results.  
 
  `RuleName`  
  Data type: `String`  
