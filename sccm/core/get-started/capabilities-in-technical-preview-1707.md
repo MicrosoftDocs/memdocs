@@ -45,6 +45,7 @@ This article introduces the features that are available in the Technical Preview
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required.
 
 ## Surface Device dashboard
+<!--1355788-->
 The Surface Device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. You can view the following:
 - percent of Surfaces
 - percent of Surface models
@@ -85,13 +86,9 @@ In this Technical Preview, we’ve expanded on this capability. Configuration Ma
 
 ### Try it out!
 
-1.            Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
-2.            On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
-3.            Supply a parameter value for the selected parameter, and then click **OK**.
-4.            Complete the wizard.
+1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
+3. Supply a parameter value for the selected parameter, and then click **OK**.
+4. Complete the wizard.
 
 When the script runs, it will use any parameter values you configured.
-
-
-<!-- ## Placeholder Section
-Remove before publishing. -->
