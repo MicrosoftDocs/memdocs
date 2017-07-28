@@ -31,6 +31,9 @@ In Configuration Manager, in addition to using packages and programs to deploy s
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run almost immediately on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
 
+>[!TIP]
+>In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+
 ## Prerequisites
 
 To run PowerShell scripts, the client must be running PowerShell version 3.0 or later. However, if a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that version.
