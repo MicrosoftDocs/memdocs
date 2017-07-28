@@ -86,7 +86,7 @@ In this Technical Preview, we’ve expanded on this capability. Configuration Ma
 
 ### Try it out!
 
-1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console]( /sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console). 
+1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console). 
 2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
 3. Supply a parameter value for the selected parameter, and then click **OK**.
 4. Complete the wizard.
