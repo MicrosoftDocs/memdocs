@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternatedownloadProvider : Resume | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : Resume | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 5e084332-44bb-468c-980c-ad9273750b39searchScope: - ConfigMgr SDK
+ms.assetid: 5e084332-44bb-468c-980c-ad9273750b39
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternatedownloadProvider : Resume Method
+# ICcmAlternateDownloadProvider : Resume Method
 The **ICcmAlternateDownloadProvider::Resume** method, in Configuration Manager, instructs the provider to resume a given job.  
 
 ## Syntax  

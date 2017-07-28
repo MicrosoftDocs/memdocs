@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternatedownloadProvider : Suspend | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : Suspend | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 5d6ef823-08b2-4e17-8e59-6dfc085f5064searchScope: - ConfigMgr SDK
+ms.assetid: 5d6ef823-08b2-4e17-8e59-6dfc085f5064
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternatedownloadProvider : Suspend Method
+# ICcmAlternateDownloadProvider : Suspend Method
 The **ICcmAlternateDownloadProvider::Suspend** method, in Configuration Manager, instructs the provider to suspend a given job.  
 
 ## Syntax  
