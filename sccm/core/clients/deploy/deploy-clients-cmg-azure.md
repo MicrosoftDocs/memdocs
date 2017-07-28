@@ -47,9 +47,10 @@ Use the following steps to help you accomplish this:
 ## Step 1: Set up the Cloud Management Gateway
 
 Set up the Cloud Management Gateway to let clients access your Configuration Manager site from the internet without using certificates. Find help in the following topics: 
-•	[Plan for cloud management gateway in Configuration Manager](/sccm/core/clients/manage/plan-cloud-management-gateway).
-•	[Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
-•	[Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
+
+- [Plan for cloud management gateway in Configuration Manager](/sccm/core/clients/manage/plan-cloud-management-gateway).
+[Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
+[Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
 
 ## Step 2: Set up the Azure Services app in Configuration Manager Cloud Services
 
