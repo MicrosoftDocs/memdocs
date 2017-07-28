@@ -81,7 +81,7 @@ To read more about Windows Defender Application Guard, see [this blog post](http
 
 <!-- 1236459 --->
 
-In the last Technical Preview, we introduced a new capability that lets you [Create and run PowerShell scripts from the Configuration Manager console]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+In the last Technical Preview, we introduced a new capability that lets you [Create and run PowerShell scripts from the Configuration Manager console](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 In this Technical Preview, we’ve expanded on this capability. Configuration Manager now reads the PowerShell script, and displays any parameters in the Create Script Wizard. You can supply a value for the parameter in the wizard that will be used when the script is run. Alternatively, you can leave the parameter blank. If you do this, you will need to supply a value for the parameter when you run the script.
 
 ### Try it out!
