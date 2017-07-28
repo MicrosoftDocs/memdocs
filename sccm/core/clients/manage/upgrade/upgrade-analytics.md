@@ -50,7 +50,7 @@ There are several configuration steps that you have to take to ensure that your 
 
 ### Prerequisites
 
-Beginning with Current Branch version 1706, the Azure Services Wizard is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to use the wizard, you need to configure an Azure web app. For more information, see, [Azure Services Wizard](..\..\..\servers\deploy\configure\azure-services-wizard.md).
+Beginning with Current Branch version 1706, the Azure Services Wizard is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to use the wizard, you need to configure an Azure web app. For more information, see, [Azure Services Wizard](/sccm/core/servers/deploy/configureazure-services-wizard).
 
 ### Use the Azure Wizard to create the connection
 
