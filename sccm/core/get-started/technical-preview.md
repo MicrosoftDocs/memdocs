@@ -110,6 +110,17 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Client Peer Cache support for express installation files for Windows 10 and Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Not added](media/Red_X.gif)|
+ |Surface Device dashboard|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Not added](media/Red_X.gif)|
+ |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
+ |Add parameters when you deploy PowerShell scripts from Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
+
+
+## Capabilities delivered in previous technical previews
+ When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
+
+ |Capability |Technical Preview version |Current Branch version|  
+ |----------------|---------------------|--------------------|
  |New mobile application management policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Not added](media/Red_X.gif)|
  |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Not added](media/Red_X.gif)|
  |Site server role high availability|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
@@ -130,13 +141,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Device Health Attestation assessment for compliance policies for conditional access|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![Not added](media/Red_X.gif)|
  |Support for Entrust certificate authorities|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![Not added](media/Red_X.gif)|
  |Cisco (IPSec) support for macOS VPN profiles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![Not added](media/Red_X.gif)|
-
-## Capabilities delivered in previous technical previews
- When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
-
- |Capability |Technical Preview version |Current Branch version|  
- |----------------|---------------------|--------------------|
-  |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Not added](media/Red_X.gif)|
+ |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Not added](media/Red_X.gif)|
  |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
  |Update reset tool  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![Not added](media/Red_X.gif)|
  |High DPI console support  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![Not added](media/Red_X.gif)|
