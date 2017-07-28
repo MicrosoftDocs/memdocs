@@ -176,7 +176,14 @@ You can now configure deferral policies for Windows 10 Feature Updates or Qualit
 
 For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).
 
-<!-- ## Reporting  -->
+## Reporting
+
+### Use Windows Analytics with Configuration Manager
+<!-- 1318608 -->
+Windows Analytics is a set of solutions that run on Operations Management Suite. The solutions allow you to form insight into the current state of your environment. Devices in your environment report Windows telemetry data. The data can be accessed through the Operations Management Suite web portal. In the case of Upgrade Readiness the data is directly available in the monitoring node of the Configuration Manager console.
+
+For more information, see [Use Windows Analytics with Configuration Manager](/sccm/core/clients/manage/monitor-windows-analytics).
+
 
 <!-- ## Inventory  -->
 
@@ -198,15 +205,13 @@ For more information, see [Configuration items for Android for Work devices](/sc
 ## Protect devices
 
 ### Include trust for specific files and folders in a Device Guard policy
-
+<!--1324676-->
 In this release, we’ve added further capabilities to Device Guard policy management.
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
- 
+
 - Overcome issues with managed installer behaviors
 - Trust line-of-business apps that cannot be deployed with Configuration Manager
 - Trust apps that are included in an operating system deployment image
 
 For more details, see [Device Guard management with Configuration Manager](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
-
-
