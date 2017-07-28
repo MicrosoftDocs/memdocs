@@ -139,6 +139,35 @@ In this release, we've added new configuration item settings for Windows 10 devi
 
 For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
+### New device compliance policy rules
+
+* **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
+
+  	**Supported on:**
+  	* Windows Phone 8+
+  	* Windows 8.1+
+  	* iOS 6+
+<br></br>
+* **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
+
+ 	**Supported on:**
+  	* Android 4.0+
+  	* Samsung KNOX Standard 4.0+
+<br></br>
+* **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
+
+  	**Supported on:**
+  	* Android 4.0+
+  	* Samsung KNOX Standard 4.0+
+<br></br>
+* **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
+
+  	**Supported on:**
+  	* Android 4.2 through 4.4
+  	* Samsung KNOX Standard 4.0+
+
+See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules
+
 ## Application Management
 
 ### Run PowerShell scripts from the Configuration Manager console
@@ -153,6 +182,18 @@ In Configuration Manager, you can deploy scripts to client devices using package
 - Examine the results returned by the script in the Configuration Manager console.
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+
+### New mobile application management policy settings
+Beginning with this release, you can use three new mobile application management (MAM) policy settings:
+
+- **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
+
+- **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
+
+- **Disable printing:** Prevents the app from printing work or school data.
+
+See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
+
 
 <!--  ## Operating system deployment  -->
 
