@@ -295,6 +295,7 @@
 
 ##   [Monitor and manage clients](clients/manage/monitor-clients.md)
 ###  [How to monitor clients](clients/manage/monitor-clients.md)
+###  [Use Windows Analytics](clients/manage/monitor-windows-analytics.md)
 ###  [How to monitor Linux and UNIX clients](clients/manage/monitor-clients-for-linux-and-unix-servers.md)
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)

@@ -20,6 +20,7 @@
 
 ## Deploy applications
 ### [Deploy applications](deploy-use/deploy-applications.md)
+### [Share an application](deploy-use/share-applications.md)
 ### [Simulate application deployments](deploy-use/simulate-application-deployments.md)
 ### [Deploy App-V virtual applications](get-started/deploying-app-v-virtual-applications.md)
 
