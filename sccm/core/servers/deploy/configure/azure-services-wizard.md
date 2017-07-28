@@ -55,36 +55,29 @@ The Azure services web app connects your Configuration Manager site to Azure AD 
 5.	On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the *Web app* and *Native Client app*  that will be used to configure the Azure service.     
     **Web app:**   Browse opens the Server App window.    
 	  In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients.
-
     If you do not have an available app, use one of the following:
 		- **Create**: To create a new server app, click **Create**. Next provide a friendly name for the app, the homepage URL, App ID URI, and the Secret key validity period. By default, the secret key validity period is one year.
 
          To continue, someone must now sign-in to Azure to complete the web app creation in Azure. The account that you use to sign-in to Azure does not need to be the same account that runs the Azure Services Wizard. After sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
 
-         When you use Create to configure a web app, Configuration Manager can creates the web app for you in Azure AD.
+         When you use Create to configure a web app, Configuration Manager can create the web app for you in Azure AD.
 		- **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue.
 
           This option is not available for all services you might configure.
 
    **Native Client app:**  Browse opens the Client App window.  
-     In the **Client App** window, select the client app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients.
+     In the **Client App** window, select the client app you want to use, and then click **OK**. 
 
-     If you do not have an available app, use one of the following:.
+     If you do not have an available client app, use one of the following:
+     - **Create**: To create a new Client app, click **Create**. Next provide a friendly name for the app and the Reply URL.
 
-     - **Create**: To create a new Client app, click **Create**. Next provide a friendly name for the app and the Reply URL.   Secret key validity period. By default, the secret key validity period is one year.
-
-          To continue, someone must now sign-in to Azure to complete the web app creation in Azure. The account that you use to sign-in to Azure does not need to be the same account that runs the Azure Services Wizard. After sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
-
-          When you use Create to configure a web app, Configuration Manager can creates the web app for you in Azure AD.
+          To continue, someone must now sign-in to Azure to complete the client app creation in Azure. The account that you use to sign-in to Azure does not need to be the same account that runs the Azure Services Wizard. After sign-in to Azure, Configuration Manager creates the native client app in Azure for you, including the Client ID for use with the web app. Later, you can view these from the Azure portal.
+          When you use Create to configure the app, Configuration Manager can creates the native client app for you in Azure AD.
      - **Import**: To use a client app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the Client ID. Then, click **OK** to continue.
-
            This option is not available for all services you might configure.
-
-    > [!TIP]  
-    > When you use Import, the account you use to runs the wizard must have the *Read directory data* application permission in the Azure portal. This is required to set the correct permissions for the App. When you use Create, Configuration Manager creates the app with the correct permissions. However, you still must give consent to the application in the Azure portal.
-
-
-6.	On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**.
+<!-- Removed temporarily after feedback   > [!TIP]  
+    > When you use Import, the account you use to runs the wizard must have the *Read directory data* application permission in the Azure portal. This is required to set the correct permissions for the App. When you use Create, Configuration Manager creates the app with the correct permissions. However, you still must give consent to the application in the Azure portal. -->
+6.	On the **Discovery** page of the wizard, click **Enable Azure Active Directory User Discovery**, and then click **Settings**.
 In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD. Learn more about [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 7.	Complete the wizard.
 
