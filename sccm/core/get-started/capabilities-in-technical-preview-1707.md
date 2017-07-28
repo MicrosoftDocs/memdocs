@@ -56,7 +56,7 @@ Click a section of the **Surface Models** chart for a complete list of the devic
 ## Configure and deploy Windows Defender Application Guard policies
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Fall Creator’s Update (codename: RS3). To test this feature now, you must be using a preview version of this update.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
 
 ### Before you start
 
@@ -86,7 +86,7 @@ In this Technical Preview, we’ve expanded on this capability. Configuration Ma
 
 ### Try it out!
 
-1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console]( /sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
 3. Supply a parameter value for the selected parameter, and then click **OK**.
 4. Complete the wizard.
