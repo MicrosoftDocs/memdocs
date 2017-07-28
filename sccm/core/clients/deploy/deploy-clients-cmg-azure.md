@@ -39,22 +39,21 @@ Use the following steps to help you accomplish this:
 
 - You must have an Azure AD tenant.
 - Your devices must run Windows 10 and be Azure AD joined. Clients can also be domain joined in addition to Azure AD joined).
-- In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected with this) are enabled on the computer that hosts this site system role.
+- In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected) are enabled on the computer that hosts this site system role.
 - To use Configuration Manager to deploy the client:
-	- At least one management point must be configured for HTTPS mode.
-	- You must set up a Cloud Management Gateway.
+	- Confiugre at least one management point for HTTPS mode.
+	- Set up a Cloud Management Gateway.
 
 ## Step 1: Set up the Cloud Management Gateway
 
-Set up the Cloud Management Gateway to let clients access your Configuration Manager site from the internet without using certificates 
-You'll find help about how to do this in the following topics: 
+Set up the Cloud Management Gateway to let clients access your Configuration Manager site from the internet without using certificates. Find help in the following topics: 
 •	[Plan for cloud management gateway in Configuration Manager](/sccm/core/clients/manage/plan-cloud-management-gateway).
 •	[Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
 •	[Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
 
 ## Step 2: Set up the Azure Services app in Configuration Manager Cloud Services
 
-This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. To do this: 
+This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. 
 
 Azure AD User Discovery is configured as part of *Cloud Management*. The procedure to do so is detailed in step **6** of the procedure [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
 	
@@ -67,7 +66,7 @@ After you complete the procedure, you have connected your Configuration Manager 
 	- **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
 2.	Deploy the client settings to the required collection of devices.
 
-To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
+To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results show **YES** if the device is Azure AD joined.
 
 
 ## Step 4: Install and register the Configuration Manager client using Azure Active Directory Identity
