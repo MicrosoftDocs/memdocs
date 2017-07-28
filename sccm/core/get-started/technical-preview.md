@@ -110,6 +110,17 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Client Peer Cache support for express installation files for Windows 10 and Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Not added](media/Red_X.gif)|
+ |Surface Device dashboard|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Not added](media/Red_X.gif)|
+ |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
+ |Add parameters when you deploy PowerShell scripts from Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
+
+
+## Capabilities delivered in previous technical previews
+ When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
+
+ |Capability |Technical Preview version |Current Branch version|  
+ |----------------|---------------------|--------------------|
  |New mobile application management policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Not added](media/Red_X.gif)|
  |Improved boundary groups for software update points|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[Version 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
  |Site server role high availability|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Not added](media/Red_X.gif)|
