@@ -56,20 +56,9 @@ You'll find help about how to do this in the following topics:
 
 This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. To do this: 
 
-1.	In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
-2.	On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
-3.	On the **Azure Services** page of the Azure Services Wizard, select **Cloud Management** to allow clients to authenticate with the hierarchy using Azure AD.
-4.	On the **General** page of the wizard, specify a name, and a description for your Azure service.
-5.	On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the server and client apps that will be used to configure the Azure service:
-	- In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
-		- **Create:** To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
-		- **Import:** To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue. This option is not currently available in this technical preview.
-	- Repeat the same process for the client app.
-You need to grant the **Read directory data** application permission when you use **Application Import**, to set the correct permissions in the portal. If you use **Application Creation** the permissions are automatically created with the application, but you still need to give consent to the application in the Azure portal.
-6.	On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**. In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD.
-7.	Complete the wizard.
+Azure AD User Discovery is configured as part of *Cloud Management*. The procedure to do so is detailed in step **6** of the procedure [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
 	
-At this point, you have connected your Configuration Manager site to Azure AD. 
+After you complete the procedure, you have connected your Configuration Manager site to Azure AD. 
 
 ## Step 3: Configure client settings to register Windows 10 devices with Azure AD
 

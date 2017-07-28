@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/25/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -79,6 +79,8 @@ On PCs running a version of Windows 10 earlier than the Creators Update (with th
 
 ## Set up Windows Store for Business synchronization
 
+### For Configuration Manager versions prior to 1706
+
 **In Azure Active Directory, register Configuration Manager as a “Web Application and/or Web API” management tool. This action gives you a client ID that you need later.**
 1. In the Active Directory node of [https://manage.windowsazure.com](https://manage.windowsazure.com), select your Azure Active Directory, then click **Applications** > **Add**.
 2.  Click **Add an application my organization is developing**.
@@ -104,6 +106,24 @@ On PCs running a version of Windows 10 earlier than the Creators Update (with th
 2.  On the **Home** tab, in the **Windows Store for Business** group, click **Add Windows Store for Business Account**. 
 3.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.
 4. Once you are done, you can see the account you configured in the **Windows Store for Business** list in the Configuration Manager console.
+
+### For Configuration Manager version 1706 and later
+
+1. In the console, go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services** to start the **Azure Services Wizard**.
+2. On the **Azure Services** page, select the service you want to configure, and then click **Next**.
+3. On the **General** page, provide a friendly name for the Azure service name and an optional description, and then click **Next**.
+4. On the **App** page, specify your Azure environment, and then click **Browse** to open the **Server App** window.
+5. In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
+	- **Create:** To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
+	- **Import:** To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue. 
+6. Review the **Information** page and complete any additional steps and configurations as directed. These configurations are necessary to use the service with Configuration Manager. For example, to configure the Windows Store for Business:
+	- In Azure you must register Configuration Manager as a web application or Web API and record the client ID. You also specify a client key for use by the management tool (which is Configuration Manager).
+	- In the Windows Store for Business console you must configure Configuration Manager as the store management tool, enable support for offline licensed apps, and then purchase at least one app. 
+7. Click **Next** when you are ready to continue.
+8. On the **App Configurations** page, complete the app catalog and language configurations for this service, and then click **Next**.
+9. After the wizard completes, the Configuration Manager console shows that you have configured **Windows Store for Business** as a **Cloud Service Type**.
+
+
 
 
 ## Create and deploy a Configuration Manager application from a Windows Store for Business app.
