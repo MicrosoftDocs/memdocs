@@ -47,7 +47,7 @@ For information about what is collected by each Windows 10 telemetry level, see 
 For information about data collected from these operating systems when you opt-in, see download  the [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) pdf file from Microsoft.
 
   -  **Configure Internet Explore data collection**  
-On devices running Windows 8.1 or earlier, Internet Explorer data collection can allow Upgrade Readiness to detect web application incompatibilities that could prevent a smooth upgrade to Windows 10. Internet Explorer data collection can be enabled on a per internet zone basis. For more information about internet zones, see [About URL Security Zones](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx).
+On devices running Windows 8.1 or earlier, Internet Explorer data collection can allow Upgrade Readiness to detect web application incompatibilities that could prevent a smooth upgrade to Windows 10. Internet Explorer data collection can be enabled on a per internet zone basis. For more information about internet zones, see [About URL Security Zones](https://msdn.microsoft.com/library/ms537183(v=vs.85).aspx).
 
 ## Use Upgrade Readiness to identify Windows 10 compatibility issues
 

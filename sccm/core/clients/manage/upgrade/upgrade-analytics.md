@@ -134,10 +134,10 @@ Before the 1706 branch of Configuration Manager, to create a connection to Upgra
 
 ### Prerequisites
 
-- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
+- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
 - Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
 - Create a client key for the registered management tool in Azure Active Directory.
-- In the Azure portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/en-us/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+- In the Azure portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
 
     > [!IMPORTANT]
 	> When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.

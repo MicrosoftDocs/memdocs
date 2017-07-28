@@ -1,6 +1,6 @@
 ---
-title: "Share applications | Microsoft Docs"
-description: "Share a link to an application in Software Center."
+title: "Share applications from System Center Configuration Manager | Microsoft Docs"
+description: "Share a link to an application in the Software Center in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
@@ -29,4 +29,3 @@ You can copy a hyperlink to an application in Software Center using the  ![Share
 2. Click the ![Share](media/share15.png) **Share** button.
 3. Click **Copy** in the window.
 4. Paste the URL into an email to share the application.
-
