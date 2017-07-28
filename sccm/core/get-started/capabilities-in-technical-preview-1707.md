@@ -2,7 +2,7 @@
 title: "Technical Preview 1707 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1707 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
