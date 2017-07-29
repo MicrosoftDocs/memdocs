@@ -2,7 +2,7 @@
 title: "SQL Server Always On | Microsoft Docs"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -32,12 +32,14 @@ When you use availability groups in Microsoft Azure, you can further increase av
 >  Before you continue, be comfortable with configuring SQL Server and SQL Server availability groups. The information that follows references the SQL Server documentation library and procedures.
 
 ## Supported scenarios
-The following are supported scenarios for using availably groups with Configuration Manager. Details and procedures for each can be found in [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
+The following are supported scenarios for using availability groups with Configuration Manager. Details and procedures for each can be found in [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
 
 -      [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group).
 -     [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group).
--     [Add or remove replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members).
+-     [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members).
+-     [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca) (Requires Configuration Manager version 1706 or later.)
+-     [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site) (Requires Configuration Manager version 1706 or later.)
 -     [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group).
 
 
@@ -56,22 +58,26 @@ Each replica in the availability group must run a version of SQL Server that is 
 You must use an *Enterprise* edition of SQL Server.
 
 **Account:**  
-Each instance of SQL Server can run under a domain user account  (**service account**) or **Local System**. Each replica in a group can have a different configuration. Per [SQL Server best practices](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd), use an account with the lowest possible permissions.
+Each instance of SQL Server can run under a domain user account (**service account**) or a non-domain account. Each replica in a group can have a different configuration. Per [SQL Server best practices](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd), use an account with the lowest possible permissions.
 
-For example, to configure Service Accounts and permissions for SQL Server 2016, see [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) on MSDN.
+-   To configure Service Accounts and permissions for SQL Server 2016, see [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) on MSDN.
+-  	To use a non-domain account, you must use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).
 
-  If you use **Local System** to run a replica, you must configure endpoint authentication. This includes delegation of rights to enable a connection to the replica server endpoint.
-  -     Delegate SQL Server rights by adding the computer account of each SQL Server as a login on the other SQL Servers in the node, and granting that account SA rights.  
-  -     Delegate Endpoint rights to each remote server on the local endpoint by running the following script on each replica:    
-
-              GRANT CONNECT ON endpoint::[endpoint_name]  
-              TO [domain\servername$]
 
 For more information see [Create a Database Mirroring Endpoint for Always On Availability Groups](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
 ### Availability group configurations
 **Replica members:**  
-The availability group must have one primary replica and can have up to two synchronous secondary replicas.  Each replica member must:
+- 	The availability group must have one primary replica.
+- 	Prior to version 1706, you can have up to two synchronous secondary replicas.
+- 	Beginning with version 1706, you can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.
+
+    You can use an asynchronous commit replica to recover your synchronous replica. See [site database recovery options]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
+    > [!CAUTION]  
+    > Configuration Manager does not support failover to use the asynchronous commit replica as your site database.
+Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.
+
+Each replica member must:
 -   Use the **default instance**  
     *Beginning with version 1702, you can use a* ***named instance***.
 
@@ -80,7 +86,7 @@ The availability group must have one primary replica and can have up to two sync
 -	  Be set for **Manual Failover** 	  
 
     >  [!TIP]
-    >  Configuration Manager supports using the availability group replicas when set to **Automatic Failover**. However, **Manual Failover** must be set when:
+    >  Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. However, **Manual Failover** must be set when:
     >  -  You run Setup to specify use of the site database in the availability group.
     >  -  When you install any update to Configuration Manager (not just updates that apply to the site database).  
 

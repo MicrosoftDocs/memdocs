@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternateDowloadProvider Interface | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider Interface | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 42eb99e9-6421-415d-8e80-7e8f8b322cb3searchScope: - ConfigMgr SDK
+ms.assetid: 42eb99e9-6421-415d-8e80-7e8f8b322cb3
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternateDowloadProvider Interface
+# ICcmAlternateDownloadProvider Interface
 The **ICcmAlternateDownloadProvider** interface, in Configuration Manager, defines the interface for an alternative download provider to be invoked by Content Transfer Manager to download packages.  
 
 ## Syntax  

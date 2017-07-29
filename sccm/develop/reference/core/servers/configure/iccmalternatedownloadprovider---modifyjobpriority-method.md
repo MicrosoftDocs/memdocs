@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternatedownloadProvider : ModifyJobPriority | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : ModifyJobPriority | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: a9dd8eee-87cc-48cd-b59f-6424d3e6dc4asearchScope: - ConfigMgr SDK
+ms.assetid: a9dd8eee-87cc-48cd-b59f-6424d3e6dc4a
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternatedownloadProvider : ModifyJobPriority Method
+# ICcmAlternateDownloadProvider : ModifyJobPriority Method
 The **ICcmAlternateDownloadProvider::ModifyJobPriority** method, in Configuration Manager, instructs the provider to modify the priority for a given job.  
 
 ## Syntax  
