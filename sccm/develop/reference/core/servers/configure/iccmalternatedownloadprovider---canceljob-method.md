@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternatedownloadProvider : CancelJob | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : CancelJob | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 51a8436a-a9ef-449f-aaa3-49bd9768bd54searchScope: - ConfigMgr SDK
+ms.assetid: 51a8436a-a9ef-449f-aaa3-49bd9768bd54
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternatedownloadProvider : CancelJob Method
+# ICcmAlternateDownloadProvider : CancelJob Method
 The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.  
 
 > [!NOTE]

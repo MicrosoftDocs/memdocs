@@ -116,3 +116,4 @@ After installation completes, run **UpdatesPublisher.exe** from the *UpdatesPubl
  After you install Updates Publisher, we recommend you [configuring the options](updates-publisher-options.md) for Updates Publisher. You must configure some options before you can use some features of Updates Publisher.
 
  However, if you want to use the defaults and do not plan to deploy updates to an update server or to managed devices, you can jump right to [managing software update catalogs](updates-publisher-catalogs.md), or [create software updates](create-updates-with-updates-publisher.md) and create update catalogs of your own.
+

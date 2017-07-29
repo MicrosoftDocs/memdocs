@@ -2,7 +2,7 @@
 title: "VPN Profiles in System Center Configuration Manager | Microsoft Docs"
 description: "VPN Profiles on mobile devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,7 +34,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
  |Connection type|iOS and macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
  |Cisco AnyConnect|Yes|Yes|No|No|No|No|Yes (OMA-URI)|
- |Cisco (IPSec)|macOS only|No|No|No|No|No|No|  
+ |Cisco (IPSec)|iOS only|No|No|No|No|No|No|  
  |Pulse Secure|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |F5 Edge Client|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |Dell SonicWALL Mobile Connect|Yes|Yes|Yes|No|Yes|Yes|Yes|  

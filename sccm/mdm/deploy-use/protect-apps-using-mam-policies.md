@@ -37,12 +37,12 @@ To use this new capability, you need to use the Azure preview portal. The follow
 
 To apply restrictions to an app, the app must incorporate the Microsoft Intune App Software Development Kit (SDK). There are two methods of obtaining this type of app:  
 
--   **Use a policy managed app** (Android and iOS): These apps have the App SDK built in. To add this type of app, you specify a link to the app from an app store such as the iTunes store or Google Play. No further processing is required for this type of app. For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
+-   **Use a policy managed app** (Android and iOS): These apps have the App SDK built in. To add this type of app, you specify a link to the app from an app store such as the iTunes store or Google Play. No further processing is required for this type of app. For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/library/dn708489.aspx).  
 
 -   **Use a "wrapped" app** (Android and iOS): These apps are repackaged to include the App SDK by using the **Microsoft Intune App Wrapping Tool**. This tool is typically used to process company apps that were created in-house. It cannot be used to process apps that were downloaded from the app store. See the following articles for more information:
-    - [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx)
+    - [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx)
 
-    - [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx)  
+    - [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## Create and deploy an app with a mobile application management policy  
 
@@ -52,7 +52,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 
      For example, the URL of the Microsoft Word for iPad app is **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **To create a wrapped app**: Use the information in the topics [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx) to create a wrapped app.  
+-   **To create a wrapped app**: Use the information in the topics [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx) to create a wrapped app.  
 
      The tool creates a processed app and an associated manifest file. You use these files when you create a Configuration Manager application that contains the app.  
 
@@ -172,4 +172,4 @@ For more information, see [Manage Internet access using managed browser policies
 -   If no policy has already been deployed to the device, and two conflicting settings are deployed, the default setting that's built into the device is used.  
 
 ##  See a list of available policy managed apps  
- For a list of the policy managed apps that are available for iOS and Android devices, see [Microsoft Intune application partners](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).  
+ For a list of the policy managed apps that are available for iOS and Android devices, see [Microsoft Intune application partners](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).  

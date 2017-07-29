@@ -49,7 +49,7 @@ The following instances are supported:
  The following configurations are not supported:
  -   A SQL Server cluster in a Network Load Balancing (NLB) cluster configuration
  -   A SQL Server cluster on a Cluster Shared Volume (CSV)
- -   SQL Server datbase mirroring technology, and peer-to-peer replication
+ -   SQL Server database mirroring technology, and peer-to-peer replication
 
 SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](https://technet.microsoft.com/library/mt608546.aspx).  
 
@@ -255,5 +255,5 @@ For an example of how to configure SQL Server to use a specific port, see [How t
 ## Upgrade options for SQL Server
 If you need to upgrade your version of SQL Server, we recommend the following methods, from easy to more complex.
 1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommended).
-2. Install a new version of SQL Server on a new computer, and then [use the datbase move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server.
+2. Install a new version of SQL Server on a new computer, and then [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server.
 3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery).

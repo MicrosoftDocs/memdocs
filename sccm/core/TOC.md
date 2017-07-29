@@ -103,6 +103,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
 ###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
 ###  [Capabilities in 1705](get-started/capabilities-in-technical-preview-1705.md)
 ###  [Capabilities in 1704](get-started/capabilities-in-technical-preview-1704.md)
@@ -189,6 +190,7 @@
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
+###  [Configure Azure services](servers/deploy/configure/azure-services-wizard.md)
 ##   Technical references
 ###  [Accounts](plan-design/hierarchy/accounts.md)
 ###  [Communications between endpoints](plan-design/hierarchy/communications-between-endpoints.md)
@@ -284,6 +286,7 @@
 #### [Linux and UNIX client commands](clients/deploy/linux-and-unix-clients-technical-reference.md)
 ###  [Prepare to deploy clients to Macs](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [How to deploy clients to Macs](clients/deploy/deploy-clients-to-macs.md)
+###  [Install clients from the Internet using Azure AD](clients/deploy/deploy-clients-cmg-azure.md)
 ###  [How to assign clients to a site](clients/deploy/assign-clients-to-a-site.md)
 ###  [How to configure client status](clients/deploy/configure-client-status.md)
 ###  [How to monitor client deployment status](clients/deploy/monitor-client-deployment-status.md)
@@ -292,6 +295,7 @@
 
 ##   [Monitor and manage clients](clients/manage/monitor-clients.md)
 ###  [How to monitor clients](clients/manage/monitor-clients.md)
+###  [Use Windows Analytics](clients/manage/monitor-windows-analytics.md)
 ###  [How to monitor Linux and UNIX clients](clients/manage/monitor-clients-for-linux-and-unix-servers.md)
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)

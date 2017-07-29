@@ -45,6 +45,7 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
 
  |Feature          |Added as pre-release | Added as a full feature|  
 |------------------|---------------------|---------------------|
+| Create and run PowerShell scripts from the Configuration Manager console |  [Version 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Device Guard management with Configuration Manager |  [Version 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Check for running executable files before installing an application  |   [Version 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Data Warehouse service point  |  [Version 1702](/sccm/core/servers/manage/data-warehouse) |[Version 1706](/sccm/core/servers/manage/data-warehouse)|

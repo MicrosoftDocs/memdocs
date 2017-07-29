@@ -3,7 +3,9 @@
 title: Configure classifications and products to synchronize | Microsoft Docs
 description: "Follow these steps to configure classifications and products to synchronize in the Configuration Manager console."
 keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: dougeby
+ms.author: dougeby
+manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
@@ -14,7 +16,10 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 
 
 ---
-#  Configure classifications and products to synchronize  *Applies to: System Center Configuration Manager (Current Branch)*
+#  Configure classifications and products to synchronize  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 > [!NOTE]  
 >  Use the procedure from this section only on the top-level site.  
@@ -42,9 +47,9 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     > - **Tools**: Specifies a utility or feature that helps to complete one or more tasks.  
     > - **Update Rollups**: Specifies a cumulative set of hotfixes that are packaged together for easy deployment. These hotfixes can include security updates, critical updates, updates, and so on. An update rollup generally addresses a specific area, such as security or a product component.  
     > - **Updates**: Specifies an update to an application or file that is currently installed.  
-    > - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality.  
-    >   
-    >      Your software update points and sites must run a minimum of WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification.  
+    > - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification.    
+    >     
+    > Beginning in Configuration Manager version 1706, you can also select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers.
 
 5.  On the **Products** tab, specify the products for which you want to synchronize software updates, and then click **Close**.  
 
@@ -54,8 +59,7 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     >  When software updates are applicable to multiple products, and at least one of the products was selected for synchronization, all of the products will appear in the Configuration Manager console even if some products were not selected. For example, if Windows Server 2012 is the only operating system that you selected, and if a software update applies to Windows 8 and Windows Server 2012, both products will be displayed in the Configuration Manager console.  
 
     > [!IMPORTANT]  
-    >  Configuration Manager stores a list of products and product families from which  you can choose when you first install the software update point. Products and product families that are released after Configuration Manager is released might not be available to select until you complete software updates synchronization, which updates the list of available products and product families from which you can choose.  
-
+    >  Configuration Manager stores a list of products and product families from which you can choose when you first install the software update point. Products and product families that are released after Configuration Manager is released might not be available to select until you complete software updates synchronization, which updates the list of available products and product families from which you can choose.  
 
 ## Next steps
 Start software updates synchronization to retrieve software updates based on the new criteria. For details, see [Synchronize software updates](synchronize-software-updates.md).
