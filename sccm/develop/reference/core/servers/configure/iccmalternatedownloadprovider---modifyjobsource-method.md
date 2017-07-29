@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternatedownloadProvider : ModifyJobSource | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : ModifyJobSource | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 13498951-c8f6-437b-91c3-d37acce33d49searchScope: - ConfigMgr SDK
+ms.assetid: 13498951-c8f6-437b-91c3-d37acce33d49
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternatedownloadProvider : ModifyJobSource Method
+# ICcmAlternateDownloadProvider : ModifyJobSource Method
 The **ICcmAlternateDownloadProvider::ModifyJobSource** method, in Configuration Manager, instructs the provider to modify the source location for a given job.  
 
 ## Syntax  

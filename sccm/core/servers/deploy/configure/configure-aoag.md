@@ -2,7 +2,7 @@
 title: "Configure Availability Groups | Microsoft Docs"
 description: "Set up and manage SQL Server Always On Availability groups with SCCM."
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,7 +25,7 @@ Use the information in this topic to configure and manage the availability group
 
 Before you start:  
 -   Be familiar with the information from [Prepare to use SQL Server Always On availability groups with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
--   Be familiar with SQL Server documentation that covers the use of availability groups and related procedures that are required to complete the following scenarios.
+-   Be familiar with SQL Server documentation that covers the use of availability groups and related procedures. That information is required to complete the following scenarios.
 
 > [!TIP]  
 >  Links from this topic for SQL Server go to content for SQL Server 2016. If you do not use that version of SQL Server, consult the documentation for the version you use.
@@ -34,8 +34,8 @@ Before you start:
 Use the following procedure to create an availability group and then move a copy of the site database to that availability group.
 
 To complete this procedure, the account you use must be:
--   A member of the **Local Administrators** group on each computer that will be in the availability group.
--   A **sysadmin** on each instance of SQL Server that will host the site database.
+-   A member of the **Local Administrators** group on each computer that is in the availability group.
+-   A **sysadmin** on each instance of SQL Server that hosts the site database.
 
 ### To create and configure an availability group for Configuration Manager  
 1.	Use the following command to stop the Configuration Manager site:
@@ -44,31 +44,31 @@ To complete this procedure, the account you use must be:
 2.	Change the backup model for the site database from **SIMPLE** to **FULL**.
 See [View or Change the Recovery Model of a Database](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) in the SQL Server documentation. (Availability groups only support FULL).
 
-3.	Use SQL Server to create a full backup of your site database, and then do one of the following, depending on whether the server that hosts your site database will be a replica member of the new availability group or not:
+3.	Use SQL Server to create a full backup of your site database. Then, do one of the following, depending on whether the server that hosts your site database will be a replica member of the new availability group or not:
     -   **Will be member of your availability group:**  
         If you use this server as the initial primary replica member of the availability group, you do not need to restore a copy of the site database to this or another server in the group. The database will already be in place on the primary replica, and SQL Server will replicate the database to the secondary replicas during a later step.  
 
 	  -    **Will not be a member of the availability group:**   
-    You must restore a copy of the site database to the server that will host the primary replica of the group.
+    Restore a copy of the site database to the server that will host the primary replica of the group.
 
     For information on how to complete this step, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) and [Restore a Database Backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)in the SQL Server documentation.
 
 4.	On the server that will host the initial primary replica of the group, use the [New Availability Group Wizard](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) to create the availability group. In the wizard:
-	  -    On the **Select Database** page, select the database for you Configuration Manager site.  
+	  -    On the **Select Database** page, select the database for your Configuration Manager site.  
 
 	  -    On the **Specify Replicas** page, configure:
     	  -    **Replicas:** Specify the servers that will host secondary replicas.
 
     	  -    **Listener:** Specify the **Listener DNS Name** as a full DNS name,  like **&lt;Listener_Server>.fabrikam.com**. This is used when you configure Configuration Manager to use the database in the availability group.
 
-	  -    On the **Select Initial Data Synchronization** page, select **Full**. After the wizard creates the availability group, the wizard will backup the primary database and transaction log, and then restore them on each server that hosts a secondary replica. (If you do not use this step, you will need to restore a copy of the site database to each server that hosts a secondary replica, and manually join that database to the group.)   
+	  -    On the **Select Initial Data Synchronization** page, select **Full**. After the wizard creates the availability group, the wizard will back up the primary database and transaction log. Then the wizard restores them on each server that hosts a secondary replica. (If you do not use this step, you will need to restore a copy of the site database to each server that hosts a secondary replica, and manually join that database to the group.)   
 
 5.	Check the configuration on each replica:   
   1.	Ensure the computer account of the site server is a member of the **Local Administrators** group on each computer that is a member of the availability group.  
 
   2.  Run the [verification script](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) from the prerequisites to confirm that the site database on each replica is correctly configured.
 
-  3.	If it’s necessary to set configurations on secondary replicas, you must manually failover the primary replica to the secondary replica before continuing because you can only configure the database of a primary replica. For more information see [Perform a Planned Manual Failover of an Availability Group](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
+  3.	If it’s necessary to set configurations on secondary replicas, you must manually failover the primary replica to the secondary replica before continuing. You can only configure the database of a primary replica. For more information, see [Perform a Planned Manual Failover of an Availability Group](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
 
 6.	After all replicas meet the requirements, the availability group is ready to be used with Configuration Manager.
 
@@ -82,7 +82,7 @@ To complete this procedure, the account you use to run Configuration Manager Set
 -   A **sysadmin** on each instance of SQL Server that hosts the site database.
 
 > [!IMPORTANT]
-> When you use Microsoft Intune with Configuration Manager in a hybrid configuration, moving the site database to or from an availability group triggers a resynchronization of data with the cloud. This cannot be avoided.
+> When you use Microsoft Intune with Configuration Manager in a hybrid configuration, moving the site database to or from an availability group triggers a resynchronization of data with the cloud. This resynchronization cannot be avoided.
 
 ### To configure a site to use the availability group
 1.	Run **Configuration Manager Setup** from **&lt;*Configuration Manager site installation folder*>\BIN\X64\setup.exe**.
@@ -94,7 +94,7 @@ To complete this procedure, the account you use to run Configuration Manager Set
 4.	Reconfigure the following for the site database:
     -   **SQL Server name:** Enter the virtual name for the availability group **listener** that you configured when creating the availability group. The virtual name should be a full DNS name, like **&lt;*endpointServer*>.fabrikam.com**.  
 
-    -   **Instance:** This value must be blank to specify the default instance for the *listener* of the availability group. If the current site database is installed on a named instance, the named instance will be listed and must be cleared.
+    -   **Instance:** This value must be blank to specify the default instance for the *listener* of the availability group. If the current site database runs on a named instance, the named instance is listed and must be cleared.
 
     -   **Database:** Leave the name as it appears. This is the name of the current site database.
 
@@ -102,15 +102,15 @@ To complete this procedure, the account you use to run Configuration Manager Set
 
 
 
-## Add and remove replica members  
-When your site database is hosted in an availability group, use the following procedures to add or remove replica members. Configuration Manager supports a single primary, and up to two secondary nodes.
+## Add and remove synchronous replica members  
+When your site database is hosted in an availability group, use the following procedures to add or remove synchronous replica members. For information about the type and number of replicas that are supported, see **Availability group configurations** under [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) in the prepare to use availability group topic.
 
 To complete the following procedures, the account you use must be:
 -   A member of the **Local Administrators** group on each computer that is a member of the availability group.
 -   A **sysadmin** on each SQL Server that hosts or will host the site database.
 
 
-### To add a new replica member
+### To add a new synchronous replica member
 1.	Add the new server as a secondary replica to the availability group. See [Add a Secondary Replica to an Availability Group (SQL Server)](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) in the SQL Server documentation library.
 
 2.	Stop the Configuration Manager site by running **Preinst.exe /stopsite**. See [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
@@ -129,6 +129,21 @@ To complete the following procedures, the account you use must be:
 
 ### To remove a replica member
 For this procedure, use the information in [Remove a Secondary Replica from an Availability Group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) from the SQL Server documentation.
+
+## Configure an asynchronous commit replica
+Beginning with Configuration Manager version 1706, you can add an asynchronous replica to an availability group you use with Configuration Manager. To do so, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See the [SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))  for information on how to add secondary replicas to availability groups.
+
+## Use the asynchronous replica to recover your site
+With Configuration Manager version 1706 and later, you can use an asynchronous replica to recover your site database. To do so, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
+
+To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
+
+Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
+
+<!-- For inclusion with passive primary site support:
+> [!TIP]  
+> If you use a primary passive replica (introduced in version [TBD],  you do not need to stop the passive replica. Only the active primary site must be stopped.
+-->  
 
 ## Stop using an availability group
 Use the following procedure when you no longer want to host your site database in an availability group. This involves moving the site database back to a single instance of SQL Server.

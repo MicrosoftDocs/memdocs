@@ -2,7 +2,7 @@
 title: "Create Android applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Android devices."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,7 +20,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A System Center Configuration Manager application has one or more deployment types that comprise the installation files and information that are required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.  
+A System Center Configuration Manager application has one or more deployment types. Deployment types comprise the installation files and information required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.  
 
  You can create applications by using the following methods:  
 
@@ -46,9 +46,9 @@ The following deployment actions are supported:
 |Android for Work | **Required** |
 
 ## Approve and deploy Android for Work apps
-As a Configuration Manager admin, you can also approve and deploy apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices.
+As a Configuration Manager admin, you can also approve apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices.
 
-Follow these steps to approve apps in the Play for Work store, sync them to the Configuration Manager console, and deploy them to managed Android for Work devices. To deploy apps to users' work profiles, you'll need to approve the apps in Play for Work, and then sync the apps with the Configuration Manager console.
+Follow these steps to approve apps in the Play for Work store, sync them to the Configuration Manager console, and deploy them to managed Android for Work devices. To deploy apps to users' work profiles, you need to approve the apps in Play for Work, and then sync the apps with the Configuration Manager console.
 
 1. Open a browser and go to: https://play.google.com/work.
 2. Sign in by using the Google admin account that you bound to your Intune tenant.

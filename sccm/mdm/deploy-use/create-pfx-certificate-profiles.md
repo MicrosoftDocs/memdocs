@@ -43,7 +43,6 @@ System Center Configuration Manager allows you to import, then provision persona
 ### Get started
 
 1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
-
 2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Certificate Profiles**.  
 
 3.  On the **Home** tab, in the **Create** group, click **Create Certificate Profile**.
@@ -54,9 +53,11 @@ System Center Configuration Manager allows you to import, then provision persona
 
     -   **Description**: Provide a description that gives an overview of the certificate profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
 
-    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose:  
+    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of the following:  
 
-        -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate.  
+        -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Imports a PFX certificate.  
+
+        -   **Personal Information Exchange - PKCS #12 (PFX) settings - Create**: Creates a PFX certificate.
        
 
 ### Import a PFX certificate
@@ -102,7 +103,17 @@ The following script variables must be modified for your script:
    -   $ProfileName = The name of the PFX profile  
    -   ComputerName = Name of host computer   
 
+### Create a PFX certificate
 
+To create a PFX certificate:
+
+1.  First, choose the certificate authority (CA).  Starting with version 1706, you may choose between Microsoft or Entrust as a certificate authority.
+
+2.  Click **Next**. 
+
+3.  On the **Supported Platforms** page, choose the device platforms on which this certificate will be installed, and then click **Next**.
+
+4.  On the **Configure Certificate Authorities** page, choose the **Primary Site** and the **Certificate registration point**.   These must be previously defined [certificate registration points](/sccm/protect/deploy-use/introduction-to-certificate-profiles).   
 
 ### Finish up
 
