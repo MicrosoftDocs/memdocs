@@ -2,7 +2,7 @@
 title: "Create Exchange ActiveSync email profiles | Microsoft Docs"
 description: "Learn how to create and configure email profiles in System Center Configuration Manager that work with Microsoft Intune."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -105,7 +105,11 @@ To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard
 
     -   **Use S/MIME**. Send outgoing email by using S/MIME encryption. This option is applicable to iOS devices only. Choose from the following options:
 
+        -   ***Signing certificates**.  Choose **Select** and then choose a PFX certificate to use for encryption.  
+
     	-   **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. You can choose only a PFX certificate to use as an encryption certificate.
+
+        -   To encrypt all mail messages, enable the **Require encryption** checkbox.  
 
 		If you choose both an encryption certificate and a signing certificate, these must both be in PFX format.
 
