@@ -53,9 +53,9 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
 -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
 
--   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Import PFX certificate profiles](../../protect/deploy-use/import-pfx-certificate-profiles.md).
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Import PFX certificate profiles](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
 
--   **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to process PFX certificates using a certificate authority. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to process PFX certificates using a certificate authority. To learn more about PFX certificate creation see [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 
 ### Configure a trusted CA certificate  

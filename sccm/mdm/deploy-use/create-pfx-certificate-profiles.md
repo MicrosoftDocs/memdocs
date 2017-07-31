@@ -107,7 +107,7 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
 
-1.  The **Active Directory publishing** is enabled when ConfigMgr is configured to [publish site data](../../core/servers/deploy/configure/publish-site-data).  Enable the option to publish the certificate profile to Active Directory.
+1.  The **Active Directory publishing** is enabled when ConfigMgr is configured to [publish site data](/sccm/core/servers/deploy/configure/publish-site-data).  Enable the option to publish the certificate profile to Active Directory.
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
