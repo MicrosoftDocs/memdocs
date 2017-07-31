@@ -176,6 +176,9 @@ You can now configure deferral policies for Windows 10 Feature Updates or Qualit
 
 For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).
 
+### Improved user notifications for Office 365 updates
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#restart-behavior-and-client-notifications-for-office-365-updates)
+
 ## Reporting
 
 ### Use Windows Analytics with Configuration Manager
