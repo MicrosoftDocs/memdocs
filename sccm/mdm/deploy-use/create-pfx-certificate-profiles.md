@@ -40,7 +40,7 @@ To learn more, see [Certificate profile prerequisites](../../protect/plan-design
 ## PFX certificate profiles
 System Center Configuration Manager allows you to create a PFX certificate profile using credentials issued by a certificate authority.  As of version 1706, you may choose Microsoft or Entrust as your certiciate authority.  When deployed to user devices, personal information exchange (.pfx) files generate user-specific certificates to support encrypted data exchange.
 
-To import certificate credentials from existing certificate files, see [How to create PFX certificate profiles by importing certificate details](import-pfx-certificate-profiles).
+To import certificate credentials from existing certificate files, see [How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md).
 
 ## Create and deploy a Personal Information Exchange (PFX) certificate profile  
 
@@ -107,7 +107,7 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  Enable the **Certificate usage** checkbox to use the certificate profile for S/MIME signing or encryption.
 
-    When using Microsoft as the CA, this delivers the same certificate to all enrolled devices.  When this checkbox is unchecked, each device received a unique certificate.  In addition, you optionally choose a certificate to digitally sign all email messages for iOS devices.  To learn more, see [Exchange ActiveSync email profiles in System Center Configuration Manager](create-exchange-activesync-profiles).  
+    When using Microsoft as the CA, this delivers the same certificate to all enrolled devices.  When this checkbox is unchecked, each device received a unique certificate.  In addition, you optionally choose a certificate to digitally sign all email messages for iOS devices.  To learn more, see [Exchange ActiveSync email profiles in System Center Configuration Manager](../../mdm/deploy-use/create-exchange-activesync-profiles.md).  
 
 1.  Set **Subject name format** to either **Common name** or **Fully-distinguished name**.  If unsure which to use, contact your certificate authority administrator.
 
@@ -121,7 +121,7 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
-    1.  Set **Windows certificate store** to **User** or **Local Computer**.
+    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not support certificate authorities.)
     1.  Select the **Key Storage Provider (KSP)** from one of the following options:
 
         - **Install to Trusted Platform Module (TPM) if present**  
@@ -186,6 +186,6 @@ To configure certificate settings when using Entrust as the CA:
 ## See also
 [Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) walks you through the Create Certificate Profile Wizard.
 
-[How to create PFX certificate profiles by importing certificate details](import-pfx-certificate-profiles)
+[How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
 
 [Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) provides information about deploying certificate profiles.
