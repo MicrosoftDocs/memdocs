@@ -32,7 +32,7 @@ Figure 1. Example of the release cycle overlap for current branch servicing supp
 
 |Version|Availability Date|Support End Date|  
 |-------------|-----------------------|----------------------|  
-|1702|July 31, 2017|July 31, 2018|
+|1706|July 31, 2017|July 31, 2018|
 |1702|March 27, 2017|March 27, 2018|
 |1610|November 18, 2016|November 18, 2017|
 |1606|July 22, 2016| July 22, 2017|
