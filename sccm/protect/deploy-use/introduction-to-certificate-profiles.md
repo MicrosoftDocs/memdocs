@@ -50,6 +50,8 @@ Certificate profiles provide the following management capabilities:
 
 -   **Personal information exchange (.pfx)** - Lets you request a .pfx (also known as PKCS #12) certificate for a device or user.
 
+    You may create PFX certificate profiles by ether [importing credentials](../../protect/deploy-use/import-pfx-certificate-profiles.md) from existing certificates or by [defining a certificate](../../protect/deploy-use/create-pfx-certificate-profiles.md) authority to process requests.
+
     Starting with release 1706, you can use Microsoft or Entrust as certificate authorities for **Personal information exchange (.pfx)** certificates.
 
 
@@ -60,7 +62,7 @@ PFX certificates also require a certificate registration point on a site system 
 
 For more information about how the Network Device Enrollment Service supports a policy module so that Configuration Manager can deploy certificates, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
 
-Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and  the operating system. The following devices and operating systems are supported:  
+Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and the operating system. The following devices and operating systems are supported:  
 
 -   Windows RT 8.1  
 

@@ -25,8 +25,6 @@ manager: angrobe
 
 Here, you learn how to create a certificate profile by importing credentials from external certificates.  
 
-Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service (NDES) role to provision authentication certificates, allowing users to seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the certificates to support VPN and wireless connections.
-
 [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provide general information about creating and configuring certificate profiles. This topic highlights some specific information about certificate profiles related to PFX certificates.
 
 -  Configuration Manager a variety of certificate stores appropriate for different devices and operating systems.  These include:

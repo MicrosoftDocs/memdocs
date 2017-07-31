@@ -22,23 +22,12 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Here, you'll learn how to create a certificate profile that uses a certification authority for credentials.
-
-Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.
+Here, you learn how to create a certificate profile that uses a certification authority for credentials.
 
 [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provides general information about creating and configuring certificate profiles. This topic highlights some specific information about certificate profiles related to PFX certificates.
 
--  Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and  the operating system. The following devices are supported when they are enrolled with Intune:
-
- -   iOS and MacOS/OSX
- -   Android and Android for Work
- -   Windows 10, including Windows 10 mobile.
-
-To learn more, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
-
-
 ## PFX certificate profiles
-System Center Configuration Manager allows you to create a PFX certificate profile using credentials issued by a certificate authority.  As of version 1706, you may choose Microsoft or Entrust as your certiciate authority.  When deployed to user devices, personal information exchange (.pfx) files generate user-specific certificates to support encrypted data exchange.
+System Center Configuration Manager allows you to create a PFX certificate profile using credentials issued by a certificate authority.  As of version 1706, you may choose Microsoft or Entrust as your certificate authority.  When deployed to user devices, personal information exchange (.pfx) files generate user-specific certificates to support encrypted data exchange.
 
 To import certificate credentials from existing certificate files, see [How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md).
 
@@ -76,10 +65,11 @@ As of version 1706, the following options are available:
     - All Windows 10 Mobile and higher
 - iPhone
 - iPad
-- Mac OS X
-    - All Mac OS X MDM Clients
 - Android
 - Android for Work
+
+> [!Note]  
+> MacOS/OSX devices are not currently supported.  
 
 When no other options are selected, the **Select All** checkbox selects all available options.  When one or more options are selected, **Select All** clears existing selections. 
 
@@ -90,7 +80,7 @@ When no other options are selected, the **Select All** checkbox selects all avai
 
 ### Configure certification authorities
 
-Here, you choose the certificate registration point (CRP) for your certificate authority (CA).  
+Here, you choose the certificate registration point (CRP) to process the PFX certificates.  
 
 1.  From the **Primary Site** list, choose the server containing the CRP role for the CA.
 1.  From the list of **Certification authorities**, choose the relevant CA by placing a checkmark in the left column.
@@ -107,21 +97,21 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  Enable the **Certificate usage** checkbox to use the certificate profile for S/MIME signing or encryption.
 
-    When using Microsoft as the CA, this delivers the same certificate to all enrolled devices.  When this checkbox is unchecked, each device received a unique certificate.  In addition, you optionally choose a certificate to digitally sign all email messages for iOS devices.  To learn more, see [Exchange ActiveSync email profiles in System Center Configuration Manager](../../mdm/deploy-use/create-exchange-activesync-profiles.md).  
+    When you check this option while using Microsoft as the CA, the same PFX certificate is delivered to all enrolled devices.  When this checkbox is unchecked, each device received a unique certificate.  In addition, you optionally choose a certificate to digitally sign all email messages for iOS devices.  To learn more, see [Exchange ActiveSync email profiles in System Center Configuration Manager](../../mdm/deploy-use/create-exchange-activesync-profiles.md).  
 
 1.  Set **Subject name format** to either **Common name** or **Fully-distinguished name**.  If unsure which to use, contact your certificate authority administrator.
 
 1.  For **Subject alternative name**, enable the **Email address** and **User principle name (UPN)** as appropriate for your CA.
 
-1.  Set **Renewal threshold** to the percentage of time you wish to receive renewal reminders.
+1.  **Renewal threshold** defines the percentage of time prior to expiration that triggers renewal reminders.
 
 1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
 
-1.  If you're using Active Directory, the **Active Directory publishing** option will be available.  Enable the option to publish the certificate.
+1.  The **Active Directory publishing** is enabled when ConfigMgr is configured to [publish site data](../../core/servers/deploy/configure/publish-site-data).  Enable the option to publish the certificate profile to Active Directory.
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
-    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not support certificate authorities.)
+    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** option does not support certificate authorities.)
     1.  Select the **Key Storage Provider (KSP)** from one of the following options:
 
         - **Install to Trusted Platform Module (TPM) if present**  
@@ -135,25 +125,25 @@ To configure certificate settings when using Microsoft as the CA:
 
 To configure certificate settings when using Entrust as the CA:
 
-1.  From the **Digital ID Configration** drop-down, choose the configuration profile.  The options are created by the Entrust administrator.
+1.  From the **Digital ID Configuration** drop-down, choose the configuration profile.  The digital ID configuration options are created by the Entrust administrator.
 
-1.  Enable the **Certificate usage** checkbox to use the certificate profile for S/MIME signing or encryption.
+1.  When checked, the **Certificate usage** uses the certificate profile for S/MIME signing or encryption.
 
-    When using Entrust as the CA, this delivers the same certificate to all enrolled devices.  When this checkbox is unchecked, each device received a unique certificate.  (Behavior changes for different CAs; to learn more, see the corresponding section.)
+    When using Entrust as the CA, this delivers the same certificate to all enrolled devices.  When this option is *not* checked, each device received a unique certificate.  (Behavior changes for different CAs; to learn more, see the corresponding section.)
 
 1.  Use the **Format** button to map Entrust **Subject name format** tokens to ConfigMgr fields.  
 
-    This opens the **Certificate Name Formatting** dialog and lists the Entrust Digital ID configuration variables.  For each Entrust token, choose the variable form the associated drop-down list.
+    The **Certificate Name Formatting** dialog lists the Entrust Digital ID configuration variables.  For each Entrust variable, choose the appropriate LDAP variable from the associated drop-down list.
 
-1.  Use the **Format** button to map Entrust **Subject Alternative Name** tokens to ConfigMgr fields.  
+1.  Use the **Format** button to map Entrust **Subject Alternative Name** tokens to supported LDAP variables.  
 
-    This opens the **Certificate Name Formatting** dialog and lists the Entrust Digital ID configuration variables.  For each Entrust token, choose the variable form the associated drop-down list.
+    The **Certificate Name Formatting** dialog lists the Entrust Digital ID configuration variables.  For each Entrust variable, choose the appropriate LDAP variable from the associated drop-down list.
 
 1.  Set **Renewal threshold** to the percentage of time you wish to receive renewal reminders.
 
 1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
 
-1.  If you're using Active Directory, the **Active Directory publishing** option will be available.  Enable the option to publish the certificate.
+1.  The **Active Directory publishing** option is enabled when the [certificate registration point](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) specifies Active Directory publication.  Check the option to publish the certificate.
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
@@ -188,4 +178,4 @@ To configure certificate settings when using Entrust as the CA:
 
 [How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
 
-[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) provides information about deploying certificate profiles.
+[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) describes how to deploy certificate profiles.
