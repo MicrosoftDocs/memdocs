@@ -23,13 +23,13 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-Here, you'll learn how to create a certificate profile by importing credentials from external certificates.  
+Here, you learn how to create a certificate profile by importing credentials from external certificates.  
 
-Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.
+Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service (NDES) role to provision authentication certificates, allowing users to seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the certificates to support VPN and wireless connections.
 
-[Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provides general information about creating and configuring certificate profiles. This topic highlights some specific information about certificate profiles related to PFX certificates.
+[Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provide general information about creating and configuring certificate profiles. This topic highlights some specific information about certificate profiles related to PFX certificates.
 
--  Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and  the operating system. The following devices are supported when they are enrolled with Intune:
+-  Configuration Manager a variety of certificate stores appropriate for different devices and operating systems.  These include:
 
  -   iOS and MacOS/OSX
  -   Android and Android for Work
@@ -38,9 +38,7 @@ Certificate profiles work with Active Directory Certificate Services and the Net
 To learn more, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
 ## PFX certificate profiles
-System Center Configuration Manager allows you to import certificate credentials and then then provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange.
-
-You can also create certificate profiles using credentials provided by a certificate authority; to learn more, see []().
+System Center Configuration Manager allows you to import certificate credentials and then provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange.
 
 > [!TIP]  
 >  A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
@@ -60,18 +58,20 @@ You can also create certificate profiles using credentials provided by a certifi
 
     -   **Description**: Provide a description that gives an overview of the certificate profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
 
-    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of the following:  
+    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of the following options:  
 
-        -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Imports a PFX certificate.  
+        -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Creates a certificate profile by programmatically importing information from existing certificates.  
 
-        -   **Personal Information Exchange - PKCS #12 (PFX) settings - Create**: Creates a PFX certificate.
-       
+        -   **Personal Information Exchange - PKCS #12 (PFX) settings - Create**: Creates a PFX certificate profile using credentials provided by a certificate authority.  To learn more, see [How to create PFX certificate profiles using a certificate authority](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
-### Create a PFX certificate profile
 
-To import a PFX certificate, you'll need the Configuration Manager SDK. Any certificates you import for a user will be deployed to any devices that the user enrolls.
+### Create a PFX certificate profile for the imported credentials
 
-1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify where the certificate will be stored on devices to which you deploy it:
+To import a PFX certificate, you use the Configuration Manager SDK to deploy a Create PFX script. 
+
+Imported certificates are later deployed to enrolled devices.
+
+1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify where the device key storage provider:
 	- 	**Install to Trusted Platform Module (TPM) if present**  
     -   **Install to Trusted Platform Module (TPM), otherwise fail** 
     -   **Install to Windows Hello for Business otherwise fail** 
@@ -123,4 +123,6 @@ To use this example, update the following script variables:
 ## See also
 [Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) walks you through the Create Certificate Profile Wizard.
 
-[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) provides information about deploying certificate profiles.
+[How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/create-pfx-certificate-profiles.md)
+
+[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) describes show to deploy certificate profiles.
