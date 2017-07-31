@@ -125,9 +125,9 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |Configuration Manager version |End user experience|  
 |----------------|---------------------|
 |Prior to 1610|A restart flag is set and the update is installed after the computer restarts.|
-|1610|Office 365 apps are shut down without warning before installing an update|
+|1610|Office 365 apps are shut down without warning before installing the update|
 |1610 with update <br/>1702|A restart flag is set and the update is installed after the computer restarts.|
-|1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to the update installing.|
+|1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
 
 
 ## Add languages for Office 365 update downloads
