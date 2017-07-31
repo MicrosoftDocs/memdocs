@@ -124,7 +124,7 @@ Custom boot images are not modified.
 >   
 >  For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
- For the steps to distribute a boot image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+ For the steps to distribute a boot image, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
 
 ##  <a name="BKMK_ModifyBootImages"></a> Modify a boot image  
  You can add or remove device drivers to the image or edit the properties associated with the boot image. The device drivers that you add or remove can include network adapters or mass storage device drivers. Consider the following factors when you modify boot images:  
@@ -133,7 +133,7 @@ Custom boot images are not modified.
 
 -   When you modify a boot image, the boot image does not change any of the associated packages that the boot image references.  
 
--   After you make changes to a boot image, you must **update** the boot image on the distribution points that already have the boot image so that the most current version of the boot image is available. For more information, see [Manage content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkmanagea-manage-the-content-you-have-distributed).  
+-   After you make changes to a boot image, you must **update** the boot image on the distribution points that already have the boot image so that the most current version of the boot image is available. For more information, see [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
 
  Use the following procedure to modify a boot image.  
 
@@ -214,7 +214,7 @@ Custom boot images are not modified.
         -   Set the **Prestaged distribution point settings** to specify how you want the boot image to be distributed to distribution points that are enabled for prestaged content.  
 
             > [!NOTE]  
-            >  For more information about prestaged content, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
+            >  For more information about prestaged content, see [Prestage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
 
     -   On the **Content Locations** tab, select the distribution point or distribution point group and perform any of the following actions:  
 
