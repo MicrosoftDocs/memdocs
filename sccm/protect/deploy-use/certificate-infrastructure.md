@@ -2,7 +2,7 @@
 title: "Configuring certificate infrastructure | Microsoft Docs"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ---
 
@@ -118,21 +118,37 @@ You must install and configure at least one certificate registration point in th
 
 6.  On the **System Role Selection** page, select **Certificate registration point** from the list of available roles, and then click **Next**. 
 
-8. On the **Certificate Registration Mode** page, select whether you want this certificate registration point to **Process SCEP certificate requests**, or **Process PFX certificate requests**. A certificate registration point cannot process both kinds of requests, but you can create multiple certificate registration points if you are working with both certificate types.
+7. On the **Certificate Registration Mode** page, select whether you want this certificate registration point to **Process SCEP certificate requests**, or **Process PFX certificate requests**. A certificate registration point cannot process both kinds of requests, but you can create multiple certificate registration points if you are working with both certificate types.
 
-7.  On the **Certificate Registration Point Settings** page, the settings you make depend on the type of certificate the certificate registration point will process:
+   If processing PFX certificates, you'll need to choose a certificate authority, either Microsoft or Entrust.
+
+8.  The **Certificate Registration Point Settings** page varies according to the certificate type:
 	-   If you selected **Process SCEP certificate requests**, then configure the following:
 		-   **Website name**, **HTTPS port number**, and **Virtual application name** for the certificate registration point. These fields are filled in automatically with default values. 
 		-   **URL for the Network Device Enrollment Service and root CA certificate** - Click **Add**, then in the **Add URL and Root CA Certificate** dialog box, specify the following:
 			- **URL for the Network Device Enrollment Service**: Specify the URL in the following format: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. For example, if the FQDN of your server that is running the Network Device Enrollment Service is server1.contoso.com, type **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
 			- **Root CA Certificate**: Browse to and select the certificate (.cer) file that you created and saved in **Step 1: Install and configure the Network Device Enrollment Service and dependencies**. This root CA certificate allows the certificate registration point to validate the client authentication certificate that the System Center Configuration Manager Policy Module will use.  
-	- If you selected **Process PFX certificate requests**, then configure the following:
-		- **Certification Authorities (CA) and account needed to conenct to each CA** - Click **Add** then in the **Add a Certificate Authority and Account** dialog box, specify the following:
+
+	- If you selected **Process PFX certificate requests**, you configure the connection details and credentials for the selected certificate authority.
+
+		- To use Microsoft as the certificate authority, click **Add** then in the **Add a Certificate Authority and Account** dialog box, specify the following:
 			- **Certificate Authority Server Name** - Enter the name of your certificate authority server.
 			- **Certificate Authority Account** - Click **Set** to select, or create the account that has permissions to enroll in templates on the certification authority.
-		- **Certificate Registration Point Connection Account** - Select or create the account that connects the certificate registration point to the Configuration Manager database. Alteratively, you can use the local computer account of the computer hosting the certificate registration point.
-		- **Active Directory Certificate Publishing Account** - Select an account, or create a new account that will be used to publish certificates to user objects in Active Directory.
-8.  In the **Add URL and Root CA Certificate** dialog box, specify the following, and then click **OK**:  
+    		- **Certificate Registration Point Connection Account** - Select or create the account that connects the certificate registration point to the Configuration Manager database. Alteratively, you can use the local computer account of the computer hosting the certificate registration point.
+            - **Active Directory Certificate Publishing Account** - Select an account, or create a new account that will be used to publish certificates to user objects in Active Directory.
+
+            - In the **URL for the Network Device Enrollment and root CA certificate** dialog box, specify the following, and then click **OK**:  
+
+        - To use Entrust as the certificate authority, specify:
+
+           - The **MDM web service URL**
+           - The username and password credentials for the URL.
+
+           When using the MDM API to define the Entrust web service URL, be sure to use at least version 9 of the API, as shown in the following sample:
+
+           `https://entrust.contoso.com:19443/mdmws/services/AdminServiceV9`
+
+           Earlier versions of the API do not support Entrust.
 
 9. Click **Next** and complete the wizard.  
 

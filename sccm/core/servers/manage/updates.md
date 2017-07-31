@@ -2,7 +2,7 @@
 title: "Updates | Microsoft Docs"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -22,10 +22,10 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to find and install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
+System Center Configuration Manager uses an in-console service method called **Updates and Servicing**. This in-console method makes it easy to find and install recommended updates for your Configuration Manager infrastructure. In-console servicing is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
 
 > [!TIP]  
-> When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
+> When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 
  **The following topics can help you understand how to find and install the different update types for System Center Configuration Manager:**  
@@ -47,21 +47,21 @@ If you use the Technical Preview branch, see [Technical Preview for System Cente
 
 -   Use the latest baseline version when you install a new site in a new hierarchy.  
 
--   You must use a baseline version to upgrade from System Center 2012 Configuration Manager.  
+-   You use a baseline version to upgrade from System Center 2012 Configuration Manager. After upgrading to System Center Configuration Manager, you can no longer use baseline versions to stay current and instead only use [in-console updates](/sccm/core/servers/manage/install-in-console-updates) to update to the newest version.  
 
--   Periodically, additional baseline versions will be released. When you use the latest baseline version to install a new hierarchy you avoid installing an outdated version of Configuration Manager, followed by an upgrade of your infrastructure to bring it up to date.  
+-   Periodically, additional baseline versions are released. When you use the latest baseline version to install a new hierarchy, you avoid installing an outdated version of Configuration Manager followed by an additional upgrade of your infrastructure to bring it up to date.  
 
 After you install a baseline version, additional versions of Configuration Manager are available as in-console updates. In-console updates update your infrastructure to the latest version of Configuration Manager.  
 
 -   You install in-console updates to update the version of your top-level site.  
 
--   Updates you install at central administration site will automatically install at child primary sites, unless blocked by a maintenance window you have configured at the primary site.  
+-   Updates you install at central administration site automatically install at child primary sites, unless blocked by a maintenance window you have configured at the primary site.  
 
--   You must manually update secondary sites to a new update version from within the console.  
+-   You manually update secondary sites to a new update version from within the console.  
 
-When you install an update, the update stores installation files for that version on the site server in a folder named CD.Latest. See [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md) for more information about these files.  
+When you install an update, the update stores installation files for that version on the site server in a folder named CD.Latest. For more information about these files, see [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
 
--   You use the files in the CD.Latest folder during site recovery and to install additional sites in a hierarchy that no longer runs a baseline version.  
+-   You use the files in the CD.Latest folder during Site Recovery and to install additional sites in a hierarchy that no longer runs a baseline version.  
 
 -   You cannot use installation files from CD.Latest to install the first site of a new hierarchy, or to upgrade a site from System Center 2012 Configuration Manager.  
 
@@ -71,12 +71,13 @@ The following versions of Configuration Manager are available as a baseline, an 
 
 |Version |Availability date|[Support end date](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|in-console update|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|Yes|Yes|
-|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|11/18/2016| 11/18/2017|No|Yes|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|7/22/2016| 7/22/2017|No|Yes|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016| 7/22/2017|Yes|No|
-| 1602<br /><br /> 5.00.8355.1000|3/11/2016| 3/11/2017|No|Yes|
-| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Yes|No|  
+|[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|July 31, 2017|July 31, 2018|No|Yes|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|March 27, 2017| March 27, 2018|Yes|Yes|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|November 18, 2016| November 18, 2017|No|Yes|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|July 22, 2016| July 22, 2017|No|Yes|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |October 12, 2016| October 12, 2017|Yes|No|
+| 1602<br /><br /> 5.00.8355.1000|March 11, 2016| March 11, 2017|No|Yes| 
+| 1511 <br /><br /> 5.00.8325.1000|December 8, 2015| December 8, 2016|Yes|No|  
 
 
 *(Note 1)* The 1606 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC). For example, on the VLSC you can search for *System Center Config Mgr (current branch and LTSB)*, and both 1606 and 1702 version baseline media are returned, and available for download.
@@ -87,11 +88,11 @@ To check the version of your Configuration Manager site, in the console go to **
  When you use a production ready installation of System Center Configuration Manager, also referred to as the current branch, most updates you install are available using the Updates and Servicing channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration, and includes only updates that Microsoft recommends for all customers.   
  These include:  
 
--   New versions, like version 1610  
+-   New versions, like version 1610, 1702, or 1706.  
 
--   Updates, that include new features for your current version  
+-   Updates, that include new features for your current version.
 
--   Hotfixes, for your version of Configuration Manager and that all customers should install  
+-   Hotfixes, for your version of Configuration Manager and that all customers should install.
 
 The in-console updates deliver increased stability and resolve common issues. They replace the update types seen for previous product versions for service packs, cumulative updates, hotfixes that are applicable to all customers,  and Extension for Microsoft Intune. These updates can apply to one or more of the following:  
 
@@ -131,7 +132,7 @@ When you install an in-console update:
 >  The production release of System Center Configuration Manager (current branch), the Long-Term Servicing Branch, and the Technical Preview for System Center Configuration Manager are different releases. Therefore, updates that apply for one branch are not available as in-console updates for the other branches. For more information about available branches, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
 
 ##  <a name="bkmk_outofband"></a> Out-of-band hotfixes  
-Some hotfixes are released with limited availability to address specific issues, or are applicable to all customers but cannot be installed using the in-console method. These fixes are delivered out-of-band and not discovered from the Microsoft cloud service.  
+Some hotfixes release with limited availability to address specific issues, or are applicable to all customers but cannot install using the in-console method. These fixes are delivered out-of-band and not discovered from the Microsoft cloud service.  
 
 Typically, you learn about out-of-band hotfixes from Microsoft customer support services, a Knowledge Base article, or from the [System Center Configuration Manager Team blog](https://blogs.technet.microsoft.com/configmgrteam) when you are seeking to fix or address a problem with your deployment of Configuration Manager.  
 

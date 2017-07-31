@@ -1,7 +1,7 @@
 ---
-title: "ICcmAlternatedownloadProvider : DownloadContent | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : DownloadContent | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: e3c904db-2838-47e2-ad60-68411e262778searchScope: - ConfigMgr SDK
+ms.assetid: e3c904db-2838-47e2-ad60-68411e262778
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: "lleonard-msft"
+ms.author: "alleonar"
+manager: "angrobe"
 ---
-# ICcmAlternatedownloadProvider : DownloadContent Method
+# ICcmAlternateDownloadProvider : DownloadContent Method
 The **ICcmAlternateDownloadProvider::DownloadContent** method, in Configuration Manager, instructs the provider to download content.  
 
 ## Syntax  
@@ -72,7 +74,7 @@ HRESULT DownloadContent(
 
  Qualifiers: [in]  
 
- The directory to which the content should be downloaded. This directory should already exist on this call, and the provider should not change any ACLs on the directory itself for any reason.  
+ The directory to which the content should be downloaded. This directory should already exist on this call, and the provider should not change any ACLs on the directory itself for any reason. When szManifest is `null`, this parameter should be ignored.  
 
  `szNotifyEndpoint`  
  Data type: `LPCWSTR`  
@@ -128,7 +130,7 @@ HRESULT DownloadContent(
 
  Qualifiers: [in, unique]  
 
- Reserved. Alternate providers should ignore this.  
+ Either `null` or XML data representing file byte ranges to be downloaded from the destination.  See **Remarks** below.
 
  `szOwnerSID`  
  Data type: `LPCWSTR`  
@@ -172,6 +174,61 @@ HRESULT DownloadContent(
  Success implies that discovery was triggered successfully. All other return values indicate failure.  
 
 ## Remarks  
+
+Starting with version 1702, Configuration Manager integrates with Microsoft Office 365 click-to-run, which supports incremental download.  Alternate content providers should be updated to implement byte range download capabilities.  Byte range information is specified in an XML manifest specified in the **szFileManifest** parameter.
+
+The manifest XML uses the following schema:
+
+``` xml
+<?xml version="1.0" encoding="utf-8"?> 
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DTSManifest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="200" minOccurs="1" name="File">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="500" minOccurs="0" name="Chunk">
+                <xs:complexType>
+                  <xs:attribute name="Length" type="xs:unsignedInt" use="required" />
+                  <xs:attribute name="Offset" type="xs:unsignedInt" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Destination" type="xs:string" use="required" />
+            <xs:attribute name="Source" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Version" type="xs:unsignedByte" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 
+```
+
+The following example shows a manifest that downloads three files:
+
+``` xml
+<?xml version="1.0"?> 
+<DTSManifest Version="1">
+  <File Destination="C:\Prod\stream.dat" Source="Office/Data/6366.2036/stream.dat">
+     <Chunk Length="43491" Offset="59247735"/>
+     <Chunk Length="267118" Offset="69247735"/>
+  </File>
+  <File Destination="C:\Prod\s320.cab" Source="Office/Data/6366.2036/320.cab">
+     <Chunk Length="512" Offset="50"/> 
+  </File>
+  <File Destination="C:\Prod\s640.cab" Source="Office/Data/16.0.6366.2036/s640.cab"/>
+</DTSManifest> 
+```
+
+When processing the manifest, remember:
+
+- There will be one or more `<file`> elements.
+- If a `<file>` element contains `<chunk>` elements, each `<chunk>` specifies the length and byte offset of an incremental download.  
+- If no `<chunk>` elements are specified, the entire file should be downloaded.
+
+Should an alternate content provider fail to support incremental downloads, Configuration Manager automatically uses distribution points to download Office 365 content.  For other download scenarios, however, the alternate content provider works without additional impact.
 
 > [!NOTE]
 >  If the provider cannot handle the request for any reason, it should return an error.  

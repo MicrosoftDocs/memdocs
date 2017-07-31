@@ -4,10 +4,10 @@
 title: Upgrade Readiness | System Center Configuration Manager
 description: Integrate Upgrade Readiness with Configuration Manager. Access upgrade compatibility data in your admin console. Target devices for upgrade or remediation.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: mattbriggs
+ms.author: mabrigg
 manager: angerobe
-ms.date: 3/1/2017
+ms.date: 7/31/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -29,7 +29,10 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 ---
 
 # Integrate Upgrade Readiness with System Center Configuration Manager
-Upgrade Readiness (formerly Upgrade Analytics) enables you to assess and analyze device readiness and compatibility with Windows 10, to allow easier and smoother upgrades. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You'll then be able to target devices for upgrade or remediation from the device list.
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+Upgrade Readiness (formerly Upgrade Analytics) enables you to assess and analyze device readiness with Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation from the device list.
 
 Upgrade Readiness is a solution in the Microsoft Operations Management Suite (OMS). You can read more about Upgrade Readiness in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
 
@@ -43,31 +46,37 @@ There are several configuration steps that you have to take to ensure that your 
 	> [!NOTE]
 	> You can download a script to automate many of the client setup tasks. See the *Run the Upgrade Readiness deployment script* section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness) for information about the script.
 
-## Create a connection to Upgrade Readiness
+## Connect to Upgrade Readiness
 
 ### Prerequisites
 
-- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
-- Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
-- Create a client key for the registered management tool in Azure Active Directory.
-- In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/en-us/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+Beginning with Current Branch version 1706, the Azure Services Wizard is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to use the wizard, you need to configure an Azure web app. For more information, see, [Azure Services Wizard](/sccm/core/servers/deploy/configureazure-services-wizard).
 
-    > [!IMPORTANT]
-	> When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
+### Use the Azure Wizard to create the connection
 
-### Create the connection
+1.  In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
+2.  On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
+3.  Type a friendly Name on the Azure Services page. You can also type a description. Then select **Upgrade Readiness Connector** and click **Next**.
+4.  Specify your Azure environment on the App page. Click **Browse** to set up a server app.
+5.  Click **Import** to connect to your Web app in Azure.
+    -  Type the **Azure AD Tenant Name**.
+    -  Type the **Azure AD Tenant ID**.
+    -  Type the **Application Name**.
+    -  Type the **Client ID**.
+    -  Type the **Secret Key**.
+    -  Select the date for the **Secret Key Expiry** date.
+    -  Type any URL for the **Application ID URI**.
+    -  Click **Verify**, and then click **OK**.
 
-1.  In the Configuration Manager console, choose **Administration** > **Cloud Services** > **Upgrade Readiness Connector** > **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connection Wizard**.
-3.  On the **Azure Active Directory** screen, provide **Tenant**, **Client ID**, and **Client secret key**, then select **Next**.
-4.  On the **Upgrade Readiness** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
-5.  Verify your connection settings on the **Summary** screen, then select **Next**.
+6.	Specify the connection to Upgrade Readiness on the Configuration page. Select the following values:  
+    -  Azure subscriptions
+    -  Azure resource group
+    -  Windows Analytics workspace
+8.	Click **Next**. You can review your connection in the Summary page. 
 
-	> [!NOTE]
-	> You must connect Upgrade Readiness to the top-tier site in your hierarchy. If you connect Upgrade Readiness to a standalone primary site and then add a central administration site to your environment, you must delete and recreate the OMS connection within the new hierarchy.
+## Complete Upgrade Readiness tasks  
 
-### Complete Upgrade Readiness tasks  
-
-After you've create the connection in Configuration Manager, perform these tasks, as described in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).  
+After you've create the connection, perform these tasks, as described in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).  
 
 1. Add the UpgradeReadiness service to the OMS workspace.  
 2. Generate a commercial ID.  
@@ -84,9 +93,9 @@ The Upgrade Readiness deployment script does the following:
 - Verifies that the latest version of KB package 10.0.x is installed (requires 10.0.14913 or subsequent releases).  
 - If enabled, turns on verbose mode for troubleshooting.  
 - Initiates the collection of the telemetry data that Microsoft needs to assess your organization’s upgrade readiness.  
-- If enabled, displays the script’s progress in a cmd window, providing you visibility into issues (success or fail for each step) and/or writes to log file.  
+- If enabled, displays the script’s progress in a cmd window. This provides visibility into issues (success or fail for each step) and/or writes to log file.  
 
-### To run the Upgrade Readiness deployment script:  
+## To run the Upgrade Readiness deployment script:  
 
 1. Download the [Upgrade Readiness deployment script](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409) and extract UpgradeReadiness.zip. The files in the **Diagnostics** folder are necessary only if you plan to run the script in troubleshooting mode.  
 2. Edit these parameters in RunConfig.bat:  
@@ -118,3 +127,27 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 2. Review the data, which includes the upgrade readiness state and the percent of Windows devices that are reporting telemetry.
 3. You can filter the dashboard to view data for devices in specific collections.
 4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to bring them to a readiness state.
+
+## Create a connection to Upgrade Readiness (1702 and earlier)
+
+Before the 1706 branch of Configuration Manager, to create a connection to Upgrade Readiness required the following steps.
+
+### Prerequisites
+
+- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
+- Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Create a client key for the registered management tool in Azure Active Directory.
+- In the Azure portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+
+    > [!IMPORTANT]
+	> When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
+
+### Create the connection
+
+1.  In the Configuration Manager console, choose **Administration** > **Cloud Services** > **Upgrade Readiness Connector** > **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connection Wizard**.
+3.  On the **Azure Active Directory** screen, provide **Tenant**, **Client ID**, and **Client secret key**, then select **Next**.
+4.  On the **Upgrade Readiness** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
+5.  Verify your connection settings on the **Summary** screen, then select **Next**.
+
+	> [!NOTE]
+	> You must connect Upgrade Readiness to the top-tier site in your hierarchy. If you connect Upgrade Readiness to a standalone primary site and then add a central administration site to your environment, you must delete and recreate the OMS connection within the new hierarchy.

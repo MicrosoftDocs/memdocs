@@ -2,7 +2,7 @@
 title: "Sync data | Microsoft Docs  | Microsoft Operations Management Suite "
 description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,58 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: arob98
-ms.author: angrobe
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
 ---
 
-
-# Sync data from Configuration Manager to the Microsoft Operations Management Suite
-
+#  Sync data from Configuration Manager to the Microsoft Operations Management Suite
 
 *Applies to: System Center Configuration Manager (Current Branch)*
+
+You may use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. Beginning with version 1706, the wizard replaces previous workflows to configure this connection. For earlier versions, see [Sync data from Configuration Manager to the Microsoft Operations Management Suite (1702 and earlier)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier)).
+
+- 	The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
+
+-   Configuration Manager connects to OMS for features like [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), or [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
+
+## Prerequisites for the OMS Connector
+Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites). That information is repeated here:  
+
+- 	Before you install the OMS connector in Configuration Manager, you must provide Configuration Manager with permissions to OMS. Specifically, you must grant *contributor access* to the Azure *Resource Group* that contains the OMS Log Analytics workspace. The procedures to do so are documented in the Log Analytics content. See [Provide Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) in the OMS documentation.
+
+- 	The OMS connector must be installed on the computer that hosts a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) that is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation).
+
+- 	You must install a Microsoft Monitoring Agent for OMS installed on the service connection point along with the OMS connector. The Agent and the OMS connector must be configured to use the same **OMS Workspace**. To install the agent, see [Download and install the agent](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent) in the OMS documentation.
+- 	After you install the connector and agent, you must configure OMS to use Configuration Manager data. To do so, in the OMS Portal you [Import Configuration Manager collections](/azure/log-analytics/log-analytics-sccm#import-collections).
+
+## Use the Azure Services Wizard to configure the connection to OMS
+
+1.	In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
+
+2.	On the **Azure Services** page, select the Operation Management Suite cloud service. Provide a friendly name for the **Azure service name** and an optional description, and then click **Next**.
+
+3.	On the **App** page, specify your Azure environment (the technical preview supports only the Public Cloud). Then, click **Browse** to open the Server App window.
+
+4.	Select a web app:
+
+    - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
+
+    > [!NOTE] 	
+    > When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
+
+5.	If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
+
+6.	The wizard connects to the OMS service using the information you've input. Select the device collections that you want to sync with OMS and then click **Add**.
+
+7.	Verify your connection settings on the **Summary** screen, then select **Next**. The **Progress** screen shows the connection status, then should **Complete**.
+
+8.	After the wizard completes, the Configuration Manager console shows that you have configured **Operation Management Suite** as a **Cloud Service Type**.
+
+## Sync data from Configuration Manager to the Microsoft Operations Management Suite (1702 and earlier)
+
+
+*Applies to: System Center Configuration Manager (1702 and prior versions)*
 
 You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS Log Analytics  in Microsoft Azure. This makes data from your Configuration Manager deployment visible in OMS.
 > [!TIP]
@@ -29,7 +71,7 @@ You can use the Microsoft Operations Management Suite (OMS) Connector to sync da
 
 Beginning with version 1702, you can use the OMS connector to connect to an OMS workspace that is on Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector. See [use the OMS connector with the Azure Government cloud](#fairfaxconfig) in this topic.
 
-## Prerequisites
+### Prerequisites
 - Before you install the OMS connector in Configuration Manager, you must provide Configuration Manager with permissions to OMS. Specifically, you must grant *contributor access* to the Azure *Resource Group* that contains the OMS Log Analytics workspace. The procedures to do so are documented in the Log Analytics content. See [Provide Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) in the OMS documentation.
 
 - The OMS connector must be installed on the computer that hosts a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) that is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation).
@@ -42,7 +84,7 @@ Beginning with version 1702, you can use the OMS connector to connect to an OMS 
 
 
 
-## Install the OMS Connector  
+### Install the OMS Connector  
 1. In the Configuration Manager console, configure your [hierarchy to use pre-release features](/sccm/core/servers/manage/pre-release-features), and then enable the use of the OMS Connector.  
 
 2. Next, go to the **Administration** > **Cloud Services** > **OMS Connector**. In the ribbon, click on "Create connection to Operations Management Suite". This opens the **Connection to Operation Management Suite Wizard**. Select **Next**.  
@@ -62,7 +104,7 @@ Beginning with version 1702, you can use the OMS connector to connect to an OMS 
 
 After you have linked Configuration Manager to OMS, you can add or remove collections, and view the properties of the OMS connection.
 
-## Verify the OMS connector properties
+### Verify the OMS connector properties
 1.	In the Configuration Manager console, go to **Administration** > **Cloud Services**, and then select **OMS Connector** to open the **OMS Connection ** page**.
 2.	Within this page there are two tabs:
   - **Azure Active Directory:**   
@@ -71,7 +113,7 @@ After you have linked Configuration Manager to OMS, you can add or remove collec
   - **OMS Connection Properties:**  
     This tab shows your **Azure subscription**, **Azure resource group**, **Operations Management Suite Workspace**, and a list of **Device collections that Operations Management Suite can get data for**. Use the **Add** and **Remove** buttons to modify which collections are allowed.
 
-## <a name="fairfaxconfig"> </a> Use the OMS connector with the Azure Government cloud
+### <a name="fairfaxconfig"> </a> Use the OMS connector with the Azure Government cloud
 
 
 1.  On any computer that has the Configuration Manager console installed, edit the following configuration file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
