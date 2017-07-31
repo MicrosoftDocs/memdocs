@@ -42,7 +42,7 @@ To deploy email profiles to devices, you must enroll the devices in Intune. For 
 
  In addition to configuring an email account on the device, you can configure synchronization settings for contacts, calendars, and tasks.  
 
- When you create an email profile, you can include a wide range of security settings. These settings include certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
+ When you create an email profile, you can include a wide range of security settings. These settings include certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).    
 
 ## Create an Exchange ActiveSync email profile  
 
@@ -104,7 +104,9 @@ To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard
 
     -   **Use S/MIME**. Send outgoing email by using S/MIME encryption. This option is applicable to iOS devices only. Choose from the following options:
 
-        -   **Signing certificates**.  Choose **Select** and then choose a PFX certificate to use for encryption.  
+        -   **Signing certificates**.  Choose **Select** and then choose a certificate profile to use for encryption.  
+
+            The profile can be either a SCEP or PFX certificate.  However, if both signing and encryption are used, you must select PFX certificate profiles for *both* signing and encryption.
 
     	-   **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. You can choose only a PFX certificate to use as an encryption certificate.
 
