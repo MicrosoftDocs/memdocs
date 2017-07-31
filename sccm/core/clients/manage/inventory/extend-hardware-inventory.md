@@ -18,7 +18,10 @@ ms.author: andredm
 manager: angrobe
 
 ---
-# How to extend hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to extend hardware inventory in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Hardware inventory reads information from Windows PCs by using Windows Management Instrumentation (WMI). WMI is the Microsoft implementation of web-based Enterprise Management (WBEM), an industry standard for accessing management information in an enterprise. In previous versions of Configuration Manager, you could extend hardware inventory by modifying the file sms_def.mof on the site server. This file contained a list of WMI classes that could be read by hardware inventory. If you edited this file, you could enable and disable existing classes, and also create new classes to inventory.  
 
 The Configuration.mof file is used to define the data classes to be inventoried by hardware inventory on the client and is unchanged from Configuration Manager 2012. You can create data classes to inventory existing or custom WMI repository data classes or registry keys present on client systems.  
@@ -139,12 +142,12 @@ You can only import inventory classes when you modify the default client setting
 > [!IMPORTANT]  
 >  When you create a NOIDMIF file it must be saved in an ANSI encoded format. NOIDMIF files saved in UTF-8 encoded format cannot be read by Configuration Manager.  
 
- After you create a NOIDMIF file, store it in the *%Windir%***\System32\CCM\Inventory\Noidmifs** folder on each client. Configuration Manager will collect information from NODMIF files in this folder during the next scheduled hardware inventory cycle.  
+ After you create a NOIDMIF file, store it in the *%Windir%***\CCM\Inventory\Noidmifs** folder on each client. Configuration Manager will collect information from NODMIF files in this folder during the next scheduled hardware inventory cycle.  
 
 ###  <a name="BKMK_IDMIF"></a> To create IDMIF files  
  IDMIF files can be used to add information about assets that could not normally be inventoried by Configuration Manager and is not associated with a particular client device, to the Configuration Manager database. For example, you could use IDMIFS to collect information about projectors, DVD players, photocopiers, or other equipment that does not contain a Configuration Manager client. For information about creating IDMIF files, see the Configuration Manager SDK documentation.  
 
- After you create an IDMIF file, store it in the *%Windir%***\System32\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
+ After you create an IDMIF file, store it in the *%Windir%***\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
 
 > [!NOTE]
 > MIF files could contain large amounts of data and collecting this data could negatively affect the performance of your site. Enable MIF collection only when required and configure the option **Maximum custom MIF file size (KB)** in the hardware inventory settings. For more information, see [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md).
