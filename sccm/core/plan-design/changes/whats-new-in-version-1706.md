@@ -195,7 +195,16 @@ Beginning with this release, you can use three new mobile application management
 See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 
-<!--  ## Operating system deployment  -->
+## Operating system deployment
+
+## Hardware inventory collects Secure Boot information
+Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+
+## Collapsible task sequence groups
+This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.
+
+## Reload boot images with current Windows PE version
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image)
 
 ## Software updates
 
