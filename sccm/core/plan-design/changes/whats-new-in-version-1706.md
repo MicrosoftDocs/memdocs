@@ -204,7 +204,7 @@ Hardware inventory now collects information about whether Secure Boot is enabled
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.
 
 ### Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image)
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
 ## Software updates
 
