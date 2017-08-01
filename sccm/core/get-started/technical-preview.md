@@ -139,14 +139,8 @@ You can install a baseline version for up to 1 year after its release. However, 
  |New Windows configuration item settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|[Version 1706](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
  |New device compliance policy rules|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-device-compliance-policy-rules)|![Not added](media/Red_X.gif)|
  |Device Health Attestation assessment for compliance policies for conditional access|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![Not added](media/Red_X.gif)|
- |Support for Entrust certificate authorities|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![Not added](media/Red_X.gif)|
- |Cisco (IPSec) support for macOS VPN profiles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![Not added](media/Red_X.gif)|
-
-## Capabilities delivered in previous technical previews
- When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
-
- |Capability |Technical Preview version |Current Branch version|  
- |----------------|---------------------|--------------------|
+ |Support for Entrust certificate authorities|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[Version 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
+ |Cisco (IPSec) support for macOS VPN profiles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[Version 1706](/sccm/protect/deploy-use/vpn-profiles)|
  |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[Version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
  |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
  |Update reset tool  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[Version 1706](/sccm/core/servers/manage/update-reset-tool)|
@@ -162,13 +156,13 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Improvements to operating system deployment|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#improvements-to-operating-system-deployment)|![Not added](media/Red_X.gif)|
  |Deploy volume-purchased iOS apps to device collections|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[Version 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
  |Direct links to applications in Software Center|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![Not added](media/Red_X.gif)
- |PFX certificates for Configuration Manager Windows client computers|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![Not added](media/Red_X.gif)|
+ |PFX certificates for Configuration Manager Windows client computers|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|[Version 1706](/sccm/protect/deploy-use/create-certificate-profiles)|
  |Configure Azure Services wizard|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|[Version 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
  |Convert from BIOS to UEFI in an operating system upgrade task sequence| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#convert-from-bios-to-uefi-during-an-in-place-upgrade) |[Version 1702](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)|
  |Collapsible task sequence groups| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |[Version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#collapsible-task-sequence-groups)|
  |Client settings to configure Windows Analytics for Upgrade Readiness | [Tech Preview 1703](capabilities-in-technical-preview-1703.md#client-settings-to-configure-windows-analytics-for-upgrade-readiness) |![Not added](media/Red_X.gif)|
  |New compliance settings for iOS devices|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|[Version 1702](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)|
- |Create PFX certificates with S/MIME support|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[Version 1702](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
+ |Create PFX certificates with S/MIME support|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[Version 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |Check for running executable files before installing an application|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|[Version 1702](/sccm/apps/deploy-use/deploy-applications)|
  |Send feedback from the Configuration Manager console | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |[Version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#send-feedback-from-the-configuration-managercconsole)  |
  |Changes for Updates and Servicing  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |[Version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#changes-for-updates-and-servicing) |
