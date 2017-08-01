@@ -49,7 +49,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
 -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
-   Specify the maximum transfer rate that clients will use outside the BITS throttling window, when you have chosen to allow BITS throttling outside the window.  
+   Specify the maximum transfer rate that clients use outside the BITS throttling window, when you have chosen to allow BITS throttling outside the window.  
 
 ## Client cache settings
 
@@ -117,7 +117,7 @@ Enables peer cache for Configuration Manager clients. Then, specify port informa
 
   -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
 
-   If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but **Enable user policy polling on clients** is **True** or **Enable user policy on clients** is **Yes**, users will not receive user policies until the computer is connected to the intranet.  
+   If you leave this option as **False** or **No**, or either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but **Enable user policy polling on clients** is **True** or **Enable user policy on clients** is **Yes**, users will not receive user policies until the computer is connected to the intranet.  
 
    For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
@@ -128,7 +128,7 @@ Enables peer cache for Configuration Manager clients. Then, specify port informa
 
 -   **Schedule compliance evaluation**  
 
-     Choose **Schedule** to create the default schedule that will be shown to users when they deploy a configuration baseline. This value can be configured for each baseline in the **Deploy Configuration Baseline** dialog box.  
+     Choose **Schedule** to create the default schedule that is shown to users when they deploy a configuration baseline. This value can be configured for each baseline in the **Deploy Configuration Baseline** dialog box.  
 
 -   **Enable User Data and Profiles**  
 
@@ -150,7 +150,7 @@ Enables peer cache for Configuration Manager clients. Then, specify port informa
 
      -   You want to manually configure the closest server for clients or ensure that they do not connect to a server across a slow network connection.  
 
-     -   You want to control which clients connect to which server. This might be for testing, performance, or business reasons.  
+     -   You want to control which clients connect to which server. This configuration might be for testing, performance, or business reasons.  
 
      -   You do not want to wait up to 25 hours or for a network change for clients to be configured with a different Application Catalog website point.  
 
@@ -238,7 +238,7 @@ Enables peer cache for Configuration Manager clients. Then, specify port informa
     -   You use the Configuration Manager software development kit (SDK) to manage client agent notifications and the installation of applications and software updates.  
 
     > [!WARNING]  
-    >  If you choose this option when neither of these conditions applies, software updates and required applications will not be installed on clients. This setting does not prevent users from installing applications from the Application Catalog, or prevent packages, programs, and task sequences from being installed on client computers.  
+    >  If you choose this option when neither of these conditions applies, software updates and required applications are not installed on clients. This setting does not prevent users from installing applications from the Application Catalog, or prevent packages, programs, and task sequences from being installed on client computers.  
 
 -   **PowerShell execution policy**  
 
