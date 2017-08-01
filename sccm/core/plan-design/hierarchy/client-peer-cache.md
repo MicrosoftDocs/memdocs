@@ -2,7 +2,7 @@
 title: "Client Peer Cache | System Center Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/3/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -88,7 +88,9 @@ Use this report to understand rejection details for a specified boundary group o
 
 -   Clients can only transfer content from Peer Cache clients that are in their current boundary group.
 
--   Each site where clients use Peer Cache must be configured with a [Network Access Account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). The account is used by the Peer Cache source computer to authenticate download requests from peers, and requires only domain user permissions for this purpose.
+-   Prior to version 1706, each site where clients use Peer Cache must be configured with a [Network Access Account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). Beginning with version 1706, that account is no longer required with one exception.  The exception is when a client uses peer cache to get and run a task sequence from the Software Center, and that task sequence reboots the client into WinPE.  In this scenario, the client still requires the Network Access Account when it is in WinPE so that it can access the peer cache source to get content.
+
+    When it's required, the Network Access Account is used by the Peer Cache source computer to authenticate download requests from peers, and requires only domain user permissions for this purpose.
 
 - 	Because the current boundary of a Peer Cache content source is determined by that client's last hardware inventory submission, a client that roams to a network location and is in a different boundary group might still be considered a member of its former boundary group for the purposes of Peer Cache. This can result in a client being offered a Peer Cache content source that is not in its immediate network location. We recommend excluding clients that are prone to this configuration from participating as a Peer Cache source.
 

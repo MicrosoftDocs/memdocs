@@ -2,7 +2,7 @@
 title: "Configure discovery | Microsoft Docs"
 description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,7 +27,9 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 -   Server Discovery is an automatic discovery method that finds computers that you use as site systems. You can't configure or disable it.  
 
-**To enable any configurable  discovery method:**  
+**To enable a configurable discovery method:**  
+ > [!NOTE]  
+ > The following information does not apply to Azure Active Directory User Discovery. Instead, see [Configure Azure AD User Discovery](#azureaadisc) later in this topic.
 
 1.  In the Configuration Manager console, choose **Administration** > **Hierarchy Configuration**, and then choose **Discovery Methods**.  
 
@@ -205,6 +207,14 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 7.  Optionally, on the **Active Directory Attributes** tab, you can configure additional Active Directory attributes for computers that you want to discover. The default object attributes are also listed.  
 
 8.  When you have finished configuring Active Directory User Discovery for this site, choose **OK** to save the configuration.  
+
+## <a name="azureaadisc"></a> Configure Azure AD User Discovery
+Beginning with version 1706, you can configure Azure Active Directory User Discovery when you connect Configuration Manager to your [Azure subscription, and Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+Azure AD User Discovery is configured as part of *Cloud Management*. The procedure to do so is detailed in [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
+
+
+
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
  By default, Heartbeat Discovery is enabled when you install a Configuration Manager primary site. As a result, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point when you do not want to use the default of every seven days.  

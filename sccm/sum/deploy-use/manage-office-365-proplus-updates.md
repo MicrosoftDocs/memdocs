@@ -67,7 +67,7 @@ For previous Configuration Manager versions, you must take the following steps t
 - The computer that runs the Office 365 Installer must have Internet access.  
 - The user that runs the Office 365 Installer must have **Read** and **Write** access to the content location share is provided in the wizard.
 - If you receive a 404 download error, copy the following files to the user %temp% folder:
-  - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
+  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 
@@ -118,6 +118,17 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
 > [!Important]
 > You must download and deploy updates in the same languages configured on Office 365 clients. For example, let's say you have an Office 365 client configured with the en-us and de-de languages. On the site server, you download and deploy only en-us content for an applicable Office 365 update. When the user starts the installation from Software Center for this update, the update will hang while downloading the content.   
+
+## Restart behavior and client notifications for Office 365 updates
+When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on which version of Configuration Manager you have. The following table provides information about the end user experience when the client receives an Office 365 update:
+
+|Configuration Manager version |End user experience|  
+|----------------|---------------------|
+|Prior to 1610|A restart flag is set and the update is installed after the computer restarts.|
+|1610|Office 365 apps are shut down without warning before installing the update|
+|1610 with update <br/>1702|A restart flag is set and the update is installed after the computer restarts.|
+|1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
+
 
 ## Add languages for Office 365 update downloads
 Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365, regardless of whether they are supported in Configuration Manager.    
