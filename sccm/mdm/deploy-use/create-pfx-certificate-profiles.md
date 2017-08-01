@@ -89,7 +89,7 @@ Here, you choose the certificate registration point (CRP) to process the PFX cer
 To learn more, see [Certificate infrastructure](../../protect/deploy-use/certificate-infrastructure.md).
 
 
-### Configure certificate settings (Microsoft)
+### Configure certificate settings for Microsoft CA
 
 To configure certificate settings when using Microsoft as the CA:
 
@@ -97,17 +97,17 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  Enable the **Certificate usage** checkbox to use the certificate profile for S/MIME signing or encryption.
 
-    When you check this option while using Microsoft as the CA, the same PFX certificate is delivered to all enrolled devices.  When this checkbox is unchecked, each device received a unique certificate.  In addition, you optionally choose a certificate to digitally sign all email messages for iOS devices.  To learn more, see [Exchange ActiveSync email profiles in System Center Configuration Manager](../../mdm/deploy-use/create-exchange-activesync-profiles.md).  
+    When you check this option while using Microsoft as the CA, all PFX certificates associated with the target user are delivered to all devices enrolled by the user.  When this checkbox is unchecked, each device receives a unique certificate.  
 
 1.  Set **Subject name format** to either **Common name** or **Fully-distinguished name**.  If unsure which to use, contact your certificate authority administrator.
 
 1.  For **Subject alternative name**, enable the **Email address** and **User principle name (UPN)** as appropriate for your CA.
 
-1.  **Renewal threshold** defines the percentage of time prior to expiration that triggers renewal reminders.
+1.  **Renewal threshold** determines when certificates are automatically renewed, based on the percentage of time remaining before expiration.
 
 1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
 
-1.  The **Active Directory publishing** is enabled when ConfigMgr is configured to [publish site data](/sccm/core/servers/deploy/configure/publish-site-data).  Enable the option to publish the certificate profile to Active Directory.
+1.  The **Active Directory publishing** is enabled when the certificate registration point specifies Active Directory credentials.  Enable the option to publish the certificate profile to Active Directory.
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
@@ -121,7 +121,7 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  When finished, choose **Next** or **Summary**.
 
-### Configure certificate settings (Entrust)
+### Configure certificate settings for Entrust CA
 
 To configure certificate settings when using Entrust as the CA:
 
@@ -129,7 +129,7 @@ To configure certificate settings when using Entrust as the CA:
 
 1.  When checked, the **Certificate usage** uses the certificate profile for S/MIME signing or encryption.
 
-    When using Entrust as the CA, this delivers the same certificate to all enrolled devices.  When this option is *not* checked, each device received a unique certificate.  (Behavior changes for different CAs; to learn more, see the corresponding section.)
+    When using Entrust as the CA, all PFX certificates associated with the target user are delivered to all devices enrolled by the user.    When this option is *not* checked, each device receives a unique certificate.  (Behavior changes for different CAs; to learn more, see the corresponding section.)
 
 1.  Use the **Format** button to map Entrust **Subject name format** tokens to ConfigMgr fields.  
 
@@ -139,11 +139,11 @@ To configure certificate settings when using Entrust as the CA:
 
     The **Certificate Name Formatting** dialog lists the Entrust Digital ID configuration variables.  For each Entrust variable, choose the appropriate LDAP variable from the associated drop-down list.
 
-1.  Set **Renewal threshold** to the percentage of time you wish to receive renewal reminders.
+1.  **Renewal threshold** determines when certificates are automatically renewed, based on the percentage of time remaining before expiration.
 
 1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
 
-1.  The **Active Directory publishing** option is enabled when the [certificate registration point](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) specifies Active Directory publication.  Check the option to publish the certificate.
+1.  The **Active Directory publishing** is enabled when the certificate registration point specifies Active Directory credentials.  Enable the option to publish the certificate profile to Active Directory.
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
