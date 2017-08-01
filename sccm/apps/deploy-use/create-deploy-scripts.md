@@ -100,4 +100,4 @@ After you have run a script to client devices, use this procedure to monitor the
 
 1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Status**.
-3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0**, generally indicates that the script ran successfully.
+3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
