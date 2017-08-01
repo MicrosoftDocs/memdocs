@@ -183,7 +183,8 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
-### New mobile application management policy settings
+### New mobile application management policy settings    
+<!--1324760-->
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
