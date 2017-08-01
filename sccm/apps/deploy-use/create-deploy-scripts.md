@@ -71,6 +71,20 @@ Sites
 	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
+### Script examples
+
+Here are some examples that illustrate scripts you might want to use with this capability.
+
+#### Create a folder
+
+*New-Item "c:\scripts" -type folder name* 
+ 
+ 
+#### Create a file
+
+*New-Item c:\scripts\new_file.txt -type file name*
+
+
 ## Approve or deny a script
 
 Before you can run a script, it must be approved. To approve a script:
