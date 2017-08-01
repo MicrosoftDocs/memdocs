@@ -247,9 +247,9 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 
 ## Mobile device management
 
-### Android for Work application management policy for copy-paste
+### Android for Work configuration for sharing updates
 <!-- 1338403 -->
-With this release, the Android for Work configuration items for the **Allow data sharing between work and personal profile** settings descriptions have been updated.
+With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
 For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
