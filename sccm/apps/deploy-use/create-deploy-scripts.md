@@ -2,7 +2,7 @@
 title: "Create and run scripts with Configuration Manager | Microsoft Docs"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -91,10 +91,13 @@ After a script is approved, it can be run against a collection you choose.
 5. On the **Script** page of the **Run Script** wizard, choose a script from the list. Only approved scripts are shown.
 6. Click **Next**, and then complete the wizard.
 
+>[!IMPORTANT]
+>The script is given a one-hour time period in which to run. If it does not run (for example if the PC is turned off) in this time period, you must run it again.
+
 ## Next steps
 
 After you have run a script to client devices, use this procedure to monitor the success of the operation.
 
 1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Status**.
-3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0**, generally indicates that the script ran successfully.
+3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
