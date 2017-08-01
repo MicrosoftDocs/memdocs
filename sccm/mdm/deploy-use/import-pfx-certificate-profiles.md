@@ -83,7 +83,7 @@ Imported certificates are later deployed to enrolled devices.
 2.  The certificate profile containing the PFX file is now available from the **Certificate Profiles** workspace. 
 3.  To deploy the profile, in the **Assets and Compliance** workspace open **Compliance Settings** > **Company Resource Access** > **Certificate Profiles**, right-click the certificate you want, then click **Deploy**. 
 
-### Deploy a Create PFX Script.
+### Deploy a Create PFX Script
 
 Use the [Configuration Manager SDK](http://go.microsoft.com/fwlink/?LinkId=613525) to deploy a Create PFX Script. 
 

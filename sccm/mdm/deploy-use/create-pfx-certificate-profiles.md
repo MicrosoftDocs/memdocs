@@ -10,7 +10,7 @@ ms.technology:
   - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
+ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: lleonard-msft
@@ -111,7 +111,7 @@ To configure certificate settings when using Microsoft as the CA:
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
-    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** option does not support certificate authorities.)
+    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not deploy certificates and should not be chosen.)
     1.  Select the **Key Storage Provider (KSP)** from one of the following options:
 
         - **Install to Trusted Platform Module (TPM) if present**  
@@ -147,7 +147,7 @@ To configure certificate settings when using Entrust as the CA:
 
 1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
 
-    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not support certificate authorities.)
+    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not deploy certificates and should not be chosen.)
     1.  Select the **Key Storage Provider (KSP)** from one of the following options:
 
         - **Install to Trusted Platform Module (TPM) if present**  
