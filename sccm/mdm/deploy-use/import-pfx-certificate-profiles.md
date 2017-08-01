@@ -119,7 +119,7 @@ To use this example, update the following script variables:
    -   **ComputerName** - Name of host computer   
 
 ## See also
-[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) walks you through the Create Certificate Profile Wizard.
+[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles) walks you through the Create Certificate Profile Wizard.
 
 [How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/create-pfx-certificate-profiles.md)
 

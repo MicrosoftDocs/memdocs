@@ -174,7 +174,7 @@ To configure certificate settings when using Entrust as the CA:
 
 
 ## See also
-[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) walks you through the Create Certificate Profile Wizard.
+[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md) walks you through the Create Certificate Profile Wizard.
 
 [How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
 
