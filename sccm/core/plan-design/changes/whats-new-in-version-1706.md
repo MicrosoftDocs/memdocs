@@ -112,7 +112,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 
 ## Compliance settings
 
-### New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client
+### New configuration settings for Windows 10 devices that are not managed with the Configuration Manager client
 <!-- 1354715 -->
 In this release, we've added new configuration item settings for Windows 10 devices that are enrolled with Intune, or managed on premises by Configuration Manager. The settings are:
 
@@ -247,7 +247,7 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 
 ## Mobile device management
 
-### Android for Work configuration for sharing updates
+### Updates to Android for Work sharing configuration
 <!-- 1338403 -->
 With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
