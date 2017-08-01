@@ -141,12 +141,6 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Device Health Attestation assessment for compliance policies for conditional access|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![Not added](media/Red_X.gif)|
  |Support for Entrust certificate authorities|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[Version 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |Cisco (IPSec) support for macOS VPN profiles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[Version 1706](/sccm/protect/deploy-use/vpn-profiles)|
-
-## Capabilities delivered in previous technical previews
- When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
-
- |Capability |Technical Preview version |Current Branch version|  
- |----------------|---------------------|--------------------|
  |New capabilities for Azure AD and cloud management|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[Version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
  |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
  |Update reset tool  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[Version 1706](/sccm/core/servers/manage/update-reset-tool)|
