@@ -211,7 +211,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 ## <a name="azureaadisc"></a> Configure Azure AD User Discovery
 Beginning with version 1706, you can configure Azure Active Directory User Discovery when you connect Configuration Manager to your [Azure subscription, and Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
-Azure AD User Discovery is configured as part of *Could Management*. The procedure to do so is detailed in [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
+Azure AD User Discovery is configured as part of *Cloud Management*. The procedure to do so is detailed in [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
 
 
 
