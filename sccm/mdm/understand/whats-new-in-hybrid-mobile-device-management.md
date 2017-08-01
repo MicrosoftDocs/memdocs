@@ -46,12 +46,12 @@ This article provides details on the new mobile device management (MDM) features
 
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1706.
 
-<!--- [EntrustSupport for Entrust certification authorities](/sccm/core/plan-design/changes/whats-new-in-version-1706#support-for-entrust-certification-authorities) -->
+- [EntrustSupport for Entrust certification authorities](/sccm/core/get-started/capabilities-in-technical-preview-1706#support-for-entrust-certification-authorities)
 - [New mobile application management policy settings](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-mobile-application-management-policy-settings)
-- [Android for Work application management policy for copy-paste](/sccm/core/plan-design/changes/whats-new-in-version-1706#android-for-work-application-management-policy-for-copy-paste)
+- [Android for Work configuration for sharing updates](/sccm/core/plan-design/changes/whats-new-in-version-1706#android-for-work-configuration-for-sharing-updates)
 - [New device compliance policy rules](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-device-compliance-policy-rules)
 - [New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-compliance-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client)
-<!--- [Cisco (IPsec) support for macOS VPN profiles](/sccm/core/plan-design/changes/whats-new-in-version-1706#cisco-ipsec-support-for-macos-vpn-profiles) -->
+- [Cisco (IPsec) support for macOS VPN profiles](/sccm/core/get-started/capabilities-in-technical-preview-1706#cisco-ipsec-support-for-macos-vpn-profiles)
 
 ## June 2017
 
