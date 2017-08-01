@@ -2,7 +2,7 @@
 title: "Client settings | Microsoft Docs"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -57,9 +57,25 @@ Many of the client settings are self-explanatory. Others are described here.
 
   Beginning in version 1606, use this setting to set up the client computer for [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
+- **Enable BranchCache**
+
+Enables BranchCache on client computers.
+
+- **Maximum BranchCache cache size (percentage of disk)**.
+
 - **Configure client cache size**
 
-  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** to specify **Maximum cache size** (megabytes or percentage of disk). The client cache size can expand to the maximum size in MB or the percentage of the disk, **whichever is less**. If this option is **No**, the default size is 5,120 MB.
+  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** then specify:
+	- **Maximum cache size** (megabytes). 
+	- **Maximum cache size** (percentage of disk).
+The client cache size can expand to the maximum size in MB or the percentage of the disk, **whichever is less**. If this option is **No**, the default size is 5,120 MB.
+
+- **Enable Configuration Manager client in full OS to share content**
+
+Enables peer cache for Configuration Manager clients. Then, specify port information by which the client communicates with the peer computer. Configuration Manager will automatically configure Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
+
+
+
 
 ## Client policy  
 
