@@ -1521,9 +1521,9 @@ After you select the variables for a rule, you must provide a value for each var
 >  When you import a task sequence with the Set Dynamic Variables step, and **Secret value** is selected for the value of the variable, the value is removed when you import the task sequence. As a result, you must re-enter the value for the dynamic variable after you import the task sequence.  
 
 ##  <a name="BKMK_SetTaskSequenceVariable"></a> Set Task Sequence Variable  
- Use the **Set Task Sequence Variable** task sequence step to set the value of a variable that is used with the task sequence.  
+Use the **Set Task Sequence Variable** task sequence step to set the value of a variable that is used with the task sequence.  
 
- This step can be run in either a standard operating system or Windows PE. Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
+This step can be run in either a standard operating system or Windows PE. Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1547,6 +1547,16 @@ After you select the variables for a rule, you must provide a value for each var
 
  **Value**  
  The value that is associated with the task sequence variable. The value could be another task sequence variable in %<varname\>% syntax.  
+
+## Hide task sequence progress
+<!-- 1354291 -->
+With the 1706 release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, use the **Set Task Sequence Variable** step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress. You can use the Set Task Sequence Variable step multiple times in a task sequence to change the value for the variable. This lets you hide or display task sequence progress in different sections of the task sequence.
+
+ - **To hide task sequence progress**  
+In task sequence editor, use the [Set Task Sequence Variable](#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
+
+ - **To display task sequence progress**  
+In task sequence editor, use the [Set Task Sequence Variable](#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to display task sequence progress.
 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Setup Windows and ConfigMgr  
  Use the **Setup Windows and ConfigMgr** task sequence step to perform the transition from Windows PE to the new operating system. This task sequence step is a required part of any operating system deployment. It installs the Configuration Manager client into the new operating system and prepares for the task sequence to continue execution in the new operating system.  
