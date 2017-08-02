@@ -112,7 +112,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 
 ## Compliance settings
 
-### New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client
+### New configuration settings for Windows 10 devices that are not managed with the Configuration Manager client
 <!-- 1354715 -->
 In this release, we've added new configuration item settings for Windows 10 devices that are enrolled with Intune, or managed on premises by Configuration Manager. The settings are:
 
@@ -183,7 +183,8 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
-### New mobile application management policy settings
+### New mobile application management policy settings    
+<!--1324760-->
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
@@ -246,9 +247,9 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 
 ## Mobile device management
 
-### Android for Work application management policy for copy-paste
+### Updates to Android for Work sharing configuration
 <!-- 1338403 -->
-With this release, the Android for Work configuration items for the **Allow data sharing between work and personal profile** settings descriptions have been updated.
+With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
 For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
