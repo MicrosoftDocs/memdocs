@@ -193,10 +193,10 @@ The new application appears in the **Applications** node of the Configuration Ma
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
 
-    -   **Uninstall content settings**--Specify one the following options:
+    -   **Uninstall content settings**--Specify one of the following options:
         - **Same as install content**--Select this option if the install and uninstall content are the same. This is the default behavior.
         - **No uninstall content**--Select this option if your application does not need content for uninstall.
-        - **Different from install content**--Select this option if the uninstall content is different from install content.
+        - **Different from install content**--Select this option if the uninstall content is different from the install content.
 
 4. If you selected **Different from install content**, browse to, or enter the location of the application content that is used to uninstall the application.
 5. Click **OK** to close the deployment type properties dialog box.
