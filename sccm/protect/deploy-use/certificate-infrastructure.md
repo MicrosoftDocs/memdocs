@@ -1,5 +1,5 @@
 ---
-title: "Configuring certificate infrastructure | Microsoft Docs"
+title: "Configure certificate infrastructure | Microsoft Docs"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/25/2017
@@ -18,11 +18,11 @@ ms.author: alleonar
 manager: angrobe
 ---
 
-# Certificate infrastructure
+# Configure certificate infrastructure
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Here are the steps, details, and more information about how to configure certificates in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
+Learn to configure certificate infrastructure in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 
 Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
