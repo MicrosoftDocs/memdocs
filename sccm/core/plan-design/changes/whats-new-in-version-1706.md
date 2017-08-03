@@ -214,10 +214,12 @@ In this release, we have significantly improved the download time for Express Up
 
 ### Manage Microsoft Surface driver updates
 <!-- 1098490 -->
-You can now use Configuration Manager to manage Microsoft Surface driver updates.
+You can now use Configuration Manager to manage Microsoft Surface driver updates.    
+
 
 #### Prerequisites
-All software update points must run Windows Server 2016.
+- All software update points must run Windows Server 2016.    
+- This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### To manage Surface driver updates
 
