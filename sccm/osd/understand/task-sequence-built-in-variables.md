@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Task sequence built-in variables in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Task sequence built-in variables in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
  Task sequence built-in variables are provided by System Center Configuration Manager. Built-in variables provide information about the environment where the task sequence is running, and their values are available throughout the whole task sequence. Typically, built-in variables are initialized before steps are run in the task sequence. For example, the built-in variable **_SMSTSLogPath** is an environment variable that specifies the path that Configuration Manager components use to write log files while the task sequence runs; any task sequence step can access this environment variable. However, some variables, such as &#95;SMSTSCurrentActionName, are evaluated before each step. The values of built-in variables are generally read-only. The values are read only for built-in variables with a name that begins with an underscore.  
 
@@ -72,7 +77,8 @@ author: Dougebyms.author: dougebymanager: angrobe
 |SMSTSDriverRequestResolveTimeOut|Use this variable to specify the number of seconds to wait for HTTP name resolution when for a driver catalog request during the Auto Apply Driver task sequence step. If the connection takes longer than the timeout setting, the request is cancelled. By default, the timeout is set to 60 seconds.|
 |SMSTSDriverRequestSendTimeOut|Use this variable to specify the number of seconds to use when sending a driver catalog request during the Auto Apply Driver task sequence step. If the request takes longer than the timeout setting, the request is cancelled. By default, the timeout is set to 60 seconds.|
 |SMSTSErrorDialogTimeout|When an error occurs in a task sequence, a dialog box is displayed that is automatically dismissed after a number of seconds specified by this variable. By default, the dialog box is automatically dismissed after **900** seconds (15 minutes).|  
-|TSErrorOnWarning|Use this variable to specify whether the task sequence engine considers a detected warning as an error during the Application Installation task sequence step. The task sequence sets the _TSAppInstallStatus variable to **Warning** when one or more applications, or a required dependency, did not install because a requirement was not met. When you set the TSErrorOnWarning variable to **True** and the _TSAppInstallStatus variable is set to Warning, it is treated as an error. A value of **False** is the default behavior.|  
+| TSDisableProgressUI | Use this variable to hide or display task sequence progress in different sections of the task sequence. | 
+|TSErrorOnWarning|Use this variable to specify whether the task sequence engine considers a detected warning as an error during the Application Installation task sequence step. The task sequence sets the _TSAppInstallStatus variable to **Warning** when one or more applications, or a required dependency, did not install because a requirement was not met. When you set the TSErrorOnWarning variable to **True** and the _TSAppInstallStatus variable is set to Warning, it is treated as an error. A value of **False** is the default behavior.| 
 |SMSTSLanguageFolder|Use this variable to change the display language of a language neutral boot image.|  
 |SMSTSLocalDataDrive|Specifies where temporary files are stored on the destination computer while the task sequence is running.<br /><br /> This variable must be set before the task sequence starts, such as by setting a collection variable. Once the task sequence starts, Configuration Manager defines the _SMSTSMDataPath variable once the Task Sequence starts.|  
 |SMSTSMP|Use this variable to specify the URL or IP address of the Configuration Manager management point.|  
