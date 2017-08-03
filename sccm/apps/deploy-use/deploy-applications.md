@@ -52,7 +52,7 @@ If this is enabled and if any of the deployment types in the application contain
 	> If you update the dependent application after the primary application has been deployed, any new content for the dependency will not be automatically distributed.
 
 - **Comments (optional)**  
-Optionally, enter a description of this deployment.
+Optionally, enter a description for this deployment.
 
 ### Specify content options for the deployment
 
@@ -66,7 +66,7 @@ On the **Deployment Settings** page of the Deploy Software wizard, specify the f
 From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.
 
 	> [!NOTE]
-	>  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** take priority.
+	>  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** takes priority.
 
 You cannot change the action of a deployment after it has been created.
 
@@ -98,7 +98,7 @@ If this option is selected, the administrator must approve any user requests for
 	>  This action does not cause the application to be uninstalled from any devices, but it does stop users from installing new copies of the application from Software Center.
 
 - **Automatically upgrade any superseded version of this application**  
-If this option is selected, any superseded versions of the application is upgraded with the superseding application.
+If this option is selected, any superseded version of the application is upgraded with the superseding application.
 
 ### Specify scheduling settings for the deployment
 
@@ -169,7 +169,7 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 >[!Tip]
 >Introduced with version 1702, this is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
 
-In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can specify one of more executable files that, if running, blocks the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed. To configure this:
+In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can specify one or more executable files that, if running, block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed. To configure this:
 
 1. Open the **Properties** dialog box for any deployment type.
 2. On the **Install Behavior** tab of the *<deployment type name>* **Properties** dialog box, click **Add**.
