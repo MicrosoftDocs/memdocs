@@ -37,7 +37,7 @@ For example, when creating the cloud management gateway at Contoso, the hostname
 
 You can create a custom SSL certificate for cloud management gateway in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) but do the following things differently:
 
-- When setting up the new certificate template, give **Read **and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
+- When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 - When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
 
 
