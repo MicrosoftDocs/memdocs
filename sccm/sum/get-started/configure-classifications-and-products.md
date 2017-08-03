@@ -49,8 +49,9 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     > - **Updates**: Specifies an update to an application or file that is currently installed.  
     > - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification.    
     >       
-    > Beginning in Configuration Manager version 1706, you can also select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers.    
-    > [!IMPORTANT]    
+
+    > [!NOTE]    
+    > Beginning in Configuration Manager version 1706, you can also select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers.     
     > This is a pre-release feature available in Configuration Manager version 1706. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 5.  On the **Products** tab, specify the products for which you want to synchronize software updates, and then click **Close**.  
