@@ -102,33 +102,17 @@ To complete this procedure, the account you use to run Configuration Manager Set
 
 
 
-## Add and remove synchronous replica members  
-When your site database is hosted in an availability group, use the following procedures to add or remove synchronous replica members. For information about the type and number of replicas that are supported, see **Availability group configurations** under [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) in the prepare to use availability group topic.
+## Add synchronous replica members  
+When your site database is hosted in an availability group, use the following procedures to add synchronous replica members. For information about the type and number of replicas that are supported, see **Availability group configurations** under [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) in the prepare to use availability group topic.
 
-To complete the following procedures, the account you use must be:
+To complete the following procedure, the account you use must be:
 -   A member of the **Local Administrators** group on each computer that is a member of the availability group.
 -   A **sysadmin** on each SQL Server that hosts or will host the site database.
 
 
-### To add a new synchronous replica member
-1.	Add the new server as a secondary replica to the availability group. See [Add a Secondary Replica to an Availability Group (SQL Server)](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) in the SQL Server documentation library.
-
-2.	Stop the Configuration Manager site by running **Preinst.exe /stopsite**. See [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
-
-3.	Use SQL Server to create a backup of the site database from the primary replica, and then restore that backup to the new secondary replica server. See [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) and [Restore a Database Backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) in the SQL Server documentation.
-
-4.	Configure each secondary replica. Perform the following actions for each secondary replica in the availability group:
-
-    1.	Ensure the computer account of the site server is a member of the **Local Administrators** group on each computer that is a member of the availability group.
-
-    2.	Run the [verification script](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) from the prerequisites to confirm that the site database on each replica is correctly configured.
-
-    3.	If it’s necessary to configure the new replica, manually failover the primary replica to the new secondary replica and then make the required settings. See [Perform a Planned Manual Failover of an Availability Group](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
-
-5.	Restart the site by starting the Site Component Manager (**sitecomp**) and **SMS_Executive** services.
-
-### To remove a replica member
-For this procedure, use the information in [Remove a Secondary Replica from an Availability Group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) from the SQL Server documentation.
+### To add a new synchronous replica member  
+The process to add secondary replica to an availability group you use with Configuration Manager can be complex, dynamic, and require steps and procedures that change based on individual environments. We are working on improvements for Configuration Manager to simplify this process. In the meantime, if you need to add secondary replicas, refer to the following blog on TechNet for guidance
+-   [ConfigMgr 1702: Adding a new node (Secondary Replica) to an existing SQL AO AG](https://blogs.technet.microsoft.com/umairkhan/2017/07/17/configmgr-1702-adding-a-new-node-secondary-replica-to-an-existing-sql-ao-ag/)
 
 ## Configure an asynchronous commit replica
 Beginning with Configuration Manager version 1706, you can add an asynchronous replica to an availability group you use with Configuration Manager. To do so, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See the [SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))  for information on how to add secondary replicas to availability groups.
