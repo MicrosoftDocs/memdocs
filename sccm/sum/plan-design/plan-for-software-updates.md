@@ -293,7 +293,7 @@ Software updates requires that a supported version of WSUS is installed on all s
 -   If a superseding software update was not approved for deployment in your production environment.  
 
     > [!NOTE]  
-    >  When Configuration Manager sets a superseded software update to **expired**, it does not set the update to **expired** in WSUS. However, when the WSUS cleanup task runs, the updates set to **expired** in Configuration Manager are set to a status of **Declined** on the WSUS server and the Windows Update Agent on computers will no longer scan for these updates. This means that clients will continue to scan for an expired update until the cleanup task runs. For information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
+    > When Configuration Manager sets a superseded software update to **Expired**, it does not set the update to **Declined** in WSUS. However, when the WSUS cleanup task runs, the updates set to **Expired** in Configuration Manager are set to a status of **Declined** on the WSUS server and the Windows Update Agent on computers will no longer scan for these updates. This means that clients will continue to scan for an expired update until the cleanup task runs. For information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
 
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
  The language settings for the software update point allow you to configure the languages for which the summary details (software updates metadata) are synchronized for software updates, and the software update file languages that will be downloaded for software updates.  
