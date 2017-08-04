@@ -2,7 +2,7 @@
 title: "Remotely administer Windows computer | Microsoft Docs"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 07/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -85,11 +85,10 @@ Here are three ways to start the remote control viewer:
 
 -   At the Windows command prompt, type *<Configuration Manager Installation Folder\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
-    > [!NOTE]  
-    >  CmRcViewer.exe supports the following command-line options:  
-    >   
-    >  -   *<Address\>* - Specifies the NetBIOS name, the fully qualified domain name (FQDN), or the IP address of the client computer that you want to connect to.  
-    > -   *<Site Server Name\>* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.  
-    > -   **/?** - Displays the command-line options for the remote control viewer.  
-    >   
-    >  **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
+CmRcViewer.exe supports the following command-line options:  
+
+- *Address* - Specifies the NetBIOS name, the fully qualified domain name (FQDN), or the IP address of the client computer that you want to connect to.
+- *Site Server Name* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.
+- **/?** - Displays the command-line options for the remote control viewer.  
+     
+**Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  

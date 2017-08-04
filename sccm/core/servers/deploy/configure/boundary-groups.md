@@ -2,7 +2,7 @@
 title: "Define boundary groups | Microsoft Docs"
 description: "Understand boundary groups that link clients to site systems in System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,11 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Configure boundary groups for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-You use boundary groups in System Center Configuration Manager to logically group related network locations ([boundaries](/sccm/core/servers/deploy/configure/boundaries)) to make it easier to manage your infrastructure. You must assign boundaries to boundary groups before you can use the boundary group.
+# Configure boundary groups for System Center Configuration Manager
+
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+You use boundary groups in System Center Configuration Manager to logically group related network locations ([boundaries](/sccm/core/servers/deploy/configure/boundaries)) to make it easier to manage your infrastructure. Boundaries must be assigned to boundary groups before you can use the boundary group.
+
 By default, Configuration Manager creates a default site boundary group at each site.
 
 > [!IMPORTANT]  
@@ -26,7 +33,7 @@ By default, Configuration Manager creates a default site boundary group at each 
 
 To configure boundary groups, you associate boundaries (network locations) and site system roles, like distribution points, to the boundary group. This helps associate clients to site system servers like distribution points that are located near the clients on the network.
 
-When you assign the same boundary to multiple boundary groups, and assign the same site system servers, like distribution points, to multiple boundary groups you increase the site systems availability to a wider range of network locations.
+When you assign the same boundary to multiple boundary groups, and assign the same site system servers, like distribution points, to multiple boundary groups you increase the availability of site systems to a wider range of network locations.
 
 Clients use a boundary group for:  
 
@@ -35,7 +42,7 @@ Clients use a boundary group for:
     - Distribution points for content location
     -	Software update points (beginning with version 1702)
     - State migration points
-    - Preferred management points (If you will use preferred management points, you must enable this option for the hierarchy and not from within the boundary group configuration. See [To enable use of preferred management points](#to-enable-use-of-preferred-management-points) in this topic.)
+    - Preferred management points (If you use preferred management points, you must enable this option for the hierarchy and not from within the boundary group configuration. See [To enable use of preferred management points](#to-enable-use-of-preferred-management-points) in this topic.)
 
 ##  Boundary groups and relationships
 For each boundary group in your hierarchy, you can assign:
@@ -48,7 +55,7 @@ For each boundary group you create, you can configure a one-way link to another 
 The configuration of each relationship determines when a client that fails to find an available site system server in its current boundary group can begin to search a neighbor boundary group to find an available site system. This search of additional groups is called **fallback**.
 
 ## Fallback
-To prevent problems for clients when they cannot find an available site system in their current boundary group, you define relationships between boundary groups that defines fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
+To prevent problems for clients when they cannot find an available site system in their current boundary group, you define relationship between boundary groups that defines fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
 
 Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of site system role that is supported, you can configure independent settings for fallback to that neighbor boundary group. As an example, when you configure a relationship to a specific boundary group you can set fallback for distribution points to occur after 20 minutes instead of the default of 120. See [Example of using boundary groups](#example-of-using-boundary-groups) for a more extensive example.
 
@@ -56,8 +63,8 @@ If a client fails to find an available site system role in its current boundary 
 
 When a client can’t find an available site system and begins to search locations from neighbor boundary groups, it increases the pool of available site systems that it can use in a manner that is defined by your configuration of boundary groups and their relationships.
 
-- A boundary group can have more than one relationship. This lets you configure fallback for each type of site system to different neighbors to occur after different periods of time.    
-- Clients will only fallback to a boundary group that is a direct neighbor of their current boundary group.
+- A boundary group can have more than one relationship. With mulitple relationships you can configure fallback for each type of site system to different neighbors to occur after different periods of time.    
+- Clients only fallback to a boundary group that is a direct neighbor of their current boundary group.
 - When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client’s boundary groups. That client can then fallback to neighbors of any of those original boundary groups.
 
 ### The default site boundary group
@@ -75,11 +82,11 @@ To manage fallback to the default site boundary group:
 ## Site assignment  
  You can configure each boundary group with an assigned site for clients.  
 
--   A newly installed client that uses automatic site assignment will join the assigned site of a boundary group that contains the client's current network location.  
--   After assigning to a site, a client does not change its site assignment when it changes its network location. For example, if the client roams to a new network location that is represented by a boundary in a boundary group with a different site assignment, the client's assigned site will remain unchanged.  
+-   A newly installed client that uses automatic site assignment joins the assigned site of a boundary group that contains the client's current network location.  
+-   After assigning to a site, a client does not change its site assignment when it changes its network location. For example, if the client roams to a new network location that is represented by a boundary in a boundary group with a different site assignment, the client's assigned site remains unchanged.  
 -   When Active Directory System Discovery discovers a new resource, network information for the discovered resource is evaluated against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.  
--   When a boundary is a member of multiple boundary groups that have different assigned sites, clients will randomly select one of the sites.  
--   Changes to a boundary groups assigned site only apply to new  site assignment actions. Clients that  previously  assigned to a site, do not re-evaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).  
+-   When a boundary is a member of multiple boundary groups that have different assigned sites, clients randomly select one of the sites.  
+-   Changes to a boundary groups assigned site only apply to new  site assignment actions. Clients that  previously  assigned to a site, do not reevaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).  
 
 For more information about client site assignment, see [Using Automatic Site Assignment for Computers](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment) in [How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
@@ -98,25 +105,49 @@ However, If the content is distributed on-demand and not available on a distribu
 ## Software update points
 Beginning with version 1702, clients use boundary groups to find a new software update point. You can add individual software update points to different boundary groups to control which servers a client can find.
 
-When you update from a version prior to 1702, all existing software update points are added to the default site boundary group at each site. This maintains the pre-update behavior where clients select a software update point from the pool of available software update points that you have configured for your hierarchy.  This behavior is maintained until you choose to add individual software update points to different boundary groups for controlled selection and fallback behavior.
+If you update from a version prior to 1702, all existing software update points are added to the default site boundary group at each site. This maintains the pre-update behavior where clients select a software update point from the pool of available software update points that you have configured for your hierarchy.  This behavior is maintained until you choose to add individual software update points to different boundary groups for controlled selection and fallback behavior.
 
-If you install a new site that runs version 1702 or later, you must assign software update points to a boundary group before clients can find and use them.
+If you install a new site that runs version 1702 or later, software update points are not added to the default site boundary group. Assign software update points to a boundary group so that clients can find and use them.
 
-
+### Fallback for software update points
 Fallback for software update points is configured like other site system roles, but has the following caveats:
-- **New clients use boundary groups to select software update points.** After you install version 1702, new clients that you install select a software update point from those associated with the boundary groups you have configured.
+- **New clients use boundary groups to select software update points.** After you install version 1702, new clients that you install select a software update point from those associated with the boundary groups you have configured. This replaces the previous behavior where clients select a software update point randomly from a list of those that share the client’s forest.
 
-  This replaces the previous behavior where clients select a software update point randomly from a list of those that share the client’s forest.
+- **Clients continue to use a last-known good software update point until they fallback to find a new one.** Clients that already have a software update point continue to use that software update point until that server cannot be reached.  This includes continued use of a software update point that is not associated with the client’s current boundary group.
 
-- **Previously installed clients continue to use their current software update point until they fallback to find a new one.** Clients that were previously installed and that already have a software update point will continue to use that software update point until that server cannot be reached. This includes continued use of a software update point that is not associated with the client’s current boundary group.
+  The continued use of an existing software update point even when that server is not in the client’s current boundary group is intentional. This is because a change of software update point can result in a large use of network bandwidth as the client synchronizes data with the new software update point. The delay in transition can help to avoid saturating your network if all your clients switch to a new software update point at the same time.
 
-  When a client that already has a software update point fails to reach it, the client can then fallback to find another. When using fallback, the client receives a list of all software update points from its current boundary group. If it fails to find an available server for 120 minutes, it will then fallback to its neighbor boundary groups and the default site boundary group. Fallback to both boundary groups happens at the same time because the software update points fallback time to neighbor groups is set to 120 minutes and cannot be changed. 120 minutes is also the default period used for fallback to the default site boundary group. When a client falls back to both a neighbor and default site boundary group, the client attempts to contact software update points from the neighbor boundary group before trying to use one from the default site boundary group.
+- **A client always attempts to reach its last known-good software update point for 120 minutes before starting fallback.** After 120 minutes, if the client has not established contact, it then begins fallback. When fallback starts, the client receives a list of all software update points from its current boundary group. Additional software update points from neighbor boundary groups and site default boundary group are available based on fallback configurations.
 
-  The continued use of an existing software update point even when that server is not in the client’s current boundary group is intentional. This is because a change of software update point can result in a large use of network bandwidth as the client synchronizes data with the new software update point. The delay in transition can help to avoid saturating your network should all your clients switch to a new software update point at the same time.
+### Fallback configurations for software update points
+#### Beginning with version 1706   
+You can configure **Fallback times (in minutes)** for software update points to be less than 120 minutes. However, the client must still attempt to reach its original software update point for 120 minutes before it expands it search to additional servers. Because boundary group fallback times start when the client first fails to reach its original server, any boundary groups that are configured for less than 120 minutes are provided to the client when it expands its search after failing to reach its original server for 120 minutes.
 
-- **Configurations for fallback time:**  Unlike fallback configurations for other site system roles, software update points do not yet support a configurable time in minutes. Instead, fallback behavior is limited to the following:  
+You can configure **Never fallback** to block fallback for a software update point to a neighbor boundary group.
+
+After failing to reach its original server for two hours, the client then uses a shorter cycle to establish a connection to a new software update point. This enables the client to rapidly search through the expanding list of potential software update points.
+
+ -  **Example of fallback:**  
+    A client’s current boundary group has fallback for software update points that is configured as *10* minutes for boundary group *A*, and *130* minutes for boundary group *B*. When the client fails to reach its last known-good software update point:
+    -   The client attempts to reach only its original server for the next 120 minutes.  After 10 minutes, the software update points from boundary group A are added to the pool of available servers. However, the client cannot attempt to contact them or any other server until the initial 120-minute period to reconnect with the original server has elapsed.
+    -   After trying to locate that original software update point for 120 minutes, the client can then expand its search. At that time, servers in the client’s current boundary group and any neighbor boundary groups that are configured for 120 minutes or less, are added to the available pool of software update points. This includes the servers in boundary group A which were previously added to the pool of available servers.
+    -   	After 10 more minutes (130-minutes total time after the client first failed to reach its last known-good software update point), the client expands the search to include software update points from boundary group B.  
+
+#### Prior to version 1706
+Prior to version 1706, fallback configurations for software update points do not support a configurable time in minutes. Instead, fallback behavior is limited to:
+
   - **Fallback times (in minutes):**  This option is grayed out for software update points and cannot be configured. It is set to 120 minutes.
   - 	**Never fallback:** You can block fallback for a software update point to a neighbor boundary group when you use this configuration.
+
+When a client that already has a software update point fails to reach it, the client can then fallback to find another. When using fallback, the client receives a list of all software update points from its current boundary group. If it fails to find an available server for 120 minutes, it will then fallback to its neighbor boundary groups and the default site boundary group. Fallback to both boundary groups happens at the same time because the software update points fallback time to neighbor groups is set to 120 minutes and cannot be changed. 120 minutes is also the default period used for fallback to the default site boundary group. When a client falls back to both a neighbor and default site boundary group, the client attempts to contact software update points from the neighbor boundary group before trying to use one from the default site boundary group.
+
+### Manually switch to a new software update point
+In addition to using fallback, you can use *Client Notification* to manually force a device to switch to a new software update point.
+
+When you switch to a new server, the devices use fallback to find that new server. Therefore, review your boundary group configurations, and ensure that your software update points are in the correct boundary groups before you start this change.
+
+For more information, see [Manually switch clients to a new software update point](/sccm/sum/plan-design/plan-for-software-updates#manually-switch-clients-to-a-new-software-update-point).
+
 
 ## Preferred management points
 

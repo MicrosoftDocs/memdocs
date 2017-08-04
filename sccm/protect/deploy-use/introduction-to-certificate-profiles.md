@@ -2,7 +2,7 @@
 title: "Introduction to certificate profiles | Microsoft Docs"
 description: "Learn how certificate profiles in System Center Configuration Manager work with Active Directory Certificate Services."
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 
 ---
@@ -45,17 +45,24 @@ Certificate profiles provide the following management capabilities:
 -   **Trusted CA certificate** - Lets you deploy a trusted root CA or intermediate CA certificate to form a certificate chain of trust when the device must authenticate a server.  
 
 -   **Simple Certificate Enrollment Protocol (SCEP)** - Lets you request a certificate for a device or user by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2.
+
+    To create a **Simple Certificate Enrollment Protocol (SCEP)** certificate profile, first create a **Trusted CA certificate** certificate profile.
+
 -   **Personal information exchange (.pfx)** - Lets you request a .pfx (also known as PKCS #12) certificate for a device or user.
 
-    > [!NOTE]  
-    >  You must create a certificate profile of the type **Trusted CA certificate** before you can create a **Simple Certificate Enrollment Protocol (SCEP)** certificate profile.  
+    You may create PFX certificate profiles by ether [importing credentials](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md) from existing certificates or by [defining a certificate](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md) authority to process requests.
+
+    Starting with release 1706, you can use Microsoft or Entrust as certificate authorities for **Personal information exchange (.pfx)** certificates.
+
 
 ## Requirements and supported platforms  
- To deploy certificate profiles that use SCEP, you must install the certificate registration point on a site system server in the central administration site, or in a primary site. You must also install a policy module for NDES, the Configuration Manager Policy Module, on a server that runs Windows Server 2012 R2 with the Active Directory Certificate Services role and a working NDES that is accessible to the devices that require the certificates. For the devices that are enrolled by Microsoft Intune, this requires the NDES to be accessible from the Internet, for example, in a screened subnet (also known as a DMZ).  
+To deploy certificate profiles that use SCEP, you must install the certificate registration point on a site system server in the central administration site, or in a primary site. You must also install a policy module for NDES, the Configuration Manager Policy Module, on a server that runs Windows Server 2012 R2 with the Active Directory Certificate Services role and a working NDES that is accessible to the devices that require the certificates. For the devices that are enrolled by Microsoft Intune, this requires the NDES to be accessible from the Internet, for example, in a screened subnet (also known as a DMZ).  
 
- For more information about how the Network Device Enrollment Service supports a policy module so that Configuration Manager can deploy certificates, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+PFX certificates also require a certificate registration point on a site system server in the central administration site or in a primary site.  You must also specify the Certificate authority (CA) for the certificate and specify relevant access credentials.  Starting with version 1706, you may specify either Microsoft or Entrust as certificate authorities.  
 
- Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and  the operating system. The following devices and operating systems are supported:  
+For more information about how the Network Device Enrollment Service supports a policy module so that Configuration Manager can deploy certificates, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+
+Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and the operating system. The following devices and operating systems are supported:  
 
 -   Windows RT 8.1  
 

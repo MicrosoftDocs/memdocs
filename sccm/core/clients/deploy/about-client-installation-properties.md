@@ -523,8 +523,6 @@ Specifies an initial management point for the Configuration Manager client to us
 > [!IMPORTANT]  
 >  If the management point only accepts client connections over HTTPS, you must prefix the management point name with https://.  
 
-Example:`CCMSetup.exe SMSMP=smsmp01.contoso.com`  
-
 Example: `CCMSetup.exe SMSMP=smsmp01.contoso.com`
 
 Example: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`  
