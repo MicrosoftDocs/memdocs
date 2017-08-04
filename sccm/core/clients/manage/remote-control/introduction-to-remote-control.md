@@ -29,4 +29,4 @@ Configuration Manager also lets you configure client settings to run Windows Rem
 > [!NOTE]  
 >  You cannot establish a Remote Assistance session from the Configuration Manager console to a client computer that is in a workgroup. 
 
- You can start a remote control session in the Configuration Manager console from **Assets and Compliance > Devices**, from any device collection , from the Windows Command Prompt window, or from the Windows **Start** menu.  
+ You can start a remote control session in the Configuration Manager console from **Assets and Compliance** > **Devices**, from any device collection, from the Windows Command Prompt window, or from the Windows **Start** menu.  
