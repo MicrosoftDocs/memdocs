@@ -37,7 +37,7 @@ The following are supported scenarios for using availability groups with Configu
 
 -      [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group).
 -     [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group).
--     [Add synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members).
+-     [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members).
 -     [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca) (Requires Configuration Manager version 1706 or later.)
 -     [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site) (Requires Configuration Manager version 1706 or later.)
 -     [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group).

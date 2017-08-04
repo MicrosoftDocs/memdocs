@@ -102,10 +102,10 @@ To complete this procedure, the account you use to run Configuration Manager Set
 
 
 
-## Add synchronous replica members  
-When your site database is hosted in an availability group, use the following procedures to add synchronous replica members. For information about the type and number of replicas that are supported, see **Availability group configurations** under [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) in the prepare to use availability group topic.
+## Add or remove synchronous replica members  
+When your site database is hosted in an availability group, use the following procedures to add or remove synchronous replica members. For information about the type and number of replicas that are supported, see **Availability group configurations** under [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) in the prepare to use availability group topic.
 
-To complete the following procedure, the account you use must be:
+To complete the following procedures, the account you use must be:
 -   A member of the **Local Administrators** group on each computer that is a member of the availability group.
 -   A **sysadmin** on each SQL Server that hosts or will host the site database.
 
@@ -113,6 +113,10 @@ To complete the following procedure, the account you use must be:
 ### To add a new synchronous replica member  
 The process to add secondary replica to an availability group you use with Configuration Manager can be complex, dynamic, and require steps and procedures that change based on individual environments. We are working on improvements for Configuration Manager to simplify this process. In the meantime, if you need to add secondary replicas, refer to the following blog on TechNet for guidance
 -   [ConfigMgr 1702: Adding a new node (Secondary Replica) to an existing SQL AO AG](https://blogs.technet.microsoft.com/umairkhan/2017/07/17/configmgr-1702-adding-a-new-node-secondary-replica-to-an-existing-sql-ao-ag/)
+
+### To remove a replica member
+For this procedure, use the information in [Remove a Secondary Replica from an Availability Group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) from the SQL Server documentation.  
+
 
 ## Configure an asynchronous commit replica
 Beginning with Configuration Manager version 1706, you can add an asynchronous replica to an availability group you use with Configuration Manager. To do so, you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See the [SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))  for information on how to add secondary replicas to availability groups.
