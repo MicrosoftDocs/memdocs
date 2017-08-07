@@ -45,7 +45,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
  At the command prompt, the CCMSetup.exe command uses the following format:  
 
- `CCMSetup.exe [&lt;Ccmsetup properties\>] [&lt;client.msi setup properties>]`  
+ `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
 
  Example:  
 
