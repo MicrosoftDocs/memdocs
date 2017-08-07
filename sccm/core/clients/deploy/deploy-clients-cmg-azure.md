@@ -42,7 +42,7 @@ Use the following steps to help you accomplish this:
 - In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected) are enabled on the computer that hosts this site system role.
 - To use Configuration Manager to deploy the client:
 	- Configure at least one management point for HTTPS mode if you want to use Azure AD to authenticate instead of client certificates.
-		If you are using client certificates instead of the Cloud Management Gateway, a HTTPS managment point is optional, but recommended. If you are using Azure AD to authenticate, whether for on premises, or Internet clients, the HTTPS management point is required.
+		If you are using client certificates instead of the Cloud Management Gateway, an HTTPS management point is optional, but recommended. If you are using Azure AD to authenticate, whether for on premises, or Internet clients, the HTTPS management point is required.
 	- Set up a Cloud Management Gateway if you want to deploy Internet clients. For on-premises clients, that you are authenticating with Azure AD, you do not need to configure the Cloud Management Gateway.
 
 
@@ -85,7 +85,7 @@ To install the client, use the instructions in [How to deploy clients to Windows
 - **SMSMP:** The name of your lookup management point – the management point can be on your intranet.
 - **AADTENANTID:**, **AADTENANTNAME:** The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
 - **AADCLIENTAPPID:** The Azure AD client app ID. For help finding this, see [Use portal to create an Azure Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
-- **AADResourceUri:** The identifier URI of the onboarded Azure AD server app. For more details, see [Configure Azure services for use with Configuration Manager](/sccm/core/servers/deploy/configure/azure-services-wizard).
+- **AADResourceUri:** The identifier URI of the onboarded Azure AD server app. For more information, see [Configure Azure services for use with Configuration Manager](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
 
 
