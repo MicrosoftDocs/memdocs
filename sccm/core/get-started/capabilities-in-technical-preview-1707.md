@@ -2,7 +2,7 @@
 title: "Technical Preview 1707 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1707 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/28/2017
+ms.date: 08/07/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -83,6 +83,7 @@ To read more about Windows Defender Application Guard, see [this blog post](http
 
 In the last Technical Preview, we introduced a new capability that lets you [Create and run PowerShell scripts from the Configuration Manager console](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 In this Technical Preview, we’ve expanded on this capability. Configuration Manager now reads the PowerShell script, and displays any parameters in the Create Script Wizard. You can supply a value for the parameter in the wizard that will be used when the script is run. Alternatively, you can leave the parameter blank. If you do this, you will need to supply a value for the parameter when you run the script.
+In this technical preview, you must supply any parameters that a script requires. In a future release, we plan to make supplying script parameters optional.
 
 ### Try it out!
 
