@@ -92,6 +92,9 @@ When you add trust for specific files for folders in a Device Guard policy you c
 	- Trust apps that are included in an operating system deployment image. 
 7.	Click **Next**, then complete the wizard.
 
+>[!IMPORTANT]
+>The inclusion of trusted files or folders is only supported on client PCs running version 1706 or later of the Configuration Manager client. If any inclusion rules are included in a Device Guard policy and the policy is then deployed to a client PC running an earlier version on the Configuration Manager client, the policy will fail to be applied. Upgrading these older clients will resolve this issue. Policies that do not include any inclusion rules may still be applied on older versions of the Configuration Manager client.
+
 ## How to deploy a Device Guard policy
 1.	In the Configuration Manager console, click **Assets and Compliance**.
 2.	In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Device Guard Policies**.
