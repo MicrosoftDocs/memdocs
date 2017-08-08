@@ -205,7 +205,7 @@ Hardware inventory now collects information about whether Secure Boot is enabled
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.
 
 ### Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ## Software updates
 
@@ -224,7 +224,7 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 #### To manage Surface driver updates
 
 1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select the **Include Microsoft Surface drivers and firmware updates** checkbox on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates).
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
 ### Configure Windows Update for Business deferral policies
