@@ -27,7 +27,7 @@ While you should continue to use automatic client upgrade when possible for most
 
 The EIC is compatible with Configuration Manager sites running version 1610 or later. The EIC should only be used for specific PCs that cannot be frequently updated, like kiosk, or point-of-sale devices. Use the most recent Configuration Manager client for all other PCs.
 ​
-## How this scenario works:
+## How this scenario works
 
 Typically, when you install a new in-console update for the Current Branch, clients automatically update their client software so they can use those new features.
 
@@ -36,14 +36,14 @@ With this scenario, you use the Current Branch and receive the new features and 
 >[!IMPORTANT]
 >The Current Branch site must run version 1610 or later.
 
-## How to use the EIC:
+## How to use the EIC
 ​
 1. Obtain the EIC (client version 5.00.8412) from the \SMSSETUP\Client folder  of the Configuration Manager 1606 update installation media, in the System Center 2016 collection. Ensure that you copy the entire contents of the folder.
 2. Manually install the EIC on those devices. [Read more details about how to manually install the client](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 3. Exclude that collection from client upgrades.
 ​
 >[!TIP]
->To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the VLSC, search for "system center config," and then select System Center Config Mgr (current branch and LTSB 1606).
+>To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the VLSC, search for "system center config", and then select System Center Config Mgr (current branch and LTSB 1606).
 
 ## The extended interoperability client software
 
@@ -54,7 +54,7 @@ The current EIC will continue to be supported with updated versions of Configura
 ​
 Plan to update the extended interoperability client on devices that you manage with the Current Branch before support for the client expires. To do so, download a new version of the client from Microsoft and then deploy that updated client software to your devices that use the current extended interoperability client.
 
-## Limitations of the extended interoperability client:
+## Limitations of the extended interoperability client
 
 - Updates for the extended interoperability client software are not available by using in-console updates. Additional details for deploying an updated client software are provided when an updated client is released.
 - The EIC only supports software updates, inventory, and packages and programs.
