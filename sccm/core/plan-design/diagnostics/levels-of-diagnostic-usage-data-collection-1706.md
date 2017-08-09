@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
 caps.latest.revision:
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -32,7 +34,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1706 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Levels of diagnostic usage data collection for version 1706 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager version 1706 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
@@ -181,6 +186,10 @@ For System Center Configuration Manager version 1706, this level includes the fo
    - Active Management Technology (AMT) client version
 
    - BIOS age in years
+   
+   - ***[New]*** Count of devices with Secure Boot enabled
+   
+   - ***[New]*** Count of devices by TPM state
 
    - Client auto-upgrade: deployment configuration including client piloting and exclusion usage (extended interoperability client)
 
