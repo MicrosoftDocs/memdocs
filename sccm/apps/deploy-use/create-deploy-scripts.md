@@ -2,7 +2,7 @@
 title: "Create and run scripts with Configuration Manager | Microsoft Docs"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 08/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -56,7 +56,6 @@ By default, users cannot approve a script they have authored. Because scripts ar
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
 3. In the list of sites, choose your site and then, on the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
-Sites
 
 ## Import and edit a script
 
