@@ -2,7 +2,7 @@
 title: "Use the Configuration Manager extended interoperability client with the Current Branch  | Microsoft Docs"
 description: "Learn about using the client from the Long-Term Servicing Branch of Configuration Manager with a Current Branch site."
 ms.custom: na
-ms.date: 08/08/2017
+ms.date: 08/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,12 +38,12 @@ With this scenario, you use the Current Branch and receive the new features and 
 
 ## How to use the EIC
 
-1. Obtain the EIC (client version 5.00.8412) from the \SMSSETUP\Client folder  of the Configuration Manager 1606 update installation media, in the System Center 2016 collection. Ensure that you copy the entire contents of the folder.
+1. Obtain the EIC (client version 5.00.8412) from the \SMSSETUP\Client folder  of the Configuration Manager 1606 update installation media. Ensure that you copy the entire contents of the folder.
 2. Manually install the EIC on those devices. [Read more details about how to manually install the client](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 3. Exclude that collection from client upgrades.
 
 >[!TIP]
->To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the VLSC, search for "system center config", and then select System Center Config Mgr (current branch and LTSB 1606).
+>To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for "system center config," and then select **System Center Config Mgr (current branch and LTSB)**.
 
 ## The extended interoperability client software
 
