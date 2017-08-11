@@ -34,7 +34,7 @@ The following steps let Configuration Manager manage Android devices without a w
 3. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** > **Android**.  
 4. In the **Microsoft Intune Subscription Properties** dialog box, choose the **Android** tab and check the **Enable Android enrollment** box. You can choose to **Block personally owned devices** to limit enrollment to [predeclared devices](predeclare-devices-with-hardware-id.md).
 
- After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+ After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
 ## Enable Android for Work enrollment
 The following steps let Configuration Manager manage Android devices with a work profile.
