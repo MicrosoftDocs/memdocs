@@ -2,7 +2,7 @@
 title: "New version 1706 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1706 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  07/31/2017
+ms.date:  08/11/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -254,6 +254,12 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
 For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
+
+### Android and iOS enrollment restrictions
+<!-- 1290826 -->
+With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
+- For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
+- For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
 
 ## Protect devices
 
