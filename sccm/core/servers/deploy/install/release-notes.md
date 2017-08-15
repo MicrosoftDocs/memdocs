@@ -153,16 +153,16 @@ This is caused by a corrupted, previously installed version of Silverlight. You 
 
 ## Operating system deployment  
 
-### If the boot image contains drivers, the image fails to reload the current PE version from the Windows Assessment and Deployment Kit (ADK)
+### If the boot image contains drivers, the image fails to reload the current Windows PE version from the Windows Assessment and Deployment Kit (ADK)
 <!-- 495087 -->
-You can use the Update Distribution Point Wizard to update distribution points with an image stored in the installation directory of the Windows Assessment and Deployment Kit (ADK). To update, open the Distribution Point Wizard and select **Reload this boot image with the current PE version from the Windows ADK**.
+You can use the Update Distribution Point Wizard to update distribution points with a boot image stored in with the latest version of Windows PE from the installation directory of the Windows Assessment and Deployment Kit (ADK). To update, open the Update Distribution Point Wizard and select **Reload this boot image with the current PE version from the Windows ADK**.
 
-However, if your image contains drivers, the update fails. Instead, the wizard reloads the image form the ADK, displays an exception dialog box that the user can dismiss, and then shows a success screen. However, the latest Software Center Configuration Manager production client components will not be installed. The boot image will not be updated on the distribution point
+However, if your boot image contains drivers, the update fails. Instead, the wizard reloads the image from the ADK, displays an exception dialog box that the user can dismiss, and then shows a success screen. However, the latest Configuration Manager client components will not be added to the boot image. The boot image will not be updated on the distribution point
 
 **Workaround**: Run the Update Distribution Point Wizard twice.
 
-1. Run the wizard with **Reload this boot image with the current Windows PE version from the Windows ADK** selected.
-2. Run the wizard again with **Reload this boot image with the current Windows PE version from the Windows ADK** not selected.
+1. Run the wizard with **Reload this boot image with the current Windows PE version from the Windows ADK** selected. This will get the latest version of Windows PE.
+2. Run the wizard again with **Reload this boot image with the current Windows PE version from the Windows ADK** not selected. This wil get the latest client binaries and update the boom image on the distribution point.
 
 ### Issue with the Windows ADK for Windows 10, version 1511  
 When you run a task sequence from Software Center that uses a Windows PE v.10.0.10586 boot image from the Windows ADK 10, version 1511, when the computer restarts into Windows PE, it will fail when "Initializing hardware devices" with the error: **Windows PE initialization failed with error code 0x80220014**  
