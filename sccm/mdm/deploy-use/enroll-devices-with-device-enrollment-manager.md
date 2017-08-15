@@ -2,7 +2,7 @@
 title: "Enroll devices with device enrollment manager - Configuration Manager | Microsoft Docs"
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Organizations can use Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* (DEM) account is a special user account that can enroll up to 1,000 devices. You add existing users to the DEM account to give them the special DEM capabilities. Each enrolled device uses a single license. We recommend that you use devices enrolled through this account as shared devices with no user affinity, rather than personal, dedicated devices.  
+Organizations can use Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* (DEM) account is a special user account used to enroll devices. You add existing users to the DEM account to give them the special DEM capabilities. Each enrolled device uses a single license. We recommend that you use devices enrolled through this account as shared devices with no user affinity, rather than personal, dedicated devices.  
 
 ## Enroll corporate-owned devices with the device enrollment manager  
  You can assign a store manager or supervisor, for example, a device enrollment manager user account to allow her to do the following:  
@@ -61,23 +61,14 @@ A restaurant wants point-of-sale tablets for its wait staff and order-monitors f
 7.  The device enrollment manager can now enroll mobile devices using the same procedure an end user uses for a bring-your-own-device (BYOD) scenario in the company portal.  
 
 #### Delete a device enrollment manager from Intune  
+Deleting a device enrollment manager does not affect enrolled devices. When a device enrollment manager is deleted:  
+- No enrolled devices are unenrolled  
+- Enrolled devices continue to be fully managed  
+- The deleted device enrollment manager account credentials remain valid to log on to the company portal to access apps  
+- The deleted device enrollment manager account credentials still cannot wipe or retire devices  
+- The deleted device enrollment manager account’s relationship to enrolled devices remains but no additional devices can be enrolled
 
 1.  In the Configuration Manager console, click **Administration**.  
-
 2.  In the **Administration** workspace, expand **Cloud Services**, and click **Microsoft Intune Subscriptions**. Select the Microsoft Intune subscription to which you'll add a device enrollment manager, and then click **Properties**.  
-
 3.  In the Microsoft Intune Subscription Properties dialog box, click the **Device Enrollment Manager** tab.  
-
 4.  **Search** for the device enrollment manager you'd like to delete and click **Remove**, then **OK**.  
-
- Deleting a device enrollment manager does not affect enrolled devices. When a device enrollment manager is deleted:  
-
--   No enrolled devices are affected  
-
--   Enrolled devices continue to be fully managed  
-
--   The deleted device enrollment manager account credentials remain valid to log on to the company portal to access apps  
-
--   The deleted device enrollment manager account credentials still cannot wipe or retire devices  
-
--   The deleted device enrollment manager account’s relationship to enrolled devices remains but no additional devices can be enrolled
