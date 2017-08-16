@@ -45,7 +45,7 @@ Hybrid MDM is a solution that integrates Intune's mobile device management capab
 
 
 ## Changing the MDM authority setting
-If you need to change the MDM authority setting, you can change it yourself without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority.md).
+If you need to change the MDM authority setting, you can change it yourself without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](../deploy-use/change-mdm-authority.md).
 
 > [!NOTE]    
 > You must have Configuration Manager version 1610 or later to change your MDM authority to Intune standalone. When you have an earlier version of Configuration Manager, you can change the MDM authority, but it requires help from Microsoft support and operations. It also requires you to unenroll and reenroll all your devices after the MDM authority is changed.  
