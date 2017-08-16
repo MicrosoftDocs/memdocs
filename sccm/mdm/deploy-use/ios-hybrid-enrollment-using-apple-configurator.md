@@ -2,7 +2,7 @@
 title: "Enroll iOS devices Apple Configurator - Configuration Manager | Microsoft Docs"
 descriptions: "Pre-enroll iOS devices by using Apple Configurator with Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,7 +35,7 @@ The following procedure is recommended for dedicated iOS devices that will have 
 
 -   USB cables for connecting devices to your Mac computer  
 
-## Step 1: Add a corporate-owned device enrollment profile
+## Add a corporate-owned device enrollment profile
 
 1.  In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Click **Create Profile** to open the Create Profile wizard. Configure the settings on the following pages:  
 
@@ -57,13 +57,13 @@ The following procedure is recommended for dedicated iOS devices that will have 
 
 4.  Review the summary, and then click **Next** to create the enrollment profile. Click **Close** to finish the wizard. You're now ready to add IMEI numbers or serial numbers for the devices you want to enroll.  
 
-## Step 2: Predeclare devices to enroll with Setup Assistant
+## Predeclare devices to enroll with Setup Assistant
 
 In this step, you predeclare devices as corporate-owned by providing a list of hardware identifiers (IMEI or serial numbers).
 
 For more information, see [Predeclare devices with IMEI and iOS serial number](predeclare-devices-with-hardware-id.md). When you're done with that task, return to this page to continue with the next step.
 
-## Step 3: Export the profile to deploy to iOS devices
+## Export the profile to deploy to iOS devices
 
 1.  In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**.
 
@@ -90,7 +90,7 @@ For more information, see [Predeclare devices with IMEI and iOS serial number](p
 > [!NOTE]
 > The enrollment profile URL is valid for two weeks from when it is exported. After two weeks, you must export a new URL to enroll iOS devices.
 
-## Step 4: Prepare the device with Apple Configurator
+## Prepare the device with Apple Configurator
 
 To prepare iOS devices for enrollment, you connect each device to a Mac computer and upload the enrollment profile to it.  
 
@@ -129,6 +129,6 @@ To prepare iOS devices for enrollment, you connect each device to a Mac computer
 
 Repeat these steps for all the devices you want to prepare for enrollment.
 
-## Step 5: Distribute devices
+## Distribute devices
 
 The devices are now ready for corporate enrollment. Power down the devices and distribute them to users. When the device is turned on, Setup Assistant will start and prompt the user for their work or school account to begin enrollment.
