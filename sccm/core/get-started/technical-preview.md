@@ -111,9 +111,9 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- |1708 Feature #1 <!-- VSO NUMBER -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#<PATH>)|![Not added](media/Red_X.gif)|
+ |1708 Feature 1 <!-- VSO NUMBER -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#<PATH>)|![Not added](media/Red_X.gif)|
 
-    
+
 
 
 ## Capabilities delivered in previous technical previews
