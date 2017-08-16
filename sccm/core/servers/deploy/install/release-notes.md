@@ -33,11 +33,11 @@ With System Center Configuration Manager, product release notes are limited to u
 
 ### After you update a Configuration Manager console using ConsoleSetup.exe from the site server folder, recent language pack changes are not available
 <!--  SMS 486420  Applicability should be 1610 and 1702.  -->
-After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed langauge packs might not be availble. This occurs when:
+After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed language packs might not be available. This occurs when:
 - Your site runs version 1610 or 1702.
 - The console is updated in-place by using ConsoleSetup.exe from the site server installation folder.
 
-When this issue occurs, the reinstalled console does not use the latest set of language packs that were configured. No errors are returned, but language packs avaialble to the console will not have changed.  
+When this issue occurs, the reinstalled console does not use the latest set of language packs that were configured. No errors are returned, but language packs available to the console will not have changed.  
 
 **Workaround:** Uninstall the current console, and then reinstall the console as a new installation. You can use ConsoleSetup.exe from the site servers installation folder. During the installation, be sure to select the language pack files you want to use.
 
@@ -135,9 +135,18 @@ When you deploy the client to Windows computers, the installation fails. The ccm
 This is caused by a corrupted, previously installed version of Silverlight. You can try running the following tool on the affected computer to fix this:
 [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
-
-
 ## Operating system deployment  
+
+### If the boot image contains drivers, the image fails to reload the current Windows PE version from the Windows Assessment and Deployment Kit (ADK)
+<!-- 495087 -->
+You can use the Update Distribution Point Wizard to update distribution points with a boot image stored in with the latest version of Windows PE from the installation directory of the Windows Assessment and Deployment Kit (ADK). To update, open the Update Distribution Point Wizard and select **Reload this boot image with the current PE version from the Windows ADK**.
+
+However, if your boot image contains drivers, the update fails. Instead, the wizard reloads the image from the ADK, displays an exception dialog box that the user can dismiss, and then shows a success screen. However, the latest Configuration Manager client components will not be added to the boot image. The boot image will not be updated on the distribution point
+
+**Workaround**: Run the Update Distribution Point Wizard twice.
+
+1. Run the wizard with **Reload this boot image with the current Windows PE version from the Windows ADK** selected. This will get the latest version of Windows PE.
+2. Run the wizard again with **Reload this boot image with the current Windows PE version from the Windows ADK** not selected. This wil get the latest client binaries and update the boom image on the distribution point.
 
 ### Servicing plans create a lot of duplicate software update groups and deployments by default  
 By default, the Create Servicing Plan wizard currently runs after every software updates synchronization. Each time the wizard runs, it creates a new software update group and deployment. If you have a software updates synchronization schedule that runs multiple times a day, for example, the Create Servicing Plan wizard will create multiple, and likely identical, software update groups and deployments each day.  
@@ -186,6 +195,8 @@ When an administrator deploys a set of terms to multiple user collections, and a
 When an Android for Work email profile is created, there are two options for authentication. One is username and password, and the other is certificates. At this time, the certificates option is not working. If the profile is created with the authentication method set to **certificates**, the profile is not applied to the device and the user will be prompted to enter email account details manually.
 
 **WORKAROUND**: None. Admins must either use the **username and password** option, or wait until this issue has been resolved.
+
+
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
