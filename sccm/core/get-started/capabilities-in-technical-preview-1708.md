@@ -42,3 +42,19 @@ This article introduces the features that are available in the Technical Preview
  -  Task 1
  -  Task 2              
 -->
+
+## Improvements for specifying script parameters when you deploy PowerShell scripts from Configuration Manager
+<!-- 1236459 -->
+
+From Configuration Manager 1706 onwards, you can [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+In [Technical Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager), we expanded on this capability to let Configuration Manager read parameters from the script.
+In this Technical Preview, we've expanded the script parameters capability to detect which parameters are mandatory, and which are optional, and prompt you to enter these.
+
+### Try it out!
+
+1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
+3. Supply a parameter value for the selected parameter, and then click **OK**.
+4. Complete the wizard.
+
+When the script runs, it will use any parameter values you configured. If you did not configure a mandatory parameter, the end user will be asked to supply the parameter when the script runs.
