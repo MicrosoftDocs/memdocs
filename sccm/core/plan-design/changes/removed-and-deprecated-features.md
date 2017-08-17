@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 06/27/2017
+ms.date: 08/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -66,7 +66,7 @@ For more information, see:
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
 |Windows XP|July 10, 2015|Version 1511|  
-|Windows XP Embedded|July 10, 2015|Version 1702|  
+|Windows XP Embedded <br><br> This includes all [XP-based Embedded operating systems](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers).|July 10, 2015|Version 1702|  
 |Windows Server 2003|July 10, 2015|Version 1511|  
 |Windows Server 2003 R2|July 10, 2015|Version 1511|  
 |Windows Vista|July 10, 2015|Version 1511|  
