@@ -21,6 +21,9 @@ Beginning in version 1610, the process for setting up cloud management gateway i
 
 ## Step 1: Configure required certificates
 
+> [!TIP]  
+> Before requesting a certificate, confirm that the desired Azure domain name (for example, GraniteFalls.CloudApp.Net) is unique. To do this log on to the [Microsoft Azure portal](https://manage.windowsazure.com), click **New**, select **Cloud Service** and then **Custom Create**. In the **URL** field type the desired domain name (do not click the checkmark to create the service). The portal will reflect whether the domain name is available or already in use by another service.
+
 ## Option 1 (preferred) - Use the server authentication certificate from a public and globally trusted certificate provider (like VeriSign)
 
 When you use this method, clients will automatically trust the certificate, and you do not need to create a custom SSL certificate yourself.
@@ -37,7 +40,6 @@ For example, when creating the cloud management gateway at Contoso, the hostname
 
 You can create a custom SSL certificate for cloud management gateway in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) but do the following things differently:
 
-- When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 - When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
 
 
@@ -136,7 +138,7 @@ The cloud management gateway connector point is a new site system role for commu
 
 ## Step 7: Configure roles for cloud management gateway traffic
 
-The final step in setting up cloud management gateway is to configure the site system roles to accept cloud management gateway traffic. For Tech Preview 1606, only the management point, distribution point, and software update point roles are supported for cloud management gateway. You must configure each role separately.
+The final step in setting up cloud management gateway is to configure the site system roles to accept cloud management gateway traffic. Only the management point and software update point roles are supported for cloud management gateway. You must configure each role separately.
 
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**.
 
@@ -144,7 +146,7 @@ The final step in setting up cloud management gateway is to configure the site s
 
 3. Choose the role, and then choose **Properties**.
 
-4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then choose **OK**. Repeat these steps for the remaining roles.
+4. In the role Properties sheet, under Client Connections, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then choose **OK**. Repeat these steps for the remaining roles. Enabling the **HTTPS** option is also recommended as a security best practice, but is not required.
 
 ## Step 8: Configure clients for cloud management gateway
 
