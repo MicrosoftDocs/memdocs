@@ -21,6 +21,9 @@ Beginning in version 1610, the process for setting up cloud management gateway i
 
 ## Step 1: Configure required certificates
 
+> [!TIP]  
+> Before requesting a certificate, confirm that the desired Azure domain name (for example, GraniteFalls.CloudApp.Net) is unique. To do this log on to the [Microsoft Azure portal](https://manage.windowsazure.com), click **New**, select **Cloud Service** and then **Custom Create**. In the **URL** field type the desired domain name (do not click the checkmark to create the service). The portal will reflect whether the domain name is available or already in use by another service.
+
 ## Option 1 (preferred) - Use the server authentication certificate from a public and globally trusted certificate provider (like VeriSign)
 
 When you use this method, clients will automatically trust the certificate, and you do not need to create a custom SSL certificate yourself.
@@ -37,7 +40,6 @@ For example, when creating the cloud management gateway at Contoso, the hostname
 
 You can create a custom SSL certificate for cloud management gateway in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) but do the following things differently:
 
-- When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 - When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
 
 
@@ -63,6 +65,9 @@ The easiest way to get export the root of the client certificates used on the ne
 
 7.  Complete the Certificate Export Wizard using the default certificate format. Make note of the name and location of the root certificate you create. You will need it to configure cloud management gateway in a [later step](#step-4-set-up-cloud-management-gateway).
 
+>[!NOTE]
+>If the client certificate was issued by a subordinate certificate authority you will need to repeat this step for each certificate in the chain.
+
 ## Step 3: Upload the management certificate to Azure
 
 An Azure management certificate is required for Configuration Manager to access the Azure API and configure cloud management gateway. For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
@@ -74,74 +79,6 @@ An Azure management certificate is required for Configuration Manager to access 
 >[!IMPORTANT]
 >Make sure to copy the subscription ID associated with the management certificate. You will need it for configuring cloud management gateway in the Configuration Manager console in the [next step](#step-4-set-up-cloud-management-gateway).
 
-### Subordinate CA certificates and Azure
-
-If your certificate is issued by a subordinate CA (subCA), and your enterprise PKI infrastructure is not on the Internet, use this procedure to upload the certificate to Azure. 
-
-1. In your Azure portal, after setting up a cloud management gateway, locate the cloud management gateway service and go to the **Certificate** tab. Upload your subCA certificate(s) there. If you have more than one subCA cert, you need to upload all of them. 
-2. Once the certificate is uploaded, record its thumbprint. 
-3. Add the thumbprint to site database using this script:
-	
-```
-
-	DIM serviceCName
-	DIM subCAThumbprints
-
-	' Verify arguments
-	IF WScript.Arguments.Count <> 2 THEN
-	WScript.StdOut.WriteLine "Usage: CScript UpdateSubCAThumbprints.vbs <ServiceCName> <SubCA cert thumbprints, separated by ;>"
-	WScript.Quit 1
-	END IF
-
-	'Get arguments
-	serviceCName = WScript.Arguments.Item(0)
-	subCAThumbprints = WScript.Arguments.Item(1)
-
-	'Find SMS Provider
-	WScript.StdOut.WriteLine "Searching for SMS Provider for local site..."
-	SET objSMSNamespace = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms")
-	SET results = objSMSNamespace.ExecQuery("SELECT * From SMS_ProviderLocation WHERE ProviderForLocalSite = true")
-
-	'Process the results
-	FOR EACH var in results
-	siteCode = var.SiteCode
-	NEXT
-
-	IF siteCode = "" THEN
-	WScript.StdOut.WriteLine "Failed to locate SMS provider."
-	WScript.Quit 1
-	END IF
-
-	WScript.StdOut.WriteLine "SiteCode = " & siteCode 
-
-	' Connect to the SMS namespace
-	SET objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms\site_" & siteCode)
-
-	'Get instance of SMS_AzureService
-	DIM query
-	query = "SELECT * From SMS_AzureService WHERE ServiceType = 'CloudProxyService' AND ServiceCName = '" & serviceCName & "'"
-	WScript.StdOut.WriteLine "Run WQL query: " &  query
-	SET objInstances = objWMIService.ExecQuery(query)
-
-	IF IsNull(objInstances) OR (objInstances.Count = 0) THEN
-	WScript.StdOut.WriteLine "Failed to get Azure_Service instance."
-	WScript.Quit 1
-	END IF
-
-	FOR EACH var IN objInstances
-	SET azService = var
-	NEXT
-
-	WScript.StdOut.WriteLine "Update [SubCACertThumbprint] to " & subCAThumbprints
-
-	'Update SubCA cert thumbprints
-	azService.Properties_.item("SubCACertThumbprint") = subCAThumbprints
-
-	'Save data back to provider
-	azService.Put_
-
-	WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
-```
 
 
 ## Step 4: Set up cloud management gateway
@@ -167,7 +104,7 @@ If your certificate is issued by a subordinate CA (subCA), and your enterprise P
 
     - Specify the private key (.pfx file) that you exported from the custom SSL certificate.
 
-    - Specify the root certificate exported from the client certificate.
+    - Specify the root certificate (and any subordinate certificates) exported from the client certificate. The wizard accepts up to two root certificates and four subordinate certificates.
 
     -   Specify the same service name FQDN that you used when you created the new certificate template. You must specify the one of the following suffixes for the FQDN service name based on the Azure cloud you are using:
 
@@ -201,7 +138,7 @@ The cloud management gateway connector point is a new site system role for commu
 
 ## Step 7: Configure roles for cloud management gateway traffic
 
-The final step in setting up cloud management gateway is to configure the site system roles to accept cloud management gateway traffic. For Tech Preview 1606, only the management point, distribution point, and software update point roles are supported for cloud management gateway. You must configure each role separately.
+The final step in setting up cloud management gateway is to configure the site system roles to accept cloud management gateway traffic. Only the management point and software update point roles are supported for cloud management gateway. You must configure each role separately.
 
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**.
 
@@ -209,7 +146,7 @@ The final step in setting up cloud management gateway is to configure the site s
 
 3. Choose the role, and then choose **Properties**.
 
-4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then choose **OK**. Repeat these steps for the remaining roles.
+4. In the role Properties sheet, under Client Connections, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then choose **OK**. Repeat these steps for the remaining roles. Enabling the **HTTPS** option is also recommended as a security best practice, but is not required.
 
 ## Step 8: Configure clients for cloud management gateway
 
