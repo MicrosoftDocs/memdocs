@@ -55,8 +55,8 @@ In this Technical Preview, we've expanded the script parameters capability to de
 ### Try it out!
 
 1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
-2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then click **Edit**.
-3. Supply a parameter value for the selected parameter, and then click **OK**.
-4. Complete the wizard.
+2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then edit its values.
+The wizard displays which parameters are mandatory, and which are optional.
+4. When you have finished editing parameters, complete the wizard.
 
 When the script runs, it will use any parameter values you configured. If you did not configure a mandatory parameter, the end user will be asked to supply the parameter when the script runs.
