@@ -2,7 +2,7 @@
 title: "Deploy Windows clients| Microsoft Docs"
 description: "Learn how to deploy clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -52,13 +52,10 @@ Client log files provide more detailed information for troubleshooting and do no
 6.  Select whether you want to install the client on domain controllers.  
 
 7.  On the **Accounts** tab, specify one or more accounts for Configuration Manager to use when connecting to the computer to install the client software. Click the **Create** icon, enter the **User name** and **Password** (no more than 38 characters), confirm the password, and then click **OK**. You must specify at least one client push installation account, which must have local administrator rights on every computer on which you want to install the client. If you do not specify a client push installation account, Configuration Manager tries to use the site system computer account, which will cause cross-domain client push to fail.  
-
-    
     > [!NOTE]  
     >  If you intend to use the client push installation method from a secondary site, the account must be specified at the secondary site that initiates the client push.  
     >   
     >  For more information about the client push installation account, see the next procedure, "To use the Client Push Installation Wizard".  
-
 8.  Complete the **Installation Properties** tab.
 
      [Client installation properties](../../../core/clients/deploy/about-client-installation-properties.md) that are specified in this tab are published to Active Directory Domain Services if the schema is extended for Configuration Manager and read by client installations where CCMSetup is run without installation properties.  
@@ -290,8 +287,8 @@ You can preinstall the Configuration Manager client software on a master image c
     > [!IMPORTANT]  
     >  Do not specify a Configuration Manager site code for the client in the CCMSetup.exe command-line properties.  
 
-2.  At a command prompt, type **net stop ccmexec** to ensure that the **SMS Agent Host** service (Ccmexec.exe) is not running on the master image computer.  
-
+2.  At a command prompt, type **net stop ccmexec** to ensure that the **SMS Agent Host** service (Ccmexec.exe) is not running on the master image computer.
+3.  Delete the file **SMSCFG.INI** from the **Windows** folder on the reference computer.  
 3.  Remove any certificates that are stored in the local computer store on the master image computer.  For example, if you use public key infrastructure (PKI) certificates, you must remove the certificates in the **Personal** store for **Computer** and **User** before you image the computer.
 
 4.  If the clients will be installed in a different Configuration Manager hierarchy than the master image computer, remove the Trusted Root Key from the master image computer.  
@@ -464,7 +461,7 @@ Check the prerequisites, then follow the directions in the section [How to Insta
 
 5.  Assign the Group Policy Object to the computers that you want to provision with Configuration Manager client installation properties.  
 
- For information about Windows Group Policy, refer to your Windows Server documentation.  
+For information about Windows Group Policy, refer to your Windows Server documentation.  
 
-### See also
-[Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md)
+## Next steps
+For more help installing the Configuration Manager client, see [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).
