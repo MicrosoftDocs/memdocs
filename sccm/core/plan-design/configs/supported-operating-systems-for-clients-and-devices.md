@@ -52,7 +52,7 @@ manager: angrobe
 
 -   **Windows  Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
--   **Windows 10**: Pro, Enterprise  
+-   **Windows 10** 
    See [Support for versions of Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) for details about the different release versions of Windows 10 that are supported by the different versions of Configuration Manager.
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
