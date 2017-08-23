@@ -30,9 +30,9 @@ Information about known issues that affect core scenarios is conveyed in the on-
 >  This topic contains release notes for the current branch of System Center Configuration Manager. For the Technical Preview for System Center Configuration Manager, see [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md)  
 
 For information about the new features introduced with different versions, see the following:
-- [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706.md)  
-- [What's new in version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702.md)
-- [What's new in version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610.md)
+- [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
+- [What's new in version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
+- [What's new in version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
 
 
 
