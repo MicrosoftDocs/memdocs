@@ -67,3 +67,31 @@ You can now gain insights into the current state of your environment based on an
 
 - **Applications without deployments**: Lists the applications in your environment that do not have active deployments. This helps you to find and delete unused applications to simplify the list of applications displayed in the console.
 - **Empty collections**: Lists the collections in your environment that have no members. You can delete these collections to simplify the list of collections displayed when deploying objects, for example. 
+
+## Software Center customization
+<!-- 1351224 -->
+You can add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
+
+### Customize Software Center
+
+To modify Software Center:
+
+1. In the **Configuration Manager** console, choose **Administration** > **Client Settings**. Click on your desired client setting instance.
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.
+3. In the **Default Settings** dialog box, choose **Software Center**.
+4. Select **Yes** to **Select new settings to specify company information** to enable your Software Center customization settings.
+5. Type your **Company name**.
+6. Select your **Color Scheme for company portal**.
+7. Click **Browse** to navigate to your logo for Software Center. The logo must be a JPEG or PNG of 400 x 100 pixels with a maximum size of 750 KB.
+8. Select **YES** to make visible in the Software Center for client devices. At least one tab must be visible.
+
+    -  Enable Applications tab.
+    -  Enable Updates tab.
+    -  Enable Operating Systems tab.
+    -  Enable Installation Status tab.
+    -  Enable Device compliance tab.
+    -  Enable Options tab.
+
+### Next steps
+
+To learn more about application management in Configuration Manager, see [Introduction to application management in System Center Configuration Manager](\sccm\apps\understand\introduction-to-application-management).
