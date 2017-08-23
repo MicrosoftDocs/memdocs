@@ -112,8 +112,9 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Improvements for specifying script parameters when you deploy PowerShell scripts from Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
-
-
+ |Management insights  <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![Not added](media/Red_X.gif)|
+ |Restart computers from the Configuration Manager console <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![Not added](media/Red_X.gif)|
+ |Software Center customization <!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![Not added](media/Red_X.gif)|
 
 
 ## Capabilities delivered in previous technical previews
