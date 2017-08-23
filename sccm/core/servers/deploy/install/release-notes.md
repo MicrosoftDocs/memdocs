@@ -33,7 +33,7 @@ For information about the new features introduced with different versions, see t
 - [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 - [What's new in version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
 - [What's new in version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
-
+   
 
 
 ## Setup and upgrade  
