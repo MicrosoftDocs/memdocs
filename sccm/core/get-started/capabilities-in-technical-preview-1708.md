@@ -60,3 +60,10 @@ The wizard displays which parameters are mandatory, and which are optional.
 4. When you have finished editing parameters, complete the wizard.
 
 When the script runs, it will use any parameter values you configured. If you did not configure a mandatory parameter, the end user will be asked to supply the parameter when the script runs.
+
+## Management insights
+<!-- 1353967 -->
+You can now gain insights into the current state of your environment based on analysis of data in the site database. Insights help you to better understand your environment and take action based on the insight. Review management insights in the Configuration Manager console at **Administration** > **Management Insights** > **All Insights**. In this release, the following insights are now available: 
+
+- **Applications without deployments**: Lists the applications in your environment that do not have active deployments. This helps you to find and delete unused applications to simplify the list of applications displayed in the console.
+- **Empty collections**: Lists the collections in your environment that have no members. You can delete these collections to simplify the list of collections displayed when deploying objects, for example. 
