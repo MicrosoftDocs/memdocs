@@ -2,7 +2,7 @@
 title: "Support for Windows features | Microsoft Docs"
 description: "Learn which Windows and networking features System Center Configuration Manager supports."
 ms.custom: na
-ms.date: 8/24//2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
