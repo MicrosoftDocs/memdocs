@@ -2,7 +2,7 @@
 title: "Support for Windows features | Microsoft Docs"
 description: "Learn which Windows and networking features System Center Configuration Manager supports."
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 8/24//2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -46,7 +46,7 @@ These clients also cache the content. In this manner, successive clients on the 
 -   **Configure clients:**    
     -   The clients that can support BranchCache must be configured for BranchCache distributed cache mode.  
     -   The operating system setting for BITS client settings must be enabled to support BranchCache.   <br /> <br />
-        
+
     For information on how you can configure clients to support BranchCache, see the [Configure clients](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache) section in [Configure BranchCache for Windows 10 updates](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache).
 
 
@@ -77,9 +77,11 @@ Configuration Manager provides support for clients in workgroups.
 ##  <a name="bkmmk_datadedup"></a> Data deduplication  
 Configuration Manager supports the use of data deduplication with distribution points on the following operating systems:  
 
+-   Windows Server 2016
+-   Windows Server 2012 R2  
 -   Windows Server 2012  
 
--   Windows Server 2012 R2  
+
 
 > [!IMPORTANT]  
 >  The volume that hosts package source files cannot be marked for data deduplication. This is because data deduplication uses reparse points, and Configuration Manager does not support using a content source location with files that are stored on reparse points.  
