@@ -104,14 +104,14 @@ To modify Software Center:
 5. Type your **Company name**.
 6. Select your **Color Scheme for Software Center**.
 7. Click **Browse** to navigate to your logo for Software Center. The logo must be a JPEG or PNG of 400 x 100 pixels with a maximum size of 750 KB.
-8. Select **YES** to make tabs visible in the Software Center for client devices. At least one tab must be visible.
+8. Select **YES** to make tabs visible in the Software Center for client devices. At least one tab must be visible:
 
-    -  Enable Applications tab.
-    -  Enable Updates tab.
-    -  Enable Operating Systems tab.
-    -  Enable Installation Status tab.
-    -  Enable Device compliance tab.
-    -  Enable Options tab.
+    -  Enable Applications tab
+    -  Enable Updates tab
+    -  Enable Operating Systems tab
+    -  Enable Installation Status tab
+    -  Enable Device compliance tab
+    -  Enable Options tab
 
 ### Next steps
 
