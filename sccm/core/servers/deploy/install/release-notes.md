@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 08/21/2017
+ms.date: 08/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,15 +24,23 @@ manager: angrobe
 
 With System Center Configuration Manager, product release notes are limited to urgent issues that are not yet fixed in the product (available through a in-console update), or detailed in a Microsoft Knowledge Base article.  
 
- For known issues that affect core scenarios, this information is conveyed in the on-line product documentation in the System Center Configuration Manager documentation library.  
+Information about known issues that affect core scenarios is conveyed in the on-line product documentation, in the System Center Configuration Manager documentation library.  
 
 > [!TIP]  
 >  This topic contains release notes for the current branch of System Center Configuration Manager. For the Technical Preview for System Center Configuration Manager, see [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md)  
+
+For information about the new features introduced with different versions, see the following:
+- [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
+- [What's new in version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
+- [What's new in version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
+   
+
 
 ## Setup and upgrade  
 
 ### After you update a Configuration Manager console using ConsoleSetup.exe from the site server folder, recent language pack changes are not available
 <!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+*The following applies to version 1610 and 1702.*   
 After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed language packs might not be available. This occurs when:
 - Your site runs version 1610 or 1702.
 - The console is updated in-place by using ConsoleSetup.exe from the site server installation folder.
@@ -44,7 +52,8 @@ When this issue occurs, the reinstalled console does not use the latest set of l
 
 ### With version 1702, the default site boundary group is configured for use for site assignment
 <!--  SMS 486380   Applicability should only be to 1702. -->
-With version 1702, the default site boundary groups Reference tab has a check for **Use this boundary group for site assignment**, lists the site as the **Assigned site**, and is grayed out so that the configuration cannot be edited or removed.
+*The following applies to version 1702.*  
+The default site boundary groups Reference tab has a check for **Use this boundary group for site assignment**, lists the site as the **Assigned site**, and is grayed out so that the configuration cannot be edited or removed.
 
 **Workaround:** None. You can ignore this setting. Although the group is enabled for site assignment, the default site boundary group is not used for site assignment. With 1702, this configuration ensures the default site boundary group is associated with the correct site.
 
@@ -101,7 +110,8 @@ When you run Setup from a CD.Latest folder created for version 1606 and use the 
 
 ### Service connection tool throws an exception when SQL server is remote, or when Shared Memory is disabled
 <!-- 479223   Fixed in 1702 and later   -->
-Beginning with version 1606, the service connection tool generates an exception when one of the following is true:  
+*The following applies to version 1610 and earlier.*  
+The service connection tool generates an exception when one of the following is true:  
  -	Your site database is remote from the computer that hosts the service connection point and uses a non-standard port (a port other than 1433)
  - 	Your site database is on the same server as the service connection point but SQL protocol **Shared Memory** is disabled
 
@@ -128,8 +138,9 @@ The exception is similar to the following:
 ## Client deployment and upgrade  
 
 ### Client installation fails with error code 0x8007064c
-<!--- SMS 486973 -->
-When you deploy the client to Windows computers, the installation fails. The ccmsetup.log file contains an entry "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
+<!--- SMS 486973  applies 1606 to 1706. Not yet fixed. -->
+*The following applies to all active versions of Configuration Manager.*   
+With all active versions of When you deploy the client to Windows computers, the installation fails. The ccmsetup.log file contains an entry "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
 
 **Workaround**
 This is caused by a corrupted, previously installed version of Silverlight. You can try running the following tool on the affected computer to fix this:
@@ -157,6 +168,7 @@ After you create a serving plan, open the properties for the servicing plan, go 
 
 ### When a high-risk deployment dialog is visible to a user, subsequent high-risk dialogs with a sooner deadline are not displayed
 <!-- Fixed in 1702 and later -->
+*The following applies to version 1610 and earlier.*   
 After you create and deploy a high-risk task deployment to users, a high-risk dialog box is displayed to the user. If the user does not close the dialog box, you create and deploy another high-risk deployment with a sooner deadline than the first, the user will not receive an updated dialog box until they have closed the original dialog box. The deployments will still run at the configured deadlines.
 
 **Workaround**:  
@@ -168,6 +180,7 @@ The user must close the dialog box for the first high-risk deployment to see the
 
 ### Importing an Office 365 client settings from a configuration file fails when it contains unsupported languages
 <!-- 489258  Fixed in 1706  -->
+*The following applies to version 1702 and earlier.*   
 When you import the Office 365 client settings from an existing XML configuration file, and the file contains languages that are not supported by the Office 365 ProPlus client, an error will occur. For details, see [deploy Office 365 apps to clients from the Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
 
 **Workaround**:    
@@ -206,6 +219,7 @@ When an Android for Work email profile is created, there are two options for aut
 
 ### Antimalware policy fails to apply on Windows Server 2016 Core
 <!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
+*The following applies to version 1610 and earlier.*  
 Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
 
 **Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017.
