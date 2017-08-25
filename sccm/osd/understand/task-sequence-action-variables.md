@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Task sequence action variables in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Task sequence action variables in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Task sequence action variables specify configuration settings that are used by a single step in a System Center Configuration Manager task sequence. By default, the settings used by a task sequence step are initialized before the step is run and available only while the associated task sequence step is run. In other words, the task sequence variable setting is added to the task sequence environment before the task sequence step is run, and the value is removed from the task sequence environment after the task sequence step has run.  
 
 ## Action Variable Example  
@@ -178,15 +183,6 @@ Task sequence action variables specify configuration settings that are used by a
 |SMSConnectNetworkFolderDriveLetter<br /><br /> (input)|Specifies the network drive letter to connect to. This value is optional; if it is not specified, then the network connection is not mapped to a drive letter. If this value is specified, the value must be in the range from D: to Z:.  In addition, do not use X: as it is the drive letter used by Windows PE during the Windows PE phase.<br /><br /> Examples:<br /><br /> **"D:"**<br /><br /> **"E:"**|  
 |SMSConnectNetworkFolderPassword<br /><br /> (input)|Specifies the network password that is used to connect to the network share.|  
 |SMSConnectNetworkFolderPath<br /><br /> (input)|Specifies the network path for the connection.<br /><br /> Example:<br /><br /> **"\\\servername\sharename"**|  
-
-###  <a name="BKMK_ConvertDisk"></a> Convert Disk to Dynamic Task Sequence Action Variables  
- The variable for this action specifies the number of the physical disk to convert from a basic to dynamic disk. For more information about the task sequence step associated with these variables, see [Convert Disk to Dynamic](task-sequence-steps.md#BKMK_ConvertDisktoDynamic).  
-
-#### Details  
-
-|Action Variable Name|Description|  
-|--------------------------|-----------------|  
-|OSDConvertDiskIndex<br /><br /> (input)|Specifies the physical disk number that is converted.|  
 
 ###  <a name="BKMK_EnableBitLocker"></a> Enable BitLocker Task Sequence Action Variables  
  The variables for this action specify the recovery password and startup key options used to enable BitLocker on the destination computer. For more information about the task sequence step associated with these variables, see [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker).  
