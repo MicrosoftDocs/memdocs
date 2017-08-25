@@ -264,7 +264,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDStateStorePath<br /><br /> (output)|The UNC path to the folder on the state migration point where the user state is stored.|  
 
 ###  <a name="BKMK_RestartComputer"></a> Restart Computer Task Sequence Action Variables  
- The variables for this action specify information used to restart the destination computer. For more information about the task sequence step associated with these variables, see [Restart Computer](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer).  
+ The variables for this action specify information used to restart the destination computer. For more information about the task sequence step associated with these variables, see [Restart Computer](task-sequence-steps.md#BKMK_RestartComputer).  
 
 #### Details  
 
