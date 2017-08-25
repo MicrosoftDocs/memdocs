@@ -27,6 +27,14 @@ This article introduces the features that are available in the Technical Preview
 -   **Issue Name**. Details
     Workaround details.
 -->
+**Known Issues in this Technical Preview:**
+-   **Update to preview version 1708 fails when you have a site server in passive mode**. When you run the preview version 1706 or 1707, and have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1708. You can reinstall the passive mode site server after your site runs version 1708.
+
+  To uninstall the passive mode site server:
+  1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
+  2. In the **Site System Roles** pane, right click on the **Site server** role, and then choose **Remove Role**.
+  3. Right-click on the passive mode site server, and then choose **Delete**.
+  4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
 
 
 
