@@ -2,7 +2,7 @@
 title: "Data warehouse| Microsoft Docs"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -46,8 +46,8 @@ When the site system role installs, it installs and configures the data warehous
 - The computer where you install the site system role requires .NET Framework 4.5.2 or later.
 - The computer account of the computer where you install the site system role is used to synchronize data with the data warehouse database. This account requires the following permissions:  
   - **Administrator** on the computer that will host the data warehouse database.
-  - **DB_owner** permission on the data warehouse database.
-  - **DB_reader** and **execute** permissions to the top-tier sites site database.
+  - **DB_Creator** permission on the data warehouse database.
+  - Either **DB_owner** or **DB_reader** with **execute** permissions to the top-tier sites site database.
 - The data warehouse database requires the use of SQL Server 2012 or later. The edition can be Standard, Enterprise, or Datacenter.
 - The following SQL Server configurations are supported to host the warehouse database:  
   - A default instance
