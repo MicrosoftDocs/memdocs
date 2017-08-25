@@ -110,8 +110,8 @@ Use the following steps to download the image file containing the Endpoint Prote
 
 This July 2017 update (X21-44498) includes the following:
 
-- SCEP for Mac 4.5.28.1 (updated installation certificate)
-- SCEP for Linux 4.5.18.0 (new language packs)
-- SCEP for Linux documentation (revised guidance on real-time protection)
+- System Center Endpoint Protection for Mac 4.5.28.1 (updated installation certificate)
+- System Center Endpoint Protection for Linux 4.5.18.0 (new language packs)
+- System Center Endpoint Protection for Linux documentation (revised guidance on real-time protection)
 
  For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products, which is located in the **Documentation** folder.
