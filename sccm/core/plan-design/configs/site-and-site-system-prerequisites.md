@@ -2,7 +2,7 @@
 title: "Site prerequisites | Microsoft Docs"
 description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
-ms.date: 1/17/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -62,9 +62,7 @@ manager: angrobe
 
 **Windows ADK:**  
 
--   Before you install or upgrade a central administration site or primary site, you must install the version of the Windows Assessment and Deployment Kit (ADK) that the version of Configuration Manager you're installing or upgrading to requires.  
-
-    -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
+-   Before you install or upgrade a central administration site or primary site, you must install the version of the Windows Assessment and Deployment Kit (ADK) that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.  
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -111,9 +109,7 @@ manager: angrobe
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
 **Windows ADK:**  
 
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  
-
-    -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
+-   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -444,9 +440,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 **Windows ADK:**  
 
--   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  
-
-    -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
+-   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.  
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -491,9 +485,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS Provider server  
 **Windows ADK:**  
 
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  
-
-    -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
+-   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.  
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
