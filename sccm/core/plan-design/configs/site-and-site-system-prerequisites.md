@@ -23,7 +23,7 @@ manager: angrobe
 
  Windows-based computers require specific configurations to support their use as System Center Configuration Manager site system servers.  
 
-
+ 
  For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use of that product. Only configurations that directly apply for use with Configuration Manager are included here.   
 
 > [!NOTE]  
