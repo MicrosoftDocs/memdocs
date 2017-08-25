@@ -88,9 +88,9 @@ Starting with version 1606 of Configuration Manager (current branch), Endpoint P
 ## Endpoint Protection Client for Mac Computers and Linux Servers  
  System Center Endpoint Protection includes an Endpoint Protection client for Linux and for Mac computers. These clients are not supplied with Configuration Manager; instead, you must download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).  
 
--   System Center 2012 Endpoint Protection for the Mac  
+-   System Center Endpoint Protection for the Mac  
 
--   System Center 2012 Endpoint Protection for Linux  
+-   System Center Endpoint Protection for Linux  
 
 
 > [!IMPORTANT]  
@@ -105,7 +105,13 @@ Use the following steps to download the image file containing the Endpoint Prote
 2. Select the **Downloads and Keys** tab at the top of the website.
 3. Filter on product **System Center Endpoint Protection (current branch)**.
 4. Click link to **Download**
-5. Click **Continue**. You should see several files, including one named: **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage	32/64 bit	1507 MB	ISO**.
-6. Click the arrow icon to download the file. The file name is **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**.
+5. Click **Continue**. You should see several files, including one named: **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage	32/64 bit	1579 MB	ISO**.
+6. Click the arrow icon to download the file. The file name is **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-2_EptProt_Lin_Mac_MLF_X21-44498.ISO**.
+
+This July 2017 update (X21-44498) includes the following:
+
+- System Center Endpoint Protection for Mac 4.5.28.1 (updated installation certificate)
+- System Center Endpoint Protection for Linux 4.5.18.0 (new language packs)
+- System Center Endpoint Protection for Linux documentation (revised guidance on real-time protection)
 
  For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products, which is located in the **Documentation** folder.
