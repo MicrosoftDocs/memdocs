@@ -1013,7 +1013,7 @@ Use the **Prepare ConfigMgr Client for Capture** step to remove the Configuratio
 Starting in Configuration Manager version 1610, the Prepare ConfigMgr Client step completely removes the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time.  
 
 > [!Note]  
->  The client is only removed during the "Build and capture a reference operating system image" task sequence. Other capture methods, such as capture media or a custom task sequence, will not remove the client.
+>  The client is only removed during the **Build and capture a reference operating system image** task sequence. Other capture methods, such as capture media or a custom task sequence, will not remove the client.
 
 Prior to Configuration Manager version 1610, this step performs the following tasks:  
 
