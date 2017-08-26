@@ -2,7 +2,7 @@
 title: "Design a site hierarchy - Configuration Manager | Microsoft Docs"
 description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
 ms.custom: na
-ms.date: 6/16/2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,6 +24,13 @@ manager: angrobe
 
 Before installing the first site of a new System Center Configuration Manager hierarchy, it's a good idea to understand the available topologies for Configuration Manager, the types of available sites and their relationships with each other, and the scope of management that each site type provides.
 Then, after considering content management options that can reduce the number of sites you need to install, you can plan a topology that efficiently serves your current business needs and can later expand to manage future growth.  
+
+When planning, keep in mind limitations for adding additional sites to a hierarchy or stand-alone site:
+-   You can install a new primary site below a central administration site, up to the [supported number of primary sites](/sccm/core/plan-design/configs/size-and-scale-numbers) for the hierarchy.
+-   You can [expand a stand-alone primary site to install a new central administration site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), so that you can then install additional primary sites.
+-   You can install new secondary sites below a primary site, up to [supported limits for the primary site](/sccm/core/plan-design/configs/size-and-scale-numbers) and overall hierarchy.
+-   You cannot add a previously installed site to an existing hierarchy to merge two stand-alone sites. Only installation of new sites to an existing hierarchy of sites is supported.
+
 
 > [!NOTE]
 > When planning a new installation of Configuration Manager, be aware of the [release notes]( /sccm/core/servers/deploy/install/release-notes), which detail current issues in the active versions. The release notes apply to all branches of Configuration Manager.  However, when you use the [Technical Preview Branch]( /sccm/core/get-started/technical-preview), you will find issues specific only to that branch in the documentation for each version of the Technical Preview.  
@@ -60,7 +67,7 @@ Then, after considering content management options that can reduce the number of
 
 -   The central administration site is the top-level site in a hierarchy.  
 
--   When you configure a hierarchy that has more than one primary site, you must install a central administration site. If you will need two or more primary sites immediately, install the central administration site first. When you already have a primary site and want to then install a central administration site, you must [expand the stand-alone primary site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to install the central administration site. 
+-   When you configure a hierarchy that has more than one primary site, you must install a central administration site. If you will need two or more primary sites immediately, install the central administration site first. When you already have a primary site and want to then install a central administration site, you must [expand the stand-alone primary site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to install the central administration site.
 
 -   The central administration site supports only primary sites as child sites.  
 
