@@ -26,7 +26,7 @@ A Configuration Manager user collection is required to specify the users who can
 > [!NOTE]
 > To enroll devices with Intune, you do not need to assign licenses to users in the Office 365 portal or Azure Active Directory portal. Including the users in a collection that gets associated with the Intune subscription (in a [later step](configure-intune-subscription.md)) is all that's required.
 
-For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
+For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In the Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
 
 ![Create a user collection for MDM](../media/mdm-create-user-collection.png)
 
