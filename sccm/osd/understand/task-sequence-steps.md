@@ -548,31 +548,6 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   Specify conditions that must be met for the step to run.  
 
-##  <a name="BKMK_ConvertDisktoDynamic"></a> Convert Disk to Dynamic  
- Use the **Convert Disk to Dynamic** task sequence step to convert a physical disk from a basic disk type to a dynamic disk type.  
-
- This step runs in either a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk).  
-
-### Details  
- On the **Properties** tab for this step, you can configure the settings described in this section.  
-
- In addition, use the **Options** tab to do the following actions:  
-
--   Disable the step.  
-
--   Specify if the task sequence continues if an error occurs while running the step.  
-
--   Specify conditions that must be met for the step to run.  
-
- **Name**  
- A short user-defined name that describes the action taken in this step.  
-
- **Description**  
- More detailed information about the action taken in this step.  
-
- **Disk Number**  
- The physical disk number of the disk that will be converted.  
-
 ##  <a name="BKMK_DisableBitLocker"></a> Disable BitLocker  
  Use the **Disable BitLocker** task sequence step to disable the BitLocker encryption on the current operating system drive, or on a specific drive. This action leaves the key protectors visible in clear text on the hard drive, but it does not decrypt the contents of the drive. Consequently this action is completed almost instantly.  
 
@@ -871,35 +846,6 @@ This step runs in either a standard operating system or Windows PE. However, the
  **If an application fails, continue installing other applications in the list**  
  This setting specifies that the step continues if an individual application installation fails. If this setting is specified, the task sequence will continue regardless of any installation errors that are returned. If this is not specified an installation fails, the task sequence step will end immediately.  
 
-##  <a name="BKMK_InstallDeploymentTools"></a> Install Deployment Tools  
- Use the **Install Deployment Tools** task sequence step to install the Configuration Manager package that contains the Sysprep deployment tools.  
-
-### Details  
- On the **Properties** tab for this step, you can configure the settings described in this section.  
-
- In addition, use the **Options** tab to do the following actions:  
-
--   Disable the step.  
-
--   Specify if the task sequence continues if an error occurs while running the step.  
-
--   Specify conditions that must be met for the step to run.  
-
- **Name**  
- A short user-defined name that describes the action taken in this step.  
-
- **Description**  
- More detailed information about the action taken in this step.  
-
- **Sysprep Package**  
- This setting specifies the Configuration Manager package that contains the Sysprep deployment tools for the following operating systems:  
-
--   Windows XP SP3  
-
--   Windows XP X64 SP2  
-
--   Windows Server 2003 SP2  
-
 ##  <a name="BKMK_InstallPackage"></a> Install Package
 
  Use the **Install Package** task sequence step to install software as part of the task sequence. When this step is run, the installation begins immediately without waiting for a policy polling interval  
@@ -1065,6 +1011,9 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 Use the **Prepare ConfigMgr Client for Capture** step to remove the Configuration Manager client or configure the client on the reference computer to prepare it for capture as part of the imaging process.
 
 Starting in Configuration Manager version 1610, the Prepare ConfigMgr Client step completely removes the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time.  
+
+> [!Note]  
+>  The client is only removed during the **Build and capture a reference operating system image** task sequence. Other capture methods, such as capture media or a custom task sequence, will not remove the client.
 
 Prior to Configuration Manager version 1610, this step performs the following tasks:  
 

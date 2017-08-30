@@ -2,7 +2,7 @@
 title: "Planning client deployment to Linux and UNIX computers | Microsoft Docs"
 description: "Plan for client deployment to Linux and UNIX computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,14 +48,6 @@ You can install the System Center Configuration Manager client on computers that
 ###  <a name="BKMK_ClientDeployExternalforLnU"></a> Dependencies External to Configuration Manager:  
  The following tables describe the required UNIX and Linux operating systems and package dependencies.  
 
- **Red Hat Enterprise Linux ES Release 4**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|glibc|C Standard Libraries|2.3.4-2|  
-|Openssl|OpenSSL Libraries; Secure Network Communications Protocol|0.9.7a-43.1|  
-|PAM|Pluggable Authentication Modules|0.77-65.1|  
-
  **Red Hat Enterprise Linux Server release 5.1 (Tikanga)**  
 
 |Required package|Description|Minimum version|  
@@ -72,15 +64,6 @@ You can install the System Center Configuration Manager client on computers that
 |Openssl|OpenSSL Libraries; Secure Network Communications Protocol|1.0.0-4|  
 |PAM|Pluggable Authentication Modules|1.1.1-4|  
 
- **Solaris 9 SPARC**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|Required operating system patch|PAM memory leak|112960-48|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC (sparc)|5.9,REV=2002.03.18|  
-|SUNWlibms|Forte Developer Bundled Shared libm (sparc)|5.9,REV=2001.12.10|  
-|OpenSSL|SMCosslg (sparc)<br /><br /> Sun does not provide a version of OpenSSL for Solaris 9 SPARC. There is a version available from Sunfreeware.|0.9.7g|  
-|PAM|Pluggable Authentication Modules<br /><br /> SUNWcsl, Core Solaris, (Shared Libs) (sparc)|11.9.0,REV=2002.04.06.15.27|  
 
  **Solaris 10 SPARC**  
 
@@ -129,15 +112,6 @@ You can install the System Center Configuration Manager client on computers that
 |SUNWcsr|Core Solaris, (Root)|11.11, REV=2009.11.11|  
 |SUNWopenssl-libraries|OpenSSL Libraries (Usr)|11.11.0,REV=2010.05.25.01.00|  
 
- **SUSE Linux Enterprise Server 9 (i586)**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|Service Pack 4|SUSE Linux Enterprise Server 9||  
-|OS Patch lib gcc-41.rpm|Standard shared library|41-4.1.2_20070115-0.6|  
-|OS Patch lib stdc++-41.rpm|Standard shared library|41-4.1.2_20070115-0.6|  
-|Openssl|OpenSSL Libraries; Secure Network Communications Protocol|0.9.7d-15.35|  
-|PAM|Pluggable Authentication Modules|0.77-221-11|  
 
  **SUSE Linux Enterprise Server 10 SP1 (i586)**  
 
@@ -170,13 +144,6 @@ You can install the System Center Configuration Manager client on computers that
 |OpenSSL|OpenSSL Libraries; Secure Network Communications Protocol|0.9.8 or 1.0|  
 |PAM|Pluggable Authentication Modules|0.99.6.2-3.14|  
 
- **IBM AIX 5L 5.3**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|OS version|Version of the operating system|AIX 5.3, Technology Level 6, Service Pack 5|  
-|xlC.rte|XL C/C++ Runtime|9.0.0.2|  
-|openssl.base|OpenSSL Libraries; Secure Network Communications Protocol|0.9.8.4|  
 
  **IBM AIX 6.1**  
 
@@ -194,33 +161,6 @@ You can install the System Center Configuration Manager client on computers that
 |xlC.rte|XL C/C++ Runtime||  
 |OpenSSL/openssl.base|OpenSSL Libraries; Secure Network Communications Protocol||  
 
- **HP-UX 11i v2 IA 64**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|HPUXBaseOS|Base OS|B.11.23|  
-|HPUXBaseAux|HP-UX Base OS Auxiliary|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL Libraries; Secure Network Communications Protocol|A.00.09.07l.003|  
-|PAM|Pluggable Authentication Modules|On HP-UX, PAM is part of the core operating system components. There are no other dependencies.|  
-
- **HP-UX 11i v2 PA-RISC**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX Foundation Operating Environment|B.11.23.0706|  
-|OS-Core.MinimumRuntime.CORE-SHLIBS|Compatible development tools libraries|B.11.23|  
-|HPUXBaseAux|HP-UX Base OS Auxiliary|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL Libraries; Secure Network Communications Protocol|A.00.09.071.003|  
-|PAM|Pluggable Authentication Modules|On HP-UX, PAM is part of the core operating system components. There are no other dependencies.|  
-
- **HP-UX 11i v3 PA-RISC**  
-
-|Required package|Description|Minimum version|  
-|----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX Foundation Operating Environment|B.11.31.0709|  
-|OS-Core.MinimumRuntime.CORE2-SHLIBS|Specific IA emulator libraries|B.11.31|  
-|openssl/Openssl.openssl|OpenSSL Libraries; Secure Network Communications Protocol|A.00.09.08d.002|  
-|PAM|Pluggable Authentication Modules|On HP-UX, PAM is part of the core operating system components. There are no other dependencies.|  
 
  **HP-UX 11i v3 IA64**  
 
@@ -282,13 +222,8 @@ You can install the System Center Configuration Manager client on computers that
 ##  <a name="BKMK_NoSHA-256"></a> About Linux and UNIX Operating Systems That do not Support SHA-256  
  The following Linux and UNIX operating systems that are supported as clients for Configuration Manager were released with versions of OpenSSL that do not support SHA-256:  
 
--   Red Hat Enterprise Linux Version 4 (x86/x64)  
+-   Solaris Version 10 (SPARC/x86)  
 
--   Solaris Version 9 (SPARC) and Solaris Version 10 (SPARC/x86)  
-
--   SUSE Linux Enterprise Server Version 9 (x86)  
-
--   HP-UX Version 11iv2 (PA-RISH/IA64)  
 
  To manage these operating systems with Configuration Manager, you must install the Configuration Manager client for Linux and UNIX with a command line switch that directs the client to skip validation of SHA-256. Configuration Manager clients that run on these operating system versions operate in a less secure mode than clients that support SHA-256. This less secure mode of operation has the following behavior:  
 

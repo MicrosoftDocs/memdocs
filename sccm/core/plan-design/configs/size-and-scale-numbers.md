@@ -53,18 +53,9 @@ the recommended hardware, or use more aggressive custom settings (like running h
 
 -   A central administration site supports up to 25 child primary sites.  
 
-**Application Catalog website point:**  
-
--   You can install multiple instances of the Application Catalog website point at primary sites.  
-
-    > [!TIP]  
-    >  As a best practice, install the Application Catalog website point and Application Catalog web service point together on the same site system when they provide service to clients that are on the intranet.  
-
-    -   For improved performance, plan to support up to 50,000 clients per instance.  
-
-    -   Each instance of this site system role supports the maximum number of clients that are supported by the hierarchy.  
 
 ## <a name="bkmk_roles"></a> Site system roles    
+
 
 **Application Catalog web service point:**  
 
@@ -76,6 +67,18 @@ the recommended hardware, or use more aggressive custom settings (like running h
     -   For improved performance, plan to support up to 50,000 clients per instance.  
 
     -   Each instance of this site system role supports the maximum number of clients that are supported by the hierarchy.  
+
+**Application Catalog website point:**  
+
+-   You can install multiple instances of the Application Catalog website point at primary sites.  
+
+    > [!TIP]  
+    >  As a best practice, install the Application Catalog website point and Application Catalog web service point together on the same site system when they provide service to clients that are on the intranet.  
+
+    -   For improved performance, plan to support up to 50,000 clients per instance.  
+
+    -   Each instance of this site system role supports the maximum number of clients that are supported by the hierarchy.  
+
 
 **Distribution point:**  
 
