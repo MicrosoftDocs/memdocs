@@ -57,9 +57,12 @@ By default, users cannot approve a script they have authored. Because scripts ar
 3. In the list of sites, choose your site and then, on the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
 
+>[!IMPORTANT]
+>As a Best Practice you should not allow a script author to approve their own scripts! This should only be allowed in a Lab setting. Please carefully consider the potential impact of changing this setting in a Production environment. 
+
 ## Import and edit a script
 
-1. In the Configuration Manager console, click **Software Librar**y.
+1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
 3. On the **Home** tab, in the **Create** group, click **Create Script**.
 4. On the **Script** page of the Create **Script** wizard, configure the following settings:
@@ -106,6 +109,9 @@ After a script is approved, it can be run against a collection you choose.
 
 >[!IMPORTANT]
 >The script is given a one-hour time period in which to run. If it does not run (for example if the PC is turned off) in this time period, you must run it again.
+
+>[!IMPORTANT]
+>The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and\or locations by the script must be provisioned with this in mind.
 
 ## Next steps
 
