@@ -103,7 +103,7 @@ When you add trust for specific files for folders in a Device Guard policy you c
 5.	When you are finished, click **OK** to deploy the policy. 
 
 Once the policy is processed on a client PC, a restart is scheduled on that client according to the **Client Settings** for **Computer Restart**.
-Until you restart the client PC, the policy does not take effect.**
+Until you restart the client PC, the policy does not take effect.
 
 ## How to monitor a Device Guard policy
 
