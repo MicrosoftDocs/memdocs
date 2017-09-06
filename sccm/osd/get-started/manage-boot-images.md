@@ -46,11 +46,10 @@ Prior to version 1702, Configuration Manager updates the existing boot image (bo
 When you upgrade Configuration Manager 2012 to Configuration Manager CB by using the setup process, Configuration Manager will regenerate the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, and all customizations remain unchanged. Custom boot images are not modified.
 
 ### Update distribution points with the boot image
-When you use the **Update Distribution Points** action from the **Boot Images** node in the Configuration Manager console, Configuration Manager updates the default boot images with the client components, drivers, customizations, etc.    
+When you use the **Update Distribution Points** action from the **Boot Images** node in the Configuration Manager console, Configuration Manager updates the target boot image with the client components, drivers, customizations, etc.    
 
 Beginning in Configuration Manager version 1706, you can choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the Update Distribution Points wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manager client. You can use this information to help you decide whether to reload the boot image. Also, a new column (**Client Version**) has been added when you view boot images in the **Boot Images** node so you know what version of the Configuration Manager client each boot image uses.    
 
-Custom boot images are not modified.
 
 ##  <a name="BKMK_BootImageCustom"></a> Customize a boot image  
  You can customize a boot image, or [Modify a boot image](#BKMK_ModifyBootImages), from the Configuration Manager console when it is based on a Windows PE  version from the supported version of Windows ADK. When a site is upgraded with a new version and a new version of Windows ADK is installed, custom boot images (not in the default boot image location) are not updated with the new version of Windows ADK. When that happens, you will no longer be able to customize the boot images in the Configuration Manager console. However, they will continue to work as they did before the upgrade.  
