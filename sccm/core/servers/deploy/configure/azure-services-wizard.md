@@ -27,7 +27,7 @@ This wizard provides a common configuration experience by using an **Azure web a
 
 The following Azure services are configured using the Configure Azure Services wizard:
 -   **Cloud Management**   
-    [Enable clients to authenticate by using Azure Active Directory]() (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
+    [Enable clients to authenticate by using Azure Active Directory](/sccm/core/clients/deploy/deploy-clients-cmg-azure) (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
 -   **OMS Connector**
     [Connect to Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS) and sync data like collections to OMS Log Analytics.
 -   **Upgrade Readiness**
@@ -83,7 +83,7 @@ The Azure services web app connects your Configuration Manager site to Azure AD 
 
 6.	On the **Discovery** page of the wizard, click **Enable Azure Active Directory User Discovery**, and then click **Settings**.
 In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD. Learn more about [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
- 
+
  7.	Complete the wizard.
 
 At this point, you have connected your Configuration Manager site to Azure AD.
