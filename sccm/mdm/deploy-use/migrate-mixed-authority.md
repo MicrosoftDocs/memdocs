@@ -44,7 +44,7 @@ Migrated users and their devices will be managed in Intune and other devices wil
     - [Apple Push Notification service (APNs) certificate](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac)
     - [Device Enrollment Program](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)
     - Enrollment profiles
-    - [Volume Purchase Program (VPP) licenses](sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)
+    - [Volume Purchase Program (VPP) licenses](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)
     - Corporate identifiers 
     - [Code Signing certificates](/sccm/mdm/deploy-use/enroll-hybrid-windows)
     - [Device categories](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections)
