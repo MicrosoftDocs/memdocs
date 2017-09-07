@@ -13,16 +13,6 @@ ms.technology:
     - configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 # Change your MDM authority
 Beginning in Configuration Manager version 1610, you can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices.

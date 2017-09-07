@@ -44,16 +44,16 @@ As part of the migration, configure all the necessary RBAC roles in Intune and a
 [Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/en-us/intune/role-based-access-control).
 
 ## Target apps and policies to AAD groups
-If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, you manually created objects that were not migrated or that had issues during the migration. Now, you are ready to go through apps, policies, profiles, etc. and make sure the objects are assigned to the correct user groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration is transparent to users. For more information about assigning groups to objects, see the following: 
+If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, many of your objects might already be assigned to AAD groups. However, you should verify that all objects (apps, policies, profiles, etc.) are assigned to the correct AAD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should be transparent to users. For more information about assigning the objects to an AAD group, see the following: 
 - [Assign policies](https://docs.microsoft.com/intune/get-started-policies) 
 - [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign) 
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## Configure the Exchange Connector
-If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. The computer that will host the connector for the Exchange Connector in Intune cannot be the same computer that hosts the Exchange Connector in Configuration Manager. For details, see Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure (https://docs.microsoft.com/en-us/intune/exchange-connector-install)
+If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. The computer that will host the connector for the Exchange Connector in Intune cannot be the same computer that hosts the Exchange Connector in Configuration Manager. For details, see [Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure](https://docs.microsoft.com/intune/exchange-connector-install)
 
 ## Configure the Microsoft Intune Certificate Connector
-If you use NDES to issue certificates using SCEP, you need to configure the Microsoft Intune Certificate Connector. The computer that hosts the NDES connector in Intune cannot be the same computer that hosts the NDES connector in Configuration Manager. For details, see Configure and manage SCEP certificates with Intune (https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
+If you use NDES to issue certificates using SCEP, you need to configure the Microsoft Intune Certificate Connector. The computer that hosts the NDES connector in Intune cannot be the same computer that hosts the NDES connector in Configuration Manager. For details, see [Configure and manage SCEP certificates with Intune](https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
 
 > [!Important]    
 > After you configure the connector, you must modify imported SCEP profiles to reference the new server URL.
