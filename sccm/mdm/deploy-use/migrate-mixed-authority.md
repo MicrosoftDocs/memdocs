@@ -63,7 +63,7 @@ In the following example, the Hybrid users collection contains all members from 
 ![Exclude collections](../media/migrate-excludecollections.png)
 
 > [!Note] 
-> If you have the All users collection selected for the Intune subscription, you are not allowed to add a rule to exclude collections. Create a new collection based on the All users collection, verify that the collection contains the users that you expect, and then edit the Intune subscription to use the new collection. You can exclude user collections from the new collection to migrate users. 
+> When you have the **All users** collection selected for the Intune subscription, you are not allowed to add a rule to exclude collections. Create a new collection based on the **All users** collection, verify that the collection contains the users that you expect, and then edit the Intune subscription to use the new collection. You can exclude user collections from the new collection to migrate users. 
 
 To migrate a test group of users to Intune, create a user collection that contain the users to migrate, and then exclude the user collection from the collection used for the Intune subscription.   
 In the following diagram, the Intune subscription uses a collection named **All Hybrid users** and contains a rule to exclude users in the **Migration pilot** collection. **User1** is a member of the **Migration pilot** collection, is excluded from the **All Hybrid users** collection, and has an Intune license. Therefore, **User1**’s devices are now managed from Intune in the Azure portal. All other devices are managed from the Configuration Manager console. 
