@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 06/27/2017
+ms.date: 08/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -66,7 +66,7 @@ For more information, see:
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
 |Windows XP|July 10, 2015|Version 1511|  
-|Windows XP Embedded|July 10, 2015|Version 1702|  
+|Windows XP Embedded <br><br> This includes all [XP-based Embedded operating systems](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers).|July 10, 2015|Version 1702|  
 |Windows Server 2003|July 10, 2015|Version 1511|  
 |Windows Server 2003 R2|July 10, 2015|Version 1511|  
 |Windows Vista|July 10, 2015|Version 1511|  
@@ -97,9 +97,10 @@ If you need to upgrade your version of SQL Server, We recommend the following me
 |Out of Band Management - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
 |Task sequences: <br /> - OSDPreserveDriveLetter  <br /><br /> During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. |June 20, 2016 |Version 1606 |
 |Task sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |November 18, 2016|Support for these task sequences ends with the first update released after June 1, 2017.|
-|The Software Center has a new, modern look. Apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center, on the **Applications** tab. The Application Catalog can still be accessed by using the link on the **Installation Status** tab of Software Center.<br><br>In the coming months, the previous version of Software Center will no longer be available.<br><br>You can set up clients to use the new Software Center by enabling the client setting, **Computer Agent** > **Use new Software Center**.<br><br>For more information about Software Center, see [Plan for and configure application management in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|December 13, 2016|Support for the previous version of Software Center ends with the first update released after January 1, 2018.|
+|Software Center has a new, modern look. In the coming months, the previous version of Software Center will no longer be available.<br><br>You can set up clients to use the new Software Center by enabling the client setting, **Computer Agent** > **Use new Software Center**.<br><br>For more information about Software Center, see [Plan for and configure application management in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|December 13, 2016|Support for the previous version of Software Center ends with the first update released after January 1, 2018.|
+|With the arrival of the new Software Center experience in version 1511, apps that would have appeared only in the Application Catalog (user-available apps) now appear in Software Center. </br></br>With this primary functionality of the Application Catalog now included in Software Center, the web-based Application Catalog experience will no longer be available in the coming months.|August 11, 2017| Support for the Application Catalog web site user experience ends with the first update released after June 1, 2018|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. </br></br>This includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. </br></br>When this support is removed, existing VHDs will not be deleted, but will no longer be accessible from within the Configuration Manager console.  |January 6, 2017 |Support for VHDs ends with the first update released after June 1, 2017.|
-|System Center Configuration Manager Upgrade Assessment Tool. </br></br>The Upgrade Assessment Tool depends on both System Center Configuration Manager and the Application Compatibility Toolkit (ACT) 6.x. The final version of ACT was shipped in the Windows 10 v1511 ADK. As there will be no further updates to ACT, support for the Upgrade Assessment Tool will be discontinued. </br></br>The Upgrade Assessment Tool is replaced by the [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) feature. Deprecation notice was added to the [download page for UAT](https://www.microsoft.com/download/details.aspx?id=37145) on 9/12/2016. |9/12/2016  | July 11, 2017 |  
+|System Center Configuration Manager Upgrade Assessment Tool. </br></br>The Upgrade Assessment Tool depends on both System Center Configuration Manager and the Application Compatibility Toolkit (ACT) 6.x. The final version of ACT was shipped in the Windows 10 v1511 ADK. As there will be no further updates to ACT, support for the Upgrade Assessment Tool will be discontinued. </br></br>The Upgrade Assessment Tool is replaced by the [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) feature. Deprecation notice was added to the [download page for UAT](https://www.microsoft.com/download/details.aspx?id=37145) on 9/12/2016. |9/12/2016  | July 11, 2017 |
 
 
 <br></br>

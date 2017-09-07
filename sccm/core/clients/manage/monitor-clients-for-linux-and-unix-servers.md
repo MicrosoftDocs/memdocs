@@ -2,7 +2,7 @@
 title: "Monitor Linux/UNIX clients - Configuration Manager | Microsoft Docs"
 description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,7 +31,7 @@ You can view information from Linux and UNIX servers in the System Center Config
 
 -   Inventory details in the Resource Explorer  
 
- The following sections describe hoe to get these details from the resource explorer and reports.  
+ The following sections describe how to get these details from the resource explorer and reports.  
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> Use resource explorer to view inventory for Linux and UNIX servers  
 

@@ -27,7 +27,7 @@ This wizard provides a common configuration experience by using an **Azure web a
 
 The following Azure services are configured using the Configure Azure Services wizard:
 -   **Cloud Management**   
-    [Enable clients to authenticate by using Azure Active Directory]() (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
+    [Enable clients to authenticate by using Azure Active Directory](/sccm/core/clients/deploy/deploy-clients-cmg-azure) (Azure AD). You can also [configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
 -   **OMS Connector**
     [Connect to Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS) and sync data like collections to OMS Log Analytics.
 -   **Upgrade Readiness**
@@ -66,7 +66,7 @@ The Azure services web app connects your Configuration Manager site to Azure AD 
           This option is not available for all services you might configure.
 
    **Native Client app:**  Browse opens the Client App window.  
-     In the **Client App** window, select the client app you want to use, and then click **OK**. 
+     In the **Client App** window, select the client app you want to use, and then click **OK**.
 
      If you do not have an available client app, use one of the following:
      - **Create**: To create a new Client app, click **Create**. Next provide a friendly name for the app and the Reply URL.
@@ -75,11 +75,16 @@ The Azure services web app connects your Configuration Manager site to Azure AD 
           When you use Create to configure the app, Configuration Manager can creates the native client app for you in Azure AD.
      - **Import**: To use a client app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the Client ID. Then, click **OK** to continue.
            This option is not available for all services you might configure.
-<!-- Removed temporarily after feedback   > [!TIP]  
-    > When you use Import, the account you use to runs the wizard must have the *Read directory data* application permission in the Azure portal. This is required to set the correct permissions for the App. When you use Create, Configuration Manager creates the app with the correct permissions. However, you still must give consent to the application in the Azure portal. -->
+
+  <!--  MOVE THIS AND STEP 6 TO configure Azure AD User Discover  content
+       [!TIP]  
+     When you use Import, the account you use to run the wizard must have the *Read directory data* application permission in the Azure portal. This is required to set the correct permissions for the App. When you use Create, Configuration Manager creates the app with the correct permissions. However, you still must give consent to the application in the Azure portal.   -->
+
+
 6.	On the **Discovery** page of the wizard, click **Enable Azure Active Directory User Discovery**, and then click **Settings**.
 In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD. Learn more about [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
-7.	Complete the wizard.
+
+ 7.	Complete the wizard.
 
 At this point, you have connected your Configuration Manager site to Azure AD.
 

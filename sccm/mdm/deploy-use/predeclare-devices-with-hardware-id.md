@@ -2,7 +2,7 @@
 title: "Predeclare devices with IMEI or iOS serial numbers | Microsoft Docs"
 description: "Predeclare corporate-owned devices with their IMEI or iOS serial number."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 09/01/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -23,6 +23,9 @@ manager: angrobe
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  Imported information will set **Ownership** of the devices that enroll as **Corporate** in lists of devices. An Intune license is still required for each user that accesses the service.  
 
 When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned.
+
+>[!NOTE]
+>Android devices, excluding Samsung Knox Standard devices, must have a phone number assigned to them to predeclare and enroll as a company-owned device with an IMEI number.
 
 ## How to predeclare corporate-owned devices
 

@@ -2,7 +2,7 @@
 title: "Windows Hello for Business settings | Microsoft Docs"
 description: "Learn how to integrate Windows Hello for Business with System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/25/2017
+ms.date: 08/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 caps.latest.revision: 17
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Windows Hello for Business settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Windows Hello for Business settings in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
 
 Hello for Business lets you use a **user gesture** to login, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.
@@ -28,16 +33,13 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 
 -   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
-- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices), below. When you are using Configuration Manager with Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client. See [Configure Windows Hello for Business settings (hybrid)](../../mdm/deploy-use/windows-hello-for-business-settings.md) for more information.
+- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices), below. When you use Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices. See [Configure Windows Hello for Business settings (hybrid)](../../mdm/deploy-use/windows-hello-for-business-settings.md) for more information.
 
 ## Configure Windows Hello for Business on domain-joined Windows 10 devices
-You can control Windows Hello for Business settings on domain-joined Windows 10 devices in three ways:
+You can control Windows Hello for Business settings on domain-joined Windows 10 devices by creating and deploying a Windows Hello for Business Profile. This is the recommended approach.
 
-- You can create and deploy a Windows Hello for Business Profile. This is the recommended approach.
-- You can use group policy.  
-- You can use a PowerShell script.
 
-Note that in addition to this configuration, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile).
+If you are using certificate-based authentication, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile). If you are using key-based authentication, you do not need to deploy a certificate profile.
 
 ## Configure a Windows Hello for Business profile  
 
@@ -45,41 +47,8 @@ In the Configuration Manager console, under **Company Resource Access**, right-c
 
 ![Windows Hello for Business settings](../media/Hello-for-Business-settings.png)
 
-## Configure Windows Hello for Business with Group Policy in Active Directory  
-
-You can use an Active Directory Group Policy to configure your Windows 10 domain-joined devices to provision user Hello for Business credentials when a user logs to Windows:
-
-1.  On a Windows Server  computer, open Server Manager and navigate to **Tools** > **Group Policy Management**.    
-
-2.  In the **Group Policy Management** dialog box, expand the  domain in which you want to enable Automatic Workplace Join.    
-
-3.  Right-click **Group Policy Objects**, and then click **New**.  
-
-4.  In the **New GPO** dialog box, enter a name for the new Group Policy object, such as **Enable Windows Hello for Business**, and then click **OK**.  
-
-5.  In the **Group Policy Objects** node, right-click the object you just created, and then click **Edit**.  
-
-6.  In the **Group Policy Management Editor** dialog box, navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Hello for Business**.  
-
-7.  Right-click **Enable Windows Hello for Business** and then click **Edit**.   
-
-8.  Select **Enabled**, click **Apply**, and then click **OK**.
-
-You can now link the Group Policy object you just created to a location of your choice. For example:    
-
-   A specific Organizational Unit (OU) in AD where Windows 10 domain-joined computers will be located.    
-
-   A specific security group containing Windows 10 domain-joined computers that will be automatically registered with Azure AD.    
-
-## Configure Windows Hello for Business by deploying a PowerShell script with Configuration Manager    
-You can create and deploy the following PowerShell script by using Configuration Manager application management.    
-
-**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}" ** 
-
-For more information about Configuration Manager application management, see [Introduction to application management in System Center Configuration Manager](/sccm/apps/understand/introduction-to-application-management).  
-
 ## Configure a certificate profile to enroll the Windows Hello for Business enrollment certificate in Configuration Manager  
- If you want to use Windows Hello for Business certificate-based logon, or Microsoft Hello, then configure the following:  
+ If you want to use Windows Hello for Business certificate-based logon, configure the following:  
 
 -   A Configuration Manager certificate profile.  
 
@@ -88,21 +57,33 @@ For more information about Configuration Manager application management, see [In
 -	If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
 You must first have created the **Key Admins** group and added all Configuration Manager management point computers as members to this group.
 
-	1.	Login to a domain controller or management workstations with Domain Admin, or equivalent credentials.
-	2.	Open **Active Directory Users and Computers**.
-	3.	From the navigation pane, right-click your domain name, and then click **Properties**.
-	4.	On the **Security** tab of the *<domain name>* **Properties** dialog box, click **Advanced**. 
+Some configurations might not need you to configure permissions, or might require further configurations. Refer to the following table for more help:
+
+|||||
+|-|-|-|-|
+|Windows client version|Configuration Manager 1602 or 1606|Configuration Manager 1610|Configuration Manager 1702 or later|
+|Windows 10 Anniversary Update|No hotfix required<br><br>No permissions required<br><br>No Windows schema update required|No hotfix required<br><br>No permissions required<br><br>No Windows schema update required|No action required|
+|Windows 10 Creators Update or later|Not supported|Install [this hotfix](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)<br><br>Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|
+
+## To configure permissions
+
+1.	Login to a domain controller or management workstations with Domain Admin, or equivalent credentials.
+2.	Open **Active Directory Users and Computers**.
+3.	From the navigation pane, right-click your domain name, and then click **Properties**.
+4.	On the **Security** tab of the *<domain name>* **Properties** dialog box, click **Advanced**. 
 if the **Security** tab is not displayed, turn on **Advanced Features** from the **View** menu of **Active Directory Users and Computers**.
-	5.	Click **Add**.
-	6.	In the **Permission Entry for** *<domain name>* dialog box, click **Select a principal**.
-	7.	In the **Select User, Computer, Service Account, or Group** dialog box, type **Key Admins** in the **Enter the object name to select** text box.  Click **OK**.
-	8.	From the **Applies to** list, select **Descendant User objects**.
-	9.	Scroll to the bottom of the page and click **Clear all**.
-	10.	In the **Properties** section, select **Read msDS-KeyCredentialLink**.
-	11.	Click **OK** three times to complete the task.
+5.	Click **Add**.
+6.	In the **Permission Entry for** *<domain name>* dialog box, click **Select a principal**.
+7.	In the **Select User, Computer, Service Account, or Group** dialog box, type **Key Admins** in the **Enter the object name to select** text box.  Click **OK**.
+8.	From the **Applies to** list, select **Descendant User objects**.
+9.	Scroll to the bottom of the page and click **Clear all**.
+10.	In the **Properties** section, select **Read msDS-KeyCredentialLink**.
+11.	Click **OK** three times to complete the task.
 
 
- For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
+## Next steps
+
+For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
 
 

@@ -2,7 +2,7 @@
 title: "Incremental versions of System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to install and manage System Center Configuration Manager updates."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -31,13 +31,10 @@ manager: angrobe
 
  These update versions are key to understanding the incremental version of your System Center Configuration Manager installation, and what features you have available to enable in your deployment.
 
- The initial release of System Center Configuration Manager current branch is version 1511. Since this initial release, additional updates are available. Use the following links to discover what’s new with each version:
+ The initial release of System Center Configuration Manager current branch is version 1511. Since this initial release, additional updates are available. Use the following links to discover what’s new with each version that remains in support:
+  - [What's new in version 1706](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
   - [What's new in version 1702](../../../core/plan-design/changes/whats-new-in-version-1702.md)
   - [What's new in version 1610](../../../core/plan-design/changes/whats-new-in-version-1610.md)
-  - [What's new in version 1606](../../../core/plan-design/changes/whats-new-in-version-1606.md)  
 
-<!-- 
-  - [What's new in version 1602](../../../core/plan-design/changes/whats-new-in-version-1602.md)
--->
 
  Each update version is supported for a year after its release. It's a good idea to stay current with the most recent update version whenever possible. For more information, see [Support for System Center Configuration Manager current branch versions](../../../core/servers/manage/current-branch-versions-supported.md).  

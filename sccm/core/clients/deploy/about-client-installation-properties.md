@@ -45,7 +45,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
  At the command prompt, the CCMSetup.exe command uses the following format:  
 
- `CCMSetup.exe [&lt;Ccmsetup properties\>] [&lt;client.msi setup properties>]`  
+ `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
 
  Example:  
 
@@ -522,8 +522,6 @@ Specifies an initial management point for the Configuration Manager client to us
 
 > [!IMPORTANT]  
 >  If the management point only accepts client connections over HTTPS, you must prefix the management point name with https://.  
-
-Example:`CCMSetup.exe SMSMP=smsmp01.contoso.com`  
 
 Example: `CCMSetup.exe SMSMP=smsmp01.contoso.com`
 

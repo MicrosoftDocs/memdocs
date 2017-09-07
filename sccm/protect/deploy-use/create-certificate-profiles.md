@@ -28,10 +28,16 @@ Use certificate profiles in Configuration Manager (SCCM) to provision managed de
 
 This topic describes how to create trusted root and SCEP certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
 
+To create a certificate profile:
 
-## Create a New Certificate Profile  
+1.  Start the Create Certificate Profile Wizard.
+1.  Provide general information about the certificate.
+1.  Configure a trusted certificate authority (CA) certificate.  
+1.  Configure SCEP certificate information (only for SCEP certificates).  
+1.  Specify supported platforms for the certificate profile.
 
-### Start the Create Certificate Profile Wizard  
+
+## Start the Create Certificate Profile wizard  
 
 1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
 
@@ -39,7 +45,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
 3.  On the **Home** tab, in the **Create** group, click **Create Certificate Profile**.  
 
-### Provide general information about the certificate profile  
+## Provide general information about the certificate profile  
 
 On the **General** page of the Create Certificate Profile Wizard, specify the following information:  
 
@@ -53,11 +59,12 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
 -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
 
--   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Import PFX certificate profiles](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
+
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to process PFX certificates using a certificate authority. To learn more about PFX certificate creation see [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 
-
-### Configure a trusted CA certificate  
+## Configure a trusted CA certificate  
 
 > [!IMPORTANT]  
 >  You must configure at least one trusted CA certificate profile before you can create a SCEP certificate profile.    
@@ -83,7 +90,7 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 2.  Use the **Certificate thumbprint** value to verify that you have imported the correct certificate.  
 
 
-### Configure SCEP certificate information (only for SCEP certificates)  
+## Configure SCEP certificate information (only for SCEP certificates)  
 
 1.  On the **SCEP Servers** page of the Create Certificate Profile Wizard, specify the URLs for the NDES Servers that will issue certificates via SCEP. You can choose to automatically assign an NDES URL based on the configuration of the Certificate Registration Point site system server, or add URLs manually.  
 
@@ -177,7 +184,7 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
    >  If you specify a root CA certificate that is not deployed to the user or device, System Center Configuration Manager will not initiate the certificate request that you are configuring in this certificate profile.  
 
 
-###  Specify supported platforms for the certificate profile  
+##  Specify supported platforms for the certificate profile  
 
 1. On the **Supported Platforms** page of the Create Certificate Profile Wizard, select the operating systems where you want to install the certificate profile. Or, click **Select all** to install the certificate profile to all available operating systems.
 2. Review the **Summary** page of the wizard and choose **Finish**. 

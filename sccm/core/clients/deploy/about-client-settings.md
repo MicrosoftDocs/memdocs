@@ -2,7 +2,7 @@
 title: "Client settings | Microsoft Docs"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,7 +49,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
 -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
-   Specify the maximum transfer rate that clients will use outside the BITS throttling window, when you have chosen to allow BITS throttling outside the window.  
+   Specify the maximum transfer rate that clients use outside the BITS throttling window, when you have chosen to allow BITS throttling outside the window.  
 
 ## Client cache settings
 
@@ -57,9 +57,25 @@ Many of the client settings are self-explanatory. Others are described here.
 
   Beginning in version 1606, use this setting to set up the client computer for [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
+- **Enable BranchCache**
+
+Enables BranchCache on client computers.
+
+- **Maximum BranchCache cache size (percentage of disk)**.
+
 - **Configure client cache size**
 
-  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** to specify **Maximum cache size** (megabytes or percentage of disk). The client cache size can expand to the maximum size in MB or the percentage of the disk, **whichever is less**. If this option is **No**, the default size is 5,120 MB.
+  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** then specify:
+	- **Maximum cache size** (megabytes). 
+	- **Maximum cache size** (percentage of disk).
+The client cache size can expand to the maximum size in MB or the percentage of the disk, **whichever is less**. If this option is **No**, the default size is 5,120 MB.
+
+- **Enable Configuration Manager client in full OS to share content**
+
+Enables peer cache for Configuration Manager clients. Then, specify port information by which the client communicates with the peer computer. Configuration Manager will automatically configure Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
+
+
+
 
 ## Client policy  
 
@@ -101,7 +117,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
   -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
 
-   If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but **Enable user policy polling on clients** is **True** or **Enable user policy on clients** is **Yes**, users will not receive user policies until the computer is connected to the intranet.  
+   If you leave this option as **False** or **No**, or either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but **Enable user policy polling on clients** is **True** or **Enable user policy on clients** is **Yes**, users will not receive user policies until the computer is connected to the intranet.  
 
    For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
@@ -112,7 +128,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
 -   **Schedule compliance evaluation**  
 
-     Choose **Schedule** to create the default schedule that will be shown to users when they deploy a configuration baseline. This value can be configured for each baseline in the **Deploy Configuration Baseline** dialog box.  
+     Choose **Schedule** to create the default schedule that is shown to users when they deploy a configuration baseline. This value can be configured for each baseline in the **Deploy Configuration Baseline** dialog box.  
 
 -   **Enable User Data and Profiles**  
 
@@ -134,7 +150,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
      -   You want to manually configure the closest server for clients or ensure that they do not connect to a server across a slow network connection.  
 
-     -   You want to control which clients connect to which server. This might be for testing, performance, or business reasons.  
+     -   You want to control which clients connect to which server. This configuration might be for testing, performance, or business reasons.  
 
      -   You do not want to wait up to 25 hours or for a network change for clients to be configured with a different Application Catalog website point.  
 
@@ -222,7 +238,7 @@ Many of the client settings are self-explanatory. Others are described here.
     -   You use the Configuration Manager software development kit (SDK) to manage client agent notifications and the installation of applications and software updates.  
 
     > [!WARNING]  
-    >  If you choose this option when neither of these conditions applies, software updates and required applications will not be installed on clients. This setting does not prevent users from installing applications from the Application Catalog, or prevent packages, programs, and task sequences from being installed on client computers.  
+    >  If you choose this option when neither of these conditions applies, software updates and required applications are not installed on clients. This setting does not prevent users from installing applications from the Application Catalog, or prevent packages, programs, and task sequences from being installed on client computers.  
 
 -   **PowerShell execution policy**  
 

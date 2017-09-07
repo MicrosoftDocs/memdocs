@@ -2,7 +2,7 @@
 title: "Create and run scripts with Configuration Manager | Microsoft Docs"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -56,7 +56,6 @@ By default, users cannot approve a script they have authored. Because scripts ar
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
 3. In the list of sites, choose your site and then, on the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
-Sites
 
 ## Import and edit a script
 
@@ -70,6 +69,20 @@ Sites
 	- **Clear** - Removes the current script from the Script field.
 	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
+
+### Script examples
+
+Here are some examples that illustrate scripts you might want to use with this capability.
+
+#### Create a folder
+
+*New-Item "c:\scripts" -type folder name* 
+ 
+ 
+#### Create a file
+
+*New-Item c:\scripts\new_file.txt -type file name*
+
 
 ## Approve or deny a script
 
@@ -91,10 +104,13 @@ After a script is approved, it can be run against a collection you choose.
 5. On the **Script** page of the **Run Script** wizard, choose a script from the list. Only approved scripts are shown.
 6. Click **Next**, and then complete the wizard.
 
+>[!IMPORTANT]
+>The script is given a one-hour time period in which to run. If it does not run (for example if the PC is turned off) in this time period, you must run it again.
+
 ## Next steps
 
 After you have run a script to client devices, use this procedure to monitor the success of the operation.
 
 1. In the Configuration Manager console, click **Monitoring**.
-2. In the **Monitoring** workspace, click **Script Results**.
-3. In the **Script Results** list, you view the results for each script you ran on client devices. A script exit code of **0**, generally indicates that the script ran successfully.
+2. In the **Monitoring** workspace, click **Script Status**.
+3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.

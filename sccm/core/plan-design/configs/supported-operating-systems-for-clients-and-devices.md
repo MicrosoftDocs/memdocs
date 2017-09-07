@@ -2,7 +2,7 @@
 title: "Supported clients and devices | Microsoft Docs"
 description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
-ms.date: 2/6/2017
+ms.date: 8/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
 # Supported operating systems for clients and devices for System Center Configuration Manager
@@ -52,7 +52,7 @@ manager: angrobe
 
 -   **Windows  Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
--   **Windows 10**: Pro, Enterprise  
+-   **Windows 10**
    See [Support for versions of Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) for details about the different release versions of Windows 10 that are supported by the different versions of Configuration Manager.
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
@@ -62,7 +62,7 @@ manager: angrobe
 -   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate    
 
 -   **The Server Core installation of Windows Server 2016** (x64) <sup>2</sup>
-  - This operating system is supported beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October of 2016). 
+  - This operating system is supported beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October of 2016).
 
 
 -   **The Server Core installation of Windows Server 2012 R2** (x64) <sup>2</sup>    
@@ -118,6 +118,8 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 -   **Windows Embedded POSReady 7** (x86, x64)    
 
 -   **Windows Embedded Standard 7 with SP1** (x86, x64)    
+
+The following operating systems are based on Windows XP Embedded, and only supported with Configuration Manager version 1610 and earlier. [Beginning with version 1702, these embedded operating systems are no longer supported](/sccm/core/plan-design/changes/removed-and-deprecated-features#client-operating-systems).  
 
 -   **WEPOS 1.1 with SP3** (x86)    
 
@@ -208,7 +210,6 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
 |||  
 |-|-|  
-|Version 5.3 (Power)|ccm-Aix53ppc.&lt;build\>.tar|  
 |Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
 |Version 7.1 (Power)|ccm-Aix71ppc.&lt;build\>.tar|  
 
@@ -239,10 +240,7 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
 |||  
 |-|-|  
-|Version 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;build\>.tar|  
-|Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;build\>.tar|  
 |Version 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;build\>.tar|  
-|Version 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;build\>.tar|  
 
 ### Oracle Linux  
 
@@ -258,8 +256,6 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
 |||  
 |-|-|  
-|Version 4 x86|ccm-RHEL4x86.&lt;build\>.tar|  
-|Version 4 x64|ccm-RHEL4x64.&lt;build\>.tar|  
 |Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
 |Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
@@ -270,7 +266,6 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
 |||  
 |-|-|  
-|Version 9 SPARC|ccm-Sol9sparc.&lt;build\>.tar|  
 |Version 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
 |Version 10 SPARC|ccm-Sol10sparc.&lt;build\>.tar|  
 |Version 11 x86|ccm-Sol11x86.&lt;build\>.tar|  
@@ -280,7 +275,6 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
 |||  
 |-|-|  
-|Version 9 x86|ccm-SLES9x86.&lt;build\>.tar|  
 |Version 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 10 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
 |Version 11 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
@@ -297,6 +291,9 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 |Version 12.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 |Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 16.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 16.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+
 
 ##  Mobile devices enrolled by Microsoft Intune  
  For details about the computers and devices that you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics   in the Microsoft Intune documentation library:  

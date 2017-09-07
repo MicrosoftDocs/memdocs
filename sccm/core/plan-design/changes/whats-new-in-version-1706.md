@@ -2,7 +2,7 @@
 title: "New version 1706 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1706 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  07/31/2017
+ms.date:  08/11/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -112,7 +112,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 
 ## Compliance settings
 
-### New compliance settings for Windows 10 devices that are not managed with the Configuration Manager client
+### New configuration settings for Windows 10 devices that are not managed with the Configuration Manager client
 <!-- 1354715 -->
 In this release, we've added new configuration item settings for Windows 10 devices that are enrolled with Intune, or managed on premises by Configuration Manager. The settings are:
 
@@ -143,28 +143,28 @@ For details of all Windows 10 settings, see [How to create configuration items f
 
 * **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
 
-  	**Supported on:**
-  	* Windows Phone 8+
-  	* Windows 8.1+
-  	* iOS 6+
+ **Supported on:**
+ * Windows Phone 8+
+ * Windows 8.1+
+ * iOS 6+
 <br></br>
 * **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
 
- 	**Supported on:**
-  	* Android 4.0+
-  	* Samsung KNOX Standard 4.0+
+ **Supported on:**
+ * Android 4.0+
+ * Samsung KNOX Standard 4.0+
 <br></br>
 * **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
 
-  	**Supported on:**
-  	* Android 4.0+
-  	* Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
 
-  	**Supported on:**
-  	* Android 4.2 through 4.4
-  	* Samsung KNOX Standard 4.0+
+ **Supported on:**
+ * Android 4.2 through 4.4
+ * Samsung KNOX Standard 4.0+
 
 See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules
 
@@ -183,7 +183,8 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
-### New mobile application management policy settings
+### New mobile application management policy settings    
+<!--1324760-->
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
@@ -195,20 +196,35 @@ Beginning with this release, you can use three new mobile application management
 See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 
-<!--  ## Operating system deployment  -->
+## Operating system deployment
+
+### Hardware inventory collects Secure Boot information
+Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+
+### Collapsible task sequence groups
+This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.
+
+### Reload boot images with current Windows PE version
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ## Software updates
+
+### Improvements to Express Update download time
+In this release, we have significantly improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+
 ### Manage Microsoft Surface driver updates
 <!-- 1098490 -->
-You can now use Configuration Manager to manage Microsoft Surface driver updates.
+You can now use Configuration Manager to manage Microsoft Surface driver updates.    
+
 
 #### Prerequisites
-All software update points must run Windows Server 2016.
+- All software update points must run Windows Server 2016.    
+- This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### To manage Surface driver updates
 
 1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select the **Include Microsoft Surface drivers and firmware updates** checkbox on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates).
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
 ### Configure Windows Update for Business deferral policies
@@ -216,6 +232,9 @@ All software update points must run Windows Server 2016.
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).
+
+### Improved user notifications for Office 365 updates
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#restart-behavior-and-client-notifications-for-office-365-updates)
 
 ## Reporting
 
@@ -230,11 +249,17 @@ For more information, see [Use Windows Analytics with Configuration Manager](/sc
 
 ## Mobile device management
 
-### Android for Work application management policy for copy-paste
+### Updates to Android for Work sharing configuration
 <!-- 1338403 -->
-With this release, the Android for Work configuration items for the **Allow data sharing between work and personal profile** settings descriptions have been updated.
+With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
 
 For more information, see [Configuration items for Android for Work devices](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
+
+### Android and iOS enrollment restrictions
+<!-- 1290826 -->
+With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
+- For more information about Android enrollment restrictions, see [Set up Android device management](/sccm/mdm/deploy-use/enroll-hybrid-android).
+- For more information about iOS enrollment restrictions, see [Configure iOS enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
 
 ## Protect devices
 

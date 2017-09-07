@@ -15,6 +15,7 @@
 ### [Manage the Long-Term Servicing Branch](understand/manage-the-ltsb.md)
 ### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch.md)
 ##  [Which branch of Configuration Manager should I use](understand/which-branch-should-i-use.md)
+##  [Extended interoperability client](understand/interoperability-client.md)
 ##  [Licensing for System Center Configuration Manager](understand/learn-more-editions.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ### [Configuration Manager on Azure](understand/configuration-manager-on-azure.md)
@@ -98,11 +99,11 @@
 ###  [Configure security](plan-design/security/configure-security.md)
 
 #    Get started
-
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
 ###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
 ###  [Capabilities in 1705](get-started/capabilities-in-technical-preview-1705.md)

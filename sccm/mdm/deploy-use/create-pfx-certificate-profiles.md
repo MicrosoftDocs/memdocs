@@ -1,5 +1,5 @@
 ---
-title: "Create PFX certificate profiles | Microsoft Docs"
+title: "Create PFX certificate profiles using a certificate authority | Microsoft Docs"
 description: "Learn how to use PFX files in System Center Configuration Manager to generate user-specific certificates that support encrypted data exchange."
 ms.custom: na
 ms.date: 04/04/2017
@@ -10,7 +10,7 @@ ms.technology:
   - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
+ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: lleonard-msft
@@ -18,34 +18,27 @@ ms.author: alleonar
 manager: angrobe
 
 ---
-# How to create PFX certificate profiles in System Center Configuration Manager
+# How to create PFX certificate profiles using a certificate authority
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.
+Here, you learn how to create a certificate profile that uses a certification authority for credentials.
 
 [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provides general information about creating and configuring certificate profiles. This topic highlights some specific information about certificate profiles related to PFX certificates.
 
--  Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and  the operating system. The following devices are supported when they are enrolled with Intune:
-
- -   iOS  
-
-- For other prerequisites, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
-
 ## PFX certificate profiles
-System Center Configuration Manager allows you to import, then provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange.
+System Center Configuration Manager allows you to create a PFX certificate profile using credentials issued by a certificate authority.  As of version 1706, you may choose Microsoft or Entrust as your certificate authority.  When deployed to user devices, personal information exchange (.pfx) files generate user-specific certificates to support encrypted data exchange.
 
-> [!TIP]  
->  A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
+To import certificate credentials from existing certificate files, see [How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md).
 
 ## Create and deploy a Personal Information Exchange (PFX) certificate profile  
 
 ### Get started
 
-1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Certificate Profiles**.  
+1.  In the System Center Configuration Manager console, choose **Assets and Compliance**.  
+2.  In the **Assets and Compliance** workspace, choose **Compliance Settings** &gt; **Company Resource Access** &gt; **Certificate Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Certificate Profile**.
+3.  On the **Home** tab, in the **Create** group, choose **Create Certificate Profile**.
 
 4.  On the **General** page of the **Create Certificate Profile** Wizard, specify the following information:  
 
@@ -53,77 +46,136 @@ System Center Configuration Manager allows you to import, then provision persona
 
     -   **Description**: Provide a description that gives an overview of the certificate profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
 
-    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of the following:  
+    -   In **Specify the type of certificate profile that you want to create**, choose **Personal Information Exchange - PKCS #12 (PFX) settings - Create** and then choose your certificate authority from the drop-down list.  Beginning with version 1706, you may choose **Microsoft** or **Entrust**.
 
-        -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Imports a PFX certificate.  
+### Select supported platforms
 
-        -   **Personal Information Exchange - PKCS #12 (PFX) settings - Create**: Creates a PFX certificate.
-       
+The Supported Platforms page identifies the operating systems and devices the certificate profile supports.  
 
-### Import a PFX certificate
+Certificate profiles may support multiple operating systems and devices, however, certain operating system or device combinations may require different settings.  In these cases, it's best to create separate profiles for each unique set of settings.  
 
-To import a PFX certificate, you'll need the Configuration Manager SDK. Any certificates you import for a user will be deployed to any devices that the user enrolls.
+As of version 1706, the following options are available:
 
-1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify where the certificate will be stored on devices to which you deploy it:
-	- 	**Install to Trusted Platform Module (TPM) if present**  
-    -   **Install to Trusted Platform Module (TPM), otherwise fail** 
-    -   **Install to Windows Hello for Business otherwise fail** 
-    -   **Install to Software Key Storage Provider** 
-2. Click **Next**. 
-3. On the **Supported Platforms** page of the wizard, choose the device platforms on which this certificate will be installed, then click **Next**.
-4. Using the SDK for Windows 8.1 available from the Download Center ([http://go.microsoft.com/fwlink/?LinkId=613525](http://go.microsoft.com/fwlink/?LinkId=613525), deploy a Create PFX Script. The Create PFX Script added in Configuration Manager 2012 SP2 adds an SMS_ClientPfxCertificate class to the SDK. This class includes the following methods:  
+- Windows 10
+    - All Windows 10 (64-bit)
+    - All Windows 10 (32-bit)
+    - All Windows 10 Holographic Enterprise and higher
+    - All Windows 10 Holographic and higher
+    - All Windows 10 Team and higher
+    - All Windows 10 Mobile and higher
+- iPhone
+- iPad
+- Android
+- Android for Work
 
-    -   ImportForUser  
+> [!Note]  
+> MacOS/OSX devices are not currently supported.  
 
-    -   DeleteForUser  
+When no other options are selected, the **Select All** checkbox selects all available options.  When one or more options are selected, **Select All** clears existing selections. 
 
-     Sample script:  
+1.  Select one or more platforms supported by the certificate profile.
 
-```  
-    $EncryptedPfxBlob = "<blob>"  
-    $Password = "abc"  
-    $ProfileName = "PFX_Profile_Name"  
-    $UserName = "ComputerName\Administrator"  
+1.  Choose **Next** to continue.  
 
-    #New pfx  
-    $WMIConnection = ([WMIClass]"\\nksccm\root\SMS\Site_MDM:SMS_ClientPfxCertificate")  
-        $NewEntry = $WMIConnection.psbase.GetMethodParameters("ImportForUser")  
-        $NewEntry.EncryptedPfxBlob = $EncryptedPfxBlob  
-        $NewEntry.Password = $Password  
-        $NewEntry.ProfileName = $ProfileName  
-        $NewEntry.UserName = $UserName  
-    $Resource = $WMIConnection.psbase.InvokeMethod("ImportForUser",$NewEntry,$null)  
 
-```  
+### Configure certification authorities
 
-The following script variables must be modified for your script:  
+Here, you choose the certificate registration point (CRP) to process the PFX certificates.  
 
-   -   blob\ = The PFX base64-encrypted blob  
-   -   $Password = The password for the PFX file  
-   -   $ProfileName = The name of the PFX profile  
-   -   ComputerName = Name of host computer   
+1.  From the **Primary Site** list, choose the server containing the CRP role for the CA.
+1.  From the list of **Certification authorities**, choose the relevant CA by placing a checkmark in the left column.
+1.  When ready to continue, choose **Next**.
 
-### Create a PFX certificate
+To learn more, see [Certificate infrastructure](../../protect/deploy-use/certificate-infrastructure.md).
 
-To create a PFX certificate:
 
-1.  First, choose the certificate authority (CA).  Starting with version 1706, you may choose between Microsoft or Entrust as a certificate authority.
+### Configure certificate settings for Microsoft CA
 
-2.  Click **Next**. 
+To configure certificate settings when using Microsoft as the CA:
 
-3.  On the **Supported Platforms** page, choose the device platforms on which this certificate will be installed, and then click **Next**.
+1.  From the **Certificate template name** drop-down, choose the certificate template.
 
-4.  On the **Configure Certificate Authorities** page, choose the **Primary Site** and the **Certificate registration point**.   These must be previously defined [certificate registration points](/sccm/protect/deploy-use/introduction-to-certificate-profiles).   
+1.  Enable the **Certificate usage** checkbox to use the certificate profile for S/MIME signing or encryption.
+
+    When you check this option while using Microsoft as the CA, all PFX certificates associated with the target user are delivered to all devices enrolled by the user.  When this checkbox is unchecked, each device receives a unique certificate.  
+
+1.  Set **Subject name format** to either **Common name** or **Fully-distinguished name**.  If unsure which to use, contact your certificate authority administrator.
+
+1.  For **Subject alternative name**, enable the **Email address** and **User principle name (UPN)** as appropriate for your CA.
+
+1.  **Renewal threshold** determines when certificates are automatically renewed, based on the percentage of time remaining before expiration.
+
+1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
+
+1.  The **Active Directory publishing** is enabled when the certificate registration point specifies Active Directory credentials.  Enable the option to publish the certificate profile to Active Directory.
+
+1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
+
+    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not deploy certificates and should not be chosen.)
+    1.  Select the **Key Storage Provider (KSP)** from one of the following options:
+
+        - **Install to Trusted Platform Module (TPM) if present**  
+        - **Install to Trusted Platform Module (TPM), otherwise fail** 
+        - **Install to Windows Hello for Business otherwise fail** 
+        - **Install to Software Key Storage Provider** 
+
+1.  When finished, choose **Next** or **Summary**.
+
+### Configure certificate settings for Entrust CA
+
+To configure certificate settings when using Entrust as the CA:
+
+1.  From the **Digital ID Configuration** drop-down, choose the configuration profile.  The digital ID configuration options are created by the Entrust administrator.
+
+1.  When checked, the **Certificate usage** uses the certificate profile for S/MIME signing or encryption.
+
+    When using Entrust as the CA, all PFX certificates associated with the target user are delivered to all devices enrolled by the user.    When this option is *not* checked, each device receives a unique certificate.  (Behavior changes for different CAs; to learn more, see the corresponding section.)
+
+1.  Use the **Format** button to map Entrust **Subject name format** tokens to ConfigMgr fields.  
+
+    The **Certificate Name Formatting** dialog lists the Entrust Digital ID configuration variables.  For each Entrust variable, choose the appropriate LDAP variable from the associated drop-down list.
+
+1.  Use the **Format** button to map Entrust **Subject Alternative Name** tokens to supported LDAP variables.  
+
+    The **Certificate Name Formatting** dialog lists the Entrust Digital ID configuration variables.  For each Entrust variable, choose the appropriate LDAP variable from the associated drop-down list.
+
+1.  **Renewal threshold** determines when certificates are automatically renewed, based on the percentage of time remaining before expiration.
+
+1.  Set the **Certificate validity period** to the lifetime of the certificate.  The period is specified by setting a number (1-100) and period (years, months, or days).
+
+1.  The **Active Directory publishing** is enabled when the certificate registration point specifies Active Directory credentials.  Enable the option to publish the certificate profile to Active Directory.
+
+1.  If you selected one or more Windows 10 platforms when specifying supported platforms:
+
+    1.  Set **Windows certificate store** to **User**.  (The **Local Computer** choice does not deploy certificates and should not be chosen.)
+    1.  Select the **Key Storage Provider (KSP)** from one of the following options:
+
+        - **Install to Trusted Platform Module (TPM) if present**  
+        - **Install to Trusted Platform Module (TPM), otherwise fail** 
+        - **Install to Windows Hello for Business otherwise fail** 
+        - **Install to Software Key Storage Provider** 
+
+1.  When finished, choose **Next** or **Summary**.
+
 
 ### Finish up
 
-1.  Click **Next**, review the **Summary** page, and then close the wizard.  
-2.  The certificate profile containing the PFX file is now available from the **Certificate Profiles** workspace. 
-3.  To deploy the profile, in the **Assets and Compliance** workspace open **Compliance Settings** > **Company Resource Access** > **Certificate Profiles**, right-click the certificate you want, then click **Deploy**. 
+1.  From the Summary page, review your selections and verify your choices.
 
+1.  When ready, choose **Next** to create the profile.  
+
+1.  The certificate profile containing the PFX file is now available from the **Certificate Profiles** workspace. 
+
+1.  To deploy the profile:
+
+    1. Open the **Assets and Compliance** workspace.
+    1. Choose **Compliance Settings** > **Company Resource Access** > **Certificate Profiles**
+    1. Right-click the desired certificate profile and then choose **Deploy**. 
 
 
 ## See also
-[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) walks you through the Create Certificate Profile Wizard.
+[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md) walks you through the Create Certificate Profile Wizard.
 
-[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) provides information about deploying certificate profiles.
+[How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
+
+[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) describes how to deploy certificate profiles.

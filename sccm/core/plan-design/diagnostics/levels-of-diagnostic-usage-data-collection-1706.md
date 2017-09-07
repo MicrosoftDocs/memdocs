@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
 caps.latest.revision:
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -32,7 +34,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1706 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Levels of diagnostic usage data collection for version 1706 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager version 1706 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
@@ -70,7 +75,7 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
 - Basic operating system deployment (OSD) counts (images)
 
-- Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
+- ***[Updated]*** Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, physical or virtual machine, and usage of site server high availability)
 
 - Configuration Manager database schema (hash of all object definitions)
 
@@ -87,6 +92,8 @@ For System Center Configuration Manager version 1706, this level includes the fo
 - Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
 - Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
+
+- ***[New]*** Hashed list of extensions to admin console property pages and wizards
 
 - Setup Information:
      - Build, install type, language packs, features that you enabled   
@@ -124,6 +131,8 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
    - Application approval statistics and usage frequency
 
+   - ***[New]*** Application content size statistics
+
    - Application deployment information (use of install versus uninstall, requires approval, user interaction enabled/disabled, dependency, supersedence, and usage count of install behavior feature)  
 
    - Application policy size and complexity statistics
@@ -142,11 +151,17 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
    - Count of applications that are referenced by a task sequence
 
+   - ***[New]*** Count of distinct branding for application catalog
+
+   - ***[New]*** Count of Office 365 applications created using dashboard
+
    - Count of packages by type  
 
    - Count of package/program deployments  
 
    - Count of Windows 10 licensed application licenses  
+
+   - ***[New]*** Count of Windows Installer deployment types by uninstall content settings
 
    - Count of Windows Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)  
 
@@ -171,6 +186,10 @@ For System Center Configuration Manager version 1706, this level includes the fo
    - Active Management Technology (AMT) client version
 
    - BIOS age in years
+   
+   - ***[New]*** Count of devices with Secure Boot enabled
+   
+   - ***[New]*** Count of devices by TPM state
 
    - Client auto-upgrade: deployment configuration including client piloting and exclusion usage (extended interoperability client)
 
@@ -205,7 +224,11 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
 - **Cloud Services:**
 
-  - Configuration and usage statistics of Cloud Management Gateway
+  - ***[New]*** Azure Active Directory discovery statistics
+
+  - ***[Updated]*** Configuration and usage statistics of Cloud Management Gateway, including counts of regions and environments, and authentication/authorization statistics
+
+  - ***[New]*** Count of Azure Active Directory applications and services connected to Configuration Manager
 
   - Count of clients joined to Azure Active Directory Services
 
@@ -214,6 +237,7 @@ For System Center Configuration Manager version 1706, this level includes the fo
   - Count of Upgrade Analytics Connectors
 
   - Whether the Operations Management Suite cloud connector is enabled
+
 
 
 
@@ -231,7 +255,9 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
 - **Compliance settings:**  
 
-    - Basic configuration baseline information (count, number of deployments, and number of references)  
+    - Basic configuration baseline information (count, number of deployments, and number of references)
+
+    - ***[New]*** Compliance policy error statistics
 
     - Count of configuration items by type  
 
@@ -256,7 +282,7 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
     - Count of boundaries by type  
 
-    - Count of peer cache clients and usage statistics
+    - ***[Updated]*** Count of peer cache clients, usage statistic, and partial download statistics
 
     - Distribution Manager configuration information (threads, retry delay, number of retries, and pull distribution point settings)  
 
@@ -324,10 +350,19 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
     - Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
 
+    - ***[New]*** Count of boot images by Configuration Manager client version
+
+    - ***[New]*** Count of boot images by Windows PE version
+
     - Count of edition upgrade policies
+
+    - ***[New]*** Count of hardware identifiers excluded from PXE
+
+    - ***[New]*** Count of task sequence deployments using option to pre-download content
 
     - Counts of task sequence step usage
 
+    - ***[New]*** Version of Windows ADK installed
 
 
 - **Site updates:**
@@ -354,6 +389,8 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
     - Count of deployed Office 365 updates  
 
+    - ***[New]*** Count of Microsoft Surface drivers synced
+
     - Count of update groups and assignments  
 
     - Count of update packages and the maximum/minimum/average number of distribution points that are targeted with packages  
@@ -361,6 +398,8 @@ For System Center Configuration Manager version 1706, this level includes the fo
     - Count of updates that are created and deployed with System Center Update Publisher  
 
     - Count of Windows 10 clients that use Windows Update for Business  
+
+    - ***[New]*** Count of Windows Update for Business policies created and deployed
 
     - Number of automatic deployment rules that are tied to synchronization  
 
@@ -407,6 +446,8 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
     - Configuration of Data Warehouse Service Point including synchronization schedule and average time
 
+    - ***[New]*** Count of Scripts and run statistics
+
     - Count of sites with Wake On Lan (WOL)
 
     - Reporting usage and performance statistics  
@@ -424,12 +465,15 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
 - Collection evaluation and refresh statistics
 
+- ***[New]*** Compliance policy statistics on compliance and errors
+
 - Compliance Settings: SCEP, VPN, Wi-Fi and Compliance Policy template configuration details
 Count of groups that have expired software updates
 
 - DCM config pack for System Center Configuration Manager usage
 
 - Detailed client deployment installation errors
+
 - Endpoint Protection health summary (including count of protected, at risk, unknown, and unsupported clients)
 
 - Endpoint Protection policy configuration
