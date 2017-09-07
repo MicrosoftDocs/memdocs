@@ -73,7 +73,7 @@ When you run the following command, the tool prepares a .cab file that contains 
 You will also need to copy the ServiceConnectionTool folder with all of its contents to the USB drive, or otherwise make it available on the computer you will use for steps 3 and 4.  
 
 ### Overview
-#### There are three primary steps to using the service connection tool:**  
+#### There are three primary steps to using the service connection tool  
 
 1.  **Prepare**:  This step runs on the computer that hosts the service connection point. When the tool is run it puts your usage data into a .cab file and stores it on a USB drive (or alternate transfer location you specify).  
 
