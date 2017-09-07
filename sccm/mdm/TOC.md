@@ -55,7 +55,11 @@
 
 ## [Manage an Intune subscription](deploy-use/manage-intune-subscriptions.md)
 
-## [Change your MDM authority](deploy-use/change-mdm-authority.md)
+## [Start migrating from hybrid MDM to Intune standalone](deploy-use/migrate-hybridmdm-to-intunsa.md) 
+### [Import Configuration Manager data to Microsoft Intune](deploy-use/migrate-import-data.md)
+### [Prepare Intune for user migration](deploy-use/migrate-prepare-intune.md)
+### [Change the MDM authority for specific users (mixed MDM authority)](deploy-use/migrate-mixed-authority.md)
+### [Change your MDM authority](deploy-use/change-mdm-authority.md)
 
 ## Manage resource access
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)
