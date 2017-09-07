@@ -39,8 +39,8 @@ In Configuration Manager, you add a collection to the Intune subscription and th
 ## Verify Intune user groups
 Your users and groups are likely already in AAD because you have directory synchronization configured. To make sure that your users are part of the correct user group, we recommend that you review your Intune user groups. You will target policies, profiles, apps, etc. to these groups. Make sure the users you migrate to Intune standalone are part of the correct groups. 
 
-## Role-based administration control (RBAC)
-As part of the migration, you should configure all the necessary RBAC roles in Intune and assign users to those roles. Note that there are differences between RBAC in Configuration Manager and Intune, such as scoping of resources. For details, see
+## Configure role-based administration control (RBAC)
+As part of the migration, configure all the necessary RBAC roles in Intune and assign users to those roles. Note that there are differences between RBAC in Configuration Manager and Intune, such as scoping of resources. For details, see
 [Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/en-us/intune/role-based-access-control).
 
 ## Target apps and policies to AAD groups
