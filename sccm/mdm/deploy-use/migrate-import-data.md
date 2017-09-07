@@ -69,8 +69,8 @@ There are some Configuration Manager objects that the importer tool cannot impor
 ## Run the Data Importer tool
 The wizard for the Data Importer tool can be divided in three main steps. This section provides information to help you complete each section of the wizard and successfully import Configuration Manager data into Intune. Each step continues where the previous step ended.
 
-### Step 1: Discover Configuration Manager objects and collect data
-In step 1, you select the objects to discover and have the tool collect information about the selected objects. 
+### Phase 1: Discover Configuration Manager objects and collect data
+In phase 1, you select the objects to discover and have the tool collect information about the selected objects. 
 1. Open the tool and click **Start**.  
 2. Read the information, and then click **Next**. 
 3. Provide the following information about your site and the objects at the site that you want to import. 
@@ -82,8 +82,8 @@ In step 1, you select the objects to discover and have the tool collect informat
     - Objects that you did not select do not display on the **Collect** data page. 
     - You can run the tool again for objects that were not collected or that you cancelled during the collection process.
 
-### Step 2: Resolve issues and select the objects to import  
-In step 2, you review the objects found by the tool, resolve issues that prevent the object from being imported to Intune, and select the objects to import. If you fix issues, return to the **Discover environment** page of the wizard to re-discover the objects. 
+### Phase 2: Resolve issues and select the objects to import  
+In phase 2, you review the objects found by the tool, resolve issues that prevent the object from being imported to Intune, and select the objects to import. If you fix issues, return to the **Discover environment** page of the wizard to re-discover the objects. 
 5.	Click **Next** to review the collected objects. An item selection page is available for each collected object type. 
 
 > [!Tip]     
@@ -106,8 +106,8 @@ In step 2, you review the objects found by the tool, resolve issues that prevent
     - **Export details**: Creates a .csv file that contains the information displayed on screen. You can keep this file for your records. 
     - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import. You can send this file to the Microsoft Data Importer tool team at [DataImporterSupport@microsoft.com](mailto:dataimportersupport@microsoft.com) to improve the tool. 
 
-### Step 3: Import selected object to Intune
-In step 3, you will sign into Intune with your Global Administrator account and import the selected objects. 
+### Phase 3: Import selected object to Intune
+In phase 3, you will sign into Intune with your Global Administrator account and import the selected objects. 
 10.	Click **Next**, and then click **Sign in to Intune** to sign into the Intune tenant for the data import. You must use an Intune account that is a Global administrator to import the data. 
 
 > [!Important]
