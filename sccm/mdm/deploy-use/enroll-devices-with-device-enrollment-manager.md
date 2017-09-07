@@ -2,7 +2,7 @@
 title: "Enroll devices with device enrollment manager - Configuration Manager | Microsoft Docs"
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -37,7 +37,7 @@ The following limitations apply to devices managed using a device enrollment man
 -  To deploy company apps to devices managed with the device enrollment manager, deploy Company Portal app as a **Required Install** to the device enrollment manager's user account. The device enrollment manager can then launch the Company Portal app to install additional apps.
 - To improve performance, the Company Portal app only shows the local device. Remote management of other DEM devices can only be done from the Configuration Manager console by and administrator
 - The Company Portal website is not available for device enrollment manager accounts. Use the Company Portal app.
-- (iOS only) If you use DEM to enroll iOS devices, you can't use the Apple Configurator or Apple Device Enrollment Program (DEP) to enroll devices.
+- If you use DEM to enroll iOS devices, you can't use the Apple Configurator or Apple Device Enrollment Program (DEP) to enroll devices. (iOS only) 
 
  **Examples of device enrollment manager scenario:**   
 A restaurant wants point-of-sale tablets for its wait staff and order-monitors for its kitchen staff. The employees never need access to company data or to log on as a user. The Intune administrator creates a device enrollment manager account and enrolls the company-owned devices using that account. Alternatively, the administrator could give the device enrollment manager credentials to a restaurant manager, allowing him or her to enroll and manage the devices.  
