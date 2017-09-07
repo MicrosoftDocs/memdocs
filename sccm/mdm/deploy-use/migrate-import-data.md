@@ -86,10 +86,10 @@ In phase 1, you select the objects to discover and have the tool collect informa
 In phase 2, you review the objects found by the tool, resolve issues that prevent the object from being imported to Intune, and select the objects to import. If you fix issues, return to the **Discover environment** page of the wizard to re-discover the objects. 
 5.	Click **Next** to review the collected objects. An item selection page is available for each collected object type. 
 
-> [!Tip]     
-> On each item selection page, you can create a filter to help you find the objects that you want to import. However, take note of the following:
-> - When you are on an item selection page and the view is filtered, the Select all checkboxes only apply to the displayed items. Any hidden objects because of a filter are not included when using the checkboxes.
-> - Objects are always grouped under their parent item even when you sort or filter the objects.
+    > [!Tip]     
+    > On each item selection page, you can create a filter to help you find the objects that you want to import. However, take note of the following:
+    > - When you are on an item selection page and the view is filtered, the Select all checkboxes only apply to the displayed items. Any hidden objects because of a filter are not included when using the checkboxes.
+    > - Objects are always grouped under their parent item even when you sort or filter the objects.
 
 
 6.	On each item selection page, sort the objects by the Importable column and review the objects that are not importable. The information in the Notes column provides details about why the tool cannot import the object. 
@@ -110,8 +110,8 @@ In phase 2, you review the objects found by the tool, resolve issues that preven
 In phase 3, you will sign into Intune with your Global Administrator account and import the selected objects. 
 10.	Click **Next**, and then click **Sign in to Intune** to sign into the Intune tenant for the data import. You must use an Intune account that is a Global administrator to import the data. 
 
-> [!Important]
-> We recommend that you first test the data import process using a trial tenant. Then, after you confirm that the data you expect has been imported, you can go through the same process with your production Intune tenant.
+    > [!Important]
+    > We recommend that you first test the data import process using a trial tenant. Then, after you confirm that the data you expect has been imported, you can go through the same process with your production Intune tenant.
 
 11.	On the **Authorize Microsoft Intune Data Importer** dialog, click **Accept** to approve this tool as a trusted app in Azure. This gives the tool permission to import the objects that you selected. Once you click Accept, the objects are imported. 
 12.	The Progress page provides the progress as the objects are imported. Click **Next** when the import completes. 
