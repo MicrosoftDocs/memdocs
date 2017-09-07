@@ -1758,12 +1758,12 @@
 			<text x="11.24" y="417.36" class="st25" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/><tspan class="st31">Collection name</tspan></text>		</g>
 		<g id="shape600-284" v:mID="600" v:groupContext="shape" transform="translate(396.938,-105.435)">
 			<title>Sheet.600</title>
-			<desc>Devices for members of All Hybrid Users</desc>
+			<desc>Devices for members of All Hybrid users</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="46.5937" cy="408.57" width="93.19" height="24.7347"/>
 			<rect x="0" y="396.203" width="93.1875" height="24.7347" class="st3"/>
 			<text x="4.79" y="406.17" class="st25" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Devices for members of <tspan
-						x="18.42" dy="1.2em" class="st17">All Hybrid Users</tspan></text>		</g>
+						x="18.9" dy="1.2em" class="st17">All Hybrid users</tspan></text>		</g>
 		<g id="shape606-288" v:mID="606" v:groupContext="shape" transform="translate(112.088,-79.665)">
 			<title>Sheet.606</title>
 			<desc>Managed in Intune</desc>
