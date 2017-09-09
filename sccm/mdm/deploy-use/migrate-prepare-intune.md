@@ -52,6 +52,14 @@ If you went through the [Import Configuration Manager data to Microsoft Intune](
 ## Configure the Exchange Connector
 If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. The computer that will host the connector for the Exchange Connector in Intune cannot be the same computer that hosts the Exchange Connector in Configuration Manager. For details, see [Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure](https://docs.microsoft.com/intune/exchange-connector-install)
 
+> [!Important]    
+> For conditional access to work properly after you migrate users, and to ensure that your users continue to access their email server, you must perform the following steps:
+> 1. Configure the default access level for your Exchange connectors to **Allow**. Or, you can decide not to configure the default access level for the connectors in both Intune and Configuration Manager.    
+>    
+>     Devices may lose access to Exchange if the default access level for your Exchange connector is configured as **Block** or **Quarantine** and you configure the Intune Exchange Connector.
+> 2. Use the same configuration for both connectors. The last connector that you configure overwrites the ActiveSync organization settings previously written by the other connector. Configuring the connectors differently could result in unexpected conditional access changes.
+> 3. Remove users from conditional access targeting in Configuration Manager once they are migrated to Intune standalone.
+
 ## Configure the Microsoft Intune Certificate Connector
 If you use NDES to issue certificates using SCEP, you need to configure the Microsoft Intune Certificate Connector. The computer that hosts the NDES connector in Intune cannot be the same computer that hosts the NDES connector in Configuration Manager. For details, see [Configure and manage SCEP certificates with Intune](https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
 

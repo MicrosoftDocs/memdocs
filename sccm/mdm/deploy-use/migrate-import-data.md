@@ -17,10 +17,10 @@ ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The Intune Data Importer tool is the recommended first step in the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md) in the cloud-only configuration. If you want, you can skip this step and [prepare Intune for user migration](migrate-prepare-intune.md) directly in Intune in the Azure portal. However, this tool performs the following functions that can save you a lot of time: 
+The recommended first phase in the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md) in the cloud-only configuration is to use the Intune Data Importer tool. If you want, you can skip this phase and move on to the [prepare Intune for user migration](migrate-prepare-intune.md) phase. However, this tool performs the following functions that can save you a lot of time in the next phase: 
 1.	Collects data about the objects you select from your Configuration Manager hierarchy. 
 2.	Provides details about the objects you can select for import and information about why some object cannot be imported.
-3.	Import selected objects into your Microsoft Intune tenant. 
+3.	Imports selected objects into your Microsoft Intune tenant. 
 
 The Data Importer tool does not change your Configuration Manager environment in any way, and therefore, you can import objects into Intune and validate that everything works as expected without risk of leaving your hybrid MDM devices in an unmanaged state. 
 
