@@ -21,14 +21,14 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute settings that might be required when a user runs an app. For example, an app might require a user to specify these details:
+You can use app configuration policies in System Center Configuration Manager to distribute settings that might be required when a user runs an app. For example, an app might require a user to specify these details:
 - A custom port number
 - Language settings
 - Security settings
 - Branding settings, like a company logo
 
 If the user enters the settings incorrectly, the burden to fix them falls on your help desk, and app deployment is slow. To help you prevent these problems, you can use app configuration policies to deploy required settings to users before they run the app. The settings are associated with a user automatically. The user doesn't need to take any action.
-To use an app configuration policy in Configuration Manager, instead of deploying the configuration policies directly to users and devices, you associate a policy with a deployment type when you deploy the app. The policy settings are applied whenever the app checks for them (typically, the first time the app runs).
+To use an app configuration policy in Configuration Manager, instead of deploying the configuration policies directly to users and devices, you associate a policy with a deployment type when you deploy the app. The policy settings are applied whenever the app checks for them, typically the first time the app runs.
 
 Android app configuration policies are available only on devices running Android for Work and apply to approved apps from the Play for Work store. For details about Android volume-purchased apps, see [How to deploy apps to Android for Work devices](https://docs.microsoft.com/en-us/intune/deploy-use/android-for-work-apps).
 
