@@ -18,7 +18,7 @@ ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 Beginning in Configuration Manager version 1610, you can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. This topic provides the steps to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone.
 
 > [!Important]    
-> To change your MDM authority after you have [migrated a subset of users](migrate-hybridmdm-to-intunesa), see [Change your MDM authority](migrate-change-mdm-authority.md) that is part of the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md).
+> To change your MDM authority after you have [migrated a subset of users](migrate-hybridmdm-to-intunesa), see [Change your MDM authority](migrate-change-mdm-authority.md) that is part of the process to [start migrating hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md).
 
 ## Key Considerations
 After you change to the new MDM authority, there will likely be transition time (up to eight hours) before the device checks in and synchronizes with the service. You must configure settings in the new MDM authority (Intune standalone) to ensure enrolled devices continue to be managed and protected after the change. Note the following considerations:
