@@ -29,7 +29,7 @@ ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 You can configure a mixed MDM authority in the same tenant by selecting some users to be managed in Intune and others to be managed with hybrid MDM (Intune integrated with Configuration Manager). This topic provides information about how to start moving users to Intune standalone and assumes that you have completed the following steps:
-- Used the data import tool to [import Configuration Manager objects to Intune](migrate-import-data.md).
+- Used the data import tool to [import Configuration Manager objects to Intune](migrate-import-data.md) (optional).
 - [Prepared Intune for user migration](migrate-prepare-intune.md) to ensure users and their devices continue to be managed after they are migrated.
 
 Migrated users and their devices will be managed in Intune and other devices will continue to be managed in Configuration Manager. You will start with a small test group of users to verify that everything is working as expected. Then, you will gradually migrate additional groups of users until you are ready to switch the tenant-level MDM authority from Configuration Manager to Intune standalone. 
@@ -80,4 +80,4 @@ Then, verify that your policies, profiles, apps, etc. are working as expected on
 After you have verified that Intune standalone is functioning as you expect, you can start migrating additional users. Just as you created a collection with a set of test users, create collections that contain users to migrate and exclude those collections from the collection associated with the Intune subscription. For details, see [Collection associated with your Intune subscription](#collection-associated-with-your-intune-subscription).
 
 ## Next steps
-After you have migrated users and tested Intune functionality, consider whether you are ready to [change the MDM authority](change-mdm-authority.md) of your Intune tenant from Configuration Manager to Intune. 
+After you have migrated users and tested Intune functionality, consider whether you are ready to [change the MDM authority](migrate-change-mdm-authority.md) of your Intune tenant from Configuration Manager to Intune. 
