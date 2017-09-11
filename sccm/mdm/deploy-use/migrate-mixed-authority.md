@@ -67,9 +67,14 @@ In the following example, the Hybrid users collection contains all members from 
 
 To migrate a test group of users to Intune, create a user collection that contain the users to migrate, and then exclude the user collection from the collection used for the Intune subscription.   
 
-In the following diagram, the Intune subscription uses a collection named **All Hybrid users** and contains a rule to exclude users in the **Migration pilot** collection. **User1** is a member of the **Migration pilot** collection, is excluded from the **All Hybrid users** collection, and has an Intune license. Therefore, **User1**’s devices are now managed from Intune in the Azure portal. All other devices are managed from the Configuration Manager console. 
+The following diagram provides an overview of how user migration works.
 
- ![Exclude collections](../media/migrate-mixedauthority.svg)
+ ![Mixed authority overview](../media/migrate-mixedauthority.svg)
+
+1. Verify that the user has an Intune/EMS license. 
+2. Create a collection to exclude from the collection for the Intune subscription. In this example, the **All Hybrid users** collection contains a rule to exclude users in the **Migration pilot** collection. **User1** is a member of the **Migration pilot** collection and is excluded from the **All Hybrid users** collection. 
+3. **User1**’s devices are now managed from Intune in the Azure portal. 
+4. All other devices continue to be managed from the Configuration Manager console. 
 
 ## Verify Intune standalone functionality
 After you have migrated a small set of users, verify that the user’s devices are listed in Intune. Go to the **Devices** blade and select **All devices**. 

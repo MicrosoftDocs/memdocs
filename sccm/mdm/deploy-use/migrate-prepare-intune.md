@@ -53,7 +53,7 @@ If you went through the [Import Configuration Manager data to Microsoft Intune](
 If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. The computer that will host the connector for the Exchange Connector in Intune cannot be the same computer that hosts the Exchange Connector in Configuration Manager. For details, see [Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure](https://docs.microsoft.com/intune/exchange-connector-install)
 
 > [!Important]    
-> For conditional access to work properly after you migrate users, and to ensure that your users continue to access their email server, you must perform the following steps:
+> For conditional access to work properly after you migrate users, and to ensure that your users continue to have access to their email server, you must perform the following steps:
 > 1. Configure the default access level for your Exchange connectors to **Allow**. Or, you can decide not to configure the default access level for the connectors in both Intune and Configuration Manager.    
 >    
 >     Devices may lose access to Exchange if the default access level for your Exchange connector is configured as **Block** or **Quarantine** and you configure the Intune Exchange Connector.
