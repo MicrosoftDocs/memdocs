@@ -48,7 +48,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 ## Create VPN profiles
 [How to Create VPN profiles in System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) provides general information about how to create VPN profiles.
 
-###   Windows 10 VPN features available when using Configuration Manager with Intune  
+## Windows 10 VPN features available when using Configuration Manager with Intune  
 
 
 > [!NOTE]  
@@ -154,7 +154,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
 **Deploy**: See [Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) for more about how to deploy VPN profiles.
 
-### Next steps  
+## Next steps  
  Use the following topics to help you plan for, set up, operate, and maintain VPN profiles in Configuration Manager.  
 
 -   [Prerequisites for VPN profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
