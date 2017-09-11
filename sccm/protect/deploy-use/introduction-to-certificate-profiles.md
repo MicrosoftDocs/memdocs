@@ -50,7 +50,7 @@ Certificate profiles provide the following management capabilities:
 
 -   **Personal information exchange (.pfx)** - Lets you request a .pfx (also known as PKCS #12) certificate for a device or user.
 
-    You may create PFX certificate profiles by ether [importing credentials](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) from existing certificates or by [defining a certificate](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) authority to process requests.
+    You may create PFX certificate profiles by either [importing credentials](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) from existing certificates or by [defining a certificate](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) authority to process requests.
 
     Starting with release 1706, you can use Microsoft or Entrust as certificate authorities for **Personal information exchange (.pfx)** certificates.
 
