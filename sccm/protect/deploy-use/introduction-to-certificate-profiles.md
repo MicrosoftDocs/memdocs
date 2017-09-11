@@ -2,7 +2,7 @@
 title: "Introduction to certificate profiles | Microsoft Docs"
 description: "Learn how certificate profiles in System Center Configuration Manager work with Active Directory Certificate Services."
 ms.custom: na
-ms.date: 07/25/2017
+ms.date: 09/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -77,7 +77,7 @@ Configuration Manager supports deploying certificates to different certificate s
 -   Android  
 
 > [!IMPORTANT]  
->  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be [enrolled in Microsoft Intune](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune).   
+>  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be [enrolled in Microsoft Intune](https://docs.microsoft.com/en-us/intune-classic/deploy-use/enroll-devices-in-microsoft-intune).   
 
 A typical scenario for System Center Configuration Manager is to install trusted root CA certificates to authenticate Wi-Fi and VPN servers when the connection uses EAP-TLS, EAP-TTLS, and PEAP authentication protocols, and IKEv2, L2TP/IPsec, and Cisco IPsec VPN tunneling protocols.  
 
