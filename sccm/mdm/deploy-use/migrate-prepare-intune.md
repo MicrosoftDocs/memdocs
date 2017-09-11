@@ -2,11 +2,11 @@
 # required metadata
 
 title: Prepare Intune for user migration 
-description:
+description: Learn how to prepare Intune on Azure for user migration from hybrid MDM.
 keywords:
 author: dougeby
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 09/14/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service:
@@ -17,7 +17,7 @@ ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
 
 # Prepare Intune for user migration 
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: System Center Configuration Manager (Current Branch)*    
 
 Before you migrate users from hybrid MDM (Intune integrated with Configuration Manager) to Intune standalone, you must take steps to prepare Intune. These steps will help to ensure that your migrated users and their devices will continue to be managed. When you complete these steps and start the migration to Intune, it should be transparent to your users.  
 

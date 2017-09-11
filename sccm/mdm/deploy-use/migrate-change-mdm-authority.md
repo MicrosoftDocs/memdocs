@@ -10,7 +10,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
 ---
+
 # Change your MDM authority to Intune standalone
+
+*Applies to: System Center Configuration Manager (Current Branch)*    
+
 You can change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid MDM) to Intune standalone. Changing the tenant-level MDM authority to Intune is the final phase in the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md) in the cloud-only configuration.    
 
 > [!Important]    

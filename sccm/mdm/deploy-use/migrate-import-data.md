@@ -15,7 +15,7 @@ ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 
 # Import Configuration Manager data to Microsoft Intune 
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: System Center Configuration Manager (Current Branch)*    
 
 The recommended first phase in the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md) in the cloud-only configuration is to use the Intune Data Importer tool. If you want, you can skip this phase and move on to the [prepare Intune for user migration](migrate-prepare-intune.md) phase. However, this tool performs the following functions that can save you a lot of time in the next phase: 
 1.	Collects data about the objects you select from your Configuration Manager hierarchy. 

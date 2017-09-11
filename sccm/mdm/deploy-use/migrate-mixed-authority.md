@@ -1,32 +1,20 @@
 ---
-# required metadata
-
 title: Change the MDM authority for specific users (mixed MDM authority) 
-description:
+description: Learn how to change the MDM authority from hybrid MDM to Intune standalone for some users.
 keywords:
 author: dougeby
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 09/14/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service:
 ms.technology:
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 # Change the MDM authority for specific users (mixed MDM authority) 
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: System Center Configuration Manager (Current Branch)*    
 
 You can configure a mixed MDM authority in the same tenant by selecting some users to be managed in Intune and others to be managed with hybrid MDM (Intune integrated with Configuration Manager). This topic provides information about how to start moving users to Intune standalone and assumes that you have completed the following steps:
 - Used the data import tool to [import Configuration Manager objects to Intune](migrate-import-data.md) (optional).

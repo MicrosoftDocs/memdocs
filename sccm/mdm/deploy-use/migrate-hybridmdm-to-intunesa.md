@@ -1,9 +1,9 @@
 ---
 title: Migrate hybrid MDM users and devices to Intune standalone
-description:
+description: "Learn how to migrate hybrid MDM users and devices to Intune on Azure."
 keywords:
 author: dougeby
-manager: dougeby
+manager: angrobe
 ms.date: 09/12/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
@@ -11,13 +11,16 @@ ms.service:
 ms.technology:
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
 ---
+
 # Migrate hybrid MDM users and devices to Intune standalone
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: System Center Configuration Manager (Current Branch)*    
 
-If you have decided that you are ready to start migrating from hybrid MDM (Intune integrated with Configuration Manager) to Intune standalone, then this is the article is for you. If you are still unsure, see [Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management). 
+When you have decided that you are ready to start migrating from hybrid MDM (Intune integrated with Configuration Manager) to a cloud-only experience using Intune on Azure, this is the article is for you. If you are still unsure, see [Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management). 
 
-You can start migrating to Intune standalone using a phased approach. By using a phased approach, you can make sure Intune standalone is configured and tested with a small subset of devices before you migrate more users. The following topics provide the steps to migrate your users to Intune standalone using a phased approach.    
+You can start migrating to Intune standalone using a phased approach that allows you to test Intune standalone with a small subset of users and devices while most of your users and devices are still managed with hybrid MDM. Then, after you verify Intune functionality, you can start migrating more users.    
+
+The following topics provide the steps to migrate your users to Intune standalone using a phased approach.    
   
 1.	[Import Configuration Manager data to Microsoft Intune](migrate-import-data.md)   
     The Intune Data Importer tool collects data about the objects you select from your Configuration Manager hierarchy, provides details about the objects you can select for import and information about why some object cannot be imported, and lets you import selected objects into your Microsoft Intune tenant. While this step is optional, it can save you a lot of time by automating the process to recreate objects from Configuration Manager to Intune. 
