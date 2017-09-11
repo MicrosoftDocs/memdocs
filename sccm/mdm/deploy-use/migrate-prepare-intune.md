@@ -50,15 +50,14 @@ If you went through the [Import Configuration Manager data to Microsoft Intune](
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## Configure the Exchange Connector
-If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. The computer that will host the connector for the Exchange Connector in Intune cannot be the same computer that hosts the Exchange Connector in Configuration Manager. For details, see [Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure](https://docs.microsoft.com/intune/exchange-connector-install)
+If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. For details, see [Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure](https://docs.microsoft.com/intune/exchange-connector-install)
 
-> [!Important]    
-> For conditional access to work properly after you migrate users, and to ensure that your users continue to have access to their email server, you must perform the following steps:
-> 1. Configure the default access level for your Exchange connectors to **Allow**. Or, you can decide not to configure the default access level for the connectors in both Intune and Configuration Manager.    
->    
->     Devices may lose access to Exchange if the default access level for your Exchange connector is configured as **Block** or **Quarantine** and you configure the Intune Exchange Connector.
-> 2. Use the same configuration for both connectors. The last connector that you configure overwrites the ActiveSync organization settings previously written by the other connector. Configuring the connectors differently could result in unexpected conditional access changes.
-> 3. Remove users from conditional access targeting in Configuration Manager once they are migrated to Intune standalone.
+> [!Important]
+> For conditional access to work properly after you migrate users, and to ensure that your users continue to have access to their email server, ensure the following is true:
+> - If the Exchange ActiveSync default access level setting (DefaultAccessLevel) is set to Block or Quarantine, devices might lose access to email. 
+> - If the Exchange Connector is installed in Configuration Manager and the **Access level when a mobile device is not managed by a rule** setting has a value of **Allow access**, you must install the [On-premises Exchange connector](https://docs.microsoft.com/en-us/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) in Intune before you migrate users. Configure the default access level setting in Intune on the **Exchange on-premises** blade in **Advanced Exchange ActiveSync access settings**. For details, see [Configure Exchange on-premises access](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
+> - Use the same configuration for both connectors. The last connector that you configure overwrites the ActiveSync organization settings previously written by the other connector. If you configure the connectors differently, it could result in unexpected conditional access changes.
+> - Remove users from conditional access targeting in Configuration Manager once they are migrated to Intune standalone.
 
 ## Configure the Microsoft Intune Certificate Connector
 If you use NDES to issue certificates using SCEP, you need to configure the Microsoft Intune Certificate Connector. The computer that hosts the NDES connector in Intune cannot be the same computer that hosts the NDES connector in Configuration Manager. For details, see [Configure and manage SCEP certificates with Intune](https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
