@@ -37,10 +37,10 @@ The import tool can collect information about the following object types in Conf
 - Deployments
 
 > [!Note]    
-> Importing deployments is only useful for other object types you are importing. For example, if you import VPN profiles and deployments, you will only be able to import the deployments for the VPN profiles that you select. Deployments in Intune are called assignments. If you want to import a deployment for a previously imported object, you will need to import that object again. For example, if you import VPN profiles and not deployments, you will have run the tool again and select VPN profiles and Deployments  
+> Importing deployments is only useful for other object types you are importing. For example, if you import VPN profiles and deployments, you will only be able to import the deployments for the VPN profiles that you select. Deployments in Intune are called assignments. If you want to import a deployment for a previously imported object, you will need to import that object againor manually create the assignment in Intune on Azure. For example, if you import VPN profiles and not deployments, you will have run the tool again and select VPN profiles and Deployments or manually create the assignment in Intune on Azure.  If you rerun the tool, duplicate objects may be created that you can delete later in Intune on Azure.  
 
 > [!Important]    
-> If the collection for a deployment is based on an Active Directory group that has been replicated to Azure Active Directory (AAD), the tool will automatically target migrated objects to the groups. When you have more complex collections or direct membership collections, you must manually recreate them in AAD.
+> If the collection for a deployment is based on an Active Directory group that has been replicated to Azure Active Directory (AAD), the tool will automatically target migrated objects to the groups if you select the appropriate deployment when running the tool. When you have more complex collections or direct membership collections, you must manually recreate them in AAD and manually target object assignments to them in Intune on Azure.
 
 
 ## Things to consider
@@ -48,8 +48,8 @@ The import tool can collect information about the following object types in Conf
 - We recommend that you first test the data import process using a trial tenant. Then, after you confirm that the data you expect has been imported, you can go through the same process with your production Intune tenant.
 - The data importer is meant to only import Configuration Manager data one time. It does not keep track of objects in Configuration Manager or Intune. However, if you run the importer again on the same computer as before, it will tell you which objects you previously imported. The tool will not know if the object still exists in Intune or if an object has changed. If you import data to Intune more than once, you may end up with duplicate objects.
 - Not all profile settings can be imported. For example, you cannot import kiosk mode settings. 
-- The tool will attempt to give you a reason for why an object cannot be imported. In some cases, before you import objects to Intune, you can go back to the Configuration Manager console, fix the issue, start the collection scan again, and then import the objects. Sometimes you may need, or may want, to recreate these objects in Intune.
-- There are some profiles that depend on other objects. If you want to import a profile that depends on another object, like an email profile that depends on a certificate, you must import both objects.
+- The tool will attempt to give you a reason for why an object cannot be imported. In some cases, before you import objects to Intune, you can go back to the Configuration Manager console, fix the issue, start the Configuration Manager object discovery scan again, and then import the objects. Sometimes you may need, or may want, to recreate these objects manually in Intune.
+- There are some profiles that depend on other objects. If you want to import a profile that depends on another object, like an email profile that depends on a certificate, you must import both objects at the same time.
 - After you run the tool, you might need to perform additional manual steps. For example, targeting apps and policies to AAD groups. 
 
 ## Prerequisites
