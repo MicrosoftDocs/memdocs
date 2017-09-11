@@ -51,8 +51,8 @@ Migrated users and their devices will be managed in Intune and other devices wil
     - [Enrollment managers](/sccm/mdm/plan-design/device-enrollment-methods)
     - Windows SLKs
     - Company Portal branding
-    - Migrate users to Intune
 
+## Migrate users to Intune
 To test that your Intune configurations are working as expected, first migrate a small set of users and their devices. Then, after you confirm things are working as expected, you can start migrating more AAD groups with more users and their devices.
 
 ## Migrate a test group of users to Intune standalone
