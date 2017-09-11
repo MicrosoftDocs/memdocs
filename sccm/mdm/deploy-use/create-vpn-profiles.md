@@ -33,20 +33,20 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
  |Connection type|iOS and macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|Yes|Yes|No|No|No|No|Yes (OMA-URI)|
+ |Cisco AnyConnect|Yes|Yes|No|No|No|No|Yes|
  |Cisco (IPSec)|iOS only|No|No|No|No|No|No|  
  |Pulse Secure|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |F5 Edge Client|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |Dell SonicWALL Mobile Connect|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |Check Point Mobile VPN|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |Microsoft SSL (SSTP)|No|No|Yes|Yes|Yes|No|No|  
- |Microsoft Automatic|No|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
- |IKEv2|Yes (Custom policy)|No|Yes|Yes|Yes|Yes|Yes (OMA-URI)|  
- |PPTP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
+ |Microsoft Automatic|No|No|Yes|Yes|Yes|No|Yes|  
+ |IKEv2|Yes (Custom policy, iOS 9 and later)|No|Yes|Yes|Yes|Yes|Yes|  
+ |PPTP|Yes|No|Yes|Yes|Yes|No|Yes|  
  |L2TP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
 
 ## Create VPN profiles
-[How to Create VPN profiles in System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) provides general information about how to creat VPN profiles.
+[How to Create VPN profiles in System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) provides general information about how to create VPN profiles.
 
 ###   Windows 10 VPN features available when using Configuration Manager with Intune  
 
