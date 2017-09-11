@@ -40,7 +40,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 ###  <a name="bkmk_ScaleSiteServer"></a> Site servers  
 
-||CPU (cores)|Memory (GB)|Memory allocation for SQL Server (%)|  
+|Site configuration|CPU (cores)|Memory (GB)|Memory allocation for SQL Server (%)|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |Stand-alone primary site server with a database site role on the same server<sup>1</sup>|16|96|80|  
 |Stand-alone primary site server with a remote site database|8|16|-|  
