@@ -138,7 +138,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   Select **Continue if some files cannot be restored** if you want the **Restore User State** step to continue if a file cannot be restored.  
 
-         If you store the user state by using local links and the restore is not successful, the administrative user can manually delete the hard-links that were created to store the data or the task sequence can run the USMTUtils tool. If you use USMTUtils to delete the hard-link, add a [Restart Computer](../understand/task-sequence-steps.md#restart-computer) step after you run USMTUtils.  
+         If you store the user state by using local links and the restore is not successful, the administrative user can manually delete the hard-links that were created to store the data or the task sequence can run the USMTUtils tool. If you use USMTUtils to delete the hard-link, add a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after you run USMTUtils.  
 
     -   Select **Enable verbose logging** to specify how much information to write to log files if an error occurs.  
 

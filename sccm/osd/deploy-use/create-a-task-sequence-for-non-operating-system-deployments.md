@@ -39,7 +39,7 @@ The power of task sequences lies in their flexibility and how you can use them t
 
 -   [Install Software Updates](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [Restart Computer](../understand/task-sequence-steps.md#restart-computer)   
+-   [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer)   
 
 -   [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
