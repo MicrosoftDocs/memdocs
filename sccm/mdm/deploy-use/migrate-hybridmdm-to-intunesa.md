@@ -18,7 +18,7 @@ ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
 
 When you have decided that you are ready to start migrating from hybrid MDM (Intune integrated with Configuration Manager) to a cloud-only experience using Intune on Azure, this is the article is for you. If you are still unsure, see [Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management). 
 
-You can start migrating to Intune standalone using a phased approach that allows you to test Intune standalone with a small subset of users and devices while most of your users and devices are still managed with hybrid MDM. Then, after you verify Intune functionality, you can start migrating more users.    
+You can start migrating to Intune standalone using a phased approach that allows you to test a small subset of users and devices while most of your users and devices are still managed with hybrid MDM. Then, after you verify Intune functionality, you can start migrating more users to Intune.    
 
 The following topics provide the steps to migrate your users to Intune standalone using a phased approach.    
   
