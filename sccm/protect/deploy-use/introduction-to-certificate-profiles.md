@@ -2,7 +2,7 @@
 title: "Introduction to certificate profiles | Microsoft Docs"
 description: "Learn how certificate profiles in System Center Configuration Manager work with Active Directory Certificate Services."
 ms.custom: na
-ms.date: 07/25/2017
+ms.date: 09/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections. 
+Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.
 
 Certificate profiles can automatically configure user devices so that company resources such as Wi-Fi networks and VPN servers can be accessed without having to install certificates manually or use an out of band process. Certificate profiles can also help to keep company resources secure because you can use more secure settings that are supported by your enterprise public key infrastructure (PKI). For example, you can require server authentication for all Wi-Fi and VPN connections because you have provisioned the required certificates on the managed devices.   
 
@@ -50,7 +50,7 @@ Certificate profiles provide the following management capabilities:
 
 -   **Personal information exchange (.pfx)** - Lets you request a .pfx (also known as PKCS #12) certificate for a device or user.
 
-    You may create PFX certificate profiles by ether [importing credentials](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md) from existing certificates or by [defining a certificate](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md) authority to process requests.
+    You may create PFX certificate profiles by either [importing credentials](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) from existing certificates or by [defining a certificate](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) authority to process requests.
 
     Starting with release 1706, you can use Microsoft or Entrust as certificate authorities for **Personal information exchange (.pfx)** certificates.
 
