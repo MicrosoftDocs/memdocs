@@ -72,7 +72,7 @@ This topic lists the prerequisites for software updates in System Center Configu
 
  For more information, see the following:  
 
--   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#bkmk_clientsettings).  
+-   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings).   
 
 -   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
 

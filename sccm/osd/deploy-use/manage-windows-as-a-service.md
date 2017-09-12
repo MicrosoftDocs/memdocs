@@ -38,7 +38,7 @@ manager: angrobe
 
 -   WSUS 4.0 with the [hotfix 3159706](https://support.microsoft.com/kb/3159706) must be installed on your software update points and site servers to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
 
--   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#bkmk_confighbdisc).  
+-   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
      The following Windows 10 branch and build information is discovered and stored in the following attributes:  
 

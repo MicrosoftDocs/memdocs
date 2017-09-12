@@ -279,7 +279,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> Task sequences and the Network Access Account  
  Although task sequences run only in the context of the Local System account, you might need to configure the Network Access Account in the following circumstances:  
 
--   You must configure the Network Access Account correctly or the task sequence will fail if it tries to access Configuration Manager packages on distribution points to complete its task. For more information about the Network Access account, see [Network Access Account](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_naa).  
+-   You must configure the Network Access Account correctly or the task sequence will fail if it tries to access Configuration Manager packages on distribution points to complete its task. For more information about the Network Access account, see [Network Access Account](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA).  
 
     > [!NOTE]  
     >  The Network Access Account is never used as the security context for running programs, installing applications, installing updates, or running task sequences; however, the Network Access account is used to access the associated resources on the network.  
