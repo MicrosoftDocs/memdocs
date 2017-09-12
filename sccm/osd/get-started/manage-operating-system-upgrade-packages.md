@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 caps.latest.revision: 12
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Manage operating system upgrade packages with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage operating system upgrade packages with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 An upgrade package in System Center Configuration Manager contains the Windows Setup source files that are used to upgrade an existing operating system on a computer. Use the following  sections manage operating system upgrade packages in Configuration Manager.
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> Add operating system upgrade packages to Configuration Manager  
@@ -51,7 +56,7 @@ An upgrade package in System Center Configuration Manager contains the Windows S
  You can now distribute the operating system installer to the distribution points that are accessed by your deployment task sequences.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Distribute operating system images to a distribution point  
- Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+ Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 ##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> Apply software updates to an operating system upgrade package  
  Beginning in Configuration Manager version 1602, you can apply new software updates to the operating system image in your operating system upgrade package. Before you can apply software updates to an upgrade package you must have your software updates infrastructure in place, have successfully synchronized software updates, and downloaded the software updates to the content library on the site server. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md).  

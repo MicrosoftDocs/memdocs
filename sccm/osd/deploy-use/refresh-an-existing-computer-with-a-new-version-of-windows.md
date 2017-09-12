@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 caps.latest.revision: 7
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Refresh an existing computer with a new version of Windows using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Refresh an existing computer with a new version of Windows using System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic provides the general steps in System Center Configuration Manager to partition and format (wipe) an existing computer and install a new operating system on the computer. For this scenario, you can choose from many different deployment methods, such as PXE, bootable media, or Software Center. You can also  choose to install a state migration point to store settings and then restore them to the new operating system after it is installed. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md).  
 
  Use the following sections to refresh an existing computer with a new version of Windows.  
@@ -40,7 +45,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
     -   For more information about how  to customize a boot image, see [Customize boot images](../get-started/customize-boot-images.md).  
 
-    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 2.  **Prepare an operating system image**  
 
@@ -48,7 +53,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
     -   To learn more about how to create an operating system image, see  [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
-    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 3.  **Create a task sequence to deploy operating systems over the network**  
 

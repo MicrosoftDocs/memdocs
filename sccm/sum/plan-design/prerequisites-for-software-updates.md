@@ -2,7 +2,9 @@
 title: Prerequisites for software updates | Microsoft Docs
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
 keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: dougeby
+ms.author: dougeby
+manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
@@ -13,7 +15,10 @@ ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 
 ---
 
-# Prerequisites for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prerequisites for software updates in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic lists the prerequisites for software updates in System Center Configuration Manager. For each of these, the external dependencies and internal dependencies are listed in separate tables.  
 
 ## Software Update Dependencies External to Configuration Manager  
@@ -67,7 +72,7 @@ This topic lists the prerequisites for software updates in System Center Configu
 
  For more information, see the following:  
 
--   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates).  
+-   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#bkmk_clientsettings).  
 
 -   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
 
