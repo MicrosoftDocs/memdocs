@@ -32,7 +32,6 @@ The import tool can collect information about the following object types in Conf
 - VPN profiles
 - Wi-Fi profiles
 - Compliance policies
-- Terms and conditions
 - Apps
 - Deployments
 
@@ -75,7 +74,16 @@ The wizard for the Data Importer tool can be divided in three main steps. This s
 ### Provide permission for the Data Importer tool to access resources
 1.	A Global Administrator must run the tool the first time using the following parameter:  ***intunedataimporter.exe -GlobalConsent*** 
 2. When the tool starts, a login screen displays where you must sign in using an account with the Global Administrator role in Azure. 
-3. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune. 
+3. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune.
+    > [!Important]
+    > When you click **Accept**, you give the tool permission to do the following:
+    > - Read all groups
+    > - Sign in and read the user profile
+    > - Read and write Intune device configuration and policies
+    > - Read and write Intune apps
+    > - Read and write Intune role-based administration control policies
+    > - Read and write Intune devices
+    > - Read and write Intune configuration
 4. After you accept consent, any other Global Administrator or Intune Administrator can run the tool to import data from Configuration Manager into Intune on Azure.    
         
     > [!Note]
@@ -120,12 +128,11 @@ In phase 2, you review the objects found by the tool, resolve issues that preven
 
 ### Phase 3: Import selected object to Intune
 In phase 3, you will sign into Intune and import the selected objects. 
-10.	Click **Next**, and then click **Sign in to Intune** to sign into the Intune tenant for the data import. 
+10.	Click **Next**, and then click **Sign in to Intune** to sign into the Intune tenant for the data import. You must sign in with a Global Administrator or Intune Administrator account. After you sign in, the import process starts.
 
     > [!Important]
     > We recommend that you first test the data import process using a trial tenant. Then, after you confirm that the data you expect has been imported, you can go through the same process with your production Intune tenant.
 
-11.	On the **Authorize Microsoft Intune Data Importer** dialog, click **Accept** to approve this tool as a trusted app in Azure. This gives the tool permission to import the objects that you selected. Once you click Accept, the objects are imported. 
 12.	The Progress page provides the progress as the objects are imported. Click **Next** when the import completes. 
 13.	On the Completion page, the imported objects are listed. Check the status for any objects that encountered an error during the import process. You have the following actions available: 
     - **Export details**: Creates a .csv file that contains the information displayed on screen. You can keep this file for your records. 

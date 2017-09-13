@@ -43,11 +43,14 @@ Your users and groups are likely already in AAD because you have directory synch
 As part of the migration, configure all the necessary RBAC roles in Intune and assign users to those roles. Note that there are differences between RBAC in Configuration Manager and Intune, such as scoping of resources. For details, see
 [Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/en-us/intune/role-based-access-control).
 
-## Target apps and policies to AAD groups
-If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, many of your objects might already be assigned to AAD groups. However, you should verify that all objects (apps, policies, profiles, etc.) are assigned to the correct AAD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should be transparent to users. For more information about assigning the objects to an AAD group, see the following: 
+## Assign apps and policies to AAD groups
+If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, many of your objects might already be assigned to AAD groups. However, you should verify that all objects (apps, policies, profiles, etc.) are assigned to the correct AAD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should be transparent to users. For details about assigning the objects to an AAD group, see the following: 
 - [Assign policies](https://docs.microsoft.com/intune/get-started-policies) 
 - [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign) 
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
+
+## Terms and conditions policy
+Just like other tenant-level policies, terms and conditions policies are automatically migrated to Intune once mixed authority is enabled for your tenant.  However, you must assign the terms and conditions to a group that contains migrated users to accurately report on acceptance for migrated users and ensure that the terms and conditions are properly targeted for future terms and conditions updates or device enrollments. Users will not have to re-accept the terms and conditions unless there are changes made to the policy in the Configuration Manager console. For details, see [Assign terms and conditions](https://docs.microsoft.com/intune/terms-and-conditions-create#assign-terms-and-conditions).
 
 ## Configure the Exchange Connector
 If you use Exchange and have an Exchange Connector in Configuration Manager, you need to configure the on-premises Exchange Connector in Intune. For details, see [Set up the Intune on-premises Exchange Connector in Microsoft Intune Azure](https://docs.microsoft.com/intune/exchange-connector-install)

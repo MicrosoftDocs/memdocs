@@ -20,7 +20,7 @@ You can change an existing Microsoft Intune tenant configured from the Configura
 > [!Important]    
 > To change your MDM authority without first migrating hybrid MDM users to Intune, see [Change your MDM authority](change-mdm-authority.md).
 
-The steps in this topic switch the MDM authority for the tenant to Intune and migrate all devices that have not migrated to Intune standalone. This topic provides information about how to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone and assumes that you have already completed the following steps:
+The steps in this topic switch the MDM authority for the tenant to Intune and migrate all devices that have not already been migrated to Intune standalone. This topic provides information about how to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone and assumes that you have already completed the following steps:
 - Used the [Intune Data Import tool](migrate-import-data.md) to import Configuration Manager objects to Intune. 
 - [Prepared Intune for user migration](migrate-prepare-intune.md) to ensure users and their devices continue to be managed after they are migrated.
 - [Changed the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md) to start managing user devices from the Azure portal.
