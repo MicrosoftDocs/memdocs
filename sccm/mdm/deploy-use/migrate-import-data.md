@@ -144,7 +144,7 @@ In phase 3, you will sign into Intune and import the selected objects.
 12.	The Progress page provides the progress as the objects are imported. Click **Next** when the import completes. 
 13.	On the Completion page, the imported objects are listed. Check the status for any objects that encountered an error during the import process. You have the following actions available: 
     - **Export details**: Creates a .csv file that contains the information displayed on screen. You can keep this file for your records. 
-    - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import. You can send this file to the Microsoft Data Importer tool team at [DataImporterSupport@microsoft.com](mailto:dataimportersupport@microsoft.com) to improve the tool. 
+    - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import.
 
 ## Next steps
 After you import the data into Intune, you must take steps to [prepare Intune for user migration](migrate-prepare-intune.md). 
