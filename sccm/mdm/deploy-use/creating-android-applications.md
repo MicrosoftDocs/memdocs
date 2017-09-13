@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
 caps.latest.revision: 6
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
 ---
 # Create Android applications with System Center Configuration Manager

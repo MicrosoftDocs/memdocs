@@ -12,7 +12,8 @@ ms.topic: article
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: robstackmsft
+author: andredm7
+ms.author: andredm
 translation.priority.ht:
   - cs-cz
   - de-de
