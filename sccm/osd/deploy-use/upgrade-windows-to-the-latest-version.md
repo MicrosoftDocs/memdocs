@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 caps.latest.revision: 13
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Upgrade Windows to the latest version with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Upgrade Windows to the latest version with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic provides the steps in System Center Configuration Manager to upgrade an  operating system on a computer from Windows 7 or later to Windows 10, or from Windows Server 2012 to Windows Server 2016, on a destination computer. You can choose from different deployment methods, such as stand-alone media or Software Center. The in-place upgrade scenario:  
 
 -   Upgrades the operating system on computers that currently run:
@@ -66,7 +71,7 @@ This topic provides the steps in System Center Configuration Manager to upgrade 
     > When you use stand-alone media, you must include a boot image in the task sequence for it to be available in the Task Sequence Media Wizard.
 
     > [!NOTE]  
-    > Typically you use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to create a task sequence to upgrade an operating system to Windows 10. The task sequence includes the Upgrade Operating System step, as well as additional recommended steps and groups to handle the end-to-end upgrade process. However, you can create a custom task sequence and add the [Upgrade Operating System](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to upgrade the operating system. This is the only step required to upgrade the operating system to Windows 10. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) step after the Upgrade Operating System step to complete the upgrade. Be sure to use the **The currently installed default operating system** setting to restart the computer into the installed operating system and not Windows PE.  
+    > Typically you use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to create a task sequence to upgrade an operating system to Windows 10. The task sequence includes the Upgrade Operating System step, as well as additional recommended steps and groups to handle the end-to-end upgrade process. However, you can create a custom task sequence and add the [Upgrade Operating System](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to upgrade the operating system. This is the only step required to upgrade the operating system to Windows 10. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the Upgrade Operating System step to complete the upgrade. Be sure to use the **The currently installed default operating system** setting to restart the computer into the installed operating system and not Windows PE.  
 
 ##  <a name="BKMK_Deploy"></a> Deploy  
 

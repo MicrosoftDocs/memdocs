@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Manage operating system images with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage operating system images with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For all operating system deployment scenarios, you must select an operating system image.   You can use the default operating system image or  build the operating system image from a reference computer that you configure. When you build the reference computer, you can add operating system files, drivers, support files, software updates, tools, and other software applications to the operating system before you capture it to create the image file. The following provides information about each method.  
 
  **Default image**  
@@ -73,7 +78,7 @@ For the steps to create a customized operating system image, see [Customize oper
  You can now distribute the operating system image to distribution points.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Distribute operating system images to distribution points  
- Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+ Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> Apply software updates to an operating system image  
  Periodically, new software updates are released that are applicable to the operating system in your operating system image. Before you can apply software updates to an image you must have your software updates infrastructure in place, have successfully synchronized software updates, and downloaded the softare updates to the content library on the site server. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md).  

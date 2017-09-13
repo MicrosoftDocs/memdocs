@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Planning considerations for automating tasks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Planning considerations for automating tasks in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can create task sequences to automate tasks in your System Center Configuration Manager environment. These tasks range from capturing an operating system on a reference computer to deploying the operating system to one or more destination computers. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level in the Local System context without requiring user intervention. Use the following sections to help plan  to automate tasks in Configuration Manager.
 
 ##  <a name="BKMK_TSStepsActions"></a> Task sequence steps and actions  
@@ -274,7 +279,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> Task sequences and the Network Access Account  
  Although task sequences run only in the context of the Local System account, you might need to configure the Network Access Account in the following circumstances:  
 
--   You must configure the Network Access Account correctly or the task sequence will fail if it tries to access Configuration Manager packages on distribution points to complete its task. For more information about the Network Access account, see [Network Access Account](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account).  
+-   You must configure the Network Access Account correctly or the task sequence will fail if it tries to access Configuration Manager packages on distribution points to complete its task. For more information about the Network Access account, see [Network Access Account](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA).  
 
     > [!NOTE]  
     >  The Network Access Account is never used as the security context for running programs, installing applications, installing updates, or running task sequences; however, the Network Access account is used to access the associated resources on the network.  
