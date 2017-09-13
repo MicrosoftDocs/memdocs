@@ -43,7 +43,7 @@ To use PXE to deploy an operating system, you must have both x86 and x64 PXE-ena
 
 -   To enable PXE on a boot image, select **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.
 
--   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).
+-   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ##  <a name="BKMK_PXEExclusionList"></a> Create an exclusion list for PXE deployments
 When you deploy operating systems with PXE, you can create an exclusion list on each distribution point. Add the MAC addresses to the exclusion list of the computers you want the distribution point to ignore. Listed computers won't receive the deployment task sequences that Configuration Manager uses for PXE deployment.

@@ -27,7 +27,7 @@ You can verify certain device management components by checking the following lo
 
 -   Check the Sitecomp.log to verify that the service connection point was created successfully.
 
-You can review [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md#a-namebkmkfunctionlogsa-log-files-for-configuration-manager-functionality) for more information about these specific log files and how to view them.
+You can review [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md##BKMK_FunctionLogs) for more information about these specific log files and how to view them. 
 
 > [!div class="button"]
 [< Previous step](set-up-additional-management.md)
