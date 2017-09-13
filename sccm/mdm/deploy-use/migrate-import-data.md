@@ -32,7 +32,7 @@ The import tool can collect information about the following object types in Conf
 - VPN profiles
 - Wi-Fi profiles
 - Compliance policies
-- Terms and Conditions
+- Terms and conditions
 - Apps
 - Deployments
 
@@ -73,10 +73,10 @@ Before you can run the Data Importer tool, you must use a Global Administrator a
 The wizard for the Data Importer tool can be divided in three main steps. This section provides information to help you complete each section of the wizard and successfully import Configuration Manager data into Intune. Each step continues where the previous step ended.
 
 ### Provide permission for the Data Importer tool to access resources
-1.	A Global Administrator must run the tool the first time using the following parameter:  ***intunedataimporter.exe -GlobalConsent***    
-1. When the tool starts, a login screen displays where you must sign in using an account with the Global Administrator role in Azure. 
-2. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune. 
-3. After you accept consent, any other Global Administrator or Intune Administrator can run the tool to import data from Configuration Manager into Intune on Azure.    
+1.	A Global Administrator must run the tool the first time using the following parameter:  ***intunedataimporter.exe -GlobalConsent*** 
+2. When the tool starts, a login screen displays where you must sign in using an account with the Global Administrator role in Azure. 
+3. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune. 
+4. After you accept consent, any other Global Administrator or Intune Administrator can run the tool to import data from Configuration Manager into Intune on Azure.    
         
     > [!Note]
     > If consent has not first been accepted by a Global Administrator, the tool might display **You can't access this application** after an Intune Administrator runs the Data Importer tool and logs in to the Intune subscription.
