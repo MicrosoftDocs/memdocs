@@ -22,13 +22,13 @@ You can configure a mixed MDM authority in the same tenant by selecting some use
 
 Migrated users and their devices will be managed in Intune and other devices will continue to be managed in Configuration Manager. You will start with a small test group of users to verify that everything is working as expected. Then, you will gradually migrate additional groups of users until you are ready to switch the tenant-level MDM authority from Configuration Manager to Intune standalone. 
 
-## Things to consider
+## Things to know before you migrate users
 - During the phased migration, any existing MDM policies or apps in Configuration Manager continue to apply to hybrid MDM devices.
 - Users are added to an AAD group that you designate as your migration group. All devices associated with users in the migration group are managed in Intune.
 - If devices are added to the AAD group, they are ignored unless they are a device without an associated user.
 - Users not in an AAD group marked for migration automatically inherit the tenant-level MDM authority (Configuration Manager).
 - When you migrate a user to Intune, the user and devices will appear in the Intune on Azure portal after about 15 minutes.  
-- When you migrate users to Intune standalone, the following settings continue to be managed from Configuration Manager for both Intune standalone and hybrid MDM devices:
+- When you migrate users to Intune standalone, continue to manage the following settings from Configuration Manager for both Intune standalone and hybrid MDM devices:
     - [Apple Push Notification service (APNs) certificate](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac)
     - [Device Enrollment Program](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)
     - Enrollment profiles
@@ -39,6 +39,7 @@ Migrated users and their devices will be managed in Intune and other devices wil
     - [Enrollment managers](/sccm/mdm/plan-design/device-enrollment-methods)
     - Windows SLKs
     - Company Portal branding
+- We recommend that you do not migrate any user accounts that have been added as device enrollment managers in Configuration Manager. Later, when you change your tenant-level MDM authority to Intune, these user accounts will migrate correctly. If you do migrate device enrollment manager user account before the tenant-level MDM authority change, you must manually add the user as a device enrollment manager in Intune on Azure. For details, see [Add a device enrollment manager](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).
 
 ## Migrate users to Intune
 To test that your Intune configurations are working as expected, first migrate a small set of users and their devices. Then, after you confirm things are working as expected, you can start migrating more AAD groups with more users and their devices.

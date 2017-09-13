@@ -43,11 +43,12 @@ The import tool can collect information about the following object types in Conf
 > If the collection for a deployment is based on an Active Directory group that has been replicated to Azure Active Directory (AAD), the tool will automatically target migrated objects to the groups if you select the appropriate deployment when running the tool. When you have more complex collections or direct membership collections, you must manually recreate them in AAD and manually target object assignments to them in Intune on Azure.
 
 
-## Things to consider
+## Things to know before you run the tool
 - Running the tool will not change your Configuration Manager environment in any way.
 - We recommend that you first test the data import process using a trial tenant. Then, after you confirm that the data you expect has been imported, you can go through the same process with your production Intune tenant.
 - The data importer is meant to only import Configuration Manager data one time. It does not keep track of objects in Configuration Manager or Intune. However, if you run the importer again on the same computer as before, it will tell you which objects you previously imported. The tool will not know if the object still exists in Intune or if an object has changed. If you import data to Intune more than once, you may end up with duplicate objects.
-- Not all profile settings can be imported. For example, you cannot import kiosk mode settings. 
+- Not all profile settings can be imported. For example, you cannot import kiosk mode or PFX settings. 
+- If you have a Configuration Manager policy with settings that are not applicable to the selected platforms, the tool might ignore these settings during the import. Ignoring the settings help to make sure the policy can be imported and supported by Intune. 
 - The tool will attempt to give you a reason for why an object cannot be imported. In some cases, before you import objects to Intune, you can go back to the Configuration Manager console, fix the issue, start the Configuration Manager object discovery scan again, and then import the objects. Sometimes you may need, or may want, to recreate these objects manually in Intune.
 - There are some profiles that depend on other objects. If you want to import a profile that depends on another object, like an email profile that depends on a certificate, you must import both objects at the same time.
 - After you run the tool, you might need to perform additional manual steps. For example, targeting apps and policies to AAD groups. 
@@ -55,6 +56,21 @@ The import tool can collect information about the following object types in Conf
 ## Prerequisites
 - We recommend that you specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy. The tool only discovers objects accessible by the user running the tool. 
 - You must run the tool from a computer that has access to the SMS Provider (to collect Configuration Manager data) and the Internet (to import objects to Intune).
+
+
+
+- A global admin must run the data importer tool the first time using the following parameter:
+a.	Intunedataimporter.exe -GlobalConsent
+b.	A login screen will appear.  The admin must sign in using an account with the Global Administrator role in Azure.  
+c.	Click the Accept button.  This will create an application in Azure with appropriate rights in Microsoft Graph that the Microsoft Intune Data Importer needs to import objects into Microsoft Intune.
+ 
+d.	After accepting consent, any other global administrator or Intune administrator can run the Microsoft Intune Data Importer tool to import MDM data from Configuration Manager into Intune on Azure.
+e.	If consent has not been granted by a global administrator, an Intune Administrator may receive the following screen after successfully logging in while running the Microsoft Intune Data Importer tool. 
+
+- 
+- 
+- 
+- 
 - The Intune account that you use must be a Global Administrator for the tool to import objects to Intune. 
 - Configuration Manager version 1610 or later.
 
@@ -67,7 +83,18 @@ There are some Configuration Manager objects that the importer tool cannot impor
 -->
 
 ## Run the Data Importer tool
+Before you can run the Data Importer tool, you must use a Global Administrator account to give the Data Importer tool permission in Azure to access resources. Then, you can run the tool by using a Global Administrator or Intune Administrator account.     
+
 The wizard for the Data Importer tool can be divided in three main steps. This section provides information to help you complete each section of the wizard and successfully import Configuration Manager data into Intune. Each step continues where the previous step ended.
+
+### Provide permission for the Data Importer tool to access resources
+1.	A Global Administrator must run the tool the first time using the following parameter:  *intunedataimporter.exe -GlobalConsent*    
+1. When the tool starts, a login screen displays where you must sign in using an account with the Global Administrator role in Azure. 
+2. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune. 
+3. After you accept consent, any other Global Administrator or Intune Administrator can run the tool to import data from Configuration Manager into Intune on Azure.    
+        
+    > [!Note]
+    > If consent has not first been accepted by a Global Administrator, the tool might display **You can't access this application** after an Intune Administrator runs the Data Importer tool and logs in to the Intune subscription.
 
 ### Phase 1: Discover Configuration Manager objects and collect data
 In phase 1, you select the objects to discover and have the tool collect information about the selected objects. 
@@ -104,11 +131,11 @@ In phase 2, you review the objects found by the tool, resolve issues that preven
     - **Required certificate** (for profiles and policies): Specifies whether a certificate is associated with the object. When a certificate is associated with the object, you must import the certificate too.
 9.	After you choose the objects to import, they are listed on the Summary page. You have the following actions available: 
     - **Export details**: Creates a .csv file that contains the information displayed on screen. You can keep this file for your records. 
-    - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import. You can send this file to the Microsoft Data Importer tool team at [DataImporterSupport@microsoft.com](mailto:dataimportersupport@microsoft.com) to improve the tool. 
+    - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import. 
 
 ### Phase 3: Import selected object to Intune
-In phase 3, you will sign into Intune with your Global Administrator account and import the selected objects. 
-10.	Click **Next**, and then click **Sign in to Intune** to sign into the Intune tenant for the data import. You must use an Intune account that is a Global administrator to import the data. 
+In phase 3, you will sign into Intune and import the selected objects. 
+10.	Click **Next**, and then click **Sign in to Intune** to sign into the Intune tenant for the data import. 
 
     > [!Important]
     > We recommend that you first test the data import process using a trial tenant. Then, after you confirm that the data you expect has been imported, you can go through the same process with your production Intune tenant.
