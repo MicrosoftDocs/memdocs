@@ -54,25 +54,10 @@ The import tool can collect information about the following object types in Conf
 - After you run the tool, you might need to perform additional manual steps. For example, targeting apps and policies to AAD groups. 
 
 ## Prerequisites
-- We recommend that you specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy. The tool only discovers objects accessible by the user running the tool. 
+- Configuration Manager version 1610 or later.- We recommend that you specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy. The tool only discovers objects accessible by the user running the tool. 
 - You must run the tool from a computer that has access to the SMS Provider (to collect Configuration Manager data) and the Internet (to import objects to Intune).
+- A Global Administrator must run the Data Importer tool the first time using the following ***intunedataimporter.exe -GlobalConsent*** parameter. Then, a Global Administrator or an Intune Administrator can run the tool.  
 
-
-
-- A global admin must run the data importer tool the first time using the following parameter:
-a.	Intunedataimporter.exe -GlobalConsent
-b.	A login screen will appear.  The admin must sign in using an account with the Global Administrator role in Azure.  
-c.	Click the Accept button.  This will create an application in Azure with appropriate rights in Microsoft Graph that the Microsoft Intune Data Importer needs to import objects into Microsoft Intune.
- 
-d.	After accepting consent, any other global administrator or Intune administrator can run the Microsoft Intune Data Importer tool to import MDM data from Configuration Manager into Intune on Azure.
-e.	If consent has not been granted by a global administrator, an Intune Administrator may receive the following screen after successfully logging in while running the Microsoft Intune Data Importer tool. 
-
-- 
-- 
-- 
-- 
-- The Intune account that you use must be a Global Administrator for the tool to import objects to Intune. 
-- Configuration Manager version 1610 or later.
 
 <!-- ## Objects that cannot be imported
 There are some Configuration Manager objects that the importer tool cannot import to Intune. You must manually create these objects in Intune. 
@@ -88,7 +73,7 @@ Before you can run the Data Importer tool, you must use a Global Administrator a
 The wizard for the Data Importer tool can be divided in three main steps. This section provides information to help you complete each section of the wizard and successfully import Configuration Manager data into Intune. Each step continues where the previous step ended.
 
 ### Provide permission for the Data Importer tool to access resources
-1.	A Global Administrator must run the tool the first time using the following parameter:  *intunedataimporter.exe -GlobalConsent*    
+1.	A Global Administrator must run the tool the first time using the following parameter:  ***intunedataimporter.exe -GlobalConsent***    
 1. When the tool starts, a login screen displays where you must sign in using an account with the Global Administrator role in Azure. 
 2. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune. 
 3. After you accept consent, any other Global Administrator or Intune Administrator can run the tool to import data from Configuration Manager into Intune on Azure.    
