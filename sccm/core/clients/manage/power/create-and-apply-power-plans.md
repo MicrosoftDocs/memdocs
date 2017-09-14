@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: arob98ms.author: angrobemanager: angrobe
 
 ---
 # How to create and apply power plans in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

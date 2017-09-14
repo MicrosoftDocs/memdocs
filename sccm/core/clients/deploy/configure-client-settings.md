@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 caps.latest.revision: 5
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 # How to configure client settings in System Center Configuration Manager
