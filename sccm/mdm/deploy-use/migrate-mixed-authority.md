@@ -20,6 +20,9 @@ You can configure a mixed MDM authority in the same tenant by selecting some use
 - Used the data import tool to [import Configuration Manager objects to Intune](migrate-import-data.md) (optional).
 - [Prepared Intune for user migration](migrate-prepare-intune.md) to ensure users and their devices continue to be managed after they are migrated.
 
+> [!Note]    
+> If you decide that you want to do a full reset of your tenant and not migrate anything from Configuration Manager, call support for assistance.
+
 Migrated users and their devices will be managed in Intune and other devices will continue to be managed in Configuration Manager. You will start with a small test group of users to verify that everything is working as expected. Then, you will gradually migrate additional groups of users until you are ready to switch the tenant-level MDM authority from Configuration Manager to Intune standalone. 
 
 ## Things to know before you migrate users
@@ -44,10 +47,7 @@ Migrated users and their devices will be managed in Intune and other devices wil
 > [!Important]    
   > Continue to edit the tenant-level policies using the Configuration Manager console. After you [change your tenant-level MDM authority](change-mdm-authority.md) to Intune, then you will manage these policies in Intune on Azure. 
 - We recommend that you do not migrate any user accounts that have been added as device enrollment managers in Configuration Manager. Later, when you change your tenant-level MDM authority to Intune, these user accounts will migrate correctly. If you do migrate device enrollment manager user account before the tenant-level MDM authority change, you must manually add the user as a device enrollment manager in Intune on Azure. However, devices enrolled by using a device enrollment manager do not migrate successfully. You must call support to migrate these devices. For details, see [Add a device enrollment manager](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).
-- Devices enrolled by using a device enrollment manager and devices that don't have associated users are not migrated to the new MDM authority. For those devices, you need to call support to help you with those individual devices.    
-
-   > [!Important]    
-   > Do not have support run an MDM authority reset or it will wipe the data in Intune. You must change your MDM authority from the Configuration Manager console to avoid this.
+- Devices enrolled by using a device enrollment manager and devices that don't have associated users are not migrated to the new MDM authority. For those devices, you need to call support to help you with those individual devices. Do not have support run an MDM authority reset or it will wipe the data in Intune. You must [change your MDM authority](migrate-change-mdm-authority.md) from the Configuration Manager console.
 
 ## Migrate users to Intune
 To test that your Intune configurations are working as expected, first migrate a small set of users and their devices. Then, after you confirm things are working as expected, you can start migrating more AAD groups with more users and their devices.
