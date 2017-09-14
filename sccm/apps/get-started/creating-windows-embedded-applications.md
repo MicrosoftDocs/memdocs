@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
 caps.latest.revision: 7
-author: robstackmsftms.author: robstackmanager: angrobe
+author: mattbriggsms.author: mabriggmanager: angrobe
 
 ---
 # Create Windows Embedded applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

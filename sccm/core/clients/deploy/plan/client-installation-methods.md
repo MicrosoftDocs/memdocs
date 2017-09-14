@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 
 ---
