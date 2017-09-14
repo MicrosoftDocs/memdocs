@@ -50,8 +50,9 @@ Use the following procedure to change the tenant-level MDM authority to Intune.
 4.	Click **Next** and complete the wizard.
 5.	The MDM authority is now reset. The Intune Subscription is no longer displayed in the Microsoft Intune Subscriptions node of the Configuration Manager console.
 6.	Log in to the [Intune in the Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) using the same Intune tenant you used earlier.    
-    > [!Important]    
-    > Do not use the Intune classic console. You must log in to Intune in the Azure portal.
+
+  > [!Important]    
+  > Do not use the Intune classic console. You must log in to Intune in the Azure portal.
 7.	Confirm that the MDM authority has been changed to **Microsoft Intune**. 
 
 ## Next steps
