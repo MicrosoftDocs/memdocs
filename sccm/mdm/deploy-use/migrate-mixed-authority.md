@@ -40,7 +40,8 @@ Migrated users and their devices will be managed in Intune and other devices wil
     - Terms and conditions
     - Windows SLKs
     - Company Portal branding    
-  > [!Important]    
+      
+> [!Important]    
   > Continue to edit the tenant-level policies using the Configuration Manager console. After you [change your tenant-level MDM authority](change-mdm-authority.md) to Intune, then you will manage these policies in Intune on Azure. 
 - We recommend that you do not migrate any user accounts that have been added as device enrollment managers in Configuration Manager. Later, when you change your tenant-level MDM authority to Intune, these user accounts will migrate correctly. If you do migrate device enrollment manager user account before the tenant-level MDM authority change, you must manually add the user as a device enrollment manager in Intune on Azure. However, devices enrolled by using a device enrollment manager do not migrate successfully. You must call support to migrate these devices. For details, see [Add a device enrollment manager](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).
 - Devices enrolled by using a device enrollment manager and devices that don't have associated users are not migrated to the new MDM authority. For those devices, you need to call support to help you with those individual devices.    
