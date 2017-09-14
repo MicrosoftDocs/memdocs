@@ -66,6 +66,13 @@ There are some Configuration Manager objects that the importer tool cannot impor
 - Etc.
 -->
 
+## Download the Data Importer tool
+The Data Importer tool is available to download from the ConfigMgrTools/Intune-Data-Importer repo in GitHub. Use the following procedure to download the tool.
+
+1. Go to the [Intune Data Importer GitHub](https://go.microsoft.com/fwlink/?linkid=858194) page.
+2. Click **Clone or download**, click **Download ZIP**, and save the compressed ZIP file. 
+3. Extract the contents of the ZIP file.
+
 ## Run the Data Importer tool
 Before you can run the Data Importer tool, you must use a Global Administrator account to give the Data Importer tool permission in Azure to access resources. Then, you can run the tool by using a Global Administrator or Intune Administrator account.     
 

@@ -47,7 +47,6 @@ Migrated users and their devices will be managed in Intune and other devices wil
     > [!Important]    
     > Do not have support run an MDM authority reset or it will wipe the data in Intune. You must change your MDM authority from the Configuration Manager console to avoid this.
 
-
 ## Migrate users to Intune
 To test that your Intune configurations are working as expected, first migrate a small set of users and their devices. Then, after you confirm things are working as expected, you can start migrating more AAD groups with more users and their devices.
 
