@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
 caps.latest.revision: 5
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Common tasks for managing compliance with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

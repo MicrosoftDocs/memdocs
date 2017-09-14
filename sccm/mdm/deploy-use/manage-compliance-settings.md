@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
 caps.latest.revision: 5
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 
 ---

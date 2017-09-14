@@ -6,8 +6,8 @@ ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 

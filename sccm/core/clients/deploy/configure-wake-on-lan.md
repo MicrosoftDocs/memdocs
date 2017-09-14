@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 # How to configure Wake on LAN in System Center Configuration Manager

@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 6271259d-e0ea-432b-90ec-5a452fba4264
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # How to create configuration items in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

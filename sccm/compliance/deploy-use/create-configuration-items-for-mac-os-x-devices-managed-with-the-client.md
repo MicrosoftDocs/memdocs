@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
