@@ -82,15 +82,15 @@ The wizard for the Data Importer tool can be divided in three main steps. This s
 1.	A Global Administrator must run the tool the first time using the following parameter:  ***intunedataimporter.exe -GlobalConsent*** 
 2. When the tool starts, a login screen displays where you must sign in using an account with the Global Administrator role in Azure. 
 3. Click **Accept** to create an application in Azure with appropriate rights in Microsoft Graph. The Data Importer tool needs these rights to import objects into Microsoft Intune.
-    > [!Important]
-    > When you click **Accept**, you give the tool permission to do the following:
-    > - Read all groups
-    > - Sign in and read the user profile
-    > - Read and write Intune device configuration and policies
-    > - Read and write Intune apps
-    > - Read and write Intune role-based administration control policies
-    > - Read and write Intune devices
-    > - Read and write Intune configuration
+   > [!Important]
+   > When you click **Accept**, you give the tool permission to do the following:
+   > - Read all groups
+   > - Sign in and read the user profile
+   > - Read and write Intune device configuration and policies
+   > - Read and write Intune apps
+   > - Read and write Intune role-based administration control policies
+   > - Read and write Intune devices
+   > - Read and write Intune configuration
 4. After you accept consent, any other Global Administrator or Intune Administrator can run the tool to import data from Configuration Manager into Intune on Azure.    
         
     > [!Note]
