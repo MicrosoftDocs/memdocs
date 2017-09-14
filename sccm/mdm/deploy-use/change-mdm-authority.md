@@ -38,8 +38,8 @@ Review the following information to prepare for the change to the MDM authority:
 - There should be no noticeable impact to end users during the change in MDM authority. 
 - If you are using Configuration Manager (hybrid tenant) to manage iOS devices prior to the change in MDM authority, you must make sure that the same Apple Push Notification service (APNs) certificate that was previously used in Configuration Manager is renewed and used to set up the tenant again in Intune standalone.
 
-    > [!IMPORTANT]  
-    > If a different APNs certificate is used for Intune standalone, then ALL previously enrolled iOS devices will become unenrolled and you will have to go through the process to reenroll them. Prior to making the MDM authority change, make sure that you know exactly what APNs certificate was used to manage iOS devices in Configuration Manager. Find the same certificate listed in Apple Push Certificates Portal (https://identity.apple.com) and make sure the user whose Apple ID was used to create the original APNs certificate is identified and available to renew the same APNs certificate as part of the change to the new MDM authority.  
+   > [!IMPORTANT]  
+   > If a different APNs certificate is used for Intune standalone, then ALL previously enrolled iOS devices will become unenrolled and you will have to go through the process to reenroll them. Prior to making the MDM authority change, make sure that you know exactly what APNs certificate was used to manage iOS devices in Configuration Manager. Find the same certificate listed in Apple Push Certificates Portal (https://identity.apple.com) and make sure the user whose Apple ID was used to create the original APNs certificate is identified and available to renew the same APNs certificate as part of the change to the new MDM authority.  
 
 ## Change the MDM authority to Intune standalone
 The process to change the MDM authority to Intune standalone includes the following high-level steps:  
@@ -50,15 +50,14 @@ The process to change the MDM authority to Intune standalone includes the follow
 - The next time devices connect to the service, it will synchronize and receive the new settings from the new MDM authority.
 
 #### To change the MDM authority to Intune standalone
-1.            In the Configuration Manager console, go to **Administration** &gt; **Overview** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and delete your existing Intune Subscription.
-2.            Select **Change MDM Authority to Microsoft Intune**, and then click **Next**.
-
-    ![Download the APNs certificate request](/sccm/mdm/deploy-use/media/mdm-change-delete-subscription.png)
-3.            Sign in to the Intune tenant that you originally used when you set the MDM authority in Configuration Manager.
-4.            Click **Next** and complete the wizard.
-5.            The MDM authority is now reset. The Intune Subscription should no longer be displayed in the Microsoft Intune Subscriptions node of the Configuration Manager console.
-6.            Login to the [Microsoft Intune administration console](http://manage.microsoft.com) using the same Intune tenant you used earlier.
-7.            Confirm that the MDM authority has been reset, and then set the MDM authority as **Microsoft Intune**. After you change the MDM authority, you should see it reflected in the console. For more information, see [How to set the MDM authority](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
+1. In the Configuration Manager console, go to **Administration** &gt; **Overview** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and delete your existing Intune Subscription.
+2. Select **Change MDM Authority to Microsoft Intune**, and then click **Next**.
+   ![Download the APNs certificate request](./media/mdm-change-delete-subscription.png)
+3. Sign in to the Intune tenant that you originally used when you set the MDM authority in Configuration Manager.
+4. Click **Next** and complete the wizard.
+5. The MDM authority is now reset. The Intune Subscription should no longer be displayed in the Microsoft Intune Subscriptions node of the Configuration Manager console.
+6. Login to the [Microsoft Intune administration console](http://manage.microsoft.com) using the same Intune tenant you used earlier.
+7. Confirm that the MDM authority has been reset, and then set the MDM authority as **Microsoft Intune**. After you change the MDM authority, you should see it reflected in the console. For more information, see [How to set the MDM authority](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
 <!-- [Azure portal](https://docs.microsoft.com/en-us/intune-azure/enroll-devices/set-mdm-authority) -->
 
 
@@ -66,35 +65,35 @@ The process to change the MDM authority to Intune standalone includes the follow
 When you have iOS devices, you must configure the APNs certificate in Intune.
 
 #### To configure the APNs certificate
-1.            Download the APNs certificate request.
-    <!--The process is different depending on how you connect to Intune:
+1. Download the APNs certificate request.
+   <!--The process is different depending on how you connect to Intune:
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment** &gt; **Apple MDM Push Certificate**, and then select **Download your CSR** to download and save the .csr file locally.   
     <br/>
     **Microsoft Intune administration console**   -->
-    In the [Microsoft Intune administration console](http://manage.microsoft.com), go to **Administration** &gt; **Mobile Device Management** &gt; **iOS and Mac OS X** &gt; **Upload an APNs Certificate**, and then choose **Download the APNs certificate request**. Save the certificate signing request (.csr) file locally.
-    > [!IMPORTANT]    
-    > Download a new certificate signing request. Do not use an existing file or it will fail.
+   In the [Microsoft Intune administration console](http://manage.microsoft.com), go to **Administration** &gt; **Mobile Device Management** &gt; **iOS and Mac OS X** &gt; **Upload an APNs Certificate**, and then choose **Download the APNs certificate request**. Save the certificate signing request (.csr) file locally.
+   > [!IMPORTANT]    
+   > Download a new certificate signing request. Do not use an existing file or it will fail.
 
-    ![Download the APNs certificate request](/sccm/mdm/deploy-use/media/mdm-change-download-apns-certificate.png)
+   ![Download the APNs certificate request](./media/mdm-change-download-apns-certificate.png)
 
-2.            Go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844), and sign-in with the **same** Apple ID that was used to previously create and renew the APNs certificate that you used in Configuration Manager (hybrid).
+2. Go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844), and sign-in with the **same** Apple ID that was used to previously create and renew the APNs certificate that you used in Configuration Manager (hybrid).
 
-    ![Apple Push Certificates Portal sign-in page](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
+   ![Apple Push Certificates Portal sign-in page](./media/mdm-change-apns-portal.png)
 
-3.            Select the APNs certificate that you used in Configuration Manager (hybrid), and then click **Renew**.   
+3. Select the APNs certificate that you used in Configuration Manager (hybrid), and then click **Renew**.   
 
-    ![Renew APNs dialog box](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
+    ![Renew APNs dialog box](./media/mdm-change-renew-apns.png)
 
-4.            Select the APNs certificate signing request (.csr) file that you downloaded locally, and then click **Upload**.
+4. Select the APNs certificate signing request (.csr) file that you downloaded locally, and then click **Upload**.
 
     ![Apple Push Certificates Portal sign-in page](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)
  
-5.            Select the same APNs, and then click **Download**. Download the APNs (.pem) certificate, and save the file locally.  
+5. Select the same APNs, and then click **Download**. Download the APNs (.pem) certificate, and save the file locally.  
 
-    ![Apple Push Certificates Portal sign-in page](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
+   ![Apple Push Certificates Portal sign-in page](./media/mdm-change-renew-apns-download.png)
 
-6.            Upload the renewed APNs certificate to the Intune tenant using the same Apple ID as before.
+6. Upload the renewed APNs certificate to the Intune tenant using the same Apple ID as before.
 <!--The process is different depending on how to connect to Intune:  
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment**  &gt; **Apple MDM Push Certificate**, enter your Apple ID in step 3, select the certificate (.pem) file in step 4, and then click **Upload**.     
@@ -102,7 +101,7 @@ When you have iOS devices, you must configure the APNs certificate in Intune.
     **Microsoft Intune administration console**    -->
     In the [Microsoft Intune administration console](http://manage.microsoft.com), go to **Administration** &gt; **Mobile Device Management** &gt; **iOS and Mac OS X** &gt; **Upload an APNs Certificate**, and then choose **Upload the APNs certificate**. Go to the certificate (.pem) file, choose **Open**, and then enter your **Apple ID**.   
 
-    ![Upload the APNs certificate](/sccm/mdm/deploy-use/media/mdm-change-upload-apns-certificate.png)
+   ![Upload the APNs certificate](./media/mdm-change-upload-apns-certificate.png)
 
 ## Next steps
 After the change in MDM authority is complete, review the following steps:
@@ -123,8 +122,8 @@ After the change in MDM authority is complete, review the following steps:
     - Wi-Fi profile
     - Configuration profiles
 - Make sure the new settings that are intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.
-    > [!TIP]   
-    > As a best practice, you should create all management settings and configurations, as well as deployments, shortly after the change to the MDM authority has completed. This will help ensure that devices are protected and actively managed during the interim period.   
+  > [!TIP]   
+  > As a best practice, you should create all management settings and configurations, as well as deployments, shortly after the change to the MDM authority has completed. This will help ensure that devices are protected and actively managed during the interim period.   
 -  After you change the MDM authority, perform the following steps to validate that new devices are enrolled successfully to the new authority:   
     - Enroll a new device
     - Make sure the newly enrolled device shows up in the Intune administration console.
