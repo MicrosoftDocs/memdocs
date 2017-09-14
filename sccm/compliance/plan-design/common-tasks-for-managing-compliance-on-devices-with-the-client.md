@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 caps.latest.revision: 8
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Common tasks for managing compliance on devices with the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*

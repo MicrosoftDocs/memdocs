@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: mattbriggsms.author: mabriggmanager: angrobe
 
 ---
 # How to create global conditions in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
