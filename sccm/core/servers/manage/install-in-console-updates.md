@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 06/13/2017
+ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -102,6 +102,9 @@ Before you install an update, consider running the prerequisite check for that u
 -   The update files are replicated to other sites before installing the update.  
 
 -   The prerequisite check automatically runs again when you choose to install the update.  
+
+> [!NOTE]
+> When you start a prerequisite check and then view the status, the **Installation** phase appears to be active, however the update is not actually installing. The display lists the Installation phase because some tasks, like extracting the binaries necessary to run the check, are also part of the Installation phase.  
 
 Later, when you install the update, you can configure the update to ignore prerequisite check warnings.  
 
@@ -285,7 +288,7 @@ The post installation tasks include:
 When an update fails to be installed, review the in-console feedback to identify resolutions for warnings and errors. You can also view the ConfigMgrPrereq.log on the site server for more details. Before you retry the installation of an update, you must fix errors, and should fix warnings.  
 
 > [!TIP]  
-> If an update has problems downloading or replicating, you can use the [update reset tool](/sccm/core/servers/manage/update-reset-tool). This tool is available from sites that run version 1706 or later. 
+> If an update has problems downloading or replicating, you can use the [update reset tool](/sccm/core/servers/manage/update-reset-tool). This tool is available from sites that run version 1706 or later.
 
 When you are ready to retry the installation of an update, select the failed update and then choose an applicable option. The update installation retry behavior depends on the node where you start the retry, and the retry option that you use.  
 

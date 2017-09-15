@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: f050ee45-bcab-4a3b-9050-4952f5e2ec2e
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Operations and maintenance for queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

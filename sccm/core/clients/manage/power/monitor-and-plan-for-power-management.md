@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: arob98ms.author: angrobemanager: angrobe
 
 ---
 # How to monitor and plan for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

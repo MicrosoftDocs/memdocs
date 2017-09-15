@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
 caps.latest.revision: 8
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Plan for and configure compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

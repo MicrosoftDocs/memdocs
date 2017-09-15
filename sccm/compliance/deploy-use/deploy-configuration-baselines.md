@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # How to deploy configuration baselines in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
