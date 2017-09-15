@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: arob98ms.author: angrobemanager: angrobe
 
 ---
 # Prerequisites for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

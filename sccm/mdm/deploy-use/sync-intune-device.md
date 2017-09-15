@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: b3731ad0-2a24-4042-994e-5e4c1230e3fe
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 # Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console

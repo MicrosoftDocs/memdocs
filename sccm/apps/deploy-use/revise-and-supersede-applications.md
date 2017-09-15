@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: mattbriggsms.author: mabriggmanager: angrobe
 
 ---
 # Revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

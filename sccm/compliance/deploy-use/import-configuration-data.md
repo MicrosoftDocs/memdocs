@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Import configuration data with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

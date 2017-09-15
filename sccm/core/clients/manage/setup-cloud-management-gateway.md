@@ -1,8 +1,8 @@
 ---
 title: "Set up Cloud Management Gateway | Microsoft Docs"
 description: ""
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 05/01/2017
 ms.topic: article
