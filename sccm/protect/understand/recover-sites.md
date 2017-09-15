@@ -26,7 +26,7 @@ Run a Configuration Manager site recovery after a Configuration Manager site fai
 The sections in this topic can help you recover a Configuration Manager site. To create a backup, see [Backup for Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
 ## Considerations before recovering a site
-**You must use the same version and edition of SQL Server:** For example, restoring a database that ran on SQL Server 2014 to SQL Server 2016is not supported. Similarly, restoring a site database that ran on a Standard edition of SQL Server 2016 to an Enterprise edition of SQL Server 2016 is not supported.
+**You must use the same version and edition of SQL Server:** For example, restoring a database that ran on SQL Server 2014 to SQL Server 2016 is not supported. Similarly, restoring a site database that ran on a Standard edition of SQL Server 2016 to an Enterprise edition of SQL Server 2016 is not supported.
 - 	SQL Server must not be set to **single-user mode**.
 - 	Ensure the .MDF and .LDF files are valid. When you recover a site, there is no check for the state of the files you are restoring.
 
