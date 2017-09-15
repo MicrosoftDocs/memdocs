@@ -21,7 +21,7 @@ You can configure a mixed MDM authority in the same tenant by selecting some use
 - [Prepared Intune for user migration](migrate-prepare-intune.md) to ensure users and their devices continue to be managed after they are migrated.
 
 > [!Note]    
-> If you decide that you want to do a full reset of your tenant and not migrate anything from Configuration Manager, call support for assistance.
+> If you decide you want to do a full reset of your tenant, which will remove all policies, apps, and device enrollments, call support for assistance.
 
 Migrated users and their devices will be managed in Intune and other devices will continue to be managed in Configuration Manager. You will start with a small test group of users to verify that everything is working as expected. Then, you will gradually migrate additional groups of users until you are ready to switch the tenant-level MDM authority from Configuration Manager to Intune standalone. 
 
