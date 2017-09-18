@@ -328,7 +328,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Do not specify this option with the installation property of SMSSITECODE=AUTO. Internet-based clients must be directly assigned to their Internet-based site.  
 
- Example: `CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+ Example: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### CCMHTTPPORT
 
