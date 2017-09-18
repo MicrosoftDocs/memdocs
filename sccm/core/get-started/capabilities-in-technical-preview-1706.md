@@ -2,7 +2,7 @@
 title: "Technical Preview 1706 | Microsoft Docs"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -324,8 +324,8 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 To use scripts, you must be a member of the appropriate Configuration Manager security role.
 
-- **To import, and author scripts** - Your account must have **Create** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
-- **To approve, or deny scripts** - Your account must have **Approve** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
+- **To import, and author scripts** - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
+- **To approve, or deny scripts** - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - **To run scripts** - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
