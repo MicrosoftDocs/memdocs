@@ -175,7 +175,7 @@ Example: `ccmsetup.exe /downloadtimeout:100`
 
  When not specified, the client checks the CRL before establishing an HTTPS connection.  
 
- For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in[Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+ For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
  Example: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
