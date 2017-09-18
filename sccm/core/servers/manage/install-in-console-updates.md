@@ -103,8 +103,8 @@ Before you install an update, consider running the prerequisite check for that u
 
 -   The prerequisite check automatically runs again when you choose to install the update.  
 
-> [!NOTE]
-> When you start a prerequisite check and then view the status, the **Installation** phase appears to be active, however the update is not actually installing. The display lists the Installation phase because some tasks, like extracting the binaries necessary to run the check, are also part of the Installation phase.  
+> [!NOTE]   
+> When you start a prerequisite check and then view the status, the **Installation** phase appears to be active, however the update is not actually installing. To run the prerequisite check, the update process extracts the package from the content library and puts it into a staging folder where the current prerequisite checks can be accessed.  This same process runs when you install an update. For this reason, Installation shows as ‘In progress’. Only the *Extract Update package* step is shown in the Installation category.  
 
 Later, when you install the update, you can configure the update to ignore prerequisite check warnings.  
 
