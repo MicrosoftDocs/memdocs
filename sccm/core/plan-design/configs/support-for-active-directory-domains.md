@@ -2,7 +2,7 @@
 title: "Supported Active Directory domains | Microsoft Docs"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
 ms.custom: na
-ms.date: 3/23/2017
+ms.date: 9/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,7 +30,7 @@ All System Center Configuration Manager site systems must be members of a suppor
 
 -   It's not supported to change the following for a computer that hosts a site system role:  
 
-    -   Domain membership  
+    -   Domain membership *(This includes removing a site system from the domain, and then rejoining the same domain.)*
 
     -   Domain name  
 
