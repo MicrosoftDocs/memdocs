@@ -32,9 +32,27 @@ This article provides details on the new mobile device management (MDM) features
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
+## September 2017
+
+### New in Microsoft Intune     
+
+- **Inform end users what device information can be seen for iOS** <!--739894-->    
+    We have added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the About screen. 
+
+- **Easier-to-understand phrasing for the Company Portal app for Android** <!---1396349-->       
+    The enrollment process for the Company Portal app for Android has been simplified with new text to make it easier for end users to enroll. If you have custom enrollment documentation, you will want to update it to reflect the new screens. You can find sample images on our [UI updates for Intune end user apps](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-september-11-2017) page.
+
+- **Windows 10 Company Portal app added to Windows Information Protection allow policy** <!-- 677129 -->    
+    The Windows 10 Company Portal app has been updated to support Windows Information Protection (WIP). The app can be added to the WIP allow policy. With this change, the app no longer has to be added to the **Exempt** list. 
+
+- **End of support notice added for iOS 8.0**    
+    A notice was added for end of support for iOS 8.0. For details, see [Notices](#notices).
+
 ## August 2017
 
-### New signed-in experience for Android Company Portal users and App Protection Policy users <!-- 621669 -->
+### New in Microsoft Intune     
+
+- **New signed-in experience for Android Company Portal users and App Protection Policy users** <!-- 621669 -->    
 End users can now browse apps, manage devices, and view IT contact information using the Android Company Portal app without enrolling their Android devices. In addition, if an end user already uses an app protected by Intune App Protection Policies and launches the Android Company Portal, the end user no longer receive a prompt to enroll the device.
 
 
@@ -307,6 +325,10 @@ The following additional hybrid features are also included in version 1702 of Co
 
 
 ## Notices
+
+### End of support for iOS 8.0 
+<!---1164477--->
+Managed apps and the Company Portal app for iOS will require iOS 9.0 and higher to access company resources. Devices that aren't updated before September will no longer be able to access the Company Portal or those apps. 
 
 ### Platform Support Reminder: Windows Phone 8.1 mainstream support ended July 11, 2017
 <!-- 1327781 -->
