@@ -2,7 +2,7 @@
 title: "Manage distribution points | Microsoft Docs"
 description: "Host the content (files and software) that you deploy to devices and users by using distribution points. Here's how to install and configure them."
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,7 +19,7 @@ manager: angrobe
 # Install and configure distribution points for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
- 
+
 You install System Center Configuration Manager distribution points to host the content (files and software) that you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  
 
  When you *install a new distribution point* (by using the installation wizard) or *manage the properties of an existing distribution point* (by editing the distribution point's properties), you can configure most of the distribution point settings. A few settings are available only when you're either installing or editing, but not both:  
@@ -41,7 +41,8 @@ You install System Center Configuration Manager distribution points to host the 
     -   **Configure Schedules for data transfers to distribution points**  
 
 ##  <a name="bkmk_install"></a> Install a distribution point  
- You must designate a site system server as a distribution point before content can be made available to client computers. You can add the distribution point site role to a new site system server or add the site role to an existing site system server.  
+You must designate a site system server as a distribution point before content can be made available to client computers. You must also assign a distribution point to at least one [boundary group](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points) before on-premises client computers can use that distribution point as a content source location. You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
+
 
  When you install a new distribution point, you use an installation wizard that walks you through the available settings. Before you start, consider the following:  
 
@@ -335,7 +336,7 @@ To view the results of the content validation process, in the **Monitoring** wor
 >  Although you specify the content validation schedule by using the local time for the computer, the Configuration Manager console shows the schedule in UTC.  
 
 ### Boundary group  
-Manage the boundary groups for which this distribution point is assigned. You can associate boundary groups with a distribution point. During content deployment, clients must be in a boundary group associated with the distribution point to use it as a source location for content.
+Manage the boundary groups for which this distribution point is assigned. Plan to add the distribution point to at least one boundary group. During content deployment, clients must be in a boundary group associated with a distribution point to use that distribution point as a source location for content.
 
 Additionally:
 
