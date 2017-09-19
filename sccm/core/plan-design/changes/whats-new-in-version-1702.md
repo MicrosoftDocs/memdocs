@@ -253,7 +253,13 @@ This change affects the wizards for creating the following items:
 
 With this change, hybrid deployments can provide support more quickly for new Android and iOS versions without needing a new Configuration Manager release or extension. Once a new version is supported in Intune standalone, users will be able to upgrade their mobile devices to that version.
 
-To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target a specific version, you can create the new item, and then specify the targeted version on the properties page of the newly created item.
+To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target a specific version, you can create the new item, and then specify the targeted version on the properties page of the newly created item. 
+
+> [!NOTE]
+> The last mobile operating system version available in the properties pages applies to that version and all subsequent versions. Properties pages provide the following choices for targeting operating systems later than Android 7 and iOS 10: 
+> - **Android 7 and higher**
+> - **All iOS 10 and higher iPhone or iPod touch devices**
+> - **All iOS 10 and higher iPad devices**
 
 ### Android for Work support
 Starting with 1702, Hybrid mobile device management with Microsoft Intune now supports Android for Work device enrollment and management. Managed Android for Work device guidance:
