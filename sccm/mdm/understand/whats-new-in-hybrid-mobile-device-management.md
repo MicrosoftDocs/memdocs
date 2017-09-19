@@ -320,6 +320,10 @@ The following additional hybrid features are also included in version 1702 of Co
 
 ## Notices
 
+### End of support for iOS 8.0 
+<!---1164477--->
+Managed apps and the Company Portal app for iOS will require iOS 9.0 and higher to access company resources. Devices that aren't updated before September will no longer be able to access the Company Portal or those apps. 
+
 ### Platform Support Reminder: Windows Phone 8.1 mainstream support ended July 11, 2017
 <!-- 1327781 -->
 *July 11, 2017*
