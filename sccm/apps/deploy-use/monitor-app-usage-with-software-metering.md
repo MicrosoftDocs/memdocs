@@ -3,7 +3,7 @@ title: "Monitor app usage with software metering | Microsoft Docs"
 description: "Learn about operations that are available in System Center Configuration Manager software metering."
 description:
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -85,7 +85,7 @@ Software metering has no external dependencies, only dependencies within the pro
         >
         >  This box is optional if a value for **File Name** is specified.
 
-    -   **Version** - The version of the executable file you that want to meter. You can use the wildcard character (*) to represent any string of characters or the wildcard character (?) to represent any single character. If you want to meter for all versions of an executable file, use the default value (\*).
+    -   **Version** - The version of the executable file you that want to meter. You can use the wildcard character ( &#42; ) to represent any string of characters or the wildcard character ( ? ) to represent any single character. If you want to meter for all versions of an executable file, use the default value ( &#42; ).
 
     -   **Language** - The language of the executable file to meter. The default value is the current locale of the operating system you are using. If you select an executable file to be metered by clicking the **Browse** button, this box is automatically filled if language information is present in the header of the file. To meter all language versions of a file, select **Any** in the drop-down list.
 
