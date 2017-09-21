@@ -2,7 +2,7 @@
 title: "Set up your System Center Configuration Manager lab | Microsoft Docs"
 description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -44,7 +44,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
     -   Do not limit the **system addressable memory** for SQL Server.  
 
-    -   Configure the **SQL Server service account** to run using the **domain local user** account.  
+    -   Configure the **SQL Server service account** to run using a low rights domain user account.  
 
     -   You must install **SQL Server reporting services**.  
 
