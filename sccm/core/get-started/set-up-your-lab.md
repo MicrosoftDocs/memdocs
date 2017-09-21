@@ -311,15 +311,15 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
 6.  Add the following **Features** by selecting them from the list:  
 
-    -   -   **Background Intelligent Transfer Service (BITS)**  
+    -   **Background Intelligent Transfer Service (BITS)**  
 
-            -   **IIS Server Extension**  
+          -   **IIS Server Extension**  
 
-        -   **Remote Server Administration Tools**  
+    -   **Remote Server Administration Tools**  
 
-            -   **Feature Administration Tools**  
+          -   **Feature Administration Tools**  
 
-                -   **BITS Server Extensions Tools**  
+          -   **BITS Server Extensions Tools**  
 
 7.  Click **Install** and verify that the installation completed properly in the **Notifications** pane of **Server Manager**.  
 
