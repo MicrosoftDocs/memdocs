@@ -44,7 +44,7 @@ On December 15th, 2016, the baseline media for version 1606 was rereleased to ad
 -   A release candidate install of System Center Configuration Manager  
 -   System Center 2012 Configuration Manager with Service Pack 1  
 -   System Center 2012 Configuration Manager with Service Pack 2  
--   System Center 2012 R2 Configuration Manager  
+-   System Center 2012 R2 Configuration Manager with no service pack
 -   System Center 2012 R2 Configuration Manager with Service Pack 1  
 
 If you use version 1606 baseline media downloaded prior to December 15th, 2016, you can  upgrade only the following to a fully licensed version of System Center Configuration Manager version 1606:
