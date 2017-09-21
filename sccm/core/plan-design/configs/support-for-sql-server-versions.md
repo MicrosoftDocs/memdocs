@@ -2,7 +2,7 @@
 title: "Supported SQL Server versions | Microsoft Docs"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 05/10/2017
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -209,7 +209,7 @@ You can use this version of SQL Server with no minimum cumulative update version
  **SQL Server service:**  
  You can configure the SQL Server service to run using:  
 
--   The **domain local user** account:  
+-   A *low rights domain user* account:  
 
     -   This is a best practice and might require you to manually register the service principal name (SPN) for the account.  
 
