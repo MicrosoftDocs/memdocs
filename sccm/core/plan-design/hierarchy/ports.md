@@ -2,7 +2,7 @@
 title: "Ports used by Configuration Manager | Microsoft Docs"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
 ms.custom: na
-ms.date: 3/20/2017
+ms.date: 09/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports that you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, or IPsec.  
-
+    
 > [!NOTE]  
 >  If you support Internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall.   
 
@@ -164,7 +164,7 @@ This communication is used to confirm whether the other client computer is awake
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Global catalog LDAP|--|3268|  
-|Global catalog LDAP SSL|--|3269|  
+
 
 ###  <a name="BKMK_PortsClient-MP"></a> Client -- > Management point  
 
@@ -292,9 +292,7 @@ This communication is used to confirm whether the other client computer is awake
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Lightweight Directory Access Protocol (LDAP)|--|389|  
-|LDAP (Secure Sockets Layer [SSL] connection)|636|636|  
 |Global catalog LDAP|--|3268|  
-|Global catalog LDAP SSL|--|3269|  
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
@@ -388,9 +386,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Lightweight Directory Access Protocol (LDAP)|--|389|  
-|LDAP (Secure Sockets Layer [SSL] connection)|636|636|  
 |Global catalog LDAP|--|3268|  
-|Global catalog LDAP SSL|--|3269|  
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
@@ -638,17 +634,9 @@ For an example of how to configure SQL Server to use a specific port, see [How t
 ### <a name="bkmk_discovery"> </a> Discovery and publishing
 The following ports are used for the discovery and publishing of site information:
  - Lightweight Directory Access Protocol (LDAP): 389
- - LDAP (Secure Sockets Layer [SSL] connection): 636
-
-
  - Global catalog LDAP: 3268
- - Global catalog LDAP SSL: 3269
-
-
  - RPC Endpoint Mapper: 135
  - RPC: Dynamically allocated high TCP ports
-
-
  - TCP: 1024: 5000
  - TCP:  49152: 65535
 

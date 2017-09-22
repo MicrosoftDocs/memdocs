@@ -2,7 +2,7 @@
 title: "Create and run scripts with Configuration Manager | Microsoft Docs"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 08/09/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 
 ---
@@ -42,8 +42,8 @@ Configuration Manager clients must be running the client from the 1706 release, 
 
 To use scripts, you must be a member of the appropriate Configuration Manager security role.
 
-- To import, and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
-- To approve, or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Compliance Settings Manager** security role.
+- To import, and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
+- To approve, or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
@@ -76,9 +76,9 @@ Here are some examples that illustrate scripts you might want to use with this c
 
 #### Create a folder
 
-*New-Item "c:\scripts" -type folder name* 
- 
- 
+*New-Item "c:\scripts" -type folder name*
+
+
 #### Create a file
 
 *New-Item c:\scripts\new_file.txt -type file name*

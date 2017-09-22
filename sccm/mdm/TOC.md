@@ -49,13 +49,18 @@
 ### [iOS volume-purchased apps](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [Create Windows Phone applications](deploy-use/creating-windows-phone-applications.md)
 ### [Create Android applications](deploy-use/creating-android-applications.md)
+### [Android app configuration policies](deploy-use/configure-android-apps-with-app-configuration-policies.md)
 ### [Mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
 ### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ### [Windows Store for Business apps](deploy-use/windows-store-for-business.md)
 
 ## [Manage an Intune subscription](deploy-use/manage-intune-subscriptions.md)
-
 ## [Change your MDM authority](deploy-use/change-mdm-authority.md)
+## [Start migrating from hybrid MDM to Intune standalone](deploy-use/migrate-hybridmdm-to-intunesa.md) 
+### [Import Configuration Manager data to Microsoft Intune](deploy-use/migrate-import-data.md)
+### [Prepare Intune for user migration](deploy-use/migrate-prepare-intune.md)
+### [Change the MDM authority for specific users (mixed MDM authority)](deploy-use/migrate-mixed-authority.md)
+### [Change your MDM authority](deploy-use/migrate-change-mdm-authority.md)
 
 ## Manage resource access
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)

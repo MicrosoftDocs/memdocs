@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 caps.latest.revision: 0
 author: arob98
-author: robstackmsft
-ms.author: robstack
+ms.author: angrobe
+manager: angrobe
 ---
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site

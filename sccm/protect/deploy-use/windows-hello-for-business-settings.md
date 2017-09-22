@@ -2,7 +2,7 @@
 title: "Windows Hello for Business settings | Microsoft Docs"
 description: "Learn how to integrate Windows Hello for Business with System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/10/2017
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 caps.latest.revision: 17
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 
 ---
@@ -62,8 +62,11 @@ Some configurations might not need you to configure permissions, or might requir
 |||||
 |-|-|-|-|
 |Windows client version|Configuration Manager 1602 or 1606|Configuration Manager 1610|Configuration Manager 1702 or later|
-|Windows 10 Anniversary Update|No hotfix required<br><br>No permissions required<br><br>No Windows schema update required|No hotfix required<br><br>No permissions required<br><br>No Windows schema update required|No action required|
+|Windows 10 Anniversary Update|No hotfix required<br><br>No permissions required<br><br>No Windows schema update required|No hotfix required (see **Warning**)<br><br>No permissions required<br><br>No Windows schema update required|Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|
 |Windows 10 Creators Update or later|Not supported|Install [this hotfix](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)<br><br>Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|Configure permissions<br><br>Apply Windows Server 2016 schema to Active Directory|
+
+> [!WARNING]
+> While [the hotfix](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v) is not required for Configuration Manager 1610 and Windows 10 Anniversary Update, it may be installed.  If the hotfix is installed, you need to configure permissions and apply Windows Server 2016 schema to Active Directory.
 
 ## To configure permissions
 

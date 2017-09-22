@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # How to manage queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

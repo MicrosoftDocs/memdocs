@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 caps.latest.revision: 8
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic provides the general steps in System Center Configuration Manager to install an operating system on a new  computer. For this scenario, you can choose from many different deployment methods, such as PXE, OEM, or stand-alone media. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md).  
 
 Use the following sections to refresh an existing computer with a new version of Windows.  
@@ -36,7 +41,7 @@ Use the following sections to refresh an existing computer with a new version of
 
     -   For more information about how  to customize a boot image, see [Customize boot images](../get-started/customize-boot-images.md).  
 
-    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 2.  **Prepare an operating system image**  
 
@@ -44,7 +49,7 @@ Use the following sections to refresh an existing computer with a new version of
 
     -   To learn more about how to create an operating system image, see  [Manage operating system images](../get-started/manage-operating-system-images.md).
 
-    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).
+    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 3.  **Create a task sequence to deploy operating systems over the network**  
 

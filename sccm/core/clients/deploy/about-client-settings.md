@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 # About client settings in System Center Configuration Manager

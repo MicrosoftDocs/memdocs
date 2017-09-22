@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: arob98ms.author: angrobemanager: angrobe
 
 ---
 # Best practices for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

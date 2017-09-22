@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 # About client installation properties in System Center Configuration Manager

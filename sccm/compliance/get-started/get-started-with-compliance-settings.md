@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 caps.latest.revision: 11
-author: robstackmsftms.author: robstackmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Get started with compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
