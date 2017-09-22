@@ -162,7 +162,7 @@ In the previous section, you prepared Windows 10 devices for co-management. Thes
 
 ### Modify your co-management settings 
 After you enable co-management using the wizard, you can modify your target group and change the workloads that are managed by Configuration Manager and Intune.  
-1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
+- In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 Select the co-management object, and then on the Home tab, click **Properties**. 
  
 ### Monitor co-management 
