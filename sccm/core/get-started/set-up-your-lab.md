@@ -72,7 +72,7 @@ Though not required for this lab, you can review [Supported configurations for S
 
 Once you have installed all of these components, there are additional steps you must take to configure your Windows environment for Configuration Manager:  
 
-###  <a name="BKMK_LabADPrep"></a> Prepare Active Directory content for the lab  
+##  <a name="BKMK_LabADPrep"></a> Prepare Active Directory content for the lab  
  For this lab, you will create a security group, then add a domain user to it.  
 
 -   Security group: **Evaluation**  
@@ -87,12 +87,12 @@ Once you have installed all of these components, there are additional steps you 
 
 The next steps required to enable Configuration Manager clients to query Active Directory Domain Services to locate site resources are listed over the next procedures.  
 
-###  <a name="BKMK_CreateSysMgmtLab"></a> Create the System Management container  
+##  <a name="BKMK_CreateSysMgmtLab"></a> Create the System Management container  
  Configuration Manager will not automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit.](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
 
  Ensure that you are logged on as an account that has **Create All Child Objects** permission on the **System** Container in Active Directory Domain Services.  
 
-##### To create the System Management container:  
+#### To create the System Management container:  
 
 1.  Run **ADSI Edit**, and connect to the domain in which the site server resides.  
 
@@ -104,13 +104,13 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 5.  Click **Finish** to complete the procedure.  
 
-###  <a name="BKMK_SetSecPermLab"></a> Set security permissions for the System Management container  
+##  <a name="BKMK_SetSecPermLab"></a> Set security permissions for the System Management container  
  Grant the site server's computer account the permissions that are required to publish site information to the container. You will use ADSI Edit for this task as well.  
 
 > [!IMPORTANT]  
 >  Confirm that you are connected to the site server's domain prior to beginning the following procedure.  
 
-##### To set security permissions for the System Management container:  
+#### To set security permissions for the System Management container:  
 
 1.  In the console pane, expand the **site server's domain**, expand **DC=&lt;server distinguished name\>**, and then expand **CN=System**. Right-click **CN=System Management**, and then click **Properties**.  
 
@@ -124,13 +124,13 @@ The next steps required to enable Configuration Manager clients to query Active 
 
      For additional insight into this procedure, please review [Extend the Active Directory schema for System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
-###  <a name="BKMK_ExtADSchLab"></a> Extend the Active Directory schema using extadsch.exe  
+##  <a name="BKMK_ExtADSchLab"></a> Extend the Active Directory schema using extadsch.exe  
  You will extend the Active Directory schema for this lab, as this allows you to use all Configuration Manager features and functionality with the least amount of administrative overhead. Extending the Active Directory schema is a forest-wide configuration that is done one time per forest. Extending the schema permanently modifies the set of classes and attributes in your base Active Directory configuration. This action is irreversible. Extending the schema allows Configuration Manager to access components that will allow it to function most effectively within your lab environment.  
 
 > [!IMPORTANT]  
 >  Ensure that you are logged on to the schema master domain controller with an account that is a member of the **Schema Admins** security group. Attempting to use alternate credentials will fail.  
 
-##### To extend the Active Directory schema using extadsch.exe:  
+#### To extend the Active Directory schema using extadsch.exe:  
 
 1.  Create a backup of the schema master domain controller's system state. For more information about backing up master domain controller, please review [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
 
@@ -142,7 +142,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
      For additional insight into this procedure, please review [Extend the Active Directory schema for System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
-###  <a name="BKMK_OtherTasksLab"></a> Other required tasks  
+##  <a name="BKMK_OtherTasksLab"></a> Other required tasks  
  You will also need to complete the following tasks prior to installation.  
 
  **Create a folder for storing all  downloads**  
@@ -153,7 +153,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
  You will need to install two .NET Frameworks: first, .NET 3.5.1 and then .NET 4.5.2+. You will also need to activate Windows Communication Foundation (WCF). WCF is designed to offer a manageable approach to distributed computing, broad interoperability, and direct support for service orientation, and simplifies development of connected applications through a service-oriented programming model. Please review [What Is Windows Communication Foundation?](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) for additional insight into WCF.  
 
-##### To install .NET and activate Windows Communication Foundation:  
+#### To install .NET and activate Windows Communication Foundation:  
 
 1.  Open **Server Manager**, then navigate to **Manage**. Click **Add Roles and Features** to open the **Add Roles and Features Wizard.**  
 
@@ -213,7 +213,7 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
 [Remote Differential Compression (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) is a set of APIs that applications can use to determine if any changes have been made to a set of files. RDC enables the application to replicate only the changed portions of a file, keeping network traffic to a minimum.  
 
-##### To enable BITS, IIS, and RDC site server roles:  
+#### To enable BITS, IIS, and RDC site server roles:  
 
 1.  On your site server, open **Server Manager**. Navigate to **Manage**. Click **Add Roles and Features** to open the **Add Roles and Features Wizard**.  
 
@@ -311,21 +311,21 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
 6.  Add the following **Features** by selecting them from the list:  
 
-    -   -   **Background Intelligent Transfer Service (BITS)**  
+    -   **Background Intelligent Transfer Service (BITS)**  
 
-            -   **IIS Server Extension**  
+          -   **IIS Server Extension**  
 
-        -   **Remote Server Administration Tools**  
+    -   **Remote Server Administration Tools**  
 
-            -   **Feature Administration Tools**  
+          -   **Feature Administration Tools**  
 
-                -   **BITS Server Extensions Tools**  
+          -   **BITS Server Extensions Tools**  
 
 7.  Click **Install** and verify that the installation completed properly in the **Notifications** pane of **Server Manager**.  
 
 By default, IIS blocks several types of file extensions and locations from access by HTTP or HTTPS communication. To enable these files to be distributed to client systems, you will need to configure request filtering for IIS on your distribution point. For more information, please review [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
 
-##### To configure IIS filtering on distribution points:  
+#### To configure IIS filtering on distribution points:  
 
 1.  Open **IIS Manager** and select the name of your server in the sidebar. This will take you to the **Home** screen.  
 
@@ -335,13 +335,13 @@ By default, IIS blocks several types of file extensions and locations from acces
 
 4.  Type **.msi** into the dialog box and click **OK**.  
 
-###  <a name="BKMK_InstallCMLab"></a> Installing Configuration Manager  
+##  <a name="BKMK_InstallCMLab"></a> Installing Configuration Manager  
 You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](/sccm/core/plan-design/configs/size-and-scale-numbers) of potential devices.  
 During this process, you will also install the Configuration Manager console, which will be used to manage your evaluation devices going forward.  
 
 Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
 
-##### To download and install Configuration Manager:  
+#### To download and install Configuration Manager:  
 
 1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of System Center Configuration Manager.  
 
@@ -361,10 +361,10 @@ Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core
     |Step 15: **Client Communication Settings**|Confirm that **All site system roles accept only HTTPS communication from clients** is not selected|  
     |Step 16: **Site System Roles**|Input your FQDN and confirm that your selection of **All site system roles accept only HTTPS communication from clients** is still deselected.|  
 
-###  <a name="BKMK_EnablePubLab"></a> Enable publishing for the Configuration Manager site  
+##  <a name="BKMK_EnablePubLab"></a> Enable publishing for the Configuration Manager site  
 Each Configuration Manager site publishes its own site-specific information to the System Management container within its domain partition in the Active Directory schema. Bidirectional channels for communication between Active Directory and Configuration Manager must be opened to handle this traffic. You will also additionally enable Forest Discovery to determine certain components of your Active Directory and network infrastructure.  
 
-##### To configure Active Directory forests for publishing:  
+#### To configure Active Directory forests for publishing:  
 
 1.  In the bottom-left corner of the Configuration Manager console, click **Administration**.  
 
@@ -380,7 +380,7 @@ Each Configuration Manager site publishes its own site-specific information to t
 
 7.  In the **Administration** workspace, expand **Hierarchy Configuration**, then click **Active Directory Forests**.  
 
-##### To enable a Configuration Manager site to publish site information to your Active Directory forest:  
+#### To enable a Configuration Manager site to publish site information to your Active Directory forest:  
 
 1.  In the Configuration Manager console, click **Administration**.  
 
