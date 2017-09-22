@@ -2,7 +2,7 @@
 title: "SQL Server Always On | Microsoft Docs"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -207,8 +207,11 @@ You can run the following script to verify database configurations for both prim
 ## Limitations and known issues
 The following limitations apply to all scenarios.   
 
-**Basic availability groups are not supported:**  
-Introduced with SQL Server 2016 Standard edition, [basic availability groups](https://msdn.microsoft.com/library/mt614935.aspx) do not support read access to secondary replicas, a requirement for use with Configuration Manager.
+**SQL Server options and configurations that are not supported:**
+- **Basic availability groups**  
+  Introduced with SQL Server 2016 Standard edition, [basic availability groups](https://msdn.microsoft.com/library/mt614935.aspx) do not support read access to secondary replicas, a requirement for use with Configuration Manager.
+- **Failover Cluster Instance**  
+  [Failover Cluster Instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-serv) are not supported for a replica you use with Configuration Manager.
 
 **SQL servers that host additional availability groups:**   
 Prior to Configuration Manager version 1610, when an availability group on a SQL Server  hosts one or more availability groups in addition to the group you use for Configuration Manager, each replica in each of those additional availability groups must have the following configurations set at the time you run Configuration Manager Setup or install an update for Configuration Manager:
