@@ -88,7 +88,7 @@ You can create objects in Intune based on the objects that you have in Configura
 ### Architectural overview for co-management 
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures. 
 
-![Co-management architectural diagram](/sccm/mdm/deploy-use/media/co-management-arch.svg)
+![Co-management architectural diagram](/sccm/mdm/deploy-use/media/co-management-arch-1709tp.svg)
 
 ### Scenarios to enable co-management  
 You can enable co-management for both Windows 10 devices enrolled in Microsoft Intune and existing Windows 10 Configuration Manager clients. Both scenarios result in Windows 10 devices concurrently managed by Configuration Manager and Intune, as well as joined to AD and Azure AD.  
