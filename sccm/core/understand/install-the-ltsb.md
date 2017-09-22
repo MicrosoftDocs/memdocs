@@ -123,7 +123,7 @@ When you upgrade from System Center 2012 Configuration Manager, use the site pla
 ### In-place upgrade paths for the 1606 baseline media
 You can use the 1606 baseline media to upgrade the following to a licensed edition of System Center Configuration Manager:
 - System Center 2012 R2 Configuration Manager with Service Pack 1
-- System Center 2012 R2 Configuration Manager (with no service pack)
+- System Center 2012 R2 Configuration Manager with no service pack (this requires the use of the baseline media for version 1606 that was rereleased on December 15th, 2016.)
 - System Center 2012 Configuration Manager with Service Pack 2
 - System Center 2012 Configuration Manager with Service Pack 1
 
