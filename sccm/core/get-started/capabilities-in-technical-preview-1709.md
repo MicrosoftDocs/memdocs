@@ -108,10 +108,28 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience, which includes joining the device to AD and Azure AD, as well as enrolling the device in Intune. Then, you will create an app in Intune to deploy the Configuration Manager client.  
 1. Enable AutoPilot for the new Windows 10 devices. For details, see [Overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
 2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll). 
-3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. For details, see one of the following topics: 
+3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the following command line when you create the app:
+
+   ccmsetup.msi CCMSETUPCMD="/mp:https://&#60;*FQDN of cloud management gateway*&#62;/ CCM_Proxy_MutualAuth/72057594037928100 CCMHOSTNAME=&#60;*FQDN of cloud management gateway*&#62;/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https://&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https://&#60;*Resource ID*&#62;”
+
+   For example, if you had the following values:
+
+   - **FQDN of cloud management gateway**: contoso.cloudapp.net    
+   - **FQDN of management point (MP)**: sccmmp.corp.contoso.com    
+   - **Sitecode**: PS1    
+   - **Azure AD tenant ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
+   - **Azure AD tenant name**: contoso    
+   - **Azure AD client app ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
+   - **AAD Resource ID URI**: 
+
+   You would use the following command line: 
+
+   ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=DFD SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;SCCMServer”
+
+   For the steps to install the client, use the previous command line when you use one of the following topics:
    - How to install clients to Intune MDM-managed Windows devices (https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices).  
-   - Install clients from the Internet using Azure AD (https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
- 
+   - Install clients from the Internet using Azure AD (https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).    
+      
    > [!Tip] 
    >You can find the command-line parameters for your site by using the following steps:     
    > 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
