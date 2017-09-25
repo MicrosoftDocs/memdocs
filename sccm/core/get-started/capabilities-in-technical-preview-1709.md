@@ -50,7 +50,7 @@ We’ve updated the VPN profile wizard and properties pages to display settings 
 - When the platform is set to **Android**, **Android for Work**, or **Windows 8.1**, the **Supported platforms** page is not needed and is not displayed.
 - The Configuration Manager client-based workflow has been combined with the hybrid mobile device (MDM) client-based Windows 10 workflows; they support the same settings.
 - Each platform workflow includes just the settings appropriate for that workflow.  For example, the Android workflow contains settings appropriate for Android; settings appropriate for iOS or Windows 10 Mobile no longer appear in the Android workflow.
-- For Windows 8.1 devices, settings managed by Configuration Manager ar clearly marked.
+- For Windows 8.1 devices, settings managed by Configuration Manager are clearly marked.
 - The Automatic VPN page is obsolete and has been removed.
 
 These changes apply to new VPN profiles.  
