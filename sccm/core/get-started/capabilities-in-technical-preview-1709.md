@@ -43,7 +43,7 @@ This article introduces the features that are available in the Technical Preview
 
 ## Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 -->
 
-We’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform.  Specifically:
+For the 1709 technical preview branch, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform.  Specifically:
 
 - Each platform has its own workflow, meaning that new VPN profiles contain only the setting supported by the platform.
 - The **Supported Platforms** pages now appears after the **General** page.  You now choose the platform before setting property values.
