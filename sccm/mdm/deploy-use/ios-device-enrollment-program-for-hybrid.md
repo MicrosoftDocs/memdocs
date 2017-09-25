@@ -2,7 +2,7 @@
 title: "Enroll iOS devices with Device Enrollment Program (DEP) - Configuration Manager | Microsoft Docs"
 description: "Enable iOS Device Enrollment Program (DEP) enrollment for hybrid deployments in Configuration Manager with Intune."
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -36,6 +36,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 3.  **Get a Device Enrollment Program token**   
     Go to the [Device Enrollment Program portal](https://deploy.apple.com) (https://deploy.apple.com) and sign in with your company Apple ID. This Apple ID must be used in future to renew your DEP token.  
     1.  In the [Device Enrollment Program portal](https://deploy.apple.com), go to **Device Enrollment Program** > **Manage Servers**, and then click **Add MDM Server**.  
+    ![Screenshot of add MDM server in the Device Enrollment Program portal](../media/enrollment-program-token-add-server.png)
     2.  Enter the **MDM Server Name**, and then click **Next**. The server name is for your reference to identify the MDM server. It is not the name or URL of the Intune or Configuration Manager server.  
     3.  The **Add <ServerName\>** dialog box opens. Click **Choose File…** to upload the .pem file that you created in the previous step, and then click **Next**.  
     4.  The **Add <ServerName\>** dialog box displays a **Your Server Token** link. Download the server token (.p7m) file to your computer, and then click **Done**.  
@@ -93,6 +94,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 
 1. Go to the [Device Enrollment Program portal](https://deploy.apple.com) (https://deploy.apple.com) and sign in with your company Apple ID.
 2. Go to **Deployment Program** > **Device Enrollment Program** > **Manage Devices**. Specify how you will **Choose Devices**, provide device information and specify details by device **Serial Number**, **Order Number**, or **Upload CSV File**. Next, select **Assign to Server** and select the <*ServerName*> that you specified in step 3, and then click **OK**.  
+![Screenshot of Apple Device Enrollment Program portal adding devices](../media/enrollment-program-token-specify-serial.png)
 
 3.  **Synchronize DEP-managed devices**   
     In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **Predeclared Devices**. On the **Home** tab, click **DEP Sync**. A sync request is sent to Apple. After synchronization completes, the DEP-managed devices are displayed.
