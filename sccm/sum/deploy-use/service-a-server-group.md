@@ -2,7 +2,8 @@
 title: Service a server group | Microsoft Docs
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 keywords:
-author: dougebyms.author: dougeby
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ms.date: 12/07/2016
 ms.topic: article
@@ -13,7 +14,14 @@ ms.technology:
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 
 ---
->[!IMPORTANT]>This is a pre-release feature available in Configuration Manager version 1606 and version 1610. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).# Service a server group*Applies to: System Center Configuration Manager (Current Branch)*
+>[!IMPORTANT]
+>Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+
+
+# Service a server group
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Starting in System Center Configuration Manager version 1606, you can configure server group settings for a collection to define how many, what percentage, or in what order computers in the collection will install software updates. You can also configure pre-deployment and post-deployment PowerShell scripts to run custom actions.
 
 When you deploy software updates to a collection that has server group settings configured, Configuration Manager determines how many computers in the collection can install the software updates at any given time and makes the same number of deployment locks available. Only computers that get a deployment lock will start software update installation. When a deployment lock is available, a computer gets the deployment lock, installs the software updates, and then releases the deployment lock when software updates installation successfully completes. Then, the deployment lock becomes available for other computers. If a computer is unable to release a deployment lock, you can manually release all server group deployment locks for the collection.
