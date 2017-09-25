@@ -1,7 +1,7 @@
 ---
 title: "Plan for the cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 06/07/2017
+ms.date: 09/26/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -43,7 +43,6 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 
     -   Client deployment
     -   Automatic site assignment
-    -   User policies
     -   Application catalog (including software approval requests)
     -   Full operating system deployment (OSD)
     -   Configuration Manager console
@@ -108,7 +107,7 @@ Use this role to simplify Internet-based client management in three steps from t
 
 ### How is the cloud management gateway deployed?
 
-The cloud service manager component on the service connection point handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD.
+The cloud service manager component on the service connection point handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD. Ensure your service connection point is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).
 
 #### Certificate requirements
 
@@ -128,6 +127,9 @@ There two phases to the deployment:
 - Set up the CMG component on your Azure AD server, and configure endpoints, HTTP handlers, and services in Internet Information Services (IIS)
 
 If you change the configuration of the CMG, a configuration deployment is initiated to the CMG.
+
+### Where do I set up the cloud management gateway?
+You can create the cloud management gateway at the top-tier site of your hierarchy. If that is a central administration site, you can then create CMG connection points at child primary sites.
 
 ### How does the cloud management gateway help ensure security?
 

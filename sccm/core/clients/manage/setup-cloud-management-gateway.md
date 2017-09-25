@@ -4,7 +4,7 @@ description: ""
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 05/01/2017
+ms.date: 0926/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -16,8 +16,7 @@ ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 # Set up cloud management gateway for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
-
-Beginning in version 1610, the process for setting up cloud management gateway in Configuration Manager includes the following steps:
+The process for setting up cloud management gateway in Configuration Manager includes the following steps:
 
 ## Step 1: Configure required certificates
 
@@ -47,7 +46,7 @@ You can create a custom SSL certificate for cloud management gateway in the same
 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
-> [!NOTE] 
+> [!NOTE]
 >
 > Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
@@ -55,7 +54,7 @@ The easiest way to get export the root of the client certificates used on the ne
 
 2.  From the File menu choose **Add/Remove Snap-in...**.
 
-3.  In the Add or Remove Snap-ins dialog box, choose **Certificates** > **Add &gt;** > **Computer account** > **Next** > **Local computer** > **Finish**. 
+3.  In the Add or Remove Snap-ins dialog box, choose **Certificates** > **Add &gt;** > **Computer account** > **Next** > **Local computer** > **Finish**.
 
 4.  Go to **Certificates** &gt; **Personal** &gt; **Certificates**.
 
