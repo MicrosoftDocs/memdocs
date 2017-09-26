@@ -77,7 +77,6 @@ Create a new VPN profile using the usual process. Notice that the first page in 
 As you select different platforms, notice that only the settings relevant to the selected platform display.
 
 
-
 <!--  Rough Section Template
 ##  FEATURE    [Commented TFS #]
 
