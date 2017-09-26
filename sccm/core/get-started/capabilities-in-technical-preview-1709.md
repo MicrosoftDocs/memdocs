@@ -41,6 +41,42 @@ This article introduces the features that are available in the Technical Preview
 
 **The following are new features you can try out with this version.**  
 
+## Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 -->
+
+For the 1709 technical preview branch, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform.  Specifically:
+
+- Each platform has its own workflow, meaning that new VPN profiles contain only the setting supported by the platform.
+- The **Supported Platforms** pages now appears after the **General** page.  You now choose the platform before setting property values.
+- When the platform is set to **Android**, **Android for Work**, or **Windows 8.1**, the **Supported platforms** page is not needed and is not displayed.
+- The Configuration Manager client-based workflow has been combined with the hybrid mobile device (MDM) client-based Windows 10 workflows; they support the same settings.
+- Each platform workflow includes just the settings appropriate for that workflow.  For example, the Android workflow contains settings appropriate for Android; settings appropriate for iOS or Windows 10 Mobile no longer appear in the Android workflow.
+- For Windows 8.1 devices, settings managed by Configuration Manager are clearly marked.
+- The Automatic VPN page is obsolete and has been removed.
+
+These changes apply to new VPN profiles.  
+
+To minimize compatibility risk, existing VPN profiles are unchanged.  When you edit an existing profile, the settings appear as they did when the profile was created.  
+
+### Try it out!
+
+Create a new VPN profile using the usual process. Notice that the first page in the VPN profile wizard’s options have changed.
+
+1.	Go to **Assets and Compliance** > **Overview** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles** and then choose **Create VPN Profile**.
+2.	Enter a name on the **General** page and choose one of the following options under **Specify the type of VPN profile you want to create**:
+
+    - Windows 10  
+    - Windows 8.1  
+    - Windows Phone 8.1  
+    - iOS and macOS  
+    - Android  
+    - Android for Work  
+
+3.	If you choose **Windows 8.1**, you also have the option to **Create new profile** or **Import from file**.
+4.	Complete the wizard to finish creating the profile.
+
+As you select different platforms, notice that only the settings relevant to the selected platform display.
+
+
 <!--  Rough Section Template
 ##  FEATURE    [Commented TFS #]
 
