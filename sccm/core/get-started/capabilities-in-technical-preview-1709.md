@@ -80,15 +80,15 @@ When a Windows 10 device is enabled for co-management, you have the following re
 
 ### Prepare Intune for co-management 
 Before you switch workloads from Configuration Manager to Intune, you must create the profiles and policies you need in Intune to ensure your devices continue to be protected.
-You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles. 
-[Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  
-[Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-[Device configuration profiles](https://docs.microsoft.com/intune/device-profile-create)  
+You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
+- [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  
+- [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
+- [Device configuration profiles](https://docs.microsoft.com/intune/device-profile-create)  
  
 ### Architectural overview for co-management 
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures. 
 
-![Co-management architectural diagram](/sccm/mdm/deploy-use/media/co-management-arch-1709tp.svg)
+![Co-management architectural diagram](./media/co-management-arch-1709tp.svg)
 
 ### Scenarios to enable co-management  
 You can enable co-management for both Windows 10 devices enrolled in Microsoft Intune and existing Windows 10 Configuration Manager clients. Both scenarios result in Windows 10 devices concurrently managed by Configuration Manager and Intune, as well as joined to AD and Azure AD.  
