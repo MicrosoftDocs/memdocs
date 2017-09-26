@@ -4,7 +4,7 @@ description: ""
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 0926/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
