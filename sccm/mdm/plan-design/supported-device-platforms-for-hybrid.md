@@ -2,7 +2,7 @@
 title: "Supported Device Platforms for hybrid MDM | Microsoft Docs"
 description: "Supported Device Platforms for hybrid MDM."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
