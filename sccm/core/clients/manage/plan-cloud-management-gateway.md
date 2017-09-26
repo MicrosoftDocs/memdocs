@@ -74,7 +74,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
 -   Outbound data transfer
 
-    -   Charges are incurred for data flowing out of the service. See the [Azure bandwidth pricing details](https://azure.microsoft.com/en-us/pricing/details/bandwidth/) to help determine potential costs.
+    -   Charges are incurred for data flowing out of the service. See the [Azure bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/) to help determine potential costs.
 
     -   For estimating purposes only, expect approximately 100 MB per client per month for Internet-based clients doing policy refreshes every hour.
 
@@ -89,7 +89,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
     - See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution) for more details.
 
-## Frequently asked questions about the Cloud Management Gateway (CMG)
+## Frequently asked questions about the cloud management gateway (CMG)
 
 ### Why use the cloud management gateway?
 
