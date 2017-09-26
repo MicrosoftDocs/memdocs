@@ -112,7 +112,10 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- | Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
+ |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
+ |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Not added](media/Red_X.gif)    |
+
+
 
 
 ## Capabilities delivered in previous technical previews
