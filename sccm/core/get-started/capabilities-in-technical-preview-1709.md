@@ -143,20 +143,20 @@ For new Windows 10 devices, you can use the Autopilot service to configure the o
 1. Enable AutoPilot for the new Windows 10 devices. For details, see [Overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
 2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll). 
 3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. For the steps to install the client, use the [Command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) in one of the following topics:    
-   - [How to install clients to Intune MDM-managed Windows devices](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices).  
-   - [Install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).    
+   - [How to install clients to Intune MDM-managed Windows devices](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices)  
+   - [Install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure)   
       
 ### Windows 10 devices not enrolled in Intune or a Configuration Manager client 
 For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
 1. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. For the steps to install the client, use the [Command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) in one of the following topics:    
-   - [How to install clients to Intune MDM-managed Windows devices](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices).  
-   - [Install clients from the Internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+   - [How to install clients to Intune MDM-managed Windows devices](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices)  
+   - [Install clients from the Internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
  
 ### Windows 10 devices enrolled in Intune 
 For Windows 10 devices that are already enrolled in Intune, create an app in Intune to deploy the Configuration Manager client. For the steps to install the client, use the [Command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) in one of the following topics:    
-- [How to install clients to Intune MDM-managed Windows devices](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices).  
-- [Install clients from the Internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+- [How to install clients to Intune MDM-managed Windows devices](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers#how-to-install-clients-to-intune-mdm-managed-windows-devices)  
+- [Install clients from the Internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
 
 ### Switch Configuration Manager workloads to Intune 
 In the previous section, you prepared Windows 10 devices for co-management. These devices are now joined to AD and Azure AD, and they are enrolled in Intune have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune. 
