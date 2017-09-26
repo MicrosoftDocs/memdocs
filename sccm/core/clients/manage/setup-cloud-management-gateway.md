@@ -32,7 +32,7 @@ For example, Contoso names their cloud management gateway service **GraniteFalls
 2. Next request a server authentication certificate from a public provider using the Common Name (CN) of the CNAME alias.
 For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.
 3. Create the cloud management gateway service in the Configuration Manager console using this certificate.
-	- On the **Settings** page of the Create Cloud Management Gateway Wizard: Wwhen you add the server certificate for this cloud service (from **Certificate file**), the wizard will extract the hostname from the certificate CN as the service name, and then append that to **cloudapp.net** (or **usgovcloudapp.net** for the Azure US Government cloud) as the Service FQDN to create the service in Azure.
+	- On the **Settings** page of the Create Cloud Management Gateway Wizard: When you add the server certificate for this cloud service (from **Certificate file**), the wizard will extract the hostname from the certificate CN as the service name, and then append that to **cloudapp.net** (or **usgovcloudapp.net** for the Azure US Government cloud) as the Service FQDN to create the service in Azure.
 For example, when creating the cloud management gateway at Contoso, the hostname **GraniteFalls** is extracted from the certificate CN, so that the actual service in Azure is created as **GraniteFalls.CloudApp.net**.
 
 ### Option 2 - Create a custom SSL certificate for cloud management gateway in the same way as for a cloud-based distribution point
