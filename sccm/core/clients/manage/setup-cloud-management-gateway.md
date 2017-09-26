@@ -23,7 +23,7 @@ The process for setting up cloud management gateway in Configuration Manager inc
 > [!TIP]  
 > Before requesting a certificate, confirm that the desired Azure domain name (for example, GraniteFalls.CloudApp.Net) is unique. To do this, log on to the [Microsoft Azure portal](https://manage.windowsazure.com), click **New**, select **Cloud Service**, and then **Custom Create**. In the **URL** field type the desired domain name (do not click the checkmark to create the service). The portal will reflect whether the domain name is available or already in use by another service.
 
-## Option 1 (preferred) - Use the server authentication certificate from a public and globally trusted certificate provider (like VeriSign)
+### Option 1 (preferred) - Use the server authentication certificate from a public and globally trusted certificate provider (like VeriSign)
 
 When you use this method, clients automatically trust the certificate and you do not need to create a custom SSL certificate yourself.
 
