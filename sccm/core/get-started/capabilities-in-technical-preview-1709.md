@@ -105,7 +105,7 @@ When you have Windows 10 devices that are Configuration Manager clients, you can
 You can enable co-management on Windows 10 devices that are joined to AD and Azure AD, and enrolled in Intune and a client in Configuration Manager. For new Windows 10 devices, and for devices that are already enrolled in Intune, you must install the Configuration Manager client before they can be co-managed. For Windows 10 devices that are already Configuration Manager clients, you can enroll the devices with Intune and enable co-management in the Configuration Manager console. 
 
 #### Command line to install Configuration Manager client
-You must install the Configuration Manager client on Windows 10 devices for them to be co-managed. You will create an app in Intune to install the client on these devices. Use the following command line when you create the app:
+You must create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
 ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47/&#60;*Resource ID*&#62;”
 
@@ -119,11 +119,13 @@ For example, if you had the following values:
  - **Azure AD tenant ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
  - **Azure AD tenant name**: contoso    
  - **Azure AD client app ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
- - **AAD Resource ID URI**: SCCMServer
+ - **AAD Resource ID URI**: ConfigMgrServer
+   > [!Note]    
+   > Use the **IdentifierUri** value in the **vSMS_AAD_Application_Ex** SQL view for the **AAD Resource ID URI** value.
 
 You would use the following command line: 
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;SCCMServer”
+ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
 
 > [!Tip] 
 >You can find the command-line parameters for your site by using the following steps:     
