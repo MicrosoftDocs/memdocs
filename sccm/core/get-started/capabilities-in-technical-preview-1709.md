@@ -171,5 +171,5 @@ After you enable co-management using the wizard, you can modify your target grou
 - In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 Select the co-management object, and then on the Home tab, click **Properties**. 
  
-### Monitor co-management 
-After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.
+<!--### Monitor co-management 
+After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
