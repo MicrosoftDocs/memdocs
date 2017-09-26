@@ -112,7 +112,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth 
 For example, if you had the following values:
 
 - **URL of cloud management gateway mutual auth endpoint**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100
-   > [!Note]    
+   >[!Note]    
    >Use the **MutualAuthPath** value in the **vProxy_Roles** SQL view for the **URL of cloud management gateway mutual auth endpoint** value. 
 - **FQDN of management point (MP)**: sccmmp.corp.contoso.com    
 - **Sitecode**: PS1    
@@ -120,8 +120,8 @@ For example, if you had the following values:
 - **Azure AD tenant name**: contoso    
 - **Azure AD client app ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
 - **AAD Resource ID URI**: ConfigMgrServer
-  > [!Note]    
-  > Use the **IdentifierUri** value found in the **vSMS_AAD_Application_Ex** SQL view for the **AAD Resource ID URI** value.
+  >[!Note]    
+  >Use the **IdentifierUri** value found in the **vSMS_AAD_Application_Ex** SQL view for the **AAD Resource ID URI** value.
 
 You would use the following command line: 
 
