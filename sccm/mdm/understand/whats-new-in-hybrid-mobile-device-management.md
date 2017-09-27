@@ -36,8 +36,6 @@ This article provides details on the new mobile device management (MDM) features
 
 ### New in Microsoft Intune     
 
-- **Additional push notifications for end users on the Company Portal app for Android Oreo** <!--1475932-->    
-    End users will see additional notifications to indicate to them when the Company Portal app for Android Oreo is performing background tasks, such as retrieving policies from the Intune service. This increases transparency for end users about when the Company Portal is performing administrative tasks on their device. This is part of the overall [optimization of the Company Portal UI](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) for the Company Portal app for Android Oreo. 
 
 - **Inform end users what device information can be seen for iOS** <!--739894-->    
     We have added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the About screen. 
