@@ -398,7 +398,7 @@ Example: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
 
-For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point).  
+For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
 
 Example: `CCMSetup.exe FSP=SMSFP01`  
 
