@@ -84,7 +84,7 @@ You must have the following prerequisites in place before you can enable co-mana
 #### Server prerequisites
 The following are prerequisites for you to enable co-management:  
 - Configuration Manager version 1710
-- Cloud Management Gateway enabled
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)
 - EMS or Intune license for all users
 - Management authority in Intune set to Intune (hybrid MDM is not supported)
 
