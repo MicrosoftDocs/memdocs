@@ -2,7 +2,7 @@
 title: "Technical Preview for Configuration Manager | Microsoft Docs"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -112,7 +112,7 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
+ |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md#improved-vpn-profile-experience-in-configuration-manager-console) |![Not added](media/Red_X.gif)    |
  |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Not added](media/Red_X.gif)    |
 
 
