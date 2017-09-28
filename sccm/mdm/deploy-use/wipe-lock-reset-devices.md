@@ -175,6 +175,9 @@ If a user forgets their passcode, you can help them by removing the passcode fro
 |Windows RT 8.1 |Not supported.|  
 |Windows 8.1 PCs |Not supported.|  
 
+> [!Note]    
+> You must perform the passcode reset action from the top-level site in your environment. For example, if you use a central administration site, you can only perform the action on that site. If you’re using a standalone primary site, you can only perform the action on that site.
+
 #### To reset the passcode on a mobile device remotely in Configuration Manager  
 
 1. In the Configuration Manager console, choose **Assets and Compliance** and choose **Devices**. Alternatively, you can choose **Device Collections** and select a collection.  
@@ -202,6 +205,9 @@ If a user loses their device, you can lock the device remotely. The following ta
 |Windows Phone 8 and Windows Phone 8.1|Supported.|  
 |Windows RT 8.1 |Supported if the current user of the device is the same user who enrolled the device.|  
 |Windows 8.1|Supported if the current user of the device is the same user who enrolled the device.|  
+
+> [!Note]    
+> You must perform the remote lock action from the top-level site in your environment. For example, if you use a central administration site, you can only perform the action on that site. If you’re using a standalone primary site, you can only perform the action on that site.
 
 #### To lock a mobile device remotely through the Configuration Manager console  
 
