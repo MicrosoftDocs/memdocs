@@ -38,6 +38,7 @@ This article introduces the features that are available in the Technical Preview
 
 
 **The following are new features you can try out with this version.**  
+
 ## Improved VPN Profile experience in Configuration Manager console <!-- 1313282 -->
 
 With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform. Specifically:
