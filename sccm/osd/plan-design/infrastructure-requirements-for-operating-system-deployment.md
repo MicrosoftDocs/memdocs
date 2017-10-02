@@ -37,7 +37,7 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
 -   Windows Preinstallation Environment (Windows PE)
 
-For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support For Windows 10 as a client](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support For Windows 10 as a client](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 
  <sup>1</sup> USMT is not required on the SMS Provider site system server.  
 
