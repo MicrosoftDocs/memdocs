@@ -132,13 +132,13 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 > [!Important]
 > In Configuration Manager version 1706, note the following detials about the end-user experience:
 >
->- For required apps and when the deadline is in future, the notification icon should display in the notification area on the task bar when the deadline is within 7.5 hours and the update content has already downloaded. The user can postpone the countdown dialog up to 3 times before the deadline. When postponed, the countdown displays again after 2 hours. If not postponed, there is a 30 minute countdown and update gets installed when the countdown expires.
+>- For required apps and when the deadline is in future, the notification icon should display in the notification area on the task bar when the deadline is within 7.5 hours and the update content has already been downloaded. The user can postpone the countdown dialog up to 3 times before the deadline. When postponed, the countdown displays again after 2 hours. If not postponed, there is a 30 minute countdown and update gets installed when the countdown expires.
 >- A pop-up notification might not display until the user clicks the icon in the notification area. In addition, if the notification area has minimal space, the notification icon might not be visible unless the user opens or expands the notification area. 
->- The notification and countdown could start while the user is not actively working on the device, for example when the device is locked overnight, so that it’s possible Office apps that are running on the device could be forced to close for the update to install. Before closing the app, Office saves app data to prevent data loss. 
->- If the deadline is in the past or configured for as soon as possible, running Office apps might be forced to close without notifications. 
+>- The notification and countdown dialog could start while the user is not actively working on the device, for example when the device is locked overnight, so it’s possible Office apps running on the device could be forced to close to install the update. Before closing the app, Office saves app data to prevent data loss. 
+>- If the deadline is in the past or configured to start as soon as possible, open Office apps might be forced to close without notifications. 
 >- If the user installs an Office update before the deadline, Configuration Manager verifies that the update is installed when the deadline is reached. The update is installed if it is not detected on the device.
->- The in-app notification bar does not display on an Office app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays for newly opened apps.
->- For Office updates triggered by a service window or scheduled for non-business hours, it's possible that running Office apps might be forced to close to install the update without notifications . 
+>- The in-app notification bar does not display on an Office app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays only for newly opened apps.
+>- For Office updates triggered by a service window or scheduled for non-business hours, it's possible that running Office apps might be forced to close to install the update without notifications. 
 <!--  >- By default, there is a start time randomization for update assignments. Evaluation and download does not happen until the start time is reached. -->
 
 
