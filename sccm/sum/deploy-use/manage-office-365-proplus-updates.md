@@ -130,9 +130,9 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
 
 > [!Important]
-> In Configuration Manager version 1706, note the following:
+> In Configuration Manager version 1706, note the following detials about the end-user experience:
 >
->- For required apps and the deadline is in future, the notification icon should display in the notification area on the task bar when the deadline is within 7.5 hours and the update content has already downloaded. The user can postpone the countdown dialog up to 3 times before the deadline. When postponed, the countdown displays again after 2 hours. If not postponed, there is a 30 minute countdown and update gets installed when the countdown expires.
+>- For required apps and when the deadline is in future, the notification icon should display in the notification area on the task bar when the deadline is within 7.5 hours and the update content has already downloaded. The user can postpone the countdown dialog up to 3 times before the deadline. When postponed, the countdown displays again after 2 hours. If not postponed, there is a 30 minute countdown and update gets installed when the countdown expires.
 >- A pop-up notification might not display until the user clicks the icon in the notification area. In addition, if the notification area has minimal space, the notification icon might not be visible unless the user opens or expands the notification area. 
 >- The notification and countdown could start while the user is not actively working on the device, for example when the device is locked overnight, so that it’s possible Office apps that are running on the device could be forced to close for the update to install. Before closing the app, Office saves app data to prevent data loss. 
 >- If the deadline is in the past or configured for as soon as possible, running Office apps might be forced to close without notifications. 
