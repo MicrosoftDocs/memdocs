@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) and the integration between Intune and the Mobile Threat Defense partners give you the ability to control the access to company resources and data based on device risk assessment.
+The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) and the integration between Intune and the Mobile Threat Defense partners give you the ability to control the access to company resources and data based on device risk assessment.
 
 Intune Mobile Threat Defense connectors allow you to leverage your chosen Mobile Threat Defense vendor as a source of information for your compliance policies and conditional access rules. This allows IT Administrators to add a layer of protection to their corporate resources such as Exchange and Sharepoint, specifically from compromised mobile devices.
 
