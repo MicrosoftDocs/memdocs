@@ -86,7 +86,7 @@ Beginning with version 1702, you can use the OMS connector to connect to an OMS 
 
 ### Install the OMS Connector  
 1. In the Configuration Manager console, configure your [hierarchy to use pre-release features](/sccm/core/servers/manage/pre-release-features), and then enable the use of the OMS Connector.  
-
+0
 2. Next, go to the **Administration** > **Cloud Services** > **OMS Connector**. In the ribbon, click on "Create connection to Operations Management Suite". This opens the **Connection to Operation Management Suite Wizard**. Select **Next**.  
 
 
@@ -132,7 +132,7 @@ After you have linked Configuration Manager to OMS, you can add or remove collec
       &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  Change the value for the setting name *FairFaxAuthorityResource* to be equal to "https://login.microsoftonline.com/"
+  Change the value for the setting name *FairFaxAuthorityResource* to be equal to "https://login.microsoftonline.us/"
 
   - **Original:**
     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
@@ -140,7 +140,7 @@ After you have linked Configuration Manager to OMS, you can add or remove collec
 
 	- **Edited:**
     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>https://login.microsoftonline.com/&lt;/value>
+    &lt;value>https://login.microsoftonline.us/&lt;/value>
 
 2.	After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
 
