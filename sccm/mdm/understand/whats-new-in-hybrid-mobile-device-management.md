@@ -21,6 +21,8 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
+> [!Note]    
+> Intune on Azure is Microsoft’s recommended MDM solution. For details about new features and updates in Intune, see [What's new in Intune](https://docs.microsoft.com/intune/whats-new) and [UI updates for Intune end user apps](https://docs.microsoft.com/intune/whats-new-app-ui). 
 
 ##  Compatibility with Configuration Manager versions  
 
