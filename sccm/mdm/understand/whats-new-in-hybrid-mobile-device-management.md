@@ -36,6 +36,8 @@ This article provides details on the new mobile device management (MDM) features
 
 ### New in Microsoft Intune     
 
+- **Refresh action added to the Company Portal app for Windows 10** <!-- 1132468 -->
+    The Company Portal app for Windows 10 allows users to refresh the data in the app by either pulling to refresh or, on desktops, pressing F5.
 
 - **Inform end users what device information can be seen for iOS** <!--739894-->    
     We have added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the About screen. 
