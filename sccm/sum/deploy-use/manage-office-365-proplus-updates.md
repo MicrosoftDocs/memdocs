@@ -120,9 +120,9 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 > You must download and deploy updates in the same languages configured on Office 365 clients. For example, let's say you have an Office 365 client configured with the en-us and de-de languages. On the site server, you download and deploy only en-us content for an applicable Office 365 update. When the user starts the installation from Software Center for this update, the update will hang while downloading the content.   
 
 ## Restart behavior and client notifications for Office 365 updates
-When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on which version of Configuration Manager you have. The following table provides information about the end user experience when the client receives an Office 365 update:
+When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on which version of Configuration Manager you have. The following table provides information about the end-user experience when the client receives an Office 365 update:
 
-|Configuration Manager version |End user experience|  
+|Configuration Manager version |End-user experience|  
 |----------------|---------------------|
 |Prior to 1610|A restart flag is set and the update is installed after the computer restarts.|
 |1610|Office 365 apps are shut down without warning before installing the update|
@@ -130,9 +130,9 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
 
 > [!Important]
-> In Configuration Manager version 1706, note the following detials about the end-user experience:
+> In Configuration Manager version 1706, note the following details:
 >
->- A notification icon should display in the notification area on the task bar for required apps where the deadline is within 48 hours in the future and the update content has been downloaded. 
+>- A notification icon displays in the notification area on the task bar for required apps where the deadline is within 48 hours in the future and the update content has been downloaded. 
 >- A countdown dialog displays for required apps where the deadline is within 7.5 hours in the future and the update has been downloaded. The user can postpone the countdown dialog up to 3 times before the deadline. When postponed, the countdown displays again after 2 hours. If not postponed, there is a 30 minute countdown and update gets installed when the countdown expires.
 >- A pop-up notification might not display until the user clicks the icon in the notification area. In addition, if the notification area has minimal space, the notification icon might not be visible unless the user opens or expands the notification area. 
 >- The notification and countdown dialog could start while the user is not actively working on the device, for example when the device is locked overnight, so it’s possible Office apps running on the device could be forced to close to install the update. Before closing the app, Office saves app data to prevent data loss. 
