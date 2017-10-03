@@ -58,7 +58,7 @@ By default, users cannot approve a script they have authored. Because scripts ar
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
 
 >[!IMPORTANT]
->As a Best Practice you should not allow a script author to approve their own scripts! This should only be allowed in a Lab setting. Please carefully consider the potential impact of changing this setting in a Production environment. 
+>As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
 
 ## Import and edit a script
 
@@ -111,7 +111,7 @@ After a script is approved, it can be run against a collection you choose.
 >The script is given a one-hour time period in which to run. If it does not run (for example if the PC is turned off) in this time period, you must run it again.
 
 >[!IMPORTANT]
->The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and\or locations by the script must be provisioned with this in mind.
+>The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
 
 ## Next steps
 
