@@ -36,7 +36,7 @@ This article provides details on the new mobile device management (MDM) features
 
 ### New in Microsoft Intune     
 
-- **Refresh action added to the Company Portal app for Windows 10** <!-- 1132468 -->
+- **Refresh action added to the Company Portal app for Windows 10** <!-- 1132468 -->    
     The Company Portal app for Windows 10 allows users to refresh the data in the app by either pulling to refresh or, on desktops, pressing F5.
 
 - **Inform end users what device information can be seen for iOS** <!--739894-->    
