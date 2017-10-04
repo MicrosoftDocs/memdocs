@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -51,16 +51,16 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     >       
 
     > [!NOTE]    
-    > Beginning in Configuration Manager version 1706, you can also select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers.     
-    >    
-    > This is a pre-release feature. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+    > Beginning in Configuration Manager version 1706, you can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
+    > 
+    > Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. Turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 5.  On the **Products** tab, specify the products for which you want to synchronize software updates, and then click **Close**.  
 
     > [!NOTE]  
-    >  The metadata for each software update defines the products for which the update is applicable. A product is a specific edition of an operating system or application, such as Windows Server 2012. A product family is the base operating system or application from which the individual products are derived. An example of a product family is Windows, of which Windows Server 2012 is a member. You can specify a product family or individual products within a product family. The more products that you select, the longer it will take to synchronize software updates.  
+    >  The metadata for each software update defines the products for which the update is applicable. A product is a specific edition of an operating system or application, such as Windows Server 2012. A product family is the base operating system or application from which the individual products are derived. An example of a product family is Windows, of which Windows Server 2012 is a member. You can specify a product family or individual products within a product family. The more products that you select, the longer it takes to synchronize software updates.  
     >   
-    >  When software updates are applicable to multiple products, and at least one of the products was selected for synchronization, all of the products will appear in the Configuration Manager console even if some products were not selected. For example, if Windows Server 2012 is the only operating system that you selected, and if a software update applies to Windows 8 and Windows Server 2012, both products will be displayed in the Configuration Manager console.  
+    >  When software updates are applicable to multiple products, and at least one of the products was selected for synchronization, all of the products appear in the Configuration Manager console even if some products were not selected. For example, if Windows Server 2012 is the only operating system that you selected, and if a software update applies to Windows 8 and Windows Server 2012, both products are displayed in the Configuration Manager console.  
 
     > [!IMPORTANT]  
     >  Configuration Manager stores a list of products and product families from which you can choose when you first install the software update point. Products and product families that are released after Configuration Manager is released might not be available to select until you complete software updates synchronization, which updates the list of available products and product families from which you can choose.  
