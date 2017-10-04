@@ -78,23 +78,28 @@ As you select different platforms, notice that only the settings relevant to the
 <!-- 1350871 -->
 Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Co-management is a solution where Windows 10 devices can be concurrently managed by Configuration Manager and Intune, as well as joined to Active Directory (AD) and Azure Active Directory (Azure AD) to provide a way for you to modernize over time. It’s a solution to provide a bridge from traditional to modern management and provides you with a path to make the transition using a phased approach.  
 
+
 ### Prerequisites
-You must have the following prerequisites in place before you can enable co-management.
+You must have the following prerequisites in place before you can enable co-management. There are general prerequisites and prerequisites for existing Configuration Manager clients and devices that are not clients.
 
-#### Server prerequisites
-The following are prerequisites for you to enable co-management:  
+#### General prerequisites
+The following are general prerequisites for you to enable co-management:  
+
 - Configuration Manager version 1710
-- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)
+- Azure AD 
 - EMS or Intune license for all users
-- Management authority in Intune set to Intune (hybrid MDM is not supported)
+- Intune subscription &#40;Management authority in Intune set to Intune&#41;
+   > [!Note]  
+   > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-> [!Note]  
-> If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-#### Client prerequisites
-The following are prerequisites for clients to be co-managed:  
+#### Additional prerequisites for existing Configuration Manager clients
 - Windows 10, version 1709 (Fall Creators Update) and above
 - Hybrid Azure AD joined (joined to AD and Azure AD)
+
+#### Additional prerequisites for new Windows 10 devices
+- Windows 10, version 1709 (Fall Creators Update) and above
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) installed in Configuration Manager
 
 ### Workloads you can switch to Intune
 After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. In this release, you can have Intune manage the following workloads.   
@@ -116,7 +121,7 @@ When a Windows 10 device is enabled for co-management, you have the following re
 ### Prepare Intune for co-management
 Before you switch workloads from Configuration Manager to Intune, you must create the profiles and policies you need in Intune to ensure your devices continue to be protected.
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
-- [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  
+<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
 - [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
 - [Device configuration profiles](https://docs.microsoft.com/intune/device-profile-create)  
 
