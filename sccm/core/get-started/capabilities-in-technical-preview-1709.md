@@ -95,11 +95,11 @@ The following are general prerequisites for you to enable co-management:
 
 
 #### Additional prerequisites for existing Configuration Manager clients
-- Windows 10, version 1709 (Fall Creators Update) and above
+- Windows 10, version 1709 (Fall Creators Update) and later
 - Hybrid Azure AD joined (joined to AD and Azure AD)
 
 #### Additional prerequisites for new Windows 10 devices
-- Windows 10, version 1709 (Fall Creators Update) and above
+- Windows 10, version 1709 (Fall Creators Update) and later
 - [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) installed in Configuration Manager
 
 ### Workloads you can switch to Intune
