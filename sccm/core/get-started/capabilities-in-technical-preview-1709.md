@@ -88,7 +88,8 @@ The following are general prerequisites for you to enable co-management:
 - Configuration Manager version 1710
 - Azure AD 
 - EMS or Intune license for all users
-- Intune subscription &#40;Management authority in Intune set to Intune&#41;    
+- Intune subscription &#40;Management authority in Intune set to Intune&#41;
+
    > [!Note]  
    > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
