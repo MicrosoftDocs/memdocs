@@ -207,3 +207,9 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 
 <!--### Monitor co-management
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
+
+
+
+
+## See also
+For information about installing or updating the technical preivew branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview). 
