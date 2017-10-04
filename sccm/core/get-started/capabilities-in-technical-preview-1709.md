@@ -78,23 +78,29 @@ As you select different platforms, notice that only the settings relevant to the
 <!-- 1350871 -->
 Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Co-management is a solution where Windows 10 devices can be concurrently managed by Configuration Manager and Intune, as well as joined to Active Directory (AD) and Azure Active Directory (Azure AD) to provide a way for you to modernize over time. It’s a solution to provide a bridge from traditional to modern management and provides you with a path to make the transition using a phased approach.  
 
+
 ### Prerequisites
-You must have the following prerequisites in place before you can enable co-management.
+You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for existing Configuration Manager clients and devices that are not clients.
 
-#### Server prerequisites
-The following are prerequisites for you to enable co-management:  
+#### General prerequisites
+The following are general prerequisites for you to enable co-management:  
+
 - Configuration Manager version 1710
-- Cloud Management Gateway enabled
+- Azure AD 
 - EMS or Intune license for all users
-- Management authority in Intune set to Intune (hybrid MDM is not supported)
+- Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;
 
-> [!Note]  
-> If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+   > [!Note]  
+   > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-#### Client prerequisites
-The following are prerequisites for clients to be co-managed:  
-- Windows 10, version 1709 (Fall Creators Update) and above
+
+#### Additional prerequisites for existing Configuration Manager clients
+- Windows 10, version 1709 (Fall Creators Update) and later
 - Hybrid Azure AD joined (joined to AD and Azure AD)
+
+#### Additional prerequisites for new Windows 10 devices
+- Windows 10, version 1709 (Fall Creators Update) and later
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager
 
 ### Workloads you can switch to Intune
 After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. In this release, you can have Intune manage the following workloads.   
@@ -116,7 +122,7 @@ When a Windows 10 device is enabled for co-management, you have the following re
 ### Prepare Intune for co-management
 Before you switch workloads from Configuration Manager to Intune, you must create the profiles and policies you need in Intune to ensure your devices continue to be protected.
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
-- [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  
+<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
 - [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
 - [Device configuration profiles](https://docs.microsoft.com/intune/device-profile-create)  
 
@@ -179,12 +185,12 @@ For new Windows 10 devices, you can use the Autopilot service to configure the o
 2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).
 3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
-### Windows 10 devices not enrolled in Intune or a Configuration Manager client
+#### Windows 10 devices not enrolled in Intune or a Configuration Manager client
 For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
 1. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
-### Windows 10 devices enrolled in Intune
+#### Windows 10 devices enrolled in Intune
 For Windows 10 devices that are already enrolled in Intune, create an app in Intune to deploy the Configuration Manager client. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### Switch Configuration Manager workloads to Intune
@@ -207,9 +213,6 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 
 <!--### Monitor co-management
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
-
-
-
 
 ## See also
 For information about installing or updating the technical preivew branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview). 
