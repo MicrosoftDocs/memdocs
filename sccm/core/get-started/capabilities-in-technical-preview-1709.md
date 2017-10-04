@@ -100,7 +100,7 @@ The following are general prerequisites for you to enable co-management:
 
 #### Additional prerequisites for new Windows 10 devices
 - Windows 10, version 1709 (Fall Creators Update) and later
-- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) installed in Configuration Manager
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager
 
 ### Workloads you can switch to Intune
 After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. In this release, you can have Intune manage the following workloads.   
