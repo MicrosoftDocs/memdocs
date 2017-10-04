@@ -51,9 +51,9 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     >       
 
     > [!NOTE]    
-    > Beginning in Configuration Manager version 1706, you can also select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers.     
-    >    
-    > This is a pre-release feature. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+    > Beginning in Configuration Manager version 1706, you can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers. All software update points must run Windows Server 2016 to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
+    > 
+    > Pre-release features are features that are in the Current Branch for early testing in a production environment. These features are fully supported but are still in active development and might receive changes until they move out of the pre-release category. You must turn on this feature for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 5.  On the **Products** tab, specify the products for which you want to synchronize software updates, and then click **Close**.  
 
