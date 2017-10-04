@@ -80,7 +80,7 @@ Many customers want to manage Windows 10 devices in the same way they manage mob
 
 
 ### Prerequisites
-You must have the following prerequisites in place before you can enable co-management. There are general prerequisites and prerequisites for existing Configuration Manager clients and devices that are not clients.
+You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for existing Configuration Manager clients and devices that are not clients.
 
 #### General prerequisites
 The following are general prerequisites for you to enable co-management:  
