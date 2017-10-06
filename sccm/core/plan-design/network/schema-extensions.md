@@ -27,7 +27,7 @@ You can extend the Active Directory schema to support Configuration Manager. Thi
 
 -   It's a good idea to extend the Active Directory schema, but it's not required.  
 
-Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx), you should be familiar with Active Directory Domain Services and comfortable with [modifying the Active Directory schema](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
+Before you [extend the Active Directory schema](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema), you should be familiar with Active Directory Domain Services and comfortable with [modifying the Active Directory schema](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
 
 ## Considerations for extending the Active Directory schema for Configuration Manager  
 
