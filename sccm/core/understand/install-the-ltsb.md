@@ -125,7 +125,7 @@ You can use the 1606 baseline media to upgrade the following to a licensed editi
 - System Center 2012 R2 Configuration Manager with Service Pack 1
 - System Center 2012 R2 Configuration Manager with no service pack (this requires the use of the baseline media for version 1606 that was rereleased on December 15th, 2016.)
 - System Center 2012 Configuration Manager with Service Pack 2
-- System Center 2012 Configuration Manager with Service Pack 1
+- System Center 2012 Configuration Manager with Service Pack 1 (this requires the use of the baseline media for version 1606 that was rereleased on December 15th, 2016.)
 
 
 You can also use this media to upgrade a non-licensed Evaluation edition of Current Branch to a fully licensed version of the Current Branch.
