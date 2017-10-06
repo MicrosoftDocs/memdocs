@@ -175,7 +175,7 @@ Example: `ccmsetup.exe /downloadtimeout:100`
 
  When not specified, the client checks the CRL before establishing an HTTPS connection.  
 
- For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in[Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+ For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
  Example: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -328,7 +328,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Do not specify this option with the installation property of SMSSITECODE=AUTO. Internet-based clients must be directly assigned to their Internet-based site.  
 
- Example: `CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+ Example: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### CCMHTTPPORT
 
@@ -398,7 +398,7 @@ Example: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
 
-For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point).  
+For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
 
 Example: `CCMSetup.exe FSP=SMSFP01`  
 
