@@ -1,7 +1,7 @@
 ---
 title: "Plan for the cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 09/26/2017
+ms.date: 10/06/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -45,6 +45,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
     -   Automatic site assignment
     -   Application catalog (including software approval requests)
     -   Full operating system deployment (OSD)
+    -   Task Sequences (all)
     -   Configuration Manager console
     -   Remote tools
     -   Reporting website
