@@ -82,17 +82,19 @@ Many customers want to manage Windows 10 devices in the same way they manage mob
 ### Prerequisites
 You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for existing Configuration Manager clients and devices that are not clients.
 
+### Known issues
+After you create a co-management policy, you cannot edit the policy. To change the policy, delete it, and then recreate it with the settings that you need. 
+
 #### General prerequisites
 The following are general prerequisites for you to enable co-management:  
 
-- Configuration Manager version 1710
+- Technical Preview for Configuration Manager version 1709
 - Azure AD 
 - EMS or Intune license for all users
 - Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;
 
    > [!Note]  
    > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. If you are interested in migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
-
 
 #### Additional prerequisites for existing Configuration Manager clients
 - Windows 10, version 1709 (Fall Creators Update) and later
@@ -198,18 +200,19 @@ In the previous section, you prepared Windows 10 devices for co-management. Thes
 
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.    
 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Onboarding Wizard.    
-3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.    
-4. On the Enablement page, in the **Devices managed by Configuration Manager** section, choose either **Pilot** or **All** for Automatic enrollment in Intune, and then click **Next**. When you choose **Pilot**, only the Configuration manager clients that are members of the Pilot group are automatically enrolled in Intune. This allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach. You can change this setting at any time in the co-management properties.   
-5. On the Workloads page, choose whether to switch Configuration Manager workloads to be managed by Intune, and then click **Next**. If you are unsure about which workloads to switch, leave all workloads set to **Configuration Manager**. Then, you can change the workloads at any time in the co-management properties. If you know what workloads you want to switch to Intune, use the sliders to select whether to switch the workload to the Pilot group or for all Windows 10 clients. Of course, if you selected **Pilot** on for **Devices managed by Configuration manager** on the previous page, the workloads that are switched are limited to the Pilot group even if you select **Intune** on this page.  
-6. On the Staging page, configure the following settings and then click **Next**:
+3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.   
+4. On the Staging page, configure the following settings and then click **Next**:
     - **Pilot group**: The pilot group contains one or more collections that you select. You will use this group as part of your phased rollout of co-management. You can start with a small test collection, and then add more collections to the pilot group as you roll out co-management to more users and devices. You can change the collections in the pilot group at any time from the co-management properties.
-    - **Exclusion group**: The exclusion group contains one or more collections that you select. Devices that are members of any of the collections in this group are excluded from using co-management, regardless of whether they are in a Pilot group collection. You can change the collections in the exclusion group at any time from the co-management properties.
+    - **Production**: When you select this setting, all supported Windows 10 devices are enabled for co-management. Configure the **Exclusion group** with one or more collections. Devices that are members of any of the collections in this group are excluded from using co-management. 
+5. On the Enablement page, choose either **Pilot** or **All** (depending on the settings you configured on the Staging page) to enable Automatic enrollment in Intune, and then click **Next**. When you choose **Pilot**, only the Configuration manager clients that are members of the Pilot group are automatically enrolled in Intune. This allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach. 
+6. On the Workloads page, choose whether to switch Configuration Manager workloads to be managed by Intune, and then click **Next**. Use the sliders to select whether to switch the workload to the Pilot group or for all Windows 10 clients (depending on the settings you configured on the Staging page). 
+
 7. Complete the wizard to enable co-management.  
 
-### Modify your co-management settings
+<!--### Modify your co-management settings
 After you enable co-management using the wizard, you can modify your target group and change the workloads that are managed by Configuration Manager and Intune.  
 - In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
-Select the co-management object, and then on the Home tab, click **Properties**.
+Select the co-management object, and then on the Home tab, click **Properties**. -->   
 
 <!--### Monitor co-management
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
