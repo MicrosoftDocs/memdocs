@@ -2,7 +2,7 @@
 title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 10/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,20 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
-caps.latest.revision: 40
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
+This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.     
+
+> [!Note]    
+> Intune on Azure is Microsoft’s recommended MDM solution.     
+> - For details about new features and updates in Intune standalone, see
+ [What's new in Intune](https://docs.microsoft.com/intune/whats-new).    
+> - For details about how to migrate to Intune standalone, see [Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+> - For details about UI updates for Intune and hybrid MDM, see [UI updates for Intune end user apps](https://docs.microsoft.com/intune/whats-new-app-ui). 
 
 ##  Compatibility with Configuration Manager versions  
-
- Each section of this article lists hybrid features under three different categories. Use the following guidance to determine compatibility of the features in each category with different versions of Configuration Manager:  
+Each section of this article lists hybrid features under three different categories. Use the following guidance to determine compatibility of the features in each category with different versions of Configuration Manager:  
 
 |Feature categories|Description|
 |-|-|
@@ -36,6 +41,8 @@ This article provides details on the new mobile device management (MDM) features
 
 ### New in Microsoft Intune     
 
+- **Refresh action added to the Company Portal app for Windows 10** <!-- 1132468 -->    
+    The Company Portal app for Windows 10 allows users to refresh the data in the app by either pulling to refresh or, on desktops, pressing F5.
 
 - **Inform end users what device information can be seen for iOS** <!--739894-->    
     We have added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the About screen. 

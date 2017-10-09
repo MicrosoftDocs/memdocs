@@ -2,7 +2,7 @@
 title: "Endpoint Protection malware definitions | Microsoft Docs"
 description: "Learn to configure Configuration Manager software updates to deliver definition updates to client computers."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 10/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -61,15 +61,15 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 13. Click **OK** to close the **Search Criteria** dialog box, and then click **Next**.
 
-14. In the **Property filters** list, select the **Superseded** check box.
+14. Optionally, you can filter out superseded updates.   To do so:
+  1.  In the **Property filters** list, select the **Superseded** check box.
+  2.  In the **Search criteria** list, click **<items to find\>**. Then, in the **Search Criteria** dialog box, in the **Specify the value to search for** list, select **No**.  <br><br>
 
-15. In the **Search criteria** list, click **<items to find\>**. Then, in the **Search Criteria** dialog box, in the **Specify the value to search for** list, select **No**.
+15. Click **OK** to close the **Search Criteria** dialog box, and then click **Next**.
 
-16. Click **OK** to close the **Search Criteria** dialog box, and then click **Next**.
+16. On the **Evaluation Schedule** page of the wizard, select **Enable rule to run on a schedule**, and then configure the schedule by which to download definition updates. At a minimum, set the rule to run two hours after each software update point synchronization. Click **Next**.
 
-17. On the **Evaluation Schedule** page of the wizard, select **Enable rule to run on a schedule**, and then configure the schedule by which to download definition updates. At a minimum, set the rule to run two hours after each software update point synchronization. Click **Next**.
-
-18. On the **Deployment Schedule** page of the wizard, configure the following settings:
+17. On the **Deployment Schedule** page of the wizard, configure the following settings:
 
     -   **Time based on**: Select **UTC** if you want all clients in the hierarchy to install the latest definitions at the same time. The actual installation time will vary within a two-hour window. This setting is a recommended best practice.
 
@@ -80,28 +80,28 @@ author: NathBarnms.author: nathbarnmanager: angrobe
         > [!NOTE]
         >  Software update deadlines are varied over a two-hour period to prevent all clients from requesting an update at the same time.
 
-19. Click **Next**.
+18. Click **Next**.
 
-20. On the **User Experience** page of the wizard, in the **User notifications** list, select **Hide in Software Center and all notifications**.   This ensures that the definition updates install silently. Click **Next**.
+19. On the **User Experience** page of the wizard, in the **User notifications** list, select **Hide in Software Center and all notifications**.   This ensures that the definition updates install silently. Click **Next**.
 
-21. On the **Alerts** page of the wizard, you do not have to configure any alerts. Endpoint Protection in Configuration Manager generates any alerts that might be required. Click **Next**.
+20. On the **Alerts** page of the wizard, you do not have to configure any alerts. Endpoint Protection in Configuration Manager generates any alerts that might be required. Click **Next**.
 
-22. On the **Download Settings** page of the wizard, select the necessary software updates download behavior, and then click **Next**.
+21. On the **Download Settings** page of the wizard, select the necessary software updates download behavior, and then click **Next**.
 
-23. On the **Deployment Package** page of the wizard, select an existing deployment package or create a new deployment package to contain the software update files associated with the rule.
+22. On the **Deployment Package** page of the wizard, select an existing deployment package or create a new deployment package to contain the software update files associated with the rule.
 
     > [!NOTE]
     >  Consider placing definition updates in a package that does not contain other software updates. This strategy keeps the size of the definition update package smaller, which allows it to replicate to distribution points more quickly.
 
-24. On the **Distribution Points** page of the wizard, select one or more distribution points to which the content for this package will be copied, and then click **Next**.
+23. On the **Distribution Points** page of the wizard, select one or more distribution points to which the content for this package will be copied, and then click **Next**.
 
-25. On the **Download Location** page of the wizard, select **Download software updates from the Internet**, and then click **Next**.
+24. On the **Download Location** page of the wizard, select **Download software updates from the Internet**, and then click **Next**.
 
-26. On the **Language Selection** page of the wizard, select each language version of the updates to be downloaded, and then click **Next**.
+25. On the **Language Selection** page of the wizard, select each language version of the updates to be downloaded, and then click **Next**.
 
-27. Complete the Create Automatic Deployment Rule Wizard.
+26. Complete the Create Automatic Deployment Rule Wizard.
 
-28. Verify that the new rule is displayed in the **Automatic Deployment Rules** node of the Configuration Manager console.
+27. Verify that the new rule is displayed in the **Automatic Deployment Rules** node of the Configuration Manager console.
 
 
 > [!div class="button"]
