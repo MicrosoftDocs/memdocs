@@ -59,7 +59,7 @@ As an administrator you can now deny a previously approved application request. 
 #### Try it out
 To deny an application approved request:
 
-1.	In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) that requires approval.
+1.	In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) that requires approval.
 2.	On a client computer, open Software Center and submit a request for the application.
 3.	In the Configuration Manager console, approve the application request.
 4.	Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
