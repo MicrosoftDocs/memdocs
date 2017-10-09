@@ -42,12 +42,8 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Configuration Manager Technical Preview 1709
 
-- **Improved VPN Profile experience in Configuration Manager console** 
-<!-- 1313282 -->
-    The VPN profile wizard and properties pages is updated to display settings appropriate for the selected platform. For details, see [Capabilities in Technical Preview 1709](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
-Improved VPN Profile Experience in Configuration Manager Console
-
-VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform will contain only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
+- **Improved VPN Profile experience in Configuration Manager console** <!-- 1313282 -->     
+    VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform will contain only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
 
 
 ## September 2017
