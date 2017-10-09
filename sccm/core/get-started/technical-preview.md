@@ -2,7 +2,7 @@
 title: "Technical Preview for Configuration Manager | Microsoft Docs"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/25/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -12,7 +12,6 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 caps.latest.revision: 157
-
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -91,10 +90,6 @@ Each preview release is supported up until three successive releases are availab
 You can install a baseline version for up to 1 year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
 -  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
-<!-- out of support. Use baseline 1703
--  **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 was available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you have media for installing 1610, we recommend you download version 1703 and install that version instead.
--->
-
 
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
@@ -112,8 +107,8 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
- |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Not added](media/Red_X.gif)    |
+ |New Feature 1 <!-- # --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md) |![Not added](media/Red_X.gif)    |
+
 
 
 ## Capabilities delivered in previous technical previews
@@ -121,6 +116,8 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
+ |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Not added](media/Red_X.gif)    |
  |Improvements for specifying script parameters when you deploy PowerShell scripts from Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
  |Management insights  <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![Not added](media/Red_X.gif)|
  |Restart computers from the Configuration Manager console <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![Not added](media/Red_X.gif)|
