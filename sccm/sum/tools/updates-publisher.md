@@ -1,5 +1,6 @@
 ---
 title: "Updates Publisher"
+titleSuffix: "Configuration Manager"
 description: "Use System Center Updates Publisher to manage custom updates"
 ms.custom: na
 ms.date: 4/29/2017

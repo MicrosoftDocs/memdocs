@@ -1,5 +1,6 @@
 ---
 title: "Client deployment planning"
+titleSuffix: "Configuration Manager"
 description: "Plan to deploy clients and prepare the infrastructure in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

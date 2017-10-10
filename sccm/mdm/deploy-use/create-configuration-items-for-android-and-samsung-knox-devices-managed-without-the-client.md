@@ -1,5 +1,6 @@
 ---
 title: "Create configuration items for Android and Samsung KNOX Standard devices managed with Intune"
+titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
 ms.date: 03/27/2017

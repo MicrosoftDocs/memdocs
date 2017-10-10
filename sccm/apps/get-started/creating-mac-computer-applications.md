@@ -1,5 +1,6 @@
 ---
 title: "Create Mac computer applications"
+titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy applications for Mac computers."
 ms.custom: na
 ms.date: 10/06/2016

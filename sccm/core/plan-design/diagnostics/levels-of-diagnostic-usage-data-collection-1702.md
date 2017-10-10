@@ -1,5 +1,6 @@
 ---
 title: "Diagnostic data for 1702"
+titleSuffix: "Configuration Manager"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1702 collects."
 ms.custom: na
 ms.date: 3/27/2017

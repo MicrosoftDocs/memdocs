@@ -1,5 +1,6 @@
 ---
 title: "Sync data to Microsoft Operations Management Suite "
+titleSuffix: "Configuration Manager"
 description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
 ms.date: 7/31/2017

@@ -1,5 +1,6 @@
 ---
 title: Deploy software updates
+titleSuffix: "Configuration Manager"
 description: "Choose software updates in the Configuration Manager console to manually start the deployment process or automatically deploy updates."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

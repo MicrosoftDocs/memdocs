@@ -1,5 +1,6 @@
 ---
 title: Create and deploy a device compliance policy
+titleSuffix: "Configuration Manager"
 description: "Learn how to create and deploy device compliance policies in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

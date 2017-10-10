@@ -1,5 +1,6 @@
 ---
 title: "SMS_Advertisement Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
 title: "Setup Wizard"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 7/24/2017
 ms.prod: configuration-manager

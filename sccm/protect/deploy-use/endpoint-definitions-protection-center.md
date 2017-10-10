@@ -1,5 +1,6 @@
 ---
 title: "Endpoint Protection malware definitions from network share"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager

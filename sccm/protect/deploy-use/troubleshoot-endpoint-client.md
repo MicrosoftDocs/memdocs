@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting Windows Defender or Endpoint Protection client"
+titleSuffix: "Configuration Manager"
 description: "Learn how to troubleshoot problems with Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 01/03/2017

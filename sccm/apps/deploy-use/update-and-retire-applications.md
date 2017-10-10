@@ -1,5 +1,6 @@
 ---
 title: "Update and retire applications"
+titleSuffix: "Configuration Manager"
 description: "Revise, supersede, or uninstall deployed applications by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

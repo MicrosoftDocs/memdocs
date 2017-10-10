@@ -1,5 +1,6 @@
 ---
 title: "Change the Maximum Run Time for a Program"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

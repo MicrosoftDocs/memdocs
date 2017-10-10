@@ -1,5 +1,6 @@
 ---
-title: "Accounts used by Configuration Manager"
+title: "Accounts used"
+titleSuffix: "Configuraton Manager"
 description: "Identify and manage the Windows groups and the accounts in System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/9/2016

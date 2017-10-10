@@ -1,5 +1,6 @@
 ---
 title: "Manage clients on the Internet "
+titleSuffix: "Configuration Manager"
 description: "Learn about managing clients with cloud management gateway and Internet-based client management in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager

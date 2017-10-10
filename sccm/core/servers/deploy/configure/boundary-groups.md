@@ -1,5 +1,6 @@
 ---
 title: "Define boundary groups"
+titleSuffix: "Configuration Manager"
 description: "Understand boundary groups that link clients to site systems in System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017

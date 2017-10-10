@@ -1,5 +1,6 @@
 ---
 title: Refresh an existing computer with a new version of Windows
+titleSuffix: "Configuration Manager"
 description: "You can use several methods in Configuration Manager to partition and format (wipe) an existing computer and install a new operating system on the computer."
 ms.custom: na
 ms.date: 10/06/2016

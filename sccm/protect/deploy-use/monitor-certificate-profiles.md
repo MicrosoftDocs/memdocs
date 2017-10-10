@@ -1,5 +1,6 @@
 ---
 title: "Monitor certificate profiles"
+titleSuffix: "Configuration Manager"
 description: "Learn how to monitor the compliance status of System Center Configuration Manager certificate profiles."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
 title: "Client deployment best practices"
+titleSuffix: "Configuration Manager"
 description: "Get best practices for client deployment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

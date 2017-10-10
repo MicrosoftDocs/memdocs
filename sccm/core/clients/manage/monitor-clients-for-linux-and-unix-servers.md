@@ -1,5 +1,6 @@
 ---
 title: "Monitor Linux/UNIX clients "
+titleSuffix: "Configuration Manager"
 description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/04/2017

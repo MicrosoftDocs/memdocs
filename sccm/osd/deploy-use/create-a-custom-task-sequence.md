@@ -1,5 +1,6 @@
 ---
 title: Create a custom task sequence
+titleSuffix: "Configuration Manager"
 description: "Edit a custom task sequence in System Center Configuration Manager to add steps to the task sequence."
 ms.custom: na
 ms.date: 10/06/2016

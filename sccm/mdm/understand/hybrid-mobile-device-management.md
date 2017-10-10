@@ -1,5 +1,6 @@
 ---
 title: "Hybrid mobile device management (MDM) with Microsoft Intune"
+titleSuffix: "Configuration Manager"
 description: "Learn about hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
 ms.date: 03/05/2017

@@ -1,5 +1,6 @@
 ---
 title: "Create queries"
+titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
 ms.custom: na
 ms.date: 10/06/2016

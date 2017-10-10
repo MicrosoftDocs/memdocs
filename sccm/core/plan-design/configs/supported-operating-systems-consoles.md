@@ -1,5 +1,6 @@
 ---
 title: "Console support"
+titleSuffix: "Configuration Manager"
 description: "Learn which operating systems a System Center Configuration Manager console supports."
 ms.custom: na
 ms.date: 1/3/2017

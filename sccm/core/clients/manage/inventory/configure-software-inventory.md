@@ -1,5 +1,6 @@
 ---
 title: "Configure software inventory"
+titleSuffix: "Configuration Manager"
 description: "Configure software inventory, and exclude folders from software inventory in Configuration Manager."
 ms.custom: na
 ms.date: 02/22/2017

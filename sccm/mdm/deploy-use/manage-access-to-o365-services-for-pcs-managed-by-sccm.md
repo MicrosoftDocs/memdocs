@@ -1,5 +1,6 @@
 ---
 title: "Manage access to O365 services for managed PCs"
+titleSuffix: "Configuration Manager"
 description: "Learn how to configure conditional access for PCs that are managed by System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

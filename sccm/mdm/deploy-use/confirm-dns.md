@@ -1,5 +1,6 @@
 ---
-title: "Confirm domain name requirements using System Center Configuration Manager"
+title: "Confirm domain name requirements"
+titleSuffix: "Configuration Manager"
 description: "Confirm domain name requirements using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/21/2017

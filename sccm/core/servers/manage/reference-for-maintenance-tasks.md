@@ -1,5 +1,6 @@
 ---
 title: "Reference for maintenance tasks"
+titleSuffix: "Configuration Manager"
 description: "Read details for each of the System Center Configuration Manager site maintenance tasks and whether these tasks are enabled by default."
 ms.custom: na
 ms.date: 3/8/2017

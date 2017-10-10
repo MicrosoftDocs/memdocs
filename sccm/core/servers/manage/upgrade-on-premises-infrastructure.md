@@ -1,5 +1,6 @@
 ---
 title: "Upgrade on-premises infrastructure"
+titleSuffix: "Configuration Manager"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
 ms.date: 06/05/2017

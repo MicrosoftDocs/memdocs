@@ -1,5 +1,6 @@
 ---
 title: "Privacy statement - OMS addendum"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 11/06/2016
 ms.reviewer: na

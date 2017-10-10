@@ -1,5 +1,6 @@
 ---
 title: "Maintenance tasks"
+titleSuffix: "Configuration Manager"
 description: "Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies and when to perform them."
 ms.custom: na
 ms.date: 10/06/2016

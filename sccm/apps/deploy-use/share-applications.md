@@ -1,5 +1,6 @@
 ---
-title: "Share applications from System Center Configuration Manager"
+title: "Share applications in the Software Center"
+titleSuffix: "Configuration Manager"
 description: "Share a link to an application in the Software Center in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/31/2017

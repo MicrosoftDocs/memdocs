@@ -1,5 +1,6 @@
 ---
 title: "Create configuration items for client-managed Windows 10 "
+titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
 ms.custom: na
 ms.date: 03/28/2017

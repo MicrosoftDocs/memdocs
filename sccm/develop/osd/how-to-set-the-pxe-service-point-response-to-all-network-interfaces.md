@@ -1,5 +1,6 @@
 ---
 title: "Set the PXE Service Point Response to All Network Interfaces"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

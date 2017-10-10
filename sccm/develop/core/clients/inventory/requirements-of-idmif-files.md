@@ -1,5 +1,6 @@
 ---
 title: "Requirements of IDMIF files"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "2017-1-03"
 ms.prod: "configuration-manager"

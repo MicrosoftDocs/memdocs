@@ -1,5 +1,6 @@
 ---
 title: "Manage Skype for Business Online access"
+titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
 ms.custom: na
 ms.date: 03/05/2017

@@ -1,5 +1,6 @@
 ---
 title: "Monitor clients"
+titleSuffix: "Configuration Manager"
 description: "Learn how to monitor and manage clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

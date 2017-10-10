@@ -1,5 +1,6 @@
 ---
-title: "Fundamentals of System Center Configuration Manager"
+title: "Fundamentals"
+titleSuffix: "Configuration Manager"
 description: "Learn about basic concepts for System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016

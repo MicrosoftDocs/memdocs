@@ -1,5 +1,6 @@
 ---
 title: "Manage update catalogs"
+titleSuffix: "Configuration Manager"
 description: "Manage software update catalogs for System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

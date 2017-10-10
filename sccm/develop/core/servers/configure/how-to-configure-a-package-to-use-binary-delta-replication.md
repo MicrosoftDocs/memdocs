@@ -1,5 +1,6 @@
 ---
 title: "Configure a Package to Use Binary Delta Replication"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

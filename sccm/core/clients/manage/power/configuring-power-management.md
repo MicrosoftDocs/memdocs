@@ -1,5 +1,6 @@
 ---
 title: "Configuring power management"
+titleSuffix: "Configuration Manager"
 description: "Set up power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

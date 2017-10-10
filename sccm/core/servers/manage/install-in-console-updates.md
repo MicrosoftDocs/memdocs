@@ -1,5 +1,6 @@
 ---
 title: "In-console updates"
+titleSuffix: "Configuration Manager"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
 ms.date: 09/14/2017

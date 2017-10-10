@@ -1,5 +1,6 @@
 ---
 title: "Supported site system servers"
+titleSuffix: "Configuration Manager"
 description: "Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role."
 ms.custom: na
 ms.date: 06/27/2017

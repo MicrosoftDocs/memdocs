@@ -1,5 +1,6 @@
 ---
 title: "Planning client deployment to Linux and UNIX computers"
+titleSuffix: "Configuration Manager"
 description: "Plan for client deployment to Linux and UNIX computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/30/2017

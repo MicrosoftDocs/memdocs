@@ -1,5 +1,6 @@
 ---
 title: "Extend hardware inventory"
+titleSuffix: "Configuration Manager"
 description: "Learn ways to extend hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 02/22/2017

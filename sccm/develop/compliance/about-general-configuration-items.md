@@ -1,5 +1,6 @@
 ---
 title: "About General Configuration Items"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

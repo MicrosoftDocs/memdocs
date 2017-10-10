@@ -1,5 +1,6 @@
 ---
 title: "Manage Linux and UNIX clients"
+titleSuffix: "Configuration Manager"
 description: "Manage clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

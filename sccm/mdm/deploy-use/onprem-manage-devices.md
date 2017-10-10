@@ -1,5 +1,6 @@
 ---
 title: "Manage devices for On-Premises Mobile Device Management"
+titleSuffix: "Configuration Manager"
 description: "Manage devices for On-premises Mobile Device Management with Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

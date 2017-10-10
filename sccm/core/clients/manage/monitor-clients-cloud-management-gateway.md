@@ -1,5 +1,6 @@
 ---
 title: "Monitor cloud management gateway "
+titleSuffix: "Configuration Manager"
 description: ""
 ms.date: 04/23/2017
 ms.prod: configuration-manager

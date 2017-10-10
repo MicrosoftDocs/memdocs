@@ -1,5 +1,6 @@
 ---
 title: "Delete a Collection"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: 12/06/2016
 ms.prod: "configuration-manager"

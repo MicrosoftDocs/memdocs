@@ -1,5 +1,6 @@
 ---
 title: "Create Endpoint Protection point site system role"
+titleSuffix: "Configuration Manager"
 description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
 defintion: ""
 definition: ""

@@ -1,5 +1,6 @@
 ---
 title: "Remote control"
+titleSuffix: "Configuration Manager"
 description: "Get an introduction to remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

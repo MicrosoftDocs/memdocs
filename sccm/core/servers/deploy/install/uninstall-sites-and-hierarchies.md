@@ -1,5 +1,6 @@
 ---
 title: "Uninstall sites"
+titleSuffix: "Configuration Manager"
 description: "Use these details as a guide to uninstall a System Center Configuration Manager site."
 ms.custom: na
 ms.date: 10/06/2016

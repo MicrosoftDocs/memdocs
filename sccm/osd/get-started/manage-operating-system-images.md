@@ -1,5 +1,6 @@
 ---
 title: Manage operating system images
+titleSuffix: "Configuration Manager"
 description: "In Configuration Manager, learn about the methods that you can use to manage operating system images that are stored in Windows Imaging (WIM) files."
 ms.custom: na
 ms.date: 12/06/2016

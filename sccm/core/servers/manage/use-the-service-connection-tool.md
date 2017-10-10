@@ -1,5 +1,6 @@
 ---
 title: "Service Connection Tool"
+titleSuffix: "Configuration Manager"
 description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.custom: na
 ms.date: 09/06/2017

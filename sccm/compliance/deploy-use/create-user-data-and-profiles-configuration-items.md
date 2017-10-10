@@ -1,5 +1,6 @@
 ---
 title: "Create user data and profiles configuration items"
+titleSuffix: "Configuration Manager"
 description: "Use data and profiles configuration items in System Center Configuration Manager to manage folder redirection, offline files, and roaming profiles."
 ms.custom: na
 ms.date: 10/06/2016

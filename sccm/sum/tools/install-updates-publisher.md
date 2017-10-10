@@ -1,5 +1,6 @@
 ---
 title: "Install Updates Publisher"
+titleSuffix: "Configuration Manager"
 description: "Install System Center Updates Publisher in your environment"
 ms.custom: na
 ms.date: 07/03/2017

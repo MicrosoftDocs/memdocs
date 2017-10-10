@@ -1,5 +1,6 @@
 ---
 title: "Migration operations"
+titleSuffix: "Configuration Manager"
 description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016

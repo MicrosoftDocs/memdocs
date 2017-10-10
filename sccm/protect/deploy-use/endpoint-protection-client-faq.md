@@ -1,5 +1,6 @@
 ---
 title: "Endpoint Protection client frequently asked questions"
+titleSuffix: "Configuration Manager"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 02/14/2017

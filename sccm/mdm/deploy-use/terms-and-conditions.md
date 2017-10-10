@@ -1,5 +1,6 @@
 ---
-title: "Terms and Conditions in System Center Configuration Manager"
+title: "Terms and Conditions"
+titleSuffix: "Configuration Manager"
 description: "Deploy terms and conditions to user groups in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

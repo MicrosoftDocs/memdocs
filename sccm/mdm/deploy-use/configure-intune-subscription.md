@@ -1,5 +1,6 @@
 ---
-title: "Configure your Intune subscription using System Center Configuration Manager"
+title: "Configure your Intune subscription"
+titleSuffix: "Configuration Manager"
 description: "Configure your Intune subscription using System Center Configuration Manager."
 ms.custom: na
 ms.date: 06/02/2017

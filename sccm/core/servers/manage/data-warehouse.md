@@ -1,5 +1,6 @@
 ---
 title: "Data warehouse"
+titleSuffix: "Configuration Manager"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
 ms.date: 8/25/2017

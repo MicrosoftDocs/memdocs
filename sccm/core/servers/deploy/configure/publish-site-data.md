@@ -1,5 +1,6 @@
 ---
 title: "Publish site data"
+titleSuffix: "Configuration Manager"
 description: "Learn how to publish Configuration Manager sites to Active Directory Domain Services."
 ms.custom: na
 ms.date: 2/7/2017

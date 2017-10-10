@@ -1,5 +1,6 @@
 ---
 title: "Install Windows on a new computer "
+titleSuffix: "Configuration Manager"
 description: "Use Configuration Manager to install an operating system on a new computer (bare metal) by using PXE, OEM, or stand-alone media."
 ms.custom: na
 ms.date: 01/23/2017

@@ -1,6 +1,7 @@
 ---
 
 title: Security and privacy for software updates
+titleSuffix: "Configuration Manager"
 description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
 keywords:
 author: dougebyms.author: dougeby

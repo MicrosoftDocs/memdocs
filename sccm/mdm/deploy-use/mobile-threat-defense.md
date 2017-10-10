@@ -1,5 +1,6 @@
 ---
 title: "Restrict access based on risk"
+titleSuffix: "Configuration Manager"
 description: "Restrict access to company resources based on device, network and application risk."
 ms.custom: na
 ms.date: 04/25/2017

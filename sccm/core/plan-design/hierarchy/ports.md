@@ -1,5 +1,6 @@
 ---
-title: "Ports used by Configuration Manager"
+title: "Ports used for connections"
+titleSuffix: "Configuration Manager"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
 ms.custom: na
 ms.date: 09/19/2017

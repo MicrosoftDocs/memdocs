@@ -1,5 +1,6 @@
 ---
 title: "Unlock Method in SMS_OperatingSystemInstallPackage"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

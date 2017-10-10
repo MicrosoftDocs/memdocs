@@ -1,5 +1,6 @@
 ---
 title: "Packages and programs"
+titleSuffix: "Configuration Manager"
 description: "Support deployments that use packages and programs or applications with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

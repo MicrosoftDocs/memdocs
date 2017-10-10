@@ -1,5 +1,6 @@
 ---
 title: "Assign a Package to a Distribution Point"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

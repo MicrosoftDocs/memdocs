@@ -1,5 +1,6 @@
 ---
 title: "Deploy App-V virtual applications"
+titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy virtual applications."
 ms.custom: na
 ms.date: 02/16/2017

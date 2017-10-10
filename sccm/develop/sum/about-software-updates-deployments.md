@@ -1,5 +1,6 @@
 ---
 title: "Software Updates Deployments"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "12/30/2016"
 ms.prod: "configuration-manager"

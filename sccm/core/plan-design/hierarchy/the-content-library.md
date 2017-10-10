@@ -1,5 +1,6 @@
 ---
 title: "The content library"
+titleSuffix: "Configuration Manager"
 description: "Learn about the content library that System Center Configuration Manager uses to reduce the overall size of distributed content."
 ms.custom: na
 ms.date: 2/14/2017

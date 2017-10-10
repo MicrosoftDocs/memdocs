@@ -2,6 +2,7 @@
 # required metadata
 
 title: "Change your MDM authority"
+titleSuffix: "Configuration Manager"
 description: "Learn how to change the MDM authority from Configuration Manager (hybrid) to Intune standalone"
 keywords:
 author: dougeby

@@ -1,5 +1,6 @@
 ---
 title: "Diagnostics and usage data"
+titleSuffix: "Configuration Manager"
 description: "Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself."
 ms.custom: na
 ms.date: 3/27/2017

@@ -1,5 +1,6 @@
 ---
 title: "Protect apps using mobile application management policies"
+titleSuffix: "Configuration Manager"
 description: "Modify the functionality of apps that you deploy so they will meet your company compliance and security policies."
 ms.custom: na
 ms.date: 03/05/2017

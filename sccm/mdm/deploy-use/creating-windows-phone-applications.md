@@ -1,5 +1,6 @@
 ---
 title: "Create Windows Phone applications"
+titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy applications for Windows Phone devices."
 ms.custom: na
 ms.date: 03/05/2017

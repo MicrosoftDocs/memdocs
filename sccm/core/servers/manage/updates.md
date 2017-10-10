@@ -1,5 +1,6 @@
 ---
 title: "Updates"
+titleSuffix: "Configuration Manager"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
 ms.date: 07/31/2017

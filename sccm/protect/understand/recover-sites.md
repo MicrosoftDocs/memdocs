@@ -1,5 +1,6 @@
 ---
 title: "Site recovery"
+titleSuffix: "Configuration Manager"
 description: "Learn to recover your sites in System Center Configuration Manager."
 ms.custom: na
 ms.date: 6/5/2017

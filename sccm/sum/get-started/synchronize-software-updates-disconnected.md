@@ -1,6 +1,7 @@
 ---
 
 title: "Synchronize updates with no Internet connection "
+titleSuffix: "Configuration Manager"
 description: "Run software updates synchronization on the top-level software update point that is disconnected from the Internet."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

@@ -1,5 +1,6 @@
 ---
 title: "Checklist for 1602"
+titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 to version 1602."
 ms.custom: na
 ms.date: 2/7/2017

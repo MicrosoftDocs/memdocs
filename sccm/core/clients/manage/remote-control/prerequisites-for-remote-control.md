@@ -1,5 +1,6 @@
 ---
 title: "Remote control prerequisites"
+titleSuffix: "Configuration Manager"
 description: "Get the prerequisites for remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

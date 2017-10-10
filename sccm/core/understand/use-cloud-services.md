@@ -1,5 +1,6 @@
 ---
 title: "Use cloud services to supplement on-premises infrastructure"
+titleSuffix: "Configuration Manager"
 description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
 ms.custom: na
 ms.date: 10/06/2016

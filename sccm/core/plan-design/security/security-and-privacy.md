@@ -1,5 +1,6 @@
 ---
 title: "Security and privacy resources"
+titleSuffix: "Configuration Manager"
 description: "Find resources about security and privacy for System Center Configuration Manager."
 ms.custom: na
 ms.date: 1/3/2017

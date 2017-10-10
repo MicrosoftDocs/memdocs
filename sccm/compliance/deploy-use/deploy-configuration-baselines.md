@@ -1,5 +1,6 @@
 ---
 title: "Deploy configuration baselines"
+titleSuffix: "Configuration Manager"
 description: "Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments."
 ms.custom: na
 ms.date: 10/06/2016

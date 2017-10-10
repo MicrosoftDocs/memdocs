@@ -1,5 +1,6 @@
 ---
 title: "Set up Android hybrid device management with Microsoft Intune"
+titleSuffix: "Configuration Manager"
 description: "Prepare to manage Android mobile devices with Configuration Manager and Intune."
 ms.custom: na
 ms.date: 08/11/2017

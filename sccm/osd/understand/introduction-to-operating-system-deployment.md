@@ -1,5 +1,6 @@
 ---
 title: Introduction to operating system deployment
+titleSuffix: "Configuration Manager"
 description: "Understand the concepts before you deploy operating systems in your Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

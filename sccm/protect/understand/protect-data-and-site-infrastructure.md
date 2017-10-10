@@ -1,5 +1,6 @@
 ---
 title: "Protect data and site infrastructure"
+titleSuffix: "Configuration Manager"
 description: "Learn how protect your organization's resources from exposure or malicious attack with System Center Configuration Manager."
 ms.custom: na
 ms.date: 11/27/2016

@@ -1,5 +1,6 @@
 ---
 title: "Set up certificates "
+titleSuffix: "Configuration Manager"
 description: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

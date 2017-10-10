@@ -1,5 +1,6 @@
 ---
 title: "SMS_SCFToSite_a Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

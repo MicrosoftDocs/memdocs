@@ -1,5 +1,6 @@
 ---
 title: "Client security and privacy"
+titleSuffix: "Configuration Manager"
 description: "Learn about security and privacy for clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

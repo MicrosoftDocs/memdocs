@@ -1,5 +1,6 @@
 ---
 title: "Learn about updates"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

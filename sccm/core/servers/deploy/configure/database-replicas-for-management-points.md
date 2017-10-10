@@ -1,5 +1,6 @@
 ---
 title: "Management point database replicas"
+titleSuffix: "Configuration Manager"
 description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
 ms.custom: na
 ms.date: 10/06/2016

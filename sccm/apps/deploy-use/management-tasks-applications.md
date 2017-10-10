@@ -1,5 +1,6 @@
 ---
 title: "Management tasks for applications"
+titleSuffix: "Configuration Manager"
 description: "Manage System Center Configuration Manager applications and deployment types."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
 title: "Choose a device management solution "
+titleSuffix: "Configuration Manager"
 description: "Learn about the solutions that System Center Configuration Manager offers for managing PCs, servers, and devices."
 ms.custom: na
 ms.date: 12/08/2016

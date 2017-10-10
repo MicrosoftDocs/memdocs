@@ -1,5 +1,6 @@
 ---
 title: "Mobile Threat Defense"
+titleSuffix: "Configuration Manager"
 description: "Restrict access to company resources based on device, network and application risk using Configuration Manager and Intune Mobile Threat Defense partners"
 ms.custom: na
 ms.date: 03/02/2017

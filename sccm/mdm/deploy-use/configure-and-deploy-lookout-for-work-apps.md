@@ -1,5 +1,6 @@
 ---
 title: "Deploy Lookout for Work app"
+titleSuffix: "Configuration Manager"
 description: "Configure and deploy Lookout for Work apps."
 ms.custom: na
 ms.date: 03/05/2017

@@ -1,5 +1,6 @@
 ---
 title: "New version 1706"
+titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1706 of System Center Configuration Manager."
 ms.custom: na
 ms.date:  08/11/2017

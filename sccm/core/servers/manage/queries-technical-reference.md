@@ -1,5 +1,6 @@
 ---
 title: "Queries technical reference"
+titleSuffix: "Configuration Manager"
 description: "See a list of topics to help you use queries to retrieve information about resources in your site."
 ms.custom: na
 ms.date: 10/06/2016

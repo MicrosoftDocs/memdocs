@@ -2,6 +2,7 @@
 # required metadata
 
 title: Upgrade Readiness
+titleSuffix: "Configuration Manager"
 description: Integrate Upgrade Readiness with Configuration Manager. Access upgrade compatibility data in your admin console. Target devices for upgrade or remediation.
 keywords:
 author: mattbriggs

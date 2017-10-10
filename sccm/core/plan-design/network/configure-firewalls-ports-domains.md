@@ -1,5 +1,6 @@
 ---
 title: "Firewalls and domains"
+titleSuffix: "Configuration Manager"
 description: "Set up firewalls, ports, and domains to prepare for System Center Configuration Manager communications."
 ms.custom: na
 ms.date: 2/6/2017

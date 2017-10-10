@@ -1,5 +1,6 @@
 ---
 title: Task sequence built-in variables
+titleSuffix: "Configuration Manager"
 description: "Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence."
 ms.custom: na
 ms.date: 03/26/2017

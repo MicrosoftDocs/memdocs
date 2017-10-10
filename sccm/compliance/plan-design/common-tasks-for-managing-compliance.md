@@ -1,5 +1,6 @@
 ---
 title: "Common tasks for managing compliance"
+titleSuffix: "Configuration Manager"
 description: "Learn how to use compliance settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

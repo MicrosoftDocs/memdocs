@@ -1,5 +1,6 @@
 ---
 title: "Managing compliance on devices managed with Intune"
+titleSuffix: "Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
 ms.date: 03/05/2017

@@ -1,5 +1,6 @@
 ---
-title: "Manage Applications in System Center Configuration Manager"
+title: "Manage Applications"
+titleSuffix: "Configuration Manager"
 description: "Manage Applications in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

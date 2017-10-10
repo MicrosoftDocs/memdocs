@@ -1,5 +1,6 @@
 ---
 title: "Enroll iOS devices with Device Enrollment Program (DEP) "
+titleSuffix: "Configuration Manager"
 description: "Enable iOS Device Enrollment Program (DEP) enrollment for hybrid deployments in Configuration Manager with Intune."
 ms.custom: na
 ms.date: 09/22/2017

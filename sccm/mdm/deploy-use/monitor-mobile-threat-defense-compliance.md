@@ -1,5 +1,6 @@
 ---
 title: "Monitor Mobile Threat Defense compliance"
+titleSuffix: "Configuration Manager"
 description: "Monitor the Mobile Threat Defense partner compliance status from the Configuration Manager manager console"
 ms.custom: na
 ms.date: 03/21/2017

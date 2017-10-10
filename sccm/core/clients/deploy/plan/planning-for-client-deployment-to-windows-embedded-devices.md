@@ -1,5 +1,6 @@
 ---
 title: "Planning client deployment to Windows Embedded devices"
+titleSuffix: "Configuration Manager"
 description: "Plan for client deployment to Windows Embedded devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

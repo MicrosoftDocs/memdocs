@@ -1,5 +1,6 @@
 ---
 title: "Configure reporting"
+titleSuffix: "Configuration Manager"
 description: "Read about how to set up reporting in your Configuration Manager hierarchy, including information about SQL Server Reporting Services."
 ms.custom: na
 ms.date: 10/06/2016

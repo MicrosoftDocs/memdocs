@@ -1,5 +1,6 @@
 ---
 title: "Client installation properties"
+titleSuffix: "Configuration Manager"
 description: "Learn about client installation properties in System Center Configuration Manager."
 ms.custom: na
 ms.date: 01/04/2017

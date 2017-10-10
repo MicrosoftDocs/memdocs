@@ -1,5 +1,6 @@
 ---
 title: "Configure certificate infrastructure"
+titleSuffix: "Configuration Manager"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/25/2017

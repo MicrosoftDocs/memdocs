@@ -1,5 +1,6 @@
 ---
 title: "Monitor replication"
+titleSuffix: "Configuration Manager"
 description: "Learn how to monitor infrastructure and operations in Configuration Manager by using the Monitoring workspace in the console."
 ms.custom: na
 ms.date: 10/06/2016

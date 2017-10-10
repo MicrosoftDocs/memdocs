@@ -1,5 +1,6 @@
 ---
 title: "Certificates and security"
+titleSuffix: "Configuration Manager"
 description: "Manage certificates and security for System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

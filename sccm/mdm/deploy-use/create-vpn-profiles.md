@@ -1,5 +1,6 @@
 ---
-title: "VPN Profiles in System Center Configuration Manager"
+title: "VPN profiles"
+titleSuffix: "Configuration Manager"
 description: "VPN Profiles on mobile devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/26/2017

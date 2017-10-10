@@ -1,5 +1,6 @@
 ---
 title: "Manage Internet access using managed browser policies"
+titleSuffix: "Configuration Manager"
 description: "Deploy the Intune Managed Browser to manage and restrict Internet access."
 ms.custom: na
 ms.date: 03/05/2017

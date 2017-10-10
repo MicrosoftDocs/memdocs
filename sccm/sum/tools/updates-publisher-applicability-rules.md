@@ -1,5 +1,6 @@
 ---
 title: "Applicability rules"
+titleSuffix: "Configuration Manager"
 description: "Manage applicability rules for System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

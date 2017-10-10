@@ -1,5 +1,6 @@
 ---
 title: "Create PFX certificate profiles using a certificate authority"
+titleSuffix: "Configuration Manager"
 description: "Learn how to use PFX files in System Center Configuration Manager to generate user-specific certificates that support encrypted data exchange."
 ms.custom: na
 ms.date: 04/04/2017

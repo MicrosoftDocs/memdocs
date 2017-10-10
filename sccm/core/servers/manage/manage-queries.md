@@ -1,5 +1,6 @@
 ---
 title: "Manage queries"
+titleSuffix: "Configuration Manager"
 description: "Learn how to manage your queries. Includes a table for detailed reference."
 ms.custom: na
 ms.date: 10/06/2016

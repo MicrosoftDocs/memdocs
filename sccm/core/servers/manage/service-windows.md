@@ -1,5 +1,6 @@
 ---
 title: "Service Windows"
+titleSuffix: "Configuration Manager"
 description: "Use service windows to control when System Center Configuration Manager sites install updates."
 ms.custom: na
 ms.date: 1/11/2017

@@ -1,5 +1,6 @@
 ---
 title: "Client management fundamentals"
+titleSuffix: "Configuration Manager"
 description: "Learn about tasks that you run to manage System Center Configuration Manager clients."
 ms.custom: na
 ms.date: 12/30/2016

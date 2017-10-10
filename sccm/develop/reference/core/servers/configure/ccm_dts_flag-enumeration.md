@@ -1,5 +1,6 @@
 ---
 title: "CCM_DTS_FLAG Enumeration"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

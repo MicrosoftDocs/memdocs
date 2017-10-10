@@ -1,5 +1,6 @@
 ---
 title: "Configure discovery"
+titleSuffix: "Configuration Manager"
 description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
 ms.custom: na
 ms.date: 7/31/2017

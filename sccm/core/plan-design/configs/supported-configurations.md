@@ -1,5 +1,6 @@
 ---
 title: "Supported configurations"
+titleSuffix: "Configuration Manager"
 description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 10/06/2016

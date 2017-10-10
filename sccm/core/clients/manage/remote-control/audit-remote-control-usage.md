@@ -1,5 +1,6 @@
 ---
 title: "Audit remote control usage"
+titleSuffix: "Configuration Manager"
 description: "Audit remote control use in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

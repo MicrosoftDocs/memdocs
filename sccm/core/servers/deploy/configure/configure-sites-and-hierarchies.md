@@ -1,5 +1,6 @@
 ---
 title: "Configure sites"
+titleSuffix: "Configuration Manager"
 description: "Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies."
 ms.custom: na
 ms.date: 2/7/2017

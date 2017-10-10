@@ -1,5 +1,6 @@
 ---
 title: "Manage apps from the Windows Store for Business"
+titleSuffix: "Configuration Manager"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017

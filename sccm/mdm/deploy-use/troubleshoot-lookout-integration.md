@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot Lookout integration"
+titleSuffix: "Configuration Manager"
 description: "This topic describes troubleshooting issues that commonly occur with Lookout Integration."
 ms.custom: na
 ms.date: 03/05/2017

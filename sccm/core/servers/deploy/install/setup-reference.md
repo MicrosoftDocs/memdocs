@@ -1,5 +1,6 @@
 ---
 title: "Setup reference"
+titleSuffix: "Configuration Manager"
 description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
 ms.date: 4/18/2017

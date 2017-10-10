@@ -1,5 +1,6 @@
 ---
 title: "Add updates to an update group "
+titleSuffix: "Configuration Manager"
 description: "Manually or automatically add software updates to a software update group in your environment."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

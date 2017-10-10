@@ -1,5 +1,6 @@
 ---
 title: "High availability"
+titleSuffix: "Configuration Manager"
 description: "Learn how to deploy System Center Configuration Manager by using options that maintain a high level of available service."
 ms.custom: na
 ms.date: 10/06/2016

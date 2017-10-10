@@ -1,5 +1,6 @@
 ---
 title: "AddDistributionPoints Method in SMS_DriverPackage"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Create an MDM collection using System Center Configuration Manager"
+title: "Create an MDM collection"
+titleSuffix: "Configuration Manager"
 description: "Create an MDM collection using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

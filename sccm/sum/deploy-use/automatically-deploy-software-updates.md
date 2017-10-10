@@ -1,5 +1,6 @@
 ---
 title: Automatically deploy software updates
+titleSuffix: "Configuration Manager"
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
 keywords:
 author: dougeby

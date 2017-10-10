@@ -1,5 +1,6 @@
 ---
-title: "User affinity for hybrid managed devices in Configuration Manager"
+title: "User affinity for hybrid managed devices"
+titleSuffix: "Configuration Manager"
 description: "Configure user affinity for managed devices in Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

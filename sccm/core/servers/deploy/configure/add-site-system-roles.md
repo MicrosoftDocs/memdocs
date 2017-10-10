@@ -1,5 +1,6 @@
 ---
 title: "Add site system roles"
+titleSuffix: "Configuration Manager"
 description: "Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site."
 ms.custom: na
 ms.date: 2/7/2017

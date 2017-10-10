@@ -1,5 +1,6 @@
 ---
 title: "Remote control security privacy"
+titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

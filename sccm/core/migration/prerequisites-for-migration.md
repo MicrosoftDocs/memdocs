@@ -1,5 +1,6 @@
 ---
 title: "Migration prerequisites"
+titleSuffix: "Configuration Manager"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
 ms.custom: na
 ms.date: 3/7/2017

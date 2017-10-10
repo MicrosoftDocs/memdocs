@@ -1,5 +1,6 @@
 ---
 title: "Create collections"
+titleSuffix: "Configuration Manager"
 description: "Create collections in System Center Configuration Manager to more easily manage groups of users and devices."
 ms.custom: na
 ms.date: 2/22/2017

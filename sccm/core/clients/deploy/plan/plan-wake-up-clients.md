@@ -1,5 +1,6 @@
 ---
 title: "Waking up clients"
+titleSuffix: "Configuration Manager"
 description: "Plan how to wake up clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

@@ -1,5 +1,6 @@
 ---
 title: "Conditional access"
+titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
 ms.date: 03/05/2017

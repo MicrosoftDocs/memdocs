@@ -1,5 +1,6 @@
 ---
 title: "Create task sequence media"
+titleSuffix: "Configuration Manager"
 description: "Create task sequence media, such as a CD, to deploy an operating system to a destination computer in your Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
 title: "Monitor Endpoint Protection status"
+titleSuffix: "Configuration Manager"
 description: "Learn how monitor Endpoint Protection in your System Center Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 03/13/2017

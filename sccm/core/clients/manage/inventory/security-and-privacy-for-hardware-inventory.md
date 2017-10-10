@@ -1,5 +1,6 @@
 ---
 title: "Hardware inventory security privacy"
+titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/22/2017

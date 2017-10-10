@@ -1,5 +1,6 @@
 ---
 title: "Configure client communication ports"
+titleSuffix: "Configuration Manager"
 description: "Set client communication ports in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

@@ -1,5 +1,6 @@
 ---
 title: "Supported SQL Server versions"
+titleSuffix: "Configuration Manager"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
 ms.date: 10/10/2017

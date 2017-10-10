@@ -1,5 +1,6 @@
 ---
 title: "Automatically categorize devices into collections"
+titleSuffix: "Configuration Manager"
 description: "Categorize devices into collections automatically with System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2016
