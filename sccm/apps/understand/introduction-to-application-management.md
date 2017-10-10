@@ -1,5 +1,5 @@
 ---
-title: "Introduction to application management | Microsoft Docs"
+title: "Introduction to application management"
 description: "Discover the basic information you’ll need to manage and deploy System Center Configuration Manager applications."
 ms.custom: na
 ms.date: 12/23/2016

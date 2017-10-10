@@ -1,5 +1,5 @@
 ---
-title: "Restrict access based on risk | Microsoft Docs"
+title: "Restrict access based on risk"
 description: "Restrict access to company resources based on device, network and application risk."
 ms.custom: na
 ms.date: 04/25/2017

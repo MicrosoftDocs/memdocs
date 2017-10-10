@@ -1,5 +1,5 @@
 ---
-title: "ICcmAlternateDownloadProvider : Suspend | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : Suspend"
 ms.custom: ""
 ms.date: "07/25/2016"
 ms.prod: "configuration-manager"

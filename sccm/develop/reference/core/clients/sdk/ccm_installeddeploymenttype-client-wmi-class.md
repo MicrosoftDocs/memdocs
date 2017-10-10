@@ -1,5 +1,5 @@
 ---
-title: "CCM_InstalledDeploymentType Class | Microsoft Docs"
+title: "CCM_InstalledDeploymentType Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Management point database replicas | Microsoft Docs"
+title: "Management point database replicas"
 description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
 ms.custom: na
 ms.date: 10/06/2016

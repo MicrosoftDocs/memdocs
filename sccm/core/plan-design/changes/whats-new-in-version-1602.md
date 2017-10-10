@@ -1,5 +1,5 @@
 ---
-title: "New in System Center Configuration Manager version 1602 | Microsoft Docs"
+title: "New in System Center Configuration Manager version 1602"
 description: "Get details about changes and new capabilities introduced in version 1602 of System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016

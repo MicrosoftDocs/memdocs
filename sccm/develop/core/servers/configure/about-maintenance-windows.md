@@ -1,5 +1,5 @@
 ---
-title: "About Maintenance Windows | Microsoft Docs"
+title: "About Maintenance Windows"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

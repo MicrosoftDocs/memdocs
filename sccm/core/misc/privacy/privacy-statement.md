@@ -1,5 +1,5 @@
 ---
-title: "Privacy statement | Microsoft Docs"
+title: "Privacy statement"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

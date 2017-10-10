@@ -1,5 +1,5 @@
 ---
-title: "Client security and privacy | Microsoft Docs"
+title: "Client security and privacy"
 description: "Learn about security and privacy for clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

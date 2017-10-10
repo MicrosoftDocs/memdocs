@@ -1,5 +1,5 @@
 ---
-title: "Get ready for System Center Configuration Manager | Microsoft Docs"
+title: "Get ready for System Center Configuration Manager"
 description: "Find topics that will help you plan a System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 10/06/2016

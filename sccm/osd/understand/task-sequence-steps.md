@@ -1,5 +1,5 @@
 ---
-title: Task sequence steps - Configuration Manager | Microsoft Docs
+title: Task sequence steps - Configuration Manager
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
 ms.date: 03/26/2017

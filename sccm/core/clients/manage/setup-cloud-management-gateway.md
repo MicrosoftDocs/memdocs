@@ -1,5 +1,5 @@
 ---
-title: "Set up Cloud Management Gateway | Microsoft Docs"
+title: "Set up Cloud Management Gateway"
 description: ""
 author: arob98
 ms.author: angrobe

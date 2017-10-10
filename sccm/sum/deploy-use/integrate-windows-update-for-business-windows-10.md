@@ -1,6 +1,6 @@
 ---
 
-title: Integration with Windows Update for Business in Windows 10 | Microsoft Docs
+title: Integration with Windows Update for Business in Windows 10
 description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up to date for devices connected to the Windows Update service."
 keywords:
 author: dougebyms.author: dougeby

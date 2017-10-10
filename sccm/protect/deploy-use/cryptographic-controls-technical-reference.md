@@ -1,5 +1,5 @@
 ---
-title: "Cryptographic controls technical reference | Microsoft Docs"
+title: "Cryptographic controls technical reference"
 description: "Learn about how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Role-based administration fundamentals | Microsoft Docs"
+title: "Role-based administration fundamentals"
 description: "Use role-based administration to control administrative access to Configuration Manager and objects that you manage."
 ms.custom: na
 ms.date: 1/3/2017

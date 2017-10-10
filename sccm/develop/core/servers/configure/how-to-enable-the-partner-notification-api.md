@@ -1,5 +1,5 @@
 ---
-title: "Enable the Partner Notification API | Microsoft Docs"
+title: "Enable the Partner Notification API"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

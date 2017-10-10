@@ -1,5 +1,5 @@
 ---
-title: "Pull-distribution point | Microsoft Docs"
+title: "Pull-distribution point"
 description: "Learn about configurations and limitations for using a pull-distribution point with System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/14/2017

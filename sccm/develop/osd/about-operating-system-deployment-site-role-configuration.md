@@ -1,5 +1,5 @@
 ---
-title: "OS Deployment Site Role Configuration | Microsoft Docs"
+title: "OS Deployment Site Role Configuration"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

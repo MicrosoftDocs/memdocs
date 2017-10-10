@@ -1,6 +1,6 @@
 ---
 
-title: Install and configure a software update point | Microsoft Docs
+title: Install and configure a software update point
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
 keywords:
 author: dougeby

@@ -1,5 +1,5 @@
 ---
-title: "Create a Schedule Token | Microsoft Docs"
+title: "Create a Schedule Token"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

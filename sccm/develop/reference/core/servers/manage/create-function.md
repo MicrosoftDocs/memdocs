@@ -1,5 +1,5 @@
 ---
-title: "Create Function | Microsoft Docs"
+title: "Create Function"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

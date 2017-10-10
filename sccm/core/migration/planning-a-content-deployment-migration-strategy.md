@@ -1,5 +1,5 @@
 ---
-title: "Migrate content | Microsoft Docs"
+title: "Migrate content"
 description: "Use distribution points to manage content while you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 12/30/2016

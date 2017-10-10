@@ -1,5 +1,5 @@
 ---
-title: "AddMemberships Method | Microsoft Docs"
+title: "AddMemberships Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

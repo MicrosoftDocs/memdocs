@@ -1,5 +1,5 @@
 ---
-title: "Support for virtualization | Microsoft Docs"
+title: "Support for virtualization"
 description: "Get requirements for installing System Center Configuration Manager client and site system roles in a virtualization environment."
 ms.custom: na
 ms.date: 1/12/2017

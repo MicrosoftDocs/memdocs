@@ -1,5 +1,5 @@
 ---
-title: "Update and retire applications | Microsoft Docs"
+title: "Update and retire applications"
 description: "Revise, supersede, or uninstall deployed applications by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Azure services wizard | Microsoft Docs"
+title: "Azure services wizard"
 description: "About the Azure services wizard for System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017

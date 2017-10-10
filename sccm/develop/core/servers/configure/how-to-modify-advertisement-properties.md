@@ -1,5 +1,5 @@
 ---
-title: "Modify Advertisement Properties | Microsoft Docs"
+title: "Modify Advertisement Properties"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

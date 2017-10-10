@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection malware definitions from WSUS | Microsoft Docs"
+title: "Endpoint Protection malware definitions from WSUS"
 definition: "Learn how to configure Windows Server Updates Services to auto-approve definition updates."
 ms.custom: na
 ms.date: 02/14/2017

@@ -1,5 +1,5 @@
 ---
-title: "Console RootNodes Element | Microsoft Docs"
+title: "Console RootNodes Element"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

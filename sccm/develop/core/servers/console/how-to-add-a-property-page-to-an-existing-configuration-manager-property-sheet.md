@@ -1,5 +1,5 @@
 ---
-title: "Add a Property Page to an Existing Property Sheet | Microsoft Docs"
+title: "Add a Property Page to an Existing Property Sheet"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

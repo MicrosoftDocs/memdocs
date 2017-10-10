@@ -1,5 +1,5 @@
 ---
-title: "Create Action XML for a Property Sheet | Microsoft Docs"
+title: "Create Action XML for a Property Sheet"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

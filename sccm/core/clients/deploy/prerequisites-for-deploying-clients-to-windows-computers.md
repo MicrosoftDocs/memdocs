@@ -1,5 +1,5 @@
 ---
-title: "Windows client deployment prerequisites | Microsoft Docs"
+title: "Windows client deployment prerequisites"
 description: "Learn the prerequisites for deploying clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

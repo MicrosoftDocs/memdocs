@@ -1,5 +1,5 @@
 ---
-title: "Site prerequisites | Microsoft Docs"
+title: "Site prerequisites"
 description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
 ms.date: 8/25/2017

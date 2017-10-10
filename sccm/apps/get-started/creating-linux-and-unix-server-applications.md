@@ -1,5 +1,5 @@
 ---
-title: "Create Linux and UNIX server applications | Microsoft Docs"
+title: "Create Linux and UNIX server applications"
 description: "See which considerations you must take into account when you create and deploy applications for Linux and Unix devices."
 ms.custom: na
 ms.date: 04/13/2017

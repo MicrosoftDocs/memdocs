@@ -1,5 +1,5 @@
 ---
-title: "Create iOS applications | Microsoft Docs"
+title: "Create iOS applications"
 description: "See which considerations you must take into account when you create and deploy applications for iOS devices."
 ms.custom: na
 ms.date: 03/05/2017

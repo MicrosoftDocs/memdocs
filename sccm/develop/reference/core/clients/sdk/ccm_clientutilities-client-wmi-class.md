@@ -1,5 +1,5 @@
 ---
-title: "CCM_ClientUtilities Class | Microsoft Docs"
+title: "CCM_ClientUtilities Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

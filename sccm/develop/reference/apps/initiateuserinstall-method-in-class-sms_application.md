@@ -1,5 +1,5 @@
 ---
-title: "InitiateUserInstall Method | Microsoft Docs"
+title: "InitiateUserInstall Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

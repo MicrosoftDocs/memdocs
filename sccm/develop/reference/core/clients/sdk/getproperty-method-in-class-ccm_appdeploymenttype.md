@@ -1,5 +1,5 @@
 ---
-title: "GetProperty Method | Microsoft Docs"
+title: "GetProperty Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

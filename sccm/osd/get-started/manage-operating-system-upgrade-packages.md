@@ -1,5 +1,5 @@
 ---
-title: Manage operating system upgrade packages | Microsoft Docs
+title: Manage operating system upgrade packages
 description: "Learn how to manage operating system upgrade packages in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/06/2016

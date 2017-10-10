@@ -1,5 +1,5 @@
 ---
-title: "Use SMSCSTAT.DLL to Create Status Messages | Microsoft Docs"
+title: "Use SMSCSTAT.DLL to Create Status Messages"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

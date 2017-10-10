@@ -1,5 +1,5 @@
 ---
-title: "Enable device protection rule in compliance policy | Microsoft Docs"
+title: "Enable device protection rule in compliance policy"
 description: "Enable mobile threat protection rule in the device compliance policy."
 ms.custom: na
 ms.date: 03/05/2017

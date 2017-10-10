@@ -1,5 +1,5 @@
 ---
-title: "Technical Preview 1705 | Microsoft Docs"
+title: "Technical Preview 1705"
 description: "Learn about features available in the Technical Preview version 1705 for System Center Configuration Manager."
 ms.custom: na
 ms.date: 06/02/2017

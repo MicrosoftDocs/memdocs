@@ -1,5 +1,5 @@
 ---
-title: "Configure Software Inventory Settings | Microsoft Docs"
+title: "Configure Software Inventory Settings"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

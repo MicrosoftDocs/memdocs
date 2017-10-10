@@ -1,5 +1,5 @@
 ---
-title: "Prepare Windows Servers | Microsoft Docs"
+title: "Prepare Windows Servers"
 description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/14/2017

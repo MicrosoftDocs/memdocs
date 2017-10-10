@@ -1,5 +1,5 @@
 ---
-title: "Manage SharePoint Online access | Microsoft Docs"
+title: "Manage SharePoint Online access"
 description: "Learn how to use the System Center Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
 ms.custom: na
 ms.date: 03/05/2017

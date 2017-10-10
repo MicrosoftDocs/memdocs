@@ -1,5 +1,5 @@
 ---
-title: Prestart commands for task sequence media | Microsoft Docs
+title: Prestart commands for task sequence media
 description: "Create a script to use for the prestart command, distribute the content associated with the prestart command, and configure the prestart command in media."
 ms.custom: na
 ms.date: 10/06/2016

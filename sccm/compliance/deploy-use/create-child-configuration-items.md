@@ -1,5 +1,5 @@
 ---
-title: "Create child configuration items | Microsoft Docs"
+title: "Create child configuration items"
 description: "Create child configuration items in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

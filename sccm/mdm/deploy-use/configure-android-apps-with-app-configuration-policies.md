@@ -1,5 +1,5 @@
 ---
-title: "Configure Android for Work apps with app configuration policies | Microsoft Docs"
+title: "Configure Android for Work apps with app configuration policies"
 description: "Help eliminate configuration problems on devices running Android for Work by deploying app configuration policies to users before they run apps."
 ms.custom: na
 ms.date: 09/12/2017

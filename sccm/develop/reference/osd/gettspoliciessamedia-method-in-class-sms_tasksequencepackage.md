@@ -1,5 +1,5 @@
 ---
-title: "GetTsPoliciesSaMedia Method | Microsoft Docs"
+title: "GetTsPoliciesSaMedia Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

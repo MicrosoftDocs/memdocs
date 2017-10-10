@@ -1,5 +1,5 @@
 ---
-title: "Create configuration baselines | Microsoft Docs"
+title: "Create configuration baselines"
 description: "Create configuration baselines in System Center Configuration Manager that you can deploy to a collection."
 ms.custom: na
 ms.date: 10/06/2016

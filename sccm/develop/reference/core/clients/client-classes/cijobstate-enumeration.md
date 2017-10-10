@@ -1,5 +1,5 @@
 ---
-title: "CIJobState Enumeration | Microsoft Docs"
+title: "CIJobState Enumeration"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

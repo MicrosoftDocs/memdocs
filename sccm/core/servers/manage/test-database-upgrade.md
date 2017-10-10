@@ -1,5 +1,5 @@
 ---
-title: "Test database update| Microsoft Docs"
+title: "Test database update"
 description: "Test upgrade the site database when installing updates for Configuration Manager."
 ms.custom: na
 ms.date: 06/13/2017

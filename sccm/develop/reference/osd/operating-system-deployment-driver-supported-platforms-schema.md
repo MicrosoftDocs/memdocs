@@ -1,5 +1,5 @@
 ---
-title: "OS Deployment Driver Supported Platforms Schema | Microsoft Docs"
+title: "OS Deployment Driver Supported Platforms Schema"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

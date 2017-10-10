@@ -1,5 +1,5 @@
 ---
-title: "SMS_Advertisement Class | Microsoft Docs"
+title: "SMS_Advertisement Class"
 ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "configuration-manager"

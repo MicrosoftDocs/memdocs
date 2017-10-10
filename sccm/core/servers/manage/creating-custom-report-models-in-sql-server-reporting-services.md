@@ -1,5 +1,5 @@
 ---
-title: "Create custom reports | Microsoft Docs"
+title: "Create custom reports"
 description: "Define report models to meet your business requirements, and then deploy the report models to Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

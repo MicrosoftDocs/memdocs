@@ -1,5 +1,5 @@
 ---
-title: "Enumerate the Steps in an OS Deployment Task Sequence | Microsoft Docs"
+title: "Enumerate the Steps in an OS Deployment Task Sequence"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

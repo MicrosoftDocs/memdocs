@@ -1,5 +1,5 @@
 ---
-title: "VerifyPackage Method | Microsoft Docs"
+title: "VerifyPackage Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

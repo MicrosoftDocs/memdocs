@@ -1,5 +1,5 @@
 ---
-title: "Uninstall applications | Microsoft Docs"
+title: "Uninstall applications"
 description: "Uninstall an application by using System Center Configuration Manager"
 ms.custom: na
 ms.date: 10/06/2016

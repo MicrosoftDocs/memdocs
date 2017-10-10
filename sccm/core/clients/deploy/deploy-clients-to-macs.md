@@ -1,5 +1,5 @@
 ---
-title: "Deploy Mac clients | Microsoft Docs"
+title: "Deploy Mac clients"
 description: "Learn how to deploy clients to Mac computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/04/2017

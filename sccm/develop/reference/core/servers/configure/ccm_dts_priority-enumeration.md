@@ -1,5 +1,5 @@
 ---
-title: "CCM_DTS_PRIORITY Enumeration | Microsoft Docs"
+title: "CCM_DTS_PRIORITY Enumeration"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

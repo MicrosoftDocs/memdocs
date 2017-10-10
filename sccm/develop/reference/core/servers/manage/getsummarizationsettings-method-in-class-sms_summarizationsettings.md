@@ -1,5 +1,5 @@
 ---
-title: "GetSummarizationSettings Method | Microsoft Docs"
+title: "GetSummarizationSettings Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "DDRPropertyFlagsEnum Enumeration | Microsoft Docs"
+title: "DDRPropertyFlagsEnum Enumeration"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

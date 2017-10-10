@@ -1,5 +1,5 @@
 ---
-title: "Migration Source hierarchies | Microsoft Docs"
+title: "Migration Source hierarchies"
 description: "Configure a source hierarchy and source sites so you can migrate data to your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 12/29/2016

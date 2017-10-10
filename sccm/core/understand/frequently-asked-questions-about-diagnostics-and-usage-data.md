@@ -1,5 +1,5 @@
 ---
-title: "Diagnostic data FAQ | Microsoft Docs"
+title: "Diagnostic data FAQ"
 description: "Find frequently asked questions about diagnostic and usage data for System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/8/2017

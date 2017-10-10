@@ -1,5 +1,5 @@
 ---
-title: "SMS_BoundaryGroupRelationships Class | Microsoft Docs"
+title: "SMS_BoundaryGroupRelationships Class"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"

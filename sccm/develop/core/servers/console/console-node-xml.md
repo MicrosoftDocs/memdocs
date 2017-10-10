@@ -1,5 +1,5 @@
 ---
-title: "Console Node XML | Microsoft Docs"
+title: "Console Node XML"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

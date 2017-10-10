@@ -1,5 +1,5 @@
 ---
-title: "Supported Device Platforms for hybrid MDM | Microsoft Docs"
+title: "Supported Device Platforms for hybrid MDM"
 description: "Supported Device Platforms for hybrid MDM."
 ms.custom: na
 ms.date: 09/22/2017

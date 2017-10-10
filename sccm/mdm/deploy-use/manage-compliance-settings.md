@@ -1,5 +1,5 @@
 ---
-title: "Managing compliance on devices managed with Intune | Microsoft Docs"
+title: "Managing compliance on devices managed with Intune"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
 ms.date: 03/05/2017

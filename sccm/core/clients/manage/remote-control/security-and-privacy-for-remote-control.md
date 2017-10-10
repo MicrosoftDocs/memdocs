@@ -1,5 +1,5 @@
 ---
-title: "Remote control security privacy | Microsoft Docs"
+title: "Remote control security privacy"
 description: "Get security and privacy information for remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

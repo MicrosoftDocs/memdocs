@@ -1,5 +1,5 @@
 ---
-title: "About Package Definition Files | Microsoft Docs"
+title: "About Package Definition Files"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

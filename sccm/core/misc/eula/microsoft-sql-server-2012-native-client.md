@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SQL SERVER 2012 NATIVE CLIENT | Microsoft Docs"
+title: "MICROSOFT SQL SERVER 2012 NATIVE CLIENT"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

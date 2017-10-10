@@ -1,5 +1,5 @@
 ---
-title: "SMS_AdvancedThreatProtectionSettings Class | Microsoft Docs"
+title: "SMS_AdvancedThreatProtectionSettings Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

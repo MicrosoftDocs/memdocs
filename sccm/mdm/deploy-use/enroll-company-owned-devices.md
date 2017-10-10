@@ -1,5 +1,5 @@
 ---
-title: "Enroll company-owned devices - Configuration Manager | Microsoft Docs"
+title: "Enroll company-owned devices - Configuration Manager"
 description: "Learn about different methods to enroll company-owned devices for hybrid deployments with Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

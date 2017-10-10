@@ -1,5 +1,5 @@
 ---
-title: "Create a Package Using a Package Definition File Template | Microsoft Docs"
+title: "Create a Package Using a Package Definition File Template"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

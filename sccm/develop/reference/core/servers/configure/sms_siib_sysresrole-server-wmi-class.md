@@ -1,5 +1,5 @@
 ---
-title: "SMS_SIIB_SysResRole Class | Microsoft Docs"
+title: "SMS_SIIB_SysResRole Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

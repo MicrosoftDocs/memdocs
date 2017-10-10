@@ -1,5 +1,5 @@
 ---
-title: "Unique Identifier Value for a Resource | Microsoft Docs"
+title: "Unique Identifier Value for a Resource"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

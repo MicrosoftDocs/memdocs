@@ -1,5 +1,5 @@
 ---
-title: "Configure client communication ports | Microsoft Docs"
+title: "Configure client communication ports"
 description: "Set client communication ports in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

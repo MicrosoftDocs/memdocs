@@ -1,5 +1,5 @@
 ---
-title: "Verifying the Application Management Extension | Microsoft Docs"
+title: "Verifying the Application Management Extension"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

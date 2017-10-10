@@ -1,5 +1,5 @@
 ---
-title: "Publishing and the Active Directory schema | Microsoft Docs"
+title: "Publishing and the Active Directory schema"
 description: "Extend the Active Directory schema for System Center Configuration Manager to simplify the process of deploying and configuring clients."
 ms.custom: na
 ms.date: 2/6/2017

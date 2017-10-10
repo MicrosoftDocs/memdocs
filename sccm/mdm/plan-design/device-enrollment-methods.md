@@ -1,5 +1,5 @@
 ---
-title: "Device Enrollment Methods for hybrid MDM | Microsoft Docs"
+title: "Device Enrollment Methods for hybrid MDM"
 description: "Device enrollment methods for hybrid MDM."
 ms.custom: na
 ms.date: 03/05/2017

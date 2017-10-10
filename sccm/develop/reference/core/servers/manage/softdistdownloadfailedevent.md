@@ -1,5 +1,5 @@
 ---
-title: "SoftDistDownloadFailedEvent | Microsoft Docs"
+title: "SoftDistDownloadFailedEvent"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

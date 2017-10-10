@@ -1,5 +1,5 @@
 ---
-title: "ICcmAlternateDownloadProvider : CancelJob | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : CancelJob"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"

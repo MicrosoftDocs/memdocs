@@ -1,5 +1,5 @@
 ---
-title: "RefreshPkgSource Method in SMS_TaskSequencePackage | Microsoft Docs"
+title: "RefreshPkgSource Method in SMS_TaskSequencePackage"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

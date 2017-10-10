@@ -1,6 +1,6 @@
 ---
 
-title: Manually deploy software updates | Microsoft Docs
+title: Manually deploy software updates
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
 keywords:
 author: dougeby

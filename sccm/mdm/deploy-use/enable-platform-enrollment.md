@@ -1,5 +1,5 @@
 ---
-title: "Enable platform enrollment using System Center Configuration Manager | Microsoft Docs"
+title: "Enable platform enrollment using System Center Configuration Manager"
 description: "Enable platform enrollment using System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
 ms.date: 03/05/2017

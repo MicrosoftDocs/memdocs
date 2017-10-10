@@ -1,5 +1,5 @@
 ---
-title: "List All Programs and Their Maximum Run Time Value | Microsoft Docs"
+title: "List All Programs and Their Maximum Run Time Value"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

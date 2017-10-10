@@ -1,5 +1,5 @@
 ---
-title: "Status Message Types | Microsoft Docs"
+title: "Status Message Types"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

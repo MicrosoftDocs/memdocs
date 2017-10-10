@@ -1,5 +1,5 @@
 ---
-title: "SMS_TaskSequence_WMIConditionExpression Class | Microsoft Docs"
+title: "SMS_TaskSequence_WMIConditionExpression Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

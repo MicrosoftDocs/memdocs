@@ -1,5 +1,5 @@
 ---
-title: "OS Deployment Computer Management | Microsoft Docs"
+title: "OS Deployment Computer Management"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Manage queries | Microsoft Docs"
+title: "Manage queries"
 description: "Learn how to manage your queries. Includes a table for detailed reference."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Enumerate the Members of a Collection | Microsoft Docs"
+title: "Enumerate the Members of a Collection"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

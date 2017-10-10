@@ -1,5 +1,5 @@
 ---
-title: "Client installation properties | Microsoft Docs"
+title: "Client installation properties"
 description: "Learn about client installation properties in System Center Configuration Manager."
 ms.custom: na
 ms.date: 01/04/2017

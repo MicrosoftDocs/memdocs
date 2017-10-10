@@ -1,5 +1,5 @@
 ---
-title: "CCM_Policy_ActionHandlerRegistration Class | Microsoft Docs"
+title: "CCM_Policy_ActionHandlerRegistration Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

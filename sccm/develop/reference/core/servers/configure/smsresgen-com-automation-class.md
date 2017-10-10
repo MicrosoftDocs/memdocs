@@ -1,5 +1,5 @@
 ---
-title: "SMSResGen COM Automation Class | Microsoft Docs"
+title: "SMSResGen COM Automation Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager SDK | Microsoft Docs"
+title: "System Center Configuration Manager SDK"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

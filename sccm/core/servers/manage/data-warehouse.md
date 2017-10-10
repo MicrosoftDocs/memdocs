@@ -1,5 +1,5 @@
 ---
-title: "Data warehouse| Microsoft Docs"
+title: "Data warehouse"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
 ms.date: 8/25/2017

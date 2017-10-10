@@ -1,5 +1,5 @@
 ---
-title: "Creating the Custom SDK Assembly | Microsoft Docs"
+title: "Creating the Custom SDK Assembly"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

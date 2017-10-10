@@ -1,5 +1,5 @@
 ---
-title: "Configure Network Discovery | Microsoft Docs"
+title: "Configure Network Discovery"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

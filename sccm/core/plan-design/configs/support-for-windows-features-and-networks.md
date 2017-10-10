@@ -1,5 +1,5 @@
 ---
-title: "Support for Windows features | Microsoft Docs"
+title: "Support for Windows features"
 description: "Learn which Windows and networking features System Center Configuration Manager supports."
 ms.custom: na
 ms.date: 8/24/2017

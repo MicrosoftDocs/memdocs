@@ -1,6 +1,6 @@
 ---
 
-title: Introduction to software updates | Microsoft Docs
+title: Introduction to software updates
 description: "Learn the basics of software updates in System Center Configuration Manager."
 keywords:
 author: dougeby

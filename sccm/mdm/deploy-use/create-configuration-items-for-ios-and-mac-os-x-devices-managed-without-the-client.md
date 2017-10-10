@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for iOS and Mac OS X devices managed with Intune | Microsoft Docs"
+title: "Create configuration items for iOS and Mac OS X devices managed with Intune"
 description: "Use the System Center Configuration Manager iOS and Mac OS X configuration item to manage settings for iOS and Mac OS X devices."
 ms.custom: na
 ms.date: 03/28/2017

@@ -1,5 +1,5 @@
 ---
-title: "RemoveContent Method | Microsoft Docs"
+title: "RemoveContent Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

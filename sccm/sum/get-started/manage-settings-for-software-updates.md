@@ -1,6 +1,6 @@
 ---
 
-title: Manage settings for software updates | Microsoft Docs
+title: Manage settings for software updates
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

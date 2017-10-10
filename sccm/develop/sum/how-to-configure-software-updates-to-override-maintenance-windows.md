@@ -1,5 +1,5 @@
 ---
-title: "Configure Software Updates to Override Maintenance Windows | Microsoft Docs"
+title: "Configure Software Updates to Override Maintenance Windows"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

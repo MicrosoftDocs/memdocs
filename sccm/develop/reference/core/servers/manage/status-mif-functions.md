@@ -1,5 +1,5 @@
 ---
-title: "Status MIF Functions | Microsoft Docs"
+title: "Status MIF Functions"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

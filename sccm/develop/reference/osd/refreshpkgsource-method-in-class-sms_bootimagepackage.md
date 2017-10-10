@@ -1,5 +1,5 @@
 ---
-title: "RefreshPkgSource Method in SMS_BootImagePackage | Microsoft Docs"
+title: "RefreshPkgSource Method in SMS_BootImagePackage"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

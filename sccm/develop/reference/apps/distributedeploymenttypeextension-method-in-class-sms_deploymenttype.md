@@ -1,5 +1,5 @@
 ---
-title: "DistributeDeploymentTypeExtension Method | Microsoft Docs"
+title: "DistributeDeploymentTypeExtension Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

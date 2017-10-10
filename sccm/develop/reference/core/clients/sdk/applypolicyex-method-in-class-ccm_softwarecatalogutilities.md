@@ -1,5 +1,5 @@
 ---
-title: "ApplyPolicyEx Method | Microsoft Docs"
+title: "ApplyPolicyEx Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

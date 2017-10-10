@@ -1,5 +1,5 @@
 ---
-title: "Get Configuration Manager | Microsoft Docs"
+title: "Get Configuration Manager"
 description: "Where to find installation media for new System Center Configuration Manager installations."
 ms.custom: na
 ms.date: 1/11/2017

@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Site System Role | Microsoft Docs"
+title: "Deploy a Site System Role"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

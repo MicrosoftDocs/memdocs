@@ -1,5 +1,5 @@
 ---
-title: "Asset Intelligence | Microsoft Docs"
+title: "Asset Intelligence"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

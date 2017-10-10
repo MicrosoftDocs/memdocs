@@ -1,5 +1,5 @@
 ---
-title: "Alerts and the status system | Microsoft Docs"
+title: "Alerts and the status system"
 description: "Configure alerts, and use the status system to remain informed about the state of your Configuration Manager deployment."
 ms.custom: na
 ms.date: 10/06/2016

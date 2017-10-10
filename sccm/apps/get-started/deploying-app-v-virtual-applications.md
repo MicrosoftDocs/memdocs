@@ -1,5 +1,5 @@
 ---
-title: "Deploy App-V virtual applications | Microsoft Docs"
+title: "Deploy App-V virtual applications"
 description: "See which considerations you must take into account when you create and deploy virtual applications."
 ms.custom: na
 ms.date: 02/16/2017

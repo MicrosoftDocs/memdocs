@@ -1,5 +1,5 @@
 ---
-title: "Deprecated features | Microsoft Docs"
+title: "Deprecated features"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
 ms.date: 08/16/2017

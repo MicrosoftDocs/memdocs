@@ -1,5 +1,5 @@
 ---
-title: "SMS_DeviceMethods Class | Microsoft Docs"
+title: "SMS_DeviceMethods Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

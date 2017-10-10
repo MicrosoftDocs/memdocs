@@ -1,5 +1,5 @@
 ---
-title: "SetRemCtrlSettings Method | Microsoft Docs"
+title: "SetRemCtrlSettings Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

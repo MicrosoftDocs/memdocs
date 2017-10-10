@@ -1,5 +1,5 @@
 ---
-title: "Install Method | Microsoft Docs"
+title: "Install Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

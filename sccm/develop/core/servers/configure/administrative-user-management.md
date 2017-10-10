@@ -1,5 +1,5 @@
 ---
-title: "Administrative User Management | Microsoft Docs"
+title: "Administrative User Management"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

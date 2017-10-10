@@ -1,5 +1,5 @@
 ---
-title: "Define boundary groups | Microsoft Docs"
+title: "Define boundary groups"
 description: "Understand boundary groups that link clients to site systems in System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017

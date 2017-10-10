@@ -1,5 +1,5 @@
 ---
-title: "ClearDeviceCategory Method | Microsoft Docs"
+title: "ClearDeviceCategory Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

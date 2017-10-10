@@ -1,5 +1,5 @@
 ---
-title: "Configure the Software Update Point | Microsoft Docs"
+title: "Configure the Software Update Point"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

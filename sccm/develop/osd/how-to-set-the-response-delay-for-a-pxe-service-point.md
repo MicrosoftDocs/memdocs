@@ -1,5 +1,5 @@
 ---
-title: "Set the Response Delay for a PXE Service Point | Microsoft Docs"
+title: "Set the Response Delay for a PXE Service Point"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

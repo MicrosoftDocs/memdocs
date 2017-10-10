@@ -1,5 +1,5 @@
 ---
-title: "Monitor and plan for power management | Microsoft Docs"
+title: "Monitor and plan for power management"
 description: "Learn how to monitor and plan for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

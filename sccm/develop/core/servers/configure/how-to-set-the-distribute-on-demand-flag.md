@@ -1,5 +1,5 @@
 ---
-title: "Set the Distribute on Demand Flag | Microsoft Docs"
+title: "Set the Distribute on Demand Flag"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Migrate data | Microsoft Docs"
+title: "Migrate data"
 description: "Learn how to transfer data from a source hierarchy to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 12/29/2016

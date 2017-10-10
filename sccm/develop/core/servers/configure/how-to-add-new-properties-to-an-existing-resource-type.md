@@ -1,5 +1,5 @@
 ---
-title: Add New Properties to an Existing Resource Type | Microsoft Docs"
+title: Add New Properties to an Existing Resource Type"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

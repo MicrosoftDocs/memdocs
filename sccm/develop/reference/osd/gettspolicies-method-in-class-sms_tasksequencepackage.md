@@ -1,5 +1,5 @@
 ---
-title: "GetTsPolicies Method | Microsoft Docs"
+title: "GetTsPolicies Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

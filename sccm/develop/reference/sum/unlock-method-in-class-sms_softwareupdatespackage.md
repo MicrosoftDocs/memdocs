@@ -1,5 +1,5 @@
 ---
-title: "Unlock Method in SMS_SoftwareUpdatesPackage | Microsoft Docs"
+title: "Unlock Method in SMS_SoftwareUpdatesPackage"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

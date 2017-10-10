@@ -1,5 +1,5 @@
 ---
-title: "Prepare to install sites | Microsoft Docs"
+title: "Prepare to install sites"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
 ms.custom: na
 ms.date: 3/1/2017

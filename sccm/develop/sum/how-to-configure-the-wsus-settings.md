@@ -1,5 +1,5 @@
 ---
-title: "Configure the WSUS Settings | Microsoft Docs"
+title: "Configure the WSUS Settings"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014 | Microsoft Docs"
+title: "MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

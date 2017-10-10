@@ -1,5 +1,5 @@
 ---
-title: "SMS_DefaultBoundaryGroup Class | Microsoft Docs"
+title: "SMS_DefaultBoundaryGroup Class"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"

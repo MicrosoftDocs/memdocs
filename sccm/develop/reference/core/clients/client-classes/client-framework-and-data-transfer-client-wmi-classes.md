@@ -1,5 +1,5 @@
 ---
-title: "Client Framework and Data Transfer Classes | Microsoft Docs"
+title: "Client Framework and Data Transfer Classes"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

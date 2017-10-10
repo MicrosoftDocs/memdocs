@@ -1,5 +1,5 @@
 ---
-title: "Extend Resource Discovery | Microsoft Docs"
+title: "Extend Resource Discovery"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

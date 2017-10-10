@@ -1,5 +1,5 @@
 ---
-title: "Enable or Disable the Compliance Settings Agent | Microsoft Docs"
+title: "Enable or Disable the Compliance Settings Agent"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: Create a task sequence to capture an operating system | Microsoft Docs
+title: Create a task sequence to capture an operating system
 description: "A build-and-capture task sequence builds a reference computer that can include specific drivers and software updates along with the operating system."
 ms.custom: na
 ms.date: 10/06/2016

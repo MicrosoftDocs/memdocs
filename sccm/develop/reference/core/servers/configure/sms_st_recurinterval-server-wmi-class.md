@@ -1,5 +1,5 @@
 ---
-title: "SMS_ST_RecurInterval Class | Microsoft Docs"
+title: "SMS_ST_RecurInterval Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

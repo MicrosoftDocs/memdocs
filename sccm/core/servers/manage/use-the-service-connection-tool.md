@@ -1,5 +1,5 @@
 ---
-title: "Service Connection Tool | Microsoft Docs"
+title: "Service Connection Tool"
 description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.custom: na
 ms.date: 09/06/2017

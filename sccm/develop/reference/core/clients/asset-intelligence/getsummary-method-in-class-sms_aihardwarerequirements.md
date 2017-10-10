@@ -1,5 +1,5 @@
 ---
-title: "GetSummary Method in Class SMS_AIHardwareRequirements | Microsoft Docs"
+title: "GetSummary Method in Class SMS_AIHardwareRequirements"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

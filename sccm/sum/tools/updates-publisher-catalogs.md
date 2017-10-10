@@ -1,5 +1,5 @@
 ---
-title: "Manage update catalogs | Microsoft Docs"
+title: "Manage update catalogs"
 description: "Manage software update catalogs for System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

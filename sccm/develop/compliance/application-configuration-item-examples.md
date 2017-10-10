@@ -1,5 +1,5 @@
 ---
-title: "Application Configuration Item Examples | Microsoft Docs"
+title: "Application Configuration Item Examples"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

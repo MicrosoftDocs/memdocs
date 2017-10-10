@@ -1,5 +1,5 @@
 ---
-title: "Manage high-risk deployments | Microsoft Docs"
+title: "Manage high-risk deployments"
 description: "Learn how to configure site settings in System Center Configuration Manager to warn admins if they create a high-risk deployment."
 ms.custom: na
 ms.date: 10/06/2016

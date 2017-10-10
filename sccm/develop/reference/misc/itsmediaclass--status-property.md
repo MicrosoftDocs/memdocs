@@ -1,5 +1,5 @@
 ---
-title: "ITsMediaClass::Status Property | Microsoft Docs"
+title: "ITsMediaClass::Status Property"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

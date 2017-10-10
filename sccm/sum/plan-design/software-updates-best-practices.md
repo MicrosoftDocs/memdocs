@@ -1,6 +1,6 @@
 ---
 
-title: Best practices for software updates | Microsoft Docs
+title: Best practices for software updates
 description: "Use these best practices for software updates in System Center Configuration Manager."
 keywords:
 author: dougebyms.author: dougeby

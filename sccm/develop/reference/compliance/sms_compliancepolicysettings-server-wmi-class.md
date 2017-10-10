@@ -1,5 +1,5 @@
 ---
-title: "SMS_CompliancePolicySettings Class | Microsoft Docs"
+title: "SMS_CompliancePolicySettings Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

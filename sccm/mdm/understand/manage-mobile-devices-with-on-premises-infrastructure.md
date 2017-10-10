@@ -1,5 +1,5 @@
 ---
-title: "On-premises Mobile Device Management (MDM) | Microsoft Docs"
+title: "On-premises Mobile Device Management (MDM)"
 description: "Learn about On-premises Mobile Device Management, a device management solution in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

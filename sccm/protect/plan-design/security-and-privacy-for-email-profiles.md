@@ -1,5 +1,5 @@
 ---
-title: "Email profile security and privacy | Microsoft Docs"
+title: "Email profile security and privacy"
 description: "Learn about the security best practices for managing email profiles for devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/28/2016

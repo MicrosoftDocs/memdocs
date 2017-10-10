@@ -1,5 +1,5 @@
 ---
-title: "Upgrade evaluation installs | Microsoft Docs"
+title: "Upgrade evaluation installs"
 description: "Learn how to upgrade an evaluation installation to a full installation of System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/7/2017

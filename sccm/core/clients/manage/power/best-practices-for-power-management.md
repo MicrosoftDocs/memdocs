@@ -1,5 +1,5 @@
 ---
-title: "Best practices for power management | Microsoft Docs"
+title: "Best practices for power management"
 description: "Get best practices for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

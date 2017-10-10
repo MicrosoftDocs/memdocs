@@ -1,5 +1,5 @@
 ---
-title: "Create a Console Custom View | Microsoft Docs"
+title: "Create a Console Custom View"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Always On | Microsoft Docs"
+title: "SQL Server Always On"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
 ms.date: 09/22/2017

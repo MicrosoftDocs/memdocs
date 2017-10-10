@@ -1,5 +1,5 @@
 ---
-title: "Set the PXE Service Point Response for a Specific Network Interface | Microsoft Docs"
+title: "Set the PXE Service Point Response for a Specific Network Interface"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "IDCMAgentCallback::NotifyComplete | Microsoft Docs"
+title: "IDCMAgentCallback::NotifyComplete"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Configure Advertised Programs Client Agent Settings | Microsoft Docs"
+title: "Configure Advertised Programs Client Agent Settings"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

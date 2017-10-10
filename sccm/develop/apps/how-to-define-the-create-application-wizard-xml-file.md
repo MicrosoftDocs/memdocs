@@ -1,5 +1,5 @@
 ---
-title: "How to Define the Create Application Wizard XML File | Microsoft Docs"
+title: "How to Define the Create Application Wizard XML File"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

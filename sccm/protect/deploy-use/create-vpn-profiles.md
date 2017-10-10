@@ -1,5 +1,5 @@
 ---
-title: "How to Create VPN profiles in System Center Configuration Manager  | Microsoft Docs"
+title: "How to Create VPN profiles in System Center Configuration Manager "
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
 ms.custom:
 ms.date: 4/19/2017

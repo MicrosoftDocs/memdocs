@@ -1,5 +1,5 @@
 ---
-title: "DDRAddIntegerArray | Microsoft Docs"
+title: "DDRAddIntegerArray"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

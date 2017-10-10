@@ -1,5 +1,5 @@
 ---
-title: "Update reset tool | Microsoft Docs"
+title: "Update reset tool"
 description: "Use the update reset tool for in-console updates for System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017

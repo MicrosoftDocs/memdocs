@@ -1,5 +1,5 @@
 ---
-title: "Context Qualifiers | Microsoft Docs"
+title: "Context Qualifiers"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "FallbackSMP Method | Microsoft Docs"
+title: "FallbackSMP Method"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"

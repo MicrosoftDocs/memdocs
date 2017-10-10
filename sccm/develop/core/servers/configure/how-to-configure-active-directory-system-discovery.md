@@ -1,5 +1,5 @@
 ---
-title: "Configure Active Directory System Discovery | Microsoft Docs"
+title: "Configure Active Directory System Discovery"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

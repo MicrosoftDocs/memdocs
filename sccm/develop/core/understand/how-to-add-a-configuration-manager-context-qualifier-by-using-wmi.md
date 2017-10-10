@@ -1,5 +1,5 @@
 ---
-title: "Add a Context Qualifier by Using WMI | Microsoft Docs"
+title: "Add a Context Qualifier by Using WMI"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

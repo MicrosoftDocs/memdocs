@@ -1,5 +1,5 @@
 ---
-title: "Packages and programs | Microsoft Docs"
+title: "Packages and programs"
 description: "Support deployments that use packages and programs or applications with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

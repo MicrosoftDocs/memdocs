@@ -1,5 +1,5 @@
 ---
-title: "Add a State Migration Point Folder | Microsoft Docs"
+title: "Add a State Migration Point Folder"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

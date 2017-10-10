@@ -1,5 +1,5 @@
 ---
-title: "Support for Windows 10 | Microsoft Docs"
+title: "Support for Windows 10"
 description: "Learn about the Windows 10 versions that are supported as clients or for OSD with System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017

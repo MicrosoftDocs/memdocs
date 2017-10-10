@@ -1,5 +1,5 @@
 ---
-title: "Manage Skype for Business Online access | Microsoft Docs"
+title: "Manage Skype for Business Online access"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
 ms.custom: na
 ms.date: 03/05/2017

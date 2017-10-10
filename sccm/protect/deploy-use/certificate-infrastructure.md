@@ -1,5 +1,5 @@
 ---
-title: "Configure certificate infrastructure | Microsoft Docs"
+title: "Configure certificate infrastructure"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/25/2017

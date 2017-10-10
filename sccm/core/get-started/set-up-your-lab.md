@@ -1,5 +1,5 @@
 ---
-title: "Set up your System Center Configuration Manager lab | Microsoft Docs"
+title: "Set up your System Center Configuration Manager lab"
 description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
 ms.custom: na
 ms.date: 09/21/2017

@@ -1,5 +1,5 @@
 ---
-title: "Certificate profile prerequisites | Microsoft Docs"
+title: "Certificate profile prerequisites"
 description: "Learn about certificate profiles in System Center Configuration Manager and their external dependencies and dependencies in the product."
 ms.custom: na
 ms.date: 03/29/2017

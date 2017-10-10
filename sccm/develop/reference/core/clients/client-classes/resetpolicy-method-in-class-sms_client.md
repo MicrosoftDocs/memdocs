@@ -1,5 +1,5 @@
 ---
-title: "ResetPolicy Method | Microsoft Docs"
+title: "ResetPolicy Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

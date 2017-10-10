@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for reporting | Microsoft Docs"
+title: "Security and privacy for reporting"
 description: "Understand best practices for security and privacy when you are using the reporting functionality in Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

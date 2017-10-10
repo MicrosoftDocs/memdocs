@@ -1,5 +1,5 @@
 ---
-title: "In-console updates | Microsoft Docs"
+title: "In-console updates"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
 ms.date: 09/14/2017

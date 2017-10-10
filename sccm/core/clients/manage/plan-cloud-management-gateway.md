@@ -1,5 +1,5 @@
 ---
-title: "Plan for the cloud management gateway | Microsoft Docs"
+title: "Plan for the cloud management gateway"
 description: ""
 ms.date: 10/06/2017
 ms.prod: configuration-manager

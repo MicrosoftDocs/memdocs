@@ -1,5 +1,5 @@
 ---
-title: "ITsMediaClass::StepInfo Property | Microsoft Docs"
+title: "ITsMediaClass::StepInfo Property"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

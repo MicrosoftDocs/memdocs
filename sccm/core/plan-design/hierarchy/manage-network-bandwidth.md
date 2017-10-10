@@ -1,5 +1,5 @@
 ---
-title: "Manage network bandwidth for content | Microsoft Docs"
+title: "Manage network bandwidth for content"
 description: "Configure scheduling, throttling, and prestaged content for System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/6/2017

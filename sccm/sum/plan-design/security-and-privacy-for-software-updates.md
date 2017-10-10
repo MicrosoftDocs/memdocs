@@ -1,6 +1,6 @@
 ---
 
-title: Security and privacy for software updates | Microsoft Docs
+title: Security and privacy for software updates
 description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
 keywords:
 author: dougebyms.author: dougeby

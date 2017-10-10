@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1) | Microsoft Docs"
+title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

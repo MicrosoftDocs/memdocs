@@ -1,5 +1,5 @@
 ---
-title: "AcceptEULA Method in SMS_SoftwareUpdate | Microsoft Docs"
+title: "AcceptEULA Method in SMS_SoftwareUpdate"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

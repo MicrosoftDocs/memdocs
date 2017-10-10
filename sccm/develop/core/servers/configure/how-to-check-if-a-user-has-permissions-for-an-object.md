@@ -1,5 +1,5 @@
 ---
-title: "Check if a User Has Permissions for an Object | Microsoft Docs"
+title: "Check if a User Has Permissions for an Object"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

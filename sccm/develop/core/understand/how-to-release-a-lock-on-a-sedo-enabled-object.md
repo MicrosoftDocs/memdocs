@@ -1,5 +1,5 @@
 ---
-title: "Release a Lock on a SEDO-Enabled Object | Microsoft Docs"
+title: "Release a Lock on a SEDO-Enabled Object"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

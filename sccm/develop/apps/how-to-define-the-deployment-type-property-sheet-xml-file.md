@@ -1,5 +1,5 @@
 ---
-title: "Define the Deployment Type Property Sheet XML File  | Microsoft Docs
+title: "Define the Deployment Type Property Sheet XML File 
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,6 +1,6 @@
 ---
 
-title: Software updates maintenance | Microsoft Docs
+title: Software updates maintenance
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

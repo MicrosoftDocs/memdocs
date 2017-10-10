@@ -1,5 +1,5 @@
 ---
-title: "Updates | Microsoft Docs"
+title: "Updates"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
 ms.date: 07/31/2017

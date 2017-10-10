@@ -1,5 +1,5 @@
 ---
-title: "List Distribution Points for a Site | Microsoft Docs"
+title: "List Distribution Points for a Site"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

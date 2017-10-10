@@ -1,5 +1,5 @@
 ---
-title: "ReDistributePackage Method | Microsoft Docs"
+title: "ReDistributePackage Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

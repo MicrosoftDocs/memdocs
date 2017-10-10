@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for Windows 8.1 and Windows 10 devices managed with Intune | Microsoft Docs"
+title: "Create configuration items for Windows 8.1 and Windows 10 devices managed with Intune"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers."
 ms.custom: na
 ms.date: 07/31/2017

@@ -1,5 +1,5 @@
 ---
-title: "SMS_EndpointProtectionDashboardBucket Class | Microsoft Docs"
+title: "SMS_EndpointProtectionDashboardBucket Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

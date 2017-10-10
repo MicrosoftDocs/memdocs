@@ -1,5 +1,5 @@
 ---
-title: "Configure the Default Compliance Evaluation Schedule | Microsoft Docs"
+title: "Configure the Default Compliance Evaluation Schedule"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

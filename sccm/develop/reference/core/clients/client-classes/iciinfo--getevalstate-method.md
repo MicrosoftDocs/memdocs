@@ -1,5 +1,5 @@
 ---
-title: "ICIINFO::GetEvalState | Microsoft Docs"
+title: "ICIINFO::GetEvalState"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

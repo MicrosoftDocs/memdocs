@@ -1,5 +1,5 @@
 ---
-title: "ICcmAlternateDownloadProvider : DownloadContent | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : DownloadContent"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"

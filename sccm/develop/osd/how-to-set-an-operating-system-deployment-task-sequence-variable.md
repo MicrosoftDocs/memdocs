@@ -1,5 +1,5 @@
 ---
-title: "Set an OS Deployment Task Sequence Variable | Microsoft Docs"
+title: "Set an OS Deployment Task Sequence Variable"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

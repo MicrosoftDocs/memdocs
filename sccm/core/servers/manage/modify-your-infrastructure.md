@@ -1,5 +1,5 @@
 ---
-title: "Modify infrastructure | Microsoft Docs"
+title: "Modify infrastructure"
 description: "Learn how to make changes or take actions that affect the Configuration Manager infrastructure you have deployed."
 ms.custom: na
 ms.date: 10/06/2016

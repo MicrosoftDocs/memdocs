@@ -1,5 +1,5 @@
 ---
-title: "Custom database file locations | Microsoft Docs"
+title: "Custom database file locations"
 description: "Learn how to specify custom locations for SQL Server database files."
 ms.custom: na
 ms.date: 10/06/2016

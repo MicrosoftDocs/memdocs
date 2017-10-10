@@ -1,5 +1,5 @@
 ---
-title: "Enroll iOS devices Apple Configurator - Configuration Manager | Microsoft Docs"
+title: "Enroll iOS devices Apple Configurator - Configuration Manager"
 descriptions: "Pre-enroll iOS devices by using Apple Configurator with Configuration Manager."
 ms.custom: na
 ms.date: 08/15/2017

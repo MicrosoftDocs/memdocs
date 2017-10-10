@@ -1,5 +1,5 @@
 ---
-title: "Collections security and privacy | Microsoft Docs"
+title: "Collections security and privacy"
 description: "Get best practices for security and privacy in collections in System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/22/2017

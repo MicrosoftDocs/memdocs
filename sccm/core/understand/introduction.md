@@ -1,5 +1,5 @@
 ---
-title: "Introduction | Microsoft Docs"
+title: "Introduction"
 description: "Get basic information as an introduction to System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

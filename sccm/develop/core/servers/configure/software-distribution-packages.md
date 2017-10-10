@@ -1,5 +1,5 @@
 ---
-title: "Software Distribution Packages | Microsoft Docs"
+title: "Software Distribution Packages"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

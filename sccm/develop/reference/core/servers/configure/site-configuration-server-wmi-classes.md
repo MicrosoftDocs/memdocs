@@ -1,5 +1,5 @@
 ---
-title: "Site Configuration Server WMI Classes | Microsoft Docs"
+title: "Site Configuration Server WMI Classes"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"

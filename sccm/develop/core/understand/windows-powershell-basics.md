@@ -1,5 +1,5 @@
 ---
-title: "Windows PowerShell Basics | Microsoft Docs"
+title: "Windows PowerShell Basics"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

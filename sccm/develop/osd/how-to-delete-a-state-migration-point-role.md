@@ -1,5 +1,5 @@
 ---
-title: "Delete a State Migration Point Role | Microsoft Docs"
+title: "Delete a State Migration Point Role"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

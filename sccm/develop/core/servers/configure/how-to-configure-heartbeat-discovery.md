@@ -1,5 +1,5 @@
 ---
-title: "Configure Heartbeat Discovery | Microsoft Docs"
+title: "Configure Heartbeat Discovery"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

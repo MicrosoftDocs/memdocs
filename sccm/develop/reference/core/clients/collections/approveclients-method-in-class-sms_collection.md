@@ -1,5 +1,5 @@
 ---
-title: "ApproveClients Method | Microsoft Docs"
+title: "ApproveClients Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

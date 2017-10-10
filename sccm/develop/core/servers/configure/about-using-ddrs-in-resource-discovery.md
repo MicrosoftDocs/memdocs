@@ -1,5 +1,5 @@
 ---
-title: "Using DDRs in Resource Discovery | Microsoft Docs"
+title: "Using DDRs in Resource Discovery"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

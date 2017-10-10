@@ -1,5 +1,5 @@
 ---
-title: "GetBusinessHours Method | Microsoft Docs"
+title: "GetBusinessHours Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

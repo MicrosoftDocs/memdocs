@@ -1,5 +1,5 @@
 ---
-title: "ReleaseAllLocks Method | Microsoft Docs"
+title: "ReleaseAllLocks Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

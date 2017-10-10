@@ -1,5 +1,5 @@
 ---
-title: "SMS_TaskSequencePackageReference_Flat Class | Microsoft Docs"
+title: "SMS_TaskSequencePackageReference_Flat Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

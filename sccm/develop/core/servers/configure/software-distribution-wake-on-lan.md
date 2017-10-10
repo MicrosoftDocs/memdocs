@@ -1,5 +1,5 @@
 ---
-title: "Software Distribution Wake On LAN | Microsoft Docs"
+title: "Software Distribution Wake On LAN"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

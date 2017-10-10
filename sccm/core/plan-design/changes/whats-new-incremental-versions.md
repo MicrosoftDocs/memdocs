@@ -1,5 +1,5 @@
 ---
-title: "Incremental versions of System Center Configuration Manager | Microsoft Docs"
+title: "Incremental versions of System Center Configuration Manager"
 description: "Learn how to install and manage System Center Configuration Manager updates."
 ms.custom: na
 ms.date: 7/31/2017

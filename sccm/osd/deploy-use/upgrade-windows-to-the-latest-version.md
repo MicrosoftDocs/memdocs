@@ -1,5 +1,5 @@
 ---
-title: Upgrade Windows to the latest version | Microsoft Docs
+title: Upgrade Windows to the latest version
 description: "Learn how to use Configuration Manager to upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
 ms.date: 02/06/2017

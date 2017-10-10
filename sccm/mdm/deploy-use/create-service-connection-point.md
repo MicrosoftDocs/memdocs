@@ -1,5 +1,5 @@
 ---
-title: "Create a service connection point using System Center Configuration Manager | Microsoft Docs"
+title: "Create a service connection point using System Center Configuration Manager"
 description: "Create a service connection point using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

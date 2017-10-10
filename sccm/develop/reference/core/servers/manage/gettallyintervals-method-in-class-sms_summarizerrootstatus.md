@@ -1,5 +1,5 @@
 ---
-title: "GetTallyIntervals Method | Microsoft Docs"
+title: "GetTallyIntervals Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

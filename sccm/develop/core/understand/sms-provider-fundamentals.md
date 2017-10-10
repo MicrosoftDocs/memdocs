@@ -1,5 +1,5 @@
 ---
-title: "SMS Provider Fundamentals | Microsoft Docs"
+title: "SMS Provider Fundamentals"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

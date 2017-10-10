@@ -1,5 +1,5 @@
 ---
-title: "ICCMEvent::SetProperty Method | Microsoft Docs"
+title: "ICCMEvent::SetProperty Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

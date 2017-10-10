@@ -1,5 +1,5 @@
 ---
-title: "Design a site hierarchy - Configuration Manager | Microsoft Docs"
+title: "Design a site hierarchy - Configuration Manager"
 description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
 ms.custom: na
 ms.date: 8/24/2017

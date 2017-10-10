@@ -1,5 +1,5 @@
 ---
-title: "UpdatePrereqAndStateFlags Method | Microsoft Docs"
+title: "UpdatePrereqAndStateFlags Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

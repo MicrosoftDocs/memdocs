@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection malware definitions from network share | Microsoft Docs"
+title: "Endpoint Protection malware definitions from network share"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager

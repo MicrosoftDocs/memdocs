@@ -1,5 +1,5 @@
 ---
-title: "How to Create Node XML for a Grid View | Microsoft Docs"
+title: "How to Create Node XML for a Grid View"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

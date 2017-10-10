@@ -1,5 +1,5 @@
 ---
-title: "Call a WMI Class Method by Using System.Management | Microsoft Docs"
+title: "Call a WMI Class Method by Using System.Management"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

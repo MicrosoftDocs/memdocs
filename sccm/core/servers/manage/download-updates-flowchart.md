@@ -1,5 +1,5 @@
 ---
-title: "Flowchart - Download updates | Microsoft Docs"
+title: "Flowchart - Download updates"
 description: "See the process by which a site with an online service connection point downloads in-console updates."
 ms.custom: na
 ms.date: 10/06/2016

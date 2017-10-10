@@ -1,5 +1,5 @@
 ---
-title: "Delete an Object by Using Managed Code | Microsoft Docs"
+title: "Delete an Object by Using Managed Code"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Requirements of IDMIF files | Microsoft Docs"
+title: "Requirements of IDMIF files"
 ms.custom: ""
 ms.date: "2017-1-03"
 ms.prod: "configuration-manager"

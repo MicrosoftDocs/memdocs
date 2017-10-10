@@ -1,5 +1,5 @@
 ---
-title: "Manage the LTSB | Microsoft Docs"
+title: "Manage the LTSB"
 description: "Management differences for the LTSB of System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/01/2017

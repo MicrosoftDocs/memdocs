@@ -1,5 +1,5 @@
 ---
-title: "Programming Fundamentals | Microsoft Docs"
+title: "Programming Fundamentals"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Migrate objects | Microsoft Docs"
+title: "Migrate objects"
 description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 1/12/2017

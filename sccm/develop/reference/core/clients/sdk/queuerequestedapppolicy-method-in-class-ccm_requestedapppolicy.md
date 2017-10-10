@@ -1,5 +1,5 @@
 ---
-title: "QueueRequestedAppPolicy Method | Microsoft Docs"
+title: "QueueRequestedAppPolicy Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Backup sites | Microsoft Docs"
+title: "Backup sites"
 description: "Learn to back up your sites before the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
 ms.date: 6/5/2017

@@ -1,5 +1,5 @@
 ---
-title: "Delete a Collection | Microsoft Docs"
+title: "Delete a Collection"
 ms.custom: ""
 ms.date: 12/06/2016
 ms.prod: "configuration-manager"

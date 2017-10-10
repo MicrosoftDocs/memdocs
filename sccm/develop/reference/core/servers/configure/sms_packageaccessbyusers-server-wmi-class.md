@@ -1,5 +1,5 @@
 ---
-title: "SMS_PackageAccessByUsers Class | Microsoft Docs"
+title: "SMS_PackageAccessByUsers Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

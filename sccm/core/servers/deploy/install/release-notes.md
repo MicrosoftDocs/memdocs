@@ -1,5 +1,5 @@
 ---
-title: "Release notes - Configuration Manager | Microsoft Docs"
+title: "Release notes - Configuration Manager"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
 ms.date: 08/23/2017

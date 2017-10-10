@@ -1,5 +1,5 @@
 ---
-title: "UNIX/Linux client component services and commands | Microsoft Docs"
+title: "UNIX/Linux client component services and commands"
 description: "Learn about component services and commands on Linux and UNIX clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

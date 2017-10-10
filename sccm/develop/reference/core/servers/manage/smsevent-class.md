@@ -1,5 +1,5 @@
 ---
-title: "SMSEvent Class | Microsoft Docs"
+title: "SMSEvent Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "SyncNow Method | Microsoft Docs"
+title: "SyncNow Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

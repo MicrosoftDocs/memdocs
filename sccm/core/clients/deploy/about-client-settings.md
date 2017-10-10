@@ -1,5 +1,5 @@
 ---
-title: "Client settings | Microsoft Docs"
+title: "Client settings"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/01/2017

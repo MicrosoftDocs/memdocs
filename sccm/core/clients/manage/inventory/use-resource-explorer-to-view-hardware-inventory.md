@@ -1,5 +1,5 @@
 ---
-title: "View hardware inventory | Microsoft Docs | Resource Explorer"
+title: "View hardware inventory | Resource Explorer"
 description: "Use Resource Explorer to view hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 01/03/2017

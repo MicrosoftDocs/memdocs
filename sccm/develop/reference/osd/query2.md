@@ -1,5 +1,5 @@
 ---
-title: "Query2 | Microsoft Docs"
+title: "Query2"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

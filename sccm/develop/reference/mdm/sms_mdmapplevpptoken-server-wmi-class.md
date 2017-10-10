@@ -1,5 +1,5 @@
 ---
-title: "SMS_MDMAppleVppToken Class | Microsoft Docs"
+title: "SMS_MDMAppleVppToken Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

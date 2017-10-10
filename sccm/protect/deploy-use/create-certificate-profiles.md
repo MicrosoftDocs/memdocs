@@ -1,5 +1,5 @@
 ---
-title: "How to create SCEP certificate profiles | Microsoft Docs"
+title: "How to create SCEP certificate profiles"
 description: "Learn how to use certificate profiles to provision managed devices with the certificates they need in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/28/2017

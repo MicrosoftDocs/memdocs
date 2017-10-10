@@ -1,5 +1,5 @@
 ---
-title: "CheckDecommissionState Method | Microsoft Docs"
+title: "CheckDecommissionState Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

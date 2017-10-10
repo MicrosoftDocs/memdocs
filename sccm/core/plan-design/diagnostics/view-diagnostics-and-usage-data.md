@@ -1,5 +1,5 @@
 ---
-title: "View diagnostics data | Microsoft Docs"
+title: "View diagnostics data"
 description: "View diagnostic and usage data to confirm that your System Center Configuration Manager hierarchy contains no sensitive information."
 ms.custom: na
 ms.date: 3/27/2017

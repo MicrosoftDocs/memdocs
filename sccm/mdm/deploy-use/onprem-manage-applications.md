@@ -1,5 +1,5 @@
 ---
-title: "Manage Applications for On-premises Mobile Device Management | Microsoft Docs"
+title: "Manage Applications for On-premises Mobile Device Management"
 description: "Manage applications for On-premises Mobile Device Management."
 ms.custom: na
 ms.date: 03/05/2017

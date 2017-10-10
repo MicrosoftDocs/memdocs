@@ -1,5 +1,5 @@
 ---
-title: "Server Runtime Requirements | Microsoft Docs"
+title: "Server Runtime Requirements"
 ms.custom: ""
 ms.date: "3/14/2017"
 ms.prod: "configuration-manager"

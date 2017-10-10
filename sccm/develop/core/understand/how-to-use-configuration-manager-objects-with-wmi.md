@@ -1,5 +1,5 @@
 ---
-title: "Use Objects with WMI | Microsoft Docs"
+title: "Use Objects with WMI"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

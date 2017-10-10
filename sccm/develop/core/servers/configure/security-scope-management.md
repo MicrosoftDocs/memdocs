@@ -1,5 +1,5 @@
 ---
-title: "Security Scope Management | Microsoft Docs"
+title: "Security Scope Management"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

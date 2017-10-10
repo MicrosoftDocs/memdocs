@@ -1,5 +1,5 @@
 ---
-title: "Perform a Synchronous Query by Using System.Management | Microsoft Docs"
+title: "Perform a Synchronous Query by Using System.Management"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

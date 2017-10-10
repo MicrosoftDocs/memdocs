@@ -1,5 +1,5 @@
 ---
-title: "Publish site data | Microsoft Docs"
+title: "Publish site data"
 description: "Learn how to publish Configuration Manager sites to Active Directory Domain Services."
 ms.custom: na
 ms.date: 2/7/2017

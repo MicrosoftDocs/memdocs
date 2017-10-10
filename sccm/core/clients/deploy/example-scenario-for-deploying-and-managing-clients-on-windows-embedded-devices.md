@@ -1,5 +1,5 @@
 ---
-title: "Example scenario - deploy Windows Embedded clients | Microsoft Docs"
+title: "Example scenario - deploy Windows Embedded clients"
 description: "See an example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices."
 ms.custom: na
 ms.date: 04/23/2017

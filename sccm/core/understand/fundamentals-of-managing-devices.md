@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of managing devices | Microsoft Docs"
+title: "Fundamentals of managing devices"
 description: "Learn how to use System Center Configuration Manager to manage devices."
 ms.custom: na
 ms.date: 12/04/2016

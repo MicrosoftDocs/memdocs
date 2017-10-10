@@ -1,5 +1,5 @@
 ---
-title: "Delete a Software Metering Rule | Microsoft Docs"
+title: "Delete a Software Metering Rule"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Diagnostics and usage data | Microsoft Docs"
+title: "Diagnostics and usage data"
 description: "Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself."
 ms.custom: na
 ms.date: 3/27/2017

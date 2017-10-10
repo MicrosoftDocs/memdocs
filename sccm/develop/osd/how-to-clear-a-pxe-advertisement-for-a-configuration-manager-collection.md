@@ -1,5 +1,5 @@
 ---
-title: "Clear a PXE Advertisement For a Collection | Microsoft Docs"
+title: "Clear a PXE Advertisement For a Collection"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

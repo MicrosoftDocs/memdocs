@@ -1,5 +1,5 @@
 ---
-title: "About upgrade, update, and install | Microsoft Docs"
+title: "About upgrade, update, and install"
 description: "Learn the difference between the terms Install, Update, and Upgrade, when managing Configuration Manager infrastructure."
 ms.custom: na
 ms.date: 1/11/2017

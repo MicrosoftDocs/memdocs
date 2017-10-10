@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for queries | Microsoft Docs"
+title: "Security and privacy for queries"
 description: "Understand best practices for security and privacy when you query for information from the site database."
 ms.custom: na
 ms.date: 10/06/2016

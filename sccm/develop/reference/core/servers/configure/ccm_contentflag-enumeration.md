@@ -1,5 +1,5 @@
 ---
-title: "CCM_CONTENTFLAG Enumeration | Microsoft Docs"
+title: "CCM_CONTENTFLAG Enumeration"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

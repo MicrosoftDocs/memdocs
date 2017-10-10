@@ -1,5 +1,5 @@
 ---
-title: "Read and Write to the Site Control File by Using WMI | Microsoft Docs"
+title: "Read and Write to the Site Control File by Using WMI"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

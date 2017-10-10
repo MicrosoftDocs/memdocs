@@ -1,5 +1,5 @@
 ---
-title: "View File Usage Summary Information | Microsoft Docs"
+title: "View File Usage Summary Information"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "EvaluateAllPolicies Method | Microsoft Docs"
+title: "EvaluateAllPolicies Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

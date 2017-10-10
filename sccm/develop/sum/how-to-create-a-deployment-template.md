@@ -1,5 +1,5 @@
 ---
-title: "Create a Deployment Template | Microsoft Docs"
+title: "Create a Deployment Template"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

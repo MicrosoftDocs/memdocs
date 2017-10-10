@@ -1,5 +1,5 @@
 ---
-title: "Status Client APIs | Microsoft Docs"
+title: "Status Client APIs"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

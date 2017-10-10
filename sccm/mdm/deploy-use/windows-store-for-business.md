@@ -1,5 +1,5 @@
 ---
-title: "WSfB in System Center Configuration Manager | Microsoft Docs"
+title: "WSfB in System Center Configuration Manager"
 description: "WSfB in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

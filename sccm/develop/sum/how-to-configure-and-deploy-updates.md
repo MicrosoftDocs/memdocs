@@ -1,5 +1,5 @@
 ---
-title: "Configure and Deploy Updates | Microsoft Docs"
+title: "Configure and Deploy Updates"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

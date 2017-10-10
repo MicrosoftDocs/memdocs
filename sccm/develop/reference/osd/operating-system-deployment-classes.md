@@ -1,5 +1,5 @@
 ---
-title: "Operating System Deployment Classes | Microsoft Docs"
+title: "Operating System Deployment Classes"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

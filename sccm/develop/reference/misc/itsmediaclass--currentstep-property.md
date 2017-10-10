@@ -1,5 +1,5 @@
 ---
-title: "ITsMediaClass::CurrentStep Property | Microsoft Docs"
+title: "ITsMediaClass::CurrentStep Property"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

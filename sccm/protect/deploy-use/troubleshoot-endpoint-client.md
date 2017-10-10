@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting Windows Defender or Endpoint Protection client | Microsoft Docs"
+title: "Troubleshooting Windows Defender or Endpoint Protection client"
 description: "Learn how to troubleshoot problems with Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 01/03/2017

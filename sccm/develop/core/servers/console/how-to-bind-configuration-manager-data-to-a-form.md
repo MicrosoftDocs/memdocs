@@ -1,5 +1,5 @@
 ---
-title: "Bind Configuration Manager Data to a Form | Microsoft Docs"
+title: "Bind Configuration Manager Data to a Form"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

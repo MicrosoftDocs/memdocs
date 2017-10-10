@@ -1,5 +1,5 @@
 ---
-title: "Setup reference | Microsoft Docs"
+title: "Setup reference"
 description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
 ms.date: 4/18/2017

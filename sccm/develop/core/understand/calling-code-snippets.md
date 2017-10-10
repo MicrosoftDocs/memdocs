@@ -1,5 +1,5 @@
 ---
-title: "Calling Code Snippets | Microsoft Docs"
+title: "Calling Code Snippets"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

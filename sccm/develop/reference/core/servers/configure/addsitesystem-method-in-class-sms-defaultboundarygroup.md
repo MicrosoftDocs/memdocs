@@ -1,5 +1,5 @@
 ---
-title: "AddSiteSystem Method | Microsoft Docs"
+title: "AddSiteSystem Method"
 ms.custom: ""
 ms.date: "03/13/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Handle Synchronous Errors by Using WMI | Microsoft Docs"
+title: "Handle Synchronous Errors by Using WMI"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

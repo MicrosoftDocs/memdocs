@@ -1,5 +1,5 @@
 ---
-title: "SMS_ImageServicingProgress Class | Microsoft Docs"
+title: "SMS_ImageServicingProgress Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Planning for reporting | Microsoft Docs"
+title: "Planning for reporting"
 description: "From installation details to security and network bandwidth, it's important to plan for reporting in Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

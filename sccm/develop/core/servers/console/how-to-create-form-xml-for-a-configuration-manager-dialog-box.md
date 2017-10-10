@@ -1,5 +1,5 @@
 ---
-title: "Create Form XML for a Dialog Box | Microsoft Docs"
+title: "Create Form XML for a Dialog Box"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

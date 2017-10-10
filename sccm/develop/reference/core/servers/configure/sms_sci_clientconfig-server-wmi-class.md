@@ -1,5 +1,5 @@
 ---
-title: "SMS_SCI_ClientConfig Class | Microsoft Docs"
+title: "SMS_SCI_ClientConfig Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

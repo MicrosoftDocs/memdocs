@@ -1,5 +1,5 @@
 ---
-title: "Enumerate Updates Matching a Specific Criteria | Microsoft Docs"
+title: "Enumerate Updates Matching a Specific Criteria"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

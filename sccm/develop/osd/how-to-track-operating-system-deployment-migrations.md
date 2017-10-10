@@ -1,5 +1,5 @@
 ---
-title: "Track OS Deployment Migrations | Microsoft Docs"
+title: "Track OS Deployment Migrations"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

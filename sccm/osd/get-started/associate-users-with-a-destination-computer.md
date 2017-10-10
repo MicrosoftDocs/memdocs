@@ -1,5 +1,5 @@
 ---
-title: Associate users with a destination computer | Microsoft Docs
+title: Associate users with a destination computer
 description: "Configure System Center Configuration Manager to associate users with destination computers when deploying operating systems."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Updates Publisher | Microsoft Docs"
+title: "Updates Publisher"
 description: "Use System Center Updates Publisher to manage custom updates"
 ms.custom: na
 ms.date: 4/29/2017

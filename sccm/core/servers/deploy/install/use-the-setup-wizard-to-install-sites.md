@@ -1,5 +1,5 @@
 ---
-title: "Setup Wizard | Microsoft Docs"
+title: "Setup Wizard"
 ms.custom: na
 ms.date: 7/24/2017
 ms.prod: configuration-manager

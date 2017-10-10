@@ -1,5 +1,5 @@
 ---
-title: "AddChangeNotification Method in SMS_VhdPackage | Microsoft Docs"
+title: "AddChangeNotification Method in SMS_VhdPackage"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

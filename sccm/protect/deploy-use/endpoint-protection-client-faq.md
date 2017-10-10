@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection client frequently asked questions | Microsoft Docs"
+title: "Endpoint Protection client frequently asked questions"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 02/14/2017

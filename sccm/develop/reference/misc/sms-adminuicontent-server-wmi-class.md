@@ -1,5 +1,5 @@
 ---
-title: "SMS_AdminUIContent Class | Microsoft Docs"
+title: "SMS_AdminUIContent Class"
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: "configuration-manager"

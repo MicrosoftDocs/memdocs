@@ -1,5 +1,5 @@
 ---
-title: "Install Updates Publisher | Microsoft Docs"
+title: "Install Updates Publisher"
 description: "Install System Center Updates Publisher in your environment"
 ms.custom: na
 ms.date: 07/03/2017

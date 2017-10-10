@@ -1,5 +1,5 @@
 ---
-title: "Privacy statement - OMS addendum | Microsoft Docs"
+title: "Privacy statement - OMS addendum"
 ms.custom: na
 ms.date: 11/06/2016
 ms.reviewer: na

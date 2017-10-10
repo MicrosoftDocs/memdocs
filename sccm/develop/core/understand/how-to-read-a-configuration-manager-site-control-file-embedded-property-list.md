@@ -1,5 +1,5 @@
 ---
-title: "Read a Site Control File Embedded Property List | Microsoft Docs"
+title: "Read a Site Control File Embedded Property List"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

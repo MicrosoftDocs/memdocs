@@ -1,5 +1,5 @@
 ---
-title: Create a custom task sequence | Microsoft Docs
+title: Create a custom task sequence
 description: "Edit a custom task sequence in System Center Configuration Manager to add steps to the task sequence."
 ms.custom: na
 ms.date: 10/06/2016

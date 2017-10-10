@@ -1,5 +1,5 @@
 ---
-title: "ICCMEvent::EventType Property | Microsoft Docs"
+title: "ICCMEvent::EventType Property"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

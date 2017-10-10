@@ -1,5 +1,5 @@
 ---
-title: "Change the Maximum Run Time for a Program | Microsoft Docs"
+title: "Change the Maximum Run Time for a Program"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

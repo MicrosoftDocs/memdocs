@@ -1,5 +1,5 @@
 ---
-title: "GetEncryptDecryptKey Method | Microsoft Docs"
+title: "GetEncryptDecryptKey Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

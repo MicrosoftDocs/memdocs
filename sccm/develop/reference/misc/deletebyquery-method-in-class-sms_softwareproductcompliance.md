@@ -1,5 +1,5 @@
 ---
-title: "DeleteByQuery Method | Microsoft Docs"
+title: "DeleteByQuery Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "OS Deployment Task Sequences Overview | Microsoft Docs"
+title: "OS Deployment Task Sequences Overview"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

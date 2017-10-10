@@ -1,5 +1,5 @@
 ---
-title: "Enable and Disable Remote Tools | Microsoft Docs"
+title: "Enable and Disable Remote Tools"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

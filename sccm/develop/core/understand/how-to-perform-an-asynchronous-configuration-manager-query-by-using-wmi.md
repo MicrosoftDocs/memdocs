@@ -1,5 +1,5 @@
 ---
-title: "Perform an Asynchronous Query by Using WMI | Microsoft Docs"
+title: "Perform an Asynchronous Query by Using WMI"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

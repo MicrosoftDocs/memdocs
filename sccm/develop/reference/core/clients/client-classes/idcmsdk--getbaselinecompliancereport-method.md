@@ -1,5 +1,5 @@
 ---
-title: "IDCMSDK::GetBaselineComplianceReport | Microsoft Docs"
+title: "IDCMSDK::GetBaselineComplianceReport"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

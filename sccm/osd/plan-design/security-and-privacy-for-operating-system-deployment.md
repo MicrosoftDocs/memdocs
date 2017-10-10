@@ -1,5 +1,5 @@
 ---
-title: Security and privacy for operating system deployment | Microsoft Docs
+title: Security and privacy for operating system deployment
 description: "Learn about security and privacy best practices for operating system deployment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for compliance settings | Microsoft Docs"
+title: "Security and privacy for compliance settings"
 description: "Learn about the security best practices for compliance settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Plan site system roles | Microsoft Docs"
+title: "Plan site system roles"
 description: "Consider site system servers and site system roles as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 10/06/2016

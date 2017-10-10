@@ -1,5 +1,5 @@
 ---
-title: "Supported Configurations for the LTSB  | Microsoft Docs"
+title: "Supported Configurations for the LTSB "
 description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.custom: na
 ms.date: 5/10/2017

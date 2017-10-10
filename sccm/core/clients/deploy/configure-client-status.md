@@ -1,5 +1,5 @@
 ---
-title: "Configure client status | Microsoft Docs"
+title: "Configure client status"
 description: "Select client status settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

@@ -1,5 +1,5 @@
 ---
-title: "How To Define the Installer Technology | Microsoft Docs"
+title: "How To Define the Installer Technology"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

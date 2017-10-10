@@ -1,6 +1,6 @@
 ---
 
-title: Configure classifications and products to synchronize | Microsoft Docs
+title: Configure classifications and products to synchronize
 description: "Follow these steps to configure classifications and products to synchronize in the Configuration Manager console."
 keywords:
 author: dougeby

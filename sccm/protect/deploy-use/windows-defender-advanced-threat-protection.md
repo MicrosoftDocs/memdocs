@@ -1,5 +1,5 @@
 ---
-title: "Windows Defender Advanced Threat Protection | Microsoft Docs"
+title: "Windows Defender Advanced Threat Protection"
 description: "Learn how to manage and monitor Windows Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks."
 ms.custom: na
 ms.date: 03/07/2017

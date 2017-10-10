@@ -1,5 +1,5 @@
 ---
-title: "Discovery methods | Microsoft Docs"
+title: "Discovery methods"
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager

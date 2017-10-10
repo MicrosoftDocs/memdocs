@@ -1,6 +1,6 @@
 ---
 
-title: Monitor software updates | Microsoft Docs
+title: Monitor software updates
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 keywords:
 author: dougebyms.author: dougeby

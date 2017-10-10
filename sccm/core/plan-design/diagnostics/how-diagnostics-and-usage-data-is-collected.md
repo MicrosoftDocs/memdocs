@@ -1,5 +1,5 @@
 ---
-title: "Diagnostics data collection | Microsoft Docs"
+title: "Diagnostics data collection"
 description: "Learn about how System Center Configuration Manager collects diagnostics and usage data about itself."
 ms.custom: na
 ms.date: 12/29/2016

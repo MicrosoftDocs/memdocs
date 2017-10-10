@@ -1,5 +1,5 @@
 ---
-title: "Add a Windows Driver to a Boot Image Package | Microsoft Docs"
+title: "Add a Windows Driver to a Boot Image Package"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

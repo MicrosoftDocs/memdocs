@@ -1,5 +1,5 @@
 ---
-title: "Monitor clients | Microsoft Docs"
+title: "Monitor clients"
 description: "Learn how to monitor and manage clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

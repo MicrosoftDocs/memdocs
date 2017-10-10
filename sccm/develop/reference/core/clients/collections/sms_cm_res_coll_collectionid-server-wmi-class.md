@@ -1,5 +1,5 @@
 ---
-title: "SMS_CM_RES_COLL_CollectionID Class | Microsoft Docs"
+title: "SMS_CM_RES_COLL_CollectionID Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

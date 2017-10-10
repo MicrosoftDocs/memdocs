@@ -1,5 +1,5 @@
 ---
-title: "ICcmAlternateDownloadProvider : ModifyJobSource | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : ModifyJobSource"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "SMS_SoftwareInventoryAgentConfig Class | Microsoft Docs"
+title: "SMS_SoftwareInventoryAgentConfig Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

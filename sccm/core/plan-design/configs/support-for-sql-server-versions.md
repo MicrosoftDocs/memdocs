@@ -1,5 +1,5 @@
 ---
-title: "Supported SQL Server versions | Microsoft Docs"
+title: "Supported SQL Server versions"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
 ms.date: 10/10/2017

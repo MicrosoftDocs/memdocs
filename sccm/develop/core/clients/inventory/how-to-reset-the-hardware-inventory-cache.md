@@ -1,5 +1,5 @@
 ---
-title: "Reset the Hardware Inventory Cache | Microsoft Docs"
+title: "Reset the Hardware Inventory Cache"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

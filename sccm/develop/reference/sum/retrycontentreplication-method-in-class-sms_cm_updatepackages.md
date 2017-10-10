@@ -1,5 +1,5 @@
 ---
-title: "RetryContentReplication Method | Microsoft Docs"
+title: "RetryContentReplication Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

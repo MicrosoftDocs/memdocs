@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Actions | Microsoft Docs"
+title: "Configuration Manager Actions"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

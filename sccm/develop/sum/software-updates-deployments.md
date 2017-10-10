@@ -1,5 +1,5 @@
 ---
-title: "Software Updates Deployments | Microsoft Docs"
+title: "Software Updates Deployments"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

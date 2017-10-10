@@ -1,5 +1,5 @@
 ---
-title: "Certificates and security | Microsoft Docs"
+title: "Certificates and security"
 description: "Manage certificates and security for System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

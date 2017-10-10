@@ -1,5 +1,5 @@
 ---
-title: "Define the Hosting Technology Registration File | Microsoft Docs"
+title: "Define the Hosting Technology Registration File"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "About DDR Properties | Microsoft Docs"
+title: "About DDR Properties"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

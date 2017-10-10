@@ -1,5 +1,5 @@
 ---
-title: "Remotely administer Windows computer | Microsoft Docs"
+title: "Remotely administer Windows computer"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/27/2017

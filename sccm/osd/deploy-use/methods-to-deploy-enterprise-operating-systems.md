@@ -1,5 +1,5 @@
 ---
-title: Methods to deploy enterprise operating | Microsoft Docs
+title: Methods to deploy enterprise operating
 description: "Learn about the methods that you can use to deploy enterprise operating systems in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

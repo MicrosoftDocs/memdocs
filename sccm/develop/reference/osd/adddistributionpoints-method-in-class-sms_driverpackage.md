@@ -1,5 +1,5 @@
 ---
-title: "AddDistributionPoints Method in SMS_DriverPackage | Microsoft Docs"
+title: "AddDistributionPoints Method in SMS_DriverPackage"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

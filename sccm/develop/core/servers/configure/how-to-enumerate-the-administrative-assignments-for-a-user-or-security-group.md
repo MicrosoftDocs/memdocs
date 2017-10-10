@@ -1,5 +1,5 @@
 ---
-title: "Enumerate Administrative Assignments | Microsoft Docs"
+title: "Enumerate Administrative Assignments"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

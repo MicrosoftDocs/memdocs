@@ -1,5 +1,5 @@
 ---
-title: "MoveMembers Method | Microsoft Docs"
+title: "MoveMembers Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

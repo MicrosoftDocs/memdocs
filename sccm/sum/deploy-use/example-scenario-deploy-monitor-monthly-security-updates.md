@@ -1,6 +1,6 @@
 ---
 
-title: Example scenario to deploy and monitor security software updates | Microsoft Docs
+title: Example scenario to deploy and monitor security software updates
 description: "Use this example scenario of how to use software updates in Configuration Manager to deploy and monitor security software updates for Microsoft monthly releases."
 keywords:
 author: dougebyms.author: dougeby

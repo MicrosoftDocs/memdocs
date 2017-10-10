@@ -1,5 +1,5 @@
 ---
-title: "Collections best practices | Microsoft Docs"
+title: "Collections best practices"
 description: "Get best practices for collections in System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/22/2017

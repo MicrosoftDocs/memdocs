@@ -1,5 +1,5 @@
 ---
-title: "Supported clients and devices | Microsoft Docs"
+title: "Supported clients and devices"
 description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
 ms.date: 8/30/2017

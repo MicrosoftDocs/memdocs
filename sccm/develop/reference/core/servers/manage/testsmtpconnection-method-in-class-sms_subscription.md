@@ -1,5 +1,5 @@
 ---
-title: "TestSmtpConnection Method | Microsoft Docs"
+title: "TestSmtpConnection Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

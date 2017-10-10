@@ -1,5 +1,5 @@
 ---
-title: "GetAdvertisements Method | Microsoft Docs"
+title: "GetAdvertisements Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

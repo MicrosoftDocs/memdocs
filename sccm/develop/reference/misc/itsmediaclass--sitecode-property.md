@@ -1,5 +1,5 @@
 ---
-title: "ITsMediaClass::SiteCode Property | Microsoft Docs"
+title: "ITsMediaClass::SiteCode Property"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

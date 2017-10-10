@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING | Microsoft Docs"
+title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING"
 ms.custom: na
 ms.date: 1/20/2017
 ms.prod: configuration-manager

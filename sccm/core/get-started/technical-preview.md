@@ -1,5 +1,5 @@
 ---
-title: "Technical Preview for Configuration Manager | Microsoft Docs"
+title: "Technical Preview for Configuration Manager"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
 ms.date: 09/28/2017

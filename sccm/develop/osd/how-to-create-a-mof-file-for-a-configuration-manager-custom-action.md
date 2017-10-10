@@ -1,5 +1,5 @@
 ---
-title: "Create a MOF File for a Custom Action | Microsoft Docs"
+title: "Create a MOF File for a Custom Action"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

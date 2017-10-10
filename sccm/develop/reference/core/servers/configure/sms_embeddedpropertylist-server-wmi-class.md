@@ -1,5 +1,5 @@
 ---
-title: "SMS_EmbeddedPropertyList Class | Microsoft Docs"
+title: "SMS_EmbeddedPropertyList Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

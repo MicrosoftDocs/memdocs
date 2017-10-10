@@ -1,5 +1,5 @@
 ---
-title: "Windows Hello for Business settings | Microsoft Docs"
+title: "Windows Hello for Business settings"
 description: "Learn how to integrate Windows Hello for Business with System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

@@ -1,5 +1,5 @@
 ---
-title: Task sequence action variables | Microsoft Docs
+title: Task sequence action variables
 description: "Use sequence action variables, such as network setting variables, to specify configuration settings for a single step in a Configuration Manager task sequence."
 ms.custom: na
 ms.date: 10/06/2016

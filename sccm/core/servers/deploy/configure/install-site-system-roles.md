@@ -1,5 +1,5 @@
 ---
-title: "Install site system roles | Microsoft Docs"
+title: "Install site system roles"
 description: "Wizards help you add site system roles to an existing or new site system server in the site."
 ms.custom: na
 ms.date: 2/7/2017

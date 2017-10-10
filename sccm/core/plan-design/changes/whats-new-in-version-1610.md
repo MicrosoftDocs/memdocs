@@ -1,5 +1,5 @@
 ---
-title: "New version 1610 | Microsoft Docs"
+title: "New version 1610"
 description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
 ms.custom: na
 ms.date:  11/23/2016

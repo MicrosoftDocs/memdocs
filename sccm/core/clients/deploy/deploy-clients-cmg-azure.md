@@ -1,5 +1,5 @@
 ---
-title: "Install and assign the client from the internet | Microsoft Docs"
+title: "Install and assign the client from the internet"
 description: "Install and assign the System Center Configuration Manager client from the internet."
 ms.custom: na
 ms.date: 8/07/2017

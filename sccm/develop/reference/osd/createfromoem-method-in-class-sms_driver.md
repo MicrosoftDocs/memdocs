@@ -1,5 +1,5 @@
 ---
-title: "CreateFromOEM Method | Microsoft Docs"
+title: "CreateFromOEM Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

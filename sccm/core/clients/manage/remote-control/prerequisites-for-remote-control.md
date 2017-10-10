@@ -1,5 +1,5 @@
 ---
-title: "Remote control prerequisites | Microsoft Docs"
+title: "Remote control prerequisites"
 description: "Get the prerequisites for remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

@@ -1,5 +1,5 @@
 ---
-title: "GetFileBinary Method | Microsoft Docs"
+title: "GetFileBinary Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

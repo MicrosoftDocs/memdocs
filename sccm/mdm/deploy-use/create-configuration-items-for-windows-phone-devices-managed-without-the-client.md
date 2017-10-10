@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows Phone devices managed with Intune | Microsoft Docs"
+title: "How to create configuration items for Windows Phone devices managed with Intune"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager

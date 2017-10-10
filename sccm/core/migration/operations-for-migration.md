@@ -1,5 +1,5 @@
 ---
-title: "Migration operations | Microsoft Docs"
+title: "Migration operations"
 description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016

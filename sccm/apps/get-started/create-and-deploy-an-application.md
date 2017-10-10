@@ -1,5 +1,5 @@
 ---
-title: "Create and deploy an application | Microsoft Docs"
+title: "Create and deploy an application"
 description: "Create and deploy an application containing a line-of-business app and learn how to manage apps effectively."
 ms.custom: na
 ms.date: 10/06/2016

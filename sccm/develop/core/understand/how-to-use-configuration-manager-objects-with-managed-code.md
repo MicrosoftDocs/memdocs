@@ -1,5 +1,5 @@
 ---
-title: "Use Objects with Managed Code | Microsoft Docs"
+title: "Use Objects with Managed Code"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

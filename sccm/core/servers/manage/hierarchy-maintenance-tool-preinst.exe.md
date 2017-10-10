@@ -1,5 +1,5 @@
 ---
-title: "Hierarchy Maintenance Tool | Microsoft Docs"
+title: "Hierarchy Maintenance Tool"
 description: "Understand what the Hierarchy Maintenance Tool does, and why you might use it. Includes command-line options reference."
 ms.custom: na
 ms.date: 10/06/2016

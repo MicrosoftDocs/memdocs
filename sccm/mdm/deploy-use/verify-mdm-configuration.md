@@ -1,5 +1,5 @@
 ---
-title: "Verify MDM configuration using System Center Configuration Manager | Microsoft Docs"
+title: "Verify MDM configuration using System Center Configuration Manager"
 description: "Verify MDM configuration using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

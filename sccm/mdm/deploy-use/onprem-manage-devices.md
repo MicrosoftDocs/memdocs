@@ -1,5 +1,5 @@
 ---
-title: "Manage devices for On-Premises Mobile Device Management | Microsoft Docs"
+title: "Manage devices for On-Premises Mobile Device Management"
 description: "Manage devices for On-premises Mobile Device Management with Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

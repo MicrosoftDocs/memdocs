@@ -1,5 +1,5 @@
 ---
-title: "Prerequisite Checker | Microsoft Docs"
+title: "Prerequisite Checker"
 description: "Learn how to use Prerequisite Checker to identify and fix problems that might block a site or site system role installation."
 ms.custom: na
 ms.date: 3/1/2017

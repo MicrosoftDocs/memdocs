@@ -1,5 +1,5 @@
 ---
-title: "GetClientBaselineStatusSummary Method | Microsoft Docs"
+title: "GetClientBaselineStatusSummary Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

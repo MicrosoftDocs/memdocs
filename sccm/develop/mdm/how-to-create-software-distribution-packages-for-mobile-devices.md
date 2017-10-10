@@ -1,5 +1,5 @@
 ---
-title: "Create Software Distribution Packages for Mobile Devices | Microsoft Docs"
+title: "Create Software Distribution Packages for Mobile Devices"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

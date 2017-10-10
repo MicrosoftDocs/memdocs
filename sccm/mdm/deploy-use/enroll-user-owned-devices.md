@@ -1,5 +1,5 @@
 ---
-title: "Enroll user-owned devices for hybrid deployments with Configuration Manager | Microsoft Docs"
+title: "Enroll user-owned devices for hybrid deployments with Configuration Manager"
 description: "Learn about different methods to enroll user-owned devices for hybrid deployments with Configuration Manager."
 ms.custom: na
 ms.date: 09/08/2017

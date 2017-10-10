@@ -1,5 +1,5 @@
 ---
-title: "LoadPDF Method | Microsoft Docs"
+title: "LoadPDF Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

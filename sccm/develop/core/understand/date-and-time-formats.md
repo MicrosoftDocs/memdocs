@@ -1,5 +1,5 @@
 ---
-title: "Date and Time Formats | Microsoft Docs"
+title: "Date and Time Formats"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

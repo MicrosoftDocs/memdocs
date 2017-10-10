@@ -1,5 +1,5 @@
 ---
-title: "AddDistributionPoints Method in SMS_OperatingSystemInstallPackage | Microsoft Docs"
+title: "AddDistributionPoints Method in SMS_OperatingSystemInstallPackage"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

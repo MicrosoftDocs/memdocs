@@ -1,5 +1,5 @@
 ---
-title: "Supported Active Directory domains | Microsoft Docs"
+title: "Supported Active Directory domains"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
 ms.custom: na
 ms.date: 9/18/2017

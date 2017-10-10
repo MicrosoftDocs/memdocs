@@ -1,5 +1,5 @@
 ---
-title: "Upgrade on-premises infrastructure | Microsoft Docs"
+title: "Upgrade on-premises infrastructure"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
 ms.date: 06/05/2017

@@ -1,5 +1,5 @@
 ---
-title: "GetReportPointInfo Method | Microsoft Docs"
+title: "GetReportPointInfo Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

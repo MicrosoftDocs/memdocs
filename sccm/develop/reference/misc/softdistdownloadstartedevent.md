@@ -1,5 +1,5 @@
 ---
-title: "SoftDistDownloadStartedEvent | Microsoft Docs"
+title: "SoftDistDownloadStartedEvent"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

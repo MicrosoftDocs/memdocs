@@ -1,5 +1,5 @@
 ---
-title: "Configure a Mandatory Advertisement for Wake On LAN | Microsoft Docs"
+title: "Configure a Mandatory Advertisement for Wake On LAN"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

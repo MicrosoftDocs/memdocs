@@ -1,5 +1,5 @@
 ---
-title: "Deploy Lookout for Work app | Microsoft Docs"
+title: "Deploy Lookout for Work app"
 description: "Configure and deploy Lookout for Work apps."
 ms.custom: na
 ms.date: 03/05/2017

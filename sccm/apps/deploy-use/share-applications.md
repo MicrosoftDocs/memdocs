@@ -1,5 +1,5 @@
 ---
-title: "Share applications from System Center Configuration Manager | Microsoft Docs"
+title: "Share applications from System Center Configuration Manager"
 description: "Share a link to an application in the Software Center in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/31/2017

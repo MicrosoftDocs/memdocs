@@ -1,5 +1,5 @@
 ---
-title: "Compliance Settings Baselines and Configuration Items | Microsoft Docs"
+title: "Compliance Settings Baselines and Configuration Items"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

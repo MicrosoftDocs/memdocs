@@ -1,5 +1,5 @@
 ---
-title: "SendNotifyProgressToCTM Method | Microsoft Docs"
+title: "SendNotifyProgressToCTM Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

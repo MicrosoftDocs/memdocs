@@ -1,5 +1,5 @@
 ---
-title: "GetNextID Method | Microsoft Docs"
+title: "GetNextID Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

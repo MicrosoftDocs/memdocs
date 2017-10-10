@@ -1,5 +1,5 @@
 ---
-title: "SMS_Client_Reg_MultiString_List Class | Microsoft Docs"
+title: "SMS_Client_Reg_MultiString_List Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

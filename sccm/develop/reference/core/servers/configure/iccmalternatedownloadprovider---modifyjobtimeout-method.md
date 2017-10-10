@@ -1,5 +1,5 @@
 ---
-title: "ICcmAlternateDownloadProvider : ModifyJobTimeout | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : ModifyJobTimeout"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"

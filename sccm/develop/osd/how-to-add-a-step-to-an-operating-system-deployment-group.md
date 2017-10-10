@@ -1,5 +1,5 @@
 ---
-title: "Add a Step to an OS Deployment Group | Microsoft Docs"
+title: "Add a Step to an OS Deployment Group"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

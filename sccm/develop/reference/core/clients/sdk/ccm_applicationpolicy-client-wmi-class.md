@@ -1,5 +1,5 @@
 ---
-title: "CCM_ApplicationPolicy Class | Microsoft Docs"
+title: "CCM_ApplicationPolicy Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

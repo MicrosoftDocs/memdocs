@@ -1,5 +1,5 @@
 ---
-title: "IAppManagementHandler::EnforceApp | Microsoft Docs"
+title: "IAppManagementHandler::EnforceApp"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

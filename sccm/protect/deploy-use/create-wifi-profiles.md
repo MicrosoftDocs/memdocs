@@ -1,5 +1,5 @@
 ---
-title: "How to create Wi-Fi profiles | Microsoft Docs"
+title: "How to create Wi-Fi profiles"
 description: "Learn how to use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization."
 ms.custom: na
 ms.date: 12/11/2016

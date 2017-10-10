@@ -1,5 +1,5 @@
 ---
-title: "Complete migration | Microsoft Docs"
+title: "Complete migration"
 description: "Learn how to finish migration to a System Center Configuration Manager destination hierarchy after a source hierarchy no longer has data."
 ms.custom: na
 ms.date: 1/12/2017

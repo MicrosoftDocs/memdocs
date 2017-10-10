@@ -1,5 +1,5 @@
 ---
-title: "Upgrade the long-term servicing branch to the current branch  | Microsoft Docs"
+title: "Upgrade the long-term servicing branch to the current branch "
 description: "Learn how to convert a Long-Term Servicing Branch site to a Current Branch site."
 ms.custom: na
 ms.date: 2/8/2017

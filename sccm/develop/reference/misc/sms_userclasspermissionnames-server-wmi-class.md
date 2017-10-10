@@ -1,5 +1,5 @@
 ---
-title: "SMS_UserClassPermissionNames Class | Microsoft Docs"
+title: "SMS_UserClassPermissionNames Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

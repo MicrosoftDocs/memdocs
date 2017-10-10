@@ -1,5 +1,5 @@
 ---
-title: Create an image for an OEM in factory or a local depot | Microsoft Docs
+title: Create an image for an OEM in factory or a local depot
 description: "Use prestaged media deployments to reduce network traffic while you deploy an operating system to a computer that is not fully provisioned."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Create a New Administrator | Microsoft Docs"
+title: "Create a New Administrator"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

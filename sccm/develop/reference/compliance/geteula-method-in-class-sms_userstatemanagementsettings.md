@@ -1,5 +1,5 @@
 ---
-title: "GetEULA Method in Class SMS_UserStateManagementSettings | Microsoft Docs"
+title: "GetEULA Method in Class SMS_UserStateManagementSettings"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

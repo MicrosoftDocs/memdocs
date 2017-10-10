@@ -1,5 +1,5 @@
 ---
-title: "SMS_G_SYSTEM_AmPolicyStatus Class | Microsoft Docs"
+title: "SMS_G_SYSTEM_AmPolicyStatus Class"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

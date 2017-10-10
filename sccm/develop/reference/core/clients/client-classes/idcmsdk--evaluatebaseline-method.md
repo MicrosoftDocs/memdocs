@@ -1,5 +1,5 @@
 ---
-title: "IDCMSDK::EvaluateBaseline | Microsoft Docs"
+title: "IDCMSDK::EvaluateBaseline"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

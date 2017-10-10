@@ -1,5 +1,5 @@
 ---
-title: "Import a MOF File to Extend Inventory | Microsoft Docs"
+title: "Import a MOF File to Extend Inventory"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

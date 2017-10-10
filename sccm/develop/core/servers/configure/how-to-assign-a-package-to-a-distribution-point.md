@@ -1,5 +1,5 @@
 ---
-title: "Assign a Package to a Distribution Point | Microsoft Docs"
+title: "Assign a Package to a Distribution Point"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Deploy Wi-Fi, VPN, email, and certificate profiles | Microsoft Docs"
+title: "Deploy Wi-Fi, VPN, email, and certificate profiles"
 description: "Learn how to deploy Wi-Fi, VPN, email, and certificate profiles in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

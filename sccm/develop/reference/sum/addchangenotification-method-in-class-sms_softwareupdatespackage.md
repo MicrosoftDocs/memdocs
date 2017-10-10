@@ -1,5 +1,5 @@
 ---
-title: "AddChangeNotification Method | Microsoft Docs"
+title: "AddChangeNotification Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

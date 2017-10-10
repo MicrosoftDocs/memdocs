@@ -1,5 +1,5 @@
 ---
-title: "Operations and maintenance for reporting  | Microsoft Docs"
+title: "Operations and maintenance for reporting "
 description: "Learn the details of managing reports and report subscriptions in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

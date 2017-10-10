@@ -1,5 +1,5 @@
 ---
-title: "ICcmAlternateDownloadProvider : ModifyJobPriority | Microsoft Docs"
+title: "ICcmAlternateDownloadProvider : ModifyJobPriority"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"

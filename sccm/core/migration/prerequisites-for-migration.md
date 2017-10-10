@@ -1,5 +1,5 @@
 ---
-title: "Migration prerequisites | Microsoft Docs"
+title: "Migration prerequisites"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
 ms.custom: na
 ms.date: 3/7/2017

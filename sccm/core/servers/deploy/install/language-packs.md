@@ -1,5 +1,5 @@
 ---
-title: "Language packs | Microsoft Docs"
+title: "Language packs"
 description: "Learn about the language support available in System Center Configuration Manager."
 ms.custom: na
 ms.date: 1/3/2017

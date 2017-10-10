@@ -1,5 +1,5 @@
 ---
-title: "CancelLockRequest Method | Microsoft Docs"
+title: "CancelLockRequest Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

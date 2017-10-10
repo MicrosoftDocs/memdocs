@@ -1,5 +1,5 @@
 ---
-title: "Progress Types | Microsoft Docs"
+title: "Progress Types"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Console support | Microsoft Docs"
+title: "Console support"
 description: "Learn which operating systems a System Center Configuration Manager console supports."
 ms.custom: na
 ms.date: 1/3/2017

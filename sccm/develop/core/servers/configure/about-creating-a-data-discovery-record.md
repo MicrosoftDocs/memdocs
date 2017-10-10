@@ -1,5 +1,5 @@
 ---
-title: "About Creating a Data Discovery Record | Microsoft Docs"
+title: "About Creating a Data Discovery Record"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

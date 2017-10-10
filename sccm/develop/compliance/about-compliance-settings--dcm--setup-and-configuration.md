@@ -1,5 +1,5 @@
 ---
-title: "About Compliance Settings Setup and Configuration | Microsoft Docs"
+title: "About Compliance Settings Setup and Configuration"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

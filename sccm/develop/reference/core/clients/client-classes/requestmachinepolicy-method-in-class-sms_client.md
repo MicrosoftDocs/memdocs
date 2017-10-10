@@ -1,5 +1,5 @@
 ---
-title: "RequestMachinePolicy Method | Microsoft Docs"
+title: "RequestMachinePolicy Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

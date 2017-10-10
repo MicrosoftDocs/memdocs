@@ -1,5 +1,5 @@
 ---
-title: "SetAutoInstallRequiredSoftwaretoNonBusinessHours Method | Microsoft Docs"
+title: "SetAutoInstallRequiredSoftwaretoNonBusinessHours Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

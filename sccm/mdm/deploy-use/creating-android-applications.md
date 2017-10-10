@@ -1,5 +1,5 @@
 ---
-title: "Create Android applications | Microsoft Docs"
+title: "Create Android applications"
 description: "See which considerations you must take into account when you create and deploy applications for Android devices."
 ms.custom: na
 ms.date: 07/31/2017

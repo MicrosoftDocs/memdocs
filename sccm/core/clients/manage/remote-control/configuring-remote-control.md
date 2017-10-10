@@ -1,5 +1,5 @@
 ---
-title: "Configure remote control | Microsoft Docs"
+title: "Configure remote control"
 description: "Set up remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

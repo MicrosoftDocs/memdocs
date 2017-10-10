@@ -1,5 +1,5 @@
 ---
-title: "AddDistributionPoints Method in Class SMS_Package | Microsoft Docs"
+title: "AddDistributionPoints Method in Class SMS_Package"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

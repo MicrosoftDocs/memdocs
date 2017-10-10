@@ -1,5 +1,5 @@
 ---
-title: "UpdateOptionalComponents Method | Microsoft Docs"
+title: "UpdateOptionalComponents Method"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

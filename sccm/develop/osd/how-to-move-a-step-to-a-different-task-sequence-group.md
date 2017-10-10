@@ -1,5 +1,5 @@
 ---
-title: "Move a Step to a Different OS Deployment Task Sequence Group | Microsoft Docs"
+title: "Move a Step to a Different OS Deployment Task Sequence Group"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Learn about updates | Microsoft Docs"
+title: "Learn about updates"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

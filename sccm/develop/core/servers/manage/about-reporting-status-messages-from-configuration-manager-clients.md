@@ -1,5 +1,5 @@
 ---
-title: "Reporting Status Messages from Clients | Microsoft Docs"
+title: "Reporting Status Messages from Clients"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

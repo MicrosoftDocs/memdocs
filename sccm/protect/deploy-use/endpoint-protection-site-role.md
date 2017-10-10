@@ -1,5 +1,5 @@
 ---
-title: "Create Endpoint Protection point site system role | Microsoft Docs"
+title: "Create Endpoint Protection point site system role"
 description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
 defintion: ""
 definition: ""

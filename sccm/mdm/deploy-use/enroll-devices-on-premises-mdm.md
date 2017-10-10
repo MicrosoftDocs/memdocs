@@ -1,6 +1,6 @@
 ---
 
-title: "Enroll devices  | Microsoft Docs"
+title: "Enroll devices "
 description: "Learn about methods to enroll devices for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

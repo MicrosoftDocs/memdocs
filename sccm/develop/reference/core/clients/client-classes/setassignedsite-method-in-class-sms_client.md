@@ -1,5 +1,5 @@
 ---
-title: "SetAssignedSite Method | Microsoft Docst"
+title: "SetAssignedSite Methodt"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
