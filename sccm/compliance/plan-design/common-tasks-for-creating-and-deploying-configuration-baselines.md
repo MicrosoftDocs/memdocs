@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for configuration baselines - Configuration Manager"
+title: "Common tasks for configuration baselines "
 description: "Learn about how to create and deploy System Center Configuration Manager configuration baselines."
 ms.custom: na
 ms.date: 07/12/2017

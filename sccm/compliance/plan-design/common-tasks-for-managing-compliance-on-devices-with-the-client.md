@@ -1,5 +1,5 @@
 ---
-title: "Common compliance management tasks for client-managed devices - Configuration Manager"
+title: "Common compliance management tasks for client-managed devices "
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
 ms.date: 10/06/2016

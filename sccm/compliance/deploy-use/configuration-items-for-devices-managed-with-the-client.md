@@ -1,5 +1,5 @@
 ---
-title: "Configuration items for client-managed devices - Configuration Manager"
+title: "Configuration items for client-managed devices "
 description: "Learn how to configure Windows and Mac devices that are managed with the System Center Configuration Manager client."
 ms.custom: na
 ms.date: 10/06/2016

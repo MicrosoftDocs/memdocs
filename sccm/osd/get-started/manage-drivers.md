@@ -1,5 +1,5 @@
 ---
-title: "Manage drivers - Configuration Manager"
+title: "Manage drivers "
 description: "Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points."
 ms.custom: na
 ms.date: 01/27/2017

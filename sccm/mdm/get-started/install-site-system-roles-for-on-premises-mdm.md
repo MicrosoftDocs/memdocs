@@ -1,5 +1,5 @@
 ---
-title: "Install roles for On-premises MDM - Configuration Manager"
+title: "Install roles for On-premises MDM "
 description: "Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

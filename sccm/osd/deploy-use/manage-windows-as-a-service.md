@@ -1,5 +1,5 @@
 ---
-title: "Manage Windows as a Service - Configuration Manager"
+title: "Manage Windows as a Service "
 description: "View the state of Windows as a Service using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support."
 
 ms.custom: na

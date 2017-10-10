@@ -1,5 +1,5 @@
 ---
-title: "Customize boot images - Configuration Manager"
+title: "Customize boot images "
 description: "Learn several ways to use Configuration Manager or the Deployment Image Servicing and Management (DISM) command-line tool to customize a boot image."
 ms.custom: na
 ms.date: 01/23/2017

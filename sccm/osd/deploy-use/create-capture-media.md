@@ -1,5 +1,5 @@
 ---
-title: "Create capture media - Configuration Manager"
+title: "Create capture media "
 description: "Use the Create Task Sequence Media Wizard to create capture media in Configuration Manager to capture an operating system image from a reference computer."
 ms.custom: na
 ms.date: 01/23/2017

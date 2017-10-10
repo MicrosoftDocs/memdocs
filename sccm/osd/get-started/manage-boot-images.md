@@ -1,5 +1,5 @@
 ---
-title: "Manage boot images - Configuration Manager"
+title: "Manage boot images "
 description: "In Configuration Manager, learn to manage the Windows PE boot images that you use during an operating system deployment."
 ms.custom: na
 ms.date: 01/23/2017

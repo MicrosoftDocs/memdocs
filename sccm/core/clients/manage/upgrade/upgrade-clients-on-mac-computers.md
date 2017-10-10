@@ -1,5 +1,5 @@
 ---
-title: "Upgrade macOS clients - Configuration Manager"
+title: "Upgrade macOS clients "
 description: "Upgrade clients on Mac computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

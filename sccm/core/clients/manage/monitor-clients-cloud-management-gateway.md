@@ -1,5 +1,5 @@
 ---
-title: "Monitor cloud management gateway - Configuration Manager"
+title: "Monitor cloud management gateway "
 description: ""
 ms.date: 04/23/2017
 ms.prod: configuration-manager

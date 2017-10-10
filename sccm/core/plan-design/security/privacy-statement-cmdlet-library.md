@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager privacy statement - Configuration Manager cmdletlLibrary"
+title: "Privacy statement for Configuration Manager cmdletlLibrary"
 description: "Learn about how Microsoft collects and uses data related to the System Center Configuration Manager cmdlet library."
 ms.custom: na
 ms.date: 1/3/2017

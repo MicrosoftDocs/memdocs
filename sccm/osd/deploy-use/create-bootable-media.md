@@ -1,5 +1,5 @@
 ---
-title: "Create bootable media - Configuration Manager"
+title: "Create bootable media "
 description: "Bootable media in Configuration Manager make it easy to install a new version of Windows or replace a computer and transfer settings."
 ms.custom: na
 ms.date: 01/23/2017

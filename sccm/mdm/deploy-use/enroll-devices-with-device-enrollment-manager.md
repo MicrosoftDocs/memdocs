@@ -1,5 +1,5 @@
 ---
-title: "Enroll devices with device enrollment manager - Configuration Manager"
+title: "Enroll devices with device enrollment manager "
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
 ms.custom: na
 ms.date: 09/08/2017

@@ -1,5 +1,5 @@
 ---
-title: "Monitor clients - Configuration Manager"
+title: "Monitor clients "
 description: "Get detailed guidance on how to monitor clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

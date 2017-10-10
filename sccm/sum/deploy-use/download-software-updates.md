@@ -1,5 +1,5 @@
 ---
-title: "Download software updates - Configuration Manager"
+title: "Download software updates "
 description: "Use the Download Software Updates Wizard to download software updates and distribute them to distribution points so they are ready to deploy to clients."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
