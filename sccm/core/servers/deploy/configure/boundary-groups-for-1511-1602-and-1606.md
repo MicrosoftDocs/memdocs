@@ -1,5 +1,5 @@
 ---
-title: "Boundary groups for 1511, 1602, and 1606 | System Center Configuration Manager"
+title: "Boundary groups for 1511, 1602, and 1606"
 description: "Use boundary groups with Configuration Manager versions 1511, 1602, and 1606."
 ms.custom: na
 ms.date: 2/8/2017

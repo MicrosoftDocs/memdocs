@@ -1,5 +1,5 @@
 ---
-title: "Client Peer Cache | System Center Configuration Manager"
+title: "Client Peer Cache"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017
