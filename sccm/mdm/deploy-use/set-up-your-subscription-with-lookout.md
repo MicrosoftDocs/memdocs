@@ -1,5 +1,5 @@
 ---
-title: "Setup your subscription with Lookout| System Center Configuration Manager"
+title: "Setup your subscription with Lookout"
 description: "This topics provides details on how to configure Lookout device threat protection."
 ms.custom: na
 ms.date: 03/05/2017

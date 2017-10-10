@@ -1,5 +1,5 @@
 ---
-title: "Hardware inventory | Linux UNIX "
+title: "Hardware inventory for Linux and UNIX"
 description: "Learn how use hardware inventory for Linux and UNIX in System Center Configuration Manager."
 ms.custom: na
 ms.date: 02/22/2017
