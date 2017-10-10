@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for System Center Configuration Manager"
+title: "Security and privacy resources"
 description: "Find resources about security and privacy for System Center Configuration Manager."
 ms.custom: na
 ms.date: 1/3/2017

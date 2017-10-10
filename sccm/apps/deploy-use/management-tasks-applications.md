@@ -1,5 +1,5 @@
 ---
-title: "Management tasks for System Center Configuration Manager applications"
+title: "Management tasks for applications"
 description: "Manage System Center Configuration Manager applications and deployment types."
 ms.custom: na
 ms.date: 10/06/2016

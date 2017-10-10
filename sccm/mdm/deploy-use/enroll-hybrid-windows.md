@@ -1,5 +1,5 @@
 ---
-title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune"
+title: "Set up Windows hybrid device management with Microsoft Intune"
 description: "Set up Windows device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
 ms.date: 03/17/2017

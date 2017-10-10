@@ -1,5 +1,5 @@
 ---
-title: "Get ready for System Center Configuration Manager"
+title: "Get ready for deployment"
 description: "Find topics that will help you plan a System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Deploy Windows to Go with System Center Configuration Manager"
+title: "Deploy Windows to Go"
 description: "Learn how to provision Windows To Go in System Center Configuration Manager to create a Windows To Go workspace that boots from an external drive."
 ms.custom: na
 ms.date: 10/06/2016

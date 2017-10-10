@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Windows devices to a different version with Configuration Manager"
+title: "Upgrade Windows devices to a different version"
 description: "Automatically upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a different edition with Configuration Manager."
 ms.custom: na
 ms.date: 07/31/2017
