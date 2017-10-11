@@ -1,5 +1,6 @@
 ---
 title: "Diagnostic data for 1710 | System Center Configuration Manager"
+titleSuffix: "Configuration Manager"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1710 collects."
 ms.custom: na
 ms.date: 11/20/2017
