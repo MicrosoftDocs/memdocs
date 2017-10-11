@@ -1,5 +1,6 @@
 ---
-title: "Define the UI Extension Assembly | Microsoft Docs"
+title: "Define the UI Extension Assembly"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Flowchart - Download updates | Microsoft Docs"
+title: "Flowchart - Download updates"
+titleSuffix: "Configuration Manager"
 description: "See the process by which a site with an online service connection point downloads in-console updates."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
-title: "Install cloud-based distribution points | Microsoft Docs"
+title: "Install cloud-based distribution points"
+titleSuffix: "Configuration Manager"
 description: "Learn what you need to do to start using cloud-based distribution points in Microsoft Azure."
 ms.custom: na
 ms.date: 2/8/2017

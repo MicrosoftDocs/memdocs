@@ -1,5 +1,6 @@
 ---
-title: "Manage clients | Microsoft Docs"
+title: "Manage clients"
+titleSuffix: "Configuration Manager"
 description: "Learn how to manage clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

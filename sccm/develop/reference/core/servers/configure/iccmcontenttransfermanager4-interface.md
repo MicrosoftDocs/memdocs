@@ -1,5 +1,6 @@
 ---
-title: "ICcmContentTransferManager4 Interface | Microsoft Docs"
+title: "ICcmContentTransferManager4 Interface"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

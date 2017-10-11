@@ -1,5 +1,6 @@
 ---
-title: Use multicast to deploy Windows over the network | Microsoft Docs
+title: Use multicast to deploy Windows over the network
+titleSuffix: "Configuration Manager"
 description: "Use multicast in your System Center Configuration Manager environment so that multiple computers can simultaneously download the operating system image."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Site Control File | Microsoft Docs"
+title: "Configuration Manager Site Control File"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

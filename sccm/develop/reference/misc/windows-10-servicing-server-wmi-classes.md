@@ -1,5 +1,6 @@
 ---
-title: "Windows 10 Servicing Server WMI Classes | Microsoft Docs"
+title: "Windows 10 Servicing Server WMI Classes"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "03/22/2017"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Compliance Settings Client Interfaces | Microsoft Docs"
+title: "Compliance Settings Client Interfaces"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

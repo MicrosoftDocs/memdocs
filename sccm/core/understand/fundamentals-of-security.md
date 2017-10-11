@@ -1,5 +1,6 @@
 ---
-title: "Fundamentals of security | Microsoft Docs"
+title: "Fundamentals of security"
+titleSuffix: "Configuration Manager"
 description: "Learn about the layers of security for System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016

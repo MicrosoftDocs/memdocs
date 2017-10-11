@@ -1,5 +1,6 @@
 ---
-title: "Site installation resources | Microsoft Docs"
+title: "Site installation resources"
+titleSuffix: "Configuration Manager"
 description: "Review a list of topics that help you install System Center Configuration Manager or add sites to your hierarchy."
 ms.custom: na
 ms.date: 1/3/2017

@@ -1,5 +1,6 @@
 ---
-title: "SMS_SIIB_NALProvider Class | Microsoft Docs"
+title: "SMS_SIIB_NALProvider Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

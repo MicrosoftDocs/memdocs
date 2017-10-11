@@ -1,5 +1,6 @@
 ---
-title: "Plan for migration | Microsoft Docs"
+title: "Plan for migration"
+titleSuffix: "Configuration Manager"
 description: "Learn about sites and hierarchies before you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 1/12/2017

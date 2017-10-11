@@ -1,5 +1,6 @@
 ---
-title: "Manage collections | Microsoft Docs"
+title: "Manage collections"
+titleSuffix: "Configuration Manager"
 description: "Do common collections management tasks in System Center Configuration Manager."
 ms.custom: na
 ms.date: 4/25/2017

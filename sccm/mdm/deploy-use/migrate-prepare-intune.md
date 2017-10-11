@@ -2,6 +2,7 @@
 # required metadata
 
 title: Prepare Intune for user migration 
+titleSuffix: "Configuration Manager"
 description: Learn how to prepare Intune on Azure for user migration from hybrid MDM.
 keywords:
 author: dougeby

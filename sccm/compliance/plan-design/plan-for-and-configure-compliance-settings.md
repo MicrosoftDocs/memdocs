@@ -1,5 +1,6 @@
 ---
-title: "Plan for and configure compliance settings | Microsoft Docs"
+title: "Plan for and configure compliance settings"
+titleSuffix: "Configuration Manager"
 description: "Learn about the prerequisites and configuration tasks for working with compliance settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

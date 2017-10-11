@@ -1,5 +1,6 @@
 ---
-title: "SMS_CollectionVariable Class | Microsoft Docs"
+title: "SMS_CollectionVariable Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager SEDO | Microsoft Docs"
+title: "Configuration Manager SEDO"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

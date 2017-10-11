@@ -1,5 +1,6 @@
 ---
-title: "Current Branch versions | Microsoft Docs"
+title: "Current Branch versions"
+titleSuffix: "Configuration Manager"
 description: "Review the version history of System Center Configuration Manager, and learn about the phases of service offered."
 ms.custom: na
 ms.date: 7/31/2017

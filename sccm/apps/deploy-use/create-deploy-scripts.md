@@ -1,5 +1,6 @@
 ---
-title: "Create and run scripts with Configuration Manager | Microsoft Docs"
+title: "Create and run scripts"
+titleSuffix: "Configuration Manager"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
 ms.date: 09/15/2017
