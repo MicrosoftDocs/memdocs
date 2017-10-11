@@ -1,5 +1,6 @@
 ---
 title: "Checklist for 1710 | System Center Configuration Manager"
+titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1710."
 ms.custom: na
 ms.date: 11/20/2017

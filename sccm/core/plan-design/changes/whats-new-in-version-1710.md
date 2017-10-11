@@ -1,5 +1,6 @@
 ---
 title: "New version 1710 | Microsoft Docs"
+titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1710 of System Center Configuration Manager."
 ms.custom: na
 ms.date:  11/20/2017
@@ -70,5 +71,3 @@ Version 1710 drops support for the following products:
 
 
 <!--  ## Protect devices   -->
-
- 
