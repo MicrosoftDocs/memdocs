@@ -1,5 +1,6 @@
 ---
-title: "Installation scenarios | Microsoft Docs"
+title: "Installation scenarios"
+titleSuffix: "Configuration Manager"
 description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading a site."
 ms.custom: na
 ms.date: 10/06/2016

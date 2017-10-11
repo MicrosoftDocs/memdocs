@@ -1,5 +1,6 @@
 ---
-title: "Plan the SMS Provider | Microsoft Docs"
+title: "Plan the SMS Provider"
+titleSuffix: "Configuration Manager"
 description: "Learn about how the SMS Provider helps you manage System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/7/2017

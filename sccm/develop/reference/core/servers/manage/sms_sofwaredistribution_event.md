@@ -1,5 +1,6 @@
 ---
-title: "SMS_SofwareDistribution_Event | Microsoft Docs"
+title: "SMS_SofwareDistribution_Event"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

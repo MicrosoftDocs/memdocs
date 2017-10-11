@@ -1,5 +1,6 @@
 ---
-title: "The content library cleanup tool | Microsoft Docs"
+title: "The content library cleanup tool"
+titleSuffix: "Configuration Manager"
 description: "Use the content library cleanup tool to remove orphaned content no longer associated with a System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 4/7/2017

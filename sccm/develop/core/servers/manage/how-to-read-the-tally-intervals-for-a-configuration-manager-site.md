@@ -1,5 +1,6 @@
 ---
-title: "Read the Tally Intervals for a Site | Microsoft Docs"
+title: "Read the Tally Intervals for a Site"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

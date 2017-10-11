@@ -1,5 +1,6 @@
 ---
-title: Manage Express installation files for Windows 10 updates | Microsoft Docs
+title: Manage Express installation files for Windows 10 updates
+titleSuffix: "Configuration Manager"
 description: "Configuration Manager supports express installation files for Windows 10, which provides smaller downloads and faster installation times on clients."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

@@ -1,5 +1,6 @@
 ---
-title: "Monitor client deployment status | Microsoft Docs"
+title: "Monitor client deployment status"
+titleSuffix: "Configuration Manager"
 description: "Monitor client deployment status in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

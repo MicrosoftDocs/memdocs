@@ -1,5 +1,6 @@
 ---
-title: "Flowchart - Update replication | Microsoft Docs"
+title: "Flowchart - Update replication"
+titleSuffix: "Configuration Manager"
 description: "See the process by which an in-console update you select to install replicates to additional sites."
 ms.custom: na
 ms.date: 10/06/2016

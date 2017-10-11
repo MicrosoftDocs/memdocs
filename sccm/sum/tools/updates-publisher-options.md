@@ -1,5 +1,6 @@
 ---
-title: "Configure options | Microsoft Docs"
+title: "Configure options"
+titleSuffix: "Configuration Manager"
 description: "Configure options for using System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

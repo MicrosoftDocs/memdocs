@@ -1,5 +1,6 @@
 ---
-title: "Software Inventory for Mobile Devices Enrolled with Microsoft Intune | Microsoft Docs"
+title: "Software Inventory for Mobile Devices Enrolled with Microsoft Intune"
+titleSuffix: "Configuration Manager"
 description: "Software inventory for mobile devices enrolled with Microsoft Intune."
 ms.custom: na
 ms.date: 03/05/2017

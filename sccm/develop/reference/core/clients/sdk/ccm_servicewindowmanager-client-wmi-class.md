@@ -1,5 +1,6 @@
 ---
-title: "CCM_ServiceWindowManager Class | Microsoft Docs"
+title: "CCM_ServiceWindowManager Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

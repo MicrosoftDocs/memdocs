@@ -1,5 +1,6 @@
 ---
-title: "Which branch should I use | Microsoft Docs"
+title: "Which branch should I use"
+titleSuffix: "Configuration Manager"
 description: "Learn the differences between available branches of System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/02/2017

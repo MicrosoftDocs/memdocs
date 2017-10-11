@@ -1,5 +1,6 @@
 ---
-title: "Security and privacy for application management | Microsoft Docs"
+title: "Security and privacy for application management"
+titleSuffix: "Configuration Manager"
 description: "Security and privacy best practices for application management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

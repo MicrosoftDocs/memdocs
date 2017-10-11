@@ -1,5 +1,6 @@
 ---
-title: "Manage configuration data | Microsoft Docs"
+title: "Manage configuration data"
+titleSuffix: "Configuration Manager"
 description: "After you create configuration items and baselines in System Center Configuration Manager, you can use other commands to perform various actions."
 ms.custom: na
 ms.date: 10/06/2016

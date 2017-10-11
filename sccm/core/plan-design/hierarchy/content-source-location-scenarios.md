@@ -1,5 +1,6 @@
 ---
-title: "Content source location | Microsoft Docs"
+title: "Content source location"
+titleSuffix: "Configuration Manager"
 description: "Learn about the System Center Configuration Manager settings that enable clients to find content on a slow network."
 ms.custom: na
 ms.date: 1/3/2017 

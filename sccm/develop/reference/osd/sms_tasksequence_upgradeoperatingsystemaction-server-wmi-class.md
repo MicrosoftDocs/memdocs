@@ -1,5 +1,6 @@
 ---
-title: "SMS_TaskSequence_UpgradeOperatingSystemAction Class | Microsoft Docs"
+title: "SMS_TaskSequence_UpgradeOperatingSystemAction Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "12/01/2016"
 ms.prod: "configuration-manager"

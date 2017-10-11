@@ -1,5 +1,6 @@
 ---
-title: "Read User-Defined Status Messages | Microsoft Docs"
+title: "Read User-Defined Status Messages"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

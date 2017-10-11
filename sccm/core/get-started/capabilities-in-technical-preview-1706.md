@@ -1,5 +1,6 @@
 ---
-title: "Technical Preview 1706 | Microsoft Docs"
+title: "Technical Preview 1706"
+titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1706 for System Center Configuration Manager."
 ms.custom: na
 ms.date: 09/15/2017

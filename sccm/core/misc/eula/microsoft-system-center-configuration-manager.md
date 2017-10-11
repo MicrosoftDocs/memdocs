@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER | Microsoft Docs"
+title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

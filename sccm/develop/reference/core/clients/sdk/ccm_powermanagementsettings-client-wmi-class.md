@@ -1,5 +1,6 @@
 ---
-title: "CCM_PowerManagementSettings Class | Microsoft Docs"
+title: "CCM_PowerManagementSettings Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Reporting | Microsoft Docs"
+title: "Reporting"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

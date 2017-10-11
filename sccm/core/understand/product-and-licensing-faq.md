@@ -1,5 +1,6 @@
 ---
-title: "Product and Licensing FAQ | Microsoft Docs"
+title: "Product and Licensing FAQ"
+titleSuffix: "Configuration Manager"
 description: "Find answers for common product and license questions for System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/28/2017

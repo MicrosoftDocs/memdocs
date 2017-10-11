@@ -1,5 +1,6 @@
 ---
-title: "Bit Field Properties | Microsoft Docs"
+title: "Bit Field Properties"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

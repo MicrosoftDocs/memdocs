@@ -1,5 +1,6 @@
 ---
-title: "Class and Property Qualifiers | Microsoft Docs"
+title: "Class and Property Qualifiers"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

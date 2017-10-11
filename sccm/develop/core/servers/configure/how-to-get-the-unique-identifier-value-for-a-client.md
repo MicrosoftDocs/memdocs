@@ -1,5 +1,6 @@
 ---
-title: "Get the Unique Identifier Value for a Client | Microsoft Docs"
+title: "Get the Unique Identifier Value for a Client"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

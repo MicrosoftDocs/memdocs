@@ -1,5 +1,6 @@
 ---
-title: "Install console | Microsoft Docs"
+title: "Install console"
+titleSuffix: "Configuration Manager"
 description: "Read about installing the Configuration Manager console to connect to a central administration site or primary site."
 ms.custom: na
 ms.date: 1/3/2017

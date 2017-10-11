@@ -1,5 +1,6 @@
 ---
-title: "Discover device and user resources | Microsoft Docs"
+title: "Discover device and user resources"
+titleSuffix: "Configuration Manager"
 description: "Read an overview of the discovery process and discovery data records."
 ms.custom: na
 ms.date: 2/8/2017

@@ -1,5 +1,6 @@
 ---
-title: "ICCMEvent::RawEvent Property | Microsoft Docs"
+title: "ICCMEvent::RawEvent Property"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

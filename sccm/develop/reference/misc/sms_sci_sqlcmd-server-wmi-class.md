@@ -1,5 +1,6 @@
 ---
-title: "SMS_SCI_SQLCmd Class | Microsoft Docs"
+title: "SMS_SCI_SQLCmd Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

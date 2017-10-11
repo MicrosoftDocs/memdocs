@@ -1,5 +1,6 @@
 ---
-title: "Features and capabilities | Microsoft Docs"
+title: "Features and capabilities"
+titleSuffix: "Configuration Manager"
 description: "Learn about the primary management capabilities of System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/29/2016

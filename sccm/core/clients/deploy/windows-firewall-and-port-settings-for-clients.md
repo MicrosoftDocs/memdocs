@@ -1,5 +1,6 @@
 ---
-title: "Windows client firewall and port settings | Microsoft Docs"
+title: "Windows client firewall and port settings"
+titleSuffix: "Configuration Manager"
 description: "Select Windows Firewall and port settings for clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

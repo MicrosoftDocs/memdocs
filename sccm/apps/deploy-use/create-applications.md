@@ -1,5 +1,6 @@
 ---
-title: "Create applications | Microsoft Docs"
+title: "Create applications"
+titleSuffix: "Configuration Manager"
 description: "Create and deploy applications and deployment types with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

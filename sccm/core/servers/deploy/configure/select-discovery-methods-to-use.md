@@ -1,5 +1,6 @@
 ---
-title: "Select discovery methods for Configuration Manager | Microsoft Docs"
+title: "Select discovery methods"
+titleSuffix: "Configuration Manager"
 description: "Review considerations for which methods to use and at which sites to run them."
 ms.custom: na
 ms.date: 10/06/2016

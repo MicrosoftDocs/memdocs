@@ -1,5 +1,6 @@
 ---
-title: "About Configuration Baselines | Microsoft Docs"
+title: "About Configuration Baselines"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

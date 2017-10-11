@@ -1,5 +1,6 @@
 ---
-title: "How to Create an Application with the Script Deployment Type | Microsoft Docs"
+title: "How to Create an Application with the Script Deployment Type"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
