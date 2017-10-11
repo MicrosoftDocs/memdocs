@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 692b86d5-dea7-4414-9e1f-043d2cadfd3b
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Protect data and devices in On-premises Mobile Device Management
