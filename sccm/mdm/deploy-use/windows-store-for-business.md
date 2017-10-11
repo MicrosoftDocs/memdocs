@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 8c13d593-3120-47a8-8fae-eff497afcd73
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # WSfB in System Center Configuration Manager

@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: a0eae17a-60a8-4132-91af-0b10ad338c92
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Software inventory for mobile devices enrolled with Microsoft Intune
