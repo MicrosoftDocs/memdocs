@@ -3,7 +3,7 @@ title: "Support for Windows 10"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Windows 10 versions that are supported as clients or for OSD with System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 10/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -37,10 +37,11 @@ For example, a Configuration Manager version will drop from the matrix after [su
 |Windows 10 release                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
 |---------------------|-----|-----|-----|
 |Enterprise 2015 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|1511  <br />(*see editions*)           |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |Enterprise 2016 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |1607 	<br />Anniversary Update<br />(*see editions*)   |![Supported](media/green_check.png) |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |
 |1703   <br />Creators Update<br />(*see editions*)      |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
+|1709   <br />Fall Creators Update<br />(*see editions*) |![Not supported](media/Red_X.png)   |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |
+
 
 
 **Editions:** Enterprise, Pro, Education, Pro Education   
@@ -59,9 +60,9 @@ The following table list the versions of the Windows 10 ADK that you can use wit
 
 |Windows 10 ADK release  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
 |--------------------|-----|-----|-----|
-|1511  |![Not supported](media/Red_X.png)             |![Not supported](media/Red_X.png)              |![Not supported](media/Red_X.png)|
 |1607  |![Supported](media/green_check.png)           |![Backwards compatible](media/blue_compat.png) |![Not supported](media/Red_X.png)|
 |1703  |![Not supported](media/Red_X.png)             |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |  
+|1709  |![Not supported](media/Red_X.png)             |![Not supported](media/Red_X.png)              |![Supported](media/green_check.png) |  
 
 |Key|
 |--|
