@@ -1,5 +1,6 @@
 ---
-title: "Apply Custom Client Settings | Microsoft Docs"
+title: "Apply Custom Client Settings"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

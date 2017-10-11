@@ -1,5 +1,6 @@
 ---
-title: "Common compliance management tasks for client-managed devices - Configuration Manager | Microsoft Docs"
+title: "Common compliance management tasks for client-managed devices "
+titleSuffix: "Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
 ms.date: 10/06/2016

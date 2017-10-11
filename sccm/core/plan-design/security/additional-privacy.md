@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager privacy statement - Additional information | Microsoft Docs"
+title: "System Center Configuration Manager privacy statement - Additional information"
 description: "Learn about how Microsoft collects and uses data from a System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 12/30/2016

@@ -1,5 +1,6 @@
 ---
 title: "Protect data and devices for On-premises Mobile Device Management "
+titleSuffix: "Configuration Manager"
 description: "Protect data and devices of On-premises Mobile Device Management in Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017

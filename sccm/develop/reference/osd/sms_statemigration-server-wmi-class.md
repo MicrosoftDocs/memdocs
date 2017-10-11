@@ -1,5 +1,6 @@
 ---
-title: "SMS_StateMigration Class | Microsoft Docs"
+title: "SMS_StateMigration Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

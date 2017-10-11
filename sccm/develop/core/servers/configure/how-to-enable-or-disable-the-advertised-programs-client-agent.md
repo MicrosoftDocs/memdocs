@@ -1,5 +1,6 @@
 ---
-title: "Enable or Disable the Advertised Programs Client Agent | Microsoft Docs"
+title: "Enable or Disable the Advertised Programs Client Agent"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

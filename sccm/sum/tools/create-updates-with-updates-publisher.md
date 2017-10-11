@@ -1,5 +1,6 @@
 ---
-title: "Create updates | Microsoft Docs"
+title: "Create updates"
+titleSuffix: "Configuration Manager"
 description: "Create and bundle software updates with System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

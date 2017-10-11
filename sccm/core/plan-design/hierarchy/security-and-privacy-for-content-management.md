@@ -1,5 +1,6 @@
 ---
-title: "Content management security and privacy | Microsoft Docs"
+title: "Content management security and privacy"
+titleSuffix: "Configuration Manager"
 description: "Optimize security and privacy for content management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 3/1/2017

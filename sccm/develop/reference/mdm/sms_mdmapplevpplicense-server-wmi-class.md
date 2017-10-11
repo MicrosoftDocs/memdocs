@@ -1,5 +1,6 @@
 ---
-title: "SMS_MDMAppleVppLicense Class | Microsoft Docs"
+title: "SMS_MDMAppleVppLicense Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

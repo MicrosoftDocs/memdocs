@@ -1,5 +1,6 @@
 ---
-title: "Upgrade clients | Microsoft Docs"
+title: "Upgrade clients"
+titleSuffix: "Configuration Manager"
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/04/2017

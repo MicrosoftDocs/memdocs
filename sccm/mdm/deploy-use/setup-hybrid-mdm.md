@@ -1,5 +1,6 @@
 ---
-title: Setup hybrid MDM  | Microsoft Docs
+title: Setup hybrid MDM 
+titleSuffix: "Configuration Manager"
 description: "Set up hybrid device enrollment with Configuration Manager and Intune."
 ms.custom: na
 ms.date: 03/05/2017

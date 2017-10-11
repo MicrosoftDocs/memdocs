@@ -1,5 +1,6 @@
 ---
-title: "Client installation properties in Active Directory Domain Services | Microsoft Docs"
+title: "Client installation properties in Active Directory Domain Services"
+titleSuffix: "Configuration Manager"
 description: "Use client installation properties published to Active Directory Domain Services in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

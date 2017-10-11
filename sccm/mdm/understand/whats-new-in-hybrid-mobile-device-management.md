@@ -1,5 +1,6 @@
 ---
-title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
+title: "What's new in hybrid MDM"
+titleSuffix: "Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
 ms.date: 10/04/2017

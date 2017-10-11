@@ -1,5 +1,6 @@
 ---
-title: Prepare for unknown computer deployments | Microsoft Docs
+title: Prepare for unknown computer deployments
+titleSuffix: "Configuration Manager"
 description: "Learn how to deploy operating systems to computers that are not managed by Configuration Manager in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

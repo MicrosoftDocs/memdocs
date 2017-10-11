@@ -1,5 +1,6 @@
 ---
-title: "Deploy content | Microsoft Docs"
+title: "Deploy content"
+titleSuffix: "Configuration Manager"
 description: "After you install distribution points for System Center Configuration Manager, here's how you can begin to deploy content to them."
 ms.custom: na
 ms.date: 10/06/2016

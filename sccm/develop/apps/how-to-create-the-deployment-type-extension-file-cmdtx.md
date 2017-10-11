@@ -1,5 +1,6 @@
 ---
-title: "How to Create the Deployment Type Extension File  | Microsoft Docs"
+title: "How to Create the Deployment Type Extension File "
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

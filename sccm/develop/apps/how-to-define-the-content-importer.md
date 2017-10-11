@@ -1,5 +1,6 @@
 ---
-title: "How to Define the Content Importer | Microsoft Docs"
+title: "How to Define the Content Importer"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

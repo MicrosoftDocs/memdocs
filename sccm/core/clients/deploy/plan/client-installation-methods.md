@@ -1,5 +1,6 @@
 ---
-title: "Client installation methods | Microsoft Docs"
+title: "Client installation methods"
+titleSuffix: "Configuration Manager"
 description: "Learn client installation methods for System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/25/2017

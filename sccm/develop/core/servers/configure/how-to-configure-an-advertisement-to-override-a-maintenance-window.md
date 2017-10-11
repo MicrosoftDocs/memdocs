@@ -1,5 +1,6 @@
 ---
-title: "Configure an Advertisement to Override a Maintenance Window | Microsoft Docs"
+title: "Configure an Advertisement to Override a Maintenance Window"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

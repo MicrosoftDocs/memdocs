@@ -1,5 +1,6 @@
 ---
-title: "Set the PXE Service Point Response to PXE Requests | Microsoft Docs"
+title: "Set the PXE Service Point Response to PXE Requests"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

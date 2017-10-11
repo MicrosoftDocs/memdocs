@@ -1,5 +1,6 @@
 ---
-title: "Define boundaries | Microsoft Docs"
+title: "Define boundaries"
+titleSuffix: "Configuration Manager"
 description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
 ms.custom: na
 ms.date: 3/27/2017

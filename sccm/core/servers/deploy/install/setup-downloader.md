@@ -1,5 +1,6 @@
 ---
-title: "Setup Downloader | Microsoft Docs"
+title: "Setup Downloader"
+titleSuffix: "Configuration Manager"
 description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
 ms.custom: na
 ms.date: 3/1/2017

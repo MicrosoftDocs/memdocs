@@ -1,5 +1,6 @@
 ---
-title: "New in System Center Configuration Manager update 1606 | Microsoft Docs"
+title: "New in version 1606"
+titleSuffix: "Configuraton Manager"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016

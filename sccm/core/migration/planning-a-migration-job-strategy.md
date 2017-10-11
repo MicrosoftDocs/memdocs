@@ -1,5 +1,6 @@
 ---
-title: "Migration job planning | Microsoft Docs"
+title: "Migration job planning"
+titleSuffix: "Configuration Manager"
 description: "Use migration jobs to configure data that you want to migrate to your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

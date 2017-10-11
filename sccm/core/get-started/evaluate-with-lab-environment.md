@@ -1,5 +1,6 @@
 ---
-title: "Evaluate Configuration Manager | Microsoft Docs"
+title: "Evaluate in a lab environment"
+titleSuffix: "Configuration Manager"
 description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
 ms.custom: na
 ms.date: 2/28/2017

@@ -1,5 +1,6 @@
 ---
-title: "Security and privacy for power management | Microsoft Docs"
+title: "Security and privacy for power management"
+titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017

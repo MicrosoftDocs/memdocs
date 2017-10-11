@@ -1,5 +1,6 @@
 ---
-title: "Find help for using System Center Configuration Manager | Microsoft Docs"
+title: "Find help"
+titleSuffix: "Configuration Manager"
 description: "Find resources for additional information about System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/8/2017

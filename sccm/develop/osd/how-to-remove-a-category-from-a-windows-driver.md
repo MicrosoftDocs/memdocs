@@ -1,5 +1,6 @@
 ---
-title: "Remove a Category from a Windows Driver | Microsoft Docs"
+title: "Remove a Category from a Windows Driver"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
