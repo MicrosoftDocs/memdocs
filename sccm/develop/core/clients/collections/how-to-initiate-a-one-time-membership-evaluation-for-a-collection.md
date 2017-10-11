@@ -1,5 +1,6 @@
 ---
-title: "Initiate a One-time Membership Evaluation for a Collection | Microsoft Docs"
+title: "Initiate a One-time Membership Evaluation for a Collection"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Unlock Method in Class SMS_Advertisement | Microsoft Docs"
+title: "Unlock Method in Class SMS_Advertisement"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

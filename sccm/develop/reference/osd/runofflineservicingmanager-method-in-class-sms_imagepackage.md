@@ -1,5 +1,6 @@
 ---
-title: "RunOfflineServicingManager Method in SMS_ImagePackage | Microsoft Docs"
+title: "RunOfflineServicingManager Method in SMS_ImagePackage"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

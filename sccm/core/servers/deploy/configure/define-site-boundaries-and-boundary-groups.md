@@ -1,5 +1,6 @@
 ---
-title: "Use Boundaries and boundary groups | Microsoft Docs"
+title: "Use Boundaries and boundary groups"
+titleSuffix: "Configuration Manager"
 description: "Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage."
 ms.custom: na
 ms.date: 3/27/2017

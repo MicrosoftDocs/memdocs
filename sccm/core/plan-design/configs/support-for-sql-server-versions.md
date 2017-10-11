@@ -1,8 +1,9 @@
 ---
-title: "Supported SQL Server versions | Microsoft Docs"
+title: "Supported SQL Server versions"
+titleSuffix: "Configuration Manager"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 09/21/2017
+ms.date: 10/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -100,6 +101,12 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   A primary site  
 -   A secondary site
 
+### SQL Server 2012 SP4: Standard, Enterprise  
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
+
+-   A central administration site  
+-   A primary site  
+-   A secondary site  
 
 ### SQL Server 2012 SP3: Standard, Enterprise  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  

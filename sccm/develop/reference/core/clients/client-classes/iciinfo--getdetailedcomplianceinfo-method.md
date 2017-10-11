@@ -1,5 +1,6 @@
 ---
-title: "ICIINFO::GetDetailedComplianceInfo | Microsoft Docs"
+title: "ICIINFO::GetDetailedComplianceInfo"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: Preprovision BitLocker in Windows PE | Microsoft Docs
+title: Preprovision BitLocker in Windows PE
+titleSuffix: "Configuration Manager"
 description: "The Preprovision BitLocker task in Configuration Manager enables BitLocker from the Windows Preinstallation Environment before operating system deployment."
 ms.custom: na
 ms.date: 10/06/2016

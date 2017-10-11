@@ -1,5 +1,6 @@
 ---
-title: Plan for hybrid MDM | Microsoft Docs
+title: Plan for hybrid MDM
+titleSuffix: "Configuration Manager"
 description: "Plan for hybrid mobile device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
 ms.date: 03/05/2017

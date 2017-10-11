@@ -1,5 +1,6 @@
 ---
-title: "Service connection point | Microsoft Docs"
+title: "Service connection point"
+titleSuffix: "Configuration Manager"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
 ms.date: 6/28/2017

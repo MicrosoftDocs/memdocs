@@ -1,5 +1,6 @@
 ---
-title: "Migration security and privacy | Microsoft Docs"
+title: "Migration security and privacy"
+titleSuffix: "Configuration Manager"
 description: "Get security best practices and privacy information for migration to your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

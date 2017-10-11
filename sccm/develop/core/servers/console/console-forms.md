@@ -1,5 +1,6 @@
 ---
-title: "Console Forms | Microsoft Docs"
+title: "Console Forms"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

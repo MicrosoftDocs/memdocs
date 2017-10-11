@@ -1,5 +1,6 @@
 ---
-title: "Size and scale | Microsoft Docs"
+title: "Size and scale"
+titleSuffix: "Configuration Manager"
 description: "Identify the number of site system roles and sites that you'll need to support the devices in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 07/24/2017
@@ -51,7 +52,6 @@ the recommended hardware, or use more aggressive custom settings (like running h
 
 -   Secondary sites don't support child sites.  
 
--   A central administration site supports up to 25 child primary sites.  
 
 
 ## <a name="bkmk_roles"></a> Site system roles    

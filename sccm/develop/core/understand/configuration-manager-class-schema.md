@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Class Schema | Microsoft Docs"
+title: "Configuration Manager Class Schema"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

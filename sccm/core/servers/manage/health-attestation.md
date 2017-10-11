@@ -1,5 +1,6 @@
 ---
-title: "Health attestation | Microsoft Docs"
+title: "Health attestation"
+titleSuffix: "Configuration Manager"
 description: "Learn about the Device Health Attestation functionality viewable in the Configuration Manager console."
 ms.custom: na
 ms.date: 10/05/2017

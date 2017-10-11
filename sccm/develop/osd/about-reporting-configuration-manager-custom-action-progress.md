@@ -1,5 +1,6 @@
 ---
-title: "Report Custom Action Progress | Microsoft Docs"
+title: "Report Custom Action Progress"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

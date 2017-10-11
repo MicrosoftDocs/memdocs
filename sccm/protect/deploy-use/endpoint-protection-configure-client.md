@@ -1,5 +1,6 @@
 ---
-title: "Configure Endpoint Protection Client | Microsoft Docs"
+title: "Configure Endpoint Protection Client"
+titleSuffix: "Configuration Manager"
 description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
 ms.custom: na
 ms.date: 02/14/2017

@@ -1,5 +1,6 @@
 ---
-title: "SMS_TaskSequence_SetupWindowsAndSMSAction Class | Microsoft Docs"
+title: "SMS_TaskSequence_SetupWindowsAndSMSAction Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Find site resources | Microsoft Docs"
+title: "Find site resources"
+titleSuffix: "Configuration Manager"
 description: "Learn how and when System Center Configuration Manager clients use service location to find site resources."
 ms.custom: na
 ms.date: 2/7/2017

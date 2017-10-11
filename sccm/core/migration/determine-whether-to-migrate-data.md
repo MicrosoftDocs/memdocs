@@ -1,5 +1,6 @@
 ---
-title: "Choose what to migrate | Microsoft Docs"
+title: "Choose what to migrate"
+titleSuffix: "Configuration Manager"
 description: "Learn which data you can migrate and which data you can't migrate to System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/29/2016

@@ -1,5 +1,6 @@
 ---
-title: Scenarios to deploy enterprise operating systems | Microsoft Docs
+title: Scenarios to deploy enterprise operating systems
+titleSuffix: "Configuration Manager"
 description: "Learn about several scenarios to deploy enterprise operating systems with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
-title: "SMS_SoftwareUpdatesPackage Class | Microsoft Docs"
+title: "SMS_SoftwareUpdatesPackage Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Manage volume-purchased iOS apps | Microsoft Docs"
+title: "Manage volume-purchased iOS apps"
+titleSuffix: "Configuration Manager"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
 ms.date: 05/12/2017

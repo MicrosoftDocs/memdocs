@@ -1,5 +1,6 @@
 ---
-title: "SMS_DPStatusInfo Class | Microsoft Docs"
+title: "SMS_DPStatusInfo Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

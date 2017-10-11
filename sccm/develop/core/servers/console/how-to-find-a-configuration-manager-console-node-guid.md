@@ -1,5 +1,6 @@
 ---
-title: "Find a Console Node GUID | Microsoft Docs"
+title: "Find a Console Node GUID"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

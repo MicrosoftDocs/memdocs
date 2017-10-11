@@ -1,5 +1,6 @@
 ---
-title: "ICIINFO::GetCategoryCount | Microsoft Docs"
+title: "ICIINFO::GetCategoryCount"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Configure iOS apps with app configuration policies | Microsoft Docs"
+title: "Configure iOS apps with app configuration policies"
+titleSuffix: "Configuration Manager"
 description: "Help eliminate configuration problems on devices running iOS 8 or later by deploying app configuration policies to users before they run apps."
 ms.custom: na
 ms.date: 03/05/2017
