@@ -1,5 +1,6 @@
 ---
 title: "Technical Preview 1710 | Microsoft Docs"
+titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/25/2017
@@ -48,7 +49,7 @@ This article introduces the features that are available in the Technical Preview
  -  Task 2              
 -->
 
- 
+
 
 <!-- ## See also
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).   -->
