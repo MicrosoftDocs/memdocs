@@ -72,7 +72,7 @@ For more information see [Create a Database Mirroring Endpoint for Always On Ava
 - 	Prior to version 1706, you can have up to two synchronous secondary replicas.
 - 	Beginning with version 1706, you can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.
 
-    You can use an asynchronous commit replica to recover your synchronous replica. See [site database recovery options]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
+-   Beginning with version 1706, you can use an asynchronous commit replica to recover your synchronous replica. See [site database recovery options]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
     > [!CAUTION]  
     > Configuration Manager does not support failover to use the asynchronous commit replica as your site database.
 Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.
