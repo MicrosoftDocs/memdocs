@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 5f44b246-3467-4778-a5c2-047ce325da58
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Manage applications for On-premises Mobile Device Management

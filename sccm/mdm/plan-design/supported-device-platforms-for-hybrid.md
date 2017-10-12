@@ -14,8 +14,8 @@ ms.topic: get-started-article
 ms.assetid: 6b0732c8-1be8-44ba-8f8e-6fb2b67782e1
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

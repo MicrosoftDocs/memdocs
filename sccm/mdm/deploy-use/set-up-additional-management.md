@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Set up additional management with System Center Configuration Manager
