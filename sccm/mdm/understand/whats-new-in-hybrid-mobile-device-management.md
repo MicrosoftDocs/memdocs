@@ -24,8 +24,7 @@ This article provides details on the new mobile device management (MDM) features
 
 > [!Note]    
 > Intune on Azure is Microsoft’s recommended MDM solution.     
-> - For details about new features and updates in Intune standalone, see
- [What's new in Intune](https://docs.microsoft.com/intune/whats-new).    
+> - For details about new features and updates in Intune standalone, see [What's new in Intune](https://docs.microsoft.com/intune/whats-new).    
 > - For details about how to migrate to Intune standalone, see [Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 > - For details about UI updates for Intune and hybrid MDM, see [UI updates for Intune end user apps](https://docs.microsoft.com/intune/whats-new-app-ui). 
 
@@ -44,7 +43,7 @@ Each section of this article lists hybrid features under three different categor
 ### New in Configuration Manager Technical Preview 1709
 
 - **Improved VPN Profile experience in Configuration Manager console** <!-- 1313282 -->     
-    VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform will contain only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
+    VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform contains only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
 
 
 ### New in Microsoft Intune  
@@ -59,9 +58,7 @@ Each section of this article lists hybrid features under three different categor
   End users with Android devices will be able to tap the non-compliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue. 
 
 - **Additional push notifications for end users on the Company Portal app for Android Oreo** <!--1475932 -->    
-  End users will see additional notifications to indicate to them when the Company Portal app for Android Oreo is performing background tasks, such as retrieving policies from the Intune service. This increases transparency for end users about when the Company Portal is performing administrative tasks on their device. This is part of the overall [optimization of the Company Portal UI](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) for the Company Portal app for Android Oreo. 
-
-  There are further optimizations for new UI elements that are enabled in Android O.  End users will see additional notifications that will indicate to them when Company Portal is performing background tasks such as retrieving policy from the Intune service.  This increases transparency for end users about when Company Portal is performing administrative tasks on the device.
+  End users will see additional notifications to indicate to them when the Company Portal app for Android Oreo is performing background tasks, such as retrieving policies from the Intune service. The notifications increase transparency for end users about when the Company Portal is performing administrative tasks on their device. This is part of the overall [optimization of the Company Portal UI](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) for the Company Portal app for Android Oreo. 
 
 - **New behaviors for the Company Portal app for Android with work profiles** <!--1485783-->    
   When you enroll an Android for Work device with a work profile, it's the Company Portal app in the work profile that performs management tasks on the device. 
@@ -351,7 +348,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Non-Compliant Apps Compliance Settings**
 
-  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they are be marked “non-compliant” and lose access to company resources according to conditional access policies in place. For more information [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
+  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they are marked “non-compliant” and lose access to company resources according to conditional access policies in place. For more information, see [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
 
 - **PFX Certificate Creation and Distribution and S/MIME Support**
 
