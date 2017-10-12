@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Apply settings to iOS apps with app configuration policies in System Center Configuration Manager

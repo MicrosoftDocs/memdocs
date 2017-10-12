@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune

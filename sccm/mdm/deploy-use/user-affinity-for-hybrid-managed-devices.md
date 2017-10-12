@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 caps.latest.revision: 6
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # User affinity for hybrid managed devices in Configuration Manager

@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: a9163b77-a67d-4139-8272-bb1dfdb8707c
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Enable platform enrollment with System Center Configuration Manager and Microsoft Intune

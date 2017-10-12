@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager

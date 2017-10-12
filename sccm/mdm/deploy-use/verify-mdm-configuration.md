@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 94ecfada-97d9-4d5f-bb04-63550dda5f47
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Verify MDM configuration with System Center Configuration Manager

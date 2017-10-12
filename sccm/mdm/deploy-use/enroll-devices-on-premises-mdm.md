@@ -14,8 +14,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 caps.latest.revision: 6
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---
