@@ -1,5 +1,6 @@
 ---
-title: "Import a Windows Driver Described by a Txtsetup.oem File | Microsoft Docs"
+title: "Import a Windows Driver Described by a Txtsetup.oem File"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

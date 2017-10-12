@@ -1,5 +1,6 @@
 ---
-title: "Device Enrollment Methods for hybrid MDM | Microsoft Docs"
+title: "Device Enrollment Methods for hybrid MDM"
+titleSuffix: "Configuration Manager"
 description: "Device enrollment methods for hybrid MDM."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: get-started-article
 ms.assetid: b81d06dc-3844-4117-9937-16732a227994
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

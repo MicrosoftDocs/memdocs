@@ -1,5 +1,6 @@
 ---
-title: "Internet-based client management | Microsoft Docs"
+title: "Internet-based client management"
+titleSuffix: "Configuration Manager"
 description: "Create a plan to manage Internet-based clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/16/2017

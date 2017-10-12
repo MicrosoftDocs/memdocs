@@ -1,5 +1,6 @@
 ---
-title: "Manage updates | Microsoft Docs"
+title: "Manage updates"
+titleSuffix: "Configuration Manager"
 description: "Manage the udpates you deploy and create with System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

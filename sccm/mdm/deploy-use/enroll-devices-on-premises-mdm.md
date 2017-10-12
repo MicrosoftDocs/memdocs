@@ -1,6 +1,7 @@
 ---
 
-title: "Enroll devices  | Microsoft Docs"
+title: "Enroll devices "
+titleSuffix: "Configuration Manager"
 description: "Learn about methods to enroll devices for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 caps.latest.revision: 6
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

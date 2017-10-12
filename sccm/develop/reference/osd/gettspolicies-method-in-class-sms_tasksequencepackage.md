@@ -1,5 +1,6 @@
 ---
-title: "GetTsPolicies Method | Microsoft Docs"
+title: "GetTsPolicies Method"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Configure Availability Groups | Microsoft Docs"
+title: "Configure Availability Groups"
+titleSuffix: "Configuration Manager"
 description: "Set up and manage SQL Server Always On Availability groups with SCCM."
 ms.custom: na
 ms.date: 7/31/2017

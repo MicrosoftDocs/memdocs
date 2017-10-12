@@ -1,5 +1,6 @@
 ---
-title: "International support | Microsoft Docs"
+title: "International support"
+titleSuffix: "Configuration Manager"
 description: "Configure System Center Configuration Manager to comply with specific international requirements."
 ms.custom: na
 ms.date: 10/06/2016

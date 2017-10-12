@@ -1,5 +1,6 @@
 ---
-title: "Manage an Intune subscription associated with System Center Configuration Manager | Microsoft Docs"
+title: "Manage an Intune subscription"
+titleSuffix: "Configuration Manager"
 description: "Manage an Intune subscription associated with System Center Configuration Manager."
 ms.custom: na
 ms.date: 06/02/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Manage an Intune subscription associated with System Center Configuration Manager

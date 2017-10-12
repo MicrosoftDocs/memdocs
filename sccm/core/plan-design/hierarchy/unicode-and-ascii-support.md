@@ -1,5 +1,6 @@
 ---
-title: "Unicode and ASCII Support | Microsoft Docs"
+title: "Unicode and ASCII Support"
+titleSuffix: "Configuration Manager"
 description: "Learn about support for Unicode and ASCII characters in System Center Configuration Manager objects."
 ms.custom: na
 ms.date: 3/1/2017

@@ -1,5 +1,6 @@
 ---
-title: "Configure your Intune subscription using System Center Configuration Manager | Microsoft Docs"
+title: "Configure your Intune subscription"
+titleSuffix: "Configuration Manager"
 description: "Configure your Intune subscription using System Center Configuration Manager."
 ms.custom: na
 ms.date: 06/02/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune

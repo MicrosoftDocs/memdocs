@@ -1,5 +1,6 @@
 ---
-title: "CCM_Scheduler_ScheduledMessage Class | Microsoft Docs"
+title: "CCM_Scheduler_ScheduledMessage Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

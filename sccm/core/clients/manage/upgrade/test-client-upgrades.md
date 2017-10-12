@@ -1,5 +1,6 @@
 ---
-title: "Test client upgrades pre-production collection | Microsoft Docs"
+title: "Test client upgrades pre-production collection"
+titleSuffix: "Configuration Manager"
 description: "Test client upgrades in a pre-production collection in System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/04/2017

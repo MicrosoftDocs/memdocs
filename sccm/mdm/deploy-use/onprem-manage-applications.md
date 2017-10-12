@@ -1,5 +1,6 @@
 ---
-title: "Manage Applications for On-premises Mobile Device Management | Microsoft Docs"
+title: "Manage Applications for On-premises Mobile Device Management"
+titleSuffix: "Configuration Manager"
 description: "Manage applications for On-premises Mobile Device Management."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 5f44b246-3467-4778-a5c2-047ce325da58
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Manage applications for On-premises Mobile Device Management

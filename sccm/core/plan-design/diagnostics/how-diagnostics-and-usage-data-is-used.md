@@ -1,5 +1,6 @@
 ---
-title: "Use of diagnostics data | Microsoft Docs"
+title: "Use of diagnostics data"
+titleSuffix: "Configuration Manager"
 description: "Learn about how Microsoft uses the diagnostics and usage data that System Center Configuration Manager collects."
 ms.custom: na
 ms.date: 12/29/2016

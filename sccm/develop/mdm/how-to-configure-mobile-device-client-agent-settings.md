@@ -1,5 +1,6 @@
 ---
-title: "Configure Mobile Device Client Agent Settings | Microsoft Docs"
+title: "Configure Mobile Device Client Agent Settings"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

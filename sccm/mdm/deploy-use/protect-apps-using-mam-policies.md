@@ -1,5 +1,6 @@
 ---
-title: "Protect apps using mobile application management policies | Microsoft Docs"
+title: "Protect apps using mobile application management policies"
+titleSuffix: "Configuration Manager"
 description: "Modify the functionality of apps that you deploy so they will meet your company compliance and security policies."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Protect apps using mobile application management policies in System Center Configuration Manager

@@ -1,5 +1,6 @@
 ---
-title: "Monitor applications from the System Center Configuration Manager console | Microsoft Docs"
+title: "Monitor applications from the console"
+titleSuffix: "Configuration Manager"
 description: "Monitor deployment of software, including updates, compliance settings, and applications by using the Monitoring workspace in Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
-title: "Monitor clients - Use Windows Analytics with Configuration Manager | Microsoft Docs"
+title: "Monitor clients with Windows Analytics"
+titleSuffix: "Configuration Manager"
 description: "Windows Analytics is a set of solutions that run on Operations Management Suite that allow you do draw valuable insights into the current state of your environment by leveraging the Windows telemetry data that is reported by devices in your environment."
 ms.custom: na
 ms.date: 07/31/2017

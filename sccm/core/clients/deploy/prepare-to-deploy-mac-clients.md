@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: "Prepare to deploy client software to Macs | Microsoft Docs"
+title: "Prepare to deploy client software to Macs"
+titleSuffix: "Configuration Manager"
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
 ms.custom: na
 ms.date: 05/04/2017

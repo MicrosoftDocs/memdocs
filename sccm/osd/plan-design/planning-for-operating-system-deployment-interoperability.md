@@ -1,5 +1,6 @@
 ---
-title: Planning for operating system deployment interoperability | Microsoft Docs
+title: Planning for operating system deployment interoperability
+titleSuffix: "Configuration Manager"
 description: "Understand interoperability issues when different System Center Configuration Manager sites in a single hierarchy use different versions."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,6 @@
 ---
-title: "RemoveSiteSystem Method | Microsoft Docs"
+title: "RemoveSiteSystem Method"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"

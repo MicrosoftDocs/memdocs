@@ -1,5 +1,6 @@
 ---
-title: "Manage Applications in System Center Configuration Manager | Microsoft Docs"
+title: "Manage Applications"
+titleSuffix: "Configuration Manager"
 description: "Manage Applications in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Manage Applications in System Center Configuration Manager

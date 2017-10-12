@@ -1,5 +1,6 @@
 ---
-title: "Set up certificates  | Microsoft Docs"
+title: "Set up certificates "
+titleSuffix: "Configuration Manager"
 description: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: get-started-article
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 caps.latest.revision: 27
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

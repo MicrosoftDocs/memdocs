@@ -1,5 +1,6 @@
 ---
-title: "Verify MDM configuration using System Center Configuration Manager | Microsoft Docs"
+title: "Verify MDM configuration"
+titleSuffix: "Configuration Manager"
 description: "Verify MDM configuration using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 94ecfada-97d9-4d5f-bb04-63550dda5f47
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Verify MDM configuration with System Center Configuration Manager

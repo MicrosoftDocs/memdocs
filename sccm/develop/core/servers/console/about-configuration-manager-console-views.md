@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Console Views | Microsoft Docs"
+title: "Configuration Manager Console Views"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

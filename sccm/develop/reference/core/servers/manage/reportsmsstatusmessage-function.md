@@ -1,5 +1,6 @@
 ---
-title: "ReportSMSStatusMessage Function | Microsoft Docs"
+title: "ReportSMSStatusMessage Function"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

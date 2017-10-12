@@ -1,5 +1,6 @@
 ---
-title: "Close Method in Class SMS_EPAlert | Microsoft Docs"
+title: "Close Method in Class SMS_EPAlert"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

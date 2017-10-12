@@ -1,5 +1,6 @@
 ---
-title: "MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS | Microsoft Docs"
+title: "MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

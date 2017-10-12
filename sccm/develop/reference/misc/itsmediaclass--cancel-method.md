@@ -1,5 +1,6 @@
 ---
-title: "ITsMediaClass::Cancel Method | Microsoft Docs"
+title: "ITsMediaClass::Cancel Method"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

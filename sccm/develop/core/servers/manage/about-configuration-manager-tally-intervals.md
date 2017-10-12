@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Tally Intervals | Microsoft Docs"
+title: "Configuration Manager Tally Intervals"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

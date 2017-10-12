@@ -1,5 +1,6 @@
 ---
-title: Plan for Endpoint Protection | Microsoft Docs
+title: Plan for Endpoint Protection
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager

@@ -1,5 +1,6 @@
 ---
 title: "How to create configuration items for Android for Work devices managed with Intune"
+titleSuffix: "Configuration Manager"
 ms.custom: na
 ms.date: 2017-07-31
 ms.prod: configuration-manager

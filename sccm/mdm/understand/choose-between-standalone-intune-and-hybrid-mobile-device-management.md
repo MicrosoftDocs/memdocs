@@ -1,5 +1,6 @@
 ---
-title: "Choose Intune standalone or hybrid MDM | Microsoft Docs"
+title: "Choose Intune standalone or hybrid MDM"
+titleSuffix: "Configuration Manager"
 description: "Choose whether to deploy hybrid mobile device management with Intune and Configuration Manager or run Intune standalone."
 ms.custom: na
 ms.date: 07/18/2017
