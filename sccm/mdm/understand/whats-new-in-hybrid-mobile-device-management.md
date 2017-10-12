@@ -47,6 +47,44 @@ Each section of this article lists hybrid features under three different categor
     VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform will contain only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
 
 
+### New in Microsoft Intune  
+
+- **Improvements to device setup workflow in Company Portal** <!--1490692-->    
+  We've improved the device setup workflow in the Company Portal app for Android. The language is more user-friendly and specific to your company, and we've combined screens where possible. You can see these on the [what's new in app UI](whats-new-app-ui.md#week-of-october-2-2017) page.
+
+- **Improved guidance around the request for access to contacts on Android devices** <!--1484985-->    
+  The Company Portal app for Android often requires the end user to accept the Contacts permission. If an end user declines this access, they will now see an in-app notification that alerts them to grant it for conditional access. 
+
+- **Secure startup remediation for Android** <!--1490712-->    
+  End users with Android devices will be able to tap the non-compliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue. 
+
+- **Additional push notifications for end users on the Company Portal app for Android Oreo** <!--1475932 -->    
+  End users will see additional notifications to indicate to them when the Company Portal app for Android Oreo is performing background tasks, such as retrieving policies from the Intune service. This increases transparency for end users about when the Company Portal is performing administrative tasks on their device. This is part of the overall [optimization of the Company Portal UI](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) for the Company Portal app for Android Oreo. 
+
+  There are further optimizations for new UI elements that are enabled in Android O.  End users will see additional notifications that will indicate to them when Company Portal is performing background tasks such as retrieving policy from the Intune service.  This increases transparency for end users about when Company Portal is performing administrative tasks on the device.
+
+- **New behaviors for the Company Portal app for Android with work profiles** <!--1485783-->    
+  When you enroll an Android for Work device with a work profile, it's the Company Portal app in the work profile that performs management tasks on the device. 
+
+  Unless you are using a MAM-enabled app in the personal profile, the Company Portal app for Android no longer serves any use. To improve the work profile experience, Intune will automatically hide the personal Company Portal app after a successful work profile enrollment.
+
+  The Company Portal app for Android can be enabled at any time in the personal profile by browsing for [Company Portal in the Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and tapping **Enable**.
+
+- **Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode** <!--1428681-->    
+ A notice was added to announce that Company Portal apps for Windows 8.1 and Windows Phone 8.1 are moving to sustaining mode. For details, see [Notices](#notices).  
+
+- **Block unsupported Samsung Knox device enrollment** <!-- 1490695 -->    
+  The Company Portal app only attempts to enroll supported Samsung Knox devices. To avoid KNOX activation errors that prevent MDM enrollment, device enrollment is only attempted if the device appears in the [list of devices published by Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Samsung devices can have model numbers that support KNOX while others that don't. Verify Knox compatibility with your device reseller before purchase and deployment. You can find the full list of verified devices in the [Android and Samsung KNOX Standard policy settings](/intune-classic/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
+
+- **End of support for Android 4.3 and lower** <!--1171126, 1326920 -->    
+  A notice was added for end of support for Android 4.3 and lower. For details, see [Notices](#notices).
+
+- **Inform end users what device information can be seen on enrolled devices** <!--1165314-->    
+  We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017). 
+
+
+
+
 ## September 2017
 
 ### New in Microsoft Intune     
@@ -343,6 +381,14 @@ The following additional hybrid features are also included in version 1702 of Co
 
 
 ## Notices
+
+### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 
+<!--1428681-->
+*October 6, 2017*   
+ 
+Beginning in October 2017, the Company Portal apps for Windows 8.1 and Windows Phone 8.1 will move to sustaining mode. This means that the apps and existing scenarios, such as enrollment and compliance, will continue to be supported for these platforms. These apps will continue to be available for download through existing release channels, such as the Microsoft Store. 
+
+Once in sustaining mode, these apps will only will receive critical security updates. There will be no additional updates or features released for these apps. For new features, we recommend that you update devices to Windows 10 or Windows 10 Mobile. 
 
 ### End of support for iOS 8.0 
 <!---1164477--->
