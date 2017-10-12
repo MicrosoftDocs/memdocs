@@ -1,5 +1,6 @@
 ---
-title: "Create a service connection point using System Center Configuration Manager | Microsoft Docs"
+title: "Create a service connection point"
+titleSuffix: "Configuration Manager"
 description: "Create a service connection point using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Create a service connection point with System Center Configuration Manager and Microsoft Intune

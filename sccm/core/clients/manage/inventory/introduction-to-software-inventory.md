@@ -1,5 +1,6 @@
 ---
-title: "Software inventory | Microsoft Docs"
+title: "Software inventory"
+titleSuffix: "Configuration Manager"
 description: "Get an introduction to software inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/22/2017

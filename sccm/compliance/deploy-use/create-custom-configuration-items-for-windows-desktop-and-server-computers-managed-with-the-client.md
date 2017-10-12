@@ -1,5 +1,6 @@
 ---
-title: "Create configuration items for client-managed Windows computers - Configuration Manager | Microsoft Docs"
+title: "Create configuration items for client-managed Windows computers "
+titleSuffix: "Configuration Manager"
 description: "Manage settings for Windows computers and servers with a custom Windows Desktops and Servers configuration item."
 ms.custom: na
 ms.date: 11/18/2016

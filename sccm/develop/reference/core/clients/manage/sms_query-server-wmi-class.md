@@ -1,5 +1,6 @@
 ---
-title: "SMS_Query Class | Microsoft Docs"
+title: "SMS_Query Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

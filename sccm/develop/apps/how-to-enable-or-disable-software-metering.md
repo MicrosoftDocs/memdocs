@@ -1,5 +1,6 @@
 ---
-title: "Enable or Disable Software Metering | Microsoft Docs"
+title: "Enable or Disable Software Metering"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Create a Package | Microsoft Docs"
+title: "Create a Package"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,5 +1,6 @@
 ---
-title: "Asset Intelligence introduction | Microsoft Docs"
+title: "Asset Intelligence introduction"
+titleSuffix: "Configuration Manager"
 description: "Get an introduction to Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/22/2017

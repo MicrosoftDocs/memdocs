@@ -1,5 +1,6 @@
 ---
-title: "Schema SQL Views | Microsoft Docs"
+title: "Schema SQL Views"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

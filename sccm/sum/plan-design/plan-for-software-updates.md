@@ -1,6 +1,7 @@
 ---
 
-title: Plan for software updates | Microsoft Docs
+title: Plan for software updates
+titleSuffix: "Configuration Manager"
 description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
 keywords:
 author: dougeby

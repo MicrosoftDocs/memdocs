@@ -1,5 +1,6 @@
 ---
-title: Import Configuration Manager data to Microsoft Intune 
+title: "Import data to Microsoft Intune"
+titleSuffix: "Configuration Manager"
 description:
 keywords:
 author: dougeby

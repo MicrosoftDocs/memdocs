@@ -1,5 +1,6 @@
 ---
-title: "Create App-V virtual environments | Microsoft Docs"
+title: "Create App-V virtual environments"
+titleSuffix: "Configuration Manager"
 description: "Create virtual environments with Microsoft Application Virtualization so apps can share data with each other."
 ms.custom: na
 ms.date: 10/06/2016

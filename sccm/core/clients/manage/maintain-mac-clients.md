@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: "Maintain Mac clients | Microsoft Docs"
+title: "Maintain Mac clients"
+titleSuffix: "Configuration Manager"
 description: Maintenance tasks for Configuration Manager Mac clients.
 ms.custom: na
 ms.date: 04/23/2017

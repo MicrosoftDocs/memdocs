@@ -1,5 +1,6 @@
 ---
-title: "Manage Internet access using managed browser policies | Microsoft Docs"
+title: "Manage Internet access using managed browser policies"
+titleSuffix: "Configuration Manager"
 description: "Deploy the Intune Managed Browser to manage and restrict Internet access."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

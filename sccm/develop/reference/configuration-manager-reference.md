@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Reference | Microsoft Docs"
+title: "Configuration Manager Reference"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

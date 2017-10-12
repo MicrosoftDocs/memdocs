@@ -1,5 +1,6 @@
 ---
-title: "SMS_ConfigurationPolicy Class | Microsoft Docs"
+title: "SMS_ConfigurationPolicy Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

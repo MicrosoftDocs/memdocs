@@ -1,5 +1,6 @@
 ---
-title: "Ensure device compliance | Microsoft Docs"
+title: "Ensure device compliance"
+titleSuffix: "Configuration Manager"
 description: "Manage the configuration and compliance of devices in your organization by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

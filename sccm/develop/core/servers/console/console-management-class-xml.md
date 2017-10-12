@@ -1,5 +1,6 @@
 ---
-title: "Console Management Class XML | Microsoft Docs"
+title: "Console Management Class XML"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

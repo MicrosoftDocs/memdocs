@@ -1,5 +1,6 @@
 ---
-title: "Set up Cloud Management Gateway | Microsoft Docs"
+title: "Set up Cloud Management Gateway"
+titleSuffix: "Configuration Manager"
 description: ""
 author: arob98
 ms.author: angrobe

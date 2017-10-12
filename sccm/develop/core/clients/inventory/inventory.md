@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager Inventory | Microsoft Docs"
+title: "Configuration Manager Inventory"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

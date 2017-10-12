@@ -1,5 +1,6 @@
 ---
-title: "Create an MDM collection using System Center Configuration Manager | Microsoft Docs"
+title: "Create an MDM collection"
+titleSuffix: "Configuration Manager"
 description: "Create an MDM collection using System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -13,8 +14,8 @@ ms.topic: article
 ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ---
 # Create an MDM collection with System Center Configuration Manager and Microsoft Intune

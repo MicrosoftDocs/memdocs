@@ -1,5 +1,6 @@
 ---
-title: "Pre-release features| Microsoft Docs"
+title: "Pre-release features"
+titleSuffix: "Configuration Manager"
 description: "Pre-release features in System Center Configuration Manager"
 ms.custom: na
 ms.date: 7/31/2017

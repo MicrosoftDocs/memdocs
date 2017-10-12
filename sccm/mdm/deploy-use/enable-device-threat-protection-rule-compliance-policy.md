@@ -1,5 +1,6 @@
 ---
-title: "Enable device protection rule in compliance policy | Microsoft Docs"
+title: "Enable device protection rule in compliance policy"
+titleSuffix: "Configuration Manager"
 description: "Enable mobile threat protection rule in the device compliance policy."
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
 caps.latest.revision:
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

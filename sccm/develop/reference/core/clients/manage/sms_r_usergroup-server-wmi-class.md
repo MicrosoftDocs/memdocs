@@ -1,5 +1,6 @@
 ---
-title: "SMS_R_UserGroup Class | Microsoft Docs"
+title: "SMS_R_UserGroup Class"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

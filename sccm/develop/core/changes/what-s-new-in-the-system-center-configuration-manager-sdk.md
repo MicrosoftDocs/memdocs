@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s new in the Configuration Manager SDK | Microsoft Docs"
+title: "What&#39;s new in the Configuration Manager SDK"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

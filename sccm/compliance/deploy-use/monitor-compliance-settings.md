@@ -1,5 +1,6 @@
 ---
-title: "Monitor compliance settings | Microsoft Docs"
+title: "Monitor compliance settings"
+titleSuffix: "Configuration Manager"
 description: "Use one or more of the procedures in this topic to display the compliance status of the configuration baseline."
 ms.custom: na
 ms.date: 10/06/2016

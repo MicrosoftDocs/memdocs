@@ -1,5 +1,6 @@
 ---
-title: Icons used for software updates | Microsoft Docs
+title: Icons used for software updates
+titleSuffix: "Configuration Manager"
 description: "The Configuration Manager console contains icons that indicate a state for the synchronized update or software update group."
 keywords:
 author: dougebyms.author: dougeby

@@ -1,5 +1,6 @@
 ---
-title: "Setup command-line options | Microsoft Docs"
+title: "Setup command-line options"
+titleSuffix: "Configuration Manager"
 description: "Use information in this article to configure scripts or to install System Center Configuration Manager from a command line."
 ms.custom: na
 ms.date: 03/27/2017

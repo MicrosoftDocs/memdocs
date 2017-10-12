@@ -1,5 +1,6 @@
 ---
-title: "Manage publications | Microsoft Docs"
+title: "Manage publications"
+titleSuffix: "Configuration Manager"
 description: "Manage groups of software updates as a publication with System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017

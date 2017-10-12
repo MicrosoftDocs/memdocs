@@ -1,5 +1,6 @@
 ---
-title: "Archive of  What's new hybrid MDM | Microsoft Docs"
+title: "Archive of  What's new hybrid MDM"
+titleSuffix: "Configuration Manager"
 description: "Archive of past mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
 ms.date: 06/30/2017
@@ -11,8 +12,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---

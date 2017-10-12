@@ -1,5 +1,6 @@
 ---
-title: "Capabilities in Technical Preview 1703 Configuration Manager"
+title: "Capabilities in Technical Preview 1703"
+titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1703."
 ms.custom: na
 ms.date: 03/24/2017

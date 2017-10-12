@@ -1,5 +1,6 @@
 ---
-title: "Connect to the Client WMI Namespace | Microsoft Docs"
+title: "Connect to the Client WMI Namespace"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

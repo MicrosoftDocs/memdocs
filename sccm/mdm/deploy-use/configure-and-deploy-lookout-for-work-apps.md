@@ -1,5 +1,6 @@
 ---
-title: "Deploy Lookout for Work app | Microsoft Docs"
+title: "Deploy Lookout for Work app"
+titleSuffix: "Configuration Manager"
 description: "Configure and deploy Lookout for Work apps."
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
 caps.latest.revision:
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 
 ---

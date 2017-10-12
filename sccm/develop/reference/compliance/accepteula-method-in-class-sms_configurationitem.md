@@ -1,5 +1,6 @@
 ---
-title: "AcceptEULA Method in Class SMS_ConfigurationItem | Microsoft Docs"
+title: "AcceptEULA Method in Class SMS_ConfigurationItem"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

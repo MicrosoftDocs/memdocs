@@ -1,5 +1,6 @@
 ---
-title: "GetRemCtrlSettings Method | Microsoft Docs"
+title: "GetRemCtrlSettings Method"
+titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
