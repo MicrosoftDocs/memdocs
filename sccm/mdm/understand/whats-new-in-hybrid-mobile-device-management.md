@@ -24,8 +24,7 @@ This article provides details on the new mobile device management (MDM) features
 
 > [!Note]    
 > Intune on Azure is Microsoft’s recommended MDM solution.     
-> - For details about new features and updates in Intune standalone, see
- [What's new in Intune](https://docs.microsoft.com/intune/whats-new).    
+> - For details about new features and updates in Intune standalone, see [What's new in Intune](https://docs.microsoft.com/intune/whats-new).    
 > - For details about how to migrate to Intune standalone, see [Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 > - For details about UI updates for Intune and hybrid MDM, see [UI updates for Intune end user apps](https://docs.microsoft.com/intune/whats-new-app-ui). 
 
@@ -44,7 +43,43 @@ Each section of this article lists hybrid features under three different categor
 ### New in Configuration Manager Technical Preview 1709
 
 - **Improved VPN Profile experience in Configuration Manager console** <!-- 1313282 -->     
-    VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform will contain only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
+    VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform contains only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
+
+
+### New in Microsoft Intune  
+
+- **Improvements to device setup workflow in Company Portal** <!--1490692-->    
+  We've improved the device setup workflow in the Company Portal app for Android. The language is more user-friendly and specific to your company, and we've combined screens where possible. You can see these on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017) page.
+
+- **Improved guidance around the request for access to contacts on Android devices** <!--1484985-->    
+  The Company Portal app for Android often requires the end user to accept the Contacts permission. If an end user declines this access, they will now see an in-app notification that alerts them to grant it for conditional access. 
+
+- **Secure startup remediation for Android** <!--1490712-->    
+  End users with Android devices will be able to tap the non-compliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue. 
+
+- **Additional push notifications for end users on the Company Portal app for Android Oreo** <!--1475932 -->    
+  End users will see additional notifications to indicate to them when the Company Portal app for Android Oreo is performing background tasks, such as retrieving policies from the Intune service. The notifications increase transparency for end users about when the Company Portal is performing administrative tasks on their device. This is part of the overall [optimization of the Company Portal UI](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) for the Company Portal app for Android Oreo. 
+
+- **New behaviors for the Company Portal app for Android with work profiles** <!--1485783-->    
+  When you enroll an Android for Work device with a work profile, it's the Company Portal app in the work profile that performs management tasks on the device. 
+
+  Unless you are using a MAM-enabled app in the personal profile, the Company Portal app for Android no longer serves any use. To improve the work profile experience, Intune will automatically hide the personal Company Portal app after a successful work profile enrollment.
+
+  The Company Portal app for Android can be enabled at any time in the personal profile by browsing for [Company Portal in the Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and tapping **Enable**.
+
+- **Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode** <!--1428681-->    
+ A notice was added to announce that Company Portal apps for Windows 8.1 and Windows Phone 8.1 are moving to sustaining mode. For details, see [Notices](#notices).  
+
+- **Block unsupported Samsung Knox device enrollment** <!-- 1490695 -->    
+  The Company Portal app only attempts to enroll supported Samsung Knox devices. To avoid KNOX activation errors that prevent MDM enrollment, device enrollment is only attempted if the device appears in the [list of devices published by Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Samsung devices can have model numbers that support KNOX while others that don't. Verify Knox compatibility with your device reseller before purchase and deployment. You can find the full list of verified devices in the [Android and Samsung KNOX Standard policy settings](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
+
+- **End of support for Android 4.3 and lower** <!--1171126, 1326920 -->    
+  A notice was added for end of support for Android 4.3 and lower. For details, see [Notices](#notices).
+
+- **Inform end users what device information can be seen on enrolled devices** <!--1165314-->    
+  We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017). 
+
+
 
 
 ## September 2017
@@ -101,37 +136,37 @@ The following features that were previously available in Configuration Manager T
 
 - **Change your MDM authority**
 
-  Beginning in Configuration Manager version 1610, you can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority]( /sccm/mdm/deploy-use/change-mdm-authority).
+  Beginning in Configuration Manager version 1610, you can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority).
 
 - **Managed browser and app proxy integration**
 
-  The Intune Managed Browser can now integrate with the Azure AD Application Proxy service to let users access internal web sites even when they are working remotely. Users of the browser enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](/intune/app-configuration-managed-browser).
+  The Intune Managed Browser can now integrate with the Azure AD Application Proxy service to let users access internal web sites even when they are working remotely. Users of the browser enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](https://docs.microsoft.com/intune/app-configuration-managed-browser).
 
 - **Company Portal app for Android now has a new end-user experience for App Protection Policies**
 
-  Based on customer feedback, we've modified the Company Portal app for Android to show an **Access Company Content** button. The intent is to prevent end users from unnecessarily going through the enrollment process when they only need to access apps that support App Protection Policies, a feature of Intune mobile application management. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
+  Based on customer feedback, we've modified the Company Portal app for Android to show an **Access Company Content** button. The intent is to prevent end users from unnecessarily going through the enrollment process when they only need to access apps that support App Protection Policies, a feature of Intune mobile application management. You can see these changes on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui) page.
 
 - **New menu action to easily remove Company Portal**
 
-  Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page and in the [Android end-user documentation](/intune-user-help/unenroll-your-device-from-intune-android).
+  Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user. You can see these changes on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui) page and in the [Android end-user documentation](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android).
 
 - **Improvements to app syncing with Windows 10 Creators Update**
 
-  The Company Portal app for Windows 10 now automatically initiates a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This reduces the issue of app installs stalling during the "Pending Sync" state. In addition, users are able to manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
+  The Company Portal app for Windows 10 now automatically initiates a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This reduces the issue of app installs stalling during the "Pending Sync" state. In addition, users are able to manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui) page.
 
 - **New guided experience for Windows 10 Company Portal**
 
   The Company Portal app for Windows 10 includes a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Azure Active Directory (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they do not complete registration and enrollment, but will experience limited functionality.
 
-  This update is only visible on devices running Windows 10 Anniversary Update (build 1607) or higher. You can see these changes on the [what's new in app UI](/intune/whats-new-app-ui) page.
+  This update is only visible on devices running Windows 10 Anniversary Update (build 1607) or higher. You can see these changes on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui) page.
 
 - **Improvements to the app tiles in the Company Portal app for iOS**
 
-  We updated the design of the app tiles on the homepage to reflect the branding color you set for the Company Portal. For more information, see [what's new in app UI](/intune/whats-new-app-ui).
+  We updated the design of the app tiles on the homepage to reflect the branding color you set for the Company Portal. For more information, see [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui).
 
 - **Account picker now available for the Company Portal app for iOS**
 
-  Users of iOS devices might see our new account picker when they sign into the Company Portal if they use their work or school account to sign into other Microsoft apps. For more information, see [what's new in app UI](/intune/whats-new-app-ui).
+  Users of iOS devices might see our new account picker when they sign into the Company Portal if they use their work or school account to sign into other Microsoft apps. For more information, see [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui).
 
 ### New in Configuration Manager Technical Preview 1706
 
@@ -180,17 +215,17 @@ The following features that were previously available in Configuration Manager T
 
 - **New icons for the Managed Browser and the Company Portal**
 
-  The Managed Browser is receiving updated icons for both the Android and iOS versions of the app. The new icon will contain the updated Intune badge to make it more consistent with other apps in Enterprise Mobility + Security (EM+S). You can see the new icon for the Managed Browser on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
+  The Managed Browser is receiving updated icons for both the Android and iOS versions of the app. The new icon will contain the updated Intune badge to make it more consistent with other apps in Enterprise Mobility + Security (EM+S). You can see the new icon for the Managed Browser on the [what's new in Intune app UI page](https://docs.microsoft.com/intune/whats-new-app-ui).
 
   The Company Portal is also receiving updated icons for the Android, iOS, and Windows versions of the app to improve consistency with other apps in EM+S. These icons will be gradually released across platforms from April to late May.
 
 - **Sign in progress indicator in Android Company Portal**
 
-  An update to the Android Company Portal app shows a sign in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](/intune/whats-new/whats-new-in-intune-app-ui.md).
+  An update to the Android Company Portal app shows a sign in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](https://docs.microsoft.com/intune/whats-new-app-ui).
 
 - **Block apps from accessing SharePoint Online**
 
-  You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
+  You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](https://docs.microsoft.com/intune-classic/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
 
 ### New in Configuration Manager Technical Preview 1704
 
@@ -212,7 +247,7 @@ The following features that were previously available in Configuration Manager T
   - Navigating Apps: **All Apps** view shows a tabbed view of **Featured**, **All**, and **Categories** for easier navigation.
   - Support: **My Devices** and **Contact IT** tabs are updated to improve readability.
 
-  For more information about these changes, see [UI updates for Intune end-user apps](/intune/whats-new/whats-new-in-intune-app-ui).
+  For more information about these changes, see [UI updates for Intune end-user apps](https://docs.microsoft.com/intune/whats-new-app-ui).
 
 - **Signing Script for Windows 10 Company Portal**
 
@@ -299,7 +334,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Modernizing the Company Portal website**
 
-  The Company Portal website supports apps that are targeted to users who do not have managed devices. The website aligns with other Microsoft products and services by using a new contrasting color scheme, dynamic illustrations, and a "hamburger menu," which contains helpdesk contact details and information on existing managed devices. The landing page is rearranged to emphasize apps that are available to users, with carousels for Featured and Recently Updated apps. You can find before-and-after images available on the [UI updates](/intune/whats-new/whats-new-in-intune-app-ui) page.
+  The Company Portal website supports apps that are targeted to users who do not have managed devices. The website aligns with other Microsoft products and services by using a new contrasting color scheme, dynamic illustrations, and a "hamburger menu," which contains helpdesk contact details and information on existing managed devices. The landing page is rearranged to emphasize apps that are available to users, with carousels for Featured and Recently Updated apps. You can find before-and-after images available on the [UI updates](https://docs.microsoft.com/intune/whats-new-app-ui) page.
 
 - **New MDM server address for Windows devices**
 
@@ -313,7 +348,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Non-Compliant Apps Compliance Settings**
 
-  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they are be marked “non-compliant” and lose access to company resources according to conditional access policies in place. For more information [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
+  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they are marked “non-compliant” and lose access to company resources according to conditional access policies in place. For more information, see [Conditional access device compliance policy improvements](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
 
 - **PFX Certificate Creation and Distribution and S/MIME Support**
 
@@ -333,7 +368,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Resolve issue where iOS devices are inactive, or the admin console cannot communicate with them**
 
-  When users’ devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console cannot communicate with them](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
+  When users’ devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console cannot communicate with them](https://docs.microsoft.com/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
 
 ### New in Configuration Manager Technical Preview 1701
 
@@ -343,6 +378,14 @@ The following additional hybrid features are also included in version 1702 of Co
 
 
 ## Notices
+
+### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 
+<!--1428681-->
+*October 6, 2017*   
+ 
+Beginning in October 2017, the Company Portal apps for Windows 8.1 and Windows Phone 8.1 will move to sustaining mode. This means that the apps and existing scenarios, such as enrollment and compliance, will continue to be supported for these platforms. These apps will continue to be available for download through existing release channels, such as the Microsoft Store. 
+
+Once in sustaining mode, these apps will only will receive critical security updates. There will be no additional updates or features released for these apps. For new features, we recommend that you update devices to Windows 10 or Windows 10 Mobile. 
 
 ### End of support for iOS 8.0 
 <!---1164477--->
