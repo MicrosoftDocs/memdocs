@@ -150,7 +150,7 @@ Use the information in this article to help you implement the necessary dependen
             > [!TIP]  
             >  To specify the organization name that's displayed in the Application Catalog and configure the website theme, use the **Customization** tab on the Application Catalog website properties.  
 
-        -   **Use new Software Center** - Set to **Yes** if you want to use the new Software Center, which lets users browse for and install available apps without the need to access the Application Catalog (which requires a Silverlight-enabled web browser).  
+        -   **Use new Software Center**. Set to **Yes** if you want to use the new Software Center, which lets users browse for and install available apps without the need to access the Application Catalog (which requires a Silverlight-enabled web browser).  
 
         -   **Install permissions**.  
 
@@ -184,7 +184,7 @@ Custom branding for the Software Center is applied according to the following ru
 3. If a Microsoft Intune subscription is configured and connected to Configuration Manager, then Software Center will display the organization name, color, and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
 
 > [!IMPORTANT]  
->  Software Center branding is synchronized with the Intune service every 14 days therefore there might be a delay before changes you make in Intune are displayed in Configuration Manager.
+>  Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
 
 ###  Step 5: Verify that the Application Catalog is operational  
  Use the following procedures to verify that the Application Catalog is operational. You can use the Application Catalog directly from a browser or from Software Center.  
@@ -200,7 +200,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 ### To use the Application Catalog directly from a browser  
 
--   In a browser, enter the address of the Application Catalog website, and confirm that the web page shows the three tabs: **Application Catalog**, **My Application Requests**, and **My Devices**.  
+-   In a browser, enter the address of the Application Catalog website, and confirm that the webpage shows the three tabs: **Application Catalog**, **My Application Requests**, and **My Devices**.  
 
      Select and use the appropriate address in the following list for the Application Catalog, where &lt;server&gt; is the computer name, intranet FQDN, or internet FQDN:  
 
