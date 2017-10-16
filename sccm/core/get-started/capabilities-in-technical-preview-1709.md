@@ -77,8 +77,7 @@ As you select different platforms, notice that only the settings relevant to the
 
 ## Co-management for Windows 10 devices    
 <!-- 1350871 -->
-Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Co-management is a solution where Windows 10 devices can be concurrently managed by Configuration Manager and Intune, as well as joined to Active Directory (AD) and Azure Active Directory (Azure AD) to provide a way for you to modernize over time. It’s a solution to provide a bridge from traditional to modern management and provides you with a path to make the transition using a phased approach.  
-
+Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. 
 
 ### Prerequisites
 You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for existing Configuration Manager clients and devices that are not clients.
