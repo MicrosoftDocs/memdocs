@@ -23,7 +23,7 @@ Microsoft plans to release updates for System Center Configuration Manager curre
 
 -   Security Updates (Only) servicing phase - After the release of a new current branch version, support for older branches will reduce to Security updates only for the remainder of that versions support lifecycle (shown in figure 1).  
 
- ![CM&#95;Servicing&#95;support&#95;timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline1")  
+ ![CM&#95;Servicing&#95;support&#95;timeline](media/CM_Servicing_support_timeline1.png "CM_Servicing_support_timeline")  
 Figure 1. Example of the release cycle overlap for current branch servicing support.
 
 > [!NOTE]  
