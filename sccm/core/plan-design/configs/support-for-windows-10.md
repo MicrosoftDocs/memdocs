@@ -34,13 +34,13 @@ For example, a Configuration Manager version will drop from the matrix after [su
 -   The following information supplements [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
 -   If you use the Long-Term Servicing Branch of Configuration Manager, see [Supported Configurations for the Long-Term Servicing Branch](/sccm/core/understand/supported-configurations-for-ltsb).
 
-|Windows 10 release                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
+|Windows 10 version                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
 |---------------------|-----|-----|-----|
 |Enterprise 2015 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |Enterprise 2016 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|1607 	<br />Anniversary Update<br />(*see editions*)   |![Supported](media/green_check.png) |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |
-|1703   <br />Creators Update<br />(*see editions*)      |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
-|1709   <br />Fall Creators Update<br />(*see editions*) |![Not supported](media/Red_X.png)   |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |
+|1607 	<br />(Also known as the Anniversary Update)<br />(*see editions*)   |![Supported](media/green_check.png) |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |
+|1703   <br />(Also known as the Creators Update)<br />(*see editions*)      |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
+|1709   <br />(Also known as the Fall Creators Update)<br />(*see editions*) |![Not supported](media/Red_X.png)   |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |
 
 
 
@@ -58,7 +58,7 @@ When you deploy operating systems with Configuration Manager, the [Windows ADK i
 
 The following table list the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-|Windows 10 ADK release  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
+|Windows 10 ADK version  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
 |--------------------|-----|-----|-----|
 |1607  |![Supported](media/green_check.png)           |![Backwards compatible](media/blue_compat.png) |![Not supported](media/Red_X.png)|
 |1703  |![Not supported](media/Red_X.png)             |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |  
