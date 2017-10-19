@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
 # Support for System Center Configuration Manager current branch versions*Applies to: System Center Configuration Manager (Current Branch)*
-Microsoft plans to release updates for System Center Configuration Manager current branch a few times per year. Beginning with the 1710 release, each update version remains in support for 18 months from its general availability (GA) release date. (For versions released prior to 1710, support extends for only 12 months instead of 18.) Technical support is provided for the entire period of support. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest current branch version.  
+Microsoft plans to release updates for System Center Configuration Manager current branch a few times per year. Beginning with the 1710 release, each update version remains in support for 18 months from its general availability (GA) release date. (For versions released prior to 1710, support extends for only 12 months instead of 18.) Technical support is provided for the entire period of support. However, our support structure is dynamic, evolving into two distinct servicing phases that depend on the availability of the latest current branch version.  
 
 -   Security and Critical Updates servicing phase - When running the latest current branch version of Configuration Manager, you receive both Security and Critical updates.  
 
@@ -27,7 +27,7 @@ Microsoft plans to release updates for System Center Configuration Manager curre
 Figure 1. Example of the release cycle overlap for current branch servicing support.
 
 > [!NOTE]  
->  The latest current branch version is always in the Security and Critical Updates servicing phase. This support statement means that in the event that you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates. For versions 1710 and later, all support ends after the 18-month lifecycle for a current branch version has expired. For versions prior to 1710, support ends after the 12-month lifecycle expires.) At that time, customers must update to a supported current branch version.  
+>  The latest current branch version is always in the Security and Critical Updates servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates. For versions 1710 and later, all support ends after the 18-month lifecycle for a current branch version has expired. For versions prior to 1710, support ends after the 12-month lifecycle expires.) At that time, customers must update to a supported current branch version.  
 
  **Version History**  
 
