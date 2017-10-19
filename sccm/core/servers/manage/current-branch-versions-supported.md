@@ -21,13 +21,13 @@ Microsoft plans to release updates for System Center Configuration Manager curre
 
 -   Security and Critical Updates servicing phase - When running the latest current branch version of Configuration Manager, you receive both Security and Critical updates.  
 
--   Security Updates (Only) servicing phase - After a new current branch version releases, support for older branches will reduce to Security updates only for the remainder of the that versions support lifecycle (shown in figure 1).  
+-   Security Updates (Only) servicing phase - After the release of a new current branch version, support for older branches will reduce to Security updates only for the remainder of that versions support lifecycle (shown in figure 1).  
 
  ![CM&#95;Servicing&#95;support&#95;timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline1")  
 Figure 1. Example of the release cycle overlap for current branch servicing support.
 
 > [!NOTE]  
->  The latest current branch version is always in the Security and Critical Updates servicing phase. This means that in the event that you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates. For versions 1710 and later, all support ends after the 18 month lifecycle for a current branch version has expired. For versions prior to 1710,support ends after the 12 month lifecycle expires.) At that time, customers must update to a supported current branch version.  
+>  The latest current branch version is always in the Security and Critical Updates servicing phase. This support statement means that in the event that you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates. For versions 1710 and later, all support ends after the 18-month lifecycle for a current branch version has expired. For versions prior to 1710, support ends after the 12-month lifecycle expires.) At that time, customers must update to a supported current branch version.  
 
  **Version History**  
 
@@ -43,4 +43,4 @@ Figure 1. Example of the release cycle overlap for current branch servicing supp
 
 
 
-For information about version numbers and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+For information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
