@@ -168,7 +168,8 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 ## How to check for running executable files before installing an application
 
 >[!Tip]
->Introduced with version 1702, this is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
+>With version 1702, this is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
+> Beginning with version 1706, this feature is no longer a pre-release feature.
 
 In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can specify one or more executable files that, if running, block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed. To configure this:
 
