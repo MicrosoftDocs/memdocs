@@ -76,14 +76,6 @@ Beginning with Current Branch version 1706, the [Azure services wizard](../../..
     -  Windows Analytics workspace
 8.	Click **Next**. You can review your connection in the Summary page. 
  
-## View Microsoft Upgrade Readiness properties in Configuration Manager  
-
-1.  In the Configuration Manager console, navigate to **Cloud Services**, then choose **OMS Connector** to open the **OMS Connection Properties** page.  
-
-2.  Within this page there are two tabs:
-  * The **Azure Active Directory** tab shows your **Tenant**, **Client ID**, **Client secret key expiration**, and allows you to **Verify** your **Client secret key** if it has expired.
-  * The **Upgrade Readiness** tab shows your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
-
 ## View and use the upgrade information
 
 After you've integrated Upgrade Readiness with Configuration Manager, you can view the analysis of your clients' upgrade readiness and then take action.
