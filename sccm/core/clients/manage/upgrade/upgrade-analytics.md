@@ -33,19 +33,21 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Upgrade Readiness (formerly Upgrade Analytics) enables you to assess and analyze device readiness with Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation from the device list.
+Upgrade Readiness (formerly Upgrade Analytics) is a part of [Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) that allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10 (the specific version targeted is configurable). Upgrade Readiness can be integrated with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation using dynamic collections created based on this data.
 
-Upgrade Readiness is a solution in the Microsoft Operations Management Suite (OMS). You can read more about Upgrade Readiness in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
+Upgrade Readiness is a solution that runs on [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview). You can read more about Upgrade Readiness in [Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness).
 
 ## Configure clients
 
-There are several configuration steps that you have to take to ensure that your clients can provide data to Upgrade Readiness:
+Upgrade Readiness, like all Windows Analytics solutions, relies on Windows telemetry data. In order for Upgrade Readiness to receive sufficient telemetry data, the following pre-requisites must be satisfied:
 
--  Configure client telemetry settings as described in [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
--  Install the KBs described in the *Deploy the compatibility update and related KBs *section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
+-  Windows 10 clients must be configured with a commercial ID key and have telemetry configured to report at least basic level telemetry.
+-  Clients running earlier versions on Windows must have specific KBs Installed as described in [Get started with Upgrade Readiness](/windows/deployment/upgrade/upgrade-readiness-get-started#deploy-the-compatibility-update-and-related-kbs). They must also have telemetry enabled in **Client Settings**.
 
-	> [!NOTE]
-	> You can download a script to automate many of the client setup tasks. See the *Run the Upgrade Readiness deployment script* section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness) for information about the script.
+Commercial ID key and Windows telemetry can be configured in **Client Settings**. To learn more see [Use Windows Analytics with Configuration Manager](../monitor-windows-analytics.md).
+
+>[!NOTE]
+>If you encounter issues with Upgrade Readiness not receiving telemetry data from devices in your environment as expected then some of these issues may be addressed by using the [Upgrade Readiness deployment script](/windows/deployment/upgrade/upgrade-readiness-deployment-script). However, in most environments deploying the correct KBs, configuring commercial ID key and telemetry in **Client Settings** should be sufficient.
 
 ## Connect to Upgrade Readiness
 
