@@ -45,7 +45,7 @@ These include:
 For information about Azure web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview)
 
 
-## <a name="webapp"></a> Create or import an Azure web app registration for use with Configuration Manager
+## <a name="webapp"></a> Create or import an Azure Active Directory web app registration for use with Configuration Manager
 
 The Azure services web app registration connects your Configuration Manager site to Azure AD and is a prerequisite for using Azure services with your infrastructure. To do this:
 
