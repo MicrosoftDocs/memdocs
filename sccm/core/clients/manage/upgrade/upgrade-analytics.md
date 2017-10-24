@@ -83,7 +83,7 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 1. In the Configuration Manager console, choose **Monitoring** > **Overview** > **Upgrade Readiness**.
 2. Review the data, which includes the upgrade readiness state and the percent of Windows devices that are reporting telemetry.
 3. You can filter the dashboard to view data for devices in specific collections.
-4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to bring them to a readiness state.
+4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to remediate devices that are blocked from upgrading.
 
 ## Create a connection to Upgrade Readiness (1702 and earlier)
 
