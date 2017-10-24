@@ -52,31 +52,23 @@ Commercial ID key and Windows telemetry can be configured in **Client Settings**
 
 ## Connect Configuration Manager to Upgrade Readiness
 
-Beginning with Current Branch version 1706, the [Azure services wizard](../../../servers/deploy/configure/azure-services-wizard.md) is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to connect Configuration Manager with Upgrade Readiness, you will need create an Azure web app registration with access permissions to the OMS workspace that hosts your Upgrade Readiness data. Once the web app registration has been created in the [Azure portal](https://portal.azure.com) and given the right permissions, then the **Azure services wizard** uses the app registration to authenticate Configuration Manager against Azure AD and connect your on-premises infrastructure to your Upgrade Readiness data.
+Beginning with Current Branch version 1706, the [Azure services wizard](../../../servers/deploy/configure/azure-services-wizard.md) is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to connect Configuration Manager with Upgrade Readiness, an Azure AD app registration of type *Web app / API* must be created in the [Azure portal](https://portal.azure.com). To read more about how to create an app registration, see [Register your application with you Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration). In the **Azure portal**, you will also need to give your newly registered web app *contributor* permissions on the resource group that contains the OMS workspace that hosts your Upgrade Readiness data. The **Azure services wizard** will use this app registration to authenticate Configuration Manager against Azure AD and connect your infrastructure to your Upgrade Readiness data.
+
+>[!IMPORTANT]
+>*Contributor* permissions must be granted to the app itself as opposed to an Azure AD user identity. This is because it is the registered app and not an Azure AD user that accesses the data on behalf of your Configuration Manager infrastructure. This permission must be assigned before the app registration is imported with the **Azure services wizard**.
 
 ### Use the Azure Wizard to create the connection
 
-1.  In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
-2.  On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
-3.  Type a friendly Name on the Azure Services page. You can also type a description. Then select **Upgrade Readiness Connector** and click **Next**.
-4.  Specify your Azure environment on the App page. Click **Browse** to set up a server app.
-5.  Click **Import** to connect to your Web app in Azure.
-    -  Type the **Azure AD Tenant Name**.
-    -  Type the **Azure AD Tenant ID**.
-    -  Type the **Application Name**.
-    -  Type the **Client ID**.
-    -  Type the **Secret Key**.
-    -  Select the date for the **Secret Key Expiry** date.
-    -  Type any URL for the **Application ID URI**.
-    -  Click **Verify**, and then click **OK**.
+Follow the instructions in [Configure Azure services for use with Configuration Manager](../../../servers/deploy/configure/azure-services-wizard.md) to create a connection to Upgrade Readiness by importing the web app registration you created above. 
 
-6.	Specify the connection to Upgrade Readiness on the Configuration page. Select the following values:  
-    -  Azure subscriptions
-    -  Azure resource group
-    -  Windows Analytics workspace
-8.	Click **Next**. You can review your connection in the Summary page. 
+On the *Configuration* page, the following values are pre-populated if the web app import was successful and the correct permissions are assigned in the **Azure portal**. 
+-  Azure subscriptions
+-  Azure resource group
+-  Windows Analytics workspace
+
+More than one resource group or workspace will be available only if the registered Azure AD web app has *Contributor* permissions on more than one resource group or if the selected resource group contains more than one OMS workspace.
  
-## View and use the upgrade information
+## View and use Upgrade Readiness information in Configuration Manager
 
 After you've integrated Upgrade Readiness with Configuration Manager, you can view the analysis of your clients' upgrade readiness and then take action.
 
@@ -85,9 +77,9 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 3. You can filter the dashboard to view data for devices in specific collections.
 4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to remediate devices that are blocked from upgrading.
 
-## Create a connection to Upgrade Readiness (1702 and earlier)
+## Using the Upgrade Readiness Connector (version 1702 and earlier)
 
-Before the 1706 branch of Configuration Manager, to create a connection to Upgrade Readiness required the following steps.
+In Configuration Manager version 1702 or earlier, a different set of steps and requirements are necessary to create a connection to Upgrade Readiness.
 
 ### Prerequisites
 
