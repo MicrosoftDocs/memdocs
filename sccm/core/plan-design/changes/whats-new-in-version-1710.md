@@ -38,7 +38,11 @@ Version 1710 drops support for the following products:
 -->
 
 
-<!-- ## Site infrastructure -->
+## Site infrastructure
+
+### Updates for Peer Cache  
+Beginning with this release, Peer Cache is no longer a pre-release feature.  No other changes for Peer Cache are introduced with this release. For more information, see  [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
+
 
 
 
@@ -71,3 +75,7 @@ Version 1710 drops support for the following products:
 
 
 <!--  ## Protect devices   -->
+
+
+## Next Steps
+When your ready to install this version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
