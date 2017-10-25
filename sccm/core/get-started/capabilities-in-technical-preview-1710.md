@@ -33,7 +33,7 @@ This article introduces the features that are available in the Technical Preview
 -   **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
-  1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
+  1. In the console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
   2. In the **Site System Roles** pane, right click on the **Site server** role, and then choose **Remove Role**.
   3. Right-click on the passive mode site server, and then choose **Delete**.
   4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
@@ -52,7 +52,9 @@ This article introduces the features that are available in the Technical Preview
 ## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-You must limit the Windows 10 telemetry data collection level to **Enhanced** to gain actionable insight about devices in your environment. With Windows 10 version 1709 or later, you can restrict the data reported by the device to data relevant to Windows Analytics. Configure the Windows telemetry on your Windows 10 clients to collect this data.
+With this release, you can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+
+The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
 
 ### Try it out!
 
