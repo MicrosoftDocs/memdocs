@@ -108,8 +108,8 @@ The following are the  capabilities delivered  with each Configuration Manager t
 
  | Capability | Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|  
-  | Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health <!-- 1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#Limit-Windows-10-Enhanced-telemetry-to-only-send-data-relevant-to-Windows-Analytics-Device-Health) |![Not added](media/Red_X.gif)    |  
-  | Software Center no longer distorts icons larger than 250x250 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#Software-Center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
+  | Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health <!-- 1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![Not added](media/Red_X.gif)    |  
+  | Software Center no longer distorts icons larger than 250x250 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
  |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
 
 
