@@ -69,40 +69,42 @@ With this release, Software Center will no longer distort icons that are larger 
 Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
 
 
--## Support for Exploit Guard
--This release adds support for Windows Defender Exploit Guard. You can configure and deploy policies that manage all four components of Exploit Guard. These components include:
---   Attack Surface Reduction
---   Controlled folder access
---   Exploit protection
---   Network protection
--
--Compliance data for Exploit Guard policy deployment is available from within the Configuration Manager console.
--
--For more information about Exploit Guard and specific components and rules, see [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) in the Windows documentation library.
--
--### Prerequisites
--Managed devices must run Windows 10 1709 Fall Creators Update or later and satisfy the following requirements depending on the components and rules configured:
--
--|Exploit Guard component |Additional prerequisites|
--|------------------------|------------------------|
--| Attack Surface Reduction  | None  |
--| Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
--| Exploit protection  | None  |
--| Network protection  | The device must have [Windows Defender SmartScreen]( https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) enabled.   |
--
--### Create an Exploit Guard policy  <!--1355468 -->
--1.	In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
--2.	On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
--3.	On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
--4.	Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
--  - 	**Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
--  - 	**Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
--  - 	**Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
--  - 	**Network protection:** Set network protection to block or audit access to suspicious domains.
--5.	Complete the wizard to create the policy, which you can later deploy to devices.
--
--### Deploy an Exploit Guard policy     
--After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
+## Support for Exploit Guard
+This release adds support for Windows Defender Exploit Guard. You can configure and deploy policies that manage all four components of Exploit Guard. These components include:
+-   Attack Surface Reduction
+-   Controlled folder access
+-   Exploit protection
+-   Network protection
 
-- ## Next steps
--For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
+Compliance data for Exploit Guard policy deployment is available from within the Configuration Manager console.
+
+For more information about Exploit Guard and specific components and rules, see [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) in the Windows documentation library.
+
+### Prerequisites
+Managed devices must run Windows 10 1709 Fall Creators Update or later and satisfy the following requirements depending on the components and rules configured:
+
+|Exploit Guard component |Additional prerequisites|
+|------------------------|------------------------|
+| Attack Surface Reduction  | None  |
+| Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
+| Exploit protection  | None  |
+| Network protection  | The device must have [Windows Defender SmartScreen]( https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) enabled.   |
+
+### Create an Exploit Guard policy  <!--1355468 -->
+
+1.	In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
+2.	On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
+3.	On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
+4.	Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
+    - 	**Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
+    - 	**Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
+    - 	**Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
+    - 	**Network protection:** Set network protection to block or audit access to suspicious domains.
+5.	Complete the wizard to create the policy, which you can later deploy to devices.
+
+### Deploy an Exploit Guard policy     
+
+After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
+
+## Next steps
+For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
