@@ -3,7 +3,7 @@ title: "Technical Preview releases"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/25/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -108,7 +108,7 @@ You can install a baseline version for up to 1 year after its release. However, 
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- |New Feature 1 <!-- # --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md) |![Not added](media/Red_X.gif)    |
+ |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
 
 
 
