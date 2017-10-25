@@ -22,7 +22,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning with Current Branch version 1706, the **Azure Services Wizard** is used to simplify the process of configuring Azure services you use with Configuration Manager.
+Beginning with Current Branch version 1706, the **Azure Services Wizard** is used to simplify the process of configuring the Azure services you use with Configuration Manager.
 
 This wizard provides a common configuration experience by using an **Azure AD web app registration** to provide subscription and configuration details and authenticate against Azure AD. The web app replaces entering this same information each time you set up a new Configuration Manager component or service with Azure.
 
@@ -33,16 +33,16 @@ The following Azure services can be configured using the Azure Services wizard:
     [Connect to Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS) and sync data like collections to OMS Log Analytics.
 -   **Upgrade Readiness**
     [Connect to Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) and view client upgrade-compatibility data.
--   **Windows Store for Business**
-    Connect to the on-line store for [Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) and get apps for your organization that you can deploy with Configuration Manager.
+-   **Microsoft Store for Business**
+    Connect to the [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) and get apps for your organization that you can deploy with Configuration Manager.
 
 When you use the wizard to configure a service, several common actions are available.
 These include:
--   Configure the Azure environment:  On the **App** page of the wizard, you select the **Azure environment** that you use. See the content for each service to learn if it supports only the public Azure cloud, or if it can support a private cloud.
--   Create or Import a server app:   On the **App** page of the wizard, you can **Create** and **Import** Azure web app registration metadata. The available options depend on the service you are configuring. In addition, some services might require an additional app. For example, the **Cloud management** service requires a **Native Client app** that is used for clients to authenticate against services directly.
+-   *Configure the Azure environment*:  On the **App** page of the wizard, select the **Azure environment** that you use. See the content for each service to learn if it supports only the public Azure cloud, or if it can support a private cloud.
+-   *Create or import a server app*:   On the **App** page of the wizard, you can **Create** and **Import** Azure web app registration metadata. The available options depend on the service you're configuring. In addition, some services might require an additional app. For example, the **Cloud management** service requires a **Native Client app** that is used for clients to authenticate against services directly.
 
 
-For information about Azure web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview)
+For information about Azure web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview).
 
 
 ## <a name="webapp"></a> Create or import an Azure Active Directory web app registration for use with Configuration Manager
@@ -61,9 +61,9 @@ The Azure services web app registration connects your Configuration Manager site
 
 	- **Create**: Automate the creation of a web app registration Azure AD based on information you input in the Configuration Manager console. Provide a friendly name for the app, the homepage URL, App ID URI, and the Secret key validity period. By default, the secret key validity period is one year.
         
-        To continue, someone must now sign-in with their Azure AD credentials to complete the web app creation in Azure. The account that you use to sign-in to Azure does not need to be the same account that runs the Azure Services Wizard. After sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
+        To continue, someone must now sign in with their Azure AD credentials to complete the web app creation in Azure. The account that you use to sign in to Azure doesn't need to be the same account that runs the Azure Services Wizard. After signing in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
 
-        When you use Create to configure a web app, Configuration Manager can create the web app for you in Azure AD.
+        When you use *Create* to configure a web app, Configuration Manager can create the web app for you in Azure AD.
 	
     - **Import**: Enter information about an Azure AD web app registration that has already been created in the **Azure portal** to import metadata about that registration into Configuration Manager. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue.
         > [!NOTE]
