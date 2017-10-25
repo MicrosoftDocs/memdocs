@@ -84,7 +84,7 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 
 |Exploit Guard component |Additional prerequisites|
 |------------------------|------------------------|
-| Attack Surface Reduction  | None  |
+| Attack Surface Reduction  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 | Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
 | Exploit protection  | None  |
 | Network protection  | The device must have [Windows Defender SmartScreen]( https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) enabled.   |
