@@ -49,7 +49,23 @@ This article introduces the features that are available in the Technical Preview
  -  Task 1
  -  Task 2              
 -->
+## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+<!-- 1356148 -->
 
+You must limit the Windows 10 telemetry data collection level to **Enhanced** to gain actionable insight about devices in your environment. With Windows 10 version 1709 or later, you can restrict the data reported by the device to data relevant to Windows Analytics. Configure the Windows telemetry on your Windows 10 clients to collect this data.
+
+### Try it out!
+
+To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
+
+## Software Center no longer distorts icons larger than 250x250  
+<!-- 1356194 -->
+
+With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
+
+### Try it out!
+
+Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
 
 
 <!-- ## See also
