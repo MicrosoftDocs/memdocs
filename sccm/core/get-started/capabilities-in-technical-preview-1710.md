@@ -84,10 +84,10 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 
 |Exploit Guard component |Additional prerequisites|
 |------------------------|------------------------|
-| Attack Surface Reduction  | None  |
+| Attack Surface Reduction  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 | Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
 | Exploit protection  | None  |
-| Network protection  | The device must have [Windows Defender SmartScreen]( https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) enabled.   |
+| Network protection  |  Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 
 ### Create an Exploit Guard policy  <!--1355468 -->
 1.	In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
@@ -105,5 +105,5 @@ After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wiz
 
 
 
- ## See also
+ ## Next Steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
