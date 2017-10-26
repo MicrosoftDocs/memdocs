@@ -50,14 +50,17 @@ This article introduces the features that are available in the Technical Preview
  -  Task 1
  -  Task 2              
 -->
+
+
+
 ## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
 You must limit the Windows 10 telemetry data collection level to **Enhanced** to gain actionable insight about devices in your environment. With Windows 10 version 1709 or later, you can restrict the data reported by the device to data relevant to Windows Analytics. Configure the Windows telemetry on your Windows 10 clients to collect this data.
 
 ### Try it out!
-
 To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
+
 
 ## Software Center no longer distorts icons larger than 250x250  
 <!-- 1356194 -->
@@ -65,8 +68,14 @@ To configure Windows 10 telemetry collection on clients, see [How to configure c
 With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
 
 ### Try it out!
-
 Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
+
+
+
+## Check compliance from Software Center for co-managed devices
+<!-- 1356374 -->
+In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
+
 
 ## Support for Exploit Guard
 This release adds support for Windows Defender Exploit Guard. You can configure and deploy policies that manage all four components of Exploit Guard. These components include:
@@ -103,9 +112,6 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 ### Deploy an Exploit Guard policy     
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
 
-## Check compliance from Software Center for co-managed devices
-<!-- 1356374 -->
-In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 ## Limited support for CNG certificates
 <!-- 1356191 --> 
@@ -140,6 +146,13 @@ To use CNG certificates, your certification authority (CA) needs to provide CNG 
     - **Provider Category** must be **Key Storage Provider**.  (Required)
 
 For best results, we recommend building the Subject Name from Active Directory information.  Use the DNS Name for **Subject name format** and include the DNS name in the alternate subject name.  Otherwise, you have to provide this information when the device enrolls into the certificate profile.
+=======
+
+## Improved descriptions for pending computer restarts   <!--1356283 -->
+In [technical preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#restart-computers-from-the-configuration-manager-console), we added the capability to identify devices that are pending a restart from within the Configuration Manager console.
+
+Beginning with this technical preview, the console displays additional details that provide information about the process or action that is requesting the reboot.
+
 
 
 ## Next Steps
