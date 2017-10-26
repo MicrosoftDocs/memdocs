@@ -71,10 +71,6 @@ With this release, Software Center will no longer distort icons that are larger 
 Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 56d4498cab8e3cc205cb90cff157a25ac3455878
 ## Check compliance from Software Center for co-managed devices
 <!-- 1356374 -->
 In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
@@ -106,10 +102,10 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 2.  On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
 3.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
 4.  Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
-  -     **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
-  -     **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
-  -     **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
-  -     **Network protection:** Set network protection to block or audit access to suspicious domains.
+    - **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
+    - **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
+    - **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
+    - **Network protection:** Set network protection to block or audit access to suspicious domains.
 5.  Complete the wizard to create the policy, which you can later deploy to devices.
 
 ### Deploy an Exploit Guard policy     
@@ -149,13 +145,6 @@ To use CNG certificates, your certification authority (CA) needs to provide CNG 
     - **Provider Category** must be **Key Storage Provider**.  (Required)
 
 For best results, we recommend building the Subject Name from Active Directory information.  Use the DNS Name for **Subject name format** and include the DNS name in the alternate subject name.  Otherwise, you have to provide this information when the device enrolls into the certificate profile.
-
-
-## Improved descriptions for pending computer restarts   <!--1356283 -->
-In [technical preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#restart-computers-from-the-configuration-manager-console), we added the capability to identify devices that are pending a restart from within the Configuration Manager console.
-
-Beginning with this technical preview, the console displays additional details that provide information about the process or action that is requesting the reboot.
-
 
 
 ## Improved descriptions for pending computer restarts   <!--1356283 -->
