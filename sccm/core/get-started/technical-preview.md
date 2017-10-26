@@ -109,7 +109,7 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
-
+ |Check compliance from Software Center for co-managed devices<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Not added](media/Red_X.gif)    |
 
 
 ## Capabilities delivered in previous technical previews
