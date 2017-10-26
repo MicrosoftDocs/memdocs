@@ -103,7 +103,8 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 ### Deploy an Exploit Guard policy     
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
 
-
+## Check compliance for co-managed devices from Software Center when conditional access is managed by Intune <!-- 1356374 -->
+In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
  ## See also
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
