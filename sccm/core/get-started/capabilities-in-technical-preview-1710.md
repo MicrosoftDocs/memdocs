@@ -107,5 +107,47 @@ After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wiz
 <!-- 1356374 -->
 In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
- ## Next Steps
+## Limited support for CNG certificates
+<!-- 1356191 --> 
+Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) certificate templates for the following scenarios:
+
+- Client registration and communication with an HTTPS management point.   
+- Software distribution and application deployment with an HTTPS distribution point.   
+- Operating system deployment.  
+- Client messaging SDK (with latest update) and ISV Proxy.   
+- Cloud Management Gateway configuration.  
+
+The following scenarios are _not_ supported:
+
+- Application catalog sever or enrollment server roles.  (These roles should be installed on separate machines.)  
+- State migration point server roles.
+- Cloud distribution point.
+- NDES policy module to certificate registration point communication.
+
+### Disable CNG support
+
+By default, CNG certificate support is included for new client installs.  Use the `/CCMPPKICERTOPTIONS` switch to override this:
+
+``` bash
+ccmsetup /CCMPKICERTOPTIONS=0
+```
+
+### Create CNG certificate templates
+
+To use CNG certificates, your certification authority (CA) needs to provide CNG certificate templates for target machines.  Template details vary according to the scenario; however, the following properties are required:
+
+- **Compatibility** tab
+
+    - **Certificate Authority** must be Windows Server 2008 or later. (Windows Server 2012 is recommended.)
+
+    - **Certificate recipient** must be Windows Vista/Server 2008 or later. (Windows 8/Windows Server 2012 is recommended.)
+
+- **Cryptography** tab
+
+    - **Provider Category** must be **Key Storage Provider**.  (Required)
+
+For best results, we recommend building the Subject Name from Active Directory information.  Use the DNS Name for **Subject name format** and include the DNS name in the alternate subject name.  Otherwise, you have to provide this information when the device enrolls into the certificate profile.
+
+
+## Next Steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
