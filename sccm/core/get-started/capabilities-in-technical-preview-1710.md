@@ -130,6 +130,8 @@ Starting with the Fall Creators Update for Windows version 1709, devices using t
 
 Restarting is the default.
 
+#### Try it out!  
+
 If you want to turn off restarts, follow these steps:
 
 1.	Open the **Create Windows Defender Application Control Policy** wizard.
@@ -143,6 +145,8 @@ For older versions of Windows, an automated restart is still enforced.
 Administrators now have the option to allow locked-down devices to run trusted software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG is comprised of Windows Defender SmartScreen and other Microsoft services.
 
 The devices must be running Windows Defender SmartScreen for the software to be trusted.
+
+#### Try it out!  
 
 To let a device running Windows Defender SmartScreen run trusted software, follow these steps:
 
