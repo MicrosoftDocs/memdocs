@@ -128,7 +128,7 @@ The following scenarios are _not_ supported:
 
 By default, CNG certificate support is included for new client installs.  Use the `/CCMPPKICERTOPTIONS` switch to override this:
 
-``` bash
+``` 
 ccmsetup /CCMPKICERTOPTIONS=0
 ```
 
