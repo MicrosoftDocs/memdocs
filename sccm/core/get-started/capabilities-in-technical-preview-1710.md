@@ -126,7 +126,7 @@ The following scenarios are _not_ supported:
 
 ### Disable CNG support
 
-By default, CNG certificate support is included for new client installs.  Use the `/CCMPPKICERTOPTIONS` switch to override this:
+By default, CNG certificate support is included for new client installs.  Use the `/CCMPKICERTOPTIONS` switch to override this:
 
 ``` 
 ccmsetup /CCMPKICERTOPTIONS=0
