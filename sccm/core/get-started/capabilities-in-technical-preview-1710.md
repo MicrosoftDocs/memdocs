@@ -117,13 +117,6 @@ Starting with this release, you may now use [Cryptography API: Next Generation (
 - Client messaging SDK (with latest update) and ISV Proxy.   
 - Cloud Management Gateway configuration.  
 
-The following scenarios are _not_ supported:
-
-- Application catalog sever or enrollment server roles.  (These roles should be installed on separate machines.)  
-- State migration point server roles.
-- Cloud distribution point.
-- NDES policy module to certificate registration point communication.
-
 ### Disable CNG support
 
 By default, CNG certificate support is included for new client installs.  Use the `/CCMPKICERTOPTIONS` switch to override this:
