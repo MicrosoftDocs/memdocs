@@ -122,16 +122,6 @@ Starting with this release, you may now use [Cryptography API: Next Generation (
 - Client messaging SDK (with latest update) and ISV Proxy.   
 - Cloud Management Gateway configuration.  
 
-### Disable CNG support
-
-By default, CNG certificate support is included for new client installs.  Use the `/CCMPKICERTOPTIONS` switch to override this:
-
-``` 
-ccmsetup /CCMPKICERTOPTIONS=0
-```
-
-### Create CNG certificate templates
-
 To use CNG certificates, your certification authority (CA) needs to provide CNG certificate templates for target machines.  Template details vary according to the scenario; however, the following properties are required:
 
 - **Compatibility** tab
