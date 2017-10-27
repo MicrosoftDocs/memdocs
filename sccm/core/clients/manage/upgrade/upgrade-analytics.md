@@ -33,7 +33,7 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Upgrade Readiness (formerly Upgrade Analytics) is a part of [Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) that allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10 (the specific version targeted is configurable). Upgrade Readiness can be integrated with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation using dynamic collections created based on this data.
+Upgrade Readiness (formerly Upgrade Analytics) is a part of [Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) that allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. You can configure the specific version. Upgrade Readiness can be integrated with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation using dynamic collections created based on this data.
 
 Upgrade Readiness is a solution that runs on [Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview). You can read more about Upgrade Readiness in [Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness).
 
@@ -52,7 +52,7 @@ Commercial ID key and Windows telemetry can be configured in **Client Settings**
 
 ## Connect Configuration Manager to Upgrade Readiness
 
-Beginning with Current Branch version 1706, the [Azure services wizard](../../../servers/deploy/configure/azure-services-wizard.md) is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to connect Configuration Manager with Upgrade Readiness, an Azure AD app registration of type *Web app / API* must be created in the [Azure portal](https://portal.azure.com). To read more about how to create an app registration, see [Register your application with you Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration). In the **Azure portal**, you will also need to give your newly registered web app *contributor* permissions on the resource group that contains the OMS workspace that hosts your Upgrade Readiness data. The **Azure services wizard** will use this app registration to authenticate Configuration Manager against Azure AD and connect your infrastructure to your Upgrade Readiness data.
+Beginning with Current Branch version 1706, the [Azure services wizard](../../../servers/deploy/configure/azure-services-wizard.md) is used to simplify the process of configuring Azure services you use with Configuration Manager. To connect Configuration Manager with Upgrade Readiness, an Azure AD app registration of type *Web app / API* must be created in the [Azure portal](https://portal.azure.com). To read more about how to create an app registration, see [Register your application with you Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration). In the **Azure portal**, you will also need to give your newly registered web app *contributor* permissions on the resource group that contains the OMS workspace that hosts your Upgrade Readiness data. The **Azure services wizard** will use this app registration to authenticate Configuration Manager against Azure AD and connect your infrastructure to your Upgrade Readiness data.
 
 >[!IMPORTANT]
 >*Contributor* permissions must be granted to the app itself as opposed to an Azure AD user identity. This is because it is the registered app and not an Azure AD user that accesses the data on behalf of your Configuration Manager infrastructure. This permission must be assigned before the app registration is imported with the **Azure services wizard**.
@@ -70,7 +70,7 @@ More than one resource group or workspace will be available only if the register
  
 ## View and use Upgrade Readiness information in Configuration Manager
 
-After you've integrated Upgrade Readiness with Configuration Manager, you can view the analysis of your clients' upgrade readiness and then take action.
+After you've integrated Upgrade Readiness with Configuration Manager, you can view the analysis of your clients' upgrade readiness.
 
 1. In the Configuration Manager console, choose **Monitoring** > **Overview** > **Upgrade Readiness**.
 2. Review the data, which includes the upgrade readiness state and the percent of Windows devices that are reporting telemetry.
