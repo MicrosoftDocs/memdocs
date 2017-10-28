@@ -38,6 +38,9 @@ You might issue a wipe command to a device when you need to secure a lost device
 Issue a **full wipe** to a device to restore the device to its factory defaults. This removes all company and user data and settings. You can do a full wipe on Windows Phone, iOS, Android, and Windows 10 devices.  
 
 > [!NOTE]
+> You can only perform a full wipe on company-owned devices.
+
+> [!NOTE]
 > Wiping Windows 10 devices on versions earlier than version 1511 with less than 4 GB of RAM might leave the device unresponsive. [Learn more](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).
 
 #### To initiate a remote wipe from the Configuration Manager console  
