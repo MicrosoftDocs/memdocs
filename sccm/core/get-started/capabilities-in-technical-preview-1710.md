@@ -3,7 +3,7 @@ title: "Technical Preview 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/27/2017
+ms.date: 10/30/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -71,7 +71,6 @@ With this release, Software Center will no longer distort icons that are larger 
 Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
 
 
-
 ## Check compliance from Software Center for co-managed devices
 <!-- 1356374 -->
 In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
@@ -99,20 +98,113 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 | Network protection  |  Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 
 ### Create an Exploit Guard policy  <!--1355468 -->
-
-1.	In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
-2.	On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
-3.	On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
-4.	Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
-    - 	**Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
-    - 	**Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
-    - 	**Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
-    - 	**Network protection:** Set network protection to block or audit access to suspicious domains.
-5.	Complete the wizard to create the policy, which you can later deploy to devices.
+1.  In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
+2.  On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
+3.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
+4.  Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
+  - **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
+  - **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
+  - **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
+  - **Network protection:** Set network protection to block or audit access to suspicious domains.
+5.  Complete the wizard to create the policy, which you can later deploy to devices.
 
 ### Deploy an Exploit Guard policy     
-
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
 
-## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
+## Limited support for CNG certificates
+<!-- 1356191 --> 
+Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) certificate templates for the following scenarios:
+
+- Client registration and communication with an HTTPS management point.   
+- Software distribution and application deployment with an HTTPS distribution point.   
+- Operating system deployment.  
+- Client messaging SDK (with latest update) and ISV Proxy.   
+- Cloud Management Gateway configuration.  
+
+To use CNG certificates, your certification authority (CA) needs to provide CNG certificate templates for target machines.  Template details vary according to the scenario; however, the following properties are required:
+
+- **Compatibility** tab
+
+    - **Certificate Authority** must be Windows Server 2008 or later. (Windows Server 2012 is recommended.)
+
+    - **Certificate recipient** must be Windows Vista/Server 2008 or later. (Windows 8/Windows Server 2012 is recommended.)
+
+- **Cryptography** tab
+
+    - **Provider Category** must be **Key Storage Provider**.  (Required)
+
+For best results, we recommend building the Subject Name from Active Directory information.  Use the DNS Name for **Subject name format** and include the DNS name in the alternate subject name.  Otherwise, you have to provide this information when the device enrolls into the certificate profile.
+
+
+## Improved descriptions for pending computer restarts   <!--1356283 -->
+In [technical preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#restart-computers-from-the-configuration-manager-console), we added the capability to identify devices that are pending a restart from within the Configuration Manager console.
+
+Beginning with this technical preview, the console displays additional details that provide information about the process or action that is requesting the reboot.
+
+## Device Guard policy changes <!-- 1355092 -->
+With the 1710 Technical Preview build, the following three changes have been made in relation to Device Guard policies:
+
+### Device Guard policies renamed to Windows Defender Application Control policies
+Device Guard policies have been renamed to Windows Defender Application Control policies. So, for example, the **Create Device Guard policy wizard** is now named **Create Windows Defender Application Control policy wizard**.
+
+### Restart is not required to apply policies
+Starting with the Fall Creators Update for Windows version 1709, devices using the new version of Windows don’t require a restart to apply the Windows Defender Application Control policies.
+
+Restarting is the default.
+
+#### Try it out!  
+
+If you want to turn off restarts, follow these steps:
+
+1.  Open the **Create Windows Defender Application Control Policy** wizard.
+2.  On the **General** page, clear the check box for **Enforce a restart of devices so that this policy can be enforced for all processes**.
+3.  Click **Next** until the wizard completes.
+
+For older versions of Windows, an automated restart is still enforced.
+
+### Automatically run software trusted by the Intelligent Security Graph
+
+Administrators now have the option to allow locked-down devices to run trusted software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG is comprised of Windows Defender SmartScreen and other Microsoft services.
+
+The devices must be running Windows Defender SmartScreen for the software to be trusted.
+
+#### Try it out!  
+
+To let a device running Windows Defender SmartScreen run trusted software, follow these steps:
+
+1.  Open the **Create Windows Defender Application Control Policy wizard**.
+2.  On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
+3.  In the **Trusted files or folder** box, add the files and folders that you want to be trusted.
+4.  Click **Next** until the wizard completes.
+
+## Configure and deploy Windows Defender Application Guard policies <!-- 1351960 -->
+
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
+ 
+### Before you start
+To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the blog post referenced later. This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
+
+### Try it out!
+
+To understand the basics about Windows Defender Application Guard, read [the blog post]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)).
+
+To create a policy, and to browse the available settings:
+1. In the **Configuration Manager** console, choose **Assets and Compliance**.
+2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
+3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
+4. Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
+5. In this release, we’ve added the new Network Definition page to the wizard. Here, specify the corporate identity, and define your corporate network boundary.
+
+    > [!NOTE]
+    > Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
+
+    You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+
+6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
+
+### Further reading
+
+To read more about Windows Defender Application Guard, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
+
+## Next Steps
+For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
