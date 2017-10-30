@@ -111,10 +111,11 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Windows 10 telemetry for Windows Analytics Device Health <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![Not added](media/Red_X.gif)    |
  |Improvements for Software Center icons <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
  |Check compliance from Software Center for co-managed devices<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Not added](media/Red_X.gif)    |
+ |Limited support for CNG certificates<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![Not added](media/Red_X.gif)    |
  |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
  |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
-
-
+ |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
+ 
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
 
@@ -271,3 +272,4 @@ You can install a baseline version for up to 1 year after its release. However, 
 ## See Also  
 [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
+
