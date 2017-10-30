@@ -3,7 +3,7 @@ title: "Protect data with remote wipe, lock, or passcode reset"
 titleSuffix: "Configuration Manager"
 description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
