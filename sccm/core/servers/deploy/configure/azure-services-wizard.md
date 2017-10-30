@@ -24,7 +24,7 @@ manager: angrobe
 
 Beginning with Current Branch version 1706, the **Azure Services Wizard** is used to simplify the process of configuring the Azure services you use with Configuration Manager.
 
-This wizard provides a common configuration experience by using an **Azure AD web app registration** to provide subscription and configuration details and authenticate against Azure AD. The web app replaces entering this same information each time you set up a new Configuration Manager component or service with Azure.
+This wizard provides a common configuration experience by using an **Azure AD web app registration** to provide subscription and configuration details and authenticate communications with Azure AD. The web app replaces entering this same information each time you set up a new Configuration Manager component or service with Azure.
 
 The following Azure services can be configured using the Azure Services wizard:
 -   **Cloud Management**   
@@ -39,7 +39,7 @@ The following Azure services can be configured using the Azure Services wizard:
 When you use the wizard to configure a service, several common actions are available.
 These include:
 -   *Configure the Azure environment*:  On the **App** page of the wizard, select the **Azure environment** that you use. See the content for each service to learn if it supports only the public Azure cloud, or if it can support a private cloud.
--   *Create or import a server app*:   On the **App** page of the wizard, you can **Create** and **Import** Azure web app registration metadata. The available options depend on the service you're configuring. In addition, some services might require an additional app. For example, the **Cloud management** service requires a **Native Client app** that is used for clients to authenticate against services directly.
+-   *Create or import a server app*:   On the **App** page of the wizard, you can **Create** and **Import** Azure web app registration metadata. The available options depend on the service you're configuring. In addition, some services might require an additional app. For example, the **Cloud management** service requires a **Native Client app** that is used for clients to directly authenticate communications with Azure services.
 
 
 For information about Azure web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview).
