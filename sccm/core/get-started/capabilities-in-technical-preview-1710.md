@@ -48,6 +48,9 @@ This article introduces the features that are available in the Technical Preview
  -  Task 1
  -  Task 2              
 -->
+
+
+
 ## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
@@ -56,8 +59,8 @@ With this release, you can now set the Windows 10 telemetry data collection leve
 The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
 
 ### Try it out!
-
 To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
+
 
 ## Software Center no longer distorts icons larger than 250x250  
 <!-- 1356194 -->
@@ -65,8 +68,13 @@ To configure Windows 10 telemetry collection on clients, see [How to configure c
 With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
 
 ### Try it out!
-
 Add an icon for your app in Software Center. To try it out see [Create applications](/sccm/apps/deploy-use/create-applications).
+
+
+
+## Check compliance from Software Center for co-managed devices
+<!-- 1356374 -->
+In this release, users can use Software Center to check the compliance of their co-managed Windows 10 devices even when conditional access is managed by Intune. For details, see [Co-management for Windows 10 devices](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 
 ## Support for Exploit Guard
@@ -85,10 +93,10 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 
 |Exploit Guard component |Additional prerequisites|
 |------------------------|------------------------|
-| Attack Surface Reduction  | None  |
+| Attack Surface Reduction  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 | Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
 | Exploit protection  | None  |
-| Network protection  | The device must have [Windows Defender SmartScreen]( https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) enabled.   |
+| Network protection  |  Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 
 ### Create an Exploit Guard policy  <!--1355468 -->
 

@@ -106,12 +106,13 @@ You can install a baseline version for up to 1 year after its release. However, 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in the most recent technical preview  
 The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
- | Capability | Technical Preview version |Current Branch version|  
- |----------------|---------------------|--------------------|  
-  | Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health <!-- 1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![Not added](media/Red_X.gif)    |  
-  | Software Center no longer distorts icons larger than 250x250 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
+ |Capability |Technical Preview version |Current Branch version|  
+ |----------------|---------------------|--------------------|
+ |Windows 10 telemetry for Windows Analytics Device Health <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![Not added](media/Red_X.gif)    |
+ |Improvements for Software Center icons <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
+ |Check compliance from Software Center for co-managed devices<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Not added](media/Red_X.gif)    |
  |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
-
+ |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
 
 
 ## Capabilities delivered in previous technical previews
