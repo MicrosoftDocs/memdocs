@@ -3,7 +3,7 @@ title: "Technical Preview releases"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/27/2017
+ms.date: 10/30/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -104,7 +104,7 @@ You can install a baseline version for up to 1 year after its release. However, 
 
 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in the most recent technical preview  
- The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
+The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
@@ -114,7 +114,8 @@ You can install a baseline version for up to 1 year after its release. However, 
  |Limited support for CNG certificates<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![Not added](media/Red_X.gif)    |
  |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
  |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
- |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
+ |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
+ |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not-added](media/Red_X.gif)    |
  
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  

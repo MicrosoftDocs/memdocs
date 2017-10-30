@@ -3,7 +3,7 @@ title: "Technical Preview 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/27/2017
+ms.date: 10/30/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -38,8 +38,6 @@ This article introduces the features that are available in the Technical Preview
   3. Right-click on the passive mode site server, and then choose **Delete**.
   4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
 
-
-
 **The following are new features you can try out with this version.**  
 
 <!--  Section Template
@@ -56,7 +54,9 @@ This article introduces the features that are available in the Technical Preview
 ## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
 <!-- 1356148 -->
 
-You must limit the Windows 10 telemetry data collection level to **Enhanced** to gain actionable insight about devices in your environment. With Windows 10 version 1709 or later, you can restrict the data reported by the device to data relevant to Windows Analytics. Configure the Windows telemetry on your Windows 10 clients to collect this data.
+With this release, you can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+
+The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
 
 ### Try it out!
 To configure Windows 10 telemetry collection on clients, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings). Open the **Cloud Services** window, and set Windows 10 telemetry to **Enhanced**.
@@ -102,15 +102,14 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 2.  On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
 3.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
 4.  Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
-    - **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
-    - **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
-    - **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
-    - **Network protection:** Set network protection to block or audit access to suspicious domains.
+  - **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
+  - **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
+  - **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
+  - **Network protection:** Set network protection to block or audit access to suspicious domains.
 5.  Complete the wizard to create the policy, which you can later deploy to devices.
 
 ### Deploy an Exploit Guard policy     
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
-
 
 ## Limited support for CNG certificates
 <!-- 1356191 --> 
