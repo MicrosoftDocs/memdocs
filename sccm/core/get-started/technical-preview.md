@@ -272,3 +272,4 @@ You can install a baseline version for up to 1 year after its release. However, 
 ## See Also  
 [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
+

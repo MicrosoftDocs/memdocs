@@ -142,7 +142,70 @@ In [technical preview 1708](/sccm/core/get-started/capabilities-in-technical-pre
 
 Beginning with this technical preview, the console displays additional details that provide information about the process or action that is requesting the reboot.
 
+## Device Guard policy changes <!-- 1355092 -->
+With the 1710 Technical Preview build, the following three changes have been made in relation to Device Guard policies:
 
+### Device Guard policies renamed to Windows Defender Application Control policies
+Device Guard policies have been renamed to Windows Defender Application Control policies. So, for example, the **Create Device Guard policy wizard** is now named **Create Windows Defender Application Control policy wizard**.
+
+### Restart is not required to apply policies
+Starting with the Fall Creators Update for Windows version 1709, devices using the new version of Windows don’t require a restart to apply the Windows Defender Application Control policies.
+
+Restarting is the default.
+
+#### Try it out!  
+
+If you want to turn off restarts, follow these steps:
+
+1.  Open the **Create Windows Defender Application Control Policy** wizard.
+2.  On the **General** page, clear the check box for **Enforce a restart of devices so that this policy can be enforced for all processes**.
+3.  Click **Next** until the wizard completes.
+
+For older versions of Windows, an automated restart is still enforced.
+
+### Automatically run software trusted by the Intelligent Security Graph
+
+Administrators now have the option to allow locked-down devices to run trusted software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG is comprised of Windows Defender SmartScreen and other Microsoft services.
+
+The devices must be running Windows Defender SmartScreen for the software to be trusted.
+
+#### Try it out!  
+
+To let a device running Windows Defender SmartScreen run trusted software, follow these steps:
+
+1.  Open the **Create Windows Defender Application Control Policy wizard**.
+2.  On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
+3.  In the **Trusted files or folder** box, add the files and folders that you want to be trusted.
+4.  Click **Next** until the wizard completes.
+
+## Configure and deploy Windows Defender Application Guard policies <!-- 1351960 -->
+
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
+ 
+### Before you start
+To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the blog post referenced later. This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
+
+### Try it out!
+
+To understand the basics about Windows Defender Application Guard, read [the blog post]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)).
+
+To create a policy, and to browse the available settings:
+1. In the **Configuration Manager** console, choose **Assets and Compliance**.
+2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
+3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
+4. Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
+5. In this release, we’ve added the new Network Definition page to the wizard. Here, specify the corporate identity, and define your corporate network boundary.
+
+    > [!NOTE]
+    > Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
+
+    You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+
+6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
+
+### Further reading
+
+To read more about Windows Defender Application Guard, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## Next Steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
