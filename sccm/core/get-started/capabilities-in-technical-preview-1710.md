@@ -142,10 +142,6 @@ In [technical preview 1708](/sccm/core/get-started/capabilities-in-technical-pre
 
 Beginning with this technical preview, the console displays additional details that provide information about the process or action that is requesting the reboot.
 
-## New SCEP certificate details available for hybrid installations 
-<!-- 1559808 -->
-Administrators are now able to set additional settings when creating a SCEP profile on Windows, iOS, macOS, and Android platforms.  Administrators can set IMEI, serial number, or common name including email in the subject name format.
-
 
 
 ## Next Steps
