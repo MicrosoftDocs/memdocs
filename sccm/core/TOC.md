@@ -305,6 +305,10 @@
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Maintain Mac clients](clients/manage/maintain-mac-clients.md)
 
+##   [Co-management for Windows 10 devices](co-management-overview.md)
+###  [Prepare Windows 10 devices for co-management](co-management-prepare.md)
+###  [Switch Configuration Manager workloads to Intune](co-management-switch-workloads.md)
+
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
 ###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)
 ###  [Set up cloud management gateway](clients/manage/setup-cloud-management-gateway.md)
