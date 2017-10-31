@@ -50,7 +50,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
  Example:  
 
- 'CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
+      'CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
  This example does the following:  
 

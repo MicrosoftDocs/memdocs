@@ -3,7 +3,7 @@ title: "Protect data with remote wipe, lock, or passcode reset"
 titleSuffix: "Configuration Manager"
 description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -36,6 +36,9 @@ System Center Configuration Manager provides selective wipe, full wipe, remote l
 You might issue a wipe command to a device when you need to secure a lost device or when you retire a device from active use.  
 
 Issue a **full wipe** to a device to restore the device to its factory defaults. This removes all company and user data and settings. You can do a full wipe on Windows Phone, iOS, Android, and Windows 10 devices.  
+
+> [!NOTE]
+> You can only perform a full wipe on company-owned devices.
 
 > [!NOTE]
 > Wiping Windows 10 devices on versions earlier than version 1511 with less than 4 GB of RAM might leave the device unresponsive. [Learn more](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).
