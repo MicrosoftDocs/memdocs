@@ -13,13 +13,18 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 caps.latest.revision: 11
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 When you deploy a new operating system in System Center Configuration Manager, computers that run the task sequence can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point.  
 
- Windows PE Peer Cache is similar to [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache), but functions in the Windows Preinstallation Environment (Windows PE). If you start the task sequence from the operating system context, such as from Software Center on the client, Windows PE Peer Cache is not used. The following terms are used to describe the clients that use Windows PE Peer Cache:  
+ Windows PE Peer Cache is similar to [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache), but functions in the Windows Preinstallation Environment (Windows PE). The following terms are used to describe the clients that use Windows PE Peer Cache:  
 
 -   A **peer cache client** is a computer that is configured to use Windows PE Peer Cache.  
 
