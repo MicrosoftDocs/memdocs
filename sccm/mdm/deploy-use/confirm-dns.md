@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 522c2e82-20eb-4f38-859b-d55640b24e32
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ---
 # Confirm domain name requirements with System Center Configuration Manager and Microsoft Intune
