@@ -98,14 +98,39 @@ The wizard for the Data Importer tool can be divided in three main steps. This s
     > [!Note]
     > If consent has not first been accepted by a Global Administrator, the tool might display **You can't access this application** after an Intune Administrator runs the Data Importer tool and logs in to the Intune subscription.
 
+### Manually map collections to Azure AD groups
+When you run the Data Importer tool, it extracts the AD group name from collections with a single rule that targets a single AD group. When the assignments are created in Intune, the Data Importer looks for an Azure AD group with the same name as the AD group, and if it exists, assigns the imported object to that Azure AD group. You can override the AD group name that the Data Importer finds for a collection and provide one or more Azure AD groups to use for that collection. Using the collection mapping file provides a way for you to map collections that are typically not importable with the Data Importer to Azure AD groups.
+#### Find the collections that are not importable
+You can get a list of all collections that aren’t importable so you can add them to your collection mapping .csv file. 
+1. Run the Data Importer tool and select the objects to import. Use the procedures in [Phase 1: Discover Configuration Manager objects and collect data](#phase-1:-discover-configuration-manager-objects-and-collect-data) and [Phase 2: Resolve issues and select the objects to import](#phase-2:-resolve-issues-and-select-the-objects-to-import) to discover and choose the objects. Then, on the **Summary** page, choose **Export Details** to create a .csv file with details of everything selected for import, including the objects that can't be imported and deployments. 
+2. Open the .csv file in Microsoft Excel and filter the data based on the **Deployment** for the **Type** column and **No** for the **Importable** column. The collection name column shows all the collections that need to be added to a collection mapping file in order for those deployments to be importable.
+
+#### Create the collection mapping file
+The collection mapping file is a comma-separated values (CSV) file where the first column is the Configuration Manager collection name and the second column is the Azure AD group name to use for that collection. To specify more than one Azure AD group for a single Configuration Manager collection, create multiple rows in the CSV file with that collection name. The following example is a CSV file that contains two collections. The first collection is mapped to a single Azure AD group and the second collection is mapped to two Azure AD groups.
+
+![Example of collection mapping csv file](..\media\migrate-collectionmapping.png)
+
+#### Start the Data Importer tool using collection mapping
+To use a collection mapping file, you must start the Data Importer tool using the *-CollectionMappingFile* command-line parameter and full path to the collection mapping .csv file you create. For example:
+
+```IntuneDataImporter.exe -CollectionMappingFile c:\Users\myuser\Documents\collectionmapping.csv```
+
+> [!Note]
+> The Data Importer does not display anything on any wizard page to indicate that the collection mapping file was loaded. However, the tool displays any errors encountered while reading the .csv file. Also, on the **Summary** page of the wizard you can review **Deployment** types. The tool displays **Yes** in the Importable column and lists the Azure AD groups that it will assign to objects in the **Notes** column.
+
 ### Phase 1: Discover Configuration Manager objects and collect data
 In phase 1, you select the objects to discover and have the tool collect information about the selected objects. 
 1. Open the tool and click **Start**.  
 2. Read the information, and then click **Next**. 
-3. Provide the following information about your site and the objects at the site that you want to import. 
-    - **Site server name**: Provide the fully qualified domain name of the site server to import objects. The tool only discovers objects accessible by the user running the tool. Typically, you will specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy.
-    - **Site code**: Provide the site code for the site server. You can find the three-letter code at the top of the Configuration Manager console.
-    - **Object types to import**: Choose the objects that you want the tool to collect. You can choose **Select all** to choose all the objects or select individual object types. 
+3. Choose whether to import an existing data set or select the object types to import:
+   - **Import existing data set**: Choose **Import existing data set**, and click **Select folder for import** to select an existing data set that you previously exported using the Data Importer Tool. The user who imports the data set must be the same user that exported the data. After you import the data, a summary of the objects are listed on the **Summary** page of the wizard. If the summary looks correct, skip to the [Phase 3: Import selected object to Intune](phase-3:-import-selected-object-to-intune).
+ 
+      > [!Note]
+      > After you discover and select the objects in your site to import, you can export the objects to a data set on the **Sign-in to Intune** page of the wizard. You can then import the data set on this page. The data set is encrypted using user credentials so only the user that exported the data set can import the data set in the tool. 
+   - **Select object types to import**: Choose **Select object types to import** to select object types to import and discover objects in your environment. Provide the following information about your site and the objects you want to import.
+      - **Site server name**: Provide the fully qualified domain name of the site server to import objects. The tool only discovers objects accessible by the user running the tool. Typically, you will specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy.
+      - **Site code**: Provide the site code for the site server. You can find the three-letter code at the top of the Configuration Manager console.
+      - **Object types to import**: Choose the objects that you want the tool to collect. You can choose **Select all** to choose all the objects or select individual object types. 
 4.	Click **Next** to start discovering the objects at the site. The tool displays progress for each of the object types. 
     - When the tool discovers no data for a selected object type, the progress bar immediately displays completed for that object type.
     - Objects that you did not select do not display on the **Collect** data page. 
@@ -128,6 +153,7 @@ In phase 2, you review the objects found by the tool, resolve issues that preven
     - **Importable**: Specifies whether an object can be imported. You can only choose objects that have Yes in the Importable column. 
     - **Platform**: Specifies the platform supported by the object.
     - **Already imported**: Specifies whether the object has already been imported by using the tool on this computer. 
+    - **Is superseded** (for apps): Specifies whether the app is superseded by another app. You must check the **Show superseded apps** check box at the top of the page for superseded apps to display.
     - **Notes**: Provides information about why an object can’t be imported.
     - **Configuration baselines** (for configuration items): Specifies the configuration baselines that are associated with a configuration item.
     - **Required certificate** (for profiles and policies): Specifies whether a certificate is associated with the object. When a certificate is associated with the object, you must import the certificate too.
