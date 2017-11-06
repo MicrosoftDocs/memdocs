@@ -43,7 +43,8 @@ Version 1710 drops support for the following products:
 ### Updates for Peer Cache  
 Beginning with this release, Peer Cache is no longer a pre-release feature.  No other changes for Peer Cache are introduced with this release. For more information, see  [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
-
+### Cloud distribution point support for Azure Government Cloud
+You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the Azure Government cloud.   
 
 
 <!-- ## Migration  -->
