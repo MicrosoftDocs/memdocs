@@ -43,10 +43,13 @@ Each section of this article lists hybrid features under three different categor
 ### New in Configuration Manager Technical Preview 1709
 
 - **Improved VPN Profile experience in Configuration Manager console** <!-- 1313282 -->     
-    VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform contains only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
+  VPN profile settings are now filtered according to platform. When you create new VPN profiles, each supported platform contains only the settings appropriate for the platform. Existing VPN profiles are not affected. You can read more about this change [here](/sccm/core/get-started/capabilities-in-technical-preview-1709#improved-vpn-profile-experience-in-configuration-manager-console).
 
 
 ### New in Microsoft Intune  
+
+- **Certificate-based authentication support on the Company Portal for iOS** <!--1029830-->
+  We have added support for certificate-based authentication (CBA) in the Company Portal app for iOS. Users with CBA enter their username, then tap the “Sign in with a certificate” link. CBA is already supported on the Company Portal apps for Android and Windows. You can learn more on the [sign in to the Company Portal app](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal) page.
 
 - **Improvements to device setup workflow in Company Portal** <!--1490692-->    
   We've improved the device setup workflow in the Company Portal app for Android. The language is more user-friendly and specific to your company, and we've combined screens where possible. You can see these on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017) page.
@@ -78,8 +81,6 @@ Each section of this article lists hybrid features under three different categor
 
 - **Inform end users what device information can be seen on enrolled devices** <!--1165314-->    
   We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017). 
-
-
 
 
 ## September 2017
@@ -169,16 +170,6 @@ The following features that were previously available in Configuration Manager T
   Users of iOS devices might see our new account picker when they sign into the Company Portal if they use their work or school account to sign into other Microsoft apps. For more information, see [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui).
 
 ### New in Configuration Manager Technical Preview 1706
-
-- **New mobile application management policy settings**    
-
-  The following mobile application management (MAM) policy settings are now available:
-
-  - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
-  - **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
-  - **Disable printing:** Prevents the app from printing work or school data.
-
-  See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 - **New Windows configuration item settings**  <!-- 1354715 -->    
 
