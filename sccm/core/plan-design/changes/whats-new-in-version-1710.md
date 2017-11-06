@@ -59,7 +59,9 @@ Beginning with this release, Peer Cache is no longer a pre-release feature.  No 
 
 
 
-<!-- ## Operating system deployment -->
+## Operating system deployment
+ > [!TIP]
+ > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
 <!-- ## Software updates -->
