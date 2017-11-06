@@ -25,7 +25,7 @@ manager: angrobe
 
 The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
-> ![TIP]  
+> [!TIP]  
 > **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
