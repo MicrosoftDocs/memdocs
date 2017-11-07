@@ -3,7 +3,7 @@ title: "Create applications"
 titleSuffix: "Configuration Manager"
 description: "Create and deploy applications and deployment types with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -116,7 +116,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 
     -   **Keywords**--Enter a list of keywords in the language that you selected in the **Selected Language** drop-down list. These keywords will help users of Software Center search for the application.  
 
-    -   **Icon**--Choose **Browse** to select an icon for this application from the available icons. If you do not specify an icon, a default icon will be used for this application.  
+    -   **Icon**--Choose **Browse** to select an icon for this application from the available icons. If you do not specify an icon, a default icon will be used for this application. You can now set an icon with a pixel dimensions of up to 512x512.
 
     -   **Display this as a featured app and highlight it in the company portal**--Select this option to display the app prominently in the company portal.  
 
