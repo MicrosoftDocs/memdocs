@@ -444,6 +444,25 @@ You can manage per-computer variables at a primary site or at a central administ
 
 6.  After you have added all the variables to the collection, click **OK**.  
 
+## Add child task sequences to a task sequence
+
+Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This creates a parent-child relationship between the task sequences. This allows you to create more modular task sequences that you can re-use.
+
+Consider the following when you add a child task sequence to a task sequence:
+
+ - The parent and child task sequences are effectively combined into a single policy that the client runs.
+ - It is not supported to add a child task sequence that is a parent of another task sequence.
+ - The environment is global. For example, if a variable is set by the parent task sequence and then changed by the child task sequence, the variable remains changed moving forward. Similarly, if the child task sequence creates a new variable, the variable is available for the remaining steps in the parent task sequence.
+ - Status messages are sent per normal for a single task sequence operation.
+ - The task sequences write entries to the smsts.log file, with new log entries that make it clear when a child task sequence starts.
+
+    If the child task sequence uses steps like **Run Command Line** (without any package reference), **Format**, **BitLocker**, etc., then the task sequence will run successfully from Software Center.
+
+### To add a child task sequence to a task sequence
+
+1. In the task sequence editor, click **Add**, select **General**, and click **Run Task Sequence**.
+2. Click **Browse** to select the child task sequence.  
+
 ##  <a name="BKMK_AdditionalActionsTS"></a> Additional actions to manage task sequences  
  You can manage task sequences by using additional actions when you select a task sequence.  
 
