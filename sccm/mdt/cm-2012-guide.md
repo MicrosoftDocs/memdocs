@@ -62,9 +62,8 @@ manager: angrobe
  To complete this guide, set up the computers listed in the following table. These computers can be either physical computers or virtual machines (VMs) with the system resources designated.  
 
 
-|||  
-|-|-|  
 |**Computer**|**Description and system resources**|  
+|-|-|  
 |WDG-MDT-01|This computer runs the MDT infrastructure and Configuration Manager. The computer runs Windows Server 2008 R2 with the following networking services installed:<br /><br /> -   AD DS<br />-   DNS Server<br />-   DHCP Server<br />-   Windows Deployment Services<br /><br /> The system resources of the computer are as follows:<br /><br /> -   Quad-core processor running at 2.66 gigahertz (GHz) or faster<br />-   4 gigabytes (GB) or more of physical memory<br />-   A disk partition that has 40 GB or more of available disk space; it will become the drive C partition<br />-   One CD-ROM or DVD-ROM drive that will be assigned the drive letter D<br />-   A disk partition that has 40 GB or more of available disk space; it will become partition E.|  
 |WDG-REF-01|This is the reference computer, which runs no current operating system. The system resources of the computer are as follows:<br /><br /> -   Processor running at 1.4 GHz or faster<br />-   1 GB or more of physical memory<br />-   16 GB or more of available disk space|  
 |WDG-CLI-01|This is the target computer, which runs no current operating system. The system resources of the computer are as follows:<br /><br /> -   Processor running at 1.4 GHz or faster<br />-   1 GB or more of physical memory<br />-   16 GB or more of available disk space|  
@@ -117,7 +116,7 @@ manager: angrobe
 ###  <a name="InstallWindowsServer"></a> Step 1-1: Install Windows Server 2008 R2  
   Information for Installing Windows Server 2008 R2.  Accept default values unless otherwise specified.  
 
-|When prompted for|Provide these values|   
+|When prompted for| Provide these values|   
 |-|-|  
 |**Where do you want to install Windows?**|**Disk 0 Unallocated Space**|  
 |**Password**|Any strong password|  
@@ -132,12 +131,12 @@ manager: angrobe
 1. The MDT Deployment Process Requires several folders. Create the following folders and shares with the specified permissions for each share.
 
 
-  |Create this folder  |With this share name  |With these share permissions  |  
-  |----|----|----|  
-  |E:\Source$|Source$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-  |E:\Images$|Images$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-  |E:\Capture$|Capture$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-  |E:\Packages$|Packages$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+    |Create this folder  |With this share name  |With these share permissions  |  
+    |----|----|----|  
+    |E:\Source$|Source$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+    |E:\Images$|Images$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+    |E:\Capture$|Capture$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+    |E:\Packages$|Packages$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
 
 2. Create the following folders:  
 
@@ -908,7 +907,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="AddRefComptoConfigDB"></a> Step 4-1: Add the Reference Computer to the Configuration Manager Site Database  
  To deploy an operating system without stand-alone media to a new computer that Configuration Manager does not currently manage, add the new computer to the Configuration Manager site database prior to initiating the operating system deployment process. Configuration Manager can automatically discover computers on the network that have a Windows operating system installed; however, if the computer has no operating system installed, use the Import Computer Information Wizard to import the new computer information.  
 
- **To add the reference computer to the Configuration Manager site database**  
+#### To add the reference computer to the Configuration Manager site database  
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -920,20 +919,18 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Import Computer Information Wizard starts.  
 
-5.  Complete the Import Computer Information Wizard using the information in  REF _Ref302035882 \h Table 24. Accept the default values unless otherwise specified.  
+5.  Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table * ARABIC 24. Information for Completing Import Computer Information Wizard  
 
-    |||  
-    |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Select Source**|Click **Import single computer**, and then click **Next**.|  
-    |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-REF-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the media access control [MAC] address of the primary network adapter for the reference computer, WDG-REF-01).<br />3.  Click **Next**.|  
-    |**Select Source: Data Preview**|Click **Next**.|  
-    |**Select Source: Choose Target Collection**|Click **Next**.|  
-    |**Summary**|1.  Review the information in the **Details** box that that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for importing the computer is displayed.|  
-    |**Confirmation**|Click **Close**.|  
+  |**On this wizard page**|**Do this**|  
+  |-|-|  
+  |**Select Source**|Click **Import single computer**, and then click **Next**.|  
+  |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-REF-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the media access control [MAC] address of the primary network adapter for the reference computer, WDG-REF-01).<br />3.  Click **Next**.|  
+  |**Select Source: Data Preview**|Click **Next**.|  
+  |**Select Source: Choose Target Collection**|Click **Next**.|  
+  |**Summary**|1.  Review the information in the **Details** box that that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+  |**Progress**|The progress for importing the computer is displayed.|  
+  |**Confirmation**|Click **Close**.|  
 
  For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section “How to Deploy Operating Systems in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
