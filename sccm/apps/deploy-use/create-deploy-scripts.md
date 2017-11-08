@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 09/15/2017
+ms.date: 11/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
+author: BrucePerlerMS
+ms.author: bruceper
 manager: angrobe
 
 ---
