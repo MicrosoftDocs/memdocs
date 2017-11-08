@@ -167,15 +167,15 @@ manager: angrobe
 ###  <a name="ObtainRequiredSoftware"></a> Step 1-3: Obtain the Required Software  
  Besides Windows Server 2008 R2, Windows 8.1, and Configuration Manager, certain software is required to evaluate MDT based on the processes in this guide.  The following table lists the software required to perform deployments using MDT, where to obtain the software, and where to place the software on WDG-MDT-01.  
 
-|**Obtain this software**|**Place in this folder**|  
-|-|-|  
-|MDT 2013|E:\Source$\MDT_2013|  
-|Windows 8.1 distribution files from the product media|E:\Source$\Windows_8-1|  
-|Device drivers required for the reference and target computers (WDG-REF-01 and WDG-CLI-01)|E:\Source$\Drivers|  
-|SQL Server 2008 R2 from the product media|E:\Source$\SQL2008R2|  
-|SQL Server 2008 R2 SP1, available at [http://www.microsoft.com/download/details.aspx?id=26727](http://www.microsoft.com/download/details.aspx?id=26727)|E:\Source$\SQL2008R2SP1|  
-|SQL Server 2008 R2 SP1 CU6, available at [http://support.microsoft.com/kb/2679367](http://support.microsoft.com/kb/2679367)|E:\Source$\SQL2008R2SP1CU6|  
-|Configuration Manager from the product media|E:\Source$\ConfigMgr|  
+ |**Obtain this software**|**Place in this folder**|  
+ |-|-|  
+ |MDT 2013|E:\Source$\MDT_2013|  
+ |Windows 8.1 distribution files from the product media|E:\Source$\Windows_8-1|  
+ |Device drivers required for the reference and target computers (WDG-REF-01 and WDG-CLI-01)|E:\Source$\Drivers|  
+ |SQL Server 2008 R2 from the product media|E:\Source$\SQL2008R2|  
+ |SQL Server 2008 R2 SP1, available at [http://www.microsoft.com/download/details.aspx?id=26727](http://www.microsoft.com/download/details.aspx?id=26727)|E:\Source$\SQL2008R2SP1|  
+ |SQL Server 2008 R2 SP1 CU6, available at [http://support.microsoft.com/kb/2679367](http://support.microsoft.com/kb/2679367)|E:\Source$\SQL2008R2SP1CU6|  
+ |Configuration Manager from the product media|E:\Source$\ConfigMgr|  
 
 ###  <a name="InstallADDSRole"></a> Step 1-4: Install the AD DS Server Role  
  AD DS is required to provide authentication and act as a repository for configuration values for the Microsoft products and technologies that MDT uses, such as SQL Server 2008 R2 and Configuration Manager.  
@@ -290,7 +290,6 @@ manager: angrobe
 
 4.  Install SQL Server 2008 R2 using the following information, accepting the defaults unless otherwise specified.  
 
-
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**Setup Support Rules**|Click **OK**.|  
@@ -319,7 +318,6 @@ manager: angrobe
      The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 Update Setup Wizard starts.  
 
 2.  Install SQL Server 2008 R2 SP1 using the following information, accepting the defaults unless otherwise specified.        
-
 
   |**On this wizard page**|**Do this**|  
   |-|-|  
@@ -352,7 +350,6 @@ manager: angrobe
      The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 CU6 Update Setup Wizard starts.  
 
 6.  Install SQL Server 2008 R2 SP1 CU6 using the following information, accepting the defaults unless otherwise specified.  
-
 
   |**On this wizard page**|**Do this**|  
   |-|-|  
@@ -410,7 +407,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 3.  Complete the Microsoft System Center 2012 R2 Configuration Manager Setup Wizard using the following information, accepting the defaults unless otherwise specified.  
 
-
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**Before You Begin**|Click **Next**.|  
@@ -458,7 +454,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 8.  Complete the **Windows User Account** dialog box using the following information, and then click **OK**.    
 
-
  |**For this**|**Do this**|  
  |-|-|  
  |**User name**|Type **MDT2013\CMNetAccess**.|  
@@ -488,7 +483,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
     > [!NOTE]   
     >  For this sample, the site boundary is specified by network address. However, you can also specify site boundaries using an AD DS site name or an IP address range.  
 
-
    |**For this**|**Do this**|  
    |-|-|  
    |**Description**|Type **IP Subnet Boundary**.|  
@@ -507,7 +501,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 4.  Complete the **General** tab of the **Create Boundary Group** dialog box using the following information.
 
-
   |**For this**|**Do this**|  
   |-|-|  
   |**Name**|Type **New York City Boundary Group**.|  
@@ -515,7 +508,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
   |Boundaries|1.  Click **Add**.<br />     The **Add Boundaries** dialog box appears.<br />2.  In the **Add Boundaries** dialog box, select ***site_boundary*** (where *site_boundary* is the site boundary you created earlier in the process), and then click **OK**.<br />     The site boundary appears in the list of boundaries.|  
 
 5.  Complete the **References** tab of the **Create Boundary Group** dialog box using the following information, and then click **OK**.  
-
 
   |**For this**|**Do this**|  
   |-|-|  
@@ -563,7 +555,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 3.  Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the information in  the following table.  Accept the default values unless otherwise specified.  
 
-
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Next**.|  
@@ -588,7 +579,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
      The Configure ConfigMgr Integration Wizard starts.  
 
 2.  Complete the Configure ConfigMgr Integration Wizard using the information in the following table. Accept the default values unless otherwise specified.  
-
 
   |**On this wizard page**|**Do this**|  
   |-|-|  
@@ -637,7 +627,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
      The Create MDT Task Sequence Wizard starts.  
 
 5.  Complete the Create MDT Task Sequence Wizard using the information in the following table. Accept the default values unless otherwise specified.  
-
 
   |**On this wizard page**|**Do this**|  
   |-|-|  
@@ -688,7 +677,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 6.  Complete the Distribute Content Wizard using the information in the following table. Accept default values unless otherwise specified.  
 
-
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**General**|Click **Next**.|  
@@ -718,7 +706,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 5.  Complete the Import New Driver Wizard using the information in the following table.  Accept the default values unless otherwise specified.  
 
-
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**Locate Driver**|In **Source folder**, type **\\\WDG-MDT-01\Source$\Drivers**, and then click **Next**.|  
@@ -743,7 +730,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
      The Distribute Content Wizard starts.  
 
 6.  Complete the Distribute Content Wizard using the following information. Accept the default values unless otherwise specified.  
-
 
   |**On this wizard page**|**Do this**|  
   |-|-|  
@@ -770,7 +756,6 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
      The New Deployment Share Wizard starts.  
 
 4.  Complete the New Deployment Share Wizard using the following information
-
 
    |**On this wizard page**|**Do this**|  
    |-|-|  
@@ -919,8 +904,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
      The Import Computer Information Wizard starts.  
 
 5.  Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
-
-
+  
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**Select Source**|Click **Import single computer**, and then click **Next**.|  
