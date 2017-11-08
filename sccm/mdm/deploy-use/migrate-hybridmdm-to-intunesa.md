@@ -18,7 +18,7 @@ ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
 *Applies to: System Center Configuration Manager (Current Branch)*    
 
 > [!Important]    
-> This functionality is not yet available. You will be notified through the Office 365 Message Center when your tenant is enabled for mixed authority. 
+> You will be notified through the Office 365 Message Center when your tenant is enabled for mixed authority. 
 
 When you have decided that you are ready to start migrating from hybrid MDM (Intune integrated with Configuration Manager) to a cloud-only experience using Intune on Azure, this is the article is for you. If you are still unsure, see [Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management). 
 
