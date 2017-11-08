@@ -23,19 +23,14 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+In System Center Configuration Manager, you can view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch systems are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB).  
 
- # Manage Windows as a service using System Center Configuration Manager
+For more information about Windows 10 servicing options, see  [Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
-*Applies to: System Center Configuration Manager (Current Branch)*
-
- In System Center Configuration Manager, you can view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch systems are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB).  
-
- For more information about Windows 10 servicing options, see  [Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
-
- Use the following sections to manage Windows as a service.
+Use the following sections to manage Windows as a service.
 
 ##  <a name="BKMK_Prerequisites"></a> Prerequisites  
- To see data in the Windows 10 servicing dashboard, you must do the following:  
+To see data in the Windows 10 servicing dashboard, you must do the following:  
 
 -   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer will not be evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
@@ -90,16 +85,16 @@ manager: angrobe
 
 -   **Time deferral**: The number of days that you specify for **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment** in the servicing plan. Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the configured number of days.  
 
- When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan.  You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
+When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan.  You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  
- As you deploy Windows 10 CB, you can create one or more servicing plans to define the deployment rings that you want in your environment, and then monitor them in the Windows 10 servicing dashboard.   
+As you deploy Windows 10 CB, you can create one or more servicing plans to define the deployment rings that you want in your environment, and then monitor them in the Windows 10 servicing dashboard.   
 Servicing plans use only the **Upgrades** software updates classification, not cumulative updates for Windows 10. For those updates, you will still need to deploy by using the software updates workflow.  The end-user experience with a servicing plan is the same as it is with software updates, including the settings that you configure in the servicing plan.  
 
 > [!NOTE]  
 >  You can use a task sequence to deploy an upgrade for each Windows 10 build, but it requires more manual work. You would need to import the updated source files as an operating system upgrade package, and then create and deploy the task sequence to the appropriate set of computers. However, a task sequence provides additional customized options, such as the pre-deployment and post-deployment actions.  
 
- You can create a basic servicing plan from the Windows 10 servicing dashboard. After you specify the name,  collection (only displays the top ten collections by size, smallest first), deployment package (only displays the top ten packages by most recently modified), and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings. Use the following procedure to create a servicing plan by using the Create Servicing Plan wizard.  
+You can create a basic servicing plan from the Windows 10 servicing dashboard. After you specify the name,  collection (only displays the top ten collections by size, smallest first), deployment package (only displays the top ten packages by most recently modified), and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings. Use the following procedure to create a servicing plan by using the Create Servicing Plan wizard.  
 
 > [!NOTE]  
 >  Beginning in Configuration Manager version 1602, you can manage the behavior for high-risk deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys Windows 10 is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
