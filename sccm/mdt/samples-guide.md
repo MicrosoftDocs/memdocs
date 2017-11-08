@@ -10,15 +10,15 @@ ms.technology:
 ms.topic: article
 ms.assetid:  2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 
-author: angrobe  
+author: brenduns  
 ms.author: angrobe  
 manager: angrobe
 
 ---
 
 
-## Introduction to the Microsoft Deployment Toolkit Samples Guide  
- This guide is part of Microsoft® Deployment Toolkit (MDT) 2013 and guides a specialist team through deploying Windows® operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.  
+# Microsoft Deployment Toolkit Samples Guide  
+ This guide is part of Microsoft® Deployment Toolkit (MDT) 2013 and guides a specialist team through deploying Windows operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.  
 
 > [!NOTE]
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
@@ -37,17 +37,15 @@ manager: angrobe
 
  In many instances, more than one scenario might be necessary to complete the configuration settings for the environment.  
 
- Because this guide contains only sample configuration settings, reviewing the guides listed in  REF _Ref306629001 \h Table 1 can further assist in customizing the configuration settings for the environment.  
+ Because this guide contains only sample configuration settings, reviewing the guides listed in the following table can further assist in customizing the configuration settings for the environment.  
 
-### Table  SEQ Table \\* ARABIC 1. Deployment Guidance in MDT  
+ |Guide|This guide offers assistance to help|  
+ |-|-|  
+ |*Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager* |Use System Center 2012 R2 Configuration Manager to install the Windows 8.1 operating system in a New Computer deployment scenario.|  
+ |*Quick Start Guide for Lite Touch Installation* |Install the Windows 8.1 operating system through Lite Touch Installation (LTI) using bootable media in a New Computer deployment scenario.|  
+ |*Quick Start Guide for User-Driven Installation* |Install the Windows 8.1 operating system with User-Driven Installation and System Center 2012 R2 Configuration Manager in a New Computer deployment scenario.|  
+ |*Using the Microsoft Deployment Toolkit* |Further customize the configuration files used in Zero Touch Installation (ZTI) and LTI deployments. This guide also provides generic configuration guidance and a technical reference for configuration settings.|
 
-|||  
-|-|-|  
-|**Guide**|**This guide offers assistance to help**|  
-|*Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager*|Use System Center 2012 R2 Configuration Manager to install the Windows 8.1 operating system in a New Computer deployment scenario.|  
-|*Quick Start Guide for Lite Touch Installation*|Install the Windows 8.1 operating system through Lite Touch Installation (LTI) using bootable media in a New Computer deployment scenario.|  
-|*Quick Start Guide for User-Driven Installation*|Install the Windows 8.1 operating system with User-Driven Installation and System Center 2012 R2 Configuration Manager in a New Computer deployment scenario.|  
-|*Using the Microsoft Deployment Toolkit*|Further customize the configuration files used in Zero Touch Installation (ZTI) and LTI deployments. This guide also provides generic configuration guidance and a technical reference for configuration settings.|  
 
 ## Deploying Windows 8 Applications Using MDT  
  MDT can deploy Windows 8 application packages, which have an .appx file extension. These application packages are new to Windows 8. For more information on these applications, see [Windows Store App development.](http://msdn.microsoft.com/windows/apps)  
@@ -433,18 +431,15 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 ####  <a name="ImportItemDeployShare"></a> Import an Item into a Deployment Share  
  You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple item into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
 
- REF _Ref330738542 \h Table 2 lists the MDT Windows PowerShell cmdlets used to import items into a deployment share and provides a brief description of each cmdlet. Examples of how to use each cmdlet is provided in the section that corresponds to each cmdlet.  
+ The following table lists the MDT Windows PowerShell cmdlets used to import items into a deployment share and provides a brief description of each cmdlet. Examples of how to use each cmdlet is provided in the section that corresponds to each cmdlet.  
 
-### Table  SEQ Table \\* ARABIC 2. MDT Windows PowerShell Cmdlets for Importing Deployment Share Items  
-
-|||  
-|-|-|  
-|**Cmdlet**|**Description**|  
-|**Import-MDTApplication**|Imports an application into a deployment share|  
-|**Import-MDTDriver**|Imports one or more device drivers into a deployment share|  
-|**Import-MDTOperatingSystem**|Imports one or more operating systems into a deployment share|  
-|**Import-MDTPackage**|Imports one or more operating system packages into a deployment share|  
-|**Import-MDTTaskSequence**|Imports a task sequence into a deployment share|  
+ |**Cmdlet** | **Description** |  
+ |-|-|  
+ |**Import-MDTApplication** |Imports an application into a deployment share|  
+ |**Import-MDTDriver** |Imports one or more device drivers into a deployment share|  
+ |**Import-MDTOperatingSystem** |Imports one or more operating systems into a deployment share|  
+ |**Import-MDTPackage** |Imports one or more operating system packages into a deployment share|  
+ |**Import-MDTTaskSequence** |Imports a task sequence into a deployment share|  
 
 ####  <a name="ViewPropertyDeployShare"></a> View the Properties of an Item in a Deployment Share  
  Each item in a deployment share has different set of properties. You can view the properties of an item in a deployment share using the [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet. The [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet uses the MDTProvider to display the properties for a specific item, just as you can see the properties in the Deployment Workbench.  
@@ -868,13 +863,13 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
  **To implement local variables in the CustomSettings.ini file**  
 
-1.  In the `[Settings]` section, on the `Priority` line, add a custom section to customize deployment based on the chassis type (`ByChassisType` in the example in  REF _Ref306694437 \h Listing 1, where *Chassis* represents the type of computer).  
+1.  In the `[Settings]` section, on the `Priority` line, add a custom section to customize deployment based on the chassis type (`ByChassisType` in the following example, where *Chassis* represents the type of computer).  
 
-2.  Create the custom section that corresponds to the custom section defined in step 1 (`ByChassisType` in the example in  REF _Ref306694437 \h Listing 1, where *Chassis* represents the type of computer).  
+2.  Create the custom section that corresponds to the custom section defined in step 1 (`ByChassisType` in the example in  following example, where *Chassis* represents the type of computer).  
 
-3.  Define a subsection for each chassis type to detect (`Subsection=Laptop-%IsLaptop%, Subsection=Desktop-%IsDesktop%, Subsection=Server-%IsServer%` in the example in  REF _Ref306694437 \h Listing 1).  
+3.  Define a subsection for each chassis type to detect (`Subsection=Laptop-%IsLaptop%, Subsection=Desktop-%IsDesktop%, Subsection=Server-%IsServer%` in the following example).  
 
-4.  Create a subsection for each `True` and `False` state of each subsection defined in step 3 (such as `[Laptop-True], [Laptop-False], [Desktop-True], [Desktop-False]` in the example in  REF _Ref306694437 \h Listing 1.  
+4.  Create a subsection for each `True` and `False` state of each subsection defined in step 3 (such as `[Laptop-True], [Laptop-False], [Desktop-True], [Desktop-False]` in the following example).  
 
 5.  Under each `True` and `False` subsection, add the appropriate settings based on the chassis type.  
 
@@ -939,7 +934,7 @@ Subsection=Server-%IsServer%
 
 1.  Use the table in the MDT DB to connect specific packages with applications listed in the target operating system.  
 
-2.  Populate the table with data that associates the appropriate package with the application listed in Program and Features or Add or Remove Programs (as illustrated in  REF _Ref306695110 \h Listing 2).  
+2.  Populate the table with data that associates the appropriate package with the application listed in Program and Features or Add or Remove Programs.
 
      **Listing  SEQ Equation \\\* ARABIC 2. SQL Query to Populate the Table**  
 
@@ -950,13 +945,11 @@ Subsection=Server-%IsServer%
     go  
     ```  
 
-     In  REF _Ref306695110 \h Listing 2, the inserted row connects any computer that has the entry `Office12.0` with the Microsoft Office 2010 Professional Plus package.  
+     The inserted row connects any computer that has the entry `Office12.0` with the Microsoft Office 2010 Professional Plus package.  
 
      This means that Microsoft Office 2010 Professional Plus will be installed on any computer currently running the 2007 Microsoft Office system (Office 12.0). Add similar entries for any other packages. Any item for which there is no entry is ignored (no package will be installed).  
 
-3.  Create a stored procedure to simplify joining the information in the new table with the inventory data (as illustrated in  REF _Ref306695134 \h Listing 3).  
-
-     **Listing  SEQ Equation \\\* ARABIC 3. SQL Query to Create a Stored Procedure to Simplify Joining the Information with Inventory Data**  
+3.  Create a stored procedure to simplify joining the information in the new table with the inventory data.  
 
     ```  
     use [MDTDB]  
@@ -983,11 +976,9 @@ Subsection=Server-%IsServer%
     go  
     ```  
 
-     The stored procedure in  REF _Ref306695134 \h Listing 3 assumes that the Configuration Manager central primary site database resides on the computer on which SQL Server is running as the MDT DB. If the central primary site database resides on a different computer, the appropriate modifications need to be made to the stored procedure. In addition, the name of the database (`CM_DB` in  REF _Ref306695134 \h Listing 3) must be updated. Also consider granting additional accounts Read access to the **v_GS_ADD_REMOVE_PROGRAMS** view in the Configuration Manager database.  
+     The stored procedure in the preceeding example assumes that the Configuration Manager central primary site database resides on the computer on which SQL Server is running as the MDT DB. If the central primary site database resides on a different computer, the appropriate modifications need to be made to the stored procedure. In addition, the name of the database (`CM_DB`) must be updated. Also consider granting additional accounts Read access to the **v_GS_ADD_REMOVE_PROGRAMS** view in the Configuration Manager database.  
 
-4.  Configure the CustomSettings.ini file to query this database table by specifying the name of a section (`[DynamicPackages]` in the **Priority** list) that points to the database information (as illustrated in  REF _Ref306695211 \h Listing 4).  
-
-     **Listing  SEQ Equation * ARABIC 4. Excerpt from CustomSettings.ini That Illustrates the DynamicPackages Section in the Priority List**  
+4.  Configure the CustomSettings.ini file to query this database table by specifying the name of a section (`[DynamicPackages]` in the **Priority** list) that points to the database information.  
 
     ```  
     [Settings]  
@@ -996,18 +987,14 @@ Subsection=Server-%IsServer%
     …  
     ```  
 
-5.  Create a `[DynamicPackages]` section to specify the name of a database section (as illustrated in  REF _Ref306695231 \h Listing 5).  
-
-     **Listing  SEQ Equation \\\* ARABIC 5. Excerpt from CustomSettings.ini That Illustrates the DynamicPackages Section with the Name of a Database Section**  
+5.  Create a `[DynamicPackages]` section to specify the name of a database section.  
 
     ```  
     [DynamicPackages]  
     SQLDefault=DB_DynamicPackages  
     ```  
 
-6.  Create a database section to specify the database information and query details (as illustrated in  REF _Ref306695250 \h Listing 6).  
-
-     **Listing  SEQ Equation \\\* ARABIC 6. Excerpt from CustomSettings.ini That Illustrates the Database Section**  
+6.  Create a database section to specify the database information and query details.  
 
     ```  
     [DB_DynamicPackages]  
@@ -1021,17 +1008,15 @@ Subsection=Server-%IsServer%
     Netlib=DBNMPNTW  
     ```  
 
-     In the example in  REF _Ref306695250 \h Listing 6, the MDT DB named *MDTDB* on the computer running the SQL Server instanced named *SERVER1* will be queried. The database contains a stored procedure named `RetrievePackages` (created in step 3).  
+     In the preceeding example, the MDT DB named *MDTDB* on the computer running the SQL Server instanced named *SERVER1* will be queried. The database contains a stored procedure named `RetrievePackages` (created in step 3).  
 
- When ZTIGather.wsf runs, a Structured Query Language (SQL) `SELECT` statement is automatically generated, and the value of the **MakeModelQuery** custom key is passed as a parameter to the query (shown in  REF _Ref306695302 \h Listing 7).  
+ When ZTIGather.wsf runs, a Structured Query Language (SQL) `SELECT` statement is automatically generated, and the value of the **MakeModelQuery** custom key is passed as a parameter to the query:  
 
- **Listing  SEQ Equation \\\* ARABIC 7. Sample SQL Query Created Automatically Based on the Database Section**  
+ ```  
+ EXECUTE RetrievePackages ?  
+ ```  
 
-```  
-EXECUTE RetrievePackages ?  
-```  
-
- The actual value of the **MACAddress** custom key will be substituted for the corresponding ? in  REF _Ref306695302 \h Listing 7. This query returns a record set with the rows entered in step 2.  
+ The actual value of the **MACAddress** custom key will be substituted for the corresponding "?".  This query returns a record set with the rows entered in step 2.  
 
  A variable number of arguments cannot be passed to a stored procedure. As a result, when a computer has more than one MAC address, not all MAC addresses can be passed to the stored procedure. As an alternative, replace the stored procedure with a view that allows querying the view with a `SELECT` statement with an `IN` clause to pass all the MAC address values.  
 
@@ -1081,9 +1066,7 @@ EXECUTE RetrievePackages ?
  For each wizard page skipped, provide the values for the corresponding properties that are typically collected through the wizard page in the CustomSettings.ini and BootStrap.ini files. For more information about the properties that must be configured in these files, see the section, "Providing Properties for Skipped Deployment Wizard Pages", in the MDT document *Toolkit Reference*.  
 
 ## Fully Automated LTI Deployment for a Refresh Computer Scenario  
- REF _Ref306707399 \h Listing 8 illustrates a CustomSettings.ini file used for a Refresh Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  
-
- **Listing  SEQ Equation \\\* ARABIC 8. CustomSettings.ini File for a Refresh Computer Scenario**  
+ The following illustrates a CustomSettings.ini file used for a Refresh Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  
 
 ```  
 [Settings]  
@@ -1147,9 +1130,7 @@ Powerusers001=DomainName\Username
 ```  
 
 ## Fully Automated LTI Deployment for a New Computer Scenario  
- REF _Ref306707458 \h Listing 9 illustrates a CustomSettings.ini file used for a New Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  
-
- **Listing  SEQ Equation \\\* ARABIC 9. CustomSettings.ini File for a New Computer Scenario**  
+ The following is an example of a CustomSettings.ini file used for a New Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  
 
 ```  
 [Settings]  
@@ -1212,9 +1193,7 @@ Home_page=http://www.microsoft.com/NewComputer
 
  To help with this problem, MDT has the ability to make web service calls based on simple rules defined in CustomSettings.ini. These web service requests do not require any special security context and can use whatever TCP/IP port is needed to simplify firewall configurations.  
 
- REF _Ref306707584 \h Listing 10 shows how to configure CustomSettings.ini to call a particular web service. In this scenario, the web service is chosen at random from an Internet search. It takes a postal code as input and returns the city, state, area code, and time zone (as a letter) for the specified postal code.  
-
- **Listing 10. CustomSettings.ini File to Call a Particular Web Service Scenario**  
+ The following shows how to configure CustomSettings.ini to call a particular web service. In this scenario, the web service is chosen at random from an Internet search. It takes a postal code as input and returns the city, state, area code, and time zone (as a letter) for the specified postal code.  
 
 ```  
 [Settings]  
@@ -1227,10 +1206,7 @@ WebService=http://www.webservicex.net/uszip.asmx/GetInfoByZIP
 Parameters=USZip  
 ```  
 
- Executing this code produces output similar to  REF _Ref306707607 \h Listing 11.  
-
- **Listing 11. CustomSettings.ini File to Call a Particular Web Service Output**  
-
+ Executing this code produces output similar to the following:
 ```  
 Added new custom property USZIP  
 Added new custom property CITY  
@@ -1296,26 +1272,20 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
     > [!NOTE]
     >  Add the task before adding any tasks that require access to resources on the target server.  
 
-6.  Complete the **Properties** tab of the new task using the information listed in  REF _Ref306707765 \h Table 3 (accept default values if none are specified), and then click **Apply**.  
+6.  Complete the **Properties** tab of the new task using the following information:
 
-    ### Table  SEQ Table \\* ARABIC 3. Completing the Properties Tab of the New Task  
-
-    |||  
+    |**In this box** |**Do this** |  
     |-|-|  
-    |**In this box**|**Do this**|  
-    |**Name**|Type **Connect to server** (where server is the name of the server to which to connect).|  
-    |**Description**|Type text that explains why the connection needs to be made.|  
-    |**Command**|Type **Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server).|  
+    |**Name** |Type **Connect to server** (where server is the name of the server to which to connect).|  
+    |**Description** |Type text that explains why the connection needs to be made.|  
+    |**Command** |Type **Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server).|  
 
-7.  Complete the **Options** tab of the new task using the information listed in  REF _Ref306707807 \h Table 4 (accept default values if none are specified), and then click **OK**.  
+7.  Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then click **OK**.  
 
-    ### Table  SEQ Table * ARABIC 4. Completing the Options Tab of the New Task  
-
-    |||  
+    |**In this box** |**Do this** |  
     |-|-|  
-    |**In this box**|**Do this**|  
-    |**Success codes**|Type **0 3010**. (The ZTIConnect.wsf script returns these codes upon successful completion.)|  
-    |**Conditions list box**|Add any conditions that might be necessary. (In most instances this task requires no conditions.)|  
+    |**Success codes** |Type **0 3010**. (The ZTIConnect.wsf script returns these codes upon successful completion.)|  
+    |**Conditions list box** |Add any conditions that might be necessary. (In most instances this task requires no conditions.)|  
 
  After adding the task that will run the ZTIConnect.wsf script, subsequent tasks can access network resources on the server specified in the **/uncpath** option of the ZTIConnect.wsf script.  
 
@@ -1346,9 +1316,9 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
 11. Create a user exit script and place it in the same directory as the CustomSettings.ini file to truncate the model name.  
 
-     REF _Ref306707933 \h Listing 12 and  REF _Ref306707939 \h Listing 13 show CustomSettings.ini and the user exit script, respectively.  
+    The following shows a CustomSettings.ini and the user exit script, respectively.  
 
-     **Listing  SEQ Equation \\\* ARABIC 12. CustomSettings.ini**  
+     **CustomSettings.ini**:  
 
     ```  
     [Settings]   
@@ -1368,7 +1338,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
     Order=Sequence  
     ```  
 
-     **Listing  SEQ Equation \\\* ARABIC 13. User Exit Script**  
+     **User Exit Script**:  
 
     ```  
     Function UserExit(sType, sWhen, sDetail, bSkip)   
@@ -1428,7 +1398,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
 4.  In the Actions pane, click **Properties**.  
 
-5.  In the ***task_sequence*Properties** dialog box, on the **Task Sequence** tab, click ***step*** (where *step* is the name of the task sequence step to configure), and then click the **Options** tab.  
+5.  In the ***task_sequence*** **Properties** dialog box, on the **Task Sequence** tab, click ***step*** (where *step* is the name of the task sequence step to configure), and then click the **Options** tab.  
 
  On the **Options** tab of the task sequence step, perform the following actions:  
 
@@ -1441,31 +1411,28 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 ### IF Statements in Conditions  
  All task sequence conditions include one or more **IF** statements. **IF** statements are the foundation for creating conditional task sequence steps. A task sequence step condition can include only one **IF** statement, but multiple **IF** statements can be nested beneath the top-level **IF** statement to create more complex conditions.  
 
- An **IF** statement can be based on the conditions listed in  REF _Ref306715303 \h Table 7, which are configured in the **IF Statement Properties** dialog box.  
+ An **IF** statement can be based on the conditions listed in  the following table, which are configured in the **IF Statement Properties** dialog box.  
 
-### Table  SEQ Table \\* ARABIC 7. Conditions Available in IF Statements  
-
-|||  
-|-|-|  
-|**Condition**|**Select this option to run the task sequence if**|  
-|**All conditions**|All the conditions beneath this **IF** statement must be true.|  
-|**Any conditions**|Any the conditions beneath this **IF** statement are true.|  
-|**None**|None the conditions beneath this **IF** statement are true.|  
+ |**Condition** |**Select this option to run the task sequence if** |  
+ |-|-|  
+ |**All conditions** |All the conditions beneath this **IF** statement must be true.|  
+ |**Any conditions** |Any the conditions beneath this **IF** statement are true.|  
+ |**None** |None the conditions beneath this **IF** statement are true.|  
 
  Complete the condition for running the task sequence step by adding other criteria to the conditions (for example, task sequence variables or values in a registry setting).  
 
  **To add an IF statement condition to a task sequence step**  
 
-1.  On the ***step*Option** tab (where *step* is the name of the task sequence step to configure), click **Add**, and then click **If statement**.  
+1.  On the ***step*** **Option** tab (where *step* is the name of the task sequence step to configure), click **Add**, and then click **If statement**.  
 
-2.  In the **If Statement Properties** dialog box, click **condition** (where *condition* is one of the conditions listed in  REF _Ref306715303 \h Table 7), and then click **OK**.  
+2.  In the **If Statement Properties** dialog box, click **condition** (where *condition* is one of the conditions listed in the previous table), and then click **OK**.  
 
 ### Task Sequence Variables in Conditions  
  Use the **Task Sequence Variable** condition to evaluate any task sequence variable created by a **Set Task Sequence Variable** task or by any task in the task sequence. For example, consider a network that contains Windows XP client computers that are part of a domain and some that are in a workgroup. Knowing that the current domain policy forces all user settings to be saved on the network, user settings may need to be saved only for computers that are not part of the domain—that is, computers that are in the workgroup. In such case, add a condition to the **Capture User Files and Settings** task that targets the computers in the workgroup.  
 
  **To add a condition based on a task sequence variable**  
 
-1.  On the ***step*Options** tab (where *step* is the name of the task sequence step to configure), click **Add Condition**, and then click **Task Sequence Variable**.  
+1.  On the ***step*** **Options** tab (where *step* is the name of the task sequence step to configure), click **Add Condition**, and then click **Task Sequence Variable**.  
 
 2.  In the **Task Sequence Variable** Condition dialog box, in the **Variable** box, type **OSDJoinType**.  
 
@@ -1647,30 +1614,24 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
  This scenario presumes that MDT is configured on a master deployment server and that the configuration of the MDT DB has already been completed as discussed at the beginning of this document.  
 
 ###  <a name="EnsureInfrastructure"></a> Ensuring That the Appropriate Infrastructure Exists  
- The highly scalable LTI deployment infrastructure uses a hub-and-spoke topology for replication of content; therefore, first nominate a deployment server in the production environment that will perform the role of the master deployment server.  REF _Ref306717597 \h Table 8 lists the required components for the master deployment server.  
+ The highly scalable LTI deployment infrastructure uses a hub-and-spoke topology for replication of content; therefore, first nominate a deployment server in the production environment that will perform the role of the master deployment server.  The following lists the required components for the master deployment server.  
 
-### Table  SEQ Table \\* ARABIC 8. Master Deployment Server  
+ |**Required component** |**Purpose/comment** |  
+ |-|-|  
+ |Windows Server 2003 R2|Required to support DFS-R|  
+ |MDT |Contains the master copy of the deployment share|  
+ |SQL Server 2005|Must be a full version to allow replication of the MDT DB|  
+ |DFS-R |Required for replication of the deployment share|  
+ |Windows Deployment Services |Required to allow network PXE-based installations to be initiated|  
 
-|||  
-|-|-|  
-|**Required component**|**Purpose/comment**|  
-|Windows Server 2003 R2|Required to support DFS-R|  
-|MDT|Contains the master copy of the deployment share|  
-|SQL Server 2005|Must be a full version to allow replication of the MDT DB|  
-|DFS-R|Required for replication of the deployment share|  
-|Windows Deployment Services|Required to allow network PXE-based installations to be initiated|  
+ When you have selected the master deployment server, provision additional servers at each site to support LTI deployments.  The following lists the required components for the child deployment server.  
 
- When you have selected the master deployment server, provision additional servers at each site to support LTI deployments.  REF _Ref306717654 \h Table 9 lists the required components for the child deployment server.  
-
-### Table  SEQ Table \\* ARABIC 9. Child Deployment Servers  
-
-|||  
-|-|-|  
-|**Required component**|**Purpose/comment**|  
-|Windows Server 2003 R2|Required to support DFS-R|  
-|Microsoft SQL Server 2005 Express Edition|Receives replicated copies of the MDT DB|  
-|DFS-R|Required for replication of deployment share|  
-|Windows Deployment Services|Required to allow network PXE-based installations to be initiated|  
+ |**Required component** |**Purpose/comment** |  
+ |-|-|  
+ |Windows Server 2003 R2|Required to support DFS-R|  
+ |Microsoft SQL Server 2005 Express Edition |Receives replicated copies of the MDT DB|  
+ |DFS-R |Required for replication of deployment share|  
+ |Windows Deployment Services |Required to allow network PXE-based installations to be initiated|  
 
 > [!NOTE]
 >  Windows Deployment Services must be set up and configured on each child server, but it is not necessary to add boot or installation images.  
@@ -1781,7 +1742,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
     2.  In the **Edit Local Path** dialog box, click **Enabled**.  
 
-    3.  Type the path where the Deployment Share folder should be stored on the child deployment server—for example, ***X*:\Deployment** (where *X* is the drive letter on the deployment server).  
+    3.  Type the path where the Deployment Share folder should be stored on the child deployment server—for example, ***X:\Deployment*** (where *X* is the drive letter on the deployment server).  
 
     4.  Click **OK**.  
 
@@ -1793,7 +1754,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
     2.  In the **Edit Local Path** dialog box, click **Enabled**.  
 
-    3.  Type the path where the Boot folder should be stored on the child deployment server—for example, ***X*:\RemoteInstall\Boot** (where *X* is the drive letter on the deployment server).  
+    3.  Type the path where the Boot folder should be stored on the child deployment server—for example, ***X:\RemoteInstall\Boot*** (where *X* is the drive letter on the deployment server).  
 
     4.  Click **OK**.  
 
@@ -2021,9 +1982,9 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
 12. On the **Confirmation** page, click **Finish**.  
 
- REF _Ref306719294 \h Listing 15 illustrates CustomSettings.ini after performing the steps outlined in this section.  
+ The following example illustrates CustomSettings.ini after performing the steps outlined in this section.  
 
- **Listing  SEQ Equation \\\* ARABIC 15. Sample CustomSettings.ini Configured for Scalable LTI Deployment Infrastructure**  
+ **Sample CustomSettings.ini Configured for Scalable LTI Deployment Infrastructure**  
 
 ```  
 [Settings]  
@@ -2111,17 +2072,14 @@ ParameterCondition=OR
 #### Understand When to Use LocationServer.xml  
  MDT offers multiple ways to determine which server to connect to during an LTI deployment. Different methods for locating the deployment server are best suited for different scenarios; therefore, it is important to understand when to use LocationServer.xml.  
 
- MDT provides several methods for automatically discovering and using the most appropriate deployment server. These methods are listed in  REF _Ref306719427 \h Table 10.  
+ MDT provides several methods for automatically discovering and using the most appropriate deployment server. These methods are listed in the following table.
 
-### Table  SEQ Table \\* ARABIC 10. Methods for Automatically Determining the Deployment Server  
+ |**Method** |**Details** |  
+ |-|-|  
+ |**%WDSServer%** |This method is used when the MDT server is co-hosted on the Windows Deployment Services server.<br /><br /> When an LTI deployment is initiated from Windows Deployment Services, an environmental variable—%WDSServer%—is created and populated with the name of the Windows Deployment Services server.<br /><br /> The **DeployRoot** variable can use this variable to automatically connect to a deployment share on the Windows Deployment Services server—for example:<br /><br /> **DeployRoot=\\\\%WDSServer%\Deployment$** |  
+ |**Location-based automation** |MDT can use location-based automation in the BootStrap.ini file to determine the server to which it should deploy.<br /><br /> Use the **Default Gateway** property to distinguish between different locations; for each **Default Gateway**, a different MDT server is specified.<br /><br /> For more information about using location-based automation, refer to "Selecting the Methods for Applying Configuration Settings".|  
 
-|||  
-|-|-|  
-|**Method**|**Details**|  
-|**%WDSServer%**|This method is used when the MDT server is co-hosted on the Windows Deployment Services server.<br /><br /> When an LTI deployment is initiated from Windows Deployment Services, an environmental variable—%WDSServer%—is created and populated with the name of the Windows Deployment Services server.<br /><br /> The **DeployRoot** variable can use this variable to automatically connect to a deployment share on the Windows Deployment Services server—for example:<br /><br /> **DeployRoot=\\\\%WDSServer%\Deployment$**|  
-|**Location-based automation**|MDT can use location-based automation in the BootStrap.ini file to determine the server to which it should deploy.<br /><br /> Use the **Default Gateway** property to distinguish between different locations; for each **Default Gateway**, a different MDT server is specified.<br /><br /> For more information about using location-based automation, refer to "Selecting the Methods for Applying Configuration Settings".|  
-
- Each approach listed in  REF _Ref306719427 \h Table 10 offers one way to automate the selection of the deployment server at a given location for certain scenarios. These approaches are targeted to specific scenarios—for example, when the MDT server is co-hosted with Windows Deployment Services.  
+ Each approach listed in the preceeding table offers one way to automate the selection of the deployment server at a given location for certain scenarios. These approaches are targeted to specific scenarios—for example, when the MDT server is co-hosted with Windows Deployment Services.  
 
  There are other scenarios in which these approaches are not suitable—for example, if there are multiple deployment servers at a given location or automation logic is not possible (for example, the network is not segmented enough to allow location determination or the MDT server is separated from Windows Deployment Services).  
 
@@ -2141,9 +2099,9 @@ ParameterCondition=OR
 
 -   A UNC path to the MDT server for that location  
 
- REF _Ref306719636 \h Listing 16 illustrates how the LocationServer.xml file is created using each of these properties using a sample LocationServer.xml file configured for multiple locations.  
+ The folowing illustrates how the LocationServer.xml file is created using each of these properties using a sample LocationServer.xml file configured for multiple locations.  
 
- **Listing  SEQ Equation \\\* ARABIC 16. Example LocationServer.xml File to Support Multiple Locations**  
+ **Example LocationServer.xml File to Support Multiple Locations**  
 
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -2166,9 +2124,9 @@ ParameterCondition=OR
 </servers>  
 ```  
 
- Using this format, specify different server entries for each location (as shown in  REF _Ref306719636 \h Listing 16) or for situations in which there are multiple servers within a single location by specifying a different server entry for each server at that location, as shown in  REF _Ref306719679 \h Listing 17  
+ Using this format, specify different server entries for each location or for situations in which there are multiple servers within a single location by specifying a different server entry for each server at that location, as shown in the following example.   
 
- **Listing  SEQ Equation \\\* ARABIC 17. Example LocationServer.xml File to Support Multiple Servers at Multiple Locations**  
+ **Example LocationServer.xml File to Support Multiple Servers at Multiple Locations**  
 
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -2194,9 +2152,9 @@ ParameterCondition=OR
 #### Create a LocationServer.xml File to Load Balance Multiple Servers at Different Locations  
  Using LocationServer.xml, specify multiple servers per location entry, and then perform basic load balancing so that when a location is chosen, MDT automatically selects a deployment server from the list of available servers. To provide this functionality, the LocationServer.xml file supports specifying a weighting metric.  
 
- REF _Ref307407325 \h Listing 18 illustrates a sample LocationServer.xml file configured for multiple servers at different locations.  
+ The following illustrates a sample LocationServer.xml file configured for multiple servers at different locations.  
 
- **Listing  SEQ Equation \\\* ARABIC 18. Example LocationServer.xml File for Different Locations**  
+ **Example LocationServer.xml File for Different Locations**  
 
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -2228,10 +2186,10 @@ ParameterCondition=OR
 
  **Server weight/sum of all server weights**  
 
- In  REF _Ref307407325 \h Listing 18, the three servers at Contoso HQ are listed as 1, 2, and 4. The likelihood of a server with a weighting of 2 being selected becomes 2 in 7. Therefore, to use the weighting system, determine the capacity of the servers available at a location, and weight each server by the server’s capacity in relation to each of the other servers.  
+ In  the previous example, the three servers at Contoso HQ are listed as 1, 2, and 4. The likelihood of a server with a weighting of 2 being selected becomes 2 in 7. Therefore, to use the weighting system, determine the capacity of the servers available at a location, and weight each server by the server’s capacity in relation to each of the other servers.  
 
 ### Adding the LocationServer.xml File to the Extra Files Directory  
- After you have created the LocationServer.xml file, add it to the LiteTouch_x86 and LiteTouch_x64 Windows PE boot images in the *X:\\*Deploy\Control folder. Using the Deployment Workbench, add other files and folders to these Windows PE images by specifying an additional directory to add in the deployment share properties.  
+ After you have created the LocationServer.xml file, add it to the LiteTouch_x86 and LiteTouch_x64 Windows PE boot images in the ***X:\\Deploy\Control folder***. Using the Deployment Workbench, add other files and folders to these Windows PE images by specifying an additional directory to add in the deployment share properties.  
 
  **To add LocationServer.xml to the deployment share**  
 
@@ -2249,7 +2207,7 @@ ParameterCondition=OR
 
 6.  In the Actions pane, click **Properties**.  
 
-7.  In the ***deployment_share*Properties** dialog box (where deployment_share is the name of the deployment share), perform these steps:  
+7.  In the ***deployment_shareProperties*** dialog box (where deployment_share is the name of the deployment share), perform these steps:  
 
     1.  Click the **Windows PE platform Settings** tab (where *platform* is the architecture of the Windows PE image to be configured).  
 
@@ -2266,7 +2224,7 @@ ParameterCondition=OR
 
 3.  In the Actions pane, click **Properties**.  
 
-4.  In the ***deployment_share*Properties** dialog box (where *deployment_share* is the name of the deployment share), click the **Rules** tab, and then click **Edit BootStrap.ini**.  
+4.  In the ***deployment_shareProperties*** dialog box (where *deployment_share* is the name of the deployment share), click the **Rules** tab, and then click **Edit BootStrap.ini**.  
 
 5.  Remove the **DeployRoot** value (for example, **DeployRoot=\\\Server\Deployment$**).  
 
@@ -2330,17 +2288,14 @@ ParameterCondition=OR
 
      The New Task Sequence Wizard starts.  
 
-4.  Complete the New Task Sequence Wizard by using the information in  REF _Ref307491643 \h Table 11. Accept the default values unless otherwise specified.  
+4.  Complete the New Task Sequence Wizard by using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 11. Information for Completing the New Task Sequence Wizard  
-
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General Settings**|1.  In **Task sequence ID**, type **VISTA_EXIST**.<br />2.  In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br />3.  Click **Next**.|  
-    |**Select Template**|In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Replace Task Sequence**, and then click **Next**.|  
-    |**Summary**|Verify that the configuration details are correct, and then click **Next**.|  
-    |**Confirmation**|Click **Finish**.|  
+    |**General Settings** |1.  In **Task sequence ID**, type **VISTA_EXIST**.<br />2.  In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br />3.  Click **Next**.|  
+    |**Select Template** |In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Replace Task Sequence**, and then click **Next**.|  
+    |**Summary** |Verify that the configuration details are correct, and then click **Next**.|  
+    |**Confirmation** |Click **Finish**.|  
 
  The New Task Sequence Wizard finishes, and the **VISTA_EXIST** task sequence is added to the list of task sequences.  
 
@@ -2357,13 +2312,10 @@ ParameterCondition=OR
 
      The New Task Sequence Wizard starts.  
 
-4.  Complete the New Task Sequence Wizard by using the information in  REF _Ref307491711 \h Table 12. Accept the default values unless otherwise specified.  
+4.  Complete the New Task Sequence Wizard by using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 12. Information for Completing the New Task Sequence Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**General Settings**|1.  In **Task sequence ID**, type **VISTA_NEW**.<br />2.  In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br />3.  Click **Next**.|  
     |**Select Template**|In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.|  
     |**Select OS**|In **The following operating system images are available to be deployed with this task sequence**. Select one to use, select ***captured_vista_image*** (where *captured_vista_image* is the captured image the reference computer added to the Operating Systems node in the Deployment Workbench), and then click *Next*.|  
@@ -2389,9 +2341,9 @@ ParameterCondition=OR
 
 4.  In the **Properties** dialog box, click the **Rules** tab.  
 
-5.  On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in  REF _Ref307491838 \h Listing 19. Make any additional modifications the environment requires.  
+5.  On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in the following exampple. Make any additional modifications the environment requires.  
 
-     **Listing  SEQ Equation \\\* ARABIC 19. Customized CustomSettings.ini File**  
+     **Customized CustomSettings.ini File**  
 
     ```  
     [Settings]  
@@ -2478,13 +2430,10 @@ ParameterCondition=OR
 
      Windows PE starts, and then the Windows Deployment Wizard starts.  
 
-2.  Complete the Windows Deployment Wizard using the information in  REF _Ref307492022 \h Table 13. Accept the default values unless otherwise specified.  
+2.  Complete the Windows Deployment Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 13. Information for Completing the Windows Deployment Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Welcome to Deployment**|Click **Run the Deployment Wizard** to install a new operating system, and then click **Next**.|  
     |**Specify Credentials for connecting to network shares.**|1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type **P@ssw0rd**.<br />3.  In **Domain**, type **CORP**.<br />4.  Click **OK**.|  
     |**Select a task sequence to execute on this computer.**|Click *Perform Replace Computer Scenario on Existing Computer*, and then click **Next**.|  
@@ -2514,11 +2463,10 @@ ParameterCondition=OR
 
      Windows PE starts, and then the Windows Deployment Wizard starts.  
 
-2.  Complete the Windows Deployment Wizard by using the information in  REF _Ref307492176 \h Table 14. Accept the default values unless otherwise specified.  
+2.  Complete the Windows Deployment Wizard by using the following information. Accept the default values unless otherwise specified.  
 
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |--|--|
     |**Welcome to Deployment**|Click **Run the Deployment Wizard to install a new operating system**, and then click **Next**.|  
     |**Specify Credentials for connecting to network shares.**|1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type **P@ssw0rd**.<br />3.  In **Domain**, type **CORP**.<br />4.  Click **OK**.|  
     |**Select a task sequence to execute on this computer.**|Click **Perform Replace Computer Scenario on New Computer**, and then click **Next**.|  
@@ -2598,9 +2546,9 @@ ParameterCondition=OR
 ####  <a name="UseZTILogging"></a> Use the ZTIUtility Logging Class  
  The logging class in ZTIUtiliy.vbs provides a simple mechanism for custom code to log status information, warnings, and errors in the same manner as other scripts during a ZTI or LTI deployment. This standardization also ensures that the **LTI Deployment Summary** dialog box correctly reports the status of any custom code that is run.  
 
- REF _Ref307492570 \h Listing 20 illustrates an example custom code script that uses the **oLogging.CreateEntry** and **TestAndFail** functions to log different types of messages, depending on the results of the various script actions.  
+ The following illustrates an example custom code script that uses the **oLogging.CreateEntry** and **TestAndFail** functions to log different types of messages, depending on the results of the various script actions.  
 
- **Listing  SEQ Equation \\\* ARABIC 20. Example Script Using ZTIUtility Logging: ZTI_Example.wsf**  
+ **Example Script Using ZTIUtility Logging: ZTI_Example.wsf**  
 
 ```  
 <job id="ZTI_Example">  
@@ -2680,18 +2628,15 @@ End Class
 >  If you want to continue using scripts that call **ZTIProcess()** with **ProcessResults()**, you can continue to do so. However, certain enhanced error-handling features will not be enabled.  
 
 ####  <a name="UseZTIEnvironment"></a> Use the ZTIUtility Environment Class  
- The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In  REF _Ref307492570 \h Listing 20, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.  
+ The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In preceeding example, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.  
 
 ####  <a name="UseZTIUtility"></a> Use the ZTIUtility Utility Class  
  The ZTIUtility.vbs script contains a number of commonly used utilities that any custom deployment script can use. You can add these utilities to any script the same way as the **oLogging** and **oEnvironment** classes.  
 
- REF _Ref307492634 \h Table 15 details some useful functions available, and their output. For a full list of available functions, refer to the ZTIUtility.vbs file.  
+The following table details some useful functions available, and their output. For a full list of available functions, refer to the ZTIUtility.vbs file.  
 
-### Table  SEQ Table \\* ARABIC 15. Useful ZTI Utility Functions  
-
-|||  
-|-|-|  
 |**Function**|**Output**|  
+|-|-|
 |**oUtility.LocalRootPath**|Returns the path of the root folder being used by the deployment process on the target computer—for example, C:\MININT|  
 |**oUtility.BootDevice**|Returns the system boot device—for example, MULTI(0)DISK(0)RDISK(0)PARTITION(1)|  
 |**oUtility.LogPath**|Returns the path to the logs folder being used during the deployment—for example, C:\MININT\SMSOSD\OSDLOGS|  
@@ -2749,11 +2694,10 @@ End Class
 
      The New Application Wizard starts.  
 
-5.  Complete the New Application Wizard using the information in  REF _Ref307492948 \h Table 16; accept defaults unless otherwise specified.  
+5.  Complete the New Application Wizard using the following information. Accept defaults unless otherwise specified.  
 
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Application Type**|Click **Application without source files or elsewhere on the network**, and then click **Next**.|  
     |**Details**|Complete this page based on the information from the application, and then click **Next**.|  
     |**Command Details**|1.  In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br />2.  In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br />3.  Click **Next**.|  
@@ -2777,7 +2721,7 @@ End Class
 
 5.  In the Actions pane, click **Properties**.  
 
-6.  In the ***task_sequence*Properties** dialog box, click the **Task Sequence** tab.  
+6.  In the ***task_sequenceProperties*** dialog box, click the **Task Sequence** tab.  
 
 7.  In the console tree, go to *group* (where *group* is the group to add the task sequence step).  
 
@@ -2938,7 +2882,7 @@ End Class
 
 4.  In the Actions pane, click **Properties**.  
 
-5.  In the ***task_sequence*Properties** dialog box, on the **Task Sequence** tab, in the details pane, go to State Restore/Windows Update (Pre-Application Installation).  
+5.  In the ***task_sequenceProperties*** dialog box, on the **Task Sequence** tab, in the details pane, go to State Restore/Windows Update (Pre-Application Installation).  
 
 6.  On the **Task Sequence** tab, click **Add**, and then click **New Group**.  
 
@@ -2981,7 +2925,7 @@ End Class
 
 4.  In the Actions pane, click **Properties**.  
 
-5.  In the ***task_sequence*Properties** dialog box, click the **Task Sequence** tab.  
+5.  In the ***task_sequenceProperties*** dialog box, click the **Task Sequence** tab.  
 
 6.  In the details pane, go to State Restore/*hardware_specific_group* (where *hardware_specific_group* is the name of the hardware-specific group where the task sequence step will be added to install the device driver application).  
 
@@ -3013,9 +2957,9 @@ End Class
 
  As part of the initialization process, both the LTI and ZTI process gather information about the computer on which it is running. As part of this process, WMI queries are performed and the values from the **Win32_ComputerSystem** class for make and manufacturer are populated as variables **%Make%** and **%Model%,** respectively.  
 
- These values can be used during processing the CustomSettings.ini file to dynamically read sections of the file depending on the make and model detected.  REF _Ref307493719 \h Listing 21 shows an example of the CustomSettings.ini file.  
+ These values can be used during processing the CustomSettings.ini file to dynamically read sections of the file depending on the make and model detected.  The folowing sample shows an example of the CustomSettings.ini file.  
 
- **Listing  SEQ Equation \\\* ARABIC 21. Sample CustomSettings.ini Configured for a Hardware-Specific Application Installation**  
+ **Sample CustomSettings.ini Configured for a Hardware-Specific Application Installation**  
 
 ```  
 [Settings]  
@@ -3043,11 +2987,11 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
      If the application wizard is used without the **MandatoryApplications** property (for example, **SkipApplications=NO**), it will overwrite applications specified by the **Applications** property.  
 
-     REF _Ref307493719 \h Listing 21 shows how to use the **%Make%** and **%Model%** variable values to dynamically manipulate how the applications list is built. The values for the make and model of each type of hardware can be located using one of the following methods:  
+     The previousi sampole shows how to use the **%Make%** and **%Model%** variable values to dynamically manipulate how the applications list is built. The values for the make and model of each type of hardware can be located using one of the following methods:  
 
 -   **The System Information tool**. Use the System Summary node in this tool to identify the **System Manufacturer** (make) and **System Model** (model).  
 
--   **Windows PowerShell®**. Use the **Get-WMIObject –class Win32_ComputerSystem** cmdlet to determine the make and model of the computer.  
+-   **Windows PowerShell**. Use the **Get-WMIObject –class Win32_ComputerSystem** cmdlet to determine the make and model of the computer.  
 
 -   **Windows Management Instrumentation Command Line**. Use **CSProduct Get Name, Vendor** to return the name (model) and vendor (make) of the computer.  
 
@@ -3150,7 +3094,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
 3.  In the Actions pane, click **Properties**.  
 
-     In the ***deployment_share*Properties** dialog box, click the **Windows PE *platform* Settings** tab (where platform is the architecture of the Windows PE image to be configured).  
+     In the ***deployment_shareProperties*** dialog box, click the **Windows PE *platform* Settings** tab (where platform is the architecture of the Windows PE image to be configured).  
 
 4.  In the **Lite Touch Boot Image Settings** area, select the **Generate a Lite Touch bootable RAM disk ISO image** check box.  
 

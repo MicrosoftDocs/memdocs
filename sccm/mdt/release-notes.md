@@ -17,10 +17,10 @@ manager: angrobe
 ---
 
 
-## Introduction to Release Notes  
+# Microsoft Deployment Toolkit 2013 Release Notes  
  Welcome to the release notes for Microsoft® Deployment Toolkit (MDT) 2013. Read these release notes thoroughly before you install MDT 2013, as they contain information you need to successfully install the toolkit that the MDT 2013 help documentation may not cover.  
 
- This release supports the deployment of the Windows® 8.1, Windows 8, Windows 7, Windows Thin PC, Windows Embedded POSReady 7 (POSReady 7), Windows Server® 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems. See the Microsoft Deployment Toolkit Documentation Library, which is included with MDT 2013, for the complete documentation for this release.  
+ This release supports the deployment of the Windows 8.1, Windows 8, Windows 7, Windows Thin PC, Windows Embedded POSReady 7 (POSReady 7), Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems. See the Microsoft Deployment Toolkit Documentation Library, which is included with MDT 2013, for the complete documentation for this release.  
 
 > [!NOTE]
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
@@ -292,25 +292,19 @@ Hard Disk - (3F0)
 
  WORKAROUND: perform the following steps:  
 
-1.  In the task sequence you want to modify, in the **Preinstall** group, in the **New Computer only** group, immediately before the **Format and Partition Disk** task sequence step for the disk in question, create a task sequence step based on the **Set Task Sequence Variable** task sequence type to force the use of the GPT disk partition system using the information in  REF _Ref332658290 \h Table 1 to complete the **Properties** tab.  
+1.  In the task sequence you want to modify, in the **Preinstall** group, in the **New Computer only** group, immediately before the **Format and Partition Disk** task sequence step for the disk in question, create a task sequence step based on the **Set Task Sequence Variable** task sequence type to force the use of the GPT disk partition system using the following information.
 
-    ### Table  SEQ Table \\* ARABIC 1. Information for Completing the Set Task Sequence Variable Task Sequence Step to Force the Use of GPT Disk Partition System  
-
-    |||  
-    |-|-|  
     |For this setting|Use this value|  
+    |-|-|  
     |Name|Force Use of GPT Disk Partition System|  
     |Description|Force the following Format and Partition Disk task sequence step to use the GPT disk partition system.|  
     |Task Sequence Variable|OSDDiskType|  
     |Value|GPT|  
 
-2.  Immediately after the **Format and Partition Disk** task sequence step, identified in the previous step, create a task sequence step based on the **Set Task Sequence Variable** task sequence type to reset the use of the GPT disk partition system using the information in  REF _Ref332658302 \h Table 2 to complete the **Properties** tab.  
+2.  Immediately after the **Format and Partition Disk** task sequence step, identified in the previous step, create a task sequence step based on the **Set Task Sequence Variable** task sequence type to reset the use of the GPT disk partition system using the following information.
 
-    ### Table  SEQ Table \\* ARABIC 2. Information for Completing the Set Task Sequence Variable Task Sequence Step to Reset Use of GPT Disk Partition System  
-
-    |||  
-    |-|-|  
     |For this setting|Use this value|  
+    |-|-|  
     |Name|Reset Use of GPT Disk Partition System|  
     |Description|Allow any subsequent Format and Partition Disk task sequence steps to use the disk partition system specified by the BIOS.|  
     |Task Sequence Variable|OSDDiskType|  

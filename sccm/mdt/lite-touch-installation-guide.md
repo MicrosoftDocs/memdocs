@@ -198,7 +198,7 @@ manager: angrobe
     |**On this wizard page**|**Do this**|  
     |-|-|  
     |**On this wizard page**|**Do this**|  
-    |OS Type|Click **Full set of source files**, and then click **Next**.|  
+    |**OS Type**|Click **Full set of source files**, and then click **Next**.|  
     |**Source**|In **Source directory**, type ***source_path*** (where *source_path* is the fully qualified path to the Windows 8.1 distribution files), and then click **Next**.|  
     |**Destination**|Click **Next**.|  
     |**Summary**|Click **Next**.|  
@@ -251,7 +251,7 @@ manager: angrobe
 
     |**On this wizard page**|**Do this**|  
     |-|-|  
-    |General Settings|1.  In **Task sequence ID**, type **WIN8_REFERENCE**.<br />2.  In **Task sequence name**, type **Deploy Windows 8.1 to Reference Computer**.<br />3.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**.<br />4.  Click **Next**.|  
+    |**General Settings**|1.  In **Task sequence ID**, type **WIN8_REFERENCE**.<br />2.  In **Task sequence name**, type **Deploy Windows 8.1 to Reference Computer**.<br />3.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**.<br />4.  Click **Next**.|  
     |**Select Template**|In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.|  
     |**Select OS**|In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **Windows 8.1 *edition*** (where *edition* is the edition of Windows 8.1 added to the Operating Systems node in the Deployment Workbench), and then click **Next**.|  
     |**Specify Product Key**|Click **Do not specify a product key at this time**, and then click **Next**.|  
@@ -351,7 +351,7 @@ manager: angrobe
     |**On this wizard page**|**Do this**|  
     |-|-|  
     |**Welcome**|Click **Run the Deployment Wizard to install a new Operating System**.|  
-    |Credentials|1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type **P@ssw0rd**.<br />3.  In **Domain**, type **MDT2013**.<br />4.  Click **OK**.|  
+    |**Credentials**|1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type **P@ssw0rd**.<br />3.  In **Domain**, type **MDT2013**.<br />4.  Click **OK**.|  
     |**Task Sequence**|Click **Deploy Windows 8.1 to Reference Computer**, and then click **Next**.|  
     |**Computer Details**|In **Computer name**, **type WDG-REF-01**, and then click **Next**.|  
     |**Move Data and Settings**|Click **Next**.|  
@@ -391,7 +391,7 @@ manager: angrobe
     |**Progress**|The overall progress of the task sequence. The progress bar indicates how many task sequence steps have been run out of the total number of task sequence steps.|  
     |**Start**|The time the deployment process started.|  
     |**End**|The time the deployment process ended.|  
-    |Elapsed|The length of time the deployment process has been running or took to run if the deployment process has finished.|  
+    |**Elapsed**|The length of time the deployment process has been running or took to run if the deployment process has finished.|  
     |**Errors**|The number of errors encountered during the deployment process.|  
     |**Warnings**|The number of warnings encountered during the deployment process.|  
     |**Remote Desktop**|This button allows you to establish a remote desktop connection with the computer being deployed using the Windows Remote Desktop feature. This method assumes that:<br /><br /> -   The target operating system is running and has remote desktop support enabled<br />-   **mstsc.exe** is in the path **Note:**  This button is always visible but may not be able to establish a remote desktop session if the monitored computer is running Windows PE, has not completed installation of the target operating system, or does not have the Remote Desktop feature enabled.|  
@@ -512,7 +512,7 @@ manager: angrobe
     |**Computer Details**|In **Computer name**, type **WDG-CLI-01**, and then click **Next**.|  
     |**Move Data and Settings**|Click **Next**.|  
     |**User Data (Restore)**|Click **Next**.|  
-    |Locale and Time|Click Next.|  
+    |**Locale and Time**|**Click Next**.|  
     |**Capture Image**|Click **Next**.|  
     |**BitLocker**|Click **Next**.|  
     |**Ready**|1.  Click **Details** to view the information provided in the wizard.<br />2.  Click **Begin**.|  
