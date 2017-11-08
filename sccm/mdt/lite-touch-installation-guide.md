@@ -18,8 +18,8 @@ manager: angrobe
 
 
 
-## Introduction to Quick Start Guide for Lite Touch Installation  
- Microsoft® Deployment Toolkit (MDT) 2013 provides technology for deploying Windows® operating systems, and Microsoft Office. This guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system through Lite Touch Installation (LTI) using bootable media (DVD or USB flash drive). This guide demonstrates how to perform the New Computer deployment scenario using an MDT 2013 deployment share. The New Computer deployment scenario covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
+## Quick Start Guide for Lite Touch Installation  
+ Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system through Lite Touch Installation (LTI) using bootable media (DVD or USB flash drive). This guide demonstrates how to perform the New Computer deployment scenario using an MDT 2013 deployment share. The New Computer deployment scenario covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
 > [!NOTE]
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server® 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
@@ -50,13 +50,11 @@ manager: angrobe
 >  The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is normally available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile removes the Create Global Object right and should not be applied to computers being deployed using MDT until the MDT process is complete.  
 
 ### Computer Configuration  
- To complete this guide, set up the computers listed in  REF _Ref300064295 \h Table 1. These computers can be either physical computers or virtual machines (VMs) with the system resources designated.  
+ To complete this guide, set up the computers listed in the following table. These computers can be either physical computers or virtual machines (VMs) with the system resources designated.  
 
-### Table  SEQ Table \\* ARABIC 1. Computers Used in This Guide  
 
-|||  
-|-|-|  
 |**Computer name**|**Description**|  
+|-|-|  
 |WDG-MDT-01|This computer runs MDT and Windows 8.1 and is installed in a domain named *mdt2013.corp.woodgrovebank.com* with a network basic input/output system (NetBIOS) name of *MDT2013*. The system resources of the computer are:<br /><br /> -   Processor running at 1.4 gigahertz (GHz) or faster.<br />-   1 gigabyte (GB) or greater physical memory.<br />-   One disk partition that has 16 GB or more available disk space that will become the drive C partition.<br />-   One CD-ROM or DVD-ROM drive that will be assigned the drive letter D.|  
 |WDG-REF-01|This is the reference computer and runs no current operating system. The system resources of the computer are:<br /><br /> -   Processor running at 1.4 GHz or faster.<br />-   1 GB or more of physical memory.<br />-   16 GB or more of available disk space.|  
 |WDG-CLI-01|This is the target computer and runs no current operating system. The system resources of the computer are:<br /><br /> -   Processor running at 1.4 GHz or faster.<br />-   1 GB or more of physical memory.<br />-   16 GB or more of available disk space.|  
@@ -98,13 +96,10 @@ manager: angrobe
 
      The Microsoft Deployment Toolkit 2013 Setup Wizard starts.  
 
-2.  Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the information in  REF _Ref301353038 \h Table 2. Accept the default values unless otherwise specified.  
+2.  Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 2. Information for Completing the Microsoft Deployment Toolkit 2013 Setup Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Next**.|  
     |**End-User License Agreement**|Click **I accept the terms in the License Agreement**, and then click **Next**.|  
     |**Custom Setup**|Click **Next**.|  
@@ -123,13 +118,10 @@ manager: angrobe
 
      The Assessment and Deployment Kit Setup Wizard starts.  
 
-3.  Complete the Assessment and Deployment Kit Setup Wizard using the information in  REF _Ref300064894 \h Table 3.  
+3.  Complete the Assessment and Deployment Kit Setup Wizard using the following information.
 
-    ### Table  SEQ Table \\* ARABIC 3. Information for Completing the Assessment and Deployment Kit Setup Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Specify Location**|Click **Next**.|  
     |**Join the Customer Experience Improvement Program (CEIP)**|Click **Yes** if you want to participate or **No** if not. Then, click **Next**.|  
     |**License Agreement**|Click **Accept**.|  
@@ -174,13 +166,10 @@ manager: angrobe
 
      The New Deployment Share Wizard starts.  
 
-4.  Complete the New Deployment Share Wizard using the information in  REF _Ref300065286 \h Table 4.  
+4.  Complete the New Deployment Share Wizard using the following information.
 
-    ### Table  SEQ Table \\* ARABIC 4. Information for Completing the New Deployment Share Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Path**|In **Deployment share path**, type **C:\DeploymentShare$**, and then click **Next**.|  
     |**Share**|Click **Next**.|  
     |**Descriptive Name**|Click **Next**.|  
@@ -204,11 +193,9 @@ manager: angrobe
 
      The Import Operating System Wizard starts.  
 
-4.  Complete the Import Operating System Wizard using the information in  REF _Ref300065381 \h Table 5.  
+4.  Complete the Import Operating System Wizard using the following information.    
 
-    ### Table  SEQ Table \\* ARABIC 5. Information for Completing the Import Operating System Wizard  
-
-    |||  
+    |**On this wizard page**|**Do this**|  
     |-|-|  
     |**On this wizard page**|**Do this**|  
     |OS Type|Click **Full set of source files**, and then click **Next**.|  
@@ -236,13 +223,10 @@ manager: angrobe
 
      The Import Driver Wizard starts.  
 
-4.  Complete the Import Driver Wizard using the information in  REF _Ref300065572 \h Table 6.  
+4.  Complete the Import Driver Wizard using the following information.
 
-    ### Table  SEQ Table \\* ARABIC 6. Information for Completing the Import Driver Wizard  
-
-    |||  
+    |**On this wizard page**|**Do this**|
     |-|-|  
-    |**On this wizard page**|**Do this**|  
     |**Specify Directory**|In **Driver source directory**, type ***driver_path*** (where *driver_path* is the fully qualified path to the folder containing the device drivers), and then click **Next**.|  
     |**Summary**|Click **Next**.|  
     |Progress|The progress for importing the device drivers is displayed.|  
@@ -263,18 +247,15 @@ manager: angrobe
 
      The New Task Sequence Wizard starts.  
 
-4.  Complete the New Task Sequence Wizard using the information in  REF _Ref300065638 \h Table 7. Accept the default values unless otherwise specified.  
+4.  Complete the New Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.
 
-    ### Table  SEQ Table \\* ARABIC 7. Information for Completing the New Task Sequence Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |General Settings|1.  In **Task sequence ID**, type **WIN8_REFERENCE**.<br />2.  In **Task sequence name**, type **Deploy Windows 8.1 to Reference Computer**.<br />3.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**.<br />4.  Click **Next**.|  
     |**Select Template**|In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.|  
     |**Select OS**|In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **Windows 8.1 *edition*** (where *edition* is the edition of Windows 8.1 added to the Operating Systems node in the Deployment Workbench), and then click **Next**.|  
     |**Specify Product Key**|Click **Do not specify a product key at this time**, and then click **Next**.|  
-    |**OS Settings**|1.  In **Full Name**, type **Woodgrove Bank Employee**.<br /><br /> 1.  In **Organization**, type **Woodgrove Bank**.<br /><br /> 1.  In **Internet Explorer Home Page**, type **http://www.woodgrovebank.com**.<br /><br /> 1.  Click **Next**.|  
+    |**OS Settings**|1.  In **Full Name**, type **Woodgrove Bank Employee**.<br /><br /> 2.  In **Organization**, type **Woodgrove Bank**.<br /><br /> 3.  In **Internet Explorer Home Page**, type **http://www.woodgrovebank.com**.<br /><br /> 4.  Click **Next**.|  
     |**Admin Password**|In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then click **Next**.|  
     |**Summary**|Click **Next**.|  
     |**Progress**|The progress for creating the task sequence is displayed.|  
@@ -318,13 +299,10 @@ manager: angrobe
 
      The Update Deployment Share Wizard starts.  
 
-5.  Complete the Update Deployment Share Wizard using the information in  REF _Ref300065739 \h Table 8. Accept the default values unless otherwise specified.  
+5.  Complete the Update Deployment Share Wizard using the following information. Accept the default values unless otherwise specified.
 
-    ### Table  SEQ Table \\* ARABIC 8. Information for Completing the Update Deployment Share Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Options**|Click **Next**.|  
     |**Summary**|Click **Next**.|  
     |**Progress**|The progress for updating the deployment share is displayed.|  
@@ -368,13 +346,10 @@ manager: angrobe
 
      Windows PE starts, and then the Windows Deployment Wizard starts.  
 
-2.  Complete the Windows Deployment Wizard using the information in  REF _Ref300067108 \h Table 9. Accept the default values unless otherwise specified.  
+2.  Complete the Windows Deployment Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 9. Information for Completing the Windows Deployment Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Welcome**|Click **Run the Deployment Wizard to install a new Operating System**.|  
     |Credentials|1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type **P@ssw0rd**.<br />3.  In **Domain**, type **MDT2013**.<br />4.  Click **OK**.|  
     |**Task Sequence**|Click **Deploy Windows 8.1 to Reference Computer**, and then click **Next**.|  
@@ -405,13 +380,10 @@ manager: angrobe
 
      The **WDG-REF-01 Properties** dialog box is displayed.  
 
-7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in  REF _Ref308167766 \h Table 10.  
+7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in the following table.
 
-    ### Table  SEQ Table \\* ARABIC 10. Monitoring Information About the Deployment Process  
-
-    |||  
-    |-|-|  
     |**Information**|**Description**|  
+    |-|-|  
     |**ID**|Unique identifier for the computer being deployed.|  
     |**Computer Name**|The name of the computer being deployed.|  
     |**Deployment status**|The current status of the computer being deployed; the status can be one of the following:<br /><br /> -   **Running**. The task sequence is healthy and running.<br />-   **Failed**. The task sequence failed, and the deployment process was unsuccessful.<br />-   **Completed**. The task sequence has finished.<br />-   **Unresponsive**. The task sequence has not updated its status in the past four hours and is assumed to be nonresponsive.|  
@@ -464,13 +436,10 @@ manager: angrobe
 
      The Import Operating System Wizard starts.  
 
-4.  Complete the Import Operating System Wizard using the information in  REF _Ref300067225 \h Table 11.  
+4.  Complete the Import Operating System Wizard using the information in the following table.
 
-    ### Table  SEQ Table \\* ARABIC 11. Information for Completing the Import Operating System Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**OS Type**|Click **Custom image file**, and then click **Next**.|  
     |**Image**|In **Source file**, type **C:\DeploymentShare$\Captures\WIN8_REFERENCE.wim**, and then click **Next**.|  
     |**Setup**|Click **Next**.|  
@@ -496,13 +465,10 @@ manager: angrobe
 
      The New Task Sequence Wizard starts.  
 
-4.  Complete the New Task Sequence Wizard using the information in  REF _Ref300067297 \h Table 12. Accept the default values unless otherwise specified.  
+4.  Complete the New Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.
 
-    ### Table  SEQ Table \\* ARABIC 12. Information for Completing the New Task Sequence Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**General Settings**|1.  In **Task sequence ID**, type **WIN8_TARGET**.<br />2.  In **Task sequence name**, type **Deploy Captured Image to Target Computer**.<br />3.  In **Task sequence comments**, type **Task sequence for captured Windows 8.1 image from reference computer (WDG-REF-01) to the target computer (WDG-CLI-01)**.<br />4.  Click **Next**.|  
     |**Select Template**|In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select Standard **Client Task Sequence**, and then click **Next**.|  
     |**Select OS**|In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **WIN8_RERENCEDrive in “WIN8_REFERENCE\WIN8_REFERENCE.wim”**, and then click **Next**.|  
@@ -536,13 +502,10 @@ manager: angrobe
 
      Windows PE starts, and then the Windows Deployment Wizard starts.  
 
-2.  Complete the Windows Deployment Wizard using the information in  REF _Ref300067405 \h Table 13. Accept the default values unless otherwise specified.  
+2.  Complete the Windows Deployment Wizard using the following information. Accept the default values unless otherwise specified.   
 
-    ### Table  SEQ Table \\* ARABIC 13. Information for Completing the Windows Deployment Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Welcome**|Click **Run the Deployment Wizard to install a new Operating System**.|  
     |**Credentials**|1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type **P@ssw0rd**.<br />3.  In **Domain**, type **MDT2013**.<br />4.  Click **OK**.|  
     |**Task Sequence**|Click **Deploy Captured Image to Target Computer**, and then click **Next**.|  

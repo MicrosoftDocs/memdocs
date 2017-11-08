@@ -16,7 +16,7 @@ manager: angrobe
 
 ---
 # What's new in Microsoft Deployment Toolkit (MDT) 2013 Guide
-Microsoft® Deployment Toolkit (MDT) 2013 is the next version of the Microsoft Solution Accelerator for operating system and application deployment. The purpose of this guide is to explain the changes in MDT 2013 from MDT 2012 Update 1.  
+Microsoft Deployment Toolkit (MDT) 2013 is the next version of the Microsoft Solution Accelerator for operating system and application deployment. The purpose of this guide is to explain the changes in MDT 2013 from MDT 2012 Update 1.  
 
  This guide specifically discusses the MDT 2013 release and assumes familiarity with previous MDT version concepts, features, and capabilities.  
 

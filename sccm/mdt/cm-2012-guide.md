@@ -17,7 +17,7 @@ manager: angrobe
 ---
 
 
-## Introduction to Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  
+# Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system with Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
 > [!NOTE]     
@@ -361,7 +361,7 @@ manager: angrobe
   |**Update Progress**|The progress is displayed on the wizard page as the update is performed.|  
   |**Complete**|Click **Close**.|  
 
-The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to restart the computer to complete the setup.  
+  The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to restart the computer to complete the setup.  
 
 7.  In the **Install a SQL Server 2008 R2 update** dialog box, click **OK**.  
 
@@ -904,7 +904,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
      The Import Computer Information Wizard starts.  
 
 5.  Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
-  
+
   |**On this wizard page**|**Do this**|  
   |-|-|  
   |**Select Source**|Click **Import single computer**, and then click **Next**.|  
@@ -932,13 +932,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Create Device Collection Wizard starts.  
 
-5.  Complete the Create Device Collection Wizard using the information in  REF _Ref302036170 \h Table 25. Accept the default values unless otherwise specified.  
+5.  Complete the Create Device Collection Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 25. Information for Completing the Create Device Collection Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Reference Computer**.</li><li>In **Comment**, type **Computer that is to be the reference computer for the target computers to be deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
     |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-REF-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-REF-01**, and then click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Progress** page, view the progress for creating the new membership rule.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
     |**Summary**|1.  Review the information in the **Details** box that that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
@@ -950,8 +947,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="DeployRefCompTaskSeq"></a> Step 4-3: Deploy the Reference Computer Task Sequence  
  In the Configuration Manager console, deploy the task sequence created earlier in the process to the device collection that includes the reference computer created earlier in the process.  
 
- **To deploy the task sequence**  
-
+#### To deploy the task sequence
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
 2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
@@ -964,13 +960,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the information in  REF _Ref303164893 \h Table 26. Accept the default values unless otherwise specified.  
+6.  Complete the Deploy Software Wizard using the following information. Accept the default values unless otherwise specified.
 
-    ### Table  SEQ Table \\* ARABIC 26. Information for Completing the Deploy Software Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Reference Computer**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the reference computer and then capture an image of the reference computer**.<br />4.  Click **Next**.|  
     |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
     |**Deployment Settings: Schedule**|Click **Next**.|  
@@ -986,7 +979,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="CreateTaskSeqBootMedia"></a> Step 4-4: Create the Task Sequence Bootable Media  
  To initiate the MDT process, provide a method for starting the computer with Windows PE and the necessary software by creating the task sequence bootable media disk. Use the Task Sequence Media Wizard in the Configuration Manager console to create bootable media for storage on a USB flash drive, CD, or DVD.  
 
- **To create a task sequence bootable media disk**  
+#### To create a task sequence bootable media disk  
 
 1.  Click **Start**, point to **All Programs**, and then point to Microsoft System Center 2012. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -998,13 +991,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Create Task Sequence Media Wizard starts.  
 
-5.  Complete the Create Task Sequence Media Wizard using the information in  REF _Ref303165066 \h Table 27. Accept the default values unless otherwise specified.  
+5.  Complete the Create Task Sequence Media Wizard using the following information. Accept the default values unless otherwise specified.
 
-    ### Table  SEQ Table \\* ARABIC 27. Information for Completing the Create Task Sequence Media Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Select Media Type**|1.  Click **Bootable media**.<br />2.  Clear the **Allow unattended operating system deployment** check box.<br />3.  Click **Next**.|  
     |**Select Media Type: Media Management**|Click **Site-based media**, and then click **Next**.|  
     |**Select Media Type: Media Type**|In **Media file**, type **\\\WDG-MDT-01\Capture$\CM2012_TS_Boot_Media.iso**, and then click **Next**.|  
@@ -1015,7 +1005,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
     |**Progress**|The progress for creating the task sequence media is displayed.|  
     |**Completion**|Click **Close**.|  
 
-     The wizard creates the CM2012_TS_Boot_Media.iso file in the WDG-MDT-01Capture$ shared folder.  
+    The wizard creates the CM2012_TS_Boot_Media.iso file in the WDG-MDT-01Capture$ shared folder.  
 
 6.  If WDG-REF-01 is a physical computer, create a CD or DVD of the International Organization for Standardization (ISO) file. If WDG-REF-01 is a VM, start the VM directly from the ISO file.  
 
@@ -1024,26 +1014,23 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="StartRefCompwithTaskSeqBootMedia"></a> Step 4-5: Start the Reference Computer with the Task Sequence Bootable Media  
  Start the reference computer (WDG-REF-01) with the task sequence bootable media disk created earlier in the process. This medium starts Windows PE on the reference computer and initiates the MDT process. At the end of the MDT process, Windows 8.1 is deployed on the reference computer and an image of the reference computer is saved to \WDG-MDT-01\Capture$\WDG-REF-01.wim.  
 
-> [!NOTE]
+> [!NOTE]   
 >  You can also initiate the MDT process by starting the target computer from Windows Deployment Services.  
 
- **To start the reference computer with the task sequence bootable media**  
+#### To start the reference computer with the task sequence bootable media
 
 1.  Start WDG-REF-01 with the task sequence bootable media created earlier in the process.  
 
      Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard using the information in  REF _Ref303165274 \h Table 28. Accept the default values unless otherwise specified.  
+2.  Complete the Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 28. Information for Completing the Task Sequence Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Welcome to the Task Sequence Wizard**|In **Password**, type **P@ssw0rd**, and then click **Next**.|  
     |**Select a Task Sequence**|In the list box, select **Windows 8.1 Reference Deployment**, and then click **Next**.|  
 
- **To monitor the reference computer deployment process using the Deployment Workbench, complete the following steps on WDG-MDT-01**  
+#### To monitor the reference computer deployment process using the Deployment Workbench, complete the following steps on WDG-MDT-01
 
 1.  On WDG-MDT-01, click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
@@ -1061,13 +1048,11 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The **WDG-REF-01 Properties** dialog box is displayed.  
 
-7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in  REF _Ref308167766 \h Table 29.  
+7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as follows:
 
-    ### Table  SEQ Table \\* ARABIC 29. Monitoring Information About the Deployment Process  
 
-    |||  
-    |-|-|  
     |**Information**|**Description**|  
+    |-|-|  
     |**ID**|Unique identifier for the computer being deployed.|  
     |**Computer Name**|The name of the computer being deployed.|  
     |**Deployment status**|The current status of the computer being deployed; the status can be one of the following:<br /><br /> -   **Running**. The task sequence is healthy and running.<br />-   **Failed**. The task sequence failed, and the deployment process was unsuccessful.<br />-   **Completed**. The task sequence has finished.<br />-   **Unresponsive**. The task sequence has not updated its status in the past four hours and is assumed to be nonresponsive.|  
@@ -1088,7 +1073,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 9. Close the Deployment Workbench.  
 
- **To monitor the reference computer deployment process using the Get-MDTMonitorData cmdlet, complete the following steps on WDG-MDT-01**  
+#### To monitor the reference computer deployment process using the Get-MDTMonitorData cmdlet, complete the following steps on WDG-MDT-01
 
 1.  On WDG-MDT-01, click **Start**, the click **Administrative Tools**, and then click **Windows PowerShell Modules**.  
 
@@ -1169,11 +1154,9 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Add Operating System Image Wizard starts.  
 
-5.  Complete the Add Operating System Image Wizard using the information in  REF _Ref306177237 \h Table 30. Accept the default values unless otherwise specified.  
+5.  Complete the Add Operating System Image Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 30. Information for Completing the Add Operating System Image Wizard  
-
-    |||  
+    |**On this wizard page**|**Do this**|  
     |-|-|  
     |**On this wizard page**|**Do this**|  
     |**Data Source**|In **Path**, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**, and then click **Next**.|  
@@ -1190,13 +1173,13 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 8.  Record the image index that contains Windows 8.1.  
 
-    > [!TIP]
+    > [!TIP]    
     >  For the purposes of this example, image index 2 should have the Windows 8.1 operating system.  
 
 ###  <a name="CreateMDTTaskSeqDeployCapturedImage"></a> Step 5-2: Create an MDT Task Sequence to Deploy the Captured Image  
  After the image is captured, create a task sequence to deploy the captured image of the reference computer (WDG-REF-01) to the target computer (WDG-CLI-01). Most of the packages needed for this task sequence were created earlier in the process. However, you must create a new MDT Custom Settings package that has the proper configuration settings for the target computer and creates an operating system image of the captured image of the reference computer.  
 
- **To create a task sequence template to deploy the captured image to the target computer**  
+#### To create a task sequence template to deploy the captured image to the target computer  
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1208,13 +1191,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Create MDT Task Sequence Wizard starts.  
 
-5.  Complete the Create MDT Task Sequence Wizard using the information in  REF _Ref303165466 \h Table 31. Accept the default values unless otherwise specified.  
+5.  Complete the Create MDT Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 31. Information for Completing the Create MDT Task Sequence Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Choose Template**|Select **Client Task Sequence**, and then click **Next**.|  
     |**Choose Template: General**|1.  In **Task sequence name**, type **Windows 8.1 Target Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying captured reference computer image to the target computer (WDG-CLI-01)**, and then click **Next**.|  
     |**Choose Template: Details**|<ol><li>Click **Join a domain**.</li><li>In **Domain**, type **mdt2013.corp.woodgrovebank.com**.</li><li>In **Account**, click **Set**, and then complete the **Windows User Account** dialog box by performing the following steps:<br /><br /> <ol><li>In **User name**, type **MDT2013\Administrator**.</li><li>In **Password** and **Confirm password**, type **P@ssw0rd**.</li><li>Click **OK**.</li></ol></li><li>In **User name**, type **Woodgrove Bank Employee**.</li><li>In **Organization name**, type **Woodgrove Bank**.</li><li>In **Product key**, type ***product_key*** (where *product_key* is the product key for Windows 8.1).</li><li>Click **Next**.</li></ol>|  
@@ -1241,7 +1221,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 > [!NOTE]
 >  In this sample, there is only one distribution point (WDG-MDT-01). However, most production networks have multiple distribution points. When performing this step in a production environment, select the appropriate distribution points for the network.  
 
- **To select the distribution points for software distribution packages**  
+#### To select the distribution points for software distribution packages  
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1255,13 +1235,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Distribute Content Wizard starts.  
 
-6.  Complete the Distribute Content Wizard using the information in  REF _Ref307405384 \h Table 32. Accept default values unless otherwise specified.  
+6.  Complete the Distribute Content Wizard using the following information. Accept default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 32. Information for Completing the Distribute Content Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**General**|Click **Next**.|  
     |**Content**|Click **Next**.|  
     |**General: Content**|Click **Next**.|  
@@ -1277,11 +1254,11 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
  When the CustomSettings.ini file has been customized, save the updated files to the source folder for the MDT Custom Settings package created earlier in the process (E:\Packages$\CustomSettings_Target).  
 
- **To customize the MDT configuration files for the target computer**  
+#### To customize the MDT configuration files for the target computer  
 
 1.  In Windows Explorer, go to E:\Packages$\CustomSettings_Target folder, and then double-click **CustomSettings.ini**.  
 
-2.  Open Notepad, and then add the following lines to the CustomSettings.ini file, as shown in  REF _Ref303166402 \h Listing 2:  
+2.  Open Notepad, and then add the following lines to the CustomSettings.ini file:  
 
     ```  
     EventService=http://WDG-MDT-01:9800  
@@ -1292,7 +1269,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
     > [!NOTE]
     >  Make any other changes that are required by your environment.  
 
-     **Listing  SEQ Equation * ARABIC 2. Default CustomSettings.ini File**  
+     **Example of the edited CustomSettings.ini File:**  
 
     ```  
     [Settings]  
@@ -1313,7 +1290,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="UpdateDistroPointsforCustomSettings"></a> Step 5-5: Update the Distribution Points for the Custom Settings Package  
  When the source folder has been updated for the MDT Target Computer Custom Settings package in Configuration Manager, update the distribution points for the MDT Target Computer Custom Settings package. Updating the distribution points copies the updated version of the CustomSettings.ini file to the deployment shares specified in the package.  
 
- **To update the distribution points for the Custom Settings package**  
+#### To update the distribution points for the Custom Settings package  
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1334,7 +1311,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="CustomizeTaskSequenceTargetComputer"></a> Step 5-6: Customize the Task Sequence for the Target Computer  
  For most deployments, the Windows 8.1 Target Deployment task sequence created earlier in the process performs all the necessary steps without modification. In this sample, modify the task sequence template to set the password for the local Administrator account to a known value. (By default, the task sequence sets the password for the local Administrator account to a random value.) The task sequence may require further customization depending on the environment.  
 
- **To customize the Windows 8.1 Target Deployment task sequence**  
+#### To customize the Windows 8.1 Target Deployment task sequence
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1358,6 +1335,8 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 10. Close all open windows and dialog boxes.  
 
+
+
 ## Step 6: Deploy the Captured Image of the Reference Computer to the Target Computer  
  When you have captured the image of the reference computer and created and configured the task sequence, deploy the captured image. Configure MDT to provide all the necessary configuration settings to deploy to the target computer. After initiating the deployment process, the image of the reference computer running Windows 8.1 is automatically deployed to the target computer and configured with the settings defined.  
 
@@ -1374,7 +1353,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="AddTargetComptoConfigManager"></a> Step 6-1: Add the Target Computer to the Configuration Manager Site Database  
  To deploy an operating system without stand-alone media to a new computer that Configuration Manager does not currently manage, add the new computer to the Configuration Manager site database prior to initiating the operating system deployment process. Configuration Manager can automatically discover computers on the network that have a Windows operating system installed; however, if the computer has no operating system installed, use the Import Computer Information Wizard to import the new computer information.  
 
- **To add the target computer to the Configuration Manager site database**  
+#### To add the target computer to the Configuration Manager site database  
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1386,13 +1365,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Import Computer Information Wizard starts.  
 
-5.  Complete the Import Computer Information Wizard using the information in  REF _Ref303167645 \h Table 33. Accept the default values unless otherwise specified.  
+5.  Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 33. Information for Completing Import Computer Information Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**Select Source**|Click **Import single computer**, and then click **Next**.|  
     |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-CLI-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer, WDG-CLI-01).<br />3.  Click **Next**.|  
     |**Select Source: Data Preview**|Click **Next**.|  
@@ -1406,7 +1382,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="CreateComputerCollectionIncludesTarget"></a> Step 6-2: Create a Computer Collection That Includes the Target Computer  
  In the Configuration Manager console, create a collection that includes the target computer (WDG-CLI-01). You use this computer collection later when advertising the task sequence created earlier in the process.  
 
- **To create a computer collection that includes the target computer**  
+#### To create a computer collection that includes the target computer
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1418,11 +1394,9 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Create Device Collection Wizard starts.  
 
-5.  Complete the Create Device Collection Wizard using the information in  REF _Ref303167993 \h Table 34. Accept the default values unless otherwise specified.  
+5.  Complete the Create Device Collection Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 34. Information for Completing the Create Device Collection Wizard  
-
-    |||  
+    |**On this wizard page**|**Do this**|  
     |-|-|  
     |**On this wizard page**|**Do this**|  
     |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Batch 01**.</li><li>In **Comment**, type **Computers that are to be included in the first batch of computers deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In the **Select Collection** dialog box, in **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
@@ -1436,7 +1410,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 ###  <a name="DeployTargetComputerTaskSequence"></a> Step 6-3: Deploy the Target Computer Task Sequence  
  In the Configuration Manager console, deploy the task sequence created earlier in the process for the target computers. Deploy the task sequence to the collection of target computers created earlier in the process.  
 
- **To deploy the task sequence**  
+#### To deploy the task sequence  
 
 1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
@@ -1450,13 +1424,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the information in  REF _Ref303169719 \h Table 35. Accept the default values unless otherwise specified.  
+6.  Complete the Deploy Software Wizard using the following information.  Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 35. Information for Completing the Deploy Software Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|  
     |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Batch 01**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the first batch of target computers**.<br />4.  Click **Next**.|  
     |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
     |**Deployment Settings: Schedule**|Click **Next**.|  
@@ -1475,23 +1446,20 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 > [!NOTE]
 >  You can also initiate the MDT process by starting the target computer from Windows Deployment Services.  
 
- **To start the target computer with the task sequence bootable media**  
+#### To start the target computer with the task sequence bootable media
 
 1.  Start WDG-CLI-01 with the task sequence bootable media created earlier in the process.  
 
      Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard using the information in  REF _Ref303169891 \h Table 36. Accept the default values unless otherwise specified.  
+2.  Complete the Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 36. Information for Completing the Task Sequence Wizard  
-
-    |||  
-    |-|-|  
     |**On this wizard page**|**Do this**|  
+    |-|-|      
     |**Welcome to the Task Sequence Wizard**|In **Password**, type **P@ssw0rd**, and then click **Next**.|  
     |**Select a Task Sequence**|In the list box, select **Windows 8.1 Target Deployment**, and then click **Next**.|  
 
- **To monitor the reference computer deployment process using the Deployment Workbench**  
+#### To monitor the reference computer deployment process using the Deployment Workbench
 
 1.  On WDG-MDT-01, click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
@@ -1509,13 +1477,10 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
      The **WDG-CLI-01 Properties** dialog box is displayed.  
 
-7.  In the **WDG-CLI-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in  REF _Ref326954317 \h Table 37.  
+7.  In the **WDG-CLI-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in the following table:
 
-    ### Table  SEQ Table \\* ARABIC 37. Monitoring Information About the Deployment Process  
-
-    |||  
-    |-|-|  
     |**Information**|**Description**|  
+    |-|-|  
     |**ID**|Unique identifier for the computer being deployed.|  
     |**Computer Name**|The name of the computer being deployed.|  
     |**Deployment status**|The current status of the computer being deployed; the status can be one of the following:<br /><br /> -   **Running**. The task sequence is healthy and running.<br />-   **Failed**. The task sequence failed, and the deployment process was unsuccessful.<br />-   **Completed**. The task sequence has finished.<br />-   **Unresponsive**. The task sequence has not updated its status in the past four hours and is assumed to be nonresponsive.|  
@@ -1536,7 +1501,7 @@ The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to 
 
 9. Close the Deployment Workbench.  
 
- **To monitor the reference computer deployment process using the Get-MDTMonitorData cmdlet**  
+#### To monitor the reference computer deployment process using the Get-MDTMonitorData cmdlet
 
 1.  On WDG-MDT-01, click **Start**, point to **Administrative Tools**, and then click **Windows PowerShell Modules**.The Windows PowerShell Modules command prompt opens.  
 
