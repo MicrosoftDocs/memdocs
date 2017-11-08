@@ -24,9 +24,13 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
- In System Center Configuration Manager, you can view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 systems are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their Semi-Annual Channel (formerly Current Branch and Current Branch for Business) build.  
+ # Manage Windows as a service using System Center Configuration Manager
 
- For more information about Windows 10 servicing options, see  [Overview of Windows as a Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).  
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+ In System Center Configuration Manager, you can view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch systems are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB).  
+
+ For more information about Windows 10 servicing options, see  [Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
  Use the following sections to manage Windows as a service.
 
@@ -43,7 +47,7 @@ manager: angrobe
 
      The following Windows 10 branch and build information is discovered and stored in the following attributes:  
 
-    -   **Operating System Readiness Branch**: Specifies the operating system branch. For example, **0** = Semi-Annual Channel - Targeted (do not defer updates), **1** = Semi-Annual Channel (defer updates), **2** = Long-Term Servicing Channel (LTSC - formerly Long Term Servicing Branch).
+    -   **Operating System Readiness Branch**: Specifies the operating system branch. For example, **0** = CB (no not defer upgrades), **1** = CBB (defer upgrades), **2** = Long Term Servicing Branch (LTSB)
 
     -   **Operating System Build**: Specified the operating system build. For example, **10.0.10240** (RTM) or **10.0.10586** (version 1511)  
 
@@ -60,7 +64,7 @@ manager: angrobe
 
 -   **Windows 10 Usage tile**:  Provides a breakdown of public builds of Windows 10. Windows Insiders builds are listed as **other** as well as any builds that are not yet known to your site. The service connection point will download metadata that informs it about the Windows builds, and then  this data is compared against discovery data.  
 
--   **Windows 10 Rings tile**:  Provides a breakdown of Windows 10 by branch and readiness state . The LTSB segment will be all LTSC versions (whereas the first tile breaks down the specific versions. For example, Windows 10 LTSC 2015. The **Release Ready** segment corresponds to Semi-Annual Channel (targeted), and the **Business ready** segment is Semi-Annual Channel.  
+-   **Windows 10 Rings tile**:  Provides a breakdown of Windows 10 by branch and readiness state . The LTSB segment will be all LTSB versions (whereas the first tile breaks down the specific versions. For example, Windows 10 LTSB 2015. The **Release Ready** segment corresponds to CB, and the **Business ready** segment is CBB.  
 
 -   **Create Service Plan tile**:   Provides a quick way to create a servicing plan. You specify the name, collection (only displays the top ten collections by size, smallest first), deployment package (only displays the top ten packages by most recently modified), and readiness state. Default values are used for the other settings. Click **Advanced Settings** to  start the Create Servicing Plan wizard where you can configure all of the service plan settings.  
 
@@ -136,9 +140,9 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     -   **Specify the Windows readiness state to which this servicing plan should apply**: Select one of the following:  
 
-        -   **Release Ready (Current Branch)**: In the Semi-Annual Channel (targeted) servicing model, feature updates are available as soon as Microsoft releases them.
+        -   **Release Ready (Current Branch)**: In the CB servicing model, feature updates are available as soon as Microsoft releases them.
 
-        -   **Business Ready (Current Branch for Business)**: The Semi-Annual Channel servicing branch is typically used for broad deployment. Windows 10 clients in the Semi-Annual Channel servicing branch receive the same build of Windows 10 as those in the Semi-Annual Channel (targeted) servicing branch, just at a later time.
+        -   **Business Ready (Current Branch for Business)**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
 
         For more information about servicing branches and what options is best for you, see [Servicing branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 
