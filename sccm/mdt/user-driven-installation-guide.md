@@ -1795,7 +1795,7 @@ manager: angrobe
 
  For the purposes of this example, you will create a custom wizard page as illustrated in  REF _Ref328595784 \h Figure 1.  
 
- ![QuickStartGuideforUDI](../Image/QuickStartGuideforUDI.jpg "QuickStartGuideforUDI")  
+ ![QuickStartGuideforUDI](media/QuickStartGuideforUDI.jpg "QuickStartGuideforUDI")  
 Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created  
 
  **Figure 1. Custom wizard page to be created**  

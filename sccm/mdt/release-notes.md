@@ -257,7 +257,7 @@ Schtasks.exe /change /disable /tn "\Microsoft\Windows\AppxDeploymentClient\Pre-s
 
  For Example,  
 
- ![MDT 2013 Release Notes Image 1](../Image/MDT2013ReleaseNotesImage1.jpg "MDT2013ReleaseNotesImage1")  
+ ![MDT 2013 Release Notes Image 1](media/MDT2013ReleaseNotesImage1.jpg "MDT2013ReleaseNotesImage1")  
 
  This step should only be added to task sequences that are running Sysprep on Windows 8.1. Windows will automatically re-enable the maintenance task during the Sysprep generalize phase.  
 
@@ -384,7 +384,7 @@ JoinDomain=Contoso.com
 
  Another mechanism must also be used to later remove this temporary setting, such as Active Directory group policy, or by removing the registry key later in the task sequence. For example,  
 
- ![MDT 2013 Release Notes Image 2](../Image/MDT2013ReleaseNotesImage2.png "MDT2013ReleaseNotesImage2")  
+ ![MDT 2013 Release Notes Image 2](media/MDT2013ReleaseNotesImage2.png "MDT2013ReleaseNotesImage2")  
 
 ### Known Issues for All Configuration Manager Deployments  
  The following is a list of known issues that relate to ZTI or UDI deployments that use System Center 2012 R2 Configuration Manager:  

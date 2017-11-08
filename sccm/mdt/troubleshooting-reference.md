@@ -260,7 +260,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
 3.  Select **Hex**, and then enter the last four digits of the code—in this case, **0040**, as shown in  REF _Ref308173547 \h Figure 1.  
 
-     ![TroubleshootingReference1](../Image/TroubleshootingReference1.jpg "TroubleshootingReference1")  
+     ![TroubleshootingReference1](media/TroubleshootingReference1.jpg "TroubleshootingReference1")  
 Figure  SEQ Figure \\* ARABIC 1. Error conversion  
 
      **Figure  SEQ Figure \\\* ARABIC 1. Error conversion**  
@@ -323,7 +323,7 @@ Figure  SEQ Figure \\* ARABIC 1. Error conversion
 
  As  REF \_Ref308173670 \\h Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](http://technet.microsoft.com/sysinternals/bb897440.aspx).  
 
- ![TroubleshootingReference2](../Image/TroubleshootingReference2.jpg "TroubleshootingReference2")  
+ ![TroubleshootingReference2](media/TroubleshootingReference2.jpg "TroubleshootingReference2")  
 Figure  SEQ Figure \\\* ARABIC 2. NTFS data streams  
 
  **Figure 2. NTFS data streams**  
@@ -650,7 +650,7 @@ Figure  SEQ Figure \\\* ARABIC 2. NTFS data streams
 ### Configuration Manager  
  **Problem:** The error message shown in  REF \_Ref308174600 \\h Figure 3 is displayed when you attempt to create a Configuration Manager PXE service point using the **Create self\-signed PXE certificate** option.  
 
- ![TroubleshootingReference3](../Image/TroubleshootingReference3.jpg "TroubleshootingReference3")  
+ ![TroubleshootingReference3](media/TroubleshootingReference3.jpg "TroubleshootingReference3")  
 Figure  SEQ Figure \\\* ARABIC 3. PXE service point error  
 
  **Figure  SEQ Figure \\\* ARABIC 3. PXE service point error**  
@@ -822,67 +822,67 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 
 -   State Restore ( REF _Ref308175212 \h Figure 13,  REF _Ref308175218 \h Figure 14,  REF _Ref308175225 \h Figure 15, and  REF _Ref308175233 \h Figure 16)  
 
- ![TroubleshootingReference4](../Image/TroubleshootingReference4.jpg "TroubleshootingReference4")  
+ ![TroubleshootingReference4](media/TroubleshootingReference4.jpg "TroubleshootingReference4")  
 Figure  SEQ Figure \\* ARABIC 4. Flow chart for the Validation Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 4. Flow chart for the Validation Phase**  
 
- ![TroubleshootingReference5](../Image/TroubleshootingReference5.jpg "TroubleshootingReference5")  
+ ![TroubleshootingReference5](media/TroubleshootingReference5.jpg "TroubleshootingReference5")  
 Figure  SEQ Figure \\* ARABIC 5. Flow chart for the State Capture Phase (1 of 2)  
 
  **Figure  SEQ Figure \\\* ARABIC 5. Flow chart for the State Capture Phase (1 of 2)**  
 
- ![TroubleshootingReference6](../Image/TroubleshootingReference6.jpg "TroubleshootingReference6")  
+ ![TroubleshootingReference6](media/TroubleshootingReference6.jpg "TroubleshootingReference6")  
 Figure  SEQ Figure \\* ARABIC 6. Flow chart for the State Capture Phase (2 of 2)  
 
  **Figure  SEQ Figure \\\* ARABIC 6. Flow chart for the State Capture Phase (2 of 2)**  
 
- ![TroubleshootingReference7](../Image/TroubleshootingReference7.jpg "TroubleshootingReference7")  
+ ![TroubleshootingReference7](media/TroubleshootingReference7.jpg "TroubleshootingReference7")  
 Figure  SEQ Figure \\* ARABIC 7. Flow chart for the Preinstall Phase (1 of 3)  
 
  **Figure  SEQ Figure \\\* ARABIC 7. Flow chart for the Preinstall Phase (1 of 3)**  
 
- ![TroubleshootingReference8](../Image/TroubleshootingReference8.jpg "TroubleshootingReference8")  
+ ![TroubleshootingReference8](media/TroubleshootingReference8.jpg "TroubleshootingReference8")  
 Figure  SEQ Figure \\* ARABIC 8. Flow chart for the Preinstall Phase (2 of 3)  
 
  **Figure  SEQ Figure \\\* ARABIC 8. Flow chart for the Preinstall Phase (2 of 3)**  
 
- ![TroubleshootingReference9](../Image/TroubleshootingReference9.jpg "TroubleshootingReference9")  
+ ![TroubleshootingReference9](media/TroubleshootingReference9.jpg "TroubleshootingReference9")  
 Figure  SEQ Figure \\* ARABIC 9. Flow chart for the Preinstall Phase (3 of 3)  
 
  **Figure  SEQ Figure \\\* ARABIC 9. Flow chart for the Preinstall Phase (3 of 3)**  
 
- ![TroubleshootingReference10](../Image/TroubleshootingReference10.jpg "TroubleshootingReference10")  
+ ![TroubleshootingReference10](media/TroubleshootingReference10.jpg "TroubleshootingReference10")  
 Figure  SEQ Figure \\* ARABIC 10. Flow chart for the Install Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 10. Flow chart for the Install Phase**  
 
- ![TroubleshootingReference11](../Image/TroubleshootingReference11.jpg "TroubleshootingReference11")  
+ ![TroubleshootingReference11](media/TroubleshootingReference11.jpg "TroubleshootingReference11")  
 Figure  SEQ Figure \\* ARABIC 11. Flow chart for the Postinstall Phase (1 of 2)  
 
  **Figure  SEQ Figure \\\* ARABIC 11. Flow chart for the Postinstall Phase (1 of 2)**  
 
- ![TroubleshootingReference12](../Image/TroubleshootingReference12.jpg "TroubleshootingReference12")  
+ ![TroubleshootingReference12](media/TroubleshootingReference12.jpg "TroubleshootingReference12")  
 Figure  SEQ Figure \\* ARABIC 12 Flow chart for the Postinstall Phase (2 of 2)  
 
  **Figure  SEQ Figure \\\* ARABIC 12 Flow chart for the Postinstall Phase (2 of 2)**  
 
- ![TroubleshootingReference13](../Image/TroubleshootingReference13.jpg "TroubleshootingReference13")  
+ ![TroubleshootingReference13](media/TroubleshootingReference13.jpg "TroubleshootingReference13")  
 Figure  SEQ Figure \\* ARABIC 13. Flow chart for the State Restore Phase (1 of 4)  
 
  **Figure  SEQ Figure \\\* ARABIC 13. Flow chart for the State Restore Phase (1 of 4)**  
 
- ![TroubleshootingReference14](../Image/TroubleshootingReference14.jpg "TroubleshootingReference14")  
+ ![TroubleshootingReference14](media/TroubleshootingReference14.jpg "TroubleshootingReference14")  
 Figure  SEQ Figure \\* ARABIC 14. Flow chart for the State Restore Phase (2 of 4)  
 
  **Figure  SEQ Figure \\\* ARABIC 14. Flow chart for the State Restore Phase (2 of 4)**  
 
- ![TroubleshootingReference15](../Image/TroubleshootingReference15.jpg "TroubleshootingReference15")  
+ ![TroubleshootingReference15](media/TroubleshootingReference15.jpg "TroubleshootingReference15")  
 Figure  SEQ Figure \\* ARABIC 15. Flow chart for the State Restore Phase (3 of 4)  
 
  **Figure  SEQ Figure \\\* ARABIC 15. Flow chart for the State Restore Phase (3 of 4)**  
 
- ![TroubleshootingReference16](../Image/TroubleshootingReference16.jpg "TroubleshootingReference16")  
+ ![TroubleshootingReference16](media/TroubleshootingReference16.jpg "TroubleshootingReference16")  
 Figure  SEQ Figure \\* ARABIC 16. Flow chart for the State Restore Phase (4 of 4)  
 
  **Figure  SEQ Figure \\\* ARABIC 16. Flow chart for the State Restore Phase (4 of 4)**  
@@ -906,47 +906,47 @@ Figure  SEQ Figure \\* ARABIC 16. Flow chart for the State Restore Phase (4 of 4
 
 -   Capture ( REF _Ref308175401 \h Figure 25)  
 
- ![TroubleshootingReference17](../Image/TroubleshootingReference17.jpg "TroubleshootingReference17")  
+ ![TroubleshootingReference17](media/TroubleshootingReference17.jpg "TroubleshootingReference17")  
 Figure  SEQ Figure \\* ARABIC 17. Flow chart for the Initialization Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 17. Flow chart for the Initialization Phase**  
 
- ![TroubleshootingReference18](../Image/TroubleshootingReference18.jpg "TroubleshootingReference18")  
+ ![TroubleshootingReference18](media/TroubleshootingReference18.jpg "TroubleshootingReference18")  
 Figure  SEQ Figure \\* ARABIC 18. Flow chart for the Validation Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 18. Flow chart for the Validation Phase**  
 
- ![TroubleshootingReference19](../Image/TroubleshootingReference19.jpg "TroubleshootingReference19")  
+ ![TroubleshootingReference19](media/TroubleshootingReference19.jpg "TroubleshootingReference19")  
 Figure  SEQ Figure \\* ARABIC 19. Flow chart for the State Capture Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 19. Flow chart for the State Capture Phase**  
 
- ![TroubleshootingReference20](../Image/TroubleshootingReference20.jpg "TroubleshootingReference20")  
+ ![TroubleshootingReference20](media/TroubleshootingReference20.jpg "TroubleshootingReference20")  
 Figure  SEQ Figure \\* ARABIC 20. Flow chart for the Preinstall Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 20. Flow chart for the Preinstall Phase**  
 
- ![TroubleshootingReference21](../Image/TroubleshootingReference21.jpg "TroubleshootingReference21")  
+ ![TroubleshootingReference21](media/TroubleshootingReference21.jpg "TroubleshootingReference21")  
 Figure  SEQ Figure \\* ARABIC 21. Flow chart for the Install Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 21. Flow chart for the Install Phase**  
 
- ![TroubleshootingReference22](../Image/TroubleshootingReference22.jpg "TroubleshootingReference22")  
+ ![TroubleshootingReference22](media/TroubleshootingReference22.jpg "TroubleshootingReference22")  
 Figure  SEQ Figure \\* ARABIC 22. Flow chart for the Postinstall Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 22. Flow chart for the Postinstall Phase**  
 
- ![TroubleshootingReference23](../Image/TroubleshootingReference23.jpg "TroubleshootingReference23")  
+ ![TroubleshootingReference23](media/TroubleshootingReference23.jpg "TroubleshootingReference23")  
 Figure  SEQ Figure \\* ARABIC 23. Flow chart for the State Restore Phase (1 of 2)  
 
  **Figure  SEQ Figure \\\* ARABIC 23. Flow chart for the State Restore Phase (1 of 2)**  
 
- ![TroubleshootingReference24](../Image/TroubleshootingReference24.jpg "TroubleshootingReference24")  
+ ![TroubleshootingReference24](media/TroubleshootingReference24.jpg "TroubleshootingReference24")  
 Figure  SEQ Figure \\* ARABIC 24. Flow chart for the State Restore Phase (2 of 2)  
 
  **Figure  SEQ Figure \\\* ARABIC 24. Flow chart for the State Restore Phase (2 of 2)**  
 
- ![TroubleshootingReference25](../Image/TroubleshootingReference25.jpg "TroubleshootingReference25")  
+ ![TroubleshootingReference25](media/TroubleshootingReference25.jpg "TroubleshootingReference25")  
 Figure  SEQ Figure \\* ARABIC 25. Flow chart for the Capture Phase  
 
  **Figure  SEQ Figure \\\* ARABIC 25. Flow chart for the Capture Phase**  

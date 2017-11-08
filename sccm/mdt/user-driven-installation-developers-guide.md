@@ -45,7 +45,7 @@ manager: angrobe
 
  REF _Ref314558518 \h Figure 1 illustrates the relationship between the UDI Wizard Designer and the UDI Wizard.  
 
- ![UDIDevelopersGuide1](../Image/UDIDevelopersGuide1.jpg "UDIDevelopersGuide1")  
+ ![UDIDevelopersGuide1](media/UDIDevelopersGuide1.jpg "UDIDevelopersGuide1")  
 Figure  SEQ Figure \\* ARABIC 1. Relationship between the UDI Wizard and UDI Wizard Designer  
 
  **Figure  SEQ Figure \\\* ARABIC 1. Relationship between the UDI Wizard and UDI Wizard Designer**  
@@ -134,7 +134,7 @@ Figure  SEQ Figure \\* ARABIC 1. Relationship between the UDI Wizard and UDI Wiz
 
      When completed, the folder structure beneath *local_folder* should look like the folder structure illustrated in  REF _Ref304041503 \h Figure 2 (where *local_folder* is the folder you created earlier in the process and is shown as *UDIDevelopment* in the figure).  
 
-     ![UDIDevelopersGuide2](../Image/UDIDevelopersGuide2.jpg "UDIDevelopersGuide2")  
+     ![UDIDevelopersGuide2](media/UDIDevelopersGuide2.jpg "UDIDevelopersGuide2")  
 Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development  
 
      **Figure  SEQ Figure * ARABIC 2. Folder structure for UDI development**  
