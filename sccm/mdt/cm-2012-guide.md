@@ -130,13 +130,12 @@ manager: angrobe
 #### To create the required folders and share  
 1. The MDT Deployment Process Requires several folders. Create the following folders and shares with the specified permissions for each share.
 
-
-    |Create this folder  |With this share name  |With these share permissions  |  
-    |----|----|----|  
-    |E:\Source$|Source$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-    |E:\Images$|Images$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-    |E:\Capture$|Capture$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-    |E:\Packages$|Packages$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+  |Create this folder  |With this share name  |With these share permissions  |  
+  |----|----|----|  
+  |E:\Source$|Source$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+  |E:\Images$|Images$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+  |E:\Capture$|Capture$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+  |E:\Packages$|Packages$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
 
 2. Create the following folders:  
 
