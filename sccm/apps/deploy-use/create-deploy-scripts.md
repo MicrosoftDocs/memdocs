@@ -82,11 +82,9 @@ Here are some examples that illustrate scripts you might want to use with this c
 
 *New-Item "c:\scripts" -type folder name*
 
-
 #### Create a file
 
 *New-Item c:\scripts\new_file.txt -type file name*
-
 
 ## Approve or deny a script
 
@@ -99,6 +97,7 @@ Before you can run a script, it must be approved. To approve a script:
 5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
 ## Run a script
+
 After a script is approved, it can be run against a collection you choose.
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
