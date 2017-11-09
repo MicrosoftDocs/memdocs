@@ -54,10 +54,13 @@ The following are general prerequisites for you to enable co-management:
 After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. You can have Intune manage the following workloads.   
 
 ### Compliance policies
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. For details, see [Device compliance policies](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies).  
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. For details, see [Device compliance policies](/sccm/mdm/deploy-use/device-compliance-policies).  
 
 ### Windows Update for Business policies
-Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+
+### Resource access policies
+Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices. For details, see [Deploy resource access profiles](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
 
 ## Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.
