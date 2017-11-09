@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Define the Deployment Type Property Sheet XML File 
 titleSuffix: "Configuration Manager"
@@ -21,6 +22,29 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Define the Deployment Type Property Sheet XML File
+=======
+---
+title: "Define the Deployment Type Property Sheet XML File" 
+titleSuffix: "Configuration Manager"
+ms.custom: ""
+ms.date: "09/20/2016"
+ms.prod: "configuration-manager"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology:
+  - "configmgr-other"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+applies_to:
+  - "System Center Configuration Manager (current branch)"
+ms.assetid: dd5151b2-09f0-4c8d-ad5f-727b8b3d4e56searchScope: - ConfigMgr SDK
+caps.latest.revision: 19
+author: "shill-ms"
+ms.author: "v-suhill"
+manager: "mbaldwin"
+---
+# How to Define the Deployment Type Property Sheet XML File
+>>>>>>> aaa6a15820f45da6bbc0d70bd9acd1a6184450ec
 To define the custom deployment type property page XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the deployment type property sheet should be named \<*TechnologyID*>DeploymentTypePropertySheet.xml.  
 
 ### To define the deployment type property page XML file  

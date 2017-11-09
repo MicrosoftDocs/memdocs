@@ -33,105 +33,53 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Upgrade Readiness (formerly Upgrade Analytics) enables you to assess and analyze device readiness with Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation from the device list.
+Upgrade Readiness (formerly Upgrade Analytics) is a part of [Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) that allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. You can configure the specific version. Upgrade Readiness can be integrated with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You are able to target devices for upgrade or remediation using dynamic collections created based on this data.
 
-Upgrade Readiness is a solution in the Microsoft Operations Management Suite (OMS). You can read more about Upgrade Readiness in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
+Upgrade Readiness is a solution that runs on [Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview). You can read more about Upgrade Readiness in [Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness).
 
 ## Configure clients
 
-There are several configuration steps that you have to take to ensure that your clients can provide data to Upgrade Readiness:
+Upgrade Readiness, like all Windows Analytics solutions, relies on Windows telemetry data. In order for Upgrade Readiness to receive sufficient telemetry data, the following pre-requisites must be satisfied:
 
--  Configure client telemetry settings as described in [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
--  Install the KBs described in the *Deploy the compatibility update and related KBs *section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
+- All clients must be configured with a **commercial ID key**. 
+- Windows 10 clients must have telemetry configured to report at least basic level telemetry.
+-  Clients running earlier versions on Windows must have specific KBs Installed as described in [Get started with Upgrade Readiness](/windows/deployment/upgrade/upgrade-readiness-get-started#deploy-the-compatibility-update-and-related-kbs). They must also have telemetry enabled in **Client Settings**.
 
-	> [!NOTE]
-	> You can download a script to automate many of the client setup tasks. See the *Run the Upgrade Readiness deployment script* section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness) for information about the script.
+Commercial ID key and Windows telemetry can be configured in **Client Settings**. To learn more, see [Use Windows Analytics with Configuration Manager](../monitor-windows-analytics.md).
 
-## Connect to Upgrade Readiness
+>[!NOTE]
+>If you encounter issues with Upgrade Readiness not receiving telemetry data from devices in your environment as expected then some of these issues may be addressed by using the [Upgrade Readiness deployment script](/windows/deployment/upgrade/upgrade-readiness-deployment-script). However, in most environments deploying the correct KBs, configuring commercial ID key and telemetry in **Client Settings** should be sufficient.
 
-### Prerequisites
+## Connect Configuration Manager to Upgrade Readiness
 
-Beginning with Current Branch version 1706, the Azure Services Wizard is used to simplify the process of configuring Azure services you use with Configuration Manager. In order to use the wizard, you need to configure an Azure web app. For more information, see, [Azure Services Wizard](/sccm/core/servers/deploy/configureazure-services-wizard).
+Beginning with Current Branch version 1706, the [Azure services wizard](../../../servers/deploy/configure/azure-services-wizard.md) is used to simplify the process of configuring Azure services you use with Configuration Manager. To connect Configuration Manager with Upgrade Readiness, an Azure AD app registration of type *Web app / API* must be created in the [Azure portal](https://portal.azure.com). To read more about how to create an app registration, see [Register your application with your Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration). In the **Azure portal**, you will also need to give your newly registered web app *contributor* permissions on the resource group that contains the OMS workspace that hosts your Upgrade Readiness data. The **Azure services wizard** will use this app registration to allow Configuration Manager to communicate securely with Azure AD and connect your infrastructure to your Upgrade Readiness data.
+
+>[!IMPORTANT]
+>*Contributor* permissions must be granted to the app itself as opposed to an Azure AD user identity. This is because it is the registered app and not an Azure AD user that accesses the data on behalf of your Configuration Manager infrastructure. To do this, you will have to search for the name of the app registration in the **Add users** blade when assigning the permission. This the same process that must be followed when [providing Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) for connections to [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm). These steps must be completed before the app registration is imported into Configuration Manager with the *Azure services wizard*.
 
 ### Use the Azure Wizard to create the connection
 
-1.  In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
-2.  On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
-3.  Type a friendly Name on the Azure Services page. You can also type a description. Then select **Upgrade Readiness Connector** and click **Next**.
-4.  Specify your Azure environment on the App page. Click **Browse** to set up a server app.
-5.  Click **Import** to connect to your Web app in Azure.
-    -  Type the **Azure AD Tenant Name**.
-    -  Type the **Azure AD Tenant ID**.
-    -  Type the **Application Name**.
-    -  Type the **Client ID**.
-    -  Type the **Secret Key**.
-    -  Select the date for the **Secret Key Expiry** date.
-    -  Type any URL for the **Application ID URI**.
-    -  Click **Verify**, and then click **OK**.
+Follow the instructions in [Configure Azure services for use with Configuration Manager](../../../servers/deploy/configure/azure-services-wizard.md) to create a connection to Upgrade Readiness by importing the web app registration you created above. 
 
-6.	Specify the connection to Upgrade Readiness on the Configuration page. Select the following values:  
-    -  Azure subscriptions
-    -  Azure resource group
-    -  Windows Analytics workspace
-8.	Click **Next**. You can review your connection in the Summary page. 
+On the *Configuration* page, the following values are pre-populated if the web app import was successful and the correct permissions are assigned in the **Azure portal**. 
+-  Azure subscriptions
+-  Azure resource group
+-  Windows Analytics workspace
 
-## Complete Upgrade Readiness tasks  
+More than one resource group or workspace will be available only if the registered Azure AD web app has *Contributor* permissions on more than one resource group or if the selected resource group contains more than one OMS workspace.
+ 
+## View and use Upgrade Readiness information in Configuration Manager
 
-After you've create the connection, perform these tasks, as described in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).  
-
-1. Add the UpgradeReadiness service to the OMS workspace.  
-2. Generate a commercial ID.  
-3. Subscribe to Upgrade Readiness.   
-
-## Use the Upgrade Readiness deployment script  
-
-You can automate many of the Upgrade Readiness tasks and troubleshoot data sharing issues with the Microsoft **Upgrade Readiness deployment script**.  
-The Upgrade Readiness deployment script does the following:  
-
-- Sets commercial ID key + CommercialDataOptIn + RequestAllAppraiserVersions keys.  
-- Verifies that user computers can send data to Microsoft.  
-- Checks whether the computer has a pending restart.   
-- Verifies that the latest version of KB package 10.0.x is installed (requires 10.0.14913 or subsequent releases).  
-- If enabled, turns on verbose mode for troubleshooting.  
-- Initiates the collection of the telemetry data that Microsoft needs to assess your organization’s upgrade readiness.  
-- If enabled, displays the script’s progress in a cmd window. This provides visibility into issues (success or fail for each step) and/or writes to log file.  
-
-## To run the Upgrade Readiness deployment script:  
-
-1. Download the [Upgrade Readiness deployment script](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409) and extract UpgradeReadiness.zip. The files in the **Diagnostics** folder are necessary only if you plan to run the script in troubleshooting mode.  
-2. Edit these parameters in RunConfig.bat:  
-- Storage location for log information. Example: %SystemDrive%\URDiagnostics. You can store log information on a remote file share or a local directory. If the script is blocked from creating the log file for the given path, it creates the log files in the drive with the Windows directory.  
-- Commercial ID key.  
-- By default, the script sends log information to both the console and the log file. To change the default behavior, use one of the following options:  
-	- logMode = 0 log to console only  
-	- logMode = 1 log to file and console  
-	- logMode = 2 log to file only  
-    - For troubleshooting, set **isVerboseLogging** to **$true** to generate log information that can help with diagnosing issues. By default, **isVerboseLogging** is set to **$false**. Ensure the Diagnostics folder is installed in the same directory as the script to use this mode.  
-	- Notify users if they need to restart their computers. By default, this is set to off.  
-
-3. After you finish editing the parameters in RunConfig.bat, run the script as an administrator.  
-
-
-## View Microsoft Upgrade Readiness properties in Configuration Manager  
-
-1.  In the Configuration Manager console, navigate to **Cloud Services**, then choose **OMS Connector** to open the **OMS Connection Properties** page.  
-
-2.  Within this page there are two tabs:
-  * The **Azure Active Directory** tab shows your **Tenant**, **Client ID**, **Client secret key expiration**, and allows you to **Verify** your **Client secret key** if it has expired.
-  * The **Upgrade Readiness** tab shows your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
-
-## View and use the upgrade information
-
-After you've integrated Upgrade Readiness with Configuration Manager, you can view the analysis of your clients' upgrade readiness and then take action.
+After you've integrated Upgrade Readiness with Configuration Manager, you can view the analysis of your clients' upgrade readiness.
 
 1. In the Configuration Manager console, choose **Monitoring** > **Overview** > **Upgrade Readiness**.
 2. Review the data, which includes the upgrade readiness state and the percent of Windows devices that are reporting telemetry.
 3. You can filter the dashboard to view data for devices in specific collections.
-4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to bring them to a readiness state.
+4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to remediate devices that are blocked from upgrading.
 
-## Create a connection to Upgrade Readiness (1702 and earlier)
+## Using the Upgrade Readiness Connector (version 1702 and earlier)
 
-Before the 1706 branch of Configuration Manager, to create a connection to Upgrade Readiness required the following steps.
+In Configuration Manager version 1702 or earlier, a different set of steps and requirements are necessary to create a connection to Upgrade Readiness.
 
 ### Prerequisites
 
