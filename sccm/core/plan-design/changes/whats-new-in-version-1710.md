@@ -74,7 +74,24 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 <!-- ## Inventory  -->
 
 
-<!--  ## Mobile device management  -->
+## Mobile device management
+
+### Windows 10 ARM64 device support
+<!-- 1355000 -->
+
+Windows 10 MDM scenarios now support ARM64 devices running Windows 10, including the following:
+- Enrollment
+- Remote device actions
+- Configuration items
+- Compliance policies
+- Conditional access
+- Company resource access profiles
+   - Certificate
+   - VPN
+   - Wi-Fi
+   - Email
+- Windows Hello for Business policy
+- App management
 
 
 <!--  ## Protect devices   -->
