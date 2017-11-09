@@ -56,7 +56,7 @@ By default, users cannot approve a script they have authored. Because scripts ar
 1. In the Configuration Manager console, click **Administration**.
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
 3. In the list of sites, choose your site and then, on the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
-4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
+4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**. ![Script - Approval setting](./media/run-scripts/RS-approval-setting.png)
 
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
@@ -71,7 +71,7 @@ By default, users cannot approve a script they have authored. Because scripts ar
 	- **Script language** - Currently, only PowerShell scripts are supported.
 	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
 	- **Clear** - Removes the current script from the Script field.
-	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary. ![Create Script](./media/run-scripts/RS-create-script.png)
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 ### Script examples
@@ -88,12 +88,14 @@ Here are some examples that illustrate scripts you might want to use with this c
 
 ## Approve or deny a script
 
+
+
 Before you can run a script, it must be approved. To approve a script:
 
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
-3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
-4. In the **Approve or deny** script dialog box, **Approve**, or **Deny** the script, and optionally enter a comment about your decision. If you deny a script, it cannot be run on client devices.
+3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**. ![Script - Approve / Deny](./media/run-scripts/RS-approve-deny.png)
+4. In the **Approve or deny script** script dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision. ![Script - Approval](./media/run-scripts/RS-approval.png) If you deny a script, it cannot be run on client devices.
 5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
 ## Run a script
