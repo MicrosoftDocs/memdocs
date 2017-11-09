@@ -26,10 +26,11 @@ manager: angrobe
 
 In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the following functionality to take the following actions:
 
-- Import PowerShell Scripts to Configuration Manager
+- Create PowerShell Scripts for Configuration Manager
 - Edit the scripts from the Configuration Manager console (for unsigned scripts only)
 - Mark scripts as Approved or Denied, to improve security
-- Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run almost immediately on client devices.
+- Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. 
+    - You don't deploy scripts, instead, they are run almost immediately on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
 
 >[!TIP]
@@ -49,9 +50,13 @@ To use scripts, you must be a member of the appropriate Configuration Manager se
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
+## Scripts rolls control
+
 By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and can be deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing.
 
-## Allow users to approve their own scripts
+### Allow users to approve their own scripts
+
+This approval is primarily used for the testing phase of script development.
 
 1. In the Configuration Manager console, click **Administration**.
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
@@ -61,7 +66,7 @@ By default, users cannot approve a script they have authored. Because scripts ar
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
 
-## Import and edit a script
+## Create a script
 
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
@@ -73,6 +78,8 @@ By default, users cannot approve a script they have authored. Because scripts ar
 	- **Clear** - Removes the current script from the Script field.
 	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary. ![Create Script](./media/run-scripts/RS-create-script.png)
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
+
+Preview release 1710 adds several new options to the **Run Scripts** feature. For more information, see Script parameters.
 
 ### Script examples
 
@@ -87,8 +94,6 @@ Here are some examples that illustrate scripts you might want to use with this c
 *New-Item c:\scripts\new_file.txt -type file name*
 
 ## Approve or deny a script
-
-
 
 Before you can run a script, it must be approved. To approve a script:
 
@@ -115,10 +120,32 @@ After a script is approved, it can be run against a collection you choose.
 >[!IMPORTANT]
 >The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
 
-## Next steps
+## Script parameters
+
+In the Create Script dialog, click **Script Parameters** under **Script**. ![Script - parameters](./media/run-scripts/RS-parameters.png)
+
+Each of the script parameters has its own dialog for further details. Currently script parameters supporting sevearl property types; *String*, *Integer* and *List*.
+
+Some examples of script parameters are:
+
+### FirstName - String
+
+![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
+
+### Age - Integer
+
+![Script parameters - integer](./media/run-scripts/RS-parameters-integer.png)
+
+### Address - List
+
+![Script parameters - list](./media/run-scripts/RS-parameters-list.png)
+
+## Scrit monitoring
 
 After you have run a script to client devices, use this procedure to monitor the success of the operation.
 
-1. In the Configuration Manager console, click **Monitoring**.
-2. In the **Monitoring** workspace, click **Script Status**.
-3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
+1. In the Configuration Manager console, click **Monitoring**. ![Script monitor - reference](./media/run-scripts/RS-monitor-reference.png)
+2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
+3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully. ![Script monitoring - status](./media/run-scripts/RS-monitoring-tabular.png)
+
+## Next steps
