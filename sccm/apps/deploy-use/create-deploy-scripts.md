@@ -72,7 +72,7 @@ This approval is primarily used for the testing phase of script development.
 
 The Run Scripts feature's work flow can be seen in the following diagram; create, approve, run and, monitor.
 
-![Run Scripts - work flow](./media/run-scripts/RS-work-flow.png)
+![Run Scripts - work flow](./media/run-scripts/RS-work-flow-diagram.png)
 
 ## Create a script
 
