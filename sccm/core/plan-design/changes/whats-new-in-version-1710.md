@@ -79,7 +79,7 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 ### Windows 10 ARM64 device support
 <!-- 1355000 -->
 
-Hybrid Mobile Device Management (MDM) scenarios are now supported on ARM64 devices running Windows 10 when these devices are available.
+Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available.
 
 These scenarios include:
 
