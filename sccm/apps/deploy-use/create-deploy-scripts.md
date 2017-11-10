@@ -50,7 +50,7 @@ To use scripts, you must be a member of the appropriate Configuration Manager se
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
-## Scripts rolls control
+## Scripts roles control
 
 By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and can be deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing.
 
@@ -65,6 +65,12 @@ This approval is primarily used for the testing phase of script development.
 
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
+
+## Run scripts work flow
+
+The Run Scripts feature's work flow can be seen in the following diagram; create, approve, run and, monitor.
+
+![Run Scripts - work flow](./media/run-scripts/RS-work-flow.png)
 
 ## Create a script
 
@@ -93,6 +99,41 @@ Here are some examples that illustrate scripts you might want to use with this c
 
 *New-Item c:\scripts\new_file.txt -type file name*
 
+## Script parameters
+
+Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* and *List* data types. 
+
+When you create a script that has parameters, an associated parameter page will be displayed. If your script has unsupported data types, you will get a warning. 
+
+In the **Create Script** dialog, click **Script Parameters** under **Script**. ![Script - parameters](./media/run-scripts/RS-parameters.png)
+
+Each of the script parameters has its own dialog for adding further details and validation. 
+
+### Parameter validation
+
+Each parameter in your script will have a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
+
+Some examples of script parameters are:
+
+### FirstName - String
+
+![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
+
+### Age - Integer
+
+![Script parameters - integer](./media/run-scripts/RS-parameters-integer.png)
+
+### Address - List
+
+![Script parameters - list](./media/run-scripts/RS-parameters-list.png)
+
+## Security scopes
+
+The Run Scripts feature supports security scopes ... 
+
+![Script - security scopes](./media/run-scripts/RS-security-scopes.png)
+
+
 ## Approve or deny a script
 
 Before you can run a script, it must be approved. To approve a script:
@@ -120,32 +161,13 @@ After a script is approved, it can be run against a collection you choose.
 >[!IMPORTANT]
 >The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
 
-## Script parameters
+## Script monitoring
 
-In the Create Script dialog, click **Script Parameters** under **Script**. ![Script - parameters](./media/run-scripts/RS-parameters.png)
-
-Each of the script parameters has its own dialog for further details. Currently script parameters supporting sevearl property types; *String*, *Integer* and *List*.
-
-Some examples of script parameters are:
-
-### FirstName - String
-
-![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
-
-### Age - Integer
-
-![Script parameters - integer](./media/run-scripts/RS-parameters-integer.png)
-
-### Address - List
-
-![Script parameters - list](./media/run-scripts/RS-parameters-list.png)
-
-## Scrit monitoring
-
-After you have run a script to client devices, use this procedure to monitor the success of the operation.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation.
 
 1. In the Configuration Manager console, click **Monitoring**. ![Script monitor - reference](./media/run-scripts/RS-monitor-reference.png)
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully. ![Script monitoring - status](./media/run-scripts/RS-monitoring-tabular.png)
 
-## Next steps
+## See also
+
