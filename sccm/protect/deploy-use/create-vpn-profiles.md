@@ -3,7 +3,7 @@ title: "How to Create VPN profiles "
 titleSuffix: "Configuration Manager"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
 ms.custom:
-ms.date: 4/19/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,16 +31,19 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
 
 1.  In the Configuration Manager console, choose **Assets and Compliance** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Create VPN Profile**.  
+2.  On the **Home** tab, in the **Create** group, choose **Create VPN Profile**.  
 
 
-1.  Complete the **General** page. Note the following:  
+3.  Complete the **General** page. Note the following:  
+
+    - Select the appropriate **Platform**.
+
+       - If you select the Windows 8.1 platform, you have the option to select **Import an existing VPN profile item from a file** to import VPN profile information that was exported to an XML file.
 
    	- Do not use the characters \\/:*?&lt;>&#124;, or the space character in the VPN profile name. These characters are not supported by the Windows Server VPN profile.  
 
-  	 -   Select **Import an existing VPN profile item from a file** to import VPN profile information that has been exported to an XML file (Windows 8.1 and Windows RT only).  
 
-1.  On the **Connection** page, specify:  
+4.  On the **Connection** page, specify:  
 
     -   **Connection type**: Choose the VPN connection type. You can choose from the connection types in the following table.  
 
