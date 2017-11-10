@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 11/08/2017
+ms.date: 11/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,6 +35,8 @@ In Configuration Manager, in addition to using packages and programs to deploy s
 
 >[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+
+### TODO - Bruce needs to update the pre-release features doc to reference extensions added for 1710.
 
 ## Prerequisites
 
@@ -171,3 +173,4 @@ After you have initiated running a script on a collection of devices, use the fo
 
 ## See also
 
+- links to supporting materials
