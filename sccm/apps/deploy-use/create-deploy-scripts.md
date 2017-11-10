@@ -42,8 +42,6 @@ Here's what Run Scripts looks like as a work flow. Note the steps; create, appro
 >[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
-### TODO - Bruce needs to update the pre-release features doc to reference extensions added for 1710.
-
 ## Prerequisites
 
 To run PowerShell scripts, the client must be running PowerShell version 3.0 or later. However, if a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that version.
