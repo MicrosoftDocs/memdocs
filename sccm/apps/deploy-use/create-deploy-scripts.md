@@ -33,6 +33,12 @@ In Configuration Manager, in addition to using packages and programs to deploy s
     - You don't deploy scripts, instead, they are run almost immediately on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
 
+## Run scripts work flow
+
+Here's what Run Scripts looks like as a work flow. Note the steps; create, approve, run and, monitor.
+
+![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
+
 >[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
@@ -67,12 +73,6 @@ This approval is primarily used for the testing phase of script development.
 
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
-
-## Run scripts work flow
-
-The Run Scripts feature's work flow can be seen in the following diagram; create, approve, run and, monitor.
-
-![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
 
 ## Create a script
 
