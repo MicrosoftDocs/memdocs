@@ -75,6 +75,27 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 
 
 ## Mobile device management
+
+### Windows 10 ARM64 device support
+<!-- 1355000 -->
+
+Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available.
+
+These scenarios include:
+
+- [Enroll devices](../../../mdm/deploy-use/enroll-hybrid-windows.md)
+- [Perform remote full and selective wipe actions](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
+- [Manage settings through configuration items and baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
+- [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md)
+- [Manage conditional access](../../../mdm/deploy-use/manage-access-to-services.md)
+- Manage access to company resources through:
+   - [Certificate profiles](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
+   - [VPN profiles](../../../mdm/deploy-use/create-vpn-profiles.md)
+   - [Wi-Fi profiles](../../../mdm/deploy-use/create-wifi-profiles.md)
+   - [Email profiles](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
+- [Configure Windows Hello for Business policy](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
+- [Manage applications](../../../mdm/deploy-use/management-tasks-applications.md)
+
 ### Improved VPN Profile Experience in Configuration Manager Console <!-- 1318232 -->
 
 With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform:
