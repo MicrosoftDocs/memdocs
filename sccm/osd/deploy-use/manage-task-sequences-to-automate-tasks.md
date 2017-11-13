@@ -3,9 +3,9 @@ title: Manage task sequences to automate tasks
 titleSuffix: "Configuration Manager"
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 11/15/2017
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.reviewer: nac
 ms.suite: na
 ms.technology:
   - configmgr-osd
@@ -451,12 +451,9 @@ Beginning with Configuration Manager version 1710, you can add a new task sequen
 Consider the following when you add a child task sequence to a task sequence:
 
  - The parent and child task sequences are effectively combined into a single policy that the client runs.
- - It is not supported to add a child task sequence that is a parent of another task sequence.
  - The environment is global. For example, if a variable is set by the parent task sequence and then changed by the child task sequence, the variable remains changed moving forward. Similarly, if the child task sequence creates a new variable, the variable is available for the remaining steps in the parent task sequence.
  - Status messages are sent per normal for a single task sequence operation.
  - The task sequences write entries to the smsts.log file, with new log entries that make it clear when a child task sequence starts.
-
-    If the child task sequence uses steps like **Run Command Line** (without any package reference), **Format**, **BitLocker**, etc., then the task sequence will run successfully from Software Center.
 
 ### To add a child task sequence to a task sequence
 
