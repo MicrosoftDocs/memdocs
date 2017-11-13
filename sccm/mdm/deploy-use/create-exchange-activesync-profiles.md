@@ -30,8 +30,8 @@ By using Microsoft Intune and Exchange ActiveSync, you can set up devices with e
 
 - Windows 10
 - Windows Phone 8.1
-- iPhones running iOS 8  
-- iPads running iOS 8  
+- iPhones running iOS 9 and later 
+- iPads running iOS 9 and later 
 - Samsung KNOX Standard (4 and later)
 - Android for Work
 
