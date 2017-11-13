@@ -30,9 +30,9 @@ You can configure the following mobile device types with Wi-Fi profiles:
 
 -   Devices that run Windows 10 Desktop or Mobile  
 
--   IPhone devices that run iOS 8  
+-   IPhone devices that run iOS 9  
 
--   IPad devices that run iOS 8  
+-   IPad devices that run iOS 9  
 
 -   Android devices that run version 4 or later
 
