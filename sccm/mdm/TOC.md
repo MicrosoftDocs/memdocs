@@ -72,6 +72,7 @@
 
 ## [Manage conditional access](deploy-use/manage-access-to-services.md)
 ### [Device compliance policies](deploy-use/device-compliance-policies.md)
+#### [Actions for noncompliance](deploy-use/actions-for-noncompliance.md)
 ### [Create a device compliance policy](deploy-use/create-compliance-policy.md)
 ### [Manage email access](deploy-use/manage-email-access.md)
 ### [Manage SharePoint Online access](deploy-use/manage-sharepoint-online-access.md)
