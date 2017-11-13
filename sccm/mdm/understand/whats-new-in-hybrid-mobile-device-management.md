@@ -3,7 +3,7 @@ title: "What's new in hybrid MDM"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 10/04/2017
+ms.date: 11/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -36,6 +36,16 @@ Each section of this article lists hybrid features under three different categor
 |**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases. This including System Center 2012 R2 Configuration Manager releases, since these features only require the Intune service and do not require additional functionality in Configuration Manager.|
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+
+## November 2017
+
+### New in Microsoft Intune
+
+- **Access to managed app logs for iOS** <!-- 1469920 -->
+  End users with the managed Browser installed can now view the management status of all Microsoft published apps and send logs for troubleshooting their managed iOS apps.
+  
+  Learn how to enable the troubleshooting mode in the Managed Browser on an iOS device, see [How to access to managed app logs using the Managed Browser on iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
 
 ## October 2017
@@ -98,6 +108,8 @@ Each section of this article lists hybrid features under three different categor
 
 - **Windows 10 Company Portal app added to Windows Information Protection allow policy** <!-- 677129 -->    
     The Windows 10 Company Portal app has been updated to support Windows Information Protection (WIP). The app can be added to the WIP allow policy. With this change, the app no longer has to be added to the **Exempt** list. 
+
+     Only a single WIP configuration item can be delivered to a device.  If two WIP configuration items are targeted to the same device, neither WIP policy applies.
 
 - **End of support notice added for iOS 8.0**    
     A notice was added for end of support for iOS 8.0. For details, see [Notices](#notices).
