@@ -49,14 +49,26 @@ This article introduces the features that are available in the Technical Preview
  -  Task 2              
 -->
 
+## Improvements to Run Task Sequence Step
+<!-- 1261338 -->
+
+This technical preview will improve The Run Task Sequence Step. Improvement include the following:
+
+ - Support for all operating system deployment scenarios from Software Center, PXE, and media.
+ - Improvements to console actions such as copy, import/export, and warning during object deletion. 
+ - Support for the **Create Prestage Content** wizard.
+ - Integration with deployment verification.
+ - The run task sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
+
+### Try it out!  
+
+Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+
+1. In the task sequence editor, click **Add**, select **General**, and click **Run Task Sequence**.
+2. Click **Browse** to select the child task sequence.
 
 
-
-
-
-<!-- When we have another H2 in this topic, Add this Next Steps section back in. 
+<!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next Steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
-
--->
