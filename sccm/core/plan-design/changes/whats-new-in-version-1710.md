@@ -57,8 +57,11 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 
 
 <!-- ## Application Management  -->
-
-
+## Application Management
+### New mobile application management policy settings
+<!-- 1324760 -->
+- **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
+- **Disable printing**: Prevents the app from printing work or school data.
 
 ## Operating system deployment
  > [!TIP]
