@@ -147,10 +147,9 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ```
 
-
 ## Security scopes
 
-Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
+Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Run a script
 
@@ -164,16 +163,18 @@ After a script is approved, it can be run against a collection you choose.
 6. Click **Next**, and then complete the wizard.
 
 >[!IMPORTANT]
->The script is given a one-hour time period in which to run. If it does not run (for example if the PC is turned off) in this time period, you must run it again.
+>The script is given a one-hour time period in which to run. If it does not run, for example if the PC is turned off, in this time period, you must run it again.
 
 >[!IMPORTANT]
->The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
+>The script is executed as the *system* or *computer* account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
+
+## Work flow and monitoring
 
 Here's what Run Scripts looks like as a work flow; create, approve, run and, monitor.
 
 ![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
 
-## Script monitoring
+### Script monitoring
 
 After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
 
@@ -181,7 +182,9 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
-## Troubleshooting
+### Troubleshooting
+
+Use the monitoring reports to ...
 
 
 ## See also
