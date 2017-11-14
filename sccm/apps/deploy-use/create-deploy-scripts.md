@@ -1,7 +1,7 @@
 ---
 title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
-description: "Create and run scripts on client devices with Configuration Manager."
+description: "Create and run Powershell scripts on client devices."
 ms.custom: na
 ms.date: 11/14/2017
 ms.prod: configuration-manager
