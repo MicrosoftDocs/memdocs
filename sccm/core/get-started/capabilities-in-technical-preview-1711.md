@@ -49,16 +49,16 @@ This article introduces the features that are available in the Technical Preview
  -  Task 2              
 -->
 
-## Improvements to Run Task Sequence Step
+## Improvements to Run Task Sequence
 <!-- 1261338 -->
 
-This technical preview will improve The Run Task Sequence Step. Improvement include the following:
+This technical preview will improve the Run Task Sequence step. Improvements include the following items:
 
  - Support for all operating system deployment scenarios from Software Center, PXE, and media.
- - Improvements to console actions such as copy, import/export, and warning during object deletion. 
+ - Improvements to console actions such as copy, import, export, and warning during object deletion. 
  - Support for the **Create Prestage Content** wizard.
  - Integration with deployment verification.
- - The run task sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
+ - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
 
 ### Try it out!  
 
