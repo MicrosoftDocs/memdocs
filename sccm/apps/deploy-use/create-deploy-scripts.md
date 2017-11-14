@@ -125,6 +125,8 @@ Here are some examples that illustrate scripts you might want to use with this c
 
 ### Ping a given computer
 
+This script takes a string and uses it as a parameter for a *ping* operation.
+
 ``` powershell
 
 Param
@@ -133,12 +135,15 @@ Param
 )
 
 Ping $Computername
+
 ```
-### Get OS version
+### Get battery status
+
+This script querries the current machine for its battery status.
 
 ``` powershell
 
-Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
+Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ```
 
