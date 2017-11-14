@@ -190,10 +190,6 @@ Beginning with this release, you can use three new mobile application management
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
 
-- **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
-
-- **Disable printing:** Prevents the app from printing work or school data.
-
 See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 
