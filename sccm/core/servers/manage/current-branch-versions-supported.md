@@ -31,7 +31,7 @@ Figure 1. Example of the release cycle overlap for current branch servicing supp
 > - For versions 1710 and later, all support ends after the 18-month lifecycle for a current branch version has expired.
 > - For versions prior to 1710, support ends after the 12-month lifecycle expires.
 
-> We recommend updating your deployment of Configuration Manager to a later version before support for your current version expires.
+> We recommend updating your deployment of Configuration Manager to the latest version before support for your current version expires.
 
  **Version History**  
 
