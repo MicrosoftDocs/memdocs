@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run scripts on client devices with Configuration Manager."
 ms.custom: na
-ms.date: 11/10/2017
+ms.date: 11/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -129,7 +129,7 @@ Some examples of script parameters are:
 
 ## Security scopes
 
-The Run Scripts feature supports security scopes ... 
+Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration).
 
 ![Script - security scopes](./media/run-scripts/RS-security-scopes.png)
 
