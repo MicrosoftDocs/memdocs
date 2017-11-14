@@ -152,6 +152,10 @@ After a script is approved, it can be run against a collection you choose.
 >[!IMPORTANT]
 >The script is executed as the system or computer account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
 
+Here's what Run Scripts looks like as a work flow; create, approve, run and, monitor.
+
+![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
+
 ## Script monitoring
 
 After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
@@ -162,11 +166,6 @@ After you have initiated running a script on a collection of devices, use the fo
 
 ## Troubleshooting
 
-### Run scripts work flow
-
-Here's what Run Scripts looks like as a work flow. Note the steps; create, approve, run and, monitor.
-
-![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
 
 ## See also
 
