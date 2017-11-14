@@ -66,7 +66,7 @@ Scripts must be approved, by the *script approver*, before they can be run. To a
 
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
-3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**. ![Script - Approve / Deny](./media/run-scripts/RS-approve-deny.png)
+3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
 4. In the **Approve or deny script** script dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision. ![Script - Approval](./media/run-scripts/RS-approval.png) If you deny a script, it cannot be run on client devices.
 5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
