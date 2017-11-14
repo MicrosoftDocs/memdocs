@@ -24,6 +24,8 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+Run Scripts is a great new feature ... <!... (Jeffrey to send pitch)...>
+
 In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the following functionality to take the following actions:
 
 - Create PowerShell Scripts for Configuration Manager
@@ -32,12 +34,6 @@ In Configuration Manager, in addition to using packages and programs to deploy s
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. 
     - You don't deploy scripts, instead, they are run almost immediately on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
-
-## Run scripts work flow
-
-Here's what Run Scripts looks like as a work flow. Note the steps; create, approve, run and, monitor.
-
-![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
 
 >[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
@@ -56,9 +52,23 @@ To use scripts, you must be a member of the appropriate Configuration Manager se
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
-## Scripts roles control
+## Run Script authors and approvers
+
+Run Scripts uses the concept of *script authors* and *script approvers* as seperate roles for implementation of a script. Having these roles seperated allows for the important process check needed for the powerful tool that Run Scripts is.
+
+### Scripts roles control
 
 By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and can be deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing.
+
+### Approve or Deny a script
+
+Scripts must be approved, by the *script approver*, before they can be run. To approve a script:
+
+1. In the Configuration Manager console, click **Software Library**.
+2. In the **Software Library** workspace, click **Scripts**.
+3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**. ![Script - Approve / Deny](./media/run-scripts/RS-approve-deny.png)
+4. In the **Approve or deny script** script dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision. ![Script - Approval](./media/run-scripts/RS-approval.png) If you deny a script, it cannot be run on client devices.
+5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
 ### Allow users to approve their own scripts
 
@@ -67,7 +77,7 @@ This approval is primarily used for the testing phase of script development.
 1. In the Configuration Manager console, click **Administration**.
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
 3. In the list of sites, choose your site and then, on the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
-4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**. ![Script - Approval setting](./media/run-scripts/RS-approval-setting.png)
+4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
 
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
@@ -82,8 +92,8 @@ This approval is primarily used for the testing phase of script development.
 	- **Script language** - Currently, only PowerShell scripts are supported.
 	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
 	- **Clear** - Removes the current script from the Script field.
-	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary. ![Create Script](./media/run-scripts/RS-create-script.png)
-5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
+	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+1. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 Preview release 1710 adds several new options to the **Run Scripts** feature. For more information, see Script parameters.
 
@@ -105,7 +115,7 @@ Adding parameters to a script provides increased flexibility for your work. The 
 
 When you create a script that has parameters, an associated parameter page will be displayed. If your script has unsupported data types, you will get a warning. 
 
-In the **Create Script** dialog, click **Script Parameters** under **Script**. ![Script - parameters](./media/run-scripts/RS-parameters.png)
+In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
 Each of the script parameters has its own dialog for adding further details and validation. 
 
@@ -117,32 +127,15 @@ Some examples of script parameters are:
 
 ### FirstName - String
 
+In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is very usefur for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
+
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
-
-### Age - Integer
-
-![Script parameters - integer](./media/run-scripts/RS-parameters-integer.png)
-
-### Address - List
-
-![Script parameters - list](./media/run-scripts/RS-parameters-list.png)
 
 ## Security scopes
 
 Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../core/servers/deploy/configure/configure-role-based-administration).
 
 ![Script - security scopes](./media/run-scripts/RS-security-scopes.png)
-
-
-## Approve or deny a script
-
-Before you can run a script, it must be approved. To approve a script:
-
-1. In the Configuration Manager console, click **Software Library**.
-2. In the **Software Library** workspace, click **Scripts**.
-3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**. ![Script - Approve / Deny](./media/run-scripts/RS-approve-deny.png)
-4. In the **Approve or deny script** script dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision. ![Script - Approval](./media/run-scripts/RS-approval.png) If you deny a script, it cannot be run on client devices.
-5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
 ## Run a script
 
@@ -163,11 +156,19 @@ After a script is approved, it can be run against a collection you choose.
 
 ## Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
 
 1. In the Configuration Manager console, click **Monitoring**. ![Script monitor - reference](./media/run-scripts/RS-monitor-reference.png)
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully. ![Script monitoring - status](./media/run-scripts/RS-monitoring-tabular.png)
+
+## Troubleshooting
+
+### Run scripts work flow
+
+Here's what Run Scripts looks like as a work flow. Note the steps; create, approve, run and, monitor.
+
+![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
 
 ## See also
 
