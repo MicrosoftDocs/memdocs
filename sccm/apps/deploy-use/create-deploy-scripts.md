@@ -133,9 +133,7 @@ In this example, you are able to set the properties of the string parameter, *Fi
 
 ## Security scopes
 
-Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../core/servers/deploy/configure/configure-role-based-administration).
-
-![Script - security scopes](./media/run-scripts/RS-security-scopes.png)
+Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
 
 ## Run a script
 
@@ -158,9 +156,9 @@ After a script is approved, it can be run against a collection you choose.
 
 After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
 
-1. In the Configuration Manager console, click **Monitoring**. ![Script monitor - reference](./media/run-scripts/RS-monitor-reference.png)
+1. In the Configuration Manager console, click **Monitoring**. 
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
-3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully. ![Script monitoring - status](./media/run-scripts/RS-monitoring-tabular.png)
+3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
 ## Troubleshooting
 
