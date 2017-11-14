@@ -109,7 +109,8 @@ The following are the  capabilities delivered  with each Configuration Manager t
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Improvements to run task sequence step <!-- 1261338 --> | [Tech Preview 1711](\capabilities-in-technical-preview-1711.md#improvements-to-run-task-sequence-step.md) |![Not added](media/Red_X.gif)    |
- 
+  |Allow user interaction when installing an application <!-- 1356976 --> | [Tech Preview 1711](\capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
 
