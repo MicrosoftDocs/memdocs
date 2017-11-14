@@ -95,8 +95,6 @@ This approval is primarily used for the testing phase of script development.
 	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 1. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
-Preview release 1710 adds several new options to the **Run Scripts** feature. For more information, see Script parameters.
-
 ## Script parameters
 
 Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* and *List* data types. 
