@@ -54,7 +54,7 @@ For more information about Configuration Manager security roles, see [Fundamenta
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as seperate roles for implementation of a script. Having these roles seperated allows for the important process check needed for the powerful tool that Run Scripts is.
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is.
 
 ### Scripts roles control
 
@@ -113,7 +113,7 @@ Some examples of script parameters are:
 
 ### FirstName - String
 
-In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is very usefur for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
+In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is very useful for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
 
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
 
@@ -174,7 +174,7 @@ Here's what Run Scripts looks like as a work flow; create, approve, run and, mon
 
 ### Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
 
 1. In the Configuration Manager console, click **Monitoring**. 
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
