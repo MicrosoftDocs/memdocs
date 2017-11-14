@@ -129,7 +129,7 @@ Some examples of script parameters are:
 
 ## Security scopes
 
-Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration).
+Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../core/servers/deploy/configure/configure-role-based-administration).
 
 ![Script - security scopes](./media/run-scripts/RS-security-scopes.png)
 
