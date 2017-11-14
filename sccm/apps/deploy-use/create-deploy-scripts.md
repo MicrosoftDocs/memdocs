@@ -97,18 +97,6 @@ This approval is primarily used for the testing phase of script development.
 
 Preview release 1710 adds several new options to the **Run Scripts** feature. For more information, see Script parameters.
 
-### Script examples
-
-Here are some examples that illustrate scripts you might want to use with this capability.
-
-#### Create a folder
-
-*New-Item "c:\scripts" -type folder name*
-
-#### Create a file
-
-*New-Item c:\scripts\new_file.txt -type file name*
-
 ## Script parameters
 
 Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* and *List* data types. 
@@ -130,6 +118,30 @@ Some examples of script parameters are:
 In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is very usefur for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
 
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
+
+## Script examples
+
+Here are some examples that illustrate scripts you might want to use with this capability.
+
+### Ping a given computer
+
+``` powershell
+
+Param
+(
+ [String][Parameter(Mandatory=$True, Position=1)] $Computername
+)
+
+Ping $Computername
+```
+### Get OS version
+
+``` powershell
+
+Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
+
+```
+
 
 ## Security scopes
 
