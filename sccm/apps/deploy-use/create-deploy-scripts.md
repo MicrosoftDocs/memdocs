@@ -24,10 +24,11 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-## THIS ARTICLE IS UNDER CONSTRUCTION - 
-**Please focus your review and feedback on COMPLETENESS and ACCURACY of the tech content.**
+>[!NOTE]
+>Jeffrey / Maryam - THIS ARTICLE IS UNDER CONSTRUCTION - Please focus your review and feedback on COMPLETENESS and ACCURACY of the tech content. We'll move to a final review for ovearll appearance next. Also, for this release we've decided to leave this as one article, no decomposition, and for now will leave the TOC as it is. 
 
-NEW INTRO NEEDED ... Run Scripts is a great new feature ... Jeffrey will provide more ... 
+>[!NOTE]
+> Jeffrey - NEW INTRO NEEDED ... Run Scripts is a great new feature ... Jeffrey will provide more ... 
 
 In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the following functionality to take the following actions:
 
