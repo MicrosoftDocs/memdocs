@@ -26,7 +26,7 @@ System Center Configuration Manager application management policies let you modi
 
 -   Devices that run Android 4 and later  
 
--   Devices that run iOS 7 and later  
+-   Devices that run iOS 9 and later  
 
 You can also use mobile app management policies to protect apps on devices that are not managed by Intune. Using this new capability, you can apply mobile app management policies to apps that connect to Office 365 services. This is not supported for apps that connect to on-premises Exchange or SharePoint.  
 
