@@ -104,7 +104,7 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 
 ## Script parameters
 
-Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you will get a warning. 
+Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning. 
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
@@ -112,11 +112,11 @@ Each of your script parameters has its own dialog for adding further details and
 
 ### Parameter validation
 
-Each parameter in your script will have a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
+Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
 #### Example: FirstName
 
-In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is very useful for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
+In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is useful for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
 
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
 
@@ -163,7 +163,7 @@ After a script is approved, it can be run against a collection you choose.
 >The script is given a one-hour time period in which to run. If it does not run, for example if the PC is turned off, in this time period, you must run it again.
 
 >[!IMPORTANT]
->The script is executed as the *system* or *computer* account on the targeted client(s). This account has very limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
+>The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
 
 ## Work flow and monitoring
 
@@ -173,7 +173,7 @@ Here's what Run Scripts looks like as a work flow; create, approve, run and, mon
 
 ### Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Note that you're both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. You are both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
 
 1. In the Configuration Manager console, click **Monitoring**. 
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
