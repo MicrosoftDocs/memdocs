@@ -150,6 +150,8 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ## Run a script
 
+You script, once execution begins, is launced quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
+
 After a script is approved, it can be run against a collection you choose.
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
@@ -160,10 +162,10 @@ After a script is approved, it can be run against a collection you choose.
 6. Click **Next**, and then complete the wizard.
 
 >[!IMPORTANT]
->The script is given a one-hour time period in which to run. If it does not run, for example if the PC is turned off, in this time period, you must run it again.
+>If a script does not run, for example if the PC is turned off, in the one hour time period, you must run it again.
 
->[!IMPORTANT]
->The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned with this in mind.
+### Target machine execution 
+The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
 
 ## Work flow and monitoring
 
