@@ -69,10 +69,8 @@ Starting with the Windows 10, version 1607 (also known as the Anniversary Update
  > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
-## Software updates    
+<!--  ## Software updates  --> 
 
-### Surface Device dashboard
-The Surface Device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. For details, see [Surface Device dashboard](/sccm/sum/deploy-use/monitor-software-updates.md#surface-device-dashboard).
 
 <!--  ## Reporting  -->
 
