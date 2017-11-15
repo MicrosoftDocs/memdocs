@@ -42,5 +42,5 @@ After you enable co-management using the wizard, you can modify the settings in 
 - In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 Select the co-management object, and then on the Home tab, click **Properties**. 
 
-<!--### Monitor co-management
-After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
+### Monitor co-management
+After you enable co-management, two policies are created in **Monitoring** > **Deployments**; one policy for the pilot group and one for production. 

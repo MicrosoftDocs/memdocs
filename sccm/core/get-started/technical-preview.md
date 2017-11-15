@@ -123,13 +123,13 @@ The following are the  capabilities delivered  with each Configuration Manager t
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
  |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
- |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Not added](media/Red_X.gif)    |
+ |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Version 1710](/sccm/core/clients/manage/co-management-overview.md)    |
  |Improvements for specifying script parameters when you deploy PowerShell scripts from Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
  |Management insights  <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![Not added](media/Red_X.gif)|
  |Restart computers from the Configuration Manager console <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![Not added](media/Red_X.gif)|
  |Software Center customization <!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![Not added](media/Red_X.gif)|
 |Client Peer Cache support for express installation files for Windows 10 and Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Not added](media/Red_X.gif)|
- |Surface Device dashboard|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Not added](media/Red_X.gif)|
+ |Surface Device dashboard|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Version 1710](/sccm/sum/deploy-use/monitor-software-updates.md#surface-device-dashboard)|
  |Configure and deploy Windows Defender Application Guard policies|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Not added](media/Red_X.gif)|
  |Add parameters when you deploy PowerShell scripts from Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
  |New mobile application management policy settings|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Not added](media/Red_X.gif)|
