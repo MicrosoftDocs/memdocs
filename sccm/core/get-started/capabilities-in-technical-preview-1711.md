@@ -85,9 +85,9 @@ Try to complete the following tasks and then send **Feedback** from the **Home**
 
     c. Select **Whether or not a user is logged on** for **Log on requirement**.
 
-    d. Select **Normal** for **Installation program visibility.
+    d. Select **Normal** for **Installation program visibility**. You can select from three options: **Minimized**, **Normal**, or **Maximized**.
 
-    e. Do not check the **Allow users to interact with the program installation** box.
+    e. Select the **Allow users to interact with the program installation** box.
 
 3. You can add specific steps in your application installation, such as:
 
@@ -99,6 +99,15 @@ Try to complete the following tasks and then send **Feedback** from the **Home**
 5.  Install the task sequence from Software Center.
 
 During task sequence progress, the application installation interface appears on the target end-user device. The task sequence progress pauses until the end user completes the application installation workflow.
+
+### Install using the wizard
+
+You can also use this feature when deploying an app using the wizard.
+
+1. Create or edit an application. 
+2. Deploy the application to a client.
+3. Install the application from Software Center. The application installation interface should appear. The end-user should follow the application installation wizard and the application will be successfully installed.
+
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
