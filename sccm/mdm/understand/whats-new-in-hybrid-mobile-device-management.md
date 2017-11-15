@@ -3,7 +3,7 @@ title: "What's new in hybrid MDM"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 10/04/2017
+ms.date: 11/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -108,6 +108,8 @@ Each section of this article lists hybrid features under three different categor
 
 - **Windows 10 Company Portal app added to Windows Information Protection allow policy** <!-- 677129 -->    
     The Windows 10 Company Portal app has been updated to support Windows Information Protection (WIP). The app can be added to the WIP allow policy. With this change, the app no longer has to be added to the **Exempt** list. 
+
+     Only a single WIP configuration item can be delivered to a device.  If two WIP configuration items are targeted to the same device, neither WIP policy applies.
 
 - **End of support notice added for iOS 8.0**    
     A notice was added for end of support for iOS 8.0. For details, see [Notices](#notices).

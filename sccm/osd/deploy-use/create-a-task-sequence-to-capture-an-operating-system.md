@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Create a task sequence to capture an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create a task sequence to capture an operating system in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 When you use a task sequence to deploy an operating system to a computer  in System Center Configuration Manager, the  computer installs the operating system image that you specify in the task sequence. To customize the operating system image so it includes specific drivers, applications, software updates, etc., you use a build and capture task sequence to build a reference computer and then capture the operating system image from that reference computer. If you already have a reference computer available to capture, you can create a custom task sequence to capture the operating system. Use the following sections to capture a custom operating system.  
 
 ##  <a name="BKMK_BuildCaptureTS"></a> Use a task sequence to build and capture a reference computer  
@@ -163,6 +168,9 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 9. Use this step only if the Configuration Manager client is installed on the reference computer.  
 
      Click **Add**, click **Images**, and then click [Prepare ConfigMgr Client for Capture](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture). This task sequence step takes the Configuration Manager client on the reference computer and prepares it for capture as part of the imaging process.  
+
+    > [!Note]  
+    >  The task sequence does not support uninstalling the Configuration Manager client.
 
 10. Click **Add**, click **Images**, and then click [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture). This task sequence action runs Sysprep and then reboots the computer into Windows PE boot image specified for the task sequence. The reference computer must not be joined to a domain for this action to be completed successfully.  
 
