@@ -61,8 +61,11 @@ Starting with the Windows 10, version 1607 (also known as the Anniversary Update
 
 
 <!-- ## Application Management  -->
-
-
+## Application Management
+### New mobile application management policy settings
+<!-- 1324760 -->
+- **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
+- **Disable printing**: Prevents the app from printing work or school data.
 
 ## Operating system deployment
  > [!TIP]
@@ -78,7 +81,46 @@ Starting with the Windows 10, version 1607 (also known as the Anniversary Update
 <!-- ## Inventory  -->
 
 
-<!--  ## Mobile device management  -->
+## Mobile device management
+
+### Windows 10 ARM64 device support
+<!-- 1355000 -->
+
+Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available.
+
+These scenarios include:
+
+- [Enroll devices](../../../mdm/deploy-use/enroll-hybrid-windows.md)
+- [Perform remote full and selective wipe actions](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
+- [Manage settings through configuration items and baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
+- [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md)
+- [Manage conditional access](../../../mdm/deploy-use/manage-access-to-services.md)
+- Manage access to company resources through:
+   - [Certificate profiles](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
+   - [VPN profiles](../../../mdm/deploy-use/create-vpn-profiles.md)
+   - [Wi-Fi profiles](../../../mdm/deploy-use/create-wifi-profiles.md)
+   - [Email profiles](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
+- [Configure Windows Hello for Business policy](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
+- [Manage applications](../../../mdm/deploy-use/management-tasks-applications.md)
+
+### Improved VPN Profile Experience in Configuration Manager Console <!-- 1318232 -->
+
+With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform:
+
+
+- Each platform has its own workflow, meaning that new VPN profiles contain only the setting supported by the platform.
+- The **Supported Platforms** pages now appears after the **General** page.  You now choose the platform before setting property values.
+- When the platform is set to **Android**, **Android for Work**, or **Windows Phone 8.1**, the **Supported platforms** page is not needed and is not displayed.
+- The Configuration Manager client-based workflow has been combined with the hybrid mobile device (MDM) client-based Windows 10 workflows; they support the same settings.
+- Each platform workflow includes just the settings appropriate for that workflow.  For example, the Android workflow contains settings appropriate for Android; settings appropriate for iOS or Windows 10 Mobile no longer appear in the Android workflow.
+- For Windows 8.1 devices, connection types managed by Configuration Manager client only (not supported by Intune) are clearly marked.
+- The Automatic VPN page is obsolete and has been removed.
+
+These changes apply to new VPN profiles.  
+
+To minimize compatibility risk, existing VPN profiles are unchanged.  When you edit an existing profile, the settings appear as they did when the profile was created.  
+
+For more information, see [VPN Profiles on mobile devices in System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
 
 
 <!--  ## Protect devices   -->
