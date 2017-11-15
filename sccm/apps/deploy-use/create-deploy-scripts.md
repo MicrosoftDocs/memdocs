@@ -24,7 +24,10 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Run Scripts is a great new feature ... <!... (Jeffrey to send pitch)...>
+## THIS ARTICLE IS UNDER CONSTRUCTION - 
+**Please focus your review and feedback on COMPLETENESS and ACCURACY of the tech content.**
+
+NEW INTRO NEEDED ... Run Scripts is a great new feature ... Jeffrey will provide more ... 
 
 In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the following functionality to take the following actions:
 
@@ -82,6 +85,10 @@ This approval is primarily used for the testing phase of script development.
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
 
+## Security scopes
+
+Run Scripts uses security scopes, an existing feature of Configuration Mananger, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+
 ## Create a script
 
 1. In the Configuration Manager console, click **Software Library**.
@@ -97,21 +104,17 @@ This approval is primarily used for the testing phase of script development.
 
 ## Script parameters
 
-Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* and *List* data types. 
-
-When you create a script that has parameters, an associated parameter page will be displayed. If your script has unsupported data types, you will get a warning. 
+Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you will get a warning. 
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of the script parameters has its own dialog for adding further details and validation. 
+Each of your script parameters has its own dialog for adding further details and validation. 
 
 ### Parameter validation
 
 Each parameter in your script will have a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
-Some examples of script parameters are:
-
-### FirstName - String
+#### Example: FirstName
 
 In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is very useful for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
 
@@ -119,7 +122,7 @@ In this example, you are able to set the properties of the string parameter, *Fi
 
 ## Script examples
 
-Here are some examples that illustrate scripts you might want to use with this capability.
+Here are a couple examples that illustrate scripts you might want to use with this capability.
 
 ### Ping a given computer
 
@@ -137,17 +140,13 @@ Ping $Computername
 ```
 ### Get battery status
 
-This script querries the current machine for its battery status.
+This script uses WMI to query the machine for its battery status.
 
 ``` powershell
 
 Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ```
-
-## Security scopes
-
-Security scopes allow control of scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Run a script
 
