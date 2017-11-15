@@ -70,7 +70,7 @@ Scripts must be approved, by the *script approver*, before they can be run. To a
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
 3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
-4. In the **Approve or deny script** script dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision.  If you deny a script, it cannot be run on client devices. ![Script - Approval](./media/run-scripts/RS-approval.png)
+4. In the **Approve or deny script** dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision.  If you deny a script, it cannot be run on client devices. ![Script - Approval](./media/run-scripts/RS-approval.png)
 5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
 ### Allow users to approve their own scripts
@@ -83,11 +83,11 @@ This approval is primarily used for the testing phase of script development.
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
 
 >[!IMPORTANT]
->As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Please carefully consider the potential impact of changing this setting in a production environment.
+>As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
 
-Run Scripts uses security scopes, an existing feature of Configuration Mananger, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Create a script
 
