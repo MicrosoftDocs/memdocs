@@ -10,7 +10,7 @@ ms.technology:
 ms.topic: article
 ms.assetid:  10a846c2-e63c-4c2b-8210-7485bfe7e47f
 
-author: angrobe  
+author: brenduns  
 ms.author: angrobe  
 manager: angrobe
 
@@ -26,15 +26,15 @@ manager: angrobe
 
  MDT performs deployments by using the Lite Touch Installation (LTI), Zero Touch Installation (ZTI), and User-Driven Installation (UDI) deployment methods. Only MDT is used in LTI deployments, while ZTI and UDI deployments are performed using MDT with Microsoft System Center 2012 R2 Configuration Manager.  
 
- This document covers these deployment methods and shows how to customize the deployment process for an organization. In addition to this document,  REF _Ref304040650 \h Table 1 lists other documents that will help you perform deployments using MDT in your organization.  
+ This document covers these deployment methods and shows how to customize the deployment process for an organization. In addition to this document, Table 1 lists other documents that will help you perform deployments using MDT in your organization.  
 
 ### Table 1. Additional MDT Documents for Use in the Deployment Process  
 
-|Document|Description|  
+|Document |Description |  
 |--------------|-----------------|  
-|[Microsoft Deployment Toolkit Samples Guide](../Topic/Microsoft%20Deployment%20Toolkit%20Samples%20Guide.md)|Provides scenario-based samples of how to solve common deployment issues using MDT. Most samples include example configuration files and step-by-step processes for implementing the solution. Use this document to help solve difficult deployment problems.|  
-|[Toolkit Reference](../Topic/Toolkit%20Reference.md)|Provides information about the task sequence steps, properties, support files, utilities, and databases used in MDT deployments. Use this document to help customize MDT deployments for your organization.|  
-|[Troubleshooting Reference](../Topic/Troubleshooting%20Reference.md)|Provides information to assist in troubleshooting common problems with MDT deployments, including lists of known issues, reviewing logs, and identifying issues by error code.|  
+|[Microsoft Deployment Toolkit Samples Guide](samples-guide.md)|Provides scenario-based samples of how to solve common deployment issues using MDT. Most samples include example configuration files and step-by-step processes for implementing the solution. Use this document to help solve difficult deployment problems.|  
+|[Toolkit Reference](toolkit-reference.md)|Provides information about the task sequence steps, properties, support files, utilities, and databases used in MDT deployments. Use this document to help customize MDT deployments for your organization.|  
+|[Troubleshooting Reference](troubleshooting-reference.md)|Provides information to assist in troubleshooting common problems with MDT deployments, including lists of known issues, reviewing logs, and identifying issues by error code.|  
 
  This document is organized to help you through the planning, building, and deploying processes in your organization. The following sections in this guide help you perform LTI, ZTI, and UDI deployments and customize the deployment process.  REF _Ref304040739 \h Table 2 lists each section in this guide, with a brief overview of each.  
 
