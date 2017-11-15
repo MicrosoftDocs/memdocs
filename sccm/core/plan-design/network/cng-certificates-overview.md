@@ -64,6 +64,6 @@ To use CNG certificates, your certification authority (CA) needs to provide CNG 
     - **Provider Category** must be **Key Storage Provider**. (required)
 
 > [!NOTE]
-> The requirements for your environment or organization may be different. Contact your PKI expert. The important point to consider is a certificate template must use a Key Storage Provider to be able to take advantage of CNG.
+> The requirements for your environment or organization may be different. Contact your PKI expert. The important point to consider is a certificate template must use a Key Storage Provider to take advantage of CNG.
 
 For best results, we recommend building the Subject Name from Active Directory information. Use the DNS Name for **Subject name format** and include the DNS name in the alternate subject name. Otherwise, you must provide this information when the device enrolls into the certificate profile.
