@@ -122,7 +122,7 @@ In phase 1, you select the objects to discover and have the tool collect informa
 1. Open the tool and click **Start**.  
 2. Read the information, and then click **Next**. 
 3. Choose whether to import a previously exported data set or select the object types to import:
-   - **Import previously exported data set**: Choose **Import data set exported from a previous run of Intune Data Importer**, and click **Exported data folder** to select a data set that you previously exported using the Data Importer Tool. The user who imports the data set must be the same user that exported the data. After you import the data, a summary of the objects are listed on the **Summary** page of the wizard. If the summary looks correct, skip to the [Phase 3: Import selected object to Intune](phase-3:-import-selected-object-to-intune).
+   - **Import previously exported data set**: Choose **Import data set exported from a previous run of Intune Data Importer**, and click **Browse** for **Exported data folder** to select a data set that you previously exported using the Data Importer Tool. The user who imports the data set must be the same user that exported the data. After you import the data, a summary of the objects are listed on the **Summary** page of the wizard. If the summary looks correct, skip to the [Phase 3: Import selected object to Intune](phase-3:-import-selected-object-to-intune).
  
       > [!Note]
       > After you discover and select the objects in your site to import, you can export the objects to a data set on the **Sign-in to Intune** page of the wizard. You can then import the data set on this page. The data set is encrypted using the Windows user credentials of the logged-in user so only the user that exported the data set can import the data set in the tool. 
@@ -164,8 +164,9 @@ In phase 3, you will sign into Intune and import the selected objects.
 
     - **Export**: After you discover and select the objects in your site to import, you can export the objects to a data set. This allows you to discover objects from a computer that doesn't have Internet access, export the data, and then import the data from a computer that has Internet access. The data set is encrypted using the Windows user credentials of the logged-in user so only the user that exported the data set can import the data set in the tool. When you choose this option, choose the path to the exported data. 
       1. Click **Export** on the **Sign in to Intune** page. 
-      2. Click **Start** to export the data, and then click **Close** to complete the wizard.
-      3. Start the Data Importer from another computer with Internet access using the same credentials and select **Import previously exported data set** on the second page of the wizard. Once the data is imported, the wizard takes you to the **Sign in to Intune** page. 
+      2. Click **Browse** to select the destination folder for the export. The folder must be empty. 
+      3. Click **Start** to export the data, and when the export completes, click **Close** to complete the wizard and close the Data Importer.
+      4. Start the Data Importer from another computer with Internet access using the same credentials and select **Import previously exported data set** on the second page of the wizard. Once the data is imported, the wizard takes you to the **Sign in to Intune** page. 
     - **Sign in to Intune**: You must sign in with a Global Administrator or Intune Administrator account. After you sign in, the import process starts.
     
       > [!Important]
