@@ -22,11 +22,16 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The public key infrastructure (PKI) certificates that you might require for System Center Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For step-by-step deployment guidance see [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). For more about Active Directory Certificate Services, see the following documentation:  
+The public key infrastructure (PKI) certificates that you might require for System Center Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For step-by-step deployment guidance see [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). 
+
+For more about Active Directory Certificate Services, see the following documentation:  
 
 -   For Windows Server 2012: [Active Directory Certificate Services Overview](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
 
--   For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
+-   For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)
+
+For information about using Cryptography API: Next Generation (CNG) certificates with Configuration Manager, see [CNG certificates overview](cng-certificates-overview.md).
+
 
 > [!IMPORTANT]  
 > System Center Configuration Manager supports Secure Hash Algorithm 2 (SHA-2) certificates. SHA-2 certificates bring an important security advantage. Therefore, we recommend the following:
