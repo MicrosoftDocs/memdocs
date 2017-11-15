@@ -37,10 +37,16 @@ In [Prepare Windows 10 devices for co-management](co-management-prepare.md), you
     - **Production**: Configure the **Exclusion group** with one or more collections. Devices that are members of any of the collections in this group are excluded from using co-management. 
 7. To enable co-management, complete the wizard.  
 
-### Modify your co-management settings
+## Modify your co-management settings
 After you enable co-management using the wizard, you can modify the settings in the co-management properties.  
 - In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 Select the co-management object, and then on the Home tab, click **Properties**. 
 
-### Monitor co-management
+## Monitor co-management
 After you enable co-management, two policies are created in **Monitoring** > **Deployments**; one policy for the pilot group and one for production. 
+
+## Next steps
+Use the following resources to help you manage the workloads that you switch to Intune:
+- [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started)
+- [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)
+- [Resource access policies](https://docs.microsoft.com/intune/device-profiles)
