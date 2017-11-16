@@ -77,8 +77,6 @@ Try to complete the following tasks and then send **Feedback** from the **Home**
 
 1.  Create or edit an application. For more information, see [Create applications with System Center Configuration Manager](/sccm/apps/deploy-use/create-applications).
 
-2.  Create or edit a task sequence to install the application using the **Install Application** step. For more information, see [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) in the [Task sequence steps in System Center Configuration Manager](/sccm/osd/understand/task-sequence-steps).
-
     a. Choose the **User Experience** tab in the **Windows Installer (\*msi file) Properties**.
 
     b. Select **Install for system** for **Install behavior**.
@@ -89,14 +87,14 @@ Try to complete the following tasks and then send **Feedback** from the **Home**
 
     e. Select the **Allow users to interact with the program installation** box.
 
-3. You can add specific steps in your application installation, such as:
+2.  Create or edit a task sequence to install the application using the **Install Application** step. For more information, see [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) in the [Task sequence steps in System Center Configuration Manager](/sccm/osd/understand/task-sequence-steps).
 
     a. Imaging task sequence after the Setup Windows and Configuration Manager step.
 
     b. In-place upgrade task sequence in the Post-Processing group.
 
-4.  Deploy the task sequence to a client.
-5.  Install the task sequence from Software Center.
+3.  Deploy the task sequence to a client.
+4.  Install the task sequence from Software Center.
 
 During task sequence progress, the application installation interface appears on the target end-user device. The task sequence progress pauses until the end user completes the application installation workflow.
 
