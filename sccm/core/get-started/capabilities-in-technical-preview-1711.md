@@ -120,7 +120,7 @@ The following are new compliance polices you can configure for Windows 10 device
 - **Valid operating system builds**.  Specify minimum and maximum operating system build requirements.  
 
 Use the Create Compliance Policy Wizard to configure these policies and select these new options when you add a rule to the policy you are configuring.  
-Learn how to [create](/ sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy) and [deploy](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy) compliance policies.
+Learn how to [create](/sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy) and [deploy](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy) compliance policies.
 
 
 
