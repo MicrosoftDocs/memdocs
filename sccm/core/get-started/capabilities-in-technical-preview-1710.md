@@ -56,7 +56,7 @@ The **Run Scripts** feature was first introduced in 1706 and improved in each su
 
 ### Try it out!
 
-To try out using the Run Scripts feature, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md).
+To try out using the Run Scripts feature, see [Create and run scripts](../../apps/deploy-use/create-deploy-scripts.md). 
 
 
 
