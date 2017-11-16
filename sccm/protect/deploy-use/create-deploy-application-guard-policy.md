@@ -36,11 +36,13 @@ To create and deploy a Windows Defender Application Guard policy, the Windows 10
 
     > [!NOTE]
     > Windows 10 PCs store only one network isolation list on the client. You can create two different kinds of network isolation lists and deploy them to the client:
->      - one from Windows Information Protection
->      - one from Windows Defender Application Guard
->    If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail. For more informationk, see the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
-> 
-> 
+    >
+    >  - one from Windows Information Protection
+    >  - one from Windows Defender Application Guard
+    >
+    > If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail. For more informationk, see the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
+    > 
+    > 
 
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
