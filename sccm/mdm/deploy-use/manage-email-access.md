@@ -36,7 +36,7 @@ You can control access to Exchange Online and Exchange On-premises from the buil
 
 -   Android 4.0 and later, Samsung KNOX Standard 4.0 and later  
 
--   iOS 7.1 and later  
+-   iOS 9.0 and later  
 
 -   Windows Phone 8.1 and later  
 
@@ -90,13 +90,13 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
 -   Android 4.0 and later, Samsung KNOX Standard 4.0 and later  
 
--   iOS 7.1 and later  
+-   iOS 9.0 and later  
 
 -   Windows Phone 8.1 and later  
 
 -   The **Mail** application on Windows 8.1 and later  
 
- Outlook app for iOS and Android, and Outlook desktop 2013 and above  is supported for only Exchange Online.  
+ Outlook app for iOS and Android, and Outlook desktop 2013 and above is supported for only Exchange Online.  
 
  The **on-premises Exchange connector** between Configuration Manager and Exchange is required for conditional access to work.  
 
