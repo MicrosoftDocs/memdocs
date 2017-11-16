@@ -84,7 +84,7 @@ For System Center Configuration Manager version 1710, this level includes the fo
 
 - Count of client languages and locales
 
-- Count of Configuration Manager client versions and operating system versions
+- ***[Updated]*** Count of Configuration Manager client versions, operating system versions, and Office versions
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 
@@ -240,7 +240,13 @@ For System Center Configuration Manager version 1710, this level includes the fo
   - Whether the Operations Management Suite cloud connector is enabled
 
 
-
+- ***[New]*** Co-management
+  - ***[New]*** Aggregated usage statistics of co-management including number of enrolled clients, clients receiving policy, workload states, pilot/exclusion collection sizes, enrollment errors
+  - ***[New]*** Count of clients by co-management enrollment method
+  - ***[New]*** Error statistics for co-management enrollment
+  - ***[New]*** Enrollment schedule and historical statistics
+  - ***[New]*** Count of clients eligible for co-management
+  - ***[New]*** Associated Intune tenant
 
 
 - **Collections:**
@@ -302,6 +308,8 @@ For System Center Configuration Manager version 1710, this level includes the fo
 
    - Count of collections that are selected to appear in Endpoint Protection dashboard  
 
+   - ***[New]*** Count of Windows Defender Exploit Guard policies, deployments and targeted clients
+
    - Endpoint Protection deployment errors (count of Endpoint Protection policy deployment error codes)  
 
    - Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group)<br /><br /> This does not include any information about the settings included in the policy.  
@@ -359,6 +367,10 @@ For System Center Configuration Manager version 1710, this level includes the fo
     - Count of edition upgrade policies
 
     - Count of hardware identifiers excluded from PXE
+
+    - ***[New]*** Count of OS deployment by OS version
+
+    - ***[New]*** Count of OS upgrades over time
 
     - Count of task sequence deployments using option to pre-download content
 
