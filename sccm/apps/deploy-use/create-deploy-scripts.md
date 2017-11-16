@@ -26,7 +26,7 @@ manager: angrobe
 
 In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the Run Scripts functionality to do the following:
 
-- Create and edit PowerShell scripts for Configuration Manager.
+- Create and edit scripts for Configuration Manager.
 - Manage script usage through roles and security scopes
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. 
     - Scripts are run almost immediately on client devices.
@@ -46,6 +46,13 @@ In Configuration Manager, in addition to using packages and programs to deploy s
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
+## Limitations
+
+Run Scripts currently supports:
+
+- Scripting languages: PowerShell
+- Paramter types: integer and string
+
 ## Run Script authors and approvers
 
 Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is.
@@ -56,7 +63,7 @@ By default, users cannot approve a script they have authored. Because scripts ar
 
 ### Approve or Deny a script
 
-Scripts must be approved, by the *script approver*, before they can be run. To approve a script:
+Scripts must be approved, by the *script approver* role, before they can be run. To approve a script:
 
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
