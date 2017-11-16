@@ -3,7 +3,7 @@ title: "Technical Preview 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/16/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -48,6 +48,15 @@ This article introduces the features that are available in the Technical Preview
  -  Task 1
  -  Task 2              
 -->
+
+## The Run Scripts feature now has security scopes and segmented roles for stronger control of execution
+<!-- 1236459 -->
+
+The **Run Scripts** feature was first introduced in 1706 and improved in each subsequent release. The Run Scripts feature will remain as a pre-release feature in 1710 current branch. 
+
+### Try it out!
+
+To try out using the Run Scripts feature, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 
 
