@@ -30,7 +30,7 @@ In Configuration Manager, in addition to using packages and programs to deploy s
 - Manage script usage through roles and security scopes
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. 
     - Scripts are run almost immediately on client devices.
-- Monitor script execution and analyze script the results.
+- Monitor script execution and use results reporting.
 
 >[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
