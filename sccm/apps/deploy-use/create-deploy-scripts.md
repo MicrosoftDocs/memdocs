@@ -154,9 +154,7 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ## Run a script
 
-You script, once execution begins, is launced quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
-
-After a script is approved, it can be run against a collection you choose.
+After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launced quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
@@ -166,7 +164,7 @@ After a script is approved, it can be run against a collection you choose.
 6. Click **Next**, and then complete the wizard.
 
 >[!IMPORTANT]
->If a script does not run, for example if the PC is turned off, in the one hour time period, you must run it again.
+>If a script does not run, for example because a target client is turned off, in the one hour time period, you must run it again.
 
 ### Target machine execution 
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
@@ -185,3 +183,7 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
+## See Also
+
+- [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
+- [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration)
