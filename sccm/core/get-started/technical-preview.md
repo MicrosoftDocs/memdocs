@@ -3,7 +3,7 @@ title: "Technical Preview releases"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -116,7 +116,7 @@ The following are the  capabilities delivered  with each Configuration Manager t
  |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
  |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
  |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not-added](media/Red_X.gif)    |
-|Create and run PowerShell scripts from the Configuration Manager console <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md) | [Version 1710](/sccm/apps/deploy-use/create-deploy-scripts.md)|
+ |Improvements for deploying PowerShell scripts from Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Version 1710](/sccm/apps/deploy-use/create-deploy-scripts.md)
 
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  

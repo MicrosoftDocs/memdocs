@@ -60,10 +60,16 @@ Starting with the Windows 10, version 1607 (also known as the Anniversary Update
 <!--  ## Compliance settings  -->
 
 
-<!-- ## Application Management  -->
 ## Application Management
-<!-- 1236459 -->
-The **Run Scripts** feature was first introduced in 1706 and improved in each subsequent release. The Run Scripts feature will remain as a pre-release feature in 1710 current branch. For more on using Run Scripts, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md)
+### Improvements for Run Scripts   <!-- 1236459 -->
+This release brings several improvements to the **Run Scripts** feature which lets you deploy PowerShell scripts to run on managed devices. This feature was first introduced in version 1706.
+
+Improvements include:
+- Use Security Scopes to help control who can use Run Scripts
+- Real-time monitoring of the scripts you run
+- Parameters for the script display in Create Script Wizard, support validation, and are identified as mandatory or optional.
+
+For more on using Run Scripts, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 ### New mobile application management policy settings
 <!-- 1324760 -->
@@ -75,7 +81,7 @@ The **Run Scripts** feature was first introduced in 1706 and improved in each su
  > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
-<!--  ## Software updates  --> 
+<!--  ## Software updates  -->
 
 
 <!--  ## Reporting  -->
