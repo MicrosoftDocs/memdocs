@@ -24,35 +24,31 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the following functionality to take the following actions:
+In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the Run Scripts functionality to do the following:
 
-- Create PowerShell Scripts for Configuration Manager
-- Edit the scripts from the Configuration Manager console (for unsigned scripts only)
-- Mark scripts as Approved or Denied, to improve security
+- Create and edit PowerShell scripts for Configuration Manager.
+- Manage script usage through roles and security scopes
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. 
-    - You don't deploy scripts, instead, they are run almost immediately on client devices.
-- Examine the results returned by the script in the Configuration Manager console.
+    - Scripts are run almost immediately on client devices.
+- Monitor script execution and analyze script the results.
 
 >[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 ## Prerequisites
 
-To run PowerShell scripts, the client must be running PowerShell version 3.0 or later. However, if a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that version.
-
-Configuration Manager clients must be running the client from the 1706 release, or later in order to run scripts.
-
-To use scripts, you must be a member of the appropriate Configuration Manager security role.
-
-- To import, and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To approve, or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
+- To run PowerShell scripts, the client must be running PowerShell version 3.0 or later. However, if a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that version of PowerShell.
+- Configuration Manager clients must be running the client from the 1706 release, or later in order to run scripts.
+- To use scripts, you must be a member of the appropriate Configuration Manager security role.
+- To import and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
+- To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is.
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is.
 
 ### Scripts roles control
 
@@ -104,7 +100,7 @@ Adding parameters to a script provides increased flexibility for your work. The 
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script parameters has its own dialog for adding further details and validation. 
+Each of your script's parameters has its own dialog for adding further details and validation. 
 
 ### Parameter validation
 
@@ -119,6 +115,18 @@ In this example, you are able to set the properties of the string parameter, *Fi
 ## Script examples
 
 Here are a couple examples that illustrate scripts you might want to use with this capability.
+
+### Create a folder
+
+``` powershell
+New-Item "c:\scripts" -type folder name
+```
+
+### Create a file
+
+```powershell
+New-Item "c:\scripts\new_file.txt" -type file name
+```
 
 ### Ping a given computer
 
