@@ -133,21 +133,19 @@ New-Item "c:\scripts\new_file.txt" -type file name
 This script takes a string and uses it as a parameter for a *ping* operation.
 
 ``` powershell
-
 Param
 (
  [String][Parameter(Mandatory=$True, Position=1)] $Computername
 )
 
 Ping $Computername
-
 ```
+
 ### Get battery status
 
 This script uses WMI to query the machine for its battery status.
 
 ``` powershell
-
 Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ```
