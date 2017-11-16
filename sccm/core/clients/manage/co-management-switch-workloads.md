@@ -6,7 +6,7 @@ description: Learn how to switch workloads currently managed by Configuration Ma
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 10/31/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

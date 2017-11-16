@@ -6,7 +6,7 @@ description: Learn how to prepare your Windows 10 devices for co-management.
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 10/31/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
