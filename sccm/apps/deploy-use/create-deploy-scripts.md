@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 11/15/2017
+ms.date: 11/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,15 +24,20 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the Run Scripts functionality to do the following:
+We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager (SCCM).
+Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and lets you accomplish mundane tasks quickly to get big jobs done more easily and more consistently. 
 
-- Create and edit scripts for Configuration Manager.
+With this integration in SCCM, you can use the Run Scripts functionality to do the following:
+
+- Create and edit scripts for use with Configuration Manager.
 - Manage script usage through roles and security scopes
-- Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. 
-    - Scripts are run almost immediately on client devices.
-- Monitor script execution and use results reporting.
+- Run scripts on collections or individual on-premises managed Windows PCs. 
+- Get rapid aggregated Script results from client devices.
+- Monitor script execution and view reporting results from script output.
 
->[!TIP]
+Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
+
+>[!INFORMATION]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 ## Prerequisites
