@@ -62,6 +62,9 @@ Starting with the Windows 10, version 1607 (also known as the Anniversary Update
 
 <!-- ## Application Management  -->
 ## Application Management
+<!-- 1236459 -->
+The **Run Scripts** feature was first introduced in 1706 and improved in each subsequent release. The Run Scripts feature will remain as a pre-release feature in 1710 current branch. For more on using Run Scripts, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md)
+
 ### New mobile application management policy settings
 <!-- 1324760 -->
 - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
