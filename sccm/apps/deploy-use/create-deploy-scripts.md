@@ -31,7 +31,7 @@ With this integration in System Center Configuration Manager, you can use the *R
 - Create and edit scripts for use with Configuration Manager.
 - Manage script usage through roles and security scopes
 - Run scripts on collections or individual on-premises managed Windows PCs. 
-- Get rapid aggregated Script results from client devices.
+- Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
 >[!IMPORTANT]
