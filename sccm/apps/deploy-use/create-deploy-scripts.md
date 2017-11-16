@@ -177,11 +177,3 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
-### Troubleshooting
-
-Use the monitoring reports to ...
-
-
-## See also
-
-- links to supporting materials
