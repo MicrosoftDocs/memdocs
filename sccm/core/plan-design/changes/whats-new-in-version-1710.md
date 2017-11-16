@@ -59,7 +59,7 @@ Starting with the Windows 10, version 1607 (also known as the Anniversary Update
 ### Restart computers form the Configuration Manager console  <!-- 1356283 -->
 Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
 
-See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients.md#restart-clients)
+See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients)
 
 
 <!--  ## Compliance settings  -->
