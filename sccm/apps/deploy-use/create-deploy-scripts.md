@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 11/14/2017
+ms.date: 11/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,12 +23,6 @@ manager: angrobe
 # Create and run PowerShell scripts from the Configuration Manager console
 
 *Applies to: System Center Configuration Manager (Current Branch)*
-
->[!NOTE]
->Jeffrey / Maryam - THIS ARTICLE IS UNDER CONSTRUCTION - Please focus your review and feedback on COMPLETENESS and ACCURACY of the tech content. We'll move to a final review for ovearll appearance next. Also, for this release we've decided to leave this as one article, no decomposition, and for now will leave the TOC as it is. 
-
->[!NOTE]
-> Jeffrey - NEW INTRO NEEDED ... Run Scripts is a great new feature ... Jeffrey will provide more ... 
 
 In Configuration Manager, in addition to using packages and programs to deploy scripts, you can use the following functionality to take the following actions:
 
