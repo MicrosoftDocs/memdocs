@@ -3,7 +3,7 @@ title: "Technical Preview 1711 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1711 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/16/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -55,7 +55,7 @@ This article introduces the features that are available in the Technical Preview
 This technical preview will improve the Run Task Sequence step. Improvements include the following items:
 
  - Support for all operating system deployment scenarios from Software Center, PXE, and media.
- - Improvements to console actions such as copy, import, export, and warning during object deletion. 
+ - Improvements to console actions such as copy, import, export, and warning during object deletion.
  - Support for the **Create Prestage Content** wizard.
  - Integration with deployment verification.
  - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
@@ -104,9 +104,25 @@ During task sequence progress, the application installation interface appears on
 
 You can also use this feature when deploying an app using the wizard.
 
-1. Create or edit an application. 
+1. Create or edit an application.
 2. Deploy the application to a client.
 3. Install the application from Software Center. The application installation interface should appear. The end-user should follow the application installation wizard and the application will be successfully installed.
+
+## New compliance policy options for Windows 10
+The following are new compliance polices you can configure for Windows 10 devices.
+- **Require Firewall**.  Specify whether a device must have a firewall enabled and monitoring all networks.
+- **Require User Account Control**. Specify that a device must have User Account Control enabled.
+- **Defender**:
+  - **Require Windows Defender Antimalware**.  Require a device to have Windows Defender Antimalware enabled.
+  - **Windows Defender Antimalware version**.  Specify the minimum version of spyware definitions a device must have installed.
+  - **Require current Windows Defender Antimalware signature**. Verify that a devices Window Defender Antimalware signature is up-to-date.
+  - **Require Real-Time Protection**.  Specify whether a device must have Windows Defender Antimalware Real-Time Protection enabled.
+- **Valid operating system builds**.  Specify minimum and maximum operating system build requirements.  
+
+Use the Create Compliance Policy Wizard to configure these policies and select these new options when you add a rule to the policy you are configuring.  
+Learn how to [create](/ sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy) and [deploy](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy) compliance policies.
+
+
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
