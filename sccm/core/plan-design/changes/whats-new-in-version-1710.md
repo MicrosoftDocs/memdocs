@@ -56,6 +56,11 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 <!-- 1350871 -->
 Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview.md).
 
+### Restart computers form the Configuration Manager console  <!-- 1356283 -->
+Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
+
+See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/get-started/manage-clients.md#restart-clients)
+
 
 <!--  ## Compliance settings  -->
 
