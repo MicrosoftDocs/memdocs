@@ -35,9 +35,10 @@ With this integration in SCCM, you can use the Run Scripts functionality to do t
 - Get rapid aggregated Script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
-Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
+>[!IMPORTANT]
+>Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
 
->[!INFORMATION]
+>[!TIP]
 >In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 ## Prerequisites
