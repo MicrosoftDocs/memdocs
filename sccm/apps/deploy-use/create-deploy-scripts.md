@@ -90,7 +90,7 @@ This approval is primarily used for the testing phase of script development.
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
-*(Introduced with version 1710)*
+*(Introduced with version 1710)*  
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Create a script
@@ -107,7 +107,7 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 1. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 ## Script parameters
-*(Introduced with version 1710)*
+*(Introduced with version 1710)*  
 Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
