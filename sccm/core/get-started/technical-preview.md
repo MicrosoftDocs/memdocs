@@ -3,7 +3,7 @@ title: "Technical Preview releases"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/16/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -108,8 +108,10 @@ The following are the  capabilities delivered  with each Configuration Manager t
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- |Improvements to run task sequence step <!-- 1261338 --> | [Tech Preview 1711](\capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
-  |Allow user interaction when installing an application <!-- 1356976 --> | [Tech Preview 1711](\capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |Improvements to run task sequence step <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |Allow user interaction when installing an application <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |New compliance policies for Windows 10 <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![Not added](media/Red_X.gif)    |
+
 
 ## Capabilities delivered in previous technical previews
  When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
