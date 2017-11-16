@@ -113,10 +113,10 @@ The following are new compliance polices you can configure for Windows 10 device
 - **Require Firewall**.  Specify whether a device must have a firewall enabled and monitoring all networks.
 - **Require User Account Control**. Specify that a device must have User Account Control enabled.
 - **Defender**:
-  - **Require Windows Defender Antimalware**.  Require a device to have Windows Defender Antimalware enabled.
-  - **Windows Defender Antimalware version**.  Specify the minimum version of spyware definitions a device must have installed.
-  - **Require current Windows Defender Antimalware signature**. Verify that a devices Window Defender Antimalware signature is up-to-date.
-  - **Require Real-Time Protection**.  Specify whether a device must have Windows Defender Antimalware Real-Time Protection enabled.
+  - **Require Windows Defender Antivirus**.  Require a device to have Windows Defender Antivirus enabled.
+  - **Windows Defender Antivirus version**.  Specify the minimum version of spyware definitions a device must have installed.
+  - **Require current Windows Defender Antivirus signature**. Verify that a devices Window Defender Antivirus signature is up-to-date.
+  - **Require Real-Time Protection**.  Specify whether a device must have Windows Defender Antivirus Real-Time Protection enabled.
 - **Valid operating system builds**.  Specify minimum and maximum operating system build requirements.  
 
 Use the Create Compliance Policy Wizard to configure these policies and select these new options when you add a rule to the policy you are configuring.  
