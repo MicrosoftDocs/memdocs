@@ -24,10 +24,9 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager (SCCM).
-Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and lets you accomplish mundane tasks quickly to get big jobs done more easily and more consistently. 
+We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly allowing you to get big jobs done more easily and more consistently. 
 
-With this integration in SCCM, you can use the Run Scripts functionality to do the following:
+With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
 
 - Create and edit scripts for use with Configuration Manager.
 - Manage script usage through roles and security scopes
