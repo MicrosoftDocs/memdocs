@@ -56,7 +56,7 @@ For more information about Configuration Manager security roles, see [Fundamenta
 Run Scripts currently supports:
 
 - Scripting languages: PowerShell
-- Paramter types: integer and string
+- Parameter types: integer and string
 
 ## Run Script authors and approvers
 
@@ -164,7 +164,7 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ## Run a script
 
-After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launced quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
+After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launched quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
