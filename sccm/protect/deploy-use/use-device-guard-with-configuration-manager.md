@@ -28,7 +28,7 @@ manager: angrobe
 ## Introduction
 Device Guard is a group of Windows 10 features that are designed to protect PCs against malware and other untrusted software. It prevents malicious code from running by ensuring that only approved code, that you know, can be run.
 
-Device Guard encompasses both software and hardware-based security functionality. Configurable code integrity is a software-based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, configurable code integrity does not have any hardware or firmware prerequisites. Windows Defender Application Control policies deployed with Configuration Manager enable a configurable code integrity policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined in this topic. Optionally, hypervisor-based protection of code integrity policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
+Device Guard encompasses both software and hardware-based security functionality. Configurable code integrity is a software-based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, configurable code integrity does not have any hardware or firmware prerequisites. Windows Defender Application Control policies deployed with Configuration Manager enable a configurable code integrity policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined in this article. Optionally, hypervisor-based protection of code integrity policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
 
 To learn more about Device Guard, read the [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
 
@@ -72,7 +72,7 @@ Before you configure or deploy Windows Defender Application Control policies, re
 - To use Device Guard with Configuration Manager, PCs you manage must be running the Windows 10 Enterprise version 1703, or later.
 - Once a policy is successfully processed on a client PC, Configuration Manager is configured as a Managed Installer on that client, and software deployed through SCCM after the policy processes is automatically trusted. Software installed by Configuration Managed before the Windows Defender Application Control policy processes is not automatically trusted.
 - Client PCs must have connectivity to their Domain Controller in order for a Windows Defender Application Control policy to be processed successfully.
-- The default compliance evaluation schedule for Windows Defender Application Control policies, configurable during deployment, is every 1 day. If issues in policy processing are observed, it may be beneficial to configure the compliance evaluation schedule to be shorter, for example every hour. This schedule dictates how often clients reattempt to process a Windows Defender Application Control policy when a failure.
+- The default compliance evaluation schedule for Windows Defender Application Control policies, configurable during deployment, is every one day. If issues in policy processing are observed, it may be beneficial to configure the compliance evaluation schedule to be shorter, for example every hour. This schedule dictates how often clients reattempt to process a Windows Defender Application Control policy when a failure.
 - Regardless of the enforcement mode you select, when you deploy a Windows Defender Application Control policy, client PCs cannot run HTML applications with the extension .hta.
 
 ## How to create a Windows Defender Application Control policy
@@ -87,7 +87,7 @@ Before you configure or deploy Windows Defender Application Control policies, re
 		- **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 5.	On the **Inclusions** tab of the **Create Windows Defender Application Control policy Wizard**, click **Add** if you want to optionally add trust for specific files or folders on PCs. 
 6.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
-When you add trust for specific files for folders in a Windows Defender Application Control policy you can:
+When you add trust for specific files for folders in a Windows Defender Application Control policy, you can:
 	- Overcome issues with managed installer behaviors
 	- Trust line-of-business apps that cannot be deployed with Configuration Manager
 	- Trust apps that are included in an operating system deployment image. 
@@ -115,7 +115,7 @@ After the policy is processed on a client PC, a restart is scheduled on that cli
 
 ## How to monitor a Windows Defender Application Control policy
 
-Use the information in the [Monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings) topic to help you monitor that the deployed policy has been applied to all PCs correctly.
+Use the information in the [Monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings) article to help you monitor that the deployed policy has been applied to all PCs correctly.
 
 To monitor the processing of a Windows Defender Application Control policy, use the following log file on client PCs:
 
@@ -128,7 +128,7 @@ To verify the specific software being blocked or audited, see the following loca
 
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG is comprised of [Windows Defender SmartScreen](https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender Smartscreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender Smartscreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
