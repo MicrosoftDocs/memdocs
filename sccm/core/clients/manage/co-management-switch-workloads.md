@@ -32,10 +32,13 @@ In [Prepare Windows 10 devices for co-management](co-management-prepare.md), you
 3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.   
 4. On the Enablement page, choose either **Pilot** or **All**  to enable Automatic enrollment in Intune, and then click **Next**. When you choose **Pilot**, only the Configuration manager clients that are members of the Pilot group are automatically enrolled in Intune. This allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach. The command line can be used to deploy the Configuration Manager client as an app in Intune for devices already enrolled in Intune. For details, see [Windows 10 devices enrolled in Intune](co-management-prepare.md#windows-10-devices-enrolled-in-intune).
 5. On the Workloads page, choose whether to switch Configuration Manager workloads to be managed by Pilot Intune or Intune, and then click **Next**. The **Pilot Intune** setting switches the associated workload only for the devices in the Pilot group. The **Intune** setting switches the associated workload for all co-managed Windows 10 devices. 
-6. On the Staging page, configure the following settings and then click **Next**:
+        
+   > [!Important]    
+   > Before you switch any workloads, make sure the corresponding workload in Intune has been properly configured and deployed. Doing this ensures that workloads are always managed by one of the management tools for your devices.   
+1. On the Staging page, configure the following settings and then click **Next**:
     - **Pilot**: The pilot group contains one or more collections that you select. Use this group as part of your phased rollout of co-management. You can start with a small test collection, and then add more collections to the pilot group as you roll out co-management to more users and devices. You can change the collections in the pilot group at any time from the co-management properties.
     - **Production**: Configure the **Exclusion group** with one or more collections. Devices that are members of any of the collections in this group are excluded from using co-management. 
-7. To enable co-management, complete the wizard.  
+2. To enable co-management, complete the wizard.  
 
 ## Modify your co-management settings
 After you enable co-management using the wizard, you can modify the settings in the co-management properties.  
@@ -43,10 +46,23 @@ After you enable co-management using the wizard, you can modify the settings in 
 Select the co-management object, and then on the Home tab, click **Properties**. 
 
 ## Monitor co-management
-After you enable co-management, two policies are created in **Monitoring** > **Deployments**; one policy for the pilot group and one for production. 
+After you enable co-management, you can monitor co-management devices using the following methods:
+- **SQL view and WMI class**: You can query the **v&#95;ClientCoManagementState** SQL view in the Configuration Manager site database or the **SMS&#95;Client&#95;ComanagementState** WMI class. With the information in the WMI class, you can create custom collections in Configuration Manager to help determine the status of your co-management deployment. For details, see [How to create collections](sccm/core/clients/manage/collections/create-collections). The following fields are available in the SQL view and WMI class: 
+    - **MachineId**: Specifies a unique device ID for the Configuration Manager client.
+    - **MDMEnrolled**: Specifies whether the device is MDM-enrolled. 
+    - **Authority**: Specifies the authority for which the device is enrolled.
+    - **ComgmtPolicyPresent**: Specifies whether the Configuration Manager co-management policy exists on the client. If the **MDMEnrolled** value is **0**, the device is not co-managed regardless whether the co-management policy exists on the client.
+
+   > [!Note]    
+   > A device is co-managed when the **MDMEnrolled** field and **ComgmtPolicyPresent** fields both have a value of **1**.
+
+- **Deployment policies**:  There are two policies are created in **Monitoring** > **Deployments**; one policy for the pilot group and one for production. These policies only report the number of devices where Configuration Manager has applied the policy. It does not consider how many devices are enrolled in Intune, which is a requirement before devices can be co-managed.  
+
+## Check compliance for co-managed devices
+Users can use Software Center to check the compliance of their co-managed Windows 10 devices regardless of whether conditional access is managed by Configuration Manager or Intune. Users can also check compliance by using the Company Portal app when conditional access is managed by Intune.
 
 ## Next steps
 Use the following resources to help you manage the workloads that you switch to Intune:
 - [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started)
-- [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)
 - [Resource access policies](https://docs.microsoft.com/intune/device-profiles)
+- [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)
