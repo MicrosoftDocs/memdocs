@@ -3,7 +3,7 @@ title: "Technical Preview releases"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -26,7 +26,7 @@ manager: angrobe
 
  Because this is a technical preview, details and functionality are subject to change.  
 
- This topic contains information that applies to all versions of the Technical Preview, and also  lists each new capability (or feature) along with the  Technical Preview version in which the capability first appears, like version 1701 for January of 2017. The details for these capabilities are detailed in  separate topics dedicated to each preview version.  
+ This topic contains information that applies to all versions of the Technical Preview, and also  lists each new capability (or feature) along with the  Technical Preview version in which the capability first appears, like version 1710 for October of 2017. The details for these capabilities are detailed in  separate topics dedicated to each preview version.  
 
  For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -80,7 +80,7 @@ The following products and technologies are supported by this branch of Configur
 ##  <a name="bkmk_install"></a> Install and update the Technical Preview  
  The System Center Configuration Manager Technical Preview is distinct from the current release of System Center Configuration Manager.  
 
- To use the technical preview you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version.     Typically, new versions of the Technical Preview are available each month.
+ To use the technical preview you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version. Typically, new versions of the Technical Preview are available each month.
 
 Each preview release is supported up until three successive releases are available. Meaning, when version 1708 releases, version 1704 would no longer be in support, but versions 1705, 1706, and 1707 would remain in support. When a baseline falls out of support (like version 1703), it is still supported for installing a new Technical Preview site until a new baseline version is available, so long as you then update that install to a supported version. When updating, if you don’t see the most recent version available in your console, update to the latest version offered and then repeat that process until you can install the most current version of the technical preview.
 
@@ -89,8 +89,8 @@ Each preview release is supported up until three successive releases are availab
 
 **Active baseline versions of the Technical Preview:**  
 You can install a baseline version for up to 1 year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
--  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
-
+-  **Technical Preview 1711** - The Configuration Manager Technical Preview 1711 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you are installing a new baseline, we recommend you use version 1711.
 
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
@@ -108,6 +108,16 @@ The following are the  capabilities delivered  with each Configuration Manager t
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Improvements to run task sequence step <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |Allow user interaction when installing an application <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |New compliance policies for Windows 10 <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![Not added](media/Red_X.gif)    |
+
+
+## Capabilities delivered in previous technical previews
+ When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
+
+ |Capability |Technical Preview version |Current Branch version|  
+ |----------------|---------------------|--------------------|
  |Windows 10 telemetry for Windows Analytics Device Health <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![Not added](media/Red_X.gif)    |
  |Improvements for Software Center icons <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
  |Check compliance from Software Center for co-managed devices<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Not added](media/Red_X.gif)    |
@@ -116,12 +126,6 @@ The following are the  capabilities delivered  with each Configuration Manager t
  |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
  |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
  |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not-added](media/Red_X.gif)    |
- 
-## Capabilities delivered in previous technical previews
- When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
-
- |Capability |Technical Preview version |Current Branch version|  
- |----------------|---------------------|--------------------|
  |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
  |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Not added](media/Red_X.gif)    |
  |Improvements for specifying script parameters when you deploy PowerShell scripts from Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Not added](media/Red_X.gif)|
@@ -273,4 +277,3 @@ The following are the  capabilities delivered  with each Configuration Manager t
 ## See Also  
 [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
-
