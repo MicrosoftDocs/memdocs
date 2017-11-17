@@ -35,9 +35,9 @@ These license terms are an agreement between you and Microsoft Corporation (or o
 
  b)	**Distribution Requirements.** For the Distributable Code, you must:
 
-    *	add significant primary functionality to it in your applications; <br /><br >
-    * require distributors and external end users to agree to terms that protect it and Microsoft at least as much as this agreement; and <br /><br >
-    *	indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your applications, except to the extent that any claim is based solely on the unmodified distributable code.   <br /><br >
+    i.	 add significant primary functionality to it in your applications; <br /><br >
+    ii.  require distributors and external end users to agree to terms that protect it and Microsoft at least as much as this agreement; and <br /><br >
+    iii. indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your applications, except to the extent that any claim is based solely on the unmodified distributable code.   <br /><br >
 
   c)	**Distribution Restrictions.** You may not:<br /><br >
     *	use Microsoft’s trademarks or trade dress in your application in any way that suggests your application comes from or is endorsed by Microsoft; or<br /><br >
