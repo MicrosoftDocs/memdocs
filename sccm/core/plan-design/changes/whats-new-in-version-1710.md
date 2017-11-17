@@ -140,6 +140,11 @@ To minimize compatibility risk, existing VPN profiles are unchanged.  When you e
 
 For more information, see [VPN Profiles on mobile devices in System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
 
+### Limited support for Cryptography: Next Generation (CNG) certificates <!-- 1356191 -->
+
+Configuration Manager has limited support for Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates.
+
+For more information, see [CNG certificates overview](../network/cng-certificates-overview.md).
 
 ## Protect devices
 
