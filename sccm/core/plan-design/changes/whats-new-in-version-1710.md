@@ -87,7 +87,7 @@ The following settings have been added to the mobile application management poli
 
 With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
 
-To add an icon for your app in Software Center,. see [Create applications](/sccm/apps/deploy-use/create-applications).
+To add an icon for your app in Software Center, see [Create applications](/sccm/apps/deploy-use/create-applications).
 
 ## Operating system deployment
  > [!TIP]   
