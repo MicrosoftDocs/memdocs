@@ -148,15 +148,15 @@ You can [create and deploy policies](/sccm/protect/deploy-use/create-deploy-expl
 ### Create and deploy Windows Defender Application Guard policy
 <!-- 1351960 -->
 
-You can [create and deploy Windows Defender Application Guard policies](/sccm/protect/deploy-use/create-deploy-application-guard-policy?branch=pr-en-us-2126) by using the Configuration Manager endpoint protection.
+You can [create and deploy Windows Defender Application Guard policies](/sccm/protect/deploy-use/create-deploy-application-guard-policy) by using the Configuration Manager endpoint protection.
 
 ### Device Guard policy changes
 <!-- 1355092 -->
 The following three changes have been made in relation to Device Guard policies:
 
 - Device Guard policies have been renamed to Windows Defender Application Control policies. So, for example, the **Create Device Guard policy wizard** is now named **Create Windows Defender Application Control policy wizard**.
-- Devices using the Fall Creators Update for Windows version 1709 don’t require a restart to apply the Windows Defender Application Control policies. Restarting is still the default, but you can [turn off restarts](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager?branch=release-cm1710-cb#how-to-deploy-a-windows-defender-application-control-policy).
-- You can [set devices to automatically run software](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager?branch=release-cm1710-cb#automatically-let-software-run-if-it-is-trusted-by-intelligent-security-graph) trusted by the Intelligent Security Graph.
+- Devices using the Fall Creators Update for Windows version 1709 don’t require a restart to apply the Windows Defender Application Control policies. Restarting is still the default, but you can [turn off restarts](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+- You can [set devices to automatically run software](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) trusted by the Intelligent Security Graph.
 
 
 
