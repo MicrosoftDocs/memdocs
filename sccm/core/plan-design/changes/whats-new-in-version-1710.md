@@ -138,7 +138,25 @@ To minimize compatibility risk, existing VPN profiles are unchanged.  When you e
 For more information, see [VPN Profiles on mobile devices in System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
 
 
-<!--  ## Protect devices   -->
+## Protect devices
+
+### Create and deploy Exploit Guard policies <!--- 1355468 --->
+
+You can [create and deploy policies](https://review.docs.microsoft.com/en-us/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) that manage all four components of Windows Defender Exploit Guard, including attack surface reduction, controlled folder access, exploit protection, and network protection.
+
+### Create and deploy Windows Defender Application Guard policy <!--- 1351960 --->
+
+You can [create and deploy Windows Defender Application Guard policies](https://review.docs.microsoft.com/sccm/protect/deploy-use/create-deploy-application-guard-policy?branch=pr-en-us-2126) by using the Configuration Manager endpoint protection.
+
+### Device Guard policy changes <!-- 1355092 -->
+The following three changes have been made in relation to Device Guard policies:
+
+- Device Guard policies have been renamed to Windows Defender Application Control policies. So, for example, the **Create Device Guard policy wizard** is now named **Create Windows Defender Application Control policy wizard**.
+- Devices using the Fall Creators Update for Windows version 1709 don’t require a restart to apply the Windows Defender Application Control policies. Restarting is still the default, but you can [turn off restarts](https://review.docs.microsoft.com/sccm/protect/deploy-use/use-device-guard-with-configuration-manager?branch=release-cm1710-cb#how-to-deploy-a-windows-defender-application-control-policy).
+- You can [set devices to automatically run software](https://review.docs.microsoft.com/sccm/protect/deploy-use/use-device-guard-with-configuration-manager?branch=release-cm1710-cb#automatically-let-software-run-if-it-is-trusted-by-intelligent-security-graph) trusted by the Intelligent Security Graph.
+
+
+
 
 
 ## Next Steps
