@@ -112,10 +112,10 @@ The following are the  capabilities delivered  with each Configuration Manager t
  |Improvements for Software Center icons <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Not added](media/Red_X.gif)    |
  |Check compliance from Software Center for co-managed devices<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Not added](media/Red_X.gif)    |
  |Limited support for CNG certificates<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![Not added](media/Red_X.gif)    |
- |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Not added](media/Red_X.gif)    |
+ |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
  |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/core/clients/manage/manage-clients)    |
- |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not added](media/Red_X.gif)    |
- |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Not-added](media/Red_X.gif)    |
+ |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
+ |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
  |Improvements for deploying PowerShell scripts from Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Version 1710](/sccm/apps/deploy-use/create-deploy-scripts)
 
 ## Capabilities delivered in previous technical previews
