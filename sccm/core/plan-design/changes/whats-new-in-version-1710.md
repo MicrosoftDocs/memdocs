@@ -82,19 +82,38 @@ The following settings have been added to the mobile application management poli
 - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
 - **Disable printing**: Prevents the app from printing work or school data.
 
+## Software Center no longer distorts icons larger than 250x250  
+<!-- 1356194 -->
+
+With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
+
+To add an icon for your app in Software Center,. see [Create applications](/sccm/apps/deploy-use/create-applications).
+
 ## Operating system deployment
  > [!TIP]   
  > <!-- 1354281 -->
  > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
+## Software Center customization
+<!-- 1351224 -->
+You can add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
+
+For more information see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management.md).
 
 ## Software updates
+
 ### Surface driver updates  <!-- 1098490 -->
 Beginning with this release, managing Surface driver updates is no longer a pre-release feature.  
 
 
-<!--  ## Reporting  -->
+## Reporting
 
+### Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+<!-- 1356148 -->
+
+You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+
+For more more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings.md). 
 
 <!-- ## Inventory  -->
 
