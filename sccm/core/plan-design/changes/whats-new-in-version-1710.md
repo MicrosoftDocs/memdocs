@@ -78,6 +78,7 @@ For more on using Run Scripts, see [Create and run scripts](../../../apps/deploy
 
 ### New mobile application management policy settings
 <!-- 1324760 -->
+The following settings have been added to the mobile application management policy settings:
 - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
 - **Disable printing**: Prevents the app from printing work or school data.
 
