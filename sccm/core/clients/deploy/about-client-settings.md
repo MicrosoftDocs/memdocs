@@ -3,7 +3,7 @@ title: "Client settings"
 titleSuffix: "Configuration Manager"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -67,7 +67,7 @@ Enables BranchCache on client computers.
 - **Configure client cache size**
 
   The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** then specify:
-	- **Maximum cache size** (megabytes). 
+	- **Maximum cache size** (megabytes).
 	- **Maximum cache size** (percentage of disk).
 The client cache size can expand to the maximum size in MB or the percentage of the disk, **whichever is less**. If this option is **No**, the default size is 5,120 MB.
 
@@ -284,6 +284,8 @@ Enables peer cache for Configuration Manager clients. Then, specify port informa
  For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 ##  Endpoint Protection  
+>  [!Tip]   
+> In addition to the following information, you can find additional details about using Endpoint Protection client settings in [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
 -   **Manage Endpoint Protection client on client computers**  
 
