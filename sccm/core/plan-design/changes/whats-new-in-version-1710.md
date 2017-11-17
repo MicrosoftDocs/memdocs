@@ -40,10 +40,10 @@ Version 1710 drops support for the following products:
 
 ## Site infrastructure
 
-### Updates for Peer Cache  
+### Updates for Peer Cache  <!-- sms500850 -->
 Beginning with this release, Peer Cache is no longer a pre-release feature.  No other changes for Peer Cache are introduced with this release. For more information, see  [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
-### Cloud distribution point support for Azure Government Cloud
+### Cloud distribution point support for Azure Government Cloud   <!-- sms491428 -->
 You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the Azure Government cloud.   
 
 
@@ -83,11 +83,14 @@ The following settings have been added to the mobile application management poli
 - **Disable printing**: Prevents the app from printing work or school data.
 
 ## Operating system deployment
- > [!TIP]
+ > [!TIP]   
+ > <!-- 1354281 -->
  > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
-<!--  ## Software updates  -->
+## Software updates
+### Surface driver updates  <!-- 1098490 -->
+Beginning with this release, managing Surface driver updates is no longer a pre-release feature.  
 
 
 <!--  ## Reporting  -->
