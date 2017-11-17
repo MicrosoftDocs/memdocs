@@ -67,7 +67,7 @@ See [How to manage clients in System Center Configuration Manager](/sccm/core/cl
 
 ## Application Management
 ### Improvements for Run Scripts   <!-- 1236459 -->
-This release brings several improvements to the **Run Scripts** feature which lets you deploy PowerShell scripts to run on managed devices. This feature was first introduced in version 1706.
+This release brings several improvements to the **Run Scripts** feature, which lets you deploy PowerShell scripts to run on managed devices. This feature was first introduced in version 1706.
 
 Improvements include:
 - Use Security Scopes to help control who can use Run Scripts
@@ -94,11 +94,18 @@ To add an icon for your app in Software Center,. see [Create applications](/sccm
  > <!-- 1354281 -->
  > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
+### Add child task sequences to a task sequence
+<!-- 1261338 -->
+
+You can add a new task sequence step that runs another task sequence, which creates a parent/child relationship between the task sequences. This allows you to create more modular task sequences that you can re-use.  
+
+To learn more about the child task sequence, see [Child task sequence](/sccm/osd/understand/task-sequence-steps.md#child-task-sequence).
+
 ## Software Center customization
 <!-- 1351224 -->
 You can add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
 
-For more information see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management.md).
+For more information, see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management.md).
 
 ## Software updates
 
@@ -113,7 +120,7 @@ Beginning with this release, managing Surface driver updates is no longer a pre-
 
 You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
 
-For more more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings.md). 
+For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings.md). 
 
 <!-- ## Inventory  -->
 
@@ -146,7 +153,7 @@ With this release, we’ve updated the VPN profile wizard and properties pages t
 
 
 - Each platform has its own workflow, meaning that new VPN profiles contain only the setting supported by the platform.
-- The **Supported Platforms** pages now appears after the **General** page.  You now choose the platform before setting property values.
+- The **Supported Platforms** page now appears after the **General** page.  You now choose the platform before setting property values.
 - When the platform is set to **Android**, **Android for Work**, or **Windows Phone 8.1**, the **Supported platforms** page is not needed and is not displayed.
 - The Configuration Manager client-based workflow has been combined with the hybrid mobile device (MDM) client-based Windows 10 workflows; they support the same settings.
 - Each platform workflow includes just the settings appropriate for that workflow.  For example, the Android workflow contains settings appropriate for Android; settings appropriate for iOS or Windows 10 Mobile no longer appear in the Android workflow.
