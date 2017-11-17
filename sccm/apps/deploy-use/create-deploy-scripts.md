@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 11/16/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,13 +24,13 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly allowing you to get big jobs done more easily and more consistently. 
+We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly allowing you to get big jobs done more easily and more consistently.
 
 With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
 
 - Create and edit scripts for use with Configuration Manager.
-- Manage script usage through roles and security scopes
-- Run scripts on collections or individual on-premises managed Windows PCs. 
+- Manage script usage through roles and security scopes  
+- Run scripts on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
@@ -38,7 +38,7 @@ With this integration in System Center Configuration Manager, you can use the *R
 >Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
 
 >[!TIP]
->In this version of Configuration Manager, scripts are a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+>Introduced with version 1706, PowerShell Scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ For more information about Configuration Manager security roles, see [Fundamenta
 Run Scripts currently supports:
 
 - Scripting languages: PowerShell
-- Paramter types: integer and string
+- Parameter types: integer and string
 
 ## Run Script authors and approvers
 
@@ -90,7 +90,7 @@ This approval is primarily used for the testing phase of script development.
 >As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
-
+*(Introduced with version 1710)*  
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Create a script
@@ -107,12 +107,12 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 1. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 ## Script parameters
-
-Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning. 
+*(Introduced with version 1710)*  
+Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script's parameters has its own dialog for adding further details and validation. 
+Each of your script's parameters has its own dialog for adding further details and validation.
 
 ### Parameter validation
 
@@ -164,7 +164,7 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ## Run a script
 
-After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launced quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
+After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launched quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
@@ -176,7 +176,7 @@ After a script is approved, it can be run against a collection you choose. Once 
 >[!IMPORTANT]
 >If a script does not run, for example because a target client is turned off, in the one hour time period, you must run it again.
 
-### Target machine execution 
+### Target machine execution
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
 
 ## Work flow and monitoring
@@ -187,9 +187,9 @@ Here's what Run Scripts looks like as a work flow; create, approve, run and, mon
 
 ### Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. You are both able to monitor a script, real-time, as it executes and you can also return to a report for a given Run Script execution.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution.
 
-1. In the Configuration Manager console, click **Monitoring**. 
+1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 

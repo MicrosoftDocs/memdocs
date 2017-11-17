@@ -56,14 +56,25 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 <!-- 1350871 -->
 Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview.md).
 
+### Restart computers form the Configuration Manager console  <!-- 1356283 -->
+Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
+
+See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients)
+
 
 <!--  ## Compliance settings  -->
 
 
-<!-- ## Application Management  -->
 ## Application Management
-<!-- 1236459 -->
-The **Run Scripts** feature was first introduced in 1706 and improved in each subsequent release. The Run Scripts feature will remain as a pre-release feature in 1710 current branch. For more on using Run Scripts, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md)
+### Improvements for Run Scripts   <!-- 1236459 -->
+This release brings several improvements to the **Run Scripts** feature which lets you deploy PowerShell scripts to run on managed devices. This feature was first introduced in version 1706.
+
+Improvements include:
+- Use Security Scopes to help control who can use Run Scripts
+- Real-time monitoring of the scripts you run
+- Parameters for the script display in Create Script Wizard, support validation, and are identified as mandatory or optional.
+
+For more on using Run Scripts, see [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 ### New mobile application management policy settings
 <!-- 1324760 -->
@@ -75,7 +86,7 @@ The **Run Scripts** feature was first introduced in 1706 and improved in each su
  > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
-<!--  ## Software updates  --> 
+<!--  ## Software updates  -->
 
 
 <!--  ## Reporting  -->
