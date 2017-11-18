@@ -138,7 +138,6 @@ These scenarios include:
 - [Perform remote full and selective wipe actions](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
 - [Manage settings through configuration items and baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
 - [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md)
-- [Manage conditional access](../../../mdm/deploy-use/manage-access-to-services.md)
 - Manage access to company resources through:
    - [Certificate profiles](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
    - [VPN profiles](../../../mdm/deploy-use/create-vpn-profiles.md)
