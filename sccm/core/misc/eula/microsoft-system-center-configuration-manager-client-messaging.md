@@ -1,7 +1,7 @@
 ---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING"
 ms.custom: na
-ms.date: 1/20/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.service:
 ms.technology: configmgr-other
@@ -19,92 +19,61 @@ robots: noindex,nofollow
 **MICROSOFT SOFTWARE LICENSE TERMS**
 **MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING**
 
-These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the software named above, which includes the media on which you received it, if any. The terms also apply to any Microsoft  
--	updates,  
-- supplements,  
--	Internet-based services, and  
-- support services    
+These license terms are an agreement between you and Microsoft Corporation (or one of its affiliates). They apply to the software named above and any Microsoft services or software updates (except to the extent such services or updates are accompanied by new or additional terms, in which case those different terms apply prospectively and do not alter your or Microsoft’s rights relating to pre-updated software or services). IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW.  BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
 
-for this software, unless other terms accompany those items. If so, those terms apply.
 
-**By using the software, you accept these terms. If you do not accept them, do not use the software.**
-
-**If you comply with these license terms, you have the perpetual rights below.**  <br><br>
 1.	**INSTALLATION AND USE RIGHTS.**   
-  - 	You may install and use any number of copies of the software on your devices.<br><br>
-2.	**ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.**   <br><br>
-  a.	**Distributable Code.** The software is comprised of Distributable Code. “Distributable Code” is code that you are permitted to distribute in programs you develop if you comply with the terms below.   <br><br>
-    i.	**Right to Use and Distribute.**
 
-    - You may copy and distribute the object code form of the software.
-    - <u>Third Party Distribution</u>. You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.    <br><br>
+  a)	**General.** You may install and use any number of copies of the software to develop and test your applications.   
 
-  ii.	**Distribution Requirements. For any Distributable Code you distribute, you must**  
-    -	add significant primary functionality to it in your programs;
-    - require distributors and external end users to agree to terms that protect it at least as much as this agreement;
-    -	display your valid copyright notice on your programs; and
-    -	indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.    <br><br>
+  b)	**Third Party Software.** The software may include third party applications that are licensed to you under this agreement or under their own terms. License terms, notices, and acknowledgements, if any, for the third party applications may be accessible in an accompanying notices file. Even if such applications are governed by other agreements, the disclaimer, limitations on, and exclusions of damages below also apply to the extent allowed by applicable law.
 
-  iii.	**Distribution Restrictions. You may not**
-    -	alter any copyright, trademark or patent notice in the Distributable Code;
-    -	use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;
-    -	include Distributable Code in malicious, deceptive or unlawful programs; or
-    -	modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that
-       -	the code be disclosed or distributed in source code form; or
-       -	others have the right to modify it.     <br><br>
+2. **DISTRIBUTABLE CODE.** The software is distributable (“Distributable Code”) (i.e. make available for third parties) in applications you develop, as described in this Section.  
 
-3.	**SCOPE OF LICENSE.** The software is licensed, not sold. This agreement only gives you some rights to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not
+  a)	**Distribution Rights.**   
+      * ***Third Party Distribution.*** You may permit distributors of your applications to copy and distribute the Distributable Code with your applications.     <br /><br >
 
-  -	work around any technical limitations in the software;
-    -	reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
-    -	make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
-    -	publish the software for others to copy;
-    -	rent, lease or lend the software;
-    -	transfer the software or this agreement to any third party; or
-    -	use the software for commercial software hosting services. <br><br>
+ b)	**Distribution Requirements.** For the Distributable Code, you must:
 
-4.	**BACKUP COPY.**  You may make one backup copy of the software. You may use it only to reinstall the software.
+    *   add significant primary functionality to it in your applications; <br /><br >
+    *   require distributors and external end users to agree to terms that protect it and Microsoft at least as much as this agreement; and <br /><br >
+    *   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your applications, except to the extent that any claim is based solely on the unmodified distributable code.   <br /><br >
 
-5.	**DOCUMENTATION.** Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
+  c)	**Distribution Restrictions.** You may not:<br /><br >
+    *	use Microsoft’s trademarks or trade dress in your application in any way that suggests your application comes from or is endorsed by Microsoft; or<br /><br >
+    *	modify or distribute the source code of any Distributable Code so that any part of it becomes subject to any license that requires that the Distributable Code, any other part of the software, or any of Microsoft’s other intellectual property be disclosed or distributed in source code form, or that others have the right to modify it.<br /><br >
 
-6.	**EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.
+3.	**SCOPE OF LICENSE.** The software is licensed, not sold. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you will not (and have no right to):<br /><br >
+    a)	work around any technical limitations in the software that only allow you to use it in certain ways;<br /><br >
+    b)	reverse engineer, decompile, or disassemble the software, or attempt to do so, except and only to the extent permitted by licensing terms governing the use of open-source components that may be included with the software;<br /><br >
+    c)	remove, minimize, block, or modify any notices of Microsoft or its suppliers in the software;<br /><br >
+    d)	use the software in any way that is against the law or to create or propagate malware; or<br /><br >
+    e)	share, publish, distribute, or lend the software (except for any distributable code, subject to the terms above), provide the software as a stand-alone hosted solution for others to use, or transfer the software or this agreement to any third party.<br /><br >
 
-7.	**SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.
+4.	**EXPORT RESTRICTIONS.** You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit http://aka.ms/exporting.<br /><br >
 
-8.	**ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
+5.	**SUPPORT SERVICES.** Microsoft is not obligated under this agreement to provide any support services for the software. Any support provided is “as is”, “with all faults”, and without warranty of any kind.<br /><br >
 
-9.	**APPLICABLE LAW.**    
-  a.  **United States.**   If you acquired the software in the United States, Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles. The laws of the state where you live govern all other claims, including claims under state consumer protection laws, unfair competition laws, and in tort.    
+6.	**UPDATES**. The software may periodically check for updates, and download and install them for you. You may obtain updates only from Microsoft or authorized sources. Microsoft may need to update your system to provide you with updates. You agree to receive these automatic updates without any additional notice. Updates may not include or support all existing software features, services, or peripheral devices.<br /><br >
 
-  **b.	Outside the United States.** If you acquired the software in any other country, the laws of that country apply.
+7.	**ENTIRE AGREEMENT.** This agreement, and any other terms Microsoft may provide for supplements, updates, or third-party applications, is the entire agreement for the software.<br /><br >
 
-10.	**LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.
+8.	**APPLICABLE LAW AND PLACE TO RESOLVE DISPUTES.** If you acquired the software in the United States or Canada, the laws of the state or province where you live (or, if a business, where your principal place of business is located) govern the interpretation of this agreement, claims for its breach, and all other claims (including consumer protection, unfair competition, and tort claims), regardless of conflict of laws principles. If you acquired the software in any other country, its laws apply. If U.S. federal jurisdiction exists, you and Microsoft consent to exclusive jurisdiction and venue in the federal court in King County, Washington for all disputes heard in court. If not, you and Microsoft consent to exclusive jurisdiction and venue in the Superior Court of King County, Washington for all disputes heard in court.<br /><br >
 
-11.	**DISCLAIMER OF WARRANTY.** **The software is licensed “as-is.” You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights or statutory guarantees under your local laws which this agreement cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.**
+9.	**CONSUMER RIGHTS; REGIONAL VARIATIONS.** This agreement describes certain legal rights. You may have other rights, including consumer rights, under the laws of your state or country. Separate and apart from your relationship with Microsoft, you may also have rights with respect to the party from which you acquired the software. This agreement does not change those other rights if the laws of your state or country do not permit it to do so. For example, if you acquired the software in one of the below regions, or mandatory country law applies, then the following provisions apply to you:<br /><br >
 
-  **FOR AUSTRALIA – You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.**
+    a)	**Australia.** You have statutory guarantees under the Australian Consumer Law and nothing in this agreement is intended to affect those rights.<br /><br >
+    b)	**Germany and Austria.**<br /><br >
 
-12.	**LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES.** **You can recover from Microsoft and its suppliers only direct damages up to U.S. $5.00. You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.**
+    *	**Warranty.** The properly licensed software will perform substantially as described in any Microsoft materials that accompany the software. However, Microsoft gives no contractual guarantee in relation to the licensed software.<br /><br >
 
-  This limitation applies to
-  -	anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and
-  -	claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law. <br><br>
+    * **Limitation of Liability.** In case of intentional conduct, gross negligence, claims based on the Product Liability Act, as well as, in case of death or personal or physical injury, Microsoft is liable according to the statutory law.
+    Subject to the foregoing clause ii., Microsoft will only be liable for slight negligence if Microsoft is in breach of such material contractual obligations, the fulfillment of which facilitate the due performance of this agreement, the breach of which would endanger the purpose of this agreement and the compliance with which a party may constantly trust in (so-called "cardinal obligations"). In other cases of slight negligence, Microsoft will not be liable for slight negligence.
 
-  It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+10.	**DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES, OR CONDITIONS. TO THE EXTENT PERMITTED UNDER APPLICABLE LAWS, MICROSOFT EXCLUDES ALL IMPLIED WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.**
 
+11.	**LIMITATION ON AND EXCLUSION OF DAMAGES. IF YOU HAVE ANY BASIS FOR RECOVERING DAMAGES DESPITE THE PRECEDING DISCLAIMER OF WARRANTY, YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT, OR INCIDENTAL DAMAGES.**
 
-**Please note: As this software is distributed in Quebec, Canada, some of the clauses in this agreement are provided below in French.**
+  **This limitation applies to (a) anything related to the software, services, content (including code) on third party Internet sites, or third party applications; and (b) claims for breach of contract, warranty, guarantee, or condition; strict liability, negligence, or other tort; or any other claim; in each case to the extent permitted by applicable law.**
 
-**Remarque : Ce logiciel étant distribué au Québec, Canada, certaines des clauses dans ce contrat sont fournies ci-dessous en français.**
-
-**EXONÉRATION DE GARANTIE.** Le logiciel visé par une licence est offert « tel quel ». Toute utilisation de ce logiciel est à votre seule risque et péril. Microsoft n’accorde aucune autre garantie expresse. Vous pouvez bénéficier de droits additionnels en vertu du droit local sur la protection des consommateurs, que ce contrat ne peut modifier. La ou elles sont permises par le droit locale, les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon sont exclues.
-
-**LIMITATION DES DOMMAGES-INTÉRÊTS ET EXCLUSION DE RESPONSABILITÉ POUR LES DOMMAGES.** Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs uniquement à hauteur de 5,00 $ US. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects ou accessoires et pertes de bénéfices.    
-
-Cette limitation concerne :
-- 	tout ce qui est relié au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et
-- 	les réclamations au titre de violation de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.
-
-Elle s’applique également, même si Microsoft connaissait ou devrait connaître l’éventualité d’un tel dommage. Si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit, il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquera pas à votre égard.
-
-**EFFET JURIDIQUE.** Le présent contrat décrit certains droits juridiques. Vous pourriez avoir d’autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
+  **It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your state, province, or country may not allow the exclusion or limitation of incidental, consequential, or other damages.**

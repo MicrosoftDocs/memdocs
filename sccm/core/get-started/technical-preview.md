@@ -26,7 +26,7 @@ manager: angrobe
 
  Because this is a technical preview, details and functionality are subject to change.  
 
- This topic contains information that applies to all versions of the Technical Preview, and also  lists each new capability (or feature) along with the  Technical Preview version in which the capability first appears, like version 1701 for January of 2017. The details for these capabilities are detailed in  separate topics dedicated to each preview version.  
+ This topic contains information that applies to all versions of the Technical Preview, and also  lists each new capability (or feature) along with the  Technical Preview version in which the capability first appears, like version 1710 for October of 2017. The details for these capabilities are detailed in  separate topics dedicated to each preview version.  
 
  For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -80,7 +80,7 @@ The following products and technologies are supported by this branch of Configur
 ##  <a name="bkmk_install"></a> Install and update the Technical Preview  
  The System Center Configuration Manager Technical Preview is distinct from the current release of System Center Configuration Manager.  
 
- To use the technical preview you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version.     Typically, new versions of the Technical Preview are available each month.
+ To use the technical preview you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version. Typically, new versions of the Technical Preview are available each month.
 
 Each preview release is supported up until three successive releases are available. Meaning, when version 1708 releases, version 1704 would no longer be in support, but versions 1705, 1706, and 1707 would remain in support. When a baseline falls out of support (like version 1703), it is still supported for installing a new Technical Preview site until a new baseline version is available, so long as you then update that install to a supported version. When updating, if you don’t see the most recent version available in your console, update to the latest version offered and then repeat that process until you can install the most current version of the technical preview.
 
@@ -89,8 +89,8 @@ Each preview release is supported up until three successive releases are availab
 
 **Active baseline versions of the Technical Preview:**  
 You can install a baseline version for up to 1 year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
--  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
-
+-  **Technical Preview 1711** - The Configuration Manager Technical Preview 1711 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical Preview 1703** - The Configuration Manager Technical Preview 1703 is available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you are installing a new baseline, we recommend you use version 1711.
 
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
@@ -105,6 +105,16 @@ You can install a baseline version for up to 1 year after its release. However, 
 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in the most recent technical preview  
 The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
+
+ |Capability |Technical Preview version |Current Branch version|  
+ |----------------|---------------------|--------------------|
+ |Improvements to run task sequence step <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |Allow user interaction when installing an application <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Not added](media/Red_X.gif)    |
+ |New compliance policies for Windows 10 <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![Not added](media/Red_X.gif)    |
+
+
+## Capabilities delivered in previous technical previews
+ When all features from a technical preview release are available in the minimum supported version of the Current Branch, details for that preview version are removed from the following table.  
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
