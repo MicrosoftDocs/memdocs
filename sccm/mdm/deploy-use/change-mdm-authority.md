@@ -7,7 +7,7 @@ description: "Learn how to change the MDM authority from Configuration Manager (
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 10/04/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:
@@ -16,7 +16,7 @@ ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 
 ---
 # Change your MDM authority
-Beginning in Configuration Manager version 1610, you can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. This topic provides the steps to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone. When you complete the steps in this topic, devices will be managed by Microsoft Intune in the Azure portal. 
+Beginning in Configuration Manager version 1610, you can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. This topic provides the steps to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone. When you complete the steps in this topic, devices will be managed by Microsoft Intune in the [Azure portal](https://portal.azure.com). 
 
 > [!Note]    
 > If you want to change an existing Microsoft Intune tenant, with the MDM authority set to Intune, to Configuration Manager (hybrid), see [Change the MDM authority](https://docs.microsoft.com/intune-classic/deploy-use/change-mdm-authority).
