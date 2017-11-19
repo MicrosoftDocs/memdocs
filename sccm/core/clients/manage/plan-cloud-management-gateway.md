@@ -42,7 +42,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 - Cloud management gateway only supports the management point and software update point roles.
 -   The following features in Configuration Manager are currently unsupported for cloud management gateway:
 
-    -   Client deployment
+    -   Client push
     -   Automatic site assignment
     -   Application catalog (including software approval requests)
     -   Full operating system deployment (OSD)
