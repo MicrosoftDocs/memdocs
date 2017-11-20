@@ -1721,7 +1721,8 @@ manager: angrobe
 >  The default value for this property always performs the **Apply Local GPO Package** task sequence step. You must explicitly provide a value of "NO" to override this behavior..  
 
 |**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-| |BootStrap.ini|||LTI|-|  
+|-|-|-|-|-|
+|BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
@@ -1743,7 +1744,8 @@ manager: angrobe
 >  This property is dynamically set by MDT scripts and is not configured in CustomSettings.ini. Treat this property as read only. However, you can use this property within CustomSettings.ini, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
 |**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-| |BootStrap.ini|||LTI|-|  
+|-|-|-|-|-|
+|BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
@@ -1760,7 +1762,8 @@ manager: angrobe
  The area code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
 |**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-| |BootStrap.ini|||LTI|-|  
+|-|-|-|-|-|
+|BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
@@ -3930,7 +3933,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |MDT DB|||ZTI|-|  
 
 |**Value**|**Description**|
-|||  
+|-|-|  
 |None|The package ID used for the operating system to install during OEM deployments|  
 
 |**Example**|  
@@ -3949,7 +3952,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |MDT DB|-||ZTI|-|  
 
 |**Value**|**Description**|  
-|||  
+|-|-|  
 |*input_locale1; input_locale2*|The locale for the keyboard attached to the target computer|  
 
 |**Example**|  
@@ -3969,7 +3972,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |MDT DB|||ZTI|-|  
 
 |**Value**|**Description**|  
-|||
+|-|-|
 |None|The package ID used for the operating system to install during OEM deployments|  
 
 |**Example**|  
