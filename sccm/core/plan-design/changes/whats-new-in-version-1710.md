@@ -82,7 +82,7 @@ The following settings have been added to the mobile application management poli
 - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
 - **Disable printing**: Prevents the app from printing work or school data.
 
-## Software Center no longer distorts icons larger than 250x250  
+### Software Center no longer distorts icons larger than 250x250  
 <!-- 1356194 -->
 
 With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
@@ -120,7 +120,7 @@ Beginning with this release, managing Surface driver updates is no longer a pre-
 
 You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
 
-For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings.md). 
+For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings.md).
 
 <!-- ## Inventory  -->
 
