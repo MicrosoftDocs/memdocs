@@ -37,15 +37,11 @@ Review the following information to prepare for the change to the MDM authority:
 - It can take up to eight hours for a device to connect to the service after you change to the new MDM authority.
 - Make sure all users that are currently managed by hybrid have an Intune/EMS license assigned to them prior to the change in MDM authority. Having the license ensures that the user and their devices are managed by Intune standalone after the change in MDM authority. For more information, see [Assign Intune licenses to your user accounts](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4).
 - Make sure that the Admin user account has an Intune/EMS license assigned and confirm that the Admin user account can sign in to Intune before the change to the MDM authority. The MDM authority should display **Set to Configuration Manager** (hybrid tenant) in Intune in the [Azure portal](https://portal.azure.com) prior to the change in MDM authority.
-- In the Configuration Manager console, remove all Device Enrollment Manager roles. Go to **Administration** > **Cloud Services** > **Microsoft Intune Subscriptions**, select the Microsoft Intune subscription, click **Properties**, click the **Device Enrollment Manager** tab, and remove all Device Enrollment Manager roles.
-- In the Configuration Manager console, remove existing device categories. Go to **Assets and Compliance** > **Overview** > **Device Collections**, choose **Manage Device Categories**, and remove existing device categories.
 - There should be no noticeable impact to end users during the change in MDM authority. 
 
 ## Change the MDM authority to Intune standalone
 The process to change the MDM authority to Intune standalone includes the following high-level steps:  
 - In the Configuration Manager console, use the **Change MDM Authority to Microsoft Intune** option to remove the existing Microsoft Intune subscription.
-- In Intune in the [Azure portal](https://portal.azure.com), set the new MDM authority to **Intune**.
-- Configure the Apple APNs certificate by using the same APNs certificate that you renewed.
 - In Intune in the [Azure portal](https://portal.azure.com), configure and deploy new settings and apps from the new MDM authority (Intune).
 - The next time devices connect to the service, it will synchronize and receive the new settings from the new MDM authority.
 
