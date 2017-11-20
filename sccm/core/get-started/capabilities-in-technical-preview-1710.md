@@ -186,7 +186,7 @@ To create and deploy Windows Defender Application Guard policies, the Windows 10
 
 ### Try it out!
 
-To understand the basics about Windows Defender Application Guard, read [the blog post]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)).
+To understand the basics about Windows Defender Application Guard, read [the blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97).
 
 To create a policy, and to browse the available settings:
 1. In the **Configuration Manager** console, choose **Assets and Compliance**.
