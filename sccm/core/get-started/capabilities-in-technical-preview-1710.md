@@ -3,7 +3,7 @@ title: "Technical Preview 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1710 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -48,6 +48,19 @@ This article introduces the features that are available in the Technical Preview
  -  Task 1
  -  Task 2              
 -->
+
+## Improvements for deploying PowerShell Scripts from Configuration Manager
+With this release, PowerShell scripts you deploy now support use of the following improvements: 
+- **Security Scopes**.  Scripts now use security scopes to control scripts authoring and execution. This is done through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+- **Real-time monitoring**. When you monitor the run of a script, it is now in real-time as the script runs.
+- **Parameter validation**. Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
+
+Deployment of PowerShell scripts was first introduced in Technical Preview [Tech Preview 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console). Additional improvements were delivered with [Tech Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) and then [Tech Preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager).
+
+
+### Try it out!
+
+To try out using the Run Scripts feature, see [Create and run scripts](../../apps/deploy-use/create-deploy-scripts.md).
 
 
 
@@ -112,7 +125,7 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
 
 ## Limited support for CNG certificates
-<!-- 1356191 --> 
+<!-- 1356191 -->
 Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) certificate templates for the following scenarios:
 
 - Client registration and communication with an HTTPS management point.   
@@ -180,7 +193,7 @@ To let a device running Windows Defender SmartScreen run trusted software, follo
 ## Configure and deploy Windows Defender Application Guard policies <!-- 1351960 -->
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is a new Windows feature that helps protect your users by opening untrusted web sites in a secure isolated container that is not accessible by other parts of the operating system. In this technical preview, we’ve added support to configure this feature using Configuration Manager compliance settings which you configure, and then deploy to a collection. This feature will be released in preview for the 64-bit version of the Windows 10 Creator’s Update (codename: RS2). To test this feature now, you must be using a preview version of this update.
- 
+
 ### Before you start
 To create and deploy Windows Defender Application Guard policies, the Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the blog post referenced later. This capability works only with current Windows 10 Insider builds. To test it, your clients must be running a recent Windows 10 Insider Build.
 
@@ -198,7 +211,7 @@ To create a policy, and to browse the available settings:
     > [!NOTE]
     > Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don’t match to the same client, the deployment will fail.
 
-    You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+    You can find more information about how to specify network definitions in the [Windows Information Protection documentation](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
 
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 

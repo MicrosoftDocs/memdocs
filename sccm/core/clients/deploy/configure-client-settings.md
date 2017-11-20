@@ -63,6 +63,19 @@ When you deploy these custom settings, they override the default client settings
 
  Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
+## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
+<!-- 1356148 -->
+
+With the 1710 update, you can set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
+
+The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
+
+1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+
+2.  On the **Home** tab, choose **Properties**.  
+
+3.  Open **Cloud Services**, and set Windows 10 telemetry to **Enhanced**.
+
 ##  View client settings  
  When multiple client settings have been deployed to the same device, user, or user group, the prioritization and combination of settings can be complex. To view the client settings:  
 

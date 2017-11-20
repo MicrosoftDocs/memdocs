@@ -3,7 +3,7 @@ title: "Site recovery"
 titleSuffix: "Configuration Manager"
 description: "Learn to recover your sites in System Center Configuration Manager."
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,6 +27,12 @@ Run a Configuration Manager site recovery after a Configuration Manager site fai
 The sections in this topic can help you recover a Configuration Manager site. To create a backup, see [Backup for Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
 ## Considerations before recovering a site
+> [!Important]  
+> This information applies only to site recovery scenarios.  When you are upgrading your on-premises infrastructure and not actively recovering a failed site, review the information in the following topics:
+> - [Upgrade on-premises infrastructure](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
+> -	[Modify your infrastructure](/sccm/core/servers/manage/modify-your-infrastructure)
+
+
 **You must use the same version and edition of SQL Server:** For example, restoring a database that ran on SQL Server 2014 to SQL Server 2016 is not supported. Similarly, restoring a site database that ran on a Standard edition of SQL Server 2016 to an Enterprise edition of SQL Server 2016 is not supported.
 - 	SQL Server must not be set to **single-user mode**.
 - 	Ensure the .MDF and .LDF files are valid. When you recover a site, there is no check for the state of the files you are restoring.
@@ -121,7 +127,7 @@ After a site database is restored from a backup, the Configuration Manager attem
 Use one of the following procedures to help you recover your site server and site database.
 
 ### To start a site recovery in the Setup Wizard
-1.	Copy the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folde) to a location outside the Configuration Manager Installation folder.
+1.	Copy the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) to a location outside the Configuration Manager Installation folder.
 From the copy of the CD.Latest folder, run the Configuration Manager Setup Wizard.
 
 2.	On the **Getting Started** page, select **Recover a site**, and then click **Next**.

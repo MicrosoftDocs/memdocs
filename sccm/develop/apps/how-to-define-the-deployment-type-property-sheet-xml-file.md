@@ -1,5 +1,5 @@
 ---
-title: "Define the Deployment Type Property Sheet XML File 
+title: "Define the Deployment Type Property Sheet XML File" 
 titleSuffix: "Configuration Manager"
 ms.custom: ""
 ms.date: "09/20/2016"
@@ -12,7 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: dd5151b2-09f0-4c8d-ad5f-727b8b3d4e56searchScope: - ConfigMgr SDK
+ms.assetid: dd5151b2-09f0-4c8d-ad5f-727b8b3d4e56
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 19
 author: "shill-ms"
 ms.author: "v-suhill"

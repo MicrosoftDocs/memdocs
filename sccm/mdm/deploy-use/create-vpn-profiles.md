@@ -3,7 +3,7 @@ title: "VPN profiles"
 titleSuffix: "Configuration Manager"
 description: "VPN Profiles on mobile devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/26/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -67,8 +67,8 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 > [!IMPORTANT]
 > We recommend that you secure all lists of associated apps that you compile for use in configuration of per-app VPN. If an unauthorized user changes your list and you import it to the per-app VPN app list, you will potentially authorize VPN access to apps that should not have access. One way you can secure app lists is by using an access control list (ACL).
 
-
-1.  On the **Authentication Method** page of the wizard, specify:  
+1. On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select the operating systems on which the VPN profile will be installed, or choose **Select all** to install the VPN profile on all available operating systems.  
+2.  On the **Authentication Method** page of the wizard, specify:  
 
     -   **Authentication method**: Select the authentication method that the VPN connection will use. Available methods depend on the connection type as shown in this table.  
 
@@ -109,46 +109,13 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
          When supported by the version of Windows that runs Configuration Manager _and_ the selected authorization method, you can choose **Configure** to open the Windows properties dialog box and configure authentication method properties.  If **Configure** is disabled, use a different means to configure authentication method properties.
 
-2.  On the **Proxy Settings** page of the **Create VPN Profile Wizard**, check the **Configure proxy settings for this VPN profile** box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
+3.  On the **Proxy Settings** page of the **Create VPN Profile Wizard**, check the **Configure proxy settings for this VPN profile** box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
 
 	> [!NOTE]  
 	>  On Windows 8.1 computers, the VPN profile will not show the proxy information until you connect to the VPN by using that computer.  
 
 
-3. Configure further DNS settings (if required).  
- On the **Configure Automatic VPN connection** page, you can configure the following:  
-
-	-   **Enable VPN on-demand**: Use if you want to configure more DNS settings for Windows Phone 8.1 devices. This setting applies only to Windows Phone 8.1 devices and should only be enabled on VPN profiles that are going to be deployed to Windows Phone 8.1 devices.
-
-	-   **DNS Suffix list** (Windows Phone 8.1 devices only): Configures domains that will establish a VPN connection. For each domain that you specify, add the DNS suffix, the DNS server address, and one of the following on-demand actions:  
-
-    	-   **Never establish**: Never open a VPN connection.  
-
-	    -   **Establish if needed**: Only open a VPN connection if the device needs to connect to resources.  
-
-	    -   **Always establish**: Always open the VPN connection.  
-
-	-   **Merge**: Copies all DNS suffixes that you configured to the **Trusted network list**.  
-
-	-   **Trusted network list** (Windows Phone 8.1 devices only): Specify one DNS suffix on each line. If the device is in a trusted network, the VPN connection will not be opened.  
-
-	-   **Suffix search list** (Windows Phone 8.1 devices only): Specify one DNS suffix on each line. Each DNS suffix will be searched when connecting to a website by using a short name.  
-
-     For example, you specify the DNS suffixes, **domain1.contoso.com** and **domain2.contoso.com**, and then go to the URL **http://mywebsite**. The following addresses will be searched:  
-
-    -   **http://mywebsite.domain1.contoso.com**  
-
-    -   **http://mywebsite.domain2.contoso.com**  
-
-	> [!NOTE]  
-	>  For Windows Phone 8.1 devices only  
-	>   
-	>  When the *Send all network traffic through the VPN connection* option is selected *and* the VPN connection uses full tunneling, the VPN connection automatically opens using the first device profile. To open a connection with a different profile, set the desired profile as the default.  
-	>   
-	>  When the *Send all network traffic through the VPN connection* option is *not* selected *and* the VPN connection uses split-tunneling,  VPN connections open automatically for configured routes or connection-specific DNS suffixes.  
-
-
-4. On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select the operating systems on which the VPN profile will be installed, or choose **Select all** to install the VPN profile on all available operating systems.  
+4. Configure further DNS settings (if required).  
 
 5. Finish the wizard. The **VPN Profiles** node in the **Assets and Compliance** workspace shows the new VPN profile.  
 

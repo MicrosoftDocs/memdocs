@@ -3,7 +3,7 @@ title: "Plan for and configure application management"
 titleSuffix: "Configuration Manager"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/09/2017
+ms.date: 11/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -182,6 +182,26 @@ Custom branding for the Software Center is applied according to the following ru
 1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name** displayed in Software Center. For instructions, see [How to configure client settings](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings).
 2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
 3. If a Microsoft Intune subscription is configured and connected to Configuration Manager, then Software Center will display the organization name, color, and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+
+#### To manually set Software Center branding
+<!-- 1351224 -->
+With the 1710 release, you can manually add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
+
+1. In the **Configuration Manager** console, choose **Administration** > **Client Settings**. Click on your desired client setting instance.
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.
+3. In the **Default Settings** dialog box, choose **Software Center**.
+4. Select **Yes** to **Select new settings to specify company information** to enable your Software Center customization settings.
+5. Type your **Company name**.
+6. Select your **Color Scheme for Software Center**.
+7. Click **Browse** to navigate to your logo for Software Center. The logo must be a JPEG or PNG of 400 x 100 pixels with a maximum size of 750 KB.
+8. Select **YES** to make tabs visible in the Software Center for client devices. At least one tab must be visible:
+
+    -  Enable Applications tab
+    -  Enable Updates tab
+    -  Enable Operating Systems tab
+    -  Enable Installation Status tab
+    -  Enable Device compliance tab
+    -  Enable Options tab
 
 > [!IMPORTANT]  
 >  Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
