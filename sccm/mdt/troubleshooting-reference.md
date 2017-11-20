@@ -10,7 +10,7 @@ ms.technology:
 ms.topic: article
 ms.assetid:  91a7a69a-deac-4b0f-aac9-b7bd187c53fb
 
-author: angrobe  
+author: brenduns  
 ms.author: angrobe  
 manager: angrobe
 
@@ -42,9 +42,9 @@ manager: angrobe
 
 -   **LiteTouch.log**. This file is created during LTI deployments. It resides in %WINDIR%\TEMP\DeploymentLogs unless you specify the **/debug:true** option.  
 
--   ***Scriptname*.log**. This file is created by each MDT script. *Scriptname* represents the name of the script in question.  
+-   **Scriptname*.log**. This file is created by each MDT script. *Scriptname* represents the name of the script in question.  
 
--   **SMSTS.log**. This file is created by the Task Sequencer and describes all Task Sequencer transactions. Depending on the deployment scenario, it may reside in %TEMP%, %WINDIR%\System32\ccm\logs, or C:\\_SMSTaskSequence, or C:\SMSTSLog.  
+-   **SMSTS.log**. This file is created by the Task Sequencer and describes all Task Sequencer transactions. Depending on the deployment scenario, it may reside in %TEMP%, %WINDIR%\System32\ccm\logs, or C:\\\_SMSTaskSequence, or C:\SMSTSLog.  
 
 -   **Wizard.log**. The deployment wizards create and update this file.  
 
@@ -72,13 +72,12 @@ ZTI USMT <usmt_type> reported <error_count> errors and <warning_count> warnings
  If the error count is greater than 0, this event is an Error type. If the warning count is greater than 0 with no errors, then the event is a Warning type. Otherwise, the event is an Informational type.  
 
 ## Identifying Error Codes  
- REF _Ref308172724 \h Table 1 lists the error codes that the MDT scripts create and provides a description of each error code. These error codes are recorded in the BDD.log file.  
+Table 1 lists the error codes that the MDT scripts create and provides a description of each error code. These error codes are recorded in the BDD.log file.  
 
-### Table  SEQ Table \\* ARABIC 1. Error Codes and Their Description  
+### Table 1. Error Codes and Their Description  
 
-|||  
-|-|-|  
 |**Error code**|**Description**|  
+|-|-|  
 |5201|A connection to the deployment share could not be made. The deployment will not proceed.|  
 |5203|A connection to the deployment share could not be made. The deployment will not proceed.|  
 |5205|A connection to the deployment share could not be made. The deployment will not proceed.|  
@@ -228,9 +227,9 @@ ZTI USMT <usmt_type> reported <error_count> errors and <warning_count> warnings
 |41024|Run ImageX.|  
 |52012|All the wizard parameters are not set.|  
 
- REF _Ref308173499 \h Listing 1 provides an excerpt from a log file that illustrates how to find the error code. In this excerpt, the error code reported is 5001.  
+ Listing 1 provides an excerpt from a log file that illustrates how to find the error code. In this excerpt, the error code reported is 5001.  
 
- **Listing  SEQ Equation \\\* ARABIC 1. Excerpt from an SMSTS.log File That Contains Error Code 5001**  
+ **Listing  1. Excerpt from an SMSTS.log File That Contains Error Code 5001**  
 
 ```  
 .  
@@ -258,12 +257,12 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
 2.  From the **View** menu, click **Scientific**.  
 
-3.  Select **Hex**, and then enter the last four digits of the code—in this case, **0040**, as shown in  REF _Ref308173547 \h Figure 1.  
+3.  Select **Hex**, and then enter the last four digits of the code—in this case, **0040**, as shown in Figure 1.  
 
      ![TroubleshootingReference1](media/TroubleshootingReference1.jpg "TroubleshootingReference1")  
-Figure  SEQ Figure \\* ARABIC 1. Error conversion  
+Figure 1. Error conversion  
 
-     **Figure  SEQ Figure \\\* ARABIC 1. Error conversion**  
+     **Figure 1. Error conversion**  
 
      Notice that leading zeros are not displayed while the calculator is in Hexadecimal mode.  
 
@@ -321,10 +320,10 @@ Figure  SEQ Figure \\* ARABIC 1. Error conversion
 ####  <a name="BlockedExecutables"></a> Blocked Executables  
  **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
 
- As  REF \_Ref308173670 \\h Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](http://technet.microsoft.com/sysinternals/bb897440.aspx).  
+ Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](http://technet.microsoft.com/sysinternals/bb897440.aspx).  
 
  ![TroubleshootingReference2](media/TroubleshootingReference2.jpg "TroubleshootingReference2")  
-Figure  SEQ Figure \\\* ARABIC 2. NTFS data streams  
+Figure 2. NTFS data streams  
 
  **Figure 2. NTFS data streams**  
 
@@ -810,146 +809,146 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 ###  <a name="LTIDeploymentProcessFlowcharts"></a> LTI Deployment Process Flowcharts  
  Flow charts are provided for the following phases:  
 
--   Validation ( REF _Ref308175154 \h Figure 4)  
+-   Validation (Figure 4)  
 
--   State Capture ( REF _Ref308175160 \h Figure 5 and  REF _Ref308175167 \h Figure 6)  
+-   State Capture (Figure 5 and Figure 6)  
 
--   Preinstall ( REF _Ref308175174 \h Figure 7,  REF _Ref308175180 \h Figure 8, and  REF _Ref308175186 \h Figure 9)  
+-   Preinstall (Figure 7, Figure 8, and Figure 9)  
 
--   Install ( REF _Ref308175193 \h Figure 10)  
+-   Install (Figure 10)  
 
--   Postinstall ( REF _Ref308175199 \h Figure 11 and  REF _Ref308175204 \h Figure 12)  
+-   Postinstall (Figure 11 and Figure 12)  
 
--   State Restore ( REF _Ref308175212 \h Figure 13,  REF _Ref308175218 \h Figure 14,  REF _Ref308175225 \h Figure 15, and  REF _Ref308175233 \h Figure 16)  
+-   State Restore (Figure 13, Figure 14, Figure 15, and Figure 16)  
 
  ![TroubleshootingReference4](media/TroubleshootingReference4.jpg "TroubleshootingReference4")  
-Figure  SEQ Figure \\* ARABIC 4. Flow chart for the Validation Phase  
+Figure 4. Flow chart for the Validation Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 4. Flow chart for the Validation Phase**  
+ **Figure 4. Flow chart for the Validation Phase**  
 
  ![TroubleshootingReference5](media/TroubleshootingReference5.jpg "TroubleshootingReference5")  
-Figure  SEQ Figure \\* ARABIC 5. Flow chart for the State Capture Phase (1 of 2)  
+Figure 5. Flow chart for the State Capture Phase (1 of 2)  
 
- **Figure  SEQ Figure \\\* ARABIC 5. Flow chart for the State Capture Phase (1 of 2)**  
+ **Figure 5. Flow chart for the State Capture Phase (1 of 2)**  
 
  ![TroubleshootingReference6](media/TroubleshootingReference6.jpg "TroubleshootingReference6")  
-Figure  SEQ Figure \\* ARABIC 6. Flow chart for the State Capture Phase (2 of 2)  
+Figure 6. Flow chart for the State Capture Phase (2 of 2)  
 
- **Figure  SEQ Figure \\\* ARABIC 6. Flow chart for the State Capture Phase (2 of 2)**  
+ **Figure 6. Flow chart for the State Capture Phase (2 of 2)**  
 
  ![TroubleshootingReference7](media/TroubleshootingReference7.jpg "TroubleshootingReference7")  
-Figure  SEQ Figure \\* ARABIC 7. Flow chart for the Preinstall Phase (1 of 3)  
+Figure 7. Flow chart for the Preinstall Phase (1 of 3)  
 
- **Figure  SEQ Figure \\\* ARABIC 7. Flow chart for the Preinstall Phase (1 of 3)**  
+ **Figure 7. Flow chart for the Preinstall Phase (1 of 3)**  
 
  ![TroubleshootingReference8](media/TroubleshootingReference8.jpg "TroubleshootingReference8")  
-Figure  SEQ Figure \\* ARABIC 8. Flow chart for the Preinstall Phase (2 of 3)  
+Figure 8. Flow chart for the Preinstall Phase (2 of 3)  
 
- **Figure  SEQ Figure \\\* ARABIC 8. Flow chart for the Preinstall Phase (2 of 3)**  
+ **Figure 8. Flow chart for the Preinstall Phase (2 of 3)**  
 
  ![TroubleshootingReference9](media/TroubleshootingReference9.jpg "TroubleshootingReference9")  
-Figure  SEQ Figure \\* ARABIC 9. Flow chart for the Preinstall Phase (3 of 3)  
+Figure 9. Flow chart for the Preinstall Phase (3 of 3)  
 
- **Figure  SEQ Figure \\\* ARABIC 9. Flow chart for the Preinstall Phase (3 of 3)**  
+ **Figure 9. Flow chart for the Preinstall Phase (3 of 3)**  
 
  ![TroubleshootingReference10](media/TroubleshootingReference10.jpg "TroubleshootingReference10")  
-Figure  SEQ Figure \\* ARABIC 10. Flow chart for the Install Phase  
+Figure 10. Flow chart for the Install Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 10. Flow chart for the Install Phase**  
+ **Figure 10. Flow chart for the Install Phase**  
 
  ![TroubleshootingReference11](media/TroubleshootingReference11.jpg "TroubleshootingReference11")  
-Figure  SEQ Figure \\* ARABIC 11. Flow chart for the Postinstall Phase (1 of 2)  
+Figure 11. Flow chart for the Postinstall Phase (1 of 2)  
 
- **Figure  SEQ Figure \\\* ARABIC 11. Flow chart for the Postinstall Phase (1 of 2)**  
+ **Figure 11. Flow chart for the Postinstall Phase (1 of 2)**  
 
  ![TroubleshootingReference12](media/TroubleshootingReference12.jpg "TroubleshootingReference12")  
-Figure  SEQ Figure \\* ARABIC 12 Flow chart for the Postinstall Phase (2 of 2)  
+Figure 12 Flow chart for the Postinstall Phase (2 of 2)  
 
- **Figure  SEQ Figure \\\* ARABIC 12 Flow chart for the Postinstall Phase (2 of 2)**  
+ **Figure 12 Flow chart for the Postinstall Phase (2 of 2)**  
 
  ![TroubleshootingReference13](media/TroubleshootingReference13.jpg "TroubleshootingReference13")  
-Figure  SEQ Figure \\* ARABIC 13. Flow chart for the State Restore Phase (1 of 4)  
+Figure 13. Flow chart for the State Restore Phase (1 of 4)  
 
- **Figure  SEQ Figure \\\* ARABIC 13. Flow chart for the State Restore Phase (1 of 4)**  
+ **Figure 13. Flow chart for the State Restore Phase (1 of 4)**  
 
  ![TroubleshootingReference14](media/TroubleshootingReference14.jpg "TroubleshootingReference14")  
-Figure  SEQ Figure \\* ARABIC 14. Flow chart for the State Restore Phase (2 of 4)  
+Figure 14. Flow chart for the State Restore Phase (2 of 4)  
 
- **Figure  SEQ Figure \\\* ARABIC 14. Flow chart for the State Restore Phase (2 of 4)**  
+ **Figure 14. Flow chart for the State Restore Phase (2 of 4)**  
 
  ![TroubleshootingReference15](media/TroubleshootingReference15.jpg "TroubleshootingReference15")  
-Figure  SEQ Figure \\* ARABIC 15. Flow chart for the State Restore Phase (3 of 4)  
+Figure 15. Flow chart for the State Restore Phase (3 of 4)  
 
- **Figure  SEQ Figure \\\* ARABIC 15. Flow chart for the State Restore Phase (3 of 4)**  
+ **Figure 15. Flow chart for the State Restore Phase (3 of 4)**  
 
  ![TroubleshootingReference16](media/TroubleshootingReference16.jpg "TroubleshootingReference16")  
-Figure  SEQ Figure \\* ARABIC 16. Flow chart for the State Restore Phase (4 of 4)  
+Figure 16. Flow chart for the State Restore Phase (4 of 4)  
 
- **Figure  SEQ Figure \\\* ARABIC 16. Flow chart for the State Restore Phase (4 of 4)**  
+ **Figure 16. Flow chart for the State Restore Phase (4 of 4)**  
 
 ###  <a name="ZTIDevelopmentProcessFlowcharts"></a> ZTI Deployment Process Flowcharts  
  Flow charts are provided for the following phases of ZTI deployment with Configuration Manager:  
 
--   Initialization ( REF _Ref308175339 \h Figure 17)  
+-   Initialization (Figure 17)  
 
--   Validation ( REF _Ref308175345 \h Figure 18)  
+-   Validation (Figure 18)  
 
--   State Capture ( REF _Ref308175351 \h Figure 19)  
+-   State Capture (Figure 19)  
 
--   Preinstall ( REF _Ref308175357 \h Figure 20)  
+-   Preinstall (Figure 20)  
 
--   Install ( REF _Ref308175363 \h Figure 21)  
+-   Install (Figure 21)  
 
--   Postinstall ( REF _Ref308175382 \h Figure 22)  
+-   Postinstall (Figure 22)  
 
--   State Restore ( REF _Ref308175388 \h Figure 23 and  REF _Ref308175394 \h Figure 24)  
+-   State Restore (Figure 23 and Figure 24)  
 
--   Capture ( REF _Ref308175401 \h Figure 25)  
+-   Capture (Figure 25)  
 
  ![TroubleshootingReference17](media/TroubleshootingReference17.jpg "TroubleshootingReference17")  
-Figure  SEQ Figure \\* ARABIC 17. Flow chart for the Initialization Phase  
+Figure 17. Flow chart for the Initialization Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 17. Flow chart for the Initialization Phase**  
+ **Figure 17. Flow chart for the Initialization Phase**  
 
  ![TroubleshootingReference18](media/TroubleshootingReference18.jpg "TroubleshootingReference18")  
-Figure  SEQ Figure \\* ARABIC 18. Flow chart for the Validation Phase  
+Figure 18. Flow chart for the Validation Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 18. Flow chart for the Validation Phase**  
+ **Figure 18. Flow chart for the Validation Phase**  
 
  ![TroubleshootingReference19](media/TroubleshootingReference19.jpg "TroubleshootingReference19")  
-Figure  SEQ Figure \\* ARABIC 19. Flow chart for the State Capture Phase  
+Figure 19. Flow chart for the State Capture Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 19. Flow chart for the State Capture Phase**  
+ **Figure 19. Flow chart for the State Capture Phase**  
 
  ![TroubleshootingReference20](media/TroubleshootingReference20.jpg "TroubleshootingReference20")  
-Figure  SEQ Figure \\* ARABIC 20. Flow chart for the Preinstall Phase  
+Figure 20. Flow chart for the Preinstall Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 20. Flow chart for the Preinstall Phase**  
+ **Figure 20. Flow chart for the Preinstall Phase**  
 
  ![TroubleshootingReference21](media/TroubleshootingReference21.jpg "TroubleshootingReference21")  
-Figure  SEQ Figure \\* ARABIC 21. Flow chart for the Install Phase  
+Figure 21. Flow chart for the Install Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 21. Flow chart for the Install Phase**  
+ **Figure 21. Flow chart for the Install Phase**  
 
  ![TroubleshootingReference22](media/TroubleshootingReference22.jpg "TroubleshootingReference22")  
-Figure  SEQ Figure \\* ARABIC 22. Flow chart for the Postinstall Phase  
+Figure 22. Flow chart for the Postinstall Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 22. Flow chart for the Postinstall Phase**  
+ **Figure 22. Flow chart for the Postinstall Phase**  
 
  ![TroubleshootingReference23](media/TroubleshootingReference23.jpg "TroubleshootingReference23")  
-Figure  SEQ Figure \\* ARABIC 23. Flow chart for the State Restore Phase (1 of 2)  
+Figure 23. Flow chart for the State Restore Phase (1 of 2)  
 
- **Figure  SEQ Figure \\\* ARABIC 23. Flow chart for the State Restore Phase (1 of 2)**  
+ **Figure 23. Flow chart for the State Restore Phase (1 of 2)**  
 
  ![TroubleshootingReference24](media/TroubleshootingReference24.jpg "TroubleshootingReference24")  
-Figure  SEQ Figure \\* ARABIC 24. Flow chart for the State Restore Phase (2 of 2)  
+Figure 24. Flow chart for the State Restore Phase (2 of 2)  
 
- **Figure  SEQ Figure \\\* ARABIC 24. Flow chart for the State Restore Phase (2 of 2)**  
+ **Figure 24. Flow chart for the State Restore Phase (2 of 2)**  
 
  ![TroubleshootingReference25](media/TroubleshootingReference25.jpg "TroubleshootingReference25")  
-Figure  SEQ Figure \\* ARABIC 25. Flow chart for the Capture Phase  
+Figure 25. Flow chart for the Capture Phase  
 
- **Figure  SEQ Figure \\\* ARABIC 25. Flow chart for the Capture Phase**  
+ **Figure 25. Flow chart for the Capture Phase**  
 
 ## Finding Additional Help  
  Find additional help in resolving MDT deployment problems by:  

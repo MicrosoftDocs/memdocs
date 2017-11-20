@@ -10,12 +10,13 @@ ms.technology:
 ms.topic: article
 ms.assetid:  b12de852-a799-4c16-b51c-cc3abbd3ca3a
 
-author: angrobe  
+author: brenduns  
 ms.author: angrobe  
 manager: angrobe
 
 ---
 
+<!-- Post migration ready -->
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system with Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
@@ -128,7 +129,7 @@ manager: angrobe
  The MDT deployment process requires additional folders that are used as the source for files or to store files created during the MDT deployment process. Some of these folders need to be shared so that they can be accessed from other computers.  
 
 #### To create the required folders and share  
-1. The MDT Deployment Process Requires several folders. Create the following folders and shares with the specified permissions for each share.
+1. The MDT Deployment Process Requires several folders. Create the following folders and shares with the specified permissions for each share.    
 
   |Create this folder  |With this share name  |With these share permissions  |  
   |----|----|----|  
@@ -1049,7 +1050,6 @@ manager: angrobe
      The **WDG-REF-01 Properties** dialog box is displayed.  
 
 7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as follows:
-
 
     |**Information**|**Description**|  
     |-|-|  

@@ -16,6 +16,7 @@ manager: angrobe
 
 ---
 
+<!-- Post migration ready -->
 
 # Microsoft Deployment Toolkit Samples Guide  
  This guide is part of Microsoft® Deployment Toolkit (MDT) 2013 and guides a specialist team through deploying Windows operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.  
@@ -158,14 +159,14 @@ manager: angrobe
 -   Manage the folders in a deployment share using Windows PowerShell as described in [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
 ###  <a name="LoadMDTSnapIn"></a> Loading the MDT Windows PowerShell Snap-In  
- The MDT cmdlets are provided in a Windows PowerShell snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT cmdlets. You can load the MDT Windows PowerShell snap-in using any one of the following methods:  
+ The MDT cmdlets are provided in a Windows PowerShell snap-in **Microsoft.BDD.SnapIn** that must be loaded prior to using the MDT cmdlets. You can load the MDT Windows PowerShell snap-in using any one of the following methods:  
 
 -   Load the MDT Windows PowerShell snap-in using the Window PowerShell Modules console as described in [Load the MDT Windows PowerShell Snap-In Using the Import System Modules Task](#LoadMDTSnapInImport).  
 
 -   Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).  
 
 ####  <a name="LoadMDTSnapInImport"></a> Load the MDT Windows PowerShell Snap-In Using the Import System Modules Task  
- The Import System Modules task automatically includes all the Windows PowerShell modules and snap-ins that are in the modules in the %Windir%\System32\WindowsPowerShell\1.0\Modules directory. MDT automatically installs the MDT Windows PowerShell snap-in—Microsoft.BDD.SnapIn—in that folder during the MDT installation process.  
+ The Import System Modules task automatically includes all the Windows PowerShell modules and snap-ins that are in the modules in the %Windir%\System32\WindowsPowerShell\1.0\Modules directory. MDT automatically installs the MDT Windows PowerShell snap-in **Microsoft.BDD.SnapIn** in that folder during the MDT installation process.  
 
 > [!NOTE]
 >  The Import System Modules task is available only in Windows 7 and Windows Server 2008 R2 when Windows PowerShell 3.0 is not installed on the computer. Beginning with Windows PowerShell 3.0, modules are imported automatically the first time that you use a cmdlet in the module.  
@@ -179,7 +180,7 @@ manager: angrobe
  For more information on staring a Windows PowerShell console with Import System Modules, see [Starting Windows PowerShell with Import System Modules](http://msdn.microsoft.com/library/windows/desktop/hh847866.aspx).  
 
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet  
- You can load the MDT Windows PowerShell snap-in—Microsoft.BDD.PSSnapIn—from any Windows PowerShell environment using the [Add-PSSnapIn](http://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
+ You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](http://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
 
 ```  
 Add-PSSnapin -Name Microsoft.BDD.PSSnapIn  
@@ -936,7 +937,7 @@ Subsection=Server-%IsServer%
 
 2.  Populate the table with data that associates the appropriate package with the application listed in Program and Features or Add or Remove Programs.
 
-     **Listing  SEQ Equation \\\* ARABIC 2. SQL Query to Populate the Table**  
+     **SQL Query to Populate the Table**  
 
     ```  
     use [MDTDB]  
@@ -1061,9 +1062,9 @@ Subsection=Server-%IsServer%
 
 -   **SkipUserData**  
 
- For more information about these individual properties, see the corresponding property in the MDT document *Toolkit Reference*.  
+For more information about these individual properties, see the corresponding property in the MDT document *Toolkit Reference*.  
 
- For each wizard page skipped, provide the values for the corresponding properties that are typically collected through the wizard page in the CustomSettings.ini and BootStrap.ini files. For more information about the properties that must be configured in these files, see the section, "Providing Properties for Skipped Deployment Wizard Pages", in the MDT document *Toolkit Reference*.  
+For each wizard page skipped, provide the values for the corresponding properties that are typically collected through the wizard page in the CustomSettings.ini and BootStrap.ini files. For more information about the properties that must be configured in these files, see the section, "Providing Properties for Skipped Deployment Wizard Pages", in the MDT document *Toolkit Reference*.  
 
 ## Fully Automated LTI Deployment for a Refresh Computer Scenario  
  The following illustrates a CustomSettings.ini file used for a Refresh Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.  

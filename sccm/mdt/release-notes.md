@@ -10,12 +10,13 @@ ms.technology:
 ms.topic: article
 ms.assetid:  6e32ce6d-585d-4801-a345-ff0f6f2d90ad
 
-author: angrobe  
+author: brenduns  
 ms.author: angrobe  
 manager: angrobe
 
 ---
 
+<!-- Post migration ready -->
 
 # Microsoft Deployment Toolkit 2013 Release Notes  
  Welcome to the release notes for Microsoft® Deployment Toolkit (MDT) 2013. Read these release notes thoroughly before you install MDT 2013, as they contain information you need to successfully install the toolkit that the MDT 2013 help documentation may not cover.  

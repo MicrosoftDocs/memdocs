@@ -16,12 +16,12 @@ manager: angrobe
 
 ---
 
-
+<!-- Post migration ready -->
 
 ## Quick Start Guide for Lite Touch Installation  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system through Lite Touch Installation (LTI) using bootable media (DVD or USB flash drive). This guide demonstrates how to perform the New Computer deployment scenario using an MDT 2013 deployment share. The New Computer deployment scenario covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
-> [!NOTE]
+> [!NOTE]     
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server® 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
  After using this guide to evaluate MDT, review the rest of the MDT guidance to learn more about the technology’s advanced features.  
@@ -46,7 +46,7 @@ manager: angrobe
 
 -   Networking services, including Domain Name System and Dynamic Host Configuration Protocol  
 
-> [!NOTE]
+> [!NOTE]   
 >  The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is normally available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile removes the Create Global Object right and should not be applied to computers being deployed using MDT until the MDT process is complete.  
 
 ### Computer Configuration  
@@ -59,13 +59,13 @@ manager: angrobe
 |WDG-REF-01|This is the reference computer and runs no current operating system. The system resources of the computer are:<br /><br /> -   Processor running at 1.4 GHz or faster.<br />-   1 GB or more of physical memory.<br />-   16 GB or more of available disk space.|  
 |WDG-CLI-01|This is the target computer and runs no current operating system. The system resources of the computer are:<br /><br /> -   Processor running at 1.4 GHz or faster.<br />-   1 GB or more of physical memory.<br />-   16 GB or more of available disk space.|  
 
-> [!NOTE]
+> [!NOTE]   
 >  This guide assumes that you are evaluating MDT on 64-bit (x64) physical or virtual computers. If evaluating MDT on 32-bit (x86) platforms, download and install the x86 editions of MDT and the components that this guide describes.  
 
 ## Step 1: Obtain the Required Software  
  This guide assumes that the 64-bit version of Windows 8.1 is installed on a computer named *WDG-MDT-01*. If the computer you are using has a different name, substitute the name of that computer for *WDG-MDT-01*.  
 
-> [!NOTE]
+> [!NOTE]   
 >  This section assumes that you are creating a new infrastructure for MDT.  
 
  The following software is required to perform LTI deployments:  
@@ -133,7 +133,7 @@ manager: angrobe
 
 5.  Close all open windows.  
 
-> [!NOTE]
+> [!NOTE]   
 >  After installing Windows ADK, log off, and then log on again to the computer so that the PATH environment variable is updated to include the %Program Files%\Windows Imaging folder.  
 
 ## Step 3: Configure MDT to Create the Reference Computer  
@@ -210,7 +210,7 @@ manager: angrobe
 ###  <a name="AddDriverstoDeployShare"></a> Step 3-3: Add Device Drivers to the Deployment Share  
  After you have added Windows 8.1 to the Deployment Workbench, add any device drivers required for the reference computer (WDG-REF-01) and the target computer (WDG-CLI-01). These device drivers will be added to Windows PE and deployed with Windows 8.1. Add the device drivers in the Out-of-box Drivers node in the Deployment Workbench by using the New Driver Wizard, which copies the device driver files to the deployment share in Out-of-Box Drivers\\*device_driver* (where *device_driver* is the name of the device driver you added to the deployment share).  
 
-> [!NOTE]
+> [!NOTE]   
 >  If the device drivers for the reference computer (WDG-REF-01) and the target computer (WDG-CLI-01) are included with Windows 8.1, skip this step and proceed with the following step.  
 
  **To add the device drivers for the reference and target computers to the distribution share**  
@@ -335,7 +335,7 @@ manager: angrobe
 ###  <a name="StartRefCompwithLTIBootable"></a> Step 4-2: Start the Reference Computer with the LTI Bootable Media  
  Start the reference computer (WDG-REF-01) with the LTI bootable media you created earlier in the process. The LTI bootable media starts Windows PE on the reference computer and initiates deployment. At the end of the MDT deployment process, Windows 8.1 is deployed on the reference computer.  
 
-> [!NOTE]
+> [!NOTE]   
 >  You can use a 32-bit boot image to deploy both 32-bit and 64-bit operating systems; however, a 64-bit boot image can only be used to deploy 64-bit operating systems.  
 
  You could also initiate the process by starting the target computer from Windows Deployment Services. For more information, see the section, "Preparing Windows Deployment Services", in the MDT document, *Using the Microsoft Deployment Toolkit*.  

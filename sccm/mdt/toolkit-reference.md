@@ -16,7 +16,7 @@ manager: angrobe
 
 ---
 
-
+<!-- Post migration ready  - Needs Review site VTP -->
 
 ## Introduction to Toolkit Reference  
  This reference is part of Microsoft® Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.  
@@ -44,33 +44,31 @@ manager: angrobe
 ###  <a name="CommonPropertiesandOptionsforTaskSequenceStepTypes"></a> Common Properties and Options for Task Sequence Step Types  
  Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.  
 
-#### Common Properties  
- REF _Ref303178408 \h Table 1 shows the settings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.  
+#### Common Properties
+ Table 1 shows the settings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.  
 
 > [!NOTE]
 >  The task sequence step types listed here are those that are available in the Deployment Workbench. Additional task sequence step types might be available when configuring task sequences using Microsoft System Center 2012 R2 Configuration Manager.  
 
-### Table 1. Settings Available on the Properties Tab  
+##### Table 1. Settings Available on the Properties Tab  
 
-|||||  
-|-|-|-|-|  
 |**Name**|**Description**|**Group**|**Step**|  
+|-|-|-|-|  
 |**Type**|A read-only value that indicates the task sequence group or step type. The type will be set to one of these values:<br /><br /> - Apply Network Settings<br /><br /> - Authorize DHCP<br /><br /> - Capture Network Settings<br /><br /> - Configure ADDS<br /><br /> - Configure DHCP<br /><br /> - Configure DNS<br /><br /> - Enable BitLocker<br /><br /> - Format and Partition Disk<br /><br /> - Gather<br /><br /> - Group<br /><br /> - Inject Drivers<br /><br /> - Install Application<br /><br /> - Install Operating System<br /><br /> - Install Roles and Features<br /><br /> - Install Updates Offline<br /><br /> - Recover From Domain Join Failure<br /><br /> - Restart computer<br /><br /> - Run Command Line<br /><br /> - Validate|-|-|  
 |**Name**|A user-defined name that should allow easy identification and differentiation from other task sequence steps.|-|-|  
 |**Description**|A user-defined description that should make the task sequence step requirements and tasks easily understandable.|-|-|  
 
 #### Common Options  
- REF _Ref303178455 \h Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](http://technet.microsoft.com/library/bb693661.aspx).  
+ Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](http://technet.microsoft.com/library/bb693661.aspx).  
 
-### Table 2. Settings Available on the Options Tab  
+##### Table 2. Settings Available on the Options Tab  
 
-|||||  
-|-|-|-|-|  
 |**Name**|**Description**|**Group**|**Step**|  
+|-|-|-|-|
 |**Disable this step**|Select this option to disable this task sequence step.|-|-|  
 |**Success codes**|Exit codes of the utility associated with this task sequence step that indicate that the step has finished successfully.||-|  
-|Continue on error|Select this option to allow the Task Sequencer to process additional task sequence steps if a failure occurs.|-|-|  
-|Conditional statements|One or more conditions that limit the running of this task sequence group or step. These conditional are based on the following:<br /><br /> - File properties<br /><br /> - Folder properties<br /><br /> Operating system version:<br /><br /> - Is a certain architecture<br /><br /> - Is a certain version<br /><br /> - Query Windows Management Instrumentation (WMI)<br /><br /> Registry setting:<br /><br /> - Exists<br /><br /> - Does not exist<br /><br /> - Equals<br /><br /> - Does not equal<br /><br /> - Greater than<br /><br /> - Greater than or equals<br /><br /> - Less than<br /><br /> - Less than or equals<br /><br /> - Installed software<br /><br /> Task sequence variable:<br /><br /> - Exists<br /><br /> - Equals<br /><br /> - Does not equal<br /><br /> - Greater than<br /><br /> - Greater than or equals<br /><br /> - Less than<br /><br /> - Less than or equals<br /><br /> These conditions can be grouped using **IF** statements that test all conditions, any condition, or no condition that evaluates as True.|-|-|  
+|**Continue on error** |Select this option to allow the Task Sequencer to process additional task sequence steps if a failure occurs.|-|-|  
+|**Conditional statements**|One or more conditions that limit the running of this task sequence group or step. These conditional are based on the following:<br /><br /> - File properties<br /><br /> - Folder properties<br /><br /> Operating system version:<br /><br /> - Is a certain architecture<br /><br /> - Is a certain version<br /><br /> - Query Windows Management Instrumentation (WMI)<br /><br /> Registry setting:<br /><br /> - Exists<br /><br /> - Does not exist<br /><br /> - Equals<br /><br /> - Does not equal<br /><br /> - Greater than<br /><br /> - Greater than or equals<br /><br /> - Less than<br /><br /> - Less than or equals<br /><br /> - Installed software<br /><br /> Task sequence variable:<br /><br /> - Exists<br /><br /> - Equals<br /><br /> - Does not equal<br /><br /> - Greater than<br /><br /> - Greater than or equals<br /><br /> - Less than<br /><br /> - Less than or equals<br /><br /> These conditions can be grouped using **IF** statements that test all conditions, any condition, or no condition that evaluates as True.|-|-|  
 
 > [!NOTE]
 >  Additional conditional statements might be available when using Configuration Manager to configure task sequence steps.  
@@ -84,17 +82,13 @@ manager: angrobe
  The unique properties and settings for the **Apply Network Settings** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Apply Network Settings|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Name**|The name to be assigned to the network connection.|  
 |**Obtain an IP address automatically**|When selected, Dynamic Host Configuration Protocol (DHCP) is used to obtain the required Internet Protocol (IP) configuration settings for the network connection. This is the default selection.|  
 |**Use the following IP address**|When selected, you can provide one or more IP address and subnet mask combinations in addition to gateways that will be assigned to the network connection.|  
@@ -116,14 +110,12 @@ manager: angrobe
 
 ##### Properties  
 
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Authorize DHCP Server**.|  
 
 ##### Settings  
-
-|||  
+|**Name**|**Description**|  
 |-|-|  
 |**Name**|**Description**|  
 |**Account**|A user account that is a member of the Enterprise Admins group, to be used when authorizing DHCP for the target computer.|  
@@ -134,17 +126,14 @@ manager: angrobe
  The unique properties and settings for the **Capture Network Settings** task sequence step type are:  
 
 ##### Properties  
-
-|||  
+|**Name**|**Description**|
 |-|-|  
 |**Name**|**Description**|  
 |**Type**|Set this read-only type to **Capture Network Settings**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |None|None|  
 
 #### Configure ADDS  
@@ -153,17 +142,13 @@ manager: angrobe
  The unique properties and settings for the **Configure ADDS** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Configure ADDS**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |Create|Specifies the configuration set that will be used to configure the target computer. The configuration sets are:<br /><br /> - **New domain controller replica**. Creates an additional domain controller in an existing AD DS domain<br /><br /> - **New read-only domain controller (RODC) replica**. Creates an RODC<br /><br /> - **New domain in existing forest**. Creates a domain in an existing AD DS forest<br /><br /> - **New domain tree in existing forest**. Creates a new tree in an existing AD DS forest<br /><br /> - **New forest**. Creates a new AD DS forest|  
 |**Domain DNS name**|The DNS name of the new or existing domain.|  
 |**Domain NetBIOS name**|The NetBIOS name of the new child domain, child domain tree, or forest that pre–AD DS clients use to access the domain. This name must be unique on the network.|  
@@ -187,17 +172,13 @@ manager: angrobe
  The unique properties and settings for the **Configure DHCP** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Configure DHCP Server**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Name**|Configure DHCP|  
 |Scope Details|These options apply to any client computers that obtain a lease within that particular scope. Configured scope option values always apply to all computers obtaining a lease in a given scope unless they are overridden by options assigned to class or client reservation.<br /><br /> Within the **Scope Details** setting, the following sub-settings are configurable:<br /><br /> - **Scope Name**. A user-definable name<br /><br /> - **Start IP address**. The starting IP address for the scope<br /><br /> - **End IP address**. The ending IP address for the scope<br /><br /> - **Subnet mask**. The subnet mask of the client subnet<br /><br /> - **Lease duration for DHCP clients**. The duration that the DHCP lease is valid for the client<br /><br /> - **Description**. A description of the scope<br /><br /> - **Exclude IP address range, Start IP address**. The starting IP address for the range of IP addresses that are to be excluded from the scope<br /><br /> -                                 **Exclude IP address range, End IP address**. The ending IP address for the range of IP addresses that are to be excluded from the scope<br /><br /> - **003 Router**. A list of IP addresses for routers on the client subnet<br /><br /> - **006 DNS Servers**. A list of IP addresses for DNS name servers available to the client<br /><br /> - **015 DNS Domain Name**. The domain name that the DHCP client should use when resolving unqualified domain names with DNS<br /><br /> -                                 **044 WINS/NBNS Servers**. Lists the IP addresses for NetBIOS name servers (NBNSes) on the network<br /><br /> - **046 WINS/NBT Node Type**. Configures the client node type for NetBT clients<br /><br /> - **060 PXE Client**. The address used for Pre-Boot Execution Environment (PXE) client bootstrap code|  
 |Server Options|These options apply globally for all scopes and classes defined at each DHCP server and for any clients that a DHCP server services. Configured server option values always apply unless they are overridden by options assigned to other scope, class, or client reservation.<br /><br /> Within the **Server Options** setting, the following sub-settings are configurable:<br /><br /> - **003 Router**. A list of IP addresses for routers on the client subnet<br /><br /> - **006 DNS Servers**. A list of IP addresses for DNS name servers available to the client<br /><br /> - **015 DNS Domain Name**. The domain name that the DHCP client should use when resolving unqualified domain names with the DNS<br /><br /> - **044 WINS/NBNS Servers**. Lists the IP addresses for NBNSes on the network<br /><br /> -                                 **046 WINS/NBT Node Type**. Configures the client node type for NetBT clients<br /><br /> - **060 PXE Client**. The address used for PXE client bootstrap code|  
@@ -208,17 +189,13 @@ manager: angrobe
  The unique properties and settings for the **Configure DNS** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Configure DNS Server**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Name**|Configure DNS|  
 |Zones|Within the **Scope Details** setting, the following sub-settings are configurable:<br /><br /> -                                 **DNS zone name**. A user-definable name<br /><br /> - Type. The type of DNS zone to be created<br /><br /> - **Replication**. Specifies the replication scheme used to share information among DNS servers<br /><br /> - **Zone file name**. The zone’s DNS database file<br /><br /> -                                 **Dynamic updates**. Enables DNS client computers to register and dynamically update their resource records with a DNS server whenever changes occur<br /><br /> -                                 **Scavenge stale resource records**. Removes stale resource records|  
 |Server Properties|Within the Server Properties setting, the following sub-settings are configurable:<br /><br /> -                                 **Disable recursion**. Specifies that the DNS server will not perform recursion on any query<br /><br /> - **BIND secondaries**. Specifies whether to use fast transfer format to transfer a zone to DNS servers running legacy Berkeley Internet Name Domain (BIND) implementations<br /><br /> - **Fail on load if bad data**. Specifies the DNS server should parse files strictly<br /><br /> -                                 **Enable round robin**. Specifies the DNS server should use the round robin mechanism to rotate and reorder a list of resource records if multiple resource records exist of the same type exist for a query answer<br /><br /> - **Enable netmask ordering**. Specifies whether the DNS server should reorder resource records within the same resource record set in its response to a query based on the IP address of the source of the query<br /><br /> - **Secure cache against pollution**. Specifies whether the DNS server will attempt to clean up responses to avoid cache pollution<br /><br /> - **Name checking**. Configures the name-checking method to be used|  
@@ -235,17 +212,13 @@ manager: angrobe
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Enable BitLocker**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Current operating system drive**|When selected, the operating system drive will be configured. This is the default selection.|  
 |**Specific drive**|When selected, the specified drive will be configured.|  
 |**TPM only**|When selected, the Trusted Platform Module (TPM) is required. This is the default selection.|  
@@ -264,19 +237,15 @@ manager: angrobe
  The unique properties and settings for the **Execute Runbook** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Execute Runbook**.|  
 |**Name**|The name of the task sequence step, which should reflect the name of the runbook being run.|  
 |**Description**|Informative text that provides additional information about the task sequence step|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|   
 |**Orchestrator Server**|Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> Note:<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> - ***servername***. When using this format, the URL defaults to:<br /><br /> `http://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> - ***servername:port***. When using this format, the URL defaults to:<br /><br /> `http://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://*servername:port***. When using this format, the URL defaults to:<br /><br /> `http://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://*servername:port***. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://*servername:port*/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc.<br /><br /> -                                 **https://*servername:port*/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc.|  
 |**Runbook**|Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> Note:<br /><br /> To successfully browse for Orchestrator runbooks, install the [ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2](http://www.microsoft.com/download/details.aspx?displaylang=en&id=2343).|  
 |**Automatically provide runbook parameters**|Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> Note:<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> Note:<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.|  
@@ -289,17 +258,13 @@ manager: angrobe
  The unique properties and settings for the **Format and Partition Disk** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read-only type to **Format and Partition Disk**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Disk number**|The physical number of the disk to be configured.|  
 |**Disk type**|The type of drive to be created. Values are:<br /><br /> -                                 **Standard (MBR)** (Master Boot Record)<br /><br /> - **GPT** (GUID [globally unique identifier] Partition Table).<br /><br /> The default selection is **Standard (MBR)**.|  
 |**Volume**|Within the **Volume** setting, the following sub-settings are configurable:<br /><br /> - Partition **Name**. A user-definable name.<br /><br /> - **Partition Type.** Values vary by disk type:<br /><br /> - MBR: **Primary** only<br /><br /> - GPT: **Primary**, **EFI**, or **MSR**<br /><br /> - **Use a percentage of remaining space.**<br /><br /> -                                 **Use specific drive size.** Values are in increments of 1 MB or 1 gigabyte (GB).<br /><br /> -                                 **Make this a boot partition.**<br /><br /> -                                 **File System.** Values are **NTFS** or **FAT32**.<br /><br /> - **Quick Format.** When selected, a quick format is performed.<br /><br /> - **Variable.** The drive letter that was assigned to this newly configured partition.|  
@@ -311,17 +276,13 @@ manager: angrobe
  This task sequence step gathers data and processing rules for the target computer. The unique properties and settings for the **Gather** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Gather**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Gather only local data**|When selected, this step processes only the properties contained in the ZTIGather.xml file.|  
 |**Gather local data and process rules**|When selected, this step processes the properties contained in the ZTIGather.xml file and the properties contained in the file that the Rules file specifies. This is the default selection.|  
 |**Rules file**|The name of the Rules file to process. If left blank, the task sequence step attempts to locate and process the CustomSettings.ini file.|  
@@ -333,17 +294,13 @@ manager: angrobe
  This task sequence step injects drivers that have been configured for deployment to the target computer. The unique properties and settings for the **Inject Drivers** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Inject Drivers**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|   
 |**Install only matching drivers**|Injects only the drivers that the target computer requires and that match what is available in Out\-of\-Box Drivers|  
 |**Install all drivers**|Installs all drivers|  
 |**Selection profile**|Installs all drivers in the selected profile|  
@@ -354,17 +311,13 @@ manager: angrobe
  The unique properties and settings for the **Install Application** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|   
 |**Type**|Set this read\-only type to **Install Application**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Install multiple applications**|Install mandatory applications that the **MandatoryApplications** property has specified and optional applications that the **Applications** property has specified. These properties are configured by rules or are specified during the Deployment Wizard interview process. This is the default selection.|  
 |**Install a single application**|The specific application to install. You select the application from a drop\-down list that consists of applications that have been configured in the Applications node of the Deployment Workbench.|  
 |**Success codes**|A space\-delimited list of application installation exit codes that should be used when determining the successful installation of applications.|  
@@ -381,17 +334,13 @@ manager: angrobe
  The unique properties and settings for the **Install Operating System** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|   
 |**Type**|Set this read\-only type to **Install Operating System**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|   
 |**Operating system to install**|The name of the operating system to be installed on the target computer. You select the operating system from a drop\-down list compiled from operating systems that have been configured in the Operating Systems node of the Deployment Workbench.|  
 |**Disk**|The disk on which to install the operating system.|  
 |**Partition**|The partition on which to install the operating system.|  
@@ -402,18 +351,14 @@ manager: angrobe
  The unique properties and settings for the **Install Roles and Features** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Install Roles and Features**.|  
 |**Description**|Informative text that describes the purpose of the task sequence step.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|    
 |**Select the operating system for which the roles are to be installed**|Select the operating system to be deployed to the target computer.|  
 |**Select the roles and features that should be installed**|Select one or more roles and features for installation on the target computer.|  
 
@@ -423,17 +368,13 @@ manager: angrobe
  The unique properties and settings for the **Install Language Packs Offline** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Install Updates Offline**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Package Name**|The name of the language pack package that should be applied to the target computer|  
 
 > [!NOTE]
@@ -445,17 +386,13 @@ manager: angrobe
  The unique properties and settings for the **Install Language Packs Online** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Install Language Packs Online**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Package Name**|The name of the language pack package that should be applied to the target computer|  
 
 > [!NOTE]
@@ -467,34 +404,26 @@ manager: angrobe
  The unique properties and settings for the **Install Updates Offline** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Install Updates Offline**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Selection Profile**|The name of the selection profile that should be applied to the target computer<br /><br /> Note:<br /><br /> When using MDT with Configuration Manager, specify the name of the update package that should be applied.|  
 
 #### Recover from Domain Join Failure  
  This task sequence step verifies that the target computer has joined a domain. The unique properties and settings for the **Recover from Domain Join Failure** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to Recover from **Domain Join Failure**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Auto recover**|The task sequence step attempts to join the target computer to a domain.|  
 |**Manual recover**|If the target computer fails to join a domain, the task sequence step causes the Task Sequencer to pause, allowing you to attempt to join the target computer to a domain.|  
 |**No recover**|If the target computer is not able to join a domain, the task sequence fails, stopping the task sequence.|  
@@ -503,17 +432,13 @@ manager: angrobe
  This task sequence step restarts the target computer. The unique properties and settings for the **Restart computer** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Restart computer**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**None**|None|  
 
 #### Run Command Line  
@@ -522,17 +447,13 @@ manager: angrobe
  The unique properties and settings for the **Run Command Line** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Run Command Line**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Command Line**|The commands to be run when this task sequence step is processed|  
 |**Start in**|The starting folder for the application \(The path must be a valid path on the target computer.\)|  
 |**Run this step as the following account**|Allows specification of user credentials that will be used to run the specified command|  
@@ -545,17 +466,13 @@ manager: angrobe
  The unique properties and settings for the **Run PowerShell Script** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Run PowerShell Script**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**PowerShell script**|The Windows PowerShell script to be run when this task sequence step is processed|  
 |Parameters|The parameters to be passed to the Windows PowerShell script. These parameters should be specified the same as if you were adding them to the Windows PowerShell script from a command line.<br /><br /> The parameters provided should be only those parameters the script consumes, not for the Windows PowerShell command line.<br /><br /> The following example would be a valid value for this setting:<br /><br /> `-MyParameter1 MyValue1 -MyParameter2 MyValue2`<br /><br /> The following example would be an invalid value for this setting \(bold items are incorrect\):<br /><br /> `-nologo -executionpolicy unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`<br /><br /> The previous example is invalid, because the value includes Windows PowerShell command\-line parameters \(**\-nologo** and **–executionpolicy unrestricted**\).|  
 
@@ -568,17 +485,13 @@ manager: angrobe
  The unique properties and settings for the **Set Task Sequence Variable** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Set Task Sequence Variable**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Task Sequence Variable**|The name of the variable to modify|  
 |**Value**|The value to assign to the specified variable|  
 
@@ -588,18 +501,14 @@ manager: angrobe
  The unique properties and settings for the **Uninstall Roles and Features** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Uninstall Roles and Features**.|  
 |**Description**|Informative text that describes the purpose of the task sequence step.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Select the operating system for which the roles are to be installed**|Select the operating system to be deployed to the target computer.|  
 |**Select the roles and features that should be installed**|Select one or more roles and features for unstallation from the target computer.|  
 
@@ -607,17 +516,13 @@ manager: angrobe
  This task sequence step verifies that the target computer meets the specified deployment prerequisite conditions. The unique properties and settings for the **Validate** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|Set this read\-only type to **Validate**.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Ensure minimum memory**|When selected, this step verifies that the amount of memory, in megabytes, installed on the target computer meets or exceeds the amount specified. This is a default selection.|  
 |**Ensure minimum processor speed**|When selected, this step verifies that the speed of the processor, in megahertz \(MHz\), installed in the target computer meets or exceeds the amount specified. This is a default selection.|  
 |**Ensure specified image size will fit**|When selected, this step verifies that the amount of free disk space, in megabytes, on the target computer meets or exceeds the amount specified.|  
@@ -640,26 +545,20 @@ manager: angrobe
  The default configuration of the **Apply Network Settings** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Apply Network Settings|  
 |**Name**|Apply Network Settings|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 ||No parameters are preconfigured for this step. This causes this step, by default, to configure the network adapter to use DHCP.|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -674,26 +573,20 @@ manager: angrobe
  The default configuration of the **Install Updates Offline** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Install Updates Offline|  
 |**Name**|Apply Patches|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Selection profile**|The name of the profile used when selecting the patches to install on the target computer|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -705,28 +598,22 @@ manager: angrobe
  The default configuration of the **Apply Windows PE** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Apply Windows PE|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTIApply.wsf" /PE`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -738,28 +625,22 @@ manager: angrobe
  The default configuration of the **Backup** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Backup|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIBackup.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -771,28 +652,22 @@ manager: angrobe
  The default configuration of the **Capture Groups** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Capture Groups|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIGroups.wsf" /capture`|  
 |**Start in**|Not specified.|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -804,28 +679,22 @@ manager: angrobe
  The default configuration of the **Capture User State** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Capture User State|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIUserState.wsf" /capture`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -837,28 +706,22 @@ manager: angrobe
  The default configuration of the **Check BIOS** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Check BIOS|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIBIOSCheck.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -870,28 +733,22 @@ manager: angrobe
  The default configuration of the **Configure** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Configure|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIConfigure.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -903,28 +760,22 @@ manager: angrobe
  The default configuration of the **Copy Scripts** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Copy Scripts|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTICopyScripts.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -936,28 +787,22 @@ manager: angrobe
  The default configuration of the **Copy Sysprep Files** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Copy Sysprep Files|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTISysprep.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -967,27 +812,21 @@ manager: angrobe
  This task sequence step sets the **BDEInstall** property to True, indicating that BitLocker should be installed on the target computer. The unique properties and settings for the **Create BitLocker Partition** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|   
 |**Type**|Set Task Sequence Variable|  
 |**Name**|Create BitLocker Partition|  
 |**Description**|None|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Task Sequence Variable**|BDE Install|  
 |**Value**|True|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -997,28 +836,22 @@ manager: angrobe
  This task sequence step creates a backup of the target computer. The unique properties and settings for the **Create WIM** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Create WIM|  
 |**Description**|None|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIBackup.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1027,31 +860,25 @@ manager: angrobe
 #### Disable BDE Protectors  
  If BitLocker is installed on the target computer, this task sequence step disables the BitLocker protectors.  
 
- The unique properties and settings for the **Disable BDE Protectors**task sequence step type are:  
+ The unique properties and settings for the **Disable BDE Protectors** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Disable BDE Protectors|  
 |**Description**|None|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIDisableBDEProtectors.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1063,19 +890,15 @@ manager: angrobe
  The default configuration of the **Enable BitLocker** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Enable BitLocker|  
 |**Name**|Enable BitLocker|  
 |**Description**|None|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Current operating system drive**|Selected|  
 |**TPM only**|Selected|  
 |**Startup key on USB only**|Not selected|  
@@ -1086,10 +909,8 @@ manager: angrobe
 |**Wait for BitLocker to complete**|Not selected|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1098,30 +919,24 @@ manager: angrobe
 #### Enable OEM Disk Configuration  
  This task sequence step sets the **DeploymentType**property to **NEWCOMPUTER**, which allows the target computer’s disk to be partitioned and formatted.  
 
- The unique properties and settings for the **Enable OEM Disk Configuration**task sequence step type are:  
+ The unique properties and settings for the **Enable OEM Disk Configuration** task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
-|**Type**|Set Task Sequence Variable|  
+|-|-|  
+|**Type**|Set Task Sequence Variable |  
 |**Name**|Enable OEM Disk Configuration|  
 |**Description**|None|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Task Sequence Variable**|DeploymentType|  
 |**Value**|NEWCOMPUTER|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1133,26 +948,20 @@ manager: angrobe
  The default configuration of the **End Phase** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Restart computer|  
 |**Name**|End Phase|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |None|None|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1164,28 +973,22 @@ manager: angrobe
  The default configuration of the **Execute Sysprep** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Execute Sysprep|  
 |**Description**|None|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTISysprep.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1197,28 +1000,22 @@ manager: angrobe
  The default configuration of the **Force Diskpart Action** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Force Diskpart Action|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cmd.exe /c if exist c:\oem.wsf del /q c:\oem.wsf`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0.1|  
 |**Continue on error**|Selected|  
@@ -1232,28 +1029,22 @@ manager: angrobe
  The default configuration of the **Format and Partition Disk** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Format and Partition Disk|  
 |**Name**|Format and Partition Disk|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disk number**|0|  
 |**Disk type**|Standard \(MBR\)|  
 |**Volume**|Within the Volume setting, the following sub\-settings are configured:<br /><br /> \-                                 **Partition Name**. OSDisk<br /><br /> \- **Partition Type**. Primary<br /><br /> \-                                 **Use a percentage of remaining space**. Selected<br /><br /> \-                                 **Size\(%\)**. 100<br /><br /> \- **Use specific drive size**. Not selected<br /><br /> \-                                 **Make this a boot partition**. Selected<br /><br /> \- **File System**. NTFS<br /><br /> \- **Quick Format**. Selected<br /><br /> \- **Variable**. Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1270,28 +1061,22 @@ manager: angrobe
  The default configuration of the **Gather local only** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Gather|  
 |**Name**|Gather local only|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Gather only local data**|Selected|  
 |**Gather local data and process rules**|Not selected|  
 |**Rules file**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1302,31 +1087,25 @@ manager: angrobe
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIAppXmlGen.wsf](#ZTIAppXmlGen.wsf).  
 
- The default configuration of the **Generate Application Migration**File task sequence step is:  
+ The default configuration of the **Generate Application Migration** File task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Generate Application Migration File|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command Line**|`cscript.exe "%SCRIPTROOT%\ZTIAppXmlGen.wsf" /capture`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1340,28 +1119,22 @@ manager: angrobe
  The default configuration of the **Inject Drivers** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Inject Drivers|  
 |**Name**|Inject Drivers|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Install only matching drivers**|Injects only the drivers which are required by the target computer and match with what is available in Out\-of\-Box Drivers|  
 |**Install all drivers**|Injects all drivers|  
 |**Selection profile**|Injects drivers which are associated with the selected profile|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1375,27 +1148,21 @@ manager: angrobe
  The default configuration of the **Install Applications** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Install Applications|  
 |**Name**|Install Applications|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Install multiple applications**|Selected|  
 |**Install a single application**|Not selected|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1407,28 +1174,22 @@ manager: angrobe
  The default configuration of the **Install Operating System** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Install Operating System|  
 |**Name**|Install Operating System|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Operating system to install**|This value corresponds to the operating system that was selected when the task sequence was created.|  
 |**Disk**|The disk where the operating system is to be installed.|  
 |**Partition**|The partition where the operating system is to be installed.|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1442,28 +1203,22 @@ manager: angrobe
  The default configuration of the **Next Phase** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Next Phase|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTINextPhase.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1477,28 +1232,22 @@ manager: angrobe
  The default configuration of the **Post\-Apply Cleanup** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Post\-Apply Cleanup|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTIApply.wsf" /post`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1510,17 +1259,13 @@ manager: angrobe
  The unique properties and settings for the Recover from Domain task sequence step type are:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Type**|This read\-only type is set to Recover from Domain Join Failure.|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**Auto recover**|The task sequence step will attempt to join the target computer to a domain.|  
 |**Manual recover**|If the target computer fails to join a domain, the task sequence step will cause the task sequencer to pause, allowing the user attempts to join the target computer to a domain.|  
 |**No recover**|If the target computer is not able to join a domain, the task sequence fails, stopping the task sequence.|  
@@ -1531,26 +1276,20 @@ manager: angrobe
  The default configuration of the **Restart computer** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Restart computer|  
 |**Name**|Restart computer|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |None|None|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1564,28 +1303,22 @@ manager: angrobe
  The default configuration of the **Restore Groups** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Restore Groups|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIGroups.wsf" /restore`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1601,28 +1334,22 @@ manager: angrobe
  The default configuration of the **Restore User State** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Restore User State|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command Line**|`cscript.exe "%SCRIPTROOT%\ZTIUserState.wsf" /restore`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1634,27 +1361,21 @@ manager: angrobe
  The default configuration of the **Set Image Build** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Set Task Sequence Variable|  
 |**Name**|Set Image Build|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Task Sequence Variable**|**ImageBuild**|  
 |**Value**|**%OSCurrentVersion%**|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|**0 3010**|  
 |**Continue on error**|Not selected|  
@@ -1666,27 +1387,21 @@ manager: angrobe
  The default configuration of the **Set Image Flags** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Set Task Sequence Variable|  
 |**Name**|Set Image Flags|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Task Sequence Variable**|ImageFlags|  
 |**Value**|%OSSKU%|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1700,28 +1415,22 @@ manager: angrobe
  The default configuration of the **Tattoo** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Tattoo|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTITatoo.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1735,35 +1444,29 @@ manager: angrobe
  The default configuration of the **Validate** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Validate|  
 |**Name**|Validate|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Ensure minimum memory \(MB\)**|Selected. The value selector is set to **768**.|  
 |**Ensure minimum processor speed \(MHz\)**|Selected. The value selector is set to **800**.|  
 |**Ensure specified image size will fit \(MB\)**|Not selected.|  
 |**Ensure current operating system to be refreshed**|Selected. The value selector is set to **Server** or **Client**, depending on the template used to create the task sequence.|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
 |**Conditional qualifier**|Not specified|  
 
-#### Windows Update \(Pre\-Application Installation  
+#### Windows Update \(Pre\-Application Installation)  
  This task sequence step installs updates to the target computer prior to the installation of applications. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.  
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIWindowsUpdate.wsf](#ZTIWindowsUpdate.wsf).  
@@ -1771,28 +1474,22 @@ manager: angrobe
  The default configuration of the **Windows Update \(Pre\-Application Installation\)** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|   
 |**Type**|Run Command Line|  
 |**Name**|Windows Update \(Pre\-Application Installation\)|  
 |**Description**|Not specified|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|   
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1809,28 +1506,22 @@ manager: angrobe
  The default configuration of the **Wipe Disk** task sequence step is:  
 
 ##### Properties  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Type**|Run Command Line|  
 |**Name**|Wipe Disk|  
 |**Description**|This will only run if **WipeDisk**=TRUE in CustomSettings.ini|  
 
 ##### Settings  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIWipeDisk.wsf"`|  
 |**Start in**|Not specified|  
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
-
-|||  
-|-|-|  
 |**Name**|**Value**|  
+|-|-|  
 |**Disable this step**|Not selected|  
 |**Success codes**|0 3010|  
 |**Continue on error**|Not selected|  
@@ -1868,164 +1559,139 @@ manager: angrobe
 > [!TIP]
 >  The properties are sorted in alphabetical order.  
 
-####  <a name="_SMSTSOrgName"></a> _SMSTSOrgName  
+####  <a name="\_SMSTSOrgName"></a> \_SMSTSOrgName  
  Customizes the Task Sequencer engine's display banner  
-
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*name*|The name that will be used in the Task Sequencer engine’s display banner|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] _SMSTSOrgName=Woodgrove Bank`|  
 
 ####  <a name="ADDSLogPath"></a> ADDSLogPath  
  Fully qualified, non-UNC directory on a hard disk on the local computer to host the AD DS log files. If the directory exists it must be empty. If it does not exist, it will be created.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*log_path*|Fully qualified, non-UNC directory on a hard disk on the local computer to host the AD DS log files|  
 
-||  
-|-|  
-|**Example**|  
+|**Example**|
+|-|   
 |`[Settings] Priority=Default  [Default] ADDSLogPath=%DestinationLogicalDrive%\Windows\NTDS`|  
 
 ####  <a name="ADDSPassword"></a> ADDSPassword  
  Account credentials that can be used when promoting the server to a domain controller.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*password*|Account credentials that can be used for the promotion operation|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password>`|  
 
 ####  <a name="ADDSUserDomain"></a> ADDSUserDomain  
  This is the domain the account specified by **ADDSUserName** should be taken from. If the operation is to create a new forest or to become a member server from a backup domain controller upgrade there is no default. If the operation is to create a new tree, the default is the DNS name of the forest the computer is currently joined to. If the operation is to create a new child domain or a replica then the default is the DNS name of the domain the computer is joined to. If the operation is to demote the computer and the computer is a domain controller in a child domain, the default is the DNS name of the parent domains. If the operation is to demote the computer, and the computer is a domain controller of a tree root domain, the default is the DNS name of the forest.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*domain*|Domain the UserName account should be taken from|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password>`|  
 
 ####  <a name="ADDSUserName"></a> ADDSUserName  
  Account credentials that will be used when promoting the server to a domain controller.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*user_name*|Account credentials that will be used for the promotion operation|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=complex_password`|  
 
 ####  <a name="Administrators"></a> Administrators  
  A list of user accounts and domain groups that will be added to the local Administrator group on the target computer. The **Administrators** property is a list of text values that can be any non-blank value. The **Administrators** property has a numeric suffix (for example, **Administrators001** or **Administrators002**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*name*|The name of a user or group that is to be added to the local Administrator group|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] Administrators001=WOODGROVEBANK\NYC Help Desk Staff Administrators002=WOODGROVEBANK\North America East Help Desk Staff PowerUsers001=WOODGROVEBANK\User01 PowerUsers002=WOODGROVEBANK\User02`|  
 
 ####  <a name="AdminPassword"></a> AdminPassword  
  Defines the password that will be assigned to the local Administrator user account on the target computer. If not specified, the pre-deployment password of the Administrator user account will be used.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*admin_password*|The password that is to be assigned to the Administrator user account on the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] Administrators001=WOODGROVEBANK\NYC Help Desk Staff AdminPassword=<admin_password>`|  
 
 ####  <a name="Applications"></a> Applications  
  A list of application GUIDs that should be installed on the target computer. These applications are specified on the Applications node in Deployment Workbench. These GUIDs are stored in the Applications.xml file. The **Applications** property is a list of text values that can be any non-blank value. The **Applications** property has a numeric suffix (for example, **Applications001** or **Applications002**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*application_guid*|The GUID is specified by Deployment Workbench for the application to be deployed to the target computer. The GUID corresponds to the application GUID stored in the Applications.xml file.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] Applications001={1D7DF331-47B7-472C-87B3-442597EC2F7D} Applications002={9d2b8999-5e4d-4f3d-bb05-edaaf4fe5628}`|  
 
 ####  <a name="ApplicationSuccessCodes"></a> ApplicationSuccessCodes  
@@ -2034,21 +1700,18 @@ manager: angrobe
 > [!NOTE]
 >  This property is only applicable to the **Install Application** task sequence step type and when **Install multiple applications** is selected.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*error_codes*|The error codes that determine when applications have been successfully installed. Default values are **0** and **3010**.|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] ApplicationSuccessCodes=0 3010`|  
 
 ####  <a name="ApplyGPOPack"></a> ApplyGPOPack  
@@ -2057,22 +1720,19 @@ manager: angrobe
 > [!NOTE]
 >  The default value for this property always performs the **Apply Local GPO Package** task sequence step. You must explicitly provide a value of "NO" to override this behavior..  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**YES**|The **Apply Local GPO Package** task sequence step is performed. This is the default value.|  
 |**NO**|The **Apply Local GPO Package** task sequence step is not performed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ApplyGPOPack=NO`|  
 
 ####  <a name="Architecture"></a> Architecture  
@@ -2083,42 +1743,36 @@ manager: angrobe
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and is not configured in CustomSettings.ini. Treat this property as read only. However, you can use this property within CustomSettings.ini, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**x86**|Processor architecture is 32 bit.|  
 |**x64**|Processor architecture is 64 bit.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="AreaCode"></a> AreaCode  
  The area code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*area_code*|The area code where the target computer is to be deployed|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="AssetTag"></a> AssetTag  
@@ -2127,26 +1781,22 @@ manager: angrobe
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*asset_tag*|The format of the asset tag is undefined and is determined by the asset tag standard of each organization.|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|   
 |`[Settings] Priority=Default  [Default] OSDComputerName=HP-%AssetTag%`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|    
 |`[Settings] Priority=AssetTag, Default  [Default] OSInstall=YES  [0034034931] OSDComputerName=HPD530-1  [0034003233] OSDNEWMACHINENAME=BVMXP`|  
 
 ####  <a name="AutoConfigDNS"></a> AutoConfigDNS  
@@ -2155,83 +1805,71 @@ manager: angrobe
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Configures DNS for the new domain if the DNS dynamic update protocol is not available|  
 |**NO**|Does not configure DNS for the domain|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] AutoConfigDNS=YES`|  
 
 ####  <a name="BackupDir"></a> BackupDir  
  The folder in which backups of the target computer are stored. This folder exists beneath the UNC path specified in the **BackupShare** property. If the folder does not already exist, it will be created automatically.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Folder*|The name of the folder that exists beneath the shared folder specified in the **BackupShare** property|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|  
 
 ####  <a name="BackupDrive"></a> BackupDrive  
  The drive to include in the backup of the target computer. This property defaults to the drive that contains disk 0 partition 1. It can be also set to **ALL**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*backup_drive*|The drive letter of the drive to back up|  
 |**ALL**|Back up all drives on the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|  
 
 ####  <a name="BackupFile"></a> BackupFile  
  Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](#ZTIBackup.wsf).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*BackupDir*|The name of the Windows Imaging Format (WIM) file to be used during back up.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupFile=%OSDComputerName%.wim`|  
 
 ####  <a name="BackupShare"></a> BackupShare  
@@ -2251,82 +1889,71 @@ manager: angrobe
 
 -   **Creator Owner**. Allow the Full Control permission.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*UNC_path*|The UNC path of the shared folder<br /><br /> Note:<br /><br /> The UNC path specified in this property must exist before deploying the target operating system.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|  
 
 ####  <a name="BDEAllowAlphaNumericPin"></a> BDEAllowAlphaNumericPin  
  This property configures whether BitLocker PINs contain alphanumeric values.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Alphanumeric characters are allowed in the PIN.<br /><br /> Note:<br /><br /> In addition to setting this property to **YES**, the **Allow enhanced PINs for startup** group policy setting must be enabled.|  
 |**NO**|Only numeric characters are allowed in the PIN.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEAllowAlphaNumericPin=YES BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|  
 
 ####  <a name="BDEDriveLetter"></a> BDEDriveLetter  
  The drive letter for the partition that is not encrypted by BitLocker, also known as the *System Volume*. SYSVOL is the directory that contains the hardware-specific files needed to load Windows computers after the BIOS has booted the platform.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*drive_letter*|The letter designation for the logical drive for the System Volume (such as S or T). The default value is **S**.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|  
 
 ####  <a name="BDEDriveSize"></a> BDEDriveSize  
  The size of the BitLocker system partition. The value is specified in megabytes. In the example, the size of the BitLocker partition to create is almost 2 GB (2,000 MB).  
 
-||||||  
+|**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*drive_size*|The size of the partition in megabytes; the default sizes are:<br /><br /> - Windows 7 and Windows Server 2008 R2: 300 MB|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|  
 
 ####  <a name="BDEInstall"></a> BDEInstall  
@@ -2340,24 +1967,21 @@ manager: angrobe
 
 -   An external startup key  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**TPM**|Protect the computer with TPM only. The TPM is a microcontroller that stores keys, passwords, and digital certificates. The microcontroller is typically an integral part of the computer motherboard.|  
 |**TPMKey**|Protect the computer with TPM and a startup key. Use this option to create a startup key and to save it on a UFD. The startup key must be present in the port each time the computer starts.|  
 |**TPMPin**|Protect the computer with TPM and a pin. Use this option in conjunction with the **BDEPin** property.|  
 |**Key**|Protect the computer with an external key (the recovery key) that can be stored in a folder, in AD DS, or printed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|  
 
 ####  <a name="BDEInstallSuppress"></a> BDEInstallSuppress  
@@ -2366,22 +1990,19 @@ manager: angrobe
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**YES**|Do not attempt to install BitLocker.|  
 |**NO**|Attempt to install BitLocker.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=YES`|  
 
 ####  <a name="BDEKeyLocation"></a> BDEKeyLocation  
@@ -2390,41 +2011,35 @@ manager: angrobe
 > [!NOTE]
 >  If this property is configured using the Deployment Wizard, the property must be the drive letter of a removable disk. If the **SkipBitLocker** property is set to **TRUE** so that the **Specify the BitLocker configuration** wizard page is skipped, this property can be set to a UNC path in CustomSettings.ini or in the MDT database (MDT DB).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Location*|Specifies where the recovery key will be stored; must be a UNC path or the drive letter of a removable disk. If not set, the first available removable drive will be used.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|  
 
 ####  <a name="BDEPin"></a> BDEPin  
  The PIN to be assigned to the target computer when configuring BitLocker and the **BDEInstall** or **OSDBitLockerMode** properties are set to **TPMPin**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Pin*|The PIN to be used for BitLocker. The PIN can be between 4 and 20 digits long.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMPin BDEPin=123456789`|  
 
 ####  <a name="BDERecoveryKey"></a> BDERecoveryKey  
@@ -2433,22 +2048,19 @@ manager: angrobe
 > [!NOTE]
 >  The recovery key is stored in the location specified in the **BDEKeyLocation** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**AD**|A recovery key is created.|  
 |Not specified|A recovery key is not created.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|  
 
 ####  <a name="BDEWaitForEncryption"></a> BDEWaitForEncryption  
@@ -2457,65 +2069,56 @@ manager: angrobe
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Specifies that the deployment process should wait for drive encryption to complete.|  
 |**FALSE**|Specifies that the deployment process should not wait for drive encryption to complete.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerStartupKeyDrive=C: OSDBitLockerCreateRecoveryPassword=AD BDEWaitForEncryption=TRUE`|  
 
 ####  <a name="BitsPerPel"></a> BitsPerPel  
- A setting for displaying colors on the target computer. The property can contain numeric digits and corresponds to the color quality setting. In the example, **32**indicates 32 bits per pixel for color quality. This value is inserted into the appropriate configuration settings in Unattend.xml.  
+ A setting for displaying colors on the target computer. The property can contain numeric digits and corresponds to the color quality setting. In the example, **32** indicates 32 bits per pixel for color quality. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
 > [!NOTE]
 >  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hertz (Hz) vertical refresh rate.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*bits_per_pixel*|The number of bits per pixel to use for color. The default value is the default for the operating system being deployed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|  
 
 ####  <a name="BuildID"></a> BuildID  
- Identifies the operating system task sequence to be deployed to the target computer. You create the task sequence ID on the Task Sequences node in the Deployment Workbench. The **BuildID** property allows alphanumeric characters, hyphens (-), and underscores (_). The **BuildID** property cannot be blank or contain spaces.  
+ Identifies the operating system task sequence to be deployed to the target computer. You create the task sequence ID on the Task Sequences node in the Deployment Workbench. The **BuildID** property allows alphanumeric characters, hyphens (-), and underscores (\_). The **BuildID** property cannot be blank or contain spaces.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*build_id*|Identifier of the operating system task sequence as defined in the Deployment Workbench for the target operating system being deployed<br /><br /> Note:<br /><br /> Make certain to use the **TaskSequenceID** specified in the Deployment Workbench user interface (UI) and not the GUID of the **TaskSequenceID**.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] BuildID=BareMetal`|  
 
 ####  <a name="CapableArchitecture"></a> CapableArchitecture  
@@ -2526,22 +2129,19 @@ manager: angrobe
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |**x86**|Processor architecture is 32 bit.|  
 |**x64**|Processor architecture is 64 bit.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |None|  
 
 ####  <a name="CaptureGroups"></a> CaptureGroups  
@@ -2550,43 +2150,37 @@ manager: angrobe
 > [!NOTE]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**NO**|Captures no group membership information.|  
 |**ALL**|Captures the membership of all local groups on the target computer.|  
 |**YES**|Captures the membership of the Administrator and Power Users built-in groups and the groups listed in the groups’ properties. This is the default value if some other value is specified. (**YES** is the typical value.)|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ CaptureGroups=YES Groups1=NYC Application Management Groups2=NYC Help Desk Users`|  
 
 ####  <a name="ChildName"></a> ChildName  
  Specifies whether to append the DNS label at the beginning of the name of an existing directory service domain when installing a child domain.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|The name of the child domain|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] ChildName=childdom.parentdom.WoodGroveBank.com`|  
 
 ####  <a name="ComputerBackupLocation"></a> ComputerBackupLocation  
@@ -2595,45 +2189,39 @@ manager: angrobe
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*blank*|Same as **AUTO**.|  
 |*UNC_path*|The UNC path to the network shared folder where the backup is stored.|  
 |**AUTO**|Creates a backup on a local hard disk if space is available. Otherwise, the backup is saved to a network location specified in the **BackupShare** and **BackupDir** properties.|  
 |**NETWORK**|Creates a backup on a network location specified in **BackupShare** and **BackupDir**.|  
 |**NONE**|No backup will be performed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ ComputerBackupLocation=NETWORK BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE`|  
 
 ####  <a name="ComputerName"></a> ComputerName  
  This property has been deprecated. Use **OSDComputerName** instead.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |None|  
 
 ####  <a name="ConfigFileName"></a> ConfigFileName  
@@ -2642,21 +2230,18 @@ manager: angrobe
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*file_name*|Specifies the name of the configuration file used during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="ConfigFilePackage"></a> ConfigFilePackage  
@@ -2665,21 +2250,18 @@ manager: angrobe
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*package*|Specifies the package ID for the configuration package used during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |None|  
 
 ####  <a name="ConfirmGC"></a> ConfirmGC  
@@ -2688,42 +2270,36 @@ manager: angrobe
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Makes the replica a global catalog if the backup was a global catalog.|  
 |**NO**|Does not make the replica a global catalog.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] ConfirmGC=YES`|  
 
 ####  <a name="CountryCode"></a> CountryCode  
  The country code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*country_code*|The country code where the target computer is to be deployed|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="CriticalReplicationOnly"></a> CriticalReplicationOnly  
@@ -2732,122 +2308,104 @@ manager: angrobe
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Skips noncritical replication|  
 |**NO**|Does not skip noncritical replication|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] CriticalReplicationOnly=YES`|  
 
 ####  <a name="CustomDriverSelectionProfile"></a> CustomDriverSelectionProfile  
  Specifies the custom selection profile used during driver installation.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*profile*|Custom selection profile used during driver installation|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] CustomDriverSelectionProfile=CustomDrivers`|  
 
 ####  <a name="CustomPackageSelectionProfile"></a> CustomPackageSelectionProfile  
  Specifies the custom selection profile used during package installation.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*profile*|Custom selection profile used during package installation|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] CustomPackageSelectionProfile=CustomPackages`|  
 
 ####  <a name="CustomWizardSelectionProfile"></a> CustomWizardSelectionProfile  
  Specifies the custom selection profile used by the wizard for filtering the display of various items.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*profile*|Custom selection profile by the wizard for filtering the display of various items|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] CustomWizardSelectionProfile=CustomWizard`|  
 
 ####  <a name="Database"></a> Database  
  The property that specifies the database to be used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of Microsoft SQL Server® on the computer is specified in the **Instance** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|\-||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*database*|The name of the database to be used for querying property values|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="DatabasePath"></a> DatabasePath  
  Specifies the fully qualified, non\-UNC path to a directory on a fixed disk of the target computer that contains the domain database.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*path*|Specifies the fully qualified, non\-UNC path to a directory on a fixed disk of the local computer that contains the domain database|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DatabasePath=%DestinationLogicalDrive%\Windows\NTSD`|  
 
 ####  <a name="DBID"></a> DBID  
@@ -2859,21 +2417,18 @@ manager: angrobe
 > [!NOTE]
 >  This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|\-||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user\_id*|The name of the user account credentials used to access the computer running SQL Server using SQL Server authentication|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 DBID=SQL_User-01 DBPwd=<complex_password> NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="DBPwd"></a> DBPwd  
@@ -2885,21 +2440,18 @@ manager: angrobe
 > [!NOTE]
 >  This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|\-||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user\_password*|The password for the user account credentials specified in the **DBID** property for using SQL Server authentication|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 DBID=SQL_User-01 DBPwd=<complex_password> NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="Debug"></a> Debug  
@@ -2916,22 +2468,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Debug logging is enabled, which includes the following:<br /><br /> \- Verbose messages are logged.<br /><br /> \- Deprecated messages are logged as errors.|  
 |**FALSE**|Debug logging is not enabled. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |None|  
 
 ####  <a name="DefaultGateway"></a> DefaultGateway  
@@ -2940,21 +2489,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*default\_gateway*|The IP address of the default gateway in standard dotted\-decimal notation|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=DefaultGateway, Default  [Default] OSInstall=YES  [DefaultGateway] 192.168.0.1=HOUSTON 11.1.1.11=REDMOND 172.28.20.1=REDMOND  [REDMOND] Packages001=XXX00004:Program4 Packages002=XXX00005:Program5  [HOUSTON] Packages001=XXX00006:Program6 Packages002=XXX00007:Program7 Packages003=XXX00008:Program8`|  
 
 ####  <a name="DeployDrive"></a> DeployDrive  
@@ -2963,21 +2509,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*drive\_letter*|The letter designation for the logical drive where the target operating system is to be installed \(such as C or D\)|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="DeploymentMethod"></a> DeploymentMethod  
@@ -2989,23 +2532,20 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**UNC**|The deployment is made to the target computer over the network.|  
 |**Media**|The deployment is made from local media (such as DVD or hard disk) at the target computer.|  
 |**SCCM**|ZTI uses this method for Configuration Manager.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |None|  
 
 ####  <a name="DeploymentType"></a> DeploymentType  
@@ -3014,23 +2554,20 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**NEWCOMPUTER**|The target computer is a new computer that has never been a member of the network.|  
 |**REFRESH**|The target computer is an existing computer on the network that needs the desktop environment standard to be redeployed.|  
 |**REPLACE**|An existing computer on the network is being replaced with a new computer. The user state migration data is transferred from the existing computer to a new computer.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeploymentType=NEWCOMPUTER`|  
 
 ####  <a name="DeployRoot"></a> DeployRoot  
@@ -3043,241 +2580,208 @@ cscript.exe LiteTouch.vbs /debug:true
     > [!NOTE]
     >  For ZTI, this property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*path*|The UNC or local path to the .|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ UserDataLocation=NONE`|  
 
 ####  <a name="DestinationDisk"></a> DestinationDisk  
  Disk number that the image will be deployed to.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*disk_number*|The number of the disk to which the image will be deployed|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DestinationDisk=0`|  
 
 ####  <a name="DestinationLogicalDrive"></a> DestinationLogicalDrive  
  The logical drive to which the image will be deployed.  
 
-||||||  
+|**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |*logical_drive_number*|The logical drive to which the image will be deployed|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DestinationLogicalDrive=0`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DestinationLogicalDrive=0`<br /><br /> `[Settings] Priority=Default  [Default] InstallDNS=YES DomainNetBIOSName=WoodGroveBank NewDomain=Child DomainLevel=3 ForestLevel=3 NewDomainDNSName=newdom.WoodGroveBank.com ParentDomainDNSName=WoodGroveBank.com AutoConfigDNS=YES ConfirmGC=YES CriticalReplicationOnly=NO ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password> DatabasePath=%DestinationLogicalDrive%\Windows\NTDS ADDSLogPath=%DestinationLogicalDrive%\Windows\NTDS SysVolPath=%DestinationLogicalDrive%\Windows\SYSVOL SafeModeAdminPassword=<complex_password>`|  
 
 ####  <a name="DestinationPartition"></a> DestinationPartition  
  Disk partition to which the image will be deployed.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*partition_number*|The number of the partition to which the image will be deployed|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DestinationPartition=1`|  
 
 ####  <a name="DHCPScopes"></a> DHCPScopes  
  Specifies the number of DHCP scopes to configure.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |*scopes*|Specifies the number of DHCP scopes to configure|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPScopes=1`|  
 
 ####  <a name="DHCPScopesxDescription"></a> DHCPScopesxDescription  
  The description of the DHCP scope.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*description*|The description of the DHCP scope|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPScopes0Description=DHCPScope0`|  
 
 ####  <a name="DHCPScopesxEndIP"></a> DHCPScopesxEndIP  
  Specifies the ending IP address for the DHCP scope.  
 
- The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+ The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*end_IP*|Specifies the ending IP address for the DHCP scope|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0EndIP=192.168.0.30`|  
 
 ####  <a name="DHCPScopesxExcludeEndIP"></a> DHCPScopesxExcludeEndIP  
  Specifies the ending IP address for the DHCP scope exclusion. IP addresses that are excluded from the scope are not offered by the DHCP server to clients obtaining leases from this scope.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |*exclude_end_IP*|Specifies the ending IP address for the DHCP scope exclusion|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0ExcludeEndIP=192.168.0.15`|  
 
 ####  <a name="DHCPScopesxExcludeStartIP"></a> DHCPScopesxExcludeStartIP  
  Specifies the starting IP address for the DHCP scope exclusion. IP addresses that are excluded from the scope are not offered by the DHCP server to clients obtaining leases from this scope.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*exclude_start_IP*|Specifies the starting IP address for the DHCP scope exclusion|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] DHCPScopes0ExcludeStartIP=192.168.0.10`|  
 
 ####  <a name="DHCPScopesxIP"></a> DHCPScopesxIP  
  Specifies the IP subnet of the scope.  
 
- The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+ The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*IP*|Specifies the IP subnet of the scope|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0IP=192.168.0.0`|  
 
 ####  <a name="DHCPScopesxName"></a> DHCPScopesxName  
  A user-definable name to be assigned to the scope.  
 
- The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+ The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*name*|A user-definable name to be assigned to the scope|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0Name=DHCPScope0`|  
 
 ####  <a name="DHCPScopesxOptionDNSDomainName"></a> DHCPScopesxOptionDNSDomainName  
@@ -3286,21 +2790,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*DNS_domain_name*|Specifies the domain name that the DHCP client should use when resolving unqualified domain names with the DNS|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionDNSDomainName=WoodGroveBank.com`|  
 
 ####  <a name="DHCPScopesxOptionDNSServer"></a> DHCPScopesxOptionDNSServer  
@@ -3309,70 +2810,61 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*DNS_server*|Specifies a list of IP addresses for DNS name servers available to the client|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionDNSServer=192.168.0.2`|  
 
 ####  <a name="DHCPScopesxOptionLease"></a> DHCPScopesxOptionLease  
  The duration that the DHCP lease is valid for the client.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*lease*|The duration that the DHCP lease is valid for the client|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionLease=7`|  
 
 ####  <a name="DHCPScopesxOptionNBTNodeType"></a> DHCPScopesxOptionNBTNodeType  
  Specifies the client node type for NetBT clients.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**1**|Configures the node type as b-node|  
 |**2**|Configures the node type as p-node|  
 |**4**|Configures the node type as m-node|  
 |**8**|Configures the node type as h-node|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionNBTNodeType=4`|  
 
 ####  <a name="DHCPScopesxOptionPXEClient"></a> DHCPScopesxOptionPXEClient  
@@ -3381,21 +2873,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |*PXE_client*|Specifies the IP address used for PXE client bootstrap code|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionPXEClient=192.168.0.252`|  
 
 ####  <a name="DHCPScopesxOptionRouter"></a> DHCPScopesxOptionRouter  
@@ -3404,21 +2893,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*router*|Specifies a list of IP addresses for routers on the client subnet|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionRouter=192.168.0.253`|  
 
 ####  <a name="DHCPScopesxOptionWINSServer"></a> DHCPScopesxOptionWINSServer  
@@ -3427,21 +2913,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*WINS_server*|Specifies the IP addresses to be used for NBNSes on the network|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionWINSServer=192.168.0.2`|  
 
 ####  <a name="DHCPScopesxStartIP"></a> DHCPScopesxStartIP  
@@ -3450,167 +2933,143 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*start_IP*|The starting IP address for the range of IP addresses that are to be excluded from the scope|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0StartIP=192.168.0.20`|  
 
 ####  <a name="DHCPScopesxSubnetMask"></a> DHCPScopesxSubnetMask  
  Specifies the subnet mask of the client subnet.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*subnet_mask*|Specifies the subnet mask of the client IP subnet|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPScopes0SubnetMask=255.255.255.0`|  
 
 ####  <a name="DHCPServerOptionDNSDomainName"></a> DHCPServerOptionDNSDomainName  
  Specifies the connection-specific DNS domain suffix of client computers.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|    
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |*DNS_domain_name*|Specifies the connection-specific DNS domain suffix of client computers|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] DHCPServerOptionDNSDomainName=Fabrikam.com`|  
 
 ####  <a name="DHCPServerOptionDNSServer"></a> DHCPServerOptionDNSServer  
  Specifies a list of IP addresses to be used as DNS name servers that are available to the client.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*DNS_server*|Specifies a list of IP addresses to be used as DNS name servers that are available to the client|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPServerOptionDNSServer=192.168.0.1,192.168.0.2`|  
 
 ####  <a name="DHCPServerOptionNBTNodeType"></a> DHCPServerOptionNBTNodeType  
  Specifies the client node type for NetBT clients.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |**1**|Configures the node type as b-node|  
 |**2**|Configures the node type as p-node|  
 |**4**|Configures the node type as m-node|  
 |**8**|Configures the node type as h-node|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPServerOptionNBTNodeType=4`|  
 
 ####  <a name="DHCPServerOptionPXEClient"></a> DHCPServerOptionPXEClient  
  Specifies the IP address used for PXE client bootstrap code.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*PXE_client*|Specifies the IP address used for PXE client bootstrap code|  
 
-||  
-|-|  
 |**Example**|  
+|-|    
 |`[Settings] Priority=Default  [Default] DHCPServerOptionPXEClient=192.168.0.252`|  
 
 ####  <a name="DHCPServerOptionRouter"></a> DHCPServerOptionRouter  
  Specifies a list of IP addresses for routers on the client subnet. When more than one router is assigned, the client interprets and uses the addresses in the specified order. This option is normally used to assign a default gateway to DHCP clients on a subnet.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*router*|Specifies a list of IP addresses for routers on the client subnet|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DHCPServerOptionRouter=192.168.0.253`|  
 
 ####  <a name="DHCPServerOptionWINSServer"></a> DHCPServerOptionWINSServer  
  Specifies the IP addresses to be used for NBNSes on the network.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|    
 |*WINS_server*|Specifies the IP addresses to be used for NBNSes on the network|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DHCPServerOptionWINSServer=192.168.0.2`|  
 
 ####  <a name="Dialing"></a> Dialing  
@@ -3619,22 +3078,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**PULSE**|The telephony infrastructure supports pulse dialing.|  
 |**TONE**|The telephony infrastructure supports touch-tone dialing.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="DisableTaskMgr"></a> DisableTaskMgr  
@@ -3643,22 +3099,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |**YES**|Prevent the user from being able to start Task Manager by pressing CTRL+ALT+DEL and subsequently interrupting the LTI task sequence.|  
 |**NO**|Allow the user to start Task Manager by pressing CTRL+ALT+DEL and subsequently interrupt the LTI task sequence. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|  
 
 ####  <a name="DNSServerOptionBINDSecondaries"></a> DNSServerOptionBINDSecondaries  
@@ -3669,22 +3122,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |**TRUE**|Allows BIND secondaries|  
 |**FALSE**|Does not allow to BIND secondaries|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSServerOptionBINDSecondaries=TRUE`|  
 
 ####  <a name="DNSServerOptionDisableRecursion"></a> DNSServerOptionDisableRecursion  
@@ -3693,22 +3143,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|    
 |**TRUE**|Disables recursion on the DNS server|  
 |**FALSE**|Enables recursion on the DNS server|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSServerOptionDisableRecursion=TRUE`|  
 
 ####  <a name="DNSServerOptionEnableNetmaskOrdering"></a> DNSServerOptionEnableNetmaskOrdering  
@@ -3719,22 +3166,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**TRUE**|Enables netmask ordering|  
 |**FALSE**|Disables netmask ordering|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSServerOptionEnableNetmaskOrdering=TRUE`|  
 
 ####  <a name="DNSServerOptionEnableRoundRobin"></a> DNSServerOptionEnableRoundRobin  
@@ -3745,22 +3189,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**TRUE**|Enables round robin|  
 |**FALSE**|Disables round robin|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSServerOptionEnableRoundRobin=TRUE`|  
 
 ####  <a name="DNSServerOptionEnableSecureCache"></a> DNSServerOptionEnableSecureCache  
@@ -3771,22 +3212,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|   
 |**TRUE**|Enables cache security|  
 |**FALSE**|Disables cache security|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DNSServerOptionEnableSecureCache=TRUE`|  
 
 ####  <a name="DNSServerOptionFailOnLoad"></a> DNSServerOptionFailOnLoad  
@@ -3795,159 +3233,138 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|    
 |**TRUE**|Enable fail on load|  
 |**FALSE**|Disable fail on load|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DNSServerOptionFailOnLoad=TRUE`|  
 
 ####  <a name="DNSServerOptionNameCheckFlag"></a> DNSServerOptionNameCheckFlag  
  Specifies which character standard is used when checking DNS names.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**0**|Uses ANSI characters that comply with Internet Engineering Task Force (IETF) Request for Comments (RFCs). This value corresponds to the **Strict RFC (ANSI)** selection when configuring DNS in the Deployment Workbench.|  
 |**1**|Uses ANSI characters that do not necessarily comply with IETF RFCs. This value corresponds to the **Non RFC (ANSI)** selection when configuring DNS in the Deployment Workbench.|  
 |**2**|Uses multibyte UCS Transformation Format 8 (UTF-8) characters. This is the default setting. This value corresponds to the **Multibyte (UTF-8)** selection when configuring DNS in the Deployment Workbench.|  
 |**3**|Uses all characters. This value corresponds to the **All names** selection when configuring DNS in the Deployment Workbench.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSServerOptionNameCheckFlag=2`|  
 
 ####  <a name="DNSZones"></a> DNSZones  
  Specifies the number of DNS zones to configure.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*zones*|Specifies the number of DNS zones to configure|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSZones=1 DNSZones0Name=MyNewZone DNSZones0DirectoryPartition=Forest DNSZones0FileName=MyNewZone.dns DNSZones0MasterIP=192.168.0.1,192.168.0.2 DNSZones0Type=Secondary`|  
 
 ####  <a name="DNSZonesxDirectoryPartition"></a> DNSZonesxDirectoryPartition  
  Specifies the directory partition on which to store the zone when configuring secondary or stub zones.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Domain**|Replicates zone data to all DNS server in the AD DS domain|  
 |**Forest**|Replicates zone data to all DNS server in the AD DS forest|  
 |**Legacy**|Replicates zone data to all domain controllers in the AD DS domain|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] DNSZones0DirectoryPartition=Forest`|  
 
 ####  <a name="DNSZonesxFileName"></a> DNSZonesxFileName  
  Specifies the name of the file that will store the zone information.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*file_name*|Specifies the name of the file that will store the zone information|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] DNSZones0FileName=MyNewZone.dns`|  
 
 ####  <a name="DNSZonesxMasterIP"></a> DNSZonesxMasterIP  
  A comma delimited list of IP addresses of the master servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*IP1,IP2*|A comma-delimited list of IP addresses of the master servers|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DNSZones0MasterIP=192.168.0.1,192.168.0.2`|  
 
 ####  <a name="DNSZonesxName"></a> DNSZonesxName  
  Specifies the name of the zone.  
 
 > [!NOTE]
->  The *x*in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
+>  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Specifies the name of the zone|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSZones0Name=MyNewZone`|  
 
 ####  <a name="DNSZonesxScavenge"></a> DNSZonesxScavenge  
@@ -3956,22 +3373,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Allow stale DNS records to be scavenged.|  
 |**FALSE**|Do not allow stale DNS records to be scavenged.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSZones0Scavenge=TRUE`|  
 
 #### DNSZonesxType  
@@ -3980,25 +3394,22 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**DSPrimary**|Creates a primary zone and specifying that it should be stored in AD DS on a DNS server configured as a domain controller|  
 |**DSStub**|Creates a stub zone and specifying that it should be stored in AD DS on a DNS server configured as a domain controller|  
 |**Primary**|Creates a primary zone|  
 |**Secondary**|Creates a secondary zone|  
 |**Stub**|Creates a stub zone|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] DNSZones0Type=Secondary`|  
 
 ####  <a name="DNSZonesxUpdate"></a> DNSZonesxUpdate  
@@ -4007,23 +3418,20 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**0**|Does not allow dynamic updates|  
 |**1**|Allows dynamic updates|  
 |**2**|Allows secure dynamic updates|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DNSZones0Update=1`|  
 
 ####  <a name="DoCapture"></a> DoCapture  
@@ -4032,24 +3440,21 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Copy the necessary files to run Sysprep on the target computer, run Sysprep on the target computer, and capture a WIM image.|  
 |**NO**|Do not run Sysprep on the target computer, and do not capture a WIM image.|  
 |**PREPARE**|Copy the necessary files to run Sysprep on the target computer, but do not run Sysprep or other image-capture processes.|  
 |**SYSPREP**|Copy the necessary files to run Sysprep on the target computer, run Sysprep on the target computer, but do not capture a WIM image.<br /><br /> Note:<br /><br /> The primary purpose of this value is to allow the creation of a VHD that contains an operating system after Sysprep has been run and no image capture is necessary.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DoCapture=YES DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|  
 
 ####  <a name="DomainAdmin"></a> DomainAdmin  
@@ -4058,21 +3463,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain_admin*|The name of the user account credentials|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|  
 
 ####  <a name="DomainAdminDomain"></a> DomainAdminDomain  
@@ -4081,21 +3483,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain_admin_domain*|The name of the domain where the user account credentials reside|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|  
 
 ####  <a name="DomainAdminPassword"></a> DomainAdminPassword  
@@ -4104,61 +3503,52 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain_admin_password*|The password for the domain Administrator account on the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|  
 
 ####  <a name="DomainLevel"></a> DomainLevel  
  This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*Level*|Sets the domain functional level to one of the following:<br /><br /> - 2, Windows Server 2003<br /><br /> - 3, Windows Server 2008<br /><br /> - 4, Windows Server 2008 R2<br /><br /> - 5, Windows Server 2012|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] DomainLevel=3`|  
 
 ####  <a name="DomainNetBiosName"></a> DomainNetBiosName  
  Assigns a NetBIOS name to the new domain.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Name*|Assigns a NetBIOS name to the new domain|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] DomainNetBiosName=NewDom`|  
 
 ####  <a name="DomainOUs"></a> DomainOUs  
@@ -4178,21 +3568,18 @@ cscript.exe LiteTouch.vbs /debug:true
 </DomainOUs>  
 ```  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*OU*|The OU in which the target computer account can be created|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=Y DomainOUs1=OU=Computers, OU=Tellers, OU=NYC, DC=WOODGROVEBANK, DC=Com DomainOUs2=OU=Computers, OU=Managers, OU=NYC, DC=WOODGROVEBANK, DC=Com`|  
 
 ####  <a name="DoNotCreateExtraPartition"></a> DoNotCreateExtraPartition  
@@ -4201,22 +3588,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**YES**|The additional system partition will not be created.|  
 |**NO**|The additional system partition will be created.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] OSInstall=Y DoNotCreateExtraPartition=YES`|  
 
 > [!NOTE]
@@ -4228,22 +3612,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**YES**|The partitioning and formatting task sequence steps in an MDT task sequence will be performed.|  
 |*Any other value*|The partitioning and formatting task sequence steps in an MDT task sequence will not be performed. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES SkipUserData=YES USMTOfflineMigration=TRUE DoNotFormatAndPartition=YES OSDStateStorePath=\\WDG-MDT-01\StateStore$`|  
 
 ####  <a name="DriverGroup"></a> DriverGroup  
@@ -4253,102 +3634,87 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For example, there are two sections for each of the computer manufacturers [Mfgr01] and [Mfgr02]. Two driver groups are defined for the manufacturer Mfgr01: Mfgr01 Video Drivers and Mfgr01 Network Drivers. For the manufacturer Mfgr02, one driver group is defined, Mfgr02 Drivers. One driver group, Shared Drivers, is applied to all computers found in the [Default] section.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*driver_group_name*|The name of the driver group defined in the Deployment Workbench|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Make, Default  [Default] DriverGroup001=Shared Drivers :: [Mfgr01] DriverGroup001=Mfgr01 Video Drivers DriverGroup002=Mfgr01 Network Drivers  [Mfgr02] DriverGroup001=Mfgr02 Drivers`|  
 
 ####  <a name="DriverInjectionMode"></a> DriverInjectionMode  
  This property is used to control the device drivers that are injected by the [Inject Drivers](#InjectDrivers) task sequence step.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |Auto|Inject only matching drivers from the selection profile or folder.  This is the same behavior as MDT 2008, which injects all drivers that matched one of the plug and play (PnP) identifiers (IDs) on the target computer.|  
 |All|Inject all drivers in the selection profile or folder.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] DriverInjectionMode=ALL DriverSelectionProfile=Nothing DriverPaths001=\\NYC-AM-FIL-01\Drivers$ DriverPaths002=\\NYC-AM-FIL-03\WinDrvs`|  
 
 ####  <a name="DriverPaths"></a> DriverPaths  
  A list of UNC paths to shared folders where additional device drivers are located. These device drivers are installed with the target operating system on the target computer. The MDT scripts copy the contents of these folders to the C:\Drivers folder on the target computer. The **DriverPaths** property is a list of text values that can be any non-blank value. The **DriverPaths** property has a numeric suffix (for example, **DriverPaths001** or **DriverPaths002**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*UNC_path*|UNC path to the shared folder in which the additional drivers reside|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] DriverPaths001=\\NYC-AM-FIL-01\Drivers$ DriverPaths002=\\NYC-AM-FIL-03\Win8Drvs`|  
 
 ####  <a name="DriverSelectionProfile"></a> DriverSelectionProfile  
  Profile name used during driver installation.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*profile_name*|None|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DriverSelectionProfile=MonitorDrivers`|  
 
 ####  <a name="EventService"></a> EventService  
  The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*url_path*|The URL to the MDT monitoring service.|  
 
-||  
-|-|  
 |**Example**|  
+|-|   
 |`[Settings] Priority=Default  [Default] EventService=http://WDG-MDT-01:9800 DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$`|  
 
 ####  <a name="EventShare"></a> EventShare  
@@ -4356,21 +3722,18 @@ cscript.exe LiteTouch.vbs /debug:true
 
  By default, the shared folder is created in C:\Events.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*UNC_path*|The UNC path to the shared folder in which the MDT scripts record events. The default share name is Events.|  
 
-||  
-|-|  
 |**Example**|  
+|-|
 |`[Settings] Priority=Default  [Default] EventShare=\\NYC-AM-FIL-01\Events DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$`|  
 
 ####  <a name="FinishAction"></a> FinishAction  
@@ -4382,21 +3745,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*action*|Where *action* is one of the following:<br /><br /> - **SHUTDOWN**. Shuts down the target computer.<br /><br /> - **REBOOT**. Restarts the target computer.<br /><br /> - **RESTART**. Same as **REBOOT**.<br /><br /> - **LOGOFF**. Log off the current user. If the target computer is currently running Windows PE, then the target computer will be restarted.<br /><br /> - **blank**. Exit the Deployment Wizard without performing any additional actions. This is the default setting.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] FinishAction=REBOOT`|  
 
 ####  <a name="ForceApplyFallback"></a> ForceApplyFallback  
@@ -4408,42 +3768,37 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Besides controlling the method used to install these operating systems, this property affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. When the value of this property is set to **NEVER**, only operating system task sequences that match the processor architecture of the boot image are displayed. If the value of this property is set to any other value or is blank, all task sequences that can use the imagex.exe installation method are shown, regardless of the processor architecture.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**NEVER**|MDT always uses the imagex.exe method if necessary. Only task sequences that deploy an operating system that matches the boot image are displayed in the Deployment Wizard.|  
-|Any other value, including blank|MDT attempts to install the operating system using the setup.exe method but falls back to the imagex.exe method, if necessary. Any task sequence that supports the imagex.exe method is displayed in the Deployment Wizard.|  
+|Any other value, including blank| Any task sequence that supports the imagex.exe method is displayed in the Deployment Wizard.|  
 
-||  
-|-|  
-|**Example**|  
+
+|**Example**|
+ |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ForceApplyFallback=NEVER`|  
 
 ####  <a name="ForestLevel"></a> ForestLevel  
  This entry specifies the forest functional level when a new domain is created in a new forest.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*level*|Sets the domain functional level to one of the following:<br /><br /> - 2, Windows Server 2003<br /><br /> - 3, Windows Server 2008<br /><br /> - 4, Windows Server 2008 R2<br /><br /> - 5, Windows Server 2012|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ForestLevel=3`|  
 
 ####  <a name="FullName"></a> FullName  
@@ -4452,69 +3807,59 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This value is different from the user credentials created after the operating system is deployed. The **FullName** property is provided as information to systems administrators about the user running applications on the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*full_name*|The full name of the user of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=MACAddress, Default Properties=CustomProperty, ApplicationInstall  [Default] CustomProperty=TRUE OrgName=Woodgrove Bank  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1 ApplicationInstall=Custom FullName=Woodgrove Bank User  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP  ApplicationInstall=Minimum FullName=Woodgrove Bank Manager`|  
 
 ####  <a name="GPOPackPath"></a> GPOPackPath  
- This property is used to override the default path to the folder in which the GPO packs reside. The path specified in this property is relative to the Templates\GPOPacks folder in a distribution share. MDT automatically scans a specific subfolder of this folder based on the operating system being deployed to the target computer, such as Templates\GPOPacks\\*operating_system* (where *operating_system* is the operating system being deployed).  REF _Ref321338772 \h Table 3 list the supported operating systems and the subfolders that correspond to each operating system.  
+ This property is used to override the default path to the folder in which the GPO packs reside. The path specified in this property is relative to the Templates\GPOPacks folder in a distribution share. MDT automatically scans a specific subfolder of this folder based on the operating system being deployed to the target computer, such as Templates\GPOPacks\\*operating_system* (where *operating_system* is the operating system being deployed). Table 3 list the supported operating systems and the subfolders that correspond to each operating system.  
 
-### Table 3. Windows Operating Systems and Corresponding GPO Pack Subfolder  
+##### Table 3. Windows Operating Systems and Corresponding GPO Pack Subfolder  
 
-|||  
-|-|-|  
 |**Operating system**|**GPO pack subfolder**|  
+|-|-|  
 |Windows 7 with SP1|Win7SP1-MDTGPOPack|  
 |Windows Server 2008 R2|WS2008R2SP1-MDTGPOPack|  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*path*|The path relative to the *distribution_share*\Templates\GPOPacks folder (where *distribution_share* is the root folder of the distribution share. The default value is the *distribution_share*\Templates\GPOPacks\\*operating_system* folder (where *operating_system* is a subfolder based on the operating system version).<br /><br /> In the example below, setting the GPOPackPath property to a value of "Win7-HighSecurity" configures MDT to use the *distribution_share*\Templates\GPOPacks\Win7-HighSecurity folder as the folder where the GPO packs are stored.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] GPOPackPath=Win7-HighSecurity`|  
 
 ####  <a name="Groups"></a> Groups  
  The list of local groups on the target computer whose membership will be captured. This group membership is captured during the State Capture Phase and is restored during the State Restore Phase. (The default groups are Administrators and Power Users.) The **Groups** property is a list of text values that can be any non-blank value. The **Groups** property has a numeric suffix (for example, **Groups001** or **Groups002**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*group_name*|The name of the local group on the target computer for which group membership will be captured|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ CaptureGroups=YES Groups001=NYC Application Management Groups002=NYC Help Desk Users`|  
 
 ####  <a name="HideShell"></a> HideShell  
@@ -4523,42 +3868,36 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property can be used with the **DisableTaskMgr** property to help prevent users from interrupting the LTI task sequence. For more information, see the [DisableTaskMgr](#DisableTaskMgr) property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |**YES**|Windows Explorer is hidden until the task sequence is complete.|  
 |**NO**|Windows Explorer is visible while the task sequence is running. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|  
 
 ####  <a name="OSHome_Page"></a> OSHome_Page  
  The URL to be used as the Windows Internet Explorer® home page after the target operating system is deployed.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*URL*|The URL of the web page to be used as the home page for Internet Explorer on the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] Home_Page=http://portal.woodgrovebank.com`|  
 
 ####  <a name="HostName"></a> HostName  
@@ -4567,21 +3906,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This is the computer name of the target computer, not the NetBIOS computer name of the target computer. The NetBIOS computer name can be shorter than the computer name. Also, this property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*host_name*|The IP host name assigned to the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="ImagePackageID"></a> ImagePackageID  
@@ -4590,21 +3926,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
+|**Value**|**Description**|
 |-|-|  
-|**Value**|**Description**|  
 |None|The package ID used for the operating system to install during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="InputLocale"></a> InputLocale  
@@ -4612,21 +3945,18 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Exclude this setting in the Windows User State Migration Tool (USMT) when backing up and restoring user state information. Otherwise, the settings in the user state information will override the values specified in the *InputLocale* property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|  
 |*input_locale1; input_locale2*|The locale for the keyboard attached to the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us InputLocale=0409:00000409;0413:00020409;0413:00000409;0409:00020409`|  
 
 ####  <a name="InstallPackageID"></a> InstallPackageID  
@@ -4635,41 +3965,35 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|The package ID used for the operating system to install during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="Instance"></a> Instance  
  The instance of SQL Server used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
-|*instance*|The name of the instance of SQL Server to be used for querying property values|  
+|-|-|
+||*instance*|The name of the instance of SQL Server to be used for querying property values|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="IPAddress"></a> IPAddress  
@@ -4678,21 +4002,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*ip\_address*|The IP address of the target computer in standard dotted\-decimal notation|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsDesktop"></a> IsDesktop  
@@ -4704,22 +4025,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The target computer is a desktop computer.|  
 |**FALSE**|The target computer is not a desktop computer.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsHypervisorRunning"></a> IsHypervisorRunning  
@@ -4745,22 +4063,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The IsVM property should be used to determine whether the target computer is a virtual or physical machine.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|A hypervisor is detected.|  
 |**FALSE**|A hypervisor is not detected.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsLaptop"></a> IsLaptop  
@@ -4772,43 +4087,37 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The target computer is a portable computer.|  
 |**FALSE**|The target computer is not a portable computer.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsServer"></a> IsServer  
  Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The target computer is a server.|  
 |**FALSE**|The target computer is not a server.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsServerCoreOS"></a> IsServerCoreOS  
@@ -4817,22 +4126,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The operating system on the target computer is the Server Core installation option of Windows Server.|  
 |**FALSE**|The operating system on the target computer is not the Server Core installation option of Windows Server.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsServerOS"></a> IsServerOS  
@@ -4841,22 +4147,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The operating system on the target computer is a server operating system.|  
 |**FALSE**|The operating system on the target computer is not a server operating system.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsUEFI"></a> IsUEFI  
@@ -4865,22 +4168,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The target computer is currently running with UEFI.|  
 |**FALSE**|The target computer is not currently running with UEFI.<br /><br /> Note:<br /><br /> It is possible that the target computer may support UEFI, but is running in a compatibility mode that emulates the older BIOS firmware interface. In this situation this value of this property will set to **FALSE** even though the target computer supports UEFI.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="IsVM"></a> IsVM  
@@ -4903,62 +4203,53 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The target computer is a VM.|  
 |**FALSE**|The target computer is not a VM.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="JoinDomain"></a> JoinDomain  
  The domain that the target computer joins after the target operating system is deployed. This is the domain where the computer account for the target computer is created. The **JoinDomain** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinDomain** property cannot be blank or contain spaces.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain\_name*|The name of the domain that the target computer joins|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] JoinDomain=WOODGROVEBANK MachineObjectOU=OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`|  
 
 ####  <a name="JoinWorkgroup"></a> JoinWorkgroup  
  The workgroup that the target computer joins after the target operating system is deployed. The **JoinWorkgroup** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinWorkgroup** property cannot be blank or contain spaces.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*workgroup\_name*|The name of the workgroup that the target computer joins|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] JoinWorkgroup=WDGV_WORKGROUP`|  
 
 ####  <a name="KeyboardLocale"></a> KeyboardLocale  
@@ -4969,26 +4260,22 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*keyboard_locale1; keyboard_locale2*|The locale of the keyboard attached to the target computer.<br /><br /> The value can be specified in the following formats:<br /><br /> - Text (en-us)<br /><br /> - Hexadecimal (0409:00000409)|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=en-us`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=0409:00000409;1809:00001809;041A:0000041A;083b:0001083b`|  
 
 ####  <a name="KeyboardLocalePE"></a> KeyboardLocalePE  
@@ -4997,46 +4284,39 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*keyboard_locale*|The locale of the keyboard attached to the target computer.<br /><br /> The value can be specified in the following formats:<br /><br /> - Text (en-us)<br /><br /> - Hexadecimal (0409:00000409)|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=Default  [Default] KeyboardLocalePE=en-us`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] KeyboardLocalePE=0409:00000409`|  
 
 ####  <a name="LanguagePacks"></a> LanguagePacks  
  A list of the GUIDs for the language packs to be deployed on the target computer. Deployment Workbench specifies these language packs on the OS Packages node. These GUIDs are stored in the Packages.xml file. The **LanguagePacks** property has a numeric suffix (for example, **LanguagePacks001** or **LanguagePacks002**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*language_pack_guid*|The GUID that the Deployment Workbench specifies for the language packs to install on the target computer. The GUID corresponds to the language pack GUID stored in Packages.xml.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] LanguagePacks001={a1923f8d-b07b-44c7-ac1e-353b7cc4c1ad}`|  
 
 ####  <a name="LoadStateArgs"></a> LoadStateArgs  
@@ -5047,21 +4327,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  Do not add any of the following command-line arguments when configuring this property: **/hardlink**, **/nocompress**, **/decrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |Arguments|The command-line arguments passed to Loadstate.exe.<br /><br /> The default arguments specified by Deployment Workbench are as follows:<br /><br /> - **/v**. Enables verbose output in the Loadstate log. The default is **0**. Specify any number from 0 to 15. The value **5** enables verbose and status output.<br /><br /> - **/c**. When specified, Loadstate will continue to run even if there are nonfatal errors. Without the **/c** option, Loadstate exits on the first error.<br /><br /> - **/lac**. Specifies that if the account being migrated is a local (non-domain) account, and it does not exist on the destination computer, then USMT will create the account but it will be disabled.<br /><br /> For more information about these and other arguments, see the USMT Help files.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|  
 
 ####  <a name="Location"></a> Location  
@@ -5073,61 +4350,52 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Then the scripts parse each section that corresponds to the locations returned in the query. For example, the value `[Springfield]`and the section `[Springfield-123 Oak Street-4th Floor]` in CustomSettings.ini can represent the corresponding locations. This is an example of how one computer can belong to two locations. The `[Springfield]`section is for all computers in a larger geographic area (an entire city), and the `[Springfield-123 Oak Street-4th Floor]` section is for all computers on the fourth floor at 123 Oak Street, in Springfield.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*location1,*location2|The list of locations to be assigned to an individual computer or a group of computers|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=LSettings, Default  [Default] UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES ScanStateArgs=/v:15 /o /c LoadStateArgs=/v:7 /c  [LSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL$ Table=LocationSettings Parameters=DefaultGateway  [Springfield] UDDir=%OSDComputerName% UDShare=\\Springfield-FIL-01\UserData  [Springfield-123 Oak Street-4th Floor] DeployRoot=\\Springfield-BDD-01\Distribution1$`|  
 
 ####  <a name="LongDistanceAccess"></a> LongDistanceAccess  
  The dialing digits to gain access to an outside line to dial long distance. The property can contain only numeric digits. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*language_pack_guid*|The GUID that the Deployment Workbench specifies for the language packs to install on the target computer. The GUID corresponds to the language pack GUID stored in Packages.xml.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="MACAddress"></a> MACAddress  
  The media access control (MAC) layer address of the primary network adapter of the target computer. The **MACAddress** property is included on the **Priority** line so that property values specific to a target computer can be provided. Create a section for each MAC address for each of the target computers (such as `[00:0F:20:35:DE:AC]`or `[00:03:FF:FE:FF:FF]`) that contain target computer–specific settings.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*mac_address*|The MAC address of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=MACAddress, Default  [Default] CaptureGroups=YES Groups1=NYC Application Management Groups2=NYC Help Desk Users  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP`|  
 
 ####  <a name="MachineObjectOU"></a> MachineObjectOU  
@@ -5139,21 +4407,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  If a computer object already exists in AD DS, specifying **MachineObjectOU** will not cause the computer object to be moved to the specified OU.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*OU\_name*|The name of the OU where the computer account for the target computer will be created|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] JoinDomain=WOODGROVEBANK MachineObjectOU=OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`|  
 
 ####  <a name="Make"></a> Make  
@@ -5162,41 +4427,35 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*make*|The manufacturer of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Make, Default  [Default]  [Dell Computer Corporation] Subsection=Dell-%Model%  [Dell-Latitude D600] Packages001=XXX00009:Program9 Packages002=XXX0000A:Program10`|  
 
 ####  <a name="MandatoryApplications"></a> MandatoryApplications  
  A list of application GUIDs that will be installed on the target computer. These applications are specified on the Applications node in the Deployment Workbench. The GUIDs are stored in the Applications.xml file. The **MandatoryApplications** property is a list of text values that can be any non\-blank value. The **MandatoryApplications** property has a numeric suffix \(for example, **MandatoryApplications001** or **MandatoryApplications002**\).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*application\_guid*|The GUID specified by the Deployment Workbench for the application to be deployed to the target computer. The GUID corresponds to the application GUID stored in the Applications.xml file.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] MandatoryApplications001={1D7DF331-47B7-472C-87B3-442597EC2F7D} MandatoryApplications002={9d2b8999-5e4d-4f3d-bb05-edaaf4fe5628} Administrators001=WOODGROVEBANK\NYC Help Desk Staff`|  
 
 ####  <a name="Memory"></a> Memory  
@@ -5205,21 +4464,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*memory*|The amount of memory installed on the target computer in megabytes|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="Model"></a> Model  
@@ -5228,84 +4484,72 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*model*|The model of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Make, Default  [Default]  [Dell Computer Corporation] Subsection=Dell-%Model%  [Dell-Latitude D600] Packages001=XXX00009:Program9 Packages002=XXX0000A:Program10`|  
 
 ####  <a name="NetLib"></a> NetLib  
  The protocol to be used to communicate with the computer running SQL Server specified in the **SQLServer** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|\-||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**DBNMPNTW**|Use the named pipes protocol to communicate.|  
 |**DBMSSOCN**|Use TCP\/IP sockets to communicate.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="NewDomain"></a> NewDomain  
  Indicates the type of a new domain: whether a new domain in a new forest, the root of a new tree in an existing forest, or a child of an existing domain.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |Child|The new domain is a child of an existing domain.|  
 |Forest|The new domain is the first domain in a new forest of domain trees.|  
 |Tree|The new domain is the root of a new tree in an existing forest.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] NewDomain=Tree`|  
 
 ####  <a name="NewDomainDNSName"></a> NewDomainDNSName  
  Specifies the required name of a new tree in an existing domain or when Setup installs a new forest of domains.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Specifies the required name of a new tree in an existing domain or when Setup installs a new forest of domains|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] NewDomainDNSName=newdom.WoodGroveBank.com`|  
 
 ####  <a name="Order"></a> Order  
@@ -5313,41 +4557,35 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For example, if **Order\=Sequence** is specified in the CustomSettings.ini file, then an **ORDER BY** sequence clause is added to the query. **Specifying Order\=Make**, **Model** adds an **ORDER BY Make, Model** clause to the query.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|\-||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*property1, property2, …*|Properties to define the sort order for the result set \(where *propertyn* represents the properties in the sort criteria\)|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=MakeModelSettings Parameters=SerialNumber, AssetTag ParameterCondition=OR Order=Make, Model`|  
 
 ####  <a name="OrgName"></a> OrgName  
  The name of the organization that owns the target computer. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*org\_name*|The name of the organization that owns the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=MACAddress, Default Properties=CustomProperty, ApplicationInstall  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac UserDataLocation=NONE CustomProperty=TRUE OrgName=Woodgrove Bank  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1 ApplicationInstall=Custom FullName=Woodgrove Bank User  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP  ApplicationInstall=Minimum FullName=Woodgrove Bank Manager`|  
 
 ####  <a name="OSArchitecture"></a> OSArchitecture  
@@ -5356,22 +4594,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**x86**|The processor architecture type for the operating system is 32 bit.|  
 |**x64**|The processor architecture type for the operating system is 64 bit.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSCurrentBuild"></a> OSCurrentBuild  
@@ -5380,22 +4615,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**7600**|Windows 7|  
 |**9600**|Windows 8.1|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSCurrentVersion"></a> OSCurrentVersion  
@@ -5404,21 +4636,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*version_number*|The operating system major version, minor version, and build numbers (major.minor.build). For example, 6.3.9600 would represent Windows 8.1.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDAdapterxDescription"></a> OSDAdapterxDescription  
@@ -5429,21 +4658,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0Description** or **OSDAdapter1Description**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |Description|The name of the network connection as it appears in the Control Panel Network Connections item|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDAdapterxDNSDomain"></a> OSDAdapterxDNSDomain  
@@ -5452,21 +4678,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSDomain** or **OSDAdapter1DNSDomain**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*DNS_domain_name*|A DNS domain name (DNS suffix) that will be assigned to the network connection|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSDomain=WoodGroveBank.com`|  
 
 ####  <a name="OSDAdapterxDNSServerList"></a> OSDAdapterxDNSServerList  
@@ -5475,21 +4698,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSServerList** or **OSDAdapter1DNSServerList**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*DNS_servers*|A comma-delimited list of DNS server IP addresses that will be assigned to the network connection|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSServerList=192.168.0.254,192.168.100.254`|  
 
 ####  <a name="OSDAdapterxDNSSuffix"></a> OSDAdapterxDNSSuffix  
@@ -5498,21 +4718,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSSuffix** or **OSDAdapter1DNSSuffix**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*DNS_suffix*|A DNS suffix that will be assigned to the network connection|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSSuffix= WoodGroveBank.com`|  
 
 ####  <a name="OSDAdapterxEnableDHCP"></a> OSDAdapterxEnableDHCP  
@@ -5521,22 +4738,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDHCP** or **OSDAdapter1EnableDHCP**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The network connection will be configured via DHCP.|  
 |**FALSE**|The network connection will be configured with static configuration.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableDHCP=TRUE`|  
 
 ####  <a name="OSDAdapterxEnableDNSRegistration"></a> OSDAdapterxEnableDNSRegistration  
@@ -5545,22 +4759,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDNSRegistration** or **OSDAdapter1EnableDNSRegistration**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables DNS registration|  
 |**FALSE**|Disables DNS registration|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableDNSRegistration=TRUE`|  
 
 ####  <a name="OSDAdapterxEnableFullDNSRegistration"></a> OSDAdapterxEnableFullDNSRegistration  
@@ -5569,22 +4780,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableFullDNSRegistration** or **OSDAdapter1EnableFullDNSRegistration**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables full DNS registration|  
 |**FALSE**|Disables full DNS registration|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableFullDNSRegistration=TRUE`|  
 
 ####  <a name="OSDAdapterxEnableLMHosts"></a> OSDAdapterxEnableLMHosts  
@@ -5593,22 +4801,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableLMHosts** or **OSDAdapter1EnableLMHosts**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables LMHOSTS lookup|  
 |**FALSE**|Disables LMHOSTS lookup|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableLMHosts=TRUE`|  
 
 ####  <a name="OSDAdapterxEnableIPProtocolFiltering"></a> OSDAdapterxEnableIPProtocolFiltering  
@@ -5616,22 +4821,19 @@ cscript.exe LiteTouch.vbs /debug:true
 
  The*x*in this property’s name is a placeholder for a zero-based array that contains network adapter information, such as *OSDAdapter0EnableIPProtocolFiltering* or **OSDAdapter1EnableIPProtocolFiltering**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables IP protocol filtering|  
 |**FALSE**|Disables IP protocol filtering|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableIPProtocolFiltering =TRUE`|  
 
 ####  <a name="OSDAdapterxEnableTCPFiltering"></a> OSDAdapterxEnableTCPFiltering  
@@ -5640,22 +4842,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this property’s name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables TCP\/IP filtering|  
 |**FALSE**|Disables TCP\/IP filtering|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableTCPFiltering=TRUE`|  
 
 ####  <a name="OSDAdapterxEnableTCPIPFiltering"></a> OSDAdapterxEnableTCPIPFiltering  
@@ -5664,22 +4863,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPIPFiltering** or **OSDAdapter1EnableTCPIPFiltering**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables TCP\/IP filtering|  
 |**FALSE**|Disables TCP\/IP filtering|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableTCPIPFiltering=TRUE`|  
 
 ####  <a name="OSDAdapterxEnableWINS"></a> OSDAdapterxEnableWINS  
@@ -5691,22 +4887,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables WINS|  
 |**FALSE**|Disables WINS|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableWINS=TRUE OSDAdapter0WINSServerList=192.168.0.1,192.168.100.1`|  
 
 ####  <a name="OSDAdapterxGatewayCostMetric"></a> OSDAdapterxGatewayCostMetric  
@@ -5715,21 +4908,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0GatewayCostMetric** or **OSDAdapter1GatewayCostMetric**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*cost\_metrics*|A comma\-delimited list of Gateway Cost Metrics|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0GatewayCostMetrics=Automatic`|  
 
 ####  <a name="OSDAdapterxGateways"></a> OSDAdapterxGateways  
@@ -5738,21 +4928,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Gateways** or **OSDAdapter1Gateways**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*gateways*|A comma\-delimited list of gateways|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0Gateways=192.168.0.1,192.168.100.1`|  
 
 ####  <a name="OSDAdapterxIPAddressList"></a> OSDAdapterxIPAddressList  
@@ -5761,21 +4948,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPAddressList** or **OSDAdapter1IPAddressList**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*IP\_addresses*|A comma delimited list of IP addresses|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0IPAddressList=192.168.0.40,192.168.100.40 OSDAdapter0SubnetMask=255.255.255.0,255.255.255.0`|  
 
 ####  <a name="OSDAdapterxIPProtocolFilterList"></a> OSDAdapterxIPProtocolFilterList  
@@ -5784,21 +4968,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPProtocolFilterList** or **OSDAdapter1IPProtocolFilterList**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*protocol\_filter\_list*|A comma\-delimited list of IP protocol filters|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0IPProtocolFilterList=a list of approved IP protocols`|  
 
 ####  <a name="OSDAdapterxMacAddress"></a> OSDAdapterxMacAddress  
@@ -5807,21 +4988,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0MacAddress** or **OSDAdapter1MacAddress**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*MAC\_address*|Network adapter MAC address|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0MacAddress=00:0C:29:67:A3:6B`|  
 
 ####  <a name="OSDAdapterxName"></a> OSDAdapterxName  
@@ -5830,21 +5008,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Name** or **OSDAdapter1Name**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Network adapter name|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0Name=3Com 3C920 Integrated Fast Ethernet Controller`|  
 
 ####  <a name="OSDAdapterxSubnetMask"></a> OSDAdapterxSubnetMask  
@@ -5853,21 +5028,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0SubnetMask** or **OSDAdapter1SubnetMask**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*subnet\_masks*|A comma\-delimited list of IP subnet masks|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0IPAddressList=192.168.0.40,192.168.100.40 OSDAdapter0SubnetMask=255.255.255.0,255.255.255.0`|  
 
 #### OSDAdapterxTCPFilterPortList  
@@ -5876,21 +5048,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPFilterPortList** or **OSDAdapter1TCPFilterPortList**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*port\_list*|A comma\-delimited list of TCP\/IP filter ports|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0TCPFilterPortList=a list of approved TCP ports`|  
 
 ####  <a name="OSDAdapterxTCPIPNetBiosOptions"></a> OSDAdapterxTCPIPNetBiosOptions  
@@ -5899,22 +5068,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPIPNetBiosOptions** or **OSDAdapter1TCPIPNetBiosOptions**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**0**|Disable IP forwarding.|  
 |**1**|Enable IP forwarding.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0TCPIPNetBiosOptions=0`|  
 
 ####  <a name="OSDAdapterxUDPFilterPortList"></a> OSDAdapterxUDPFilterPortList  
@@ -5923,21 +5089,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0UDPFilterPortList** or **OSDAdapter1UDPFilterPortList**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*port\_list*|A comma\-delimited list of UDP filter ports|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0UDPFilterPortList=a list of approved UDP ports`|  
 
 ####  <a name="OSDAdapterxWINSServerList"></a> OSDAdapterxWINSServerList  
@@ -5946,41 +5109,35 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0WINSServerList** or **OSDAdapter1WINSServerList**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*WINS\_server\_list*|A comma\-delimited list of WINS server IP addresses|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableWINS=TRUE OSDAdapter0WINSServerList=192.168.0.1,192.168.100.1`|  
 
 ####  <a name="OSDAdapterCount"></a> OSDAdapterCount  
  Specifies the number of network connections that are to be configured.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |count|The number of network adapters|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDAdapterCount=1 OSDAdapter0EnableDHCP=FALSE OSDAdapter0IPAddressList=192.168.0.40,192.168.100.40 OSDAdapter0SubnetMask=255.255.255.0,255.255.255.0 OSDAdapter0Gateways=192.168.0.1,192.168.100.1 OSDAdapter0EnableWINS=TRUE OSDAdapter0WINSServerList=192.168.0.1,192.168.100.1 OSDAdapter0TCPIPNetBiosOptions=0 OSDAdapter0MacAddress=00:0C:29:67:A3:6B OSDAdapter0GatewayCostMetrics=Automatic OSDAdapter0EnableTCPIPFiltering=TRUE OSDAdapter0EnableLMHosts=TRUE OSDAdapter0EnableFullDNSRegistration=TRUE OSDAdapter0EnableDNSRegistration=TRUE OSDAdapter0DNSSuffix=WoodGroveBank.com`|  
 
 #### OSDAnswerFilePath  
@@ -5989,21 +5146,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*file\_path*|Specifies the path to the answer file to be used during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDBitLockerCreateRecoveryPassword"></a> OSDBitLockerCreateRecoveryPassword  
@@ -6012,22 +5166,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**AD**|A recovery key is created.|  
 |Not specified|A recovery key is not created.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerStartupKeyDrive=C:`|  
 
 ####  <a name="OSDBitLockerMode"></a> OSDBitLockerMode  
@@ -6041,104 +5192,89 @@ cscript.exe LiteTouch.vbs /debug:true
 
 -   An external startup key  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TPM**|Protect the computer with TPM only. The TPM is a microcontroller that stores keys, passwords, and digital certificates. The microcontroller is typically an integral part of the computer motherboard.|  
 |**TPMKey**|Protect the computer with TPM and a startup key. Use this option to create a startup key and to save it on a UFD. The startup key must be present in the port each time the computer starts.|  
 |**TPMPin**|Protect the computer with TPM and a pin. Use this option in conjunction with the **BDEPin** property.<br /><br /> Note:<br /><br /> This value is not valid when using ZTI.|  
 |**Key**|Protect the computer with an external key \(the recovery key\) that can be stored in a folder, in AD DS, or printed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPM OSDBitLockerCreateRecoveryPassword=AD`|  
 
 ####  <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword  
  Instead of generating a random recovery password, the **Enable BitLocker** task sequence action uses the specified value as the recovery password. The value must be a valid numerical BitLocker recovery password.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*password*|A valid 48\-digit password|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerRecoveryPassword=621280128854709621167486709731081433315062587367 OSDBitLockerStartupKeyDrive=C:`|  
 
 ####  <a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey  
  Instead of generating a random startup key for the key management option **Startup Key on USB only**, the **Enable BitLocker** task sequence action uses the value as the startup key. The value must be a valid, Base64\-encoded BitLocker startup key.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*startupkey*|Base64\-encoded BitLocker startup key|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=KEY OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerStartupKey=8F4922B8-2D8D-479E-B776-12629A361049`|  
 
 ####  <a name="OSDBitLockerStartupKeyDrive"></a> OSDBitLockerStartupKeyDrive  
  The location for storing the BitLocker recovery key and startup key.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*location*|The storage location for the recovery key and startup key \(either local to the target computer or to a UNC that points to a shared network folder\)|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLocker CreateRecoveryPassword=AD OSDBitLockerStartupKeyDrive=C:`|  
 
 ####  <a name="OSDBitLockerTargetDrive"></a> OSDBitLockerTargetDrive  
  Specifies the drive to be encrypted. The default drive is the drive that contains the operating system.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*drive*|The drive that is to be encrypted|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDERecoveryPassword=TRUE OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerTargetDrive=C:`|  
 
 ####  <a name="OSDBitLockerWaitForEncryption"></a> OSDBitLockerWaitForEncryption  
@@ -6147,22 +5283,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Specifies that the deployment process should wait for drive encryption to finish|  
 |**FALSE**|Specifies that the deployment process should not wait for drive encryption to finish|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerStartupKeyDrive=C: OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerWaitForEncryption=TRUE`|  
 
 ####  <a name="OSDComputerName"></a> OSDComputerName  
@@ -6171,21 +5304,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property can also be set within a task sequence using a customized **Set Task Sequence Variable** task sequence step.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*computer\_name*|The new computer name to assign to the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Default] OSDComputerName=%_SMSTSMachineName%`|  
 
 ####  <a name="OSDDiskAlign"></a> OSDDiskAlign  
@@ -6194,41 +5324,35 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property can be used in conjunction with the **OSDDiskOffset** property to set the **offset** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskOffset](#OSDDiskOffset) property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*alignment\_value*|Specifies the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDDiskAlign=1024 OSDDiskOffset=2048`|  
 
 ####  <a name="OSDDiskIndex"></a> OSDDiskIndex  
  Specifies the disk index that will be configured.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*disk\_index*|Specifies the disk index that will be configured \(The default value is **0**.\)|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDDiskIndex=0`|  
 
 ####  <a name="OSDDiskOffset"></a> OSDDiskOffset  
@@ -6236,42 +5360,36 @@ cscript.exe LiteTouch.vbs /debug:true
 
  This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#OSDDiskAlign) property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*offset\_value*|Specifies the byte offset at which to create the partition. For master boot record \(MBR\) disks, the offset rounds to the closest cylinder boundary.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDDiskAlign=1024 OSDDiskOffset=2048`|  
 
 ####  <a name="OSDDiskPartBiosCompatibilityMode"></a> OSDDiskPartBiosCompatibilityMode  
  This property specifies whether to disable cache alignment optimizations when partitioning the hard disk for compatibility with certain types of BIOS.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Enables cache alignment optimizations when partitioning the hard disk for compatibility with certain types of BIOS|  
 |**FALSE**|Disables cache alignment optimizations when partitioning the hard disk for compatibility with certain types of BIOS \(This is the default value.\)|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDDiskPartBiosCompatibilityMode=TRUE`|  
 
 ####  <a name="OSDImageCreator"></a> OSDImageCreator  
@@ -6280,21 +5398,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*image\_creator*|Specifies the name of the installation account that will be used during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDImageIndex"></a> OSDImageIndex  
@@ -6303,21 +5418,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*index*|Specifies the index of the image in the WIM file|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDImagePackageID"></a> OSDImagePackageID  
@@ -6326,21 +5438,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*package\_ID*|Specifies the package ID for the image to install during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDInstallEditionIndex"></a> OSDInstallEditionIndex  
@@ -6349,21 +5458,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*index*|Specifies the index of the image in the WIM file|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDInstallType"></a> OSDInstallType  
@@ -6372,21 +5478,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*install\_type*|Specifies the installation type used for OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDisk"></a> OSDisk  
@@ -6395,41 +5498,35 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*disk*|Specifies the drive used to install the operating system during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDPartitions"></a> OSDPartitions  
  Specifies the number of defined partitions configurations. The maximum number of partitions that can be configured is two. The default is **None**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*partitions*|Specifies the number of defined partitions configurations|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions=1 OSDPartitions0Bootable=TRUE OSDPartitions0FileSystem=NTFS OSDPartitions0QuickFormat=TRUE OSDPartitions0Size=60 OSDPartitions0SizeUnits=GB OSDPartitions0Type=Primary OSDPartitions0VolumeName=OSDisk OSDPartitions0VolumeLetterVariable=NewDrive1`|  
 
 ####  <a name="OSDPartitionsxBootable"></a> OSDPartitionsxBootable  
@@ -6438,22 +5535,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The partition should be set to bootable.|  
 |**FALSE**|Do not set the partition to bootable.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0Bootable=TRUE`|  
 
 ####  <a name="OSDPartitionsxFileSystem"></a> OSDPartitionsxFileSystem  
@@ -6465,21 +5559,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*file_system*|The type of file system for the partition|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0FileSystem=NTFS`|  
 
 ####  <a name="OSDPartitionsxQuickFormat"></a> OSDPartitionsxQuickFormat  
@@ -6491,22 +5582,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|Quick-format the partition.|  
 |**FALSE**|Do not quick-format the partition.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0QuickFormat=TRUE`|  
 
 ####  <a name="OSDPartitionsxSize"></a> OSDPartitionsxSize  
@@ -6515,21 +5603,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Size*|Partition size|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0Size=60 OSDPartitions0SizeUnits=GB`|  
 
 ####  <a name="OSDPartitionsxSizeUnits"></a> OSDPartitionsxSizeUnits  
@@ -6538,21 +5623,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*size_units*|The units of measure used when specifying the size of the partition|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0Size=60 OSDPartitions0SizeUnits=GB`|  
 
 ####  <a name="OSDPartitionsxType"></a> OSDPartitionsxType  
@@ -6561,23 +5643,20 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Primary**|Create a primary partition. This is the default value.|  
 |**Logical**|Create a logical partition.|  
 |**Extended**|Create an extended partition.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0Type=Primary`|  
 
 ####  <a name="OSDPartitionsxVolumeLetterVariable"></a> OSDPartitionsxVolumeLetterVariable  
@@ -6586,21 +5665,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*volume_letter_variable*|The name of the variable that will be assigned the drive letter of the partition being managed|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0VolumeLetterVariable=NewDrive1`|  
 
 ####  <a name="OSDPartitionsxVolumeName"></a> OSDPartitionsxVolumeName  
@@ -6609,21 +5685,18 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*volume_name*|The volume name that will be assigned to the partition|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSDPartitions0VolumeName=OSDisk`|  
 
 ####  <a name="OSDPreserveDriveLetter"></a> OSDPreserveDriveLetter  
@@ -6632,22 +5705,19 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property should only be set in a task sequence step, not in the CustomSettings.ini file or in the MDT DB.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The drive letters in the operating system image file (.wim file) and the operating system drives letters after deployment are identical to the drive letters in the .wim file.|  
 |**FALSE**|The drive letters in the operating system image file (.wim file) are ignored, which allows the task sequence to override the driver letters in the .wim file.<br /><br /> Note:<br /><br /> For MDT, this value should always be selected.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDStateStorePath"></a> OSDStateStorePath  
@@ -6671,21 +5741,18 @@ BackupShare=\\fs1\Share\ComputerBackup
 BackupDir=Client01  
 ```  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Path*|The path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] USMTLocal=True OSDStateStorePath=\\fs1\Share\Replace ComputerBackupLocation=\\fs1\Share\ComputerBackup\Client01`|  
 
 ####  <a name="OSDTargetSystemDrive"></a> OSDTargetSystemDrive  
@@ -6694,21 +5761,18 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read-only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*system_drive*|Specifies the drive where the operating system will be installed during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDTargetSystemRoot"></a> OSDTargetSystemRoot  
@@ -6717,21 +5781,18 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*system_root*|Specifies the install path where the operating system will be installed during OEM deployments|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSFeatures"></a> OSFeatures  
@@ -6743,21 +5804,18 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*ID1,ID2*|The server features that are to be installed on the target computer. Valid values are located in the *program_files*\Microsoft Deployment Toolkit\Bin\ServerManager.xml file on the MDT server.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSFeatures=CMAK,MSMQ-Multicasting,RSAT`|  
 
 ####  <a name="OSInstall"></a> OSInstall  
@@ -6766,22 +5824,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Deployment of an operating system to the target computer is authorized. This is the default value.|  
 |**NO**|Deployment of an operating system to the target computer is not authorized.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES`|  
 
 ####  <a name="OSRoles"></a> OSRoles  
@@ -6793,23 +5848,20 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*ID1,ID2*|The server role that is to be installed on the target computer.|  
 
  See “C:\Program Files\Microsoft Deployment Toolkit\Bin\ServerManager.xml” for valid ID values.  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSRoles=ADDS`|  
 
 ####  <a name="OSRoleServices"></a> OSRoleServices  
@@ -6818,21 +5870,18 @@ BackupDir=Client01
 > [!NOTE]
 >  Not all server role service IDs are compatible with all server operating systems.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*ID*|The server role service that will be installed on the target computer. The valid value is:<br /><br /> - **ADDS-Domain-Controller**|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSRoleServices=ADDS-Domain-Controller`|  
 
 ####  <a name="OSSKU"></a> OSSKU  
@@ -6841,21 +5890,18 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*edition*|The operating system edition. For example, "BUSINESS" for a Business edition of an operating system or "ENTERPRISE" for an Enterprise edition of an operating system.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSVersion"></a> OSVersion  
@@ -6864,24 +5910,21 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**WinPE**|Windows PE|  
 |**2008R2**|Windows Server 2008 R2|  
 |**Win7Client**|Windows 7|  
 |**Other**|Operating systems other than those listed, including Windows 8 and Windows Server 2012|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSVersionNumber"></a> OSVersionNumber  
@@ -6890,41 +5933,35 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*version_number*|The operating system major and minor version number|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OverrideProductKey"></a> OverrideProductKey  
  The Multiple Activation Key (MAK) string to be applied after the target operating is deployed to the target computer. The value specified in this property is used by the ZTILicensing.wsf script during the State Restore Phase to apply the MAK to the target operating system. The script also configures the volume licensing image to use MAK activation instead of Key Management Service (KMS). The operating system needs to be activated with Microsoft after the MAK is applied. This is used when the target computer is unable to access a server that is running KMS.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*MAK*|The MAK string to be provided to the target operating system|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ProductKey=AAAAA-BBBBB-CCCCC-DDDDD-EEEEE-FFFFF OverrideProductKey=AAAAA-BBBBB-CCCCC-DDDDD-EEEEE-FFFFF`|  
 
 ####  <a name="PackageGroup"></a> PackageGroup  
@@ -6938,21 +5975,18 @@ BackupDir=Client01
 > [!NOTE]
 >  The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*package_group_name*|Name of the package group to be deployed to the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] PackageGroup001=Updates`|  
 
 ####  <a name="Packages"></a> Packages  
@@ -6961,61 +5995,52 @@ BackupDir=Client01
 > [!NOTE]
 >  The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*package_id:program_name*|Name of the package to be deployed to the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] Packages001=NYC00010:Install Packages002=NYC00011:Install`|  
 
 ####  <a name="PackageSelectionProfile"></a> PackageSelectionProfile  
  Profile name used during package installation.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*profile_name*|Profile name used during package installation|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] PackageSelectionProfile=CoreApplications`|  
 
 ####  <a name="Parameters"></a> Parameters  
  The parameters to be passed to a database query that returns property values from columns in the table specified in the **Table** property. The table is located in the database specified in the **Database** property on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*parameter1, parameter2*|The list of parameters to pass to the database query|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="ParameterCondition"></a> ParameterCondition  
@@ -7024,62 +6049,53 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**AND**|A Boolean AND operation is performed on the properties listed in the **Parameters** property. Only results that match all properties specified in the **Parameters** property are returned. This is the default value.|  
 |**OR**|A Boolean OR operation is performed on the properties listed in the **Parameters** property. Results that match any property specified in the **Parameters** property are returned.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="ParentDomainDNSName"></a> ParentDomainDNSName  
  Specifies the DNS domain name of an existing directory service domain when installing a child domain.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Specifies the DNS domain name of an existing directory service domain when installing a child domain|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ParentDomainDNSName=WoodGroveBank.com`|  
 
 ####  <a name="Password"></a> Password  
  Specifies the password for the user name (account credentials) to use for promoting the member server to a domain controller.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*password*|Specifies the password for the user name (account credentials) to use for promoting the member server to a domain controller|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] Password=<complex_password>`|  
 
 ####  <a name="Phase"></a> Phase  
@@ -7091,16 +6107,14 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**VALIDATION**|Identifies that the target computer is capable of running the scripts necessary to complete the deployment process.|  
 |**STATECAPTURE**|Saves any user state migration data before deploying the new target operating system.|  
 |**PREINSTALL**|Completes any tasks that need to be done (such as creating new partitions) before the target operating system is deployed.|  
@@ -7108,90 +6122,77 @@ BackupDir=Client01
 |**POSTINSTALL**|Completes any tasks that need to be done before restoring the user state migration data. These tasks customize the target operating system before starting the target computer the first time (such as installing updates or adding drivers).|  
 |**STATERESTORE**|Restores the user state migration data saved during the State Capture Phase.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="Port"></a> Port  
  The number of the port that should be used when connecting to the SQL Server database instance that is used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property. The port used during connection is specified in the **Port** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*port*|The number of the port used when connecting to SQL Server|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 Database=MDTDB Instance=MDT2010 Port=1433 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="PowerUsers"></a> PowerUsers  
  A list of user accounts and domain groups to be added to the local Power Users group on the target computer. The **PowerUsers** property is a list of text values that can be any non-blank value. The **PowerUsers** property has a numeric suffix (for example, **PowerUsers1** or **PowerUsers2**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Name of the user or group to be added to the local Power Users group|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] Administrators001=WOODGROVEBANK\NYC Help Desk Staff PowerUsers001=WOODGROVEBANK\User01 PowerUsers002=WOODGROVEBANK\User02`|  
 
 ####  <a name="PrepareWinRE"></a> PrepareWinRE  
  This property specifies if the LiteTouchPE.wim file, which includes Windows RE and optionally DaRT, is applied to the system drive as the recovery partition. This allows the target computer to use the LiteTouchPE.wim image to perform recovery tasks. DaRT may optionally be included in the image, which makes DaRT recovery features available on the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |YES|The LiteTouchPE.wim file, which includes Windows RE and optionally DaRT, is applied to the system drive as the recovery partition.|  
 |*any other value*|The LiteTouchPE.wim file, which includes Windows RE and optionally DaRT, is not applied to the system drive as the recovery partition. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] PrepareWinRE=YES`|  
 
 ####  <a name="Priority"></a> Priority  
  The reserved property that determines the sequence for finding configuration values. The **Priority** reserved property lists each section to be searched and the order in which the sections are searched. When a property value is found, the ZTIGather.wsf script quits searching for the property, and the remaining sections are not scanned for that property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*section1, section2*|The sections to be searched in the order they are to be searched|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=MACAddress, Default  [Default] UserDataLocation=NONE CustomProperty=TRUE  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP`|  
 
 ####  <a name="ProcessorSpeed"></a> ProcessorSpeed  
@@ -7200,21 +6201,18 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*processor_speed*|The speed of the processor on the target computer in megahertz|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="Product"></a> Product  
@@ -7225,122 +6223,104 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*product*|The product name of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="ProductKey"></a> ProductKey  
  The product key string to be configured for the target computer. Before the target operating system is deployed, the product key specified is automatically inserted into the appropriate location in Unattend.xml.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*product_key*|The product key to be assigned to the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ProductKey=AAAAA-BBBBB-CCCCC-DDDDD-EEEEE-FFFFF`|  
 
 ####  <a name="Properties"></a> Properties  
  A reserved property that defines any custom, user-defined properties. These user-defined properties are located by the ZTIGather.wsf script in the CustomSettings.ini file, BootStrap.ini file, or the MDT DB. These properties are additions to the predefined properties in MDT.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*custom_property1,*custom_property2|Custom, user-defined properties to be resolved|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=MACAddress, Default Properties=CustomProperty, ApplicationInstall  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac UserDataLocation=NONE CustomProperty=TRUE  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1 ApplicationInstall=Custom  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP ApplicationInstall=Minimum`|  
 
 ####  <a name="ReplicaDomainDNSName"></a> ReplicaDomainDNSName  
  Specifies the DNS domain name of the domain to replicate.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Specifies the DNS domain name of the domain to replicate|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ReplicaDomainDNSName=WoodGroveBank.com`|  
 
 ####  <a name="ReplicaOrNewDomain"></a> ReplicaOrNewDomain  
  Specifies whether to install a new domain controller as the first domain controller in a new directory service domain or to install it as a replica directory service domain controller.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Replica**|Installs the new domain controller as a replica directory service domain controller.|  
 |**Domain**|Installs the new domain controller as the first domain controller in a new directory service domain. You must specify the **TreeOrChild** entry with a valid value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ReplicaOrNewDomain=Domain`|  
 
 ####  <a name="ReplicationSourceDC"></a> ReplicationSourceDC  
  Indicates the full DNS name of the domain controller from which you replicate the domain information.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Indicates the full DNS name of the domain controller from which you replicate the domain information|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ReplicationSourceDC=dc01.WoodGroveBank.com`|  
 
 ####  <a name="ResourceDrive"></a> ResourceDrive  
@@ -7349,21 +6329,18 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*drive_letter*|The letter designation for the logical drive that contains the resources|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="ResourceRoot"></a> ResourceRoot  
@@ -7372,21 +6349,18 @@ BackupDir=Client01
 > [!NOTE]
 >  For LTI, the scripts automatically set the **ResourceRoot** property to be the same as the **DeployRoot** property. For ZTI, the values in the **DeployRoot** and **ResourceRoot** properties can be unique.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*UNC_path*|The UNC path to the shared folder that contains the resources|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceDrive=R: ResourceRoot=\\NYC-AM-FIL-01\Resource$ UserDataLocation=NONE`|  
 
 ####  <a name="Role"></a> Role  
@@ -7394,46 +6368,39 @@ BackupDir=Client01
 
  Typically, the value for the **Role** property is set by performing a database query in the MDT DB. The Deployment Workbench can assist in creating the role and property settings associated with the role, and then the Deployment Workbench can configure CustomSettings.ini to perform the database query for the **Role** property and the property settings associated with the role.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Role*|The roles to be assigned to an individual computer or a group of computers|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=RoleSettings, Default  [Default] SkipCapture=NO UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES ScanStateArgs=/v:15 /o /c LoadStateArgs=/v:7 /c  [RoleSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL_Share Table=RoleSettings Parameters=Role`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=RoleSettings, Default  [Default] SkipCapture=NO UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES Role1=Teller Role2=Woodgrove User  [RoleSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL_Share Table=RoleSettings Parameters=Role`|  
 
 ####  <a name="SafeModeAdminPassword"></a> SafeModeAdminPassword  
  Supplies the password for the administrator account when starting the computer in Safe mode or a variant of Safe mode, such as Directory Services Restore mode.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*password*|Supplies the password for the administrator account when starting the computer in Safe mode or a variant of Safe mode, such as Directory Services Restore mode|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SafeModeAdminPassword=<complex_password>`|  
 
 ####  <a name="ScanStateArgs"></a> ScanStateArgs  
@@ -7445,21 +6412,18 @@ BackupDir=Client01
 > [!NOTE]
 >  Do not add any of the following command line arguments when configuring this property: **/hardlink**, **/nocompress**, **/encrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*arguments*|The command-line arguments passed to Scanstate.exe.<br /><br /> The default arguments specified by the Deployment Workbench are as follows:<br /><br /> - **/v**. Enables verbose output in the Scanstate log. The default is **0**. Specify any number from 0 to 15. The value **5** enables verbose and status output.<br /><br /> - **/o**. Overwrites any existing data in the store. If not specified, Scanstate will fail if the store already contains data. This option cannot be specified more than once in a Command Prompt window.<br /><br /> -                             **/c**. When specified, Scanstate will continue to run even if there are nonfatal errors. Without the **/c** option, Scanstate exits on the first error.<br /><br /> For more information about these and other arguments, see the USMT Help files.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|  
 
 ####  <a name="SerialNumber"></a> SerialNumber  
@@ -7468,41 +6432,35 @@ BackupDir=Client01
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*serial_number*|The format of the serial number is undefined and is determined by the serial number standard of each computer manufacturer.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="SiteName"></a> SiteName  
  Specifies the name of an existing site where you can place the new domain controller.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|Specifies the name of an existing site where you can place the new domain controller|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SiteName=FirstSite`|  
 
 ####  <a name="SkipAdminAccounts"></a> SkipAdminAccounts  
@@ -7516,22 +6474,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected. This is the default value.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminAccounts=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipAdminPassword"></a> SkipAdminPassword  
@@ -7542,22 +6497,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipApplications"></a> SkipApplications  
@@ -7568,22 +6520,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=YES SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipBDDWelcome"></a> SkipBDDWelcome  
@@ -7597,22 +6546,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipBitLocker"></a> SkipBitLocker  
@@ -7623,22 +6569,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipBDDWelcome=YES SkipBitLocker=YES SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipBuild"></a> SkipBuild  
@@ -7648,22 +6591,19 @@ BackupDir=Client01
 
  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipBuild=YES SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipCapture"></a> SkipCapture  
@@ -7674,22 +6614,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipComputerBackup"></a> SkipComputerBackup  
@@ -7700,22 +6637,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=YES SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipComputerName"></a> SkipComputerName  
@@ -7726,22 +6660,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|Wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=NO SkipComputerName=YES SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipDomainMembership"></a> SkipDomainMembership  
@@ -7752,22 +6683,19 @@ BackupDir=Client01
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipDomainMembership=NO`|  
 
 ####  <a name="SkipFinalSummary"></a> SkipFinalSummary  
@@ -7778,22 +6706,19 @@ BackupDir=Client01
 > [!NOTE]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipBDDWelcome=YES SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipGroupSubFolders"></a> SkipGroupSubFolders  
@@ -7811,22 +6736,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|Do not include subfolders when matching against groups.|  
 |**NO**|Include subfolders when matching against groups. This is the default behavior.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipGroupSubFolders=NO`|  
 
 ####  <a name="SkipLocaleSelection"></a> SkipLocaleSelection  
@@ -7837,22 +6759,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipPackageDisplay"></a> SkipPackageDisplay  
@@ -7863,22 +6782,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=YES SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipProductKey"></a> SkipProductKey  
@@ -7889,22 +6805,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipRearm"></a> SkipRearm  
@@ -7915,22 +6828,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|MDT does not rearm the Microsoft Office 2010 25\-day activation grace period.|  
 |**NO**|MDT rearms the Microsoft Office 2010 25\-day activation grace period. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=Y SkipCapture=YES SkipAdminPassword=NO SkipProductKey=YES SkipRearm=YES DoCapture=YES`|  
 
 ####  <a name="SkipRoles"></a> SkipRoles  
@@ -7941,22 +6851,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=Yes SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipRoles=YES SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipSummary"></a> SkipSummary  
@@ -7967,22 +6874,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=Yes SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipTaskSequence"></a> SkipTaskSequence  
@@ -7996,22 +6900,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=NO SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipTimeZone"></a> SkipTimeZone  
@@ -8022,22 +6923,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=YES SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipTimeZone=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|  
 
 ####  <a name="SkipUserData"></a> SkipUserData  
@@ -8048,22 +6946,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The wizard page is not displayed, and the information on that page is not collected.|  
 |**NO**|The wizard page is displayed, and the information on that page is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|  
 
 ####  <a name="SkipWizard"></a> SkipWizard  
@@ -8074,164 +6969,140 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**YES**|The entire wizard is not displayed, and none of the information on the wizard pages is collected.|  
 |**NO**|The wizard is displayed, and the information on the enabled wizard pages is collected. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SkipWizard=YES`|  
 
 ####  <a name="SLShare"></a> SLShare  
  The network shared folder in which the deployment logs are stored at the end of the deployment process.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|\-||ZTI|\-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*shared_folder*|The name of the network shared folder in which script logs are stored|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO SkipAdminPassword=YES SkipProductKey=YES`|  
 
 ####  <a name="SLShareDynamicLogging"></a> SLShareDynamicLogging  
  The network shared folder in which all MDT logs should be written during deployment. This is used for advanced real-time debugging only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*shared_folder*|The name of the network shared folder in which script logs are stored|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ SLShareDynamicLogging=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO SkipAdminPassword=YES SkipProductKey=YES`|  
 
 ####  <a name="SMSTSAssignUserMode"></a> SMSTSAssignUserMode  
  Specifies whether user device affinity (UDA) should be enabled and whether approval is required. This property only works with the UDA feature in Configuration Manager.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Auto**|The affinity between a user and the target device is established, and approval is automatically performed.|  
 |**Pending**|The affinity between a user and the target device is established, and approval is submitted for Configuration Manager administrator approval.|  
 |**Disable**|The affinity between a user and the target device is not established.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SMSTSAssignUserMode=Auto SMSTSUdaUsers=Fabrikam\Ken, Fabrikam\Pilar`|  
 
 ####  <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName  
  Specifies the user name in *Domain\User_Name* format that should be used with a **Run Command Line** step that is configured to run as a user.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user_name*|Specifies the user name in that should be used with a **Run Command Line** step|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SMSTSRunCommandLineUserName=Fabrikam\Ken SMSTSRunCommandLineUserPassword=<complex_password>`|  
 
 ####  <a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword  
  Specifies the password that should be used with a **Run Command Line** step that is configured to run as a user.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user_password*|Specifies the password that should be used with a **Run Command Line** step|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SMSTSRunCommandLineUserName=Fabrikam\Ken SMSTSRunCommandLineUserPassword=<complex_password>`|  
 
 ####  <a name="SMSTSUdaUsers"></a> SMSTSUdaUsers  
  Specifies the users who will be assigned affinity with a specific device using the UDA feature, which is available only in Configuration Manager.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user1, user2, …*|The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br /><br /> Note:<br /><br /> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com).|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SMSTSAssignUserMode=Auto SMSTSUdaUsers=Fabrikam\Ken, Fabrikam\Pilar`|  
 
 ####  <a name="SQLServer"></a> SQLServer  
  The identity of the computer running SQL Server that performs a database query that returns property values from columns in the table specified in the **Table** property. The query is based on parameters specified in the **Parameters** and **ParameterCondition** properties. The instance of SQL Server on the computer is specified in the **Instance** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*SQL_server*|The name of the computer running SQL Server|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="SQLShare"></a> SQLShare  
@@ -8240,21 +7111,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property must be specified to perform Integrated Windows authentication. This is the recommended authentication method, rather than using the **DBID** and **DBPwd** properties (which support the SQL Server authentication method).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*shared_folder*|The name of a shared folder on the computer running SQL Server|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default Properties=MyCustomProperty  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=MDT2010 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="StatePath"></a> StatePath  
@@ -8263,21 +7131,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is provided for backward compatibility with previous versions of MDT. Use the [OSDStateStorePath](#UserDataLocation) property instead.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Path*|The path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SitePath=\\fs1\Share\Replace ComputerBackupLocation=\\fs1\Share\ComputerBackup\Client01`|  
 
 ####  <a name="StoredProcedure"></a> StoredProcedure  
@@ -8285,21 +7150,18 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about using a stored procedure to query a SQL Server database, see the section, "Deploying Applications Based on Earlier Application Versions", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*stored_procedure*|The name of the stored procedure used to query the SQL Server database|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=DynamicPackages, Default  [Default] OSInstall=YES  [DynamicPackages] SQLDefault=DB_DynamicPackages  [DB_DynamicPackages] SQLServer=SERVER1 Database=MDTDB StoredProcedure=RetrievePackages Parameters=MacAddress SQLShare=Logs Instance=MDT2013 Port=1433 Netlib=DBNMPNTW`|  
 
 ####  <a name="SupportsHyperVRole"></a> SupportsHyperVRole  
@@ -8328,22 +7190,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The processor resources of the target computer can support the Hyper-V server role in Windows Server.|  
 |**FALSE**|The processor resources of the target computer cannot support the Hyper-V server role in Windows Server.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="SupportsNX"></a> SupportsNX  
@@ -8366,22 +7225,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The processor resources of the target computer support NX technology.|  
 |**FALSE**|The processor resources of the target computer do not support NX technology.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="SupportsVT"></a> SupportsVT  
@@ -8404,22 +7260,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The processor resources of the target computer support VT technology.|  
 |**FALSE**|The processor resources of the target computer do not support VT technology.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="Supports64Bit"></a> Supports64Bit  
@@ -8442,82 +7295,70 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The processor resources of the target computer support a Windows 64-bit operating system.|  
 |**FALSE**|The processor resources of the target computer do not support a Windows 64-bit operating system.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="SysVolPath"></a> SysVolPath  
  Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*path*|Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] SysVolPath=%DestinationLogicalDrive%\Windows\Sysvol`|  
 
 ####  <a name="Table"></a> Table  
  The name of the table or view to be used in performing a database query that returns property values from columns in the table or view. The query is based on parameters specified in the **Parameters** and **ParameterCondition** properties. The table or view is located in the database specified in the **Database** property. The computer running SQL Server is specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*table_name*|The name of the table or view to be queried for property values|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=MDT2010 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|  
 
 ####  <a name="TaskSequenceID"></a> TaskSequenceID  
- Identifies the operating system task sequence to be deployed to the target computer. The task sequence ID is created on the Task Sequences node in the Deployment Workbench. The **TaskSequenceID** property allows alphanumeric characters, hyphens (-), and underscores (_). The **TaskSequenceID** property cannot be blank or contain spaces.  
+ Identifies the operating system task sequence to be deployed to the target computer. The task sequence ID is created on the Task Sequences node in the Deployment Workbench. The **TaskSequenceID** property allows alphanumeric characters, hyphens (-), and underscores (\_). The **TaskSequenceID** property cannot be blank or contain spaces.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*task_sequence_id*|Identifier of the operating system task sequence defined in the Deployment Workbench for the target operating system being deployed<br /><br /> Note:<br /><br /> Be sure to use the **TaskSequenceID** specified in the Deployment Workbench UI, not the GUID of the **TaskSequenceID**.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] TaskSequenceID=BareMetal`|  
 
 ####  <a name="TaskSequenceName"></a> TaskSequenceName  
@@ -8526,21 +7367,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*task_sequence_name*|Name of the task sequence being run, such as Deploy *Windows 8.1 to Reference Computer*|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="TaskSequenceVersion"></a> TaskSequenceVersion  
@@ -8549,41 +7387,35 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*task_sequence_version*|Version of the task sequence being run, such as *1.00*|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="TimeZoneName"></a> TimeZoneName  
  The time zone in which the target computer is located. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*time_zone_name*|The text value that indicates the time zone where the target computer is located|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] TimeZoneName=Pacific Standard Time DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE`|  
 
 ####  <a name="ToolRoot"></a> ToolRoot  
@@ -8592,21 +7424,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*path*|The UNC or local path to the Tools\\*proc_arch* folder (where *proc_arch* is the processor architecture of the currently running operating system and can have a value of **x86** or **x64**) immediately beneath the root of the folder structure specified by the **DeployRoot** property|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="TPMOwnerPassword"></a> TPMOwnerPassword  
@@ -8615,101 +7444,86 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  If the TPM ownership is already set or TPM ownership is not allowed, then the **TPMOwnerPassword** property is ignored. If the TPM password is needed and the **TPMOwnerPassword** property is not provided, the TPM password is set to the local Administrator password.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*password*|The TPM password for the owner of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=TRUE BDEKeyLocation=C: TPMOwnerPassword=<complex_password> BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|  
 
 ####  <a name="UDDir"></a> UDDir  
  The folder in which the user state migration data is stored. This folder exists beneath the network shared folder specified in **UDShare**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*folder*|The name of the folder that exists beneath the network shared folder|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO`|  
 
 ####  <a name="UDProfiles"></a> UDProfiles  
  A comma-delimited list of user profiles that need to be saved by Scanstate.exe during the State Capture Phase.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user_profiles*|The list of user profiles to be saved, separated by commas|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO`|  
 
 ####  <a name="UDShare"></a> UDShare  
  The network share where user state migration data is stored.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*UNC_path*|The UNC path to the network share where user state migration data is stored|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO`|  
 
 ####  <a name="UILanguage"></a> UILanguage  
  The default language to be used with the target operating system. If not specified, the **Deployment Wizard** uses the language configured in the image being deployed.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*UI_language*|The default language for the operating system on the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us UILanguage=en-us KeyboardLocale=0409:00000409`|  
 
 ####  <a name="UserDataLocation"></a> UserDataLocation  
@@ -8718,25 +7532,22 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |blank|If **UserDataLocation**is not specified or is left blank, the Deployment Wizard will default to using the AUTO behavior.|  
 |*UNC_path*|The UNC path to the network shared folder where the user state migration data is stored.|  
 |**AUTO**|The deployment scripts store the user state migration data on a local hard disk if space is available. Otherwise, the user state migration data is saved to a network location, which is specified in the **UDShare** and **UDDir** properties.|  
 |**NETWORK**|The user state migration data is stored in the location designated by the **UDShare** and **UDDir** properties.|  
 |**NONE**|The user state migration data is not saved.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% UserDataLocation=NETWORK DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|  
 
 ####  <a name="UserDomain"></a> UserDomain  
@@ -8745,21 +7556,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain*|The name of the domain where the user account credentials reside|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UserDataLocation=NONE UserDomain=WOODGROVEBANK UserID=NYC Help Desk Staff UserPassword=<complex_password>`|  
 
 ####  <a name="UserID"></a> UserID  
@@ -8768,46 +7576,39 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user_id*|The name of the user account credentials used to access the network resources|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UserDataLocation=NONE UserDomain=WOODGROVEBANK UserID=NYC-HelpDesk UserPassword=<complex_password>`|  
 
 ####  <a name="UserLocale"></a> UserLocale  
  The user locale to be used with the target operating system. If not specified, the **Deployment Wizard** uses the user locale configured in the image being deployed.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user_locale*|The locale for the user on the target computer. The value is specified as a text value (en-us).|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=0409:00000409`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=en-us`|  
 
 ####  <a name="UserPassword"></a> UserPassword  
@@ -8816,41 +7617,35 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*user_password*|The password for the user account credentials|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserDataLocation=NONE UserDomain=WOODGROVEBANK UserID=NYC-HelpDesk UserPassword=<complex_password>`|  
 
 ####  <a name="USMTConfigFile"></a> USMTConfigFile  
  The USMT configuration XML file that should be used when running **Scanstate** and **Loadstate**.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*USMTConfigFile*|The name of the XML configuration file that should be used when running Scanstate.exe and Loadstate.exe|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles1=MigApp.xml USMTMigFiles2=MigUser.xml USMTMigFiles3=MigSys.xml USMTMigFiles4=MigCustom.xml USMTConfigFile=USMTConfig.xml UserDataLocation=NONE`|  
 
 ####  <a name="USMTLocal"></a> USMTLocal  
@@ -8859,22 +7654,19 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property should only be used in the circumstance described in the [OSDStateStorePath](#OSDStateStorePath) property).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI||  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The USMT user state information is stored locally on the target computer, and the **Request State Store** and **Release State Store** task sequence steps are skipped.|  
 |**FALSE**|The USMT user state information is not stored locally on the target computer, and the **Request State Store** and **Release State Store** task sequence steps are performed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTLocal=TRUE USMTMigFiles001=MigApp.xml USMTMigFiles002=MigUser.xml USMTMigFiles003=MigSys.xml USMTMigFiles004=MigCustom.xml UserDataLocation=NONE`|  
 
 ####  <a name="USMTMigFiles"></a> USMTMigFiles  
@@ -8886,21 +7678,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property name can be specified using single-digit nomenclature (**USMTMigFiles1**) or triple-digit nomenclature (**USMTMigFiles001**).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*USMTMigFile*|The name of the .xml file to be used as input for Scanstate.exe, on separate lines. If not specified, the default is MigApp.xml, MigUser.xml, and MigSys.xml.<br /><br /> Note:<br /><br /> If this value is specified, the default files (MigApp.xml, MigUser.xml, and MigSys.xml) must also be added to the list if these files are to be included.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles001=MigApp.xml USMTMigFiles002=MigUser.xml USMTMigFiles003=MigSys.xml USMTMigFiles004=MigCustom.xml UserDataLocation=NONE`|  
 
 ####  <a name="USMTOfflineMigration"></a> USMTOfflineMigration  
@@ -8923,22 +7712,19 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about using MDT and USMT to perform an offline user state migration, see "Configure USMT Offline User State Migration".  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|MDT uses USMT to perform an offline user state migration.|  
 |*Any other value*|MDT does not perform an offline user state migration. Instead, user state migration is captured in the existing operating system. This is the default value.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] OSInstall=YES SkipUserData=YES USMTOfflineMigration=TRUE DoNotFormatAndPartition=YES OSDStateStorePath=\\WDG-MDT-01\StateStore$`|  
 
 ####  <a name="UUID"></a> UUID  
@@ -8949,21 +7735,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*UUID*|The UUID of the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="ValidateDomainCredentialsUNC"></a> ValidateDomainCredentialsUNC  
@@ -8972,21 +7755,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  Ensure that no other properties in MDT use the server sharing the folder in this property. Using a server that is already referenced by other MDT properties could result in improper validation of the credentials.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*unc_path*|Specifies the fully qualified UNC path to a network shared folder|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] ValidateDomainCredentialsUNC=\\wdg-fs-01\Source$`|  
 
 ####  <a name="VHDCreateDiffVHD"></a> VHDCreateDiffVHD  
@@ -9018,22 +7798,19 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*filename*|Specifies the name of the differencing VHD file, which is located in the same folder as the parent VHD file<br /><br /> The differencing VHD file cannot have the same name as the parent VHD file.|  
 |**RANDOM**|Automatically generates a random name for the differencing VHD file, which is located in the same folder as the parent VHD file|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] VHDCreateDiffVHD=Win7Diff_C.vhd VHDInputVariable=VHDTargetDisk`|  
 
 ####  <a name="VHDCreateFileName"></a> VHDCreateFileName  
@@ -9065,23 +7842,20 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*file_name*|Specifies the name of the VHD file|  
 |**RANDOM**|Automatically generates a random name for the VHD file, which is located in the VHD folder in the root of the parent drive|  
 |Blank|Same a **RANDOM**|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|  
 
 ####  <a name="VHDCreateSizeMax"></a> VHDCreateSizeMax  
@@ -9113,21 +7887,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*size*|The maximum size of the VHD file specified in MB. For example, 130,048 MB equals 127 GB. The default value is 90% of the available disk space on the parent disk.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=FIXED VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|  
 
 ####  <a name="VHDCreateSource"></a> VHDCreateSource  
@@ -9156,21 +7927,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|The file name, which can be specified using a UNC path, local path, relative path, or just the file name. If just the file name is specified, then MDT attempts to find the VHD file on the target computer.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateSource=\\wdg-mdt-01\vhds\win7_template.vhd VHDCreateType=FIXED VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|  
 
 ####  <a name="VHDCreateType"></a> VHDCreateType  
@@ -9208,22 +7976,19 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**EXPANDABLE**|Creates a fixed VHD file|  
 |**FIXED**|Creates a dynamically expanding VHD file|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|  
 
 ####  <a name="VHDDisks"></a> VHDDisks  
@@ -9255,21 +8020,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*index1 index2 index3*|A list of the physical drive numbers assigned to the VHD files separated by spaces—for example, *1 2 5*.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="VHDInputVariable"></a> VHDInputVariable  
@@ -9301,21 +8063,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*variable*|Variable that contains the drive letter on the target computer where the VHD files will be created. MDT creates the VHD files in the VHD folder in the root of this drive. For example, if this property has a value of **VHDTargetDisk**, the **VHDTargetDisk** property contains the drive letter \(such as *H*\).|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd  VHDInputVariable=VHDTargetDisk`|  
 
 ####  <a name="VHDOutputVariable"></a> VHDOutputVariable  
@@ -9344,21 +8103,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDTargetDisk**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|\-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Variable*|Variable will contains the physical drive number assigned to the newly created VHD file. For example, if this property has a value of **OSDDiskIndex**, the **OSDDiskIndex** property will contain the physical drive number assigned to the newly created VHD file \(such as *4*\).|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="VHDTargetDisk"></a> VHDTargetDisk  
@@ -9385,21 +8141,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **VHDOutputVariable**  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|\-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Disk*|Specifies the drive where the VHD is to be created|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="VMHost"></a> VMHost  
@@ -9408,66 +8161,58 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
- REF \_Ref300064295 \\h  \\\* MERGEFORMAT Table 4 lists the Windows operating systems that MDT supports and their corresponding Hyper\-V Integration Components support.  
+Table 4 lists the Windows operating systems that MDT supports and their corresponding Hyper\-V Integration Components support.  
 
 ### Table 4. Windows Operating Systems and Hyper-V Integration Components Support  
 
-|||  
-|-|-|  
 |**Operating system**|**Hyper-V Integration Components**|  
+|-|-|  
 |Windows PE|Integration Components are unavailable.|  
 |Windows 7|Available by default in Enterprise, Ultimate, and Professional editions.|  
 |Windows Server 2008 R2|Available by default in all editions.|  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Name*|The name of the Hyper-V host running the VM where MDT is running|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="VMName"></a> VMName  
  Specifies the name of the VM where MDT is running. This property is only available when the Hyper-V Integration Components are installed and running.  
 
- REF _Ref320458323 \h Table 5 lists the Windows operating systems supported by MDT and their corresponding Hyper-V Integration Components support.  
+ Table 5 lists the Windows operating systems supported by MDT and their corresponding Hyper-V Integration Components support.  
 
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
 ### Table 5. Windows Operating Systems and Hyper-V Integration Components Support  
 
-|||  
-|-|-|  
 |**Operating system**|**Hyper-V Integration Components**|  
+|-|-|  
 |Windows PE|Integration Components are unavailable.|  
 |Windows 7|Available by default in Enterprise, Ultimate, and Professional editions.|  
 |Windows Server 2008 R2|Available by default in all editions.|  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*name*|The name of the VM where MDT is running|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="VMPlatform"></a> VMPlatform  
@@ -9476,24 +8221,21 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Hyper-V**|Hyper-V|  
 |**VirtualBox**|Virtual Box|  
 |**VMware**|VMware virtualization platform|  
 |**Xen**|Citrix Xen Server|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="VRefresh"></a> VRefresh  
@@ -9502,41 +8244,35 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*refresh_rate*|The vertical refresh rate for the monitor on the target computer in Hertz|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|  
 
 ####  <a name="VSSMaxSize"></a> VSSMaxSize  
  This property is used to pass a value to the **maxsize** parameter of the **vssadmin resize shadowstorage** command in the **Vssadmin** command. The **maxsize** parameter is used to specify the maximum amount of space on the target volume that can be used for storing shadow copies. For more information on the **maxsize** parameter, see [Vssadmin resize shadowstorage](http://technet.microsoft.com/library/cc788050\(WS.10\).aspx).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*maxsize_value*|Specifies the maximum amount of space that can be used for storing shadow copies. The value can be specified in bytes or as a percentage of the target volume.<br /><br /> To specify the value:<br /><br /> - In bytes, the value must be 300 MB or greater and accept the following suffixes: KB, MB, GB, TB, PB and EB. You can also use B, K, M, G, T, P, and E as suffixes—for example:<br /><br /> `VSSMaxSize=60G`<br /><br /> - As a percentage, use the % character as the suffix to the numeric value—for example:<br /><br /> `VSSMaxSize=20%`<br /><br /> Note:<br /><br /> If a suffix is not supplied, the default suffix is bytes. For example, `VSSMaxSize=1024` indicates that the **VSSMaxSize** will be set to 1,024 bytes.<br /><br /> If the value is set to **UNBOUNDED**, then there is no limit placed on the amount of storage space that can be used—for example:<br /><br /> `VSSMaxSize=UNBOUNDED`|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] VSSMaxSize=25%`|  
 
 ####  <a name="WDSServer"></a> WDSServer  
@@ -9545,21 +8281,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*WDS_server*|The name of the computer running Windows Deployment Services|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="WindowsSource"></a> WindowsSource  
@@ -9573,21 +8306,18 @@ PackageGroup001=TopFolder\SecondFolder
 
  When the situation described in the bulleted list above occurs, MDT may be unable to find the operating system source files locally, and the installation will attempt to download the files from the Internet. Because the computer does not have Internet access, the process will fail. Setting this property to the appropriate value helps prevent this problem from occurring.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |***folder_unc***|A UNC path to the Sources\sxs folder for the operating system being deployed.<br /><br /> Note:<br /><br /> The UNC path must include the Sources\sxs folder.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] WindowsSource=%DeployRoot%\Operating Systems\Windows 8\Sources\sxs`|  
 
 ####  <a name="WipeDisk"></a> WipeDisk  
@@ -9603,42 +8333,36 @@ PackageGroup001=TopFolder\SecondFolder
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|If **WipeDisk** is set to **TRUE**, the Win32_DiskPartition at DiskIndex 0 and Index 0 will be formatted.|  
 |**FALSE**|The disk will not be formatted.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] WipeDisk=TRUE`|  
 
 ####  <a name="WizardSelectionProfile"></a> WizardSelectionProfile  
  Profile name used by the wizard for filtering the display of various items.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*profile_name*|Profile name used by the wizard for filtering the display of various items|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] WizardSelectionProfile=SelectTaskSequenceOnly`|  
 
 ####  <a name="WSUSServer"></a> WSUSServer  
@@ -9646,21 +8370,18 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](#ZTIWindowsUpdate.wsf).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*server_name*|The name of the WSUS server, specified in HTTP format|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] WSUSServer=http://WSUSServerName[Settings] Priority=Default  [Default] WSUSServer=http://WSUSServerName`|  
 
 ####  <a name="WUMU_ExcludeKB"></a> WUMU_ExcludeKB  
@@ -9668,21 +8389,18 @@ PackageGroup001=TopFolder\SecondFolder
 
  Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project’s needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update needs to be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*WUMU_ExcludeKB*|The list of Windows Update/Microsoft Update software updates to ignore by QNumber|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] WUMU_ExcludeKB1=925471`|  
 
 #### WUMU_ExcludeID  
@@ -9692,21 +8410,18 @@ PackageGroup001=TopFolder\SecondFolder
 
  For example, if the installation of the Windows Malicious Software Removal Tool should be excluded, look up the line in the ZTIWindowsUpdate.log that shows where the update was identified and installed, and then select the UpdateID number. For example, the UpdateID number for the Windows Malicious Software Removal Tool is adbe6425-6560-4d40-9478-1e35b3cdab4f.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI||  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*WUMU_ExcludeID*|The list of Windows Update/Microsoft Update software updates to ignore, by UpdateID number|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] WUMU_ExcludeID1={adbe6425-6560-4d40-9478-1e35b3cdab4f}[Settings] Priority=Default  [Default] WUMU_ExcludeID1={adbe6425-6560-4d40-9478-1e35b3cdab4f}`|  
 
 ####  <a name="XResolution"></a> XResolution  
@@ -9715,21 +8430,18 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*horizontal_resolution*|The horizontal resolution of the monitor on the target computer in pixels|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|  
 
 ####  <a name="YResolution"></a> YResolution  
@@ -9738,25 +8450,22 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.  
 
-||||||  
-|-|-|-|-|-|  
 |**Property configured by**|||**Property applies to**||  
+|-|-|-|-|-|  
 |BootStrap.ini|||LTI|-|  
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*vertical_resolution*|The vertical resolution of the monitor on the target computer in pixels|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|  
 
 ###  <a name="ProvidingPropertiesforSkippedDeploymentWizardPages"></a> Providing Properties for Skipped Deployment Wizard Pages  
- REF _Ref306453078 \h Table 6 lists the individual Deployment Wizard pages, the property to skip the corresponding wizard page, and the properties that must be configured when skipping the wizard page.  
+ Table 6 lists the individual Deployment Wizard pages, the property to skip the corresponding wizard page, and the properties that must be configured when skipping the wizard page.  
 
  If the **SkipWizard** property is used to skip all the Deployment Wizard pages, provide all the properties in the **Configure these properties**column. For examples of various deployment scenarios that skip Deployment Wizard pages, see the section, "Fully Automated LTI Deployment Scenario", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.  
 
@@ -9765,9 +8474,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 ### Table 6. Deployment Wizard Pages  
 
-||||  
-|-|-|-|  
 |**Skip this wizard page**|**Using this property**|**Configure these properties**|  
+|-|-|-|  
 |**Welcome**|SkipBDDWelcome||  
 |**Specify credentials for connecting to network shares**|Skipped by providing properties in next column|- UserID<br /><br /> - UserDomain<br /><br /> - UserPassword|  
 |**Task Sequence**|SkipTaskSequence|- TaskSequenceID|  
@@ -9821,9 +8529,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about LiteTouch.vbs, see the corresponding topic in [Scripts](#Scripts).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information required by the scripts to complete the deployment process|  
 |**Output**|None|  
 |**References**|**LiteTouch.vbs**. Initiates LTI|  
@@ -9832,24 +8539,21 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="BDD_Welcome_ENU.xml"></a> BDD_Welcome_ENU.xml  
  This XML file contains the script code and HTML layout for the **Welcome to Windows Deployment** page that is displayed at the start of the Deployment Wizard. This XML file is read by Wizard.hta, which runs the wizard pages embedded in this XML file.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|- **NICSettings_Definition_ENU.xml**. Allows the user to provide configuration settings for network adapters<br /><br /> - **Wizard.hta**. Displays the Deployment Wizard pages<br /><br /> - **WPEUtil.exe**. Initializes Windows PE and network connections; initiates LTI|  
@@ -9858,16 +8562,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**KeyboardLocalePE**|-||  
 |**WelcomeWizardCommand**||-|  
 |**WizardComplete**||-|  
@@ -9878,9 +8580,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This wizard page is only displayed if there is a failure while validating the predefined user credentials.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|**Credentials_scripts.vbs**. Contains user credential support functions|  
@@ -9889,16 +8590,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="Credentials_scripts.vbs"></a> Credentials_scripts.vbs  
@@ -9906,9 +8605,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about Credentials_ENU.xml, see the corresponding topic in [Scripts](#Scripts).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|Event message are written to these log files:<br /><br /> - **Credentials_scripts.log**. Log file that contains events generated by this script<br /><br /> - **BDD.log**. Log file that contains events generated by all MDT scripts|  
 |**References**|None|  
@@ -9917,16 +8615,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**UserCredentials**||-|  
 |**UserDomain**|-||  
 
@@ -9969,9 +8665,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **Ready to Begin**  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|- **DeployWiz_Initialization.vbs**. Includes support functions and subroutines used by the script<br /><br /> - **DeployWiz_Validation.vbs**. Includes support functions and subroutines used by the script<br /><br /> - **ZTIBackup.wsf**. Creates a backup of the target computer<br /><br /> - **ZTIPatches.wsf**. Installs updates (language packs, security updates, and so on)<br /><br /> - **ZTIUserState.wsf**. Initializes user state migration to capture and restore user state on the target computer|  
@@ -9980,16 +8675,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DeploymentMethod**|-||  
 |**DeploymentType**|-||  
 |**DoCapture**|-||  
@@ -10025,9 +8718,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="DeployWiz_Initialization.vbs"></a> DeployWiz_Initialization.vbs  
  This script initializes the pages in the **Deployment Wizard** (stored in [DeployWiz_Definition_ENU.xml](#DeployWiz_Definition_ENU.xml)). It also contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|- **DomainOUList.xm**l. Contains a list of domain OUs<br /><br /> - **ListOfLanguages.xml**<br /><br /> - **LocationServer.xml**. Contains a list of available deployment shares<br /><br /> - **Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information that the scripts require to complete the deployment process; the environment variables are populated by ZTIGather.wsf|  
 |**Output**|Event message are written to these log files:<br /><br /> - **DeployWiz_Initialization.log**. Log file that contains events generated by this script<br /><br /> - **BDD.log**. Log file that contains events generated by all MDT scripts|  
 |**References**|**ZTIApplications.wsf**. Initiates application installation|  
@@ -10036,16 +8728,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**Applications**|-||  
 |**BackupDir**|-||  
@@ -10104,9 +8794,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="DeployWiz_Validation.vbs"></a> DeployWiz_Validation.vbs  
  This script initializes and validates the information typed in the pages of the Deployment Wizard (stored in [DeployWiz_Definition_ENU.xml](#DeployWiz_Definition_ENU.xml)). This script contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|- **OperatingSystems.xml**. Contains the list of operating systems available for deployment<br /><br /> - **Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information required by the scripts to complete the deployment process; the environment variables are populated by ZTIGather.wsf|  
 |**Output**|None|  
 |**References**|- **Credentials_ENU.xml**. Prompts the user for credentials that will be used when connecting to network resources<br /><br /> - **ZTIGather.wsf**. Gathers properties and processing rules|  
@@ -10115,16 +8804,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**DeploymentType**|-|-|  
 |**DeployTemplate**||-|  
@@ -10147,9 +8834,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   Starts the Deployment Wizard by running [LiteTouch.wsf](#LiteTouch.wsf)  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|- **BDDRun.exe**<br /><br /> - **ZTIPrereq.vbs**. Used to determine whether the target computer meets the prerequisites for deploying a new operating system<br /><br /> - **LiteTouch.wsf**. The script responsible for controlling the LTI deployment process|  
@@ -10158,16 +8844,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> - **TRUE**, event messages are sent to the console and the .log files<br /><br /> - **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="LiteTouch.wsf"></a> LiteTouch.wsf  
@@ -10177,9 +8861,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   Running the LTI deployment process by using the appropriate task sequence file  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|- ***task_sequence_file*.xml**. Contains the tasks and sequence of tasks for the LTI deployment process<br /><br /> - **Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information required by the scripts to complete the deployment process; the environment variables are populated by ZTIGather.wsf|  
 |**Output**|-                          **LiteTouch.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **BDD_Welcome_ENU.xml**. Displays the Deployment Wizard **Welcome** page for LTI deployment<br /><br /> -                          **DeployWiz_Definition_ENU.xml**. Displays the Deployment Wizard pages for LTI deployment<br /><br /> -                          **Diskpart.exe**. Utility that allows the automated management of disks, partitions, and volumes<br /><br /> -                          **LTICleanup.wsf**. Performs cleanup tasks after deployment finishes<br /><br /> -                          **LTICopyScripts.wsf**. Copies the deployment scripts to a local hard drive on the target computer<br /><br /> -                          **MSHTA.exe**. HTML application host<br /><br /> -                          **RecEnv.exe**. If this utility exists, the user is prompted to determine whether to launch Windows Recovery Environment.<br /><br /> -                          **Regsvr32.exe**. Registers files (.dll, .exe, .ocx, and so on) with the operating system<br /><br /> -                          **Summary_Definition_ENU.xml**. Displays the summary results for the LTI deployment<br /><br /> -                          **TsmBootStrap.exe**. Task sequence Bootstrap utility<br /><br /> -                          **Wizard.hta**. Displays the Deployment Wizard pages<br /><br /> -                          **WPEUtil.exe**. Initializes Windows PE and network connections; initiates LTI<br /><br /> -                          **ZTIGather.wsf**. Gathers properties and processing rules<br /><br /> -                          **ZTIPrereq.vbs**. Checks that the target computer meets the requirements for running the Deployment Wizard<br /><br /> -                          **ZTINICConfig.wsf**. Configures activated network adapters<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines the script uses|  
@@ -10188,17 +8871,15 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 |**/Start**|Creates a shortcut in the new operating system that runs once the shell starts|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_DoNotCleanLiteTouch**|-||  
 |**_SMSTSPackageName**||-|  
 |**AdminPassword**|-||  
@@ -10243,9 +8924,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="LTIApply.wsf"></a> LTIApply.wsf  
  This script is responsible for installing a Windows PE image to the target computer. The Windows PE image is used to collect information about the target computer and to run the deployment tasks on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information the scripts require to complete the deployment process|  
 |**Output**|-                          **LTIApply.log**. Log file that contains events that this script generates<br /><br /> -                          **LTIApply_wdsmcast.log**. Log file that contains events that the Wdsmcast utility generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **CMD.exe**. Allows the running of command-line tools<br /><br /> -                          **Bootsect.exe**. Applies a boot sector to the hard disk<br /><br /> -                          **ImageX.exe**. A utility used to create and manage WIM files<br /><br /> -                          **ZTIBCDUtility.vbs**. Includes utility functions used when performing Boot Manager tasks<br /><br /> -                          **ZTIConfigFile.vbs**. Includes routines for processing XML files<br /><br /> -                          **ZTIDiskUtility.vbs**. Includes support functions and subroutines the script uses<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines the script uses<br /><br /> -                          **Wdsmcast.exe**. A utility that target computers use to join a multicast transmission|  
@@ -10254,18 +8934,16 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/pe**|Uses the process for installing the Windows PE image on the target computer|  
 |**/post**|Cleans up unnecessary files after the installation of an image|  
 |**/debug:*value***|Outputs the event messages to the console and to the .log files; if the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**BootPE**||-|  
 |**DeployRoot**|-||  
@@ -10287,9 +8965,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="LTICleanup.wsf"></a> LTICleanup.wsf  
  This script removes any files or configuration settings (such as scripts, folders, registry entries, or automatic logon configuration settings) from the target computer after the deployment process finishes.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information that the scripts require to complete the deployment process. The environment variables are populated by ZTIGather.wsf.|  
 |**Output**|-                          **LTICleanup.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Bootsect.exe**. Applies a boot sector to the hard disk<br /><br /> -                          **Net.exe**. Performs network management tasks<br /><br /> -                          **RegSvr32.exe**. Registers files (.dll, .exe, .ocx, and so on) with the operating system<br /><br /> -                          **ZTIBCDUtility.vbs**. Includes utility functions used when performing Boot Manager tasks<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines the script uses|  
@@ -10298,16 +8975,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_DoNotCleanLiteTouch**|-||  
 |**DeployRoot**|-||  
 |**DestinationLogicalDrive**|-||  
@@ -10316,9 +8991,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="LTICopyScripts.wsf"></a> LTICopyScripts.wsf  
  This script copies the deployment scripts for the LTI and ZTI deployment processes to a local hard drive on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|-                          **Summary_Definition_ENU.xml**. Displays the summary results for the LTI deployment<br /><br /> -                          **Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **LTICopyScripts.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines the script uses|  
@@ -10327,24 +9001,21 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="LTIGetFolder.wsf"></a> LTIGetFolder.wsf  
  This script displays a dialog box that allows the user to browses to a folder. The selected folder path is stored in the FOLDERPATH environment variable.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information that the scripts require to complete the deployment process. The environment variables are populated by ZTIGather.wsf.|  
 |**Output**|None|  
 |**References**|-                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **WizUtility.vbs**. Includes support functions and subroutines that the UI uses (such as wizard pages)|  
@@ -10353,25 +9024,22 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:value**|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DefaultFolderPath**|-||  
 |**FolderPath**||-|  
 
 ###  <a name="LTIOEM.wsf"></a> LTIOEM.wsf  
  This script is used by an OEM during an LTI OEM scenario to copy the contents of a media deployment share to the target computer’s hard disk to prepare it for duplication.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information that the scripts require to complete the deployment process. The environment variables are populated by ZTIGather.wsf.|  
 |**Output**|-                          **LTIOEM.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **RoboCopy.exe**. File and folder copy tool<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10380,18 +9048,16 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 |**/BITLOCKER**|Enables BitLocker|  
 |**/BDE**|Enables BitLocker|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_DoNotCleanLiteTouch**||-|  
 |**DeployDrive**|-||  
 |**DeployRoot**|-||  
@@ -10403,9 +9069,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This script is only supported while in the full operating system.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information the scripts require to complete the deployment process. The environment variables are populated by ZTIGather.wsf.|  
 |**Output**|-                          **LTISuspend.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **LiteTouch.wsf**. Controls the LTI deployment process<br /><br /> -                          **LTICopyScripts.wsf**. Copies the deployment scripts to a local hard drive on the target computer<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10414,26 +9079,23 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 |**/Resume**|–|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**LTISuspend**||-|  
 |**SMSTSRebootRequested**||-|  
 
 ###  <a name="LTISysprep.wsf"></a> LTISysprep.wsf  
  This script prepares the target computer for running Sysprep, runs Sysprep on the target computer, and then verifies that Sysprep ran successfully.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information that the scripts require to complete the deployment process. The environment variables are populated by ZTIGather.wsf.|  
 |**Output**|-                          **LTISysprep.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Expand.exe**. Expands compressed files<br /><br /> -                          **Sysprep.exe**. Prepares computers for duplication<br /><br /> -                          **ZTIConfigFile.vbs**. Contains routines for processing XML files<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10442,16 +9104,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**DeployRoot**|-||  
 |**DestinationLogicalDrive**|-||  
@@ -10465,9 +9125,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="NICSettings_Definition_ENU.xml"></a> NICSettings_Definition_ENU.xml  
  This XML file contains the script code and HTML layout for the **Configure Static IP Network Settings** wizard page in the Deployment Wizard. During an LTI deployment, Wizard.hta reads this file and runs the embedded wizard page that prompts for the required network addressing configuration. If no static IP addressing configuration is supplied, the deployment scripts will default to using DHCP to obtain the required network configuration.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|**ZTINICUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10476,16 +9135,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**OSDAdapterxDNSServerList**||-|  
 |**OSDAdapterxDNSSuffix**||-|  
 |**OSDAdapterxGateways**||-|  
@@ -10505,9 +9162,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   **Failure**. Notification regarding the failure to successfully complete the deployment tasks  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|**Summary_Scripts.vbs**. Includes support functions and subroutines that the wizard pages embedded in this XML file use|  
@@ -10516,25 +9172,22 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**SkipFinalSummary**|-||  
 |**RetVal**|-||  
 
 ###  <a name="Summary_scripts.vbs"></a> Summary_scripts.vbs  
  This script is called by the **Summary** wizard page of the Deployment Wizard. It contains functions and subroutines used for initialization and validation.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|Event message are written to these log files:<br /><br /> -                          **Summary_scripts.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|None|  
@@ -10543,25 +9196,22 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DeploymentType**|-||  
 |**RetVal**|-||  
 
 ###  <a name="Wizard.hta"></a> Wizard.hta  
  This Hypertext Application displays the Deployment Wizard pages.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the list of property values, custom properties, database connections, deployment rules, and other information that the scripts require to complete the deployment process. The environment variables are populated by ZTIGather.wsf.|  
 |**Output**|-                          **Wizard.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **LTIGetFolder.wsf**. Script file that initiates a **BrowseForFolder** dialog box<br /><br /> -                          **ZTIConfigFile.vbs**. Includes routines for processing XML files<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **WizUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10570,18 +9220,16 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/NotWizard**|Used to bypass wizard page prompts|  
 |**/Definition:*filename***|Specifies the XML file that is to be loaded into the wizard|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Definition**|-||  
 |**DefaultFolderPath**||-|  
 |**FolderPath**|-||  
@@ -10590,9 +9238,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="WizUtility.vbs"></a> WizUtility.vbs  
  This script contains functions and subroutines that the various Deployment Wizard scripts reference.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **WizUtility.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**LTIGetFolder.wsf**. Script file that initiates a **BrowseForFolder**dialog box|  
@@ -10601,16 +9248,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DefaultFolderPath**||-|  
 |**DefaultDestinationDisk**|-||  
 |**DefaultDestinationIsDirty**|-||  
@@ -10634,9 +9279,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  If the listed application has any dependent applications defined, this script attempts to install those dependent applications before installing the listed application.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIApplications.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **ZTIConfigFile.vbs**. Includes routines for processing XML files<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **BDDRun.exe**. Runs a command that requires user interaction|  
@@ -10645,16 +9289,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**ApplicationGUID**|-||  
 |**ApplicationSuccessCodes**|-||  
 |**DependentApplications**|-||  
@@ -10674,9 +9316,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   Have a valid open handler listed at **HKEY_CLASSES_ROOT\application\shell\open\command**  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIAppXmlGen.xml**.Contains a list of applications installed on the target computer<br /><br /> -                          **ZTIAppXmlGen.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10685,16 +9326,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DeploymentMethod**|-||  
 |**DeploymentType**|-||  
 |**ImageBuild**|-||  
@@ -10706,9 +9345,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about authorizing DHCP servers, see [How to Use Netsh.exe to Authorize, Unauthorize and List DHCP Servers in Active Directory](http://support.microsoft.com/kb/303351).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIAuthorizeDHCP.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Netsh.exe**. A utility used to automate the configuration of networking components<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10717,24 +9355,21 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**IPAddress**|-||  
 
 ###  <a name="ZTIBackup.wsf"></a> ZTIBackup.wsf  
  This script performs a backup of the target computer using the ImageX utility. The backup is stored in the location specified in the [BackupDir](#BackupDir) and [BackupShare](#BackupShare) properties.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIBackup.log**. Log file that contains events that this script generates<br /><br /> -                          **ZTIBackup_imagex.log**. Log file that contains events that ImageX generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **ImageX.exe**. A utility used to create and manage WIM files<br /><br /> -                          **ZTIBCDUtility.vbs**. Includes utility functions used when performing Boot Manager tasks<br /><br /> -                          **ZTIDiskUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10743,16 +9378,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**BackupDir**|-||  
 |**BackupDisk**|-||  
 |**BackupDrive**|-||  
@@ -10775,9 +9408,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIBCDUtility.vbs"></a> ZTIBCDUtility.vbs  
  This script contains utility functions that some MDT scripts use when performing Boot Manager tasks.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|None|  
 |**References**|**BCDEdit.exe**. A tool for editing the Windows boot configuration|  
@@ -10786,16 +9418,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="ZTIBde.wsf"></a> ZTIBde.wsf  
@@ -10804,9 +9434,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  For ZTI and UDI deployments, the **UILanguage** property must be set in CustomSettings.ini or in the MDT DB, because ZTIBde.wsf tries to read the locale from the **UILanguage** property.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIBde.log**. Log file that contains events that this script generates<br /><br /> -                          **ZTIBdeFix_diskpart.log**. Log file that contains events that the Diskpart tool generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **CMD.exe**. Allows running of command-line tools<br /><br /> -                          **Defrag.exe**. Defragments the hard disk<br /><br /> -                          **Diskpart.exe**. Utility that allows for the automated management of disks, partitions, and volumes<br /><br /> -                          **ServerManagerCmd.exe**<br /><br /> -                          **ZTIDiskUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **ZTIOSRole.wsf**. Installs server roles<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10815,16 +9444,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**AdminPassword**|-||  
 |**BDEDriveLetter**|-|-|  
 |**BDEDriveSize**|-||  
@@ -10859,9 +9486,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  If the BIOS on the target computer is listed in the [ZTIBIOSCheck.xml](#ZTIBIOSCheck.xml) file, then the script returns a status that indicates the BIOS is incompatible with Windows and the deployment process should be terminated. For information on populating the list of incompatible BIOSes, see [ZTIBIOSCheck.xml](#ZTIBIOSCheck.xml).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|-                          **ZTIBIOSCheck.xml**. Contains a list of BIOSes that are known to be incompatible with Windows<br /><br /> -                          **Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIBIOSCheck.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10870,16 +9496,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="ZTICoalesce.wsf"></a> ZTICoalesce.wsf  
@@ -10909,9 +9533,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  Configuration Manager would then be able to run all four programs.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTICoalesce.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10920,26 +9543,23 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/CoalesceDigits:*value***|Specifies the number of digits that need to be provided when creating the numbering sequence. For example, a value of:<br /><br /> -                              **2** would create PACKAGE03<br /><br /> -                              **3**would create PACKAGE003<br /><br /> The default value if this argument is not provided is **3**.|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**CoalescePattern**|-||  
 |**CoalesceTarget**|-||  
 
 ###  <a name="ZTIConfigFile.vbs"></a> ZTIConfigFile.vbs  
  This script contains common routines for processing MDT XML files.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIConfigFile.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|Net.exe|  
@@ -10948,16 +9568,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**IsSafeForWizardHTML**|-||  
 |**MandatoryApplications**|-||  
 |**SkipGroupSubFolders**|-||  
@@ -10967,9 +9585,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  This script reads the ZTIConfigure.xml file to determine how to update the Unattend.xml file with the appropriate values specified in the deployment properties. The ZTIConfigure.xml file contains the information to translate properties to settings in the Unattend.xml file.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|-                          **ZTIConfigure.xml**. Contains a list of property values (specified earlier in the deployment process) and their corresponding configuration settings<br /><br /> -                          **Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIConfigure.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -10978,16 +9595,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**ComputerName**|-|-|  
 |**DeploymentType**|-||  
 |**DeploymentMethod**|-||  
@@ -11003,9 +9618,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 ###  <a name="ZTIConfigureADDS.wsf"></a> ZTIConfigureADDS.wsf  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIConfigureADDS.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Dcpromo.exe**. Installs and removes AD DS<br /><br /> -                          **Net.exe**. Performs network management tasks<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11014,16 +9628,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**ADDSLogPath**|-||  
 |**ADDSPassword**|-||  
 |**ADDSUserDomain**|-||  
@@ -11052,9 +9664,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  DHCP should already be installed on the target computer before running this script.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIConfigureDHCP.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Netsh.exe**. A utility that permits automating the configuration of networking components<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11063,16 +9674,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DHCPScopesxDescription**|-||  
 |**DHCPScopesxEndIP**|-||  
 |**DHCPScopesxExcludeStartIP**|-||  
@@ -11106,9 +9715,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  DNS should already be installed on the target computer before running this script.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIConfigureDNS.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Dnscmd.exe**. Assists administrators with DNS management<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11117,16 +9725,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DNSServerOptionDisableRecursion**|-||  
 |**DNSServerOptionBINDSecondaries**|-||  
 |**DNSServerOptionFailOnLoad**|-||  
@@ -11148,9 +9754,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIConnect.wsf"></a> ZTIConnect.wsf  
  The MDT deployment process uses this script to authenticate with a server computer (such as a computer running SQL Server or another server that has a shared network folder). When this script is run, it validates that a connection can be created to the network shared folder specified in the **/uncpath** argument.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIConnect.log**.  Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11159,25 +9764,22 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/UNCPath:uncpath**|Specifies a fully qualified UNC path to a network shared folder|  
 |**/debug:*value***|Outputs the event messages to the console and to the .log files; if the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="ZTICopyLogs.wsf"></a> ZTICopyLogs.wsf  
  Copy the Smsts.log and BDD.log files to a subfolder beneath the share that the **SLShare** property specifies. The subfolder takes the name that **OSDComputerName**, **_SMSTSMachineName**, or **HostName** specifies.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTICopyLogs.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11186,24 +9788,21 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug: *value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="ZTIDataAccess.vbs"></a> ZTIDataAccess.vbs  
  This script contains common routines for database access.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIDataAccess.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|None|  
@@ -11212,16 +9811,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_SMSTSReserved1**|-||  
 |**_SMSTSReserved2**|-||  
 |**RulesFile**|-||  
@@ -11232,9 +9829,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIDisableBDEProtectors.wsf"></a> ZTIDisableBDEProtectors.wsf  
  If BitLocker is enabled, this script suspends the BitLocker protectors configured on the system.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIDisableBDEProtectors.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11243,16 +9839,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**ImageBuild**|-||  
 |**ISBDE**||-|  
 |**OSCurrentBuild**|-||  
@@ -11282,9 +9876,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about configuring disks, see the MDT document *Using the Microsoft Deployment Toolkit*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIDiskpart.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Diskpart.exe**. Utility that allows for the automated management of disks, partitions, and volumes<br /><br /> -                          **Format.com**. Formats the hard disk<br /><br /> -                          **ZTIDiskUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11293,16 +9886,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**BDEDriveLetter**|-||  
 |**BDEDriveSize**|-||  
 |**BDEInstall**|-||  
@@ -11323,9 +9914,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIDiskUtility.vbs"></a> ZTIDiskUtility.vbs  
  This script contains disk-related functions and subroutines that the various scripts in the MDT deployment process call.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|-                          **ZTIDiskUtility.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **BcdBoot.exe**. Configures the system partition<br /><br /> -                          **DiskPart.exe**. Utility that allows for the automated management of disks, partitions, and volumes|  
@@ -11334,25 +9924,22 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DestinationLogicalDrive**|-||  
 |**UILanguage**|-|-|  
 
 ###  <a name="ZTIDomainJoin.wsf"></a> ZTIDomainJoin.wsf  
  During the State Restore deployment phase, this script verifies that the computer is joined to a domain and recovers from failed attempts to join a domain.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIDomainJoin.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **LTISuspend.wsf**<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11361,17 +9948,15 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug: *value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/DomainErrorRecovery: *value***|Attempts to join the computer to the domain. If the value specified in value is:<br /><br /> -                              **AUTO**. Retry the domain join process. Restart and retry. This is the default script behavior.<br /><br /> -                              **FAIL**. Stops all processing. All task sequence processing stops.<br /><br /> -                              **MANUAL**. Stop processing; allows the user to manually join the computer to the domain.|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DomainAdmin**|-||  
 |**DomainAdminDomain**|-||  
 |**DomainAdminPassword**|-||  
@@ -11387,9 +9972,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIDrivers.wsf"></a> ZTIDrivers.wsf  
  This script installs additional device drivers onto the target computer before initiating the configuration of the operating system. This script reads the Drivers.xml file and copies the list of device driver files in the Drivers.xml file (created by and managed in the Drivers node in the Deployment Workbench) to the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **PnpEnum.xml**. Contains a list of all devices installed on the target computer<br /><br /> -                          **ZTIDrivers.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Attrib.exe**. Sets file and folder attributes<br /><br /> -                          **CMD.exe. Allows running of command-line tools**<br /><br /> -                          **Microsoft.BDD.PnpEnum.exe**. Utility that enumerates Plug and Play devices<br /><br /> -                          **Reg.exe**. The console registry tool for reading and modifying registry data<br /><br /> -                          **ZTIConfigFile.vbs**. Includes routines for processing XML files<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11398,16 +9982,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**CustomDriverSelectionProfile**|-||  
 |**DeploymentMethod**|-||  
@@ -11427,9 +10009,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIExecuteRunbook.wsf"></a> ZTIExecuteRunbook.wsf  
  This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#ExecuteRunbook) task sequence step type, which in turn runs this script.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|Environment variables contain the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process.|  
 |**Output**|- BDD.log contains events that all MDT scripts generate.<br /><br /> - Return status of the runbook completion.<br /><br /> - Return parameters from the runbook output.|  
 |**References**|- ZTIUtility.vbs includes support functions and subroutines that the script uses.|  
@@ -11438,16 +10019,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**OrchestratorServer**|-||  
 |**RunbookName**|-||  
 |**RunbookID**|-||  
@@ -11458,9 +10037,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  This script creates the task sequence variables listed in the following table for internal script use. Do not set these task sequence variables in CustomSettings.ini or in the MDT DB.  
 
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](#ExecuteRunbook) task sequence step|  
 |**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](#ExecuteRunbook) task sequence step|  
 |**RunbookID**|Identifier assigned to the runbook on the Orchestrator server|  
@@ -11471,9 +10049,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIGather.wsf"></a> ZTIGather.wsf  
  This script gathers the properties and processing rules that control the deployment process. The properties and rules (also known as *local properties*) are explicitly defined in this script and contained in the ZTIGather.xml file, in the CustomSettings.ini file, and in the MDT DB (created in the Database node in the Deployment Workbench).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIGather.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Wpeutil.exe**. Initializes Windows PE and network connections; initiates LTI<br /><br /> -                          **ZTIDataAccess.vbs**. Contains routines for database access<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11482,18 +10059,16 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/localonly**|Returns only information about the target computer and the current operating system installed on the target computer; does not parse the input .ini file (specified in the **/inifile** argument); returns properties and rules specified in the .ini file<br /><br /> If not specified, the script returns information about the target computer and the currently installed operating system; parses the .ini file|  
 |**/inifile:ini_file_name**|Name and path of the input .ini file that contains the properties and rules used in the deployment processIf not specified, the script uses the default value in CustomSettings.ini|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**All**|-|-|  
 
 ###  <a name="ZTIGroups.wsf"></a> ZTIGroups.wsf  
@@ -11502,9 +10077,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  When restoring group membership, the script does not create any destination groups that do not already exist on the target computer. Therefore, be sure to include all required groups in the reference computer when building the image file.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIGroups.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generates|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11513,18 +10087,16 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/capture**|Backs up the group membership of the local groups on the target computer as specified in the **CaptureGroups** property|  
 |**/restore**|Restores the group membership to the local groups backed up earlier in the deployment process|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**CaptureGroups**|-||  
 |**Groups**|-|-|  
 |HostName|-||  
@@ -11532,9 +10104,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTILangPacksOnline.wsf"></a> ZTILangPacksOnline.wsf  
  This script installs language packs for Windows operating systems.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTILangPacksOnline.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **CMD.exe**. Allows running of command-line tools<br /><br /> -                          **Lpksetup.exe**. The Language Pack Setup tool used to add or remove language packs<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11543,16 +10114,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**OSVersion**|-||  
 
@@ -11566,9 +10135,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This script is intended to be called only when creating partitions structures for use with UEFI. This script should not be called when creating partition structures to be used in deployments without UEFI.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|BDD.log contains events that all MDT scripts generate.|  
 |**References**|ZTIUtility.vbs includes support functions and subroutines that the script uses.|  
@@ -11577,17 +10145,15 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/UtilityVol:*value***|Provides the drive letter of the volume that needs to be configured for a Windows RE Tools partition for use with computers with UEFI (for example, "E:")|  
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**UtilityVol**|-||  
 
 ###  <a name="ZTIMoveStateStore.wsf"></a> ZTIMoveStateStore.wsf  
@@ -11596,9 +10162,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This script is run only when deploying images using Configuration Manager.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIMoveStateStore.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11607,16 +10172,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="ZTINextPhase.wsf"></a> ZTINextPhase.wsf  
@@ -11636,9 +10199,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about the **Phase** property, see the corresponding topic in [Properties](#Properties).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTINextPhase.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11647,25 +10209,22 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DeploymentMethod**|-||  
 |**Phase**|-|-|  
 
 ###  <a name="ZTINICConfig.wsf"></a> ZTINICConfig.wsf  
  This script configures activated network adapters with values that ZTIGather.wsf captured based on the properties listed in the CustomSettings.ini file or the MDT DB (created in the Database node in the Deployment Workbench).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTINICConfig.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses<br /><br /> -                          **ZTINicUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11674,18 +10233,16 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/ForceCapture**|If there are any local networking adapters with static IP addresses saved, this script captures those settings and saves them to the local environment—for example, C:\MININT\SMSOSD\OSDLogs\Variables.dat. This script can be useful in capturing static IP settings for a large number of computers for automation.|  
 |/RestoreWithinWinPE|When specified, applies any saved static IP network settings to the local computer, when appropriate; used for internal processing only.|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DeployDrive**|-|-|  
 |**DeploymentMethod**|-||  
 |**DeploymentType**|-||  
@@ -11698,9 +10255,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTINICUtility.vbs"></a> ZTINICUtility.vbs  
  This script contains network adapter–related functions and subroutines that the various scripts in the MDT deployment process call.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|-                          **CMD.exe**. Allows running of command-line tools<br /><br /> -                          **Netsh.exe**. A utility used to automate the configuration of networking components|  
@@ -11709,16 +10265,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**OSDAdapter*AdapterIndexAdapterName***|-|-|  
 
 > [!NOTE]
@@ -11730,9 +10284,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This script is intended to be called only by the **Install Roles and Features** and**Uninstall Roles and Features** task sequence steps. Calling this script directly is not supported.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIOSRole.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **CMD.exe**. Allows running of command-line tools<br /><br /> -                          **OCSetup.exe**. Adds or to removes Windows optional components<br /><br /> -                          **ServerManagerCmd.exe**. Installs, configures, and manages Windows Server roles and features<br /><br /> -                          **Sysocmgr.exe**. Adds or removes Windows components<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11741,17 +10294,15 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/Uninstall**|If provided, this argument indicates that the roles and features will be uninstalled. If not provided, the script assumes the roles and features will be installed.|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**IsServerCoreOS**|-||  
 |**OSFeatures**|-||  
 |**OSRoles**|-||  
@@ -11768,9 +10319,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  The script starts Pkgmgr if **DeploymentMethod** equals **SCCM**.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIPatches.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Expand.exe**. Expands compressed files<br /><br /> -                          **Pkgmgr.exe**. Installs or updates Windows Vista offline<br /><br /> -                          **ZTIConfigFile.vbs**. Includes routines for processing XML files<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11779,16 +10329,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**CustomPackageSelectionProfile**|-||  
 |**DeployRoot**|-||  
@@ -11805,9 +10353,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIPowerShell.wsf"></a> ZTIPowerShell.wsf  
  This script runs a Windows PowerShell script using a custom Windows PowerShell host.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIPowerShell.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate<br /><br /> -                          **Return code**. The numeric value returned by the Windows PowerShell script after completion, which indicates the completion status of the script.|  
 |**References**|-                          **Microsoft.BDD.TaskSequencePSHost.exe**. Custom Windows PowerShell host used to run the Windows PowerShell script.|  
@@ -11816,16 +10363,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**None**||  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**None**|||  
 
 ###  <a name="ZTIPrereq.vbs"></a> ZTIPrereq.vbs  
@@ -11837,9 +10382,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  If any one of the checks fails, an error is raised and the script exits the **ValidatePrereq** procedure.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|None|  
 |**Output**|None|  
 |**References**|None|  
@@ -11848,16 +10392,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |None|||  
 
 ###  <a name="ZTISCCM.wsf"></a> ZTISCCM.wsf  
@@ -11895,9 +10437,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about these properties, see the corresponding topics in [Properties](#Properties).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTISCCM.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11906,16 +10447,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_SMSTSMDataPath**|-||  
 |**Architecture**|-||  
 |**BDDPackageID**|-|-|  
@@ -11930,9 +10469,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTISetVariable.wsf"></a> ZTISetVariable.wsf  
  This script sets the specified global task sequence variable that corresponds to the name contained in **VariableName** to the value contained in **VariableValue**.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTISetVariable.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|**ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -11941,16 +10479,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**VariableName**|-||  
 |**VariableValue**|-||  
 
@@ -12018,9 +10554,8 @@ PackageGroup001=TopFolder\SecondFolder
     > [!NOTE]
     >  This script is not designed to run on Windows PE.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTITatoo.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Mofcomp.exe**. Command-line .mof file compiler<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -12029,16 +10564,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_SMSTSAdvertID**|-||  
 |**_SMSTSPackageID**|-||  
 |**_SMSTSSiteCode**|-||  
@@ -12052,9 +10585,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIUserState.wsf"></a> ZTIUserState.wsf  
  This script initializes USMT to capture and restore user state on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIUserState.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **CMD.exe**. Allows running of command-line tools<br /><br /> -                          **Loadstate.exe**. Deposits user state data on a target computer<br /><br /> -                          **Msiexec.exe**. Manages the installation of .msi-based applications<br /><br /> -                          **Scanstate.exe**. Collects user data and settings<br /><br /> -                          **USMT Application Files**<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -12063,9 +10595,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |/debug:value|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/Capture**|–|  
 |**/Estimate**|–|  
@@ -12073,9 +10604,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**DeploymentMethod**|-||  
 |**DeploymentType**|-||  
@@ -12106,9 +10636,8 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="ZTIUtility.vbs"></a> ZTIUtility.vbs  
  This script contains utility functions that most of the MDT scripts use.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|None|  
 |**References**|-                          **Credentials_ENU.xml**. Prompts the user for credentials that will be used when connecting to network resources<br /><br /> -                          **IPConfig.exe**. Displays all current TCP/IP network configuration values and refreshes DHCP and DNS settings<br /><br /> -                          **MSHTA.exe**. HTML application host<br /><br /> -                          **Regsvr32.exe**. Registers files (.dll, .exe, .ocx, and so on) with the operating system<br /><br /> -                          **Xcopy.exe**. Copies files and directories, including subdirectories|  
@@ -12117,16 +10646,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|None|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**_SMSTSAdvertID**|-||  
 |**_SMSTSCurrentActionName**|-||  
 |**_SMSTSCustomProgressDialogMessage**|-||  
@@ -12206,9 +10733,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   If **DeploymentType = REFRESH**, verify that drive C is not compressed by running `Compact /u C:\`.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIValidate.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Compact.exe**. Displays or alters the compression of files on NTFS file system partitions<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -12217,16 +10743,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**DeploymentType**|-||  
 |**DestinationLogicalDrive**|-|-|  
 |**ImageBuild**|-||  
@@ -12261,9 +10785,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   The disk number of the mounted virtual hard disk is returned.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIVHDCreate.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **ZTIDiskUtility.vbs**. Includes support functions and subroutines the script uses<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -12272,16 +10795,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**VHDCreateDiffVHD**|-||  
 |**VHDCreateFileName**|-||  
 |**VHDCreateSizeMax**|-||  
@@ -12376,9 +10897,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  If intranet sources are not available, this script downloads files from two Microsoft sites: [http://update.microsoft.com/redist/wuredist.cab](http://update.microsoft.com/redist/wuredist.cab) and [http://download.windowsupdate.com/v6/windowsupdate/redist/standalone/muauth.cab](http://download.windowsupdate.com/v6/windowsupdate/redist/standalone/muauth.cab).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIWindowsUpdate.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **Expand.exe**. Expands compressed files<br /><br /> -                          **Net.exe**. Performs network management tasks<br /><br /> -                          **WindowsUpdateAgent30-x86.exe**. Installs WUA<br /><br /> -                          **WindowsUpdateAgent30-x64.exe**. Installs WUA<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -12387,9 +10907,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 |**/UpdateCommand:*param***|-                              **IsInstalled**. Set to **0** to query for updates that are not installed.<br /><br /> -                              **IsHidden**. Set to **0** to query for updates that are hidden.|  
 |**/Query:*value***|-                              **True**. Query only for required updates. Do not download and install any binaries.<br /><br /> -                              **False**. Query for and install required updates. Download and install binaries.|  
@@ -12408,9 +10927,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**Architecture**|-||  
 |**DoCapture**|-||  
 |**InstalledUpdates**||-|  
@@ -12431,9 +10949,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   Formats the drive by calling `cmd /c format <Drive> /fs:ntfs /p:3 /Y` (where `<Drive>` is the drive letter of the hard disk drive to be formatted)  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Input**|**Environment variables**. Contains the property values, custom property values, database connections, deployment rules, and other information that the scripts require to complete the deployment process|  
 |**Output**|-                          **ZTIWipeDisk.log**. Log file that contains events that this script generates<br /><br /> -                          **BDD.log**. Log file that contains events that all MDT scripts generate|  
 |**References**|-                          **CMD.exe**. Allows running of command-line tools<br /><br /> -                          **Format.com**. Formats the hard disk<br /><br /> -                          **ZTIUtility.vbs**. Includes support functions and subroutines that the script uses|  
@@ -12442,16 +10959,14 @@ PackageGroup001=TopFolder\SecondFolder
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
 
 #### Properties  
 
-||||  
-|-|-|-|  
 |**Name**|**Read**|**Write**|  
+|-|-|-|  
 |**WipeDisk**|-||  
 
 ##  <a name="SupportFiles"></a> Support Files  
@@ -12476,9 +10991,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="Applications.xml"></a> Applications.xml  
@@ -12486,25 +11000,22 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="BootStrap.ini"></a> BootStrap.ini  
  The configuration file used when the target computer is not able to connect to the appropriate deployment share. This situation occurs in the New Computer and the Replace Computer scenarios.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="CustomSettings.ini"></a> CustomSettings.ini  
  The primary configuration file for the MDT processing rules used in all scenarios.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="Deploy.xml"></a> Deploy.xml  
@@ -12512,9 +11023,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*program_files*\Microsoft Deployment Toolkit\Control|  
 
 ###  <a name="DriverGroups.xml"></a> DriverGroups.xml  
@@ -12522,9 +11032,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="Drivers.xml"></a> Drivers.xml  
@@ -12532,9 +11041,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|Description|  
+|-|-|  
 |**Location**|*distribution*\Control|  
 
 ###  <a name="LinkedDeploymentShares.xml"></a> LinkedDeploymentShares.xml  
@@ -12542,9 +11050,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="ListOfLanguages.xml"></a> ListOfLanguages.xml  
@@ -12552,9 +11059,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="MediaGroups.xml"></a> MediaGroups.xml  
@@ -12562,9 +11068,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="Medias.xml"></a> Medias.xml  
@@ -12572,9 +11077,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="OperatingSystemGroups.xml"></a> OperatingSystemGroups.xml  
@@ -12582,9 +11086,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="OperatingSystems.xml"></a> OperatingSystems.xml  
@@ -12592,9 +11095,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="PackageGroups.xml"></a> PackageGroups.xml  
@@ -12602,9 +11104,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="Packages.xml"></a> Packages.xml  
@@ -12612,9 +11113,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="SelectionProfileGroups.xml"></a> SelectionProfileGroups.xml  
@@ -12622,9 +11122,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="SelectionProfiles.xml"></a> SelectionProfiles.xml  
@@ -12632,9 +11131,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="ServerManager.xml"></a> ServerManager.xml  
@@ -12642,9 +11140,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*program_files*\Microsoft Deployment Toolkit\Bin|  
 
 ###  <a name="Settings.xml"></a> Settings.xml  
@@ -12652,9 +11149,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="TaskSequenceGroups.xml"></a> TaskSequenceGroups.xml  
@@ -12662,9 +11158,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="TaskSequences.xml"></a> TaskSequences.xml  
@@ -12672,9 +11167,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control|  
 
 ###  <a name="TS.xml"></a> TS.xml  
@@ -12682,9 +11176,8 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is managed by MDT and should not require modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Control\\*task_sequence_id*|  
 
 > [!NOTE]
@@ -12695,25 +11188,22 @@ PackageGroup001=TopFolder\SecondFolder
 
  For assistance with customizing this file, see the section, "Create an ImageX Configuration File," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Tools\\*platform*|  
 
 ###  <a name="ZTIBIOSCheck.xml"></a> ZTIBIOSCheck.xml  
  This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ZTIBIOSCheck.wsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic® Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="ZTIConfigure.xml"></a> ZTIConfigure.xml  
  This XML file is used by the [ZTIConfigure.wsf](#ZTIConfigure.wsf) script to translate property values (specified earlier in the deployment process) to configure settings in the Unattend.xml file. This file is already customized to make the appropriate translations and should not require further modification.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="ZTIGather.xml"></a> ZTIGather.xml  
@@ -12721,17 +11211,15 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This XML file is preconfigured and should not require modification. Define custom properties in the CustomSettings.ini file or the MDT DB.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="ZTIUserState_config.xml"></a> ZTIUserState_config.xml  
  This XML file is used by the [ZTIUserState.wsf](#ZTIUserState.wsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](#USMTConfigFile) property. See the [Config.xml File](http://technet.microsoft.com/library/dd560760.aspx) topic in the USMT documentation for more information on syntax and use.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="ZTITatoo.mof"></a> ZTITatoo.mof  
@@ -12761,9 +11249,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 -   TaskSequenceVersion  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Scripts|  
 
 ## Utilities  
@@ -12790,16 +11277,14 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="BCDBoot.exe"></a> BCDBoot.exe  
  BCDBoot is a tool used to quickly set up a system partition or repair the boot environment located on the system partition. The system partition is set up by copying a small set of boot environment files from an installed Windows image. BCDBoot also creates a Boot Configuration Data (BCD) store on the system partition, with a new boot entry that enables Windows to boot to the installed Windows image.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the command-line help provided by this utility.|  
 
 ###  <a name="BDDRun.exe"></a> BDDRun.exe  
@@ -12810,17 +11295,15 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This utility can only be used in LTI deployments. ZTI deployments prohibit any user interaction.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Tools\\*platform*|  
 |**Use**|`BDDRun.exe commandline`|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*commandline*|The command to be run that requires user interaction|  
 
 > [!NOTE]
@@ -12831,17 +11314,15 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information on Bootsect.exe, see the section, "Bootsect Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Tools\\*platform*|  
 |**Use**|`bootsect.exe /nt52 C:`|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/Help**|Displays the use instructions listed here.|  
 |**/nt52**|Applies the master boot code compatible with NTLDR to **SYS**, **ALL**, or *DriveLetter*. The operating system installed on **SYS**, **ALL**, or *DriveLetter* must be an earlier version of Windows Vista.|  
 |**/nt60**|Applies the master boot code compatible with BOOTMGR to **SYS**, **ALL**, or *DriveLetter*. The operating system installed on **SYS**, **ALL**, or *DriveLetter* must be Windows Vista.|  
@@ -12853,16 +11334,14 @@ PackageGroup001=TopFolder\SecondFolder
 ###  <a name="Compact.exe"></a> Compact.exe  
  Displays or alters the compression of files on NTFS file system partitions.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**/C**|Compresses the specified files. Directories will be marked so that files added afterward will be compressed.|  
 |**/V**|Decompresses the specified files. Directories will be marked so that files added afterward will not be compressed.|  
 |**/S**|Performs the specified operation on files in the given directory and in all subdirectories. Default dir is the current directory.|  
@@ -12877,32 +11356,28 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information on Diskpart.exe, see the section, "Diskpart Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows PE source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the guide referenced in the utility description.|  
 
 ###  <a name="Expand.exe"></a> Expand.exe  
  This utility is run to expand (extract) files from compressed files.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 |**Use**|`Expand.exe -r wuredist.cab -F:wuRedist.xml %temp%`|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**-r**|Renames expanded files|  
 |**-D**|Displays the list of files in the source directory|  
 |***Source***|Source file specification (Wildcards can be used.)|  
@@ -12914,91 +11389,79 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information about ImageX, see the section, "What is ImageX," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Tools\\*platform*|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the guide referenced in the utility description.|  
 
 ###  <a name="Microsoft.BDD.PnpEnum.exe"></a> Microsoft.BDD.PnpEnum.exe  
  This utility is run to enumerate Plug and Play devices installed on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|*distribution*\Tools\\*platform*|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |None|–|  
 
 ###  <a name="Mofcomp.exe"></a> Mofcomp.exe  
  Mofcomp.exe is the Managed Object Format compiler that parses a file that contains Managed Object Format statements and adds the classes and class instances defined in the file to the WMI repository. Mofcomp.exe provides command-line help on the switch use options.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the command-line help that this utility provides.|  
 
 ###  <a name="Netsh.exe"></a> Netsh.exe  
  Netsh.exe is a command-line and scripting utility used to automate the configuration of networking components. For more information about Netsh.exe, see [The Netsh Command-Line Utility](http://technet.microsoft.com/library/cc785383%28WS.10%29.aspx).  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the command-line help that this utility provides or the information found at the URL listed in the utility description.|  
 
 ###  <a name="Reg.exe"></a> Reg.exe  
  The Console Registry Tool is used to read and modify registry data.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the command-line help that this utility provides.|  
 
 ###  <a name="Regsvr32.exe"></a> Regsvr32.exe  
  This utility is used to register files (.dll, .exe, .ocx, and so on) with the operating system.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |***file***|The name of the file to register or unregister|  
 |**/s**|Runs the utility in silent mode|  
 |**/u**|Unregisters the file|  
@@ -13008,16 +11471,14 @@ PackageGroup001=TopFolder\SecondFolder
 
  For more information on Wpeutil.exe, see the section, "Wpeutil Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User’s Guide*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**Location**|Included in the Windows PE source files|  
 
 #### Arguments  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 ||See the guide referenced in the utility description.|  
 
 ## MDT Windows PowerShell Cmdlets  
@@ -13029,9 +11490,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 ### Table 7. MDT Windows PowerShell Cmdlets  
 
-|||  
-|-|-|  
 |**Cmdlet**|**Description**|  
+|-|-|  
 |[Add-MDTPersistentDrive](#Add-MDTPersistentDrive)|Adds a deployment share to the list of MDT persisted drives that can be restored using the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet.|  
 |[Disable-MDTMonitorService](#Disable-MDTMonitorService)|Disables the MDT monitoring services.|  
 |[Enable-MDTMonitorService](#Enable-MDTMonitorService)|Enables the MDT monitoring services.|  
@@ -13081,9 +11541,8 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
 
  For more information on how to create a new Windows PowerShell drive using the **MDTProvider** and how to create a deployment share using Windows PowerShell, see the section "Creating a Deployment Share Using Windows PowerShell" in the MDT document, *Microsoft Deployment Toolkit Samples Guide*.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|None|  
@@ -13093,9 +11552,8 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
 ##### -InputObject <PSObject\>  
  This parameter specifies a Windows PowerShell drive object that was created earlier in the process. Enter a PSObject object, such as one generated by the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**3** and **Named**|  
 |**Default value**|–|  
@@ -13210,9 +11668,8 @@ Enable-MDTMonitorService [-EventPort] <Int32> [-DataPort] <Int32> [<CommonParame
 ##### -EventPort <Int32\>  
  This parameter specifies the TCP port used as the event port for the MDT monitoring service.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|**9800**|  
@@ -13222,9 +11679,8 @@ Enable-MDTMonitorService [-EventPort] <Int32> [-DataPort] <Int32> [<CommonParame
 ##### -DataPort <Int32\>  
  This parameter specifies the TCP port used as the data port for the MDT monitoring service.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**3** and **Named**|  
 |**Default value**|**9801**|  
@@ -13307,9 +11763,8 @@ Get-MDTDeploymentShareStatistics [-Path <String>] [<CommonParameters>]
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|–|  
@@ -13393,9 +11848,8 @@ ComputerIdentities : {}
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|–|  
@@ -13405,9 +11859,8 @@ ComputerIdentities : {}
 ##### -ID <Nullable\>  
  This parameter specifies the specific identifier for the deployment of a specific computer. If this parameter is not specified, then all monitoring data for deployments in the deployment share are displayed.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**3** and **Named**|  
 |**Default value**|–|  
@@ -13473,9 +11926,8 @@ Get-MDTOperatingSystemCatalog [-ImageFile] <String> [-Index] <Int32> [<CommonPar
 ##### -ImageFile <String\>  
  This parameter specifies the fully qualified path to the custom operating system image file (.wim file), including the name of the custom operating system image file.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|–|  
@@ -13485,9 +11937,8 @@ Get-MDTOperatingSystemCatalog [-ImageFile] <String> [-Index] <Int32> [<CommonPar
 ##### -Index <Int32\>  
  This parameter specifies the index of the desired operating system image within the operating system image file (.wim file).  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**3** and **Named**|  
 |**Default value**|–|  
@@ -13597,9 +12048,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 > [!NOTE]
 >  If this parameter is not provided, the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13609,9 +12059,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 ##### -Name <String\>  
  This parameter specifies the name of the application to be added to the deployments share and must be unique within the deployment share. This parameter is used in all syntax usages for this cmdlet.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13621,9 +12070,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 ##### -ApplicationSourcePath <String\>  
  This parameter specifies the fully qualified path to the application source files for the application that will be imported into the deployment share. This parameter is only valid for use in the first syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13633,9 +12081,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 ##### -DestinationFolder <String\>  
  This parameter specifies the folder in the deployment share where the application source files are to be imported. This folder is created beneath the folder specified in the *Path* parameter. This parameter is only valid for use in the first syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13653,9 +12100,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 
  This parameter is only valid for use in the first syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13671,9 +12117,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 
  This parameter is only valid for use in the second syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13683,9 +12128,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 ##### -Bundle [<SwitchParameter\>]  
  This parameter specifies that the application being imported is an application that is a bundle of two or more applications. This parameter is only valid for use in the last syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13759,9 +12203,8 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share. This parameter must be provided if the *SourcePath* parameter is not provided.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13774,9 +12217,8 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the folder where the device driver files are located. This parameter must be provided if the *Path* parameter is not provided.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**1** and **Named**|  
 |**Default value**|–|  
@@ -13794,9 +12236,8 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 
 -   Not specified, then the device drivers will be added and linked to the original, existing device drivers  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13871,9 +12312,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13883,9 +12323,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 ##### -SourcePath <String\>  
  This parameter specifies the fully qualified path to the operating system source files for the operating system that will be imported into the deployment share. This parameter is only valid for use in the first syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13895,9 +12334,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 ##### -DestinationFolder <String\>  
  This parameter specifies the folder in the deployment share where the operating system source files are to be imported. This folder is created beneath the folder specified in the *Path* parameter. This parameter is only valid for use in the first and second syntax examples.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13915,9 +12353,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 
  This parameter is only valid for use in the first and second syntax examples.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13927,9 +12364,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 ##### -SourceFile <String\>  
  This parameter specifies the fully qualified path to the operating system source .wim file for the operating system that will be imported into the deployment share. This parameter is only valid for use in the second syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13939,9 +12375,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 ##### -SetupPath <String\>  
  This parameter specifies the fully qualified path to the operating system setup files that need to be imported along with the .wim file specified in the *SourceFile* parameter. This parameter is only valid for use in the second syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -13953,9 +12388,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 
  This parameter is only valid for use in the last syntax example.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14029,9 +12463,8 @@ Import-MDTPackage [-Path <String>] [[-SourcePath] <String[]>] [<CommonParameters
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14041,9 +12474,8 @@ Import-MDTPackage [-Path <String>] [[-SourcePath] <String[]>] [<CommonParameters
 ##### -SourcePath <String\>  
  This parameter specifies the fully qualified path to a folder structure to be scanned for operating system packages to import. The specified folder structure will be scanned for .cab and .msu files. For .msu files, the .cab files inside the .msu files are automatically extracted.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**1** and **Named**|  
 |**Default value**|–|  
@@ -14090,9 +12522,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14108,9 +12539,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 
  For more information on the task sequence templates that are included with MDT for LTI deployments, see the section "Create a New Task Sequence in the Deployment Workbench" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**1** and **Named**|  
 |**Default value**|–|  
@@ -14120,9 +12550,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 ##### -Name <String\>  
  This parameter specifies the name of the task sequence to be imported. The value of this parameter must be unique within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|–|  
@@ -14132,9 +12561,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 ##### -ID <String\>  
  This parameter specifies the identifier of the task sequence to be imported. The value of this parameter must be unique within the deployment share. The value assigned to this parameter should be in uppercase and not have any spaces or special characters. This value is used to create a subfolder in the folder specified in the *Path* parameter, which should be under the Control folder in the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**3** and **Named**|  
 |**Default value**|–|  
@@ -14144,9 +12572,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 ##### -Comments <String\>  
  This parameter specifies the text that provides additional, descriptive information about the task sequence to be imported. This descriptive information is visible in the Deployment Workbench.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**4** and **Named**|  
 |**Default value**|–|  
@@ -14156,9 +12583,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 ##### -Version <String\>  
  This parameter specifies the version number of the task sequence to be imported. The value of this parameter is informational only and is not used by MDT for version-related processing.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**4** and **Named**|  
 |**Default value**|–|  
@@ -14171,9 +12597,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 > [!NOTE]
 >  If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystem* parameter.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14194,9 +12619,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 > [!NOTE]
 >  If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystemPath* parameter.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14206,9 +12630,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 ##### -FullName <String\>  
  This parameter specifies the name of the registered owner of the operating system to be used with this task sequence. This name is saved in the **RegisteredOwner** registry key at **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion**. The value of this parameter is injected into the Unattend.xml file to be associated with this task sequences.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14218,9 +12641,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 ##### -OrgName <String\>  
  This parameter specifies the name of the organization for the registered owner of the operating system to be used with this task sequence. This name is saved in the **RegisteredOrganization** registry key at **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion**. The value of this parameter is injected into the Unattend.xml file to be associated with this task sequences.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14230,9 +12652,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 ##### -HomePage <String\>  
  This parameter specifies the URL to be used as the home page in Internet Explorer. The value of this parameter is injected into the Unattend.xml file to be associated with this task sequences.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14245,9 +12666,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 > [!NOTE]
 >  If this parameter is not provided, then the product key must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14260,9 +12680,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 > [!NOTE]
 >  If this parameter is not provided, then the MAK key must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14275,9 +12694,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 > [!NOTE]
 >  If this parameter is not provided, then the password to be assigned to the built-in, local Administrator account on the target computer must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14340,9 +12758,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14356,9 +12773,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 
 -   Omitted, then the tables within an existing MDT DB will not be re-created  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14368,9 +12784,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 ##### -SQLServer <String\>  
  This parameter specifies the name of the computer running SQL Server where the new MDT DB database will be created.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14383,9 +12798,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 > [!NOTE]
 >  The SQL Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14395,9 +12809,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 ##### -Port <String\>  
  This parameter specifies the TCP port to be used in communication with the SQL Server instance specified in the *SQLServer* parameter. The default port that SQL Server uses is 1433. Specify this parameter when SQL Server is configured to use a port other than the default value. The value of this parameter must match the port configured for SQL Server.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14413,9 +12826,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 
  If this parameter is not provided, the named pipes SQL network library (DBNMPNTW) is used.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14427,9 +12839,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 
  If the database specified in this parameter already exists, the database will not be recreated. The tables within the database can be recreated based on the *Force* parameter.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14442,9 +12853,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 > [!NOTE]
 >  If this parameter is not included, then a secured IPC$ connection is not established. As a result, named pipes communication with SQL Server may fail.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14513,9 +12923,8 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14525,9 +12934,8 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 ##### -ID <Nullable\>  
  This parameter specifies the monitoring data item to be removed using the identifier of the monitoring data item. If this parameter is not specified, then the *ComputerObject* parameter must be specified to identify a particular monitoring data item.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14537,9 +12945,8 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 ##### -ComputerObject <PSObject\>  
  This parameter specifies the monitoring data item to be removed using a computer object. If this parameter is not specified, then the *ID* parameter must be specified to identify a particular monitoring data item.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14609,9 +13016,8 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
 
  For more information on how to create a new Windows PowerShell drive using the **MDTProvider** and how to create a deployment share using Windows PowerShell, see the section "Creating a Deployment Share Using Windows PowerShell" in the MDT document, *Microsoft Deployment Toolkit Samples Guide*.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**1** and **Named**|  
 |**Default value**|**None**|  
@@ -14621,9 +13027,8 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
 ##### -InputObject <PSObject\>  
  This parameter specifies a Windows PowerShell drive object that was created earlier in the process. Enter a **PSObject** object, such as one generated by the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**2** and **Named**|  
 |**Default value**|–|  
@@ -14686,9 +13091,8 @@ Restore-MDTPersistentDrive [-Force] [<CommonParameters>]
 
 -   Omitted, then deployment share will not be upgraded when restored  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14757,9 +13161,8 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14769,9 +13172,8 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 ##### -ComputerObject <PSObject\>  
  This parameter specifies the monitoring data item to be created or updated using a computer object. If this parameter is not specified, then the *MACAddress* parameter must be specified to identify a particular monitoring data item.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14781,9 +13183,8 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 ##### -MACAddress <String\>  
  This parameter specifies the monitoring data item to be created or updated using the MAC address of the primary network adapter of the computer being monitored. The format of the MACAddress is *xx:xx:xx:xx:xx:xx,* where *x* is a hexadecimal character specified in uppercase (as required). If this parameter is not specified, then the *ComputerObject* parameter must be specified to identify a particular monitoring data item.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14795,9 +13196,8 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 
  `"Setting"` can be any property listed in the ZTIGather.xml file. `Value` can be any valid value for the property specfied in `"Setting"`.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14865,9 +13265,8 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 ##### -Server <String\>  
  Specifies the name of the computer on which MDT is installed and the MDT monitoring service is running.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|None|  
@@ -14877,9 +13276,8 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 ##### -DataPort <Int32\>  
  This parameter specifies the TCP port used as the data port for the MDT monitoring service.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14889,9 +13287,8 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 ##### -EventPort <Int32\>  
  This parameter specifies the TCP port used as the event port for the MDT monitoring service.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14937,9 +13334,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 ##### -SQLServer <String\>  
  This parameter specifies the name of the computer running SQL Server where the MDT DB database will be upgraded.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14952,9 +13348,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 > [!NOTE]
 >  The SQL Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14964,9 +13359,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 ##### -Port <String\>  
  This parameter specifies the TCP port to be used in communication with the SQL Server instance specified in the *SQLServer* parameter. The default port that SQL Server uses is 1433. Specify this parameter when SQL Server is configured to use a port other than the default value. The value of this parameter must match the port configured for SQL Server.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14985,9 +13379,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 > [!NOTE]
 >  The Deployment Workbench does not provide the option for configuring the SQL network library. The Deployment Workbench always uses named pipes communication. However, the SQL network library can be configured in the CustomSettings.ini file.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -14997,9 +13390,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 ##### -Database <String\>  
  This parameter specifies the name of the database to be upgraded in the SQL Server instance specified in the *Instance* parameter on the SQL Server instance specified in the *SQLServer* parameter.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -15055,9 +13447,8 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -15071,9 +13462,8 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 
 -   Omitted, then the cmdlet optimizes the existing Windows PE boot images. This process takes less time than generating new versions of the Windows PE boot images. If this parameter is omitted, the *Compress* parameter can be used to reduce the size of the boot images as a part of the Windows PE boot image optimization process.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -15090,9 +13480,8 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 > [!NOTE]
 >  This parameter should only be provided if the *Force* parameter is not provided. If the *Force* parameter is included, new Windows PE boot images are generated and are compressed to the minimal size.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**False**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -15166,9 +13555,8 @@ Update-MDTLinkedDS -Path <String> [<CommonParameters>]
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -15217,9 +13605,8 @@ Update-MDTMedia -Path <String> [<CommonParameters>]
 > [!NOTE]
 >  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.  
 
-|||  
-|-|-|  
 |**Parameter**|**Value**|  
+|-|-|  
 |**Required?**|**True**|  
 |**Position?**|**Named**|  
 |**Default value**|–|  
@@ -15255,9 +13642,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ### Tables in the MDT DB  
  The following table lists the database tables that Deployment Workbench creates and manages.  
 
-|||  
-|-|-|  
 |**Table**|**Description**|  
+|-|-|  
 |ComputerIdentity|Used to identify a specific computer using any combination of the **AssetTag, UUID, SerialNumber**, and **MACAddress** properties. The table includes a **Description** column to provide a user-friendly method of describing the computer (usually the computer name).|  
 |Descriptions|Contains descriptions of all properties configurable via the database.|  
 |LocationIdentity|Used to identify geographic locations using the **Location** property. The values for this property are stored in a corresponding column in the table.|  
@@ -15274,9 +13660,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ### Views in the MDT DB  
  The following table lists and describes the database views that are used when querying configuration information in the MDT DB.  
 
-|||  
-|-|-|  
 |**View**|**Description**|  
+|-|-|
 |ComputerAdministrators|Used to find all accounts to be made members of the local Administrators group on the target computer. The view is a join of the ComputerIdentity and Settings_Administrators tables.|  
 |ComputerApplications|Used to find all applications to be deployed to the target computer. The view is a join of the ComputerIdentity and Settings_Applications tables.|  
 |ComputerPackages|Used to find all packages to be deployed to the target computer. The view is a join of the ComputerIdentity and Settings_Packages tables.|  
@@ -15303,9 +13688,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 8. Windows 7 Feature Dependency Reference  
 
-||||  
-|-|-|-|  
 |**Feature**|**Parent Feature**|**Dependent Features**|  
+|-|-|-|  
 |Windows Media® Center|Media Features|Might affect other Windows features|  
 |Windows DVD Maker|Media Features|Might affect other Windows features|  
 |Windows Media Player|Media Features|Might affect other Windows features|  
@@ -15417,9 +13801,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 9. UDI Wizard Command-Line Parameters  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**/preview**|Allows you to preview the current configuration of the wizard by enabling the **Next** button, which allows you to move from page to page without requiring valid input.|  
 |**/xml**|Specifies the name of the UDI Wizard configuration file. The UDIWizard.wsf script automatically sets this parameter to the OSDSetupWizard.xml file, which is stored in the folder in which the task sequence stores log files. This parameter defaults to the config.xml file.<br /><br /> The syntax for this parameter is as follows (where `<full_path>` is the fully qualified path to the .xml file, including the file name and extension):<br /><br /> `/xml:<full_path>`|  
 |**/stage**|Specifies the name of the UDI stage to run. The UDIWizard.wsf script automatically sets this parameter to the appropriate stage, as described in [UDI Stage Reference](#UDIStageReference). This parameter defaults to the first stage in the UDI Wizard configuration file.<br /><br /> The syntax for this parameter is as follows (where `<stage_name>` is the name of the stage to be run):<br /><br /> `/stage:<stage_name>`<br /><br /> Note:<br /><br /> The value for <stage_name> is case sensitive.|  
@@ -15481,9 +13864,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 10. Configuration Settings in the OSDResults.exe.config File  
 
-|||  
-|-|-|  
 |**Setting**|**Description**|  
+|-|-|  
 |**headerImagePath**|This setting allows you to specify the fully qualified or relative path to a .bmp file that is displayed in the header of the **OSDResults** dialog box.<br /><br /> The default value for this setting is as follows:<br /><br /> `images\UDI_Wizard_Banner.bmp`|  
 |**backgroundWallpaper**|This setting allows you to specify the fully qualified or relative path to a .jpg file that is displayed as the wallpaper in the **OSDResults** dialog box.<br /><br /> The default value for this setting is as follows:<br /><br /> `images\Wallpaper.jpg`|  
 |**welcomeText**|This setting allows you to specify the text that welcomes the user and provides information about the deployment process. It is displayed in the **OSDResults** dialog box.|  
@@ -15629,9 +14011,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 11. Configuration Settings in the AppInstall.exe.config File  
 
-|||  
-|-|-|  
 |**Setting**|**Description**|  
+|-|-|  
 |**timeoutMinutes**|This setting allows you to specify the length of time for AppInstall to wait for a response from the Configuration Manager Application Catalog before timing out. The value is specified in minutes. The default value for this setting is **5**.|  
 |**delayTimer**|This setting allows you to specify the length of time for AppInstall to wait prior to attempting the connection to the Configuration Manager Application Catalog. The value is specified in minutes. The default value for this setting is **5**.|  
 
@@ -15664,9 +14045,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 12. MDT Deployment Scenarios and UDI Stages  
 
-|||  
+|**Scenario**|**Description**|   
 |-|-|  
-|**Scenario**|**Description**|  
 |New Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage<br /><br /> This scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. Run the UDI Wizard with the following UDI stages to support each type of deployment:<br /><br /> - **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#NEWCOMPUTERStage).<br /><br /> -                         **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#NEWCOMPUTERPrestagedStage).|  
 |Refresh Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> - The UDI Wizard is run with the REFRESH stage to support this deployment scenario. For more information, see [REFRESH Stage](#REFRESHStage).|  
 |Replace Computer|This scenario includes an existing computer and a replacement computer. A separate task sequence is created and run on each computer as described in the following process:<br /><br /> -                          **On the existing computer.** MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Replace Task Sequence task sequence template<br /><br /> Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> The UDI Wizard is run with the following UDI stages to support this deployment scenario:<br /><br /> - **REPLACE stage.** This stage is run in the existing Windows operating system and captures configuration information from within Windows.<br /><br /> -                          **REPLACE.WinPE stage.** This stage is run in Windows PE and completes the capturing of configuration information from the existing computer—for example, running USMT and capturing the user state migration data.<br /><br /> The user state is captured to a network shared folder or to a local USB drive.<br /><br /> For more information on the REPLACE and REPLACE.WinPE stages, see [REPLACE and REPLACE.WinPE Stages](#REPLACEandREPLACEWinPEStages).<br /><br /> -                          **On the replacement computer.** This portion of the scenario is identical to the New Computer scenario, except that the user state captured in the previous step is restored. MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage.<br /><br /> This portion of the scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. As a part of this portion of the scenario, the user state migration data is restored. The UDI Wizard is run with the following UDI stages to support each type of deployment:<br /><br /> -                          **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#NEWCOMPUTERStage).<br /><br /> -                          **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#NEWCOMPUTERPrestagedStage).|  
@@ -15725,9 +14105,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 13. Configuration Settings Common to All UDI Tasks  
 
-|||  
-|-|-|  
 |**Task**|**Description**|  
+|-|-|  
 |**Bitmap Filename**|This parameter specifies the graphic used to indicate the task type.|  
 |**Display Name**|This specifies the name of the task, which is displayed on the wizard page when the task is run.|  
 |**Exit Code Values**|This specifies a list of possible return codes for the task. An item exists in the list for each possible return code.|  
@@ -15738,9 +14117,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 14. Built\-in UDI Tasks  
 
-|||  
-|-|-|  
 |**Task**|**Description**|  
+|-|-|  
 |[AC Power Check](#ACPowerCheck)|This UDI task is used to identify whether the target computer is connected to AC power, not solely on battery.|  
 |[Application Discovery](#ApplicationDiscovery)|This UDI task is used to discover applications that are installed on the target computer.|  
 |[CheckSMSFolderOnUSB](#CheckSMSFolderOnUSB)|This UDI task is used to determine whether the \_SMSTaskSequence folder is located on a USB drive on the target computer.|  
@@ -15755,9 +14133,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 15. Error and Exit Codes for the AC Power Check Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the target computer is plugged into AC power|  
 |Exit|**\***|**Error**, which indicates that the target computer is not plugged into AC power|  
 
@@ -15768,9 +14145,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 16. Parameters Used by the Application Discovery Task  
 
-|||  
-|-|-|  
 |**Task**|**Description**|  
+|-|-|  
 |**Readcfg**|This parameter specifies the fully qualified or relative path to the location of the .app file that has a list of applications for the task to discover. The .app file contains the list of available software items from which the user can select.<br /><br /> The **Application Discovery** task reads the .app file and determines whether any of these software items is installed. If a software item is installed, the item is added to the file specified in the **Writecfg** parameter.<br /><br /> Ensure that this parameter uses the same location and file name as the [ApplicationPage](#ApplicationPage) wizard page.|  
 |**Writecfg**|This parameter specifies the fully qualified or relative path to the location of the .xml file that contains a list of the applications discovered by the task.|  
 |**Log**|This parameter specifies the fully qualified or relative path to the location of the log file generated by this task. The file name of the log file is AppDiscovery.log.|  
@@ -15781,9 +14157,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 17. Error and Exit Codes for the Application Discovery Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status and description**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the task successfully scanned for applications|  
 |Exit|**\***|**Warning**, which indicates that the application discovery engine could not be run for some unknown reason|  
 |Exit|**1**|**Warning**, which indicates that the application discovery engine encountered one or more warnings|  
@@ -15811,9 +14186,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 18. Error and Exit Codes for the CheckSMSFolderOnUSB Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the \_SMSTaskSequence folder is not located on a USB drive and the deployment can continue.|  
 |Exit|**\***|**Error**, which indicates that the \_SMSTaskSequence folder is located on a USB drive and the deployment cannot continue.|  
 
@@ -15824,9 +14198,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 19. Parameters Used by the Copy Files Task  
 
-|||  
-|-|-|  
 |**Task**|**Description**|  
+|-|-|  
 |**Source**|This parameter specifies the fully qualified or relative path to the source file, which can contain wildcards to copy multiple files using a single task.|  
 |**Destination**|This parameter specifies the fully qualified or relative path to the destination file without a file name.|  
 
@@ -15836,9 +14209,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 20. Error and Exit Codes for the Copy Files Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status and description**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the copy process succeed|  
 |Exit|**\***|**Error**, which indicates that the copy process failed|  
 |Error|**\-1**|**Error**, which indicates that the copy process failed|  
@@ -15850,9 +14222,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 21. Parameters Used by the Shell Execute Task  
 
-|||  
-|-|-|  
 |**Task**|**Description**|  
+|-|-|  
 |**Filename**|This parameter specifies the fully qualified or relative path to the command for the task to run.|  
 |**Parameters**|This parameter specifies the command\-line parameters that are to be provided when running the command.|  
 
@@ -15881,9 +14252,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 22. Common Error and Exit Codes for the Shell Execute Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status and description**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the task finished successfully|  
 |Exit|**\***|**Error**, which indicates that the task failed|  
 
@@ -15894,9 +14264,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 23. Error and Exit Codes for the Wired Network Check Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status and description**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the target computer is connected to a wired network|  
 |Exit|**\***|**Error**, which indicates that the target computer is not connected to a wired network|  
 
@@ -15919,9 +14288,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 24. Built-in UDI Validators  
 
-|||  
-|-|-|  
 |**Validator**|**Description**|  
+|-|-|  
 |[InvalidChars](#InvalidChars)|This validator identifies any invalid characters that have been entered from a list that you configure.|  
 |[NamedPattern](#NamedPattern)|This validator helps ensure that the text follows a predefined pattern.|  
 |[NonEmpty](#NonEmpty)|This validator is used to require text in a field.|  
@@ -15972,9 +14340,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 25. Memory Variables Set by the UDI Wizard at Startup and Their Descriptions  
 
-||||  
-|-|-|-|  
 |**Variable**|**Read**|**Write**|  
+|-|-|-|  
 |**LogPath**<br /><br /> Specifies the fully qualified path to the log files for the UDI Wizard. You can set this variable to one of the following values:<br /><br /> - The value in the **_SMSTSLogPath** task sequence variable<br /><br /> - The value of the %TEMP% environment variable if the **_SMSTSLogPath** task sequence variable is not set|No|Yes|  
 |**WizardConfigFilename**<br /><br /> Specifies the name of the UDI Wizard configuration file currently in use. The **ApplicationPage** wizard page reads the value of this variable to find the corresponding .app file, which contains the list of applications. For example, if the UDI Wizard configuration file is named *config.xml,* then the wizard page will look for the corresponding .app file (config.xml.app).|No|Yes|  
 
@@ -15983,9 +14350,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 26. Built-in Wizard Pages and Their Descriptions  
 
-|||  
-|-|-|  
 |**Wizard page**|**Description**|  
+|-|-|  
 |[AdminAccounts](#AdminAccounts)|Use this wizard page to set the password for the local administrator account and add other users to the local Administrators group on the target computer.|  
 |[ApplicationPage](#ApplicationPage)|Use this wizard page to configure the list of applications that can be installed during the setup process. These applications can include applications or packages and programs from Configuration Manager.|  
 |[BitLockerPage](#BitLockerPage)|Use this wizard page to configure BitLocker settings for the target computer.|  
@@ -16008,9 +14374,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 27. AdminAccounts Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**OSDAddAdmin**<br /><br /> Specifies a list of additional user names to be added to the local Administrators group on the target computer.|Yes|Yes|Yes|  
 |**OSDLocalAdminPassword**<br /><br /> Specifies the passwords for the local built-in Administrator account on the target computer.|Yes|Yes|Yes|  
 
@@ -16025,9 +14390,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 28. ApplicationPage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**ApplicationBaseVariable**<br /><br /> Specifies the name used as the base for the task sequence variable names created for each Configuration Manager application selected on the **ApplicationPage** wizard page. This variable is configured using the **Edit Software Settings** button in the **Edit Settings** group on the Ribbon in the UDI Wizard Designer.<br /><br /> A separate task sequence variable is created for each application selected on this page. The default value for this variable is **APPLICATIONS**. So, for example, the default names of the task sequence variables created for each application selected on this page will be *APPLICATIONS001, APPLICATIONS002, APPLICATIONS003,* and so forth.|No|Yes|Yes|  
 |**OSDApplicationList**<br /><br /> Specifies the list of application identifiers that should be initially selected. The variable contains a list of numeric values separated by semicolons (;).<br /><br /> The application identifiers are found in the **Id** attribute of the **Application** element in the UDI Wizard application configuration file (UDIWizard_Config.xml.app). There is a separate **Application** element for each application displayed in this wizard page.|Yes|No|No|  
 |**OSDArchitecture**<br /><br /> Specifies the processor architecture of the target computer. The **ApplicationPage** wizard page uses this variable to filter the available applications when the **VolumeArchitecture** memory variable has not been set. However, if the **VolumeArchitecture** memory variable has been set, it always takes precedence over this task sequence variable for filtering the available applications.<br /><br /> The value for this variable can be:<br /><br /> -                                      **x86**, which indicates a 32-bit processor architecture<br /><br /> -                                      **amd64**, which indicates a 64-bit processor architecture|Yes|No|No|  
@@ -16038,9 +14402,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 29. ApplicationPage Memory Variables  
 
-||||  
-|-|-|-|  
 |**Variable**|**Read**|**Write**|  
+|-|-|-|  
 |**VolumeArchitecture**<br /><br /> Specifies the processor architecture of the target operating system image to be deployed (whether the image contains a 32-bit or 64-bit operating system). When this page is displayed, it checks to see if this variable has changed. If the variable has changed since the last time the wizard page was displayed, the wizard page filters the programs available for selection based on architecture of the target operating system. For example, if a 32-bit operating system is to be deployed, then the wizard page removes (filters) any 64-bit applications from the list of available applications on the wizard page.|Yes|No|  
 |**WizardConfigFilename**<br /><br /> Specifies the name of the UDI Wizard configuration file currently in use. If the value of the **Link.Uri** setter property is empty, the **ApplicationPage** wizard page reads the value of this variable to find the corresponding .app file, which contains the list of applications. For example, if the UDI Wizard configuration file is named *config.xml,* then the wizard page will look for the corresponding .app file (config.xml.app). This variable is set when the UDI Wizard starts.<br /><br /> The **Link.Uri** setter property is set on the **Software Settings** dialog box, which can be opened using the **Edit Software Settings** button in the **Page Behavior** group on the Ribbon in the UDI Wizard Designer.|Yes|No|  
 
@@ -16052,9 +14415,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 30. BitLockerPage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**BDEInstallSuppress**<br /><br /> Specifies whether BitLocker installation should be suppressed. If the variable is set to:<br /><br /> - **YES**, then the **Enable BitLocker** check box is selected and the installation is performed<br /><br /> - **NO**, then the **Enable BitLocker** check box is cleared and the installation is not performed|Yes|Yes|Yes|  
 |**BDEKeyLocation**<br /><br /> Specifies the fully qualified path to the location where the BitLocker encryption keys are stored, which can be a local or UNC path. This variable is set to the value of the **KeyLocation** setter value in the UDI Wizard configuration file for the **BitLockerPage**. This variable is only considered valid when the **OSDBitLockerMode** is set to **TPMKEY** or **KEY**.|No|Yes|No|  
 |**BDEPin**<br /><br /> Specifies the BitLocker PIN value if the **Enable BitLocker using TPM and Pin** option is selected.|Yes|Yes|Yes|  
@@ -16068,9 +14430,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 31. BitLockerPage Configuration Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**KeyLocation**<br /><br /> Specifies the fully qualified path to the location where the BitLocker encryption keys are stored, which can be a local or UNC path. This configuration value is used to set the value of the **BDEKeyLocation** task sequence variable for the **BitLockerPage**. This variable is only considered valid when **OSDBitLockerMode** is set to **TPMKEY** or **KEY**.|Yes|No|Yes|  
 
 #####  <a name="ComputerPage"></a> ComputerPage  
@@ -16089,9 +14450,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 32. ComputerPage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**OSDComputerName**<br /><br /> Specifies the name of the target computer. The value of this variable is set in the **Computer name** box.|Yes|Yes|Yes|  
 |**OSDDomainName**<br /><br /> Specifies the name of the domain to which the target computer is to be joined. The value of this variable is set in the **Domain** box.|Yes|Yes|Yes|  
 |**OSDDomainOUName**<br /><br /> Specifies the name of the OU within the domain to which the target computer object is to be placed. The value of this variable is set in the **Organizational Unit** box.|Yes|Yes|Yes|  
@@ -16105,9 +14465,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 33. ComputerPage Configuration Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**ADComputerObjectCheck**<br /><br /> Specifies whether the **ComputerPage** wizard page will validate that the credentials provided have the appropriate permissions to modify a computer object in AD DS prior to continuing to the next wizard page.<br /><br /> Note:<br /><br /> This configuration setting is ignored if **ADCredentialCheck** is set to **FALSE**.<br /><br /> If the value is set to:<br /><br /> \- **TRUE**, then the **Active Directory Computer Object Check** check box is selected in the wizard page editor in the **Domain Join Credentials** section in the UDI Wizard Designer, and permissions to modify a computer object for the credentials are validated<br /><br /> \- **FALSE**, then the **Active Directory Computer Object Check** check box is cleared in the wizard page editor in the **Domain Join Credentials** section in the UDI Wizard Designer, and permissions to modify a computer object for the credentials are not validated|Yes|No|Yes|  
 |**ADCredentialCheck**<br /><br /> Specifies whether the **ComputerPage** wizard page will validate the credentials provided for joining a domain prior to continuing to the next wizard page. If the value is set to:<br /><br /> \-                                      **TRUE**, then the **Active Directory Credential Check** check box is selected in the wizard page editor in the **Domain Join Credentials** section in the UDI Wizard Designer, and credentials are validated<br /><br /> If this configuration setting is set to **TRUE**, then the credentials are validated even if the credential fields are disabled \(locked\).<br /><br /> \- **FALSE**, then the **Active Directory Credential Check** check box is cleared in the wizard page editor in the **Domain Join Credentials** section in the UDI Wizard Designer, and credentials are not validated<br /><br /> If this configuration setting is set to **FALSE**, then the **ADComputerObjectCheck** configuration setting is ignored and the validation that the provided credentials can modify a computer object in AD DS is not performed.|Yes|No|Yes|  
 |**UseExistingComputerName**<br /><br /> Specifies whether the **ComputerPage** wizard page will use the existing computer name on the target computer as the default for the computer name.<br /><br /> Note:<br /><br /> This check box is only relevant for the Refresh Computer deployment scenario.<br /><br /> If the value is set to:<br /><br /> \- **TRUE**, then the **Use Existing Computer Name** check box is selected in the wizard page editor in the **Computer Name** section in the UDI Wizard Designer, and the existing computer name will be used as the default computer name for the target computer after the new operating system is deployed<br /><br /> \-                                      **FALSE**, then the **Use Existing Computer Name** check box is cleared in the wizard page editor in the **Computer Name** section in the UDI Wizard Designer, and the existing computer name will not be used as the default computer name for the target computer after the new operating system is deployed|Yes|No|Yes|  
@@ -16131,9 +14490,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 34. LanguagePage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**InputLocale**<br /><br /> Specifies the input locale of the target operating system. You set the value of this variable in the **Time and currency format** box. If not specified, the input locale configured in the image is used.|Yes|Yes|Yes|  
 |**KeyboardLocale**<br /><br /> Specifies the keyboard locale of the target operating system. Set the value of this variable in the **Keyboard layout** box. If not specified, the keyboard locale configured in the image is used.|Yes|Yes|Yes|  
 |**OSDTimeZone**<br /><br /> Specifies the time zone where the target computer will be physically located. Set the value of this variable in the **Time zone** box. If not specified, the time zone configured in the image is used.|Yes|Yes|Yes|  
@@ -16164,9 +14522,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 35. UDAPage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**SMSTSAssignUsersMode**<br /><br /> Specifies the mode for configuring user affinity in Configuration Manager. Use this variable to configure the behavior of creating affinity between the target computer and user accounts in the **SMSTSUdaUsers** task sequence variable. To set this variable, select the **Use User Device Affinity** check box.<br /><br /> If the variable is set to:<br /><br /> \-                                      **Auto**, then the affinity processing is automatically approved by Configuration Manager<br /><br /> \- **Pending**, then the affinity processing rules will require approval by a Configuration Manager administrator \(This is the value used when the **Use User Device Affinity** check box is selected.\)<br /><br /> \-                                      **Disabled**, then no affinity processing will occur|No|Yes|No|  
 |**SMSTSUdaUsers**<br /><br /> Specifies the users to be associated with the target computer. The **User Device Affinity Account** sets this variable. This variable can have one or many users specified and is in the format `Domain\User1, Domain\User2`.|Yes|Yes|Yes|  
 
@@ -16194,9 +14551,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 36. Behavior of Options for the NEWCOMPUTER Stage  
 
-||||||  
-|-|-|-|-|-|  
 |**Format**|**NoData**|**Local**|**USB**|**Network**|  
+|-|-|-|-|-|  
 |Yes|Enabled|Disabled|Enabled|Enabled|  
 |No|Disabled|Selected|Disabled|Disabled|  
 
@@ -16207,9 +14563,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 37. Behavior of Options for the NewComputer.Prestaged Stage  
 
-||||||  
-|-|-|-|-|-|  
 |**Format**|**NoData**|**Local**|**USB**|**Network**|  
+|-|-|-|-|-|  
 |N\/A|Enabled|Disabled|Enabled|Enabled|  
 
 ######  <a name="REFRESHStageBehavior"></a> REFRESH Stage Behavior  
@@ -16223,9 +14578,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 38. Behavior of Options for the REFRESH Stage  
 
-||||||  
-|-|-|-|-|-|  
 |**Format**|**NoData**|**Local**|**USB**|**Network**|  
+|-|-|-|-|-|  
 |Yes|Selected|Disabled|Disabled|Disabled|  
 |No|Disabled|Selected|Disabled|Disabled|  
 
@@ -16236,9 +14590,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 39. Behavior of Options for the REPLACE.WinPE Stage  
 
-||||||  
-|-|-|-|-|-|  
 |**Format**|**NoData**|**Local**|**USB**|**Network**|  
+|-|-|-|-|-|  
 |N\/A|Disabled|Disabled|Enabled|Enabled|  
 
 ###### Task Sequence Variables  
@@ -16246,9 +14599,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 40. UserStatePage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**\_SMSTsInWinPE**<br /><br /> Specifies whether the UDI Wizard is running in Windows PE. If the variable is set to:<br /><br /> \- **TRUE**, then the UDI Wizard is running in Windows PE<br /><br /> \-                                      **FALSE**, then the UDI Wizard is not running in Windows PE, but rather in a full Windows operating system|Yes|No|No|  
 |**OSDDataSourceDirectory**<br /><br /> Specifies the directory in which the user state migration data is stored.|No|Yes|No|  
 |**OSDDataSourceDrive**<br /><br /> Specifies the USB drive used for capturing and restoring user state migration data, which you select from the **USB Target Drive** box. If the variable is set prior to showing the wizard page, the value of the variable is used as the default value.|Yes|Yes|No|  
@@ -16265,9 +14617,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 41. UserStatePage Memory Variables  
 
-||||  
-|-|-|-|  
 |**Variable**|**Read**|**Write**|  
+|-|-|-|  
 |**DriveLetter**<br /><br /> Specifies the drive letter for the USB drive selected in the **USB Target Drive** box on the wizard page. The value of this variable will be the drive letter, including the colon (:) suffix, such as *M:.*|No|Yes|  
 |**TargetDrive**<br /><br /> Specifies the caption displayed in the **USB Target Drive** box on the wizard page for the USB drive selected on the target computer. The value of this variable will be similar to the following example:<br /><br /> `M: VendorA Ultra TD v1.0 USB Device (74.5 GB)`|No|Yes|  
 |**UserStateMode**<br /><br /> Specifies the option selected with the options on the wizard page and is set to the same value as the **OSDUserStateMode** variable. Valid values for this variable include:<br /><br /> -                                      **NoData**, which indicates that the **No Data to Restore** option was selected<br /><br /> -                                      **Local**, which indicates that the **Local** option was selected<br /><br /> -                                      **USB**, which indicates that the **USB Target Drive** option was selected<br /><br /> - **Network**, which indicates that the **Network** option was selected|No|Yes|  
@@ -16277,9 +14628,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 42. UserStatePage Configuration Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**DataSourceText**<br /><br /> Specifies an informational message that instructs the user performing the user state capture or restore about how to use the wizard page. You set the value of this variable in the **Instruction Text** box in the **Message** section on the wizard paged editor in the UDI Wizard Designer.|Yes|No|Yes|  
 |**Format**<br /><br /> Specifies whether the USB drive selected for capturing user state on the target computer should be partitioned and formatted prior to capturing user state migration data. Set the value of this variable by selecting the **Format the USB drive before capture** check box in the **USB Combo Box** section on the wizard paged editor in the UDI Wizard Designer.<br /><br /> If the variable is set to:<br /><br /> - **TRUE**, then the drive is formatted prior to capturing user state migration data<br /><br /> -                                      **FALSE**, then the drive is not formatted prior to capturing user state migration data|Yes|No|Yes|  
 |**FormatPrompt**<br /><br /> Specifies whether the user must confirm that the USB drive used for capturing user state migration data is to be formatted prior to performing the capture. Set the value of this variable by selecting the **Prompt the user before formatting the target drive** check box in the **USB Combo Box** section on the wizard paged editor in the UDI Wizard Designer.<br /><br /> Note:<br /><br /> This variable is only valid if the **OSDUserStateMode** task sequence variable is set to **USB**.|Yes|No|Yes|  
@@ -16295,9 +14645,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 43. VolumePage Task Sequence Variables  
 
-|||||  
-|-|-|-|-|  
 |**Variable**|**Read**|**Write**|**Config**|  
+|-|-|-|-|  
 |**OSDDiskPart**<br /><br /> Specifies whether the drive selected for deploying the target operating system on the target computer should be partitioned and formatted prior to capturing user state migration data. The value of this variable is set by the one of the following check boxes on the wizard page:<br /><br /> -                                      **Clean the selected volume.** This check box appears when the UDI Wizard is running in a full Windows operating system. You can configure the text message using the **FormatFullOS** setter property for the wizard page in the UDI Wizard configuration file.<br /><br /> -                                      **Partition and format disk 0.** This check box appears when the UDI Wizard is running in Windows PE. You can configure the text message using the **FormatWinPE** setter property for the wizard page in the UDI Wizard configuration file.<br /><br /> The code logic behind the [UserStatePage](#UserStatePage) wizard page uses this variable to determine which options are selected and enabled by default.<br /><br /> If the variable is set to:<br /><br /> - **TRUE**, then the drive is partitioned and formatted prior to deploying the target operating system<br /><br /> -                                      **FALSE**, then the drive is not partitioned and formatted prior to deploying the target operating system|Yes|Yes|Yes|  
 |**OSDImageIndex**<br /><br /> Specifies a numeric index of the operating system image in the .wim file, which is selected in the **Image Selection** combo box. You configure the list of possible operating system images in the **Image Selection** box in the **Image Combo Box Values** list in the **Image Combo Box** section on the **VolumePage** wizard page editor. The image index is configured as a part of each image in the **Image Combo Box Values** list.|Yes|Yes|Yes|  
 |**OSDImageName**<br /><br /> Specifies the name of the operating system image in the .wim file, which is selected in the **Image Selection** box. The list of possible operating system images in the **Image Selection** combo box is configured in the **Image Combo Box Values** list in the **Image Combo Box** section on the **VolumePage** wizard page editor. The image name is configured as a part of each image in the **Image Combo Box Values** list.|No|Yes|No|  
@@ -16309,9 +14658,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 44. VolumePage Memory Variables  
 
-||||  
-|-|-|-|  
 |**Variable**|**Read**|**Write**|  
+|-|-|-|  
 |**VolumeArchitecture**<br /><br /> Specifies the processor architecture of the operating system to be deployed, which is selected in the **Image Selection** box. The **VolumeArchitecture** wizard page consumes this variable to filter the architecture of applications displayed on that page. For example, if a 32-bit operating system is to be deployed, then the **VolumeArchitecture** wizard page removes (filters) any 64-bit applications from the list of available applications.<br /><br /> If the variable is set to:<br /><br /> -                                      **x86**, then a 32-bit operating system was selected<br /><br /> - **amd64**, then 64-bit operating system was selected|No|Yes|  
 
 #####  <a name="WelcomePage"></a> WelcomePage  
@@ -16332,9 +14680,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 45. Types of Controls in the UDI Build Your Own Page Toolbox  
 
-|||  
-|-|-|  
 |**Control type**|**Description**|  
+|-|-|  
 |[Checkbox control](#CheckboxControl)|This control allows you select or clear a configuration option and behaves as a traditional UI check box.|  
 |[Combobox control](#ComboboxControl)|This control allows you to select an item from a list of items and behaves as a traditional UI drop-down list.|  
 |[Line control](#LineControl)|This control allows you to add a horizontal line to divide one portion of the custom wizard page from another.|  
@@ -16359,9 +14706,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 46. Checkbox Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Label**|Use this property to configure the descriptive text associated with the check box.|  
@@ -16373,9 +14719,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 47. Checkbox Control Settings Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**Default value**|Use this property to configure the default value for the control. For a check box, the default value is **False**.|  
 |**Task sequence variable name**|Use this property to configure the task sequence variable where the information collected from the user is stored. If the task sequence variable:<br /><br /> - Does not already exist, the task sequence variable is created and set to the value the user provides<br /><br /> - Already exists, the existing value of the task sequence variable is overwritten with the value the user provides|  
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|  
@@ -16389,9 +14734,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 48. Combobox Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Width**|Use this property to configure the width of the control.<br /><br /> **Note** If the text entered in the control is longer than the width of the control, the text is not displayed.|  
@@ -16403,9 +14747,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 49. Combobox Control Settings Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**Task sequence variable name**|Use this property to configure the task sequence variable where the information collected from the user is stored. If the task sequence variable:<br /><br /> - Does not already exist, the task sequence variable is created and set to the value the user provides<br /><br /> - Already exists, the existing value of the task sequence variable is overwritten with the value the user provides|  
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|  
 |**Unlocked**|Use this property to configure whether the user is able to interact with the control. By default, the control is enabled. This button displays the following status:<br /><br /> -                                  **Unlocked.** The control is enabled, and users can enter information using it.<br /><br /> - **Locked.** The control is disabled, and users are unable to enter information using it.<br /><br /> **Note** If you disable (lock) a control, you must provide the information the control collected by configuring MDT properties in CustomSettings.ini or in the MDT DB. Otherwise, the UDI Wizard will not collect the necessary information, and the UDI deployment will fail.|  
@@ -16418,9 +14761,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 50. Line Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Width**|Use this property to configure the width of the control.|  
@@ -16437,9 +14779,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 51. Label Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Label**|Use this property to configure the descriptive text associated with this control.|  
@@ -16459,9 +14800,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 52. Radio Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Label**|Use this property to configure the descriptive text associated with the radio button.|  
@@ -16475,9 +14815,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 53. Radio Control Settings Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**Default value**|Use this property to configure the default value for the control. By default, the value is set to the control ID.|  
 |**Task sequence variable name**|Use this property to configure the task sequence variable where the information collected from the user is stored. If the task sequence variable:<br /><br /> - Does not already exist, the task sequence variable is created and set to the value the user provides<br /><br /> - Already exists, the existing value of the task sequence variable is overwritten with the value the user provides|  
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|  
@@ -16491,9 +14830,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 54. Bitmap Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Width**|Use this property to configure the width of the control.<br /><br /> **Note** If the graphic selected in the **Source** property is longer than the width of the control, the graphic is clipped.|  
@@ -16511,9 +14849,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 55. Textbox Control Layout Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**X**|Use this property to configure the horizontal position of the control.|  
 |**Y**|Use this property to configure the vertical position of the control.|  
 |**Width**|Use this property to configure the width of the control.<br /><br /> **Note** If the text entered in the control is longer than the width of the control, the text is clipped and not displayed.|  
@@ -16524,9 +14861,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 56. Textbox Control Settings Properties  
 
-|||  
-|-|-|  
 |**Property**|**Description**|  
+|-|-|  
 |**Default value**|Use this property to configure the default value for the control.|  
 |**Task sequence variable name**|Use this property to configure the task sequence variable where the information collected from the user is stored. If the task sequence variable:<br /><br /> - Does not already exist, the task sequence variable is created and set to the value the user provides<br /><br /> - Already exists, the existing value of the task sequence variable is overwritten with the value the user provides|  
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|  
@@ -16547,108 +14883,92 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ####  <a name="OSDAddAdmin"></a> OSDAddAdmin  
  This task sequence variable specifies a list of domain-based accounts or local accounts to be added to the Administrators local built-in group on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain\account_name1; computer\account_name2*|The format of the accounts to be made members of the Administrators group on the target computer in the format of *domain\account* and separated by semicolons, where *domain* can be the name of an Active Directory domain or the target computer name.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDAddAdmin=domain\user01;Win7-01\LocalUser01`|  
 
 ####  <a name="OSDApplicationList"></a> OSDApplicationList  
  This task sequence variable specifies which applications should be selected by default on the **Install Software** page of the Operating System Deployment (OSD) Setup Wizard.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*app_id1;app_id2*|A semicolon-delimited list of application to be selected by default on the **Install Software** page of the Operating System Deployment (OSD) Setup Wizard; each application is represented by an application ID and separated by a semicolon. The application ID is derived from the **Id** attribute of each application in the UDIWizard_Config.xml file. In the following excerpt from a UDIWizard_Config.xml file, the 2007 Microsoft Office system with SP2 application has an **Id** attribute of **1**:<br /><br /> `<Application DisplayName="Office 2007 SP2" State="Disabled" Id="1">`|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDApplicationList=2;3`|  
 
 ####  <a name="OSDArchitecture"></a> OSDArchitecture  
  This task sequence variable specifies the processor architecture of the target operating system to be deployed.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |x86|The target operating system is a 32-bit operating system.|  
 |amd64|The target operating system is a 64-bit operating system.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDArchitecture=amd64`|  
 
 ####  <a name="OSDBitlockerStatus"></a> OSDBitlockerStatus  
  This task sequence variable specifies if BitLocker is enabled on the target computer by the BitLocker preflight check.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**PROTECTED**|The target computer has BitLocker enabled.|  
 |Does not exist|If the target computer does not have BitLocker enabled, then the task sequence variable does not exist.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDDiskPart"></a> OSDDiskPart  
  This task sequence variable specifies whether the target disk partition should be formatted.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The target disk partition will be formatted.|  
 |**FALSE**|The target disk partition will not be formatted.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDDiskPart=TRUE`|  
 
 ####  <a name="OSDDomainName"></a> OSDDomainName  
  This task sequence variable specifies the name of the domain to which the target computer will be joined if the computer is configured to be a domain member.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*domain_name*|The name of the domain to which the target computer will be joined. If you have configured the **Computer** wizard page in the Operating System Deployment (OSD) Setup Wizard to be **Silent**, the value in this task sequence variable must match the values specified in the UDI Wizard Designer. Otherwise, the wizard page will be displayed.<br /><br /> Note:<br /><br /> This task sequence variable is only necessary when you are creating a new computer account in the OU. If the computer account already exists, this variable is not needed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDDomainName=domain01`|  
 
 ####  <a name="OSDDomainOUName"></a> OSDDomainOUName  
  This task sequence variable specifies the name of the OU in the domain to which the target computer account will be created when the computer joins a domain.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*ou_name*|The name of the OU in the domain in which the computer account will be created<br /><br /> Note:<br /><br /> This task sequence variable is only necessary when you are creating a new computer account in the OU. If the computer account already exists, this variable is not needed.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDDomainOUName=NewDeployOU`|  
 
 ####  <a name="OSDImageIndex2"></a> OSDImageIndex  
  This task sequence variable specifies the index number of the target operating system in a WIM file.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*index_number*|The index number of the target, which is starts with an index number of 1 for the first operating system in the WIM file|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDImageIndex=1`|  
 
 ####  <a name="OSDImageName"></a> OSDImageName  
@@ -16657,120 +14977,102 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 > [!NOTE]
 >  **Note** This tasks sequence variable is set by the [VolumePage](#VolumePage) wizard and should not be configured in the CustomSettings.ini file or in the MDT DB. However, this tasks sequence variable can be used to set conditions for task sequence steps, as described in the section, "Configure UDI Task Sequences to Deploy Different Operating Systems", in the MDT document *Using the Microsoft Deployment Toolkit*.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*image_name*|The name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#VolumePage) wizard page|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDJoinAccount"></a> OSDJoinAccount  
  This task sequence variable specifies the domain-based account used to join the target computer to the domain specified in the **OSDDomainName** task sequence variable. This task sequence variable is necessary if the target computer will be joined to a domain.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*account_name*|The name of the account used to join the target computer to the domain in the format of *domain\account*|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDJoinAccount=domain\admin01`|  
 
 ####  <a name="OSDJoinPassword"></a> OSDJoinPassword  
  This task sequence variable specifies the password for the domain-based account used to join the target computer to the domain specified in the **OSDJoinAccount** task sequence variable. This task sequence variable is necessary if the target computer will be joined to a domain.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*password*|The password of the account used to join the domain|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDJoinPassword=P@ssw0rd10`|  
 
 ####  <a name="OSDLocalAdminPassword"></a> OSDLocalAdminPassword  
  This task sequence variable specifies the password for the Administrator local built-in account on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*password*|The password of the Administrator local built-in account on the target computer|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDLocalAdminPassword=P@ssw0rd10`|  
 
 ####  <a name="OSDNetworkJoinType"></a> OSDNetworkJoinType  
  This task sequence variable specifies whether the target computer joins a domain or a workgroup.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**0**|The target computer will join a domain.<br /><br /> If you select this option and configure the corresponding Operating System Deployment (OSD) Setup Wizard page to be **Silent**, you must also provide values for the **OSDJoinAccount**, **OSDJoinPassword**, **OSDDomainName**, and **OSDDomainOUName** task sequence variables accordingly. In addition, you must select **Domain** in **Default Selection** in the Workspace pane on the **Computer Page** in the UDI Wizard Designer.|  
 |**1**|The target computer will join a workgroup.<br /><br /> If you select this option and configure the corresponding Operating System Deployment (OSD) Setup Wizard page to be **Silent**, you must also provide a value for the **OSDWorkgroupName** task sequence variable. In addition, you must select **Workgroup** in **Default Selection** in the Workspace pane on the **Computer Page** in the UDI Wizard Designer.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDNetworkJoinType=0`|  
 
 ####  <a name="OSDSetupWizCancelled"></a> OSDSetupWizCancelled  
  This task sequence variable specifies if the user cancelled the Operating System Deployment (OSD) Setup Wizard.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |**TRUE**|The user cancelled the Operating System Deployment (OSD) Setup Wizard.|  
 |Does not exist|If the wizard is not cancelled, then the task sequence variable does not exist.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |None|  
 
 ####  <a name="OSDTargetDrive"></a> OSDTargetDrive  
  This task sequence variable specifies the disk volume where the target operating system will be deployed.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*disk_volume*|The disk volume designation|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDTargetDrive=C:`|  
 
 ####  <a name="OSDWinPEWinDir"></a> OSDWinPEWinDir  
  This task sequence variable specifies the folder in which the Windows operating system is currently installed on the target computer.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*windows_directory*|The directory in which the Windows operating system is currently installed|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDWinPEWinDir=C:\Windows`|  
 
 ####  <a name="OSDWorkgroupName"></a> OSDWorkgroupName  
  This task sequence variable specifies the name of the workgroup to which the target computer will be joined if the computer is configured to be a workgroup member.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*workgroup_name*|The name of the workgroup to which the target computer will be joined|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`OSDWorkgroupName=WORKGROUP01`|  
 
 ###  <a name="OSDResultsexeconfigFileElementValues"></a> OSDResults.exe.config File Element Values  
@@ -16779,81 +15081,69 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ####  <a name="backgroundOpacity"></a> backgroundOpacity  
  This XML element configures the opaqueness of the background wallpaper image specified as a decimal-formatted percentage in the **backgroundWallpaper** element.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*opacity_percent*|The percentage of opaqueness of the **backgroundWallpaper** element specified in a decimal formatted percentage—for example, a value of **0.8** designates 80% opaqueness.|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`<add key="backgroundOpacity" value="0.8"/>`|  
 
 ####  <a name="backgroundWallpaper"></a> backgroundWallpaper  
  This XML element provides the file name and relative path to the image that is displayed as the background in the **OSD Results** dialog box. The path is relative to the Tools\OSDResults folder in the MDT Package.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*path\\\file_name*|Includes the relative path and file name of the background image; the path is delimited with double forward slashes (//).|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`<add key="backgroundWallpaper" value="images\\Wallpaper.jpg"/>`|  
 
 ####  <a name="completedText"></a> completedText  
  This XML element provides the text that is displayed in the **OSD Results** dialog box when the deployment is complete.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*text*|The text to be displayed in the **OSD Results** dialog box in quotation marks when deployment is complete|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`<add key="completedText" value="Deployment Complete"/>`|  
 
 ####  <a name="headerImagePath"></a> headerImagePath  
  This XML element provides the file name and relative path to the image that is displayed in the header of the **OSD Results** dialog box. The path is relative to the Tools\OSDResults folder in the MDT Package.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*path\\\file_name*|Includes the relative path and file name of the header image; the path is delimited with double backslashes (\\\\).|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`<add key="headerImagePath" value="images\\Windows7_h_rgb.png"/>`|  
 
 ####  <a name="timeoutMinutes"></a> timeoutMinutes  
  This XML element configures how many minutes the **OSD Result** dialog box is displayed before the dialog box is automatically closed and the computer is restarted.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*Non-numeric value*|The dialog box remains opens until **Start Windows** is clicked.|  
 |*Negative value*|The dialog box remains opens until **Start Windows** is clicked.|  
 |**0**|The dialog box remains opens until **Start Windows** is clicked.|  
 |Include decimal point|The dialog box remains opens until **Start Windows** is clicked.|  
 |**1 - 10080**|The number of minutes the dialog box will be displayed, with a minimum value of 1 minute and a maximum value of 10080 minutes (1 week).|  
 
-||  
-|-|  
 |**Example**|  
+|-|  
 |`<add key="timeoutMinutes" value="30"/>`|  
 
 ####  <a name="welcomeText"></a> welcomeText  
  This XML element provides the welcome text that is displayed in the **OSD Results** dialog box.  
 
-|||  
-|-|-|  
 |**Value**|**Description**|  
+|-|-|
 |*welcome_text*|The welcome text to be displayed in the **OSD Results** dialog box in quotation marks|  
 
-||  
-|-|  
 |**Example**|  
-|`<add key="welcomeText" value="Congratulations, Windows 7 has been sucessfully deployed to your computer."/>`|
+|-|  
+|`<add key="welcomeText" value="Congratulations, Windows 7 has been successfully deployed to your computer."/>`|
