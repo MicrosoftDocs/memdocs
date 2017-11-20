@@ -16,7 +16,7 @@ manager: angrobe
 
 ---
 
-
+<!-- Post migration ready  - Needs Review site VTP -->
 
 ## Introduction to Toolkit Reference  
  This reference is part of Microsoft® Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.  
@@ -45,7 +45,7 @@ manager: angrobe
  Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.  
 
 #### Common Properties
- Table 1 shows the se ttings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.  
+ Table 1 shows the settings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.  
 
 > [!NOTE]
 >  The task sequence step types listed here are those that are available in the Deployment Workbench. Additional task sequence step types might be available when configuring task sequences using Microsoft System Center 2012 R2 Configuration Manager.  
@@ -1466,7 +1466,7 @@ manager: angrobe
 |**Continue on error**|Not selected|  
 |**Conditional qualifier**|Not specified|  
 
-#### Windows Update \(Pre\-Application Installation  
+#### Windows Update \(Pre\-Application Installation)  
  This task sequence step installs updates to the target computer prior to the installation of applications. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.  
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIWindowsUpdate.wsf](#ZTIWindowsUpdate.wsf).  
@@ -3823,9 +3823,8 @@ cscript.exe LiteTouch.vbs /debug:true
 
 ##### Table 3. Windows Operating Systems and Corresponding GPO Pack Subfolder  
 
-|||  
-|-|-|  
 |**Operating system**|**GPO pack subfolder**|  
+|-|-|  
 |Windows 7 with SP1|Win7SP1-MDTGPOPack|  
 |Windows Server 2008 R2|WS2008R2SP1-MDTGPOPack|  
 
@@ -3930,8 +3929,9 @@ cscript.exe LiteTouch.vbs /debug:true
 |CustomSettings.ini|||||  
 |MDT DB|||ZTI|-|  
 
-|**Value**|**Description**|  
-|||  |None|The package ID used for the operating system to install during OEM deployments|  
+|**Value**|**Description**|
+|||  
+|None|The package ID used for the operating system to install during OEM deployments|  
 
 |**Example**|  
 |-|  
@@ -3949,7 +3949,8 @@ cscript.exe LiteTouch.vbs /debug:true
 |MDT DB|-||ZTI|-|  
 
 |**Value**|**Description**|  
-|||  |*input_locale1; input_locale2*|The locale for the keyboard attached to the target computer|  
+|||  
+|*input_locale1; input_locale2*|The locale for the keyboard attached to the target computer|  
 
 |**Example**|  
 |-|  
@@ -4266,14 +4267,12 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|-|
 |*keyboard_locale1; keyboard_locale2*|The locale of the keyboard attached to the target computer.<br /><br /> The value can be specified in the following formats:<br /><br /> - Text (en-us)<br /><br /> - Hexadecimal (0409:00000409)|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=en-us`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=0409:00000409;1809:00001809;041A:0000041A;083b:0001083b`|  
 
 ####  <a name="KeyboardLocalePE"></a> KeyboardLocalePE  
@@ -4292,14 +4291,12 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|-|
 |*keyboard_locale*|The locale of the keyboard attached to the target computer.<br /><br /> The value can be specified in the following formats:<br /><br /> - Text (en-us)<br /><br /> - Hexadecimal (0409:00000409)|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=Default  [Default] KeyboardLocalePE=en-us`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] KeyboardLocalePE=0409:00000409`|  
 
 ####  <a name="LanguagePacks"></a> LanguagePacks  
@@ -6378,14 +6375,12 @@ BackupDir=Client01
 |-|-|
 |*Role*|The roles to be assigned to an individual computer or a group of computers|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=RoleSettings, Default  [Default] SkipCapture=NO UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES ScanStateArgs=/v:15 /o /c LoadStateArgs=/v:7 /c  [RoleSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL_Share Table=RoleSettings Parameters=Role`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=RoleSettings, Default  [Default] SkipCapture=NO UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES Role1=Teller Role2=Woodgrove User  [RoleSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL_Share Table=RoleSettings Parameters=Role`|  
 
 ####  <a name="SafeModeAdminPassword"></a> SafeModeAdminPassword  
@@ -7605,14 +7600,12 @@ PackageGroup001=TopFolder\SecondFolder
 |-|-|
 |*user_locale*|The locale for the user on the target computer. The value is specified as a text value (en-us).|  
 
-||  
-|-|  
 |**Example 1**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=0409:00000409`|  
 
-||  
-|-|  
 |**Example 2**|  
+|-|  
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=en-us`|  
 
 ####  <a name="UserPassword"></a> UserPassword  
@@ -8165,7 +8158,7 @@ PackageGroup001=TopFolder\SecondFolder
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
- REF \_Ref300064295 \\h  \\\* MERGEFORMAT Table 4 lists the Windows operating systems that MDT supports and their corresponding Hyper\-V Integration Components support.  
+Table 4 lists the Windows operating systems that MDT supports and their corresponding Hyper\-V Integration Components support.  
 
 ### Table 4. Windows Operating Systems and Hyper-V Integration Components Support  
 
@@ -8478,9 +8471,8 @@ PackageGroup001=TopFolder\SecondFolder
 
 ### Table 6. Deployment Wizard Pages  
 
-||||  
-|-|-|-|  
 |**Skip this wizard page**|**Using this property**|**Configure these properties**|  
+|-|-|-|  
 |**Welcome**|SkipBDDWelcome||  
 |**Specify credentials for connecting to network shares**|Skipped by providing properties in next column|- UserID<br /><br /> - UserDomain<br /><br /> - UserPassword|  
 |**Task Sequence**|SkipTaskSequence|- TaskSequenceID|  
@@ -10042,9 +10034,8 @@ PackageGroup001=TopFolder\SecondFolder
 
  This script creates the task sequence variables listed in the following table for internal script use. Do not set these task sequence variables in CustomSettings.ini or in the MDT DB.  
 
-|||  
-|-|-|  
 |**Name**|**Description**|  
+|-|-|  
 |**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](#ExecuteRunbook) task sequence step|  
 |**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](#ExecuteRunbook) task sequence step|  
 |**RunbookID**|Identifier assigned to the runbook on the Orchestrator server|  
@@ -14258,9 +14249,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 22. Common Error and Exit Codes for the Shell Execute Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status and description**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the task finished successfully|  
 |Exit|**\***|**Error**, which indicates that the task failed|  
 
@@ -14271,9 +14261,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 23. Error and Exit Codes for the Wired Network Check Task  
 
-||||  
-|-|-|-|  
 |**Exit or error code**|**Value**|**Status and description**|  
+|-|-|-|  
 |Exit|**0**|**Success**, which indicates that the target computer is connected to a wired network|  
 |Exit|**\***|**Error**, which indicates that the target computer is not connected to a wired network|  
 
@@ -14296,9 +14285,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 24. Built-in UDI Validators  
 
-|||  
-|-|-|  
 |**Validator**|**Description**|  
+|-|-|  
 |[InvalidChars](#InvalidChars)|This validator identifies any invalid characters that have been entered from a list that you configure.|  
 |[NamedPattern](#NamedPattern)|This validator helps ensure that the text follows a predefined pattern.|  
 |[NonEmpty](#NonEmpty)|This validator is used to require text in a field.|  
@@ -14667,9 +14655,8 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 44. VolumePage Memory Variables  
 
-||||  
-|-|-|-|  
 |**Variable**|**Read**|**Write**|  
+|-|-|-|  
 |**VolumeArchitecture**<br /><br /> Specifies the processor architecture of the operating system to be deployed, which is selected in the **Image Selection** box. The **VolumeArchitecture** wizard page consumes this variable to filter the architecture of applications displayed on that page. For example, if a 32-bit operating system is to be deployed, then the **VolumeArchitecture** wizard page removes (filters) any 64-bit applications from the list of available applications.<br /><br /> If the variable is set to:<br /><br /> -                                      **x86**, then a 32-bit operating system was selected<br /><br /> - **amd64**, then 64-bit operating system was selected|No|Yes|  
 
 #####  <a name="WelcomePage"></a> WelcomePage  
@@ -15156,4 +15143,4 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 |**Example**|  
 |-|  
-|`<add key="welcomeText" value="Congratulations, Windows 7 has been sucessfully deployed to your computer."/>`|
+|`<add key="welcomeText" value="Congratulations, Windows 7 has been successfully deployed to your computer."/>`|
