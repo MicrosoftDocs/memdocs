@@ -16,7 +16,7 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready  - Needs Review site VTP -->
+<!-- Post migration ready  -->
 
 ## Introduction to Toolkit Reference  
  This reference is part of Microsoft® Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.  

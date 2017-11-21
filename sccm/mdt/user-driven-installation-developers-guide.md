@@ -16,6 +16,9 @@ manager: angrobe
 
 ---
 
+
+<!-- Post migration ready  -->
+
 ## Introduction  
  User Driven Installation (UDI) helps simplify the deployment of Windows® client operating systems, such as Windows 8.1, to computers using the operating system deployment (OSD) feature in Microsoft® System Center 2012 R2 Configuration Manager. UDI is part of the Microsoft Deployment Toolkit (MDT).  
 
@@ -43,12 +46,12 @@ manager: angrobe
 ### UDI Architecture  
  The high-level goal of UDI development is to create custom wizard pages that can be displayed in the UDI Wizard. By creating custom wizard pages, you can extend the existing features of UDI to meet the business and technical requirements of your organization. A custom wizard page collects information in addition to or in place of the wizard pages that UDI provides.  
 
- REF _Ref314558518 \h Figure 1 illustrates the relationship between the UDI Wizard Designer and the UDI Wizard.  
+ Figure 1 illustrates the relationship between the UDI Wizard Designer and the UDI Wizard.  
 
  ![UDIDevelopersGuide1](media/UDIDevelopersGuide1.jpg "UDIDevelopersGuide1")  
-Figure  SEQ Figure \\* ARABIC 1. Relationship between the UDI Wizard and UDI Wizard Designer  
+Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer  
 
- **Figure  SEQ Figure \\\* ARABIC 1. Relationship between the UDI Wizard and UDI Wizard Designer**  
+ **Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer**  
 
  At a conceptual level, UDI development includes the creation of:  
 
@@ -132,12 +135,12 @@ Figure  SEQ Figure \\* ARABIC 1. Relationship between the UDI Wizard and UDI Wiz
 
 6.  Rename the *local_folder*\Tools folder to *local_folder*\OSDSetupWizard(where *local_folder* is the folder you created earlier in the process).  
 
-     When completed, the folder structure beneath *local_folder* should look like the folder structure illustrated in  REF _Ref304041503 \h Figure 2 (where *local_folder* is the folder you created earlier in the process and is shown as *UDIDevelopment* in the figure).  
+     When completed, the folder structure beneath *local_folder* should look like the folder structure illustrated in Figure 2 (where *local_folder* is the folder you created earlier in the process and is shown as *UDIDevelopment* in the figure).  
 
      ![UDIDevelopersGuide2](media/UDIDevelopersGuide2.jpg "UDIDevelopersGuide2")  
-Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development  
+Figure 2. Folder structure for UDI development  
 
-     **Figure  SEQ Figure * ARABIC 2. Folder structure for UDI development**  
+     **Figure 2. Folder structure for UDI development**  
 
 ####  <a name="VerifyUDIDeploymentEnvironment"></a> Verify the UDI Development Environment  
  When the UDI development environment is configured, verify that the UDI development environment is configured correctly by ensuring that the sample projects build correctly in Visual Studio 2010.  
@@ -259,7 +262,7 @@ Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development
 
 11. On the **Debug** tab, click **Start external program**.  
 
-12. In **Start external program**, type ***installation_folder*\Bin\UDIDesigner.exe** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.  
+12. In **Start external program**, type ***installation_folder\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.  
 
     > [!TIP]
     >  You can click the ellipse (…) button to browse to the folder and select UDIDesigner.exe.  
@@ -308,13 +311,12 @@ Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development
 -   Custom UDI wizard page editor example as described in [Review the SampleEditor Visual Studio Solution](#ReviewSampleEditorVisualStudioSolution)  
 
 ###  <a name="ReviewContentsofSDKFolder"></a> Review the Contents of the SDK Folder  
- During configuration of the UDI development environment, you copied the SDK folder from the folder in which you installed MDT to another folder that you created.  REF _Ref301274297 \h Table 1 lists the folders immediately beneath the SDK folder and provides a brief description of each.  
+ During configuration of the UDI development environment, you copied the SDK folder from the folder in which you installed MDT to another folder that you created. Table 1 lists the folders immediately beneath the SDK folder and provides a brief description of each.  
 
 ### Table 1. Folders in the UDI SDK  
 
-|||  
-|-|-|  
 |**Folder**|**This folder contains**|  
+|-|-|  
 |Includes|The C++ header files necessary for creating custom wizard pages for the UDI Wizard|  
 |Libs|The C++ library files that will be linked to your custom page; there are 32-bit and 64-bit versions of the static link libraries. **Note:**  Itanium versions of the libraries (IA-64) are not available.|  
 |SampleEditor|A Visual Studio project for building a custom editor used to edit the SamplePage page in UDI Wizard Designer, which is written in C#|  
@@ -328,13 +330,12 @@ Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development
 -   Review the Visual Studio solution for the SamplePage example in the UDI SDK as described in [Review the SamplePage Example](#ReviewSamplePageExample).  
 
 ####  <a name="ReviewWizardPageLifeCycle"></a> Review the Wizard Page Life Cycle  
- A UDI wizard page has methods that correspond to each stage (or phase) of the life cycle of the page. As a part of creating your custom wizard page, you need to override these methods with your code.  REF _Ref312177559 \h Table 2 lists the methods that you will need to override and provides a brief description of each method, including when to use the method in the wizard page life cycle.  
+ A UDI wizard page has methods that correspond to each stage (or phase) of the life cycle of the page. As a part of creating your custom wizard page, you need to override these methods with your code. Table 2 lists the methods that you will need to override and provides a brief description of each method, including when to use the method in the wizard page life cycle.  
 
 ### Table 2. Methods in a Wizard Page Life Cycle  
 
-|||  
-|-|-|  
 |**Method**|**Description**|  
+|-|-|  
 |**OnWindowCreated**|This method is called once, after the page’s window has been created.<br /><br /> For this method, write code that initializes the page for the first time and only needs to be performed once. For example, use this method to initialize fields or to read configuration information from the **Setter** elements in the UDI Wizard configuration file.|  
 |**OnWindowShown**|This method is called each time the page is displayed (shown) in the UDI Wizard. It is called the first time the page is displayed and each time you navigate to the page by clicking **Next** or **Back** in the wizard.<br /><br /> For this method, write code that prepares the page to be displayed—for example, reading memory variables, task sequence variables, or environment variables, and then updating the page based on any changes to those variables.|  
 |**OnCommonControlEvent**|This method can be called anytime the wizard page is displayed and receives a WM_NOTIFY message from a child (typically, common controls).<br /><br /> For this method, write code that handles WM_NOTIFY based on the notification message. For example, you may want to respond to events from a common control, such as responding to click or double-click events for a **TreeView** control.|  
@@ -390,7 +391,7 @@ Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development
 
  The **RegisterFactories** function is used to register the factory class of your wizard page with the class factory registry for the UDI Wizard. *Class factories* are classes that can create an instance of another class. The **RegisterFactories** function creates a new instance of a factory class and passes that class to the class factory registry for the UDI Wizard, which makes that factory class available to the wizard. The UDI Wizard looks for a factory class registered with an ID that matches the **Type** attribute of the **Page** element for the custom wizard page.  
 
- In the example, the ID is defined as **ID_Location** in the PageClassIds.h file as **Microsoft.SamplePage.LocationPage**, which matches the **Type** attribute for the **Page** element in the Config.xml file. **ID_Location** is passed as a parameter in the **RegisterFactories**function implemented in the dllmain.ccp file.  
+ In the example, the ID is defined as **ID_Location** in the PageClassIds.h file as **Microsoft.SamplePage.LocationPage**, which matches the **Type** attribute for the **Page** element in the Config.xml file. **ID_Location** is passed as a parameter in the **RegisterFactories** function implemented in the dllmain.ccp file.  
 
  You can create a function using the Register_*name* function template to simplify the creation of a new factory instance and register the newly created instance. The **name** value provided using the Register function template must implement the **iClassFactory** interface. The [ClassFactoryImpl Class](#ClassFactoryImplClass) handles most of the details for implementing a class factory.  
 
@@ -614,7 +615,7 @@ Figure  SEQ Figure \\* ARABIC 2. Folder structure for UDI development
 
 5.  Write any code to perform the appropriate tasks while the user interacts with the wizard page.  
 
-6.  Write any code to perform the appropriate tasks when the user clicks **Next** in the UDI Wizard (overrides for the **OnNextClicked**method), including the following steps:  
+6.  Write any code to perform the appropriate tasks when the user clicks **Next** in the UDI Wizard (overrides for the **OnNextClicked** method), including the following steps:  
 
     1.  Update any memory variables, task sequence variables, environment variables, or XML file information.  
 
@@ -783,13 +784,12 @@ CreateInstance(Container(), ID_WmiRepository, &pWmi);
 #### Creatable Components  
  There is a set of components that you can register with the registry. The first set of components is always registered, because the main UDI Wizard executable file provides it. The other two sets of components are provided in “optional” DLLs. For these components to be available, the DLL must be listed in the **DLLs** section of the .config XML file. Your code does not need to know which executable contains a specific component.  
 
- The list of component IDs for components (the component name is the same as the ID but without the initial *ID_*) registered with the factory registry (defined in OSDSetupWizard) is shown in  REF _Ref314827955 \h Table 3.  
+ The list of component IDs for components (the component name is the same as the ID but without the initial *ID_*) registered with the factory registry (defined in OSDSetupWizard) is shown in Table 3.  
 
 ### Table 3. Component IDs  
 
-|||  
-|-|-|  
 |**ID**|**Description**|  
+|-|-|  
 |ID_ACPowerTask|(ITask, IWizardComponent) A preflight task that ensures that your computer is not running on battery alone|  
 |ID_AppDiscoveryTask|(ITask, IWizardComponent) A specialized task for discovering which software items you have installed on your computer|  
 |**ID_BackgroundTask**|(**IBackgroundTask**, **IWizardComponent**) Can be used to run a task on another thread|  
@@ -808,20 +808,18 @@ CreateInstance(Container(), ID_WmiRepository, &pWmi);
 |**ID_WmiRepository**|(**IWmiRepository**, **IWizardComponent**) Allows you to run Windows Management Instrumentation (WMI) queries|  
 |**ID_IXmlDocument**|(**IXmlDocument**) Provides a façade for reading and writing XML documents|  
 
- The defined OSDRefreshWizard.dll, shared pages, and other control components are shown in  REF _Ref314828246 \h Table 4 and  REF _Ref314828276 \h Table 5.  
+ The defined OSDRefreshWizard.dll, shared pages, and other control components are shown in Table 4 and Table 5.  
 
 ### Table 4. Directory Controls  
 
-|||  
-|-|-|  
 |**ID**|**Description**|  
+|-|-|  
 |**ID_Directory**|(**IDirectory**) A façade for obtaining directory information from the file system|  
 
 ### Table 5. Defined SharedPages.dll  
 
-|||  
-|-|-|  
 |**ID**|**Description**|  
+|-|-|  
 |**ID_ADHelper**|(**IADHelper**) Provides a façade for a limited set of features in Active Directory® Domain Services (AD DS)|  
 |**ID_CpuInfo**|(**ICpuInfo**) Determines whether your CPU is 32 or 64 bit|  
 |**ID_DomainJoinValidator**|(**IDomainJoinValidator**) Has some methods for checking whether a set of credentials is allowed to join a domain|  
@@ -829,13 +827,12 @@ CreateInstance(Container(), ID_WmiRepository, &pWmi);
 |**ID_WiredNetworkTask**|(**ITask**) A tasks that checks whether you are connected to the network with a hard-wired (instead of wireless) network adapter|  
 
 #### Control Components  
- You interact with the controls on your page through the **GetControlWrapper** template function, which provides access to one of the types of components listed in  REF _Ref314828490 \h Table 6.  
+ You interact with the controls on your page through the **GetControlWrapper** template function, which provides access to one of the types of components listed in Table 6.  
 
 ### Table 6. Components  
 
-|||  
-|-|-|  
 |**Dialog control types**|**Description**|  
+|-|-|  
 |**CONTROL_CHECK_BOX**|(**ICheckBox**) A façade for working with check box controls|  
 |**CONTROL_COMBO_BOX**|(**IComboBox**) A façade for combo box controls|  
 |**CONTROL_GENERIC**|(**IControl**) Allows you to work with most types of controls to control enable and visible state|  
@@ -886,13 +883,12 @@ pValidator->SetProperty(0, pPassword2);
 
  This validator compares the contents of a text control (one that supports **IStaticText**) to a regular expression and fails if the text does not match the regular expression.  
 
- Alternatively, you can use this validator with a predefined named pattern. To use a regular expression, the XML must contain a setter property called **Pattern**. If you want to use a named pattern instead, use a setter called **NamedPattern** set to one of the values in  REF _Ref314829013 \h Table 7.  
+ Alternatively, you can use this validator with a predefined named pattern. To use a regular expression, the XML must contain a setter property called **Pattern**. If you want to use a named pattern instead, use a setter called **NamedPattern** set to one of the values in Table 7.  
 
 ### Table 7. Named Pattern Setters  
 
-|||  
-|-|-|  
 |**Pattern**|**Description**|  
+|-|-|  
 |Username|Verifies that the text is either of the form domain\user or user@domain|  
 |ComputerName|The name must be between 1 and 15 characters long and cannot include a set of characters (such as : and ?)|  
 |Workgroup|The name must be between 1 and 15 characters long and cannot contain a set of characters (such as =, +, and ?)|  
@@ -917,16 +913,15 @@ Register<LocationPageFactory>(ID_LocationPage, factories);
  The **TSVariableBag** component allows you to read and write task sequence variables. It keeps the values in memory until the user clicks **Finish** (by default). You can access the **TSVariable** bag via the page’s **TSVariables** method (implemented by the **WizardPageImpl** base class). These components log all reads and writes of task sequence variables.  
 
 #### WmiRepository Component  
- This component provides a façade for working with WMI queries. You can call the **CreateInstance** helper function with **ID_WmiRepository** to obtain an instance of this component, which supports the **IWmiRepository**interface. This component returns result records via the **IWmiIterator**interface.  
+ This component provides a façade for working with WMI queries. You can call the **CreateInstance** helper function with **ID_WmiRepository** to obtain an instance of this component, which supports the **IWmiRepository** interface. This component returns result records via the **IWmiIterator** interface.  
 
 ###  <a name="WizardPageHelperClasses"></a> Wizard Page Helper Classes  
- You can create custom UDI wizard pages using built-in helper classes provided with the UDI SDK.  REF _Ref315192101 \h Table 8 lists the helper classes that you can use to create custom wizard pages.  
+ You can create custom UDI wizard pages using built-in helper classes provided with the UDI SDK. Table 8 lists the helper classes that you can use to create custom wizard pages.  
 
 ### Table 8. Helper Classes  
 
-|||  
-|-|-|  
 |**Helper class**|**Description**|  
+|-|-|  
 |[ClassFactoryImpl Class](#ClassFactoryImplClass)|This is a useful base class for creating a class factory that you can then register with the factory registry.|  
 |[Interface Template Class](#InterfaceTemplateClass)|Use this template class when you want to build a component that implements more than one interface.|  
 |[Path Helper Class](#PathHelperClass)|This class provides common file/directory operations.|  
@@ -1036,13 +1031,12 @@ if (pComp != nullptr)
 static inline int CompareIgnore(LPCWSTR first, LPCWSTR second)  
 ```  
 
- This method compares two strings while ignoring case (see  REF _Ref314829710 \h Table 9).  
+ This method compares two strings while ignoring case (see Table 9).  
 
 ### Table 9. StringUtil Helper Class  
 
-|||  
-|-|-|  
 |**Returns**|**Description**|  
+|-|-|  
 |**0**|Strings match, ignoring case|  
 |**<0**|First < second|  
 |**>0**|First > second|  
@@ -1129,29 +1123,27 @@ __interfaceIADHelper : IUnknown
 
 ```  
 
-##### HRESULT Init(ILogger *pLogger)  
+##### HRESULT Init(ILogger \*pLogger)  
  Initialize this component, passing it to the logger so that it can log information.  
 
 ##### HRESULTValidLogon(LPCTSTR userName, LPCTSTR password, LPCTSTR domain)  
- This method verifies whether a set of credentials is valid, as shown in  REF _Ref314835345 \h Table 10.  
+ This method verifies whether a set of credentials is valid, as shown in Table 10.  
 
 ### Table 10. HResultValidLogon  
 
-|||  
-|-|-|  
 |**HResult**|**Description**|  
+|-|-|  
 |S_OK|Credentials are valid|  
 |S_FALSE|Credentials are not valid|  
 |E_FAIL|Could not locate the domain controller; check logs for details|  
 
 ##### HRESULT HasAccess(LPCTSTR username, LPCTSTR password, LPCTSTR domain, LPCTSTR computerName, LPCTSTR accountDomain)  
- This method verifies whether a set of credentials has read/write access to the computer object in AD DS, as shown in  REF _Ref314835422 \h Table 11.  
+ This method verifies whether a set of credentials has read/write access to the computer object in AD DS, as shown in Table 11.  
 
 ### Table 11. HResult HasAccess  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |S_OK|The user has access|  
 |E_FAIL|The user does not have access. Check the log file for additional information.|  
 
@@ -1175,26 +1167,24 @@ __interface IBackgroundTask : IUnknown
 
  This interface is implemented by the **ID_BackgroundTask** ("Microsoft.Wizard.BackgroundTask") component, defined in the IBackgroundTask.h interface.  
 
-##### HRESULT Init(ITask *pTask, int id, IBackgroundCallback \*pCallback)  
- This interface initializes the component, as shown in  REF _Ref314835634 \h Table 12.  
+##### HRESULT Init(ITask \*pTask, int id, IBackgroundCallback \*pCallback)  
+ This interface initializes the component, as shown in Table 12.  
 
 ### Table 12. HRESULT Init  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pTask**|Pointer to the class that contains the code you want to run on another thread|  
 |**Id**|A number you can use in the callback’s **Finished** method to tell which task finished running; useful if you start several tasks with the same callback method|  
 |**pCallback**|A class that implements the **Finished** method, which is called whenever a task finishes running; the call to the **Finished** method will be on the background thread, not the UI thread|  
 
 ##### void Start(void)  
- This method starts the task on a background thread and returns the elements shown in  REF _Ref314835790 \h Table 13.  
+ This method starts the task on a background thread and returns the elements shown in Table 13.  
 
 ### Table 13. Return Background Thread  
 
-|||  
-|-|-|  
 |**Returns**|**Description**|  
+|-|-|  
 |**E_INVALIDARG**|The task is already running, so you cannot start it right now.|  
 |**E_FAIL**|There was a problem starting the thread.|  
 |**S_OK**|The thread was started.|  
@@ -1206,31 +1196,28 @@ __interface IBackgroundTask : IUnknown
  This method waits until either the thread stops running or the number of milliseconds has elapsed.  
 
 ##### HRESULT Terminate(DWORD exitCode)  
- This method kills the thread that is running (see  REF _Ref314836332 \h Table 14 and  REF _Ref314836410 \h Table 15). This process may take a short amount of time to finish after this method returns.  
+ This method kills the thread that is running (see Table 14 and Table 15). This process may take a short amount of time to finish after this method returns.  
 
 ### Table 14. HRESULT Terminate Exit Code  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**exitCode**|The exit code that will be sent to the Finished callback method, which will also be available from the **GetExitCode** method.|  
 
 ### Table 15. Termination Codes  
 
-|||  
-|-|-|  
 |**Returns**|**Description**|  
+|-|-|  
 |**E_FAIL**|The call to terminate failed.|  
 |**S_OK**|The request to terminate the thread succeeded.|  
 
-##### HRESULT GetExitCode(LPDWORD pCode, HRESULT *pHresult)  
- Use this method to get the results of running the task on the background thread (see  REF _Ref314836499 \h Table 16).  
+##### HRESULT GetExitCode(LPDWORD pCode, HRESULT \*pHresult)  
+ Use this method to get the results of running the task on the background thread (see Table 16).  
 
 ### Table 16. Result Codes  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pCode**|Pointer to a **DWORD** that will be set on return or **nullptr** if you do not need the return value. On exit, this parameter is set to **STILL_ACTIVE** if the thread is running, the code returned by the task’s **Execute** method, or the value passed to the **Terminate** method if you called that method.|  
 |**pHresult**|Pointer to an **HRESULT** that will be set on return or **nullptr** if you do not need the **HRESULT** value.|  
 
@@ -1270,7 +1257,7 @@ __interface IComboBox : IControl
 ##### Overview  
  This interface is implemented by the **CheckBoxWrapper** component. You retrieve an instance of this component using the **GetControlWrapper** helper function with the type **CONTROL_COMBO_BOX**.  
 
-##### HRESULT Bind([in] IBindableList *pList)  
+##### HRESULT Bind([in] IBindableList \*pList)  
  Use this method when you have a data source that implements the **IBindableList** interface. The list box initializes the contents with the captions from this list.  
 
 ##### HRESULT Select(int index)  
@@ -1376,14 +1363,13 @@ __interface IDomainJoinValidator : IUnknown
 ##### Overview  
  You obtain an instance of this interface using the **ID_DomainJoinValidator** value to the **CreateInstance** template function.  
 
-##### HRESULT Init(ILogger *pLogger, IWizardPageContainer \*pContainer, IStaticText \*pUsername, IStaticText \*pPassword, IStaticText \*pComputerName)  
- Initialize the instance, as shown in  REF _Ref314839221 \h Table 17.  
+##### HRESULT Init(ILogger \*pLogger, IWizardPageContainer \*pContainer, IStaticText \*pUsername, IStaticText \*pPassword, IStaticText \*pComputerName)  
+ Initialize the instance, as shown in Table 17.  
 
 ### Table 17. HRESULT Init - Instance Initialization  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pLogger**|The logger instance, which is available to your page via the page’s **Logger** method|  
 |**pContainer**|Passes the results from your page’s **Container** method|  
 |**pUsername**|The text box that contains the user name to be validated|  
@@ -1413,7 +1399,7 @@ __interface IDriveList : IUnknown
 }  
 ```  
 
-##### HRESULT Init(IWmiRepository *pWmi)  
+##### HRESULT Init(IWmiRepository \*pWmi)  
  Call this method before you call any other components. You will need to create a new **WmiRepository** before you call this method.  
 
 ##### HRESULT SetWhereClause(LPCTSTR whereClause)  
@@ -1423,20 +1409,19 @@ __interface IDriveList : IUnknown
 pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");  
 ```  
 
-##### HRESULT SetMinimumDriveSize(__int64 size)  
+##### HRESULT SetMinimumDriveSize(\__int64 size)  
  Set the minimize drive size, in bytes, for drives that will be returned from the query.  
 
 ##### HRESULT Update(void)  
  Execute the query. The drive list available after calling this method is sorted by drive letter.  
 
 ##### HRESULT AddProperty(ENUM_DISK_QUERY_SECTION section, LPCTSTR propName, LPCTSTR propNameReturned)  
- This method adds the names of additional properties that you want to make available in the query results. Call this method before calling **Update**.  REF _Ref314840085 \h Table 18 shows three of the useful properties.  
+ This method adds the names of additional properties that you want to make available in the query results. Call this method before calling **Update**. Table 18 shows three of the useful properties.  
 
 ### Table 18. HRESULT AddProperty: Useful Properties  
 
-||||  
-|-|-|-|  
 |**Section**|**Property**|**Description**|  
+|-|-|-|  
 |**DISKQUERY_LOGICALDISK**|**Size**|The size, in bytes, represented as a string|  
 |**DISKQUERY_DISKPARTITION**|**DiskIndex**|The disk number as an integer, starting with 0|  
 |**DISKQUERY_LOGICALDISK**|**VolumeName**|The volume label|  
@@ -1445,19 +1430,18 @@ pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");
  The number of records the query returns. Call **Update** before you call this method.  
 
 ##### HRESULT GetProperty(size_t index, LPCTSTR propName,  LPVARIANT value)  
- This method retrieves the value of a property from the query results, as shown in  REF _Ref314840193 \h Table 19.  
+ This method retrieves the value of a property from the query results, as shown in Table 19.  
 
 ### Table 19. HRESULT GetProperty  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Index**|Zero-based index to the result record|  
 |**propName**|Name of the property, such as “Size”|  
 |**Value**|On return, this parameter contains a variant value of the property|  
 
 ##### HRESULT GetCaption(size_t index,  LPBSTR pCaption)  
- This method retrieves the caption for a record, which is the same as the **Caption** property.  
+ This method retrieves the caption for a record witch is the same as the **Caption** property.  
 
 #### IImageList Interface  
 
@@ -1480,13 +1464,12 @@ __interface IImageList
  This method returns the handle for the image list in case you need to perform other operations on the image list.  
 
 ##### int AddImage(HInstance hInstance, int resourceId)  
- Add a new image to the image list from a resource, as shown in  REF _Ref314840324 \h Table 20.  
+ Add a new image to the image list from a resource, as shown in Table 20.  
 
 ### Table 20. HRESULT IImageList Interface  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**hInstance**|Instance handle of the module that contains the bitmap resource|  
 |**resourceId**|ID of the resource to load into the image list|  
 
@@ -1521,13 +1504,12 @@ __interface IListView : IControl
  Add a new column to the list view.  
 
 ##### HRESULT SetSubItem(int index, int column, [in] LPCTSTR text)  
- Set the text in a column other than the first column of the list box, as shown in  REF _Ref314914201 \h Table 21.  
+ Set the text in a column other than the first column of the list box, as shown in Table 21.  
 
 ### Table 21. HRESULT SetSubItem  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**index**|The index of the list item you want to modify|  
 |**column**|The index of the column you want to update; the first column is set with **AddItem**, columns two and following are set with this method|  
 |**text**|The string to show in the column|  
@@ -1749,13 +1731,12 @@ __interface ITreeView : IControl
  Set the currently selected item to the item that you provide. You can call **SetFirstVisible** after this to ensure that the newly selected item is visible.  
 
 ##### void CheckItem(HTREEITEM item, UINT checkState)  
- The method basically sets the image that will be shown for the check box in the tree view. These images are in a separate **ImageList** control that the tree view manages. By default, this image list has three images in it, shown in  REF _Ref314915069 \h Table 22.  
+ The method basically sets the image that will be shown for the check box in the tree view. These images are in a separate **ImageList** control that the tree view manages. By default, this image list has three images in it, shown in Table 22.  
 
 ### Table 22.void CheckItem Image List Default  
 
-|||  
-|-|-|  
 |**checkState**|**Description**|  
+|-|-|  
 |**0**|Blank|  
 |**1**|Cleared|  
 |**2**|Selected|  
@@ -1790,7 +1771,7 @@ __interface ITreeView : IControl
 ##### INT_PTR CommonControlEvent(WORD controlId, void* pInfo, BOOL \*pCancel)  
  This method is for internal use only.  
 
-##### HRESULT SetEventHandler(ITreeViewEvent *pEventHandler)  
+##### HRESULT SetEventHandler(ITreeViewEvent \*pEventHandler)  
  Call this method if you want to receive notification when the selected item changes or the user changes the check state of a tree view item. You must implement the **ITreeViewEvent** in your component to receive these callbacks.  
 
 ##### void SetSelectedBackColor(COLORREF color)  
@@ -1810,39 +1791,36 @@ __interface IWmiIterator : IUnknown
  You typically use this interface, along with **IWmiRepository**, when working with WMI calls. The **IWmiIteration** interface allows you to iterate through the values that a query returns.  
 
 ##### HRESULT Next(void)  
- Move to the next item in the query results, as shown in  REF _Ref314915295 \h Table 23.  
+ Move to the next item in the query results, as shown in Table 23.  
 
 ### Table 23. HRESULT Next(void) Query Returns  
 
-|||  
-|-|-|  
 |**HRRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Moved to the next result; you can use **GetProperty** to retrieve properties of that result.|  
 |**S_FALSE**|There are no more items in the list.|  
 |**E_NOT_SET**|There are no query results|  
 
 ##### HRESULT GetProperty(LPCTSTR propertyName, [out] LPVARIANT pValue)  
- This method retrieves the value of a property from the current result record, as shown in  REF _Ref314915377 \h Table 24 and  REF _Ref314915438 \h Table 25.  
+ This method retrieves the value of a property from the current result record, as shown in Table 24 and Table 25.  
 
 ### Table 24. HRESULT GetProperty  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**propertyName**|Name of the property you want to retrieve|  
 |**pValue**|Points to a VARIANT structure that on return contains the property value|  
 
 ### Table 25. HRESULT GetProperty Result  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Property value was retrieved.|  
 |**WBEM_E_NOT_FOUND**|There is no property with the name.|  
 |**E_NOT_VALID_STATE**|There is no current record.|  
 
 > [!NOTE]
->  The **GetProperty** method can return other WMI error codes other than those listed in  REF _Ref314915438 \h Table 25. The values listed are the common results that are returned.  
+>  The **GetProperty** method can return other WMI error codes other than those listed in Table 25. The values listed are the common results that are returned.  
 
 #### IWmiRepository Interface  
 
@@ -1861,21 +1839,19 @@ __interface IWmiRepository : IUnknown
  This method sets the WMI namespace that will be used for the query. Call this method before you call **ExecQuery**. If you do not call this method, the namespace will be root\cimv2. This method always returns **S_OK**.  
 
 ##### HRESULT ExecQuery(LPCWSTR query, [out] IWmiIterator **ppIterator)  
- Execute a query against the WMI namespace set with a call to **SetNamespace**, as shown in  REF _Ref314915598 \h  \\* MERGEFORMAT Table 26 and  REF _Ref318371194 \h Table 27.  
+ Execute a query against the WMI namespace set with a call to **SetNamespace**, as shown in Table 26 and Table 27.  
 
 ### Table 26. HRESULT ExecQuery  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Query**|The string for the WMI query you want to execute|  
 |**ppIterator**|Pass a pointer to an interface pointer, which on return will be filled in with an interface, giving you access to the query results|  
 
 ### Table 27. HRESULT Query Result  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Query succeeded|  
 |**Other**|If the query did not succeed, returns a WMI **HRESULT**|  
 
@@ -1918,13 +1894,12 @@ __interface IFormController : IUnknown
  Each page in the UDI Wizard has its own form controller that implements this interface. You use this controller to connect the field data in the .config XML file to the controls on your page. The form controller then handles many of the details for you.  
 
 #####  <a name="SettingUptheForm"></a> Setting up the Form  
- Generally, set up the form controller in your page’s **OnWindowCreated** method. Doing so usually involves calling the methods shown in  REF _Ref314915816 \h Table 28.  
+ Generally, set up the form controller in your page’s **OnWindowCreated** method. Doing so usually involves calling the methods shown in Table 28.  
 
 ### Table 28. OnWindowCreated Method  
 
-|||  
-|-|-|  
 |**Method**|**Description**|  
+|-|-|  
 |**Init**|Initializes the form controller|  
 |**AddField**|Provides a connection between a field in the .config XML file that is a string name and a control in your page’s dialog box that is an ID|  
 |**AddRadioGroup**|Used to connect a radio button to both a group and a control in your dialog box|  
@@ -1942,13 +1917,12 @@ Form()->ControlEvent(eventId, controlId);
  This call passes events on to the form controller so it can process form-related events.  
 
 ##### Save Form Data  
- In the **OnNextClicked** method, call the form methods shown in  REF _Ref314915953 \h Table 29.  
+ In the **OnNextClicked** method, call the form methods shown in Table 29.  
 
 ### Table 29. OnNextClicked Method  
 
-|||  
-|-|-|  
 |**Method**|**Description**|  
+|-|-|  
 |**InitSection**|Provides the name of the section that will be shown on the **Summary** page for this page|  
 |**SaveFields**|Save field values to task sequence variables and to the **Summary** page|  
 
@@ -1986,13 +1960,12 @@ HRESULT Validate(void)
 AddToGroup(int groupControlId, int controlId)  
 ```  
 
- This method adds a control as a “child” of a check box or radio button, as shown in  REF _Ref314916134 \h Table 30. All such child controls will be disabled when the parent control is not selected. The method always returns **S_OK**.  
+ This method adds a control as a “child” of a check box or radio button, as shown in Table 30. All such child controls will be disabled when the parent control is not selected. The method always returns **S_OK**.  
 
 ### Table 30. AddToGroup  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**groupControlId**|The ID of the check box or radio button that will control the enable state of the child control|  
 |**Controlld**|The ID of the control that you want to add as a child|  
 
@@ -2026,13 +1999,12 @@ HRESULT AddValidator(int controlId, LPCWSTR validatorId, LPCWSTR message, IVa
 HRESULT DisableValidation(int controlId, BOOL disable)  
 ```  
 
- Call this method to either explicitly disable validator for a control or restore normal validation, as shown in  REF _Ref314916281 \h Table 31. This method is useful, for example, when you have enable/disable rules for controls that are not covered with form validation and you need to disable validation for a control. In other words, you would not normally call this method. This method always returns **S_OK**.  
+ Call this method to either explicitly disable validator for a control or restore normal validation, as shown in Table 31. This method is useful, for example, when you have enable/disable rules for controls that are not covered with form validation and you need to disable validation for a control. In other words, you would not normally call this method. This method always returns **S_OK**.  
 
 ### Table 31. HRESULT DisableValidation  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**controlId**|The control for which you want to enable or disable validation|  
 |**Disable**|Set to TRUE to disable validation and to FALSE to restore normal validation|  
 
@@ -2042,13 +2014,12 @@ HRESULT DisableValidation(int controlId, BOOL disable)
 HRESULT AddField(LPCWSTR fieldName, int controlId, BOOL suppressLog, DialogControlTypes type)  
 ```  
 
- Add a control mapping between the name in a **Field** element of the .config XML file and the control ID in your page’s dialog box, as shown in  REF _Ref314920508 \h Table 32. You must call this method before the call to **InitFields**, because **InitFields** uses this information. This method always returns **S_OK**.  
+ Add a control mapping between the name in a **Field** element of the .config XML file and the control ID in your page’s dialog box, as shown in   Table 32. You must call this method before the call to **InitFields**, because **InitFields** uses this information. This method always returns **S_OK**.  
 
 ### Table 32. HRESULT AddField  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Fieldname**|Name of the field as it appears in your page’s XML|  
 |**controlId**|The ID of the control in your page’s dialog box template|  
 |**suppressLog**|Set to TRUE if you do not want the values from this field written to the log file; always set this parameter to TRUE for password or PIN fields|  
@@ -2060,13 +2031,12 @@ HRESULT AddField(LPCWSTR fieldName, int controlId, BOOL suppressLog, DialogCo
 HRESULT AddRadioGroup(LPCWSTR groupName, int radioControlId)  
 ```  
 
- This method adds a control to a named radio button group, as shown in  REF _Ref314920713 \h Table 33. You must call this before the **InitFields** method, because that method uses attributes on the **RadioGroup** element to control settings for all the radio button controls in the group. Radio groups can be locked, for example, so that all the radio buttons are disabled, but child controls are enabled or disabled based only on which radio button is selected. This method always returns **S_OK**.  
+ This method adds a control to a named radio button group, as shown in Table 33. You must call this before the **InitFields** method, because that method uses attributes on the **RadioGroup** element to control settings for all the radio button controls in the group. Radio groups can be locked, for example, so that all the radio buttons are disabled, but child controls are enabled or disabled based only on which radio button is selected. This method always returns **S_OK**.  
 
 ### Table 33. HRESULT AddRadioGroup  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**groupName**|A string that defines a group of radio buttons on this page|  
 |**radioControlId**|The ID of a single radio button to add to this group|  
 
@@ -2076,21 +2046,19 @@ HRESULT AddRadioGroup(LPCWSTR groupName, int radioControlId)
 HRESULT EnableRadioGroup(LPCWSTR groupName, BOOL enable)  
 ```  
 
- This method allows you to enable or disable an entire radio button group. Disabling a radio group disables all the radio button controls in the group as well as any children of those radio buttons that have been added with **AddToGroup**. See  REF _Ref314920782 \h  \\* MERGEFORMAT Table 34 and  REF _Ref318371065 \h Table 35.  
+ This method allows you to enable or disable an entire radio button group. Disabling a radio group disables all the radio button controls in the group as well as any children of those radio buttons that have been added with **AddToGroup**. See Table 34 and Table 35.  
 
 ### Table 34. EnableRadioGroup  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**groupName**|Name of a radio button group that you defined already with a call to **AddRadioGroup**|  
 |**Enable**|Set to TRUE to enable the radio button group and FALSE to disable the group|  
 
 ### Table 35. HRESULT EnableRadioGroup  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Group enabled or disabled|  
 |**E_INVALIDARG**|There is no radio button group with the name you provided|  
 
@@ -2126,13 +2094,12 @@ BOOL IsFieldDisabled(int controlId)
 HRESULT InitSection(LPCWSTR key, LPCWSTR sectionCaption)  
 ```  
 
- This method initializes the summary data that will be shown on the **Summary** page, as shown in  REF _Ref314921047 \h Table 36. Call this method in your **OnNextClicked** method before calling **SaveFields**. This method always returns **S_OK**.  
+ This method initializes the summary data that will be shown on the **Summary** page, as shown in Table 36. Call this method in your **OnNextClicked** method before calling **SaveFields**. This method always returns **S_OK**.  
 
 ### Table 36. HRESULT InitSection  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Key**|This parameter should be unique to your page. It is used to ensure that each page has its own summary information.|  
 |**sectionCaption**|The header that will be shown on the **Summary** page for this page’s summary information. Typically, you use **DisplayName()** as the value for this parameter.|  
 
@@ -2142,13 +2109,12 @@ HRESULT InitSection(LPCWSTR key, LPCWSTR sectionCaption)
 HRESULT AddSummaryItem(LPCWSTR first, LPCWSTR second)  
 ```  
 
- This method allows you to add summary items to the **Summary** page above and beyond those items set with the XML. See  REF _Ref314921140 \h Table 37.  
+ This method allows you to add summary items to the **Summary** page above and beyond those items set with the XML. See Table 37.  
 
 ### Table 37. HRESULT AddSummaryItem  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**First**|The caption for the summary item, which is shown on the left side|  
 |**Second**|The value that will be shown on the right side|  
 
@@ -2166,13 +2132,12 @@ HRESULT SuppressLogValue(LPCWSTR tsVariableName)
 HRESULT SaveText(int controlId, LPCWSTR tsVariableName, LPCWSTR summaryCaption)  
 ```  
 
- This method saves the value of a text control to both a task sequence variable and the summary section. Typically, you will not need to call this method yourself, because the form controller does this for all fields. See  REF _Ref314921230 \h Table 38.  
+ This method saves the value of a text control to both a task sequence variable and the summary section. Typically, you will not need to call this method yourself, because the form controller does this for all fields. See Table 38.  
 
 ### Table 38. HRESULT SaveText  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**controlId**|The ID of the text box that contains the value you want to save (or any other control that can return text)|  
 |**tsVariableName**|Name of the task sequence variable that you want to modify|  
 |**summaryCaption**|The caption on the **Summary** page for this value|  
@@ -2218,25 +2183,23 @@ __interface IValidator : IUnknown
 ##### Overview  
  *Validators* are components that can validate a single control on your page. The easiest way to implement a validator is to make it a subclass of the **BaseValidator** class, which is defined in the BaseValidator.h header file.  
 
-##### HRESULT Init(IControl *pControl, LPCTSTR message)  
- If you create a validator in code, you can call this method to initialize the validator. See  REF _Ref314921366 \h Table 39.  
+##### HRESULT Init(IControl \*pControl, LPCTSTR message)  
+ If you create a validator in code, you can call this method to initialize the validator. See Table 39.  
 
 ### Table 39. HRESULT Init  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pControl**|The control that your validator must validate|  
 |**Message**|The message to display on the page if the control is not valid|  
 
-##### HRESULT Init(IControl *pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)  
- The form controller calls this method to initialize validators that it creates based on the page’s XML. See  REF _Ref314921432 \h Table 40.  
+##### HRESULT Init(IControl \*pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)  
+ The form controller calls this method to initialize validators that it creates based on the page’s XML. See Table 40.  
 
 ### Table 40. HRESULT Init Method  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pControl**|The control that your validator must validate|  
 |**pContainer**|In case your validator needs access to the logger or needs to create other components|  
 |**pProperties**|Provides access to the properties (setter elements) for your validator|  
@@ -2247,7 +2210,7 @@ __interface IValidator : IUnknown
 ##### HRESULT SetProperty(int propertyId, LPVARIANT pValue)  
  You can implement this method if you need extra values that are not provided in the XML.  
 
-##### HRESULT SetProperty(int propertyId, IUnknown *pUnknown)  
+##### HRESULT SetProperty(int propertyId, IUnknown \*pUnknown)  
  You can implement this method if you need extra values that are not provided in the XML.  
 
 ##### HRESULT SetProperty)(int propertyId, LPCTSTR pValue)  
@@ -2431,13 +2394,12 @@ __interface IDataNodes : IUnknown
  The component that supports this interface also supports **IBindableList**, which makes it easy to populate a combo box with data from the page’s XML. This method controls which property (setter) in each **DataItem** element will be used for this binding. For example, you could call this method with **DisplayName**, and it would use that setter property for data binding. The combo box would then contain **Public** and **Dev Team** as items.  
 
 ##### HRESULT GetProperty(size_t index, LPCTSTR propertyName, [out] LPBSTR propertyValue)  
- This method gets a property from one of the **DataItem** elements. See  REF _Ref315086038 \h  \\* MERGEFORMAT Table 41 and  REF _Ref318371237 \h Table 42.  
+ This method gets a property from one of the **DataItem** elements. See Table 41 and Table 42.  
 
 ### Table 41. DataItem GetProperty  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Index**|The index value (starting with 0) of the **DataItem** for which you want to retrieve a property value|  
 |**propertyName**|Name of the setter property for which you want to retrieve a value|  
 |**propertyValue**|On return, contains the string value of a property|  
@@ -2451,21 +2413,19 @@ __interface IDataNodes : IUnknown
 |**E_INVALIDARG**|The index is past the end of the array.|  
 
 ##### HRESULT GetNode(size_t index, [out] ISettingsProperties **ppNode)  
- This method is similar to **GetProperty**, but instead of returning one value from a **DataItem**, it returns the entire **DataItem** wrapped in an **ISettingsProperties** interface. See  REF _Ref315086181 \h Table 43 and  REF _Ref315187122 \h Table 44.  
+ This method is similar to **GetProperty**, but instead of returning one value from a **DataItem**, it returns the entire **DataItem** wrapped in an **ISettingsProperties** interface. See Table 43 and Table 44.  
 
 ### Table 43. HRESULT GetNode  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |Index|The index value (starting with 0) of the **DataItem** for which you want to retrieve a property value|  
 |**ppNode**|On exit, the **ISettingsProperties** interface that wraps the **DataItem** node|  
 
 ### Table 44. HRESULT GetNode Results  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|The node was retrieved.|  
 |**E_INVALIDARG**|The index is past the end of the array.|  
 
@@ -2488,18 +2448,17 @@ __interface IFactoryRegistry : IUnknown
 ##### Overview  
  When you create a new custom page, at a minimum you need to create a *page factory*—a class that implements **IClassFactory**. (You can use **ClassFactoryImpl** as a base class for your factory.)  
 
-##### void Register(LPCTSTR type,  IClassFactory *pFactory)  
- This method registers a class factory with the registry. See  REF _Ref315086371 \h Table 45.  
+##### void Register(LPCTSTR type,  IClassFactory \*pFactory)  
+ This method registers a class factory with the registry. See Table 45.  
 
 ### Table 45. IClassFactory void Register  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Type**|A string that identifies the factory you are registering; generally, this parameter should have your company name in the string to ensure that it is unique|  
 |**pFactory**|A pointer to your class factory instance|  
 
-##### HRESULT LoadAndRegister(LPCTSTR dllName, ILogger *pLogger)  
+##### HRESULT LoadAndRegister(LPCTSTR dllName, ILogger \*pLogger)  
  This method is for internal use only.  
 
 ##### BOOL Contains(LPCTSTR type)  
@@ -2511,10 +2470,10 @@ __interface IFactoryRegistry : IUnknown
 ##### HRESULT CreateInstance(LPCTSTR type,  IUnknown **ppInstance)  
  This method creates a new instance of a component, given its type. Use the **CreateInstance** template method instead, which allows type-safe object creation.  
 
-##### HRESULT SetContainer(IWizardPageContainer *pContainer)  
+##### HRESULT SetContainer(IWizardPageContainer \*pContainer)  
  This method is for internal use only.  
 
-##### HRESULT RegisterService(REFGUID iid, IUnknown *pService)  
+##### HRESULT RegisterService(REFGUID iid, IUnknown \*pService)  
  *Services* are single instances of a component that can be used in multiple places. You can use this method to register a service on one page, and then retrieve that same instance from another page.  
 
 ##### HRESULT GetService(REFGUID iid,  IUnknown **ppService)  
@@ -2600,13 +2559,12 @@ HRESULT Log(EMessageType messageType, LPCTSTR component, LPCTSTR message)
 HRESULT Error(HRESULT error, LPCTSTR component, LPCTSTR message)  
 ```  
 
- Call this method to log information about an error. See  REF _Ref315086724 \h Table 46.  
+ Call this method to log information about an error. See Table 46.  
 
 ### Table 46. HRESULT Error  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Error**|The error code returned by a call (This code will be displayed in the log entry as a number.)|  
 |**Component**|A string that identifies the source of the error, which is generally your page or the component that you have written|  
 |**Message**|The message that explains what caused the error|  
@@ -2801,13 +2759,12 @@ __interface IStringProperties : IUnknown
  This interface provides simple access to a set of setter elements that come from XML. This interface is available for the properties of a page using **Settings()->Properties()**.  
 
 ##### HRESULT Get(LPCTSTR propertyName, [out] LPBSTR pPropValue)  
- This method retrieves a single property value. See  REF _Ref315087437 \h Table 47 and  REF _Ref315087498 \h Table 48.  
+ This method retrieves a single property value. See Table 47 and Table 48.  
 
 ### Table 47. IHRESULT Get Property Value  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**propertyName**|Name of the property that you want to read|  
 |**pPropValue**|On exit, contains the property value as a string (This value will be **nullptr** if there is no such property.)|  
 
@@ -2847,14 +2804,13 @@ __interface ITaskManager : IUnknown
 
  This interface is implemented by the **TaskManager** component (**ID_TaskManager** in ITaskManager.h), which is the component that runs tasks on the preflight page. You can either use the preflight page directly, which is what you do most of the time, or build your own page, letting this component do most of the work.  
 
-##### HRESULT Init(IWizardPageView *pPageView, int idListView, int idMessage, int idRetryButton, ISettingsProperties \*pPageInfo, ITaskManagerCallback \*pCallback)  
- You must call this method before calling any other method. It initializes the **TaskManager** component. See  REF _Ref315087613 \h Table 49.  
+##### HRESULT Init(IWizardPageView \*pPageView, int idListView, int idMessage, int idRetryButton, ISettingsProperties \*pPageInfo, ITaskManagerCallback \*pCallback)  
+ You must call this method before calling any other method. It initializes the **TaskManager** component. See Table 49.  
 
 ### Table 49. HRESULT Init  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pPageView**|Provides access to the page that will be running tasks (This page must have a specific set of controls, which are outlined in the next few parameters.)|  
 |**idListView**|The control ID of a **ListView** control that will display the list of tasks and the status of those tasks|  
 |**idMessage**|The control ID of a text box that will be used to display a message for the task that you select|  
@@ -2872,13 +2828,12 @@ __interface ITaskManager : IUnknown
  This method is for internal use only. It retrieves the current message for a task based on its index in the list of tasks.  
 
 ##### HRESULT GetResultType)(size_t index, LPBSTR type)  
- This method retrieves the current “type” for a task.  REF _Ref315087810 \h Table 50 shows the available types.  
+ This method retrieves the current “type” for a task. Table 50 shows the available types.  
 
 ### Table 50. HRESULT GetResultType  
 
-|||  
-|-|-|  
 |**Type**|**Description**|  
+|-|-|  
 |**0**|Represents a task that succeeded|  
 |**1**|Represents a tasks that returned a warning|  
 |**-1**|Represents a failed task|  
@@ -3036,23 +2991,21 @@ Logger()->Verbose(s_component, L"Message for log file");
  This method allows you to retrieve a service that has been registered. However, it is better to call the **GetService** template function, which is strongly typed (instead of using **IUnknown**).  
 
 ##### HRESULT ReplaceVariables(LPCTSTR source, [out] LPBSTR pDest)  
- This method handles working with variables inside string values. It supports the formats shown in  REF _Ref315088280 \h Table 51 and  REF _Ref315088383 \h Table 52.  
+ This method handles working with variables inside string values. It supports the formats shown in Table 51 and Table 52.  
 
 ### Table 51. HRESULT ReplaceVariables  
 
-|||  
-|-|-|  
 |**Format**|**Description**|  
+|-|-|  
 |**$Name$**|Replaces the value of a memory variable with this name (If there is no memory variable with the name, the “token” will be removed.)|  
 |**%Name%**|Either a task sequence variable or an environment variable. The order is as follows:<br /><br /> 1.  Use the value of a task sequence variable, if present.<br />2.  Use the value of an environment variable, if present.<br />3.  Otherwise, remove this text from the string.|  
 
 ### Table 52. HRESULT Parameter  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**Source**|The input string, which can contain any combination of **$** and **%** variables or none at all|  
-|**pDest**|On return, contains a new string that has all the tokens replaced according to  REF _Ref315088280 \h Table 51|  
+|**pDest**|On return, contains a new string that has all the tokens replaced according to Table 51|  
 
 ##### HRESULT GotoPage(LPCTSTR pageName)  
  This method has not been fully tested. The idea is that you can switch directly to a specific page based on the name of the page as defined in the .config XML file. Calling this method bypasses the **OnNextClicked** on your page. In addition, the behavior of this method is subject to change, so use it at your own risk.  
@@ -3089,7 +3042,7 @@ __interface IWizardPageView : IUnknown
 
  This interface is available to the code in your page through the **View** method (implemented by **WizardPageImpl**).  
 
-##### HRESULT GetControlWrapper(int itemId, DialogControlTypes controlType, IUnknown **ppControl)  
+##### HRESULT GetControlWrapper(int itemId, DialogControlTypes controlType, IUnknown \*ppControl)  
  The UDI Wizard uses *wrappers*, which are really façades for interacting with the controls on your page. Using these façades instead of the actual controls makes it much easier to write tests for your page, because you can provide mock façades from your tests.  
 
  Instead of using this method directly, it is better to use the **GetControlWrapper** template method, which is strongly typed—for example:  
@@ -3163,28 +3116,27 @@ __interface IXmlDocument : IUnknown
 ##### HRESULT GetParseErrorMessage(LPBSTR pMessage)  
  This method returns a new string with the error message from loading the XML document, if any. It always returns **S_OK**.  
 
-##### HRESULT SelectNodes(LPCTSTR xpath, IXMLDOMNodeList **ppNodes)  
+##### HRESULT SelectNodes(LPCTSTR xpath, IXMLDOMNodeList \**ppNodes)  
  This method allows you to use an XPath expression to retrieve a collection of nodes from the document. It always returns **S_OK**.  
 
-##### HRESULT SelectSingleNode(LPCTSTR xpath, IXMLDOMNode **ppNode)  
+##### HRESULT SelectSingleNode(LPCTSTR xpath, IXMLDOMNode \**ppNode)  
  This method allows you to use an XPath expression to retrieve one node from the document. It always returns **S_OK**.  
 
 ##### HRESULT AddSchema(LPCTSTR filename, LPCTSTR ns)  
  This method adds the name of an external schema file that will be used to validate the schema of your XML document when it is loaded. The namespace you provide is the string you can use in XPath queries, although this has not been tested.  
 
-##### HRESULT AddAttribute(IXMLDOMNode *pNode, LPCWSTR name, LPCWSTR value)  
- This method adds a new attribute to an existing node in the XML document. See  REF _Ref315099683 \h Table 53.  
+##### HRESULT AddAttribute(IXMLDOMNode \*pNode, LPCWSTR name, LPCWSTR value)  
+ This method adds a new attribute to an existing node in the XML document. See Table 53.  
 
 ### Table 53. HRESULT AddAttribute  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**pNode**|The node to which you want to add an attribute|  
 |**Name**|Name of the new attribute|  
 |**Value**|The value for the new attribute|  
 
-##### HRESULT CreateNode(DOMNodeType type, LPCWSTR name, LPCWSTR ns, IXMLDOMNode **ppNode)  
+##### HRESULT CreateNode(DOMNodeType type, LPCWSTR name, LPCWSTR ns, IXMLDOMNode \**ppNode)  
  Call this method to create a new node:  
 
 ```  
@@ -3227,13 +3179,12 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
 ### UDI Wizard Designer Configuration File Schema Reference  
  This file is consumed by the UDI Wizard Designer. A separate file is created for each custom .dll file, which can contain custom wizard page editors, custom tasks, or custom validators. The file must end with *.config* and reside in the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT).  
 
- REF _Ref314147005 \h Table 54 lists the elements in the UDI Wizard Designer configuration file and their descriptions. The **DesignerConfig** element is the root node for this reference.  
+  Table 54 lists the elements in the UDI Wizard Designer configuration file and their descriptions. The **DesignerConfig** element is the root node for this reference.  
 
 ### Table 54. Elements in the UDI Wizard Designer Configuration File and Their Descriptions  
 
-|||  
-|-|-|  
 |**Element Name**|**Description**|  
+|-|-|  
 |[DesignerConfig](#DesignerConfig)|Specifies the root for all other elements|  
 |[DesignerMappings](#DesignerMappings)|Groups a set of [Page](#Page)elements|  
 |[Page](#Page)|Specifies a wizard page editor to be loaded in the UDI Wizard Designer, which is used to edit the configuration settings for a wizard page|  
@@ -3248,13 +3199,12 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element specifies the root for all other elements.  
 
 ##### Element Information  
- REF _Ref314147024 \h Table 55 provides information about the [DesignerConfig](#DesignerConfig) element.  
+  Table 55 provides information about the [DesignerConfig](#DesignerConfig) element.  
 
 ### Table 55. DesignerConfig Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One: This element is required.|  
 |Parent elements|None|  
 |Contents|**DesignerMappings**, **TaskLibrary**, **ValidatorLibrary**|  
@@ -3279,13 +3229,12 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element groups a set of [Page](#Page) elements.  
 
 ##### Element Information  
- REF _Ref314147034 \h Table 56 provides information about the [DesignerMappings](#DesignerMappings) element.  
+  Table 56 provides information about the [DesignerMappings](#DesignerMappings) element.  
 
 ### Table 56. DesignerMappings Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or one within the [DesignerConfig](#DesignerConfig) element (This element is optional if there are no custom wizard page in the DLL that corresponds to this UDI Wizard Designer configuration file.)|  
 |Parent elements|**DesignerConfig**|  
 |Contents|**Page**|  
@@ -3332,25 +3281,23 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element specifies a wizard page editor to be loaded in the UDI Wizard Designer, which is in turn used to edit the configuration settings for a wizard page.  
 
 ##### Element Information  
- REF _Ref314147046 \h Table 57 provides information about the [Page](#Page) element.  
+Table 57 provides information about the [Page](#Page) element.  
 
 ### Table 57. Page Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more for each wizard page defined in the [DesignerMappings](#DesignerMappings) element|  
 |Parent elements|**DesignerMappings**|  
 |Contents|Any well-formed XML content|  
 
 ##### Element Attributes  
- REF _Ref314147054 \h Table 58 lists the attributes of the [Page](#Page) element and a description for each.  
+Table 58 lists the attributes of the [Page](#Page) element and a description for each.  
 
 ### Table 58. Attributes and Corresponding Values for the Page Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Description**|Specifies text that provides information about the parameter, which is displayed in the UDI Wizard Designer|  
 |**DesignerAssembly**|Specifies the name of the .dll file associated with the wizard page editor (The .dll file must exist in the *installation_folder*\Bin folder (where *installation_folder* is the folder in which you installed MDT.)|  
 |**DesignerType**|Specifies the name of the wizard page editor within the .dll file specified in the **DesignerAssembly** attribute (This is the Microsoft .NET type for the wizard page editor, with the fully qualified Microsoft .NET namespace.)|  
@@ -3372,25 +3319,23 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
 >  The attributes for this element are different if the parent is the [Task](#Task) or [Validator](#Validator) element.  
 
 ##### Element Information  
- REF _Ref314147070 \h Table 59 provides information about the [Param](#Param) element.  
+ Table 59 provides information about the [Param](#Param) element.  
 
 ### Table 59. Param Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more for each [TaskItem](#TaskItem) or [Validator](#Validator) parent element|  
 |Parent elements|**TaskItem**, **Validator**|  
 |Contents|Any well-formed XML content|  
 
 ##### Element Attributes  
- REF _Ref314147078 \h Table 60 lists the attributes of the [Param](#Param) element and provides a description of each.  
+  Table 60 lists the attributes of the [Param](#Param) element and provides a description of each.  
 
 ### Table 60. Attributes and Corresponding Values for the Param Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Description**|Specifies text that provides information about the parameter, which is displayed in the UDI Wizard Designer **Note:**  This attribute is valid only for the [Validator](#Validator) element.|  
 |**DisplayName**|Specifies the user-friendly name of the validator parameter, which is displayed for the appropriate UDI Wizard page in the UDI Wizard Designer (This name is usually more descriptive than the **Name** attribute.) **Note:**  This attribute is valid only for the [Validator](#Validator) element.|  
 |**Name**|Specifies the name of the parameter that is passed to the task or validator, depending on the parent element (This attribute will become the **Property** attribute in a [Setter]() element in the UDI Wizard configuration file.) **Note:**  This parameter is used for both [TaskItem](#TaskItem) and [Validator](#Validator) parent elements.|  
@@ -3405,25 +3350,23 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element specifies a task within the task library.  
 
 ##### Element Information  
- REF _Ref314147092 \h Table 61 provides information about the [Task](#Task) element.  
+ Table 61 provides information about the [Task](#Task) element.  
 
 ### Table 61. Task Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within the [TaskLibrary](#TaskLibrary) element (This element is not optional if the **TaskLibrary** element is specified.)|  
 |Parent elements|**TaskLibrary**|  
 |Contents|**TaskItem**|  
 
 ##### Element Attributes  
- REF _Ref314147104 \h Table 62 lists the attributes of the [Task](#Task) element and provides a description of each.  
+  Table 62 lists the attributes of the [Task](#Task) element and provides a description of each.  
 
 ### Table 62. Attributes and Corresponding Values for the Task Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Description**|Specifies text that provides information about the task, which is displayed in the UDI Wizard Designer|  
 |**DLL**|Specifies the name of the .dll file associated with the task (The .dll file must exist in the *installation_folder*\Templates\Distribution\Tools\\*platform* folder (where *installation_folder* is the folder in which you installed MDT and *platform* is **x86** for the 32-bit version or **x64** for the 64-bit version.)|  
 |**Name**|Specifies the name of the task, which is displayed in the appropriate UDI Wizard page and in the UDI Wizard Designer|  
@@ -3439,25 +3382,23 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element specifies a group of parameters that are passed to the task.  
 
 ##### Element Information  
- REF _Ref314147118 \h Table 63 provides information about the [TaskItem](#TaskItem) element.  
+  Table 63 provides information about the [TaskItem](#TaskItem) element.  
 
 ### Table 63. TaskItem Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more for each **Task** element|  
 |Parent elements|**Task**|  
 |Contents|**Param**|  
 
 ##### Element Attributes  
- REF _Ref314147125 \h Table 64 lists the attributes of the [TaskItem](#TaskItem) element and provides a description of each.  
+ Table 64 lists the attributes of the [TaskItem](#TaskItem) element and provides a description of each.  
 
 ### Table 64. Attribute and Corresponding Values for the TaskItem Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Type**|Specifies the of element type that will be created in the UDI Wizard configuration file. An XML element will be created that corresponds to the value of this attribute. For example, if the value for this attribute is [File](#File), then a **File** element will be created in the UDI Wizard configuration file.<br /><br /> Currently, the only values supported are:<br /><br /> -   **File**, which requires two [Param](#Param) child elements (one **Param** child element with the **Name** attribute set to **Source** and another **Param** child element with the **Name** attribute set to **Dest**)<br />-   [Setter](), which requires one **Param** child element|  
 
 ##### Remarks  
@@ -3470,13 +3411,12 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element groups a set of [Task](#Task) elements.  
 
 ##### Element Information  
- REF _Ref314147140 \h Table 65 provides information about the [TaskLibrary](#TaskLibrary) element.  
+ Table 65 provides information about the [TaskLibrary](#TaskLibrary) element.  
 
 ### Table 65. TaskLibrary Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or one within the [DesignerConfig](#DesignerConfig) element (This element is optional if there are no custom tasks in the DLL that correspond to this UDI Wizard Designer configuration file.)|  
 |Parent elements|**DesignerConfig**|  
 |Contents|**Task**|  
@@ -3507,25 +3447,23 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element specifies a validator within the validator library.  
 
 ##### Element Information  
- REF _Ref314147149 \h Table 66 provides information about the [Validator](#Validator) element.  
+ Table 66 provides information about the [Validator](#Validator) element.  
 
 ### Table 66. Validator Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within the [ValidatorLibrary](#ValidatorLibrary) element (This element is optional.)|  
 |Parent elements|**ValidatorLibrary**|  
 |Contents|**Param**|  
 
 ##### Element Attributes  
- REF _Ref321478439 \h Table 67 lists the attributes of the [Validator](#Validator) element and provides a description of each.  
+Table 67 lists the attributes of the [Validator](#Validator) element and provides a description of each.  
 
 ### Table 67. Attributes and Corresponding Values for the Validator Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Description**|Specifies text that provides information about the validator, which is displayed in the UDI Wizard Designer|  
 |**DisplayName**|Specifies the user-friendly name of the validator displayed in the UDI Wizard Designer (This name is usually more descriptive than the **Name** attribute.)|  
 |**DLL**|Specifies the name of the .dll file associated with the validator (The .dll file must exist in the *installation_folder*\Templates\Distribution\Tools\\*platform* folder (where *installation_folder* is the folder in which you installed MDT and *platform* is **x86** for the 32-bit version or **x64** for the 64-bit version.)|  
@@ -3542,13 +3480,12 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
  This element groups a set of [Validator](#Validator) elements.  
 
 ##### Element Information  
- REF _Ref314147172 \h Table 68 provides information about the [ValidatorLibrary](#ValidatorLibrary) element.  
+ Table 68 provides information about the [ValidatorLibrary](#ValidatorLibrary) element.  
 
 ### Table 68. ValidatorLibrary Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or one within the [DesignerConfig](#DesignerConfig) element (This element is optional if there are no custom validators in the DLL that correspond to this UDI Wizard Designer configuration file.)|  
 |Parent elements|**DesignerConfig**|  
 |Contents|**Validator**|  
@@ -3565,13 +3502,12 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
 ## UDI Wizard Designer Reference  
 
 ### Controls  
- The controls used to create custom wizard page editors for use in the UDI Wizard Designer are WPF **UserControl** instances.  REF _Ref312785515 \h Table 69 lists the controls that you can use to create custom wizard page editors.  
+ The controls used to create custom wizard page editors for use in the UDI Wizard Designer are WPF **UserControl** instances. Table 69 lists the controls that you can use to create custom wizard page editors.  
 
 ### Table 69. Controls That Can Be Used to Create Custom Wizard Page Editors  
 
-|||  
-|-|-|  
 |Control|Description|  
+|-|-|  
 |[CollectionTControl](#CollectionTControl)|This control is used to edit data stored in the [Data](#Data) element within a [Page](#Page) element.|  
 |[FieldElementControl](#FieldElementControl)|This control is used to edit a field, which is typically linked to a TextBox control on the .xaml page.|  
 |[SetterControl](#SetterControl)|This control is used to modify the value of a [setter]() element in the UDI Wizard configuration file.|  
@@ -3701,13 +3637,12 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
  Set this property to the text you want to appear below the header—typically instruction text that tells the user of your custom editor when and why he or she would want to modify the behavior of the field.  
 
 ### Interfaces  
- REF _Ref312786983 \h Table 70 lists the interfaces that you can use to create custom wizard page editors.  
+Table 70 lists the interfaces that you can use to create custom wizard page editors.  
 
 ### Table 70. Interfaces That Can Be Used to Create Custom Wizard Page Editors  
 
-|||  
-|-|-|  
 |**Interface**|**Description**|  
+|-|-|  
 |[IDataService](#IDataService)|Use this interface to connect fields to the **Data** elements in the UDI Wizard configuration file.|  
 |[IMessageBoxService](#IMessageBoxService)|This interface provides access to methods that you can use to display message boxes.|  
 
@@ -3722,13 +3657,12 @@ public IDataService DataService { get; set; }
 ```  
 
 ##### Properties  
- REF _Ref312787313 \h Table 71 lists the properties for the **IDataService** interface.  
+ Table 71 lists the properties for the **IDataService** interface.  
 
 ### Table 71. Properties for the IDataService Interface  
 
-|||  
-|-|-|  
 |**Interface**|**Description**|  
+|-|-|  
 |[CurrentPage](#CurrentPage)|This property provides access to the XML elements, attributes, and values beneath the context of the current page being edited in the UDI Wizard configuration file|  
 
 ######  <a name="CurrentPage"></a> CurrentPage  
@@ -3752,25 +3686,23 @@ public IMessageBoxService MessageBoxes { get; set; }
 ```  
 
 ##### Methods  
- REF _Ref315103362 \h Table 72 lists the methods for the **IMessageBoxService** interface.  
+ Table 72 lists the methods for the **IMessageBoxService** interface.  
 
 ### Table 72. Methods for the IMessageBoxService Interface  
 
-|||  
-|-|-|  
 |**Method**|**Description**|  
+|-|-|  
 |[ShowMessageBox](#ShowMessageBox)|This overloaded method is used to display a message box with the following members:<br /><br /> -   [ShowMessageBox(String message, String caption, MessageBoxImage icon)](#ShowMessageBox_Stringmessage_Stringcaption_MessageBoxImage_icon)<br />-   [ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon)](#ShowMessageBox_stringmessage_stringcaption_MessageBoxButtonbutton_MessageBoxImage_icon)<br />-   [ShowMessageBox(Exception exception)](#ShowMessageBox_Exception_exception)|  
 |[ShowDialogWindow](#ShowDialogWindow)|Use this method to create a new dialog box.|  
 |[ShowWizardWindow](#ShowWizardWindow)|Use this method to display a custom editor inside a dialog box that includes **Next** and **Back** buttons for navigation.|  
 
 ######  <a name="ShowMessageBox"></a> ShowMessageBox  
- This method displays a message box that is a child of the custom wizard page editor. This member is overloaded:  REF _Ref315172848 \h Table 73 contains a list of the members and a brief description of each. For complete information about each member (including syntax, usage, and examples), see the section that corresponds to each member.  
+ This method displays a message box that is a child of the custom wizard page editor. This member is overloaded: Table 73 contains a list of the members and a brief description of each. For complete information about each member (including syntax, usage, and examples), see the section that corresponds to each member.  
 
 ### Table 73. Overloaded Members for the ShowMessagBox Method  
 
-|||  
-|-|-|  
 |Member|Description|  
+|-|-|  
 |[ShowMessageBox(String message, String caption, MessageBoxImage icon)](#ShowMessageBox_Stringmessage_Stringcaption_MessageBoxImage_icon)|Displays a message box with an icon and an **OK** button|  
 |[ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon)](#ShowMessageBox_stringmessage_stringcaption_MessageBoxButtonbutton_MessageBoxImage_icon)|Displays a message box with an icon and different possible combinations of buttons|  
 |[ShowMessageBox(Exception exception)](#ShowMessageBox_Exception_exception)|Displays a message box that provides information about an exception and has an **OK** button|  
@@ -3781,13 +3713,12 @@ public IMessageBoxService MessageBoxes { get; set; }
 void ShowMessageBox(String message, String caption, MessageBoxImage icon);  
 ```  
 
- This method displays a message box with an **OK** button. See  REF _Ref315173108 \h Table 74.  
+ This method displays a message box with an **OK** button. See Table 74.  
 
 ### Table 74. Parameters for the ShowMessageBox(String message, String caption, MessageBoxImage icon) Method  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**message**|The message to display in the content area of the message box|  
 |**caption**|The text to show in the title bar of the dialog box|  
 |**icon**|The type of icon to show in the message box|  
@@ -3798,13 +3729,12 @@ void ShowMessageBox(String message, String caption, MessageBoxImage icon);
 MessageBoxResult ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon);  
 ```  
 
- This method displays a message box with the set of buttons you want shown and reports which button you clicked. See  REF _Ref315173273 \h Table 75.  
+ This method displays a message box with the set of buttons you want shown and reports which button you clicked. See Table 75.  
 
 ### Table 75. Parameters for the ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon) Method  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**message**|The message to display in the content area of the message box|  
 |**caption**|The text to show in the title bar of the dialog box|  
 |**button**|Which buttons to show|  
@@ -3816,13 +3746,12 @@ MessageBoxResult ShowMessageBox(string message, string caption, MessageBoxB
 void ShowMessageBox(Exception exception);  
 ```  
 
- This method displays a message box that reports information about an exception. This message box has a single **OK** button. See  REF _Ref315173371 \h Table 76.  
+ This method displays a message box that reports information about an exception. This message box has a single **OK** button. See Table 76.  
 
 ### Table 76. Parameters for the ShowMessageBox(Exception exception) Method  
 
-|||  
-|-|-|  
 |**Parameter**|**Description**|  
+|-|-|  
 |**exception**|The exception that you want to report (The dialog box uses **exception.Message** as the contents.)|  
 
 ######  <a name="ShowDialogWindow"></a> ShowDialogWindow  
@@ -3856,13 +3785,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
 
 -   Available Stages within each deployment wizard in the UDI Wizard Designer  
 
- REF _Ref314147184 \h Table 77 lists the elements in the UDI Wizard Configuration File and their descriptions. The **Wizard** element is the root node for this reference.  
+  77 lists the elements in the UDI Wizard Configuration File and their descriptions. The **Wizard** element is the root node for this reference.  
 
 ### Table 77. Elements in the UDI Wizard Configuration File and Their Descriptions  
 
-|||  
-|-|-|  
 |**Element name**|**Description**|  
+|-|-|  
 |[Data](#Data)|Groups the individual [DataItem](#DataItem) elements within a [Page](#Page) element and is named by the **Name** attribute.|  
 |[DataItem](#DataItem)|Groups the individual [Setter]() elements within a [Page](#Page) element. You can create hierarchical data by including one or more [Data](#Data) elements within a [DataItem](#DataItem) element. Each **DataItem** element represents an individual item. For example, a list of available drives might have a **DataItem** for the display name and another **DataItem** element for the corresponding drive letter.|  
 |[Default](#Default)|Specifies a default value for the field specified in the parent [Field](#Field) or [RadioGroup](#RadioGroup) element. The default is set to the value bracketed by this element.|  
@@ -3892,25 +3820,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups the individual [DataItem](#DataItem) elements within a [Page](#Page) element and is named by the **Name** attribute.  
 
 ##### Element Information  
- REF _Ref314147224 \h Table 78 provides information about the [Data](#Data) element.  
+Table 78 provides information about the [Data](#Data) element.  
 
 ### Table 78. Data Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each [Page](#Page) element (This element is optional.)|  
 |Parent elements|**Page**, **DataItem**|  
 |Contents|**DataItem**, **Setter**|  
 
 ##### Element Attributes  
- REF _Ref314147233 \h Table 79 lists the attributes of the [Data](#Data) element and provides a description of each.  
+ Table 79 lists the attributes of the [Data](#Data) element and provides a description of each.  
 
 ### Table 79. Attributes and Corresponding Values for the Data Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Name**|Specifies the name of the [Data](#Data) element|  
 
 ##### Remarks  
@@ -3923,13 +3849,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups the individual [Setter]() elements within a [Page](#Page) element. You can create hierarchical data by including one or more [Data](#Data) elements within a [DataItem](#DataItem) element. Each **DataItem** element represents an individual item. For example, a list of available drives might have a **DataItem** for the display name and another **DataItem** element for the corresponding drive letter.  
 
 ##### Element Information  
- REF _Ref314147245 \h Table 80 provides information about the [DataItem](#DataItem) element.  
+ Table 80 provides information about the [DataItem](#DataItem) element.  
 
 ### Table 80. DataItem Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each [Data](#Data) element (This element is optional.)|  
 |Parent elements|**Data**|  
 |Contents|**Data**, **Setter**|  
@@ -3947,14 +3872,13 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a default value for the field specified in the parent [Field](#Field) or [RadioGroup](#RadioGroup) element. The default is set to the value that this element brackets.  
 
 ##### Element Information  
- REF _Ref314147265 \h Table 81 provides information about the [Default](#Default) element.  
+Table 81 provides information about the [Default](#Default) element.  
 
 ### Table 81. Default Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
-|Number of occurrences|Zero or more within a [Field](#Field) or [RadioGroup](#RadioGroup) element (This element is optional.)|  
+|-|-|  
+|Number of occurrences |Zero or more within a [Field](#Field) or [RadioGroup](#RadioGroup) element (This element is optional.)|  
 |Parent elements|**Field**, **RadioGroup**|  
 |Contents|Can be any well-formed XML content but is typically standard text|  
 
@@ -3976,25 +3900,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a DLL for the UDI Wizard and UDI Wizard Designer to load and reference.  
 
 ##### Element Information  
- REF _Ref314147278 \h Table 82 provides information about the [DLL](#DLL) element.  
+Table 82 provides information about the [DLL](#DLL) element.  
 
 ### Table 82. DLL Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within the [DLLs](#DLLs) element|  
 |Parent element|**DLLs**|  
 |Contents|No content allowed for this element|  
 
 ##### Element Attributes  
- REF _Ref314147287 \h Table 83 lists the attributes of the [DLL](#DLL) element and provides a description of each.  
+ Table 83 lists the attributes of the [DLL](#DLL) element and provides a description of each.  
 
 ### Table 83. Attributes and Corresponding Values for the DLL Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |Name|Specifies the name of the DLL for the UDI Wizard and UDI Wizard Designer to reference|  
 
 ##### Remarks  
@@ -4013,13 +3935,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups the individual [DLL](#DLL) elements.  
 
 ##### Element Information  
- REF _Ref314147297 \h Table 84 provides information about the [DLLs](#DLLs) element.  
+Table 84 provides information about the [DLLs](#DLLs) element.  
 
 ### Table 84. DLLs Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One|  
 |Parent elements|**Wizard**|  
 |Contents|**DLL**|  
@@ -4043,25 +3964,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a possible error code that a task can return. The value of the error code is returned and trapped by the task’s **HRESULT** to provide more specific error information.  
 
 ##### Element Information  
- REF _Ref314147310 \h Table 85 provides information about the [Error](#Error) element.  
+ Table 85 provides information about the [Error](#Error) element.  
 
 ### Table 85. Error Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each [ExitCode](#ExitCode) element (This element is optional.)|  
 |Parent elements|**ExitCodes**|  
 |Contents|Any well-formed XML content|  
 
 ##### Element Attributes  
- REF _Ref314147319 \h Table 86 lists the attributes of the [Error](#Error) element and provides a description of each.  
+ Table 86 lists the attributes of the [Error](#Error) element and provides a description of each.  
 
 ###  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**State**|Specifies the return state of a task that encountered an error. Typically, the value for this attribute is set to Error. This value is displayed in the **State** column on the wizard page in the UDI Wizard.|  
 |**Text**|Specifies the descriptive text about the error condition that the task encountered.|  
 |**Type**|Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   **0.**The element represent a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error.|  
@@ -4077,25 +3996,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a possible exit code for a task. The exit codes are return codes that the task expects. Create an **ExitCode** element for each possible exit code. Otherwise, you can specify an asterisk (\*) in the **Value** attribute to handle return codes not listed in other **ExitCode** elements.  
 
 ##### Element Information  
- REF _Ref314147334 \h Table 87 provides information about the [ExitCode](#ExitCode) element.  
+Table 87 provides information about the [ExitCode](#ExitCode) element.  
 
 ### Table 87. ExitCode Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each [ExitCodes](#ExitCodes) element (This element is optional.)|  
 |Parent elements|**ExitCodes**|  
 |Contents|At least one [ExitCode](#ExitCode) element and zero or more [Error](#Error) elements|  
 
 ##### Element Attributes  
- REF _Ref314147343 \h Table 88 lists the attributes of the [ExitCode](#ExitCode) element and provides a description of each.  
+Table 88 lists the attributes of the [ExitCode](#ExitCode) element and provides a description of each.  
 
 ### Table 88. Attributes and Corresponding Values for the ExitCode Element  
 
-|||  
-|-|-|  
 |**Attribute**|Description|  
+|-|-|  
 |**State**|Specifies the return state of a task. The value of this attribute is displayed in the **State** column on the corresponding wizard page in the UDI Wizard. You can use any values for this attribute that are meaningful for your task. The following are typical values used for this attribute:<br /><br /> -   Success<br />-   Warning<br />-   Error|  
 |**Text**|Specifies the descriptive text about the exist code of the task.|  
 |**Type**|Specifies whether this element represents an error, warning, or success. The value specified in type must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   **0.** The element represents a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error.|  
@@ -4111,13 +4028,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups a set of [ExitCode](#ExitCode) and [Error](#Error) elements for a [Task](#Task) or an **Error** element.  
 
 ##### Element Information  
- REF _Ref314147358 \h Table 89 provides information about the [ExitCodes](#ExitCodes) element.  
+Table 89 provides information about the [ExitCodes](#ExitCodes) element.  
 
 ### Table 89. ExitCodes Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One within each [Task](#Task) element|  
 |Parent elements|**Task**|  
 |Contents|**Error**, **ExitCode**|  
@@ -4135,25 +4051,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies an instance of a control in a [Page](#Page) element used to provide customization with XML. Not all controls allow customization with XML—only controls that use the [Field](#Field) element.  
 
 ##### Element Information  
- REF _Ref314147370 \h Table 90 provides information about the [Field](#Field) element.  
+ Table 90 provides information about the [Field](#Field) element.  
 
 ### Table 90. Field Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each [Field](#Field) element (This element is optional.)|  
 |Parent elements|**Fields**|  
 |Contents|**Default**, **Validator**|  
 
 ##### Element Attributes  
- REF _Ref314147378 \h Table 91 lists the attributes of the [Field](#Field) element and provides a description of each.  
+Table 91 lists the attributes of the [Field](#Field) element and provides a description of each.  
 
 ### Table 91. Attributes and Corresponding Values for the Field Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Enabled**|Specifies whether the field is enabled for user input (The attribute can be set to True or False.)|  
 |**Name**|Specifies the name of the field|  
 |**Summary**|Specifies the descriptive text displayed on the **Summary** wizard page for the value that this field sets|  
@@ -4169,13 +4083,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups the individual [Field](#Field) elements within a [Page](#Page) element.  
 
 ##### Element Information  
- REF _Ref314147392 \h Table 92 provides information about the [Fields](#Fields) element.  
+Table 92 provides information about the [Fields](#Fields) element.  
 
 ### Table 92. Fields Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each [Page](#Page) element (This element is optional.)|  
 |Parent elements|**Page**|  
 |Contents|**Field**, **RadioGroup**|  
@@ -4193,25 +4106,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies the source and destination for a file copy operation using the **Microsoft.Wizard.CopyFilesTask** task type. You can include a separate [File](#File) element to copy more than one file in a single task.  
 
 ##### Element Information  
- REF _Ref314147409 \h Table 93 provides information about the [File](#File) element.  
+ Table 93 provides information about the [File](#File) element.  
 
 ### Table 93. File Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more for each task that has a task type of **Microsoft.Wizard.CopyFilesTask**|  
 |Parent elements|**Task**|  
 |Contents|None|  
 
 ##### Element Attributes  
- REF _Ref314147416 \h Table 94 lists the attributes of the [File](#File) element and provides a description of each.  
+ Table 94 lists the attributes of the [File](#File) element and provides a description of each.  
 
 ### Table 94. Attributes and Corresponding Values for the File Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Dest**|Specifies the fully qualified or relative path to the destination folder for the file specified in the **Source** attribute. Environment variables are allowed as a part of the path.|  
 |**Source**|Specifies the fully qualified or relative path to the source file that the **Microsoft.Wizard.CopyFilesTask** task type copies. This attribute supports wildcard characters so that multiple files can be copied using a single [File](#File) element. Environment variables are allowed as part of the path.|  
 
@@ -4225,25 +4136,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies an instance of a page and includes all the configuration settings for the page.  
 
 ##### Element Information  
- REF _Ref314147427 \h Table 95 provides information about the [Page](#Page) element.  
+Table 95 provides information about the [Page](#Page) element.  
 
 ### Table 95. Page Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within each [Pages](#Pages) element|  
 |Parent elements|**Pages**|  
 |Contents|**Data**, **Fields**, **Setter**, **Tasks**|  
 
 ##### Element Attributes  
- REF _Ref314147435 \h Table 96 lists the attributes of the [Page](#Page) element and provides a description of each.  
+Table 96 lists the attributes of the [Page](#Page) element and provides a description of each.  
 
 ### Table 96. Attributes and Corresponding Values for the Page Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**DisplayName**|Specifies the user-friendly name of the wizard page displayed in the UDI Wizard Designer. This name is usually more descriptive than the **Name** attribute.|  
 |**Name**|Specifies the name of the wizard page displayed in the UDI Wizard Designer.|  
 |**Type**|Specifies the type of wizard page that directly relates to a specific wizard page within a DLL.|  
@@ -4258,25 +4167,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a reference to an instance of a page within a [Stage](#Stage) within a [StageGroup](#StageGroup).  
 
 ##### Element Information  
- REF _Ref314147445 \h Table 97 provides information about the [PageRef](#PageRef) element.  
+Table 97 provides information about the [PageRef](#PageRef) element.  
 
 ### Table 97. PageRef Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within a [Stage](#Stage) element|  
 |Parent elements|**Stage**|  
 |Contents|None|  
 
 ##### Element Attributes  
- REF _Ref314147454 \h Table 98 lists the attribute of the [PageRef](#PageRef) element and provides a description of it.  
+Table 98 lists the attribute of the [PageRef](#PageRef) element and provides a description of it.  
 
 ### Table 98. Attributes and Corresponding Values for the PageRef Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Page**|Specifies the instance of a page within a [Stage](#Stage) within a [StageGroup](#StageGroup). Set this value to the Name attribute of a [Page](#Page) element.|  
 
 ##### Remarks  
@@ -4289,13 +4196,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups the individual [Page](#Page) elements.  
 
 ##### Element Information  
- REF _Ref314147464 \h Table 99 provides information about the [Pages](#Pages) element.  
+Table 99 provides information about the [Pages](#Pages) element.  
 
 ### Table 99. Pages Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One|  
 |Parent elements|**Wizard**|  
 |Contents|**Page**|  
@@ -4333,25 +4239,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a group of radio buttons with in a [Field](#Field) element.  
 
 ##### Element Information  
- REF _Ref314147476 \h Table 100 provides information about the [RadioGroup](#RadioGroup) element.  
+Table 100 provides information about the [RadioGroup](#RadioGroup) element.  
 
 ### Table 100. RadioGroup Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within a [Fields](#Fields) element (This element is optional.)|  
 |Parent elements|**Fields**|  
 |Contents|**Default**|  
 
 ##### Element Attributes  
- REF _Ref314147486 \h Table 101 lists the attributes of the [RadioGroup](#RadioGroup) element and provides a description of each.  
+ Table 101 lists the attributes of the [RadioGroup](#RadioGroup) element and provides a description of each.  
 
 ### Table 101. Attributes and Corresponding Values for the RadioGroup Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Locked**|Specifies whether the group of radio buttons is enabled for user input. The attribute can be set to:<br /><br /> -   **True**. Specifies that the radio buttons are disabled and users cannot select a radio button in the group.<br />-   **False**. Specifies that the radio buttons are enabled and users can select a radio button in the group.|  
 |**Name**|Specifies the name of the radio option group.|  
 
@@ -4365,25 +4269,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a deployment stage group.  
 
 ##### Element Information  
- REF _Ref314147496 \h Table 102 provides information about the [StageGroup](#StageGroup) element.  
+Table 102 provides information about the [StageGroup](#StageGroup) element.  
 
 ### Table 102. StageGroup Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within a [StageGroups](#StageGroups) element|  
 |Parent elements|**StageGroups**|  
 |Contents|**Stage**|  
 
 ##### Element Attributes  
- REF _Ref314147504 \h Table 103 lists the attributes of the [StageGroup](#StageGroup) element and a description of the attribute.  
+ Table 103 lists the attributes of the [StageGroup](#StageGroup) element and a description of the attribute.  
 
 ### Table 103. Attributes and Corresponding Values for the StageGroup Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**DisplayName**|Specifies the user-friendly name of the stage group displayed in the UDI Wizard Designer. This name is usually more descriptive than the **Name** attribute.|  
 
 ##### Remarks  
@@ -4396,13 +4298,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups a set of stage groups within a UDI Wizard configuration file.  
 
 ##### Element Information  
- REF _Ref314147514 \h Table 104 provides information about the [StageGroups](#StageGroups) element.  
+Table 104 provides information about the [StageGroups](#StageGroups) element.  
 
 ### Table 104. StageGroups Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or one within a [Wizard](#Wizard) element|  
 |Parent elements|**Wizard**|  
 |Contents|**StageGroup**|  
@@ -4420,25 +4321,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a property setting for the value for a property that is named in the **Property** property.  
 
 ##### Element Information  
- REF _Ref314147527 \h Table 105 provides information about the [Setter]() element.  
+ Table 105 provides information about the [Setter]() element.  
 
 ### Table 105. Setter Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or more within each parent element (This element is optional.)|  
 |Parent elements|**Data**, **DataItem**, **Page**, **Style**, **Task**, **Validator**|  
 |Contents|Contains a string value in the **Property** attribute|  
 
 ##### Element Attributes  
- REF _Ref314147542 \h Table 106 lists the attribute of the [Setter]() element and provides a description of it.  
+Table 106 lists the attribute of the [Setter]() element and provides a description of it.  
 
 ### Table 106. Attributes and Corresponding Values for the Setter Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**Property**|Specifies the property name being set. The property name is set to the value that this attribute brackets.|  
 
 ##### Remarks  
@@ -4451,25 +4350,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a [Stage](#Stage) within a [StageGroup](#StageGroup) and contains one or more [PageRef](#PageRef) elements.  
 
 ##### Element Information  
- REF _Ref314147551 \h Table 107 provides information about the [Stage](#Stage) element.  
+Table 107 provides information about the [Stage](#Stage) element.  
 
 ### Table 107. Stage Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within a [StageGroup](#StageGroup) element|  
 |Parent elements|**StageGroup**|  
 |Contents|**PageRef**|  
 
 ##### Element Attributes  
- REF _Ref314147561 \h Table 108 lists the attributes of the [Stage](#Stage) element and provides a description of each.  
+Table 108 lists the attributes of the [Stage](#Stage) element and provides a description of each.  
 
 ### Table 108. Attributes and Corresponding Values for the Stage Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**DisplayName**|Specifies the user-friendly name of the wizard page displayed in the UDI Wizard Designer. This name is usually more descriptive than the **Name** attribute.|  
 |**Name**|Specifies the name of the stage. The value of this element is used when starting the UDI Wizard with the **/stage: name** command line parameter.|  
 
@@ -4483,13 +4380,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups the individual [Setter]() elements that configure the UDI Wizard look and feel, including the title shown at the top of the wizard and the banner image shown on the UDI Wizard.  
 
 ##### Element Information  
- REF _Ref314147572 \h Table 109 provides information about the Style element.  
+Table 109 provides information about the Style element.  
 
 ### Table 109. Style Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One|  
 |Parent elements|**Wizard**|  
 |Contents|**Setter**|  
@@ -4513,25 +4409,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a task that is to be run on the page specified in the parent [Page](#Page) element.  
 
 ##### Element Information  
- REF _Ref314147584 \h Table 110 provides information about the [Task](#Task) element.  
+Table 110 provides information about the [Task](#Task) element.  
 
 ### Table 110. Task Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One or more within a [Tasks](#Tasks) element|  
 |Parent elements|**Tasks**|  
 |Contents|**ExitCodes**, **File**, **Setter**|  
 
 ##### Element Attributes  
- REF _Ref314147593 \h Table 111 lists the attributes of the [Task](#Task) element and provides a description of each.  
+Table 111 lists the attributes of the [Task](#Task) element and provides a description of each.  
 
 ### Table 111. Attributes and Corresponding Values for the Task Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**DependsOn**|Specifies whether the task is dependent on another task. The value of this attribute is set to the **Name** attribute of another [Task](#Task) element. **Note:**  This attribute cannot be configured using the UDI Wizard Designer. However, you can manually add this attribute to a [Task](#Task) element by directly modifying the .xml file.|  
 |**DisplayName**|Specifies the user-friendly name of the task displayed in the UDI Wizard Designer. This name is usually more descriptive than the **Name** attribute.|  
 |**Name**|Specifies the name of the task. This name must be unique.|  
@@ -4547,25 +4441,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element groups a set of tasks for a [Page](#Page) element.  
 
 ##### Element Information  
- REF _Ref314147609 \h Table 112 provides information about the [Tasks](#Tasks) element.  
+Table 112 provides information about the [Tasks](#Tasks) element.  
 
 ### Table 112. Tasks Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or one within each [Page](#Page) element (This element is optional.)|  
 |Parent elements|**Page**|  
 |Contents|**Task**|  
 
 ##### Element Attributes  
- REF _Ref314147618 \h Table 113 lists the attributes of the [Tasks](#Tasks) element and provides a description of each.  
+Table 113 lists the attributes of the [Tasks](#Tasks) element and provides a description of each.  
 
 ### Table 113. Attributes and Corresponding Values for the Tasks Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |**NameTitle**|Specifies the caption that appears at the top of the column that contains the name of the tasks in the appropriate wizard page.|  
 |**StatusTitle**|Specifies the caption that appears at the top of the column that contains the status of the tasks in the appropriate wizard page.|  
 
@@ -4579,25 +4471,23 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies a validator for the field control that is specified in the parent [Field](#Field) element.  
 
 ##### Element Information  
- REF _Ref314147630 \h Table 114 provides information about the [Validator](#Validator) element.  
+Table 114 provides information about the [Validator](#Validator) element.  
 
 ### Table 114. Validator Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|Zero or one within a [Field](#Field) element|  
 |Parent elements|**Field**|  
 |Contents|**Setter**|  
 
 ##### Element Attributes  
- REF _Ref314147639 \h Table 115 lists the attribute of the [Validator](#Validator) element and provides a description of it.  
+Table 115 lists the attribute of the [Validator](#Validator) element and provides a description of it.  
 
 ### Table 115. Attributes and Corresponding Values for the Validator Element  
 
-|||  
-|-|-|  
 |**Attribute**|**Description**|  
+|-|-|  
 |Type|Specifies the type for the validator, which is defined in the DLL that contains the validator|  
 
 ##### Remarks  
@@ -4610,13 +4500,12 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
  This element specifies the root for all other elements.  
 
 ##### Element Information  
- REF _Ref314147649 \h Table 116 provides information about the [Wizard](#Wizard) element.  
+Table 116 provides information about the [Wizard](#Wizard) element.  
 
 ### Table 116. Wizard Element Information  
 
-|||  
-|-|-|  
 |**Attribute**|**Value**|  
+|-|-|  
 |Number of occurrences|One|  
 |Parent elements|None|  
 |Contents|**DLLs**, **Pages**, **StageGroups**, **Style**|  

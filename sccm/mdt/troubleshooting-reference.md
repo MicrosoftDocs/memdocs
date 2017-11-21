@@ -16,6 +16,7 @@ manager: angrobe
 
 ---
 
+<!-- Post migration ready -->
 
 ## Introduction to Troubleshooting Reference  
  The deployment of operating systems and applications as well as the migration of user state can be a challenging endeavor, even when you are equipped with appropriate tools and guidance. This reference, which is part of Microsoft® Deployment Toolkit (MDT) 2013, provides information on current known issues, possible workarounds for those issues, and troubleshooting guidance.  
