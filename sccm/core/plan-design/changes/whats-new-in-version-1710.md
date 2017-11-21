@@ -99,13 +99,13 @@ To add an icon for your app in Software Center, see [Create applications](/sccm/
 
 You can add a new task sequence step that runs another task sequence, which creates a parent/child relationship between the task sequences. This allows you to create more modular task sequences that you can re-use.  
 
-To learn more about the child task sequence, see [Child task sequence](/sccm/osd/understand/task-sequence-steps.md#child-task-sequence).
+To learn more about the child task sequence, see [Child task sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).
 
 ## Software Center customization
 <!-- 1351224 -->
 You can add enterprise branding elements and specify the visibility of tabs on Software Center. You can add your Software Center specific company name, set a Software Center configuration color theme, set a company logo, and set the visible tabs for client devices.
 
-For more information, see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management.md).
+For more information, see [Plan for and configure application management in System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).
 
 ## Software updates
 
@@ -120,7 +120,7 @@ Beginning with this release, managing Surface driver updates is no longer a pre-
 
 You can now set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
 
-For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings.md).
+For more information, see [How to configure client settings in System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings).
 
 <!-- ## Inventory  -->
 
