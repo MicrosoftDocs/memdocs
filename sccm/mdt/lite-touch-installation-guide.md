@@ -6,7 +6,7 @@ description: "A Quick Start guide for Microsoft Deployment Toolkit lite touch in
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  21bedd68-e925-46e0-a540-df8c0aba2d6c
 
@@ -16,9 +16,7 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready -->
-
-## Quick Start Guide for Lite Touch Installation  
+# Quick Start Guide for Lite Touch Installation  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system through Lite Touch Installation (LTI) using bootable media (DVD or USB flash drive). This guide demonstrates how to perform the New Computer deployment scenario using an MDT 2013 deployment share. The New Computer deployment scenario covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
 > [!NOTE]     

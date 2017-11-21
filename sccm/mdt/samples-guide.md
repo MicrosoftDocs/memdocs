@@ -6,7 +6,7 @@ description: "Microsoft Deployment Toolkit samples."
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 
@@ -16,7 +16,6 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready -->
 
 # Microsoft Deployment Toolkit Samples Guide  
  This guide is part of Microsoft® Deployment Toolkit (MDT) 2013 and guides a specialist team through deploying Windows operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.  

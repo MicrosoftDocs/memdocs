@@ -6,7 +6,7 @@ description: "Learn how to use the Microsoft Deployment Toolkit 2013."
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  10a846c2-e63c-4c2b-8210-7485bfe7e47f
 
@@ -16,10 +16,7 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready  -->
-
-
-## Introduction to Using the Microsoft Deployment Toolkit  
+# Using the Microsoft Deployment Toolkit  
  Microsoft® Deployment Toolkit (MDT) 2013 allows you to automate the deployment of computers in your organization. This document provides guidance on how to plan, build, and deploy Windows® operating systems and applications using MDT 2013.  
 
 > [!NOTE]

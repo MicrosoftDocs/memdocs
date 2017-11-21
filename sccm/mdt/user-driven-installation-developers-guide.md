@@ -6,7 +6,7 @@ description: "Developers Guide for user driven installation of Microsoft Deploym
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  a2b3a3a0-7b81-4191-b1f9-c618e59347c3
 
@@ -17,11 +17,11 @@ manager: angrobe
 ---
 
 
-<!-- Post migration ready  -->
+
+# User Driven Installation - Developers Guide
+User Driven Installation (UDI) helps simplify the deployment of Windows® client operating systems, such as Windows 8.1, to computers using the operating system deployment (OSD) feature in Microsoft® System Center 2012 R2 Configuration Manager. UDI is part of the Microsoft Deployment Toolkit (MDT).  
 
 ## Introduction  
- User Driven Installation (UDI) helps simplify the deployment of Windows® client operating systems, such as Windows 8.1, to computers using the operating system deployment (OSD) feature in Microsoft® System Center 2012 R2 Configuration Manager. UDI is part of the Microsoft Deployment Toolkit (MDT).  
-
  Typically, when deploying operating systems using the OSD feature, you must provide all the necessary information for deploying the operating system. The information is configured in configuration files or in databases (such as the CustomSettings.ini file or the MDT database [MDT DB]). You must provide all configuration settings before you can initiate the deployment.  
 
  UDI provides a wizard-driven interface that allows you to provide configuration information immediately prior to performing the deployment. This behavior allows you to create generic OSD task sequences, and then provide computer-specific information at the time of deployment, which provides greater flexibility in the deployment process.  
@@ -435,7 +435,7 @@ Figure 2. Folder structure for UDI development
 
          The **IFieldCallback** interface calls the **SetFieldDefault** method, which is used to set the default values for controls other than text box and check box controls. In the example, the **SetFieldDefault** method sets the initial index of the combo box control based on the default value specified in the **Default** element for the [Field](#Field) element in the Config.xml file.  
 
-     The **OnWindowCreated** method sets up the form controller using the [IFormController interface](#IFormControllerInterface). For more information about setting up the form controller, see [Setting up the Form](#SettingUptheForm).  
+     The **OnWindowCreated** method sets up the form controller using the [IFormController interface](#IFormController-Interface). For more information about setting up the form controller, see [Setting up the Form](#SettingUptheForm).  
 
 -   **InitLocations**. This method populates the combo box from the list of locations in the Config.xml file. The [Data](#Data) element and child [DataItem](#DataItem) elements the Confg.xml file provide the list of possible values.  
 

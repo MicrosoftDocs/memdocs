@@ -6,7 +6,7 @@ description: "Reference details for Microsoft Deployment Toolkit 2013."
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  ac670143-b7cd-47d0-86ed-14cb2554dfc7
 
@@ -16,9 +16,8 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready  -->
 
-## Introduction to Toolkit Reference  
+# Toolkit Reference for the Microsoft Deployment Toolkit
  This reference is part of Microsoft® Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.  
 
 > [!NOTE]

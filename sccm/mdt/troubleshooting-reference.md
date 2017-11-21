@@ -6,7 +6,7 @@ description: "Troubleshooting reference for the Microsoft Deployment Toolkit"
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  91a7a69a-deac-4b0f-aac9-b7bd187c53fb
 
@@ -16,9 +16,7 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready -->
-
-## Introduction to Troubleshooting Reference  
+# Troubleshooting Reference for the Microsoft Deployment Toolkit
  The deployment of operating systems and applications as well as the migration of user state can be a challenging endeavor, even when you are equipped with appropriate tools and guidance. This reference, which is part of Microsoft® Deployment Toolkit (MDT) 2013, provides information on current known issues, possible workarounds for those issues, and troubleshooting guidance.  
 
 > [!NOTE]
