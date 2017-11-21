@@ -146,7 +146,8 @@ These scenarios include:
 - [Configure Windows Hello for Business policy](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
 - [Manage applications](../../../mdm/deploy-use/management-tasks-applications.md)
 
-### Improved VPN Profile Experience in Configuration Manager Console <!-- 1318232 -->
+### Improved VPN Profile Experience in Configuration Manager Console 
+<!-- 1318232 -->
 
 With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform:
 

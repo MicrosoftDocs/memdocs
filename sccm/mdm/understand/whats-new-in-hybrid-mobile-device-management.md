@@ -83,6 +83,8 @@ We have added **Ownership Type** to the Device Details screen on the Company Por
   - [Improved VPN profile experience in Configuration Manager console](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console).
 
 
+Improved VPN Profile Experience in Configuration Manager Console
+
 ### New in Configuration Manger Technical Preview 1711
 
 - **New compliance policy options for Windows 10**
