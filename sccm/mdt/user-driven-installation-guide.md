@@ -15,10 +15,11 @@ ms.author: angrobe
 manager: angrobe
 
 ---
+<!-- Post migration ready  -->
 
 
 ## Introduction to Quick Start Guide for User-Driven Installation  
- Microsoft® Deployment Toolkit (MDT) 2013 provides technology for deploying Windows® operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system and Microsoft Office Professional Plus 2010 with User-Driven Installation (UDI) and Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the MDT New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
+ Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system and Microsoft Office Professional Plus 2010 with User-Driven Installation (UDI) and Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the MDT New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
 > [!NOTE]
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server® 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
@@ -62,18 +63,17 @@ manager: angrobe
 >  The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is normally available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile removes the Create Global Object right and should not be applied to computers deployed using MDT.  
 
 ### Computer Configuration  
- To complete this guide, set up the computers listed in  REF _Ref301272365 \h Table 1. These computers can be either physical computers or virtual machines (VMs) with the system resources designated.  
+ To complete this guide, set up the computers listed in Table 1. These computers can be either physical computers or virtual machines (VMs) with the system resources designated.  
 
-### Table  SEQ Table \\* ARABIC 1. Computers Used in This Guide  
+### Table 1. Computers Used in This Guide  
 
-|||  
+|**Computer** |**Description and system resources** |  
 |-|-|  
-|**Computer**|**Description and system resources**|  
 |WDG-MDT-01|This computer runs the MDT infrastructure and Configuration Manager. The computer runs Windows Server 2008 R2 with the following networking services installed:<br /><br /> -   AD DS<br />-   DNS Server<br />-   DHCP Server<br />-   Windows Deployment Services<br /><br /> The system resources of the computer are as follows:<br /><br /> -   Quad-core processor running at 2.66 gigahertz (GHz) or faster<br />-   4 gigabytes (GB) or more of physical memory<br />-   A disk partition that has 40 GB or more of available disk space; it will become the drive C partition<br />-   One CD-ROM or DVD-ROM drive that will be assigned the drive letter D<br />-   A disk partition that has 40 GB or more of available disk space; it will become partition E.|  
 |WDG-REF-01|This is the reference computer, which runs no current operating system. The system resources of the computer are as follows:<br /><br /> -   Processor running at 1.4 GHz or faster<br />-   1 GB or more of physical memory<br />-   16 GB or more of available disk space|  
 |WDG-CLI-01|This is the target computer, which runs no current operating system. The system resources of the computer are as follows:<br /><br /> -   Processor running at 1.4 GHz or faster<br />-   1 GB or more of physical memory<br />-   16 GB or more of available disk space|  
 
- The resources listed in  REF _Ref301272365 \h Table 1 reflect the system resources recommended to perform the steps in this guide. For information on the minimum system resource requirements for:  
+ The resources listed in Table 1 reflect the system resources recommended to perform the steps in this guide. For information on the minimum system resource requirements for:  
 
 -   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](http://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
 
@@ -121,31 +121,29 @@ manager: angrobe
 -   Configuring discovery of users in AD DS as described in [Step 1-15: Configure Discovery of Active Directory Users](#ConfigureDiscoveryofActiveDirectoryUsers)  
 
 ###  <a name="InstallWindowsServer2008"></a> Step 1-1: Install Windows Server 2008 R2  
- Use the information in  REF _Ref301273844 \h Table 2 to install Windows Server 2008 R2. Accept default values unless otherwise specified.  
+ Use the information in 2 to install Windows Server 2008 R2. Accept default values unless otherwise specified.  
 
-### Table  SEQ Table \\* ARABIC 2. Information for Installing Windows Server 2008 R2  
+### Table 2. Information for Installing Windows Server 2008 R2  
 
-|||  
+|**When prompted for** |**Provide these values** |  
 |-|-|  
-|**When prompted for**|**Provide these values**|  
-|**Where do you want to install Windows?**|**Disk 0 Unallocated Space**|  
-|**Password**|Any strong password|  
-|**Computer name**|**WDG-MDT-01**|  
-|**Format for volumes C and E**|**NTFS**|  
-|**TCP/IP configuration**|Configure with a static IP address configuration, with the other TCP/IP configuration options as appropriate for the environment|  
+|**Where do you want to install Windows?** |**Disk 0 Unallocated Space** |  
+|**Password** |Any strong password|  
+|**Computer name** |**WDG-MDT-01** |  
+|**Format for volumes C and E** |**NTFS** |  
+|**TCP/IP configuration** |Configure with a static IP address configuration, with the other TCP/IP configuration options as appropriate for the environment|  
 
 ###  <a name="CreatetheRequiredFoldersandNetworkShares"></a> Step 1-2: Create the Required Folders and Network Shares  
  The MDT deployment process requires additional folders that are used as the source for files or to store files created during the MDT deployment process. Some of these folders need to be shared so that they can be accessed from other computers.  
 
  **To create the required folders and shares**  
 
-1.  Create the folders and shares listed in  REF _Ref301274061 \h Table 3 with the permissions specified for each share  
+1.  Create the folders and shares listed in Table 3 with the permissions specified for each share  
 
-    ### Table  SEQ Table \\* ARABIC 3. Folders That the MDT Deployment Process Requires  
+    ### Table 3. Folders That the MDT Deployment Process Requires  
 
-    ||||  
+    |**Create this folder** |**With this share name** |**With these share permissions** |  
     |-|-|-|  
-    |**Create this folder**|**With this share name**|**With these share permissions**|  
     |E:\Source$|Source$|**Administrators**: Co-owner<br /><br /> **Everyone**: Read|  
     |E:\Images$|Images$|**Administrators**: Co-owner<br /><br /> **Everyone**: Read|  
     |E:\Capture$|Capture$|**Administrators**: Co-owner<br /><br /> **Everyone**: Read|  
@@ -181,13 +179,12 @@ manager: angrobe
     >  The processes in this guide assume that the reference computer and target computer have the same devices and do not require different devices drivers.  
 
 ###  <a name="ObtaintheRequiredSoftware"></a> Step 1-3: Obtain the Required Software  
- Besides Windows Server 2008 R2, Windows 8.1, and System Center 2012 R2 Configuration Manager, certain software is required to evaluate MDT based on the processes in this guide.  REF _Ref301274197 \h Table 4 lists the software required to perform deployments using MDT, where to obtain the software, and where to place the software on WDG-MDT-01.  
+ Besides Windows Server 2008 R2, Windows 8.1, and System Center 2012 R2 Configuration Manager, certain software is required to evaluate MDT based on the processes in this guide. Table 4 lists the software required to perform deployments using MDT, where to obtain the software, and where to place the software on WDG-MDT-01.  
 
-### Table  SEQ Table \\* ARABIC 4. Additional Software Required for Deployment Using MDT  
+### Table 4. Additional Software Required for Deployment Using MDT  
 
-|||  
+|**Obtain this software** |**Place in this folder** |  
 |-|-|  
-|**Obtain this software**|**Place in this folder**|  
 |MDT 2013|E:\Source$\MDT_2013|  
 |Windows 8.1 distribution files from the product media|E:\Source$\Windows_8-1|  
 |Device drivers required for the reference and target computers (WDG-REF-01 and WDG-CLI-01)|E:\Source$\Drivers|  
@@ -200,41 +197,38 @@ manager: angrobe
 ###  <a name="InstalltheADDSServerRole"></a> Step 1-4: Install the AD DS Server Role  
  AD DS is required to provide authentication and act as a repository for configuration values for the Microsoft products and technologies that MDT uses, such as Microsoft SQL Server and Configuration Manager.  
 
- To install AD DS, run the DCPROMO Wizard to configure the computer as a domain controller. Install AD DS using the information in  REF _Ref301274225 \h Table 5, accepting any defaults unless otherwise specified.  
+ To install AD DS, run the DCPROMO Wizard to configure the computer as a domain controller. Install AD DS using the information in Table 5, accepting any defaults unless otherwise specified.  
 
-### Table  SEQ Table \\* ARABIC 5. Information for Installing AD DS  
+### Table 5. Information for Installing AD DS  
 
-|||  
+|**When prompted** |**Do this** |  
 |-|-|  
-|**When prompted**|**Do this**|  
 |For the domain type|Create a new domain in a new forest.|  
 |For the fully qualified domain name|Type **mdt2013.corp.woodgrovebank.com**.|  
-|For the forest functional level|Select **Windows Server 2008 R2.**|  
+|For the forest functional level|Select **Windows Server 2008 R2.** |  
 |To install the DNS Server service as part of the domain controller installation process|Click **Yes**.|  
 
 ###  <a name="InstalltheDHCPServerServerRole"></a> Step 1-5: Install the DHCP Server Server Role  
- The DHCP Server server role is required to provide automatic IP configuration for the target computers. Install DHCP Server using the information in  REF _Ref301274297 \h Table 6, accepting any defaults unless otherwise specified.  
+ The DHCP Server server role is required to provide automatic IP configuration for the target computers. Install DHCP Server using the information in Table 6, accepting any defaults unless otherwise specified.  
 
 > [!NOTE]
 >  If you are using a virtualized environment, disable any DHCP configuration that the computer-virtualization software provides. Ensure that the DHCP Server service running WDG-MDT-01 is the only provider of IP configuration using DHCP.  
 
-### Table  SEQ Table \\* ARABIC 6. Information for Installing the DHCP Server Server Role  
+### Table 6. Information for Installing the DHCP Server Server Role  
 
-|||  
+|**On this wizard page** |**Do this** |  
 |-|-|  
-|**On this wizard page**|**Do this**|  
-|**Authorize DHCP server in Active Directory**|Authorize WDG-MDT-01 to provide client IP configuration.|  
-|**DHCP scopes**|Create an appropriate scope that can be used to automatically configure TCP/IP for WDG-REF-01 and WDG-CLI-01.|  
-|**DHCPv6 stateless mode configuration**|Disable DHCPv6 stateless mode for this server.|  
+|**Authorize DHCP server in Active Directory** |Authorize WDG-MDT-01 to provide client IP configuration.|  
+|**DHCP scopes** |Create an appropriate scope that can be used to automatically configure TCP/IP for WDG-REF-01 and WDG-CLI-01.|  
+|**DHCPv6 stateless mode configuration** |Disable DHCPv6 stateless mode for this server.|  
 
 ###  <a name="InstalltheWebServicesServerRole"></a> Step 1-6: Install the Web Services (IIS) Server Role  
- Install the Web Services (IIS) server role with the role services listed in  REF _Ref301274359 \h Table 7, which are required for SQL Server 2008 R2 and Configuration Manager. Unless otherwise specified, use the default values.  
+ Install the Web Services (IIS) server role with the role services listed in Table 7, which are required for SQL Server 2008 R2 and Configuration Manager. Unless otherwise specified, use the default values.  
 
-### Table  SEQ Table \\* ARABIC 7. Information for Installing the Web Services (IIS) Server Role  
+### Table 7. Information for Installing the Web Services (IIS) Server Role  
 
-|||  
+|**Role service** |**Status** |  
 |-|-|  
-|**Role service**|**Status**|  
 |Web Server|Installed|  
 |Common HTTP Features|Installed|  
 |Static Content|Installed|  
@@ -292,13 +286,12 @@ manager: angrobe
 -   Remote Differential Compression  
 
 ###  <a name="CreatetheRequiredUserandServiceAccounts"></a> Step 1-8: Create the Required User and Service Accounts  
- Configuration Manager and SQL Server 2008 R2 require user accounts during the installation process.  REF _Ref301274604 \h Table 8 lists the information needed for creating these accounts.  
+ Configuration Manager and SQL Server 2008 R2 require user accounts during the installation process. Table 8 lists the information needed for creating these accounts.  
 
-### Table  SEQ Table \\* ARABIC 8. Information for Creating the Required Accounts  
+### Table 8. Information for Creating the Required Accounts  
 
-|||  
+|**Create this account** |**With these settings** |  
 |-|-|  
-|**Create this account**|**With these settings**|  
 |SQL Server Agent service account|1.  In **First name**, type **SQL Agent**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLAgent**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 Agent service**.|  
 |SQL Server Database Engine service account|1.  In **First name**, type **SQL DB Engine**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLDBEngine**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 database engine**.|  
 |SQL Server Reporting Services service account|1.  In **First name**, type **SQL Reporting**.<br />2.  **In Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLReport**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 reporting services**.|  
@@ -320,30 +313,29 @@ manager: angrobe
 
      SQL Server 2008 R2 Setup Wizard starts.  
 
-4.  Install SQL Server 2008 R2 using the information in  REF _Ref299981497 \h Table 9, accepting the defaults unless otherwise specified.  
+4.  Install SQL Server 2008 R2 using the information in Table 9, accepting the defaults unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 9. Information for Installing SQL Server 2008 R2  
+    ### Table 9. Information for Installing SQL Server 2008 R2  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Setup Support Rules**|Click **OK**.|  
-    |**Product Key**|Click **Next**.|  
-    |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
-    |**Setup Support Files**|Click **Install**.|  
-    |**Setup Support Rules**|Ensure that no critical results exist for the rules, and then click **Next**.|  
-    |**Setup Role**|Click **SQL Server Feature Installation**, and then click **Next**.|  
-    |**Feature Selection**|1.  Select the **Database Engine Services** check box.<br />2.  Select the **Reporting Services** check box.<br />3.  Select the **Full-Text Search** check box.<br />4.  Select the **Management Tools - Complete** check box.<br />5.  Click **Next**.|  
-    |**Installation Rules**|Click **Next**.|  
-    |**Instance Configuration**|Click **Next**.|  
-    |**Disk Space Requirements**|Click **Next**.|  
-    |**Server Configuration**|1.  For **SQL Server Agent**, in **Account Name**, type **MDT2013\SQLAgent**, in **Password**, type **P@ssw0rd**.<br />2.  For **SQL Server Database Engine**, in **Account Name**, type **MDT2013\SQLDBEngine**, in **Password**, type **P@ssw0rd**.<br />3.  For **SQL Server Reporting Services**, in **Account Name**, type **MDT2013\SQLReport**, in **Password**, type **P@ssw0rd**.<br />4.  Click **Next**.|  
-    |**Database Engine Configuration**|Click **Add Current User**, and then click **Next**.|  
-    |**Reporting Services Configuration**|Click **Next**.|  
-    |**Error Reporting**|Click **Next**.|  
-    |**Installation Configuration Rules**|Click **Next**.|  
-    |**Ready to Install**|Click **Install**.|  
-    |**Complete**|Click **Close**.|  
+    |**Setup Support Rules** |Click **OK**.|  
+    |**Product Key** |Click **Next**.|  
+    |**License Terms** |Select the **I accept the license terms** check box, and then click **Next**.|  
+    |**Setup Support Files** |Click **Install**.|  
+    |**Setup Support Rules** |Ensure that no critical results exist for the rules, and then click **Next**.|  
+    |**Setup Role** |Click **SQL Server Feature Installation**, and then click **Next**.|  
+    |**Feature Selection** |1.  Select the **Database Engine Services** check box.<br />2.  Select the **Reporting Services** check box.<br />3.  Select the **Full-Text Search** check box.<br />4.  Select the **Management Tools - Complete** check box.<br />5.  Click **Next**.|  
+    |**Installation Rules** |Click **Next**.|  
+    |**Instance Configuration** |Click **Next**.|  
+    |**Disk Space Requirements** |Click **Next**.|  
+    |**Server Configuration** |1.  For **SQL Server Agent**, in **Account Name**, type **MDT2013\SQLAgent**, in **Password**, type **P@ssw0rd**.<br />2.  For **SQL Server Database Engine**, in **Account Name**, type **MDT2013\SQLDBEngine**, in **Password**, type **P@ssw0rd**.<br />3.  For **SQL Server Reporting Services**, in **Account Name**, type **MDT2013\SQLReport**, in **Password**, type **P@ssw0rd**.<br />4.  Click **Next**.|  
+    |**Database Engine Configuration** |Click **Add Current User**, and then click **Next**.|  
+    |**Reporting Services Configuration** |Click **Next**.|  
+    |**Error Reporting** |Click **Next**.|  
+    |**Installation Configuration Rules** |Click **Next**.|  
+    |**Ready to Install** |Click **Install**.|  
+    |**Complete** |Click **Close**.|  
 
 5.  Close the SQL Server Installation Center.  
 
@@ -353,20 +345,19 @@ manager: angrobe
 
      The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 Update Setup Wizard starts.  
 
-2.  Install SQL Server 2008 R2 SP1 using the information in  REF _Ref315204728 \h Table 10, accepting the defaults unless otherwise specified.  
+2.  Install SQL Server 2008 R2 SP1 using the information in Table 10, accepting the defaults unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 10. Information for Installing SQL Server 2008 R2 SP1  
+    ### Table 10. Information for Installing SQL Server 2008 R2 SP1  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**SQL Server 2008 R2 update**|Click **Next**.|  
-    |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
-    |**Select Features**|Click **Next**.|  
-    |**Check Files In Use**|Click **Next**.|  
-    |**Ready to update**|Click **Update**.|  
-    |**Update Progress**|The progress is displayed on the wizard page as the update is performed and finishes.|  
-    |**Complete**|Click **Close**.|  
+    |**SQL Server 2008 R2 update** |Click **Next**.|  
+    |**License Terms** |Select the **I accept the license terms** check box, and then click **Next**.|  
+    |**Select Features** |Click **Next**.|  
+    |**Check Files In Use** |Click **Next**.|  
+    |**Ready to update** |Click **Update**.|  
+    |**Update Progress** |The progress is displayed on the wizard page as the update is performed and finishes.|  
+    |**Complete** |Click **Close**.|  
 
  **To install SQL Server 2008 R2 SP1 CU6**  
 
@@ -389,20 +380,19 @@ manager: angrobe
 
      The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 CU6 Update Setup Wizard starts.  
 
-6.  Install SQL Server 2008 R2 SP1 CU6 using the information in  REF _Ref315205520 \h Table 11, accepting the defaults unless otherwise specified.  
+6.  Install SQL Server 2008 R2 SP1 CU6 using the information in Table 11, accepting the defaults unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 11. Information for Installing SQL Server 2008 R2 SP1 CU6  
+    ### Table 11. Information for Installing SQL Server 2008 R2 SP1 CU6  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**SQL Server 2008 R2 update**|Click **Next**.|  
-    |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
-    |**Select Features**|Click **Next**.|  
-    |**Check Files In Use**|Click **Next**.|  
-    |**Ready to update**|Click **Update**.|  
-    |**Update Progress**|The progress is displayed on the wizard page as the update is performed and finishes.|  
-    |**Complete**|Click **Close**.|  
+    |**SQL Server 2008 R2 update** |Click **Next**.|  
+    |**License Terms** |Select the **I accept the license terms** check box, and then click **Next**.|  
+    |**Select Features** |Click **Next**.|  
+    |**Check Files In Use** |Click **Next**.|  
+    |**Ready to update** |Click **Update**.|  
+    |**Update Progress** |The progress is displayed on the wizard page as the update is performed and finishes.|  
+    |**Complete** |Click **Close**.|  
 
      The **Install a SQL Server 2008 R2 update** dialog box appears prompting you to restart the computer to complete the setup.  
 
@@ -449,30 +439,29 @@ manager: angrobe
 
      The Microsoft System Center 2012 R2 Configuration Manager Setup Wizard starts.  
 
-3.  Complete the Microsoft System Center 2012 R2 Configuration Manager Setup Wizard using the information in  REF _Ref301276299 \h Table 12. Accept the defaults unless otherwise specified.  
+3.  Complete the Microsoft System Center 2012 R2 Configuration Manager Setup Wizard using the information in Table 12. Accept the defaults unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 12. Information for Installing Configuration Manager  
+    ### Table 12. Information for Installing Configuration Manager  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Before You Begin**|Click **Next**.|  
-    |**Getting Started**|Click **Next**.|  
-    |**Product Key**|In **Enter your 25-character product key**, type ***product_key*** (where *product_key* is your product key for Configuration Manager).|  
-    |**Microsoft Software License Terms**|Select the **I accept these license terms** check box, and then click **Next**.|  
-    |**Update Prerequisite Components**|In **Download and use the latest updates. Updates will be saved to the following location**, type **E:\CMDownloads**, and then click **Next**.|  
-    |**Server Language Selection**|Click **Next**.|  
-    |**Client Language Selection**|Click **Next**.|  
-    |**Site and Installation Settings**|1.  In **Site code**, type **NYC**.<br />2.  In **Site name**, type **New York City Site**.<br />3.  Click **Next**.|  
-    |**Primary Site Installation**|1.  Click **Install the primary site as a stand-alone site**.<br />2.  Click **Next**.<br />     The **Configuration Manager** dialog box appears, confirming that you want to install this site as a stand-alone site.<br />3.  In the **Configuration Manager** dialog box, click **Yes**.|  
-    |**Database Information**|Click **Next**.|  
-    |**SMS Provider Settings**|Click **Next**.|  
-    |**Client Computer Communication Settings**|Click **Configure the communication method on each site system role**, and then click **Next**.|  
-    |**Site System Roles**|Click **Next**.|  
-    |**Customer Experience Improvement Program Configuration**|Select the appropriate participation in the Customer Experience Improvement program for your organization, and then click **Next**.|  
-    |**Settings Summary**|Click **Next**.|  
-    |**Prerequisite Check**|Click **Begin Install**.|  
-    |**Install**|Monitor the installation process until it is complete, and then click **Close**.|  
+    |**Before You Begin** |Click **Next**.|  
+    |**Getting Started** |Click **Next**.|  
+    |**Product Key** |In **Enter your 25-character product key**, type ***product_key*** (where *product_key* is your product key for Configuration Manager).|  
+    |**Microsoft Software License Terms** |Select the **I accept these license terms** check box, and then click **Next**.|  
+    |**Update Prerequisite Components** |In **Download and use the latest updates. Updates will be saved to the following location**, type **E:\CMDownloads**, and then click **Next**.|  
+    |**Server Language Selection** |Click **Next**.|  
+    |**Client Language Selection** |Click **Next**.|  
+    |**Site and Installation Settings** |1.  In **Site code**, type **NYC**.<br />2.  In **Site name**, type **New York City Site**.<br />3.  Click **Next**.|  
+    |**Primary Site Installation** |1.  Click **Install the primary site as a stand-alone site**.<br />2.  Click **Next**.<br />     The **Configuration Manager** dialog box appears, confirming that you want to install this site as a stand-alone site.<br />3.  In the **Configuration Manager** dialog box, click **Yes**.|  
+    |**Database Information** |Click **Next**.|  
+    |**SMS Provider Settings** |Click **Next**.|  
+    |**Client Computer Communication Settings** |Click **Configure the communication method on each site system role**, and then click **Next**.|  
+    |**Site System Roles** |Click **Next**.|  
+    |**Customer Experience Improvement Program Configuration** |Select the appropriate participation in the Customer Experience Improvement program for your organization, and then click **Next**.|  
+    |**Settings Summary** |Click **Next**.|  
+    |**Prerequisite Check** |Click **Begin Install**.|  
+    |**Install** |Monitor the installation process until it is complete, and then click **Close**.|  
 
 4.  Close all open windows and dialog boxes.  
 
@@ -499,16 +488,15 @@ manager: angrobe
 
      The **Windows User Account** dialog box appears.  
 
-8.  Complete the **Windows User Account** dialog box using the information in  REF _Ref301282772 \h Table 13, and then click **OK**.  
+8.  Complete the **Windows User Account** dialog box using the information in Table 13, and then click **OK**.  
 
-    ### Table  SEQ Table \\* ARABIC 13. Information Required to Complete the Windows User Account Dialog Box  
+    ### Table 13. Information Required to Complete the Windows User Account Dialog Box  
 
-    |||  
+    |**For this** |**Do this** |  
     |-|-|  
-    |**For this**|**Do this**|  
-    |**User name**|Type **MDT2013\CMNetAccess**.|  
-    |**Password**|Type **P@ssw0rd**.|  
-    |**Confirm password**|Type **P@ssw0rd**.|  
+    |**User name** |Type **MDT2013\CMNetAccess**.|  
+    |**Password** |Type **P@ssw0rd**.|  
+    |**Confirm password** |Type **P@ssw0rd**.|  
 
 9. In the **Software Distribution Properties** dialog box, click **OK**.  
 
@@ -529,20 +517,19 @@ manager: angrobe
 
      The **Create Boundary** dialog box opens.  
 
-5.  Complete the **Create Boundary** dialog box using the information in  REF _Ref307233558 \h Table 14, and then click **OK**.  
+5.  Complete the **Create Boundary** dialog box using the information in Table 14, and then click **OK**.  
 
     > [!NOTE]
     >  For this sample, the site boundary is specified by network address. However, you can also specify site boundaries using an AD DS site name or an IP address range.  
 
-    ### Table  SEQ Table \\* ARABIC 14. Information Required to Complete the Create Boundary Dialog Box  
+    ### Table 14. Information Required to Complete the Create Boundary Dialog Box  
 
-    |||  
+    |**For this** |**Do this** |  
     |-|-|  
-    |**For this**|**Do this**|  
-    |**Description**|Type **IP Subnet Boundary**.|  
-    |**Type**|Select **IP subnet**.|  
+    |**Description** |Type **IP Subnet Boundary**.|  
+    |**Type** |Select **IP subnet**.|  
     |Network|Type ***network_address*** (where *network_address* is the network address of the subnet where the computers are installed).|  
-    |**Subnet mask**|Type ***subnet_mask*** (where *subnet_mask* is the subnet mask of the subnet where the computers are installed).|  
+    |**Subnet mask** |Type ***subnet_mask*** (where *subnet_mask* is the subnet mask of the subnet where the computers are installed).|  
 
  **To add the Configuration Manager site boundary to a site boundary group**  
 
@@ -554,26 +541,24 @@ manager: angrobe
 
      The **Create Boundary Group** dialog box opens.  
 
-4.  Complete the **General** tab of the **Create Boundary Group** dialog box using the information in  REF _Ref307233599 \h Table 15.  
+4.  Complete the **General** tab of the **Create Boundary Group** dialog box using the information in Table 15.  
 
-    ### Table  SEQ Table \\* ARABIC 15. Information Required to Complete the General Tab of the Create Boundary Group Dialog Box  
+    ### Table ARABIC 15. Information Required to Complete the General Tab of the Create Boundary Group Dialog Box  
 
-    |||  
+    |**For this** |**Do this** |  
     |-|-|  
-    |**For this**|**Do this**|  
-    |**Name**|Type **New York City Boundary Group**.|  
+    |**Name** |Type **New York City Boundary Group**.|  
     |Description|Type **Boundary group for the site boundaries at the New York City site**.|  
-    |**Boundaries**|1.  Click **Add**.<br />     The **Add Boundaries** dialog box appears.<br />2.  In the **Add Boundaries** dialog box, select ***site_boundary*** (where *site_boundary* is the site boundary you created earlier in the process), and then click **OK**.<br />     The site boundary appears in the list of boundaries.|  
+    |**Boundaries** |1.  Click **Add**.<br />     The **Add Boundaries** dialog box appears.<br />2.  In the **Add Boundaries** dialog box, select ***site_boundary*** (where *site_boundary* is the site boundary you created earlier in the process), and then click **OK**.<br />     The site boundary appears in the list of boundaries.|  
 
-5.  Complete the **References** tab of the **Create Boundary Group** dialog box using the information in  REF _Ref307233659 \h Table 16, and then click **OK**.  
+5.  Complete the **References** tab of the **Create Boundary Group** dialog box using the information in Table 16, and then click **OK**.  
 
-    ### Table  SEQ Table \\* ARABIC 16. Information Required to Complete the References Tab of the Create Boundary Group Dialog Box  
+    ### Table 16. Information Required to Complete the References Tab of the Create Boundary Group Dialog Box  
 
-    |||  
+    |**For this** |**Do this** |  
     |-|-|  
-    |**For this**|**Do this**|  
-    |**Site assignment**|Select the **Use this boundary group for site assignment** check box.|  
-    |**Content location**|1.  Click **Add**.<br />     The **Add Site Systems** dialog box appears.<br />2.  In the **Add Site Systems** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     The site system server appears in the list of site system servers.|  
+    |**Site assignment** |Select the **Use this boundary group for site assignment** check box.|  
+    |**Content location** |1.  Click **Add**.<br />     The **Add Site Systems** dialog box appears.<br />2.  In the **Add Site Systems** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     The site system server appears in the list of site system servers.|  
 
 6.  Close any open windows.  
 
@@ -665,19 +650,18 @@ manager: angrobe
 
      The Microsoft Deployment Toolkit 2013 Setup Wizard starts.  
 
-3.  Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the information in  REF _Ref301353038 \h Table 17. Accept the default values unless otherwise specified.  
+3.  Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the information in Table 17. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 17. Information for Completing the Microsoft Deployment Toolkit 2013 Setup Wizard  
+    ### Table 17. Information for Completing the Microsoft Deployment Toolkit 2013 Setup Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Next**.|  
-    |**End-User License Agreement**|Click **I accept the terms in the License Agreement**, and then click **Next**.|  
-    |**Custom Setup**|Click **Next**.|  
-    |**Ready to install Microsoft Deployment Toolkit 2013**|Click **Install**.|  
-    |**Installing Microsoft Deployment Toolkit 2013**|The progress for installing MDT is displayed.|  
-    |**Completed the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Finish**.|  
+    |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard** |Click **Next**.|  
+    |**End-User License Agreement** |Click **I accept the terms in the License Agreement**, and then click **Next**.|  
+    |**Custom Setup** |Click **Next**.|  
+    |**Ready to install Microsoft Deployment Toolkit 2013** |Click **Install**.|  
+    |**Installing Microsoft Deployment Toolkit 2013** |The progress for installing MDT is displayed.|  
+    |**Completed the Microsoft Deployment Toolkit 2013 Setup Wizard** |Click **Finish**.|  
 
  The Microsoft Deployment Toolkit 2013 Setup Wizard finishes, and MDT is installed on WDG-MDT-01.  
 
@@ -693,15 +677,14 @@ manager: angrobe
 
      The Configure ConfigMgr Integration Wizard starts.  
 
-2.  Complete the Configure ConfigMgr Integration Wizard using the information in  REF _Ref301353187 \h Table 18. Accept the default values unless otherwise specified.  
+2.  Complete the Configure ConfigMgr Integration Wizard using the information in Table 18. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 18. Information for Completing the Configure ConfigMgr Integration Wizard  
+    ### Table 18. Information for Completing the Configure ConfigMgr Integration Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Options**|1.  Verify that the **Install the MDT console extensions for ConfigMgr 2012** check box is selected.<br />2.  Verify that the **Add the MDT task sequence actions to a ConfigMgr server** check box is selected.<br />3.  In **Site server name**, verify that the value is **WDG-MDT-01.mdt2013.corp.woodgrovebank.com**.<br />4.  In **Site code**, verify that the value is **NYC**.<br />5.  Click **Next**.|  
-    |**Confirmation**|Click **Finish**.|  
+    |**Options** |1.  Verify that the **Install the MDT console extensions for ConfigMgr 2012** check box is selected.<br />2.  Verify that the **Add the MDT task sequence actions to a ConfigMgr server** check box is selected.<br />3.  In **Site server name**, verify that the value is **WDG-MDT-01.mdt2013.corp.woodgrovebank.com**.<br />4.  In **Site code**, verify that the value is **NYC**.<br />5.  Click **Next**.|  
+    |**Confirmation** |Click **Finish**.|  
 
  The Configure ConfigMgr Integration Wizard finishes, and MDT is integrated with Configuration Manager.  
 
@@ -744,36 +727,35 @@ manager: angrobe
 
      The Create MDT Task Sequence Wizard starts.  
 
-5.  Complete the Create MDT Task Sequence Wizard using the information in  REF _Ref301353524 \h Table 19. Accept the default values unless otherwise specified.  
+5.  Complete the Create MDT Task Sequence Wizard using the information in Table 19. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 19. Information for Completing the Create MDT Task Sequence Wizard  
+    ### Table 19. Information for Completing the Create MDT Task Sequence Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Choose Template**|Select **Client Task Sequence**, and then click **Next**.|  
-    |**Choose Template: General**|1.  In **Task sequence name**, type **Windows 8.1 Reference Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**, and then click **Next**.|  
-    |**Choose Template: Details**|1.  Click **Join a workgroup**.<br />2.  In **Workgroup**, type **WORKGROUP**.<br />3.  In **User name**, type **Woodgrove Bank Employee**.<br />4.  In **Organization name**, type **Woodgrove Bank**.<br />5.  In **Product key**, type ***product_key*** (where *product_key* is the product key for Windows 8.1).<br />6.  Click **Next**.|  
-    |**Choose Template: Capture Settings**|<ol><li>Click **This task sequence may be used to capture and image**.</li><li>In **Capture destination**, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**.</li><li>In **Capture account**, click **Set**.</li><li>Complete the **Windows User Account** dialog box by performing the following steps:<br /><br /> <ol><li>In **User name**, type **MDT2013\Administrator**.</li><li>In **Password** and **Confirm password**, type **P@ssw0rd**.</li></ol></li><li>Click **OK**.</li><li>Click **Next**.</li></ol>|  
-    |**Boot Image**|1.  Click **Create a new boot image package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\WINPE_Custom**, and then click **Next**.|  
-    |**Boot Image: General Settings**|1.  In **Name**, type **Windows PE Custom**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Customized version of Windows PE to be used in deployment of reference and target computers**, and then click **Next**.|  
-    |**Boot Image: Options**|Under **Platform**, click **x64**, and then click **Next**.|  
-    |**Boot Image: Components**|Click **Next**.|  
-    |**Boot Image: Customization**|Click **Next**.|  
-    |**MDT Package**|1.  Click **Create a new Microsoft Deployment Toolkit Files package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\MDT_Files**, and then click **Next**.|  
-    |**MDT Package: MDT Details**|1.  In **Name**, type **MDT Files**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Provides access to MDT files during Configuration Manager deployment process**, and then click **Next**.|  
-    |**OS Image**|1.  Click **Create a new OS install package**.<br />2.  In **OS installation folder location**, type **\\\WDG-MDT-01\Source$\Windows_8-1**.<br />3.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\Windows_8-1**, and then click **Next**.|  
-    |**OS Image: Image Details**|1.  In **Name**, type **Windows 8.1**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 package used to deploy to reference computers**, and then click **Next**.|  
-    |**Deployment Method**|Click **Next**.|  
-    |**Client Package**|Click **Create a new ConfigMgr client package**, and then click **Next**.|  
-    |**USMT Package**|1.  Click **Create a new USMT package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\USMT**, and then click **Next**.|  
-    |**USMT Package: USMT Details**|1.  In **Name**, type **USMT**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **USMT files used to capture and restore user state migration information**, and then click **Next**.|  
-    |**Settings Package**|1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Reference**, and then click **Next**.|  
-    |**Settings Package: Settings Details**|1.  In **Name**, type **MDT Reference Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the reference computer**, and then click **Next**.|  
-    |**Sysprep Package**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the task sequence is displayed.|  
-    |**Confirmation**|Click **Finish**.|  
+    |**Choose Template** |Select **Client Task Sequence**, and then click **Next**.|  
+    |**Choose Template: General** |1.  In **Task sequence name**, type **Windows 8.1 Reference Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**, and then click **Next**.|  
+    |**Choose Template: Details** |1.  Click **Join a workgroup**.<br />2.  In **Workgroup**, type **WORKGROUP**.<br />3.  In **User name**, type **Woodgrove Bank Employee**.<br />4.  In **Organization name**, type **Woodgrove Bank**.<br />5.  In **Product key**, type ***product_key*** (where *product_key* is the product key for Windows 8.1).<br />6.  Click **Next**.|  
+    |**Choose Template: Capture Settings** |<ol><li>Click **This task sequence may be used to capture and image**.</li><li>In **Capture destination**, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**.</li><li>In **Capture account**, click **Set**.</li><li>Complete the **Windows User Account** dialog box by performing the following steps:<br /><br /> <ol><li>In **User name**, type **MDT2013\Administrator**.</li><li>In **Password** and **Confirm password**, type **P@ssw0rd**.</li></ol></li><li>Click **OK**.</li><li>Click **Next**.</li></ol>|  
+    |**Boot Image** |1.  Click **Create a new boot image package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\WINPE_Custom**, and then click **Next**.|  
+    |**Boot Image: General Settings** |1.  In **Name**, type **Windows PE Custom**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Customized version of Windows PE to be used in deployment of reference and target computers**, and then click **Next**.|  
+    |**Boot Image: Options** |Under **Platform**, click **x64**, and then click **Next**.|  
+    |**Boot Image: Components** |Click **Next**.|  
+    |**Boot Image: Customization** |Click **Next**.|  
+    |**MDT Package** |1.  Click **Create a new Microsoft Deployment Toolkit Files package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\MDT_Files**, and then click **Next**.|  
+    |**MDT Package: MDT Details** |1.  In **Name**, type **MDT Files**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Provides access to MDT files during Configuration Manager deployment process**, and then click **Next**.|  
+    |**OS Image** |1.  Click **Create a new OS install package**.<br />2.  In **OS installation folder location**, type **\\\WDG-MDT-01\Source$\Windows_8-1**.<br />3.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\Windows_8-1**, and then click **Next**.|  
+    |**OS Image: Image Details** |1.  In **Name**, type **Windows 8.1**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 package used to deploy to reference computers**, and then click **Next**.|  
+    |**Deployment Method** |Click **Next**.|  
+    |**Client Package** |Click **Create a new ConfigMgr client package**, and then click **Next**.|  
+    |**USMT Package** |1.  Click **Create a new USMT package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\USMT**, and then click **Next**.|  
+    |**USMT Package: USMT Details** |1.  In **Name**, type **USMT**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **USMT files used to capture and restore user state migration information**, and then click **Next**.|  
+    |**Settings Package** |1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Reference**, and then click **Next**.|  
+    |**Settings Package: Settings Details** |1.  In **Name**, type **MDT Reference Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the reference computer**, and then click **Next**.|  
+    |**Sysprep Package** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the task sequence is displayed.|  
+    |**Confirmation** |Click **Finish**.|  
 
  The new task sequence appears in the preview pane.  
 
@@ -797,19 +779,18 @@ manager: angrobe
 
      The Distribute Content Wizard starts.  
 
-6.  Complete the Distribute Content Wizard using the information in  REF _Ref301353910 \h Table 20. Accept default values unless otherwise specified.  
+6.  Complete the Distribute Content Wizard using the information in 20. Accept default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 20. Information for Completing the Distribute Content Wizard  
+    ### Table 20. Information for Completing the Distribute Content Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|Click **Next**.|  
-    |**General: Content**|Click **Next**.|  
-    |**General: Content Destination**|1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for distributing the software is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |Click **Next**.|  
+    |**General: Content** |Click **Next**.|  
+    |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for distributing the software is displayed.|  
+    |**Completion** |Click **Close**.|  
 
 7.  Close all open windows and dialog boxes.  
 
@@ -830,20 +811,19 @@ manager: angrobe
 
      The Import New Driver Wizard starts.  
 
-5.  Complete the Import New Driver Wizard using the information in  REF _Ref302034493 \h Table 21. Accept the default values unless otherwise specified.  
+5.  Complete the Import New Driver Wizard using the information in Table 21. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 21. Information for Completing the Import New Driver Wizard  
+    ### Table 21. Information for Completing the Import New Driver Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Locate Driver**|**In Source folder**, type **\\\WDG-MDT-01\Source$\Drivers**, and then click **Next**.|  
-    |**Locate Driver: Driver Details**|Click **Next**.|  
-    |**Locate Driver: Add Driver to Package**|<ol><li>Click **New Package**.</li><li>Complete the **New Driver Package** dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, type ***device_driver_name* Package** (where *device_driver_name* is a descriptive name for the device drivers).</li><li>In **Comment**, type **Device drivers that are necessary for the reference and target computers**.</li></ol></li><li>In **Driver package source**, type **\\\WDG-MDT-01\Packages$\Drivers**, and then click **OK**.</li><li>Click **Next**.</li></ol>|  
-    |**Locate Driver: Add Driver to Boot Images**|1.  In the list of images, select the **Windows PE Custom** check box.<br />2.  Select the **Update distribution points when finished** check box, and then click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for importing the device drivers is displayed.|  
-    |**Confirmation**|Click **Close**.|  
+    |**Locate Driver** |**In Source folder**, type **\\\WDG-MDT-01\Source$\Drivers**, and then click **Next**.|  
+    |**Locate Driver: Driver Details** |Click **Next**.|  
+    |**Locate Driver: Add Driver to Package** |<ol><li>Click **New Package**.</li><li>Complete the **New Driver Package** dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, type ***device_driver_name*** **Package** (where *device_driver_name* is a descriptive name for the device drivers).</li><li>In **Comment**, type **Device drivers that are necessary for the reference and target computers**.</li></ol></li><li>In **Driver package source**, type **\\\WDG-MDT-01\Packages$\Drivers**, and then click **OK**.</li><li>Click **Next**.</li></ol>|  
+    |**Locate Driver: Add Driver to Boot Images** |1.  In the list of images, select the **Windows PE Custom** check box.<br />2.  Select the **Update distribution points when finished** check box, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for importing the device drivers is displayed.|  
+    |**Confirmation** |Click **Close**.|  
 
  **To select the distribution points for the driver package**  
 
@@ -853,24 +833,23 @@ manager: angrobe
 
 3.  In the Software Library workspace, go to Overview/Operating Systems/Driver Packages.  
 
-4.  In the preview pane, click ***device_driver_name* Package** (where *device_driver_name* is a descriptive name for the device drivers).  
+4.  In the preview pane, click ***device_driver_name*** **Package** (where *device_driver_name* is a descriptive name for the device drivers).  
 
 5.  On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Distribute Content**.  
 
      The Distribute Content Wizard starts.  
 
-6.  Complete the Distribute Content Wizard using the information in  REF _Ref302034626 \h Table 22. Accept the default values unless otherwise specified.  
+6.  Complete the Distribute Content Wizard using the information in Table 22. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 22. Information for Completing the Distribute Content Wizard  
+    ### Table 22. Information for Completing the Distribute Content Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|Click **Next**.|  
-    |**General: Content**|Click **Next**.|  
-    |**General: Content Destination**|1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for distributing the software is displayed.|  
+    |**General** |Click **Next**.|  
+    |**General: Content** |Click **Next**.|  
+    |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for distributing the software is displayed.|  
     |Completion|Click **Close**.|  
 
 7.  Close all open windows and dialog boxes.  
@@ -888,20 +867,19 @@ manager: angrobe
 
      The New Deployment Share Wizard starts.  
 
-4.  Complete the New Deployment Share Wizard using the information in  REF _Ref300065286 \h Table 23.  
+4.  Complete the New Deployment Share Wizard using the information in Table 23.  
 
-    ### Table  SEQ Table \\* ARABIC 23. Information for Completing the New Deployment Share Wizard  
+    ### Table 23. Information for Completing the New Deployment Share Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Path**|**In Deployment share path**, type **C:\DeploymentShare$**, and then click **Next**.|  
-    |**Share**|Click **Next**.|  
-    |**Descriptive Name**|Click **Next**.|  
-    |**Options**|Click **Next**.|  
-    |**Summary**|Click **Next**.|  
-    |**Progress**|The progress for creating the deployment share is displayed.|  
-    |**Confirmation**|Click Finish.|  
+    |**Path** |**In Deployment share path**, type **C:\DeploymentShare$**, and then click **Next**.|  
+    |**Share** |Click **Next**.|  
+    |**Descriptive Name** |Click **Next**.|  
+    |**Options** |Click **Next**.|  
+    |**Summary** |Click **Next**.|  
+    |**Progress** |The progress for creating the deployment share is displayed.|  
+    |**Confirmation** |Click Finish.|  
 
      The New Deployment Share Wizard finishes, and the new deployment share—MDT Deployment Share (C:\DeploymentShare$)—appears in the details pane.  
 
@@ -932,7 +910,7 @@ manager: angrobe
 
 1.  In Windows Explorer, go to E:\Packages$\CustomSettings_Reference, and then double-click **CustomSettings.ini**.  
 
-2.  Open Microsoft Notepad, and then add the following lines to the end of the CustomSettings.ini file, as shown in  REF _Ref327007623 \h Listing 1:  
+2.  Open Microsoft Notepad, and then add the following lines to the end of the CustomSettings.ini file, as shown in Listing 1:  
 
     ```  
     DoCapture=YES  
@@ -940,9 +918,9 @@ manager: angrobe
     ```  
 
     > [!NOTE]
-    >  Ensure that you remove any additional settings other than those shown in  REF _Ref327007623 \h Listing 1.  
+    >  Ensure that you remove any additional settings other than those shown in Listing 1.  
 
-     **Listing  SEQ Equation * ARABIC 1. CustomSettings.ini File After Adding the DoCapture Property**  
+     **Listing 1. CustomSettings.ini File After Adding the DoCapture Property**  
 
     ```  
     [Settings]  
@@ -1040,20 +1018,19 @@ manager: angrobe
 
      The Import Computer Information Wizard starts.  
 
-5.  Complete the Import Computer Information Wizard using the information in  REF _Ref302035882 \h Table 24. Accept the default values unless otherwise specified.  
+5.  Complete the Import Computer Information Wizard using the information in 24. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 24. Information for Completing Import Computer Information Wizard  
+    ### Table 24. Information for Completing Import Computer Information Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Select Source**|Click **Import single computer**, and then click **Next**.|  
+    |**Select Source** |Click **Import single computer**, and then click **Next**.|  
     |Select Source: Single Computer|1.  In **Computer Name**, type **WDG-REF-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the media access control [MAC] address of the primary network adapter for the reference computer, WDG-REF-01).<br />3.  Click **Next**.|  
-    |**Select Source: Data Preview**|Click **Next**.|  
-    |**Select Source: Choose Target Collection**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for importing the computer is displayed.|  
-    |**Confirmation**|Click **Close**.|  
+    |**Select Source: Data Preview** |Click **Next**.|  
+    |**Select Source: Choose Target Collection** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for importing the computer is displayed.|  
+    |**Confirmation** |Click **Close**.|  
 
  For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section, “How to Deploy Operating Systems in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
@@ -1072,18 +1049,17 @@ manager: angrobe
 
      The Create Device Collection Wizard starts.  
 
-5.  Complete the Create Device Collection Wizard using the information in  REF _Ref302036170 \h Table 25. Accept the default values unless otherwise specified.  
+5.  Complete the Create Device Collection Wizard using the information in Table 25. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 25. Information for Completing the Create Device Collection Wizard  
+    ### Table 25. Information for Completing the Create Device Collection Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Reference Computer**.</li><li>In **Comment**, type **Computer that is to be the reference computer for the target computers to be deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-REF-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-REF-01**, and then click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Progress** page, view the progress for creating the new membership rule.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the device collection is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |<ol><li>In **Name**, type **Microsoft Deployment – Reference Computer**.</li><li>In **Comment**, type **Computer that is to be the reference computer for the target computers to be deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
+    |**Membership Rules** |<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-REF-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-REF-01**, and then click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Progress** page, view the progress for creating the new membership rule.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the device collection is displayed.|  
+    |**Completion** |Click **Close**.|  
 
  For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
@@ -1104,22 +1080,21 @@ manager: angrobe
 
      The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the information in  REF _Ref303164893 \h Table 26. Accept the default values unless otherwise specified.  
+6.  Complete the Deploy Software Wizard using the information in Table 26. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 26. Information for Completing the Deploy Software Wizard  
+    ### Table ARABIC 26. Information for Completing the Deploy Software Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Reference Computer**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the reference computer and then capture an image of the reference computer**.<br />4.  Click **Next**.|  
-    |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
-    |**Deployment Settings: Schedule**|Click **Next**.|  
-    |**Deployment Settings: User Experience**|Click **Next**.|  
-    |**Deployment Settings: Alerts**|Click **Next**.|  
-    |**Deployment Settings: Distribution Points**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for deploying the task sequence is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Reference Computer**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the reference computer and then capture an image of the reference computer**.<br />4.  Click **Next**.|  
+    |**Deployment Settings** |1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
+    |**Deployment Settings: Schedule** |Click **Next**.|  
+    |**Deployment Settings: User Experience** |Click **Next**.|  
+    |**Deployment Settings: Alerts** |Click **Next**.|  
+    |**Deployment Settings: Distribution Points** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for deploying the task sequence is displayed.|  
+    |**Completion** |Click **Close**.|  
 
  For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
@@ -1138,22 +1113,21 @@ manager: angrobe
 
      The Create Task Sequence Media Wizard starts.  
 
-5.  Complete the Create Task Sequence Media Wizard using the information in  REF _Ref303165066 \h Table 27. Accept the default values unless otherwise specified.  
+5.  Complete the Create Task Sequence Media Wizard using the information in Table 27. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 27. Information for Completing the Create Task Sequence Media Wizard  
+    ### Table 27. Information for Completing the Create Task Sequence Media Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Select Media Type**|1.  Click **Bootable media**.<br />2.  Clear the **Allow unattended operating system deployment** check box.<br />3.  Click **Next**.|  
-    |**Select Media Type: Media Management**|Click **Site-based media**, and then click **Next**.|  
-    |**Select Media Type: Media Type**|In **Media file**, type **\\\WDG-MDT-01\Capture$\CM2012_TS_Boot_Media.iso**, and then click **Next**.|  
-    |**Select Media Type: Security**|In **Password** and **Confirm password**, type **P@ssw0rd**, and then click **Next**.|  
-    |**Select Media Type: Boot Image**|1.  In **Boot image**, click **Browse**.<br />2.  In the **Select a Boot Image** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  In **Distribution point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />4.  In **Management point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />5.  Click **Next**.|  
-    |**Select Media Type: Customization**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the task sequence media is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**Select Media Type** |1.  Click **Bootable media**.<br />2.  Clear the **Allow unattended operating system deployment** check box.<br />3.  Click **Next**.|  
+    |**Select Media Type: Media Management** |Click **Site-based media**, and then click **Next**.|  
+    |**Select Media Type: Media Type** |In **Media file**, type **\\\WDG-MDT-01\Capture$\CM2012_TS_Boot_Media.iso**, and then click **Next**.|  
+    |**Select Media Type: Security** |In **Password** and **Confirm password**, type **P@ssw0rd**, and then click **Next**.|  
+    |**Select Media Type: Boot Image** |1.  In **Boot image**, click **Browse**.<br />2.  In the **Select a Boot Image** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  In **Distribution point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />4.  In **Management point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />5.  Click **Next**.|  
+    |**Select Media Type: Customization** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the task sequence media is displayed.|  
+    |**Completion** |Click **Close**.|  
 
      The wizard creates the CM2012_TS_Boot_Media.iso file in the WDG-MDT-01Capture$ shared folder.  
 
@@ -1173,15 +1147,14 @@ manager: angrobe
 
      Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard using the information in  REF _Ref303165274 \h Table 28. Accept the default values unless otherwise specified.  
+2.  Complete the Task Sequence Wizard using the information in Table 28. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 28. Information for Completing the Task Sequence Wizard  
+    ### Table 28. Information for Completing the Task Sequence Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Welcome to the Task Sequence Wizard**|In **Password**, type **P@ssw0rd**, and then click **Next**.|  
-    |**Select a Task Sequence**|In the list box, select **Windows 8.1 Reference Deployment**, and then click **Next**.|  
+    |**Welcome to the Task Sequence Wizard** |In **Password**, type **P@ssw0rd**, and then click **Next**.|  
+    |**Select a Task Sequence** |In the list box, select **Windows 8.1 Reference Deployment**, and then click **Next**.|  
 
  **To monitor the reference computer deployment process using the Deployment Workbench**  
 
@@ -1201,28 +1174,27 @@ manager: angrobe
 
      The **WDG-REF-01 Properties** dialog box is displayed.  
 
-7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in  REF _Ref308167766 \h Table 29.  
+7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in Table 29.  
 
-    ### Table  SEQ Table \\* ARABIC 29. Monitoring Information About the Deployment Process  
+    ### Table 29. Monitoring Information About the Deployment Process  
 
-    |||  
+    |**Information** |**Description** |  
     |-|-|  
-    |**Information**|**Description**|  
-    |**ID**|Unique identifier for the computer being deployed.|  
-    |**Computer Name**|The name of the computer being deployed.|  
+    |**ID** |Unique identifier for the computer being deployed.|  
+    |**Computer Name** |The name of the computer being deployed.|  
     |Deployment status|The current status of the computer being deployed; the status can be one of the following:<br /><br /> -   **Running**. The task sequence is healthy and running.<br />-   **Failed**. The task sequence failed, and the deployment process was unsuccessful.<br />-   **Completed**. The task sequence has finished.<br />-   **Unresponsive**. The task sequence has not updated its status in the past four hours and is assumed to be nonresponsive.|  
-    |**Step**|The current task sequence step being run.|  
-    |**Progress**|The overall progress of the task sequence. The progress bar indicates how many task sequence steps have been run out of the total number of task sequence steps.|  
-    |**Start**|The time the deployment process started.|  
-    |**End**|The time the deployment process ended.|  
-    |**Elapsed**|The length of time the deployment process has been running or took to run if the deployment process has finished.|  
-    |**Errors**|The number of errors encountered during the deployment process.|  
-    |**Warnings**|The number of warnings encountered during the deployment process.|  
-    |**Remote Desktop**|This button allows you to establish a remote desktop connection with the computer being deployed using the Windows Remote Desktop feature. This method assumes that:<br /><br /> -   The target operating system is running and has remote desktop support enabled<br />-   **mstsc.exe** is in the path **Note:**  This button is always visible but may not be able to establish a remote desktop session if the monitored computer is running Windows PE, has not completed installation of the target operating system, or does not have the Remote Desktop feature enabled.|  
-    |**VM Connection**|This button allows you to establish a remote desktop connection to a VM running in HyperV®. This method assumes that:<br /><br /> -   The deployment is being performed to a VM running on Hyper-V<br />-   **vmconnect.exe** is located in the %ProgramFiles%\Hyper-V folder **Note:**  This button appears when ZTIGather.wsf detects that Hyper-V integration components are running on the monitored computer. Otherwise, this button will not be visible.|  
-    |**DaRT Remote Control**|This button allows you to establish a remote control session using the remote viewer feature in the Diagnostics and Recovery Toolkit (DaRT).<br /><br /> This method assumes that:<br /><br /> -   DaRT has been deployed to the target computer and is currently running<br />-   **DartRemoteViewer.exe** is located in the %ProgramFiles%\Microsoft DaRT 7\v7 folder **Note:**  This button appears when ZTIGather.wsf detects that DaRT is running on the monitored computer. Otherwise, this button will not be visible.|  
-    |**Automatically refresh this information every 10 seconds**|Check box that controls whether the information in the dialog box is automatically refreshed. If the check box is:<br /><br /> -   Selected, the information is refreshed every 10 seconds<br />-   Cleared, the information is not automatically refreshed and must be manually refreshed using the **Refresh Now** button|  
-    |**Refresh Now**|This button immediately refreshes the information displayed in the dialog box.|  
+    |**Step** |The current task sequence step being run.|  
+    |**Progress** |The overall progress of the task sequence. The progress bar indicates how many task sequence steps have been run out of the total number of task sequence steps.|  
+    |**Start** |The time the deployment process started.|  
+    |**End** |The time the deployment process ended.|  
+    |**Elapsed** |The length of time the deployment process has been running or took to run if the deployment process has finished.|  
+    |**Errors** |The number of errors encountered during the deployment process.|  
+    |**Warnings** |The number of warnings encountered during the deployment process.|  
+    |**Remote Desktop** |This button allows you to establish a remote desktop connection with the computer being deployed using the Windows Remote Desktop feature. This method assumes that:<br /><br /> -   The target operating system is running and has remote desktop support enabled<br />-   **mstsc.exe** is in the path **Note:**  This button is always visible but may not be able to establish a remote desktop session if the monitored computer is running Windows PE, has not completed installation of the target operating system, or does not have the Remote Desktop feature enabled.|  
+    |**VM Connection** |This button allows you to establish a remote desktop connection to a VM running in HyperV®. This method assumes that:<br /><br /> -   The deployment is being performed to a VM running on Hyper-V<br />-   **vmconnect.exe** is located in the %ProgramFiles%\Hyper-V folder **Note:**  This button appears when ZTIGather.wsf detects that Hyper-V integration components are running on the monitored computer. Otherwise, this button will not be visible.|  
+    |**DaRT Remote Control** |This button allows you to establish a remote control session using the remote viewer feature in the Diagnostics and Recovery Toolkit (DaRT).<br /><br /> This method assumes that:<br /><br /> -   DaRT has been deployed to the target computer and is currently running<br />-   **DartRemoteViewer.exe** is located in the %ProgramFiles%\Microsoft DaRT 7\v7 folder **Note:**  This button appears when ZTIGather.wsf detects that DaRT is running on the monitored computer. Otherwise, this button will not be visible.|  
+    |**Automatically refresh this information every 10 seconds** |Check box that controls whether the information in the dialog box is automatically refreshed. If the check box is:<br /><br /> -   Selected, the information is refreshed every 10 seconds<br />-   Cleared, the information is not automatically refreshed and must be manually refreshed using the **Refresh Now** button|  
+    |**Refresh Now** |This button immediately refreshes the information displayed in the dialog box.|  
 
 8.  In the **WDG-REF-01 Properties** dialog box, click **OK**.  
 
@@ -1325,18 +1297,17 @@ manager: angrobe
 
      The Add Operating System Image Wizard starts.  
 
-5.  Complete the Add Operating System Image Wizard using the information in  REF _Ref306177237 \h Table 30. Accept the default values unless otherwise specified.  
+5.  Complete the Add Operating System Image Wizard using the information in Table 30. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 30. Information for Completing the Add Operating System Image Wizard  
+    ### Table 30. Information for Completing the Add Operating System Image Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Data Source**|In Path, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**, and then click **Next**.|  
-    |**General**|1.  In **Name**, type **Windows 8.1 Reference Image**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 captured image of reference computer (WDG-REF-01) used to deploy to target computers**, and then click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for importing the operating system image is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**Data Source** |In Path, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**, and then click **Next**.|  
+    |**General** |1.  In **Name**, type **Windows 8.1 Reference Image**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 captured image of reference computer (WDG-REF-01) used to deploy to target computers**, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for importing the operating system image is displayed.|  
+    |**Completion** |Click **Close**.|  
 
 6.  In the preview pane, click **Windows 8.1 Reference Image**.  
 
@@ -1364,30 +1335,29 @@ manager: angrobe
 
      The Create MDT Task Sequence Wizard starts.  
 
-5.  Complete the Create MDT Task Sequence Wizard using the information in  REF _Ref303165466 \h Table 31. Accept the default values unless otherwise specified.  
+5.  Complete the Create MDT Task Sequence Wizard using the information in Table 31. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 31. Information for Completing the Create MDT Task Sequence Wizard  
+    ### Table 31. Information for Completing the Create MDT Task Sequence Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Choose Template**|Select **Client Task Sequence**, and then click **Next**.|  
-    |**Choose Template: General**|1.  In **Task sequence name**, type **UDI - Windows 8.1 Target Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying captured reference computer image to the target computer (WDG-CLI-01) using UDI**, and then click **Next**.|  
+    |**Choose Template** |Select **Client Task Sequence**, and then click **Next**.|  
+    |**Choose Template: General** |1.  In **Task sequence name**, type **UDI - Windows 8.1 Target Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying captured reference computer image to the target computer (WDG-CLI-01) using UDI**, and then click **Next**.|  
     |Choose Template: Details|1.  In **Use name**, type **Woodgrove Bank Employee**.<br />2.  In **Organization name**, type **Woodgrove Bank**.<br />3.  Click **Next**.|  
-    |**Choose Template: Capture Settings**|Click **Next**.|  
-    |**Boot Image**|1.  In **Specify an existing boot image package**, click **Browse**.<br />2.  In **Select a Package** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**MDT Package**|1.  In **Specify an existing Microsoft Deployment Toolkit Files package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **MDT Files**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**OS Image**|1.  Click **Specify an existing OS image**.<br />2.  In **Specify an existing OS image**, click **Browse**.<br />3.  In the **Select a Package** dialog box, click **Windows 8.1 Reference Image**, and then click **OK**.<br />4.  Click **Next**.|  
-    |**OS Image: OS Image Index**|1.  In **The selected operating system image (WIM) file contains multiple images. Specify which image you would like to deploy**, select ***image_index*** (where *image_index* is the image index of the image that contains Windows 8.1, which was identified in the [Step 5-1: Import the Captured .wim File into Configuration Manager](#ImportCapturedwimFileintoCOnfigurationManager); for the purposes of this guide, select 2).<br />2.  Click **Next**.|  
-    |**Deployment Method**|Click **Perform a "User-Driven Installation"**, and then click **Next**.|  
-    |**Client Package**|1.  In **Specify an existing ConfigMgr client package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **Microsoft Configuration Manager Client Upgrade**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**USMT Package**|1.  In **Specify an existing USMT package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **USMT**, and then click **OK**.<br />3.  Click **Next**.|  
+    |**Choose Template: Capture Settings** |Click **Next**.|  
+    |**Boot Image** |1.  In **Specify an existing boot image package**, click **Browse**.<br />2.  In **Select a Package** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  Click **Next**.|  
+    |**MDT Package** |1.  In **Specify an existing Microsoft Deployment Toolkit Files package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **MDT Files**, and then click **OK**.<br />3.  Click **Next**.|  
+    |**OS Image** |1.  Click **Specify an existing OS image**.<br />2.  In **Specify an existing OS image**, click **Browse**.<br />3.  In the **Select a Package** dialog box, click **Windows 8.1 Reference Image**, and then click **OK**.<br />4.  Click **Next**.|  
+    |**OS Image: OS Image Index** |1.  In **The selected operating system image (WIM) file contains multiple images. Specify which image you would like to deploy**, select ***image_index*** (where *image_index* is the image index of the image that contains Windows 8.1, which was identified in the [Step 5-1: Import the Captured .wim File into Configuration Manager](#ImportCapturedwimFileintoCOnfigurationManager); for the purposes of this guide, select 2).<br />2.  Click **Next**.|  
+    |**Deployment Method** |Click **Perform a "User-Driven Installation"**, and then click **Next**.|  
+    |**Client Package** |1.  In **Specify an existing ConfigMgr client package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **Microsoft Configuration Manager Client Upgrade**, and then click **OK**.<br />3.  Click **Next**.|  
+    |**USMT Package** |1.  In **Specify an existing USMT package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **USMT**, and then click **OK**.<br />3.  Click **Next**.|  
     |Settings Package|1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\UDICustomSettings_Target**, and then click **Next**.|  
-    |**Settings Package: Settings Details**|1.  In **Name**, type **UDI Target Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process using UDI (such as CustomSettings.ini) for the target computer**, and then click **Next**.|  
-    |**Sysprep Package**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the task sequence is displayed.|  
-    |**Confirmation**|Click **Finish**.|  
+    |**Settings Package: Settings Details** |1.  In **Name**, type **UDI Target Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process using UDI (such as CustomSettings.ini) for the target computer**, and then click **Next**.|  
+    |**Sysprep Package** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the task sequence is displayed.|  
+    |**Confirmation** |Click **Finish**.|  
 
  The list of task sequences is displayed. The task sequence that you just created (**UDI – Windows 8.1 Target Deployment**) is listed in the list of task sequences.  
 
@@ -1413,19 +1383,18 @@ manager: angrobe
 
      The Distribute Content Wizard starts.  
 
-5.  Complete the Distribute Content Wizard using the information in  REF _Ref303165811 \h Table 32. Accept default values unless otherwise specified.  
+5.  Complete the Distribute Content Wizard using the information in Table 32. Accept default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 32. Information for Completing the Distribute Content Wizard  
+    ### Table 32. Information for Completing the Distribute Content Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|Click **Next**.|  
-    |**Content**|Click **Next**.|  
-    |**General: Content Destination**|1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for distributing the software is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |Click **Next**.|  
+    |**Content** |Click **Next**.|  
+    |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for distributing the software is displayed.|  
+    |**Completion** |Click **Close**.|  
 
 ###  <a name="CustomizeMDTConfigurationFiles"></a> Step 5-4: Customize the MDT Configuration Files  
  When the task sequence for the target computer has been created, customize the MDT configuration files that provide the configuration settings for deploying Windows 8.1 to the target computer—specifically, CustomSettings.ini.  
@@ -1436,14 +1405,14 @@ manager: angrobe
 
 1.  In Windows Explorer, go to E:\Packages$\CustomSettings_Target folder, and then double-click **CustomSettings.ini**.  
 
-2.  Open Notepad, and then add the following line to the CustomSettings.ini file that the environment requires, as shown in  REF _Ref327008506 \h Listing 2:  
+2.  Open Notepad, and then add the following line to the CustomSettings.ini file that the environment requires, as shown in Listing 2:  
 
      This setting configures monitoring of the target computer deployment.  
 
     > [!NOTE]
     >  Make any other changes that your environment requires.  
 
-     **Listing  SEQ Equation \\\* ARABIC 2. Default CustomSettings.ini File**  
+     **Listing 2. Default CustomSettings.ini File**  
 
     ```  
     [Settings]  
@@ -1582,20 +1551,19 @@ manager: angrobe
 
      The Create Application Wizard starts.  
 
-5.  Complete the Create Application Wizard using the information in  REF _Ref306704479 \h Table 33. Accept default values unless otherwise specified.  
+5.  Complete the Create Application Wizard using the information in Table 33. Accept default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 33. Information for Completing the Create Application Wizard  
+    ### Table 3. Information for Completing the Create Application Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|Click **Manually specify the application information**, and then click **Next**.|  
-    |**General: General**|1.  In **Name**, type **Microsoft Office Professional Plus 2010 – x86**.<br />2.  In **Administrator comments**, type **32-bit version of Microsoft Office Professional Plus 2010**.<br />3.  Select the **Allow this application to be installed from Install Application task sequence action instead of deploying it manually** check box.<br />4.  Click **Next**.|  
-    |**General: Application Catalog**|1.  In **Localized description**, type **32-bit version of Microsoft Office Professional Plus 2010 for use by Woodgrove Bank Employees**.<br />2.  In **Keywords**, **type Office Professional Plus 2010**.<br />3.  Click **Next**.|  
-    |**General: Deployment Type s**|<ol><li>Click **Add**.<br /><br />     The Create Deployment Type Wizard Starts.</li><li>In the **Create Deployment Type Wizard**, on the **General** page, click **Manually specify the deployment type information** and then click **Next**.</li><li>On the **General: General Information** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Name**, type **Microsoft Office Professional Plus 2010 – x32 (Windows Installer)**.</li><li>In **Administrator comments**, type **Deploy Microsoft Office Professional Plus 2010 using native Windows Installer**.</li></ol></li><li>On the **General: Content** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Content location**, type **\\\WDGMDT01\Source$\OfficeProPlus2010**.</li><li>In **Installation program**, type **setup.exe**.</li><li>In **Uninstall program**, type **setup.exe /uninstall PROPLUS**.</li></ol></li><li>On the **General: Detection Method** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>Click Add **Clause**,<br /><br />         The **Detection Rule** dialog box appears.</li><li>In the **Detection Rule** dialog box, in **Setting Type**, select **Windows Installer**.</li><li>In **Product code**, click **Browse**<br /><br />         The **Open** dialog box appears.</li><li>In the **Open dialog** box, in **File name**, type **\\\WDGMDT01\Source$\OfficeProPlus2010\ProPlus.WW\ProPlusWW.msi**, and then click **Open**.<br /><br />         The product code for Office Professional Plus 2010 appears in the **Product code** box.</li><li>In the **Detection Rule** dialog box, click **OK**.</li></ol></li><li>On the **General: User Experience** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Installation behavior**, select **Install for system**.</li><li>In **Logon requirement**, select **Whether or not a user is logged on**.</li><li>In **Installation program visibility**, select **Normal**.</li><li>In **Estimated installation time**, type **120**.</li></ol></li><li>On the **Requirements** page, click **Next**.</li><li>On the **Dependencies** page, click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.<br /><br />     The Create Application Wizard starts.</li><li>Click **Next**.</li></ol>|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the application is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |Click **Manually specify the application information**, and then click **Next**.|  
+    |**General: General** |1.  In **Name**, type **Microsoft Office Professional Plus 2010 – x86**.<br />2.  In **Administrator comments**, type **32-bit version of Microsoft Office Professional Plus 2010**.<br />3.  Select the **Allow this application to be installed from Install Application task sequence action instead of deploying it manually** check box.<br />4.  Click **Next**.|  
+    |**General: Application Catalog** |1.  In **Localized description**, type **32-bit version of Microsoft Office Professional Plus 2010 for use by Woodgrove Bank Employees**.<br />2.  In **Keywords**, **type Office Professional Plus 2010**.<br />3.  Click **Next**.|  
+    |**General: Deployment Type s** |<ol><li>Click **Add**.<br /><br />     The Create Deployment Type Wizard Starts.</li><li>In the **Create Deployment Type Wizard**, on the **General** page, click **Manually specify the deployment type information** and then click **Next**.</li><li>On the **General: General Information** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Name**, type **Microsoft Office Professional Plus 2010 – x32 (Windows Installer)**.</li><li>In **Administrator comments**, type **Deploy Microsoft Office Professional Plus 2010 using native Windows Installer**.</li></ol></li><li>On the **General: Content** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Content location**, type **\\\WDGMDT01\Source$\OfficeProPlus2010**.</li><li>In **Installation program**, type **setup.exe**.</li><li>In **Uninstall program**, type **setup.exe /uninstall PROPLUS**.</li></ol></li><li>On the **General: Detection Method** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>Click Add **Clause**,<br /><br />         The **Detection Rule** dialog box appears.</li><li>In the **Detection Rule** dialog box, in **Setting Type**, select **Windows Installer**.</li><li>In **Product code**, click **Browse**<br /><br />         The **Open** dialog box appears.</li><li>In the **Open dialog** box, in **File name**, type **\\\WDGMDT01\Source$\OfficeProPlus2010\ProPlus.WW\ProPlusWW.msi**, and then click **Open**.<br /><br />         The product code for Office Professional Plus 2010 appears in the **Product code** box.</li><li>In the **Detection Rule** dialog box, click **OK**.</li></ol></li><li>On the **General: User Experience** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Installation behavior**, select **Install for system**.</li><li>In **Logon requirement**, select **Whether or not a user is logged on**.</li><li>In **Installation program visibility**, select **Normal**.</li><li>In **Estimated installation time**, type **120**.</li></ol></li><li>On the **Requirements** page, click **Next**.</li><li>On the **Dependencies** page, click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.<br /><br />     The Create Application Wizard starts.</li><li>Click **Next**.</li></ol>|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the application is displayed.|  
+    |**Completion** |Click **Close**.|  
 
  The Office Professional Plus 2010 – x86 application appears in the preview pane.  
 
@@ -1616,19 +1584,18 @@ manager: angrobe
 
      The Distribute Content Wizard starts.  
 
-6.  Complete the Distribute Content Wizard using the information in  REF _Ref307237568 \h Table 34. Accept the default values unless otherwise specified.  
+6.  Complete the Distribute Content Wizard using the information in Table 34. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 34. Information for Completing the Distribute Content Wizard  
+    ### Table 34. Information for Completing the Distribute Content Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|Click **Next**.|  
-    |**General: Content**|Click **Next**.|  
-    |**General: Content Destination**|1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution** Points dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the Content destination list.<br />3.  Click **Next**.|  
+    |**General** |Click **Next**.|  
+    |**General: Content** |Click **Next**.|  
+    |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution** Points dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the Content destination list.<br />3.  Click **Next**.|  
     |Summary|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for distributing the application is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**Progress** |The progress for distributing the application is displayed.|  
+    |**Completion** |Click **Close**.|  
 
 7.  Close all open windows and dialog boxes.  
 
@@ -1649,37 +1616,35 @@ manager: angrobe
 
      The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the information in  REF _Ref307237688 \h Table 35. Accept the default values unless otherwise specified.  
+6.  Complete the Deploy Software Wizard using the information in Table 35. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 35. Information for Completing the Deploy Software Wizard  
+    ### Table 35. Information for Completing the Deploy Software Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|1.  In **Collection**, click **Browse**.<br />     The **Select Collection** dialog box appears.<br />2.  In the **Select Collection** dialog box, click **All Users**, and then click **OK**.<br />3.  In **Comments**, type **Make Microsoft Office Professional Plus 2010 available for deployment to all users**.<br />4.  Click **Next**.|  
-    |**Content**|Click **Next**.|  
-    |**Deployment Settings**|Click **Next**.|  
-    |**Scheduling**|Click **Next**.|  
-    |**Alerts**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for deploying the application is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |1.  In **Collection**, click **Browse**.<br />     The **Select Collection** dialog box appears.<br />2.  In the **Select Collection** dialog box, click **All Users**, and then click **OK**.<br />3.  In **Comments**, type **Make Microsoft Office Professional Plus 2010 available for deployment to all users**.<br />4.  Click **Next**.|  
+    |**Content** |Click **Next**.|  
+    |**Deployment Settings** |Click **Next**.|  
+    |**Scheduling** |Click **Next**.|  
+    |**Alerts** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for deploying the application is displayed.|  
+    |**Completion** |Click **Close**.|  
 
 7.  Close all open windows and dialog boxes.  
 
 ###  <a name="CustomizeUDIWizardConfigFile"></a> Step 5-11: Customize the UDI Wizard Configuration File for the Target Computer  
  The User-Driven Installation task sequence template includes a task sequence step that runs the UDI Wizard. When a task sequence step runs the UDI Wizard, the step also references an XML file that determines the configuration of the UDI Wizard. The UDIWizard_Config.xml file in the Scripts folder controls the behavior of the UDI Wizard. Customize the UDIWizard_Config.xml file using the UDI Wizard Designer.  
 
- The UDI Wizard Designer includes predefined stage groups for the UDI Wizard listed in  REF _Ref304716468 \h Table 36. You can add or remove the wizard pages that appear in the UDI Wizard and the sequence of each wizard page for each stage group.  
+ The UDI Wizard Designer includes predefined stage groups for the UDI Wizard listed in Table 36. You can add or remove the wizard pages that appear in the UDI Wizard and the sequence of each wizard page for each stage group.  
 
-### Table  SEQ Table \\* ARABIC 36. Predefined Stage Groups for Each Supported MDT Deployment Scenario  
+### Table 36. Predefined Stage Groups for Each Supported MDT Deployment Scenario  
 
-|||  
+|**Stage group** |**Description** |  
 |-|-|  
-|**Stage group**|**Description**|  
-|**New Computer**|Use this stage group as the basis for your deployment when a new installation of a Windows operating system is deployed to a new computer and no user state is migrated.|  
-|**Refresh**|Use this stage group as the basis for your deployment when a computer is refreshed, including computers that must be re-imaged for image standardization or to address a problem.|  
-|**Replace**|Use this stage group as the basis for your deployment when one computer replaces another computer. The existing user state migration data is saved from the original computer. Then, a new installation of Windows is deployed to a new computer. Finally, the user state data is restored to the new computer.|  
+|**New Computer** |Use this stage group as the basis for your deployment when a new installation of a Windows operating system is deployed to a new computer and no user state is migrated.|  
+|**Refresh** |Use this stage group as the basis for your deployment when a computer is refreshed, including computers that must be re-imaged for image standardization or to address a problem.|  
+|**Replace** |Use this stage group as the basis for your deployment when one computer replaces another computer. The existing user state migration data is saved from the original computer. Then, a new installation of Windows is deployed to a new computer. Finally, the user state data is restored to the new computer.|  
 
  **To customize the UDI Wizard configuration file for the reference computer**  
 
@@ -1720,17 +1685,16 @@ manager: angrobe
     > [!NOTE]
     >  Make note of the sequence of the wizard pages in the StageGroup: New Computer flow in the UDI Wizard Designer. You will see the same sequence of wizard pages when you run the UDI Wizard in [Step 6-4: Start the Target Computer with the Task Sequence Bootable Media](#StartTargetComputerwithTaskSequenceBootableMedia).  
 
-8.  Configure the **StageGroup: New Computer** flow using the information for each page listed in  REF _Ref307238163 \h Table 37. Accept the default values unless otherwise specified.  
+8.  Configure the **StageGroup: New Computer** flow using the information for each page listed in Table 37. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 37. Information for Configuring UDI Wizard Designer Pages  
+    ### Table 37. Information for Configuring UDI Wizard Designer Pages  
 
-    |||  
+    |**Wizard page** |**Click the Configure tab and do the following** |  
     |-|-|  
-    |**Wizard page**|**Click the Configure tab and do the following**|  
-    |**BitLocker**|<ol><li>Under **BitLocker Mode**, expand **BitLocker Mode**. In **BitLocker Checkbox**, clear the **Initially check this check box** check box.</li><li>Under **BitLocker Mode**, click **Unlocked** for each of the following configuration options:<br /><br /> <ul><li>**BitLocker Checkbox**</li><li>**BitLocker Mode Radio Buttons**</li><li>**PIN Text Box**</li></ul></li></ol><br /> The status for each configuration option changes to **Locked**, which prevents users from changing these options in the UDI Wizard.|  
-    |**Volume**|<ol><li>Under **Image Combo Box**, expand **Image Combo Behavior**, under **Image Combo Box Values**, right-click **Windows 8.1 RTM (x86)**, and then cliczk Select an **Operating System Image**.<br /><br />     The **Select an Operating System Image** dialog box appears.</li><li>Complete the **Select an Operating System Image** dialog box by performing the following steps, and then click **OK**:<br /><br /> <ol><li>In **Select an Operating System Image/Installer to add**, click ***image_index*** (where *image_index* is the image index of the image that contains Windows 8.1, which was identified in [Step 5-1: Import the Captured .wim File into Configuration Manager](#ImportCapturedwimFileintoCOnfigurationManager); for the purposes of this guide, select **2**).</li><li>In **Display Name**, type **Windows 8.1 Reference Image – x64**.</li></ol></li><li>Under **Image Combo Box**, expand **Image Combo Behavior**; under **Image Combo Box Values**, right-click **Windows 8.1 RTM (x86)**, and then click **Remove Item**.<br /><br />     The **Delete Item Confirmation** dialog box appears.</li><li>In the **Delete Item Confirmation** dialog box, click **Yes**.</li><li>Under **User Data and Settings**, expand **User Data Combo Behavior**, and then select the **Format: Clean all the data on the target volume during install** check box.</li><li>Under **User Data Combo Behavior**, click **Unlocked** for each of the following configuration options:<br /><br /> <ul><li>**Format Drive**</li><li>**Windows Directory**</li></ul></li></ol><br /> The status for each configuration option changes to **Locked**, which prevents users from changing these options in the UDI Wizard.|  
-    |**New Computer Details**|1.  Under **Network Details**, expand **Network Details**; in **Domain or Workgroup Radio Buttons**, click **Domain**.<br />2.  Under **Domain or Workgroup Radio Buttons**, click **Unlocked**.<br />     The status changes to **Locked**, which prevents users from changing this option in the UDI Wizard.<br />3.  Under **Network Details**, expand **Domains and OUs**, and then click **Add Domain**.<br />     The **Create or Edit Domain Information** dialog box appears.<br />4.  In the **Create or Edit Domain Information** dialog box, in **Domain Name** type **mdt2013.corp.woodgrovebank.com**.<br />5.  In the **Create or Edit Domain Information** dialog box, in **Friendly Name**, type **Woodgrove Bank Active Directory Domain**, and then click **OK**.|  
-    |**Install Programs**|<ol><li>Under **Software and Groups**, right-click any blank area, and then click **Add Software Group**.<br /><br />     The **Add/Edit a Software Group** dialog box appears.</li><li>In the **Add/Edit a Software Group** dialog box, in **Name**, type **Woodgrove Bank Applications**, and then click **OK**.</li><li>Under **Software and Groups**, click **Woodgrove Bank Applications**.</li><li>On the Ribbon, on the **Home** tab, in the **General Software Item Settings** group, click **Add**, and then click **Add Software to Group**.<br /><br />     The Add Software to Group Wizard starts.</li><li>Complete the Add Software to Group Wizard by performing the following steps:<br /><br /> <ol><li>On the **What type of software item do you want to add** page, click **I want to add an Application**, and then click **Next**.</li><li>On the **Search Configuration Manager for the Software Item to Add** page, in **Display Name**, type **Microsoft Office Professional Plus 2010 – x86**.</li><li>On the **Search Configuration Manager for the Software Item to Add** page, click **Select**.<br /><br />         The **Search Applications** dialog box appears.</li><li>In the **Search Applications** dialog box, click **Search**, click **Microsoft Office Professional Plus 2010 – X86**, and then click **OK**.</li><li>On the **Search Configuration Manager for the Software Item to Add page**, click **Finish**.</li></ol><br />     **Microsoft Office Professional Plus 2010 – x86** appears underneath the **Woodgrove Bank Applications** software group.</li><li>Under **Software and Groups**, click **General Software**.</li><li>On the Ribbon, on the **Home** tab, in the **General Software Item Settings** group, click **Add**, and then click **Remove Item**.<br /><br />     The **Delete the Selected Item** dialog box appears.</li><li>In the **Delete the Selected Item** dialog box, click **Yes**.</li><li>Under **Software and Groups**, select the check box for **Woodgrove Bank Applications**.<br /><br />     The group and Microsoft Office Professional Plus 2010 – x86 are selected.</li></ol>|  
+    |**BitLocker** |<ol><li>Under **BitLocker Mode**, expand **BitLocker Mode**. In **BitLocker Checkbox**, clear the **Initially check this check box** check box.</li><li>Under **BitLocker Mode**, click **Unlocked** for each of the following configuration options:<br /><br /> <ul><li>**BitLocker Checkbox**</li><li>**BitLocker Mode Radio Buttons**</li><li>**PIN Text Box**</li></ul></li></ol><br /> The status for each configuration option changes to **Locked**, which prevents users from changing these options in the UDI Wizard.|  
+    |**Volume** |<ol><li>Under **Image Combo Box**, expand **Image Combo Behavior**, under **Image Combo Box Values**, right-click **Windows 8.1 RTM (x86)**, and then cliczk Select an **Operating System Image**.<br /><br />     The **Select an Operating System Image** dialog box appears.</li><li>Complete the **Select an Operating System Image** dialog box by performing the following steps, and then click **OK**:<br /><br /> <ol><li>In **Select an Operating System Image/Installer to add**, click ***image_index*** (where *image_index* is the image index of the image that contains Windows 8.1, which was identified in [Step 5-1: Import the Captured .wim File into Configuration Manager](#ImportCapturedwimFileintoCOnfigurationManager); for the purposes of this guide, select **2**).</li><li>In **Display Name**, type **Windows 8.1 Reference Image – x64**.</li></ol></li><li>Under **Image Combo Box**, expand **Image Combo Behavior**; under **Image Combo Box Values**, right-click **Windows 8.1 RTM (x86)**, and then click **Remove Item**.<br /><br />     The **Delete Item Confirmation** dialog box appears.</li><li>In the **Delete Item Confirmation** dialog box, click **Yes**.</li><li>Under **User Data and Settings**, expand **User Data Combo Behavior**, and then select the **Format: Clean all the data on the target volume during install** check box.</li><li>Under **User Data Combo Behavior**, click **Unlocked** for each of the following configuration options:<br /><br /> <ul><li>**Format Drive**</li><li>**Windows Directory**</li></ul></li></ol><br /> The status for each configuration option changes to **Locked**, which prevents users from changing these options in the UDI Wizard.|  
+    |**New Computer Details** |1.  Under **Network Details**, expand **Network Details**; in **Domain or Workgroup Radio Buttons**, click **Domain**.<br />2.  Under **Domain or Workgroup Radio Buttons**, click **Unlocked**.<br />     The status changes to **Locked**, which prevents users from changing this option in the UDI Wizard.<br />3.  Under **Network Details**, expand **Domains and OUs**, and then click **Add Domain**.<br />     The **Create or Edit Domain Information** dialog box appears.<br />4.  In the **Create or Edit Domain Information** dialog box, in **Domain Name** type **mdt2013.corp.woodgrovebank.com**.<br />5.  In the **Create or Edit Domain Information** dialog box, in **Friendly Name**, type **Woodgrove Bank Active Directory Domain**, and then click **OK**.|  
+    |**Install Programs** |<ol><li>Under **Software and Groups**, right-click any blank area, and then click **Add Software Group**.<br /><br />     The **Add/Edit a Software Group** dialog box appears.</li><li>In the **Add/Edit a Software Group** dialog box, in **Name**, type **Woodgrove Bank Applications**, and then click **OK**.</li><li>Under **Software and Groups**, click **Woodgrove Bank Applications**.</li><li>On the Ribbon, on the **Home** tab, in the **General Software Item Settings** group, click **Add**, and then click **Add Software to Group**.<br /><br />     The Add Software to Group Wizard starts.</li><li>Complete the Add Software to Group Wizard by performing the following steps:<br /><br /> <ol><li>On the **What type of software item do you want to add** page, click **I want to add an Application**, and then click **Next**.</li><li>On the **Search Configuration Manager for the Software Item to Add** page, in **Display Name**, type **Microsoft Office Professional Plus 2010 – x86**.</li><li>On the **Search Configuration Manager for the Software Item to Add** page, click **Select**.<br /><br />         The **Search Applications** dialog box appears.</li><li>In the **Search Applications** dialog box, click **Search**, click **Microsoft Office Professional Plus 2010 – X86**, and then click **OK**.</li><li>On the **Search Configuration Manager for the Software Item to Add page**, click **Finish**.</li></ol><br />     **Microsoft Office Professional Plus 2010 – x86** appears underneath the **Woodgrove Bank Applications** software group.</li><li>Under **Software and Groups**, click **General Software**.</li><li>On the Ribbon, on the **Home** tab, in the **General Software Item Settings** group, click **Add**, and then click **Remove Item**.<br /><br />     The **Delete the Selected Item** dialog box appears.</li><li>In the **Delete the Selected Item** dialog box, click **Yes**.</li><li>Under **Software and Groups**, select the check box for **Woodgrove Bank Applications**.<br /><br />     The group and Microsoft Office Professional Plus 2010 – x86 are selected.</li></ol>|  
 
 9. On the Ribbon, on the **Home** tab, click **Save**.  
 
@@ -1776,27 +1740,26 @@ manager: angrobe
 ###  <a name="AddControlstoNewcustomWizardPage"></a> Step 5-14: Add Controls to New Custom Wizard Page  
  After the new UDI custom wizard page has been added to the New Computer stage group, the appropriate controls need to be added to the new custom wizard page. The controls are added to the custom wizard page from the Build Your Own Page toolbox, which is displayed when you view the custom wizard page on the **Configure** tab in the UDI Wizard Designer.  
 
- REF _Ref328645017 \h Table 38 lists the types of controls to your custom wizard page, which is illustrated in  REF _Ref328595784 \h Figure 1.  
+ Table 38 lists the types of controls to your custom wizard page, which is illustrated in Figure 1.  
 
-### Table  SEQ Table \\* ARABIC 38. Types of Controls in the UDI Build Your Own Page Toolbox  
+### Table 38. Types of Controls in the UDI Build Your Own Page Toolbox  
 
-|||  
+|**Control type** |**Description** |  
 |-|-|  
-|**Control type**|**Description**|  
-|**Checkbox**|This control allows you to select or clear a configuration option and behaves as a traditional user interface (UI) check box. This control has a corresponding label that you can use to describe the purpose of the check box. The state of this control is True when the check box is selected and False when the check box is cleared. The state of the check box is stored in the task sequence variable configured for this control. For more information on this control, see "Checkbox Control" in the MDT document, *Toolkit Reference*.|  
-|**Combobox**|This control allows you to select an item from a list of items and behaves as a traditional UI drop-down list. This control allows you to add or remove items from the list and provide a corresponding value that will be set in the task sequence variable configured for this control. For more information on this control, see "Combobox Control" in the MDT document, *Toolkit Reference*.|  
-|**Line**|This control allows you to add a horizontal line to divide one portion of the custom wizard page from another. This control does not collect any configuration values but rather is used to visually enhance the UI. For more information on this control, see "Line Control" in the MDT document, *Toolkit Reference*.|  
-|**Label**|This control allows you to add descriptive, read-only text to the wizard page. This control does not collect any configuration values but rather is used to visually enhance the UI. For more information on this control, see "Label Control" in the MDT document, *Toolkit Reference*.|  
-|**Radio**|This control allows you to select one configuration option from a group of two or more options. As with traditional radio buttons, two or more of these controls can be grouped together, and then the user can select one of the options in the radio button group. A unique value is assigned to each option. The value assigned to the selected option control is saved in the task sequence variable configured for this control. For more information on this control, see "Radio Control" in the MDT document, *Toolkit Reference*.|  
-|**Bitmap**|This control allows you to add a bitmap graphic (.bmp file) to the custom wizard page. This control does not collect any configuration values but rather is used to visually enhance the UI. The path to the .bmp file is relative to the location of the UDI Wizard (OSDSetupWizard.exe). For more information on this control, see "Bitmap Control" in the MDT document, *Toolkit Reference*.|  
-|**Textbox**|This control allows you to enter text on the custom wizard page. The text typed into this control is saved in the task sequence variable configured for this control. For more information on this control, see "Textbox Control" in the MDT document, *Toolkit Reference*.|  
+|**Checkbox** |This control allows you to select or clear a configuration option and behaves as a traditional user interface (UI) check box. This control has a corresponding label that you can use to describe the purpose of the check box. The state of this control is True when the check box is selected and False when the check box is cleared. The state of the check box is stored in the task sequence variable configured for this control. For more information on this control, see "Checkbox Control" in the MDT document, *Toolkit Reference*.|  
+|**Combobox** |This control allows you to select an item from a list of items and behaves as a traditional UI drop-down list. This control allows you to add or remove items from the list and provide a corresponding value that will be set in the task sequence variable configured for this control. For more information on this control, see "Combobox Control" in the MDT document, *Toolkit Reference*.|  
+|**Line** |This control allows you to add a horizontal line to divide one portion of the custom wizard page from another. This control does not collect any configuration values but rather is used to visually enhance the UI. For more information on this control, see "Line Control" in the MDT document, *Toolkit Reference*.|  
+|**Label** |This control allows you to add descriptive, read-only text to the wizard page. This control does not collect any configuration values but rather is used to visually enhance the UI. For more information on this control, see "Label Control" in the MDT document, *Toolkit Reference*.|  
+|**Radio** |This control allows you to select one configuration option from a group of two or more options. As with traditional radio buttons, two or more of these controls can be grouped together, and then the user can select one of the options in the radio button group. A unique value is assigned to each option. The value assigned to the selected option control is saved in the task sequence variable configured for this control. For more information on this control, see "Radio Control" in the MDT document, *Toolkit Reference*.|  
+|**Bitmap** |This control allows you to add a bitmap graphic (.bmp file) to the custom wizard page. This control does not collect any configuration values but rather is used to visually enhance the UI. The path to the .bmp file is relative to the location of the UDI Wizard (OSDSetupWizard.exe). For more information on this control, see "Bitmap Control" in the MDT document, *Toolkit Reference*.|  
+|**Textbox** |This control allows you to enter text on the custom wizard page. The text typed into this control is saved in the task sequence variable configured for this control. For more information on this control, see "Textbox Control" in the MDT document, *Toolkit Reference*.|  
 
  You can add any combination of these controls to your custom wizard page based on the information you want to collect. In addition, you can use the **Show Gridlines** check box to show or hide gridlines that can be used to assist in visually designing the custom wizard page.  
 
- For the purposes of this example, you will create a custom wizard page as illustrated in  REF _Ref328595784 \h Figure 1.  
+ For the purposes of this example, you will create a custom wizard page as illustrated in Figure 1.  
 
  ![QuickStartGuideforUDI](media/QuickStartGuideforUDI.jpg "QuickStartGuideforUDI")  
-Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created  
+Figure 1. Custom wizard page to be created  
 
  **Figure 1. Custom wizard page to be created**  
 
@@ -1820,16 +1783,15 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      This control acts as a heading for the custom wizard page and describes the purpose of the page.  
 
-5.  Configure the layout properties of **label1** on the **Layout** tab using the information in  REF _Ref328594181 \h Table 39. Accept the default values unless otherwise stated.  
+5.  Configure the layout properties of **label1** on the **Layout** tab using the information in Table 39. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 39. label1 Layout Properties  
+    ### Table 39. label1 Layout Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**Label**|User and organization information|  
-    |**X**|30|  
-    |**Y**|5|  
+    |**Label** |User and organization information|  
+    |**X** |30|  
+    |**Y** |5|  
 
 6.  In the Build Your Own Page toolbox, drag the **Label** control to the empty wizard page at approximately the following coordinates:  
 
@@ -1843,16 +1805,15 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      This control acts as a label for the text box used to enter the user name.  
 
-8.  Configure the layout properties of **label2** on the **Layout** tab using the information in  REF _Ref328596095 \h Table 40. Accept the default values unless otherwise stated.  
+8.  Configure the layout properties of **label2** on the **Layout** tab using the information in Table 40. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 40. lable2 Layout Properties  
+    ### Table 40. lable2 Layout Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**Label**|User name|  
-    |**X**|60|  
-    |**Y**|60|  
+    |**Label** |User name|  
+    |**X** |60|  
+    |**Y** |60|  
 
 9. In the Build Your Own Page toolbox, click and drag the **Textbox** control to the empty wizard page at approximately the following coordinates:  
 
@@ -1866,26 +1827,24 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      This control is the text box used to enter the user name.  
 
-11. Configure the layout properties of **text1** on the **Layout** tab using the information in  REF _Ref328596073 \h Table 41. Accept the default values unless otherwise stated.  
+11. Configure the layout properties of **text1** on the **Layout** tab using the information in Table 41. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 41. text1 Layout Properties  
+    ### Table 41. text1 Layout Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**X**|60|  
-    |**Y**|80|  
-    |**Width**|400|  
+    |**X** |60|  
+    |**Y** |80|  
+    |**Width** |400|  
 
-12. Configure the settings properties of **text1** on the **Settings** tab using the information in  REF _Ref328598800 \h Table 42. Accept the default values unless otherwise stated.  
+12. Configure the settings properties of **text1** on the **Settings** tab using the information in Table 42. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 42. text1 Settings Properties  
+    ### Table 42. text1 Settings Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**Task sequence variable name**|**FullName**|  
-    |**Friendly display name visible in summary page**|Registered user name|  
+    |**Task sequence variable name** |**FullName** |  
+    |**Friendly display name visible in summary page** |Registered user name|  
 
 13. In the Build Your Own Page toolbox, drag the **Label** control to the empty wizard page at approximately the following coordinates:  
 
@@ -1899,16 +1858,15 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      This control acts as a label for the combo box used to select the organization or department name for the user.  
 
-15. Configure the layout properties of **lable3** on the **Layout** tab using the information in  REF _Ref328597830 \h Table 43. Accept the default values unless otherwise stated.  
+15. Configure the layout properties of **lable3** on the **Layout** tab using the information in Table 43. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 43. lable3 Layout Properties  
+    ### Table 43. lable3 Layout Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**Label**|Organization or department name|  
-    |**X**|60|  
-    |**Y**|121|  
+    |**Label** |Organization or department name|  
+    |**X** |60|  
+    |**Y** |121|  
 
 16. In the Build Your Own Page toolbox, drag the **Combobox** control to the empty wizard page at approximately the following coordinates:  
 
@@ -1922,37 +1880,34 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      This control is the combo box used to select the organization name.  
 
-18. Configure the layout properties of **combo1** on the **Layout** tab using the information in  REF _Ref328599011 \h Table 44. Accept the default values unless otherwise stated.  
+18. Configure the layout properties of **combo1** on the **Layout** tab using the information in Table 44. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 44. combo1 Layout Properties  
+    ### Table 44. combo1 Layout Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**X**|60|  
-    |**Y**|80|  
-    |**Width**|400|  
+    |**X** |60|  
+    |**Y** |80|  
+    |**Width** |400|  
 
-19. Add data items to the layout properties of **combo1** on the **Layout** tab using the information in  REF _Ref328599330 \h Table 45. Accept the default values unless otherwise stated.  
+19. Add data items to the layout properties of **combo1** on the **Layout** tab using the information in Table 45. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 45. combo1 Data Items  
+    ### Table 45. combo1 Data Items  
 
-    |||  
+    |**Value** |**Display Value** |  
     |-|-|  
-    |**Value**|**Display Value**|  
-    |**Woodgrove Bank – New York City**|Woodgrove Bank – New York City|  
-    |**Woodgrove Bank – Dallas**|Woodgrove Bank – Dallas|  
-    |**Woodgrove Bank – Chicago**|Woodgrove Bank – Chicago|  
-    |**Woodgrove Bank – Seattle**|Woodgrove Bank – Seattle|  
+    |**Woodgrove Bank – New York City** |Woodgrove Bank – New York City|  
+    |**Woodgrove Bank – Dallas** |Woodgrove Bank – Dallas|  
+    |**Woodgrove Bank – Chicago** |Woodgrove Bank – Chicago|  
+    |**Woodgrove Bank – Seattle** |Woodgrove Bank – Seattle|  
 
-20. Configure the settings properties of **combo1** on the **Settings** tab using the information in  REF _Ref328599012 \h Table 46. Accept the default values unless otherwise stated.  
+20. Configure the settings properties of **combo1** on the **Settings** tab using the information in Table 46. Accept the default values unless otherwise stated.  
 
-    ### Table  SEQ Table \\* ARABIC 46. combo1 Settings Properties  
+    ### Table 46. combo1 Settings Properties  
 
-    |||  
+    |**Property** |**Value** |  
     |-|-|  
-    |**Property**|**Value**|  
-    |**Task sequence variable name**|**OrgName**|  
+    |**Task sequence variable name** |**OrgName** |  
     |Friendly display name visible in summary page|Registered organization name|  
 
 21. On the Ribbon, on the **Home** tab, click **Save**.  
@@ -2014,20 +1969,19 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      The Import Computer Information Wizard starts.  
 
-5.  Complete the Import Computer Information Wizard using the information in  REF _Ref303167645 \h Table 47. Accept the default values unless otherwise specified.  
+5.  Complete the Import Computer Information Wizard using the information in Table 47. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 47. Information for Completing Import Computer Information Wizard  
+    ### Table 47. Information for Completing Import Computer Information Wizard  
 
-    |||  
+    |On this wizard page |Do this |  
     |-|-|  
-    |*On this wizard page*|**Do this**|  
-    |**Select Source**|Click **Import single computer**, and then click **Next**.|  
-    |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-CLI-01**.<br />2.  In *MAC address*, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer, WDG-CLI-01).<br />3.  Click **Next**.|  
-    |**Select Source: Data Preview**|Click **Next**.|  
-    |**Select Source: Choose Target Collection**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for importing the computer is displayed.|  
-    |**Confirmation**|Click **Close**.|  
+    |**Select Source** |Click **Import single computer**, and then click **Next**.|  
+    |**Select Source: Single Computer** |1.  In **Computer Name**, type **WDG-CLI-01**.<br />2.  In *MAC address*, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer, WDG-CLI-01).<br />3.  Click **Next**.|  
+    |**Select Source: Data Preview** |Click **Next**.|  
+    |**Select Source: Choose Target Collection** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for importing the computer is displayed.|  
+    |**Confirmation** |Click **Close**.|  
 
  For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section, “How to Deploy Operating Systems in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
@@ -2046,18 +2000,17 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      The Create Device Collection Wizard starts.  
 
-5.  Complete the Create Device Collection Wizard using the information in  REF _Ref303167993 \h Table 48. Accept the default values unless otherwise specified.  
+5.  Complete the Create Device Collection Wizard using the information in Table 48. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 48. Information for Completing the Create Device Collection Wizard  
+    ### Table 48. Information for Completing the Create Device Collection Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Batch 01**.</li><li>In **Comment**, type **Computers that are to be included in the first batch of computers deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Browse Collections** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In the **Browse Collection** dialog box, in **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-CLI-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-CLI-01**, and then click **Next**. **Note:**          The process for adding the target computer (WDG-CLI-01) to All Systems can take a few minutes to finish. If WDG-CLI-01 does not appear in the list, repeat steps b and c until WDGCLI01 appears.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the device collection is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |<ol><li>In **Name**, type **Microsoft Deployment – Batch 01**.</li><li>In **Comment**, type **Computers that are to be included in the first batch of computers deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Browse Collections** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In the **Browse Collection** dialog box, in **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
+    |**Membership Rules** |<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-CLI-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-CLI-01**, and then click **Next**. **Note:**          The process for adding the target computer (WDG-CLI-01) to All Systems can take a few minutes to finish. If WDG-CLI-01 does not appear in the list, repeat steps b and c until WDGCLI01 appears.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the device collection is displayed.|  
+    |**Completion** |Click **Close**.|  
 
  For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
@@ -2078,22 +2031,21 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the information in  REF _Ref303169719 \h Table 49. Accept the default values unless otherwise specified.  
+6.  Complete the Deploy Software Wizard using the information in Table 49. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 49. Information for Completing the Deploy Software Wizard  
+    ### Table 49. Information for Completing the Deploy Software Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Batch 01**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the first batch of target computers using UDI**.<br />4.  Click **Next**.|  
-    |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
-    |**Deployment Settings: Schedule**|Click **Next**.|  
-    |**Deployment Settings: User Experience**|Click **Next**.|  
-    |**Deployment Settings: Alerts**|Click **Next**.|  
-    |**Deployment Settings: Distribution Points**|Click **Next**.|  
-    |**Summary**|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
-    |**Progress**|The progress for creating the deploying the task sequence is displayed.|  
-    |**Completion**|Click **Close**.|  
+    |**General** |1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Batch 01**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the first batch of target computers using UDI**.<br />4.  Click **Next**.|  
+    |**Deployment Settings** |1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
+    |**Deployment Settings: Schedule** |Click **Next**.|  
+    |**Deployment Settings: User Experience** |Click **Next**.|  
+    |**Deployment Settings: Alerts** |Click **Next**.|  
+    |**Deployment Settings: Distribution Points** |Click **Next**.|  
+    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Progress** |The progress for creating the deploying the task sequence is displayed.|  
+    |**Completion** |Click **Close**.|  
 
  For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
@@ -2109,36 +2061,34 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard using the information in  REF _Ref303169891 \h Table 50. Accept the default values unless otherwise specified.  
+2.  Complete the Task Sequence Wizard using the information in Table 50. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 50. Information for Completing the Task Sequence Wizard  
+    ### Table 50. Information for Completing the Task Sequence Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Welcome to the Task Sequence Wizard**|In **Password**, type **P@ssw0rd**, and then click **Next**.|  
-    |**Select a Task Sequence**|In the list box, select **UDI - Windows 8.1 Target Deployment**, and then click **Next**.|  
+    |**Welcome to the Task Sequence Wizard** |In **Password**, type **P@ssw0rd**, and then click **Next**.|  
+    |**Select a Task Sequence** |In the list box, select **UDI - Windows 8.1 Target Deployment**, and then click **Next**.|  
 
      At the appropriate task sequence step, the UDI Deployment Wizard starts.  
 
-3.  Complete the UDI Deployment Wizard using the information in  REF _Ref307239335 \h Table 51. Accept the default values unless otherwise specified.  
+3.  Complete the UDI Deployment Wizard using the information in Table 51. Accept the default values unless otherwise specified.  
 
-    ### Table  SEQ Table \\* ARABIC 51. Information for UDI Deployment Wizard  
+    ### Table 51. Information for UDI Deployment Wizard  
 
-    |||  
+    |**On this wizard page** |**Do this** |  
     |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**Welcome**|Click **Next**.|  
-    |**User Information**|1.  In **User Name,** type **Woodgrove Bank Chicago Employee**.<br />2.  In **Organization or Department Name**, select **Woodgrove Bank – Chicago**.<br />3.  Click **Next**.|  
-    |**BitLocker**|Click **Next**.|  
-    |**Volume**|Click **Next**.|  
-    |**Select Target**|Click **Next**.|  
-    |**Deployment Readiness**|1.  Review the configuration checks, and ensure that the status for all checks are set to **Success**.<br />2.  Click *Next*.|  
-    |**New Computer Details**|1.  In **Computer name**, type **WDG-CLI-01**. **Note:**      In unknown computer scenarios, users could change the computer name to the appropriate value.<br />2.  In **User name**, type **MDT2013\Administrator**.<br />3.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />4.  Click **Next**.|  
-    |**Administrator Password**|1.  In **Administrator password** and **Confirm password**, type **P@ssw0rd**.<br />2.  Click **Next**.|  
-    |**User Device Affinity**|Select the **Set primary user** check box, and then click **Next**.|  
-    |**Language**|Click **Next**.|  
-    |**Install Programs**|Verify that the **Microsoft Office Professional Plus 2010 – x86** check box is selected, and then click **Next**.|  
+    |**Welcome** |Click **Next**.|  
+    |**User Information** |1.  In **User Name,** type **Woodgrove Bank Chicago Employee**.<br />2.  In **Organization or Department Name**, select **Woodgrove Bank – Chicago**.<br />3.  Click **Next**.|  
+    |**BitLocker** |Click **Next**.|  
+    |**Volume** |Click **Next**.|  
+    |**Select Target** |Click **Next**.|  
+    |**Deployment Readiness** |1.  Review the configuration checks, and ensure that the status for all checks are set to **Success**.<br />2.  Click *Next*.|  
+    |**New Computer Details** |1.  In **Computer name**, type **WDG-CLI-01**. **Note:**      In unknown computer scenarios, users could change the computer name to the appropriate value.<br />2.  In **User name**, type **MDT2013\Administrator**.<br />3.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />4.  Click **Next**.|  
+    |**Administrator Password** |1.  In **Administrator password** and **Confirm password**, type **P@ssw0rd**.<br />2.  Click **Next**.|  
+    |**User Device Affinity** |Select the **Set primary user** check box, and then click **Next**.|  
+    |**Language** |Click **Next**.|  
+    |**Install Programs** |Verify that the **Microsoft Office Professional Plus 2010 – x86** check box is selected, and then click **Next**.|  
     |Summary|Review the information that that you provided while completing the previous wizard pages, and then click **Finish**.|  
 
  **To monitor the reference computer deployment process using the Deployment Workbench**  
@@ -2159,28 +2109,27 @@ Figure  SEQ Figure \\* ARABIC 1. Custom wizard page to be created
 
      The **WDG-REF-01 Properties** dialog box is displayed.  
 
-7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in  REF _Ref327008717 \h Table 52.  
+7.  In the **WDG-REF-01 Properties** dialog box, on the **Identity** tab, view the monitoring information provided about the deployment process as described in Table 52.  
 
-    ### Table  SEQ Table * ARABIC 52. Monitoring Information About the Deployment Process  
+    ### Table 52. Monitoring Information About the Deployment Process  
 
-    |||  
+    |**Information** |**Description** |  
     |-|-|  
-    |**Information**|**Description**|  
-    |**ID**|Unique identifier for the computer being deployed.|  
-    |**Computer Name**|The name of the computer being deployed.|  
+    |**ID** |Unique identifier for the computer being deployed.|  
+    |**Computer Name** |The name of the computer being deployed.|  
     |Deployment status|The current status of the computer being deployed; the status can be one of the following:<br /><br /> -   **Running**. The task sequence is healthy and running.<br />-   **Failed**. The task sequence failed, and the deployment process was unsuccessful.<br />-   **Completed**. The task sequence has finished.<br />-   **Unresponsive**. The task sequence has not updated its status in the past four hours and is assumed to be nonresponsive.|  
-    |**Step**|The current task sequence step being run.|  
-    |**Progress**|The overall progress of the task sequence. The progress bar indicates how many task sequence steps have been run out of the total number of task sequence steps.|  
-    |**Start**|The time the deployment process started.|  
-    |**End**|The time the deployment process ended.|  
-    |**Elapsed**|The length of time the deployment process has been running or took to run if the deployment process has finished.|  
-    |**Errors**|The number of errors encountered during the deployment process.|  
-    |**Warnings**|The number of warnings encountered during the deployment process.|  
-    |**Remote Desktop**|This button allows you to establish a remote desktop connection with the computer being deployed using the Windows Remote Desktop feature. This method assumes that:<br /><br /> -   The target operating system is running and has remote desktop support enabled<br />-   **mstsc.exe** is in the path **Note:**  This button is always visible but may not be able to establish a remote desktop session if the monitored computer is running Windows PE, has not completed installation of the target operating system, or does not have the Remote Desktop feature enabled.|  
-    |**VM Connection**|This button allows you to establish a remote desktop connection to a VM running in HyperV. This method assumes that:<br /><br /> -   The deployment is being performed to a VM running on Hyper-V<br />-   **vmconnect.ex**e is located in the %ProgramFiles%\Hyper-V folder **Note:**  This button appears when ZTIGather.wsf detects that Hyper-V integration components are running on the monitored computer. Otherwise, this button will not be visible.|  
-    |**DaRT Remote Control**|This button allows you to establish a remote control session using the remote viewer feature in DaRT.<br /><br /> This method assumes that:<br /><br /> -   DaRT has been deployed to the target computer and is currently running<br />-   **DartRemoteViewer.exe** is located in the %ProgramFiles%\Microsoft DaRT 7\v7 folder **Note:**  This button appears when ZTIGather.wsf detects that DaRT is running on the monitored computer. Otherwise, this button will not be visible.|  
-    |**Automatically refresh this information every 10 seconds**|Check box that controls whether the information in the dialog box is automatically refreshed. If the check box is:<br /><br /> -   Selected, the information is refreshed every 10 seconds<br />-   Cleared, the information is not automatically refreshed and must be manually refreshed using the **Refresh** Now button|  
-    |**Refresh Now**|This button immediately refreshes the information displayed in the dialog box.|  
+    |**Step** |The current task sequence step being run.|  
+    |**Progress** |The overall progress of the task sequence. The progress bar indicates how many task sequence steps have been run out of the total number of task sequence steps.|  
+    |**Start** |The time the deployment process started.|  
+    |**End** |The time the deployment process ended.|  
+    |**Elapsed** |The length of time the deployment process has been running or took to run if the deployment process has finished.|  
+    |**Errors** |The number of errors encountered during the deployment process.|  
+    |**Warnings** |The number of warnings encountered during the deployment process.|  
+    |**Remote Desktop** |This button allows you to establish a remote desktop connection with the computer being deployed using the Windows Remote Desktop feature. This method assumes that:<br /><br /> -   The target operating system is running and has remote desktop support enabled<br />-   **mstsc.exe** is in the path **Note:**  This button is always visible but may not be able to establish a remote desktop session if the monitored computer is running Windows PE, has not completed installation of the target operating system, or does not have the Remote Desktop feature enabled.|  
+    |**VM Connection** |This button allows you to establish a remote desktop connection to a VM running in HyperV. This method assumes that:<br /><br /> -   The deployment is being performed to a VM running on Hyper-V<br />-   **vmconnect.ex**e is located in the %ProgramFiles%\Hyper-V folder **Note:**  This button appears when ZTIGather.wsf detects that Hyper-V integration components are running on the monitored computer. Otherwise, this button will not be visible.|  
+    |**DaRT Remote Control** |This button allows you to establish a remote control session using the remote viewer feature in DaRT.<br /><br /> This method assumes that:<br /><br /> -   DaRT has been deployed to the target computer and is currently running<br />-   **DartRemoteViewer.exe** is located in the %ProgramFiles%\Microsoft DaRT 7\v7 folder **Note:**  This button appears when ZTIGather.wsf detects that DaRT is running on the monitored computer. Otherwise, this button will not be visible.|  
+    |**Automatically refresh this information every 10 seconds** |Check box that controls whether the information in the dialog box is automatically refreshed. If the check box is:<br /><br /> -   Selected, the information is refreshed every 10 seconds<br />-   Cleared, the information is not automatically refreshed and must be manually refreshed using the **Refresh** Now button|  
+    |**Refresh Now** |This button immediately refreshes the information displayed in the dialog box.|  
 
 8.  In the **WDG-REF-01 Properties** dialog box, click **OK**.  
 
