@@ -262,7 +262,7 @@ Figure 2. Folder structure for UDI development
 
 11. On the **Debug** tab, click **Start external program**.  
 
-12. In **Start external program**, type ***installation_folder*\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.  
+12. In **Start external program**, type ***installation_folder\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.  
 
     > [!TIP]
     >  You can click the ellipse (…) button to browse to the folder and select UDIDesigner.exe.  

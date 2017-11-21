@@ -863,14 +863,14 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 #### Table 8. Information for Completing the Microsoft Deployment Toolkit 2013 Setup Wizard  
 
-    |**On this wizard page** |**Do the following** |  
-    |-----------------------------|--------------------------|  
-    |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard** |Click **Next**.|  
-    |**End-User License Agreement** |- Review the license agreement.<br /><br /> - Select the **I accept the terms in the License Agreement** check box, and then click **Next**.|  
-    |**Custom Setup** |- Select the desired features.<br /><br /> - Select the desired destination folder for installing MDT (which defaults to C:\Program Files\Microsoft Deployment Toolkit), and then click **Next**.|  
-    |**Ready to install Microsoft Deployment Toolkit 2013** |Click **Install**.|  
-    |**Installing Microsoft Deployment Toolkit 2013** |The progress for installing the Microsoft Deployment Toolkit 2013 is displayed.|  
-    |**Completed the Microsoft Deployment Toolkit 2013 Setup Wizard** |Click **Finish**.|  
+|**On this wizard page** |**Do the following** |  
+|-----------------------------|--------------------------|  
+|**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard** |Click **Next**.|  
+|**End-User License Agreement** |- Review the license agreement.<br /><br /> - Select the **I accept the terms in the License Agreement** check box, and then click **Next**.|  
+|**Custom Setup** |- Select the desired features.<br /><br /> - Select the desired destination folder for installing MDT (which defaults to C:\Program Files\Microsoft Deployment Toolkit), and then click **Next**.|  
+|**Ready to install Microsoft Deployment Toolkit 2013** |Click **Install**.|  
+|**Installing Microsoft Deployment Toolkit 2013** |The progress for installing the Microsoft Deployment Toolkit 2013 is displayed.|  
+|**Completed the Microsoft Deployment Toolkit 2013 Setup Wizard** |Click **Finish**.|  
 
  Upon completion, MDT is installed in the target folder you selected in the wizard.  
 
@@ -7885,7 +7885,7 @@ SkipProductKey=YES
 
   Table 153 explains the properties and corresponding values used in Listing 6.  
 
-### Table 153. Explanation of CustomSettings.ini Properties in Listing 3  
+### Table 153. Explanation of CustomSettings.ini Properties in Listing 6  
 
 |Line in CustomSettings.ini|Purpose|  
 |--------------------------------|-------------|  
@@ -7961,9 +7961,9 @@ MyCustomProperty=TRUE
 MyCustomProperty=FALSE  
 ```  
 
-  Table 154 explains the properties and corresponding values used in Listing 9.  
+Table 154 explains the properties and corresponding values used in Listing 9.  
 
-### Table 154. Explanation of CustomSettings.ini Properties in Listing 6  
+### Table 154. Explanation of CustomSettings.ini Properties in Listing 9  
 
 |Line in CustomSettings.ini|Purpose|  
 |--------------------------------|-------------|  
@@ -11180,7 +11180,7 @@ Parameters=DefaultGateway
 > [!NOTE]
 >  You must import the entire Windows 7 installation files to a deployment share to support Windows RE. Otherwise, Windows 7 is installed without Windows RE support.  
 
- While running the LTI task sequence, the **Add Windows Recovery (WinRE)**task sequence step is responsible for:**  
+ While running the LTI task sequence, the **Add Windows Recovery (WinRE)** task sequence step is responsible for:
 
 -   Installing the appropriate .wim image to the active partition  
 
