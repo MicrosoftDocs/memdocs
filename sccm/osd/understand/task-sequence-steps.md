@@ -538,7 +538,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 ##  Child task sequence
 
-Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This creates a parent-child relationship between the task sequences. With a child task seqeucne, you can create modular, re-usable task sequences.
+Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This creates a parent-child relationship between the task sequences. With a child task sequence, you can create modular, re-usable task sequences.
 
 Consider the following when you add a child task sequence to a task sequence:
 
