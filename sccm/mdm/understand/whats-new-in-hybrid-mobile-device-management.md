@@ -76,7 +76,7 @@ We have added **Ownership Type** to the Device Details screen on the Company Por
   See [protect apps using app protection policies in Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
 - **Windows 10 ARM64 device support** <!-- 1355000 -->
-  Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available. For details, see [Windows 10 ARM64 device support](/sccm/core/plan-design/changes/whats-new-in-version-1710#Windows 10 ARM64 device support).
+  Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available. For details, see [Windows 10 ARM64 device support](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
 
 - **Improved VPN profile experience in the Configuration Manager console** <!-- 1318232 -->
   With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform. This feature was previously available in Configuration Manager Technical Preview 1709 and now available in hybrid deployments with Intune and Configuration Manager (Current Branch) version 1710:
