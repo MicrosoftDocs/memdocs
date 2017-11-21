@@ -6,7 +6,7 @@ description: "Learn about the Microsoft Deployment Toolkit 2013."
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
-  - mdt
+  - configmgr-osd
 ms.topic: article
 ms.assetid:  17466fa9-1a26-4dd8-a36f-c0c68fa1984c
 
@@ -16,7 +16,6 @@ manager: angrobe
 
 ---
 
-<!-- Post migration ready -->
 
 
 # What's new in Microsoft Deployment Toolkit (MDT) 2013 Guide
