@@ -54,7 +54,7 @@ Each section of this article lists hybrid features under three different categor
   Learn how to enable the troubleshooting mode in the Managed Browser on an iOS device, see [How to access to managed app logs using the Managed Browser on iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
 - **Improvements to device setup workflow in the Company Portal for iOS in version 2.9.0**
-  We've improved the device setup workflow in the Company Portal app for iOS. The language is more user-friendly and we've combined screens where possible. We have also made the language more specific to your company by using your company name throughout the setup text. You can see this updated workflow on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui) page.
+  We've improved the device setup workflow in the Company Portal app for iOS. The language is more user-friendly and we've combined screens where possible. We have also made the language more specific to your company by using your company name throughout the setup text. You can see this updated workflow on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017) page.
 
 - **Feedback prompts for the Company Portal app for Android** <!--1165249-->
 The Company Portal app for Android now requests end user feedback. This feedback will be sent directly to Microsoft, and provide end users with an opportunity to review the app in the public Google Play store. Feedback is not required, and can easily be dismissed so users can continue using the app. 
