@@ -42,10 +42,51 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
+- **Company Portal app for macOS is available** <!--1541700-->
+  The Intune Company Portal on macOS has an updated experience, which has been optimized to cleanly display all the information and compliance notifications your users need for all the devices they have enrolled. And, once the Intune Company Portal has been deployed to a device, Microsoft AutoUpdate for macOS will provide updates to it. You can download the new Intune Company Portal for macOS by logging into the Intune Company Portal website from a macOS device.
+
+- **Microsoft Planner is now part of the mobile app management (MAM) list of approved apps**  <!-- 1248473 -->
+  The Microsoft Planner app for iOS and Android is now part of the approved apps for mobile app management (MAM). The app can be configured through the Intune App Protection blade in the Azure portal to all tenants. For details, see [MAM list of approved apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
 - **Access to managed app logs for iOS** <!-- 1469920 -->
   End users with the managed Browser installed can now view the management status of all Microsoft published apps and send logs for troubleshooting their managed iOS apps.
   
   Learn how to enable the troubleshooting mode in the Managed Browser on an iOS device, see [How to access to managed app logs using the Managed Browser on iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
+
+- **Improvements to device setup workflow in the Company Portal for iOS in version 2.9.0**
+  We've improved the device setup workflow in the Company Portal app for iOS. The language is more user-friendly and we've combined screens where possible. We have also made the language more specific to your company by using your company name throughout the setup text. You can see this updated workflow on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui) page.
+
+- **Feedback prompts for the Company Portal app for Android** <!--1165249-->
+The Company Portal app for Android now requests end user feedback. This feedback will be sent directly to Microsoft, and provide end users with an opportunity to review the app in the public Google Play store. Feedback is not required, and can easily be dismissed so users can continue using the app. 
+
+- **Inform end users what device information can be seen for Windows 10 devices** <!--1337920-->
+We have added **Ownership Type** to the Device Details screen on the Company Portal app for Windows 10. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the **About** screen.
+
+- **New 'Resolve' action available for Android devices** <!--1583480-->
+  The Company Portal app for Android is introducing a 'Resolve' action on the _Update device settings_ page. Selecting this option will take the end user directly to the setting that is causing their device to be noncompliant. The Company Portal app for Android currently supports this action for the [device passcode](/intune-user-help/set-your-pin-or-password-android), [device encryption](/intune-user-help/encrypt-your-device-android), [USB debugging](/intune-user-help/you-need-to-turn-off-usb-debugging-android), and [Unknown Sources](intune-user-help/you-need-to-turn-off-unknown-sources-android) settings. 
+
+
+### New in Configuration Manager (current branch)
+
+- **New mobile application management policy settings** <!-- 1324760 -->
+  The following settings have been added to the mobile application management policy settings:
+  - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
+  - **Disable printing**: Prevents the app from printing work or school data.
+
+  See [protect apps using app protection policies in Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
+
+- **Windows 10 ARM64 device support** <!-- 1355000 -->
+  Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available. For details, see [Windows 10 ARM64 device support](/sccm/core/plan-design/changes/whats-new-in-version-1710#Windows 10 ARM64 device support).
+
+- **Improved VPN profile experience in the Configuration Manager console** <!-- 1318232 -->
+  With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform. This feature was previously available in Configuration Manager Technical Preview 1709 and now available in hybrid deployments with Intune and Configuration Manager (Current Branch) version 1710:
+  - [Improved VPN profile experience in Configuration Manager console](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console).
+
+
+### New in Configuration Manger Technical Preview 1711
+
+- **New compliance policy options for Windows 10**
+  You can now configure new options for compliance policies for Windows 10 devices. The new settings include policies for Firewall, User Account Control, Windows Defender Anitivirus, and OS build versioning. For details, see [New compliance policy options for Windows 10](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10).
 
 
 ## October 2017
