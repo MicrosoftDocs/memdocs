@@ -5,7 +5,7 @@ title: "Prepare to deploy client software to Macs"
 titleSuffix: "Configuration Manager"
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -25,7 +25,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Follow these steps to ensure that you're ready to [deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs). 
+Follow these steps to ensure that you're ready to [deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
 ## Mac prerequisites
 
@@ -33,9 +33,9 @@ The Mac client installation package is not supplied with the Configuration Manag
 
 **Supported versions:**  
 
--   **Mac OS X 10.6** (Snow Leopard) 
+-   **Mac OS X 10.6** (Snow Leopard)
 
--   **Mac OS X 10.7** (Lion) 
+-   **Mac OS X 10.7** (Lion)
 
 -   **Mac OS X 10.8** (Mountain Lion)
 
@@ -49,11 +49,13 @@ The Mac client installation package is not supplied with the Configuration Manag
 
 -   **Mac OS X 10.12** (macOS Sierra )  
 
+-   **Mac OS X 10.13** (macOS High Sierra )  
+
 ## Certificate requirements
 Client installation and management for Mac computers requires public key infrastructure (PKI) certificates. PKI certificates secure the communication between the Mac computers and the Configuration Manager site by using mutual authentication and encrypted data transfers. Configuration Manager can request and install a user client certificate by using Microsoft Certificate Services with an enterprise certification authority (CA) and the Configuration Manager enrollment point and enrollment proxy point site system roles. Or, you can request and install a computer certificate independently from Configuration Manager if the certificate meets the requirements for Configuration Manager.   
-  
+
 Configuration Manager Mac clients always perform certificate revocation checking. You cannot disable this function.  
-  
+
 If Mac clients cannot confirm the certificate revocation status for a server certificate because they cannot locate the CRL, they will not be able to successfully connect to Configuration Manager site systems. Especially for Mac clients in a different forest to the issuing certification authority, check your CRL design to ensure that Mac clients can locate and connect to a CRL distribution point (CDP) for connecting site system servers.  
 
 Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
@@ -83,7 +85,7 @@ If these site systems don't have it, deploy a web server certificate to the comp
 
 The web server certificate must contain the Internet FQDN that is specified in the site system properties. The server doesn't have to be accessible from the Internet to support Mac computers. If you do not require Internet-based client management, you can specify the intranet FQDN value for the Internet FQDN.  
 
-Specify the site system's Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point. 
+Specify the site system's Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.
 
 For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
@@ -119,10 +121,10 @@ For an example deployment that creates and installs this web server certificate,
 
  Although distribution points are not required to install the client, you must configure distribution points to allow client connections from the Internet if you want to deploy software to these computers after the client is installed.  
 
- 
+
 ### To configure management points and distribution points to support Macs  
 
-Before you start this procedure, make sure that the site system server that runs the management point and distribution point is configured with an Internet FQDN. If these servers won't support Internet-based client management, you can specify the intranet FQDN as the Internet FQDN value. 
+Before you start this procedure, make sure that the site system server that runs the management point and distribution point is configured with an Internet FQDN. If these servers won't support Internet-based client management, you can specify the intranet FQDN as the Internet FQDN value.
 
 The site system roles must be in a primary site.  
 
