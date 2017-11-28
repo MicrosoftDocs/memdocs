@@ -3,7 +3,7 @@ title: "Release notes "
 titleSuffix: "Configuration Manager"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 08/23/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,30 +34,10 @@ For information about the new features introduced with different versions, see t
 - [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 - [What's new in version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
 - [What's new in version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
-   
+
 
 
 ## Setup and upgrade  
-
-### After you update a Configuration Manager console using ConsoleSetup.exe from the site server folder, recent language pack changes are not available
-<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
-*The following applies to version 1610 and 1702.*   
-After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed language packs might not be available. This occurs when:
-- Your site runs version 1610 or 1702.
-- The console is updated in-place by using ConsoleSetup.exe from the site server installation folder.
-
-When this issue occurs, the reinstalled console does not use the latest set of language packs that were configured. No errors are returned, but language packs available to the console will not have changed.  
-
-**Workaround:** Uninstall the current console, and then reinstall the console as a new installation. You can use ConsoleSetup.exe from the site servers installation folder. During the installation, be sure to select the language pack files you want to use.
-
-
-### With version 1702, the default site boundary group is configured for use for site assignment
-<!--  SMS 486380   Applicability should only be to 1702. -->
-*The following applies to version 1702.*  
-The default site boundary groups Reference tab has a check for **Use this boundary group for site assignment**, lists the site as the **Assigned site**, and is grayed out so that the configuration cannot be edited or removed.
-
-**Workaround:** None. You can ignore this setting. Although the group is enabled for site assignment, the default site boundary group is not used for site assignment. With 1702, this configuration ensures the default site boundary group is associated with the correct site.
-
 
 
 ### When installing a Long-Term Service Branch site using version 1606, a Current Branch site is installed
@@ -109,29 +89,6 @@ When you run Setup from a CD.Latest folder created for version 1606 and use the 
  - Manually delete the *cd.latest\redist\languagepack\zhh* folder, and then run Setup again.
 
 
-### Service connection tool throws an exception when SQL server is remote, or when Shared Memory is disabled
-<!-- 479223   Fixed in 1702 and later   -->
-*The following applies to version 1610 and earlier.*  
-The service connection tool generates an exception when one of the following is true:  
- -	Your site database is remote from the computer that hosts the service connection point and uses a non-standard port (a port other than 1433)
- - 	Your site database is on the same server as the service connection point but SQL protocol **Shared Memory** is disabled
-
-The exception is similar to the following:
- - *Unhandled Exception: System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) --*
-
-**Workaround**: During use of the tool you must modify the registry of the server that hosts the service connection point to include information about the SQL Server port:
-
-   1.	Before using the tool, edit the following registry key and add the number of the port that is in use to the name of the SQL Server:
-    - Key:   HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
-	  - Value: &lt;SQL Server Name>
-    - Add: **,&lt;PORT>**
-
-    For example, to add port *15001* to a server named *testserver.test.net*, the resultant key would be: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
-
-   2.	After adding the port to the registry, the tool should function normally.  
-
-   3.	After your use of the tool is complete, for both the **-connect** and **-import** steps, change the registry key back to the original value.  
-
 
 <!-- ## Backup and recovery  -->
 
@@ -156,15 +113,6 @@ By default, the Create Servicing Plan wizard currently runs after every software
 After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
 
 
-### When a high-risk deployment dialog is visible to a user, subsequent high-risk dialogs with a sooner deadline are not displayed
-<!-- Fixed in 1702 and later -->
-*The following applies to version 1610 and earlier.*   
-After you create and deploy a high-risk task deployment to users, a high-risk dialog box is displayed to the user. If the user does not close the dialog box, you create and deploy another high-risk deployment with a sooner deadline than the first, the user will not receive an updated dialog box until they have closed the original dialog box. The deployments will still run at the configured deadlines.
-
-**Workaround**:  
-The user must close the dialog box for the first high-risk deployment to see the dialog box for the next high-risk deployment.
-
-
 
 ## Software updates
 
@@ -179,6 +127,12 @@ Use only the [languages supported by the Office 365 ProPlus client](https://tech
 
 
 ## Mobile device management  
+
+### Beginning with version 1710, you can no longer deploy Windows Phone 8.1 VPN profiles to Windows 10   <!-- 503274  Should be fixed by 1802, if not sooner -->
+In 1710, it is no longer possible to create a VPN profile using the Windows Phone 8.1 workflow that is also applicable to Windows 10 devices. For these profiles, the Supported Platforms page is no longer shown in the creation wizard and Windows Phone 8.1 is automatically selected on the back-end; in the properties pages, the Supported Platforms page is available, but the Windows 10 options are not displayed.
+
+**Workaround**: Use the Windows 10 VPN profile workflow for Windows 10 devices. If this is not feasible for your environment, contact support. Support can help you add the Windows 10 targeting, if needed.
+
 
 ### Full wipe disables Windows 10 devices with less than 4 GB RAM
 Performing full wipe on Windows 10 RTM devices (versions earlier than version 1511) with less than 4 GB of RAM can leave the device unusable. After attempting to wipe the device it cannot start and unresponsive.
@@ -203,20 +157,4 @@ When an Android for Work email profile is created, there are two options for aut
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
-
-
-## Endpoint Protection
-
-### Antimalware policy fails to apply on Windows Server 2016 Core
-<!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
-*The following applies to version 1610 and earlier.*  
-Antimalware policy fails to apply on Windows Server 2016 Core.  The error code is 0x80070002.  There is a missing dependency for ConfigSecurityPolicy.exe.
-
-**Workaround:**  This issue is resolved by [Knowledge Base article 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distributed May 9, 2017.
-
-
-### Windows Defender Advanced Threat Protection policies fail on older client agents
-<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release      Fixed in 1610 -->
-Windows Defender Advanced Threat Protection policies created from a Configuration Manager version 1610 or later site server fail to apply to Configuration Manager version 1606 and earlier clients.  The clients are not on-boarded and the policy evaluation reports an error. The **Deployment state** in Windows Defender Advanced Threat Protection configuration shows **Error**.
-
-**WORKAROUND**: Upgrade the Configuration Manager client to version 1610 or later.
+<!-- ## Endpoint Protection -->
