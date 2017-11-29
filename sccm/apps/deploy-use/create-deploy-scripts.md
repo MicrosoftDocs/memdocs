@@ -118,11 +118,26 @@ Each of your script's parameters has its own dialog for adding further details a
 
 Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
-#### Example: FirstName
+#### Example: *FirstName*
 
-In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is useful for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
+In this example, you are able to set the properties of the string parameter, *FirstName*.
 
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
+
+
+The validation section of the **Script Parameter Properties** dialog contains the following fields for your use:
+
+- **Minimum Length** - minimum number of characters of the *FirstName* field
+- **Maximum Length**- maximum number of characters of the *FirstName* field
+- **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
+- **Custom Error** - useful for adding your guidance to the user about their interaction with the string parameter, *FirstName* in this case and its validation state.
+
+#### Using Regular Expression validation
+
+A regular expression is a compact form of programming for checking a string of characters against an encoded validation. For example, you could check for the absence of a capitol alphabetic character in the *FirstName* field by placing `[^A-Z]` in the *RegEx* field.
+
+The regular expression processing for this dialog is supported by the .NET Framework. For a quick reference on using regular expressions, see [.NET Regular Expression](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions). 
+
 
 ## Script examples
 
