@@ -3,7 +3,7 @@ title: "What's new in hybrid MDM"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 11/12/2017
+ms.date: 11/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
