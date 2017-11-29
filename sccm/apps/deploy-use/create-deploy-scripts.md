@@ -130,11 +130,11 @@ The validation section of the **Script Parameter Properties** dialog contains th
 - **Minimum Length** - minimum number of characters of the *FirstName* field.
 - **Maximum Length**- maximum number of characters of the *FirstName* field
 - **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
-  - **Custom Error** - useful for adding your own custom error message about the results of your regular expression (RegEx) test of the string data type.
+  - **Custom Error** - useful for adding your own custom error message about the results of your regular expression (RegEx) test of the string data type.****
 
 #### Using Regular Expression validation
 
-A regular expression is a compact form of programming for checking a string of characters against an encoded validation. For example, you could check for the absence of a capitol alphabetic character in the *FirstName* field by placing `[^A-Z]` in the *RegEx* field.
+A regular expression is a compact form of programming for checking a string of characters against an encoded validation. For example, you could check for the absence of a capital alphabetic character in the *FirstName* field by placing `[^A-Z]` in the *RegEx* field.
 
 The regular expression processing for this dialog is supported by the .NET Framework. For a quick reference on using regular expressions, see [.NET Regular Expression](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions). 
 
