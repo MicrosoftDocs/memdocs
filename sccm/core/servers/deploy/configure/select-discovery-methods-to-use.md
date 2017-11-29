@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 ---
 # Select discovery methods to use for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To successfully and efficiently use discovery for System Center Configuration Manager, you must consider which methods to use and at which sites to run them.  

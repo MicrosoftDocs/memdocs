@@ -12,8 +12,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
-author: Brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
 ---
 # Capabilities in Technical Preview 1710 for System Center Configuration Manager

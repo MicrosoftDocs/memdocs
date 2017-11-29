@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: brendunsms.author: brendunsmanager: angrobe
+author: erikjems.author: erikjemanager: angrobe
 
 ---
 # Set up your System Center Configuration Manager lab*Applies to: System Center Configuration Manager (Current Branch)*
