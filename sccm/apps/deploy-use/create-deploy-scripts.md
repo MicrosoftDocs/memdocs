@@ -130,7 +130,7 @@ The validation section of the **Script Parameter Properties** dialog contains th
 - **Minimum Length** - minimum number of characters of the *FirstName* field.
 - **Maximum Length**- maximum number of characters of the *FirstName* field
 - **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
-- **Custom Error** - useful for adding your own guidance about the specifics of your chosen regular expression test of the string field, *FirstName* in this case. 
+   - **Custom Error** - useful for adding your own guidance about the specifics of your chosen regular expression test of the string field, *FirstName* in this case. 
 
 #### Using Regular Expression validation
 
