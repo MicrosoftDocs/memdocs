@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 caps.latest.revision: 5
-author: brenduns  
-ms.author: brenduns
+author: mstewart  
+ms.author: mstewart
 manager: angrobe
 ---
 # Support for Windows 10 for System Center Configuration Manager  

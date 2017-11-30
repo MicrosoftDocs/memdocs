@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Uninstall sites and hierarchies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

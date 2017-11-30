@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
 caps.latest.revision:
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # Checklist for installing update 1710 for System Center Configuration Manager

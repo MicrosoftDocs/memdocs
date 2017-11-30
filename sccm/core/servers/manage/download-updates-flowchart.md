@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d50a8d7-90d2-42da-b9fd-2edc190fa22e
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Flowchart - Download updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

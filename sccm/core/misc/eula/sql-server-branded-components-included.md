@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 067675e6-bfae-44d9-ac86-3bf91e4fc600
 caps.latest.revision: 6
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 robots: noindex,nofollow
 ---
 # SQL Server Branded Components included with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

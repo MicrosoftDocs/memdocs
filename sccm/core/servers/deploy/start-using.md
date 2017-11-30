@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Start using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

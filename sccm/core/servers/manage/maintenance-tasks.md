@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Maintenance tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid:  8da2887a-fd8e-438c-b926-849c121f7fdf
 caps.latest.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # Manage the Long Term Servicing Branch of Configuration Manager*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
