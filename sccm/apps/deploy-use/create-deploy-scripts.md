@@ -24,7 +24,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
->[!INFORMATION]
+>[!TIP]
 >Introduced with version 1706, the ability to run PowerShell scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly allowing you to get big jobs done more easily and more consistently.
