@@ -56,7 +56,7 @@ For more information about Configuration Manager security roles, see [Fundamenta
 Run Scripts currently supports:
 
 - Scripting languages: PowerShell
-- Parameter types: integer and string
+- Parameter types: integer, string and, list
 
 ## Run Script authors and approvers
 
