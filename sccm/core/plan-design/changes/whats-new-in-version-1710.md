@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # What&#39;s new in version 1710 of System Center Configuration Manager
@@ -24,8 +24,8 @@ Update 1710 for System Center Configuration Manager current branch is available 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >  Learn more about:    
->   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+>   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
 >   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 The following sections provide details about changes and new capabilities introduced in version 1710 of Configuration Manager.  
@@ -56,7 +56,7 @@ You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarc
 <!-- 1350871 -->
 Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
-### Restart computers form the Configuration Manager console  <!-- 1356283 -->
+### Restart computers from the Configuration Manager console  <!-- 1356283 -->
 Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
 
 See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients)

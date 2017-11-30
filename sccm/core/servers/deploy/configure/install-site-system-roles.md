@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 caps.latest.revision: 4
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # Install site system roles for System Center Configuration Manager

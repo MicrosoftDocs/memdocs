@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 caps.latest.revision: 4
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
 ---
 # The Content library cleanup tool for System Center Configuration Manager

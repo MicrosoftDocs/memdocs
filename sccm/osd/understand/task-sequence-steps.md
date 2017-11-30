@@ -536,22 +536,6 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
  **Ensure current OS to be refreshed is**  
  Select this setting to verify that the operating system installed on the target computer meets the requirement that you specify. By default, this setting is selected with a value of **CLIENT**.  
 
-##  Child task sequence
-
-Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This creates a parent-child relationship between the task sequences. With a child task seqeucne, you can create modular, re-usable task sequences.
-
-Consider the following when you add a child task sequence to a task sequence:
-
- - The parent and child task sequences are effectively combined into a single policy that the client runs.
- - The environment is global. For example, if a variable is set by the parent task sequence and then changed by the child task sequence, the variable remains changed moving forward. Similarly, if the child task sequence creates a new variable, the variable is available for the remaining steps in the parent task sequence.
- - Status messages are sent per normal for a single task sequence operation.
- - The task sequences write entries to the smsts.log file, with new log entries that make it clear when a child task sequence starts.
-
-### Details
-
-1. In the task sequence editor, click **Add**, select **General**, and click **Run Task Sequence**.
-2. Click **Browse** to select the child task sequence.  
-
 ##  <a name="BKMK_ConnectToNetworkFolder"></a> Connect To Network Folder  
  Use the **Connect to Network Folder** task sequence action to create a connection to a shared network folder.  
 
@@ -1420,6 +1404,22 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
 > [!IMPORTANT]  
 >  PowerShell 1.0 does not support Undefined and Bypass execution policies.  
+
+##  <a name="child-task-sequence"></a> Run Task Sequence
+
+Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This creates a parent-child relationship between the task sequences. With a child task sequence, you can create modular, re-usable task sequences.
+
+Consider the following when you add a child task sequence to a task sequence:
+
+ - The parent and child task sequences are effectively combined into a single policy that the client runs.
+ - The environment is global. For example, if a variable is set by the parent task sequence and then changed by the child task sequence, the variable remains changed moving forward. Similarly, if the child task sequence creates a new variable, the variable is available for the remaining steps in the parent task sequence.
+ - Status messages are sent per normal for a single task sequence operation.
+ - The task sequences write entries to the smsts.log file, with new log entries that make it clear when a child task sequence starts.
+
+### Details
+
+1. In the task sequence editor, click **Add**, select **General**, and click **Run Task Sequence**.
+2. Click **Browse** to select the child task sequence.  
 
 ##  <a name="BKMK_SetDynamicVariables"></a> Set Dynamic Variables  
  Use the **Set Dynamic Variables** task sequence step to perform the following:  

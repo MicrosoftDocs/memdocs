@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # Customer Experience Improvement Program (CEIP) for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

@@ -12,7 +12,7 @@ ms.technology:
 ms.topic: article
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 caps.latest.revision: 2
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 ---
 # Configuration Manager on Azure - Frequently Asked Questions*Applies to: System Center Configuration Manager (Current Branch)*
 The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.

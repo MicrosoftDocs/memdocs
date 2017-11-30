@@ -14,7 +14,7 @@ ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # Plan for the site database for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

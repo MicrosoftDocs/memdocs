@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # How to view diagnostics and usage data for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

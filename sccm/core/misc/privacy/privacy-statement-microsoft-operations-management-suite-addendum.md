@@ -11,8 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa91afee-45b5-46eb-ad8a-e9c7d3122b38
 caps.latest.revision: 4
-author: brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
 ---
 # System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum

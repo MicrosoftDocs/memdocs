@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 ---
 # Where to get installation media for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 If you have System Center Configuration Manager volume licenses with Software Assurance, or if you have purchased licenses for System Center Configuration Manager volume licenses, you can download baseline source media to install System Center Configuration Manager from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).   

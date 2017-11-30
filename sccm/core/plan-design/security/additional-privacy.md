@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de

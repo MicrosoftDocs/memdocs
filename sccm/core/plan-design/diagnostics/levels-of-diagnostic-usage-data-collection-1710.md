@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 caps.latest.revision:
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
 translation.priority.ht:
   - cs-cz
