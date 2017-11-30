@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Use the Hotfix Installer to install updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

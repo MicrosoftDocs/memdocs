@@ -14,7 +14,9 @@ ms.topic: article
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewart
+ms.author: mstewart
+manager: angrobe
 
 ---
 # Get ready for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

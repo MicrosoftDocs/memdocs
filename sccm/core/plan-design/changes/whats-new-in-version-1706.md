@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # What&#39;s new in version 1706 of System Center Configuration Manager

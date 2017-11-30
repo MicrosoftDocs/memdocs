@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: becfa825-b19f-448c-ab82-bb929255e4ae
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # How diagnostics and usage data is collected by System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

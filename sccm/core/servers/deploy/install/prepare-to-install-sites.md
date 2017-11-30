@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 caps.latest.revision: 5
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # Prepare to install System Center Configuration Manager sites

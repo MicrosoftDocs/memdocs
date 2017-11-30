@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 caps.latest.revision: 3
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
 ---
 # Package Transfer Manager in System Center Configuration Manager

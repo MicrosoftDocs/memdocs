@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Define network locations as boundaries for System Center Configuration Manager

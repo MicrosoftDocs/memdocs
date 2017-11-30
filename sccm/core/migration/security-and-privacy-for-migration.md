@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # Security and privacy for migration to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

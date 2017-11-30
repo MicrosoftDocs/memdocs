@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: erikjems.author: erikjemanager: angrobe
 robots: noindex,nofollow
 ---
 # Capabilities in Technical Preview 1604 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*

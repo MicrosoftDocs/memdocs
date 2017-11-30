@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Use the Update Registration Tool to import hotfixes to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

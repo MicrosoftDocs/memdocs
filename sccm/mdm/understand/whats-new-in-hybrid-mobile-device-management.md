@@ -42,48 +42,49 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
-- **Company Portal app for macOS is available** <!--1541700-->
+- **Text protocol allowed from managed Apps** <!-- 1414050  -->    
+  Apps managed by the Intune App SDK are able to send SMS messages.
+
+- **Company Portal app for macOS is available** <!--1541700-->    
   The Intune Company Portal on macOS has an updated experience, which has been optimized to cleanly display all the information and compliance notifications your users need for all the devices they have enrolled. And, once the Intune Company Portal has been deployed to a device, Microsoft AutoUpdate for macOS will provide updates to it. You can download the new Intune Company Portal for macOS by logging into the Intune Company Portal website from a macOS device.
 
-- **Microsoft Planner is now part of the mobile app management (MAM) list of approved apps**  <!-- 1248473 -->
+- **Microsoft Planner is now part of the mobile app management (MAM) list of approved apps**  <!-- 1248473 -->    
   The Microsoft Planner app for iOS and Android is now part of the approved apps for mobile app management (MAM). The app can be configured through the Intune App Protection blade in the Azure portal to all tenants. For details, see [MAM list of approved apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
-- **Access to managed app logs for iOS** <!-- 1469920 -->
+- **Access to managed app logs for iOS** <!-- 1469920 -->    
   End users with the managed Browser installed can now view the management status of all Microsoft published apps and send logs for troubleshooting their managed iOS apps.
   
   Learn how to enable the troubleshooting mode in the Managed Browser on an iOS device, see [How to access to managed app logs using the Managed Browser on iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
-- **Improvements to device setup workflow in the Company Portal for iOS in version 2.9.0**
+- **Improvements to device setup workflow in the Company Portal for iOS in version 2.9.0**    
   We've improved the device setup workflow in the Company Portal app for iOS. The language is more user-friendly and we've combined screens where possible. We have also made the language more specific to your company by using your company name throughout the setup text. You can see this updated workflow on the [what's new in app UI](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017) page.
 
-- **Feedback prompts for the Company Portal app for Android** <!--1165249-->
+- **Feedback prompts for the Company Portal app for Android** <!--1165249-->    
 The Company Portal app for Android now requests end user feedback. This feedback will be sent directly to Microsoft, and provide end users with an opportunity to review the app in the public Google Play store. Feedback is not required, and can easily be dismissed so users can continue using the app. 
 
-- **Inform end users what device information can be seen for Windows 10 devices** <!--1337920-->
+- **Inform end users what device information can be seen for Windows 10 devices** <!--1337920-->    
 We have added **Ownership Type** to the Device Details screen on the Company Portal app for Windows 10. This will allow users to find out more about privacy directly from this page from the Intune end user docs. They will also be able to locate this information on the **About** screen.
 
-- **New 'Resolve' action available for Android devices** <!--1583480-->
+- **New 'Resolve' action available for Android devices** <!--1583480-->    
   The Company Portal app for Android is introducing a 'Resolve' action on the _Update device settings_ page. Selecting this option will take the end user directly to the setting that is causing their device to be noncompliant. The Company Portal app for Android currently supports this action for the [device passcode](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android), [device encryption](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android), [USB debugging](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android), and [Unknown Sources](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android) settings. 
 
 
 ### New in Configuration Manager (current branch)
 
-- **New mobile application management policy settings** <!-- 1324760 -->
+- **New mobile application management policy settings** <!-- 1324760 -->    
   The following settings have been added to the mobile application management policy settings:
   - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
   - **Disable printing**: Prevents the app from printing work or school data.
 
   See [protect apps using app protection policies in Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 
-- **Windows 10 ARM64 device support** <!-- 1355000 -->
+- **Windows 10 ARM64 device support** <!-- 1355000 -->    
   Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devices running Windows 10 when these devices are available. For details, see [Windows 10 ARM64 device support](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
 
-- **Improved VPN profile experience in the Configuration Manager console** <!-- 1318232 -->
+- **Improved VPN profile experience in the Configuration Manager console** <!-- 1318232 -->    
   With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform. This feature was previously available in Configuration Manager Technical Preview 1709 and now available in hybrid deployments with Intune and Configuration Manager (Current Branch) version 1710:
   - [Improved VPN profile experience in Configuration Manager console](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console).
 
-
-Improved VPN Profile Experience in Configuration Manager Console
 
 ### New in Configuration Manger Technical Preview 1711
 
@@ -101,7 +102,10 @@ Improved VPN Profile Experience in Configuration Manager Console
 
 ### New in Microsoft Intune  
 
-- **Certificate-based authentication support on the Company Portal for iOS** <!--1029830-->
+- **Device setup progress indicator in Android Company Portal** <!--1565657-->    
+  The Company Portal app for Android shows a device setup progress indicator when a user is enrolling their device. The indicator shows new statuses, beginning with "Setting up your device...", then "Registering your device...", then "Finishing registering your device...", then "Finishing setting up your device...".  
+
+- **Certificate-based authentication support on the Company Portal for iOS** <!--1029830-->    
   We have added support for certificate-based authentication (CBA) in the Company Portal app for iOS. Users with CBA enter their username, then tap the “Sign in with a certificate” link. CBA is already supported on the Company Portal apps for Android and Windows. You can learn more on the [sign in to the Company Portal app](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal) page.
 
 - **Improvements to device setup workflow in Company Portal** <!--1490692-->    

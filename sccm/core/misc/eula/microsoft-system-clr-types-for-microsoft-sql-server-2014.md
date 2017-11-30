@@ -13,7 +13,7 @@ ms.technology:
  - configmgr-other
 ms.assetid: a0539a3d-c56b-40e2-b291-55fb8f74d714
 caps.latest.revision: 7
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 robots: noindex,nofollow
 
 ---

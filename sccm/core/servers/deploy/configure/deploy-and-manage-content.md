@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 caps.latest.revision: 6
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 ---
 # Deploy and manage content for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you install distribution points for System Center Configuration Manager, you can begin to deploy content to them. Typically, content transfers to distribution points across the network, but other options to get content to the distribution points exists. After content transfers to a distribution point, you can update, redistribute, remove, and validate that content on distribution points.  
