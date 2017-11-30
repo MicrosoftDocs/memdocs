@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -130,7 +130,7 @@ The validation section of the **Script Parameter Properties** dialog contains th
 - **Minimum Length** - minimum number of characters of the *FirstName* field.
 - **Maximum Length**- maximum number of characters of the *FirstName* field
 - **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
-  - **Custom Error** - useful for adding your own custom error message about the results of your regular expression (RegEx) test of the string data type.
+- **Custom Error** - useful for adding your own custom error message to augment any system validation error messages.
 
 #### Using Regular Expression validation
 
@@ -179,7 +179,7 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ## Run a script
 
-After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launched quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
+After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launched quickly through a high priority system that times-out in one hour. The results of the script are returned using a state message system.
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
@@ -202,10 +202,12 @@ Here's what Run Scripts looks like as a work flow; create, approve, run and, mon
 
 ### Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution. <br>
+
+![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. In the Configuration Manager console, click **Monitoring**.
-2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
+2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
 ## See Also
