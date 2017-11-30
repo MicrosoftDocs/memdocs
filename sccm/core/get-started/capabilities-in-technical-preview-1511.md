@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: erikjems.author: erikjemanager: angrobe
 robots: noindex,nofollow
 ---
 # Capabilities in Technical Preview 1511 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*

@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Modify your System Center Configuration Manager infrastructure*Applies to: System Center Configuration Manager (Current Branch)*

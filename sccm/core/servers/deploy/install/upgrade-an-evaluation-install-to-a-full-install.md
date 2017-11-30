@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 caps.latest.revision: 3
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # Upgrade an evaluation installation of System Center Configuration Manager to a full installation

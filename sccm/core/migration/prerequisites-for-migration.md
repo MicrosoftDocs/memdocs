@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aaronczms.author: aaronczmanager: angrobe
 
 ---
 # Prerequisites for migration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

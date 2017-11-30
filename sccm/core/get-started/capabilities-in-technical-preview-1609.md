@@ -13,7 +13,7 @@ ms.technology:
 ms.topic: article
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
 caps.latest.revision: 2
-author: Brendunsms.author: brendunsmanager: angrobe
+author: erikjems.author: erikjemanager: angrobe
 ---
 # Capabilities in Technical Preview 1609 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
 

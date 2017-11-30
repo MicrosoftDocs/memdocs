@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 caps.latest.revision: 3
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 ---
 # Custom locations for System Center Configuration Manager site database files

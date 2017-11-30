@@ -14,8 +14,8 @@ ms.topic: get-started-article
 ms.assetid: ceff72f5-f19d-43a0-a8c0-72f1c09b9bf5
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
 
 ---

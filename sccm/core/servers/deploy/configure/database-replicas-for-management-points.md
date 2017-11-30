@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mstewartms.author: mstewartmanager: angrobe
 
 ---
 # Database replicas for management points for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
