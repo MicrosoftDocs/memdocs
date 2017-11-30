@@ -3,7 +3,7 @@ title: "Supported SQL Server versions"
 titleSuffix: "Configuration Manager"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 10/10/2017
+ms.date: 11/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -70,13 +70,6 @@ Support for a specific SQL Server service pack includes cumulative updates to th
 > [!IMPORTANT]  
 >  When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
-### SQL Server 2017: Standard, Enterprise  <!--SMS.498506-->
-You can use this version of SQL Server with no minimum cumulative update version beginning [with version 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following:  
-
--   A central administration site  
--   A primary site  
--   A secondary site  
-
 ### SQL Server 2016 SP1: Standard, Enterprise  
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
@@ -98,8 +91,6 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   A central administration site  
 -   A primary site  
 -   A secondary site
-
-
 
 ### SQL Server 2014 SP1: Standard, Enterprise  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
@@ -139,10 +130,6 @@ When supported by your version of Configuration Manager, you can use this versio
 
 -   A central administration site  
 -   A primary site
--   A secondary site
-
-### SQL Server 2017 Express   
-You can use this version of SQL Server with no minimum cumulative update version beginning [with version 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following:
 -   A secondary site
 
 ### SQL Server 2016 Express SP1  
