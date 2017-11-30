@@ -42,6 +42,9 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
+- **Text protocol allowed from managed Apps** <!-- 1414050  -->
+  Apps managed by the Intune App SDK are able to send SMS messages.
+
 - **Company Portal app for macOS is available** <!--1541700-->
   The Intune Company Portal on macOS has an updated experience, which has been optimized to cleanly display all the information and compliance notifications your users need for all the devices they have enrolled. And, once the Intune Company Portal has been deployed to a device, Microsoft AutoUpdate for macOS will provide updates to it. You can download the new Intune Company Portal for macOS by logging into the Intune Company Portal website from a macOS device.
 
@@ -100,6 +103,9 @@ Improved VPN Profile Experience in Configuration Manager Console
 
 
 ### New in Microsoft Intune  
+
+- **Device setup progress indicator in Android Company Portal** <!--1565657-->
+  The Company Portal app for Android shows a device setup progress indicator when a user is enrolling their device. The indicator shows new statuses, beginning with "Setting up your device...", then "Registering your device...", then "Finishing registering your device...", then "Finishing setting up your device...".  
 
 - **Certificate-based authentication support on the Company Portal for iOS** <!--1029830-->
   We have added support for certificate-based authentication (CBA) in the Company Portal app for iOS. Users with CBA enter their username, then tap the “Sign in with a certificate” link. CBA is already supported on the Company Portal apps for Android and Windows. You can learn more on the [sign in to the Company Portal app](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal) page.
