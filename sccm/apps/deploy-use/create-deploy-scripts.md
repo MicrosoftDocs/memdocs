@@ -179,7 +179,9 @@ Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
 
 ## Run a script
 
-After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launched quickly through a high priority system that times-out in one hour. The results of the script are returned using a state message system.
+After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it is launched quickly through a high priority system that times-out in one hour. The results of the script are then returned using a state message system.
+
+To select a collection of targets for your script:
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
@@ -189,9 +191,10 @@ After a script is approved, it can be run against a collection you choose. Once 
 6. Click **Next**, and then complete the wizard.
 
 >[!IMPORTANT]
->If a script does not run, for example because a target client is turned off, in the one hour time period, you must run it again.
+>If a script does not run, for example because a target device is turned off during the one hour time period, you must run it again.
 
 ### Target machine execution
+
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
 
 ## Script monitoring
