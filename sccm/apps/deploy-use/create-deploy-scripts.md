@@ -27,17 +27,17 @@ manager: angrobe
 >[!TIP]
 >Introduced with version 1706, the ability to run PowerShell scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
-We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly allowing you to get big jobs done more easily and more consistently.
+We've now better integrated the ability to run Powershell scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get big jobs done more easily and more consistently.
 
 With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
 
-- Create and edit scripts for use with Configuration Manager.
-- Manage script usage through roles and security scopes  
+- Create and edit scripts for use with System Center Configuration Manager.
+- Manage script usage through roles and security scopes. 
 - Run scripts on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
->[!IMPORTANT]
+>[!WARNING]
 >Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
 
 ## Prerequisites
