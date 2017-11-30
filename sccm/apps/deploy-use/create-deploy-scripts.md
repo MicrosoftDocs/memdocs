@@ -47,7 +47,7 @@ With this integration in System Center Configuration Manager, you can use the *R
 - To use scripts, you must be a member of the appropriate Configuration Manager security role.
 - To import and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
+- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Full Administrator Properties** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
@@ -130,7 +130,7 @@ The validation section of the **Script Parameter Properties** dialog contains th
 - **Minimum Length** - minimum number of characters of the *FirstName* field.
 - **Maximum Length**- maximum number of characters of the *FirstName* field
 - **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
-- **Custom Error** - useful for adding your own custom error message to augment any system validation error messages.
+- **Custom Error** - useful for adding your own custom error message that supercedes any system validation error messages.
 
 #### Using Regular Expression validation
 
@@ -184,7 +184,7 @@ After a script is approved, it can be run against a collection you choose. Once 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
 3. In the **Device Collections** list, click the collection of devices on which you want to run the script.
-4. On the **Home** tab, in the **All Systems** group, click **Run Script**.
+4. Select a collection of your choice, click **Run Script**.
 5. On the **Script** page of the **Run Script** wizard, choose a script from the list. Only approved scripts are shown.
 6. Click **Next**, and then complete the wizard.
 
@@ -194,13 +194,7 @@ After a script is approved, it can be run against a collection you choose. Once 
 ### Target machine execution
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
 
-## Work flow and monitoring
-
-Here's what Run Scripts looks like as a work flow; create, approve, run and, monitor.
-
-![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
-
-### Script monitoring
+## Script monitoring
 
 After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution. <br>
 
