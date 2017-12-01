@@ -62,7 +62,7 @@ Beginning with this release, you can use the Configuration Manager console to id
 See [How to manage clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients)
 
 
-<!--  ## Compliance settings  -->
+<!-- ## Compliance settings -->
 
 
 ## Application Management
@@ -126,6 +126,10 @@ For more information, see [How to configure client settings in System Center Con
 
 
 ## Mobile device management
+
+### Actions for non-compliance 
+<!--1321366 -->    
+You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Set up actions for non-compliance](/sccm/mdm/deploy-use/actions-for-noncompliance).
 
 ### Windows 10 ARM64 device support
 <!-- 1355000 -->

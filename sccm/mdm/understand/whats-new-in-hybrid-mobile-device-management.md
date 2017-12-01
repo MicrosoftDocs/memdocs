@@ -71,6 +71,9 @@ We have added **Ownership Type** to the Device Details screen on the Company Por
 
 ### New in Configuration Manager (current branch)
 
+- **Actions for non-compliance** <!--1321366 -->    
+  You can now configure a time-ordered sequence of actions that are applied to devices that fall out of compliance. For example, you can notify users of non-compliant devices via e-mail or mark those devices non-compliant. For details, see [Set up actions for non-compliance](/sccm/mdm/deploy-use/actions-for-noncompliance).
+
 - **New mobile application management policy settings** <!-- 1324760 -->    
   The following settings have been added to the mobile application management policy settings:
   - **Disable contact sync**: Prevents the app from saving data to the native Contacts app on the device.
