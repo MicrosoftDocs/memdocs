@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 caps.latest.revision: 10
-author: mstewartms.author: mstewartmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 
 ---
-# Use alerts and the status system for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Use alerts and the status system for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Configure Alerts, and use the built-in Status System to remain informed about the state of your System Center Configuration Manager deployment.  
 
 
