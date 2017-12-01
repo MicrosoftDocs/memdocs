@@ -148,7 +148,6 @@ Here are a couple examples that illustrate scripts you might want to use with th
 This script creates a new folder and a file within it given your naming input.
 
 ``` powershell
-
 Param(
 [Parameter(Mandatory=$True)]
 [string]$FolderName,
@@ -158,7 +157,6 @@ Param(
 
 New-Item $FolderName -type directory
 New-Item $FileName -type file
-
 ```
 
 ### Get OS Version
@@ -167,7 +165,6 @@ This script uses WMI to query the machine for its OS version.
 
 ``` powershell
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
-
 ```
 
 ## Run a script
