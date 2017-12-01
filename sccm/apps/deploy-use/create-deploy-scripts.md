@@ -157,7 +157,7 @@ New-Item "c:\scripts\new_file.txt" -type file
 
 ### Get BIOS version
 
-This script uses WMI to query the machine for its battery status.
+This script uses WMI to query the machine for its BIOS version.
 
 ``` powershell
 Write-Output (get-wmiobject -class win32_bios).biosversion
