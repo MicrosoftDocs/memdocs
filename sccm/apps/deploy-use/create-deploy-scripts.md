@@ -143,24 +143,28 @@ The regular expression processing for this dialog is supported by the .NET Frame
 
 Here are a couple examples that illustrate scripts you might want to use with this capability.
 
-### Create a folder
+### Create a new folder and a file within it given your naming input
 
 ``` powershell
-New-Item "c:\scripts" -type directory
+
+Param(
+[Parameter(Mandatory=$True)]
+[string]$FolderName,
+[Parameter(Mandatory=$True)]
+[string]$FileName,
+)
+
+New-Item $FolderName -type directory
+New-Item $FileName -type file
+
 ```
 
-### Create a file
+### Get OS Version
 
-```powershell
-New-Item "c:\scripts\new_file.txt" -type file
-```
-
-### Get BIOS version
-
-This script uses WMI to query the machine for its BIOS version.
+This script uses WMI to query the machine for its OS version.
 
 ``` powershell
-Write-Output (get-wmiobject -class win32_bios).biosversion
+Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ```
 
