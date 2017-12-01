@@ -47,7 +47,7 @@ With this integration in System Center Configuration Manager, you can use the *R
 - To use scripts, you must be a member of the appropriate Configuration Manager security role.
 - To import and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Full Administrator Properties** security role.
+- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Full Administrator** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
@@ -146,34 +146,21 @@ Here are a couple examples that illustrate scripts you might want to use with th
 ### Create a folder
 
 ``` powershell
-New-Item "c:\scripts" -type folder name
+New-Item "c:\scripts" -type directory
 ```
 
 ### Create a file
 
 ```powershell
-New-Item "c:\scripts\new_file.txt" -type file name
+New-Item "c:\scripts\new_file.txt" -type file
 ```
 
-### Ping a given computer
-
-This script takes a string and uses it as a parameter for a *ping* operation.
-
-``` powershell
-Param
-(
- [String][Parameter(Mandatory=$True, Position=1)] $Computername
-)
-
-Ping $Computername
-```
-
-### Get battery status
+### Get BIOS version
 
 This script uses WMI to query the machine for its battery status.
 
 ``` powershell
-Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
+Write-Output (get-wmiobject -class win32_bios).biosversion
 
 ```
 
