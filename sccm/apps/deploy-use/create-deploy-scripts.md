@@ -143,7 +143,9 @@ The regular expression processing for this dialog is supported by the .NET Frame
 
 Here are a couple examples that illustrate scripts you might want to use with this capability.
 
-### Create a new folder and a file within it given your naming input
+### Create a new folder and file
+
+This script creates a new folder and a file within it given your naming input.
 
 ``` powershell
 
