@@ -14,7 +14,7 @@ ms.topic: get-started-article
 ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: mstewart
+author: mestew
 ms.author: mstewart
 manager: angrobe
 
