@@ -3,7 +3,7 @@ title: "Supported SQL Server versions"
 titleSuffix: "Configuration Manager"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 10/10/2017
+ms.date: 11/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 caps.latest.revision: 21
-author: mstewart
+author: mestew
 ms.author: mstewart
 manager: angrobe
 
@@ -92,8 +92,6 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   A primary site  
 -   A secondary site
 
-
-
 ### SQL Server 2014 SP1: Standard, Enterprise  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
@@ -133,8 +131,6 @@ When supported by your version of Configuration Manager, you can use this versio
 -   A central administration site  
 -   A primary site
 -   A secondary site
-
-
 
 ### SQL Server 2016 Express SP1  
 You can use this version of SQL Server with no minimum cumulative update version for the following:

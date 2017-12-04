@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 caps.latest.revision: 3
-author: mstewartms.author: mstewartmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 robots: noindex,nofollow
 ---
-# What&#39;s new in version 1602 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# What&#39;s new in version 1602 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 Update 1602 for System Center Configuration Manager is only available as an in-console update for previously installed sites that run version 1511. Version 1511 is the initial, baseline version you use to install new Configuration Manager sites.  
 
