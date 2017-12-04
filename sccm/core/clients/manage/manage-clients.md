@@ -266,12 +266,7 @@ For more information about how to use these command line properties for CCMSetup
 
 2.  On the **Cache** tab set the space and location properties. The default location is *%windir%*\ccmcache.  
 
-5.  To delete the files in the cache folder, choose **Delete Files**.  
-
-	> [!NOTE]
-	>
-	> The cache folder is a regular Windows folder, so you can automate deletion of the folder contents using a script, a utility, or with the PowerShell cmdlet `Remove-Item`.
-
+3.  To delete the files in the cache folder, choose **Delete Files**.  
 
 ### To configure client cache size in Client Settings
 
