@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: mstewart
+author: mestew
 ms.author: mstewart
 manager: angrobe
 

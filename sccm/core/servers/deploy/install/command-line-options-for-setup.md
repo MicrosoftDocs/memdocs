@@ -13,9 +13,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 caps.latest.revision: 3
-author: mstewartms.author: mstewartmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 ---
-# Command-line options for Setup in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Command-line options for Setup in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
  Use the following information to configure scripts or to install System Center Configuration Manager from a command line.  
 

@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
 caps.latest.revision: 8
-author: mstewart
+author: mestew
 ms.author: mstewart
 manager: angrobe
 

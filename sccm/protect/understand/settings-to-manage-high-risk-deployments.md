@@ -13,12 +13,16 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
 caps.latest.revision: 6
-author: mstewart
-ms.author: mstewart
-manager: angrobe
+author: mestew
+ms.author: mstewart
+
+manager: angrobe
 
 ---
-# Settings to manage high-risk deployments for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Settings to manage high-risk deployments for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 With System Center Configuration Manager you can configure site settings that will warn admins if they create a high-risk task sequence deployment. A high-risk deployment is:  
 
