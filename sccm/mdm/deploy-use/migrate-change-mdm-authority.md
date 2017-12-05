@@ -40,7 +40,7 @@ Review the following information to prepare for the change to the MDM authority:
 - Make sure all users that are currently managed by hybrid MDM have an Intune/EMS license assigned to them prior to the change in MDM authority. Having the license ensures that the user and their devices are managed by Intune standalone after the change in MDM authority. For more information, see [Assign Intune licenses to your user accounts](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4).
 - Make sure that the Admin user account has an Intune/EMS license assigned.
 
-### Change the MDM authority to Intune
+## Change the MDM authority to Intune
 Use the following procedure to change the tenant-level MDM authority to Intune.
 
 1.	In the Configuration Manager console, go to **Administration** &gt; **Overview** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and delete your existing Intune Subscription.

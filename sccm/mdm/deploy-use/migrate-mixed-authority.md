@@ -45,10 +45,10 @@ Migrated users and their devices will be managed in Intune and other devices wil
     - Windows SLKs
     - Company Portal branding    
       
-> [!Important]    
+  > [!Important]    
   > Continue to edit the tenant-level policies using the Configuration Manager console. After you [change your tenant-level MDM authority](change-mdm-authority.md) to Intune, then you will manage these policies in Intune on Azure. 
 - We recommend that you do not migrate any user accounts that have been added as device enrollment managers in Configuration Manager. Later, when you change your tenant-level MDM authority to Intune, these user accounts will migrate correctly. If you do migrate device enrollment manager user account before the tenant-level MDM authority change, you must manually add the user as a device enrollment manager in Intune on Azure. However, devices enrolled by using a device enrollment manager do not migrate successfully. You must call support to migrate these devices. For details, see [Add a device enrollment manager](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).
-- Devices enrolled by using a device enrollment manager and devices that don't have associated users are not migrated to the new MDM authority. For those devices, you need to call support to help you with those individual devices. Do not have support run an MDM authority reset or it will wipe the data in Intune. You must [change your MDM authority](migrate-change-mdm-authority.md) from the Configuration Manager console.
+- Devices enrolled by using a device enrollment manager and devices without [user affinity](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) are not automatically migrated to the new MDM authority. To switch the management authority for these MDM devices, see [Migrate devices without user affinity](#migrate-devices-without-user-affinity).
 
 ## Migrate users to Intune
 To test that your Intune configurations are working as expected, first migrate a small set of users and their devices. Then, after you confirm things are working as expected, you can start migrating more AAD groups with more users and their devices.
@@ -81,6 +81,84 @@ Then, verify that your policies, profiles, apps, etc. are working as expected on
 
 ## Migrate additional users
 After you have verified that Intune standalone is functioning as you expect, you can start migrating additional users. Just as you created a collection with a set of test users, create collections that contain users to migrate and exclude those collections from the collection associated with the Intune subscription. For details, see [Collection associated with your Intune subscription](#collection-associated-with-your-intune-subscription).
+
+## Migrate devices without user affinity
+Devices enrolled by using a device enrollment manager and devices without [user affinity](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) are not automatically migrated to the new MDM authority. To switch the management authority for these MDM devices, you can use the *Switch-MdmDeviceAuthority* cmdlet to switch between Intune and Configuration Manager management authorities. 
+
+### Cmdlet *Switch-MdmDeviceAuthority*
+
+#### SYNOPSIS
+Switches the management authority of MDM devices that do not have users associated with them (For example: Bulk enrolled devices). The cmdlet will switch between Intune and SCCM management authorities for the specified devices based on their management authorities when the cmdlet is invoked.
+
+### SYNTAX
+`Switch-MdmDeviceAuthority -DeviceIds <Guid[]> [-Credential <PSCredential>] [-Force] [-LogFilePath <string>] [-LoggingLevel {Off | Critical | Error | Warning | Information | Verbose | ActivityTracing | All}] [-Confirm] [-WhatIf] [<CommonParameters>]`
+
+
+### PARAMETERS
+``` powershell
+-Credential <PSCredential>
+Credential for Intune Tenant Admin or Service Admin account to use when switching device management authorities. The user will be prompted for credentials if the parameter is not specified.
+
+-DeviceIds <Guid[]>
+The ids of the MDM devices that need to have their management authority switched. The device ids are unique identifiers for the devices displayed by the SCCM console.
+
+-Force [<SwitchParameter>]
+Specify parameter to disable the Should Continue prompt.<br>
+ 
+-LogFilePath <string>
+Path to log file location.
+ 
+-LoggingLevel <SourceLevels>
+The log level used to determine the type of logs that need to be written to the log file.
+ 
+The following are the possible values for LoggingLevel:
+
+  - ActivityTracing
+  - All
+  - Critical
+  - Error
+  - Information
+  - Off
+  - Verbose
+  - Warning
+ 
+-Confirm [<SwitchParameter>]
+Prompts you for confirmation before executing the command.
+ 
+-WhatIf [<SwitchParameter>]
+Describes what would happen if you executed the command without actually executing the command.
+ 
+<CommonParameters>
+This cmdlet supports the common parameters: Verbose, Debug,
+ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+OutBuffer, PipelineVariable, and OutVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+```
+
+### Example 1
+
+``` powershell
+C:\PS>Switch-MdmDeviceAuthority -Credential $creds -DeviceIds $deviceIds
+ 
+  DeviceId       : 62e6ea43-18f8-4278-bcd4-a4baed2c6d24
+  Success        : True
+  FailureReason  :
+  NewAuthority   : Intune
+  CompletionTime : 11/15/2017 8:00:11 PM
+ 
+Description
+ 
+-----------
+ 
+Successfully switched the management authority of the device from Configuration Manager to Intune.
+```
+### REMARKS
+``` powershell
+To see the examples, type: "get-help Switch-MdmDeviceAuthority -examples".
+For more information, type: "get-help Switch-MdmDeviceAuthority -detailed".
+For technical information, type: "get-help Switch-MdmDeviceAuthority -full".
+For online help, type: "get-help Switch-MdmDeviceAuthority -online".
+```
 
 ## Next steps
 After you have migrated users and tested Intune functionality, consider whether you are ready to [change the MDM authority](migrate-change-mdm-authority.md) of your Intune tenant from Configuration Manager to Intune. 
