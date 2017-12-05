@@ -28,7 +28,7 @@ Migrated users and their devices are managed in Intune and other devices continu
 
 ## Things to know before you migrate users
 - During the phased migration, any existing MDM policies or apps in Configuration Manager continue to apply to hybrid MDM devices.
-- The devices for the users in the collection associated with the Intune subscription can enroll in hybrid MDM. All devices associated with users not in the collection are managed in Intune. Devices for users not in the collection associated with the Intune subscription automatically inherit the tenant-level MDM authority (Configuration Manager).
+- The devices for the users in the collection associated with the Intune subscription can enroll in hybrid MDM. All devices associated with users not in the collection are managed in Intune as long as the user has an Intune/EMS license. 
 - When you migrate a user to Intune, the user and devices appear in the Intune on Azure portal after about 15 minutes.  
 - When you migrate users to Intune standalone, continue to manage the following settings from Configuration Manager for both Intune standalone and hybrid MDM devices:
     - [Apple Push Notification service (APNs) certificate](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac)
