@@ -5,7 +5,7 @@ description: Learn how to change the MDM authority from hybrid MDM to Intune sta
 keywords:
 author: dougeby
 manager: dougeby
-ms.date: 09/14/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service:
@@ -28,9 +28,7 @@ Migrated users and their devices are managed in Intune and other devices continu
 
 ## Things to know before you migrate users
 - During the phased migration, any existing MDM policies or apps in Configuration Manager continue to apply to hybrid MDM devices.
-- Users are added to an AAD group that you designate as your migration group. All devices associated with users in the migration group are managed in Intune.
-- If devices are added to the AAD group, they are ignored unless they are a device without an associated user.
-- Users not in an AAD group marked for migration automatically inherit the tenant-level MDM authority (Configuration Manager).
+- The devices for the users in the collection associated with the Intune subscription can enroll in hybrid MDM. All devices associated with users not in the collection are managed in Intune. Devices for users not in the collection associated with the Intune subscription automatically inherit the tenant-level MDM authority (Configuration Manager).
 - When you migrate a user to Intune, the user and devices appear in the Intune on Azure portal after about 15 minutes.  
 - When you migrate users to Intune standalone, continue to manage the following settings from Configuration Manager for both Intune standalone and hybrid MDM devices:
     - [Apple Push Notification service (APNs) certificate](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac)
@@ -83,12 +81,19 @@ Then, verify that your policies, profiles, apps, etc. are working as expected on
 After you have verified that Intune standalone is functioning as you expect, you can start migrating additional users. Just as you created a collection with a set of test users, create collections that contain users to migrate and exclude those collections from the collection associated with the Intune subscription. For details, see [Collection associated with your Intune subscription](#collection-associated-with-your-intune-subscription).
 
 ## Migrate devices without user affinity
-Devices enrolled by using a device enrollment manager and devices without [user affinity](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) are not automatically migrated to the new MDM authority. To switch the management authority for these MDM devices, you can use the *Switch-MdmDeviceAuthority* cmdlet to switch between Intune and Configuration Manager management authorities. 
+Devices enrolled by using a device enrollment manager and devices without [user affinity](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) are not automatically migrated to the new MDM authority. You can use the *Switch-MdmDeviceAuthority* PowerShell cmdlet to switch between Intune and Configuration Manager management authorities in the following scenarios: 
+
+-	Scenario 1: Use the *Switch-MdmDeviceAuthority* cmdlet to migrate selected devices and validate that they can be managed using Intune in Azure. Then, when you are ready, you can [change the MDM authority to Intune for the tenant](migrate-change-mdm-authority.md) to complete the migration for the devices. 
+-	Scenario 2: When you are ready to change the MDM authority to Intune for the tenant, you can take the following actions to migrate your devices without user affinity:
+    - Use the cmdlet to change the MDM authority for your devices without user affinity before you [change the MDM authority to Intune for the tenant](migrate-change-mdm-authority.md).    
+    - Call support to have the devices without user affinity switched after you change the MDM authority to Intune for the tenant.
+
+To switch the management authority for these MDM devices, you can use the *Switch-MdmDeviceAuthority* cmdlet to switch between Intune and Configuration Manager management authorities. 
 
 ### Cmdlet *Switch-MdmDeviceAuthority*
 
 #### SYNOPSIS
-Switches the management authority of MDM devices that do not have users associated with them (For example: Bulk enrolled devices). The cmdlet switches between Intune and Configuration Manager management authorities for the specified devices based on their management authorities when the cmdlet is invoked.
+The cmdlet switches the management authority of MDM devices without user affinity (For example, bulk-enrolled devices). The cmdlet switches between Intune and Configuration Manager management authorities for the specified devices based on their management authorities when you run the cmdlet.
 
 ### SYNTAX
 `Switch-MdmDeviceAuthority -DeviceIds <Guid[]> [-Credential <PSCredential>] [-Force] [-LogFilePath <string>] [-LoggingLevel {Off | Critical | Error | Warning | Information | Verbose | ActivityTracing | All}] [-Confirm] [-WhatIf] [<CommonParameters>]`

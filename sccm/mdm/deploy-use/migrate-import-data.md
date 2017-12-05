@@ -5,7 +5,7 @@ description:
 keywords:
 author: dougeby
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 11/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service:

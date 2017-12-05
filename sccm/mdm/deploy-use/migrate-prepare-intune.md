@@ -7,7 +7,7 @@ description: Learn how to prepare Intune on Azure for user migration from hybrid
 keywords:
 author: dougeby
 manager: dougeby
-ms.date: 09/14/2017
+ms.date: 11/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service:
@@ -54,7 +54,7 @@ If you went through the [Import Configuration Manager data to Microsoft Intune](
 Just like other tenant-level policies, terms and conditions policies are automatically migrated to Intune once mixed authority is enabled for your tenant.  However, you must assign the terms and conditions to a group that contains migrated users to accurately report on acceptance for migrated users and ensure that the terms and conditions are properly targeted for future terms and conditions updates or device enrollments. Users do not have to re-accept the terms and conditions unless there are changes made to the policy in the Configuration Manager console. For details, see [Assign terms and conditions](https://docs.microsoft.com/intune/terms-and-conditions-create#assign-terms-and-conditions).
 
 ## Configure the Exchange Connector
-If you use Exchange and have an Exchange Connector in Configuration Manager, you need to [configure the on-premises Exchange Connector in Intune](https://docs.microsoft.com/intune/exchange-connector-install). Also consider the information in the following sections to help you migrate to the Intune Exchange Connector and to ensure conditional access work properly after migration.
+If you use Exchange and have an on-premises Exchange Connector in Configuration Manager, you need to [configure the on-premises Exchange Connector in Intune](https://docs.microsoft.com/intune/exchange-connector-install). Also consider the information in the following sections to help you migrate to the Intune Exchange Connector and to ensure conditional access work properly after migration.
 
 ### PowerShell scripts to help you migrate to the Intune Exchange Connector 
 PowerShell scripts are available to help you prepare to transition your Exchange devices from the Configuration Manager Exchange Connector to the Intune Exchange Connector. While running these scripts are optional, we recommend that you run them to remove inactive devices from Exchange, which prevents Intune from discovering unnecessary devices. Running the scripts ensure that devices discovered through Exchange can merge with devices enrolled with Intune as smoothly as possible. Run these scripts prior to setting up the Intune Exchange Connector. The PowerShell scripts are part of the Intune Data Importer installation that you use to [import Configuration Manager data to Microsoft Intune](migrate-import-data.md) in the next article. For details and to download the scripts, go to [Download the Data Importer tool](migrate-import-data.md#download-the-data-importer-tool).
