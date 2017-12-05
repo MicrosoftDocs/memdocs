@@ -5,7 +5,7 @@ description:
 keywords:
 author: dougeby
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service:
@@ -99,7 +99,7 @@ Before you can run the Data Importer tool, you must use a Global Administrator a
 
 ### Manually map collections to Azure AD groups
 When you run the Data Importer tool, it extracts the AD group name from collections with a single rule that targets a single AD group. When the assignments are created in Intune, the Data Importer looks for an Azure AD group with the same name as the AD group, and if it exists, assigns the imported object to that Azure AD group. You can override the AD group name that the Data Importer finds for a collection and provide one or more Azure AD groups to use for that collection. Using the collection mapping file provides a way for you to map collections that are typically not importable with the Data Importer to Azure AD groups.
-#### Find the collections that are not importable
+#### Find the collections that cannot be imported
 You can get a list of all collections that aren’t importable so you can add them to your collection mapping .csv file. 
 1. Run the Data Importer tool and select the objects to import. Use the procedures in [Phase 1: Discover Configuration Manager objects and collect data](#phase-1:-discover-configuration-manager-objects-and-collect-data) and [Phase 2: Resolve issues and select the objects to import](#phase-2:-resolve-issues-and-select-the-objects-to-import) to discover and choose the objects. Then, on the **Summary** page, choose **Export Details** to create a .csv file with details of everything selected for import, including the objects that can't be imported and deployments. 
 2. Open the .csv file in Microsoft Excel and filter the data based on the **Deployment** for the **Type** column and **No** for the **Importable** column. The collection name column shows all the collections that need to be added to a collection mapping file in order for those deployments to be importable.
