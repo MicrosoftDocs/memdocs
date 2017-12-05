@@ -24,7 +24,7 @@ You can start migrating to Intune standalone using a phased approach that allows
 The following topics provide the steps to migrate your users to Intune standalone using a phased approach.    
   
 1.	[Import Configuration Manager data to Microsoft Intune](migrate-import-data.md)   
-    The Intune Data Importer tool collects data about the objects you select from your Configuration Manager hierarchy, provides details about the objects you can select for import and information about why some object cannot be imported, and lets you import selected objects into your Microsoft Intune tenant. While this step is optional, it can save you a lot of time by automating the process to recreate objects from Configuration Manager to Intune. 
+    The Intune Data Importer tool collects data about the objects you select from your Configuration Manager hierarchy, provides details about the objects you can select for import and information about why some object cannot be imported, and lets you import selected objects into your Microsoft Intune tenant. While this step is optional, it can save you much time by automating the process to recreate objects from Configuration Manager to Intune. 
 2.	[Prepare Intune for user migration](migrate-prepare-intune.md)    
     Validate imported objects from Configuration Manager, create new objects, create AAD groups and make object assignments to these groups, install NDES and Exchange connectors, etc. When you complete the steps and start the migration to Intune standalone, it should be transparent to your users.  
 3.	[Change the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md)    
