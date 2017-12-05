@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,21 +24,21 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-We've now better integrated the ability to run Powershell Scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly allowing you to get big jobs done more easily and more consistently.
+>[!TIP]
+>Introduced with version 1706, the ability to run PowerShell scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+
+We've now better integrated the ability to run Powershell scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get big jobs done more easily and more consistently.
 
 With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
 
-- Create and edit scripts for use with Configuration Manager.
-- Manage script usage through roles and security scopes  
+- Create and edit scripts for use with System Center Configuration Manager.
+- Manage script usage through roles and security scopes. 
 - Run scripts on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
->[!IMPORTANT]
+>[!WARNING]
 >Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
-
->[!TIP]
->Introduced with version 1706, PowerShell Scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ With this integration in System Center Configuration Manager, you can use the *R
 - To use scripts, you must be a member of the appropriate Configuration Manager security role.
 - To import and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
+- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Full Administrator** security role.
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
@@ -56,7 +56,7 @@ For more information about Configuration Manager security roles, see [Fundamenta
 Run Scripts currently supports:
 
 - Scripting languages: PowerShell
-- Parameter types: integer and string
+- Parameter types: integer, string and, list
 
 ## Run Script authors and approvers
 
@@ -118,79 +118,83 @@ Each of your script's parameters has its own dialog for adding further details a
 
 Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
 
-#### Example: FirstName
+#### Example: *FirstName*
 
-In this example, you are able to set the properties of the string parameter, *FirstName*. Notice the optional field for **Custom error**. This field is useful for adding user guidance about the specific field and your guidance to the user about their interaction with the string parameter, *FirstName* in this case.
+In this example, you are able to set the properties of the string parameter, *FirstName*.
 
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
+
+
+The validation section of the **Script Parameter Properties** dialog contains the following fields for your use:
+
+- **Minimum Length** - minimum number of characters of the *FirstName* field.
+- **Maximum Length**- maximum number of characters of the *FirstName* field
+- **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
+- **Custom Error** - useful for adding your own custom error message that supercedes any system validation error messages.
+
+#### Using Regular Expression validation
+
+A regular expression is a compact form of programming for checking a string of characters against an encoded validation. For example, you could check for the absence of a capital alphabetic character in the *FirstName* field by placing `[^A-Z]` in the *RegEx* field.
+
+The regular expression processing for this dialog is supported by the .NET Framework. For guidance on using regular expressions, see [.NET Regular Expression](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions). 
+
 
 ## Script examples
 
 Here are a couple examples that illustrate scripts you might want to use with this capability.
 
-### Create a folder
+### Create a new folder and file
+
+This script creates a new folder and a file within it given your naming input.
 
 ``` powershell
-New-Item "c:\scripts" -type folder name
-```
-
-### Create a file
-
-```powershell
-New-Item "c:\scripts\new_file.txt" -type file name
-```
-
-### Ping a given computer
-
-This script takes a string and uses it as a parameter for a *ping* operation.
-
-``` powershell
-Param
-(
- [String][Parameter(Mandatory=$True, Position=1)] $Computername
+Param(
+[Parameter(Mandatory=$True)]
+[string]$FolderName,
+[Parameter(Mandatory=$True)]
+[string]$FileName,
 )
 
-Ping $Computername
+New-Item $FolderName -type directory
+New-Item $FileName -type file
 ```
 
-### Get battery status
+### Get OS Version
 
-This script uses WMI to query the machine for its battery status.
+This script uses WMI to query the machine for its OS version.
 
 ``` powershell
-Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
-
+Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
 ## Run a script
 
-After a script is approved, it can be run against a collection you choose. Once execution of your script begins, it is launched quickly through a high priority system and is executed within one hour. The results of the script are returned using a slower, state message system.
+After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it is launched quickly through a high priority system that times-out in one hour. The results of the script are then returned using a state message system.
+
+To select a collection of targets for your script:
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
 3. In the **Device Collections** list, click the collection of devices on which you want to run the script.
-4. On the **Home** tab, in the **All Systems** group, click **Run Script**.
+4. Select a collection of your choice, click **Run Script**.
 5. On the **Script** page of the **Run Script** wizard, choose a script from the list. Only approved scripts are shown.
 6. Click **Next**, and then complete the wizard.
 
 >[!IMPORTANT]
->If a script does not run, for example because a target client is turned off, in the one hour time period, you must run it again.
+>If a script does not run, for example because a target device is turned off during the one hour time period, you must run it again.
 
 ### Target machine execution
+
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
 
-## Work flow and monitoring
+## Script monitoring
 
-Here's what Run Scripts looks like as a work flow; create, approve, run and, monitor.
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution. <br>
 
-![Run Scripts - work flow](./media/run-scripts/RS-run-scripts-work-flow.png)
-
-### Script monitoring
-
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution.
+![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. In the Configuration Manager console, click **Monitoring**.
-2. In the **Monitoring** workspace, click **Script Status**. ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
+2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
 ## See Also
