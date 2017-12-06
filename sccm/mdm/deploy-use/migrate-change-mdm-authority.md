@@ -5,7 +5,7 @@ description: "Learn how to change the MDM authority from Configuration Manager (
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 09/14/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -21,7 +21,7 @@ You can change an existing Microsoft Intune tenant configured from the Configura
 > [!Important]    
 > To change your MDM authority without first migrating hybrid MDM users to Intune, see [Change your MDM authority](change-mdm-authority.md).
 
-The steps in this topic switch the MDM authority for the tenant to Intune and migrate all devices that have not already been migrated to Intune standalone. This topic provides information about how to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone and assumes that you have already completed the following steps:
+This article provides information about how to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone and assumes that you have already completed the following steps:
 - Used the [Intune Data Import tool](migrate-import-data.md) to import Configuration Manager objects to Intune. 
 - [Prepared Intune for user migration](migrate-prepare-intune.md) to ensure users and their devices continue to be managed after they are migrated.
 - [Changed the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md) to start managing user devices from the Azure portal.
@@ -29,7 +29,7 @@ The steps in this topic switch the MDM authority for the tenant to Intune and mi
 
 ## Users and devices that have not been migrated
 You have already migrated many users and tested Intune functionality to make sure things are working as expected. Therefore, your policies, profiles, apps, etc. have been configured in Intune and you have thoroughly tested the objects on devices. There should be no new configurations required for your tenant-level policies after the change in MDM authority. However, for users and devices that have not been previously migrated, review the following information about what to expect after the change in MDM authority:    
-- There will likely be transition time (up to eight hours) before the device checks in and synchronizes with the service.
+- There is likely a transition time (up to eight hours) before the device checks in and synchronizes with the service.
 - Your devices must connect with the service after the change so that the settings from the new MDM authority (Intune standalone) replace the existing settings on the device.
 - Some of the basic settings (such as profiles) from the previous MDM authority (hybrid) remain on the device for up to seven days. 
 - Devices that don't have associated users (typically when you have iOS Device Enrollment Program or bulk enrollment scenarios) are not migrated to the new MDM authority. For those devices, you need to call support for assistance to move them to the new MDM authority.
@@ -40,7 +40,7 @@ Review the following information to prepare for the change to the MDM authority:
 - Make sure all users that are currently managed by hybrid MDM have an Intune/EMS license assigned to them prior to the change in MDM authority. Having the license ensures that the user and their devices are managed by Intune standalone after the change in MDM authority. For more information, see [Assign Intune licenses to your user accounts](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4).
 - Make sure that the Admin user account has an Intune/EMS license assigned.
 
-### Change the MDM authority to Intune
+## Change the MDM authority to Intune
 Use the following procedure to change the tenant-level MDM authority to Intune.
 
 1.	In the Configuration Manager console, go to **Administration** &gt; **Overview** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and delete your existing Intune Subscription.
@@ -68,10 +68,10 @@ After the change in MDM authority is complete, review the following information:
 - If you have issues with specific devices, you can unenroll and reenroll the devices to get them connected to the new authority and managed as quickly as possible.
 - For users and devices that have not been previously migrated:
     - Verify that devices are now displayed in the **Devices** blade as managed devices. These devices must check in and synchronize with the service after the change in MDM authority before they are displayed. 
-    - When the Intune service detects that a tenant’s MDM authority has changed, it sends out a notification message to all the enrolled devices to check in and synchronize with the service (outside of the regularly scheduled check-in). Therefore, after the MDM authority for the tenant has been changed from hybrid to Intune standalone, all the devices that are powered on and online will connect with the service, receive the new MDM authority, and be managed by Intune standalone from now on. There will be no interruption to the management and protection of these devices.
+    - When the Intune service detects that a tenant’s MDM authority has changed, it sends out a notification message to all the enrolled devices to check in and synchronize with the service (outside of the regularly scheduled check-in). Therefore, after the MDM authority for the tenant has been changed from hybrid to Intune standalone, all the devices that are powered on and online connect with the service, receive the new MDM authority, and be managed by Intune standalone from now on. There is no interruption to the management and protection of these devices.
     - Devices that are either powered off or offline during (or shortly after) the change in MDM authority connect to and synchronize with the service under the new MDM authority when they are powered on and online.  
     - Users can quickly change to the new MDM authority by manually starting a check-in from the device to the service. Users can easily do check in by using the Company Portal app and initiating a device compliance check.
-    - There is an interim period when a device is offline during the change in MDM authority and when that device checks in to the service. To help ensure that the device remains protected and functional during this interim period, the following profiles will remain on the device for up to seven days (or until the device connects with the new MDM authority and receives new settings that overwrite the existing ones):
+    - There is an interim period when a device is offline during the change in MDM authority and when that device checks in to the service. To help ensure that the device remains protected and functional during this interim period, the following profiles remain on the device for up to seven days (or until the device connects with the new MDM authority and receives new settings that overwrite the existing ones):
         - E-mail profile
         - VPN profile
         - Cert profile
