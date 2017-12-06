@@ -3,7 +3,7 @@ title: "Deploy applications"
 titleSuffix: "Configuration Manager"
 description: "Create a deployment type or simulate deployment for an application by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -168,8 +168,7 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 ## How to check for running executable files before installing an application
 
 >[!Tip]
->With version 1702, this is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
-> Beginning with version 1706, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.
 
 In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can specify one or more executable files that, if running, block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed. To configure this:
 
