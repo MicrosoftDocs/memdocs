@@ -3,7 +3,7 @@ title: "Data warehouse"
 titleSuffix: "Configuration Manager"
 description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,9 +24,7 @@ manager: angrobe
 Beginning with version 1702 you can use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
 > [!TIP]
-> The Data Warehouse service point is a pre-release feature introduced in version 1702. To enable it, see [Use pre-release features](/sccm/core/servers/manage/pre-release-features).
-
-> Beginning with version 1706, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.
 
 The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point. Data that is synchronized to the data warehouse database is retained for three years. Periodically, a built-in task removes data that is older than three years.
 

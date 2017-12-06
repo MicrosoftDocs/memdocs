@@ -103,8 +103,10 @@ When a pull-distribution point downloads content from a source distribution poin
 -   This framework is installed by the **Pulldp.msi** when you configure the distribution point to be a pull-distribution point. The framework doesn't require the Configuration Manager client.  
 
 -   After the pull-distribution point is installed, the CCMExec service on the distribution point computer must be operational for the pull-distribution point to function.  
+<!--sms.503672 -Clarified BITS use-->
+-   When the pull-distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. A pull-distribution point doesn't require the optional BITS IIS Server Extension feature to be installed.
 
--   When the pull-distribution point transfers content, it transfers content by using **Background Intelligent Transfer Service** (BITS) and logs its operation in the **datatransferservice.log** and the **pulldp.log** on the distribution point computer.  
+-  The pull-distribution point logs its operation in the **datatransferservice.log** and the **pulldp.log** on the distribution point computer.
 
 ## See also  
  [Fundamental concepts for content management in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
