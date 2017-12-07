@@ -106,20 +106,6 @@ You can also use this feature when deploying an app using the wizard.
 2. Deploy the application to a client.
 3. Install the application from Software Center. The application installation interface should appear. The end-user should follow the application installation wizard and the application will be successfully installed.
 
-## New compliance policy options for Windows 10
-The following are new compliance polices you can configure for Windows 10 devices.
-- **Require Firewall**.  Specify whether a device must have a firewall enabled and monitoring all networks.
-- **Require User Account Control**. Specify that a device must have User Account Control enabled.
-- **Defender**:
-  - **Require Windows Defender Antivirus**.  Require a device to have Windows Defender Antivirus enabled.
-  - **Windows Defender Antivirus version**.  Specify the minimum version of spyware definitions a device must have installed.
-  - **Require current Windows Defender Antivirus signature**. Verify that a devices Window Defender Antivirus signature is up-to-date.
-  - **Require Real-Time Protection**.  Specify whether a device must have Windows Defender Antivirus Real-Time Protection enabled.
-- **Valid operating system builds**.  Specify minimum and maximum operating system build requirements.  
-
-Use the Create Compliance Policy Wizard to configure these policies and select these new options when you add a rule to the policy you are configuring.  
-Learn how to [create](/sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy) and [deploy](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy) compliance policies.
-
 
 
 
