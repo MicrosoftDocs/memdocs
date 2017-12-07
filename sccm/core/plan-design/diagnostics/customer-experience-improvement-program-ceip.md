@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
 caps.latest.revision: 4
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Customer Experience Improvement Program (CEIP) for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Customer Experience Improvement Program (CEIP) for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 During installation of the System Center Configuration Manager console, you can choose to participate in the **Customer Experience Improvement Program** (CEIP). Although CEIP is turned off by default, if it was previously enabled, it will remain enabled.  
 
 -   CEIP is separate from [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
