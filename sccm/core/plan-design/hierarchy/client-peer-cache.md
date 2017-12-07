@@ -3,7 +3,7 @@ title: "Client Peer Cache"
 titleSuffix: "Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/07/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -33,7 +33,7 @@ A Peer Cache client is a Configuration Manager client that is enabled to use Pee
  - 	To share content as a Peer Cache source, a Peer Cache client:
     -  Must be domain joined. However, a client that is not domain joined can get content from a domain joined Peer Cache source.
     -  Must be a member of the current boundary group of the client that's seeking the content. A Peer Cache client in a neighbor boundary group is not included with the pool of available content source locations when a client uses fallback to seek content from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
- - Every type of content that is held in the cache of a Configuration Manager client can be served to other clients by using Peer Cache.
+ - Every type of content that is held in the cache of a Configuration Manager client can be served to other clients by using Peer Cache including Office 365 files and express installation files.<!--SMS.500850-->
  -	Peer Cache does not replace the use of other solutions like BranchCache but instead works side-by-side with it to give you more options for extending traditional content deployment solutions such as distribution points. This is a custom solution with no reliance on BranchCache, so if you don’t enable or use Windows BranchCache, it still works.
 
 ### Operations
