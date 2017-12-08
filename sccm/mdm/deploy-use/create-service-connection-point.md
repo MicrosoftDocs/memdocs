@@ -34,7 +34,7 @@ When you have created your subscription, you can then install the service connec
 
 1.  In the Configuration Manager console, click **Administration**.
 
-2.  In the **Administration** workspace, expand **Sites**, and then click **Servers and Site System Roles**.
+2.  In the **Administration** workspace, expand **Site Configuration** and then **Sites**, then click **Servers and Site System Roles**.
 
 3.  Add the **Service connection point** role to a new or existing site system server by using the associated step:
 
