@@ -3,7 +3,7 @@ title: "Endpoint Protection client frequently asked questions"
 titleSuffix: "Configuration Manager"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 caps.latest.revision: 15
-author: NathBarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
 
 ---
@@ -200,7 +200,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
 ##  What is real-time protection?  
 
- Real-time protection enables Windows Defender to monitor your computer all the time and alert you when potential threats, such as viruses and spyware, are trying to install themselves or run on your computer. Because this feature is an important element of the way that Windows Defender helps protect your computer, you should make sure real-time protection is always turned on. If real-time protection gets turned off, Windows Defender notifies you, and changes your computerâ€™s status to â€œAt riskâ€.  
+ Real-time protection enables Windows Defender to monitor your computer all the time and alert you when potential threats, such as viruses and spyware, are trying to install themselves or run on your computer. Because this feature is an important element of the way that Windows Defender helps protect your computer, you should make sure real-time protection is always turned on. If real-time protection gets turned off, Windows Defender notifies you, and changes your computer's status to **at risk**.  
 
  Whenever real-time protection detects a threat or potential threat, Windows Defender displays a notification. You can now choose from the following options:  
 
