@@ -3,7 +3,7 @@ title: "Manage SharePoint Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use the System Center Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
 
 ---
@@ -161,7 +161,7 @@ Office desktop applications can access SharePoint Online on PCs running:
 
 4.  Under **Browser access** to SharePoint Online and OneDrive for Business, you can choose to allow access to Exchange Online only through the supported browsers: Safari (iOS), and Chrome (Android). Access from other browsers will be blocked.  The same platform restrictions you selected for Application access for OneDrive also apply here.
 
-    On **Android** devices, users must enable the browser access.  To do this the end-user must enable the â€œEnable Browser Accessâ€ option on the enrolled device as follows:
+    On **Android** devices, users must enable the browser access.  To do this the end-user must enable the **Enable Browser Access** option on the enrolled device as follows:
     1.  Launch the **Company Portal app**.
     2.  Go to the **Settings** page from the triple dots (â€¦) or the hardware menu button.
     3.  Press the **Enable Browser Access** button.
