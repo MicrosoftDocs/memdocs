@@ -2,7 +2,7 @@
 
 title: "Release notes"
 titleSuffix: "MDT 2013 release notes"
-description: "Understand prerequisites and limitations of Microsoft Deployment Toolkit 2013."
+description: "Understand prerequisites and limitations of Microsoft Deployment Toolkit 2013. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

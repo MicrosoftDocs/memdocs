@@ -2,7 +2,7 @@
 
 title: "Quick Start - Lite Touch Installation"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "A Quick Start guide for Microsoft Deployment Toolkit lite touch installation."
+description: "A Quick Start guide for Microsoft Deployment Toolkit lite touch installation. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

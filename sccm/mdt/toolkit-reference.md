@@ -2,7 +2,7 @@
 
 title: "Toolkit reference"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Reference details for Microsoft Deployment Toolkit 2013."
+description: "Reference details for Microsoft Deployment Toolkit 2013. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

@@ -2,7 +2,7 @@
 
 title: "Troubleshoot MDT"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Troubleshooting reference for the Microsoft Deployment Toolkit"
+description: "Troubleshooting reference for the Microsoft Deployment Toolkit "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

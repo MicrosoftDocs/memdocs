@@ -2,7 +2,7 @@
 
 title: "MDT Samples"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Microsoft Deployment Toolkit samples."
+description: "Microsoft Deployment Toolkit samples. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

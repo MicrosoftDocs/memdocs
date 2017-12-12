@@ -2,7 +2,7 @@
 
 title: "Use the MDT"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Learn how to use the Microsoft Deployment Toolkit 2013."
+description: "Learn how to use the Microsoft Deployment Toolkit 2013. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

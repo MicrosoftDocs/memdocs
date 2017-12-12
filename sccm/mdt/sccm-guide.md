@@ -2,7 +2,7 @@
 
 title: "Quick Start - System Center 2012 R2 Configuration Manager"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "A Quick Start guide for Microsoft Deployment Toolkit with System Center 2012 R2 Configuration Manager"
+description: "A Quick Start guide for Microsoft Deployment Toolkit with System Center 2012 R2 Configuration Manager. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:

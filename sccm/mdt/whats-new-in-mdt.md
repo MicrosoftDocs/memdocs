@@ -2,7 +2,7 @@
 
 title: "What’s new in MDT 2013 Guide"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Learn about the Microsoft Deployment Toolkit 2013."
+description: "Learn about the Microsoft Deployment Toolkit 2013. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
