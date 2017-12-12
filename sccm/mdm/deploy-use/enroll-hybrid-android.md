@@ -57,7 +57,7 @@ The following steps let Configuration Manager manage Android devices with a work
 > A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage all supported devices as Android for Work** option.
 
 
-After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/en-us/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
 When the binding finishes, you see the account name and organization name in the Intune portal. At that time, you can close both browsers.
 

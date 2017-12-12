@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 
 ---
-# Maintenance tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Maintenance tasks for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager sites and hierarchies require regular maintenance and monitoring to provide services effectively and continuously. Regular maintenance ensures that the hardware, software, and Configuration Manager database continue to function correctly and efficiently. Optimal performance greatly reduces the risk of failure.  
 
  To set up Alerts and use the Status System to monitor the health of Configuration Manager, see [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  

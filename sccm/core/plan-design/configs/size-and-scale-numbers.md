@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: 4
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
 ---
 # Size and scale numbers for System Center Configuration Manager
@@ -144,7 +144,10 @@ A central administration site supports a total number of devices that includes u
  For example, in a hierarchy, you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0, and up to 300,000 cloud-based devices when you integrate Microsoft Intune—for a total of 1,025,000 devices. If you support devices that are managed by on-premises MDM, the total for the hierarchy is 825,000 devices.  
 
 > [!IMPORTANT]  
->  In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. The edition of SQL Server that is in use at a stand-alone primary site doesn't limit that site's capacity to support up to the stated number of clients.  
+>  In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. To support more than 50,000 desktops and devices, you must use an Enterprise edition of SQL Server. This requirement applies only to a central administration site, and does not apply to a stand-alone primary site or a child primary site where the edition of SQL Server you use does not limit that site's capacity to support the stated number of clients.   
+
+
+ The edition of SQL Server that is in use at a stand-alone primary site doesn't limit that site's capacity to support up to the stated number of clients.  
 
 
 ###  <a name="bkmk_chipri"></a> Child primary site  

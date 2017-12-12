@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
 ---
 # What&#39;s new in version 1706 of System Center Configuration Manager
@@ -189,10 +189,6 @@ For more information, see [Create and run PowerShell scripts from the Configurat
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
 - **Block screen capture (Android devices only):** Specifies that the screen capture capabilities of the device are blocked when using this app.
-
-- **Disable contact sync:** Prevents the app from saving data to the native Contacts app on the device.
-
-- **Disable printing:** Prevents the app from printing work or school data.
 
 See [protect apps using app protection policies in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) to try the new app protection policy settings.
 

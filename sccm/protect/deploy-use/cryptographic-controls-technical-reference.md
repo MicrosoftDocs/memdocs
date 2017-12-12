@@ -1,9 +1,9 @@
 ---
 title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
-description: "Learn about how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
+description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +11,8 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
-caps.latest.revision: 6
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
 
 ---
@@ -276,5 +274,14 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  When a management point first authenticates a client by using the self-signed client certificate, this mechanism provides minimal security because any computer can generate a self-signed certificate. In this scenario, the client identity process must be augmented by approval. Only trusted computers must be approved, either automatically by Configuration Manager, or manually, by an administrative user. For more information, see the approval section in [Communications between endpoints in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-##  About SSL vulnerabilities  
- We recommend the disabling of SSL 3.0, the enabling of TLS 1.1, and 1.2, and the reordering of TLS-related cipher suites, to improve the security of your Configuration Manager servers. You can learn how to take these actions in [this KB article](https://support.microsoft.com/en-us/kb/245030/). This action will not affect Configuration Manager functionality.  
+## About SSL vulnerabilities
+To improve the security of your Configuration Manager clients and servers, do the following:
+
+-	Enable TLS 1.2
+
+    To enable TLS 1.2 for Configuration Manager, see the following KB article: [How to enable TLS 1.2 for Configuration Manager]( https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
+-	Disable SSL 3.0, TLS 1.0, and TLS 1.1 
+-	Reorder the TLS-related cipher suites 
+
+For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) and [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx). These procedures do not affect Configuration Manager functionality.
+

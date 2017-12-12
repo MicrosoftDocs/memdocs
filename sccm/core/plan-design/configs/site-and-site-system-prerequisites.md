@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 5
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
 ---
 # Site and site system prerequisites for System Center Configuration Manager
@@ -254,8 +254,9 @@ manager: angrobe
     > [!NOTE]  
     >  WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> The distribution point site system role doesn't require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer isn't used to facilitate the download of content by clients that use BITS.  
+> When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client does not  upload information to it.  
 
 ###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection point  
 **Windows Server roles and features:**  
@@ -622,8 +623,9 @@ When you use a custom IIS configuration, you can remove options that aren't requ
     > [!NOTE]  
     >  WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> The distribution point site system role doesn't require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer isn't used to facilitate the download of content by clients that use BITS.  
+> When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client does not  upload information to it.   
 
 
 ###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection point  

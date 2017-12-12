@@ -3,7 +3,7 @@ title: Task sequence steps
 titleSuffix: "Configuration Manager"
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,6 +24,9 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+
+> [!TIP]  
+> **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
 ##  <a name="BKMK_ApplyDataImage"></a> Apply Data Image Task Sequence Step  
@@ -742,7 +745,7 @@ This step runs in either a standard operating system or Windows PE. However, the
  The physical disk number of the disk that will be formatted. The number is based on Windows disk enumeration ordering.  
 
  **Disk Type**  
- The type of the disk that is formatted. There are two options to select from the drop-down list:  
+ The type of the disk that is formatted. There are two options to select from the drop-down list: 
 
 -   Standard(MBR) - Master Boot Record.  
 
@@ -1401,6 +1404,22 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
 > [!IMPORTANT]  
 >  PowerShell 1.0 does not support Undefined and Bypass execution policies.  
+
+##  <a name="child-task-sequence"></a> Run Task Sequence
+
+Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This creates a parent-child relationship between the task sequences. With a child task sequence, you can create modular, re-usable task sequences.
+
+Consider the following when you add a child task sequence to a task sequence:
+
+ - The parent and child task sequences are effectively combined into a single policy that the client runs.
+ - The environment is global. For example, if a variable is set by the parent task sequence and then changed by the child task sequence, the variable remains changed moving forward. Similarly, if the child task sequence creates a new variable, the variable is available for the remaining steps in the parent task sequence.
+ - Status messages are sent per normal for a single task sequence operation.
+ - The task sequences write entries to the smsts.log file, with new log entries that make it clear when a child task sequence starts.
+
+### Details
+
+1. In the task sequence editor, click **Add**, select **General**, and click **Run Task Sequence**.
+2. Click **Browse** to select the child task sequence.  
 
 ##  <a name="BKMK_SetDynamicVariables"></a> Set Dynamic Variables  
  Use the **Set Dynamic Variables** task sequence step to perform the following:  

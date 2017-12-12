@@ -13,9 +13,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 ---
-# Select discovery methods to use for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Select discovery methods to use for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 To successfully and efficiently use discovery for System Center Configuration Manager, you must consider which methods to use and at which sites to run them.  
 
  Because discovery can generate a large volume of network traffic, and the resultant discovery data records (DDRs) can use significant CPU resources during processing, use only those discovery methods that you require to meet your goals. You might start by using only one or two discovery methods, and then later enable additional methods in a controlled manner to extend the level of discovery in your environment. The information in this topic can help you make informed decisions.  

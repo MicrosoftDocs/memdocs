@@ -3,7 +3,7 @@ title: "SQL Server Always On"
 titleSuffix: "Configuration Manager"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
-ms.date: 09/22/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 caps.latest.revision: 16
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
 
 ---
@@ -213,6 +213,11 @@ The following limitations apply to all scenarios.
   Introduced with SQL Server 2016 Standard edition, [basic availability groups](https://msdn.microsoft.com/library/mt614935.aspx) do not support read access to secondary replicas, a requirement for use with Configuration Manager.
 - **Failover Cluster Instance**  
   [Failover Cluster Instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) are not supported for a replica you use with Configuration Manager.
+
+- **MultiSubnetFailover**    
+    It is not supported to use an availability group in a multi-subnet configuration or with the [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.
+
+
 
 **SQL servers that host additional availability groups:**   
 Prior to Configuration Manager version 1610, when an availability group on a SQL Server  hosts one or more availability groups in addition to the group you use for Configuration Manager, each replica in each of those additional availability groups must have the following configurations set at the time you run Configuration Manager Setup or install an update for Configuration Manager:

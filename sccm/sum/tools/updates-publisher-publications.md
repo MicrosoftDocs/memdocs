@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 caps.latest.revision: 1
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
 ---

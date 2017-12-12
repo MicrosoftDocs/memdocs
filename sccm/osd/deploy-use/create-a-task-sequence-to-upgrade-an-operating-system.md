@@ -3,7 +3,7 @@ title: Create a task sequence to upgrade an operating system
 titleSuffix: "Configuration Manager"
 description: "Task sequences in System Center Configuration Manager can automatically upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 caps.latest.revision: 12
-author: Dougebyms.author: dougebymanager: angrobe
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
 
 ---
-# Create a task sequence to upgrade an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create a task sequence to upgrade an operating system in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use task sequences in System Center Configuration Manager to automatically upgrade an operating system from Windows 7 or later to Windows 10, or Windows Server 2012 or later to Windows Server 2016, on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
 ##  <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an operating system  
@@ -70,7 +75,7 @@ Use task sequences in System Center Configuration Manager to automatically upgra
 ## Configure pre-cache content
 Beginning in version 1702, for available deployments of task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
 > [!TIP]  
-> Introduced with version 1702, the pre-cache is a pre-release feature. To enable it, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.
 
 For example, let's say you want to deploy a Windows 10 in-place upgrade task sequence, only want a single task sequence for all users, and have multiple architectures and/or languages. Prior to version 1702, if you create an available deployment, and then the user clicks **Install** in Software Center, the content downloads at that time. This adds additional time before the installation is ready to start. Also, all content referenced in the task sequence is downloaded. This includes the operating system upgrade package for all languages and architectures. If each is roughly three GB in size, the download package can be quite large.
 

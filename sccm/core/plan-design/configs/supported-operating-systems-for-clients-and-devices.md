@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
-author: arob98
-ms.author: angrobe
+author: mestew
+ms.author: mstewart
 manager: angrobe
 ---
 # Supported operating systems for clients and devices for System Center Configuration Manager

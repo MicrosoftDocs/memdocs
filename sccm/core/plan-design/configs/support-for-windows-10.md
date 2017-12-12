@@ -3,7 +3,7 @@ title: "Support for Windows 10"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Windows 10 versions that are supported as clients or for OSD with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/11/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 caps.latest.revision: 5
-author: brenduns  
-ms.author: brenduns
+author: mestew 
+ms.author: mstewart
 manager: angrobe
 ---
 # Support for Windows 10 for System Center Configuration Manager  
@@ -34,13 +34,13 @@ For example, a Configuration Manager version will drop from the matrix after [su
 -   The following information supplements [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
 -   If you use the Long-Term Servicing Branch of Configuration Manager, see [Supported Configurations for the Long-Term Servicing Branch](/sccm/core/understand/supported-configurations-for-ltsb).
 
-|Windows 10 version                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
+|Windows 10 version                    |  Configuration Manager 1702          |    Configuration Manager 1706 |Configuration Manager 1710          |  
 |---------------------|-----|-----|-----|
-|Enterprise 2015 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|Enterprise 2016 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|Enterprise 2015 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+|Enterprise 2016 LTSB                   |![Supported](media/green_check.png) |![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 |1607 	<br />(Also known as the Anniversary Update)<br />(*see editions*)   |![Supported](media/green_check.png) |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |
-|1703   <br />(Also known as the Creators Update)<br />(*see editions*)      |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
-|1709   <br />(Also known as the Fall Creators Update)<br />(*see editions*) |![Not supported](media/Red_X.png)   |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) |
+|1703   <br />(Also known as the Creators Update)<br />(*see editions*)      |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+|1709   <br />(Also known as the Fall Creators Update)<br />(*see editions*) |![Not supported](media/Red_X.png)   |![Backwards compatible](media/blue_compat.png) | ![Supported](media/green_check.png) |
 
 
 
@@ -58,11 +58,11 @@ When you deploy operating systems with Configuration Manager, the [Windows ADK i
 
 The following table list the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-|Windows 10 ADK version  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
+|Windows 10 ADK version  |Configuration Manager 1702   |Configuration Manager 1706 |Configuration Manager 1710 |
 |--------------------|-----|-----|-----|
-|1607  |![Supported](media/green_check.png)           |![Backwards compatible](media/blue_compat.png) |![Not supported](media/Red_X.png)|
-|1703  |![Not supported](media/Red_X.png)             |![Supported](media/green_check.png)            |![Supported](media/green_check.png) |  
-|1709  |![Not supported](media/Red_X.png)             |![Not supported](media/Red_X.png)              |![Supported](media/green_check.png) |  
+|1607  |![Backwards compatible](media/blue_compat.png) |![Not supported](media/Red_X.png)| ![Not supported](media/Red_X.png) |
+|1703  |![Supported](media/green_check.png)            |![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png)|
+|1709  |![Not supported](media/Red_X.png)              |![Supported](media/green_check.png) | ![Supported](media/green_check.png)|
 
 |Key|
 |--|

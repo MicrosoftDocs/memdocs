@@ -13,7 +13,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -33,7 +35,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1702 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Levels of diagnostic usage data collection for version 1702 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager version 1702 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.

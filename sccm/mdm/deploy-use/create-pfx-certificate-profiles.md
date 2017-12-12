@@ -3,7 +3,7 @@ title: "Create PFX certificate profiles using a certificate authority"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use PFX files in System Center Configuration Manager to generate user-specific certificates that support encrypted data exchange."
 ms.custom: na
-ms.date: 04/04/2017
+ms.date: 11/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -55,11 +55,12 @@ The Supported Platforms page identifies the operating systems and devices the ce
 
 Certificate profiles may support multiple operating systems and devices, however, certain operating system or device combinations may require different settings.  In these cases, it's best to create separate profiles for each unique set of settings.  
 
-As of version 1706, the following options are available:
+As of version 1710, the following options are available:
 
 - Windows 10
     - All Windows 10 (64-bit)
     - All Windows 10 (32-bit)
+    - All Windows 10 (ARM64)
     - All Windows 10 Holographic Enterprise and higher
     - All Windows 10 Holographic and higher
     - All Windows 10 Team and higher

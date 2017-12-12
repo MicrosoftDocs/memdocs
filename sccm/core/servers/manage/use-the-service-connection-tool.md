@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 caps.latest.revision: 11
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 
 ---
-# Use the Service Connection Tool for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Use the Service Connection Tool for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the **service connection tool** when your service connection point is in offline mode, or when your Configuration Manager site system servers are not connected to the Internet. The tool can help you keep your site up-to-date with the latest updates to Configuration Manager.  
 
 When run, the tool manually connects to the Configuration Manager cloud service to upload usage information for your hierarchy, and to download updates. Uploading usage data is necessary to enable the cloud service to provide the correct updates for your deployment.  

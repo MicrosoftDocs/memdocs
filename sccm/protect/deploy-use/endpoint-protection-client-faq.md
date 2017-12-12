@@ -3,7 +3,7 @@ title: "Endpoint Protection client frequently asked questions"
 titleSuffix: "Configuration Manager"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 caps.latest.revision: 15
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Endpoint Protection client frequently asked questions*Applies to: System Center Configuration Manager (Current Branch)*
+# Endpoint Protection client frequently asked questions
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 This FAQ is for computer users whose IT administrator has deployed Windows Defender or Endpoint Protection to their managed computer. The content here might not apply to other antimalware software. Microsoft System Center Endpoint Protection manages Windows Defender on Windows 10. It can also deploy and manage the Endpoint Protection client to computers before Windows 10. While Windows Defender is described in this article, its information also applies to Endpoint Protection.  
 
@@ -55,7 +60,7 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
     |Monitor file and program activity on your computer|This option monitors when files and programs start running on your computer, and then it alerts you about any actions they perform and actions taken on them. This is important, because malicious software can use vulnerabilities in programs that you have installed to run malicious or unwanted software without your knowledge. For example, spyware can run itself in the background when you start a program that you frequently use. Windows Defender monitors your programs and alerts you if it detects suspicious activity.|  
     |Enable behavior monitoring|This option monitors collections of behavior for suspicious patterns that might not be detected by traditional antivirus detection methods.|  
 
-    |Enable Network Inspection System|This option helps protect your computer against "zero day" exploits of known vulnerabilities, decreasing the window of time between the moment a vulnerability is discovered and an update is applied.|  
+    |Enable Network Inspection System|This option helps protect your computer against "zero day" exploits of known vulnerabilities, decreasing the window of time between the moment a vulnerability is discovered and an update is applied.|  
 
 -   **Scanning options** - You can use Windows Defender to scan for potential threats, such as viruses, spyware, and other malicious software that might put your computer at risk. You can also use it to schedule scans on a regular basis and to remove malicious software that is detected during a scan.  
 
@@ -195,7 +200,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
 ##  What is real-time protection?  
 
- Real-time protection enables Windows Defender to monitor your computer all the time and alert you when potential threats, such as viruses and spyware, are trying to install themselves or run on your computer. Because this feature is an important element of the way that Windows Defender helps protect your computer, you should make sure real-time protection is always turned on. If real-time protection gets turned off, Windows Defender notifies you, and changes your computerâ€™s status to â€œAt riskâ€.  
+ Real-time protection enables Windows Defender to monitor your computer all the time and alert you when potential threats, such as viruses and spyware, are trying to install themselves or run on your computer. Because this feature is an important element of the way that Windows Defender helps protect your computer, you should make sure real-time protection is always turned on. If real-time protection gets turned off, Windows Defender notifies you, and changes your computer's status to **at risk**.  
 
  Whenever real-time protection detects a threat or potential threat, Windows Defender displays a notification. You can now choose from the following options:  
 

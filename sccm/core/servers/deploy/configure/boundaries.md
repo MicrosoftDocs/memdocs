@@ -13,10 +13,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: angrobe
 
 ---
-# Define network locations as boundaries for System Center Configuration Manager
+# Define network locations as boundaries for System Center Configuration Manager
+
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager boundaries are locations on your network that contain devices that you want to manage. The boundary a device is on is equivalent to the Active Directory site, or network IP address that is identified by the Configuratoin Manager client that is installed on the device.

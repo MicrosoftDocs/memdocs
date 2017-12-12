@@ -3,7 +3,7 @@ title: "Manage clients"
 titleSuffix: "Configuration Manager"
 description: "Learn how to manage clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,7 +48,7 @@ Note that, depending on the device type, some of these options might not be avai
     -   **Add the device to a new or existing collection**  
 
          Add the device to a collection with a direct rule.  
-         
+
     -   **Install and reinstall the client by using the Client Push wizard**  
 
          Install and reinstall the Configuration Manager client to repair it or to reconfigure it on computers that run Windows. Includes site configuration options and client.msi properties that you set for client push installation.  
@@ -182,6 +182,21 @@ Note that, depending on the device type, some of these options might not be avai
 
          Client notification tasks are displayed in the **Client Operations** node in the **Monitoring** workspace.  
 
+
+## Restart clients
+Beginning with version 1710, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
+
+To identify devices that are pending a restart, go to **Assets and Compliance** > **Devices** and select a collection with devices that might need a restart. After you select a collection you can view the status for each device in the details pane in a new column named **Pending Restart**. Each device has a value of **Yes**, or **No**.
+
+**To create the client notification to restart a device:**
+1.	Locate the device you want to restart in the Devices node of the console.
+2.	Right-click on the device, select **Client Notification**, and then select **Restart**. This opens an information window about the restart. Click **OK** to confirm the restart request.
+
+When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring  [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
+
+
+
+
 ##  <a name="BKMK_ClientCache"></a> Configure the Client Cache for Configuration Manager Clients  
 The client cache stores temporary files for when clients install applications and programs. Software updates also use the client cache, but software updates are not restricted by the configured cache size and will always attempt to download to the cache. You can configure the client cache settings, such as size and location, when you install the Configuration Manager client manually, when you use client push installation, or after the client is installed.
 
@@ -251,12 +266,7 @@ For more information about how to use these command line properties for CCMSetup
 
 2.  On the **Cache** tab set the space and location properties. The default location is *%windir%*\ccmcache.  
 
-5.  To delete the files in the cache folder, choose **Delete Files**.  
-
-	> [!NOTE]
-	> 
-	> The cache folder is a regular Windows folder, so you can automate deletion of the folder contents using a script, a utility, or with the PowerShell cmdlet `Remove-Item`. 
-
+3.  To delete the files in the cache folder, choose **Delete Files**.  
 
 ### To configure client cache size in Client Settings
 
@@ -270,6 +280,8 @@ Beginning in version 1606, you can adjust the size of the client cache folder wi
  3. Choose **Client Cache Settings** and choose **Yes** for **Configure client cache size**, then use either the **MB** or **percentage of disk settings**. Cache is adjusted to whichever size is less.
 
      The Configuration Manager client will configure the cache size with these settings when the next client policy is downloaded.
+
+
 
 ##  <a name="BKMK_UninstalClient"></a> Uninstall the Configuration Manager Client  
  You can uninstall the Windows Configuration Manager client software from a computer by using **CCMSetup.exe** with the **/Uninstall** property. Run CCMSetup.exe on an individual computer from the command prompt or deploy a package and program to uninstall the client for a collection of computers.  
@@ -328,7 +340,7 @@ Beginning in Configuration Manager version 1610, you can provide a list of hardw
 You can initiate policy retrieval using:
 
 
-- [Client notification](#initiate-client-policy-retrieval-using-client-notification) 
+- [Client notification](#initiate-client-policy-retrieval-using-client-notification)
 - [The **Actions** tab on the client](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
 - [A script](#manually-initiate-client-policy-retrieval-by-script)
 

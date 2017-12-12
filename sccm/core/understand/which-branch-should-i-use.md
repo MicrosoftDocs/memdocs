@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 caps.latest.revision: 0
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
 
 ---
@@ -144,7 +144,7 @@ For more information, see [Technical Preview for System Center Configuration Man
 When you view version information for a Configuration Manager site, you also confirm the branch.
 
 **Version**   
-To check the version of your site, in the console go to **About System Center Configuration Manager** at the upper-left corner of the console where the **Site version** appears. See []() for a list of site versions.
+To check the version of your site, in the console go to **About System Center Configuration Manager** at the upper-left corner of the console where the **Site version** appears. See [Baseline and Update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) for a list of site versions.
 
 **Branch**  
 To confirm the branch of your site (as the LTSB or Current Branch), in the console go to **Administration** > **Site Configuration** > **Sites**, and open **Hierarchy Settings**. If there is an option to convert to the Current Branch and it is active, the site runs the LTSB version. When the site runs the Current Branch, this option is grayed out.

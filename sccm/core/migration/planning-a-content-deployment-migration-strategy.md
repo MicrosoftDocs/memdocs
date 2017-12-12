@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
 
 ---

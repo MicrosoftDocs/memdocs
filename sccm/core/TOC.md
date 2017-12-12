@@ -27,10 +27,11 @@
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
+###  [What's new in version 1710](plan-design/changes/whats-new-in-version-1710.md)
 ###  [What's new in version 1706](plan-design/changes/whats-new-in-version-1706.md)
 ###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
-###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 <!--
+###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
@@ -74,14 +75,15 @@
 ###  [Prepare Windows Servers to support site systems](plan-design/network/prepare-windows-servers.md)
 ###  [Websites for site system servers](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI certificate requirements](plan-design/network/pki-certificate-requirements.md)
+###  [CNG certificates overview](plan-design/network/cng-certificates-overview.md)
 
 ##   [Diagnostics and usage data](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [How diagnostics and usage data is used](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [Diagnostic data for 1710](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
 ###  [Diagnostic data for 1706](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
 ###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
-###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-
 <!--
+###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
@@ -103,6 +105,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1711](get-started/capabilities-in-technical-preview-1711.md)
 ###  [Capabilities in 1710](get-started/capabilities-in-technical-preview-1710.md)
 ###  [Capabilities in 1709](get-started/capabilities-in-technical-preview-1709.md)
 ###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
@@ -227,10 +230,11 @@
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [Checklist for installing update 1710](servers/manage/checklist-for-installing-update-1710.md)
 ###  [Checklist for installing update 1706](servers/manage/checklist-for-installing-update-1706.md)
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
-###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 <!-- Deprecated from Content - still published but out of TOC:
+###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 -->
@@ -304,6 +308,10 @@
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Maintain Mac clients](clients/manage/maintain-mac-clients.md)
+
+##   [Co-management for Windows 10 devices](clients/manage/co-management-overview.md)
+###  [Prepare Windows 10 devices for co-management](clients/manage/co-management-prepare.md)
+###  [Switch Configuration Manager workloads to Intune](clients/manage/co-management-switch-workloads.md)
 
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
 ###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)
