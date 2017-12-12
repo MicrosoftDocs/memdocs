@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 caps.latest.revision: 11
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Scenarios to deploy enterprise operating systems with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Scenarios to deploy enterprise operating systems with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 There following operating system deployment scenarios are available in System Center Configuration Manager:  
 
 -   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md): This scenario upgrades the operating system on computers that currently run Windows 7, Windows 8, Windows 8.1, or Windows 10. The upgrade process retains the applications, settings, and user data on the computer. There are no external dependencies, such as the Windows ADK and this process is faster and more resilient than traditional operating system deployments.  
