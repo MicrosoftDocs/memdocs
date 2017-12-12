@@ -3,7 +3,7 @@ title: "Cryptographic controls technical reference"
 titleSuffix: "Configuration Manager"
 description: "Learn how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/5/2017
+ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,8 +11,8 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
 
 ---
@@ -274,8 +274,8 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  When a management point first authenticates a client by using the self-signed client certificate, this mechanism provides minimal security because any computer can generate a self-signed certificate. In this scenario, the client identity process must be augmented by approval. Only trusted computers must be approved, either automatically by Configuration Manager, or manually, by an administrative user. For more information, see the approval section in [Communications between endpoints in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-## To make Configuration Manager servers more secure  
-To make Configuration Manager servers more secure, do the following:
+## About SSL vulnerabilities
+To improve the security of your Configuration Manager clients and servers, do the following:
 
 -	Enable TLS 1.2
 
@@ -283,5 +283,5 @@ To make Configuration Manager servers more secure, do the following:
 -	Disable SSL 3.0, TLS 1.0, and TLS 1.1 
 -	Reorder the TLS-related cipher suites 
 
-For more information, see the following KB article: [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/). These procedures do not affect Configuration Manager functionality.
+For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) and [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx). These procedures do not affect Configuration Manager functionality.
 
