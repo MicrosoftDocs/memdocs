@@ -2,7 +2,7 @@
 
 title: "Toolkit reference"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Reference details for Microsoft Deployment Toolkit 2013."
+description: "Reference details for Microsoft Deployment Toolkit 2013. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
@@ -10,8 +10,8 @@ ms.technology:
 ms.topic: article
 ms.assetid:  ac670143-b7cd-47d0-86ed-14cb2554dfc7
 
-author: brenduns  
-ms.author: angrobe  
+author: aczechowski  
+ms.author: aaroncz 
 manager: angrobe
 
 ---

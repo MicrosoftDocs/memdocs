@@ -2,7 +2,7 @@
 
 title: "Quick Start - User-driven installation"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "A quick start guiide for using Microsoft Deployment Toolkit for user-driven installation"
+description: "A quick start guiide for using Microsoft Deployment Toolkit for user-driven installation. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
@@ -10,8 +10,8 @@ ms.technology:
 ms.topic: article
 ms.assetid:  dcddc250-9361-4e69-af45-472da4ef5fd5
 
-author: brenduns  
-ms.author: angrobe  
+author: aczechowski  
+ms.author: aaroncz 
 manager: angrobe
 
 ---

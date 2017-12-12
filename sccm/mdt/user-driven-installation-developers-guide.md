@@ -2,7 +2,7 @@
 
 title: "User driven installation"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Developers Guide for user driven installation of Microsoft Deployment Toolkit 2013."
+description: "Developers Guide for user driven installation of Microsoft Deployment Toolkit 2013. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
@@ -10,8 +10,8 @@ ms.technology:
 ms.topic: article
 ms.assetid:  a2b3a3a0-7b81-4191-b1f9-c618e59347c3
 
-author: brenduns  
-ms.author: angrobe  
+author: aczechowski  
+ms.author: aaroncz 
 manager: angrobe
 
 ---

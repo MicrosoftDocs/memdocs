@@ -2,7 +2,7 @@
 
 title: "MDT Samples"
 titleSuffix: "Microsoft Deployment Toolkit"
-description: "Microsoft Deployment Toolkit samples."
+description: "Microsoft Deployment Toolkit samples. "
 ms.date:  09/09/2016
 ms.prod: configuration-manager
 ms.technology:
@@ -10,8 +10,8 @@ ms.technology:
 ms.topic: article
 ms.assetid:  2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 
-author: brenduns  
-ms.author: angrobe  
+author: aczechowski  
+ms.author: aaroncz 
 manager: angrobe
 
 ---
