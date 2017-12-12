@@ -3,7 +3,7 @@ title: "New version 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1710 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  11/20/2017
+ms.date:  12/08/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -45,6 +45,9 @@ Beginning with this release, Peer Cache is no longer a pre-release feature.  No 
 
 ### Cloud distribution point support for Azure Government Cloud   <!-- sms491428 -->
 You can now use [cloud-based distribution points](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the Azure Government cloud.   
+
+### Inventory default unit revision <!-- sms503697 -->
+As devices now include hard drives with sizes in the gigabyte (GB), terabyte (TB) and larger scales, this release changes the default unit (SMS_Units) used in many views from megabytes (MB) to GB. For example, the v_gs_LogicalDisk.FreeSpace value now reports GB units.
 
 
 <!-- ## Migration  -->

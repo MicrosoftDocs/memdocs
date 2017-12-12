@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
 
 ---
