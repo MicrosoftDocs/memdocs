@@ -2,7 +2,7 @@
 ## [What's new in MDT 2013](whats-new-in-mdt.md)
 ## [Using the Microsoft Deployment Toolkit](use-the-mdt.md)
 ## [Quick start - Light touch installation](lite-touch-installation-guide.md)
-## [Quick start - System Center 2012 R2 Configuration Manager](cm-2012-guide.md)
+## [Quick start - System Center 2012 R2 Configuration Manager](sccm-guide.md)
 ## [Quick start - User driven installation](user-driven-installation-guide.md)
 ## [Samples guide](samples-guide.md)
 ## [Toolkit reference](toolkit-reference.md)
