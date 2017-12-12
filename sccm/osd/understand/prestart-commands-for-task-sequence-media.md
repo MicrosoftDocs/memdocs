@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Prestart commands for task sequence media in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prestart commands for task sequence media in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can create a prestart command in System Center Configuration Manager to use with boot media, stand-alone media, and prestaged media. The prestart command is a script or executable that runs before the task sequence is selected and can interact with the user in Windows PE. The prestart command can prompt a user for information and save it in the task sequence environment or query a task sequence variable for information. When the destination computer boots, the command-line is run before the policy is downloaded from the management point. Use the following procedures to create a script to use for the prestart command, distribute the content associated with the prestart command, and configure the prestart command in media.  
 
 ## Create a script file to use for the Prestart Command  

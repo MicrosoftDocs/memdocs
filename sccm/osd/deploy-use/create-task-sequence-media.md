@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Create task sequence media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create task sequence media with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can use media to capture an operating system image from a reference computer or to deploy an operating system to a destination computer in your System Center Configuration Manager environment. The media that you create can be a CD, DVD set, or a USB flash drive.  
 
  Media is used mostly to deploy operating systems on destination computers that do not have a network connection or that have a low bandwidth connection to your Configuration Manager site. However, deployment media is also used to start an operating system deployment outside of an existing Windows operating system. This second use of deployment media is important for times when there is no operating system on the destination computer, the operating system is in a non-operable state, or the administrative user wants to repartition the hard disk on the destination computer.  
