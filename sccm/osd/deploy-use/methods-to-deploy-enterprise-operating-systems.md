@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3646d62d-355a-43fc-8569-c08dc2257ee5
 caps.latest.revision: 6
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Methods to deploy enterprise operating systems using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Methods to deploy enterprise operating systems using System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 There are different methods that you can use to deploy an operating system in your System Center Configuration Manager environment.
 
 -   [Use PXE to deploy Windows over the network](use-pxe-to-deploy-windows-over-the-network.md)  
