@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Preprovision BitLocker in Windows PE with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Preprovision BitLocker in Windows PE with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The **Pre-provision BitLocker** task sequence step in System Center Configuration Manager allows you to enable BitLocker from the Windows Preinstallation Environment (Windows PE) prior to operating system deployment. Only the used drive space is encrypted, and therefore, encryption times are much faster. This is done with a randomly generated clear protector applied to the formatted volume and encrypting the volume prior to running the Windows setup process. The ability to pre-provision BitLocker was introduced with Windows 8 and Windows Server 2012. However, you can pre-provision BitLocker on a hard drive and install Windows 7 as long as you follow specific steps. After Windows 7 Setup completes, you must set a BitLocker key protector because the Windows 7 BitLocker control panel does not support BitLocker with a clear protector. You must add a key protector by using the **Enable BitLocker** step or by using the manage-bde.exe command-line tool.  
 
  Generally, you must do the following to successfully pre-provision BitLocker on a computer that will install Windows 7:  

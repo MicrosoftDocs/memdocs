@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Monitor operating system deployments in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Monitor operating system deployments in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The Configuration Manager console provides the following ways to help you monitor operating system deployment objects.  
 
 

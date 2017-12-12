@@ -14,10 +14,15 @@ ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Prepare site system roles for operating system deployments with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prepare site system roles for operating system deployments with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 To deploy operating systems in System Center Configuration Manager, you must first prepare the following site system roles that require specific configurations and considerations.
 
 ##  <a name="BKMK_DistributionPoints"></a> Distribution points  
