@@ -71,9 +71,7 @@ When using multi-select mode in the **Applications** tab, the following criteria
 
 ### Try it out!
 **In the Configuration Manager console:**
- 1. Deploy to a user or device multiple applications for installation, as either Available or Required (with the deadline in the future).
-    - Do not require administrator approval
-See [Deploy applications](/sccm/apps/deploy-use/deploy-applications) for more information.
+Deploy to a user or device multiple applications for installation, as either available or required (with the deadline in the future). Do not require administrator approval. See [Deploy applications](/sccm/apps/deploy-use/deploy-applications) for more information.
 
 **In Software Center:**
  1. The **Applications** tab should open by default. 
@@ -111,7 +109,7 @@ We have made the following improvements to the Configuration Manager console, wh
 ## Improvements to operating system deployment
 We made the following improvements to operating system deployment, some of which were the result of your user voice feedback.
  - [Default log viewer in boot image](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/19269823-stop-cmtrace-from-asking-us-if-we-want-to-use-it-a): In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
- - Download Package Content step: you can now add boot images to this task sequence step
+ - Download Package Content step: You can now add boot images to this task sequence step.
 
 
 
