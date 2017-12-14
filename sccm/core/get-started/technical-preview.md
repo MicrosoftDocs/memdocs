@@ -108,13 +108,13 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1712
-- [Do not automatically upgrade superseded applications](capabilities-in-technical-preview-1712.md#Do-not-automatically-upgrade-superseded-applications) <!-- 1351266 --> 
-- [Install multiple applications in Software Center](capabilities-in-technical-preview-1712.md#Install-multiple-applications-in-Software-Center) <!-- 1357126 --> 
-- [Change in the Configuration Manager client install](capabilities-in-technical-preview-1712.md#Change-in-the-Configuration-Manager-client-install) <!-- 1356195 --> 
-- [Change to the Surface device dashboard](capabilities-in-technical-preview-1712.md#Change-to-the-Surface-device-dashboard) <!-- 1355788 --> 
-- [Improvements to Office 365 Client Management dashboard](capabilities-in-technical-preview-1712.md#Improvements-to-Office-365-Client-Management-dashboard) <!-- 1357281 --> 
-- [Improvements to the Configuration Manager console](capabilities-in-technical-preview-1712.md#Improvements-to-the-Configuration-Manager-console) <!-- 1357280,1357282 --> 
-- [Improvements to operating system deployment](capabilities-in-technical-preview-1712.md#Improvements-to-operating-system-deployment) <!-- SMS 500897 --> 
+- [Do not automatically upgrade superseded applications](capabilities-in-technical-preview-1712#do-not-automatically-upgrade-superseded-applications) <!-- 1351266 --> 
+- [Install multiple applications in Software Center](capabilities-in-technical-preview-1712#install-multiple-applications-in-software-center) <!-- 1357126 --> 
+- [Change in the Configuration Manager client install](capabilities-in-technical-preview-1712#change-in-the-configuration-manager-client-install) <!-- 1356195 --> 
+- [Change to the Surface device dashboard](capabilities-in-technical-preview-1712#change-to-the-surface-device-dashboard) <!-- 1355788 --> 
+- [Improvements to Office 365 Client Management dashboard](capabilities-in-technical-preview-1712#improvements-to-office-365-client-management-dashboard) <!-- 1357281 --> 
+- [Improvements to the Configuration Manager console](capabilities-in-technical-preview-1712#improvements-to-the-configuration-manager-console) <!-- 1357280,1357282 --> 
+- [Improvements to operating system deployment](capabilities-in-technical-preview-1712#improvements-to-operating-system-deployment) <!-- SMS 500897 --> 
 
 
 
