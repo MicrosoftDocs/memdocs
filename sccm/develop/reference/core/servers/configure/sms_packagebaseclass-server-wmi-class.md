@@ -2,7 +2,7 @@
 title: "SMS_PackageBaseclass Class"
 titleSuffix: "Configuration Manager"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "12/14/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 0e172800-3d43-4164-a89f-34489f957c42searchScope: - ConfigMgr SDK
+ms.assetid: 0e172800-3d43-4164-a89f-34489f957c42
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 28
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -333,10 +335,12 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 |4|Task sequence package.|  
 |5|Software update package.|  
 |6|Device setting package.|  
-|7|Virtual application package.|  
+|7|Virtual application package.| 
+|8|Application package.| 
 |257|Image package.|  
 |258|Boot image package.|  
-|259|Operating system install package.|  
+|259|Operating system install package.|
+|260|VHD package.|   
 
  `PkgFlags`  
  Data type: `UInt32`  
