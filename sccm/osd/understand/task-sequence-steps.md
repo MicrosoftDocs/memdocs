@@ -1474,7 +1474,7 @@ Consider the following when you add a child task sequence to a task sequence:
 
 -   **Make and Model**: Use this rule category to evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.   
 
-    Starting in Configuration Manager version 1610, you can specify an asterisk (*****) and question mark (**?**) as wild cards, where ***** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" will match DELL-ABC-9001 and DELL9009.
+    Starting in Configuration Manager version 1610, you can specify an asterisk (**\***) and question mark (**?**) as wild cards, where **\*** matches multiple characters and **?** matches a single character. For example, the string "DELL\*900?" will match DELL-ABC-9001 and DELL9009.
 
 -   **Task Sequence Variable**: Use this rule category to add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
 
