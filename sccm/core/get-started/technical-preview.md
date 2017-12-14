@@ -22,11 +22,11 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
-**Welcome to the System Center Configuration Manager Technical Preview**. This topic provides details about the evolving preview release that introduces new functionality and capabilities we are working on. With each version of the technical preview, new features are introduced that are not included in the current branch of System Center Configuration Manager at the time the technical preview version is made available. These features might eventually be included in an update to the current branch release, but before we finalize the features and add them, we want you to have a chance to try them out and give us feedback.  
+**Welcome to the System Center Configuration Manager Technical Preview**. This article provides details about the evolving preview release that introduces new functionality and capabilities we are working on. Each version of the technical preview introduces new features that are not included in the current branch of Configuration Manager at the time the technical preview version is made available. These features might eventually be included in an update to the current branch release, but before we finalize the features and add them, we want you to have a chance to try them out and give us feedback.  
 
  Because this is a technical preview, details and functionality are subject to change.  
 
- This topic contains information that applies to all versions of the Technical Preview, and also  lists each new capability (or feature) along with the  Technical Preview version in which the capability first appears, like version 1712 for December of 2017. The details for these capabilities are detailed in  separate topics dedicated to each preview version.  
+ This article contains information that applies to all versions of the Technical Preview. It also lists each new capability (or feature) along with the Technical Preview version in which the capability first appears, like version 1712 for December of 2017. These capabilities are detailed in separate topics dedicated to each preview version.  
 
  For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -35,7 +35,7 @@ manager: angrobe
 ##  <a name="bkmk_reqs"></a> Requirements and limitations for the Technical Preview  
 
 > [!IMPORTANT]     
->  The Technical Preview is licensed for use only in a lab environment.  Microsoft may not provide support services and certain features may not be available in the Preview software. Additionally, the Preview software may have reduced or different security, privacy, accessibility, availability and reliability standards relative to commercially provided software.  
+>  The Technical Preview is licensed for use only in a lab environment.  Microsoft may not provide support services and certain features may not be available in the Preview software. Additionally, the Preview software may have reduced or different security, privacy, accessibility, availability, and reliability standards relative to commercially provided software.  
 
  For most product prerequisites, use the information in the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). The following exceptions apply to the Technical Preview releases:  
 
@@ -50,9 +50,9 @@ manager: angrobe
     -   **/testdbupgrade**    
 
 
--   By default, when you use the technical preview, the service connection point is set to online mode when it installs, and does not support a change to offline mode.
+-   By default, when you use the technical preview, the service connection point installs to online mode. It does not support changing to offline mode.
 
--   When applicable, additional limitations or requirements are included with details for each specific version of the Technical Preview  
+-   The separate articles for each specific version of the technical preview include additional limitations or requirements, as applicable.
 
 -   There is no support for migration to or from this preview build.  
 
@@ -70,7 +70,7 @@ The following products and technologies are supported by this branch of Configur
     -   SQL Server 2012 (with Service Pack 3, or later)
 
 
--   The site supports up to 10 clients, which must run one of the following:  
+-   The site supports up to 10 clients, which must run one of the following versions of Windows:  
 
       -   Windows 10  
       -   Windows 8.1  
@@ -80,16 +80,16 @@ The following products and technologies are supported by this branch of Configur
 ##  <a name="bkmk_install"></a> Install and update the Technical Preview  
  The System Center Configuration Manager Technical Preview is distinct from the current release of System Center Configuration Manager.  
 
- To use the technical preview you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version. Typically, new versions of the Technical Preview are available each month.
+ To use the technical preview, you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version. Typically, new versions of the Technical Preview are available each month.
 
-Each preview release is supported up until three successive releases are available. Meaning, when version 1708 released, version 1704 was no longer  in support, but versions 1705, 1706, and 1707 remained in support. When a baseline falls out of support (like version 1703), it is still supported for installing a new Technical Preview site until a new baseline version is available, so long as you then update that install to a supported version. When updating, if you don’t see the most recent version available in your console, update to the latest version offered and then repeat that process until you can install the most current version of the technical preview.
+Each preview release is supported up until three successive releases are available. Meaning, when version 1708 released, version 1704 was no longer  in support, but versions 1705, 1706, and 1707 remained in support. When a baseline falls out of support, it is still supported for installing a new Technical Preview site until a new baseline version is available, so long as you then update that install to a supported version. Update to the latest available version and then repeat that process until you can install the most current version of the technical preview.
 
 > [!TIP]  
 >  When you install  an update to the  technical preview, you  update your preview installation to that new technical preview version.    A technical preview installation  never has the option to upgrade to a current branch installation, nor  receive updates from the current branch release.  
 
 **Active baseline versions of the Technical Preview:**  
-You can install a baseline version for up to 1 year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
--  **Technical Preview 1711** - The Configuration Manager Technical Preview 1711 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is [available from the TechNet Evaluation Center website](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+You can install a baseline version for up to one year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
+-  **Technical Preview 1711** - The Configuration Manager Technical Preview 1711 is available as both an in-console update and as a new baseline version. Download baseline versions [from the TechNet Evaluation Center](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
@@ -108,7 +108,14 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1712
-- [Feature name](capabilities-in-technical-preview-1712.md#featureanchor) <!-- TFS ID --> 
+- [Do not automatically upgrade superseded applications](capabilities-in-technical-preview-1712.md#Do-not-automatically-upgrade-superseded-applications) <!-- 1351266 --> 
+- [Install multiple applications in Software Center](capabilities-in-technical-preview-1712.md#Install-multiple-applications-in-Software-Center) <!-- 1357126 --> 
+- [Change in the Configuration Manager client install](capabilities-in-technical-preview-1712.md#Change-in-the-Configuration-Manager-client-install) <!-- 1356195 --> 
+- [Change to the Surface device dashboard](capabilities-in-technical-preview-1712.md#Change-to-the-Surface-device-dashboard) <!-- 1355788 --> 
+- [Improvements to Office 365 Client Management dashboard](capabilities-in-technical-preview-1712.md#Improvements-to-Office-365-Client-Management-dashboard) <!-- 1357281 --> 
+- [Improvements to the Configuration Manager console](capabilities-in-technical-preview-1712.md#Improvements-to-the-Configuration-Manager-console) <!-- 1357280,1357282 --> 
+- [Improvements to operating system deployment](capabilities-in-technical-preview-1712.md#Improvements-to-operating-system-deployment) <!-- SMS 500897 --> 
+
 
 
 
