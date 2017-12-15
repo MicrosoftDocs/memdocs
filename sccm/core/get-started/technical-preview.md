@@ -115,6 +115,7 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Improvements to Office 365 Client Management dashboard](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) <!-- 1357281 --> 
 - [Improvements to the Configuration Manager console](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) <!-- 1357280,1357282 --> 
 - [Improvements to operating system deployment](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) <!-- SMS 500897 --> 
+- [Windows 10 Feedback Hub app integration](capabilities-in-technical-preview-1712.md#windows-10-feedback-hub-app-integration) <!-- NA -->
 
 
 
