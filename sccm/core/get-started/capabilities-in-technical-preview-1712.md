@@ -71,7 +71,7 @@ When using multi-select mode in the **Applications** tab, the following criteria
 
 ### Try it out!
 **In the Configuration Manager console:**
-Deploy to a user or device multiple applications for installation, as either available or required (with the deadline in the future). Do not require administrator approval. See [Deploy applications](/sccm/apps/deploy-use/deploy-applications) for more information.
+Deploy to a user or device multiple applications for installation, as either available or required (with the deadline in the future). Do not require administrator approval. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
 
 **In Software Center:**
  1. The **Applications** tab should open by default. 
@@ -80,6 +80,34 @@ Deploy to a user or device multiple applications for installation, as either ava
  4. Click the **Install Selected** button.
 
 The apps install as normal, only now in succession.
+
+
+## Client-based PXE responder service
+<!-- 1357148 -->
+A common challenge for customers is providing PXE services at remote/branch offices with little or no server infrastructure. The distribution point role supports client operating systems, but can't be PXE-enabled due to the dependency on Windows Deployment Services.
+
+New client settings are now available to enable a PXE responder service on Configuration Manager clients. A PXE-enabled boot image must reside in the PXE responder's client cache.
+
+### Try it out!
+Ensure there are no existing PXE-enabled distribution points or other PXE servers in the test environment that may conflict with this client PXE responder.
+
+In the Configuration Manager console:
+ 1. In the **Software Library** workspace under **Operating Systems**, **Task Sequences**: create a task sequence using the custom template.
+	1. Click **Add**, select **General**, and then the **Set Task Sequence Variable** step. Enter **SMSTSPersistContent** as the task sequence variable, and enter the value **TRUE**.
+	1. Click **Add**, select **Software**, and then the **Download Package Content** step. Click the gold asterisk and then select a PXE-enabled boot image. Include both x86 and x64 boot images. Configure the step to place it into the **Configuration Manager client cache**.
+	1. Click **Add**, select **General**, and then the **Set Task Sequence Variable** step. Enter **SMSTSPreserveContent** as the task sequence variable, and enter the value **TRUE**.
+ 2. In the **Administration** workspace under **Client Settings**: create a custom client device settings policy.
+	1. Select the **Client Cache Settings** group.
+  1. Set the **Enable Configuration Manager client in full OS to share content** setting to **Yes**.
+	1. Set the **Enable PXE responder service** setting to **Yes**.
+  1. For the **Create a self-signed certificate or import a PKI client certificate** setting, click **Provide a certificate**. Select **Import certificate** if your test environment has PKI, otherwise click **OK** to create a self-signed certificate. 
+	1. Configure the remaining settings as necessary for your test environment. (The default settings should work unless there are specific network or security requirements.)
+ 3. Deploy the task sequence and custom client settings to a collection of target clients to be PXE responders. Wait for the policies to apply and the task sequence to run.
+ 4. Start another client on the same subnet to PXE/network boot as normal.
+
+### Known issues
+ - The task sequence editor displays a red error icon for the **Download Package Content** step when you add a boot image, but the task sequence successfully saves. Opening this task sequence again in the editor also shows a harmless warning that referenced objects cannot be found. <!-- sms427542 -->
+ - The boot image from the Download Package Content step does not show in the custom task sequence's list of references. Also the **Distribute Content** action is not available. <!-- sms504017 -->
 
 
 ## Change in the Configuration Manager client install  
@@ -111,6 +139,16 @@ We made the following improvements to operating system deployment, some of which
  - [Default log viewer in boot image](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/19269823-stop-cmtrace-from-asking-us-if-we-want-to-use-it-a): In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
  - Download Package Content step: You can now add boot images to this task sequence step.
 
+
+## Windows 10 Feedback Hub app integration
+
+We love feedback so much that we're now enabling feedback through the [Feedback Hub app](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) built-in to Windows 10. When you **Add new feedback**, be sure to select the **Enterprise Management** category, and then choose from one of the following subcategories:
+ - Configuration Manager Client
+ - Configuration Manager Console
+ - Configuration Manager OS Deployment
+ - Configuration Manager Server
+
+Continue to use our [user voice page](http://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
