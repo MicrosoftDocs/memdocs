@@ -2,7 +2,7 @@
 title: "SMS_Collection Class"
 titleSuffix: "Configuration Manager"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "12/14/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,14 +12,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 7b900446-4a60-4343-9f8b-2d6ecc7ac951searchScope: - ConfigMgr SDK
+ms.assetid: 7b900446-4a60-4343-9f8b-2d6ecc7ac951
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 30
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # SMS_Collection Server WMI Class
-The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a collection of resources related logically by rules, along with collection information.  
+The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class in System Center Configuration Manager. It represents a collection of resources related logically by rules along with collection information.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -123,7 +125,7 @@ Class SMS_Collection : SMS_BaseClass
 
  Qualifiers: [read, enumeration]  
 
- Count of collection variables.  
+ The type of the collection. When creating or modifying collections, the collection type must be the same for all included, excluded, and LimitTo collections. Mismatched collection types are not allowed. <!--SMS442380-->
 
 |||  
 |-|-|  
