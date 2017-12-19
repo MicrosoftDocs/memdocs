@@ -33,7 +33,7 @@ Device Guard encompasses both software and hardware-based security functionality
 To learn more about Device Guard, read the [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
 
    > [!NOTE]
-   > Beginning with Windows 10, version 1709, configurable code integrity policies are known as Windows Defender Application Control.]
+   > Beginning with Windows 10, version 1709, configurable code integrity policies are known as Windows Defender Application Control.
 
 ## Using Device Guard with Configuration Manager
 
