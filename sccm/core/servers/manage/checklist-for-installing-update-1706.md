@@ -3,7 +3,7 @@ title: "Checklist for 1706"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1706."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 12/19/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
