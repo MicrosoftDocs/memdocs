@@ -88,7 +88,10 @@ For more information, see   [Database replicas for management points for System 
 
 When a site database maintenance task runs during the update installation, the update installation can fail. Before you disable a task, record the schedule of the task so you can restore its configuration after the update has installed.  
 
- For more information, see [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) and [Reference for maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
+ For more information, see [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) and [Reference for maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md). 
+
+**Temporarily stop any antivirus software on the System Center Configuration Manager servers**
+Before you update a site, ensure that you have stopped antivirus software on the Configuration Manager servers. <!--SMS.503481--> 
 
  **Create a backup of the site database at the central administration site and primary sites:** Before you update a site, backup the site database to ensure that you have a successful backup to use for disaster recovery.   
 
