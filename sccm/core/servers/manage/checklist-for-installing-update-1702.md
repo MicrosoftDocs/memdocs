@@ -131,7 +131,7 @@ When a site database maintenance task runs during the update installation, the u
 
 For more information, see [Maintenance tasks for System Center Configuration Manager](/sccm/core/servers/manage/maintenance-tasks) and [Reference for maintenance tasks for System Center Configuration Manager](/sccm/core/servers/manage/reference-for-maintenance-tasks).
 
-**Temporarily stop any antivirus software on the System Center Configuration Manager servers**
+**Temporarily stop any antivirus software on the System Center Configuration Manager servers:** 
 Before you update a site, ensure that you have stopped antivirus software on the Configuration Manager servers. <!--SMS.503481--> 
 
 **Create a backup of the site database at the central administration site and primary sites:** 
