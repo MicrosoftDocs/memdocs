@@ -3,7 +3,7 @@ title: "Checklist for 1710 | System Center Configuration Manager"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1710."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/19/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -127,6 +127,9 @@ Before you install the update, disable any site maintenance task that might run 
 When a site database maintenance task runs during the update installation, the update installation can fail. Before you disable a task, record the schedule of the task so you can restore its configuration after the update has been installed.
 
 For more information, see [Maintenance tasks for System Center Configuration Manager](/sccm/core/servers/manage/maintenance-tasks) and [Reference for maintenance tasks for System Center Configuration Manager](/sccm/core/servers/manage/reference-for-maintenance-tasks).
+
+**Temporarily stop any antivirus software on the System Center Configuration Manager servers:** 
+Before you update a site, ensure that you have stopped antivirus software on the Configuration Manager servers. <!--SMS.503481--> 
 
 **Create a backup of the site database at the central administration site and primary sites:** 
 Before you update a site, back up the site database to ensure that you have a successful backup to use for disaster recovery.
