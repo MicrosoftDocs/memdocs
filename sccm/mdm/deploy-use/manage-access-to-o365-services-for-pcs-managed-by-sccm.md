@@ -61,22 +61,22 @@ For information on configuring conditional access for devices enrolled and manag
 
  The PCs must meet the following requirements:  
 
--   [Prerequisites](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) for automatic device registration with Azure Active Directory  
+-   [Prerequisites](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) for automatic device registration with Azure Active Directory  
 
      You can register PCs with Azure AD through the compliance policy.  
 
     -   For Windows 8.1 and Windows 10 PCs, you can use an Active Directory Group Policy to configure your devices to register automatically with Azure AD.  
 
-    -   o   For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) article has more details.  
+    -   o   For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
 
--   Must use Office 2013 or Office 2016 with modern authentication [enabled](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
+-   Must use Office 2013 or Office 2016 with modern authentication [enabled](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
 
  The following steps apply to both Exchange Online and SharePoint Online  
 
 ### Step 1. Configure compliance policy  
  In the Configuration Manager Console, create a compliance policy with the following rules:  
 
--   **Require registration in Azure Active Directory:** This rule checks if the user's device is work-place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [Automatic device registration with Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
+-   **Require registration in Azure Active Directory:** This rule checks if the user's device is work-place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [Automatic device registration with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
 -   **All required updates installed with a deadline older than a certain number of days:** This rule checks if the user's device has all required updates (specified in the Required automatic updates rule) within deadline and grace period specified by you, and automatically install any pending required updates.  
 
