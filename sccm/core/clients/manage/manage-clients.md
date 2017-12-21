@@ -194,7 +194,7 @@ Beginning with version 1710, you can use the Configuration Manager console to id
 > [!Tip]
 > You must also upgrade clients to version 1710 for this capability to function. We recommend that you enable automatic client upgrade to keep your clients up to date with minimal administrative overhead. For more information, see [Use automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
 
-To identify devices that are pending a restart, go to **Assets and Compliance** > **Devices** and select a collection. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values: 
+To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values: 
  - **No**: there is no pending restart
  - **Configuration Manager**: this value comes from the client reboot coordinator component (RebootCoordinator.log)
  - **File rename**: this value comes from Windows reporting a pending file rename operation (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
@@ -205,7 +205,7 @@ To identify devices that are pending a restart, go to **Assets and Compliance** 
 1.	Locate the device you want to restart within a collection in the **Device Collections** node of the console.
 2.	Right-click on the device, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Click **OK** to confirm the restart request.
 
-When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring  [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
+When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
 
 
 ##  <a name="BKMK_ClientCache"></a> Configure the Client Cache for Configuration Manager Clients  
