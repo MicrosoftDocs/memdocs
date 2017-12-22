@@ -31,7 +31,7 @@
 ## Manage applications
 ### [Management tasks](deploy-use/management-tasks-applications.md)
 ### [User device affinity](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [Windows Store for Business volume-purchased apps](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [Microsoft Store for Business volume-purchased apps](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [App-V virtual environments](deploy-use/create-app-v-virtual-environments.md)
 
 ## Update and retire applications

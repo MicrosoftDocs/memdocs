@@ -32,7 +32,7 @@ To enable Windows device management for either PCs or mobile devices, use the fo
 3.  In the ribbon, click **Configure Platforms**, and then select the Windows platform:
     - **Windows** for Windows PCs and laptops, then perform the following steps:
       1. In the **General** tab, click the **Enable Windows enrollment** checkbox.
-      2. If you use a certificate to code-sign and deploy the Company Portal app, browse to the **Code-signing certificate**. Device users can also install the Company Portal app from the Windows Store or you can deploy the app from the Windows Store for Business without code-signing.
+      2. If you use a certificate to code-sign and deploy the Company Portal app, browse to the **Code-signing certificate**. Device users can also install the Company Portal app from the Microsoft Store or you can deploy the app from the Microsoft Store for Business without code-signing.
       3. You can also configure [Windows Hello for Business settings](windows-hello-for-business-settings.md).
     - **Windows Phone** for Windows phones and tablets, then perform the following steps:
       1. In the **General** tab, click the **Windows Phone 8.1 and Windows 10 Mobile** checkbox. Windows Phone 8.0 is no longer supported.
