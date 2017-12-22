@@ -3,7 +3,7 @@ title: "Manage Skype for Business Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,56 +23,55 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-Use conditional access policy for  **Skype for Business Online** to manage access to Skype for Business Online, based on conditions you specify.  
+Use conditional access policy for Skype for Business Online to manage access to Skype for Business Online, based on conditions you specify.  
 
 
  When a targeted user attempts to use Skype for Business Online on their device, the following evaluation occurs:![ConditionalAccess&#95;SFBFlow](media/ConditionalAccess_SFBFlow.png)  
 
 ## Prerequisites  
 
--   Enable modern authentication for Skype for Business Online. Fill this [connect form](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) to be enrolled in the modern authentication program.  
+-   Enable [modern authentication](https://aka.ms/SkypeModernAuth) for Skype for Business Online.   
 
--   All your end-users must be using Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy will not be applied to end-users.  
+-   All of your users must use Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy does not apply to on-premises users.  
 
 -   The device that needs access to Skype for Business Online must:  
 
-    -   Be an Android or iOS device.  
+    -   Be an Android or iOS device
 
-    -   Be enrolled with Intune.  
+    -   Be enrolled with Microsoft Intune
 
-    -   Be compliant with any deployed Intune compliance policies.  
+    -   Be compliant with any deployed Microsoft Intune compliance policies
 
- The device state is stored in Azure Active Directory which grants or blocks access, based on the conditions you specify.  
-If a condition is not met, the user is presented with one of the following messages when they log in:  
+ Azure Active Directory stores the device state, which grants or blocks access based on the conditions you specify.  
+If a condition is not met, the user sees one of the following messages when they log in:  
 
--   If the device is not enrolled with Intune, or is not registered in Azure Active Directory, a message is displayed with instructions about how to install the company portal app and enroll.  
+-   If the device is not enrolled with Microsoft Intune, or is not registered in Azure Active Directory, the user sees instructions about how to install the Company Portal app and enroll.  
 
--   If the device is not compliant, a message is displayed that directs the user to the Intune Company Portal website or Company Portal app where they can find information about the problem, and how to remediate it.  
+-   If the device is not compliant, the user sees a message that directs them to the Company Portal website or Company Portal app. The Company Portal has information about the problem and how to remediate it.  
 
 ## Configure conditional access for Skype for Business Online  
 
 ### Step 1: Configure Active Directory security groups  
- Before you start, configure Azure Active Directory security groups for the conditional access policy. You can configure these groups in the Office 365 admin center. These groups contain the users that will be targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.  
+ Before you start, configure Azure Active Directory security groups for the conditional access policy. Configure these groups in the Office 365 admin center. These groups contain the users to target with or exclude from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.  
 
  You can specify two group types to use for the Skype for Business policy:  
 
--   Targeted groups â€“ Contains groups of users to which the policy will apply  
+-   **Targeted groups** contain users to which the policy applies  
 
--   Exempted groups â€“ Contains groups of users that are exempt from the policy (optional)  
-    If a user is in both groups, they will be exempt from the policy.  
+-   **Exempted groups** contain users to exclude from the policy  
+    If a user is in both groups, they are exempt.  
 
 ### Step 2: Configure and deploy a compliance policy  
- Ensure that you create and deploy a compliance policy to all devices that the Skype for Business Online policy will be targeted to.  
+ Create and deploy a compliance policy to all devices to which the Skype for Business Online policy is targeted.  
 
- For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md).  
+ For details about how to configure the compliance policy, see [Manage device compliance policies](../../protect/deploy-use/device-compliance-policies.md).  
 
 > [!NOTE]  
->  If you have not deployed a compliance policy and then enable the Skype for Business Online policy, all targeted devices will be allowed access if they are enrolled in Intune.  
+>  If you have not deployed a compliance policy and then enable the Skype for Business Online policy, all targeted devices are allowed access if they are enrolled in Microsoft Intune.  
 
- When you are ready, continue to Step 3.  
 
 ### Step 3: Configure the Skype for Business Online policy  
- Next, configure the policy to require that only managed and compliant devices can access Skype for Business Online. This policy will be will be stored in Azure Active Directory.  
+ Configure the policy to require that only managed and compliant devices can access Skype for Business Online. This policy is stored in Azure Active Directory.  
 
 1.  In the [Microsoft Intune administration console](https://manage.microsoft.com), click **Policy** > **Conditional Access** > **Skype for Business Online Policy**.  
 
@@ -86,7 +85,7 @@ If a condition is not met, the user is presented with one of the following messa
 
     -   Android  
 
-4.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy will apply. You can choose to target this to all users or just a select group of users.  
+4.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy applies. You can choose to target this policy to all users or just a select group of users.  
 
 5.  Under **Exempted Groups**, optionally, click **Modify** to select the Azure Active Directory security groups that are exempt from this policy.  
 
@@ -99,11 +98,11 @@ If a condition is not met, the user is presented with one of the following messa
 
  Select any mobile device group and then, on the **Devices** tab, select one of the following **Filters**:  
 
--   **Devices that are not registered with AAD** â€“ These devices are blocked from Skype for Business Online.  
+-   **Devices that are not registered with AAD** are blocked from Skype for Business Online
 
--   **Devices that are not compliant** â€“ These devices are blocked from Skype for Business Online.  
+-   **Devices that are not compliant** are blocked from Skype for Business Online  
 
--   **Devices that are registered with AAD and compliant** â€“ These devices can access Skype for Business Online.  
+-   **Devices that are registered with AAD and compliant** can access Skype for Business Online  
 
 ### See also  
 
