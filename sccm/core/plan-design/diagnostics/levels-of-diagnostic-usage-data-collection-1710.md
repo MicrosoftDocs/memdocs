@@ -164,7 +164,7 @@ For System Center Configuration Manager version 1710, this level includes the fo
 
    - Count of Windows Installer deployment types by uninstall content settings
 
-   - Count of Windows Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)  
+   - Count of Microsoft Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)  
 
    - Maintenance window type and duration  
 
@@ -517,4 +517,4 @@ Count of groups that have expired software updates
 
 - Type of EAS Conditional Access policies (block or quarantine) for devices that Intune manages
 
-- Windows Store for Business application details (non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts)
+- Microsoft Store for Business application details (non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts)

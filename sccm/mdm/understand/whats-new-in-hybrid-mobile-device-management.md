@@ -371,9 +371,9 @@ The following additional hybrid features are also included in version 1702 of Co
 
   For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
-- **Support for line-of-business apps in Windows Store for Business**
+- **Support for line-of-business apps in Microsoft Store for Business**
 
-  You can now sync custom line-of-business apps from the Windows Store for Business.
+  You can now sync custom line-of-business apps from the Microsoft Store for Business.
 
 - **New Mobile Threat Defense monitoring tools**
 

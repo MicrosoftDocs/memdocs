@@ -100,7 +100,7 @@ You can fully sync the data held by Apple with Configuration Manager at any time
 1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **License Information for Store Apps**.  
 
 3.  Choose the app that you want to deploy, and then, in the **Home** tab, in the **Create** group, choose **Create Application**.
-The Configuration Manager application that is created has the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
+The Configuration Manager application that is created has the Microsoft Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
 
     > [!IMPORTANT]  
     > You must choose a deployment purpose of **Required**. Available installations are not currently supported.
