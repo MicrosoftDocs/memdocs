@@ -67,6 +67,9 @@ sections:
         
 - title: Additional resources
   items:
+  - type: paragraph
+    text: 'Read our how-to and reference information.'
+  items:
   - type: list
     style: cards
     className: cardsM
