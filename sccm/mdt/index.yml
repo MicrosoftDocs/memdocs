@@ -1,0 +1,88 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Microsoft Deployment Toolkit documentation
+metadata:
+  document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
+  title: Microsoft Deployment Toolkit documentation
+  description: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
+  keywords: freeware, tool, process, workflow, automation, deployment, automated, distribution
+  author: arob98
+  ms.author: angrobe
+  manager: angrobe
+  ms.date: 12/27/2017
+  ms.topic: article
+  ms.devlang: na
+  ms.prod: configuration-manager
+sections:
+- items:
+  - type: markdown
+    text: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments. 
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: whats-new-in-mdt.md
+      html: <p>See what's new.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: What's new
+    - href: release-notes.md
+      html: <p>Details about fixes and bugs included in this release.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: Release notes
+    - href: samples-guide.md
+      html: <p>Sample configuration settings for specific deployment scenarios.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+      title: Samples guide
+    - href: user-driven-installation-developers-guide.md
+      html: <p>Customize user-driven installation for your organization.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+      title: Developer's guide
+- title: Quickstarts
+  items:
+  - type: paragraph
+    text: 'Read how to get started.'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: lite-touch-installation-guide.md
+      title: Install using bootable media
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: user-driven-installation-guide.md
+      title: Deploy with user-driven installation 
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: sccm-guide.md
+      title: Deploy to a new computer
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        
+- title: Additional resources
+  items:
+  - type: paragraph
+    text: 'Read our how-to and reference information.'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: use-the-mdt.md
+      title: Perform deployments by using the Lite-Touch, Zero-Touchn, and User-Driven Installation deployments. 
+      image:
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+    - href: toolkit-reference.md
+      title: Configuration settings that aid with deployments.
+      image:
+        src: https://docs.microsoft.com/media/common/i_download-install.svg
+    - href: troubleshooting-reference.md
+      title: Log files, error codes, and other troubleshooting details.
+      image:
+        src: https://docs.microsoft.com/media/common/i_support.svg
