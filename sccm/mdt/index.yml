@@ -17,6 +17,7 @@ sections:
 - items:
   - type: markdown
     text: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments. 
+
 - items:
   - type: list
     style: cards
@@ -43,10 +44,9 @@ sections:
       image:
         src: https://docs.microsoft.com/media/common/i_architecture.svg
       title: Developer's guide
+
 - title: Quickstarts
   items:
-  - type: paragraph
-    text: 'Read how to get started.'
   - type: list
     style: cards
     className: cardsM
@@ -67,8 +67,6 @@ sections:
         
 - title: Additional resources
   items:
-  - type: paragraph
-    text: 'Read our how-to and reference information.'
   - type: list
     style: cards
     className: cardsM
