@@ -76,7 +76,7 @@ sections:
     columns: 3
     items: 
     - href: use-the-mdt.md
-      title: Perform deployments by using the Lite-Touch, Zero-Touchn, and User-Driven Installation deployments. 
+      title: Perform deployments by using the Lite-Touch, Zero-Touch, and User-Driven Installation deployments. 
       image:
         src: https://docs.microsoft.com/media/common/i_api-reference.svg
     - href: toolkit-reference.md
