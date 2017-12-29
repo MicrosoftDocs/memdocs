@@ -27,7 +27,7 @@ Configuration Manager lets you manage Office 365 ProPlus apps in the following w
 
 - [Deploy Office 365 updates](#deploy-office-365-updates): Beginning in Configuration Manager version 1602, you can manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.    
 
-- [Add languages for Office 365 update downloads](#add-languages-for-office-365-update-downloads): Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365. Regardless of whether the languages are supported in Configuration Manager.  
+- [Add languages for Office 365 update downloads](#add-languages-for-office-365-update-downloads): Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager does not have to support the language as long as Office 365 does.  
 
 - [Change the update channel](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
 
@@ -52,7 +52,7 @@ The data that is displayed in the Office 365 Client Management dashboard comes f
 4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.  
 5. In the **Device Settings** list, click **Set Classes**.  
 6. In the **Hardware Inventory Classes** dialog box, select **Office 365 ProPlus Configurations**.  
-7.  Click **OK** to save your changes and close the **Hardware Inventory Classes** dialog box. The Office 365 Client Management dashboard starts displaying data as hardware inventory is reported.
+7.  Click **OK** to save your changes and close the **Hardware Inventory Classes** dialog box. <br/>The Office 365 Client Management dashboard starts displaying data as hardware inventory is reported.
 
 ## Deploy Office 365 apps  
 Beginning in version 1702, start the Office 365 Installer from the Office 365 Client Management dashboard for the initial Office 365 App installation. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application for the files. Until Office 365 is installed on clients, Office 365 updates are not applicable.
