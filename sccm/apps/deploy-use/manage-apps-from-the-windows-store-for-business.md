@@ -3,7 +3,7 @@ title: "Manage apps from the Microsoft Store for Business"
 titleSuffix: "Configuration Manager"
 description: "Manage and deploy apps from the Microsoft Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 caps.latest.revision: 11
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
 ---
 
@@ -27,14 +27,14 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) is 
 The Microsoft Store for Business supports two types of app:
 
 - **Online** - This license type requires users and devices to connect to the store to get an app and its license. Windows 10 devices must be Azure Active Directory domain-joined.
-- **Offline** - Lets you cache apps and licenses to deploy directly within your on-premises network, without connecting to the store or having a connection to the Internet.
+- **Offline** - Lets you cache apps and licenses to deploy directly within your on-premises network. Devices do not need to connect to the store or have a connection to the Internet.
 
 [Read more](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview) about the Microsoft Store for Business.
 
-Configuration Manager supports managing Microsoft Store for Business apps on both Windows 10 devices running the Configuration Manager client, and also Windows 10 devices that are enrolled with Microsoft Intune (known as a hybrid configuration). Configuration Manager offers the following capabilities for online and offline apps.
+Configuration Manager supports managing Microsoft Store for Business apps on both Windows 10 devices with the Configuration Manager client, and also Windows 10 devices enrolled with Microsoft Intune. Configuration Manager offers the following capabilities for online and offline apps.
 
 > [!IMPORTANT]
-> To use this capability, Windows 10 devices must be running the November 2015 (1511) release or later.
+> To use Microsoft Store for Business, Windows 10 devices must be running the November 2015 (1511) release or later.
 
 
 |Capability|Offline apps|Online apps|
@@ -42,18 +42,18 @@ Configuration Manager supports managing Microsoft Store for Business apps on bot
 |Synchronize app data to Configuration Manager<br>(synchronization occurs every 24 hours)|Yes|Yes|
 |Create Configuration Manager applications from store apps|Yes|Yes|
 |Support for free apps from the store|Yes|Yes|
-|Support for paid apps from the store|No|Yes|
+|Support for paid apps from the store|No|Yes<sup>1</sup>|
 |Support required deployments to user or device collections|Yes|Yes|
 |Support available deployments to user or device collections|Yes|Yes|
 |Support line-of-business apps from the store|Yes|Yes|
 
-To deploy online licensed apps to Windows 10 PCs with the Configuration Manager client, they must be running the Windows 10 Creators Update, or later.
+<sup>1</sup>To deploy online licensed apps to Windows 10 PCs with the Configuration Manager client, they must be running the Windows 10 Creators Update, or later.
 
-## Deploying online apps using the Microsoft Store for Business with PCs that run the Configuration Manager client
+### Deploying online apps using the Microsoft Store for Business with PCs that run the Configuration Manager client
 Before deploying Microsoft Store for Business apps to PCs that run the full Configuration Manager client, consider the following points:
 
 - For full functionality, PCs must be running the Windows 10 Creators Update, or later.
-- PCs must be Azure Active Directory Workplace joined, and be in the same AAD tenant where you registered the Microsoft Store for Business as a management tool.
+- PCs must be joined to Azure Active Directory in the same tenant where you registered the Microsoft Store for Business as a management tool.
 - When PCs are logged in with the built-in Administrator account, they cannot access Microsoft Store for Business apps.
 - PCs must have a live internet connection to the Microsoft Store for Business.
 
@@ -61,10 +61,10 @@ Before deploying Microsoft Store for Business apps to PCs that run the full Conf
 On PCs running a version of Windows 10 earlier than the Creators Update (with the Configuration Manager client), the following functionality applies:
 
 
-- When installation is enforced either by the user installing the application, by the application reaching its installation deadline, or by post installation re-evaluation for required deployments:
-	- The application is “enforced” by launching the Microsoft Store for Business app. 
+- When enforcing installation by the user installing the application, the application reaching its installation deadline, or by post-installation re-evaluation for required deployments:
+	- The application is "enforced" by launching the Microsoft Store for Business app. 
 	- The end user must then complete the installation from the store before the app is installed
-	- The application status in the Configuration Manager console reports failed with the error “The Microsoft Store app was opened on the client PC and is waiting for the user to complete the installation.”
+	- In the Configuration Manager console the application status reports failure with the following error: "The Microsoft Store app was opened on the client PC and is waiting for the user to complete the installation."
 - At the next application evaluation cycle:
 	- If the application was installed by the end user from the store, the application reports the Status **Success**. 
 	- If the end user did not attempt to install the app from the store:
@@ -75,14 +75,16 @@ On PCs running a version of Windows 10 earlier than the Creators Update (with th
 
 - You cannot deploy line-of-business apps from the Microsoft Store for Business
 - When you deploy paid apps from the store, end users must log in to the store and purchase the app themselves.
-- If you have deployed a Group Policy disabling access to the consumer version of the Microsoft Store, deployments from the Microsoft Store for Business do not work, even if the Microsoft Store for Business is enabled.
+- If you deploy a group policy to disable access to the consumer version of the Microsoft Store, deployments from the Microsoft Store for Business do not work, even if the Microsoft Store for Business is enabled.
 
 
 ## Set up Microsoft Store for Business synchronization
+Synchronizing the list of apps purchased by your organization lets you see these apps in the Configuration Manager console.
 
+<!-- Remove below after 1802... -->
 ### For Configuration Manager versions prior to 1706
 
-**In Azure Active Directory, register Configuration Manager as a “Web Application and/or Web API” management tool. This action gives you a client ID that you need later.**
+**In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This action gives you a client ID that you need later.**
 1. In the Active Directory node of [https://manage.windowsazure.com](https://manage.windowsazure.com), select your Azure Active Directory, then click **Applications** > **Add**.
 2.  Click **Add an application my organization is developing**.
 3.  Enter a name for the application, select **Web application** and/or **Web API**, then click the **Next** arrow.
@@ -105,21 +107,22 @@ On PCs running a version of Windows 10 earlier than the Creators Update (with th
 
 1. Ensure you have purchased at least one app from the Microsoft Store for Business. In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, then click **Microsoft Store for Business**.
 2.  On the **Home** tab, in the **Microsoft Store for Business** group, click **Add Microsoft Store for Business Account**. 
-3.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.
-4. Once you are done, you can see the account you configured in the **Microsoft Store for Business** list in the Configuration Manager console.
+3.  Add your tenant ID, client ID, and client key from Azure Active Directory, then complete the wizard.
+4. Once you are done, you can see the account under **Microsoft Store for Business** in the Configuration Manager console.
 
 ### For Configuration Manager version 1706 and later
+<!-- ...remove above after 1802 -->
 
-1. In the console, go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services** to start the **Azure Services Wizard**.
+1. In the console, go to **Administration** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** to start the **Azure Services Wizard**.
 2. On the **Azure Services** page, select the service you want to configure, and then click **Next**.
 3. On the **General** page, provide a friendly name for the Azure service name and an optional description, and then click **Next**.
 4. On the **App** page, specify your Azure environment, and then click **Browse** to open the **Server App** window.
-5. In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
-	- **Create:** To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
-	- **Import:** To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue. 
+5. In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your tenant ID, client ID, and a secret key for clients. If you do not have an available server app, use one of the following actions:
+	- **Create:** To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign in to Azure, Configuration Manager creates the web app in Azure for you, including the client ID and secret key for use with the web app. Later, you can view these values from the Azure portal.
+	- **Import:** To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant. Then specify the tenant ID, client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue. 
 6. Review the **Information** page and complete any additional steps and configurations as directed. These configurations are necessary to use the service with Configuration Manager. For example, to configure the Microsoft Store for Business:
-	- In Azure you must register Configuration Manager as a web application or Web API and record the client ID. You also specify a client key for use by the management tool (which is Configuration Manager).
-	- In the Microsoft Store for Business console you must configure Configuration Manager as the store management tool, enable support for offline licensed apps, and then purchase at least one app. 
+	- In Azure, you must register Configuration Manager as a web application or Web API and record the client ID. You also specify a client key for use by the management tool (which is Configuration Manager).
+	- In the Microsoft Store for Business portal you must configure Configuration Manager as the store management tool, enable support for offline licensed apps, and then purchase at least one app. 
 7. Click **Next** when you are ready to continue.
 8. On the **App Configurations** page, complete the app catalog and language configurations for this service, and then click **Next**.
 9. After the wizard completes, the Configuration Manager console shows that you have configured **Microsoft Store for Business** as a **Cloud Service Type**.
@@ -128,19 +131,23 @@ On PCs running a version of Windows 10 earlier than the Creators Update (with th
 
 
 ## Create and deploy a Configuration Manager application from a Microsoft Store for Business app.
+After synchronization, create and deploy the store apps like you would any other app.
+
 1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.
 2.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.
 A Configuration Manager application is created containing the Microsoft Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
 
 > [!IMPORTANT]
-> For devices enrolled with Intune, deployed apps are only available to the user who originally enrolled the device. No other users can access the app.
+> For devices enrolled with Microsoft Intune, deployed apps are only available to the user who originally enrolled the device. No other users can access the app.
 
 ## Next steps
 
 In the **Software Library** workspace, expand **Application Management**, then click **License Information for Store Apps**.
 
-For each store app you manage, you can view information about the app including its name, platform, then number of licenses for the app that you own, and the number of licenses you have available.
+For each store app you manage, you can view information about the app. This information includes the app name, platform, the number of licenses for the app that you own, and the number of licenses you have available.
 
-After deploying online apps, note that any updates to that app will come directly from the Microsoft Store.
+After deploying online apps, any updates to that app will come directly from the Microsoft Store. Furthermore, Configuration Manager does not check version compliance of online apps, just that Windows reports the app as installed.  
 
-When deploying offline apps to Windows 10 devices with the Configuration Manager client (especially in multi-user environments such as classrooms), disable the Microsoft Store and/or application updates via the Microsoft Store (for example, using [group policy](https://docs.microsoft.com/en-us/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy)) so that users cannot update applications external to Configuration Manager deployments. Additionally, after the Microsoft Store for Business administrator purchases the app (thus making it available in offline state for synchronization with Configuration Manager) do not publish the app to users such that they can install or update online. This will ensure that all users only receive app updates via Configuration Manager. 
+When deploying offline apps to Windows 10 devices with the Configuration Manager client, do not allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. One option to disable the Microsoft Store is by using [group policy](https://docs.microsoft.com/en-us/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy). 
+
+After the Microsoft Store for Business administrator purchases an offline app, do not publish the app to users via the store. This configuration ensures that users can't install or update online. Users will only receive offline app updates via Configuration Manager. 
