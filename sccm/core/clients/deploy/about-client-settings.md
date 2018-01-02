@@ -76,7 +76,8 @@ Manage all client settings in the Configuration Manager console from the **Clien
 
 ## Client policy  
 
--   **Client policy polling interval (minutes)    Specifies how frequently the following Configuration Manager clients download client policy:  
+-   **Client policy polling interval (minutes)**  </br>
+     Specifies how frequently the following Configuration Manager clients download client policy:  
       -   Windows computers (for example, desktops, servers, laptops)  
       -   Mobile devices that Configuration Manager enrolls  
       -   Mac computers  
@@ -712,7 +713,8 @@ Manage all client settings in the Configuration Manager console from the **Clien
 
 ## State Messaging
 
--   **State message reporting cycle (minutes)  Specifies how often clients report state messages. This setting is 15 minutes by default.
+-   **State message reporting cycle (minutes)**  </br>
+     Specifies how often clients report state messages. This setting is 15 minutes by default.
 
 
 
