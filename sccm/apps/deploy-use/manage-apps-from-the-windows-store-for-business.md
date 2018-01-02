@@ -130,7 +130,7 @@ Synchronizing the list of apps purchased by your organization lets you see these
 
 
 
-## Create and deploy a Configuration Manager application from a Microsoft Store for Business app.
+## Create and deploy a Configuration Manager application from a Microsoft Store for Business app
 After synchronization, create and deploy the store apps like you would any other app.
 
 1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.
