@@ -3,7 +3,7 @@ title: "Find help"
 titleSuffix: "Configuration Manager"
 description: "Find resources for additional information about System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/8/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 
@@ -23,49 +23,49 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use the following resources to get additional information about System Center Configuration Manager:  
+This article provides multiple resources to find help for using Configuration Manager.  
 
--   [Information and support](#bkmk_Info)  
-
-    -   [Search the documentation library](#BKMK_SearchTips)  
-
-    -   [The System Center Configuration Manager team blog](#BKMK_ProductGroupBlog)  
-    -   [Support options and community resources](#BKMK_SupportOptions)
-
-  For help with accessibility, see
+For help with product accessibility, see
   [Accessibility features in System Center Configuration Manager](../../core/understand/accessibility-features.md).
 
-##  <a name="bkmk_Info"></a> Information and support  
+
+##  <a name="bkmk_Info"></a> Product documentation  
  Use the following resources for additional information about Configuration Manager.  
 
--   **To access the most current System Center Configuration Manager product documentation:** Use the TechNet [Documentation Library for System Center Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=691974).
+-   To access the most current product documentation, start at the [library index](https://docs.microsoft.com/sccm/)
 
--   **To provide feedback about the documentation:** Submit feedback using  **User Voice** at [System Center Configuration Manager Feedback (Documentation)](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation).  
+-   To provide feedback about the documentation, submit via [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation)  
 
--   **To download an archived copy of documentation:** go to the TechNet Gallery:
-
-    - [Version 1602](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
-    - [Version 1511](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
 
 ###  <a name="BKMK_SearchTips"></a> Search the documentation library  
  Use the following search tips to help you find the information that you need:  
 
--   When using your preferred search engine to locate content for System Center Configuration Manager, you can focus the search results to the current content library by including the following two terms, **SCCM** and **Docs**.
+-   When using your preferred search engine to locate content for Configuration Manager, focus the search results to the current content library by including the following two terms, **SCCM** and **Docs**.
 
--   Use search terms that match those that you see in the user interface (UI) and online documentation, rather than unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP"; "deployment type" rather than "DT"; and "software updates" rather than "SUM."  
+-   Use search terms that match terminology in the user interface and online documentation. Avoid unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP"; "deployment type" rather than "DT"; and "software updates" rather than "SUM."  
 
--   When you search on a page in TechNet or in the help file (for example, select Ctrl+F1, and enter search terms in the **Find** box), the results exclude text that is in collapsed sections. To search for text in collapsed sections, expand the sections before you search on the page. To do this, you can select the **Expand All** button at the top of the page, or double-click any collapsed section. When all sections are expanded, a search on the page can then search all sections on that page.  
+-   To search within an article you are currently viewing on docs.microsoft.com, select Ctrl+F, and then enter search terms in the browser's **Find** box. 
 
--   To search a topic in the help file, select F1, and then enter search terms in the **Find** dialog box. The help file does not support the **Expand All** option, and you must manually expand individual sections that are collapsed before search on the page finds text in those sections.  
+-   Each article on docs.microsoft.com includes the following fields to assist with searching the content:
+    - **Search** in the upper right corner. To search all articles enter terms in this field. Articles in the Configuration Manager library  automatically include the "ConfigMgr" scope.
+    - **Filter** above the left table of contents. To search the current table of contents enter terms in this field. This field only matches terms that appear in the article titles. 
 
--   Whenever possible, use the TechNet online library rather than downloaded documentation. TechNet contains the most up-to-date information, and the information that you are searching for might not be in the downloaded documentation or there might be corrections or additional information online.  
 
--   If you find it easier and faster to search documentation when it is stored locally, you can select multiple topics in TechNet and save them locally. First, sign in to TechNet. Then, on the top of the page that you want to save locally, choose **Export** (next to **Print**). You then see the **Export multiple sets of pages** banner that lets you add and remove pages that you want to save. Then choose **Manage pages** to export them. For more information, choose **Help** on the banner.  
+## Product feedback
+Report potential product defects through the [Feedback Hub app](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) built-in to Windows 10. When you **Add new feedback**, be sure to select the **Enterprise Management** category, and then choose from one of the following subcategories:
+ - Configuration Manager Client
+ - Configuration Manager Console
+ - Configuration Manager OS Deployment
+ - Configuration Manager Server
 
-###  <a name="BKMK_ProductGroupBlog"></a> The System Center Configuration Manager team blog  
- The Configuration Manager engineering and partner teams use the [System Center Configuration Manager Team Blog](http://go.microsoft.com/fwlink/?LinkId=191941) to provide you with technical information and other news about Configuration Manager and related technologies. Our blog posts supplement the product documentation and support information.  
+Continue to use our [user voice page](http://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
 
-###  <a name="BKMK_SupportOptions"></a> Support options and community resources  
+
+##  <a name="BKMK_ProductGroupBlog"></a> Configuration Manager team blog  
+ The Configuration Manager engineering and partner teams use the [Enterprise Mobility + Security blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) to provide you with technical information and other news about Configuration Manager and related technologies. Our blog posts supplement the product documentation and support information.  
+
+
+##  <a name="BKMK_SupportOptions"></a> Support options and community resources  
  The following links provide information about support options and community resources:  
 
 -   [Microsoft support](http://go.microsoft.com/fwlink/?LinkId=243064)  
@@ -73,3 +73,4 @@ Use the following resources to get additional information about System Center Co
 -   [Configuration Manager Community: System Center Configuration Manager (Current Branch) Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Configuration Manager forums page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
+    <!-- NOTE: the above URL requires "en-US" for the category to work -->

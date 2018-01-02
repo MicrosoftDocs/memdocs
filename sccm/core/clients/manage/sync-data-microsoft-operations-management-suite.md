@@ -24,7 +24,7 @@ manager: angrobe
 
 You may use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. Beginning with version 1706, the wizard replaces previous workflows to configure this connection. For earlier versions, see [Sync data from Configuration Manager to the Microsoft Operations Management Suite (1702 and earlier)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier)).
 
-- 	The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
+- 	The wizard is used to configure cloud services for Configuration Manager, like OMS, Microsoft Store for Business, and Azure Active Directory (Azure AD).  
 
 -   Configuration Manager connects to OMS for features like [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), or [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
 

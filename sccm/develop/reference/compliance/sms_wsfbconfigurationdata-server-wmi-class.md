@@ -10,14 +10,16 @@ ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 51870eea-f043-4bd3-a3cd-a68b7471681dsearchScope: - ConfigMgr SDK
+ms.assetid: 51870eea-f043-4bd3-a3cd-a68b7471681d
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 5
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # SMS_WSfBConfigurationData Server WMI Class
-The `SMS_WSfBConfigurationData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Windows Store For Business configuration data.  
+The `SMS_WSfBConfigurationData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Store for Business configuration data.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -49,7 +51,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- Windows Store For Business client ID.  
+ Microsoft Store For Business client ID.  
 
  `ContentLocation`  
  Data type: `String`  
@@ -58,7 +60,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- Location of the content downloaded from the Windows Store For Business.  
+ Location of the content downloaded from the Microsoft Store For Business.  
 
  `DefaultLocale`  
  Data type: `String`  
@@ -67,7 +69,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- The default language for the Windows Store For Business.  
+ The default language for the Microsoft Store for Business.  
 
  `LastSuccessfulSyncTime`  
  Data type: `DateTime`  
@@ -76,7 +78,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- The time of the last successful synchronization with Windows Store For Business.  
+ The time of the last successful synchronization with Microsoft Store for Business.  
 
  `LastSyncStatus`  
  Data type: `SInt32`  
@@ -85,7 +87,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- The status of the last synchronization with Windows Store For Business.  
+ The status of the last synchronization with Microsoft Store for Business.  
 
  `LastSyncTime`  
  Data type: `DateTime`  
@@ -94,7 +96,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- The time of the last synchronization with Windows Store For Business.  
+ The time of the last synchronization with Microsoft Store for Business.  
 
  `SelectedLocales`  
  Data type: `String`  
@@ -103,7 +105,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: none  
 
- The selected languages for Windows Store For Business.  
+ The selected languages for Microsoft Store for Business.  
 
  `TenantId`  
  Data type: `String`  
@@ -112,7 +114,7 @@ Class SMS_WSfBConfigurationData : SMS_BaseClass
 
  Qualifiers: [key]  
 
- Windows Store For Business tenant ID.  
+ Microsoft Store for Business tenant ID.  
 
 ## Remarks  
  Class qualifiers for this class include:  

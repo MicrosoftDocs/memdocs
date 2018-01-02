@@ -3,7 +3,7 @@ title: "Conditional access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,9 +25,9 @@ manager: angrobe
 
 
 ## Conditional access in System Center Configuration Manager
-Use **conditional access**  to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  
+Use conditional access to specify conditions to help secure email and other services on devices enrolled with Microsoft Intune.  
 
- For information about **conditional access on PCs that are managed with System Center Configuration Manager** and evaluated for compliance, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ For information about conditional access on devices that are managed with the Configuration Manager client, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  A typical flow for conditional access might look as follows:  
@@ -58,19 +58,19 @@ Use **conditional access**  to help secure email and other services on devices t
 
     -   Whether the device is jailbroken or rooted  
 
-    -   Whether email on the device is managed by a Configuration Manager or Intune policy  
+    -   Whether email on the device is managed by a Configuration Manager or Microsoft Intune policy  
 
-     **If no compliance policy is deployed to a device, then any applicable conditional access policies will treat the device as compliant**.  
+     A device reports compliant for any applicable conditional access policies if you do not deploy any compliance policy to it.
 
--   **Conditional access policies** are configured for a particular service, and define rules such as which Azure Active Directory security user groups or Configuration Manager user collections will be targeted, or exempt.  
+-   **Conditional access policies** are for a particular service. These policies define rules such as which Azure Active Directory security user groups or Configuration Manager user collections to target or exclude.  
 
-     You configure the On-Premises Exchange conditional access policy from the Configuration Manager console. However, when you configure an Exchange Online or SharePoint Online policy, this opens the Intune admin console where you configure the policy.  
+     You configure the on-premises Exchange conditional access policy from the Configuration Manager console. However, when you configure an Exchange Online or SharePoint Online policy, the Microsoft Intune console opens to configure the policy.  
 
-     Unlike other Intune or Configuration Manager policies, you do not deploy conditional access policies. Instead, you configure these once, and they apply to all targeted users.  
+     Unlike other Microsoft Intune or Configuration Manager policies, you do not deploy conditional access policies. Instead, you configure these policies once, and they apply to all targeted users.  
 
- When devices do not meet the conditions you configure, the user is guided though the process of enrolling the device and fixing the issue that prevents the device from being compliant.  
+ When devices do not meet the configured conditions, the user is guided though enrolling the device and fixing the device compliance issue.  
 
-**Before** you start using conditional access, ensure that you have the correct **requirements** in place:  
+Before you start using conditional access, ensure that you have the correct requirements in place:  
 
 ## Requirements for Exchange Online (using the shared multi-tenant environment)
 Conditional access to Exchange Online supports devices that run:
@@ -84,11 +84,11 @@ Conditional access to Exchange Online supports devices that run:
 -   Devices must be workplace joined, which registers the device with the Azure Active Directory Device Registration Service (AAD DRS).<br />     
 - Domain joined PCs must be automatically registered with Azure Active Directory through group policy or MSI.
 
-  The **Conditional access for PCs** section in this topic describes all the requirements for enabling conditional access for a PC.<br />     
-  AAD DRS will be activated automatically for Intune and Office 365 customers. Customers who have already deployed the ADFS Device Registration Service will not see registered devices in their on-premises Active Directory.
--   You must use an Office 365 subscription that includes Exchange Online (such as E3) and users must be licensed for Exchange Online.
--   The optional **Exchange Server connector** is optional and connects Configuration Manager to Microsoft Exchange Online and helps you monitor device information through the Configuration Manager console (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)).
-You do not need to use the connector to use compliance policies or conditional access policies, but is required to run reports that help evaluate the impact of conditional access.
+  The **Conditional access for PCs** section in this article describes all the requirements for enabling conditional access for a PC.<br />     
+  AAD DRS activates automatically for Microsoft Intune and Office 365 customers. Customers who have already deployed the ADFS Device Registration Service do not see registered devices in their on-premises Active Directory.
+-   Use an Office 365 subscription that includes Exchange Online (such as E3). Users must be licensed for Exchange Online.
+-   The Exchange Server connector is optional and connects Configuration Manager to Microsoft Exchange Online. This connector helps you monitor device information through the Configuration Manager console. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+You do not need the connector to use compliance policies or conditional access policies. Running reports on the impact of conditional access requires the connector.
 
 ## Requirements for Exchange Online Dedicated
 Conditional access to Exchange Online Dedicated supports devices that run:
@@ -99,31 +99,32 @@ Conditional access to Exchange Online Dedicated supports devices that run:
 -   Windows Phone 8 and later
 -   Any iOS device that uses an Exchange ActiveSync (EAS) email client
 -   Android 4 and later.
--   For tenants in the **legacy Exchange Online Dedicated environment**:    
+-   For tenants in the legacy Exchange Online Dedicated environment:    
 
-  You must use the  **Exchange Server connector** which connects Configuration Manager to Microsoft Exchange On-premises. This lets you manage mobile devices and enables conditional access (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)).
--   For tenants in the **new Exchange Online Dedicated environment**:     
-  The optional **Exchange Server connector** connects Configuration Manager to Microsoft Exchange Online and helps you manage device information (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)). You do not need to use the connector to use compliance policies or conditional access policies, but is required to run reports that help evaluate the impact of conditional access.  
+  Use the Exchange Server connector, which connects Configuration Manager to Microsoft Exchange on-premises. The connector lets you manage mobile devices and enables conditional access. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+-   For tenants in the new Exchange Online Dedicated environment:     
+  The Exchange Server connector is optional, which connects Configuration Manager to Microsoft Exchange Online and helps you manage device information. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md). You do not need the connector to use compliance policies or conditional access policies. Running reports on the impact of conditional access requires the connector.  
 
-## Requirements for Exchange On-premises
-Conditional access to Exchange On-premises supports:
+## Requirements for Exchange on-premises
+Conditional access to Exchange on-premises supports:
 -   Windows 8 and later (when enrolled with Intune)
 -   Windows Phone 8 and later
 -   Native email app on iOS
 -   Native email app on Android 4 or later
--   Microsoft Outlook app is not supported (Android and iOS).
+-   Microsoft Outlook app is not supported (Android and iOS)
 
 **Additionally**:
 
--  Exchange version must be Exchange 2010 or later. Exchange server Client Access Server (CAS) array is supported.
+- Exchange version must be Exchange 2010 or later
+- Exchange server Client Access Server (CAS) array is supported
 
 > [!TIP]
 > If your Exchange environment is in a CAS server configuration, then you must configure the on-premises Exchange connector to point to one of the CAS servers.
-- You must use the **Exchange Server connector** which connects Configuration Manager to Microsoft Exchange On-premises. This lets you manage mobile devices  and enables conditional access (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)).
-  - Make sure that you are using the latest version of the **on-premises Exchange connector**. The on-premises Exchange connector should be configured through the Configuration Manager console. For a detailed walkthrough, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
-  - The connector must  be configured only on the System Center Configuration Manager Primary Site.</li><li>This connector  supports Exchange CAS environment. <br />        When configuring the connector, you must set it so it talk to the one of the Exchange CAS servers.
+- Use the Exchange Server connector, which connects Configuration Manager to Microsoft Exchange on-premises. The connector lets you manage mobile devices and enables conditional access. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+  - Make sure that you are using the latest version of the on-premises Exchange connector. Configure the on-premises Exchange connector through the Configuration Manager console. For a detailed walkthrough, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
+  - Only configure the connector on the Configuration Manager primary site
 
-- Exchange ActiveSync can be configured with certificate based authentication, or user credential entry
+- Exchange ActiveSync can be configured with certificate-based authentication, or user credential entry
 
 
 ## Requirements for Skype for Business Online
@@ -132,9 +133,9 @@ Conditional access to SharePoint Online supports devices that run:
  -   Android 4.0 and later
  -   Samsung KNOX Standard 4.0 or later
 
-**Additionally,** you must enable modern authentication for Skype for Business Online. Fill this [connect form](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) to be enrolled in the modern authentication program.
+Enable [modern authentication](https://aka.ms/SkypeModernAuth) for Skype for Business Online. 
 
-All your end-users must be using the Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy will not be applied to end-users who are in the on-premises deployment.
+All of your users must use Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy does not apply to on-premises users.
 
 ## Requirements for SharePoint Online
 Conditional access to SharePoint Online supports devices that run:
@@ -147,21 +148,21 @@ Conditional access to SharePoint Online supports devices that run:
  **Additionally**:
  -   Devices must be workplace joined, which registers the device with the Azure Active Directory Device Registration Service (AAD DRS).
 
- Domain joined PCs must be automatically registered with Azure Active Directory through group policy or MSI. The **Conditional access for PCs** section in this topic describes all the requirements for enabling conditional access for a PC.
+ Domain joined PCs must be automatically registered with Azure Active Directory through group policy or MSI. The **Conditional access for PCs** section in this article describes all the requirements for enabling conditional access for a PC.
 
- AAD DRS will be activated automatically for Intune and Office 365 customers. Customers who have already deployed the ADFS Device Registration Service will not see registered devices in their on-premises Active Directory.
+ AAD DRS activates automatically for Microsoft Intune and Office 365 customers. Customers who have already deployed the ADFS Device Registration Service do not see registered devices in their on-premises Active Directory.
  -   A SharePoint Online subscription is required and users must be licensed for SharePoint Online.
 
  ### Conditional access for PCs
 
- You can setup conditional access for PCs that run Office desktop applications to access **Exchange Online** and **SharePoint Online** for PCs that meet the following requirements:
- -   The PC must be running Windows 7.0 or Windows 8.1.
- -   The PC must either be domain joined or compliant.
+ You can configure conditional access for PCs that run Office desktop applications, and access Exchange Online or SharePoint Online. The PCs must meet the following requirements:
+ -   The PC must be running Windows 7.0 or Windows 8.1
+ -   The PC must be either domain joined or compliant
 
- In order to be compliant, the PC must be enrolled in Intune and comply with the policies.
+ In order to be compliant, the PC must be enrolled in Microsoft Intune and comply with the policies.
 
  For domain joined PCs, you must  set it up to [automatically register the device](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.
- -   [Office 365 modern authentication must be enabled](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/), and have all the latest Office updates.<br />     Modern authentication brings Active Directory Authentication Library (ADAL) based sign-in to Office 2013 Windows clients and enables better security like **multi-factor authentication**, and **certificate-based authentication**.
+ -   [Office 365 modern authentication must be enabled](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/), and have all the latest Office updates.<br />     Modern authentication brings Active Directory Authentication Library (ADAL)-based sign-in to Office 2013 Windows clients and enables better security like multi-factor authentication and certificate-based authentication.
  -   Setup ADFS claims rules to block non-modern authentication protocols.  
 
 ## Next Steps  
