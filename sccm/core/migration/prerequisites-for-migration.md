@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Prerequisites for migration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prerequisites for migration in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 To migrate from a supported source hierarchy, you must have access to each applicable Configuration Manager source site, and permissions within the System Center Configuration Manager destination site to configure and run migration operations.  
 
  Use the information in the following sections to help you understand the versions of Configuration Manager that are supported for migration, and the required configurations.  

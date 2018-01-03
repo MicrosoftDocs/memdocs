@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Security and privacy for migration to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for migration to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic contains security best practices and privacy information for migration to your System Center Configuration Manager environment.  
 
 ## Security Best Practices for Migration  

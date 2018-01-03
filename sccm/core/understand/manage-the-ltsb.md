@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid:  8da2887a-fd8e-438c-b926-849c121f7fdf
 caps.latest.revision: 0
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Manage the Long Term Servicing Branch of Configuration Manager*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+# Manage the Long Term Servicing Branch of Configuration Manager
+
+*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+
 When you use the Long-Term Servicing Branch (LTSB) of System Center Configuration Manager, the following can help you understand important changes that affect how you manage your infrastructure.
 
 Because the LTSB is equivalent to Current Branch version 1606 (with some exceptions like Intune integration and cloud-related features), most tasks you use for planning, deployment, configuration, and day-to-day management are the same.

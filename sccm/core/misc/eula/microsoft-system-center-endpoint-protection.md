@@ -13,11 +13,16 @@ ms.technology:
  - configmgr-other
 ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 caps.latest.revision: 4
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION**PLEASE NOTE:** Your use of this software is subject to the terms and conditions of the license agreement by which you (or your company) acquired the Microsoft server software or gained access to the online service from Microsoft. For instance, if you are:  
+# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION
+
+
+**PLEASE NOTE:** Your use of this software is subject to the terms and conditions of the license agreement by which you (or your company) acquired the Microsoft server software or gained access to the online service from Microsoft. For instance, if you are:  
 
 -   a volume license customer or service provider, use of this software is subject to your volume license agreement or service provider license agreement;  
 

@@ -13,7 +13,9 @@ ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -34,7 +36,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Additional information about privacy for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Additional information about privacy for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 ## Updates and servicing
 System Center Configuration Manager introduces a new update model that helps keep your Configuration Manager deployment current with the latest updates and features. When installed, this feature adds a new site system role that's called the service connection point on a site server that an admin chooses. For details about collected information and how it is used, see the Usage data section in this article.
