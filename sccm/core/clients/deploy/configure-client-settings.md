@@ -3,7 +3,7 @@ title: "Configure client settings"
 titleSuffix: "Configuration Manager"
 description: "Select client settings in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,15 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 caps.latest.revision: 5
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
 ---
 # How to configure client settings in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You manage all client settings in System Center Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy these to collections.  
+You manage all client settings in System Center Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy to collections.  
 
 For information about each client setting, see [About client settings in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md).
 
@@ -59,25 +59,14 @@ When you deploy these custom settings, they override the default client settings
 
 9. In the **Select Collection** dialog box, select the appropriate collection, and then choose **OK**. You can verify the selected collection if you click the **Deployments** tab in the details pane.  
 
-10. View the order of the custom client setting that you have just created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
+10. View the order of the custom client setting that you created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
 
  Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
-## Limit Windows 10 Enhanced telemetry to only send data relevant to Windows Analytics Device Health
-<!-- 1356148 -->
 
-With the 1710 update, you can set the Windows 10 telemetry data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** telemetry level with Windows 10 version 1709 or later.
-
-The Enhanced (Limited) telemetry level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics. For more information on telemetry levels, see [Telemetry levels](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
-
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
-
-2.  On the **Home** tab, choose **Properties**.  
-
-3.  Open **Cloud Services**, and set Windows 10 telemetry to **Enhanced**.
 
 ##  View client settings  
- When multiple client settings have been deployed to the same device, user, or user group, the prioritization and combination of settings can be complex. To view the client settings:  
+ When you deploy multiple client settings to the same device, user, or user group, the prioritization and combination of settings is complex. To view the client settings:  
 
 1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices** > **Users** or **User Collections**.  
 

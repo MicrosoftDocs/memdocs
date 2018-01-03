@@ -102,7 +102,7 @@ When you use one of the following Azure services with Configuration Manager, and
 Services:  
 -	    [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS)
 -	    [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
--	    [Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+-	    [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
 Use the following steps to resolve this issue:
  1.    In the Configuration Manager console, delete the Azure service from the Azure services node.

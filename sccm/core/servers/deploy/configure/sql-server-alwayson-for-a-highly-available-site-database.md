@@ -3,7 +3,7 @@ title: "SQL Server Always On"
 titleSuffix: "Configuration Manager"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -75,7 +75,7 @@ For more information see [Create a Database Mirroring Endpoint for Always On Ava
 
 -   Beginning with version 1706, you can use an asynchronous commit replica to recover your synchronous replica. See [site database recovery options]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
     > [!CAUTION]  
-    > Configuration Manager does not support failover to use the asynchronous commit replica as your site database.
+    > Configuration Manager does not support [failover](https://go.microsoft.com/fwlink/?linkid=626885) to use the asynchronous commit replica as your site database.
 Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.
 
 Each replica member must:
