@@ -14,7 +14,7 @@ ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 

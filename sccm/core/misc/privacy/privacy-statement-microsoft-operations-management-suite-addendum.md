@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa91afee-45b5-46eb-ad8a-e9c7d3122b38
 caps.latest.revision: 4
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 ---

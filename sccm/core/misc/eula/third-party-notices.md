@@ -13,10 +13,15 @@ ms.technology:
  - configmgr-other
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 ---
-# Third Party Notices*Applies to: System Center Configuration Manager (Current Branch)*
+# Third Party Notices
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION  
 
 > [!NOTE]  

@@ -12,11 +12,16 @@ ms.technology:
  - configmgr-other
 ms.assetid: 4d7b19db-a915-4bc8-9962-2d1515ddff6c
 caps.latest.revision: 7
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT EVALUATION SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER**  

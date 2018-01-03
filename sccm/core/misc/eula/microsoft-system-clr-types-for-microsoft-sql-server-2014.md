@@ -13,11 +13,16 @@ ms.technology:
  - configmgr-other
 ms.assetid: a0539a3d-c56b-40e2-b291-55fb8f74d714
 caps.latest.revision: 7
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014**  
