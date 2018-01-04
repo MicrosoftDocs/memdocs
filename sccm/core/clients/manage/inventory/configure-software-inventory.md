@@ -46,7 +46,7 @@ This procedure configures the default client settings for software inventory and
  > [!TIP]  
         >   Error code 80041006 in inventoryprovider.log means the WMI provider is out of memory. That is, the memory quota limit for a provider has been hit and inventory provider cannot continue.
 In this case, the inventory agent creates a report with 0 entries so no inventory items are reported. <br/>
-A possible solution for this error would be to reduce the scope of the software inventory collection. In circumstances when the error occurs after limiting the inventory scope, modifying the [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) property defined in the [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) class can also be a possible solution.
+A possible solution for this error would be to reduce the scope of the software inventory collection. In circumstances when the error occurs after limiting the inventory scope, increasing the [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) property defined in the [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) class can provide a solution.
 
 <!--SMS.480648 include WMI Out of memory tip -->
 
