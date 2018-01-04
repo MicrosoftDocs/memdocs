@@ -138,7 +138,7 @@ The following are the capabilities delivered with previous versions of the Confi
  |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
  |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
  |Improvements for deploying PowerShell scripts from Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Version 1710](/sccm/apps/deploy-use/create-deploy-scripts)
- |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Not added](media/Red_X.gif)    |
+ |Improved VPN Profile Experience in Configuration Manager Console <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |[Version 1710](/sccm/protect/deploy-use/create-vpn-profiles)    |
  |Co-management for Windows 10 devices|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[Version 1710](/sccm/core/clients/manage/co-management-overview.md)|
  
 
