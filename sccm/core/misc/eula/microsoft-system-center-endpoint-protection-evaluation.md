@@ -13,11 +13,16 @@ ms.technology:
  - configmgr-other
 ms.assetid: 906806fe-6d7b-4536-95fd-829290367c5c
 caps.latest.revision: 5
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT EVALUATION SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION**  

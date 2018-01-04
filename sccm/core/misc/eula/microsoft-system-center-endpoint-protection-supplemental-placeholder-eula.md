@@ -13,9 +13,14 @@ ms.technology:
  - configmgr-other
 ms.assetid: db3ca12d-b737-40a6-8a2e-8b85c2188775
 caps.latest.revision: 3
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION SUPPLEMENTAL PLACEHOLDER EULA*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION SUPPLEMENTAL PLACEHOLDER EULA
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION SUPPLEMENTAL PLACEHOLDER EULA

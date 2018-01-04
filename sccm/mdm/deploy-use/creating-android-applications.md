@@ -44,7 +44,7 @@ The following deployment actions are supported:
 |Device type|Supported actions|
 |-|-|
 |Android|**Available**, **Required** The user must consent to both installation and uninstallation.|
-|Android for Work | **Required** |
+|Android for Work |**Available**, **Required** |
 
 ## Approve and deploy Android for Work apps
 As a Configuration Manager admin, you can also approve apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices.
@@ -61,3 +61,5 @@ Follow these steps to approve apps in the Play for Work store, sync them to the 
 8. Go to **Software Library** > **Overview** > **Application Management** > **Applications**, choose an Android for Work app, and deploy as usual.
 
 To sync Play for Work apps with Configuration Manager, you must approve at least one app on the Play for Work website first.
+
+Apps deployed as **Available** display in the work-badged Google Play app instead of the Company Portal. This lets you deploy apps from a trusted source (the work-badged Google Play app is a trusted source) and not have to allow apps from untrusted sources.

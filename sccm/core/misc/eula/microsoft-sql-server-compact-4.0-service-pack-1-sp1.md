@@ -13,11 +13,16 @@ ms.technology:
  - configmgr-other
 ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
 caps.latest.revision: 7
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)**  
