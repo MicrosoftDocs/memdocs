@@ -12,11 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 41e8d1ed-ce41-4070-9bb9-de0fe4948f20
 caps.latest.revision: 5
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# System Center Configuration Manager privacy statement - Mobile device addendum*Applies to: System Center Configuration Manager (Current Branch)*
+# System Center Configuration Manager privacy statement - Mobile device addendum
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This privacy statement should be read in conjunction with the [System Center Configuration Manager privacy statement](../../../core/misc/privacy/privacy-statement.md) and the [Microsoft Intune Privacy Statement](http://go.microsoft.com/fwlink/p/?LinkId=265368). Provisions in those documents are applicable. This privacy statement covers the features for Enterprise Enrollment related to mobile device management in System Center Configuration Manager. This disclosure focuses on the high-level aspects of the enrollment feature, and is not intended to be an exhaustive list.  
 
 ## **Enterprise Enrollment for Mobile Devices**  

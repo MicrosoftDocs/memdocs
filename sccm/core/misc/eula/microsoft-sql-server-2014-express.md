@@ -12,11 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c147514c-e4bb-4c36-b8a6-b0ab2fef394a
 caps.latest.revision: 7
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER 2014 EXPRESS*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SQL SERVER 2014 EXPRESS
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER 2014 EXPRESS**  

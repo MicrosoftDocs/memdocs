@@ -13,11 +13,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 77580c83-3fc5-479e-9f94-6bc59ac0fa69
 caps.latest.revision: 6
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS**  

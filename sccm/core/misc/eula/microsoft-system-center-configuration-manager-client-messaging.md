@@ -11,11 +11,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88e9583b-8d42-4652-9acc-a6829243bc77
 caps.latest.revision: 7
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING*Applies to: System Center Configuration Manager (Current Branch)*
+# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 **MICROSOFT SOFTWARE LICENSE TERMS**
 **MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER CLIENT MESSAGING**
 

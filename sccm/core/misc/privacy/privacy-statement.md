@@ -12,11 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de4e7752-7490-4c3f-9550-ac7f476d99d8
 caps.latest.revision: 5
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 robots: noindex,nofollow
 
 ---
-# System Center Configuration Manager privacy statement*Applies to: System Center Configuration Manager (Current Branch)*
+# System Center Configuration Manager privacy statement
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Microsoft is committed to protecting your privacy, while delivering software that brings you the performance, power, and convenience you desire in your personal computing. This privacy statement explains many of the data collection and use practices of System Center Configuration Manager ("Configuration Manager"). This disclosure focuses on features that communicate with the Internet and is not intended to be an exhaustive list. It does not apply to other online or offline Microsoft sites, products, or services. End users (information workers) should consult their IT administrators for further information about their company's privacy policies. Microsoft is not responsible for the privacy practices of its customers or other companies.  
 
 Configuration Manager comprehensively assesses, deploys, and updates your servers, clients, and devices across physical, virtual, distributed, and mobile environments. Optimized for Windows and extensible beyond, it is the best choice for gaining enhanced insight into, and control over, your IT systems  

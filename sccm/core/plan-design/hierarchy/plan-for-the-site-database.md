@@ -14,10 +14,15 @@ ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Plan for the site database for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for the site database for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The site database server is a computer that runs a supported version of Microsoft SQL Server. SQL Server is used to store information for Configuration Manager sites. Each site in a Configuration Manager hierarchy contains a site database and a server that is assigned the site database server role.  
 
 -   For central administration sites and primary sites, you can install SQL Server on the site server, or you can install SQL Server on a computer other than the site server.  
