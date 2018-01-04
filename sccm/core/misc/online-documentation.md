@@ -13,10 +13,15 @@ ms.technology:
  - configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: 5
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Online Documentation for System Center Configuration ManagerWelcome to the System Center Configuration Manager documentation library.  
+# Online Documentation for System Center Configuration Manager
+
+
+Welcome to the System Center Configuration Manager documentation library.  
 Find the documentation library for the product version that you use:  
 
 ## System Center Configuration Manager (current branch)  

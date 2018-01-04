@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 caps.latest.revision: 10
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# Communications between endpoints in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Communications between endpoints in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 ##  <a name="Planning_Intra-site_Com"></a> Communications between site systems in a site  
  When Configuration Manager site systems or components communicate across the network to other site systems or Configuration Manager components in the site, they use one of the following protocols, depending on how you configure the site:  

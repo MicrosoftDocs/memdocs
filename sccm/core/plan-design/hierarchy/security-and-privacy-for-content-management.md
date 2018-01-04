@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
 caps.latest.revision: 8
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 

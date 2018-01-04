@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: aaronczms.author: aaronczmanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: angrobe
 
 ---
-# International support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# International support in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The following sections provide technical details to help you make System Center Configuration Manager compliant with specific international requirements.  
 
 ## GB18030 Requirements  
