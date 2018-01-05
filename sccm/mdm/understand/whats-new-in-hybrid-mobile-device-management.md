@@ -3,7 +3,7 @@ title: "What's new in hybrid MDM"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -41,8 +41,8 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
-- **Available application deployments now supported for Android Enterprise**
-  You can now deploy Android Enterprise (formerly Android for Work) apps as **Available**, in addition to **Required**. For details, see [Create Android applications with System Center Configuration Manager](/sccm/mdm/deploy-use/creating-android-applications.md).
+- **Available application deployments now supported for Android Enterprise**    
+  You can now deploy Android Enterprise (formerly Android for Work) apps as **Available**, in addition to **Required**. For details, see [Create Android applications with System Center Configuration Manager](/sccm/mdm/deploy-use/creating-android-applications).
 
 
 ## November 2017
