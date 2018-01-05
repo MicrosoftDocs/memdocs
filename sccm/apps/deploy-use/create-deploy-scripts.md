@@ -107,7 +107,7 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 1. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
     > [!WARNING]
     >  Reboot actions in scripts stop the Configuration Manager agent. Instead, use client notification to restart the device. Starting in Configuration Manager version 1710, the [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
-
+<!--SMS503978--Script reboot warning-->
 ## Script parameters
 *(Introduced with version 1710)*  
 Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
