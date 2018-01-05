@@ -3,7 +3,7 @@ title: "Client settings"
 titleSuffix: "Configuration Manager"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/29/2017
+ms.date: 01/05/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -549,7 +549,7 @@ Manage all client settings in the Configuration Manager console from the **Clien
     - **Color scheme for Software Center** </br>
         Click **Select Color** to define primary color used by Software Center.
     - **Select a logo for Software Center** </br>
-        Click **Browse** to select an image to display in Software Center. The logo must be a JPEG or PNG of 400 x 100 pixels with a maximum size of 750 KB.
+        Click **Browse** to select an image to display in Software Center. The logo must be a JPEG, PNG or BMP of 400 x 100 pixels with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
 
 -   Software Center tab visibility </br>
     Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
