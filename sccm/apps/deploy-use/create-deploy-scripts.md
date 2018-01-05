@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/05/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,8 +14,8 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: BrucePerlerMS
-ms.author: bruceper
+author: mestew
+ms.author: mstewart
 manager: angrobe
 
 ---
@@ -73,9 +73,9 @@ Scripts must be approved, by the *script approver* role, before they can be run.
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
 3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
-4. In the **Approve or deny script** dialog box, select **Approve** or **Deny** for the script and optionally enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
+4. In the **Approve or deny script** dialog box, select **Approve** or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
 ![Script - Approval](./media/run-scripts/RS-approval.png)
-5. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
+1. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
 ### Allow users to approve their own scripts
 
@@ -105,6 +105,8 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 	- **Clear** - Removes the current script from the Script field.
 	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 1. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
+    > [!WARNING]
+    >  Reboot actions in scripts stop the Configuration Manager agent. Instead, use client notification to restart the device. Starting in Configuration Manager version 1710, the [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
 
 ## Script parameters
 *(Introduced with version 1710)*  
@@ -130,7 +132,7 @@ The validation section of the **Script Parameter Properties** dialog contains th
 - **Minimum Length** - minimum number of characters of the *FirstName* field.
 - **Maximum Length**- maximum number of characters of the *FirstName* field
 - **RegEx** - short for *Regular Expression*. For more information on using the Regular Expression, see the next section, *Using Regular Expression validation*.
-- **Custom Error** - useful for adding your own custom error message that supercedes any system validation error messages.
+- **Custom Error** - useful for adding your own custom error message that supersedes any system validation error messages.
 
 #### Using Regular Expression validation
 
@@ -189,7 +191,7 @@ The script is executed as the *system* or *computer* account on the targeted cli
 
 ## Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real-time as it executes, and you can also return to a report for a given Run Script execution. <br>
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. <br>
 
 ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
