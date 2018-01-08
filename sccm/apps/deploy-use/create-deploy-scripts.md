@@ -104,11 +104,13 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
 	- **Clear** - Removes the current script from the Script field.
 	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
-5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
- 
-    > [!IMPORTANT]
-          Scripting a reboot stops the Configuration Manager agent. Instead, use client notification to restart the device. Starting in Configuration Manager version 1710, the [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
+5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 <!--SMS503978--Script reboot warning-->
+ 
+ > [!IMPORTANT]
+    >  Scripting a reboot stops the Configuration Manager agent. Instead, use client notification to restart the device. Starting in Configuration Manager version 1710, the [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
+
+
 ## Script parameters
 *(Introduced with version 1710)*  
 Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
