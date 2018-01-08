@@ -53,8 +53,11 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
  -  Task 1
  -  Task 2              
 -->
-
-
+## Improvements to Run Scripts
+The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now allows you to import and run signed PowerShell scripts. 
+- To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
+- Imported signed scripts cannot be edited after import.
+<!--1236459-->
 
 
 
