@@ -3,7 +3,7 @@ title: "New version 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1710 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  12/08/2017
+ms.date:  1/08/2018
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -144,7 +144,7 @@ These scenarios include:
 - [Enroll devices](../../../mdm/deploy-use/enroll-hybrid-windows.md)
 - [Perform remote full and selective wipe actions](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
 - [Manage settings through configuration items and baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-- [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md)
+- [Manage compliance policy](../../../mdm/deploy-use/device-compliance-policies.md) and [conditional access](../../../protect/deploy-use/manage-access-to-services.md)
 - Manage access to company resources through:
    - [Certificate profiles](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
    - [VPN profiles](../../../mdm/deploy-use/create-vpn-profiles.md)
@@ -152,6 +152,9 @@ These scenarios include:
    - [Email profiles](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
 - [Configure Windows Hello for Business policy](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
 - [Manage applications](../../../mdm/deploy-use/management-tasks-applications.md)
+
+> [!NOTE]
+> Deploying .appxbundle applications built for multiple architectures may not work on these devices, and this scenario is not supported at this time.
 
 ### Improved VPN Profile Experience in Configuration Manager Console 
 <!-- 1318232 -->

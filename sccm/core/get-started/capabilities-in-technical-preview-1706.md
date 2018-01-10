@@ -458,10 +458,10 @@ You can configure Entrust as the certification authority when adding a Certifica
 **Known issue**: In the 1706 technical preview, PFX certificates are not issued for Microsoft certification authorities. This does not affect imported PFX certificates or SCEP profiles.
 
 
-## Cisco (IPsec) support for macOS VPN profiles
+## Cisco (IPsec) support for iOS VPN profiles
 <!-- 1321367 -->
 
-You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
 ## New Windows configuration item settings
