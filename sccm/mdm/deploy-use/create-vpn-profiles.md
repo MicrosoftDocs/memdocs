@@ -34,7 +34,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
  |Connection type|iOS and macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|Yes|Yes|No|No|No|No|Yes|
+ |Cisco AnyConnect|Yes|Yes|No|No|No|No|No|
  |Cisco (IPSec)|iOS only|No|No|No|No|No|No|  
  |Pulse Secure|Yes|Yes|Yes|No|Yes|Yes|Yes|  
  |F5 Edge Client|Yes|Yes|Yes|No|Yes|Yes|Yes|  
