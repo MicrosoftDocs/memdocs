@@ -174,7 +174,7 @@ If a user forgets their passcode, you can help them by removing the passcode fro
 | Android                               | Supported on versions earlier than Android 7.0. Creates a temporary passcode.                |
 | Android for Work                      | Not supported.                                                                               |
 | Windows 10 PCs                        | Not supported.                                                                               |
-| Windows 10 mobile                     | Supported for Windows 10 Creator version and later mobile devices that are Azure AD joined.  |
+| Windows 10 mobile                     | Supported, excluding Azure AD joined devices.  |
 | Windows Phone 8 and Windows Phone 8.1 | Supported.                                                                                   |
 | Windows RT 8.1                        | Not supported.                                                                               |
 | Windows 8.1 PCs                       | Not supported.                                                                               |
