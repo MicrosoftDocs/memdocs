@@ -72,6 +72,8 @@ When you upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows
 
 -   After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
+-   If you are upgrading the primary site server then [run a site reset](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).
+
 **Known issue for remote Configuration Manager consoles:**  
 After you upgrade the site server or a server that hosts an instance of the SMS_Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS_Provider:
 
