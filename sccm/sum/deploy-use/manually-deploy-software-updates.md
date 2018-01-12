@@ -231,10 +231,10 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
     -   **User notifications**: Specify whether to display notification of the software updates in Software Center on the client computer at the configured **Software available time** and whether to display user notifications on the client computers. When **Type of deployment** is set to **Available** on the Deployment Settings page, you cannot select **Hide in Software Center and all notifications**.  
 
-    -   **Deadline behavior**: *Available only when **Type of deployment** *is set to **Required** *on the Deployment Settings page.*   
+    -   **Deadline behavior**: Available only when **Type of deployment** is set to **Required** on the Deployment Settings page.   
     Specify the behavior that is to occur when the deadline is reached for the software update deployment. Specify whether to install the software updates in the deployment. Also specify whether to perform a system restart after software update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Device restart behavior**: *Available only when **Type of deployment** *is set to **Required** *on the Deployment Settings page.*    
+    -   **Device restart behavior**: Available only when **Type of deployment** is set to **Required** on the Deployment Settings page.    
     Specify whether to suppress a system restart on servers and workstations after software updates are installed and a system restart is required to complete the installation.  
 
         > [!IMPORTANT]  
