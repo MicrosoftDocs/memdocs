@@ -53,11 +53,63 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
  -  Task 1
  -  Task 2              
 -->
+
+## Create phased deployments
+Phased deployments allow you to automate a coordinated, sequenced rollout of applications, software updates, or task sequences. You no longer need to create multiple deployments when you want to deploy to pilot collections then to production collections. Phased deployments can be stopped manually or automatically based on configured criteria. 
+
+<!--1357405-->
+### Try it out!  
+ Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+1. Create a phased deployment for a task sequence. </br>
+    a. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.</br>
+    b. Right-click on an existing task sequence and select **Create Phased Deployment**. </br>
+    c. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create default pilot and production phases**. </br>
+    d. Populate the **Pilot collection** and **Production Collection** fields. Select **Next**.</br>
+    e. On the **Scheduling** tab, choose one option for each of the scheduling settings and select **Next** when complete.  
+    - Criteria for success of the pilot phase:
+        - Deployment success percentage
+        - Number of devices successfully deployed
+    - Conditions for beginning the production phase of deployment:
+        - Automatically begin this many days after the success of the pilot phase
+        - Manually begin this phase of deployment
+    - Once a device is targeted, apply the upgrade:
+        - As soon as possible
+        - Deadline time (relative to the time the device is targeted)</br>
+
+    f. On the **Phases** tab, edit any of the phases if needed then click **Next**.</br>
+    g. On the **Stop Criteria** tab, select an option to automatically stop deployment. 
+    - Criteria for automatic stop of the deployments in all phases
+        - Percentage of deployments failed in all phases
+        - Number of devices with failed deployments in all phases </br>
+
+    h. Confirm your selections on the **Summary** tab then click **Next** to proceed.
+
+
+2. Create a phased deployment for an application.
+3. Create a phased deployment for a software update.
+
+## Deployment templates for task sequences
+<!--1357391_Create Deployment Template for TS-->
+The deployment wizard for task sequences can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
+
+### Try it out!  
+ Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
+1. Create a deployment template from a new task sequence deployment.
+    a. 
+2. Apply an existing deployment template to a task sequence deployment. 
+
+## New settings for Windows Defender Application Guard
+<!--1356256--WD Suite support for files and virtual gpu-->
+On Windows 10 version 1709 and later devices, there are two new host interaction settings for Windows Defender Application Guard. 
+1. Websites can be given access to the host’s virtual graphics processor. 
+2. Files downloaded inside the container can be persisted on the host. </br>
+
+
 ## Improvements to Run Scripts
 The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now allows you to import and run signed PowerShell scripts. 
 - To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
 - Imported signed scripts cannot be edited after import.
-<!--1236459_import_signed_scripts-->
+<!--1236459_import_signed_scripts--->
 
 
 
