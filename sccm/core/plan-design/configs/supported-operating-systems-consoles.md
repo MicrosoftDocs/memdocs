@@ -38,6 +38,6 @@ manager: angrobe
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise  
 
--   **Windows 8** (x86, x64): Professional, Enterprise  
+<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, Ultimate  
