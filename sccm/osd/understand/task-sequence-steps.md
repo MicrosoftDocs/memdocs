@@ -505,8 +505,8 @@ In the task sequence editor, click **Add**, select **General**, and select **Che
 -   Driver packages  
 
 -   Packages  
-
- This step works well in a task sequence to upgrade an operating system in the following scenarios:  
+    
+This step works well in a task sequence to upgrade an operating system in the following scenarios:  
 
 -   To use a single upgrade task sequence that can work with both x86 and x64 platforms. Include two **Download Package Content** steps in the **Prepare for Upgrade** group. Specify conditions on the **Options** tab to detect the client architecture and download only the appropriate OS upgrade package. Configure each **Download Package Content** step to use the same variable. Use the variable for the media path on the **Upgrade Operating System** step.  
 
@@ -533,52 +533,47 @@ This step runs in either a standard operating system or Windows PE. However, the
  -   **Configuration Manager client cache**: Use this option to store the content in the client cache. The client acts as a peer cache source for other peer cache clients. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
  -   **Custom path**  
-
- **Save path as a variable**  
+   
+**Save path as a variable**  
  You can save the path as a variable that you can  use in another task sequence step. Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, it is the root for where the task sequence stores all referenced content. This content may contain multiple packages. Then when you refer to the variable, add a numerical suffix. For example, for the first package, refer to %*mycontent01*%. When you refer to the variable in subsequent steps, such as **Upgrade Operating System**, use %*mycontent02*% or %*mycontent03*%, where the number corresponds to the order that the **Download Package Content** step lists the packages.  
 
- **If a package download fails, continue downloading other packages in the list**  
+**If a package download fails, continue downloading other packages in the list**  
  If the task sequence fails to download a package, it starts to download the next package in the list.  
 
 
 
 ##  <a name="BKMK_EnableBitLocker"></a> Enable BitLocker  
- Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the operating system. The bootstrap partition must remain unencrypted.  
+Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the operating system. The bootstrap partition must remain unencrypted.  
 
- Use the **Pre-provision BitLocker** task sequence step to enable BitLocker on a drive while in Windows PE. For more information, see the [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker) section.  
+Use the **Pre-provision BitLocker** task sequence step to enable BitLocker on a drive while in Windows PE. For more information, see the [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker) section.  
 
 > [!NOTE]  
 >  BitLocker drive encryption provides low-level encryption of the contents of a disk volume.  
 
- The **Enable BitLocker** step runs only in a standard operating system. It does not run in Windows PE. For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
+The **Enable BitLocker** step runs only in a standard operating system. It does not run in Windows PE. For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
 
- When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:  
+When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:  
 
 -   Enabled  
-
 -   Activated  
-
 -   Ownership Allowed  
-
- This step completes any remaining TPM initialization. The remaining steps do not require physical presence or reboots. The **Enable BitLocker** step transparently completes the remaining TPM initialization steps, if necessary:  
+   
+This step completes any remaining TPM initialization. The remaining steps do not require physical presence or reboots. The **Enable BitLocker** step transparently completes the remaining TPM initialization steps, if necessary:  
 
 -   Create endorsement key pair  
-
 -   Create owner authorization value and escrow to Active Directory, which must have been extended to support this value  
-
 -   Take ownership  
-
 -   Create the storage root key, or reset if already present but incompatible  
+   
+If you want the task sequence to wait for the **Enable BitLocker** step to complete the drive encryption process, then select the **Wait** option. If you do not select the **Wait** option, the drive encryption process happens in the background. The task sequence immediately proceeds to the next step.  
 
- If you want the task sequence to wait for the **Enable BitLocker** step to complete the drive encryption process, then select the **Wait** option. If you do not select the **Wait** option, the drive encryption process happens in the background. The task sequence immediately proceeds to the next step.  
+BitLocker can be used to encrypt multiple drives on a computer system (both operating system and data drives). To encrypt a data drive, first encrypt the operating system drive and complete the encryption process. This requirement is because the operating system drive stores the key protectors for the data drives. If you encrypt the operating system and data drives in the same task sequence, select the **Wait** option on the **Enable BitLocker** step for the operating system drive.  
 
- BitLocker can be used to encrypt multiple drives on a computer system (both operating system and data drives). To encrypt a data drive, first encrypt the operating system drive and complete the encryption process. This requirement is because the operating system drive stores the key protectors for the data drives. If you encrypt the operating system and data drives in the same task sequence, select the **Wait** option on the **Enable BitLocker** step for the operating system drive.  
+If the hard drive is already encrypted, but BitLocker is disabled, then the **Enable BitLocker** step re-enables the key protectors and completes quickly. Re-encryption of the hard drive is not necessary in this case.  
 
- If the hard drive is already encrypted, but BitLocker is disabled, then the **Enable BitLocker** step re-enables the key protectors and completes quickly. Re-encryption of the hard drive is not necessary in this case.  
+For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
 
- For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
-
- In the task sequence editor, click **Add**, select **Disks**, and select **Enable BitLocker** to add this step. 
+In the task sequence editor, click **Add**, select **Disks**, and select **Enable BitLocker** to add this step. 
 
 ### Properties  
  On the **Properties** tab for this step, configure the settings described in this section.  
@@ -593,16 +588,16 @@ This step runs in either a standard operating system or Windows PE. However, the
 -   **TPM and Startup Key on USB**: Select this option to use TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer.  
 
 -   **TPM and PIN**:  Select this option to use TPM and a personal identification number (PIN). When you select this option, BitLocker locks the normal boot process until the user provides the PIN.  
+   
+To encrypt a specific, non-operating system data drive, select **Specific drive**, and then select the drive from the list.  
 
- To encrypt a specific, non-operating system data drive, select **Specific drive**, and then select the drive from the list.  
-
- **Chose where to create the recovery key**  
+**Chose where to create the recovery key**  
  To specify where BitLocker creates the recovery password and escrow it in Active Directory, select **In Active Directory**. If you select this option, you must extend Active Directory for the site. BitLocker can then save the associated recovery information in Active Directory. Select **Do not create recovery key** to not create a password. Creating a password is a best practice.  
 
- **Wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution**  
+**Wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution**  
  Select this option to allow BitLocker drive encryption to complete prior to running the next step in the task sequence. If you select this option, BitLocker encrypts the entire disk volume before the user is able to log in to the computer.  
 
- The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.  
+The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.  
 
 
 
@@ -625,34 +620,31 @@ This step runs in either a standard operating system or Windows PE. However, the
  **Disk Type**  
  The type of the disk that is formatted. There are two options to select from the drop-down list: 
 
--   Standard(MBR) - Master Boot Record.  
-
+-   Standard(MBR) - Master Boot Record
 -   GPT - GUID Partition Table  
 
 > [!NOTE]  
 >  If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.  
-
- **Volume**  
+   
+**Volume**  
  Specific information about the partition or volume that the task sequence creates, including the following attributes:  
 
 -   Name  
-
 -   Remaining disk space  
-
- To create a new partition, click **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it is a boot partition. To modify an existing partition, click the partition to be modified and then click the properties button. For more information about how to configure hard drive partitions, see one of the following articles:  
+   
+To create a new partition, click **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it is a boot partition. To modify an existing partition, click the partition to be modified and then click the properties button. For more information about how to configure hard drive partitions, see one of the following articles:  
 
 -   [How to Configure UEFI/GPT-Based Hard Drive Partitions](http://go.microsoft.com/fwlink/?LinkID=272104)  
-
 -   [How to Configure BIOS/MBR-Based Hard Drive Partitions](http://go.microsoft.com/fwlink/?LinkId=272105)  
 
- To delete a partition, select the partition to be deleted and then click **Delete**.  
+To delete a partition, select the partition to be deleted and then click **Delete**.  
 
 
 
 ##  <a name="BKMK_InstallApplication"></a> Install Application  
- This step installs the specified applications, or a set of applications defined by a dynamic list of task sequence variables. When this step is run, the application installation begins immediately without waiting for a policy polling interval.  
+This step installs the specified applications, or a set of applications defined by a dynamic list of task sequence variables. When this step is run, the application installation begins immediately without waiting for a policy polling interval.  
 
- The applications that are installed must meet the following criteria:  
+The applications that are installed must meet the following criteria:  
 
 -   The application must be a deployment type of Windows Installer or Script installer. Windows app package (.appx file) deployment types are not supported.  
 
@@ -662,7 +654,7 @@ This step runs in either a standard operating system or Windows PE. However, the
 
 -   It must not initiate a restart on its own. The application must request a restart by using the standard restart code, a 3010 exit code. This behavior ensures that the task sequence step correctly handles the restart. If the application does return a 3010 exit code, the underlying task sequence engine performs the restart. After the restart, the task sequence automatically continues.  
 
- When the **Install Application** step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of the install application step. Application dependencies are not supported for stand-alone media.  
+When the **Install Application** step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of the install application step. Application dependencies are not supported for stand-alone media.  
 
 > [!NOTE]  
 >  To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio is not installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.  
@@ -683,40 +675,38 @@ This step runs in either a standard operating system or Windows PE. However, the
  Configuration Manager filters out any disabled applications, or any applications with the following settings:  
 
 -   Only when a user is logged on  
-
 -   Run with user rights  
 
-  These applications do not appear in the **Select the application to install** dialog box.
+These applications do not appear in the **Select the application to install** dialog box.
+  
+**Install applications according to dynamic variable list**  
+The task sequence installs applications using this base variable name. The base variable name is for a set of task sequence variables defined for a collection or computer. These variables specify the applications that the task sequence installs for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 01. The value for each variable must contain the name of the application and nothing else.  
 
- **Install applications according to dynamic variable list**  
- The task sequence installs applications using this base variable name. The base variable name is for a set of task sequence variables defined for a collection or computer. These variables specify the applications that the task sequence installs for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 01. The value for each variable must contain the name of the application and nothing else.  
-
- For the task sequence to install applications by using a dynamic variable list, enable the following setting on the **General** tab of the application **Properties**: **Allow this application to be installed from the Install Application task sequence action instead of deploying manually**  
+For the task sequence to install applications by using a dynamic variable list, enable the following setting on the **General** tab of the application **Properties**: **Allow this application to be installed from the Install Application task sequence action instead of deploying manually**  
 
 > [!NOTE]  
 >  You cannot install applications by using a dynamic variable list for stand-alone media deployments.  
 
- For example, to install a single application by using a task sequence variable called AA01, you specify the following variable:  
+For example, to install a single application by using a task sequence variable called AA01, you specify the following variable:  
 
 |Variable Name|Variable Value|  
 |-------------------|--------------------|  
 |AA01|Microsoft Office|  
 
- To install two applications, you would specify the following variables:  
+To install two applications, you would specify the following variables:  
 
 |Variable Name|Variable Value|  
 |-------------------|--------------------|  
 |AA01|Microsoft Lync|  
 |AA02|Microsoft Office|  
 
- The following conditions affect the applications installed by the task sequence:  
+The following conditions affect the applications installed by the task sequence:  
 
 -   If the value of a variable contains any information other than the name of the application. The task sequence does not install the application, and the task sequence continues.  
 
 -   If the task sequence does not find a variable with the specified base name and "01" suffix, the task sequence does not install any applications. 
-
-
- **If an application fails, continue installing other applications in the list**  
+   
+**If an application fails, continue installing other applications in the list**  
  This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you do not specify this setting, and the installation fails, the step immediately ends.  
 
 ### Options
@@ -731,10 +721,9 @@ Besides the default options, configure the following additional settings on the 
 
 
 ##  <a name="BKMK_InstallPackage"></a> Install Package
+Use this step to install a software package as part of the task sequence. When this step is run, the installation begins immediately without waiting for a policy polling interval.  
 
- Use this step to install a software package as part of the task sequence. When this step is run, the installation begins immediately without waiting for a policy polling interval.  
-
- The package must meet the following criteria:  
+The package must meet the following criteria:  
 
 -   It must run under the local system account and not a user account.  
 
@@ -742,7 +731,7 @@ Besides the default options, configure the following additional settings on the 
 
 -   It must not initiate a restart on its own. The software must request a restart using the standard restart code, a 3010 exit code. This behavior ensures that the task sequence step properly handles the restart. If the software does return a 3010 exit code, the underlying task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
- Programs that use the **Run another program first** option to install a dependent program are not supported when deploying an operating system. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program has not already run on the destination computer, the task sequence step fails.  
+Programs that use the **Run another program first** option to install a dependent program are not supported when deploying an operating system. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program has not already run on the destination computer, the task sequence step fails.  
 
 > [!NOTE]  
 >  The central administration site does not have the necessary client configuration policies required to enable the software distribution agent during the task sequence. When you create stand-alone media for a task sequence at the central administration site, and the task sequence includes an **Install Package** step, the following error might appear in the CreateTsMedia.log file:  
@@ -755,9 +744,9 @@ Besides the default options, configure the following additional settings on the 
 >   
 >  For more information about creating stand-alone media, see [Create stand-alone media](../deploy-use/create-stand-alone-media.md).  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE.  
+This task sequence step runs only in a standard operating system. It does not run in Windows PE.  
 
- In the task sequence editor, click **Add**, select **Software**, and select **Install Package** to add this step. 
+In the task sequence editor, click **Add**, select **Software**, and select **Install Package** to add this step. 
 
 ### Properties  
  On the **Properties** tab for this step, configure the settings described in this section.  
@@ -794,14 +783,14 @@ Besides the default options, configure the following additional settings on the 
 -   If the package ID contains lowercase characters, the software installation fails.  
 
 -   If the task sequence does not find a variable with the specified base name and "001" suffix, the task sequence does not install any packages. The task sequence continues.  
-
- **If installation of a software package fails, continue installing other packages in the list**  
+   
+**If installation of a software package fails, continue installing other packages in the list**  
  This setting specifies that the step continues if an individual software package installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you do not specify this setting, and the installation fails, the step immediately ends.  
 
 
 
 ##  <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates  
- Use this step to install software updates on the destination computer. The destination computer is not evaluated for applicable software updates until this task sequence step runs. At that time, the destination computer is evaluated for software updates like any other Configuration Manager client. For this step to install software updates, you must first deploy the updates to a collection of which the target computer is a member.  
+Use this step to install software updates on the destination computer. The destination computer is not evaluated for applicable software updates until this task sequence step runs. At that time, the destination computer is evaluated for software updates like any other Configuration Manager client. For this step to install software updates, you must first deploy the updates to a collection of which the target computer is a member.  
 >  [!IMPORTANT]
 > A best practice for optimum performance is to install the latest version of the Windows Update Agent. 
 >* For Windows 7, see [Knowledge base article 3161647](https://support.microsoft.com/kb/3161647).
@@ -884,9 +873,9 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
 -   Removes the trusted root key for the Configuration Manager client.  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE.  
+This task sequence step runs only in a standard operating system. It does not run in Windows PE.  
 
- In the task sequence editor, click **Add**, select **Images**, and select **Prepare ConfigMgr Client for Capture** to add this step. 
+In the task sequence editor, click **Add**, select **Images**, and select **Prepare ConfigMgr Client for Capture** to add this step. 
 
 ### Properties  
  This step does not require any settings on the **Properties** tab.
@@ -1171,7 +1160,6 @@ In the task sequence editor, click **Add**, select **General**, and select **Run
 Beginning with Configuration Manager version 1710, you can add a new step that runs another task sequence. This step creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
 Consider the following statements when you add a child task sequence to a task sequence:
-
  - The parent and child task sequences are effectively combined into a single policy that the client runs.
  - The environment is global. If the parent task sequence sets a variable, and then the child task sequence changes that variable, it retains the latest value. If the child task sequence creates a new variable, it is available for the rest of the parent task sequence.
  - Status messages are sent per normal for a single task sequence operation.
@@ -1194,25 +1182,18 @@ In the task sequence editor, click **Add**, select **General**, and select **Run
 
 2.  Evaluate defined rules and set task sequence variables based on the variables and values configured for rules that evaluate to true.  
 
- The task sequence automatically sets the following read-only task sequence variables:  
-
+The task sequence automatically sets the following read-only task sequence variables:  
  -   &#95;SMSTSMake  
-
  -   &#95;SMSTSModel  
-
  -   &#95;SMSTSMacAddresses  
-
  -   &#95;SMSTSIPAddresses  
-
  -   &#95;SMSTSSerialNumber  
-
  -   &#95;SMSTSAssetTag  
-
  -   &#95;SMSTSUUID  
 
- This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
+This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
 
- In the task sequence editor, click **Add**, select **General**, and select **Set Dynamic Variables** to add this step. 
+In the task sequence editor, click **Add**, select **General**, and select **Set Dynamic Variables** to add this step. 
 
 ### Properties  
  On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1228,16 +1209,17 @@ In the task sequence editor, click **Add**, select **General**, and select **Run
 
 -   **Make and Model**: Evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.   
 
-<!-- for future edits: an escape code must be used for the bolded asterisk character, but may be removed somewhere along the way. Instead of five asterisk, should be bold tags with &#42; in-between -->
+    <!-- for future edits: an escape code must be used for the bolded asterisk character, but may be removed somewhere along the way. Instead of five asterisk, should be bold tags with &#42; in-between -->
+
     Specify an asterisk (**&#42;**) and question mark (**?**) as wild cards, where **&#42;** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" matches DELL-ABC-9001 and DELL9009.
 
 -   **Task Sequence Variable**: Add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
 
     Specify one or more variables to set for a rule that evaluates to true, or set variables without using a rule. Select an existing variable, or create a custom variable.  
 
- -   **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables are not available to select.  
+     -   **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables are not available to select.  
 
- -   **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as OSDAdapter, since variable arrays are not in the list of existing task sequence variables.  
+     -   **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as OSDAdapter, since variable arrays are not in the list of existing task sequence variables.  
 
 After you select the variables for a rule, you must provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the OSDCaptureAccountPassword task sequence variable.  
 
@@ -1349,31 +1331,31 @@ In the task sequence editor, click **Add**, select **Images**, and select **Setu
 In the task sequence editor, click **Add**, select **Images**, and select **Upgrade Operating System** to add this step. 
 
 ### Properties  
- On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.  
 
- **Upgrade package**  
+**Upgrade package**  
  Select this option to specify the Windows 10 operating system upgrade package to use for the upgrade.  
 
- **Source path**  
+**Source path**  
  Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option **/InstallFrom**. You can also specify a variable, such as %mycontentpath% or %DPC01%. When you use a variable for the source path, it must be specified earlier in the task sequence. For example, if you use the [Download Package Content](#BKMK_DownloadPackageContent) step in the task sequence, you can specify a variable for the location of the operating system upgrade package. Then, you can use that variable for the source path for this step.  
 
- **Edition**  
+**Edition**  
  Specify the edition within the operating system media to use for the upgrade.  
 
- **Product key**  
+**Product key**  
  Specify the product key to apply to the upgrade process  
 
- **Provide the following driver content to Windows Setup during upgrade**  
+**Provide the following driver content to Windows Setup during upgrade**  
  Add drivers to the destination computer during the upgrade process. This setting corresponds to the Windows Setup command-line option **/InstallDriver**. The drivers must be compatible with Windows 10. Specify one of the following options:  
 
 -   **Driver package**: Click **Browse** and select an existing driver package from the list.  
 
 -   **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, it must be specified earlier in the task sequence. For example,  by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
 
- **Time-out (minutes)**  
+**Time-out (minutes)**  
  Specifies the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but does not terminate.  
 
- **Perform Windows Setup compatibility scan without starting upgrade**  
+**Perform Windows Setup compatibility scan without starting upgrade**  
  Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option **/Compat ScanOnly**. You must deploy the entire installation source when you use this option. Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes.  
 
 |Exit code|Details|  
@@ -1384,13 +1366,13 @@ In the task sequence editor, click **Add**, select **Images**, and select **Upgr
 |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|  
 |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|  
 
- For more information about this  parameter, see [Windows Setup Command-Line Options](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx)  
+For more information about this  parameter, see [Windows Setup Command-Line Options](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx)  
 
- **Ignore any dismissible compatibility messages**  
+**Ignore any dismissible compatibility messages**  
  Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option **/Compat IgnoreWarning**.  
 
- **Dynamically update Windows Setup with Windows Update**  
+**Dynamically update Windows Setup with Windows Update**  
  Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option **/DynamicUpdate**. This setting is not compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.  
 
- **Override policy and use default Microsoft Update**
+**Override policy and use default Microsoft Update**
  Temporarily override the local policy in real-time to run Dynamic Update operations and have the computer get updates from Windows Update.  
