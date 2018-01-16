@@ -58,7 +58,7 @@ manager: angrobe
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
--   **Windows 8** (x86, x64): Professional, Enterprise    
+<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate    
 
@@ -188,12 +188,12 @@ The following operating systems are based on Windows XP Embedded, and only suppo
 
 -   **Mac OS X 10.11** (El Capitan)  
 
--   **Mac OS X 10.12** (macOS Sierra )
+-   **Mac OS X 10.12** (macOS Sierra)
 
 ##  Linux and UNIX servers  
  You can manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.  
 
- The Linux and UNIX client installation packages are  are not supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the script that manages the installation of the client on each computer.  
+ The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the script that manages the installation of the client on each computer.  
 
 **Requirements and limitations:**  
 
@@ -297,7 +297,7 @@ The following operating systems are based on Windows XP Embedded, and only suppo
 
 
 ##  Mobile devices enrolled by Microsoft Intune  
- For details about the computers and devices that you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics   in the Microsoft Intune documentation library:  
+ For details about the computers and devices that you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics in the Microsoft Intune documentation library:  
 
 -   [Mobile device management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
 -   [Windows PC management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
