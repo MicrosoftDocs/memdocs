@@ -3,7 +3,7 @@ title: Task sequence built-in variables
 titleSuffix: "Configuration Manager"
 description: "Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence."
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 01/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -78,8 +78,8 @@ manager: angrobe
 |SMSTSDriverRequestResolveTimeOut|Use this variable to specify the number of seconds to wait for HTTP name resolution when for a driver catalog request during the Auto Apply Driver task sequence step. If the connection takes longer than the timeout setting, the request is cancelled. By default, the timeout is set to 60 seconds.|
 |SMSTSDriverRequestSendTimeOut|Use this variable to specify the number of seconds to use when sending a driver catalog request during the Auto Apply Driver task sequence step. If the request takes longer than the timeout setting, the request is cancelled. By default, the timeout is set to 60 seconds.|
 |SMSTSErrorDialogTimeout|When an error occurs in a task sequence, a dialog box is displayed that is automatically dismissed after a number of seconds specified by this variable. By default, the dialog box is automatically dismissed after **900** seconds (15 minutes).|  
-| TSDisableProgressUI | Use this variable to hide or display task sequence progress in different sections of the task sequence. | 
-|TSErrorOnWarning|Use this variable to specify whether the task sequence engine considers a detected warning as an error during the Application Installation task sequence step. The task sequence sets the _TSAppInstallStatus variable to **Warning** when one or more applications, or a required dependency, did not install because a requirement was not met. When you set the TSErrorOnWarning variable to **True** and the _TSAppInstallStatus variable is set to Warning, it is treated as an error. A value of **False** is the default behavior.| 
+| TSDisableProgressUI | <!-- 1354291 --> Beginning in Configuration Manager version 1706, use this variable to control when the task sequence displays progress to end users. Set this variable multiple times in a task sequence to hide or display progress at different times. To hide task sequence progress, set the value of this variable to **True**. To display task sequence progress, set the value of this variable to **False**. | 
+| TSErrorOnWarning |Use this variable to specify whether the task sequence engine considers a detected warning as an error during the Application Installation task sequence step. The task sequence sets the _TSAppInstallStatus variable to **Warning** when one or more applications, or a required dependency, did not install because a requirement was not met. When you set the TSErrorOnWarning variable to **True** and the _TSAppInstallStatus variable is set to Warning, it is treated as an error. A value of **False** is the default behavior.| 
 |SMSTSLanguageFolder|Use this variable to change the display language of a language neutral boot image.|  
 |SMSTSLocalDataDrive|Specifies where temporary files are stored on the destination computer while the task sequence is running.<br /><br /> This variable must be set before the task sequence starts, such as by setting a collection variable. Once the task sequence starts, Configuration Manager defines the _SMSTSMDataPath variable once the Task Sequence starts.|  
 |SMSTSMP|Use this variable to specify the URL or IP address of the Configuration Manager management point.|  
