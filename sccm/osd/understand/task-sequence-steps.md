@@ -67,7 +67,7 @@ In the task sequence editor, click **Add**, select **Images**, and select **Appl
 
 -   **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
 
- **Delete all content on the partition before applying the image**  
+**Delete all content on the partition before applying the image**  
  Specifies that the task sequence deletes all files on the target partition before installing the image. By not deleting the content of the partition, this step can be used to apply additional content to a previously targeted partition.  
 
 
@@ -398,8 +398,8 @@ In the task sequence editor, click **Add**, select **Settings**, and select **Ca
      For more information about migrating data using hard-links, see [Hard-Link Migration Store](http://go.microsoft.com/fwlink/p/?LinkId=240222)  
 
 -   **Capture in off-line mode (Windows PE only)**: Enable this setting to capture the user state while in Windows PE instead of the full operating system.  
-
- **Capture by using Volume Copy Shadow Services (VSS)**  
+    
+**Capture by using Volume Copy Shadow Services (VSS)**  
  This option allows you to capture files even if they are locked for editing by another application.  
 
 
@@ -1148,9 +1148,9 @@ In the task sequence editor, click **Add**, select **General**, and select **Run
 >   
 >  `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 >   
->  The following example contains invalid parameters. The bold items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script does not consume these parameters.  
+>  The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script does not consume these parameters.  
 >   
->  **`-NoLogo -ExecutionPolicy Unrestricted`** `-File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+>  `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 
  **PowerShell execution policy**  
  Determine which Windows PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:  
@@ -1228,7 +1228,8 @@ In the task sequence editor, click **Add**, select **General**, and select **Run
 
 -   **Make and Model**: Evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.   
 
-    Specify an asterisk (*****) and question mark (**?**) as wild cards, where ***** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" matches DELL-ABC-9001 and DELL9009.
+<!-- for future edits: an escape code must be used for the bolded asterisk character, but may be removed somewhere along the way. Instead of five asterisk, should be bold tags with &#42; in-between -->
+    Specify an asterisk (**&#42;**) and question mark (**?**) as wild cards, where **&#42;** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" matches DELL-ABC-9001 and DELL9009.
 
 -   **Task Sequence Variable**: Add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
 
