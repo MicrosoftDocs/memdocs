@@ -1211,6 +1211,8 @@ In the task sequence editor, click **Add**, select **General**, and select **Set
 
     <!-- for future edits: an escape code must be used for the bolded asterisk character, but may be removed somewhere along the way. Instead of five asterisk, should be bold tags with &#42; in-between -->
 
+    Starting in Configuration Manager version 1610, you can specify an asterisk (**&#42;**) and question mark (**?**) as wild cards, where **&#42;** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" will match DELL-ABC-9001 and DELL9009. 
+
     Specify an asterisk (**&#42;**) and question mark (**?**) as wild cards, where **&#42;** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" matches DELL-ABC-9001 and DELL9009.
 
 -   **Task Sequence Variable**: Add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
@@ -1375,4 +1377,4 @@ For more information about this  parameter, see [Windows Setup Command-Line Opti
  Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option **/DynamicUpdate**. This setting is not compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.  
 
 **Override policy and use default Microsoft Update**
- Temporarily override the local policy in real-time to run Dynamic Update operations and have the computer get updates from Windows Update.  
+ Temporarily override the local policy in real-time to run Dynamic Update operations and have the computer get updates from Windows Update.
