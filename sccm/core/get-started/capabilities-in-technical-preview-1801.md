@@ -62,13 +62,13 @@ Phased deployments automate a coordinated, sequenced rollout of software without
   Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
  
 **Create a phased deployment for a task sequence** </br></br>
-   1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
-   2. Right-click on an existing task sequence and select **Create Phased Deployment**. 
-   3. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create default pilot and production phases**. 
-   4. Populate the **Pilot collection** and **Production Collection** fields. Select **Next**.
-    5. On the **Scheduling** tab, choose one option for each of the scheduling settings and select **Next** when complete.  
-    6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
-    7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
+1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
+2. Right-click on an existing task sequence and select **Create Phased Deployment**. 
+3. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create default pilot and production phases**. 
+4. Populate the **Pilot collection** and **Production Collection** fields. Select **Next**.
+5. On the **Scheduling** tab, choose one option for each of the scheduling settings and select **Next** when complete. 
+6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
+7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
 
 ## Deployment templates for task sequences
 The deployment wizard for task sequences can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
@@ -78,12 +78,12 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 
  **Create a deployment template for a new task sequence deployment** <br/> <br/>
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
-  2. Right-click on a task sequence and select **Deploy**. 
-  3. On the **General** tab, note there is now an option to **Select Deployment Template**. 
-  4. Continue through the **Deploy Software Wizard** selecting the deployment settings for the task sequence. 
-  5. When you reach the **Summary** tab of the **Deploy Software Wizard**, click on **Save As Template**.
-  6. Give the template a name and select the settings to save in the template. 
-  7. Click **Save**. The template is now available for use from the **Select Deployment Template** option.
+2. Right-click on a task sequence and select **Deploy**. 
+3. On the **General** tab, note there is now an option to **Select Deployment Template**. 
+4. Continue through the **Deploy Software Wizard** selecting the deployment settings for the task sequence. 
+5. When you reach the **Summary** tab of the **Deploy Software Wizard**, click on **Save As Template**.
+6. Give the template a name and select the settings to save in the template. 
+7. Click **Save**. The template is now available for use from the **Select Deployment Template** option.
 <!--1357391_Create Deployment Template for TS-->
 
 ## Improvements to automatic deployment rule evaluation schedule
