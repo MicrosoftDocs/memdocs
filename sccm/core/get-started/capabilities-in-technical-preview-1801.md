@@ -69,15 +69,7 @@ Phased deployments automate a coordinated, sequenced rollout of software without
     5. On the **Scheduling** tab, choose one option for each of the scheduling settings and select **Next** when complete.  
     6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
     7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
-  
- <!-- 
-change to 1357405- not adding stop criteria as this TP is wizard walk through  only.
- On the **Stop Criteria** tab, select an option to automatically stop deployment. 
-    - Criteria for automatic stop of the deployments in all phases
-        - Percentage of deployments failed in all phases
-        - Number of devices with failed deployments in all phases 
- -->
- 
+
 ## Deployment templates for task sequences
 The deployment wizard for task sequences can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
 
