@@ -334,7 +334,16 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
         > [!IMPORTANT]  
         >  A conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the user sets the maximum run time to a period that exceeds the length of any available maintenance window, that deployment type will not be run.  
 
-2.  **Estimated installation time (minutes)**--Specify the estimated time that installation of the deployment type will take. This is displayed to users of Software Center.  
+    -   **Estimated installation time (minutes)**--Specify the estimated time that installation of the deployment type will take. This is displayed to users of Software Center.  
+
+    -   **Specify specific reboot behavior**--Specify the post-installation action. The following options are available:  
+
+        -   **Determine behavior based on return codes**--Handle reboots based on the codes configured on the Return Codes tab.  The Software Center will display **Might Require a Reboot**.  If a user is logged in during the install they will be prompted depending on the deployment's User Experience configuration.  
+
+        -   **No specific action**--No reboot required after installation.  The Software Center will report that no reboot is required.  
+        -   **The software installation program might force a device restart**--Configuration Manager will not control or initiate a reboot but the actual installation might do so without warning.  Use this setting to prevent Configuration Manager from reporting installation failure when the installer initiates a reboot.  The Software Center will display **Might Require a Reboot**.  
+
+        -   **Configuration Manager client will force a mandatory device restart**--Configuration Manager will force a device reboot after successfull installation.  The Software Center will report that a reboot is required.  If a user is logged in during the install they will be prompted depending on the deployment's User Experience configuration.
 
 ## Specify requirements for the deployment type  
 
