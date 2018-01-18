@@ -26,7 +26,7 @@ manager: angrobe
 This article details the Windows versions that you can use to host a System Center Configuration Manager site or site system role.
 
 
-Use the information in this topic with the information in the following articles:
+Use the information in this article with the information in the following articles:
 -   [Recommended hardware for Configuration Manager](../../../core/plan-design/configs/recommended-hardware.md)
 -   [Site and site system prerequisites for Configuration Manager](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 -   [Size and scale numbers for Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md)
@@ -268,7 +268,7 @@ This operating system is not supported for site servers or site system roles wit
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configuration support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## Windows 8 (x86, x64): Professional and Enterprise
+<!--## Windows 8 (x86, x64): Professional and Enterprise
 **Site system servers:**  
 
 -   Distribution point  
@@ -278,6 +278,8 @@ This operating system is not supported for site servers or site system roles wit
     -   Distribution points on this operating system version do not support Multicast.  
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+   
+    -  - -removed Jan 12,2018 sms505863-->
 
 ## Windows 7 with SP1 (x86, x64): Professional, Enterprise, and Ultimate  
 **Site system servers:**  

@@ -3,7 +3,7 @@ title: "Manage access to O365 services for managed PCs"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure conditional access for PCs that are managed by System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 01/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -22,10 +22,12 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning with version 1602 of Configuration Manager, you can configure conditional access for PCs managed by System Center Configuration Manager.  
+This article describes how to configure conditional access for PCs managed by Configuration Manager.  
 
-> [!Tip]  
+<!--
+ >> [!Tip]  
 > This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
+-->
 
 For information on configuring conditional access for devices enrolled and managed by Microsoft Intune, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). That article also covers devices that are domain joined and not evaluated for compliance.
 
@@ -42,16 +44,16 @@ For information on configuring conditional access for devices enrolled and manag
 
 ## Supported Windows Servers
 
--   2008 R2
--   2012
--   2012 R2
--   2016
+-   Windows Server 2008 R2
+-   Windows Server 2012
+-   Windows Server 2012 R2
+-   Windows Server 2016
 
 	> [!IMPORTANT]
-	> For Windows Servers that may have multiple users signed in simultaneously, the same conditional access policies must be deployed to all of the users signed in.
+	> For Windows Servers that may have multiple users signed in simultaneously, deploy the same conditional access policies to all of these users.
 
 ## Configure conditional access  
- To set up conditional access, you must first create a compliance policy and configure conditional access policy. When you configure conditional access policies for PCs, you can require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  
+ To set up conditional access, you must first create a compliance policy and configure conditional access policy. When you configure conditional access policies for PCs, you can require that the PCs be compliant in order to access Exchange Online and SharePoint Online services.  
 
 ### Prerequisites  
 
@@ -78,7 +80,7 @@ For information on configuring conditional access for devices enrolled and manag
 
 -   **Require registration in Azure Active Directory:** This rule checks if the user's device is work-place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [Automatic device registration with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **All required updates installed with a deadline older than a certain number of days:** This rule checks if the user's device has all required updates (specified in the Required automatic updates rule) within deadline and grace period specified by you, and automatically install any pending required updates.  
+-   **All required updates installed with a deadline older than a certain number of days:** Specify the value for the grace period from the deployment deadline for required updates on the user's device. Adding this rule also automatically installs any pending required updates. Specify the required updates in the **Required automatic updates** rule.   
 
 -   **Require BitLocker drive encryption:** This rule checks if the primary drive (for example, C:\\) on the device is BitLocker encrypted. If Bitlocker encryption is not enabled on the primary device, access to email and SharePoint services is blocked.  
 
@@ -131,7 +133,7 @@ For information on configuring conditional access for devices enrolled and manag
 
 5.  Set the Windows PC requirement  to**Devices must be compliant option**.  
 
-6.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy will apply.  
+6.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy applies.  
 
     > [!NOTE]  
     >  The same security user group should be used for deploying compliancy policy and the Targeted Group for conditional access policy.  
