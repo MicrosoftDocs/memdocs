@@ -65,6 +65,7 @@ The following products and technologies are supported by this branch of Configur
 
 -   Only the following versions of SQL Server are supported:  
 
+    -   SQL Server 2017 (with cumulative update 2, and later) beginning in Configuration Manager version 1710
     -   SQL Server 2016 (with no Service Pack, and later)
     -   SQL Server 2014 (with Service Pack 1, and later)
     -   SQL Server 2012 (with Service Pack 3, or later)
@@ -74,20 +75,20 @@ The following products and technologies are supported by this branch of Configur
 
       -   Windows 10  
       -   Windows 8.1  
-      -   Windows 8  
       -   Windows 7  
 
 ##  <a name="bkmk_install"></a> Install and update the Technical Preview  
  The System Center Configuration Manager Technical Preview is distinct from the current release of System Center Configuration Manager.  
 
- To use the technical preview, you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version. Typically, new versions of the Technical Preview are available each month.
+ To use the technical preview, you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up-to-date with the most recent preview version. Typically, new versions of the Technical Preview are available each month.
 
 Each preview release is supported up until three successive releases are available. Meaning, when version 1708 released, version 1704 was no longer  in support, but versions 1705, 1706, and 1707 remained in support. When a baseline falls out of support, it is still supported for installing a new Technical Preview site until a new baseline version is available, so long as you then update that install to a supported version. Update to the latest available version and then repeat that process until you can install the most current version of the technical preview.
 
 > [!TIP]  
 >  When you install  an update to the  technical preview, you  update your preview installation to that new technical preview version.    A technical preview installation  never has the option to upgrade to a current branch installation, nor  receive updates from the current branch release.  
 
-**Active baseline versions of the Technical Preview:**  
+**Active baseline versions of the Technical Preview:**
+   
 You can install a baseline version for up to one year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
 -  **Technical Preview 1711** - The Configuration Manager Technical Preview 1711 is available as both an in-console update and as a new baseline version. Download baseline versions [from the TechNet Evaluation Center](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -145,7 +146,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  |Check compliance from Software Center for co-managed devices<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|[Version 1710](/sccm/core/clients/manage/co-management-overview)    |
  |Limited support for CNG certificates<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|[Version 1710](/sccm/core/plan-design/network/cng-certificates-overview)    |
  |Support for Exploit Guard <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
- |Improved descriptions for pending computer restarts   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/core/clients/manage/manage-clients)    |
+ |Improved descriptions for pending computer restart   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/core/clients/manage/manage-clients)    |
  |Device Guard policy changes   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
  |Configure and deploy Windows Defender Application Guard policies   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Version 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
  |Improvements for deploying PowerShell scripts from Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Version 1710](/sccm/apps/deploy-use/create-deploy-scripts)
