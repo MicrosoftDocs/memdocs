@@ -108,7 +108,15 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1801
-- [Feature Name](capabilities-in-technical-preview-1801.md#feature-heading-name) <!-- TFSid --> 
+- [Create phased deployments](capabilities-in-technical-preview-1801.md#create-phased-deployments) <!-- 1357405 --> 
+- [Deployment templates for task sequences](capabilities-in-technical-preview-1801.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
+- [Co-management reporting](capabilities-in-technical-preview-1801.md#co-management-reporting) <!-- 1356648 --> 
+- [Improvements to automatic deployment rule evaluation schedule](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) <!-- 1357133 --> 
+- [Reassign distribution point](capabilities-in-technical-preview-1801.md#reassign-distribution-point) <!-- 1306937 --> 
+- [Improvements to hardware inventory](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory) <!-- 1357389 --> 
+- [Improvements to client settings for Software Center](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) <!-- 1355146 --> 
+- [New settings for Windows Defender Application Guard](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) <!-- 1356256 --> 
+- [Improvements to Run Scripts](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) <!-- 1236459 --> 
 
 
 
