@@ -54,14 +54,16 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
  -  Task 2              
 -->
 
+
+
 ## Create phased deployments
+<!-- 1357405 -->
 Phased deployments automate a coordinated, sequenced rollout of software without creating multiple deployments. In this Technical Preview version, the phased deployment wizard can be completed for task sequences in the admin console. However, deployments are not created. 
 
-<!--1357405- Phased Deployments-->
 ### Try it out!  
   Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
  
-**Create a phased deployment for a task sequence** </br></br>
+**Create a phased deployment for a task sequence** </br>
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
 2. Right-click on an existing task sequence and select **Create Phased Deployment**. 
 3. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create default pilot and production phases**. 
@@ -70,13 +72,16 @@ Phased deployments automate a coordinated, sequenced rollout of software without
 6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
 7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
 
+
+
 ## Deployment templates for task sequences
+<!-- 1357391 -->
 The deployment wizard for task sequences can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
 
 ### Try it out!  
 Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked. 
 
- **Create a deployment template for a new task sequence deployment** <br/> <br/>
+ **Create a deployment template for a new task sequence deployment** <br/> 
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
 2. Right-click on a task sequence and select **Deploy**. 
 3. On the **General** tab, note there is now an option to **Select Deployment Template**. 
@@ -84,10 +89,36 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 5. When you reach the **Summary** tab of the **Deploy Software Wizard**, click on **Save As Template**.
 6. Give the template a name and select the settings to save in the template. 
 7. Click **Save**. The template is now available for use from the **Select Deployment Template** option.
-<!--1357391_Create Deployment Template for TS-->
+
+
+
+## Co-management reporting
+<!-- 1356648 -->
+If you are using the [co-management](/sccm/core/clients/manage/co-management-overview) capabilities, you can now view a dashboard with information about co-management in your environment. In the Configuration Manager console, navigate to the **Monitoring** workspace, expand **Upgrade Readiness**, and select the **Co-management** dashboard. The dashboard includes the following tiles:
+- **Co-managed devices**: the percentage of devices in your environment that you enabled for co-management
+- **OS distribution**: the breakdown of operating systems (OS) by version. This chart uses the following groupings:
+   - Windows 7 & 8.x
+   - Windows 10 lower than 1709
+   - Windows 10 1709 and above
+  > [!NOTE] 
+  > Windows 10, version 1709 and later, is a prerequisite for co-management
+- **Co-management status**: the breakdown of device success or failure in the following categories:
+   - Success, hybrid Azure AD Joined
+   - Success, Azure AD Joined
+   - Failure: Auto-enrollment failed
+- **Workload transition**: a bar chart showing the number of devices that you transitioned to Microsoft Intune for the three available workloads: 
+   - Compliance Policies
+   - Resource Access
+   - Windows Update for Business
+
+### Prerequisites
+- The computer that runs the Configuration Manager console requires Internet Explorer 9 or later.
+
+
 
 ## Improvements to automatic deployment rule evaluation schedule
-Based upon your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8819518-software-update-patch-tuesday-scheduling), you can now schedule automatic deployment rule (ADR) evaluation to be offset from a base day. For example, an offset of two days after the second Tuesday of the month evaluates the rule on Thursday. <!--1357133- ADR eval schedule relative to Patch Tuesday-->
+<!-- 1357133 -->
+Based upon your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8819518-software-update-patch-tuesday-scheduling), you can now schedule automatic deployment rule (ADR) evaluation to be offset from a base day. For example, an offset of two days after the second Tuesday of the month evaluates the rule on Thursday. 
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked. <br/>
@@ -101,9 +132,29 @@ Based upon your [user voice feedback](https://configurationmanager.uservoice.com
 6. Check **Offset (days)** and the number of days for the offset then **OK** when finished.  
 7. Complete the rest of the **Create Automatic Deployment Rule Wizard**. 
 
+
+
+## Reassign distribution point
+<!-- 1306937 -->
+Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to retain distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly in terms of time and network bandwidth to distribute to these remote servers. 
+
+This feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first perform this action on a single distribution point, and then proceed with additional servers one at a time.
+
+> [!IMPORTANT]
+> The site system server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you cannot reassign the distribution point. You cannot reassign a cloud distribution point. 
+
+This option is not functional with this release due to the Technical Preview limit of a single primary site. Consider the scenario, and then send **Feedback** from the **Home** tab of the ribbon, regarding the capabilities of this action.
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Distribution Points** node.
+2. Right-click the target distribution point, and select **Reassign Distribution Point**. 
+  ![Reassign Distribution Point](media/1306937-reassign-dp.png)
+3. Select the site server and site code to which you want to reassign this distribution point. 
+  ![Select a Site Server](media/1306937-select-site.png)
+
+
+
 ## Improvements to hardware inventory
+<!-- 1357389 -->
 For newly added classes, string lengths greater than 255 characters can be specified for hardware inventory properties that are not keys.
-<!--1357389 - HINV string length-->
 
 ### Try it out!  
 Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.<br/>
@@ -117,7 +168,10 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 7. Ensure that the edited property is selected for **Add Hardware Inventory Class** and click **OK**. 
 8. Collect hardware inventory with the newly added class containing a property greater than 255 characters in length. 
 
+
+
 ## Improvements to client settings for Software Center
+<!-- 1351224 & 1355146 -->
 In this version of the Technical Preview, improvements have been made for Software Center customization under the client settings. 
 
 1. The client settings for Software Center now have a **Customize** button.
@@ -133,17 +187,21 @@ In this version of the Technical Preview, improvements have been made for Softwa
 2.  Click on the **Customize** button. Try out the different customization settings including the preview.
 3. Enable the setting **Hide unapproved applications in Software Center**. Observe the changes in Software Center. 
 
+
+
 ## New settings for Windows Defender Application Guard
+<!-- 1356256 -->
 For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy). 
 1. Websites can be given access to the host’s virtual graphics processor. 
 2. Files downloaded inside the container can be persisted on the host. </br>
- <!--1356256--WD Suite support for files and virtual gpu-->
+
+
 
 ## Improvements to Run Scripts
+<!-- 1236459 -->
 The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now allows you to import and run signed PowerShell scripts. 
 - To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
 - Imported signed scripts cannot be edited after import.
-<!--1236459_import_signed_scripts--->
 <!--1236459_import_signed_scripts POSSIBLE ISSUE, waiting on confirmation
 [!IMPORTANT] In this Technical Preview, there is a temporary limitation where scripts can only be imported in the Run Scripts feature and can't be edited directly from the console. 
 --->
