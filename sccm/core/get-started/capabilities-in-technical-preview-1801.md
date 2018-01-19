@@ -3,7 +3,7 @@ title: "Technical Preview 1801 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1801 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/19/2018
+ms.date: 01/19/2018 
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -182,12 +182,11 @@ For Windows 10 version 1709 and later devices, there are two new host interactio
 The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now allows you to import and run signed PowerShell scripts. 
 - To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
 - Imported signed scripts cannot be edited after import.
-
-[!IMPORTANT] In this Technical Preview, there are two temporary limitations.
-   1. Scripts can only be imported in the Run Scripts feature and can't be edited directly from the console.
-   2. Scripts imported with a non-Unicode encoding may display in the console incorrectly. The script will still execute as originally written
-
-
+    
+[!IMPORTANT]
+ In this Technical Preview, there are two temporary limitations.
+    a. Scripts can only be imported in the Run Scripts feature and can't be edited directly from the console.
+    b. Scripts imported with a non-Unicode encoding may display in the console incorrectly. The script will still execute as originally written
 
 
 
