@@ -110,7 +110,6 @@ The following are the capabilities delivered with the most recent Configuration 
 
 ### Technical Preview version 1801
 - [Create phased deployments](capabilities-in-technical-preview-1801.md#create-phased-deployments) <!-- 1357405 --> 
-- [Deployment templates for task sequences](capabilities-in-technical-preview-1801.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
 - [Co-management reporting](capabilities-in-technical-preview-1801.md#co-management-reporting) <!-- 1356648 --> 
 - [Improvements to automatic deployment rule evaluation schedule](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) <!-- 1357133 --> 
 - [Reassign distribution point](capabilities-in-technical-preview-1801.md#reassign-distribution-point) <!-- 1306937 --> 
