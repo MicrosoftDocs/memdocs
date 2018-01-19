@@ -3,7 +3,7 @@ title: "Technical Preview 1801 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1801 for System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/19/2018
+ms.date: 01/19/2018 
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -68,29 +68,9 @@ Phased deployments automate a coordinated, sequenced rollout of software without
 2. Right-click on an existing task sequence and select **Create Phased Deployment**. 
 3. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create default pilot and production phases**. 
 4. Populate the **Pilot collection** and **Production Collection** fields. Select **Next**.
-5. On the **Scheduling** tab, choose one option for each of the scheduling settings and select **Next** when complete. 
+5. On the **Settings** tab, choose one option for each of the scheduling settings and select **Next** when complete. 
 6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
 7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
-
-
-
-## Deployment templates for task sequences
-<!-- 1357391 -->
-The deployment wizard for task sequences can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
-
-### Try it out!  
-Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked. 
-
- **Create a deployment template for a new task sequence deployment** <br/> 
-1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
-2. Right-click on a task sequence and select **Deploy**. 
-3. On the **General** tab, note there is now an option to **Select Deployment Template**. 
-4. Continue through the **Deploy Software Wizard** selecting the deployment settings for the task sequence. 
-5. When you reach the **Summary** tab of the **Deploy Software Wizard**, click on **Save As Template**.
-6. Give the template a name and select the settings to save in the template. 
-7. Click **Save**. The template is now available for use from the **Select Deployment Template** option.
-
-
 
 ## Co-management reporting
 <!-- 1356648 -->
@@ -164,7 +144,7 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 3. Click the **Connect** button.
 4. Fill in **Computer Name**, **WMI namespace**, select **recursive** if needed. Provide credentials if necessary to connect. Click **Connect** to view the namespace classes.
 5. Select a new class then click **Edit**.
-6. Change the **Length** of at least one property, other than the key, to be greater than 255. Click **OK**. 
+6. Change the **Length** of at least one property that is a string, other than the key, to be greater than 255. Click **OK**. 
 7. Ensure that the edited property is selected for **Add Hardware Inventory Class** and click **OK**. 
 8. Collect hardware inventory with the newly added class containing a property greater than 255 characters in length. 
 
@@ -202,9 +182,12 @@ For Windows 10 version 1709 and later devices, there are two new host interactio
 The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now allows you to import and run signed PowerShell scripts. 
 - To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
 - Imported signed scripts cannot be edited after import.
-<!--1236459_import_signed_scripts POSSIBLE ISSUE, waiting on confirmation
-[!IMPORTANT] In this Technical Preview, there is a temporary limitation where scripts can only be imported in the Run Scripts feature and can't be edited directly from the console. 
---->
+    
+>[!IMPORTANT]
+>In this Technical Preview, there are two temporary limitations.
+>- Scripts can only be imported in the Run Scripts feature and can't be edited directly from the console.
+>- Scripts imported with a non-Unicode encoding may display in the console incorrectly. The script will still execute as originally written.
+
 
 
 
