@@ -35,9 +35,7 @@
       "searchScope": ["ConfigMgr"]
       },
     "fileMetadata": {},
-    "template": [
-      "docs.html"
-    ],
+    "template": [],
     "dest": "sccm"
   }
 }
