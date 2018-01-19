@@ -183,10 +183,12 @@ The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now a
 - To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
 - Imported signed scripts cannot be edited after import.
     
-[!IMPORTANT]
- In this Technical Preview, there are two temporary limitations.
-    a. Scripts can only be imported in the Run Scripts feature and can't be edited directly from the console.
-    b. Scripts imported with a non-Unicode encoding may display in the console incorrectly. The script will still execute as originally written
+>[!IMPORTANT]
+>In this Technical Preview, there are two temporary limitations.
+>- Scripts can only be imported in the Run Scripts feature and can't be edited directly from the console.
+>- Scripts imported with a non-Unicode encoding may display in the console incorrectly. The script will still execute as originally written.
+
+
 
 
 
