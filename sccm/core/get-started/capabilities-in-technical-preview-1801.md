@@ -129,9 +129,9 @@ In this version of the Technical Preview, improvements have been made for Softwa
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
-1. In the **Administration** workspace, click on **Client Settings** highlight a client device setting to edit. Right-click then select **Properties** then **Software Center**.
+1. In the **Administration** workspace, click on **Client Settings**. Select a client device setting to edit. Right-click on it then select **Properties** then **Software Center**.
 2.  Click on the **Customize** button. Try out the different customization settings including the preview.
-3. Enable the setting **Hide unapproved applications in Software Center** and observe the changes in Software Center. 
+3. Enable the setting **Hide unapproved applications in Software Center**. Observe the changes in Software Center. 
 
 ## New settings for Windows Defender Application Guard
 For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy). 
