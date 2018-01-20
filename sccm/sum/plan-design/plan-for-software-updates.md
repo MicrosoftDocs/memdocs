@@ -327,4 +327,4 @@ In previous versions of Configuration Manager, when a restart is pending for Win
 Once you plan for software updates, see [Prepare for software updates management](../get-started/prepare-for-software-updates-management.md).
 
 **For more information:** <br/>
-[Fundamentals of Configuration Manager as a service and Windows as a service](sccm/core/understand/configuration-manager-and-windows-as-service.md)
+[Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service.md)
