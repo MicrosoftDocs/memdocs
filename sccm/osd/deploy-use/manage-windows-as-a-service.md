@@ -280,4 +280,4 @@ Use the following procedure to modify the properties of a servicing plan.
     >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 **For more information:** <br/>
-[Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/Configuration-Manager-and-Windows-as-a-service.md)
+[Fundamentals of Configuration Manager as a service and Windows as a service](sccm/core/understand/configuration-manager-and-windows-as-service.md)
