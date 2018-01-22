@@ -15,7 +15,7 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 
 ---
 # Supported SQL Server versions for System Center Configuration Manager
