@@ -189,6 +189,9 @@ You can use this version of SQL Server with no minimum cumulative update version
 
  Configuration Manager supports two exceptions to this collation to meet standards that are defined in GB18030 for use in China. For more information, see [International support in System Center Configuration Manager](../../../core/plan-design/hierarchy/international-support.md).  
 
+ **Database Compatibility Level:** </br>
+ Configuration Manager requires that the compatibility level for the site database be no less than the lowest supported SQL Server version for your Configuration Manager version. For instance, beginning with version 1702, you will need to have a [database compatibility level](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) greater than or equal to 110. <!-- SMS.506266--> 
+
  **SQL Server features:**  
  Only the **Database Engine Services** feature is required for each site server.  
 
