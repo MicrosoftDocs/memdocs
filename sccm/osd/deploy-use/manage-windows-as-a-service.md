@@ -24,7 +24,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
- In System Center Configuration Manager, you can view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch systems are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB).  
+ In System Center Configuration Manager, you can view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch systems are kept up-to-date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB).  
 
  For more information about Windows 10 servicing options, see  [Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
@@ -48,7 +48,7 @@ manager: angrobe
     -   **Operating System Build**: Specified the operating system build. For example, **10.0.10240** (RTM) or **10.0.10586** (version 1511)  
 
 -   The service connection point must be installed  and  configured for **Online, persistent connection** mode to see data on the Windows 10 servicing dashboard. When you are  in offline mode, you  will not  see data updates in the dashboard until you  get Configuration Manager servicing updates.   
-     For more information, see [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+      For more information, see [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 
 -   Internet Explorer 9 or later must be installed on the computer that runs the Configuration Manager console.  
@@ -278,3 +278,6 @@ Use the following procedure to modify the properties of a servicing plan.
 
     > [!NOTE]  
     >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
+
+**For more information:** <br/>
+[Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service.md)
