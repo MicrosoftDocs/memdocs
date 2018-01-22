@@ -107,35 +107,16 @@
 
 <!-- Only show the current plus three, i.e., four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1802](get-started/capabilities-in-technical-preview-1802.md)
 ###  [Capabilities in 1801](get-started/capabilities-in-technical-preview-1801.md)
 ###  [Capabilities in 1712](get-started/capabilities-in-technical-preview-1712.md)
 ###  [Capabilities in 1711](get-started/capabilities-in-technical-preview-1711.md)
-###  [Capabilities in 1710](get-started/capabilities-in-technical-preview-1710.md)
 
 <!-- No longer in support
+###  [Capabilities in 1710](get-started/capabilities-in-technical-preview-1710.md)
 ###  [Capabilities in 1709](get-started/capabilities-in-technical-preview-1709.md)
 ###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
-###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
-###  [Capabilities in 1705](get-started/capabilities-in-technical-preview-1705.md)
-###  [Capabilities in 1704](get-started/capabilities-in-technical-preview-1704.md)
-###  [Capabilities in 1703](get-started/capabilities-in-technical-preview-1703.md)
-###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
-###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
-###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
-###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
-###  [Capabilities in 1610](get-started/capabilities-in-technical-preview-1610.md)
-###  [Capabilities in 1609](get-started/capabilities-in-technical-preview-1609.md)
-###  [Capabilities in 1608](get-started/capabilities-in-technical-preview-1608.md)
-###  [Capabilities in 1607](get-started/capabilities-in-technical-preview-1607.md)
-###  [Capabilities in 1606](get-started/capabilities-in-technical-preview-1606.md)
-###  [Capabilities in 1605](get-started/capabilities-in-technical-preview-1605.md)
-###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
-###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
-###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
-###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
-###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
-###  [Capabilities in 1511](get-started/capabilities-in-technical-preview-1511.md)
 -->
 
 ##   [Migrate data between hierarchies](migration/migrate-data-between-hierarchies.md)
