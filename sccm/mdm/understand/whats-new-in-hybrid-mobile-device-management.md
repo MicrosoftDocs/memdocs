@@ -123,6 +123,11 @@ We have added **Ownership Type** to the Device Details screen on the Company Por
 
 ### New in Microsoft Intune  
 
+- **Helping your users help themselves with the Company Portal app for Android** <!-- 1573324, 1573150, 1558616, 1564878 -->      
+  The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
+    - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
+    - End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](https://docs.microsoft.com/intune-user-help/power-saving-mode-android). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](https://docs.microsoft.com/intune-user-help/send-logs-to-microsoft-android).
+
 - **Device setup progress indicator in Android Company Portal** <!--1565657-->    
   The Company Portal app for Android shows a device setup progress indicator when a user is enrolling their device. The indicator shows new statuses, beginning with "Setting up your device...", then "Registering your device...", then "Finishing registering your device...", then "Finishing setting up your device...".  
 
