@@ -190,6 +190,8 @@ The following operating systems are based on Windows XP Embedded, and only suppo
 
 -   **Mac OS X 10.12** (macOS Sierra)
 
+-   **Mac OS X 10.13** (macOS High Sierra)
+
 ##  Linux and UNIX servers  
  You can manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.  
 
