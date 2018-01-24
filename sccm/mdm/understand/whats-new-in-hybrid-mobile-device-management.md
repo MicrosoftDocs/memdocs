@@ -37,6 +37,17 @@ Each section of this article lists hybrid features under three different categor
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
+
+## January 2018
+
+### New in Microsoft Intune
+
+- **Remote lock available in Company Portal app for Windows 10** <!--676506-->    
+  End users can now remotely lock their devices from the Company Portal app for Windows 10. This will not be displayed for the local device they're actively using.
+
+- **Easier resolution of compliance issues for the Company Portal app for Windows 10** <!--676546-->    
+  End users with Windows devices will be able to tap the non-compliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue.
+
 ## December 2017
 
 ### New in Microsoft Intune
@@ -111,6 +122,11 @@ We have added **Ownership Type** to the Device Details screen on the Company Por
 
 
 ### New in Microsoft Intune  
+
+- **Helping your users help themselves with the Company Portal app for Android** <!-- 1573324, 1573150, 1558616, 1564878 -->      
+  The Company Portal app for Android has added instruction for end users to help them understand, and where possible, self-solve on new use cases.
+    - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
+    - End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](https://docs.microsoft.com/intune-user-help/power-saving-mode-android). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](https://docs.microsoft.com/intune-user-help/send-logs-to-microsoft-android).
 
 - **Device setup progress indicator in Android Company Portal** <!--1565657-->    
   The Company Portal app for Android shows a device setup progress indicator when a user is enrolling their device. The indicator shows new statuses, beginning with "Setting up your device...", then "Registering your device...", then "Finishing registering your device...", then "Finishing setting up your device...".  
