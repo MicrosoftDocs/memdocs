@@ -40,6 +40,8 @@ Each section of this article lists hybrid features under three different categor
 
 ## January 2018
 
+### New in Microsoft Intune
+
 - **Remote lock available in Company Portal app for Windows 10** <!--676506-->    
   End users can now remotely lock their devices from the Company Portal app for Windows 10. This will not be displayed for the local device they're actively using.
 
