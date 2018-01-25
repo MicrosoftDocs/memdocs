@@ -81,7 +81,7 @@ To use the Configuration Manager Service Manager, in the console go to **Monitor
 -   The distribution manager on the site server uses the Site System Installation Account to transfer updates from the service connection point.
 
 ##  <a name="bkmk_urls"></a> Internet access requirements  
-To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through **port TCP 443** and **port TCP 443** to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to use these locations.  If you need to configure a web proxy acccount See: [Proxy server support in System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
+To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through outgoing port **TCP 443** for HTTPS and outgoing port **TCP 80** for HTTP to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to use these locations.  If you need to configure a web proxy acccount See: [Proxy server support in System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
 
 **Updates and servicing**  
 
