@@ -177,7 +177,7 @@
         },
         {  
             "source_path": "sccm/core/plan-design/changes/removed-and-deprecated-features.md",
-            "redirect_url": "/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md",
+            "redirect_url": "/sccm/core/plan-design/changes/deprecated/removed-and-deprecated",
             "redirect_document_id": false
         }
     ]

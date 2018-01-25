@@ -60,6 +60,6 @@ Additional details for features removed with version 1511 of System Center Confi
 
 ## More information
 For more information, see:
- - [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md)
+ - [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)
  - The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
  - [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).
