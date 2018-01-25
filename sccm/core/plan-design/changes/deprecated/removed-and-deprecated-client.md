@@ -44,8 +44,8 @@ This information is subject to change with future releases, and might not includ
 |Windows CE 5.0 - 6.0|July 10, 2015|Version 1511|  
 
 
-## More Information
+## More information
 For more information, see:
- - [Removed and Deprecated] (/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md)
+ - [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md)
  - The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
  - [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).

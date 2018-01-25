@@ -58,8 +58,8 @@ Additional details for features removed with version 1511 of System Center Confi
 
  For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](https://technet.microsoft.com/library/hh831683.aspx).
 
-## More Information
+## More information
 For more information, see:
- - [Removed and Deprecated] (/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md)
+ - [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md)
  - The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
  - [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).

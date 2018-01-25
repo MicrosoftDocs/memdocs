@@ -175,7 +175,7 @@
             "redirect_url": "/sccm/mdm/deploy-use/mobile-device-hardware-inventory-hybrid",
             "redirect_document_id": false
         },
-        {
+        {  
             "source_path": "sccm/core/plan-design/changes/removed-and-deprecated-features.md",
             "redirect_url": "/sccm/core/plan-design/changes/deprecated/removed-and-deprecated.md",
             "redirect_document_id": false
