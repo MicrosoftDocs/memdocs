@@ -69,7 +69,7 @@ Use the following topics and additional sections in this topic to learn more abo
 -   [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md)  
 -   [Evaluate System Center Configuration Manager by building your own lab environment](/sccm/core/get-started/set-up-your-lab)
 -   [Find help for using System Center Configuration Manager](../../core/understand/find-help.md)  
--   [Removed and deprecated features for System Center Configuration Manager](../../core/plan-design/changes/removed-and-deprecated-features.md)  
+-   [Removed and deprecated items for System Center Configuration Manager](../../core/plan-design/changes/deprecated/removed-and-deprecated.md)  
 
 ##  <a name="BKMK_Console"></a> The Configuration Manager console  
  After you install Configuration Manager, use the Configuration Manager console to configure sites and clients, and to run and monitor management tasks. This console is the main point of administration and lets you manage multiple sites.  

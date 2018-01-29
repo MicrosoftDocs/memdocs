@@ -41,8 +41,8 @@ However, if you continue to use an earlier version that supports the feature, li
 Items that are removed or deprecated are split between three categories.  
 
 ### [Removed and deprecated Configuration Manager features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)
-### [Removed and deprecated items for Configuration Manager site servers](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client)
-### [Removed and deprecated items for Configuration Manager clients](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server)
+### [Removed and deprecated items for Configuration Manager site servers](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server)
+### [Removed and deprecated items for Configuration Manager clients](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client)
 
 
 ## More information

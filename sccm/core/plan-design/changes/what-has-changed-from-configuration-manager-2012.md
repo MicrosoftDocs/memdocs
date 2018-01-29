@@ -78,7 +78,7 @@ Note that Out-of-Band Management in System Center 2012 Configuration Manager is 
 ##  <a name="bkmk_out"></a> Deprecated functionality  
  Some capabilities, like native [Support for Intel Active Management Technology (AMT)](#bkmk_AMT) based-computers, are removed from the Configuration Manager console. Other capabilities, like Network Access Protection, are removed entirely. Additionally, some older Microsoft products like Windows Vista,  Windows Server 2008, and SQL Server 2008, are no longer supported.  
 
- For a list of deprecated features, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ For a list of deprecated features, see [Removed and deprecated items for System Center Configuration Manager](../../../core/plan-design/changes/deprecated/removed-and-deprecated.md).  
 
  For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md).  
 

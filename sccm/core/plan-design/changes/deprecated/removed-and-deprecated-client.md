@@ -32,7 +32,10 @@ This information is subject to change with future releases, and might not includ
  Unless noted otherwise, each operating system that is supported as a Configuration Manager client is supported until the Extended Support End Date of that operating system. For details about Extended Support End Dates, see the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). If Configuration Manager support for an operating system ends prior to the Extended Support End Date, a deprecation date and support removal date for that operating system will be listed here.  
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
-|-|-|-|  
+|-|-|-|
+|Windows 8: Professional, Enterprise|January 12, 2018||
+|Windows Embedded 8 Pro|January 12, 2018||
+|Windows Embedded 8 Industry|January 12, 2018||
 |Windows XP Embedded <br><br> Including all [XP-based Embedded operating systems](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers).|July 10, 2015|Version 1702| 
 |Windows Vista|July 10, 2015|Version 1511| 
 |Windows Server 2003 R2|July 10, 2015|Version 1511|

@@ -177,7 +177,7 @@ Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseli
 -   State migration point  
 
 ## Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, and Datacenter  
- Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](../../../core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
  Beginning with Configuration Manager version 1702, this operating system is not supported for site servers or most site system roles, but does remain supported for the distribution point site system role (including pull-distribution points, and for PXE and multicast).
 
@@ -231,7 +231,7 @@ Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseli
 -   State migration point  
 
 ## Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, and Datacenter  
- Windows Server 2008 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](../../../core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
 This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
 

@@ -31,7 +31,7 @@ System Center Configuration Manager provides comprehensive control over feature 
 | ------------- |-------------|
 |[Overview of Configuration Manager as a service](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Provides a brief summary of the key points for the new servicing model for Configuration Manager (Current Branch)|
 |[Support lifecycle](/sccm/core/servers/manage/current-branch-versions-supported)|Explains the new support and servicing model.|
-|[Removed and deprecated features](/sccm/core/plan-design/changes/removed-and-deprecated-features)|Provides early notice about future changes that might affect your use of Configuration Manager.|
+|[Removed and deprecated items](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Provides early notice about future changes that might affect your use of Configuration Manager.|
 |[Configuration Manager as a service](/sccm/core/servers/manage/updates)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
 |[Get available updates](/core/servers/manage/install-in-console-updates#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
 |[Update checklist](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 

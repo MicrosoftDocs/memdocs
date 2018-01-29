@@ -31,13 +31,13 @@ Update 1702 for System Center Configuration Manager current branch is available 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
 ## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated features](/sccm/core/plan-design/changes/removed-and-deprecated-features).
+Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
 Version 1702 drops support for the following products:
-- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
-- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
-- **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on  July 10, 2015.
-- **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on  July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
+- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
+- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
+- **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) on  July 10, 2015.
+- **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems) on  July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
 
 
 
