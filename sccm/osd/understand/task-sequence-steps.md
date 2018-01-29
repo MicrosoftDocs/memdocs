@@ -1309,7 +1309,7 @@ In the task sequence editor, click **Add**, select **Images**, and select **Setu
  Click **Browse**, then select the Configuration Manager client installation package to use with this step.  
 
  **Use pre-production client package when available**  
- If there is a pre-production client package available, the task sequence uses this package instead of the production client package. The pre-production client is a newer version for testing in the production environment. Click **Browse**, then select the pre-production client installation package to use with this step.  
+ If there is a pre-production client package available, and the computer is a member of the piloting collection, the task sequence uses this package instead of the production client package. The pre-production client is a newer version for testing in the production environment. Click **Browse**, then select the pre-production client installation package to use with this step.  
 
  **Installation Properties**  
  Site assignment and the default configuration are automatically specified by the task sequence action. You can use this field to specify any additional installation properties to use when you install the client. To enter multiple installation properties, separate them with a space.  
