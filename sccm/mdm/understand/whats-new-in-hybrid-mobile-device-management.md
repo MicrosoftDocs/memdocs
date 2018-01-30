@@ -42,6 +42,9 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
+- **New functionality for the "Resolve" action for Android devices** <!--1583480-->    
+  The Company Portal app for Android is expanding the "Resolve" action for **Update device settings** to resolve [device encryption issues](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android).
+
 - **Remote lock available in Company Portal app for Windows 10** <!--676506-->    
   End users can now remotely lock their devices from the Company Portal app for Windows 10. This will not be displayed for the local device they're actively using.
 
