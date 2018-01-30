@@ -532,7 +532,7 @@ This step runs in either a standard operating system or Windows PE. However, the
 
  -   **Configuration Manager client cache**: Use this option to store the content in the client cache. The client acts as a peer cache source for other peer cache clients. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
- -   **Custom path**  
+ -    **Custom path**: With this option the task sequence engine first downloads the package to the task sequence working directory, then moves it to this path you specify. The task sequence engine appends the path with the package ID. 
    
 **Save path as a variable**  
  You can save the path as a variable that you can  use in another task sequence step. Configuration Manager adds a numerical suffix to the variable name. For example, if you specify a variable of %*mycontent*% as a custom variable, it is the root for where the task sequence stores all referenced content. This content may contain multiple packages. Then when you refer to the variable, add a numerical suffix. For example, for the first package, refer to %*mycontent01*%. When you refer to the variable in subsequent steps, such as **Upgrade Operating System**, use %*mycontent02*% or %*mycontent03*%, where the number corresponds to the order that the **Download Package Content** step lists the packages.  
@@ -1309,7 +1309,7 @@ In the task sequence editor, click **Add**, select **Images**, and select **Setu
  Click **Browse**, then select the Configuration Manager client installation package to use with this step.  
 
  **Use pre-production client package when available**  
- If there is a pre-production client package available, the task sequence uses this package instead of the production client package. The pre-production client is a newer version for testing in the production environment. Click **Browse**, then select the pre-production client installation package to use with this step.  
+ If there is a pre-production client package available, and the computer is a member of the piloting collection, the task sequence uses this package instead of the production client package. The pre-production client is a newer version for testing in the production environment. Click **Browse**, then select the pre-production client installation package to use with this step.  
 
  **Installation Properties**  
  Site assignment and the default configuration are automatically specified by the task sequence action. You can use this field to specify any additional installation properties to use when you install the client. To enter multiple installation properties, separate them with a space.  

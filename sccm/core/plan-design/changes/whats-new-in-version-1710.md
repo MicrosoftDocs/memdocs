@@ -206,4 +206,4 @@ The following three changes have been made in relation to Device Guard policies:
 
 
 ## Next Steps
-When your ready to install this version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
+When you're ready to install this version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
