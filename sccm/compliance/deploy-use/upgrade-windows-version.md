@@ -1,9 +1,9 @@
 ---
 title: "Upgrade Windows devices to a different version"
 titleSuffix: "Configuration Manager"
-description: "Automatically upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a different edition with Configuration Manager."
+description: "Automatically upgrade devices that run Windows 10 Desktop or Windows 10 Mobile to a different edition with Configuration Manager."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 01/26/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,9 +14,9 @@ ms.topic: article
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 
 ---
 
@@ -25,29 +25,27 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-The System Center Configuration Manager **Edition Upgrade Policy** lets you automatically upgrade devices that run one of the following Windows 10 versions to a different edition:
+The **Edition Upgrade Policy** lets you automatically upgrade devices that run one of the following Windows 10 versions to a different edition:
 
 - Windows 10 Desktop
 - Windows 10 Mobile
-<!-- - Windows 10 Holographic -->
 
 The following upgrade paths are supported:
 
 - From Windows 10 Pro to Windows 10 Enterprise
 - From Windows 10 Home to Windows 10 Education
 - From Windows 10 Mobile to Windows 10 Mobile Enterprise
-<!-- - From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise -->
 
 The devices must be enrolled in Microsoft Intune or run the Configuration Manager client software. This policy is currently not compatible with PCs that are managed by on-premises MDM.
 
 ## Before you start  
- Before you begin to upgrade devices to the latest version, you will need one of the following:  
+ Before you begin to upgrade devices to the latest version, review the following prerequisites:  
 
--   A product key which is valid to install the new version of Windows on all devices you target with the policy (for desktop operating systems)  
+-   For desktop editions of Windows 10: A valid product key for the new version of Windows on all devices you target with the policy. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide. <!--496871-->  
 
--   A licence file from Microsoft which contains the licensing information to install the new version of Windows on all devices you target with the policy (for Windows 10 Mobile<!-- and Windows 10 Holographic-->).
+-   For Windows 10 Mobile: An XML license file from the Microsoft Volume Licensing Service Center (VLSC). This file contains the licensing information for the new version of Windows on all devices you target with the policy.
 
-- To create and deploy this policy type, you must have been assigned the Configuration Manager **Full Administrator** security role.
+- To manage this policy type, you must be in the Configuration Manager **Full Administrator** security role.
 
 ## Configure the edition upgrade policy  
 
@@ -59,24 +57,23 @@ The devices must be enrolled in Microsoft Intune or run the Configuration Manage
 
 5.  On the **General** page of the **Create Edition Upgrade Policy Wizard**, specify the following information:  
 
-    -   **Name** - Enter a name for the edition upgrade policy.  
+    -   **Name** - Enter a name for the edition upgrade policy  
 
-    -   **Description** (optional) - Optionally, enter a description for the policy that helps you identify it in the Intune console.  
+    -   **Description** (optional) - Optionally, enter a description for the policy that helps you identify it in the Intune console  
 
-    -   **SKU to upgrade device to** - From the drop-down list, select the version of Windows 10 Desktop, <!-- Windows 10 Holographic,--> or Windows 10 Mobile that you want to upgrade targeted devices to.  
+    -   **SKU to upgrade device to** - From the drop-down list, select the target edition of Windows 10 desktop or Windows 10 Mobile  
 
     -   **License information** - Select one of:  
 
-        -   **Product Key** - Enter a valid Windows 10 product key that will be used to upgrade devices you target that run Windows 10 Desktop operating systems.  
+        -   **Product Key** - Enter a valid product key for the target Windows 10 desktop edition  
 
             > [!NOTE]  
-            >  After you create a policy containing a product key, you cannot edit the product key later. This is because the key is obscured for security reasons. To change the product key, you must re-enter the entire key.  
+            >  After you create a policy containing a product key, you cannot edit the product key later. Configuration Manager obscures the key for security reasons. To change the product key, you must re-enter the entire key.  
 
-        -   **License File** - Click **Browse** to select a valid license file in XML format that will be used to upgrade devices you target that run <!--Windows 10 Holographic and -->Windows 10 Mobile operating systems.  
+        -   **License File** - Click **Browse** to select a valid license file in XML format. Configuration Manager uses this license file to upgrade Windows 10 Mobile devices.  
 
 6.  Complete the wizard.  
 
-The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **Assets and Compliance** workspace.  
 
 ## Deploy the edition upgrade policy  
 
@@ -84,16 +81,20 @@ The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **
 
 3.  Select the Windows 10 edition upgrade policy you want to deploy and then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, choose the collection to which you want to deploy the policy and the schedule by which the policy will be evaluated, and then click **OK**. For PCs that are managed with the Configuration Manager client, you must deploy the policy to a device collection. For PCs that are enrolled with Intune, you can deploy the policy to a user or device collection. 
+4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, first choose the collection to which you want to deploy the policy. Select the schedule by which the client evaluates the policy, and then click **OK**. For PCs that are managed with the Configuration Manager client, you must deploy the policy to a device collection. For PCs that are enrolled with Intune, you can deploy the policy to a user or device collection. 
 
 
 
 ## Next steps
 
-When you monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace, you might see errors indicating the deployment was unsuccessful like:
+Monitor this deployment from the **Deployments** node of the **Monitoring** workspace. If you see errors indicating an unsuccessful deployment, for example:
 - **Not applicable for this device**
 - **Data type conversion failed**
 
 These errors do not mean that the deployment failed. Verify at the targeted PC that the upgrade performed successfully.
 
-Once the policy reaches a targeted Windows PC and is evaluated, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
+Once the client evaluates the targeted policy, it will restart within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
+
+If the following error appears in **DcmWmiProvider.log** on the client, check that you are using the proper key for your activation scenario. For more information, see the [Before you start](#before-you-start) section. If you are using a key management service for activation, make sure to use a [KMS client setup key](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
+
+`Failed to execute CheckApplicabilityMethod with error = 0x80041001	OsEditionUpgradeProvider`
