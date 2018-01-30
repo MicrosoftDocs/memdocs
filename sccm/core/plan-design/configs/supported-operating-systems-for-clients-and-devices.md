@@ -120,7 +120,7 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
 -   **Windows Embedded Standard 7 with SP1** (x86, x64)    
 
-The following operating systems are based on Windows XP Embedded, and only supported with Configuration Manager version 1610 and earlier. [Beginning with version 1702, these embedded operating systems are no longer supported](/sccm/core/plan-design/changes/removed-and-deprecated-features#client-operating-systems).  
+The following operating systems are based on Windows XP Embedded, and only supported with Configuration Manager version 1610 and earlier. [Beginning with version 1702, these embedded operating systems are no longer supported](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems).  
 
 -   **WEPOS 1.1 with SP3** (x86)    
 

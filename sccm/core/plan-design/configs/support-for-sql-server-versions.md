@@ -131,7 +131,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 -->
 
 ### SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
-  This version of SQL Server is not supported [beginning with version 1702](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database).  
+  This version of SQL Server is not supported [beginning with version 1702](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database).  
  This version of SQL Server remains supported when you use a version of Configuration Manager prior to 1702.
 
 When supported by the Configuration Manager version, you can use this version of SQL Server with no minimum cumulative update version for the following sites:  
