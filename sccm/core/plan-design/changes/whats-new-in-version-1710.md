@@ -32,7 +32,7 @@ The following sections provide details about changes and new capabilities introd
 
 <!--
 ## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated features](/sccm/core/plan-design/changes/removed-and-deprecated-features).
+Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
 Version 1710 drops support for the following products:
 -->
