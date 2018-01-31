@@ -36,8 +36,10 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
-
+###  [Removed and deprecated](plan-design/changes/deprecated/removed-and-deprecated.md)
+#### [Removed and deprecated features](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
+#### [Removed and deprecated for site servers](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [Removed and deprecated for clients](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [Supported configurations](plan-design/configs/supported-configurations.md)
 ###  [Size and scale numbers](plan-design/configs/size-and-scale-numbers.md)
 ###  [Site and site system prerequisites](plan-design/configs/site-and-site-system-prerequisites.md)
