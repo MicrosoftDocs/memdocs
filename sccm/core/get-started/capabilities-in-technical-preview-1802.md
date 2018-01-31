@@ -84,9 +84,11 @@ For customers who use the [Microsoft Edge](https://technet.microsoft.com/microso
 
 Like any compliance settings policy, the client remediates the settings on the schedule you specify. [Monitor and report on device compliance](/sccm/compliance/deploy-use/monitor-compliance-settings) in the Configuration Manager console.
 
+## Product Lifecycle dashboard
+<!--1319632-->
+The new Product Lifecycle dashboard shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. You can use the dashboard to understand the availability of support for each product. 
 
-
-
+To access the Lifecycle Dashboard, in the Configuration Manager console, go to **Assets and Compliance** >**Asset Intelligence** >**Product Lifecycle**
 
 
 ## Next steps
