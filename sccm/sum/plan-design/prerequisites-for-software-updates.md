@@ -3,10 +3,10 @@ title: Prerequisites for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
 keywords:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -31,8 +31,8 @@ This topic lists the prerequisites for software updates in System Center Configu
 ### Windows Server Update Services (WSUS)  
  WSUS is necessary for software updates synchronization and for the software updates compliance assessment scan on clients. The WSUS server must be installed before you create the software update point site system role. The following versions of WSUS are supported for a software update point:  
 
--   WSUS 4 (role in Windows Server 2012 and Windows Server 2012 R2)  
-
+-   WSUS 10.0 (role in Windows Server 2016)
+-   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)  
 -   WSUS 3.2 (role in Windows Server 2008 R2)  
 
  When you have multiple software update points at a site, ensure that they are all running the same version of WSUS.  
