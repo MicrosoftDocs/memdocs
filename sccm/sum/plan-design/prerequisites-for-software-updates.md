@@ -20,7 +20,7 @@ ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This topic lists the prerequisites for software updates in System Center Configuration Manager. For each of these, the external dependencies and internal dependencies are listed in separate tables.  
+This article lists the prerequisites for software updates in System Center Configuration Manager. For each of these, the external dependencies and internal dependencies are listed in separate tables.  
 
 ## Software Update Dependencies External to Configuration Manager  
  The following sections  list the external dependencies for software updates.  
@@ -29,7 +29,7 @@ This topic lists the prerequisites for software updates in System Center Configu
  Internet Information Services (IIS) must be on site system servers in order to run the software update point, the management point, and the distribution point. For more information, see [Prerequisites for site system roles](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 ### Windows Server Update Services (WSUS)  
- WSUS is necessary for software updates synchronization and for the software updates compliance assessment scan on clients. The WSUS server must be installed before you create the software update point site system role. The following versions of WSUS are supported for a software update point:  
+ WSUS is necessary for software updates synchronization and for the software updates applicability scan on clients. The WSUS server must be installed before you create the software update point role. The following versions of WSUS are supported for a software update point:  
 
 -   WSUS 10.0 (role in Windows Server 2016)
 -   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)  
@@ -52,7 +52,7 @@ This topic lists the prerequisites for software updates in System Center Configu
 >  Do not use the WSUS Administration Console to configure WSUS settings. Configuration Manager connects to WSUS that is running on the software update point and configures the appropriate settings.  
 
 ### Windows Update Agent (WUA)  
- The WUA client is required on clients to enable them to connect to the WSUS server and retrieve the list of software updates that must be scanned for compliance.  
+ The WUA client is required on clients in order to connect to the WSUS server. WUA retrieves the list of software updates that must be scanned for compliance.  
 
  When you install Configuration Manager, the latest version of the WUA is downloaded. Then, when the Configuration Manager client is installed, the WUA is upgraded if necessary. However, if the installation fails, you must use a different method to upgrade the WUA.  
 
@@ -69,19 +69,19 @@ This topic lists the prerequisites for software updates in System Center Configu
  Distribution points are required to store the content for software updates. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### Client settings for software updates  
- By default, software updates is enabled for clients. However there are other available settings that control how and when clients assess compliance for the software updates and control how the software updates are installed.  
+ By default, software updates are enabled for clients. However, there are other available settings that control how and when clients assess compliance for the software updates and control how the software updates are installed.  
 
  For more information, see the following:  
 
 -   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings).   
 
--   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
+-   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) article.  
 
 ### Reporting services point  
- The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md) .  
+ The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting.  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> Recover from synchronizing the Upgrades category before you install KB 3095113  
- You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS will see the Windows 10 build 1511 feature upgrade even if it can’t properly download and deploy the associated packages. If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you will populate the WSUS database (SUSDB) with unusable data that must be cleared before upgrades can be properly deployed.  Use the following procedure to recover from this issue.  
+ You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS sees the Windows 10 build 1511 feature upgrade even if it can’t properly download and deploy the associated packages. If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before upgrades can be properly deployed. Use the procedure below to recover from this issue.  
 
 #### To recover from synchronizing the Upgrades classification before you install KB 3095113  
 
