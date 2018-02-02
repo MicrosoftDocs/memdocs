@@ -6,7 +6,7 @@ keywords:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
