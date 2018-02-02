@@ -100,11 +100,11 @@ This article lists the prerequisites for software updates in System Center Confi
 
      To bulk delete software updates with the Upgrades classification, you can modify the PowerShell script to read multiple GUIDs from a txt file.  
 
-2.  Uncheck the **Upgrades** classification in the Software Update Point component properties (For details, see [Configure classifications and products](../get-started/configure-classifications-and-products.md)) and then start software updates synchronization (For details, see [Synchronize software updates](../get-started/synchronize-software-updates.md).  
+2.  Uncheck the **Upgrades** classification in the Software Update Point component properties (For details, see [Configure classifications and products](../get-started/configure-classifications-and-products.md)) and then start software updates synchronization (For details, see [Synchronize software updates](../get-started/synchronize-software-updates.md)).  
 
 3.  Install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers.  
 
-4.  Select the **Upgrades** classification in the Software Update Point component properties (For details, see [Configure classifications and products](../get-started/configure-classifications-and-products.md)) and then start software updates synchronization (For details, see [Synchronize software updates](../get-started/synchronize-software-updates.md).  
+4.  Select the **Upgrades** classification in the Software Update Point component properties (For details, see [Configure classifications and products](../get-started/configure-classifications-and-products.md)) and then start software updates synchronization (For details, see [Synchronize software updates](../get-started/synchronize-software-updates.md)).  
 
 ## Next steps
 [Prepare for software updates management](../get-started/prepare-for-software-updates-management.md)
