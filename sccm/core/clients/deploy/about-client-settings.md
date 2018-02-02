@@ -122,26 +122,26 @@ For more information about managing clients on the internet, see [Considerations
 >  Application approval requests from users do not require user policies or user authentication.  
 
 
-## Cloud Services
+## Cloud services
 
 -   **Allow access to cloud distribution point** </br>
-    Configure this setting to **Yes** for clients to obtain content from a cloud distribution point. This setting does not require the device to be Internet-based.
+    Set this to **Yes** for clients to obtain content from a cloud distribution point. This setting does not require the device to be internet-based.
 
 -    **Automatically register new Windows 10 domain joined devices with Azure Active Directory** </br> 
-    When you configure Azure Active Directory to support hybrid join, then Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+    When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 -   **Enable clients to use a cloud management gateway** </br>
-    By default, all Internet-roaming clients use any available [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
+    By default, all internet-roaming clients use any available [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
 
 
 
 ##  Compliance settings  
 
 -   **Enable compliance evaluation on clients** </br>
-    Configure this setting to **Yes** to configure the other settings in this group.
+    Set this to **Yes** to configure the other settings in this group.
  
 -   **Schedule compliance evaluation**   </br>
-     Click **Schedule** to create the default schedule for configuration baseline deployments. This value is configurable for each baseline in the **Deploy Configuration Baseline** dialog box.  
+     Select **Schedule** to create the default schedule for configuration baseline deployments. This value is configurable for each baseline in the **Deploy Configuration Baseline** dialog box.  
 
 -   **Enable User Data and Profiles**   </br>
      Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
@@ -149,147 +149,163 @@ For more information about managing clients on the internet, see [Considerations
 
 
 ## Computer agent  
--   User notifications for required deployments </br>
-    For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
-    -   **Deployment deadline greater than 24 hours, remind user every (hours)**
-    -   **Deployment deadline less than 24 hours, remind user every (hours)**  </br>
-    -   **Deployment deadline less than 1 hour, remind user every (minutes)**  </br>
 
--   **Default Application Catalog website point**   </br>
-     Configuration Manager uses this setting to connect users to the Application Catalog from Software Center. Click **Set Website** to specify a server that hosts the Application Catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice because it offers the following benefits:  
+### User notifications for required deployments
 
-    -   If the site has an Application Catalog website point, then clients are automatically given an Application Catalog website point from their site.  
+For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
 
-    -   The client prefers HTTPS-enabled Application Catalog website points on the intranet over HTTP-only servers. This capability helps protect against a rogue server.
+-   **Deployment deadline greater than 24 hours, remind user every (hours)**
+-   **Deployment deadline less than 24 hours, remind user every (hours)** 
+-   **Deployment deadline less than 1 hour, remind user every (minutes)** 
 
-    -   The management point gives Internet-based clients an Internet-based Application Catalog website point. The management point gives intranet-based clients an intranet-based Application Catalog website point.  
+### Default Application Catalog website point
 
-     Automatic detection does not guarantee that clients are given the closest Application Catalog website point. You might decide not to use **Automatically detect** for the following reasons:  
+Configuration Manager uses this setting to connect users to the Application Catalog from Software Center. Select **Set Website** to specify a server that hosts the Application Catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice, because it offers the following benefits:  
 
-     -   You want to manually configure the closest server for clients or ensure that they do not connect to a server across a slow network connection.  
+-   If the site has an Application Catalog website point, then clients are automatically given an Application Catalog website point from their site.  
 
-     -   You want to control which clients connect to which server. This configuration might be for testing, performance, or business reasons.  
+-   The client prefers HTTPS-enabled Application Catalog website points on the intranet over HTTP-only servers. This capability helps protect against a rogue server.
 
-     -   You do not want to wait up to 25 hours or for a network change for clients to use a different Application Catalog website point.  
+-   The management point gives internet-based clients an internet-based Application Catalog website point. The management point gives intranet-based clients an intranet-based Application Catalog website point.  
 
-     If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN. This configuration reduces the likelihood that the web browser prompts users for credentials when they access an intranet-based Application Catalog. To use the NetBIOS name, the following conditions must apply:  
+Automatic detection does not guarantee that clients are given the closest Application Catalog website point. You might decide not to use **Automatically detect** for the following reasons:  
 
-     -   The NetBIOS name is specified in the Application Catalog website point properties.  
+-   You want to manually configure the closest server for clients, or ensure that they do not connect to a server across a slow network connection.  
 
-     -   You use WINS, or all clients are in the same domain as the Application Catalog website point.  
+-   You want to control which clients connect to which server. This configuration might be for testing, performance, or business reasons.  
 
-     -   You configure the Application Catalog website point for HTTP client connections, or configure the server for HTTPS and the web server certificate has the NetBIOS name.  
+-   You do not want to wait up to 25 hours or for a network change for clients to use a different Application Catalog website point.  
 
-     Typically, users are prompted for credentials when the URL has an FQDN but not when the URL is a NetBIOS name. Expect users to be always prompted when they connect from the Internet, because this connection must use the Internet FQDN. When using an Internet-based client and the web browser prompts users for credentials, ensure that the Application Catalog website point can connect to a domain controller for the user’s account. This configuration allows the user to authenticate by using Kerberos.  
+If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN. This configuration reduces the likelihood that the web browser prompts users for credentials when they access an intranet-based Application Catalog. To use the NetBIOS name, the following conditions must apply:  
 
-    > [!NOTE]  
-    >  How automatic detection works:  
-    >   
-    >  The client makes a service location request to a management point. If there is an Application Catalog website point in the same site as the client, this server is given to the client as the Application Catalog server to use. When more than one Application Catalog website point is available in the site, an HTTPS-enabled server takes precedence over a server that is not enabled for HTTPS. After this filtering, all clients are given one of the servers to use as the Application Catalog; Configuration Manager does not load-balance between multiple servers. When the client’s site does not have an Application Catalog website point, the management point nondeterministically returns an Application Catalog website point from the hierarchy.  
-    >   
-    >  For intranet-based clients, if you configure the Application Catalog website point with a NetBIOS name for the Application Catalog URL, the management point gives clients this NetBIOS name instead of the intranet FQDN. For Internet-based clients, the management point only gives the Internet FQDN to the client.  
-    >   
-    >  The client makes this service location request every 25 hours or whenever it detects a network change. For example, if the client moves from the intranet to the Internet, and the client locates an Internet-based management point, the Internet-based management point gives Internet-based Application Catalog website point servers to clients.  
+-   The NetBIOS name is specified in the Application Catalog website point properties.  
 
--   **Add default Application Catalog website to Internet Explorer trusted sites zone**   </br>
-     If this option is **Yes**, the client automatically adds the current default Application Catalog website URL to the Internet Explorer trusted sites zone.  
+-   You use WINS, or all clients are in the same domain as the Application Catalog website point.  
 
-     This setting ensures that the Internet Explorer setting for Protected Mode is not enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the Application Catalog. By default, the trusted sites zone also supports user logon for the Application Catalog, which requires Windows authentication.  
+-   You configure the Application Catalog website point for HTTP client connections, or configure the server for HTTPS and the web server certificate has the NetBIOS name.  
 
-     If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the Application Catalog. An alternative method is to configure these Internet Explorer settings in another zone for the Application Catalog URL that clients use.  
+Typically, users are prompted for credentials when the URL has an FQDN, but not when the URL is a NetBIOS name. Expect users always to be prompted when they connect from the internet, because this connection must use the internet FQDN. For an internet-based client, when the web browser prompts users for credentials, ensure that the Application Catalog website point can connect to a domain controller for the user’s account. This configuration allows the user to authenticate by using Kerberos.  
 
-    > [!NOTE]  
-    >  Whenever Configuration Manager adds a default Application Catalog to the trusted sites zone, Configuration Manager removes any previously added Application Catalog URL.  
-    >   
-    >  If the URL is already specified in one of the security zones, then Configuration Manager cannot add the URL. In this scenario, you must either remove the URL from the other zone or manually configure the required Internet Explorer settings.  
+> [!NOTE]  
+>  Here is how automatic detection works:  
+>   
+>  The client makes a service location request to a management point. If there is an Application Catalog website point in the same site as the client, this server is given to the client as the Application Catalog server to use. When more than one Application Catalog website point is available in the site, an HTTPS-enabled server takes precedence over a server that is not enabled for HTTPS. After this filtering, all clients are given one of the servers to use as the Application Catalog. Configuration Manager does not load-balance between multiple servers. When the client’s site does not have an Application Catalog website point, the management point nondeterministically returns an Application Catalog website point from the hierarchy.  
+>   
+>  For intranet-based clients, if you configure the Application Catalog website point with a NetBIOS name for the Application Catalog URL, the management point uses this. It does not use the intranet FQDN. For internet-based clients, the management point only gives the internet FQDN to the client.  
+>   
+>  The client makes this service location request every 25 hours, or whenever it detects a network change. For example, if the client moves from the intranet to the internet, that is a network change. If the client then locates an internet-based management point, the internet-based management point gives internet-based Application Catalog website point servers to clients.  
 
--   **Allow Silverlight applications to run in elevated trust mode**   </br>
-     This setting must be **Yes** for users to use the Application Catalog .  
+### Add default Application Catalog website to Internet Explorer trusted sites zone
 
-     If you change this setting, it takes effect when users next load their browser or refresh their currently opened browser window.  
+If this option is **Yes**, the client automatically adds the current default Application Catalog website URL to the Internet Explorer trusted sites zone.  
 
-     For more information about this setting, see [Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5).  
+This setting ensures that the Internet Explorer setting for Protected Mode is not enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the Application Catalog. By default, the trusted sites zone also supports user sign-in for the Application Catalog, which requires Windows authentication.  
 
--   **Organization name displayed in Software Center**   </br>
-     Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source.  
+If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the Application Catalog. An alternative method is to configure these Internet Explorer settings in another zone for the Application Catalog URL that clients use.  
 
--   **Use new Software Center**   </br>
-     If you configure this client setting to **Yes**, then all client computers use the new Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the new Software Center.   
+> [!NOTE]  
+>  Whenever Configuration Manager adds a default Application Catalog URL to the trusted sites zone, Configuration Manager removes any previously added Application Catalog URL.  
+>   
+>  If the URL is already specified in one of the security zones, Configuration Manager cannot add the URL. In this scenario, you must either remove the URL from the other zone, or manually configure the required Internet Explorer settings.  
 
-     The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
+### Allow Silverlight applications to run in elevated trust mode
 
-     For more information, see [Plan for and configure application management](../../../apps/plan-design/plan-for-and-configure-application-management.md).  
+This setting must be **Yes** for users to use the Application Catalog.  
 
--   **Enable communication with Health Attestation Service**  </br>
-    Configure this setting to **Yes** for Windows 10 devices to use [Health attestation](/sccm/core/servers/manage/health-attestation). When you enable this setting, the following setting is also available for configuration.
+If you change this setting, it takes effect when users next load their browser, or refresh their currently opened browser window.  
 
-    -   **Use on-premises Health Attestation Service** </br>
-        Configure this setting to **Yes** for devices to use an on-premises service. Configure this setting to **No** for devices to use Microsoft's cloud-based service.  
+For more information about this setting, see [Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5).  
 
--   **Install Permissions**   </br>
-    > [!WARNING]  
-    >  This setting applies to the Application Catalog and Software Center. This setting has no effect when users use the Company Portal.  
+### Organization name displayed in Software Center
 
-     Configure how users can initiate the installation of software, software updates, and task sequences:  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source.  
 
-    -   **All Users**: Users with any permission except Guest  
+### Use new Software Center
 
-    -   **Only Administrators**: Users must be a member of the local Administrators group  
+If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center.   
 
-    -   **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer  
+The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
-    -   **No Users**: No users logged on to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users cannot initiate the installation of software from the Application Catalog or Software Center.  
+For more information, see [Plan for and configure application management](../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
--   **Suspend BitLocker PIN entry on restart**  </br>
-     If computers require BitLocker PIN entry, then this option bypasses the requirement to enter a PIN when the computer restarts after a software installation.  
+### Enable communication with Health Attestation Service
 
-    -   **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart and initiated a restart of the computer. This setting applies only to a computer restart initiated by Configuration Manager. This setting does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
+Set this to **Yes** for Windows 10 devices to use [Health attestation](/sccm/core/servers/manage/health-attestation). When you enable this setting, the following setting is also available for configuration.
 
-    -   **Never**: Configuration Manager does not suspend BitLocker on the next computer startup after it has installed software that requires a restart. In this scenario, the software installation cannot finish until the user enters the PIN to complete the standard startup process and load Windows.
+### Use on-premises Health Attestation Service
 
--   **Additional software manages the deployment of applications and software updates**  </br>
-     Enable this option only if one of the following conditions apply:  
+Set this to **Yes** for devices to use an on-premises service. Set to **No** for devices to use the Microsoft cloud-based service.  
 
-    -   You use a vendor solution that requires this setting to be enabled.  
+### Install permissions
 
-    -   You use the Configuration Manager software development kit (SDK) to manage client agent notifications and the installation of applications and software updates.  
+> [!IMPORTANT]  
+>  This setting applies to the Application Catalog and Software Center. This setting has no effect when users use the Company Portal.  
 
-    > [!WARNING]  
-    >  If you choose this option when neither of these conditions apply, the client does not install software updates and required applications. This setting does not prevent users from installing applications from the Application Catalog, or the installation of packages, programs, and task sequences.  
+Configure how users can initiate the installation of software, software updates, and task sequences:  
 
--   **PowerShell execution policy**  </br>
-     Configure how Configuration Manager clients can run Windows PowerShell scripts. These scripts are often used for detection in configuration items for compliance settings. They can also be sent in a deployment as a standard script.  
+-   **All Users**: Users with any permission except Guest.  
 
-    -   **Bypass**: The Configuration Manager client bypasses the Windows PowerShell configuration on the client computer so that unsigned scripts can run.  
+-   **Only Administrators**: Users must be a member of the local Administrators group.  
 
-    -   **Restricted**: The Configuration Manager client uses the current Windows PowerShell configuration on the client computer. This configuration determines whether unsigned scripts can run.  
+-   **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer.  
 
-    -   **All Signed**: The Configuration Manager client runs scripts only if a trusted publisher has signed them. This restriction applies independently from the current Windows PowerShell configuration on the client computer.  
+-   **No Users**: No users signed in to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users cannot initiate the installation of software from the Application Catalog or Software Center.  
 
-     This option requires at least Windows PowerShell version 2.0. The default is **All Signed**.  
+### Suspend BitLocker PIN entry on restart
 
-    > [!TIP]  
-    >  If unsigned scripts fail to run because of this client setting, Configuration Manager reports this error in the following ways:  
-    >   
-    > -   The **Monitoring** workspace in the console displays deployment status error ID **0x87D00327** and description **Script is not signed**  
-    > -   Reports display error type **Discovery Error**, and then either error code **0x87D00327** and description **Script is not signed**, or error code **0x87D00320** and description **The script host has not been installed yet**. An example report is **Details of errors of configuration items in a configuration baseline for an asset**.  
-    > -   The **DcmWmiProvider.log** file displays the message **Script is not signed (Error: 87D00327; Source: CCM)**.  
+If computers require BitLocker PIN entry, then this option bypasses the requirement to enter a PIN when the computer restarts after a software installation.  
 
--   **Show notifications for new deployments**  </br>
-     Choose **Yes** to display a notification for deployments available less than a week.  This message displays each time the client agent starts.
+-   **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart, and has initiated a restart of the computer. This setting applies only to a computer restart initiated by Configuration Manager. This setting does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
 
--   **Disable deadline randomization**  </br>
-     After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled.  
+-   **Never**: Configuration Manager does not suspend BitLocker after it has installed software that requires a restart. In this scenario, the software installation cannot finish until the user enters the PIN to complete the standard startup process and load Windows.
 
-     For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you do not use VDI, many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
+### Additional software manages the deployment of applications and software updates
 
-     If clients must install required software updates at the deployment deadline without delay, then configure this setting to **Yes**. 
+Enable this option only if one of the following conditions applies:  
 
--   **Grace period for enforcement after deployment deadline (hours)** </br>
-	 If you want to give users more time to install required application or software update deployments beyond the deadline, then configure this setting to **Yes**. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments. 
+-   You use a vendor solution that requires this setting to be enabled.  
 
-     Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
+-   You use the Configuration Manager software development kit (SDK) to manage client agent notifications, and the installation of applications and software updates.  
 
+> [!WARNING]  
+>  If you choose this option when neither of these conditions apply, the client does not install software updates and required applications. This setting does not prevent users from installing applications from the Application Catalog, or the installation of packages, programs, and task sequences.  
+
+### PowerShell execution policy
+
+Configure how Configuration Manager clients can run Windows PowerShell scripts. You might use these scripts for detection in configuration items for compliance settings. You might also send the scripts in a deployment as a standard script.  
+
+-   **Bypass**: The Configuration Manager client bypasses the Windows PowerShell configuration on the client computer, so that unsigned scripts can run.  
+
+-   **Restricted**: The Configuration Manager client uses the current PowerShell configuration on the client computer. This configuration determines whether unsigned scripts can run.  
+
+-   **All Signed**: The Configuration Manager client runs scripts only if a trusted publisher has signed them. This restriction applies independently from the current PowerShell configuration on the client computer.  
+
+This option requires at least Windows PowerShell version 2.0. The default is **All Signed**.  
+
+> [!TIP]  
+>  If unsigned scripts fail to run because of this client setting, Configuration Manager reports this error in the following ways:  
+>   
+> -   The **Monitoring** workspace in the console displays deployment status error ID **0x87D00327**. It also displays the description **Script is not signed**.  
+> -   Reports display the error type **Discovery Error**. Then reports display either error code **0x87D00327** and the description **Script is not signed**, or error code **0x87D00320** and the description **The script host has not been installed yet**. An example report is: **Details of errors of configuration items in a configuration baseline for an asset**.  
+> -   The **DcmWmiProvider.log** file displays the message **Script is not signed (Error: 87D00327; Source: CCM)**.  
+
+### Show notifications for new deployments
+
+Choose **Yes** to display a notification for deployments available for less than a week. This message displays each time the client agent starts.
+
+### Disable deadline randomization
+
+After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled.  
+
+For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you do not use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
+
+If clients must install required software updates at the deployment deadline without delay, then configure this setting to **Yes**. 
+
+### Grace period for enforcement after deployment deadline (hours)
+
+If you want to give users more time to install required application or software update deployments beyond the deadline, set this to **Yes**. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments. 
+
+Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
 
 
 ##  Computer restart  
