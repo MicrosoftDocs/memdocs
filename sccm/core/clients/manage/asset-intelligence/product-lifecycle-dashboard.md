@@ -74,6 +74,6 @@ The following new reports are added under the category **Product Lifecycle**:
 - **List of expired products found in the organization:** View details for products in your environment that have expired lifecycle dates. 
 - **List of machines with expired products in the organization:** View computers that have expired products on them. You can filter this report by product name.
 
-### Next steps
+## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).  
 
