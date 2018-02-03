@@ -19,7 +19,7 @@ ms.author: mstewart
 manager: angrobe
 
 ---
-# Manage Microsoft Lifecycle Policy using System Center Configuration Manager
+# Use the Product Lifecycle Dashboard to Manage Microsoft Lifecycle Policy in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
