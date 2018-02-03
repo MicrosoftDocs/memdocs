@@ -134,6 +134,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  |Improvements to Run Scripts <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts)  |![Not added](media/Red_X.gif)    |
  |Do not automatically upgrade superseded applications <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications)  |![Not added](media/Red_X.gif)    | 
  |Install multiple applications in Software Center <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center)  |![Not added](media/Red_X.gif)    |
+ |Client-based PXE responder service <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service)  |![Not added](media/Red_X.gif)    |
  |Change in the Configuration Manager client install <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install)  |![Not added](media/Red_X.gif)    | 
  |Change to the Surface device dashboard <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard)  |![Not added](media/Red_X.gif)    | 
  |Improvements to Office 365 Client Management dashboard <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard)  |![Not added](media/Red_X.gif)    | 
