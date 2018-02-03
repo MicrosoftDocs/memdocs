@@ -23,7 +23,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
-Beginning with Technical Preview version 1802, you can use the Configuration Manager Product Lifecycle dashboard. The dashboard shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. 
+Beginning with [Technical Preview version 1802](/sccm/core/get-started/capabilities-in-technical-preview-1802), you can use the Configuration Manager Product Lifecycle dashboard. The dashboard shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. 
  You can use the dashboard to understand the availability of support for each product. Helping you plan for when to update the Microsoft products you use before their current end of support is reached.  
 
 For more information about the Microsoft Product Lifecycle Policy, see [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/lifecycle).
@@ -32,6 +32,7 @@ For more information about the Microsoft Product Lifecycle Policy, see [Microsof
 
  To see data in the Product Lifecycle dashboard, the following are required: 
 - Internet Explorer 9 or later must be installed on the computer running the Configuration Manager console. 
+- A Reporting Services Point is required for hyperlink functionality in the dashboard since they link to a SQL Server Reporting Services (SSRS) report. For more information, see [Reporting in System Center Configuration Manager](/sccm/core/servers/manage/reporting). 
 - The Asset Intelligence synchronization point must be configured and synchronized. For more information, see [Configure Asset Intelligence in System Center Configuration Manager](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).
 
 The data in the dashboard depends on having the Asset Intelligence synchronization point installed. The dashboard uses the Asset Intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. 
@@ -46,8 +47,8 @@ Based on inventory data you collected from managed devices, the dashboard displa
 
 To access the Lifecycle dashboard in the Configuration Manager console, go to **Assets and Compliance** > **Asset Intelligence** > **Product Lifecycle**.
 
-[!NOTE]
-The data in the dashboard is based on the site the Configuration Manager console connects to. If the console connects to your top-tier site, you see data for the entire hierarchy. When connected to a child primary site, only data from that site displays.
+>[!NOTE]
+>The data in the dashboard is based on the site the Configuration Manager console connects to. If the console connects to your top-tier site, you see data for the entire hierarchy. When connected to a child primary site, only data from that site displays.
 
 ### Product Lifecycle dashboard
 
