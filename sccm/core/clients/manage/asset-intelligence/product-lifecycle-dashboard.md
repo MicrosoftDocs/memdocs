@@ -3,7 +3,7 @@ title: "Product Lifecycle dashboard"
 titleSuffix: "Configuration Manager"
 description: "Get information about the Product Lifecycle dashboard in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/09/2018
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
