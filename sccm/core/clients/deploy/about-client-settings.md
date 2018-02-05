@@ -311,110 +311,122 @@ Set a grace period of 1 to 120 hours. Use this setting along with the deployment
 ##  Computer restart  
  The following settings must be shorter in duration than the shortest maintenance window applied to the computer.  
 
- For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
-
 -   **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
 -   **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
 
-
+For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
 
 ##  Endpoint Protection  
 >  [!Tip]   
-> In addition to the following information, you can find additional details about using Endpoint Protection client settings in [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
+> In addition to the following information, you can find details about using Endpoint Protection client settings in [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
--   **Manage Endpoint Protection client on client computers**  </br>
-     Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
+### Manage Endpoint Protection client on client computers
 
-     Choose this option if you have already installed the Endpoint Protection client and want to manage it with Configuration Manager.  This separate installation includes a scripted process using a Configuration Manager application or package and program.
+Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
 
--   **Install Endpoint Protection client on client computers**   </br>
-     Choose **Yes** to install and enable the Endpoint Protection client on client computers not already running the client.  
+Choose this option if you have already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program.
 
-    > [!NOTE]  
-    >  If the Endpoint Protection client is already installed, choosing **No** does not uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
+### Install Endpoint Protection client on client computers
 
--   **Automatically remove previously installed antimalware software before Endpoint Protection is installed** </br>
-    Configure this setting to **Yes** for the Endpoint Protection client to attempt to uninstall other antimalware applications. Multiple antimalware clients on the same device can conflict and impact system performance.
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that are not already running the client.  
 
--   **Allow Endpoint Protection client installation and restarts outside maintenance windows. Maintenance windows must be at least 30 minutes long for client installation** </br>
-    Configure this setting to **Yes** to override typical installation behaviors with maintenance windows. This setting meets business requirements for the priority of system maintenance for security purposes. 
+> [!NOTE]  
+>  If the Endpoint Protection client is already installed, choosing **No** does not uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
 
--   **For Windows Embedded devices with write filters, commit Endpoint Protection client installation (requires restarts)**  </br>
-     Choose **Yes** to disable the write filter on the Windows Embedded device and restart the device. This action commits the installation on the device.  
+### Automatically remove previously installed antimalware software before Endpoint Protection is installed
 
-     If you configure this setting to **No**, then the client installs on a temporary overlay that clears when the device restarts. In this scenario, the Endpoint Protection client does not fully install until another installation commits changes to the device. This configuration is the default.  
+Set this to **Yes** for the Endpoint Protection client to attempt to uninstall other antimalware applications. Multiple antimalware clients on the same device can conflict, and impact system performance.
 
--   **Suppress any required computer restarts after the Endpoint Protection client is installed**  </br>
-     Choose **Yes** to suppress a computer restart if necessary after the Endpoint Protection client installs.  
+### Allow Endpoint Protection client installation and restarts outside maintenance windows. Maintenance windows must be at least 30 minutes long for client installation
 
-    > [!IMPORTANT]  
-    >  If the Endpoint Protection client requires a computer restart and this setting is **No**, then the computer restarts regardless of any configured maintenance windows.  
+Set this to **Yes** to override typical installation behaviors with maintenance windows. This setting meets business requirements for the priority of system maintenance for security purposes. 
 
--   **Allowed period of time users can postpone a required restart to complete the Endpoint Protection installation (hours)**  </br>
-     If a restart is necessary after the Endpoint Protection client installs, this setting specifies the number of hours that users can postpone the required restart. This setting requires the **Suppress any required computer restarts after the Endpoint Protection client is installed** setting is **No**.  
+### For Windows Embedded devices with write filters, commit Endpoint Protection client installation (requires restarts)
 
--   **Disable alternate sources (such as Microsoft Windows Update, Microsoft Windows Server Update Services, or UNC shares) for the initial definition update on client computers**  </br>
-     Choose **Yes** if you want Configuration Manager to install only the initial definition update on client computers. This setting can be helpful to avoid unnecessary network connections and reduce network bandwidth during the initial installation of the definition update.  
+Choose **Yes** to disable the write filter on the Windows Embedded device, and restart the device. This action commits the installation on the device.  
+
+If you choose **No**, the client installs on a temporary overlay that clears when the device restarts. In this scenario, the Endpoint Protection client does not fully install until another installation commits changes to the device. This configuration is the default.  
+
+### Suppress any required computer restarts after the Endpoint Protection client is installed
+
+Choose **Yes** to suppress a computer restart after the Endpoint Protection client installs.  
+
+> [!IMPORTANT]  
+>  If the Endpoint Protection client requires a computer restart and this setting is **No**, then the computer restarts regardless of any configured maintenance windows.  
+
+### Allowed period of time users can postpone a required restart to complete the Endpoint Protection installation (hours)
+
+If a restart is necessary after the Endpoint Protection client installs, this setting specifies the number of hours that users can postpone the required restart. This setting requires that the setting for **Suppress any required computer restarts after the Endpoint Protection client is installed** is **No**.  
+
+### Disable alternate sources (such as Microsoft Windows Update, Microsoft Windows Server Update Services, or UNC shares) for the initial definition update on client computers
+
+Choose **Yes** if you want Configuration Manager to install only the initial definition update on client computers. This setting can be helpful to avoid unnecessary network connections, and reduce network bandwidth, during the initial installation of the definition update.  
 
 
 
 ##  Enrollment
 
 -   **Polling interval for mobile device legacy clients** </br>
-    Click **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, Mac OS X, and Unix or Linux.
+    Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, Mac OS X, and Unix or Linux.
 
 -   **Polling interval for modern devices (minutes)** </br>
-    Enter the number of minutes that modern devices poll for policy. This setting is for Windows 10 devices managed via on-premises mobile device management.
+    Enter the number of minutes that modern devices poll for policy. This setting is for Windows 10 devices that are managed through on-premises mobile device management.
 
 -   **Allow users to enroll mobile devices and Mac computers** </br>
-    To enable user-based enrollment of legacy devices, configure this setting to **Yes**, and then configure the following setting:
+    To enable user-based enrollment of legacy devices, set this to **Yes**, and then configure the following setting:
 
     -   **Enrollment profile** </br>
-        Click **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
+        Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
 
 -   **Allow users to enroll modern devices** </br>
-    To enable user-based enrollment of modern devices, configure this setting to **Yes**, and then configure the following setting:
+    To enable user-based enrollment of modern devices, set this to **Yes**, and then configure the following setting:
 
     -   **Modern device enrollment profile** </br>
-        Click **Set Profile** to create or select an enrollment profile. For more information, see [Create an enrollment profile that allows users to enroll modern devices](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf).
+        Select **Set Profile** to create or select an enrollment profile. For more information, see [Create an enrollment profile that allows users to enroll modern devices](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf).
 
 
 
 ##  Hardware inventory  
 
--   **Enable hardware inventory on clients** </br>
-    This setting is set to **Yes** by default. For more information, see [Introduction to hardware inventory](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).
+### Enable hardware inventory on clients
 
--   **Hardware inventory schedule** </br>
-    Click **Schedule** to adjust the frequency that clients run the hardware inventory cycle. By default, this cycle occurs every seven days.
+By default, this setting is **Yes**. For more information, see [Introduction to hardware inventory](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).
 
--   **Maximum random delay (minutes)** </br>
-    Specify the maximum number of minutes for the Configuration Manager client to randomize the hardware inventory cycle from the defined schedule. This randomization across all clients helps load balance inventory processing on the site server. You can specify a value of 0 to 480 minutes. By default, this value is set to 240 minutes (four hours).
+### Hardware inventory schedule
 
--   **Maximum custom MIF file size (KB)**  </br>
-     Specify the maximum size, in kilobytes (KB), allowed for each custom Management Information Format (MIF) file that the client collects during a hardware inventory cycle. The Configuration Manager hardware inventory agent does not process any custom MIF files that exceed this size. You can specify a size of 1 KB to 5,120 KB. By default, this value is set to 250 KB. This setting does not affect the size of the regular hardware inventory data file.  
+Select **Schedule** to adjust the frequency that clients run the hardware inventory cycle. By default, this cycle occurs every seven days.
 
-    > [!NOTE]  
-    >  This setting is available only in the default client settings.  
+### Maximum random delay (minutes)
 
--   **Hardware inventory classes**  </br>
-     Click **Set Classes** to extend the hardware information that you collect from clients without manually editing the sms_def.mof file. For more information, see [How to configure hardware inventory](../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+Specify the maximum number of minutes for the Configuration Manager client to randomize the hardware inventory cycle from the defined schedule. This randomization across all clients helps load-balance inventory processing on the site server. You can specify any value between 0 and 480 minutes. By default, this value is set to 240.
 
--   **Collect MIF files**  </br>
-     Use this setting to specify whether to collect MIF files from Configuration Manager clients during hardware inventory.  
+### Maximum custom MIF file size (KB)
 
-     For a MIF file to be collected by hardware inventory, it must be in the correct location on the client computer. By default, the files are located in the following paths:  
+Specify the maximum size, in kilobytes (KB), allowed for each custom Management Information Format (MIF) file that the client collects during a hardware inventory cycle. The Configuration Manager hardware inventory agent does not process any custom MIF files that exceed this size. You can specify a size of 1 KB to 5,120 KB. By default, this value is set to 250 KB. This setting does not affect the size of the regular hardware inventory data file.  
 
-    -   **IDMIF files** should be in the Windows\System32\CCM\Inventory\Idmif folder 
+> [!NOTE]  
+>  This setting is available only in the default client settings.  
 
-    -   **NOIDMIF files** should be in the Windows\System32\CCM\Inventory\Noidmif folder
+### Hardware inventory classes
 
-    > [!NOTE]  
-    >  This setting is available only in the default client settings.
+Select **Set Classes** to extend the hardware information that you collect from clients without manually editing the sms_def.mof file. For more information, see [How to configure hardware inventory](../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+
+### Collect MIF files
+
+Use this setting to specify whether to collect MIF files from Configuration Manager clients during hardware inventory.  
+
+For a MIF file to be collected by hardware inventory, it must be in the correct location on the client computer. By default, the files are located in the following paths:  
+
+-   **IDMIF files** should be in the Windows\System32\CCM\Inventory\Idmif folder. 
+
+-   **NOIDMIF files** should be in the Windows\System32\CCM\Inventory\Noidmif folder.
+
+> [!NOTE]  
+>  This setting is available only in the default client settings.
 
    
 
-##  Metered Internet connections  
+##  Metered internet connections  
  Manage how Windows 8 and later computers use metered Internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
 > [!NOTE]  
