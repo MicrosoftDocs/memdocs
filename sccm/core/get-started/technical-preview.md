@@ -109,8 +109,10 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1802
-- [Feature Name](capabilities-in-technical-preview-1802.md#feature-name) <!-- TFSid --> 
-- [Microsoft Edge browser policies](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 --> 
+- [Configure Windows Delivery Optimization to use Configuration Manager boundary groups](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) <!-- 1324696 --> 
+- [Windows 10 in-place upgrade task sequence via cloud management gateway](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
+- [Improvements to Windows 10 in-place upgrade task sequence](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
+- [Improvements to PXE-enabled distribution points](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
 
 
 
