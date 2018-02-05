@@ -185,23 +185,6 @@ The [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts) feature now retur
 
 
 
-## Report on Windows AutoPilot device information
-<!-- 1357314 -->
-Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
-
-### Prerequisites
-- This device information only applies to clients on Windows 10, version 1703, and later
-
-### Try it out!
- Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
-
-1. In the Configuration Manager console, **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.
-2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
-3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
-4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
-
-
-
 ## Boundary group fallback for management points
 <!-- 1324594 -->
 Starting in this release, you can configure fallback relationships for management points between [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups). This behavior provides greater control for the management points that clients use. On the **Relationships** tab of the boundary group properties, there is a new column for management point. When you add a new fallback boundary group, the fallback time for the management point is currently always zero (0). This behavior is the same for the **Default Behavior** on the site default boundary group.
