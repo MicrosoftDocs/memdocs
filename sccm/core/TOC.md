@@ -339,6 +339,8 @@
 ###  [Example validation state transitions for Asset Intelligence](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [Example Asset Intelligence general license import file](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
+### [Use the Product Lifecycle dashboard](clients/manage/asset-intelligence/product-lifecycle-dashboard.md)
+
 ##   Remote control
 ###  [Introduction to remote control](clients/manage/remote-control/introduction-to-remote-control.md)
 ### [Prerequisites for remote control](clients/manage/remote-control/prerequisites-for-remote-control.md)
