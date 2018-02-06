@@ -432,143 +432,164 @@ For a MIF file to be collected by hardware inventory, it must be in the correct 
 > [!NOTE]  
 >  The configured client setting is not applied in the following scenarios:  
 >   
-> -   The computer is on a roaming data connection: The Configuration Manager client does not perform any tasks that require data to be transferred to Configuration Manager sites.  
-> -   The Windows network connection properties are configured as non-metered: The Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
+> -   If the computer is on a roaming data connection, the Configuration Manager client does not perform any tasks that require data to be transferred to Configuration Manager sites.  
+> -   If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
 
--   **Client communication on metered Internet connections**  </br>
-     Choose one of the following options for this setting:  
+### Client communication on metered internet connections
 
-    -   **Allow**: All client communications are allowed over the metered Internet connection unless the client device is using a roaming data connection.  
+Choose one of the following options for this setting:  
 
-    -   **Limit**: Only the following client communications are allowed over the metered Internet connection:  
+-   **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.  
 
-        -   Client policy retrieval  
+-   **Limit**: Only the following client communications are allowed over the metered internet connection:  
 
-        -   Client state messages to send to the site  
+    -   Client policy retrieval  
 
-        -   Software installation requests by using the Application Catalog  
+    -   Client state messages to send to the site  
 
-        -   Required deployments (when the installation deadline is reached)  
+    -   Software installation requests by using the Application Catalog  
 
-        > [!IMPORTANT]  
-        >  The client always permits software installations from Software Center or the Application Catalog, regardless of the metered Internet connection settings.  
+    -   Required deployments (when the installation deadline is reached)  
 
-         If the data transfer limit is reached for the metered Internet connection, the client no longer tries to communicate with Configuration Manager sites.  
+    > [!IMPORTANT]  
+    >  The client always permits software installations from Software Center or the Application Catalog, regardless of the metered Internet connection settings.  
 
-    -   **Block**: The Configuration Manager client does not try to communicate with Configuration Manager sites when it is on a metered Internet connection. This option is the default.  
+    If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
+
+-   **Block**: The Configuration Manager client does not try to communicate with Configuration Manager sites when it is on a metered internet connection. This is the default option.  
 
 
 
 ##  Power management  
 
--   **Allow power management of devices** </br>
-    Configure this setting to **Yes** to enable power management on clients. For more information, see [Introduction to power management](/sccm/core/clients/manage/power/introduction-to-power-management).
+### Allow power management of devices
 
--   **Allow users to exclude their device from power management**  </br>
-     Choose **Yes** to let users of Software Center exclude their computer from any configured power management settings.  
+Set this to **Yes** to enable power management on clients. For more information, see [Introduction to power management](/sccm/core/clients/manage/power/introduction-to-power-management).
 
--   **Enable wake-up proxy** </br> 
-     Specify **Yes** to supplement the site’s Wake On LAN setting when it is configured for unicast packets.  
+### Allow users to exclude their device from power management
 
-     For more information about wake-up proxy, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).  
+Choose **Yes** to let users of Software Center exclude their computer from any configured power management settings.  
 
-    > [!WARNING]  
-    >  Do not enable wake-up proxy in a production network without first understanding how it works and evaluating it in a test environment.  
+### Enable wake-up proxy
 
-    Then configure the following additional settings as needed:
+Specify **Yes** to supplement the site’s Wake On LAN setting, when it is configured for unicast packets.  
 
-    -   **Wake-up proxy port number (UDP)**  </br>
+For more information about wake-up proxy, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).  
+
+> [!WARNING]  
+>  Do not enable wake-up proxy in a production network without first understanding how it works and evaluating it in a test environment.  
+
+Then, configure the following additional settings as needed:
+
+-   **Wake-up proxy port number (UDP)**  </br>
          The port number that clients use to send wake-up packets to sleeping computers. Keep the default port 25536, or change the number to a value of your choice.  
 
-    -   **Wake On LAN port number (UDP)** </br> 
+-   **Wake On LAN port number (UDP)** </br> 
          Keep the default value of 9, unless you have changed the Wake On LAN (UDP) port number on the **Ports** tab of the site **Properties**.  
 
-        > [!IMPORTANT]  
-        >  This number must match the number in the site **Properties**. If you change this number in one place, it isn't automatically updated in the other place.  
+    > [!IMPORTANT]  
+    >  This number must match the number in the site **Properties**. If you change this number in one place, it isn't automatically updated in the other place.  
 
-    -   **Windows Defender Firewall exception for wake-up proxy** </br>
-         The Configuration Manager client automatically configures the wake-up proxy port number on devices that run Windows Defender Firewall. Click **Configure** to specify the desired firewall profiles.
+-   **Windows Defender Firewall exception for wake-up proxy** </br>
+         The Configuration Manager client automatically configures the wake-up proxy port number on devices that run Windows Defender Firewall. Select **Configure** to specify the desired firewall profiles.
 
-        If clients run a different firewall, you must manually configure it to allow the **Wake-up proxy port number (UDP)**.  
+    If clients run a different firewall, you must manually configure it to allow the **Wake-up proxy port number (UDP)**.  
         
-    -   **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries** </br>
+-   **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries** </br>
         Enter the necessary IPv6 prefixes for wake-up proxy to function on your network.
 
 
 
 ##  Remote tools  
 
--   **Enable Remote Control on clients** and **Firewall exception profiles**  </br>
-     Click **Configure** to enable the Configuration Manager remote control feature. Optionally, configure firewall settings to allow remote control to work on client computers.  
+### Enable Remote Control on clients, and Firewall exception profiles
 
-     Remote control is disabled by default.  
+Select **Configure** to enable the Configuration Manager remote control feature. Optionally, configure firewall settings to allow remote control to work on client computers.  
 
-    > [!IMPORTANT]  
-    >  If firewall settings are not configured, remote control might not work correctly.  
+Remote control is disabled by default.  
 
--   **Users can change policy or notification settings in Software Center**  </br>
-     Choose whether users can change remote control options from within Software Center.  
+> [!IMPORTANT]  
+>  If firewall settings are not configured, remote control might not work correctly.  
 
--   **Allow Remote Control of an unattended computer**  </br>
-     Choose whether an admin can use remote control to access a client computer that is logged off or locked. Only a logged-on and unlocked computer can be remotely controlled when this setting is disabled.  
+### Users can change policy or notification settings in Software Center
 
--   **Prompt user for Remote Control permission**  </br>
-     Choose whether the client computer shows a message asking for the user's permission before allowing a remote control session.  
+Choose whether users can change remote control options from within Software Center.  
 
--   **Prompt user for permission to transfer content from shared clipboard** </br>
-    Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer.
+### Allow Remote Control of an unattended computer
 
--   **Grant Remote Control permission to local Administrators group**  </br>
-     Choose whether local admins on the server that initiates the remote control connection can establish remote control sessions to client computers.  
+Choose whether an admin can use remote control to access a client computer that is logged off or locked. Only a logged-on and unlocked computer can be remotely controlled when this setting is disabled.  
 
--   **Access level allowed**  </br>
-     Specify the level of remote control access to allow. Choose from the following settings:  
-    - **No Access**
-    - **View Only**
-    - **Full Control**  
+### Prompt user for Remote Control permission
 
--   **Permitted viewers of Remote Control and Remote Assistance**  </br>
-     Click **Set Viewers** to specify the names of the Windows users who can establish remote control sessions to client computers.  
+Choose whether the client computer shows a message asking for the user's permission before allowing a remote control session.  
 
--   **Show session notification icon on taskbar**  </br>
-     Configure this setting to **Yes** to show an icon on the client's Windows taskbar to indicate an active remote control session.  
+### Prompt user for permission to transfer content from shared clipboard
 
--   **Show session connection bar**  </br>
-     Configure this setting to **Yes** to show a high-visibility session connection bar on clients to indicate an active remote control session.  
+Allow your users the opportunity to accept or deny file transfers, before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer.
 
--   **Play a sound on client**  </br>
-     Configure this setting to use sound to indicate when a remote control session is active on a client computer. Select one of the following options:
-    - **No sound**
-    - **Beginning and send of session** (default)
-    - **Repeatedly during session**  
+### Grant Remote Control permission to local Administrators group
 
--   **Manage unsolicited Remote Assistance settings**  </br>
-     Configure this setting to **Yes** to let Configuration Manager manage unsolicited Remote Assistance sessions.  
+Choose whether local admins on the server that initiates the remote control connection can establish remote control sessions to client computers.  
 
-     In an unsolicited Remote Assistance session, the user at the client computer did not request assistance to initiate the session.  
+### Access level allowed
 
--   **Manage solicited Remote Assistance settings**  </br>
-     Configure this setting to **Yes** to let Configuration Manager manage solicited Remote Assistance sessions.  
+Specify the level of remote control access to allow. Choose from the following settings:  
+- **No Access**
+- **View Only**
+- **Full Control**  
 
-     In a solicited Remote Assistance session, the user at the client computer sent a request to the admin for remote assistance.  
+### Permitted viewers of Remote Control and Remote Assistance
 
--   **Level of access for Remote Assistance**  </br>
-     Choose the level of access to assign to Remote Assistance sessions that are initiated in the Configuration Manager console.  Select one of the following options:
-    - **None** (default)
-    - **Remote Viewing**
-    - **Full Control**
+Select **Set Viewers** to specify the names of the Windows users who can establish remote control sessions to client computers.  
 
-    > [!NOTE]  
-    >  The user at the client computer must always grant permission for a Remote Assistance session to occur.  
+### Show session notification icon on taskbar
 
--   **Manage Remote Desktop settings**  </br>
-     Configure this setting to **Yes** to let Configuration Manager manage Remote Desktop sessions for computers.  
+Configure this setting to **Yes** to show an icon on the client's Windows taskbar to indicate an active remote control session.  
 
--   **Allow permitted viewers to connect by using Remote Desktop connection**  </br>
-     Configure this setting to **Yes** to add users specified in the permitted viewer list to the Remote Desktop local user group on clients.  
+### Show session connection bar
 
--   **Require network level authentication on computers that run Windows Vista operating system and later versions**  </br>
-     Configure this setting to **Yes** to use network-level authentication (NLA) to establish Remote Desktop connections to client computers. NLA initially requires fewer remote computer resources because it finishes user authentication before it establishes a Remote Desktop connection. Using NLA is a more secure configuration. NLA helps protect the computer from malicious users or software, and it reduces the risk from denial-of-service attacks.  
+Set this to **Yes** to show a high-visibility session connection bar on clients, to indicate an active remote control session.  
+
+### Play a sound on client
+
+Set this to use sound to indicate when a remote control session is active on a client computer. Select one of the following options:
+- **No sound**
+- **Beginning and send of session** (default)
+- **Repeatedly during session**  
+
+### Manage unsolicited Remote Assistance settings
+
+Configure this setting to **Yes** to let Configuration Manager manage unsolicited Remote Assistance sessions.  
+
+In an unsolicited Remote Assistance session, the user at the client computer did not request assistance to initiate the session.  
+
+### Manage solicited Remote Assistance settings
+
+Set this to **Yes** to let Configuration Manager manage solicited Remote Assistance sessions.  
+
+In a solicited Remote Assistance session, the user at the client computer sent a request to the admin for remote assistance.  
+
+### Level of access for Remote Assistance
+
+Choose the level of access to assign to Remote Assistance sessions that are initiated in the Configuration Manager console. Select one of the following options:
+- **None** (default)
+- **Remote Viewing**
+- **Full Control**
+
+> [!NOTE]  
+>  The user at the client computer must always grant permission for a Remote Assistance session to occur.  
+
+### Manage Remote Desktop settings
+
+Set this to **Yes** to let Configuration Manager manage Remote Desktop sessions for computers.  
+
+### Allow permitted viewers to connect by using Remote Desktop connection
+
+Set this to **Yes** to add users specified in the permitted viewer list to the Remote Desktop local user group on clients.  
+
+### Require network level authentication on computers that run Windows Vista operating system and later versions
+
+Set this to **Yes** to use network-level authentication (NLA) to establish Remote Desktop connections to client computers. NLA initially requires fewer remote computer resources, because it finishes user authentication before it establishes a Remote Desktop connection. Using NLA is a more secure configuration. NLA helps protect the computer from malicious users or software, and it reduces the risk from denial-of-service attacks.  
 
 
 
