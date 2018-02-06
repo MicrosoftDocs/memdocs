@@ -247,12 +247,11 @@ Configuration Manager does not migrate existing classic CMG instances to the Azu
 
 1. In the Configuration Manager console, **Administration** workspace, expand **Cloud Services**, and select **Cloud Management Gateway**. Click **Create Cloud Management Gateway** in the ribbon. 
 2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Azure AD subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
-
-   > [!NOTE] 
-   > For the selected Azure AD server app, Azure assigns the subscription **contributor** permission. 
-
 3. On the **Settings** page, provide the server PKI certificate file as usual. This certificate defines the CMG service name in Azure. Select the **Region**, and then select a resource group option to either **Create new** or **Use existing**. Enter the new resource group name, or select an existing resource group from the drop-down list. 
 4. Complete the wizard.
+
+> [!NOTE] 
+> For the selected Azure AD server app, Azure assigns the subscription **contributor** permission. 
 
 Monitor the service deployment progress with **cloudmgr.log** on the service connection point.
 
