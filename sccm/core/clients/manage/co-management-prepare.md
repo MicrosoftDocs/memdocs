@@ -29,6 +29,9 @@ ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 # Prepare Windows 10 devices for co-management
 You can enable co-management on Windows 10 devices that are joined to AD and Azure AD, and enrolled in Intune and a client in Configuration Manager. For new Windows 10 devices, and for devices that are already enrolled in Intune, install the Configuration Manager client before they can be co-managed. For Windows 10 devices that are already Configuration Manager clients, you can enroll the devices with Intune and enable co-management in the Configuration Manager console.
 
+> [!IMPORTANT]
+> Windows 10 mobile devices do not support Co-management.
+
 ## Command line to install Configuration Manager client
 You must create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
