@@ -189,7 +189,7 @@ The [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts) feature now retur
 <!-- 1324594 -->
 Starting in this release, you can configure fallback relationships for management points between [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups). This behavior provides greater control for the management points that clients use. On the **Relationships** tab of the boundary group properties, there is a new column for management point. When you add a new fallback boundary group, the fallback time for the management point is currently always zero (0). This behavior is the same for the **Default Behavior** on the site default boundary group.
 
-Previously, a common problem occurs when you have a protected management point in a secure network, for example an Internet-facing network. Clients on the internal network receive policy that includes this protected management point, even though they cannot communicate with it across a firewall. To address this problem, use the **Never fallback** option to ensure that clients only fallback to management points with which they can communicate.
+Previously, a common problem occurs when you have a protected management point in a secure network. Clients on the main corporate network receive policy that includes this protected management point, even though they cannot communicate with it across a firewall. To address this problem, use the **Never fallback** option to ensure that clients only fallback to management points with which they can communicate.
 
 When upgrading the site to this version, Configuration Manager adds all non-Internet-facing management points into the site default boundary group. This upgrade behavior ensures that older client versions continue to communicate with management points. In order to take full advantage of this feature, move your management points to the desired boundary groups.
 
@@ -231,24 +231,26 @@ The list of [unsupported scenarios](/sccm/core/plan-design/network/cng-certifica
 <!-- 1324735 -->
 When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
-The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. We recommend using the Azure Resource Manager deployment model for all new CMG instances, as Azure will deprecate the classic service deployment technology in the future. 
+The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
 Configuration Manager does not migrate existing classic CMG instances to the Azure Resource Manager deployment model. Create new CMG instances using Azure Resource Manager deployments, and then remove classic CMG instances. 
 
 > [!IMPORTANT]
-> This capability does not enable support for Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to create classic type virtual machines, whereas CSPs can only use fabric-based virtual machines.  
+> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### Prerequisites
-- Integration with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+- Integration with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery is not required.
 - The same [requirements for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements-for-cloud-management-gateway), except for the Azure management certificate.
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. In the Configuration Manager console, **Administration** workspace, expand **Cloud Services**, and select **Cloud Management Gateway**. Click **Create Cloud Management Gateway** in the ribbon. 
-2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Azure AD subscription information stored during the integration prerequisite. Click **Next**. 
-3. On the **Settings** page, provide the server PKI certificate file as usual. This certificate defines the CMG service name in Azure. Select the **Region**, and then select a resource group option to either **Create new** or **Use existing**. Enter the new resource group name, or select an existing resource group from the drop-down list. 
-4. Complete the wizard.
+1. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Azure AD subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.
+   > [!NOTE]
+   > For the selected Azure AD server app, Azure assigns the subscription **contributor** permission.
+1. On the **Settings** page, provide the server PKI certificate file as usual. This certificate defines the CMG service name in Azure. Select the **Region**, and then select a resource group option to either **Create new** or **Use existing**. Enter the new resource group name, or select an existing resource group from the drop-down list. 
+1. Complete the wizard.
 
 Monitor the service deployment progress with **cloudmgr.log** on the service connection point.
 
@@ -269,6 +271,42 @@ Starting in this release, when a user requests an application that requires appr
 2. On the **Deployment Settings** page, enable the option **An administrator must approve a request for this application on the device**.
 
 View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There is now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.
+
+
+
+## Use Software Center to browse and install user-available applications on Internet-based clients
+<!-- 1322613 -->
+If you deploy applications as available to users, they can now browse and install them through Software Center on Internet-based clients. The Configuration Manager client uses the cloud management gateway to communicate with the on-premises application catalog website point role.
+
+### Prerequisites
+- [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) with [Azure Active Directory (Azure AD) integration](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+- An application deployed as available to a user collection
+- Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group
+- Enable the client setting **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
+- The client must be: 
+   - Windows 10
+   - Azure AD-joined, also known as cloud-domain joined. 
+
+### Known issues
+- This functionality does not yet support hybrid domain joined. A hybrid device is joined to both Azure AD and on-premises Active Directory.
+- When an Internet-based client roams back to the corporate network, Software Center does not display user-available applications.
+
+
+
+## Report on Windows AutoPilot device information
+<!-- 1351442 -->
+Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
+
+### Prerequisites
+- This device information only applies to clients on Windows 10, version 1703, and later
+
+### Try it out!
+ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+
+1. In the Configuration Manager console, **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.
+2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
+3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
+4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
 
 
 

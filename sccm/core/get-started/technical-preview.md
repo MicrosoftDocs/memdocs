@@ -122,6 +122,8 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Approve application requests for users per device](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
 - [Boundary group fallback for management points](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
 - [Cloud management gateway support for Azure Resource Manager](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
+- [Report on Windows AutoPilot device information](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
+- [Use Software Center to browse and install user-available applications on Internet-based clients](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-internet-based-clients) <!-- 1322613 --> 
 
 
 
