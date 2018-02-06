@@ -113,6 +113,17 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Windows 10 in-place upgrade task sequence via cloud management gateway](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
 - [Improvements to Windows 10 in-place upgrade task sequence](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
 - [Improvements to PXE-enabled distribution points](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
+- [Deployment templates for task sequences](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
+- [Product Lifecycle dashboard](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) <!--1319632 --> 
+- [Improvements to reporting](capabilities-in-technical-preview-1802.md#improvements-to-reporting) <!--1357653 --> 
+- [Improvements to Software Center](capabilities-in-technical-preview-1802.md#improvements-to-software-center) <!--1357592 --> 
+- [Improvements to Run Scripts](capabilities-in-technical-preview-1802.md#improvements-to-run-scripts) <!--1236459 --> 
+- [Improved support for CNG certificates](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) <!-- 1357314 --> 
+- [Approve application requests for users per device](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
+- [Boundary group fallback for management points](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
+- [Cloud management gateway support for Azure Resource Manager](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
+- [Report on Windows AutoPilot device information](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
+- [Use Software Center to browse and install user-available applications on Internet-based clients](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-internet-based-clients) <!-- 1322613 --> 
 
 
 
