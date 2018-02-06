@@ -56,7 +56,9 @@ manager: angrobe
 
 -   There is no support for migration to or from this preview build.  
 
--   There is no support for upgrade to this preview build.  
+-   There is no support for upgrade to this preview build. 
+
+-   There is no support for site recovery from the cd.latest folder.  <!--507106-->
 
 -   There is no support for upgrade to a production build (current branch) from this preview build. However, when updates are available for a preview version,  you can find and install them from the **Updates and Servicing** node of the Configuration Manager console. For a video of the in-console upgrade process, see [Installing ConfigMgr Update Packages](https://www.youtube.com/embed/KBd_EGFbUT8) on youtube.com.  
 -   Only a stand-alone primary site is supported. There is no support for a central administration site, multiple primary sites, or secondary sites.  
