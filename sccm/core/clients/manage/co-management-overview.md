@@ -28,10 +28,13 @@ ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 <!-- 1350871 -->
 Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. In the previous Windows 10 updates, you can already join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Starting with Configuration Manager version 1710, co-management takes advantage of this improvement and enables you to concurrently manage Windows 10, version 1709 (also known as the Fall Creators Update) devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. 
 
-There are two main paths to reach to co-management.  One is Configuration Manager provisioned co-management where Windows 10 devices managed by Configuration Manager and hybrid Azure AD joined get enrolled into Intune. The other is Intune provisioned devices that are enrolled in Intune and then installed with the Configuration Manager client reach a co-management state.  
+There are two main paths to reach to co-management.  One is Configuration Manager provisioned co-management where Windows 10 devices managed by Configuration Manager and hybrid Azure AD joined get enrolled into Intune. The other is Intune provisioned devices that are enrolled in Intune and then installed with the Configuration Manager client reach a co-management state.
 
 ## Prerequisites
 You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for devices with the Configuration Manager client and devices that do not have the client installed.
+
+> [!IMPORTANT]
+> Windows 10 mobile devices do not support Co-management.
 
 ### General prerequisites
 The following are general prerequisites for you to enable co-management:  
