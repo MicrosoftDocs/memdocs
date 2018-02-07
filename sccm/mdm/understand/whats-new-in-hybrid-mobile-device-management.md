@@ -3,7 +3,7 @@ title: "What's new in hybrid MDM"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 01/04/2018
+ms.date: 02/06/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -41,6 +41,16 @@ Each section of this article lists hybrid features under three different categor
 ## January 2018
 
 ### New in Microsoft Intune
+
+- **Approve the Company Portal app for Android for Work** <!--1797090 -->    
+  If your organization uses Android for Work, you'll need to manually approve the Company Portal app for Android so that it will continue to receive automatic updates from the managed Google Play store.
+
+- **Conditional Access policies for Intune is only available from the Azure portal**  <!-- 1737088 1634311 -->    
+  Starting with this release, you must configure and manage your Conditional Access policies in the [Azure portal](https://portal.azure.com) from **Azure Active Directory** > **Conditional Access**. For your convenience, you can also access this blade from Intune in the Azure portal at **Intune** > **Conditional Access**.
+
+- **Updates to compliance emails** <!--1637547 -->    
+  When an email is sent to report a noncompliant device, details about the noncompliant device are included. 
+
 
 - **New functionality for the "Resolve" action for Android devices** <!--1583480-->    
   The Company Portal app for Android is expanding the "Resolve" action for **Update device settings** to resolve [device encryption issues](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android).
