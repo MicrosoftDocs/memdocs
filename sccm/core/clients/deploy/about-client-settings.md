@@ -596,16 +596,16 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
 ## Software Center
 
 -   **Select these new settings to specify company information** </br>
-    Configure this setting to **Yes**, and then specify the following settings to brand Software Center for your organization:
+    Set this to **Yes**, and then specify the following settings to brand Software Center for your organization:
 
     - **Company name** </br>
         Enter the organization name that users see in Software Center.
     - **Color scheme for Software Center** </br>
-        Click **Select Color** to define primary color used by Software Center.
+        Select **Select Color** to define the primary color used by Software Center.
     - **Select a logo for Software Center** </br>
-        Click **Browse** to select an image to display in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+        Select **Browse** to select an image to display in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
 
--   Software Center tab visibility </br>
+-   **Software Center tab visibility** </br>
     Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
     - **Applications**
     - **Updates**
@@ -614,7 +614,7 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
     - **Device Compliance**
     - **Options**
 
-    For example, if your organization does not use compliance policies and you want to hide the Device Compliance tab in Software Center, configure the **Enable Device Compliance tab** setting to **No**.
+    For example, if your organization does not use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 
 
 
@@ -626,86 +626,88 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
     > [!IMPORTANT]  
     >  We recommend that you do not change this value to a lower value than the default. A more aggressive re-evaluation schedule negatively affects the performance of your network and client computers.  
 
-     Initiate this action from a client by choosing the **Application Deployment Evaluation Cycle** from the **Actions** tab of the **Configuration Manager** control panel.  
+     Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
 
 
 
 ##  Software inventory  
 
--   **Enable software inventory on clients** </br>
-    This setting is set to **Yes** by default. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+### Enable software inventory on clients
 
--   **Schedule software inventory and file collection** </br>
-    Click **Schedule** to adjust the frequency that clients run the software inventory and file collection cycles. By default, this cycle occurs every seven days.
+This is set to **Yes** by default. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
 
--   **Inventory reporting detail**  </br>
-     Specify one of the following levels of file information to inventory:
-    - **File only**
-    - **Product only**
-    - **Full details** (default)
+### Schedule software inventory and file collection
 
--   **Inventory these file types**  </br>
-     If you want to specify the types of file to inventory, click **Set Types**, and then configure the following options:  
+Select **Schedule** to adjust the frequency that clients run the software inventory and file collection cycles. By default, this cycle occurs every seven days.
+
+### Inventory reporting detail
+
+Specify one of the following levels of file information to inventory:
+- **File only**
+- **Product only**
+- **Full details** (default)
+
+### Inventory these file types
+
+If you want to specify the types of file to inventory, select **Set Types**, and then configure the following options:  
+
+> [!NOTE]  
+>  If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.  
+
+-   Select **New** to add a new file type to inventory. Then specify the following information in the **Inventoried File Properties** dialog box:  
+
+    -   **Name**: Provide a name for the file that you want to inventory. Use an asterisk (**&#42;**) wildcard to represent any string of text, and a question mark (**?**) to represent any single character. For example, if you want to inventory all files with the extension .doc, specify the file name **\*.doc**.  
+
+    -   **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the specified file, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
+
+    -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files are not inventoried.  
+
+    -   **Exclude files in the Windows folder**: When you choose this option, any files in the Windows folder and its subfolders are not inventoried.  
+
+    Select **OK** to close the **Inventoried File Properties** dialog box. Add all the files that you want to inventory, and then select **OK** to close the **Configure Client Setting** dialog box.  
+
+### Collect files
+
+If you want to collect files from client computers, select **Set Files**, and then configure the following settings:  
+
+> [!NOTE]  
+>  If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.  
+
+-   In the **Configure Client Setting** dialog box, select **New** to add a file to be collected.  
+
+-   In the **Collected File Properties** dialog box, provide the following information:  
+
+    -   **Name**: Provide a name for the file that you want to collect. Use an asterisk (**&#42;**) wildcard to represent any string of text, and a question mark (**?**) to represent any single character.  
+
+    -   **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
+
+    -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files are not collected.  
+
+    -   **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size, in kilobytes (KB), after which the client stops collecting the specified files.  
 
     > [!NOTE]  
-    >  If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.  
+    >  The site server collects the five most recently changed versions of collected files, and stores them in the *&lt;ConfigMgr installation directory\>*\Inboxes\Sinv.box\Filecol directory. If a file has not changed since the last software inventory cycle, the file is not collected again.  
+    >   
+    >  Software inventory does not collect files larger than 20 MB.  
+    >   
+    >  The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box shows the maximum size for all collected files. When this size is reached, file collection stops. Any files already collected are retained and sent to the site server.  
 
-    -   Click the **New** icon to add a new file type to inventory. Then specify the following information in the **Inventoried File Properties** dialog box:  
+    > [!IMPORTANT]
+    >  If you configure software inventory to collect many large files, this configuration might negatively affect the performance of your network and site server.  
 
-        -   **Name**: Provide a name for the file that you want to inventory. Use an asterisk (**&#42;**) wildcard to represent any string of text and a question mark (**?**) to represent any single character. For example, if you want to inventory all files with the extension .doc, specify the file name **\*.doc**.  
+    For information about how to view collected files, see [How to use Resource Explorer to view software inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
-        -   **Location**: Click **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the specified file, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
+    Select **OK** to close the **Collected File Properties** dialog box. Add all the files that you want to collect, and then click **OK** to close the **Configure Client Setting** dialog box.  
 
-        -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files are not inventoried.  
+### Set Names
 
-        -   **Exclude files in the Windows folder**: When you choose this option, any files in the Windows folder and its subfolders are not inventoried.  
+The software inventory agent retrieves manufacturer and product names from file header information. These names are not always standardized in the file header information. When you view software inventory in Resource Explorer, different versions of the same manufacturer or product name can appear. To standardize these display names, select **Set Names**, and then configure the following settings:  
 
-    -   Click **OK** to close the **Inventoried File Properties** dialog box.  
+-   **Name type**: Software inventory collects information about both manufacturers and products. Choose whether you want to configure display names for a **Manufacturer** or a **Product**.  
 
-    -   Add all the files that you want to inventory, and then click **OK** to close the **Configure Client Setting** dialog box.  
+-   **Display name**: Specify the display name that you want to use in place of the names in the **Inventoried names** list. To specify a new display name, select **New**.  
 
--   **Collect files**  </br>
-     If you want to collect files from client computers, click **Set Files** and then configure the following settings:  
-
-    > [!NOTE]  
-    >  If multiple custom client settings are applied to a computer, the inventory that each setting returns is merged.  
-
-    -   In the **Configure Client Setting** dialog box, click the **New** icon to add a file to be collected.  
-
-    -   In the **Collected File Properties** dialog box, provide the following information:  
-
-        -   **Name**: Provide a name for the file that you want to collect. Use an asterisk (**&#42;**) wildcard to represent any string of text and a question mark (**?**) to represent any single character.  
-
-        -   **Location**: Click **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
-
-        -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files are not collected.  
-
-        -   **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size, in kilobytes (KB), after which the client stops collecting the specified files.  
-
-          > [!NOTE]  
-          >  The site server collects the five most recently changed versions of collected files and stores them in the *&lt;ConfigMgr installation directory\>*\Inboxes\Sinv.box\Filecol directory. If a file has not changed since the last software inventory cycle, the file is not collected again.  
-          >   
-          >  Software inventory does not collect files larger than 20 MB.  
-          >   
-          >  The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box shows the maximum size for all collected files. When this size is reached, file collection stops. Any files already collected are retained and sent to the site server.  
-
-          > [!IMPORTANT]
-          >  If you configure software inventory to collect many large files, this configuration might negatively affect the performance of your network and site server.  
-
-        For information about how to view collected files, see [How to use Resource Explorer to view software inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
-
-    -   Click **OK** to close the **Collected File Properties** dialog box.  
-
-    -   Add all the files that you want to collect, and then click **OK** to close the **Configure Client Setting** dialog box.  
-
--   **Set Names**  </br>
-     The software inventory agent retrieves manufacturer and product names from file header information. These names are not always standardized in the file header information. When you view software inventory in Resource Explorer, different versions of the same manufacturer or product name can appear. To standardize these display names, click **Set Names** and then configure the following settings:  
-
-    -   **Name type**: Software inventory collects information about both manufacturers and products. Choose whether you want to configure display names for a **Manufacturer** or a **Product**.  
-
-    -   **Display name**: Specify the display name that you want to use in place of the names in the **Inventoried names** list. Click the **New** icon to specify a new display name.  
-
-    -   **Inventoried names**: Click the **New** icon to add an inventoried name. This name is replaced in software inventory by the name chosen in the **Display name** list. You can add multiple names to replace.  
+-   **Inventoried names**: To add an inventoried name, select **New**. This name is replaced in software inventory by the name chosen in the **Display name** list. You can add multiple names to replace.  
 
 
 
@@ -715,53 +717,61 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
     This setting is set to **Yes** by default. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering#configure-software-metering).
 
 -   **Schedule data collection** </br>
-    Click **Schedule** to adjust the frequency that clients run the software metering cycle. By default, this cycle occurs every seven days.
+    Select **Schedule** to adjust the frequency that clients run the software metering cycle. By default, this cycle occurs every seven days.
 
 
 
 ##  Software updates  
 
--   **Enable software updates on clients**  </br>
-     Use this setting to enable software updates on Configuration Manager clients. When you disable this setting, Configuration Manager removes existing deployment policies from client. When you re-enable this setting, the client downloads the current deployment policy.  
+### Enable software updates on clients
 
-    > [!IMPORTANT]  
-    >  When you disable this setting, compliance policies that rely on software updates will no longer function.  
+Use this setting to enable software updates on Configuration Manager clients. When you disable this setting, Configuration Manager removes existing deployment policies from client. When you re-enable this setting, the client downloads the current deployment policy.  
 
--   **Software update scan schedule**  </br>
-     Click **Schedule** to specify how often the client initiates a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+> [!IMPORTANT]  
+>  When you disable this setting, compliance policies that rely on software updates will no longer function.  
 
-     By default, this scan uses a simple schedule to initiate every seven days. You can create a custom schedule to specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.  
+### Software update scan schedule
 
-    > [!NOTE]  
-    >  If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
+Select **Schedule** to specify how often the client initiates a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
-    > [!WARNING]  
-    >  The actual start time on client computers is the start time plus a random amount of time up to two hours. This randomization prevents client computers from initiating the scan and simultaneously connecting to the active software update point.  
+By default, this scan uses a simple schedule to initiate every seven days. You can create a custom schedule. You can specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.  
 
--   **Schedule deployment re-evaluation**  </br>
-     Click **Schedule** to configure how often the software updates client agent re-evaluates software updates for installation status on Configuration Manager client computers. When previously installed software updates are no longer found on clients but are still required, the client reinstalls the software updates.
+> [!NOTE]  
+>  If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
 
-     Adjust this schedule based on company policy for software update compliance and whether users can uninstall software updates. Every deployment re-evaluation cycle results in network and client computer processor activity. By default, this setting uses a simple schedule to initiate the deployment re-evaluation scan every seven days.  
+> [!WARNING]  
+>  The actual start time on client computers is the start time plus a random amount of time, up to two hours. This randomization prevents client computers from initiating the scan and simultaneously connecting to the active software update point.  
 
-    > [!NOTE]  
-    >  If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
+### Schedule deployment re-evaluation
 
--   **When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time**  </br>
-     Configure this setting to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client initiates installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
+Select **Schedule** to configure how often the software updates client agent re-evaluates software updates for installation status on Configuration Manager client computers. When previously installed software updates are no longer found on clients but are still required, the client reinstalls the software updates.
 
-     Use this setting to expedite installation for required software updates. This setting also potentially increases client security, potentially decreases end-user notifications, and potentially decreases client restarts. By default, this setting is set to **No** thus not enabled.  
+Adjust this schedule based on company policy for software update compliance, and whether users can uninstall software updates. Every deployment re-evaluation cycle results in network and client computer processor activity. By default, this setting uses a simple schedule to initiate the deployment re-evaluation scan every seven days.  
 
--   **Period of time for which all pending deployments with deadline in this time will also be installed**  </br>
-     Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours and from 1 to 365 days. By default, this setting is configured for seven days.  
+> [!NOTE]  
+>  If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
 
--   **Enable installation of Express installation files on clients** </br>
-    Configure this setting to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
-    -   **Port used to download content for Express installation files** </br>
-        This setting configures the local port for the HTTP listener to download express content. It is set to 8005 by default. You do not need to open this port in the client firewall.
+Set this to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client initiates installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
 
--   **Enable management of the Office 365 Client Agent** </br>
-    Use this setting to enable the management of the Office 365 Client Agent. When you set the value to **Yes**, it enables the configuration of Office 365 installation settings, downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+Use this setting to expedite installation for required software updates. This setting also has the potential to increase client security, decrease notifications to the user, and decrease client restarts. By default, this setting is set to **No**.  
+
+### Period of time for which all pending deployments with deadline in this time will also be installed
+
+Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for 7 days.  
+
+### Enable installation of Express installation files on clients
+
+Set this to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+
+### Port used to download content for Express installation files
+
+This setting configures the local port for the HTTP listener to download express content. It is set to 8005 by default. You do not need to open this port in the client firewall.
+
+### Enable management of the Office 365 Client Agent
+
+When you set this to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
 
 
@@ -775,19 +785,19 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
 ##  User and device affinity  
 
 -   **User device affinity usage threshold (minutes)**  </br>
-     Specify the number of minutes before Configuration Manager creates a user device affinity mapping.  By default this value is 2880 minutes (two days).
+     Specify the number of minutes before Configuration Manager creates a user device affinity mapping.  By default, this value is 2880 minutes (2 days).
 
 -   **User device affinity usage threshold (days)**  </br>
-     Specify the number of days over which the client measures the threshold for usage-based device affinity.  By default this value is 30 days.
+     Specify the number of days over which the client measures the threshold for usage-based device affinity.  By default, this value is 30 days.
 
     > [!NOTE]  
-    >  For example, you specify **User device affinity usage threshold (minutes)** as **60** minutes and **User device affinity usage threshold (days)** as **5** days. Then the user must use the device for 60 minutes over a period of five days to create automatic affinity with the device.  
+    >  For example, you specify **User device affinity usage threshold (minutes)** as **60** minutes, and **User device affinity usage threshold (days)** as **5** days. Then the user must use the device for 60 minutes over a period of 5 days to create automatic affinity with the device.  
 
 -   **Automatically configure user device affinity from usage data**  </br>
      Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.  
 
 -   **Allow user to define their primary devices** </br>
-    When this setting is **Yes** then users can identify their own primary devices in Software Center.
+    When this setting is **Yes**, users can identify their own primary devices in Software Center.
 
 
 
