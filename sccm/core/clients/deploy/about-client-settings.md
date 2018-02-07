@@ -291,7 +291,7 @@ This option requires at least Windows PowerShell version 2.0. The default is **A
 
 ### Show notifications for new deployments
 
-Choose **Yes** to display a notification for deployments available for less than a week. This message displays each time the client agent starts.
+Choose **Yes** to display a notification for deployments available for less than a week. This message appears each time the client agent starts.
 
 ### Disable deadline randomization
 
@@ -427,7 +427,7 @@ For a MIF file to be collected by hardware inventory, it must be in the correct 
    
 
 ##  Metered internet connections  
- Manage how Windows 8 and later computers use metered Internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
+ Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered internet connection.  
 
 > [!NOTE]  
 >  The configured client setting is not applied in the following scenarios:  
@@ -452,7 +452,7 @@ Choose one of the following options for this setting:
     -   Required deployments (when the installation deadline is reached)  
 
     > [!IMPORTANT]  
-    >  The client always permits software installations from Software Center or the Application Catalog, regardless of the metered Internet connection settings.  
+    >  The client always permits software installations from Software Center or the Application Catalog, regardless of the metered internet connection settings.  
 
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
@@ -603,7 +603,7 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
     - **Color scheme for Software Center** </br>
         Select **Select Color** to define the primary color used by Software Center.
     - **Select a logo for Software Center** </br>
-        Select **Browse** to select an image to display in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+        Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
 
 -   **Software Center tab visibility** </br>
     Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
@@ -697,7 +697,7 @@ If you want to collect files from client computers, select **Set Files**, and th
 
     For information about how to view collected files, see [How to use Resource Explorer to view software inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
-    Select **OK** to close the **Collected File Properties** dialog box. Add all the files that you want to collect, and then click **OK** to close the **Configure Client Setting** dialog box.  
+    Select **OK** to close the **Collected File Properties** dialog box. Add all the files that you want to collect, and then select **OK** to close the **Configure Client Setting** dialog box.  
 
 ### Set Names
 
