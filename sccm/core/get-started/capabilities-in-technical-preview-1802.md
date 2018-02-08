@@ -54,8 +54,10 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
  -  Task 2              
 -->
 
-
-
+## Transition Endpoint Protection workload to Intune using co-management    
+<!-- 1357365 -->
+In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after co-management is enabled. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+ 
 ## Configure Windows Delivery Optimization to use Configuration Manager boundary groups
 <!-- 1324696 -->
 You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. 
