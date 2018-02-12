@@ -73,7 +73,7 @@ For more information, see the **Group** delivery mode option in [Delivery Optimi
 ## Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
 
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to Internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
+The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
 
 Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). Otherwise devices cannot run the task sequence.
 
@@ -187,7 +187,7 @@ Starting in this release, you can configure fallback relationships for managemen
 
 Previously, a common problem occurs when you have a protected management point in a secure network. Clients on the main corporate network receive policy that includes this protected management point, even though they cannot communicate with it across a firewall. To address this problem, use the **Never fallback** option to ensure that clients only fallback to management points with which they can communicate.
 
-When upgrading the site to this version, Configuration Manager adds all non-Internet-facing management points into the site default boundary group. This upgrade behavior ensures that older client versions continue to communicate with management points. In order to take full advantage of this feature, move your management points to the desired boundary groups.
+When upgrading the site to this version, Configuration Manager adds all non-internet-facing management points into the site default boundary group. This upgrade behavior ensures that older client versions continue to communicate with management points. In order to take full advantage of this feature, move your management points to the desired boundary groups.
 
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
@@ -273,19 +273,23 @@ View **Approval Requests** under **Application Management** in the **Software Li
 
 ## Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. When the Configuration Manager client is Internet-based, it uses the cloud management gateway to communicate with the on-premises application catalog website point role. When the client is on the corporate network, it communicates with an HTTPS-enabled management point. In both scenarios, the client downloads any application content from a cloud distribution point. 
+If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
 
 ### Prerequisites
-- [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) with [Azure AD integration](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
-    - For clients on the corporate network, enable HTTPS on the management point.
-- An application deployed as available to a user collection
+- Enable HTTPS on the management point
+- Integrate the site with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+- Deploy an application as available to a user collection
 - Distribute any application content to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)
 - Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group
-- Enable the client setting **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
 - The client must be: 
    - Windows 10
-   - Azure AD-joined, also known as cloud domain-joined. 
-
+   - Azure AD-joined, also known as cloud domain-joined
+- To support internet-based clients:
+    - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) 
+    - Enable the client setting **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
+- To support clients on the corporate network:
+    - Add the cloud distribution point to a boundary group used by the clients
+    - Clients must be able to resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point
 
 
 ## Report on Windows AutoPilot device information
