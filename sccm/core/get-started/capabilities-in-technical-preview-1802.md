@@ -154,7 +154,7 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 
 ## Product lifecycle dashboard
 <!--1319632-->
-The new Product Lifecycle dashboard shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. You can use the dashboard to understand the availability of support for each product. 
+The new [Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard) shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. You can use the dashboard to understand the availability of support for each product. 
 
 To access the Lifecycle Dashboard, in the Configuration Manager console, go to **Assets and Compliance** >**Asset Intelligence** >**Product Lifecycle**
 
@@ -302,6 +302,20 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
 3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
 4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
+
+## Improvements to Configuration Manager Policies for Windows Device Exploit Guard
+<!-- 1356220 -->
+Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added for Windows Device Exploit Guard in Configuration Manager.
+
+**New settings for Controlled folder access**<br/>
+There are two additional options when you configure Controlled folder access: **Block disk sectors only** and **Audit disk sectors only**. These two settings allow Controlled folder access to be enabled for boot sectors only and does not enable the protection of specific folders or the default protected folders. 
+
+**New settings for Attack Surface Reduction**
+- Use advanced protection against ransomware.
+- Block credential stealing from the Windows local security authority subsystem. 
+- Block executable files from running unless they meet a prevalence, age, or trusted list criteria. 
+- Block untrusted and unsigned processes that run from USB.
+
 
 
 ## Microsoft Edge browser policies

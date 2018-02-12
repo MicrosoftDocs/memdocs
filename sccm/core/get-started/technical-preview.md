@@ -129,7 +129,8 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Report on Windows AutoPilot device information](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
 - [Microsoft Edge browser policies](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
 - [Report for default browser counts](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
-
+- [Use Software Center to browse and install user-available applications on Internet-based clients](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-internet-based-clients) <!-- 1322613 --> 
+- [Improvements to Configuration Manager Policies for Windows Device Exploit Guard](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-device-exploit-guard) <!-- 1356220 -->
 
 
 
