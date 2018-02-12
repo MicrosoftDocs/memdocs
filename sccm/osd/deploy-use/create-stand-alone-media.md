@@ -1,9 +1,9 @@
 ---
 title: "Create stand-alone media"
 titleSuffix: "Configuration Manager"
-description: "Use stand-alone media to deploy the operating system on a computer without a connection to a Configuration Manager site or the network."
+description: "Use stand-alone media to deploy the operating system on a computer without a network connection."
 ms.custom: na
-ms.date: 06/07/2017
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,14 +16,14 @@ caps.latest.revision: 21
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create stand-alone media with System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Stand-alone media in Configuration Manager contains everything that is required to deploy the operating system on a computer without a connection to a Configuration Manager site or using the network. Use stand-alone media with the following operating system deployment scenarios:  
+Stand-alone media in Configuration Manager contains everything required to deploy the operating system (OS) on a computer without a network connection. Use stand-alone media with the following OS deployment scenarios:  
 
 -   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
@@ -31,7 +31,7 @@ Stand-alone media in Configuration Manager contains everything that is required 
 
 -   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)  
 
-Stand-alone media includes the task sequence that automates the steps to install the operating system and all other required content, including the boot image, operating system image, and device drivers. Because everything to deploy the operating system is stored on the stand-alone media, the disk space required for stand-alone media is significantly larger than the disk space required for other types of media. When you create stand-alone media on a central administration site, the client will retrieve its assigned site code from active directory. Stand-alone media created at child sites will automatically assign to the client the site code for that site.  
+Stand-alone media includes the task sequence that automates the steps to install the OS, and all other required content. This content includes the boot image, operating system image, and device drivers. Because the stand-alone media stores everything to deploy the OS, it requires more disk space than required for other types of media. When you create stand-alone media on a central administration site, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
 
 ##  <a name="BKMK_CreateStandAloneMedia"></a> Create stand-alone media  
 Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that the following conditions are met:  
@@ -40,36 +40,38 @@ Before you create stand-alone media by using the Create Task Sequence Media Wiza
 As part of the stand-alone media, you must specify the task sequence to deploy an operating system. For the steps to create a new task sequence, see [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).
 
 The following actions are not supported for stand-alone media:
-- The Auto Apply Drivers step in the task sequence. Automatic application of device drivers from the driver catalog is not supported, but you can choose the Apply Driver Package step to make a specified set of drivers available to Windows Setup.
-- The Download Package Content step in the task sequence. The management point information is not available on standalone media, therefore the step will fail trying to enumerate content locations.
+- The **Auto Apply Drivers** step in the task sequence. Stand-alone media does not support automatic application of device drivers from the driver catalog. Use the **Apply Driver Package** step to make a specified set of drivers available to Windows Setup.
+- The **Download Package Content** step in the task sequence. The management point information is not available on standalone media, therefore the step fails trying to enumerate content locations.
 - Installing software updates.
 - Installing software before deploying the operating system.
 - Task sequences for non-operating system deployments.
 - Associating users with the destination computer to support user device affinity.
-- Dynamic package installs via the Install Packages task.
-- Dynamic application installs via the Install Application task.
+- Dynamic package installs via the **Install Packages** task.
+- Dynamic application installs via the **Install Application** task.
 
 > [!NOTE]    
-> If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:    
+> An error might occur if your task sequence includes the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site. The central administration site does not have the necessary client configuration policies. These policies are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:    
 >     
-> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"    
+> `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`    
 > 
-> For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:    
+> For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled. 
+>
+> Alternatively, add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs the following WMIC command to enable the software distribution agent before the first Install Package step:    
 >    
-> *WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE*
+> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
 
 > [!IMPORTANT]    
-> When you use the **Setup Windows and ConfigMgr** task sequence step in the operating system task sequence, do not select the **Use pre-production client package when available** setting for stand-alone media. If this setting is selected and the pre-production client package is available, it will be used in the stand-alone media. This is not supported. For details about this setting, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+> Do not select the **Use pre-production client package when available** setting in the **Setup Windows and ConfigMgr** task sequence step for stand-alone media. Stand-alone media does not support use of this setting. For more information about this setting, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
 
 
 ### Distribute all content associated with the task sequence
-You must distribute all content that is required by the task sequence the  to at least one distribution point. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For details, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
+Distribute all content that is required by the task sequence to at least one distribution point. This  content includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
 
 ### Prepare the removable USB drive
 *For a removable USB drive:*
 
-If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.
+If you are using a removable USB drive, connect the USB drive to the computer where the wizard is run. The USB drive must be detectable by Windows as a removable device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.
 
 ### Create an output folder
 *For a CD/DVD set:*
@@ -91,14 +93,16 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     -   Select **Stand-alone media**.  
 
-    -   Optionally, if you want to allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**. When you select this option the user is not prompted for network configuration information or for optional task sequences. However, the user is still prompted for a password if the media is configured for password protection.  
+    -   Optionally, if you want to allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**. When you select this option, the user is not prompted for network configuration information or for optional task sequences. If the media is configured for password protection, the user is still prompted for a password.  
 
-5.  On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
+5.  On the **Media Type** page, specify whether the media is a removable USB drive or a CD/DVD set:  
 
     > [!IMPORTANT]  
-    >  Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.  
+    >  By default, stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a removable USB drive whose content contains a file over 4 GB in size.  
 
-    -   If you select **USB flash drive**, specify the drive where you want to store the content.  
+    -   If you select **Removable USB drive**, specify the drive where you want to store the content.  
+
+        - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If you have already formatted and configured the removable drive, disable this option. 
 
     -   If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
 
@@ -116,7 +120,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         >  On stand-alone media, only the task sequence steps and their variables are encrypted. The remaining content of the media is not encrypted, so do not include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
 
     - **Select date range for this stand-alone media to be valid** (starting in version 1702): Set optional start and expiration dates on the media. These settings are disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media is not started. These options are also available by using the New-CMStandaloneMedia PowerShell cmdlet.
-7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. Choose **Detect associated application dependencies and add them to this media** to add content to the stand-alone media for application dependencies.
+7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. To add content to the stand-alone media for application dependencies, choose **Detect associated application dependencies and add them to this media**.
     > [!TIP]
     > If you do not see expected application dependencies, deselect and then reselect the **Detect associated application dependencies and add them to this media** setting to refresh the list.
 
@@ -125,9 +129,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 8. On the **Select Application** page (available beginning in version 1702), specify application content to include as part of the media file, and then click **Next**.
 9. On the **Select Package** page (available beginning in version 1702), specify the package content to include as part of the media file, and then click **Next**.
 10. On the **Select Driver Package** page (available beginning in version 1702), specify the driver package content to include as part of the media file, and then click **Next**.
-11.  On the **Distribution Points** page, specify the distribution points that contain the content required by the task sequence, and then click **Next**.  
+11.  On the **Distribution Points** page, specify the distribution points that contain the required content, and then click **Next**.  
 
-     Configuration Manager will only display distribution points that have the content. You must distribute all of the content associated with the task sequence (boot image, operating system image, etc.) to at least one distribution point before you can continue. After you distribute the content, you can either restart the wizard or remove any distribution points that you already selected  on this page, go to the previous page, and then back to the **Distribution Points** page to refresh the distribution point list. For more information about distributing content, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS). For more information about distribution points and content management, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
     >  You must have **Read** access rights to the content library on the distribution points.  
@@ -136,19 +140,19 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     -   Specify the variables that the task sequence uses to deploy the operating system.  
 
-    -   Specify any prestart commands that you want to run before the task sequence. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. For more information about prestart commands for media, see [Prestart commands for task sequence media in System Center Configuration Manager](../understand/prestart-commands-for-task-sequence-media.md).  
+    -   Specify any prestart commands that you want to run before the task sequence. Prestart commands are a script or an executable that runs in Windows PE before the task sequence starts. For more information, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
 
          Optionally, select **Files for the prestart command** to include any required files for the prestart command.  
 
         > [!TIP]  
-        >  During task sequence media creation, the task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the CreateTSMedia.log log file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
+        >  During task sequence media creation, Configuration Manager writes the package ID and prestart command line to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. This output includes the value for any task sequence variables. Review this log file to verify the value for the task sequence variables.  
 
 13. Complete the wizard.  
 
  The stand-alone media files (.iso) are created in the destination folder. If you selected **Stand-Alone CD/DVD**, you can now copy the output files to a set of CDs or DVDs.  
 
 ##  <a name="BKMK_StandAloneMediaTSExample"></a> Example task sequence for stand-alone media  
- Use the following table as a guide as you create a task sequence to deploy an operating system using stand-alone media. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create might vary from this sample and can contain more or fewer task sequence steps and groups.  
+ To create a task sequence to deploy an operating system using stand-alone media, use the following table as a guide. The table helps you decide the general sequence for your task sequence steps. It also helps organize and structure the task sequence steps into logical groups. The task sequence that you create might vary from this sample and can contain more or fewer task sequence steps and groups.  
 
 > [!NOTE]  
 >  You must always use the Task Sequence Media Wizard to create stand-alone media.  
@@ -156,18 +160,18 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 |Task Sequence Group or Step|Description|  
 |---------------------------------|-----------------|  
 |Capture File and Settings - **(New Task Sequence Group)**|Create a task sequence group. A task sequence group keeps similar task sequence steps together for better organization and error control.|  
-|Capture Windows Settings|Use this task sequence step to identify the Microsoft Windows settings that are captured from the existing operating system on the destination computer prior to reimaging. You can capture the computer name, user and organizational information, and the time zone settings.|  
+|Capture Windows Settings|Use this task sequence step to capture the Windows settings from the destination computer prior to reimaging. Capture the computer name, user and organizational information, and the time zone settings.|  
 |Capture Network Settings|Use this task sequence step to capture network settings from the computer that receives the task sequence. You can capture the domain or workgroup membership of the computer and the network adapter setting information.|  
-|Capture User Files and Settings - **(New Task Sequence Sub-Group)**|Create a task sequence group within a task sequence group. This sub-group contains the steps needed to capture user state data from the existing operating system on the destination computer prior to reimaging. Similar to the initial group that you added, this sub-group keeps similar task sequence steps together for better organization and error control.|  
+|Capture User Files and Settings - **(New Task Sequence Subgroup)**|Create a task sequence group within a task sequence group. This subgroup contains the steps to capture user state data from the destination computer prior to reimaging. Similar to the initial group that you added, this subgroup keeps similar task sequence steps together for better organization and error control.|  
 |Set Local State Location|Use this task sequence step to specify a local location using the protected path task sequence variable. The user state is stored on a protected directory on the hard drive.|  
 |Capture User State|Use this task sequence step to capture the user files and settings you want to migrate to the new operating system.|  
-|Install Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install the operating system.|  
-|Reboot to Windows PE or hard disk|Use this task sequence step to specify restart options for the computer that receives this task sequence. This step will display a message to the user indicating that the computer will be restarted so that the installation can continue.<br /><br /> This step uses the read-only **_SMSTSInWinPE** task sequence variable. If the associated value equals **false** the task sequence step will continue.|  
-|Apply Operating System|Use this task sequence step to install the operating system image onto the destination computer. This step deletes all files on that volume (with the exception of Configuration Manager-specific control files) and then applies all volume images contained in the WIM file to the corresponding sequential disk volume. You can also specify a **sysprep** answer file to configure which disk partition to use for the installation.|  
-|Apply Windows Settings|Use this task sequence step to configure the Windows settings configuration information for the destination computer. The windows settings you can apply are user and organizational information, product or license key information, time zone, and the local administrator password.|  
+|Install Operating System - **(New Task Sequence Group)**|Create another task sequence subgroup. This subgroup contains the steps needed to install the operating system.|  
+|Reboot to Windows PE or hard disk|Use this task sequence step to specify restart options for the computer that receives this task sequence. This step displays a message to the user that the computer is restarting to continue the installation.<br /><br /> This step uses the read-only **_SMSTSInWinPE** task sequence variable. If the associated value equals **false**, the task sequence step continues.|  
+|Apply Operating System|Use this task sequence step to install the operating system image onto the destination computer. This step deletes all files on that volume, except for Configuration Manager-specific control files. It then applies all volume images contained in the WIM file to the corresponding sequential disk volume. You can also specify a **sysprep** answer file to configure which disk partition to use for the installation.|  
+|Apply Windows Settings|Use this task sequence step to configure the Windows settings configuration information for the destination computer. These settings include user and organizational information, product or license key information, time zone, and the local administrator password.|  
 |Apply Network Settings|Use this task sequence step to specify the network or workgroup configuration information for the destination computer. You can also specify if the computer uses a DHCP server or you can statically assign the IP address information.|  
 |Apply Driver Package|Use this task sequence step to make all device drivers in a driver package available for use by Windows setup. All necessary device drivers must be contained on the stand-alone media.|  
-|Setup Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install the Configuration Manager client.|  
+|Setup Operating System - **(New Task Sequence Group)**|Create another task sequence subgroup. This subgroup contains the steps needed to install the Configuration Manager client.|  
 |Setup Windows and ConfigMgr|Use this task sequence step to install the Configuration Manager client software. Configuration Manager installs and registers the Configuration Manager client GUID. You can assign the necessary installation parameters in the **Installation properties** window.|  
-|Restore User Files and Settings - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to restore the user state.|  
-|Restore User State|Use this task sequence step to initiate the User State Migration Tool (USMT) to restore the user state and settings that were captured from the Capture User State Action to the destination computer.|  
+|Restore User Files and Settings - **(New Task Sequence Group)**|Create another task sequence subgroup. This subgroup contains the steps needed to restore the user state.|  
+|Restore User State|Use this task sequence step to initiate the User State Migration Tool (USMT). USMT restores the user state and settings, previously captured with the Capture User State step, to the destination computer.|  
