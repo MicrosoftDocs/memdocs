@@ -201,12 +201,12 @@ Management point boundary group fallback does not change the behavior during cli
 New entries appear in the **LocationServices.log**. The **Locality** attribute identifies one of the following states:
 - 0: Unknown
 - 1: The specified management point is only in the site default boundary group for fallback
-- 2: The specified management point is in a remote or neighbor boundary group. When the management point is in both a neighbor and site default boundary groups, the locality is 2.
-- 3: The specified management point is in the local or current boundary group. When the management point is in both the current and a neighbor or site default boundary groups, the locality is 3. If you do not enable the preferred management points setting in Hierarchy Settings, the locality is always 3 no matter which boundary group the management point is in.
+- 2: The specified management point is in a remote or neighbor boundary group. When the management point is in both a neighbor and the site default boundary groups, the locality is 2.
+- 3: The specified management point is in the local or current boundary group. When the management point is in the current boundary group as well as either a neighbor or the site default boundary group, the locality is 3. If you do not enable the preferred management points setting in Hierarchy Settings, the locality is always 3 no matter which boundary group the management point is in.
 
 Clients use local management points first (locality 3), remote second (locality 2), then fallback (locality 1). 
 
-When a client receives five errors in ten minutes and fails to communicate with a management point in its current boundary group, it tries to contact a management point in a neighbor or site default boundary group. If the management point in the current boundary group later comes back online, the client will return to the local management point on the next refresh cycle. The refresh cycle is 24 hours, or when the Configuration Manager agent service restarts.
+When a client receives five errors in ten minutes and fails to communicate with a management point in its current boundary group, it tries to contact a management point in a neighbor or the site default boundary group. If the management point in the current boundary group later comes back online, the client will return to the local management point on the next refresh cycle. The refresh cycle is 24 hours, or when the Configuration Manager agent service restarts.
 
 
 
@@ -257,6 +257,9 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 <!-- 1357015 -->
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. 
 
+> [!NOTE]
+> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+
 ### Prerequisites
 - Upgrade the Configuration Manager client to the latest version
 - Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group
@@ -265,9 +268,9 @@ Starting in this release, when a user requests an application that requires appr
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. Deploy an application as available to a user collection.
-2. On the **Deployment Settings** page, enable the option **An administrator must approve a request for this application on the device**.
-
-View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There is now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.
+2. On the **Deployment Settings** page, enable the option: **An administrator must approve a request for this application on the device**.
+3. As a targeted user, use Software Center to submit a request for the application. 
+4. View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There is now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.
 
 
 
@@ -286,10 +289,11 @@ If you deploy applications as available to users, they can now browse and instal
    - Azure AD-joined, also known as cloud domain-joined
 - To support internet-based clients:
     - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) 
-    - Enable the client setting **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
+    - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
 - To support clients on the corporate network:
     - Add the cloud distribution point to a boundary group used by the clients
     - Clients must be able to resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point
+
 
 
 ## Report on Windows AutoPilot device information
@@ -306,6 +310,8 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
 3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
 4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
+
+
 
 ## Improvements to Configuration Manager Policies for Windows Device Exploit Guard
 <!-- 1356220 -->
@@ -370,7 +376,7 @@ Like any compliance settings policy, the client remediates the settings on the s
 Now there is a new report to show the count of clients with a specific web browser as the Windows default. 
 
 ### Known issues
-- When you first open the report it only shows the count and not the BrowserProgID. To workaround this issue, edit the query for the report to the following syntax:  
+- When you first open the report, it only shows the count and not the BrowserProgID. To work around this issue, edit the query for the report to the following syntax:  
     `select BrowserProgId00 as BrowserProgId, Count(*) as Count`  
     `from DEFAULT_BROWSER_DATA as dbd`  
     `group by BrowserProgId00`
@@ -391,7 +397,7 @@ Use the following reference for common BrowserProgIDs:
 
 ## Support for Windows 10 ARM64 devices
 <!-- 1353704 -->
-Starting in this release the Configuration Manager client is supported on Windows 10 ARM64 devices. Existing client management features (for example, hardware and software inventory, software updates, and application management) should work with these new devices. Operating system deployment is currently not supported. 
+Starting in this release the Configuration Manager client is supported on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. Operating system deployment is currently not supported. 
 
 
 
