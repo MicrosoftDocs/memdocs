@@ -399,6 +399,26 @@ Use the following reference for common BrowserProgIDs:
 <!-- 1353704 -->
 Starting in this release the Configuration Manager client is supported on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. Operating system deployment is currently not supported. 
 
+## Changes to Phased Deployments
+<!-- 1357405 -->
+Phased deployments automate a coordinated, sequenced rollout of software without creating multiple deployments. In this Technical Preview version, the phased deployment wizard can be completed for task sequences in the admin console and deployments are created. However, the production phase does not start automatically after satisfying the success criteria of the pilot phase. The production phase can be manually started with a SQL statement.   
+
+### Try it out!  
+  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+ 
+**Create a phased deployment for a task sequence** </br>
+1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
+2. Right-click on an existing task sequence and select **Create Phased Deployment**. 
+3. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create default pilot and production phases**. 
+4. Populate the **Pilot collection** and **Production Collection** fields. Select **Next**.
+5. On the **Settings** tab, choose one option for each of the scheduling settings and select **Next** when complete. 
+6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
+7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
+8. When the success criteria for the pilot phase has been reached, follow the instructions to start the production phase with a SQL statement.
+ 
+**Start production phase with a SQL statement**
+1. Identify the PhasedDeploymentID for the deployment you created with the following SQL query:<br/> `Select * from PhasedDeployment`
+2. Run the following statement to start the production phase:<br/> `UPDATE PhasedDeployment SET EvaluatePhasedDeployment = 1, Action = 3 WHERE PhasedDeploymentID = <Phased Deployment ID>`
 
 
 ## Next steps

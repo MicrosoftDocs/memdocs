@@ -131,6 +131,7 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Microsoft Edge browser policies](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
 - [Report for default browser counts](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
 - [Support for Windows 10 ARM64 devices](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
+- [Changes to Phased Deployments](capabilities-in-technical-preview-1802.md#changes-to-phased-deployments) <!-- 1357405 -->
 
 
 
