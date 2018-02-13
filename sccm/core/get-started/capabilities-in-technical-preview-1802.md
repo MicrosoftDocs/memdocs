@@ -26,12 +26,11 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
 
 
 <!--  Known Issues Template   
-**Known Issues in this Technical Preview:**
+## Known Issues in this Technical Preview:
 -   **Issue Name**. Details
     Workaround details.
-**Known Issues in this Technical Preview:**
 -->
-**Known Issues in this Technical Preview:**
+## Known Issues in this Technical Preview
 -   **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
@@ -42,21 +41,16 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
 <!--sms 489412-->
 
 
+</br>
+
 **The following are new features you can try out with this version.**  
 
-<!--  Section Template
-##  FEATURE
-<-- TFS ID - need to fix comment md here
-### Procedure 1
-### Try it out!  
- Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
- -  Task 1
- -  Task 2              
--->
 
 ## Transition Endpoint Protection workload to Intune using co-management    
 <!-- 1357365 -->
-In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after co-management is enabled. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+
+
  
 ## Configure Windows Delivery Optimization to use Configuration Manager boundary groups
 <!-- 1324696 -->
@@ -79,7 +73,7 @@ For more information, see the **Group** delivery mode option in [Delivery Optimi
 ## Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
 
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to Internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
+The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
 
 Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). Otherwise devices cannot run the task sequence.
 
@@ -158,7 +152,7 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 
 
 
-## Product Lifecycle dashboard
+## Product lifecycle dashboard
 <!--1319632-->
 The new [Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard) shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. You can use the dashboard to understand the availability of support for each product. 
 
@@ -193,7 +187,7 @@ Starting in this release, you can configure fallback relationships for managemen
 
 Previously, a common problem occurs when you have a protected management point in a secure network. Clients on the main corporate network receive policy that includes this protected management point, even though they cannot communicate with it across a firewall. To address this problem, use the **Never fallback** option to ensure that clients only fallback to management points with which they can communicate.
 
-When upgrading the site to this version, Configuration Manager adds all non-Internet-facing management points into the site default boundary group. This upgrade behavior ensures that older client versions continue to communicate with management points. In order to take full advantage of this feature, move your management points to the desired boundary groups.
+When upgrading the site to this version, Configuration Manager adds all non-internet-facing management points into the site default boundary group. This upgrade behavior ensures that older client versions continue to communicate with management points. In order to take full advantage of this feature, move your management points to the desired boundary groups.
 
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
@@ -277,23 +271,25 @@ View **Approval Requests** under **Application Management** in the **Software Li
 
 
 
-## Use Software Center to browse and install user-available applications on Internet-based clients
+## Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Internet-based clients. The Configuration Manager client uses the cloud management gateway to communicate with the on-premises application catalog website point role.
+If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
 
 ### Prerequisites
-- [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) with [Azure Active Directory (Azure AD) integration](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
-- An application deployed as available to a user collection
+- Enable HTTPS on the management point
+- Integrate the site with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+- Deploy an application as available to a user collection
+- Distribute any application content to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)
 - Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group
-- Enable the client setting **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
 - The client must be: 
    - Windows 10
-   - Azure AD-joined, also known as cloud-domain joined. 
-
-### Known issues
-- This functionality does not yet support hybrid domain joined. A hybrid device is joined to both Azure AD and on-premises Active Directory.
-- When an Internet-based client roams back to the corporate network, Software Center does not display user-available applications.
-
+   - Azure AD-joined, also known as cloud domain-joined
+- To support internet-based clients:
+    - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) 
+    - Enable the client setting **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
+- To support clients on the corporate network:
+    - Add the cloud distribution point to a boundary group used by the clients
+    - Clients must be able to resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point
 
 
 ## Report on Windows AutoPilot device information
@@ -324,6 +320,78 @@ There are two additional options when you configure Controlled folder access: **
 - Block executable files from running unless they meet a prevalence, age, or trusted list criteria. 
 - Block untrusted and unsigned processes that run from USB.
 
+
+
+## Microsoft Edge browser policies
+<!-- 1357310 -->
+For customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, you can now create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. This policy currently includes the following settings:
+- **Set Microsoft Edge browser as default**: configures the Windows 10 default app setting for web browser to Microsoft Edge
+- **Allow address bar drop down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Allow autofill**: For more information, see [AllowAutofill browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Allow cookies**: For more information, see [AllowCookies browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+
+### Prerequisites
+- Windows 10 client that is Azure Active Directory-joined. 
+
+### Known issues
+- On-premises domain-joined devices cannot apply this policy in this release. This issue also pertains to hybrid domain-joined devices.
+
+### Try it out!  
+ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+
+**Create the policy**
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings** and select the new **Microsoft Edge Browser Profiles** node. Click the ribbon option to **Create Microsoft Edge Browser Policy**.
+2. Specify a **Name** for the policy, optionally enter a **Description**, and click **Next**.
+3. On the **Settings** page, change the value to **Configured** for the settings to include in this policy, and click **Next**.
+4. On the **Supported Platforms** page, select the operating system versions and architectures to which this policy applies, and click **Next**. 
+5. Complete the wizard.
+
+**Deploy the policy**
+1. Select your policy and click the ribbon option to **Deploy**.
+2. Click **Browse** to select the user or device collection to which to deploy the policy. 
+3. Select additional options as necessary. Generate alerts when the policy is not compliant. Set the schedule by which the client evaluates the device's compliance with this policy.
+4. Click **OK** to create the deployment.
+
+Like any compliance settings policy, the client remediates the settings on the schedule you specify. [Monitor and report on device compliance](/sccm/compliance/deploy-use/monitor-compliance-settings) in the Configuration Manager console.
+
+
+
+## Report for default browser counts
+<!-- 1357830 -->
+Now there is a new report to show the count of clients with a specific web browser as the Windows default. 
+
+### Known issues
+- When you first open the report it only shows the count and not the BrowserProgID. To workaround this issue, edit the query for the report to the following syntax:  
+    `select BrowserProgId00 as BrowserProgId, Count(*) as Count`  
+    `from DEFAULT_BROWSER_DATA as dbd`  
+    `group by BrowserProgId00`
+
+### Try it out!  
+ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+1. In the **Configuration Manager** console, **Monitoring** workspace, expand **Reporting**, expand **Reports**, select **Software - Companies and Products**.
+2. Run the **Default Browser counts** report.
+
+Use the following reference for common BrowserProgIDs:
+- **AppXq0fevzme2pys62n3e0fbqa7peapykr8v**: Microsoft Edge
+- **IE.HTTP**: Microsoft Internet Explorer
+- **ChromeHTML**: Google Chrome
+- **OperaStable**: Opera Software
+- **FirefoxURL-308046B0AF4A39CB**: Mozilla Firefox
+
+
+
+## Support for Windows 10 ARM64 devices
+<!-- 1353704 -->
+Starting in this release the Configuration Manager client is supported on Windows 10 ARM64 devices. Existing client management features (for example, hardware and software inventory, software updates, and application management) should work with these new devices. Operating system deployment is currently not supported. 
 
 
 
