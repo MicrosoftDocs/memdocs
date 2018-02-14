@@ -63,6 +63,7 @@ These clients also cache the content. In this manner, successive clients on the 
 |Windows Server 2008 R2|Supported by default|  
 |Windows Server 2012|Supported by default|  
 |Windows Server 2012 R2|Supported by default|  
+|Windows Server 2016|Supported by default|  
 
  For more information about BranchCache, see [BranchCache for Windows](http://go.microsoft.com/fwlink/p/?LinkId=177945) in the Windows Server documentation.  
 
