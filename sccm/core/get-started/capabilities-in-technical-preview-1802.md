@@ -401,7 +401,7 @@ Starting in this release the Configuration Manager client is supported on Window
 
 ## Changes to Phased Deployments
 <!-- 1357405 -->
-Phased deployments automate a coordinated, sequenced rollout of software without creating multiple deployments. In this Technical Preview version, the phased deployment wizard can be completed for task sequences in the admin console and deployments are created. However, the production phase does not start automatically after satisfying the success criteria of the pilot phase. The production phase can be manually started with a SQL statement.   
+Phased deployments automate a coordinated, sequenced rollout of software across multiple collections. In this Technical Preview version, the phased deployment wizard can be completed for task sequences in the admin console and deployments are created. However, the second phase does not start automatically after satisfying the success criteria of the first phase. The second phase can be manually started with a SQL statement.   
 
 ### Try it out!  
   Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
@@ -410,7 +410,7 @@ Phased deployments automate a coordinated, sequenced rollout of software without
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
 2. Right-click on an existing task sequence and select **Create Phased Deployment**. 
 3. On the **General** tab, give the phased deployment a name, description (optional), and select **Automatically create a default two phase deployment**. 
-4. Populate the **First Cdsadsaollection** and **Second Collection** fields. Select **Next**.
+4. Populate the **First Collection** and **Second Collection** fields. Select **Next**.
 5. On the **Settings** tab, choose one option for each of the scheduling settings and select **Next** when complete. 
 6. On the **Phases** tab, edit any of the phases if needed then click **Next**.
 7. Confirm your selections on the **Summary** tab then click **Next** to proceed.
