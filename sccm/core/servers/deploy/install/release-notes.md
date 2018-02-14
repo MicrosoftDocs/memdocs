@@ -147,14 +147,6 @@ When an administrator deploys a set of terms to multiple user collections, and a
 **Workaround**: Make sure each user is only included in one collection to which the terms are deployed.  
 
 
-### Android for Work email profiles that use certificate authentication are not applied to devices
-<!--  487657      -->
-When an Android for Work email profile is created, there are two options for authentication. One is username and password, and the other is certificates. At this time, the certificates option is not working. If the profile is created with the authentication method set to **certificates**, the profile is not applied to the device and the user will be prompted to enter email account details manually.
-
-**WORKAROUND**: None. Admins must either use the **username and password** option, or wait until this issue has been resolved.
-
-
-
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
 <!-- ## Endpoint Protection -->
