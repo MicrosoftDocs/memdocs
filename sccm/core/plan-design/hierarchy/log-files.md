@@ -49,7 +49,7 @@ In System Center Configuration Manager, client and site server components record
 
     -   [Site server installation log files](#BKMK_SiteInstallLog) 
 
-    -   [Data Warehouse service point log files](#BKMK_DataWarehouse)
+    -   [Data warehouse service point log files](#BKMK_DataWarehouse)
 
     -   [Fallback status point log files](#BKMK_FSPLog)  
 
@@ -363,7 +363,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |smstsvc.log|Records information about the installation, use, and removal of a Windows service that is used to test network connectivity and permissions between servers, using the computer account of the server that initiates the connection.|Site server and site system server|  
 
 ###  <a name="BKMK_DataWarehouse"></a> Data warehouse service point log files  
- The following table lists the log files that contain information related to the Data Warehouse service point.  
+ The following table lists the log files that contain information related to the data warehouse service point.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
@@ -545,7 +545,7 @@ The following table lists the log files that contain information related to the 
 |--------------|-----------------|----------------------------|  
 |ADALOperationProvider.log|Records details about acquisition of AAD token.|Client|  
 |cloudusersync.log|Records license enablement for users.|Computer with the service connection point|  
-|ComplRelayAgent.log|Receives overall compliance state from DCM, acquires MP token, acquires AAD token, and reports compliance back to Intune(the CA relay service).|Client|  
+|ComplRelayAgent.log|Receives overall compliance state from DCM, acquires MP token, acquires AAD token, and reports compliance back to Intune (the CA relay service).|Client|  
 |DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|Client|  
 |dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|
 |dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|   
