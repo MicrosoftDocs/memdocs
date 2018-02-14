@@ -3,7 +3,7 @@ title: "Log files for troubleshooting issues"
 titleSuffix: "Configuration Manager"
 description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 7/03/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ caps.latest.revision: 9
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Log files in System Center Configuration Manager
@@ -47,7 +47,9 @@ In System Center Configuration Manager, client and site server components record
 
     -   [Site server and site system server logs](#BKMK_SiteSiteServerLog)  
 
-    -   [Site server installation log files](#BKMK_SiteInstallLog)  
+    -   [Site server installation log files](#BKMK_SiteInstallLog) 
+
+    -   [Data warehouse service point log files](#BKMK_DataWarehouse)
 
     -   [Fallback status point log files](#BKMK_FSPLog)  
 
@@ -70,6 +72,8 @@ In System Center Configuration Manager, client and site server components record
     -   [Cloud management gateway](#cloud-management-gateway)
 
     -   [Compliance settings and company resource access](#BKMK_CompSettingsLog)  
+
+    -   [Conditional Access](#BKMK_CA)
 
     -   [Configuration Manager console](#BKMK_ConsoleLog)  
 
@@ -112,14 +116,14 @@ In System Center Configuration Manager, client and site server components record
     -   [WSUS server](#BKMK_WSUSLog)  
 
 ##  <a name="BKMK_AboutLogs"></a> About Configuration Manager log files  
- Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by **.log** or **.lo_** file extensions. Configuration Manager writes to a .log file until that log reaches its maximum size. When the log is full, the .log file is copied to a file of the same name but with the .lo_ extension, and the process or component continues to write to the .log file. When the .log file again reaches its maximum size, the .lo_ file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by retaining the .log extension. An exception to the maximum size and use of the .lo_ file is the client for Linux and UNIX. For information about how the client for Linux and UNIX uses log files, see [Manage log files in the client for Linux and UNIX](#BKMK_ManageLinuxLogs) in this topic.  
+ Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by **.log** or **.lo_** file extensions. Configuration Manager writes to a .log file until that log reaches its maximum size. When the log is full, the .log file is copied to a file of the same name but with the .lo_ extension, and the process or component continues to write to the .log file. When the .log file again reaches its maximum size, the .lo_ file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by retaining the .log extension. An exception to the maximum size and use of the .lo_ file is the client for Linux and UNIX. For information about how the client for Linux and UNIX uses log files, see [Manage log files in the client for Linux and UNIX](#BKMK_ManageLinuxLogs) in this article.  
 
  To view the logs, use the Configuration Manager log viewer tool CMTrace, located in the \\SMSSetup\\Tools folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library.  
 
 ###  <a name="BKMK_LogOptions"></a> Configure logging options by using Configuration Manager Service Manager  
  In Configuration Manager, you can change where log files are stored, and you can change the log file size.  
 
- To modify the size of log files, change the name and location of the log file, or to force multiple components to write to a single log file, do the following steps.  
+ To modify the size of log files, change the name and location of the log file, or to force multiple components to write to a single log file, do the following steps:  
 
 #### To modify logging for a component  
 
@@ -144,7 +148,7 @@ The following table lists the log files located on the Configuration Manager cli
 |Log name|Description|  
 |--------------|-----------------|  
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
-|Ccm32BitLauncher.log|Records actions for starting applications on the client marked "run as 32bit".|  
+|Ccm32BitLauncher.log|Records actions for starting applications on the client marked "run as 32 bit".|  
 |CcmEval.log|Records Configuration Manager client status evaluation activities and details for components that are required by the Configuration Manager client.|  
 |CcmEvalTask.log|Records the Configuration Manager client status evaluation activities that are initiated by the evaluation scheduled task.|  
 |CcmExec.log|Records activities of the client and the SMS Agent Host service. This log file also includes information about enabling and disabling wake-up proxy.|  
@@ -358,6 +362,15 @@ The log file SMS_DM.log on the site system server also records communication bet
 |SMS_BOOTSTRAP.log|Records information about the progress of launching the secondary site installation process. Details of the actual setup process are contained in ConfigMgrSetup.log.|Site Server|  
 |smstsvc.log|Records information about the installation, use, and removal of a Windows service that is used to test network connectivity and permissions between servers, using the computer account of the server that initiates the connection.|Site server and site system server|  
 
+###  <a name="BKMK_DataWarehouse"></a> Data warehouse service point log files  
+ The following table lists the log files that contain information related to the data warehouse service point.  
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|DWSSMSI.log|Records messages generated by the installation of a data warehouse service point.|Site system server|  
+|DWSSSetup.log|Records messages generated by the installation of a data warehouse service point.|Site system server|  
+|Microsoft.ConfigMgrDataWarehouse.log|Records information about data synchronization between the site database and the data warehouse database.|Site system server|  
+
 ###  <a name="BKMK_FSPLog"></a> Fallback status point log files  
  The following table lists the log files that contain information related to the fallback status point.  
 
@@ -386,7 +399,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |MP_Retry.log|Records hardware inventory retry processes.|Site system server|  
 |MP_Sinv.log|Records details about the conversion of XML software inventory records from clients and the copy of those files to the site server.|Site system server|  
 |MP_SinvCollFile.log|Records details about file collection.|Site system server|  
-|MP_Status.log|Records details about the conversion of XML.svf status message files from clients and the copy of those files to the site server.|Site system server|  
+|MP_Status.log|Records details about the conversion of XML.svf status message files from clients and the copy of those files to the site server.|Site system server|
 |mpcontrol.log|Records the registration of the management point with WINS. Records the availability of the management point every 10 minutes.|Site server|  
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details about the management point installation.|Site server|  
@@ -503,12 +516,12 @@ The following table lists the log files that contain information related to the 
 |-|-|-|
 |Log name|Description|Computer with log file|
 |CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.<br>You can configure the logging level be editing the registry **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|The *installdir* folder on the primary site server or CAS.|
-|CMGSetup.log or CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Records details about the 2nd phase of the cloud management gateway deployment (local deployment in Azure)<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|CMGSetup.log or CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Records details about the second phase of the cloud management gateway deployment (local deployment in Azure)<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |CMGHttpHandler.log or CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Records details about the cloud management gateway http handler binding with Internet Information Services in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |CMGService.log or CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Records details about the cloud management gateway service core component in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 |SMS_Cloud_ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
 
-<sup>1</sup> These are local Configuration Manager log files that cloud service manager sync from Azure storage every 5 minutes. The cloud management gateway will push logs to Azure storage every 5 minutes. so the maximum delay will be 10 minutes. Verbose switches will affect both local and remote logs.
+<sup>1</sup> These are local Configuration Manager log files that cloud service manager sync from Azure storage every 5 minutes. The cloud management gateway pushes logs to Azure storage every 5 minutes. so the maximum delay is 10 minutes. Verbose switches affect both local and remote logs.
 
 - For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
 - For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
@@ -524,6 +537,19 @@ The following table lists the log files that contain information related to the 
 |DCMAgent.log|Records high-level information about the evaluation, conflict reporting, and remediation of configuration items and applications.|Client|  
 |DCMReporting.log|Records information about reporting policy platform results into state messages for configuration items.|Client|  
 |DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|Client|  
+
+###  <a name="BKMK_CA"></a> Conditional access
+ The following table lists the log files that contain information related to conditional access.  
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|ADALOperationProvider.log|Records details about acquisition of AAD token.|Client|  
+|cloudusersync.log|Records license enablement for users.|Computer with the service connection point|  
+|ComplRelayAgent.log|Receives overall compliance state from DCM, acquires MP token, acquires AAD token, and reports compliance back to Intune (the CA relay service).|Client|  
+|DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|Client|  
+|dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|
+|dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|   
+|MP_Token.log|Records token requests from clients.|Site system server|  
 
 ###  <a name="BKMK_ConsoleLog"></a> Configuration Manager console  
  The following table lists the log files that contain information related to the Configuration Manager console.  
@@ -546,7 +572,6 @@ The following table lists the log files that contain information related to the 
 |PrestageContent.log|Records the details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system role|  
 |SMSdpmon.log|Records details about distribution point health monitoring scheduled tasks that are configured on a distribution point.|Site system role|  
 |smsdpprov.log|Records details about the extraction of compressed files received from a primary site. This log is generated by the WMI provider of the remote distribution point.|Distribution point computer that is not colocated with the site server|  
-
 
 ###  <a name="BKMK_DiscoveryLog"></a> Discovery  
 The following table lists the log files that contain information related to Discovery.  
@@ -731,7 +756,7 @@ The following table lists the log files that contain information related to Disc
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |Distmgr.log|Records details about content distribution requests.|Top-level site server|  
 |Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
-|Dmpuploader.log|Records details related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
+|Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
 |hman.log|Records information about message forwarding.|Site server|  
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
@@ -769,7 +794,7 @@ The following table lists the log files that contain information related to Disc
  The following table lists the log files that contain information related to using Wake On LAN.  
 
 > [!NOTE]  
->  When you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_<*domain*\>@SYSTEM_0.log in the [Client operations](#BKMK_ClientOpLogs) section of this topic.  
+>  When you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_<*domain*\>@SYSTEM_0.log in the [Client operations](#BKMK_ClientOpLogs) section of this article.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
