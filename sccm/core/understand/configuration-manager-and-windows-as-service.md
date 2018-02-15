@@ -35,7 +35,7 @@ System Center Configuration Manager provides comprehensive control over feature 
 |[Configuration Manager as a service](/sccm/core/servers/manage/updates)|Explains the easy in-console method of applying feature updates to Configuration Manager.|
 |[Get available updates](/core/servers/manage/install-in-console-updates#get-available-updates)|Explains the two modes available to get new Configuration Manager feature updates.|
 |[Update checklist](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|Provides update version-specific checklists, if applicable.| 
-|[Install new Configuration Manager feature updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)|Explains the simple installation steps for feature updates.|
+|[Install new Configuration Manager feature updates](/sccm/core/servers/manage/updates)|Explains the simple installation steps for feature updates.|
 |[Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)|Provides a support matrix for Windows 10 (and ADK) versions.|
 |[Technical Previews for Configuration Manager](/sccm/core/get-started/technical-preview)|Provides information about the ConfigMgr technical preview program.|
 
