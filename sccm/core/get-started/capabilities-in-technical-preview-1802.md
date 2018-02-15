@@ -313,9 +313,9 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 
 
-## Improvements to Configuration Manager Policies for Windows Device Exploit Guard
+## Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added for Windows Device Exploit Guard in Configuration Manager.
+Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 **New settings for Controlled folder access**<br/>
 There are two additional options when you configure Controlled folder access: **Block disk sectors only** and **Audit disk sectors only**. These two settings allow Controlled folder access to be enabled for boot sectors only and does not enable the protection of specific folders or the default protected folders. 
