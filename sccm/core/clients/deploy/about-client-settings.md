@@ -18,7 +18,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 ---
-# Choose client settings in System Center Configuration Manager
+# About client settings in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (current branch)*
 
@@ -29,49 +29,50 @@ The following sections describe settings and options in further detail.
 
 ## Background Intelligent Transfer Service (BITS)  
 
--   **Limit the maximum network bandwidth for BITS background transfers**   </br>
-   When this option is **Yes**, clients use BITS bandwidth throttling. To configure the other settings in this group, you must enable this setting. 
+### Limit the maximum network bandwidth for BITS background transfers
+When this option is **Yes**, clients use BITS bandwidth throttling. To configure the other settings in this group, you must enable this setting. 
 
--   **Throttling window start time**   </br>
-   Specify the local start time for the BITS throttling window.  
+### Throttling window start time
+Specify the local start time for the BITS throttling window.  
 
--   **Throttling window end time**   </br>
-   Specify the local end time for the BITS throttling window. If the end time is equal to the start time, BITS throttling is always enabled.  
+### Throttling window end time
+Specify the local end time for the BITS throttling window. If the end time is equal to the **Throttling window start time**, BITS throttling is always enabled.  
 
--   **Maximum transfer rate during throttling window (Kbps)** </br>
-    Specify the maximum transfer rate that clients can use during the window.  
+### Maximum transfer rate during throttling window (Kbps)
+Specify the maximum transfer rate that clients can use during the window.  
 
--   **Allow BITS downloads outside the throttling window**   </br>
-   Allow clients to use separate BITS settings outside the specified window.  
+### Allow BITS downloads outside the throttling window
+Allow clients to use separate BITS settings outside the specified window.  
 
--   **Maximum transfer rate outside the throttling window (Kbps)**   </br>
-   Specify the maximum transfer rate that clients can use outside the BITS throttling window.  
+### Maximum transfer rate outside the throttling window (Kbps)
+Specify the maximum transfer rate that clients can use outside the BITS throttling window.  
 
 
 
 ## Client cache settings
 
-- **Configure BranchCache** </br>
-  Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
+### Configure BranchCache
+Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
-    - **Enable BranchCache** </br>
+- **Enable BranchCache** </br>
     Enables BranchCache on client computers.
 
-    - **Maximum BranchCache cache size (percentage of disk)** </br>
+- **Maximum BranchCache cache size (percentage of disk)** </br>
     The percentage of the disk that you allow BranchCache to use. 
 
-- **Configure client cache size** </br>
-  The Configuration Manager client cache on Windows computers stores temporary files used to install applications and programs. If this option is set to **No**, the default size is 5,120 MB.</br>
-    If you choose **Yes**, then specify:
-	- **Maximum cache size (MB)**
-	- **Maximum cache size (percentage of disk)** </br>
-    The client cache size expands to the maximum size in megabytes (MB), or the percentage of the disk, whichever is less. 
+### Configure client cache size
+The Configuration Manager client cache on Windows computers stores temporary files used to install applications and programs. If this option is set to **No**, the default size is 5,120 MB.
 
-- **Enable Configuration Manager client in full OS to share content** </br>
-    Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer. 
-    - **Port for initial network broadcast** (default 8004)
-    - **Port for content download from peer** (default 8003) </br>
-    Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
+If you choose **Yes**, then specify:
+- **Maximum cache size (MB)**
+- **Maximum cache size (percentage of disk)** </br>
+The client cache size expands to the maximum size in megabytes (MB), or the percentage of the disk, whichever is less. 
+
+### Enable Configuration Manager client in full OS to share content
+Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer. 
+- **Port for initial network broadcast** (default 8004)
+- **Port for content download from peer** (default 8003) </br>
+Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
 
 
 
@@ -124,27 +125,27 @@ For more information about managing clients on the internet, see [Considerations
 
 ## Cloud services
 
--   **Allow access to cloud distribution point** </br>
-    Set this to **Yes** for clients to obtain content from a cloud distribution point. This setting does not require the device to be internet-based.
+### Allow access to cloud distribution point
+Set this to **Yes** for clients to obtain content from a cloud distribution point. This setting does not require the device to be internet-based.
 
--    **Automatically register new Windows 10 domain joined devices with Azure Active Directory** </br> 
-    When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+### Automatically register new Windows 10 domain joined devices with Azure Active Directory 
+When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
--   **Enable clients to use a cloud management gateway** </br>
-    By default, all internet-roaming clients use any available [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
+### Enable clients to use a cloud management gateway
+By default, all internet-roaming clients use any available [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
 
 
 
 ##  Compliance settings  
 
--   **Enable compliance evaluation on clients** </br>
-    Set this to **Yes** to configure the other settings in this group.
+### Enable compliance evaluation on clients
+Set this to **Yes** to configure the other settings in this group.
  
--   **Schedule compliance evaluation**   </br>
-     Select **Schedule** to create the default schedule for configuration baseline deployments. This value is configurable for each baseline in the **Deploy Configuration Baseline** dialog box.  
+### Schedule compliance evaluation
+Select **Schedule** to create the default schedule for configuration baseline deployments. This value is configurable for each baseline in the **Deploy Configuration Baseline** dialog box.  
 
--   **Enable User Data and Profiles**   </br>
-     Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
+### Enable User Data and Profiles
+Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
 
 
 
@@ -309,7 +310,7 @@ Set a grace period of 1 to 120 hours. Use this setting along with the deployment
 
 
 ##  Computer restart  
- The following settings must be shorter in duration than the shortest maintenance window applied to the computer.  
+The following settings must be shorter in duration than the shortest maintenance window applied to the computer.  
 
 -   **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
 -   **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
@@ -366,23 +367,23 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ##  Enrollment
 
--   **Polling interval for mobile device legacy clients** </br>
-    Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, Mac OS X, and Unix or Linux.
+### Polling interval for mobile device legacy clients
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, Mac OS X, and Unix or Linux.
 
--   **Polling interval for modern devices (minutes)** </br>
-    Enter the number of minutes that modern devices poll for policy. This setting is for Windows 10 devices that are managed through on-premises mobile device management.
+### Polling interval for modern devices (minutes)
+Enter the number of minutes that modern devices poll for policy. This setting is for Windows 10 devices that are managed through on-premises mobile device management.
 
--   **Allow users to enroll mobile devices and Mac computers** </br>
-    To enable user-based enrollment of legacy devices, set this to **Yes**, and then configure the following setting:
+### Allow users to enroll mobile devices and Mac computers
+To enable user-based enrollment of legacy devices, set this to **Yes**, and then configure the following setting:
 
-    -   **Enrollment profile** </br>
-        Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
+-   **Enrollment profile** </br>
+Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
 
--   **Allow users to enroll modern devices** </br>
-    To enable user-based enrollment of modern devices, set this to **Yes**, and then configure the following setting:
+### Allow users to enroll modern devices
+To enable user-based enrollment of modern devices, set this to **Yes**, and then configure the following setting:
 
-    -   **Modern device enrollment profile** </br>
-        Select **Set Profile** to create or select an enrollment profile. For more information, see [Create an enrollment profile that allows users to enroll modern devices](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf).
+-   **Modern device enrollment profile** </br>
+Select **Set Profile** to create or select an enrollment profile. For more information, see [Create an enrollment profile that allows users to enroll modern devices](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf).
 
 
 
@@ -398,7 +399,7 @@ Select **Schedule** to adjust the frequency that clients run the hardware invent
 
 ### Maximum random delay (minutes)
 
-Specify the maximum number of minutes for the Configuration Manager client to randomize the hardware inventory cycle from the defined schedule. This randomization across all clients helps load-balance inventory processing on the site server. You can specify any value between 0 and 480 minutes. By default, this value is set to 240.
+Specify the maximum number of minutes for the Configuration Manager client to randomize the hardware inventory cycle from the defined schedule. This randomization across all clients helps load-balance inventory processing on the site server. You can specify any value between 0 and 480 minutes. By default, this value is set to 240 minutes (4 hours).
 
 ### Maximum custom MIF file size (KB)
 
@@ -595,38 +596,38 @@ Set this to **Yes** to use network-level authentication (NLA) to establish Remot
 
 ## Software Center
 
--   **Select these new settings to specify company information** </br>
-    Set this to **Yes**, and then specify the following settings to brand Software Center for your organization:
+### Select these new settings to specify company information
+Set this to **Yes**, and then specify the following settings to brand Software Center for your organization:
 
-    - **Company name** </br>
-        Enter the organization name that users see in Software Center.
-    - **Color scheme for Software Center** </br>
-        Select **Select Color** to define the primary color used by Software Center.
-    - **Select a logo for Software Center** </br>
-        Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+- **Company name** </br>
+Enter the organization name that users see in Software Center.
+- **Color scheme for Software Center** </br>
+Select **Select Color** to define the primary color used by Software Center.
+- **Select a logo for Software Center** </br>
+Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
 
--   **Software Center tab visibility** </br>
-    Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
-    - **Applications**
-    - **Updates**
-    - **Operating Systems**
-    - **Installation Status**
-    - **Device Compliance**
-    - **Options**
+### Software Center tab visibility
+Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
+- **Applications**
+- **Updates**
+- **Operating Systems**
+- **Installation Status**
+- **Device Compliance**
+- **Options**
 
-    For example, if your organization does not use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
+For example, if your organization does not use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 
 
 
 ## Software deployment  
 
--   **Schedule re-evaluation for deployments**  </br>
-     Configure a schedule for when Configuration Manager re-evaluates the requirement rules for all deployments. The default value is every seven days.  
+### Schedule re-evaluation for deployments
+Configure a schedule for when Configuration Manager re-evaluates the requirement rules for all deployments. The default value is every seven days.  
 
-    > [!IMPORTANT]  
-    >  We recommend that you do not change this value to a lower value than the default. A more aggressive re-evaluation schedule negatively affects the performance of your network and client computers.  
+> [!IMPORTANT]  
+>  We recommend that you do not change this value to a lower value than the default. A more aggressive re-evaluation schedule negatively affects the performance of your network and client computers.  
 
-     Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
+Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
 
 
 
@@ -713,11 +714,11 @@ The software inventory agent retrieves manufacturer and product names from file 
 
 ##  Software Metering
 
--   **Enable software metering on clients** </br>
-    This setting is set to **Yes** by default. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering#configure-software-metering).
+### Enable software metering on clients
+This setting is set to **Yes** by default. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering#configure-software-metering).
 
--   **Schedule data collection** </br>
-    Select **Schedule** to adjust the frequency that clients run the software metering cycle. By default, this cycle occurs every seven days.
+### Schedule data collection
+Select **Schedule** to adjust the frequency that clients run the software metering cycle. By default, this cycle occurs every seven days.
 
 
 
@@ -777,27 +778,27 @@ When you set this to **Yes**, it enables the configuration of Office 365 install
 
 ## State Messaging
 
--   **State message reporting cycle (minutes)**  </br>
-     Specifies how often clients report state messages. This setting is 15 minutes by default.
+### State message reporting cycle (minutes)
+Specifies how often clients report state messages. This setting is 15 minutes by default.
 
 
 
 ##  User and device affinity  
 
--   **User device affinity usage threshold (minutes)**  </br>
-     Specify the number of minutes before Configuration Manager creates a user device affinity mapping.  By default, this value is 2880 minutes (2 days).
+### User device affinity usage threshold (minutes)
+Specify the number of minutes before Configuration Manager creates a user device affinity mapping.  By default, this value is 2880 minutes (2 days).
 
--   **User device affinity usage threshold (days)**  </br>
-     Specify the number of days over which the client measures the threshold for usage-based device affinity.  By default, this value is 30 days.
+### User device affinity usage threshold (days)
+Specify the number of days over which the client measures the threshold for usage-based device affinity.  By default, this value is 30 days.
 
-    > [!NOTE]  
-    >  For example, you specify **User device affinity usage threshold (minutes)** as **60** minutes, and **User device affinity usage threshold (days)** as **5** days. Then the user must use the device for 60 minutes over a period of 5 days to create automatic affinity with the device.  
+> [!NOTE]  
+>  For example, you specify **User device affinity usage threshold (minutes)** as **60** minutes, and **User device affinity usage threshold (days)** as **5** days. Then the user must use the device for 60 minutes over a period of 5 days to create automatic affinity with the device.  
 
--   **Automatically configure user device affinity from usage data**  </br>
-     Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.  
+### Automatically configure user device affinity from usage data
+Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.  
 
--   **Allow user to define their primary devices** </br>
-    When this setting is **Yes**, users can identify their own primary devices in Software Center.
+### Allow user to define their primary devices
+When this setting is **Yes**, users can identify their own primary devices in Software Center.
 
 
 
