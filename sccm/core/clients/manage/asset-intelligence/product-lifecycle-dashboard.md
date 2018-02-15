@@ -38,6 +38,9 @@ For more information about the Microsoft Product Lifecycle Policy, see [Microsof
 
 The data in the dashboard depends on having the Asset Intelligence synchronization point installed. The dashboard uses the Asset Intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. 
 
+>[!NOTE]
+>If you are configuring the Asset Intelligence service point for the first time, make sure to [enable Asset Intelligence hardware inventory classes](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_EnableAssetIntelligence). The Lifecycle dashboard is dependent on those Asset Intelligence hardware inventory classes and will not display data until clients have scanned for and returned hardware inventory.  
+
 ## Use the Microsoft Product Lifecycle dashboard
 
 Based on inventory data you collected from managed devices, the dashboard displays information about all current products. However, the information displayed for operating systems and SQL Server is limited to the following versions:
