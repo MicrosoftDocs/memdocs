@@ -79,7 +79,7 @@ Then either restart the SMS_Executive service, or wait up to 24 hours for the ne
 
 When you run Setup from the CD.Latest folder created for version 1606, and use the redistributable files included with that CD.Latest folder, Setup fails with the following errors in the Configuration Manager Setup log:
 
-  `ERROR: File hash check failed for defaultcategories.dll`
+  `ERROR: File hash check failed for defaultcategories.dll`  
   `ERROR: Manifest verification failed. Wrong version of manifest?`
 
 **Workaround:** Use one of the following options:
@@ -99,11 +99,11 @@ When you run Setup from the CD.Latest folder created for version 1606, and use t
 
 When you deploy the client to Windows computers, the installation fails. The ccmsetup.log file contains the following entries: 
 
-`File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation`
+`File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation`  
 `InstallFromManifest failed 0x8007064c`
 
 **Workaround**: A corrupted, previously installed version of Silverlight causes this issue. To fix this issue, run the following tool on the affected computer:
-[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
+[Fix problems that block programs from being installed or removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed).
 
 ## Operating system deployment  
 
