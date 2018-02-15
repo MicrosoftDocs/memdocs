@@ -23,7 +23,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use the information in this topic to help you upgrade the server infrastructure that runs System Center Configuration Manager.  
+Use the information in this article to help you upgrade the server infrastructure that runs System Center Configuration Manager.  
 
  - If you want to upgrade from an earlier version of Configuration Manager to System Center Configuration Manager, see [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
 
