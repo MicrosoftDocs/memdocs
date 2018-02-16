@@ -3,7 +3,7 @@ title: "Ports used for connections"
 titleSuffix: "Configuration Manager"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
 ms.custom: na
-ms.date: 09/19/2017
+ms.date: 02/16/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports that you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, or IPsec.  
+System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports that you specify. Verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, or IPsec.  
     
 > [!NOTE]  
 >  If you support Internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall.   
@@ -111,7 +111,7 @@ The following sections detail the ports that are used for communication in Confi
 ###  <a name="BKMK_PortsClient-ClientWakeUp"></a> Client -- > Client  
  In addition to the ports that are listed in the following table, wake-up proxy also uses Internet Control Message Protocol (ICMP) echo request messages from one client to another client when they are configured for wake-up proxy.
 
-This communication is used to confirm whether the other client computer is awake on the network. ICMP is sometimes referred to as TCP/IP ping commands. ICMP does not have a UDP or TCP protocol number, and so it is not listed in the following table. However, any host-based firewalls on these client computers or intervening network devices within the subnet must permit ICMP traffic for wake-up proxy communication to succeed.  
+This communication is used to confirm whether the other client computer is awake on the network. ICMP is sometimes referred to as TCP/IP ping commands. ICMP does not have a UDP or TCP protocol number, and so it is not listed in the below table. However, any host-based firewalls on these client computers or intervening network devices within the subnet must permit ICMP traffic for wake-up proxy communication to succeed.  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -202,6 +202,13 @@ This communication is used to confirm whether the other client computer is awake
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer Protocol (HTTP)|--|80|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443|
+
+The Configuration Manager console uses internet access for the following: 
+- Downloading software updates from Microsoft Update for deployment packages.
+- The Feedback item in the Ribbon.
+- Links to documentation within the console.
+<!--506823-->
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console -- > Reporting Services point  
 
@@ -335,7 +342,7 @@ This communication is used to confirm whether the other client computer is awake
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443|
-For more information see [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) for the service connection point.
+For more information, see [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) for the service connection point.
 
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site server &lt; -- > Application Catalog web service point  
 
@@ -686,12 +693,12 @@ Use IPsec to help secure the traffic between the site server and site systems. I
 >  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship.  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Ports used by Configuration Manager client installation  
-The ports that are using during client installation depend on the client deployment method. For a list of ports for each client deployment method, see **Ports used during Configuration Manager client deployment** in the [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) topic. For information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
+The ports that are using during client installation depend on the client deployment method. For a list of ports for each client deployment method, see **Ports used during Configuration Manager client deployment** in the [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) article. For information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
 ###  <a name="BKMK_MigrationPorts"></a> Ports used by migration  
 The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy to gather data from the source sites' SQL Server databases, and to share distribution points.  
 
- For information about these ports, see the [Required configurations for migration](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) section in the  [Prerequisites for migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md) topic.  
+ For information about these ports, see the [Required configurations for migration](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) section in the  [Prerequisites for migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md) article.  
 
 ###  <a name="BKMK_ServerPorts"></a> Ports used by Windows Server  
  The following table lists some of the key ports used by Windows Server along with their respective functions. For a more complete list of Windows Server services and network ports requirements, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
