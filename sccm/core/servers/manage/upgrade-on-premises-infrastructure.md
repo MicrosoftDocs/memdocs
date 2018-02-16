@@ -3,7 +3,7 @@ title: "Upgrade on-premises infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
-ms.date: 06/05/2017
+ms.date: 02/15/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use the information in this topic to help you upgrade the server infrastructure that runs System Center Configuration Manager.  
+Use the information in this article to help you upgrade the server infrastructure that runs System Center Configuration Manager.  
 
  - If you want to upgrade from an earlier version of Configuration Manager to System Center Configuration Manager, see [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
 
@@ -40,8 +40,7 @@ Use the information in this topic to help you upgrade the server infrastructure 
     - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#bkmk_from2008r2).
 
     > [!WARNING]  
-    >  Before you upgrade to Windows Server 2012 R2, *you must uninstall WSUS 3.2* from the server.  
-    >   
+    >  Before you upgrade to a different operating system, *you must uninstall WSUS* from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. 
     >  For information about this critical step, see the "New and changed functionality" section  in [Windows Server Update Services Overview](https://technet.microsoft.com/library/hh852345.aspx) in the Windows Server documentation.  
 
 To upgrade a server, use the upgrade procedures provided by the operating system you are upgrading to.  See the following:
@@ -54,6 +53,7 @@ When you upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows
 
 **Before upgrade:**  
 - 	Remove the System Center Endpoint Protection (SCEP) client. Windows Server 2016 has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server 2016.
+-   Remove the WSUS role from the server if it is installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
 
 **After upgrade:**
 - 	Ensure Windows Defender is enabled, set for automatic start, and running.
@@ -90,7 +90,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
 ### <a name="bkmk_2012r2"></a> Windows Server 2012 to Windows Server 2012 R2
 
 **Before upgrade:**
--  Unlike the other supported scenarios, this scenario does not require extra considerations before upgrade.
+-   Remove the WSUS role from the server if it is installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
 
 **After upgrade:**
   -	Ensure the Windows Deployment Service is started and running for the following site system roles (this service is stopped during upgrade):
