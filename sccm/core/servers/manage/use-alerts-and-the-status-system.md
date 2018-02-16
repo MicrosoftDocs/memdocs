@@ -216,9 +216,9 @@ Because the status system maintains separate configurations for each site you mu
     |**Postpone**|Suspends the monitoring of the alert until the specified date is reached. At that time, the state of the alert is updated.<br /><br /> You can only postpone an alert when it is enabled.|  
     |**Create subscription**|Opens the **New Subscription** dialog box where you can create an email subscription to the selected alert.|  
 
-##### To configure Endpoint Protection alerts for a collection  
+<!--##### To configure Endpoint Protection alerts for a collection  
 
-1.  pending  
+1.  pending  -->
 
 ##### To configure client status alerts for a collection  
 
