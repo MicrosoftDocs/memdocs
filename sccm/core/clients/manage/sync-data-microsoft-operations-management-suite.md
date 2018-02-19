@@ -106,7 +106,7 @@ Beginning with version 1702, you can use the OMS connector to connect to an OMS 
 After you have linked Configuration Manager to OMS, you can add or remove collections, and view the properties of the OMS connection.
 
 ### Verify the OMS connector properties
-1.	In the Configuration Manager console, go to **Administration** > **Cloud Services**, and then select **OMS Connector** to open the **OMS Connection ** page**.
+1.	In the Configuration Manager console, go to **Administration** > **Cloud Services**, and then select **OMS Connector** to open the **OMS Connection page**.
 2.	Within this page there are two tabs:
   - **Azure Active Directory:**   
     This tab shows your **Tenant**, **Client ID**, **Client secret key expiration**, and allows you to verify your client secret key has expired.
