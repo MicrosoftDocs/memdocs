@@ -28,6 +28,6 @@ During installation of the Configuration Manager console, you can choose to part
 
 -   CEIP is per console. It collects data such as the number of times that each element is selected in the user interface.  
 
--   Read the [privacy statement](https://privacy.microsoft.com/en-us/privacystatement).  
+-   Read the [privacy statement](https://privacy.microsoft.com/privacystatement).  
 
 Change the CEIP settings per console installation. To change the settings, go to the console's backstage tab (the upper left tab with the drop-down arrow), and select **Customer Experience Improvement Program**.  

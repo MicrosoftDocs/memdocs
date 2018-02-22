@@ -4264,7 +4264,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 4.  In the **Task Sequence OS Condition** dialog box, in the **Condition box**, click ***condition*** (where *condition* is the logical operation to use in the condition), and then click **OK**.  
 
 #####  <a name="AddWMIQueriestoTaskSequenceStepConditions"></a> Add WMI Queries to Task Sequence Step Conditions  
- You can use WMI queries in a task sequence condition. WMI is the primary management technology for Windows operating systems and enables consistent and uniform management, control, and monitoring of systems throughout the enterprise. Based on industry standards, WMI allows you to query, change, and monitor configuration settings on desktop and server systems, applications, networks, and other enterprise components. You can also write scripts that use the WMI scripting library to work with WMI and create a wide range of systems management and monitoring scripts. For more information about WMI, see the [WMI Scripting Primer](https://technet.microsoft.com/en-us/library/ee156560.aspx).  
+ You can use WMI queries in a task sequence condition. WMI is the primary management technology for Windows operating systems and enables consistent and uniform management, control, and monitoring of systems throughout the enterprise. Based on industry standards, WMI allows you to query, change, and monitor configuration settings on desktop and server systems, applications, networks, and other enterprise components. You can also write scripts that use the WMI scripting library to work with WMI and create a wide range of systems management and monitoring scripts. For more information about WMI, see the [WMI Scripting Primer](https://technet.microsoft.com/library/ee156560.aspx).  
 
  To configure a condition based on a WMI condition, provide the following information in the **Task Sequence WMI Condition** dialog box:  
 
@@ -7566,7 +7566,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 -   Applying security and compliance configuration settings using Group Policy Object Packs as described in [Applying Group Policy Object Packs](#ApplyingGroupPolicyObjectPacks)  
 
--   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/en-us/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
+-   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
 
 -   Configuring the task sequence steps that configure Windows roles and features on the target computer as described in [Configuring Roles and Features Task Sequence Steps](#ConfiguringRolesandFeaturesTaskSequenceSteps)  
 
@@ -9044,7 +9044,7 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 >  The appropriate GPO pack is selected based on the operating system being deployed. If no matching GPO pack can be found, then no GPO pack will be applied.  
 
 ###  <a name="EnablingParticipationinCEIPandWER"></a> Enabling Participation in CEIP and WER  
- MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/en-us/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
+ MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
 
 > [!NOTE]
 >  Although you can use MDT task sequences to enable CEIP and WER for Windows operating systems (only when the corresponding task sequence step is enabled), this is separate from the CEIP information gathered when you opt in to the MDT CEIP program. For more information about what information MDT sends when CEIP is enabled, see the [Microsoft Deployment Toolkit Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=314082).  
