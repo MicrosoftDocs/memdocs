@@ -131,7 +131,7 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
 
 > [!Important]
-> In Configuration Manager version 1706, note the following details:
+> Starting in Configuration Manager version 1706, note the following details:
 >
 >- A notification icon displays in the notification area on the task bar for required apps where the deadline is within 48 hours in the future and the update content has been downloaded. 
 >- A countdown dialog displays for required apps where the deadline is within 7.5 hours in the future and the update has been downloaded. The user can postpone the countdown dialog up to three times before the deadline. When postponed, the countdown displays again after two hours. If not postponed, there is a 30-minute countdown and update gets installed when the countdown expires.
