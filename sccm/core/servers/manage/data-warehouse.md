@@ -43,6 +43,7 @@ When the site system role installs, it installs and configures the data warehous
 ## Prerequisites for the data warehouse service point
 - The data warehouse site system role is supported only at the top-tier site of your hierarchy. (A central administration site or stand-alone primary site).
 - The computer where you install the site system role requires .NET Framework 4.5.2 or later.
+- Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database. 
 - The computer account of the computer where you install the site system role is used to synchronize data with the data warehouse database. This account requires the following permissions:  
   - **Administrator** on the computer that hosts the data warehouse database.
   - **DB_Creator** permission on the data warehouse database.
@@ -79,23 +80,19 @@ When you install the role, Configuration Manager creates the data warehouse data
 
 **General** page:
 - 	**Configuration Manager data warehouse database connection settings**:
- - **SQL Server fully qualified domain name**:  
- Specify the full qualified domain name (FQDN) of the server that hosts the data warehouse service point database.
- - **SQL Server instance name, if applicable**:   
- If you do not use a default instance of SQL Server, you must specify the instance.
- - **Database name**:   
- Specify a name for the data warehouse database. The database name cannot exceed 10 characters. (The supported name length will be increased in a future release).
- Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.
- - **SQL Server port used for connection**:   
- Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
+     - **SQL Server fully qualified domain name**: Specify the full qualified domain name (FQDN) of the server that hosts the data warehouse service point database.
+     - **SQL Server instance name, if applicable**: If you do not use a default instance of SQL Server, you must specify the instance.
+     - **Database name**: Specify a name for the data warehouse database. The database name cannot exceed 10 characters. (The supported name length will be increased in a future release).
+     Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.
+     - **SQL Server port used for connection**: Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
 
 **Synchronization schedule** page:   
 - **Synchronization schedule**:
- - **Start time**:  
- Specify the time that you want the data warehouse synchronization to start.
- - **Recurrence Pattern**:
-    - **Daily**: Specify that synchronization runs every day.
-    - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
+    - **Start time**:  
+         Specify the time that you want the data warehouse synchronization to start.
+    - **Recurrence Pattern**:
+         - **Daily**: Specify that synchronization runs every day.
+         - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
 
 ## Reporting
 After you install a data warehouse service point, several reports become available on the reporting services point that is installed at the same site. If you install the data warehouse service point before installing a reporting services point, the reports are automatically added when you later install the reporting services point.
