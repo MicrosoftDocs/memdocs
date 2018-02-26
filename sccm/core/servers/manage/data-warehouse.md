@@ -3,7 +3,7 @@ title: "Data warehouse"
 titleSuffix: "Configuration Manager"
 description: "Data warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 02/21/2018
+ms.date: 02/26/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,6 +43,7 @@ When the site system role installs, it installs and configures the data warehous
 ## Prerequisites for the data warehouse service point
 - The data warehouse site system role is supported only at the top-tier site of your hierarchy. (A central administration site or stand-alone primary site).
 - The computer where you install the site system role requires .NET Framework 4.5.2 or later.
+- Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database. 
 - The computer account of the computer where you install the site system role is used to synchronize data with the data warehouse database. This account requires the following permissions:  
   - **Administrator** on the computer that hosts the data warehouse database.
   - **DB_Creator** permission on the data warehouse database.
@@ -79,42 +80,30 @@ When you install the role, Configuration Manager creates the data warehouse data
 
 **General** page:
 - 	**Configuration Manager data warehouse database connection settings**:
- - **SQL Server fully qualified domain name**:  
- Specify the full qualified domain name (FQDN) of the server that hosts the data warehouse service point database.
- - **SQL Server instance name, if applicable**:   
- If you do not use a default instance of SQL Server, you must specify the instance.
- - **Database name**:   
- Specify a name for the data warehouse database. The database name cannot exceed 10 characters. (The supported name length will be increased in a future release).
- Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.
- - **SQL Server port used for connection**:   
- Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
+     - **SQL Server fully qualified domain name**: Specify the full qualified domain name (FQDN) of the server that hosts the data warehouse service point database.
+     - **SQL Server instance name, if applicable**: If you do not use a default instance of SQL Server, you must specify the instance.
+     - **Database name**: Specify a name for the data warehouse database. The database name cannot exceed 10 characters. (The supported name length will be increased in a future release).
+     Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.
+     - **SQL Server port used for connection**: Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
 
 **Synchronization schedule** page:   
 - **Synchronization schedule**:
- - **Start time**:  
- Specify the time that you want the data warehouse synchronization to start.
- - **Recurrence Pattern**:
-    - **Daily**: Specify that synchronization runs every day.
-    - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
+    - **Start time**: Specify the time that you want the data warehouse synchronization to start.
+    - **Recurrence Pattern**:
+         - **Daily**: Specify that synchronization runs every day.
+         - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
 
 ## Reporting
 After you install a data warehouse service point, several reports become available on the reporting services point that is installed at the same site. If you install the data warehouse service point before installing a reporting services point, the reports are automatically added when you later install the reporting services point.
 
 The data warehouse site system role includes the following reports, which have a Category of **Data Warehouse**:
- - **Application Deployment - Historical**:   
- View details for application deployment for a specific application and machine.
- - **Endpoint Protection and Software Update Compliance - Historical**:
-  View computers that are missing software updates.  
- - **General Hardware Inventory - Historical**:	  
- View all hardware inventory for a specific machine.
- - **General Software Inventory - Historical**:	  
- View all software inventory for a specific machine.
- - **Infrastructure Health Overview - Historical**:	 
- Displays an overview of the health of your Configuration Manager infrastructure
- - **List of Malware Detected - Historical**:	 
- View malware that has been detected in the organization.
- - **Software Distribution Summary - Historical**:	 
- A summary of software distribution for a specific advertisement and machine.
+ - **Application Deployment - Historical**: View details for application deployment for a specific application and machine.
+ - **Endpoint Protection and Software Update Compliance - Historical**: View computers that are missing software updates.  
+ - **General Hardware Inventory - Historical**: View all hardware inventory for a specific machine.
+ - **General Software Inventory - Historical**: View all software inventory for a specific machine.
+ - **Infrastructure Health Overview - Historical**: Displays an overview of the health of your Configuration Manager infrastructure
+ - **List of Malware Detected - Historical**:	View malware that has been detected in the organization.
+ - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.
 
 
 ## Expand an existing stand-alone primary into a hierarchy
@@ -137,26 +126,23 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 4.	After the site system role installs, the move is complete.
 
 ## Troubleshooting data warehouse issues
-**Log Files**:  
+**Log Files**  
 Use the following logs to investigate problems with the installation of the data warehouse service point, or synchronization of data:
  - *DWSSMSI.log* and *DWSSSetup.log* - Use these logs to investigate errors when installing the data warehouse service point.
  - *Microsoft.ConfigMgrDataWarehouse.log* – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
 **Set up Failure**  
  Installation of the data warehouse service point fails on a remote site system server when the data warehouse is the first site system role that installs on that computer.  
-  - **Solution**:   
-    Make sure that the computer you are installing the data warehouse service point on already hosts at least one other site system role.  
+  - **Solution**: Make sure that the computer you are installing the data warehouse service point on already hosts at least one other site system role.  
 
 
 **Known synchronization issues**:   
 Synchronization fails with the following message in *Microsoft.ConfigMgrDataWarehouse.log*: **“failed to populate schema objects”**  
- - **Solution**:  
-    Make sure that the computer account of the computer that hosts the site system role is a **db_owner** on the data warehouse database.
+ - **Solution**: Make sure that the computer account of the computer that hosts the site system role is a **db_owner** on the data warehouse database.
 
 Data warehouse reports fail to open when the data warehouse database and reporting service point are on different site systems.  
 
- - **Solution**:  
-    Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database.
+ - **Solution**: Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database.
 
 When you open a data warehouse report, the following error is returned:
 
