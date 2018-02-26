@@ -247,6 +247,16 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
+## Script Output
+Staring in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. There are a few limitations to this change.
+- Scripts that fail to run may not get output returned. <!--507179-->
+- Avoid returning large script output since it is truncated to 4 KB <!--508488-->
+- Some functionality with script output formatting is not available if you are running Configuration Manager version 1802 or later with a down-level client. <!--508487-->
+- Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
+   ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
+
+
+
 ## See Also
 
 - [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
