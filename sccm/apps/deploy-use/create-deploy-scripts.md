@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,7 +27,7 @@ manager: angrobe
 >[!TIP]
 >Introduced with version 1706, the ability to run PowerShell scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
-We've now better integrated the ability to run Powershell scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get big jobs done more easily and more consistently.
+System Center Configuration Manager has an integrated ability to run Powershell scripts. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
 With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
 
@@ -56,15 +56,15 @@ For more information about Configuration Manager security roles, see [Fundamenta
 Run Scripts currently supports:
 
 - Scripting languages: PowerShell
-- Parameter types: integer, string and, list
+- Parameter types: integer, string, and list.
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is.
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#BKMK_ScriptRoles)
 
 ### Scripts roles control
 
-By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and can be deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing.
+By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and potentially deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You are able to turn off secondary approval, for ease of testing.
 
 ### Approve or Deny a script
 
@@ -73,7 +73,7 @@ Scripts must be approved, by the *script approver* role, before they can be run.
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
 3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
-4. In the **Approve or deny script** dialog box, select **Approve** or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
+4. In the **Approve or deny script** dialog box, select **Approve**, or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
 ![Script - Approval](./media/run-scripts/RS-approval.png)
 1. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
@@ -92,6 +92,52 @@ This approval is primarily used for the testing phase of script development.
 ## Security scopes
 *(Introduced with version 1710)*  
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+
+## <a name="bkmk_ScriptRoles"></a> Create security roles for scripts
+The three security roles used for running scripts are not created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
+
+1. In the Configuration Manager console, go to **Administration** >**Security** >**Security Roles**
+2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Ensure that they are appropriate for the user. 
+3. Give the custom role a **Name** and a **Description**. 
+4. Assign the security role the permissions outlined below. 
+
+    ### **Security Role Permissions**
+
+     **Role Name**: Script Runners
+    - **Description**: These permissions enable this role to only run scripts that were previously created and approved by other roles. 
+    - **Permissions:** Ensure the following are set to **Yes**.
+         |**Category**|**Permission**|**State**|
+         |---|---|---|
+         |Collection|Run Script|Yes|
+         |SMS Scripts|Create|Yes|
+         |SMS Scripts|Read|Yes|
+
+     **Role Name**: Script Authors
+    - **Description**: These permissions enable this role to author scripts, but they can’t approve or run them. 
+    - **Permissions**: Ensure the following permissions are set. Note that Run Script should be set to **No**.
+         |**Category**|**Permission**|**State**|
+         |---|---|---|
+         |Collection|Run Script|No|
+         |SMS Scripts|Create|Yes|
+         |SMS Scripts|Read|Yes|
+         |SMS Scripts|Delete|Yes|
+         |SMS Scripts|Modify|Yes|
+
+    **Role Name**: Script Authors
+    - **Description**: These permissions enable this role to approve scripts, but they can’t create or run them. 
+    - **Permissions:** Ensure the following permissions are set. Note that Run Script should be set to **No**.
+         |**Category**|**Permission**|**State**|
+         |---|---|---|
+         |Collection|Run Script|No|
+         |SMS Scripts|Read|Yes|
+         |SMS Scripts|Approve|Yes|
+         |SMS Scripts|Modify|Yes|
+     
+**Example of SMS Scripts permissions for the script authors role**
+
+ ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
+
+   
 
 ## Create a script
 
