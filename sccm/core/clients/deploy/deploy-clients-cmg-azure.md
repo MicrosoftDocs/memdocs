@@ -78,7 +78,7 @@ To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe
 
 To install the client, use the instructions in [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) using the following installation command line: 
 
-**ccmsetup.exe /mp&#58; https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057594037928100 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=DFD SMSMP=https://SCCMDFPSS.contoso.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011DB47 AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d17026 AADRESOURCEURI=https://contososerver**
+**ccmsetup.exe /mp&#58; https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100 SMSSiteCode=DND SMSMP=https://sitename.contoso.corp.contoso.com AADTENANTID=44ba6fe0-c73e-4b38-80b6-85c557e7a7ed AADTENANTNAME=contoso  AADCLIENTAPPID=55ba7je0-c73e-4b38-97b6-85c557e7a7ed AADRESOURCEURI=https://contososerver**
 
 - **/MP** – Download source. Can set to CMG if bootstrap from internet.
 - **CCMHOSTNAME:** The name of your Internet management point. You can find this by running **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** from a command prompt on a managed client.
