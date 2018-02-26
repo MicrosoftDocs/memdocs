@@ -3,7 +3,7 @@ title: "Data warehouse"
 titleSuffix: "Configuration Manager"
 description: "Data warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 02/21/2018
+ms.date: 02/26/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
