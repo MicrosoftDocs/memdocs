@@ -88,8 +88,7 @@ When you install the role, Configuration Manager creates the data warehouse data
 
 **Synchronization schedule** page:   
 - **Synchronization schedule**:
-    - **Start time**:  
-         Specify the time that you want the data warehouse synchronization to start.
+    - **Start time**: Specify the time that you want the data warehouse synchronization to start.
     - **Recurrence Pattern**:
          - **Daily**: Specify that synchronization runs every day.
          - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
@@ -98,20 +97,13 @@ When you install the role, Configuration Manager creates the data warehouse data
 After you install a data warehouse service point, several reports become available on the reporting services point that is installed at the same site. If you install the data warehouse service point before installing a reporting services point, the reports are automatically added when you later install the reporting services point.
 
 The data warehouse site system role includes the following reports, which have a Category of **Data Warehouse**:
- - **Application Deployment - Historical**:   
- View details for application deployment for a specific application and machine.
- - **Endpoint Protection and Software Update Compliance - Historical**:
-  View computers that are missing software updates.  
- - **General Hardware Inventory - Historical**:	  
- View all hardware inventory for a specific machine.
- - **General Software Inventory - Historical**:	  
- View all software inventory for a specific machine.
- - **Infrastructure Health Overview - Historical**:	 
- Displays an overview of the health of your Configuration Manager infrastructure
- - **List of Malware Detected - Historical**:	 
- View malware that has been detected in the organization.
- - **Software Distribution Summary - Historical**:	 
- A summary of software distribution for a specific advertisement and machine.
+ - **Application Deployment - Historical**: View details for application deployment for a specific application and machine.
+ - **Endpoint Protection and Software Update Compliance - Historical**: View computers that are missing software updates.  
+ - **General Hardware Inventory - Historical**: View all hardware inventory for a specific machine.
+ - **General Software Inventory - Historical**: View all software inventory for a specific machine.
+ - **Infrastructure Health Overview - Historical**: Displays an overview of the health of your Configuration Manager infrastructure
+ - **List of Malware Detected - Historical**:	View malware that has been detected in the organization.
+ - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.
 
 
 ## Expand an existing stand-alone primary into a hierarchy
@@ -134,26 +126,23 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 4.	After the site system role installs, the move is complete.
 
 ## Troubleshooting data warehouse issues
-**Log Files**:  
+**Log Files**  
 Use the following logs to investigate problems with the installation of the data warehouse service point, or synchronization of data:
  - *DWSSMSI.log* and *DWSSSetup.log* - Use these logs to investigate errors when installing the data warehouse service point.
  - *Microsoft.ConfigMgrDataWarehouse.log* – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
 **Set up Failure**  
  Installation of the data warehouse service point fails on a remote site system server when the data warehouse is the first site system role that installs on that computer.  
-  - **Solution**:   
-    Make sure that the computer you are installing the data warehouse service point on already hosts at least one other site system role.  
+  - **Solution**: Make sure that the computer you are installing the data warehouse service point on already hosts at least one other site system role.  
 
 
 **Known synchronization issues**:   
 Synchronization fails with the following message in *Microsoft.ConfigMgrDataWarehouse.log*: **“failed to populate schema objects”**  
- - **Solution**:  
-    Make sure that the computer account of the computer that hosts the site system role is a **db_owner** on the data warehouse database.
+ - **Solution**: Make sure that the computer account of the computer that hosts the site system role is a **db_owner** on the data warehouse database.
 
 Data warehouse reports fail to open when the data warehouse database and reporting service point are on different site systems.  
 
- - **Solution**:  
-    Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database.
+ - **Solution**: Grant the **Reporting Services Point Account** the **db_datareader** permission on the data warehouse database.
 
 When you open a data warehouse report, the following error is returned:
 
