@@ -296,6 +296,7 @@ The following reports are included with Configuration Manager. The reports appea
 |**Computers in a specific workgroup or domain**|Displays a list of computers in a specified Workgroup or domain.|  
 |**Inventory classes assigned to a specific collection**|Displays the inventory classes that are assigned to a specified collection.|  
 |**Inventory classes enabled on a specific computer**|Displays the inventory classes that are enabled on a specified computer.|  
+|**Windows AutoPilot Device Information**|Displays client device information that is needed for Windows AutoPilot registration.|
 
 
 
