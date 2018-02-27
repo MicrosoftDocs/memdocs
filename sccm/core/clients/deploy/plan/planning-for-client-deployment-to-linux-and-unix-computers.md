@@ -65,6 +65,13 @@ You can install the System Center Configuration Manager client on computers that
 |Openssl|OpenSSL Libraries; Secure Network Communications Protocol|1.0.0-4|  
 |PAM|Pluggable Authentication Modules|1.1.1-4|  
 
+ **Red Hat Enterprise Linux Server release 7**  
+
+|Required package|Description|Minimum version|  
+|----------------------|-----------------|---------------------|  
+|glibc|C Standard Libraries|2.17|  
+|Openssl|OpenSSL Libraries; Secure Network Communications Protocol|1.0.1|  
+|PAM|Pluggable Authentication Modules|1.1.1-4|  
 
  **Solaris 10 SPARC**  
 
