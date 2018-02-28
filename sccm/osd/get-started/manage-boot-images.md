@@ -23,7 +23,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) image that is used during an operating system deployment. Boot images are used to start a computer in WinPE. This minimal operating system contains limited components and services. Configuration Manager uses WinPE to prepare the destination computer for Windows installation. Use the following sections to manage boot images.
+A boot image in Configuration Manager is a [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) image that is used during an operating system deployment. Boot images are used to start a computer in WinPE. This minimal operating system contains limited components and services. Configuration Manager uses WinPE to prepare the destination computer for Windows installation. Use the following sections to manage boot images.
 
 ## <a name="BKMK_BootImageDefault"></a> Default boot images
 Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>. The default boot images are updated or regenerated depending on the action that you take.
@@ -77,7 +77,7 @@ Use this information to help decide whether to reload the boot image. The **Boot
 
      Windows PE 3.1<sup>1</sup> and Windows PE 5  
 
-     <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
+     <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
      For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see [Customize boot images](customize-boot-images.md).
 
@@ -115,16 +115,15 @@ Use this information to help decide whether to reload the boot image. The **Boot
 >  In the **Boot Image** node of the console, the **Size (KB)** column displays the decompressed size for each boot image. When the site sends a boot image over the network, it sends a compressed copy. This copy is typically smaller than the size listed in the **Size (KB)** column.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Distribute boot images to a distribution point  
- Boot images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the boot image to at least one distribution point before you deploy an operating system and before you create media.  
+ Boot images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the boot image to at least one distribution point before you deploy an operating system and before you create media.   
 
 > [!NOTE]  
->  To use PXE to deploy an operating system, consider the following before you distribute the boot image:  
+> To use PXE to deploy an operating system, consider the following points before you distribute the boot image:  
+> - Configure the distribution point to accept PXE requests.  
+> - Distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.  
+> - Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.  
 >   
->  -  Configure the distribution point to accept PXE requests.  
-> -   Distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.  
-> -   Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.  
->   
->  For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+> For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
  For the steps to distribute a boot image, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
 
@@ -153,7 +152,7 @@ Use this information to help decide whether to reload the boot image. The **Boot
 
     -   On the **Images** tab, if you have changed the properties of the boot image by using an external tool, click **Reload**.  
 
-    -   On the **Drivers** tab, add the Windows device drivers that are required to boot WinPE. Consider the following when you add device drivers:  
+    -   On the **Drivers** tab, add the Windows device drivers that are required to boot WinPE. Consider the following points when you add device drivers:  
 
         -   Select **Hide drivers that do not match the architecture of the boot image** to only display only drivers for the architecture of the boot image. The architecture is based on the architecture reported in the INF from the manufacturer.  
 
@@ -161,9 +160,9 @@ Use this information to help decide whether to reload the boot image. The **Boot
 
         -   Select **Hide drivers that are not digitally signed** to hide drivers that don't have a valid digital signature.  
 
-        -   As a best practice, add only NIC and Mass Storage Drivers to the boot image unless there are requirements for other drivers to be part of WinPE.  
+        -   As a best practice, add only network and mass storage drivers to the boot image, unless there are requirements for other drivers in WinPE.  
 
-        -   Because WinPE already comes with many drivers built in, add only NIC and Mass Storage Drivers that are not supplied by WinPE.  
+        -   Because WinPE already comes with many drivers built in, add only network and mass storage drivers that are not supplied by WinPE.  
 
         -   Make sure that the drivers that you add to the boot image match the architecture of the boot image.  
 
@@ -224,7 +223,7 @@ Use this information to help decide whether to reload the boot image. The **Boot
 
         -   Click **Validate** to check the integrity of the boot image package on the selected distribution point or distribution point group.  
 
-    -   On the **Optional Components** tab, specify the components that are added to Windows PE for use with Configuration Manager. For more information about available optional components, see [WinPE: Add packages (Optional Components Reference)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx).  
+    -   On the **Optional Components** tab, specify the components that are added to Windows PE for use with Configuration Manager. For more information about available optional components, see [WinPE: Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
     -   On the **Security** tab, select an administrative user and change the operations that they can perform.  
 
