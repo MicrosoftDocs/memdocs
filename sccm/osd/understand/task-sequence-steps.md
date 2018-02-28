@@ -505,6 +505,8 @@ In the task sequence editor, click **Add**, select **General**, and select **Che
 -   Driver packages  
 
 -   Packages  
+
+-   Boot images
     
 This step works well in a task sequence to upgrade an operating system in the following scenarios:  
 
