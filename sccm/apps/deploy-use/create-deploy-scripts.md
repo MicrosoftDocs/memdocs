@@ -29,7 +29,7 @@ manager: angrobe
 
 System Center Configuration Manager has an integrated ability to run Powershell scripts. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
-With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
+With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
 
 - Create and edit scripts for use with System Center Configuration Manager.
 - Manage script usage through roles and security scopes. 
@@ -58,9 +58,12 @@ Run Scripts currently supports:
 - Scripting languages: PowerShell
 - Parameter types: integer, string, and list.
 
+## Group Policy considerations for scripts
+While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts. Setting an Execution Policy via Group Policy may not allow scripts to be run with Configuration Manager. For information about Execution Polices and hoe they get set see the [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) article. <!--507185-->
+
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#BKMK_ScriptRoles)
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#BKMK_ScriptRoles).
 
 ### Scripts roles control
 
@@ -87,7 +90,7 @@ This approval is primarily used for the testing phase of script development.
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
 
 >[!IMPORTANT]
->As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
+>As a best practice, you shouldn't allow a script author to approve their own scripts. It should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
 *(Introduced with version 1710)*  
@@ -114,7 +117,8 @@ The three security roles used for running scripts are not created by default in 
 
      **Role Name**: Script Authors
     - **Description**: These permissions enable this role to author scripts, but they can’t approve or run them. 
-    - **Permissions**: Ensure the following permissions are set. Note that Run Script should be set to **No**.
+    - **Permissions**: Ensure the following permissions are set.
+    - 
          |**Category**|**Permission**|**State**|
          |---|---|---|
          |Collection|Run Script|No|
@@ -125,7 +129,7 @@ The three security roles used for running scripts are not created by default in 
 
     **Role Name**: Script Authors
     - **Description**: These permissions enable this role to approve scripts, but they can’t create or run them. 
-    - **Permissions:** Ensure the following permissions are set. Note that Run Script should be set to **No**.
+    - **Permissions:** Ensure the following permissions are set.
          |**Category**|**Permission**|**State**|
          |---|---|---|
          |Collection|Run Script|No|
@@ -195,7 +199,7 @@ Here are a couple examples that illustrate scripts you might want to use with th
 
 ### Create a new folder and file
 
-This script creates a new folder and a file within it given your naming input.
+This script creates a new folder and a file within the folder, given your naming input.
 
 ``` powershell
 Param(
