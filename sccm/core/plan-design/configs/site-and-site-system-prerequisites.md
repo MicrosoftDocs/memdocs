@@ -3,7 +3,7 @@ title: "Site prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 02/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 ---
 # Site and site system prerequisites for System Center Configuration Manager
 
@@ -25,7 +25,7 @@ manager: angrobe
  Windows-based computers require specific configurations to support their use as System Center Configuration Manager site system servers.  
 
  
- For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use of that product. Only configurations that directly apply for use with Configuration Manager are included here.   
+ For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use. Only configurations that directly apply for use with Configuration Manager are included here.   
 
 > [!NOTE]  
 >  In January 2016, support expired for the .NET Framework 4.0, 4.5, and 4.5.1. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) at support.microsoft.com.  
@@ -33,9 +33,9 @@ manager: angrobe
 ## <a name="bkmk_generalprerewq"></a> General site server requirements and limitations
 **The following apply to all site system servers:**
 
--   Each site system server must use a 64-bit operating system. The only exception to this is the distribution point site system role, which you can install on some 32-bit operating systems.  
+-   Each site system server must use a 64-bit operating system. The only exception is the distribution point site system role, which you can install on some 32-bit operating systems.  
 
--   Site systems are not supported on Server Core installations of any operating system. An exception to this is that Server Core installations are supported for the distribution point site system role, without PXE or multicast support.  
+-   Site systems are not supported on Server Core installations of any operating system. An exception is that Server Core installations are supported for the distribution point site system role, without PXE or multicast support.  
 
 -   After a site system server is installed, it's not supported to change:  
 
@@ -45,11 +45,11 @@ manager: angrobe
 
     -   The name of the computer.  
 
-  If you must change any of these, you must first remove the site system role from the computer and then reinstall the role after the change is complete. If this affects the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
+  If you must change any of these items, you must first remove the site system role from the computer and then reinstall the role after the change is complete. For changes affecting the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
 
--   Site system roles are not supported on an instance of a Windows Server cluster. The only exception to this is the site database server.  
+-   Site system roles are not supported on an instance of a Windows Server cluster. The only exception is the site database server.  
 
--   It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do this, you might prevent key services from running correctly.  
+-   It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
 ##  <a name="bkmk_2012Prereq"></a> Prerequisites for Windows Server 2012 and later operating systems  
 ###  <a name="bkmk_2012sspreq"></a> Site server: central administration site and primary site  
@@ -57,13 +57,13 @@ manager: angrobe
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later)
 
 -   Remote Differential Compression  
 
 **Windows ADK:**  
 
--   Before you install or upgrade a central administration site or primary site, you must install the version of the Windows Assessment and Deployment Kit (ADK) that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.  
+-   Before you install or upgrade a central administration site or primary site, you must install the version of the Windows Assessment and Deployment Kit (ADK) that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client article.  
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -78,7 +78,7 @@ manager: angrobe
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later)   
 
 -   Remote Differential Compression  
 
@@ -110,7 +110,7 @@ manager: angrobe
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
 **Windows ADK:**  
 
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.
+-   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client article.
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -119,7 +119,7 @@ manager: angrobe
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (or later):  
 
     -   ASP.NET 4.5  
 
@@ -154,7 +154,7 @@ manager: angrobe
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (or later):  
 
     -   ASP.NET 4.5:  
 
@@ -189,12 +189,12 @@ manager: angrobe
 ###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later)  
 
 ###  <a name="bkmk_2012crppreq"></a> Certificate registration point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (or later):  
 
     -   HTTP Activation  
 
@@ -256,7 +256,7 @@ manager: angrobe
 
 <!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client does not  upload information to it.  
+> When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client doesn't upload information to it.  
 
 ###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection point  
 **Windows Server roles and features:**  
@@ -268,9 +268,9 @@ manager: angrobe
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (or later):  
 
-     When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+     When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
     -   HTTP Activation (and automatically selected options)  
 
@@ -308,9 +308,9 @@ manager: angrobe
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
-     When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
+     When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
 
 **IIS configuration:**  
 
@@ -354,7 +354,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2012MPpreq"></a> Management point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 -   BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
 
@@ -377,22 +377,22 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2012RSpoint"></a> Reporting services point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 **SQL Server Reporting Services:**  
 
--   You must install and configure at least one instance of SQL Server to support SQL Server Reporting Services before installing the reporting services point.  
+-   Install and configure at least one instance of SQL Server to support SQL Server Reporting Services before installing the reporting services point.  
 
 -   The instance that you use for SQL Server Reporting Services can be the same instance you use for the site database.  
 
--   Additionally, the instance that you use can be shared with other System Center products as long as the other System Center products don't have restrictions for sharing the instance of SQL Server.  
+-   Additionally, the instance that you use can be shared with other System Center products, as long as the other System Center products don't have restrictions for sharing the instance of SQL Server.  
 
 ###  <a name="bkmk_SCPpreq"></a> Service connection point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
-     When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+     When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
 **Visual C++ Redistributable:**  
 
@@ -405,7 +405,7 @@ The default IIS configuration is required with the following additions:
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 The default IIS configuration is required.
 
@@ -427,14 +427,14 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 **The following applies to all Windows Communication Foundation (WCF) activation requirements:**  
 
--   You can configure WCF activation as part of the .NET Framework Windows feature on the site system server. For example, on Windows Server 2008 R2, run the **Add Features Wizard** to install additional features on the server. On the **Select Features** page, expand **NET Framework 3.5.1 Features**, expand **WCF Activation**, and then check the boxes for both **HTTP Activation** and **Non-HTTP Activation** to enable these options.  
+-   You can configure WCF activation as part of the .NET Framework Windows feature on the site system server. For example, on Windows Server 2008 R2, run the **Add Features Wizard** to install additional features on the server. On the **Select Features** page, expand **NET Framework 3.5.1 Features**, and expand **WCF Activation**. Check the boxes for both **HTTP Activation** and **Non-HTTP Activation** to enable these options.  
 
 ###  <a name="bkmk_2008sspreq"></a> Site server: central administration site and primary site  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 **Windows feature:**  
 
@@ -442,7 +442,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 **Windows ADK:**  
 
--   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.  
+-   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client article.  
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -457,7 +457,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later)  
 
 **Visual C++ Redistributable:**  
 
@@ -487,14 +487,14 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS Provider server  
 **Windows ADK:**  
 
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client topic.  
+-   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) in the Support for Windows 10 as a client article.  
 
 -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 ###  <a name="bkmk_2008acwspreq"></a> Application Catalog website point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 **IIS configuration:**
 
@@ -525,7 +525,7 @@ The default IIS configuration is required with the following additions:
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 **Windows Communication Foundation (WCF) activation:**  
 
@@ -556,12 +556,12 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence synchronization point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 ###  <a name="bkmk_2008crppreq"></a> Certificate registration point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 -   HTTP Activation  
 
@@ -594,7 +594,7 @@ You can use the default IIS configuration or a custom configuration. To use a cu
 
     -   IIS 6 WMI Compatibility  
 
-When you use a custom IIS configuration, you can remove options that aren't required, such as the following:  
+When you use a custom IIS configuration, you can remove options that aren't required, such as the following items:  
 
 -   Common HTTP Features:  
 
@@ -636,9 +636,9 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 ###  <a name="bkmk_2008Enrollpreq"></a> Enrollment point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
-     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
 **Windows Communication Foundation (WCF) activation:**  
 
@@ -665,7 +665,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2008EnrollProxpreq"></a> Enrollment proxy point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
      When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -703,7 +703,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2008MPpreq"></a> Management point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later)
 
 **IIS configuration:**
 
@@ -729,7 +729,7 @@ To use a custom IIS configuration, you must enable the following options for IIS
     -   IIS 6 WMI Compatibility  
 
 
-When you use a custom IIS configuration, you can remove options that aren't required, such as the following:  
+When you use a custom IIS configuration, you can remove options that aren't required, such as the following options:  
 
 -   Common HTTP Features:  
 
@@ -744,11 +744,11 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 ###  <a name="bkmk_2008RSpoint"></a> Reporting services point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later)  
 
 **SQL Server Reporting Services:**  
 
--   You must install and configure at least one instance of SQL Server to support SQL Server Reporting Services before installing the reporting services point.  
+-   Install and configure at least one instance of SQL Server to support SQL Server Reporting Services before installing the reporting services point.  
 
 -   The instance that you use for SQL Server Reporting Services can be the same instance you use for the site database.  
 
@@ -757,9 +757,9 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 ###  <a name="bkmk_2008SCPpreq"></a> Service connection point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
-     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
 **Visual C++ Redistributable:**  
 
@@ -772,7 +772,7 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (or later) 
 
 **IIS configuration:**
 
