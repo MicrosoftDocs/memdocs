@@ -50,6 +50,7 @@ To open the Surface device dashboard, use the following steps:
 The Surface device dashboard shows three graphs for your environment. 
 
 - **Percent of Surface devices** -Gives you the percentage of Surface devices throughout your environment.
+
     ![Percent of Surface devices graph](media\Percent-Surface-Devices.PNG)
 - **Surface Models** -Shows the number of devices per Surface model. 
     - Hovering over a graph section will give you the percentage of Surface devices that are the model selected. 
@@ -59,7 +60,7 @@ The Surface device dashboard shows three graphs for your environment.
         ![Surface model device list](media\Surface-Model-Device-List.PNG)
 
 - **Top five firmware versions**- Displays a chart with the top five firmware models in your environment. 
-    - Hovering over a graph section will give you the percentage of Surface devices that are the firmware version selected. 
+    - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. 
        ![Surface model device list](media\Surface-Firmware-Hover.PNG)
 
 
