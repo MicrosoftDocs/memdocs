@@ -46,10 +46,10 @@ When you have multiple software update points at a site, ensure that they're all
   WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS isn't already installed on the site server.  
 
 > [!IMPORTANT]  
->  The WSUS version on the site server must be the same as the WSUS version that's running on the software update points.  
+>  - The WSUS version on the site server must be the same as the WSUS version that's running on the software update points. 
+> -  Don't use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
 
-> [!IMPORTANT]  
->  Don't use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
+
 
 ### Windows Update Agent (WUA)  
  The WUA client is required on clients so that they can connect to the WSUS server. WUA retrieves the list of software updates that must be scanned for compliance.  
@@ -73,9 +73,9 @@ When you have multiple software update points at a site, ensure that they're all
 
  For more information, see the following articles:  
 
--   [Client settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings).   
+-   [Client settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
--   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)  
 
 ### Reporting services points  
  The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting.  
