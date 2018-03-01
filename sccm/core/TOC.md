@@ -203,6 +203,7 @@
 -->
 
 #    Manage infrastructure
+## [Management insights](servers/manage/management-insights.md)
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
