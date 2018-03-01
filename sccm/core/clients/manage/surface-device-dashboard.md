@@ -34,11 +34,11 @@ Beginning in version 1802, the Surface device dashboard gives you information ab
 
 ## Open the Surface device dashboard
 
-To open the Surface device dashboard follow the steps below: 
+To open the Surface device dashboard, use the following steps: 
 
 1. Open the Configuration Manager console. 
 2. Click on the **Monitoring** node. 
-3. Click on **Surface Devices** to load the dashboard.
+3. To load the dashboard, click on **Surface Devices**.
 
 **Surface device dashboard**
 ![Surface device dashboard](media\Surface-device-dashboard.PNG)
@@ -47,7 +47,7 @@ To open the Surface device dashboard follow the steps below:
 
 ## Reviewing information in the Surface device dashboard
 
-The Surface device dashboard contains three graphs to review for your environment. 
+The Surface device dashboard shows three graphs for your environment. 
 
 - **Percent of Surface devices** -Gives you the percentage of Surface devices throughout your environment.
     ![Percent of Surface devices graph](media\Percent-Surface-Devices.PNG)
