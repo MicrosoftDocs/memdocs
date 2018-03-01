@@ -2,6 +2,7 @@
 # required metadata
 
 title: Surface Device Dashboard
+titleSuffix: "System Center Configuration Manager"
 description: Review information about Surface devices using the dashboard.
 keywords:
 author: mestew
@@ -12,6 +13,7 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
+  - configmgr-other
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
 
 
