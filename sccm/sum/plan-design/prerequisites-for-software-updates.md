@@ -35,21 +35,21 @@ This article lists the prerequisites for software updates in System Center Confi
 -   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)  
 -   WSUS 3.2 (role in Windows Server 2008 R2)  
 
- When you have multiple software update points at a site, ensure that they are all running the same version of WSUS.  
+ When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
 
 > [!WARNING]  
->  The **Upgrades** software updates classification is only supported starting in in WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based server or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  
+>  The **Upgrades** software updates classification is only supported beginning in WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based server or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  
 >   
 >  If you synchronize software updates with the **Upgrades** classification before you install [hotfix 3095113](https://support.microsoft.com/kb/3095113), see [Recover from synchronizing the Upgrades category before you install KB 3095113](#BKMK_RecoverUpgrades).  
 
 ### WSUS Administration Console  
-  WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS is not already installed on the site server.  
+  WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS isn't already installed on the site server.  
 
 > [!IMPORTANT]  
 >  The WSUS version on the site server must be the same as the WSUS version that's running on the software update points.  
 
 > [!IMPORTANT]  
->  Do not use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
+>  Don't use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
 
 ### Windows Update Agent (WUA)  
  The WUA client is required on clients so that they can connect to the WSUS server. WUA retrieves the list of software updates that must be scanned for compliance.  
