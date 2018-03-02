@@ -182,8 +182,8 @@ After reassigning a distribution point, refresh the server's certificate. For mo
 - For PKI certificates, you don't need to create a new certificate. Import the same .PFX and enter the password.
 - For self-signed certificates, adjust the expiration date to update it.
 If you do not refresh the certificate, the distribution point still serves content, but the following functions fail:
-- Content validation messages (the distmgr.log shows that it can't decrypt the certificate)
-- PXE support for clients 
+    - Content validation messages (the distmgr.log shows that it can't decrypt the certificate)
+    - PXE support for clients 
 
 ### Tips
 - Perform this action from the central administration site. This practice helps with replication to the primary sites.
