@@ -1,9 +1,9 @@
 ---
-title: "What's new in hybrid MDM"
-titleSuffix: "Configuration Manager"
-description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
+title: What's new in hybrid MDM
+titleSuffix: Configuration Manager
+description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
 ms.custom: na
-ms.date: 02/21/2018
+ms.date: 03/01/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
+# What's new in hybrid mobile device management with Configuration Manager and Microsoft Intune
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -37,6 +37,15 @@ Each section of this article lists hybrid features under three different categor
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
+
+
+## February 2018
+
+### New in Microsoft Intune
+
+- **macOS Company Portal support for enrollments that use the Device Enrollment Manager**  
+    Users can now use the Device Enrollment Manager when enrolling with the macOS Company Portal.
+    <!-- 1352411 -->
 
 
 ## January 2018
