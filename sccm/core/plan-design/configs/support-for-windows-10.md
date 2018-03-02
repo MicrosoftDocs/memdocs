@@ -17,7 +17,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Support for Windows 10 for System Center Configuration Manager  
+# Support for Windows 10 in System Center Configuration Manager  
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -43,7 +43,7 @@ For example, a Configuration Manager version drops from the matrix after [suppor
 | 1703   <br />(*see editions*)   <!--10/09/2018-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | 1709   <br />(*see editions*)   <!--04/09/2019-->   | ![Backwards compatible](media/blue_compat.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
-<!-- lifecycle reference: https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet -->
+<!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
 **Editions:** Enterprise, Pro, Education, Pro Education   
 

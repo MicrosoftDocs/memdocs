@@ -183,7 +183,7 @@ When a client receives five errors in 10 minutes and fails to communicate with a
  Preferred management points enable a client to identify a management point that is associated with its current network location (boundary).  
 
 -   A client attempts to use a preferred management point from its assigned site before using one not configured as preferred from its assigned site.  
--   To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries. For 
+-   To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries.
 -   When you configure preferred management points, and a client organizes its list of management points, the client places the preferred management points at the top of its list. This list includes all management points from the client's assigned site.  
 
 > [!NOTE]  
