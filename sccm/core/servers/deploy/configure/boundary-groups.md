@@ -1,7 +1,7 @@
 ---
-title: "Define boundary groups"
-titleSuffix: "Configuration Manager"
-description: "Understand boundary groups that link clients to site systems in System Center Configuration Manager."
+title: Configure boundary groups
+titleSuffix: Configuration Manager
+description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
 ms.custom: na
 ms.date: 03/09/2018
 ms.prod: configuration-manager
@@ -177,10 +177,13 @@ When a client receives five errors in 10 minutes and fails to communicate with a
 
 ## Preferred management points
 
+ > [!Note]
+ > The behavior of this hierarchy setting, **Clients prefer to use management points specified in boundary groups**, changes starting in version 1802. When you enable this setting, Configuration Manager uses the boundary group functionality for the assigned management point. For more information, see [management points](#management-points). 
+
  Preferred management points enable a client to identify a management point that is associated with its current network location (boundary).  
 
 -   A client attempts to use a preferred management point from its assigned site before using one not configured as preferred from its assigned site.  
--   To use this option, enable it for the hierarchy. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries.  
+-   To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries.
 -   When you configure preferred management points, and a client organizes its list of management points, the client places the preferred management points at the top of its list. This list includes all management points from the client's assigned site.  
 
 > [!NOTE]  
@@ -211,7 +214,7 @@ Add the network locations of your clients as boundaries to only the BG_A boundar
 
 	Example of boundary groups and fallback times:
 
-	 ![BG_Fallack](media/BG_Fallback.png)
+	 ![Example of boundary groups and fallback times](media/BG_Fallback.png)
 
 
 With this configuration:
