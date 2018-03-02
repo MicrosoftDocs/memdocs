@@ -22,7 +22,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Management insights in System Center Configuration Manager provides information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight.
+Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight.
 
 ## Review Management Insights in the Configuration Manager console 
 
@@ -40,16 +40,16 @@ Management insights in System Center Configuration Manager provides information 
     **All rules and prerequisites for the cloud services group**
     ![Management insights- All rules and prerequisites for cloud services group](./media/Management-insights-all-cloud-rules.png)
 
-## Management insights re-evaluation and logging
-The management insight rules re-evaluate their applicability on a weekly schedule. You can re-evaluate a rule on demand by right-clicking the rule and selecting **Re-evaluate**.
+## Management insights reevaluation and logging
+The management insight rules reevaluate their applicability on a weekly schedule. You can re-evaluate a rule on demand by right-clicking the rule and selecting **Re-evaluate**.
 
 **Log File for management insight rules**: SMS_DataEngine.log
 ## Management insights groups and rules
-Rules are organized into different management insight groups. When groups and rules are added, they'll be added to the below list.
+Rules are organized into different management insight groups. When groups and rules are added, they'll be added to the following list:
 
 **Applications**: Insights for your application management.
 
-- **Applications without deployments** -Lists the applications in your environment that do not have active deployments. This rule helps you find and delete unused applications to simplify the list of applications displayed int the console. 
+- **Applications without deployments** -Lists the applications in your environment that do not have active deployments. This rule helps you find and delete unused applications to simplify the list of applications displayed in the console. 
 
 **Cloud Services**: Helps you integrate with many cloud services; enabling modern management of your devices. 
  - **Assess co-management readiness** -Helps you understand what steps are needed to enable co-management. This rule has prerequisites. 
@@ -68,7 +68,7 @@ Rules are organized into different management insight groups. When groups and ru
    - **Direct users to Software Center instead of Application Catalog** -Check if users have installed or requested applications from the Application Catalog in the last 14 days. The primary functionality of Application Catalog is now included in Software Center. Support for the Application Catalog website ends with the first update released after June 1, 2018
    - **Use the new version of Software Center** -The previous version of Software Center is no longer supported. Set up clients to use the new Software Center by enabling the client setting **Computer Agent** >**Use new Software Center**.
 
-**Windows 10**: Insights related to the deployment and servicing of Windows 10. The **Windows 10** management insight group is available when more than half of clients are running Windows 7, Windows 8, or Windows 8.1.
+**Windows 10**: Insights related to the deployment and servicing of Windows 10. The Windows 10 management insight group is available when more than half of clients are running Windows 7, Windows 8, or Windows 8.1.
    - **Configure Windows telemetry and commercial ID key** -Leverage Upgrade Readiness to expedite your Windows 10 deployments before Windows 7 goes out of support.
    - **Connect Configuration Manager to Upgrade Readiness** -To use data from Upgrade Readiness, devices must be configured with a Commercial ID key and have telemetry enabled. Windows 10 devices must be set to Enhanced (Limited) telemetry level or higher. **Configure Windows telemetry and commercial ID key** is a prerequisite. 
 
