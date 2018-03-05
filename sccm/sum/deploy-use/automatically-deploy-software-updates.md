@@ -252,8 +252,8 @@ You can automatically approve and deploy software updates by using an ADR. You c
     -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
  
 
-        > [!WARNING]  
-        >  Suppressing system restarts can be useful in server environments or in cases in which you do not want the computers that are installing the software updates to restart by default. However, doing so can leave computers in an insecure state, whereas allowing a forced restart helps to ensure immediate completion of the software update installation.  
+       > [!WARNING]  
+       >  Suppressing system restarts can be useful in server environments or in cases in which you do not want the computers that are installing the software updates to restart by default. However, doing so can leave computers in an insecure state, whereas allowing a forced restart helps to ensure immediate completion of the software update installation.  
 
     -   **Write filter handling for Windows Embedded devices**: When you deploy software updates to Windows Embedded devices that are write filter enabled, you can specify to install the software update on the temporary overlay and either commit changes later or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
 
