@@ -2,6 +2,7 @@
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help for Configuration Manager](understand/find-help.md)
 ### [Accessibility features](understand/accessibility-features.md)
+### [Software Center user guide](understand/software-center.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
 ### [Fundamentals of sites and hierarchies](understand/fundamentals-of-sites-and-hierarchies.md)
 #### [About upgrade, update, and install for site and hierarchy infrastructure](understand/upgrade-update-install.md)

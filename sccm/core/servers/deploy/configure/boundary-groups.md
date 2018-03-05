@@ -36,7 +36,7 @@ Clients use a boundary group for:
 -   Automatic site assignment  
 -   To find a site system server that can provide a service, including:
     - Distribution points for content location
-    -	Software update points (beginning with version 1702)
+    -	Software update points
     - State migration points
     - Preferred management points (If you use preferred management points, you must enable this option for the hierarchy and not from within the boundary group configuration. See [To enable use of preferred management points](#to-enable-use-of-preferred-management-points) in this topic.)
 
@@ -229,7 +229,7 @@ By configuring the different neighbor groups to be available at different times,
 
 
 
-
+<!--
 ### Update existing boundary groups to the new model
 When you update to version prior to 1610, the following configurations are automatically made. This behavior ensures your current fallback behavior remains available until you configure new boundary groups and relationships.
 
@@ -258,12 +258,12 @@ Not selected |  Not selected|  **Fallback to neighbor** - Use the distribution p
 Not selected | Selected		|   **Normal fallback** - Use distribution points in current boundary group, then servers from the neighbor and site default boundary groups
 
  All other deployment configurations result in **Normal fallback**.  
+-->
 
 
 
-
-## Changes from prior versions for UI and behavior for content locations
-The following are the key changes to boundary groups and how clients find content. These changes are introduced with version 1610. Many of these changes and concepts work together.
+## Changes from prior versions
+The following are the key changes to boundary groups and how clients find content in Configuration Manager Current Branch. Many of these changes and concepts work together.
 
 
 -	Configurations for Fast or Slow are removed: You no longer configure individual distribution points to be fast or slow. Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
