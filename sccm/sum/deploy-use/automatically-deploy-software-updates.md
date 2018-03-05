@@ -19,7 +19,7 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
- You can use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you will use ADRs to deploy monthly software updates (known as Patch Tuesday updates) and for managing definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md)
+ You can use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you will use ADRs to deploy monthly software updates (known as Patch Tuesday updates) and for managing definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
 <!--##  <a name="BKMK_AddUpdatesToExistingGroup"></a> Add software updates to a deployed update group  
 After you create and deploy a software update group, you can add software updates to the update group and they will be automatically deployed.  
@@ -93,7 +93,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
 5.  On the Software Updates page, configure the criteria for the software updates that the ADR retrieves and adds to the software update group. The limit for software updates in the ADR is 1000 software updates. If needed, you can filter on the content size for software updates in automatic deployment rules. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 
-6.  On the Evaluation Schedule page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule. The start time configuration for the schedule is based on the local time of the computer that runs the Configuration Manager console
+6.  On the Evaluation Schedule page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule. The start time configuration for the schedule is based on the local time of the computer that runs the Configuration Manager console.
     - The start time configuration for the schedule is based on the local time of the computer that runs the Configuration Manager console.
     - The ADR evaluation can run as often as three times per day.
     - Never set the evaluation schedule with a frequency that exceeds the software updates synchronization schedule. The software update point synchronization schedule is displayed to help you determine evaluation schedule frequency. 
@@ -251,11 +251,10 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
     -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
  
+           > [!WARNING]  
+           >  Suppressing system restarts can be useful in server environments or in cases in which you do not want the computers that are installing the software updates to restart by default. However, doing so can leave computers in an insecure state, whereas allowing a forced restart helps to ensure immediate completion of the software update installation.  
 
-       > [!WARNING]  
-       >  Suppressing system restarts can be useful in server environments or in cases in which you do not want the computers that are installing the software updates to restart by default. However, doing so can leave computers in an insecure state, whereas allowing a forced restart helps to ensure immediate completion of the software update installation.  
-
-    -   **Write filter handling for Windows Embedded devices**: When you deploy software updates to Windows Embedded devices that are write filter enabled, you can specify to install the software update on the temporary overlay and either commit changes later or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
+    - **Write filter handling for Windows Embedded devices**: When you deploy software updates to Windows Embedded devices that are write filter enabled, you can specify to install the software update on the temporary overlay and either commit changes later or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
 
         - When you deploy a software update to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window.  
 
