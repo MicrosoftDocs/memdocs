@@ -43,7 +43,7 @@ When you have multiple software update points at a site, ensure that they're all
 >  If you synchronize software updates with the **Upgrades** classification before you install [hotfix 3095113](https://support.microsoft.com/kb/3095113), see [Recover from synchronizing the Upgrades category before you install KB 3095113](#BKMK_RecoverUpgrades).  
 
 ### WSUS Administration Console  
-  WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS isn't already installed on the site server.  
+ The WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS isn't already installed on the site server.  
 
 > [!IMPORTANT]  
 >  - The WSUS version on the site server must be the same as the WSUS version that's running on the software update points. 
@@ -78,7 +78,7 @@ When you have multiple software update points at a site, ensure that they're all
 -   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)  
 
 ### Reporting services points  
- The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting.  
+ The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md).  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> Recover from synchronizing the Upgrades category before you install KB 3095113  
  You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS sees the Windows 10 build 1511 feature upgrade even if it can’t properly download and deploy the associated packages. 
