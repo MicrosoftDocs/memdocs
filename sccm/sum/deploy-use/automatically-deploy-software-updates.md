@@ -102,7 +102,8 @@ You can automatically approve and deploy software updates by using an ADR. You c
        > [!NOTE]  
        >Starting in Configuration Manager version 1802, ADRs can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. <!--1357133-->
        > - When scheduling evaluation to occur with an offset during the last week of the month, the evaluation will be scheduled for the last day of the month if the offset chosen overflows into the next month. <!--506731-->
-       ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
+
+       > ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
 
    
 7.  On the Deployment Schedule page, configure the following settings:  
