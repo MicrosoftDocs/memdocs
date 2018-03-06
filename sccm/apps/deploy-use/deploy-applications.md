@@ -68,7 +68,7 @@ On the **Deployment Settings** page of the Deploy Software wizard, specify the f
 	> [!NOTE]
 	>  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** takes priority.
 
-You cannot change the action of a deployment after you create it.
+  You cannot change the action of a deployment after you create it.
 
 - **Purpose**: From the drop-down list, choose one of the following options:  
 	- **Available**: If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.

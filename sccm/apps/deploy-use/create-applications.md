@@ -499,4 +499,4 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
 
 ## Next steps
 
-After creating an application in Configuration Manager, the next step is to [deploy the application](deploy-applications).
+After creating an application in Configuration Manager, the next step is to [deploy the application](/sccm/apps/deploy-use/deploy-applications).
