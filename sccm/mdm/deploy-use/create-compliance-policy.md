@@ -266,6 +266,7 @@ robots: noindex
 
   **Supported on:**
   * Windows 10 and Windows 10 Mobile
+
 > [!NOTE]
 > Starting in Configuration Manager 1802, the Software Center shows the Health Attestation item the device is not compliant with. <!--1235616--> 
 ![Device Health Attestation device compliance in Software Center](./media/Software-Center-noncompliant.PNG)
