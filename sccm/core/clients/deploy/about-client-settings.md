@@ -223,7 +223,7 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center.   
+If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
 
 The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
