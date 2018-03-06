@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # Install and configure distribution points for System Center Configuration Manager
@@ -178,9 +178,9 @@ Follow these steps to reassign a distribution point:
 
 Monitor the reassignment similarly as when you add a new role. The simplest method is to refresh the console view after several minutes. Add the site code column to the view. This value changes when Configuration Manager reassigns the server. If you try to perform another action on the target server before you refresh the console view, an "object not found" error occurs. Ensure the process is complete and refresh the console view before starting any other actions on the server.
 
-After reassigning a distribution point, refresh the server's certificate. For more information, see the **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point** setting on the [General](#general) tab of the distribution point properties. 
+After reassigning a distribution point, refresh the server's certificate. The new site server needs to re-encrypt this certificate using its public key and store it in the site database. For more information, see the **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point** setting on the [General](#general) tab of the distribution point properties. 
 - For PKI certificates, you don't need to create a new certificate. Import the same .PFX and enter the password.
-- For self-signed certificates, adjust the expiration date to update it.
+- For self-signed certificates, adjust the expiration date or time to update it.
 If you do not refresh the certificate, the distribution point still serves content, but the following functions fail:
     - Content validation messages (the distmgr.log shows that it can't decrypt the certificate)
     - PXE support for clients 
@@ -189,6 +189,7 @@ If you do not refresh the certificate, the distribution point still serves conte
 - Perform this action from the central administration site. This practice helps with replication to the primary sites.
 - Don't distribute content to the target server and then attempt to reassign it. Distribute content tasks that are in progress may fail during the reassignment process, but it retries per normal.
 - If the server is also a Configuration Manager client, make sure to also reassign the client to the new primary site. This step is especially critical for pull-distribution points, which use client components to download content.
+- This process removes the distribution point from the old site's default boundary group. You need to manually add it to the new site's default boundary group, if necessary. All other boundary group assignments remain the same.
 
 
 
@@ -279,13 +280,22 @@ For each pull-distribution point that you configure, you must specify one or mor
 -   Use the arrow buttons to adjust the order in which the pull-distribution point contacts the source distribution points when the pull-distribution point attempts to transfer content. Distribution points with the lowest value are contacted first.  
 
 ### PXE  
-Specify whether to enable PXE on the distribution point. When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if necessary. Windows Deployment Services is the service that performs the PXE boot to install operating systems. After you finish the wizard to create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.  
+Specify whether to enable PXE on the distribution point. When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if necessary. WDS is the service that performs the PXE boot to install operating systems. After you finish the wizard to create the distribution point, Configuration Manager installs a provider in WDS that uses the PXE boot functions. 
+
+Starting in version 1802, you can enable PXE on a distribution point without WDS. 
 
 When you choose **Enable PXE support for clients**, configure the following settings:  
 
--   **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable Windows Deployment Services so that it responds to PXE service requests. Use this box to enable and disable the service without removing the PXE functionality from the distribution point.  
+ > [!Note]  
+ > Click **Yes** in the **Review Required Ports for PXE** dialog box to confirm that you want to enable PXE. Configuration Manager automatically configures the default ports on Windows firewall. You must manually configure the ports if you use a different firewall.  
+ >   
+ > If WDS and DHCP are installed on the same server, you must configure WDS to listen on a different port. By default, DHCP listens on the same port. For more information, see [Considerations when you have WDS and DHCP on the same server](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#BKMK_WDSandDHCP).  
 
--   **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager does not manage.  
+-   **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS so that it responds to PXE service requests. Use this box to enable and disable the service without removing the PXE functionality from the distribution point.  
+
+-   **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager does not manage. 
+
+-   **Enable a PXE responder without Windows Deployment Service**: Starting in version 1802, this option enables a PXE responder on the distribution point, which does not require WDS. This PXE responder supports IPv6 networks. If you enable this option on a distribution point that is already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this option, but still **Enable PXE support for clients**, then the distribution point enables WDS again. <!--1357580-->
 
 -   **Require a password when computers use PXE**: To provide additional security for your PXE deployments, specify a strong password.  
 
@@ -310,7 +320,7 @@ When you choose **Enable PXE support for clients**, configure the following sett
 > 2. Interact with the Configuration Manager infrastructure to determine the appropriate deployment actions to take.  
 
 ### Multicast  
-Specify whether to enable multicast on the distribution point. When you enable multicast, Configuration Manager installs Windows Deployment Services on the server, if necessary.  
+Specify whether to enable multicast on the distribution point. When you enable multicast, Configuration Manager installs Windows Deployment Services (WDS) on the server, if necessary.  
 
 When you **Enable multicast to simultaneously send data to multiple clients**, configure the following settings:  
 
@@ -338,6 +348,13 @@ When you **Enable multicast to simultaneously send data to multiple clients**, c
 
 > [!NOTE]  
 >  Multicast deployments conserve network bandwidth by simultaneously sending data to multiple Configuration Manager clients instead of sending a copy of the data to each client over a separate connection. For more information about using multicast for operating system deployment, see [Use multicast to deploy Windows over the network with System Center Configuration Manager](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
+
+> [!IMPORTANT]
+> Starting in version 1802, to enable and configure multicast on the **Multicast** tab of the distribution point properties, the distribution point must use WDS. 
+> - If you **Enable PXE support for clients** and **Enable multicast to simultaneously send data to multiple clients**, then you cannot **Enable a PXE responder without Windows Deployment Service**.
+> - If you **Enable PXE support for clients** and **Enable a PXE responder without Windows Deployment Service**, then you cannot **Enable multicast to simultaneously send data to multiple clients**
+
+
 
 ### Group relationships  
 
