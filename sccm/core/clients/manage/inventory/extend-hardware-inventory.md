@@ -131,7 +131,7 @@ You can only import inventory classes when you modify the default client setting
 8.  In the **Export** dialog box, specify the Managed Object Format (MOF) file that you want to export the classes to, and then choose **Save**.  
 
 ### Configure hardware inventory to collect strings larger than 255 characters
-Beginning in Configuration Manager 1802 you can specify the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. <!-- 1357389 -->
+Beginning in Configuration Manager 1802, you can specify the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. <!-- 1357389 -->
 
 1. In the **Administration** workspace, click on **Client Settings** highlight a client device setting to edit, right-click then select **Properties**.
 
