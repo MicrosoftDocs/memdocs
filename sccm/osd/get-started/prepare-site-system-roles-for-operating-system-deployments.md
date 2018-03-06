@@ -49,12 +49,12 @@ To deploy operating systems in Configuration Manager, you must first prepare the
        - The disk speed of the distribution point
        - The available bandwidth on the network
        - The size of the image package   
+  
+    For example, if you don't consider any other server resource factors, the maximum number of computers that can process a four gigabyte (GB) image package in one hour on a 100-megabit/sec Ethernet network is 11 computers.  
 
-     For example, if you don't consider any other server resource factors, the maximum number of computers that can process a four gigabyte (GB) image package in one hour on a 100-megabit/sec Ethernet network is 11 computers.  
+    `100 megabits/sec = 12.5 megabytes/sec = 750 megabytes/min = 45 gigabytes/hour = 11 images @ 4 GB per image`  
 
-     `100 megabits/sec = 12.5 megabytes/sec = 750 megabytes/min = 45 gigabytes/hour = 11 images @ 4 GB per image`  
-
-     If you must deploy an OS to a specific number of computers within a specific time frame, distribute the image to an appropriate number of distribution points.  
+    If you must deploy an OS to a specific number of computers within a specific time frame, distribute the image to an appropriate number of distribution points.  
 
 -   **Can I deploy an OS to a distribution point?**  
 
@@ -71,36 +71,29 @@ You can customize the RamDisk TFTP block and window sizes for PXE-enabled distri
 -   **TFTP block size**: The block size is the size of the data packets that the server sends to the client that is downloading the file. A larger block size allows the server to send fewer packets, so there are fewer round-trip delays between the server and the client. However, a large block size leads to fragmented packets, which most PXE client implementations do not support.  
 
 -   **TFTP window size**: TFTP requires an acknowledgment (ACK) packet for each block of data that is sent. The server does not send the next block in the sequence until it receives the ACK packet for the previous block. TFTP windowing enables you to define how many data blocks it takes to fill a window. The server sends the data blocks back-to-back until the window is filled, and then the client sends an ACK packet. If you increase this window size, it reduces the number of round-trip delays between the client and server, and it decreases the overall required time to download a boot image.  
+  
+
+> [!Note]  
+> Both Windows Deployment Services and the Configuration Manager PXE responder service support these TFTP configurations.
 
 
-#### To modify the RamDisk TFTP window size  
+#### Modify the RamDisk TFTP window size  
+To customize the RamDisk TFTP window size, add the following registry key on PXE-enabled distribution points:  
 
--   To customize the RamDisk TFTP window size, add the following registry key on PXE-enabled distribution points:  
+  - **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  - **Name**: RamDiskTFTPWindowSize  
+  - **Type**: REG_DWORD  
+  - **Value**: &lt;customized window size>  </br>
+     The default value is **1** (one data block fills the window)  
 
-     **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    Name: RamDiskTFTPWindowSize  
+#### Modify the RamDisk TFTP block size  
+To customize the RamDisk TFTP window size, add the following registry key on PXE-enabled distribution points:  
 
-     **Type**: REG_DWORD  
-
-     **Value**: &lt;customized window size>  
-
- The default value is **1** (one data block fills the window)  
-
-#### To modify the RamDisk TFTP block size  
-
--   To customize the RamDisk TFTP window size, add the following registry key on PXE-enabled distribution points:  
-
-     **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    Name: RamDiskTFTPBlockSize  
-
-     **Type**: REG_DWORD  
-
-     **Value**: &lt;customized block size>  
-
- The default value is **4096**.  
-
- > [!Note]  
- > Both Windows Deployment Services and the Configuration Manager PXE responder service support these TFTP configurations.
+  - **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  - **Name**: RamDiskTFTPBlockSize  
+  - **Type**: REG_DWORD  
+  - **Value**: &lt;customized block size>  </br>
+     The default value is **4096**.  
 
 
 ###  <a name="BKMK_DPMulticast"></a> Configure distribution points to support multicast  
@@ -125,9 +118,10 @@ You can customize the RamDisk TFTP block and window sizes for PXE-enabled distri
 
 -   The effect that the stored data has on disk storage.  
 
--   The potential requirement to keep the data for a time in case you must migrate the data again.  
-
- State migration occurs in two phases: capturing the data, and restoring the data. When you capture data, the user state data is collected and saved to the state migration point. When you restore the data, the user state data is retrieved from the state migration point, written to the destination computer, and then the **Release State Store** task sequence step releases the stored data. When the data is released, the retention timer starts. If you select the option to delete migrated data immediately, the user state data is deleted as soon as it's released. If you select the option to keep the data for a certain period of time, the data is deleted when that period of time elapses after the state data is released. The longer you set the retention period, the more disk space you're likely to require.  
+-   The potential requirement to keep the data for a time in case you must migrate the data again.
+  
+  
+State migration occurs in two phases: capturing the data, and restoring the data. When you capture data, the user state data is collected and saved to the state migration point. When you restore the data, the user state data is retrieved from the state migration point, written to the destination computer, and then the **Release State Store** task sequence step releases the stored data. When the data is released, the retention timer starts. If you select the option to delete migrated data immediately, the user state data is deleted as soon as it's released. If you select the option to keep the data for a certain period of time, the data is deleted when that period of time elapses after the state data is released. The longer you set the retention period, the more disk space you're likely to require.  
 
 ### Select drive to store user state migration data  
  When you configure the state migration point, you must specify the drive on the server to store the user state migration data. You select a drive from a fixed list of drives. However, some of these drives might represent non-writable drives, such as the CD drive, or a non-network share drive. Some drive letters might not be mapped to any drives on the computer. Specify a writable, shared drive when you configure the state migration point.  
