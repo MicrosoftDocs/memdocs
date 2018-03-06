@@ -223,7 +223,7 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center.   
+If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
 
 The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
@@ -619,8 +619,14 @@ Enter the organization name that users see in Software Center.
 - **Color scheme for Software Center** </br>
 Select **Select Color** to define the primary color used by Software Center.
 - **Select a logo for Software Center** </br>
-Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces.  
+         
+### Hide unapproved applications in Software Center
+Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   
 
+### Hide installed applications in Software Center
+Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled.    
+  
 ### Software Center tab visibility
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 - **Applications**
