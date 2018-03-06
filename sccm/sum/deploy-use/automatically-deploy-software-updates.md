@@ -41,7 +41,7 @@ Use the following procedure to add software updates to an existing update group.
 
 5.  Click the **Software Update Groups** node to display the software update group.  
 
-6.  Click the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates in the group.  --mstewart this is already doc'd on the SUG page -->
+6.  Click the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates in the group.  --mstewart this is already doc'd on the SUG page. -->
 
 ##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Create an automatic deployment rule (ADR)  
 You can automatically approve and deploy software updates by using an ADR. You can have the rule add software updates to a new software update group each time the rule runs or add software updates to an existing group. When a rule runs and adds software updates to an existing group, the rule removes all updates from the group and then adds the  updates that meet the criteria that you define to the group. 
@@ -99,13 +99,12 @@ You can automatically approve and deploy software updates by using an ADR. You c
     - Never set the evaluation schedule with a frequency that exceeds the software updates synchronization schedule. The software update point synchronization schedule is displayed to help you determine evaluation schedule frequency. 
     - To manually run the ADR, select the rule, and then click **Run Now** on the **Home** tab in the **Automatic Deployment Rule** group.
     
-> [!NOTE]  
-    >Starting in Configuration Manager version 1802, ADRs can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. <!--1357133-->
-    > - When scheduling evaluation to occur with an offset during the last week of the month, the evaluation will be scheduled for the last day of the month if the offset chosen overflows into the next month. <!--506731-->
-     ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
+       > [!NOTE]  
+       >Starting in Configuration Manager version 1802, ADRs can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. <!--1357133-->
+       > - When scheduling evaluation to occur with an offset during the last week of the month, the evaluation will be scheduled for the last day of the month if the offset chosen overflows into the next month. <!--506731-->
+       ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
 
    
-
 7.  On the Deployment Schedule page, configure the following settings:  
 
     -   **Schedule evaluation**: Specify whether Configuration Manager evaluates the available time and installation deadline times by using UTC or the local time of the computer that runs the Configuration Manager console.  
