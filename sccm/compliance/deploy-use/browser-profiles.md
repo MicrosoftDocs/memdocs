@@ -40,15 +40,6 @@ This policy currently includes the following settings:
 
 
 
-## Before you start  
- Before you begin to manage these settings, review the following prerequisites:  
-- Windows 10 clients that are Azure Active Directory-joined. 
-
-> [!Note] 
-> On-premises domain-joined devices cannot apply this policy. This issue also pertains to hybrid domain-joined devices.
-
-
-
 ## Create the Microsoft Edge browser profile
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings** and select the new **Microsoft Edge Browser Profiles** node. Click the ribbon option to **Create Microsoft Edge Browser Policy**.
