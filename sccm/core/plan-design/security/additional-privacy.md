@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager privacy statement - Additional information"
-description: "Learn about how Microsoft collects and uses data from a System Center Configuration Manager deployment."
+title: Privacy statement - additional information
+description: Learn about how Microsoft collects and uses data from System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/13/2017
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ caps.latest.revision: 5
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -53,18 +53,22 @@ Configuration Manager collects data only from the site's SQL server database, an
 
 Admins can change the level of data that's collected by going to the **Usage Data** section of the Configuration Manager console.
 
-For more information, see the "Learn more" articles about Usage Data Levels and Settings in the [Diagnostics and usage data for System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626566) article.
+For more information, see the "Learn more" articles about usage data levels and settings in the [Diagnostics and usage data for System Center Configuration Manager](https://go.microsoft.com/fwlink/?LinkID=626566) article.
 
 
 ## Customer Experience Improvement Program
+
+> [!Note]  
+> Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
+
 The Customer Experience Improvement Program (CEIP) collects basic information from the Configuration Manager console about your hardware configuration and how you use our software and services to identify trends and usage patterns. CEIP also collects the type and number of errors that you encounter, software and hardware performance, and the speed of services. We do not collect your name, address, or other contact information. No CEIP data is collected from client computers.
 
 We use this information to improve the quality, reliability, and performance of Microsoft software and services.
 
-For more about the information that's collected, processed, or transmitted by CEIP, see the [CEIP privacy statement](http://go.microsoft.com/fwlink/?LinkID=525211).
+For more about the information that's collected, processed, or transmitted by CEIP, see the [CEIP privacy statement](https://go.microsoft.com/fwlink/?LinkID=525211).
 
 ## Operations Management Suite Connector
-The Microsoft Operations Management Suite Connector syncs data, such as collections, from System Center Configuration Manager to Microsoft Operations Management Suite. The Microsoft Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Azure Active Directory client secret and the Microsoft Operations Management Suite workspace shared key are stored in the on-premises System Center Configuration Manager database. All communications between System Center Configuration Manager and Microsoft Operations Management Suite use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized telemetry data. For details about the information that Microsoft Operations Management Suite collects, see [Log analytics security](http://go.microsoft.com/fwlink/?LinkId=823545).
+The Microsoft Operations Management Suite Connector syncs data, such as collections, from System Center Configuration Manager to Microsoft Operations Management Suite. The Microsoft Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Azure Active Directory client secret and the Microsoft Operations Management Suite workspace shared key are stored in the on-premises System Center Configuration Manager database. All communications between System Center Configuration Manager and Microsoft Operations Management Suite use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized telemetry data. For details about the information that Microsoft Operations Management Suite collects, see [Log analytics security](https://go.microsoft.com/fwlink/?LinkId=823545).
 
 ## Asset Intelligence
 Asset Intelligence lets IT admins define, track, and proactively manage conformity with configuration standards. Metering and reporting on the deployment and use of both physical and virtual applications helps organizations make better business decisions about software licensing and maintain compliance with licensing agreements. After collecting usage data from Configuration Manager clients, admins can use different features to view the data, including collections, queries, and reporting.
@@ -92,16 +96,16 @@ Microsoft Cloud Protection Service reports are used to improve Microsoft softwar
 
 Microsoft Cloud Protection Service does not intentionally collect personal information. To the extent that Microsoft Cloud Protection Service collects any personal information, Microsoft does not use the information to identify you or contact you.
 
-Additional details about collected data can be found in the product documentation at [Endpoint Protection in System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=823547).
+Additional details about collected data can be found in the product documentation at [Endpoint Protection in System Center Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=823547).
 
 ## Site Hierarchy – Geographical View with Bing Maps
 Site Hierarchy - Geographical View lets you use maps that Microsoft Bing Maps provides to view your Configuration Manager physical server topology. To enable this feature, location information that you provide is sent from your server to the Bing Maps Web service.
 
-Microsoft uses the information to operate and improve Microsoft Bing Maps and other Microsoft sites and services. For more information, see the [Microsoft Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=823548).
+Microsoft uses the information to operate and improve Microsoft Bing Maps and other Microsoft sites and services. For more information, see the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=823548).
 You can choose not to use the Geographical View for the Site Hierarchy. The Hierarchy Diagram view lets you see the hierarchy and does not use the Bing Maps service.
 
 ## Microsoft Intune subscription
-Customers who bought a subscription to Microsoft Intune can use Configuration Manager to manage their mobile devices that are connected through Microsoft Intune. [Microsoft Online Services Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=262214) applies to the Microsoft online services, which includes Microsoft Intune. If customers also have a Microsoft Intune subscription, the [Microsoft Online Services Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=262214) should be read in conjunction with this privacy statement.
+Customers who bought a subscription to Microsoft Intune can use Configuration Manager to manage their mobile devices that are connected through Microsoft Intune. [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=262214) applies to the Microsoft online services, which includes Microsoft Intune. If customers also have a Microsoft Intune subscription, the [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=262214) should be read in conjunction with this privacy statement.
 
 All communications with Microsoft Intune use HTTPS. To configure the Microsoft Intune subscription and to download the Certificate Signing Request (CSR) that's needed to configure iOS support, an admin must sign in to Microsoft Intune by using work account and password. These credentials are not stored within Configuration Manager. All other communications with Microsoft Intune are authenticated by using PKI certificates that Microsoft Intune automatically generates.
 

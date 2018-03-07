@@ -1,7 +1,7 @@
 ---
-title: "Diagnostics and usage data"
-titleSuffix: "Configuration Manager"
-description: "Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself."
+title: Diagnostics and usage data
+titleSuffix: Configuration Manager
+description: Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself.
 ms.custom: na
 ms.date: 03/09/2018
 ms.prod: configuration-manager
@@ -23,18 +23,18 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases.  
+Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases.  
 
- Diagnostics  and Usage Data is enabled for each System Center Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.  
+ Diagnostics and usage data is enabled for each Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.  
 
 > [!NOTE]  
 >  Configuration Manager collects data only from the site's SQL server database, and it does not collect data directly from clients or site servers.  
 
- For more information, see the [Privacy Statement for System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626527).  
+ For more information, see the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=626527).  
 
- Learn more about diagnostic and usage data for System Center Configuration Manager in the following articles:  
+ Learn more about diagnostic and usage data for Configuration Manager in the following articles:  
 
--   [How diagnostics and usage data is used for System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
+-   [How diagnostics and usage data is used](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
 -   Levels of diagnostic usage data collection:
     - [Diagnostic data for 1802](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802)  
@@ -49,13 +49,17 @@ System Center Configuration Manager collects diagnostics and usage data about it
     - [Diagnostic data for  1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
 -->
 
--   [How diagnostics and usage data is collected by System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
+-   [How diagnostics and usage data is collected](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
 
--   [How to view diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)  
+-   [How to view diagnostics and usage data](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)  
 
--   [Customer Experience Improvement Program (CEIP) for System Center Configuration Manager](../../../core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md)  
+-   [Customer Experience Improvement Program (CEIP)](../../../core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md)  
 
--   [Frequently asked questions about diagnostics and usage data for System Center Configuration Manager](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  
+     > [!Note]  
+     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
+
+
+-   [Frequently asked questions about diagnostics and usage data](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  
 
 ## See Also  
- [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
+ [About the service connection point](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
