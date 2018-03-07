@@ -75,7 +75,7 @@ The co-management dashboard shows four graphs for your environment.
      ![Workload transition bar graph](media\co-management-dashboard\Workload-Transition.PNG)
 
 
-## Next Steps
+## Next steps
 
 For more information about co-management, see:
  - [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview.md)
