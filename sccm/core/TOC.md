@@ -299,9 +299,9 @@
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Maintain Mac clients](clients/manage/maintain-mac-clients.md)
-### [Co-management dashboard](clients/manage/surface-device-dashboard.md)
+### [Co-management dashboard](clients/manage/co-management-dashboard.md)
 
-### [Surface device dashboard](clients/manage/co-management-dashboard.md)
+### [Surface device dashboard](clients/manage/surface-device-dashboard.md)
 
 ##   [Co-management for Windows 10 devices](clients/manage/co-management-overview.md)
 ###  [Prepare Windows 10 devices for co-management](clients/manage/co-management-prepare.md)
