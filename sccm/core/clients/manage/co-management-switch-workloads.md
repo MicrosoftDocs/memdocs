@@ -5,7 +5,6 @@ title: Switch Configuration Manager workloads to Intune
 titleSuffix: "System Center Configuration Manager"
 description: Learn how to switch workloads currently managed by Configuration Manager to Microsoft Intune. 
 ms.prod: configuration-manager
-ms.reviewer: na
 ms.suite: na
 ms.technology:
   - configmgr-client
