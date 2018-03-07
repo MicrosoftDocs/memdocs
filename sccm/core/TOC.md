@@ -67,7 +67,6 @@
 #### [Content library cleanup tool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
-#### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [Manage network bandwidth for content management](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [Security and privacy for content management](plan-design/hierarchy/security-and-privacy-for-content-management.md)

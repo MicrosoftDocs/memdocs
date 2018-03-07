@@ -84,10 +84,11 @@ Before creating Configuration Manager compliance settings, first learn about cor
 
 
 ## User data and profiles configuration items  
- Configuration items for user data and profiles include settings that control how users on computers that run Windows 8 and later manage: 
-    - Folder redirection
-    - Offline files
-    - Roaming profiles
+ Configuration items for user data and profiles include settings that control how users on computers that run Windows 8 and later manage:  
+   - Folder redirection
+   - Offline files
+   - Roaming profiles  
+
 Deploy these configuration items to user collections. Monitor their compliance from the **Monitoring** node of the Configuration Manager console. Unlike other configuration items, don't add them to configuration baselines before you deploy them. Deploy them directly by clicking **Deploy** in the ribbon.  
 
  For more information, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).  

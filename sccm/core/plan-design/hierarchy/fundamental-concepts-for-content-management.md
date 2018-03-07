@@ -151,9 +151,10 @@ Standard distribution points support a range of configurations and features:
 - Use other options, including **prestaged content**, and **pull-distribution points** to minimize and control network consumption. 
 - **BranchCache**, **peer cache**, and **Delivery Optimization** are peer-to-peer technologies to reduce the network bandwidth that's used when you deploy content.  
 - There are different configurations for OS deployments, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)**
-- Options for **mobile devices**  
-
- Cloud-based and pull distribution points support many of these same configurations, but have limitations that are specific to each distribution point variation.  
+- Options for **mobile devices**   
+  
+  
+Cloud-based and pull distribution points support many of these same configurations, but have limitations that are specific to each distribution point variation.  
 
 
 
@@ -239,7 +240,7 @@ For information about the different content location and fallback scenarios, see
 -->
 
 
-<!--
+
 ## On-demand content distribution  
  On-demand content distribution is an option for individual application and package deployments. This option enables on-demand content distribution to preferred servers.  
 
@@ -250,8 +251,11 @@ For information about the different content location and fallback scenarios, see
 -   Although this triggers Configuration Manager to automatically distribute the content to that client's preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this behavior occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment.  
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+
+<!--
 If you use version 1511, 1602, or 1606, see  [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for information about the different content location and fallback scenarios.
 -->
+
 
 
 ## Package transfer manager  

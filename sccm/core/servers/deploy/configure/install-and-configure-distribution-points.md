@@ -391,11 +391,7 @@ To view the results of the content validation process, in the **Monitoring** wor
 ### Boundary group  
 Manage the boundary groups for which this distribution point is assigned. Plan to add the distribution point to at least one boundary group. During content deployment, clients must be in a boundary group associated with a distribution point to use that distribution point as a source location for content.
 
-Additionally:
-
-- Before version 1610, you can check the **Allow clients to use this site system as a fallback source location for content** box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available. For more information about boundary groups, see [Boundary groups for versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606). For preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
-
-- With version 1610 or later, you configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 ### Schedule  
