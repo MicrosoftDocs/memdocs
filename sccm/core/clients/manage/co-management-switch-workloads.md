@@ -2,15 +2,19 @@
 # required metadata
 
 title: Switch Configuration Manager workloads to Intune
+titleSuffix: "System Center Configuration Manager"
 description: Learn how to switch workloads currently managed by Configuration Manager to Microsoft Intune. 
-keywords:
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
-ms.topic: article
 ms.prod: configuration-manager
-ms.service:
+ms.reviewer: na
+ms.suite: na
 ms.technology:
+  - configmgr-client
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/09/2018
+ms.topic: article
+ms.service:
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 
 # optional metadata
@@ -45,6 +49,24 @@ After you enable co-management using the wizard, you can modify the settings in 
 - In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 Select the co-management object, and then on the Home tab, click **Properties**. 
 
+## Workloads able to be transitioned to Intune
+Certain workloads are available to be switched over to Intune. The list below will be updated as workloads become available to transition:
+1. Device compliance policies
+2. Resource access policies
+3. Windows Update policies
+4. Endpoint Protection (starting in Configuration Manager version 1802)
+      - Windows Defender Antivirus
+      - Windows Defender Application Guard
+      - Windows Defender Firewall
+      - Windows Defender SmartScreen
+      - Windows Encryption
+      - Windows Defender Exploit Guard
+      - Windows Defender Application Control
+      - Windows Defender Security Center
+      - Windows Defender Advanced Threat Protection
+
+
+
 ## Monitor co-management
 After you enable co-management, you can monitor co-management devices using the following methods:
 - **SQL view and WMI class**: You can query the **v&#95;ClientCoManagementState** SQL view in the Configuration Manager site database or the **SMS&#95;Client&#95;ComanagementState** WMI class. With the information in the WMI class, you can create custom collections in Configuration Manager to help determine the status of your co-management deployment. For details, see [How to create collections](/sccm/core/clients/manage/collections/create-collections). The following fields are available in the SQL view and WMI class: 
@@ -66,3 +88,4 @@ Use the following resources to help you manage the workloads that you switch to 
 - [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started)
 - [Resource access policies](https://docs.microsoft.com/intune/device-profiles)
 - [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)
+- [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
