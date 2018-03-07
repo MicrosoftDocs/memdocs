@@ -1,6 +1,6 @@
 ---
 title: "Co-management Dashboard"
-titleSuffix: "Configuration Manager"
+titleSuffix: "System Center Configuration Manager"
 description: "Review information about co-management using the dashboard."
 ms.custom: na
 ms.date: 03/09/2018
@@ -75,7 +75,7 @@ The co-management dashboard shows four graphs for your environment.
      ![Workload transition bar graph](media\co-management-dashboard\Workload-Transition.PNG)
 
 
-## More information
+## Next Steps
 
 For more information about co-management, see:
  - [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview.md)
