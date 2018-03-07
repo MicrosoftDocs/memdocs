@@ -32,6 +32,7 @@ Configuration Manager collects diagnostics and usage data about itself, which is
 
  For more information, see the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=626527).  
 
+## Articles
  Learn more about diagnostic and usage data for Configuration Manager in the following articles:  
 
 -   [How diagnostics and usage data is used](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
