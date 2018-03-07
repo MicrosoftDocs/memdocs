@@ -40,20 +40,21 @@ The co-management dashboard shows four graphs for your environment.
     ![Co-managed devices graph](media\co-management-dashboard\Percent-Co-managed-graph.PNG)
 
 - **Client OS distribution** -Shows the number of client devices per OS by version. The following groupings are used: </br>
-     - Windows 7 & 8.x
-     - Windows 10 lower than 1709
-     - Windows 10 1709 and above
+    - Windows 7 & 8.x
+    - Windows 10 lower than 1709
+    - Windows 10 1709 and above
+
          > [!NOTE] 
-          > Windows 10, version 1709 and later, is a prerequisite for co-management.
+         > Windows 10, version 1709 and later, is a prerequisite for co-management.
 
      Hovering over a graph section will give you the percentage of devices in the OS grouping selected.
 
      ![Graph of Client OS distribution](media\co-management-dashboard\Co-management-OS-distribution-graph.PNG)
 
 - **Co-management status**- The breakdown of device success or failure in the following categories:
-     - Success, hybrid Azure AD Joined
-     - Success, Azure AD Joined
-     - Failure: Auto-enrollment failed
+    - Success, hybrid Azure AD Joined
+    - Success, Azure AD Joined
+    - Failure: Auto-enrollment failed
     
      Hovering over a graph section gives you the percentage of devices in the category. 
 
@@ -64,11 +65,11 @@ The co-management dashboard shows four graphs for your environment.
      ![Enrollment failure device list](media\co-management-dashboard\Enrollment-Failure_Device-List.PNG)
 
 
-- **Workload transition**- Displays a bar chart with the number of devices that you transitioned to Microsoft Intune for the four available workloads: 
-     - Compliance Policies
-     - Resource Access
-     - Windows Update for Business
-     - Endpoint Protection
+- **Workload transition**- Displays a bar chart with the number of devices that you transitioned to Microsoft Intune for the four available workloads:
+    - Compliance Policies
+    - Resource Access
+    - Windows Update for Business
+    - Endpoint Protection
 
      Hovering over a chart section will give you the number of devices transitioned for the workload. 
      ![Workload transition bar graph](media\co-management-dashboard\Workload-Transition.PNG)
