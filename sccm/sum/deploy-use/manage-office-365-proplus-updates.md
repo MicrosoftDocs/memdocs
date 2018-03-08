@@ -21,7 +21,7 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 
-- [Office 365 Client Management dashboard](#office-365-client-management-dashboard): You can review Office 365 client information from the Office 365 Client Management dashboard. Beginning in Configuration Manager version 1802, the Office 365 client management dashboard displays a list of relevant devices when graph sections are selected. 
+- [Office 365 Client Management dashboard](#office-365-client-management-dashboard): You can review Office 365 client information from the Office 365 Client Management dashboard. Beginning in Configuration Manager version 1802, the Office 365 client management dashboard displays a list of relevant devices when graph sections are selected. <!--1357281 -->
 
 - [Deploy Office 365 apps](#deploy-office-365-apps): Beginning in version 1702, you can start the Office 365 Installer from the Office 365 Client Management dashboard to make the initial Office 365 App installation experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.    
 
