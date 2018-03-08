@@ -74,7 +74,7 @@ The LTSB is based on version 1606. This branch does not receive in-console updat
 To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get as a DVD with System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use baseline media to install a new site that runs version 1606 of the Current Branch, or a new site that runs the Long-Term Servicing Branch.
 
 > [!TIP]  
-> To learn about System Center 2016, see [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/system-center). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.
+> To learn about System Center 2016, see [System Center 2016 documentation](https://docs.microsoft.com/en-us/system-center/index). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.
 
 > To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for "system center config," and then select **System Center Config Mgr (current branch and LTSB)**.
 
