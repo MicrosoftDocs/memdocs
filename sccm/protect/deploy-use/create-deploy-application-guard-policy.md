@@ -65,6 +65,7 @@ Configures interactions between host devices and the Application Guard container
     - Virtual graphics processor access
 - **Files:** (starting with Configuration Manager version 1802)
     - Save downloaded files to host
+
 ### <a name="bkmk_ABS"></a> Application behavior settings
 Configures application behavior inside the Application Guard session. Before Configuration Manager version 1802, both application behavior and host interaction were under the **Settings** tab.
 
