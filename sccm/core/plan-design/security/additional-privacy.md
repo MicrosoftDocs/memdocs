@@ -1,5 +1,6 @@
 ---
 title: Privacy statement - additional information
+titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data from System Center Configuration Manager.
 ms.custom: na
 ms.date: 03/09/2018
