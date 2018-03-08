@@ -1,9 +1,9 @@
 ---
-title: "Setup command-line options"
-titleSuffix: "Configuration Manager"
-description: "Use information in this article to configure scripts or to install System Center Configuration Manager from a command line."
+title: Setup command-line options
+titleSuffix: Configuration Manager
+description: Create automation scripts to install System Center Configuration Manager from a command line.
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,55 +15,55 @@ ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 caps.latest.revision: 3
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 ---
-# Command-line options for Setup in System Center Configuration Manager
+# Command-line options for setup in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
  Use the following information to configure scripts or to install System Center Configuration Manager from a command line.  
 
-##  <a name="bkmk_setup"></a> Command-line options for Setup  
+##  <a name="bkmk_setup"></a> Command-line options for setup  
  **/DEINSTALL**  
- Uninstalls the site. You must run Setup from the site server computer.  
+ Uninstalls the site. Run setup from the site server computer.  
 
  **/DONTSTARTSITECOMP**  
  Installs a site, but prevents the Site Component Manager service from starting. Until the Site Component Manager service starts, the site is not active. The Site Component Manager is responsible for installing and starting the SMS_Executive service, and for additional processes at the site. After the site install is finished, when you start the Site Component Manager service, it installs the SMS_Executive service and additional processes that are necessary for the site to operate.  
 
  **/HIDDEN**  
- Hides the user interface during Setup. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or Setup fails.  
+ Hides the user interface during setup. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or setup fails.  
 
  **/NOUSERINPUT**  
- Disables user input during Setup, but displays the Setup Wizard. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or Setup fails.  
+ Disables user input during setup, but displays the setup wizard. Use this option only in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or setup fails.  
 
  **/RESETSITE**  
- Performs a site reset that resets the database and service accounts for the site. You must run Setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md).  
+ Performs a site reset that resets the database and service accounts for the site. Run setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md).  
 
  **/TESTDBUPGRADE <*Instance name*>\\<*Database name*>**  
- Performs a test on a backup of the site database to ensure that the database is capable of an upgrade. You must provide the instance name and database name for the site database. If you specify only the database name, Setup uses the default instance name.  
+ Performs a test on a backup of the site database to ensure that the database is capable of an upgrade. Provide the instance name and database name for the site database. If you specify only the database name, setup uses the default instance name.  
 
 > [!IMPORTANT]  
 >  Do not run this command-line option on your production site database. Running this command-line option on your production site database upgrades the site database and could render your site inoperable.  
 
  **/UPGRADE**  
- Runs an unattended upgrade of a site. When you use **/UPGRADE**, you must specify the product key, including the dashes (-). Also, you must specify the path to the previously downloaded Setup prerequisite files.  
+ Runs an unattended upgrade of a site. When you use **/UPGRADE**, you must specify the product key, including the dashes (-). Also, you must specify the path to the previously downloaded setup prerequisite files.  
 
  Example: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx <path to external component files>`  
 
- For more information about Setup prerequisite files, see  [Setup Downloader](setup-downloader.md).  
+ For more information about setup prerequisite files, see [Setup Downloader](setup-downloader.md).  
 
- **/SCRIPT <*Setup script path*>**  
- Performs unattended installations. A Setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run Setup unattended, see [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+ **/SCRIPT <*setup script path*>**  
+ Performs unattended installations. A setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run setup unattended, see [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST <*SMS Provider FQDN*>**  
- Installs the SMS Provider on the specified computer. You must provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+ Installs the SMS Provider on the specified computer. Provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
  **/SDKDEINST <*SMS Provider FQDN*>**  
- Uninstalls the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer.  
+ Uninstalls the SMS Provider on the specified computer. Provide the FQDN for the SMS Provider computer.  
 
  **/MANAGELANGS <*Language script path*>**  
- Manages the languages that are installed at a previously installed site. To use this option, you must run Setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server and provide the location for the language script file that contains the language settings. For more information about the language options available in the language setup script file, see [Command-line options to manage languages](#bkmk_Lang) in this topic.  
+ Manages the languages that are installed at a previously installed site. To use this option, run setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server. Provide the location for the language script file that contains the language settings. For more information about the language options available in the language setup script file, see the [Command-line options to manage languages](#bkmk_Lang) section.  
 
 ##  <a name="bkmk_Lang"></a> Command-line options to manage languages  
  **Identification**  
@@ -132,21 +132,21 @@ manager: angrobe
 
          1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup downloads the files.  
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
 
 -   **Key Name:** PrerequisitePath  
 
     -   **Required:** Yes  
 
-    -   **Values:** <*Path to Setup prerequisite files*>  
+    -   **Values:** <*Path to setup prerequisite files*>  
 
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
-##  <a name="bkmk_Unattended"></a> Unattended Setup script file keys  
- Use the following sections to help you create your script for unattended Setup. The lists show the available Setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description of the key.  
+##  <a name="bkmk_Unattended"></a> Unattended setup script file keys  
+ Use the following sections to help you create your script for unattended setup. The lists show the available setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description of the key.  
 
 ### Unattended install for a central administration site  
- Use the following details to install a central administration site by using an unattended Setup script file.  
+ Use the following details to install a central administration site by using an unattended setup script file.  
 
 **Identification**  
 
@@ -219,15 +219,15 @@ manager: angrobe
 
          1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup will download the files.  
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
 
 -   **Key Name:** PrerequisitePath  
 
     -   **Required:** Yes  
 
-    -   **Values:** <*Path to Setup prerequisite files*>  
+    -   **Values:** <*Path to setup prerequisite files*>  
 
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 -   **Key Name:** AdminConsole  
 
@@ -242,6 +242,8 @@ manager: angrobe
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
 -   **Key Name:** JoinCEIP  
+    > [!Note]  
+    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
     -   **Required:** Yes  
 
@@ -313,10 +315,10 @@ manager: angrobe
 
     -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database.  
+    -   **Details:** Specifies the name of the SQL Server database to create, or the SQL Server database to use, when setup installs the central administration site database.  
 
         > [!IMPORTANT]  
-        >  You must specify the instance name and site database name if you do not use the default instance.  
+        >  If you do not use the default instance, you must specify the instance name and site database name.  
 
 -   **Key Name:** SQLSSBPort  
 
@@ -374,7 +376,7 @@ manager: angrobe
 
          1 = Install  
 
-    -   **Details:** Specifies whether the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point uses a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -382,7 +384,7 @@ manager: angrobe
 
     -   **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
+    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
 -   **Key Name:** ProxyPort  
 
@@ -393,7 +395,7 @@ manager: angrobe
     -   **Details:** Specifies the port number to use for the proxy port.  
 
 ### Unattended install for a primary site  
-Use the following details to install a primary site by using an unattended Setup script file.  
+Use the following details to install a primary site by using an unattended setup script file.  
 
 **Identification**  
 
@@ -466,15 +468,15 @@ Use the following details to install a primary site by using an unattended Setup
 
          1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup will download the files.  
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
 
 -   **Key Name:** PrerequisitePath  
 
     -   **Required:** Yes  
 
-    -   **Values:** <*Path to Setup prerequisite files*>  
+    -   **Values:** <*Path to setup prerequisite files*>  
 
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 -   **Key Name:** AdminConsole  
 
@@ -489,6 +491,8 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
 -   **Key Name:** JoinCEIP  
+    > [!Note]  
+    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
     -   **Required:** Yes  
 
@@ -615,7 +619,7 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the primary site database.  
 
         > [!IMPORTANT]  
-        >  You must specify the instance name and site database name if you do not use the default instance.  
+        >  If you do not use the default instance, you must specify the instance name and site database name.  
 
 -   **Key Name:** SQLSSBPort  
 
@@ -649,7 +653,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Central administration site FQDN*>  
 
-    -   **Details:** Specifies the central administration site that a primary site will attach to when it joins the Configuration Manager hierarchy. You must specify the central administration site during Setup.  
+    -   **Details:** Specifies the central administration site that a primary site attaches to when it joins the Configuration Manager hierarchy. Specify the central administration site during setup.  
 
 -   **Key Name:** CASRetryInterval  
 
@@ -657,7 +661,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Interval*>  
 
-    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then re-attempts the connection.  
+    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then reattempts the connection.  
 
 -   **Key Name:** WaitForCASTimeout  
 
@@ -701,7 +705,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          1 = Install  
 
-    -   **Details:** Specifies whether the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point uses a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -709,7 +713,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
+    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
 -   **Key Name:** ProxyPort  
 
@@ -720,7 +724,7 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Details:** Specifies the port number to use for the proxy port.  
 
 ### Unattended recovery for a central administration site  
- Use the following details to recover a central administration site by using an unattended Setup script file.  
+ Use the following details to recover a central administration site by using an unattended setup script file.  
 
 **Identification**  
 
@@ -755,7 +759,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          4 = Recover SQL Server only.  
 
-    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
+    -   **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
 
         -   Value = 1: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -777,7 +781,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          80 = Skip database recovery.  
 
-    -   **Details:** Specifies how Setup recovers the site database in SQL Server.  
+    -   **Details:** Specifies how setup recovers the site database in SQL Server.  
 
 -   **Key Name:** ReferenceSite  
 
@@ -823,7 +827,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Site code*>  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure.
+    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. Specify the site code that the site used before the failure.
 
 -   **Key Name:** SiteName  
 
@@ -847,7 +851,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*SMS Provider FQDN*>  
 
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.  
+    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.  
 
          You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
@@ -861,15 +865,15 @@ Use the following details to install a primary site by using an unattended Setup
 
          1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup downloads the files.  
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
 
 -   **Key Name:** PrerequisitePath  
 
     -   **Required:** Yes  
 
-    -   **Values:** <*Path to Setup prerequisite files*>  
+    -   **Values:** <*Path to setup prerequisite files*>  
 
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 -   **Key Name:** AdminConsole  
 
@@ -884,6 +888,8 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
 -   **Key Name:** JoinCEIP  
+    > [!Note]  
+    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
     -   **Required:** Yes  
 
@@ -903,7 +909,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*SQL server name*>  
 
-    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which will host the site database. You must specify the same server that hosted the site database before the failure.  
+    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which hosts the site database. Specify the same server that hosted the site database before the failure.  
 
 -   **Key Name:** DatabaseName  
 
@@ -911,10 +917,10 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. You must specify the same database name that was used before the failure.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. Specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
-        >  You must specify the instance name and site database name if you do not use the default instance.  
+        >  If you do not use the default instance, you must specify the instance name and site database name.  
 
 -   **Key Name:** SQLSSBPort  
 
@@ -922,7 +928,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SSB port that SQL Server uses. SSB typically is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
+    -   **Details:** Specifies the SSB port that SQL Server uses. SSB typically is configured to use TCP port 4022. Specify the same SSB port that was used before the failure.  
 
 -   **Key Name:** SQLDataFilePath  
 
@@ -972,7 +978,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          1 = Install  
 
-    -   **Details:** Specifies whether the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point uses a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -980,7 +986,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
+    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
 -   **Key Name:** ProxyPort  
 
@@ -991,7 +997,7 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Details:** Specifies the port number to use for the proxy port.  
 
 ### Unattended recovery for a primary site  
- Use the following details to recover a primary site by using an unattended Setup script file.  
+ Use the following details to recover a primary site by using an unattended setup script file.  
 
 **Identification**  
 
@@ -1026,7 +1032,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          4 = Recover SQL Server only.  
 
-    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
+    -   **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
 
         -   Value = 1: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -1048,7 +1054,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          80 = Skip database recovery.  
 
-    -   **Details:** Specifies how Setup recovers the site database in SQL Server.  
+    -   **Details:** Specifies how setup recovers the site database in SQL Server.  
 
 -   **Key Name:** SiteServerBackupLocation  
 
@@ -1084,7 +1090,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Site code*>  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure.
+    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. Specify the site code that the site used before the failure.
 
 -   **Key Name:** SiteName  
 
@@ -1108,7 +1114,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*SMS Provider FQDN*>  
 
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure. You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure. Configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 -   **Key Name:** PrerequisiteComp  
 
@@ -1120,15 +1126,15 @@ Use the following details to install a primary site by using an unattended Setup
 
          1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup downloads the files.  
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of **0**, setup downloads the files.  
 
 -   **Key Name:** PrerequisitePath  
 
     -   **Required:** Yes  
 
-    -   **Values:** <*Path to Setup prerequisite files*>  
+    -   **Values:** <*Path to setup prerequisite files*>  
 
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 -   **Key Name:** AdminConsole  
 
@@ -1143,6 +1149,8 @@ Use the following details to install a primary site by using an unattended Setup
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
 -   **Key Name:** JoinCEIP  
+    > [!Note]  
+    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
     -   **Required:** Yes  
 
@@ -1162,20 +1170,20 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*SQL server name*>  
 
-    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which will host the site database. You must specify the same server that hosted the site database before the failure.  
+    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which hosts the site database. Specify the same server that hosted the site database before the failure.  
 
 -   **Key Name:** DatabaseName  
 
     -   **Required:** Yes  
 
-    -   **Values:**  <*Site database name*> or <*Instance name*>\\<*Site database name*>
+    -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>
 
     -   **Details:**  
 
-         Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. You must specify the same database name that was used before the failure.  
+         Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. Specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
-        >  You must specify the instance name and site database name if you do not use the default instance.  
+        >  If you do not use the default instance, you must specify the instance name and site database name.  
 
 -   **Key Name:** SQLSSBPort  
 
@@ -1183,7 +1191,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
+    -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. Specify the same SSB port that was used before the failure.  
 
 -   **Key Name:** SQLDataFilePath  
 
@@ -1209,7 +1217,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Site code for central administration site*>  
 
-    -   **Details:** Specifies the central administration site to which a primary site attaches when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. You must specify the site code that was used for the central administration site before the failure.  
+    -   **Details:** Specifies the central administration site to which a primary site attaches when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. Specify the site code that was used for the central administration site before the failure.  
 
 -   **Key Name:** CASRetryInterval  
 
@@ -1259,7 +1267,7 @@ Use the following details to install a primary site by using an unattended Setup
 
          1 = Install  
 
-    -   **Details:** Specifies whether the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point uses a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -1267,7 +1275,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Proxy server FQDN*>  
 
-    -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
+    -   **Details:** Specifies the FQDN of the proxy server that the service connection point uses.  
 
 -   **Key Name:** ProxyPort  
 
