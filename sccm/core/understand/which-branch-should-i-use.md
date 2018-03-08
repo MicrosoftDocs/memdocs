@@ -3,7 +3,7 @@ title: "Which branch should I use"
 titleSuffix: "Configuration Manager"
 description: "Learn the differences between available branches of System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -87,7 +87,7 @@ To install the LTSB as a new site or as an upgrade from a supported Configuratio
 
 **Limitations**  
 The LTSB is based on the Current Branch version 1606 and has the following limitations:
-- The LTSB is supported for 10 years of critical security updates after its general availability (October of 2016), after which, support for this branch expires. For more about the support lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/lifecycle).
+- The LTSB is supported for 10 years of critical security updates after its general availability (October of 2016), after which, support for this branch expires. For more about the support lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).
 - Supports a limited set list of server and client operating systems and related technologies, like SQL Server versions. For more about what is supported with this branch, see [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md).
 - Does not receive updates for new features.
 - Does not support adding a Microsoft Intune Subscription, which prevents the use of:
