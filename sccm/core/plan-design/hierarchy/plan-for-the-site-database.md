@@ -3,7 +3,7 @@ title: "Plan the site database"
 titleSuffix: "Configuration Manager"
 description: "Consider the site database and the site database server role as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/08/20168
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
