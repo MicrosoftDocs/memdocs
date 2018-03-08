@@ -24,7 +24,8 @@ manager: dougeby
 
 Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections. You can create phased deployments with the default of two phases, or manually configure multiple phases. Phased deployment of task sequences does not support PXE or media installation. 
 
->[!NOTE] Phased deployments are a pre-release feature introduced in Configuration Manager 1802. <!--1356837-->
+>[!NOTE]
+> Phased deployments are a pre-release feature introduced in Configuration Manager 1802. <!--1356837-->
 
 ## Create a default two phased deployment for a task sequence
 Use the following instructions to create a phased deployment. 
