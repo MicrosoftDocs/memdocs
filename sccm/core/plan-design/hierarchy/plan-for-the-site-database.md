@@ -29,6 +29,12 @@ The site database server is a computer that runs a supported version of Microsof
 
 -   For secondary sites, you can use SQL Server Express instead of a full SQL Server installation. The database server must, however, be run on the secondary site server.  
 
+-  For SQL Availability Group usage the Database Recovery Model must be set to FULL  
+
+-  For non-SQL Availability Group usage the Database Recovery Model must be set to SIMPLE  
+
+Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+
 The following SQL Server configurations can be used to host the site database:  
 
 -   The default instance of SQL Server  
