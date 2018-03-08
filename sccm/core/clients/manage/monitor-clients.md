@@ -28,7 +28,7 @@ manager: angrobe
 ##  <a name="bkmk_about"></a> About client status  
  Configuration Manager provides the following types of information as client status:  
 
--   **Client online status** - Beginning in version 1602 of Configuration Manager, this status indicates if the computer is online or not. A computer is considered online if it is connected to it's assigned management point.  To indicate that the client is online, it sends ping-like messages to the management point. If the management point doesn't receive a message in 5 minutes or so, the client is considered offline.  
+-   **Client online status** - Beginning in version 1602 of Configuration Manager, this status indicates if the computer is online or not. A computer is considered online if it is connected to its assigned management point.  To indicate that the client is online, it sends ping-like messages to the management point. If the management point doesn't receive a message in 5 minutes or so, the client is considered offline.  
 
 -   **Client activity** - This status indicates if the client has been actively engaging with Configuration Manager over the last 7 days. If the client hasn't requested a policy update, sent a heartbeat message, or sent hardware inventory in 7 days, the client is considered inactive.  
 
