@@ -273,42 +273,42 @@ For Configuration Manager version 1802, this level includes the following data:
 
 ### Compliance settings  
 
-    - Basic configuration baseline information: count, number of deployments, and number of references
+  - Basic configuration baseline information: count, number of deployments, and number of references
 
-    - Compliance policy error statistics
+  - Compliance policy error statistics
 
-    - Count of configuration items by type  
+  - Count of configuration items by type  
 
-    - Count of deployments that reference built-in settings, including remediate setting  
+  - Count of deployments that reference built-in settings, including remediate setting  
 
-    - Count of rules and deployments created for custom settings, including remediate setting  
+  - Count of rules and deployments created for custom settings, including remediate setting  
 
-    - Count of deployed Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificate (.pfx), and compliance policy templates
+  - Count of deployed Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificate (.pfx), and compliance policy templates
 
-    - Count of SCEP certificate, VPN, Wi-Fi, certificate (.pfx) and compliance policy deployments by platform
+  - Count of SCEP certificate, VPN, Wi-Fi, certificate (.pfx) and compliance policy deployments by platform
 
-    - Windows Hello for Business policy (created, deployed)
+  - Windows Hello for Business policy (created, deployed)
 
 
 ### Content  
 
-   - ***[Updated]*** Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships
+  - ***[Updated]*** Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships
 
-    - Boundary group information: count of boundaries and site systems that are assigned to each boundary group  
+  - Boundary group information: count of boundaries and site systems that are assigned to each boundary group  
 
-    - Boundary group relationships and fallback configuration
+  - Boundary group relationships and fallback configuration
 
-    - Client content download statistics
+  - Client content download statistics
 
-    - Count of boundaries by type  
+  - Count of boundaries by type  
 
-    - Count of peer cache clients, usage statistic, and partial download statistics
+  - Count of peer cache clients, usage statistic, and partial download statistics
 
-    - Distribution Manager configuration information: threads, retry delay, number of retries, and pull distribution point settings  
+  - Distribution Manager configuration information: threads, retry delay, number of retries, and pull distribution point settings  
 
-    - Distribution point configuration information: use of branch cache and distribution point monitoring
+  - Distribution point configuration information: use of branch cache and distribution point monitoring
 
-    - Distribution point group information: count of packages and distribution points that are assigned to each distribution point group  
+  - Distribution point group information: count of packages and distribution points that are assigned to each distribution point group  
 
 
 ### Endpoint Protection  
