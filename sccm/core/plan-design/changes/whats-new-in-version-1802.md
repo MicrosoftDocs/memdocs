@@ -185,7 +185,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 ### Improvements to the Configuration Manager console 
 This release includes the following improvements to the Configuration Manager console.
-- Device lists under Assets and Compliance, Devices, now display the primary user by default. The last logged on user can also be added as an optional column. <!-- 1357280 -->
+- Device lists under Assets and Compliance, Devices, now display the primary user by default. This column only displays in the Devices node. The last logged on user can also be added as an optional column. <!-- 1357280 --> You need to enable [user and device affinity](/sccm/core/clients/deploy/about-client-settings#user-and-device-affinity) client settings for the site to associate a primary user with a device.
 - If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
 
 
