@@ -2,7 +2,7 @@
 title: "Plan for the cloud management gateway"
 titleSuffix: "Configuration Manager"
 description: ""
-ms.date: 10/06/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -27,7 +27,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 
 ## Requirements for cloud management gateway
 
--   Client computers and the site system server running the cloud management gateway connector point.
+-    Site system running the cloud management gateway connector for Internet-based clients to use.
 
 -   Custom SSL certificates from the internal CA - used to encrypt communication from the client computers and authenticate the identity of the cloud management gateway service.
 
