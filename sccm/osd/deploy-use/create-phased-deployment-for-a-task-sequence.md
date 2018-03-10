@@ -58,6 +58,8 @@ Use the following instructions to create a phased deployment.
 
 >[!WARNING]
 >Phased deployments will not notify you if a task sequence deployment is [high-risk](/sccm/protect/understand/settings-to-manage-high-risk-deployments.md) 
+
+
 ## Suspend and resume phases or move to next phase
 On occasion, you may need to manually suspend a phased deployment, resume a suspended phased deployment, or move onto next phase. 
 
