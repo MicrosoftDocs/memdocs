@@ -112,8 +112,6 @@ Pre-cache content gives you the option to allow the client to only download the 
     - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose the currently selected time. The client starts pre-caching content at the deployment's available time. When a targeted client receives this policy, the available time is in the past, thus pre-cache download starts right away. If the client receives this policy but the available time is in the future, the client does not start pre-caching content until the available time occurs. 
     - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content is not pre-cached before a user starts the installation, the client uses these settings.
   
->[!NOTE]
->Starting in Configuration Manager 1802, you have the option of using a deployment template on the **General** tab. To save a deployment template, on the **Summary** tab of the **Deploy Software Wizard**, click on **Save As Template**. Give the template a name and select the settings to save in the template. Click **Save**. The template is now available for use from the **Select Deployment Template** option. [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS) has additional information about templates.  <!--1357391-->
 
 ### User experience
 - When the client receives the deployment policy, it starts to pre-cache the content after the deployment's available time. This content includes all referenced packages, but only the OS upgrade package that matches the architecture and language attributes on the package.
