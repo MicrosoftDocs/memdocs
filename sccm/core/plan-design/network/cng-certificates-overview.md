@@ -50,8 +50,8 @@ The following scenarios are currently not supported:
     - Application catalog website
     - Enrollment point  
     - Enrollment proxy point  
-  
-   Software Center does not display applications and packages as available that are deployed to user or user group collections.
+
+- Software Center does not display applications and packages as available that are deployed to user or user group collections.
 
 - Using CNG certificates to create a Cloud Distribution Point.
 
