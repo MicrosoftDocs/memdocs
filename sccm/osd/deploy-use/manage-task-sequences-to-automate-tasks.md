@@ -3,7 +3,7 @@ title: Manage task sequences to automate tasks
 titleSuffix: "Configuration Manager"
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 11/15/2017
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: nac
 ms.suite: na
@@ -205,7 +205,7 @@ The following notification message will be displayed when the end-user opens the
 > [!NOTE]  
 >  The status messages for the task sequence deployment are displayed in the Message window on a primary site, but they are not displayed on a central administration site.  
 
-#### To deploy a task sequence  
+#### To deploy a task sequence    
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -239,7 +239,7 @@ The following notification message will be displayed when the end-user opens the
         > -   If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
 
     -   **Comments (optional)**: Specify additional information that describes this deployment of the task sequence.  
-
+    - **Select Deployment Template**: Starting in Configuration Manager version 1802, you can save and specify a deployment template for a task sequence. <!--1357391-->
 6.  On the **Deployment Settings** page, specify the following information, and then click **Next**.  
 
     -   **Purpose**: From the drop-down list, choose one of the following options:  
@@ -326,8 +326,10 @@ The following notification message will be displayed when the end-user opens the
         -   Specify that clients run the content from the distribution point. This option is available only when all packages associated with the task sequence is enabled to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.  
 
     -   **When no local distribution point is available, use a remote distribution point**: Specify whether clients can use distribution points that are on slow and unreliable networks to download the content that is required by the task sequence.  
+11. Beginning in Configuration Manager 1802, on the **Summary** tab, click on **Save As Template** if you wish to save settings to use again. Supply a name for the template and select the settings to save. 
 
-11. Complete the wizard.  
+ 
+12. Complete the wizard.  
 
 ##  <a name="BKMK_ExportImport"></a> Export and import task sequences  
  You can export and import task sequences with or without their related objects, such as such an operating system image, a boot image, a client agent package, a driver package, and applications that have dependencies.  
