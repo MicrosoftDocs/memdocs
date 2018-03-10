@@ -61,12 +61,20 @@ Starting in this release, use CNG certificates for the following HTTPS-enabled s
 - Management point
 - Distribution point
 - Software update point
+- State migration point  
 
-The list of [unsupported scenarios](/sccm/core/plan-design/network/cng-certificates-overview#unsupported-scenarios) remains the same.
 
 ### Boundary group fallback for management points
 <!-- 1324594 -->
 Configure fallback relationships for management points between [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups). This behavior provides greater control for the management points that clients use. For more information, see [configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+
+### Cloud distribution point site affinity
+<!--503719-->
+This feature benefits customers with a multi-site, geographically-dispersed hierarchy using cloud distribution points. When an internet-based client searches for content, previously there was no order to the list of cloud distribution points received by the client. This behavior could result in internet-based clients receiving content from geographically-distant cloud distribution points. Downloading content from such a distant server is typically slower than a closer server.
+ 
+With cloud distribution point site affinity, an internet-based client receives an ordered list. This list prioritizes cloud distribution points from the client's assigned site. This behavior allows the administrator to preserve their design intent for content downloads from site resources.
+ 
 
 
 
@@ -144,7 +152,7 @@ This release includes the following improvements to operating system deployment:
 
 ### Install multiple applications in Software Center
 <!-- 1357126 -->
-If an end user or desktop technician needs to install multiple applications on a device, Software Center now supports installing multiple selected applications. This allows the user to be more efficient while not waiting for one installation to finish before starting the next.
+If an end user or desktop technician needs to install multiple applications on a device, Software Center now supports installing multiple selected applications. This behavior allows the user to be more efficient while not waiting for one installation to finish before starting the next.
 
 ### Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
@@ -185,8 +193,9 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 ### Improvements to the Configuration Manager console 
 This release includes the following improvements to the Configuration Manager console.
-- Device lists under Assets and Compliance, Devices, now display the primary user by default. The last logged on user can also be added as an optional column. <!-- 1357280 -->
+- Device lists under Assets and Compliance, Devices, now display the primary user by default. This column only displays in the Devices node. The last logged on user can also be added as an optional column.<!-- 1357280 --> Enable [user and device affinity](/sccm/core/clients/deploy/about-client-settings#user-and-device-affinity) client settings for the site to associate a primary user with a device.
 - If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
+- When using remote control on a client with multiple monitors at different DPI scaling, the mouse cursor now correctly maps between them. <!--433170-->
 
 
 
