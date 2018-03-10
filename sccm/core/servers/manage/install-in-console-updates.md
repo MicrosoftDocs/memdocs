@@ -303,27 +303,27 @@ When you are ready to retry the installation of an update, select the failed upd
 #### Retry installation for the hierarchy
 You can retry the installation of an update for the entire hierarchy when that update is in one of the following states:  
 
-    -   Prerequisite check passed with one or more warnings, and the option to ignore prerequisite check warnings was not set in the Update Wizard. (The update's value for **Ignore Prereq Warning** in the **Updates and servicing** node is **No**.)   
-    -   Prerequisite failed    
-    -   Installation failed
-    -   Replication of the content to the site failed   
+  -   Prerequisite check passed with one or more warnings, and the option to ignore prerequisite check warnings was not set in the Update Wizard. (The update's value for **Ignore Prereq Warning** in the **Updates and servicing** node is **No**.)   
+  -   Prerequisite failed    
+  -   Installation failed
+  -   Replication of the content to the site failed   
 
-    Go to **Administration** > **Updates and Servicing**, select the update, and then choose one of the following options:  
+Go to **Administration** > **Updates and Servicing**, select the update, and then choose one of the following options:  
 
-    -   **Retry** - When you run **Retry** from this node, the update install starts again and automatically ignores prerequisite warnings. Content for the update also re-replicates if replication previously failed.
-    - **Ignore prerequisite warnings** - If the update install stops due to a warning, you can then choose **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.   
+  -   **Retry** - When you run **Retry** from this node, the update install starts again and automatically ignores prerequisite warnings. Content for the update also re-replicates if replication previously failed.
+  - **Ignore prerequisite warnings** - If the update install stops due to a warning, you can then choose **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.   
 
 #### Retry installation for the site  
  You can retry the installation of an update at a specific site when that update is in one of the following states:  
 
-    -   Prerequisite check passed with one or more warnings, and option to ignore prerequisite check warnings was not set in the Update Wizard. (The updates value for **Ignore Prereq Warning** in the Updates and servicing node is **No**.)  
-    -   Prerequisite failed    
-    -   Installation failed    
+  -   Prerequisite check passed with one or more warnings, and option to ignore prerequisite check warnings was not set in the Update Wizard. (The updates value for **Ignore Prereq Warning** in the Updates and servicing node is **No**.)  
+  -   Prerequisite failed    
+  -   Installation failed    
 
-    Go to **Monitoring** > **Overview** > **Site Servicing Status**, select the update, and then click one of the following options:
+Go to **Monitoring** > **Overview** > **Site Servicing Status**, select the update, and then click one of the following options:
 
-       - **Retry** - When you run **Retry** from this node, you restart the installation of the update at only that site. Unlike running **Retry** from the **Updates and Servicing** node, this retry does not ignore prerequisite warnings.
-       -    **Ignore prerequisite warnings** - If the update install stops due to a warning, you can then click **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.
+  - **Retry** - When you run **Retry** from this node, you restart the installation of the update at only that site. Unlike running **Retry** from the **Updates and Servicing** node, this retry does not ignore prerequisite warnings.
+  - **Ignore prerequisite warnings** - If the update install stops due to a warning, you can then click **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.
 
 
 

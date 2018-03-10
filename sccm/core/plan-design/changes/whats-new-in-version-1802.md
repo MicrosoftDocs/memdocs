@@ -61,8 +61,8 @@ Starting in this release, use CNG certificates for the following HTTPS-enabled s
 - Management point
 - Distribution point
 - Software update point
+- State migration point  
 
-The list of [unsupported scenarios](/sccm/core/plan-design/network/cng-certificates-overview#unsupported-scenarios) remains the same.
 
 ### Boundary group fallback for management points
 <!-- 1324594 -->
