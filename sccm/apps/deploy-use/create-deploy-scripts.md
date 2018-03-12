@@ -136,6 +136,7 @@ The three security roles used for running scripts are not created by default in 
     **Role Name**: Script Authors
     - **Description**: These permissions enable this role to approve scripts, but they can’t create or run them. 
     - **Permissions:** Ensure the following permissions are set.
+
          |**Category**|**Permission**|**State**|
          |---|---|---|
          |Collection|Run Script|No|
