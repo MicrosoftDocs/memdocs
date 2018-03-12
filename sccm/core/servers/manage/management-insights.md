@@ -22,7 +22,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight.
+Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. <!--1353967-->
 
 ## Review Management Insights in the Configuration Manager console 
 
@@ -69,8 +69,8 @@ Rules are organized into different management insight groups. When groups and ru
    - **Use the new version of Software Center** -The previous version of Software Center is no longer supported. Set up clients to use the new Software Center by enabling the client setting **Computer Agent** >**Use new Software Center**.
 
 **Windows 10**: Insights related to the deployment and servicing of Windows 10. The Windows 10 management insight group is available when more than half of clients are running Windows 7, Windows 8, or Windows 8.1.
-   - **Configure Windows telemetry and commercial ID key** -Leverage Upgrade Readiness to expedite your Windows 10 deployments before Windows 7 goes out of support.
-   - **Connect Configuration Manager to Upgrade Readiness** -To use data from Upgrade Readiness, devices must be configured with a Commercial ID key and have telemetry enabled. Windows 10 devices must be set to Enhanced (Limited) telemetry level or higher. **Configure Windows telemetry and commercial ID key** is a prerequisite. 
+   - **Configure Windows telemetry and commercial ID key** -To use data from Upgrade Readiness, devices must be configured with a Commercial ID key and have telemetry enabled. Windows 10 devices must be set to Enhanced (Limited) telemetry level or higher.
+   - **Connect Configuration Manager to Upgrade Readiness** -Leverage Upgrade Readiness to expedite your Windows 10 deployments before Windows 7 goes out of support. **Configure Windows telemetry and commercial ID key** is a prerequisite.
 
      **Windows 10 management insights rules**
     ![Management insights- Rules for Windows 10](./media/Windows-10-insights-group.png)
