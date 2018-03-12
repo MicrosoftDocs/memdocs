@@ -27,7 +27,7 @@ Phased deployments automate a coordinated, sequenced rollout of a task sequence 
 >[!NOTE]
 > Phased deployments is a pre-release feature introduced in Configuration Manager 1802. <!--1356837-->
 
-## Create a default two phased deployment for a task sequence
+## Create a default two-phased deployment for a task sequence
 Use the following instructions to create a phased deployment. 
 
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
@@ -41,12 +41,12 @@ Use the following instructions to create a phased deployment.
 5. On the **Settings** tab, choose one option for each of the scheduling settings and select **Next** when complete. 
     - **Criteria for success of the first phase.** 
         - **Deployment success percentage** -Specify percent of devices that successfully complete the deployment for phase success criteria. 
-    - **Conditions for beginning second phase of deployment after success of the first phase.** (choose one)
+    - **Conditions for beginning second phase of deployment after success of the first phase** (choose one):
         - **Automatically begin this phase after a deferral period (in days)** - Choose the number of days to wait before beginning the second phase after the success of the first. 
-        - **Manually begin the second phase of deployment** -Don't begin second phase automatically after success of the first, require it to be started manually. 
-    - **Once a device is targeted, install the software** (choose one)
+        - **Manually begin the second phase of deployment** - Don't begin second phase automatically after success of the first. Require it to be started manually. 
+    - **Once a device is targeted, install the software** (choose one):
         - **As soon as possible** - Sets the deadline for installation on the device as soon as the device is targeted.
-        - **Deadline time (relative to the time device is targeted)** -Sets deadline for installation a certain number of days after device is targeted. 
+        - **Deadline time (relative to the time device is targeted)** - Sets deadline for installation a certain number of days after device is targeted. 
 
 6. On the **Phases** tab, click the first phase, then **Edit**.  Specify **User Experience** such as **User Notifications** and **Write filter handling for Windows Embedded devices**. Click **Apply**.
 
@@ -54,30 +54,30 @@ Use the following instructions to create a phased deployment.
 
 8. On the **Phases** tab, edit the second phase for **User Experience** and **Distribution Points**. Click **Apply** and **OK**.
 
-9. Confirm your selections on the **Summary** tab then click **Next** and proceed though the wizard.
+9. Confirm your selections on the **Summary** tab, and then click **Next** and proceed though the wizard.
 
 >[!WARNING]
->Phased deployments will not notify you if a task sequence deployment is [high-risk](/sccm/protect/understand/settings-to-manage-high-risk-deployments.md) 
+>Phased deployments will not notify you if a task sequence deployment is [high-risk](/sccm/protect/understand/settings-to-manage-high-risk-deployments.md). 
 
 
-## Suspend and resume phases or move to next phase
-On occasion, you may need to manually suspend a phased deployment, resume a suspended phased deployment, or move onto next phase. 
+## Suspend and resume phases or move to the next phase
+On occasion, you may need to manually suspend a phased deployment, resume a suspended phased deployment, or move onto the next phase. 
 
-### Move to next phase
+### Move to the next phase
 When you select the setting **Manually begin the second phase of deployment**, you will need to start the second phase. Use the following instructions to move to the second phase: 
 
-1. In the Configuration Manager console, select **Software Library**, expand **Operating Systems** and click on **Task Sequences**
-2. Highlight the task sequence 
+1. In the Configuration Manager console, select **Software Library**, expand **Operating Systems**, and click on **Task Sequences**.
+2. Highlight the task sequence.
 3. Click on the **Phased Deployment** tab near the bottom of the console. 
 4. Right-click the phased deployment and select **Move to next phase**.
 ![Suspend, resume, or move to next phase](media/Suspend-phased-deployment.PNG)
 
 ### Suspend or resume a phased deployment
-1. In the Configuration Manager console, select **Software Library**, expand **Operating Systems** and click on **Task Sequences**
+1. In the Configuration Manager console, select **Software Library**, expand **Operating Systems**, and click on **Task Sequences**.
 2. Highlight the task sequence and click on the **Phased Deployment** tab near the bottom of the console. 
 3. Select the phased deployment and click **Suspend** or **Resume** in the ribbon.
 
-## Next Steps
+## Next steps
 [Create a custom task sequence](create-a-custom-task-sequence.md) </br>
 [Create a task sequence for non-operating system deployments](create-a-task-sequence-for-non-operating-system-deployments.md). 
 
