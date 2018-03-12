@@ -22,9 +22,10 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. <!--1353967-->
+Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. This feature was released in Configuration Manager version 1802. <!--1353967-->
 
 ## Review Management Insights in the Configuration Manager console 
+The **site-read** permission is needed to view the rules.
 
 1. Open the Configuration Manager Console. 
 2. Go to the **Administration** node and click on **Management Insights**.
