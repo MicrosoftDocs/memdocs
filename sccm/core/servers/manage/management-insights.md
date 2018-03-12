@@ -36,7 +36,7 @@ The **site-read** permission is needed to view the rules.
     - **Complete**:  Lists rules where no action is needed. 
     - **In Progress**: Shows rules where some, but not all, prerequisites are complete.
     - **Action Needed**: Rules needing actions taken are listed. Right-click and select **More Details** to retrieve specific items where action is needed. 
-    - **Prerequisites**: If a rule needs items completed before they can be run, the required items will be listed here.  
+    - **Prerequisites**: If a rule needs items completed before they can be run, the required items will be listed here.   
     
     **All rules and prerequisites for the cloud services group**
     ![Management insights- All rules and prerequisites for cloud services group](./media/Management-insights-all-cloud-rules.png)
