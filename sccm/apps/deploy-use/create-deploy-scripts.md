@@ -43,11 +43,14 @@ With this integration in System Center Configuration Manager, you can use the *R
 - To run PowerShell scripts, the client must be running PowerShell version 3.0 or later. However, if a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that version of PowerShell.
 - Configuration Manager clients must be running the client from the 1706 release, or later in order to run scripts.
 - To use scripts, you must be a member of the appropriate Configuration Manager security role.
-- To import and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Full Administrator** security role.
+- To import and author scripts - Your account must have **Create** permissions for **SMS Scripts**.
+- To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts**.
+- To run scripts - Your account must have **Run Script** permissions for **Collections**.
 
-For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+For more information about Configuration Manager security roles:</br>
+[Security scopes for run scripts](#BKMK_Scopes)</br>
+[Security roles for run scripts](#BKMK_ScriptRoles)</br>
+[Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 ## Limitations
 
@@ -57,11 +60,12 @@ Run Scripts currently supports:
 - Parameter types: integer, string, and list.
 
 >[!WARNING]
->Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include to secrets in your PowerShell scripts (no passwords, etc.). There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. 
+>Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include to secrets in your PowerShell scripts (no passwords, etc.). <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
 
 ## Group Policy considerations for scripts
-While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts. Setting an Execution Policy via Group Policy may not allow scripts to be run with Configuration Manager. For information about Execution Polices and how they get set see the [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) article. <!--507185-->
+<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
+Setting an Execution Policy via Group Policy may not allow scripts to be run with Configuration Manager. For information about Execution Polices and how they get set see the [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) article. <!--507185-->
 
 ## Run Script authors and approvers
 
@@ -102,7 +106,7 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 The three security roles used for running scripts are not created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
 
 1. In the Configuration Manager console, go to **Administration** >**Security** >**Security Roles**
-2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Ensure that they are appropriate for the user. 
+2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Make sure you take only the permissions that you want. 
 3. Give the custom role a **Name** and a **Description**. 
 4. Assign the security role the permissions outlined below. 
 
@@ -252,14 +256,15 @@ After you have initiated running a script on a collection of devices, use the fo
 1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
-    - Beginning in Configuration Manager 1802, script output is truncated to 4 KB. Monitoring shows the output as **SMS_ScriptsExecution** when truncated. <!--510013-->
+    - Beginning in Configuration Manager 1802, script output is truncated to 4 KB to allow for better display experience.  <!--510013-->
       ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png) 
 
 ## Script Output
-Staring in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. There are a few limitations to this change.
-- Scripts that fail to run may not get output returned. <!--507179-->
-- Avoid returning large script output since it is truncated to 4 KB <!--508488-->
-- Some functionality with script output formatting is not available when running Configuration Manager version 1802 or later with a down-level client. <!--508487-->
+
+- Starting in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. 
+- Scripts that get an unknown result, or those where the client was offline, won't show in the charts or data set. <!--507179-->
+- Avoid returning large script output since it is truncated to 4 KB. <!--508488-->
+- Some functionality with script output formatting is not available when running Configuration Manager version 1802 or later with a down-level version of the client. <!--508487-->
 - Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
    ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
 
