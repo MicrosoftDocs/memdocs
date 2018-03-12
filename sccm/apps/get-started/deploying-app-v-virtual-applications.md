@@ -3,7 +3,7 @@ title: "Deploy App-V virtual applications"
 titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy virtual applications."
 ms.custom: na
-ms.date: 03/08/2018
+ms.date: 03/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -63,7 +63,7 @@ In addition to the other System Center Configuration Manager requirements and pr
      Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322).  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/en-us/kb/2963211) or use App-V 5.0 SP3.  
--   **App-V 5.2**: This is built into Windows 10 Education (1703 and later), Windows 10 Enterprise (1703 and later), and Windows Server 2016.
+-   **App-V 5.2**: This is built into Windows 10 Education (1607 and later), Windows 10 Enterprise (1607 and later), and Windows Server 2016.
 
 For more information about App-V in Windows 10, see the following topics:
 
