@@ -93,7 +93,8 @@ Review the applicable update checklist for actions to take before you start the 
 
 - Update to 1610 from either 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
 
-- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md).
+- Update to 1710 from either 1610, 1702, or 1706: See [Checklist for installing update 1710](../../../core/servers/manage/checklist-for-installing-update-1710.md).
+
 
 <!-- Removed as update guidance 6/6/2017. The Test DB Upgrade details are no longer recommended nor required. They live on in a new topic for customers who still want to use them. -->
 
