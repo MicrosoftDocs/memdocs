@@ -2,6 +2,7 @@
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help for Configuration Manager](understand/find-help.md)
 ### [Accessibility features](understand/accessibility-features.md)
+### [Software Center user guide](understand/software-center.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
 ### [Fundamentals of sites and hierarchies](understand/fundamentals-of-sites-and-hierarchies.md)
 #### [About upgrade, update, and install for site and hierarchy infrastructure](understand/upgrade-update-install.md)
@@ -66,7 +67,6 @@
 #### [Content library cleanup tool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
-#### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [Manage network bandwidth for content management](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [Security and privacy for content management](plan-design/hierarchy/security-and-privacy-for-content-management.md)
@@ -299,6 +299,8 @@
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Maintain Mac clients](clients/manage/maintain-mac-clients.md)
+### [Co-management dashboard](clients/manage/co-management-dashboard.md)
+
 ### [Surface device dashboard](clients/manage/surface-device-dashboard.md)
 
 ##   [Co-management for Windows 10 devices](clients/manage/co-management-overview.md)

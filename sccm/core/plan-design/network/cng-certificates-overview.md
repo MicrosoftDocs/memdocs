@@ -1,7 +1,7 @@
 ---
-title: "CNG certificates overview"
-titleSuffix: "Configuration Manager"
-description: "An overview of CNG certificates in Configuration Manager"
+title: CNG certificates overview
+titleSuffix: Configuration Manager
+description: Learn about support for Cryptography Next Generation (CNG) certificates for Configuration Manager clients and servers.
 ms.custom: na
 ms.date: 03/09/2018
 ms.prod: configuration-manager
@@ -36,6 +36,7 @@ Starting with version 1802, use CNG certificates for the following HTTPS-enabled
 - Management point
 - Distribution point
 - Software update point
+- State migration point     
 
 > [!NOTE]
 > CNG is backward compatible with Crypto API (CAPI). CAPI certificates continue to be supported even when CNG support is enabled on the client.
@@ -47,11 +48,10 @@ The following scenarios are currently not supported:
 - The following server roles are not operational when installed in HTTPS mode with a CNG certificate bound to the web site in Internet Information Services (IIS): 
     - Application catalog web service
     - Application catalog website
-    - Enrollment point
-    - Enrollment proxy point
-    - State migration point     
+    - Enrollment point  
+    - Enrollment proxy point  
 
-    Software Center does not display applications and packages as available that are deployed to user or user group collections.
+- Software Center does not display applications and packages as available that are deployed to user or user group collections.
 
 - Using CNG certificates to create a Cloud Distribution Point.
 

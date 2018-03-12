@@ -35,14 +35,14 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 -   Updates and fixes for the Configuration Manager client.  
 
 > [!NOTE]  
->  In Configuration Manager, you cannot run the Client.msi file directly.  
+>  In Configuration Manager, you can't run the Client.msi file directly.  
 
  CCMSetup.exe provides [command-line properties](#ccmsetup-exe-command-line-properties) to customize the installation. You can also specify properties to modify the behavior of Client.msi at the CCMSetup.exe command line.  
 
 > [!IMPORTANT]  
 >  Specify CCMSetup properties before you specify properties for Client.msi.  
 
- CCMSetup.exe and its supporting files are located on the Configuration Manager site server in the **Client** folder of the Configuration Manager installation folder. This folder is shared to the network as **&lt;Site Server Name\>\SMS_&lt;Site Code\>\Client**.  
+ CCMSetup.exe and the supporting files are located on the Configuration Manager site server in the **Client** folder of the Configuration Manager installation folder. This folder is shared to the network as **&lt;Site Server Name\>\SMS_&lt;Site Code\>\Client**.  
 
  At the command prompt, the CCMSetup.exe command uses the following format:  
 
@@ -52,7 +52,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
       'CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
- This example does the following:  
+ This example does the following things:  
 
 -   Specifies the management point named SMSMP01 to request a list of distribution points to download the client installation files.  
 
@@ -63,7 +63,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 -   Instructs client.msi to use the fallback status point named SMSFP01.  
 
 > [!NOTE]  
->  If a property contains spaces, surround it with quotation marks.  
+>  If a property has spaces, surround it with quotation marks.  
 
 
 > [!IMPORTANT]  
@@ -88,12 +88,12 @@ Example: **ccmsetup.exe /?**
 
 ### /mp:&lt;Computer\>
 
- Specifies a source management point for computers to connect to so that they can find the nearest distribution point for the installation files. If there are no distribution points or computers cannot download the files from the distribution points after 4 hours, clients download the files from the specified management point.  
+ Specifies a source management point for computers to connect to so that they can find the nearest distribution point for the installation files. If there are no distribution points or computers can't download the files from the distribution points after four hours, clients download the files from the specified management point.  
 
 > [!IMPORTANT]  
->  This property is used to specify an initial management point for computers to find a download source, and can be any management point in any site. It does not *assign* the client to a management point.   
+>  This property is used to specify an initial management point for computers to find a download source, and can be any management point in any site. It doesn't *assign* the client to a management point.   
 
- Computers download the files over an HTTP or HTTPS connection, depending on the site system role configuration for client connections. The download uses BITS throttling, if configured. If all distribution points and management points are configured for HTTPS client connections only,  verify that the client computer has a valid client certificate.  
+ Computers download the files over an HTTP or HTTPS connection, depending on the site system role configuration for client connections. If configured, the download uses BITS throttling. If all distribution points and management points are configured for HTTPS client connections only,  verify that the client computer has a valid client certificate.  
 
 You can use the **/mp** command-line property to specify multiple management points so that if the computer fails to connect to the first one, the next is tried, and so on. When you specify multiple management points, separate the values by semicolons.
 
@@ -111,7 +111,7 @@ Example: `ccmsetup.exe /retry:20`
 
 ### /noservice
 
-Prevents CCMSetup from running as a service, which is the default. When CCMSetup runs as a service, it runs in the context of the Local System account of the computer, which might not have sufficient rights to access required network resources for the installation. With **/noservice**, CCMSetup.exe runs in the context of the user account that you use to start the installation. Also, if you are use a script to run CCMSetup.exe with the **/service** property, CCMSetup.exe exits after the service starts and might not report installation details correctly.   
+Prevents CCMSetup from running as a service, which is the default. When CCMSetup runs as a service, it runs in the context of the Local System account of the computer, which might not have sufficient rights to access required network resources for the installation. With **/noservice**, CCMSetup.exe runs in the context of the user account that you use to start the installation. Also, if you're using a script to run CCMSetup.exe with the **/service** property, CCMSetup.exe exits after the service starts and might not report installation details correctly.   
 
 Example: `ccmsetup.exe /noservice`  
 
@@ -135,7 +135,7 @@ Example: `ccmsetup.exe /logon`
 
 ### /forcereboot
 
- Specifies that CCMSetup should force the client computer to restart if necessary to complete the installation. If this is not specified, CCMSetup exits when a restart is necessary, and then continues after the next manual restart.  
+ Specifies that CCMSetup should force the client computer to restart if necessary to complete the installation. If this isn't specified, CCMSetup exits when a restart is necessary, and then continues after the next manual restart.  
 
  Example: `CCMSetup.exe /forcereboot`  
 
@@ -157,16 +157,16 @@ Example: `ccmsetup.exe /logon`
 
 ### /downloadtimeout:&lt;Minutes\>
 
-The length of time in minutes that CCMSetup attempts to download the  installation files before stopping. The default value is **1440** minutes (1 day).  
+The length of time in minutes that CCMSetup attempts to download the  installation files before stopping. The default value is **1440** minutes (one day).  
 
 Example: `ccmsetup.exe /downloadtimeout:100`  
 
 ### /UsePKICert
 
- When specified, the client uses a PKI certificate that includes client authentication, if available. If a valid certificate cannot be found, the client uses an HTTP connection and a self-signed certificate, which is also the behavior when you don't use this property.
+ When specified, the client uses a PKI certificate that includes client authentication, if available. If a valid certificate can't be found, the client uses an HTTP connection and a self-signed certificate, which is also the behavior when you don't use this property.
 
 > [!NOTE]  
->  In some scenarios you do not have to specify this property when you are installing a client, and still use a client certificate. These scenarios include installing a client by using client push, and software update point–based client installation. However, you must specify this property whenever you manually install a client and use the **/mp** property to specify a management point that is configured to accept only HTTPS client connections. You also must specify this property when you install a client for Internet-only communication, by using the CCMALWAYSINF=1 property (together with the properties for the Internet-based management point and the site code). For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
+>  In some scenarios, you do not have to specify this property when you are installing a client, and still use a client certificate. These scenarios include installing a client by using client push, and software update point–based client installation. However, you must specify this property whenever you manually install a client and use the **/mp** property to specify a management point that is configured to accept only HTTPS client connections. You also must specify this property when you install a client for Internet-only communication, by using the CCMALWAYSINF=1 property (together with the properties for the Internet-based management point and the site code). For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
 
  Example: `CCMSetup.exe /UsePKICert`  
 
@@ -198,7 +198,7 @@ Example [Client Install] section entry: `Install=INSTALL=ALL SMSSITECODE=ABC SMS
  Specifies that CCMSetup.exe must not install the specified prerequisite program when the Configuration Manager client is installed. This property supports entering multiple values. Use the semicolon character (;) to separate each value.  
 
 
- Examples: `CCMSetup.exe /skipprereq:silverlight.exe` or `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe`  
+ Examples: `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe` or `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`  
 
 ### /forceinstall
 
@@ -208,7 +208,7 @@ Example [Client Install] section entry: `Install=INSTALL=ALL SMSSITECODE=ABC SMS
 
 Specifies that CCMSetup.exe will not install the specified feature when the client is installed.  
 
-Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` will not install  Software Center on the client.  
+Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` won't install  Software Center on the client.  
 
 > [!NOTE]  
 >  For this release, **ClientUI** is the only value supported with the **/ExcludeFeatures** property.  
@@ -230,13 +230,13 @@ Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` will not install  Software Cen
 
 ### CCMADMINS  
 
-Specifies one or more Windows user accounts or groups to be given access to client settings and policies. This is useful where the Configuration Manager admin does not have local administrative credentials on the client computer. Specify a list of accounts that are separated by semi-colons.  
+Specifies one or more Windows user accounts or groups to be given access to client settings and policies. This is useful where the Configuration Manager admin doesn't have local administrative credentials on the client computer. Specify a list of accounts that are separated by semi-colons.  
 
 Example: `CCMSetup.exe CCMADMINS="Domain\Account1;Domain\Group1"`  
 
 ### CCMALLOWSILENTREBOOT
 
-Specifies that the computer is allowed to restart following the client installation if required.  
+Specifies that the computer is allowed to restart following the client installation if necessary.  
 
 > [!IMPORTANT]  
 >  The computer will restart without warning even if a user is logged on.  
@@ -293,7 +293,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
 ### CCMCERTSTORE
 
- Specifies an alternate certificate store name if the client certificate for HTTPS is not located in the default certificate store of **Personal** in the Computer store.  
+ Specifies an alternate certificate store name if the client certificate for HTTPS isn't located in the default certificate store of **Personal** in the Computer store.  
 
  Example: `CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"`  
 
@@ -319,7 +319,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
 ### CCMFIRSTCERT
 
- If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period. This setting might be required if you are using Network Access Protection with IPsec enforcement.  
+ If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period. This setting might be required if you're using Network Access Protection with IPsec enforcement.  
 
  Example: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 
@@ -327,7 +327,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Specifies the FQDN of the Internet-based management point, if the client is managed over the Internet.  
 
- Do not specify this option with the installation property of SMSSITECODE=AUTO. Internet-based clients must be directly assigned to their Internet-based site.  
+ Don't specify this option with the installation property of SMSSITECODE=AUTO. Internet-based clients must be directly assigned to their Internet-based site.  
 
  Example: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
@@ -357,7 +357,7 @@ Example: `CCMSetup.exe CCMLOGLEVEL=3`
 
 ### CCMLOGMAXHISTORY
 
-When a Configuration Manager log file reaches 250000 bytes in size (or the value specified by the property CCMLOGMAXSIZE), it is renamed as a backup, and a new log file is created.  
+When a Configuration Manager log file reaches 250,000 bytes in size (or the value specified by the property CCMLOGMAXSIZE), it is renamed as a backup, and a new log file is created.  
 
 This property specifies how many previous versions of the log file to retain. The default value is 1. If the value is set to 0, no old log files are kept.  
 
@@ -365,7 +365,7 @@ Example: `CCMSetup.exe CCMLOGMAXHISTORY=0`
 
 ### CCMLOGMAXSIZE
 
-The maximum log file size in bytes. When a log grows to the size that is specified, it is renamed as a history file, and a new file is created. This property must be set to at least 10000 bytes. The default value is 250000 bytes.  
+The maximum log file size in bytes. When a log grows to the size that is specified, it is renamed as a history file, and a new file is created. This property must be set to at least 10,000 bytes. The default value is 250000 bytes.  
 
 Example: `CCMSetup.exe CCMLOGMAXSIZE=300000`  
 
@@ -386,7 +386,7 @@ Example: `CCMSetup.exe DISABLECACHEOPT=TRUE`
  Specifies a DNS domain for clients to locate management points that are published in DNS. When a management point is located, it informs the client about other management points in the hierarchy. This means that the management point that is located by using DNS publishing does not have to be from the client’s site, but can be any management point in the hierarchy.  
 
 > [!NOTE]  
->  You do not have to specify this property if the client is in the same domain as a published management point. In that case, the client’s domain is automatically used to search DNS for management points.  
+>  You don't have to specify this property if the client is in the same domain as a published management point. In that case, the client’s domain is automatically used to search DNS for management points.  
 
  For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service Location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) in [Understand how clients find site resources and services for System Center Configuration Manager](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) .  
 
@@ -405,10 +405,10 @@ Example: `CCMSetup.exe FSP=SMSFP01`
 
 ### IGNOREAPPVVERSIONCHECK
 
- Specifies that the presence of the minimum required version of Microsoft Application Virtualization (App-V) is not checked before the client is installed.  
+ Specifies that the presence of the minimum required version of Microsoft Application Virtualization (App-V) isn't checked before the client is installed.  
 
 > [!IMPORTANT]  
->  If you install the Configuration Manager client without installing App-V, you cannot deploy virtual applications.  
+>  If you install the Configuration Manager client without installing App-V, you can't deploy virtual applications.  
 
  Example: `CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE`  
 
@@ -422,7 +422,7 @@ For more information, see [How to configure client status in System Center Confi
 
 ### RESETKEYINFORMATION
 
- If a Configuration Manager client has the wrong Configuration Manager trusted root key and cannot contact a trusted management point to receive the new trusted root key, you must manually remove the old trusted root key by using this property. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication.  
+ If a Configuration Manager client has the wrong Configuration Manager trusted root key and can't contact a trusted management point to receive the new trusted root key, you must manually remove the old trusted root key by using this property. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication.  
 
  Example: `CCMSetup.exe RESETKEYINFORMATION=TRUE`  
 
@@ -444,7 +444,7 @@ Example: `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE` installs the cl
 
 ### SMSCACHEFLAGS
 
-Specifies further installation details for the client cache folder. You can use SMSCACHEFLAGS properties individually or in combination, separated by semicolons. If this property is not specified, the client cache folder is installed according to the SMSCACHEDIR property, the folder is not compressed, and the SMSCACHESIZE value is used as the size in MB of the folder.  
+Specifies further installation details for the client cache folder. You can use SMSCACHEFLAGS properties individually or in combination, separated by semicolons. If this property isn't specified, the client cache folder is installed according to the SMSCACHEDIR property, the folder isn't compressed, and the SMSCACHESIZE value is used as the size in MB of the folder.  
 
 This setting is ignored when you upgrade an existing client.  
 
@@ -460,7 +460,7 @@ Properties:
 
 -   NTFSONLY: Specifies that the folder can be installed only on NTFS disk drives. This value will be ignored if a path has been specified with the SMSCACHEDIR property.  
 
--   COMPRESS: Specifies that the folder should be stoed in a compressed form.  
+-   COMPRESS: Specifies that the folder should be stored in a compressed form.  
 
 -   FAILIFNOSPACE: Specifies that the client software should be removed if there is insufficient space to install the folder.  
 
@@ -472,17 +472,17 @@ Example: `CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS`
 > [!IMPORTANT]
 > Beginning with Configuration Manager version 1606, new client settings are available for specifying the client cache folder size. The addition of those client settings effectively replaces using SMSCACHESIZE as a client.msi property to specify the size of the client cache. For more information, see the [client settings for cache size](about-client-settings.md#client-cache-settings).  
 
-For 1602 and earlier, SMSCACHESIZE specifies the size of the client cache folder in megabyte (MB) or as a percentage when used with the PERCENTDISKSPACE or PERCENTFREEDISKSPACE property. If this property is not set, the folder defaults to a maximum size of 5120 MB. The lowest value that you can specify is 1 MB.  
+For 1602 and earlier, SMSCACHESIZE specifies the size of the client cache folder in megabyte (MB) or as a percentage when used with the PERCENTDISKSPACE or PERCENTFREEDISKSPACE property. If this property isn't set, the folder defaults to a maximum size of 5120 MB. The lowest value that you can specify is 1 MB.  
 
 > [!NOTE]  
->  If a new package that must be downloaded would cause the folder to exceed the maximum size, and if the folder cannot be purged to make sufficient space available, the package download fails, and the program or application will not run.  
+>  If a new package that must be downloaded would cause the folder to exceed the maximum size, and if the folder can't be purged to make sufficient space available, the package download fails, and the program or application won't run.  
 
 This setting is ignored when you upgrade an existing client and when the client downloads software updates.  
 
 Example: `CCMSetup.exe SMSCACHESIZE=100`  
 
 > [!NOTE]  
->  If you reinstall a client, you cannot use the SMSCACHESIZE or SMSCACHEFLAGS installation properties to set the cache size to be smaller than it was previously. If you try to do this, your value is ignored and the cache size is automatically set to the size it was previously.  
+>  If you reinstall a client, you can't use the SMSCACHESIZE or SMSCACHEFLAGS installation properties to set the cache size to be smaller than it was previously. If you try to do this, your value is ignored and the cache size is automatically set to the size it was previously.  
 
 ### SMSCONFIGSOURCE
 
@@ -490,7 +490,7 @@ Specifies the location and order that the Configuration Manager Installer checks
 
 -   R: Check for configuration settings in the registry.  
 
-   For more information, see [information about storing client installation properties in the registry.](https://technet.microsoft.com/library/gg712298.aspx#BKMK_Provision).  
+   For more information, see [information about storing client installation properties in the registry](https://technet.microsoft.com/library/gg712298.aspx#BKMK_Provision).  
 
 -   P: Check for configuration settings in the installation properties provided at the command prompt.  
 
@@ -504,13 +504,13 @@ Specifies the location and order that the Configuration Manager Installer checks
 
 ### SMSDIRECTORYLOOKUP
 
- Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they cannot find a management point in Active Directory Domain Services or in DNS.  
+ Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.  
 
  This property doesn't affect whether the client uses WINS for name resolution.  
 
  You can configure two different modes for this property:  
 
--   NOWINS: This is the most secure setting for this property and prevents clients from finding a management point in WINS .  When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
+-   NOWINS: This is the most secure setting for this property and prevents clients from finding a management point in WINS.  When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
 
 -   WINSSECURE (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
@@ -553,7 +553,7 @@ Example: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
  Specifies the Configuration Manager site to assign the Configuration Manager client to. This can either be a three-character site code or the word AUTO. If AUTO is specified, or if this property is not specified, the client attempts to determine its Configuration Manager site assignment from Active Directory Domain Services or from a specified management point. To enable AUTO for client upgrades, you must also set [SITEREASSIGN](#sitereassign) to TRUE.    
 
 > [!NOTE]  
->  Do not use AUTO if you also specify the Internet-based management point (CCMHOSTNAME). In that case, you must directly assign the client to its site.  
+>  Don't use AUTO if you also specify the Internet-based management point (CCMHOSTNAME). In that case, you must directly assign the client to its site.  
 
  Example: `CCMSetup.exe SMSSITECODE=XZY`  
 

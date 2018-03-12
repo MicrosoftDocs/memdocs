@@ -3,7 +3,7 @@ title: "Windows client deployment prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Learn the prerequisites for deploying clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -58,7 +58,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Microsoft Visual C++ 2005 Redistributable version 8.0.50727.42|For version 1606 and earlier, required to support Microsoft SQL Server Compact operations.|  
 |Windows Imaging APIs 6.0.6001.18000|Required to allow Configuration Manager to manage Windows image (.wim) files.|  
 |Microsoft Policy Platform 1.2.3514.0|Required to allow clients to evaluate compliance settings.|  
-|Microsoft Silverlight 5.1.41212.0 (beginning in Configuration Manager version 1602)|Required to support the Application Catalog website user experience.|  
+|Microsoft Silverlight 5.1.41212.0|Required to support the Application Catalog website user experience. Starting in Configuration Manager 1802, Silverlight is no longer installed automatically. The primary functionality of the Application Catalog is now included in Software Center. Support for the Application Catalog web site ends with the first update released after June 1, 2018.|  
 |Microsoft .NET Framework version 4.5.2|Required to support client operations. Automatically installed on the client computer if it does not have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 3.5 SP2 components|Required to store information related to client operations.|  
 |Microsoft Windows Imaging Components|Required by Microsoft .NET Framework 4.0 for Windows Server 2003 or Windows XP SP2 for 64-bit computers.|
@@ -67,7 +67,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 ####  <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
 
 > [!NOTE]  
->  On January 12th of 2016, support for .NET 4.0, 4.5, and 4.5.1 expired. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) at support.microsoft.com.  
+>  On January 12 of 2016, support for .NET 4.0, 4.5, and 4.5.1 expired. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) at support.microsoft.com.  
 
  A restart may be required to complete the installation of Microsoft .NET Framework version 4.5.2. The user will see **Restart required** notification in the system tray.  Common scenarios that require client computers to be restarted:  
 
