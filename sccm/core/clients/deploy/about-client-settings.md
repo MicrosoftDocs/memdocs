@@ -1,9 +1,9 @@
 ---
-title: "Client settings"
-titleSuffix: "Configuration Manager"
-description: "Choose client settings by using the admin console in System Center Configuration Manager."
+title: Client settings
+titleSuffix: Configuration Manager
+description: Learn about the default and custom settings for controlling client behaviors
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ caps.latest.revision: 15
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # About client settings in System Center Configuration Manager
 
@@ -223,7 +223,7 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center.   
+If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
 
 The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
@@ -316,6 +316,21 @@ The following settings must be shorter in duration than the shortest maintenance
 -   **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
 
 For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
+
+
+
+## Delivery Optimization
+
+<!-- 1324696 -->
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers.
+
+ > [!Note]
+ > Delivery Optimization is only available on Windows 10 clients
+
+### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
+ Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. 
+
+
 
 ##  Endpoint Protection  
 >  [!Tip]   
@@ -604,8 +619,14 @@ Enter the organization name that users see in Software Center.
 - **Color scheme for Software Center** </br>
 Select **Select Color** to define the primary color used by Software Center.
 - **Select a logo for Software Center** </br>
-Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces.  
+         
+### Hide unapproved applications in Software Center
+Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   
 
+### Hide installed applications in Software Center
+Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled.    
+  
 ### Software Center tab visibility
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 - **Applications**

@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
+ROBOTS: NOINDEX
 ---
 # Content source location scenarios in System Center Configuration Manager
 

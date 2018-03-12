@@ -12,7 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 8a8df275-7e63-4159-9f9a-5f21621be0f1searchScope: - ConfigMgr SDK
+ms.assetid: 8a8df275-7e63-4159-9f9a-5f21621be0f1
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -25,7 +27,7 @@ The following examples demonstrate various Microsoft System Center Configuration
 
 #### To determine the display name of a resource type from the resource type number  
 
--   In SQL Server 2008, query the Configuration Manager database with the following SQL statement:  
+-   In SQL Server, query the Configuration Manager database with the following SQL statement:  
 
 ```  
 select DisplayName from v_ResourceMap where ResourceType=5  
@@ -33,7 +35,7 @@ select DisplayName from v_ResourceMap where ResourceType=5
 
 #### To determine discovery properties for a particular resource type  
 
--   In SQL Server 2008, query the Configuration Manager database with the following SQL statement:  
+-   In SQL Server, query the Configuration Manager database with the following SQL statement:  
 
 ```  
 select * from v_ResourceAttributeMap where ResourceType=5  
@@ -41,7 +43,7 @@ select * from v_ResourceAttributeMap where ResourceType=5
 
 #### To list the inventory groups for a particular resource type  
 
--   In SQL Server 2008, query the Configuration Manager database with the following SQL statement:  
+-   In SQL Server, query the Configuration Manager database with the following SQL statement:  
 
 ```  
 select InvClassName from v_GroupMap where ResourceType = 5  
