@@ -79,7 +79,7 @@ With cloud distribution point site affinity, an internet-based client receives a
 
 ## Management insights
 <!-- 1353967 -->
-Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. For details see, [Management Insights](/sccm/core/servers/manage/management-insights.md)
+Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. For details see, [Management Insights](/sccm/core/servers/manage/management-insights)
 
 In Configuration Manager 1802, the following insights are available:
 - Applications:
@@ -115,7 +115,7 @@ When creating an instance of the [cloud management gateway](/sccm/core/clients/m
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory.md#BKMK_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -132,17 +132,17 @@ For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-devic
 
 ### Change in the Configuration Manager client install
 <!--1356195-->|
-Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites fo deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_ExternalDependencies)
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites fo deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies)
 
 ## Co-management
 
 ### Transition Endpoint Protection workload to Intune using co-management
 <!-- 1357365 -->
- The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune). For more information about co-management, see [co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+ The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). For more information about co-management, see [co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
  
 ### Co-management dashboard in System Center Configuration Manager
 <!--1356648-->
-Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [co-management dashboard](\sccm\core\clients\manage\client-management-dashboard.md) article. 
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [co-management dashboard](\sccm\core\clients\manage\client-management-dashboard) article. 
 
 
 ## Compliance settings
@@ -203,7 +203,7 @@ The [deployment wizard for task sequences](/sccm/osd/deploy-use/manage-task-sequ
 
 ### Phased deployments for task sequences
 <!--1356837-->
- Phased deployments is a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections. You can [create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md) with the default of two phases, or manually configure multiple phases. Phased deployment of task sequences does not support PXE or media installation.
+ Phased deployments is a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections. You can [create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with the default of two phases, or manually configure multiple phases. Phased deployment of task sequences does not support PXE or media installation.
 
 
 
@@ -220,11 +220,11 @@ If you deploy applications as available to users, they can now browse and instal
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings.md#BKMK_HideInstalled) has additional details.  
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) has additional details.  
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings.md#BKMK_HideUnapproved) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) has additional details.  
 ### Software Center shows user additional compliance information
 <!-- 1097546 -->
  When using Device Health Attestation status as a compliance policy rule for conditional access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
@@ -234,7 +234,7 @@ When this client setting option is enabled, user available applications that req
 
 ### Schedule automatic deployment rule evaluation to be offset from a base day. 
 <!--1357133-->
-Automatic deployment rules can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. For details, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates.md#BKMK_CreateAutomaticDeploymentRule). 
+Automatic deployment rules can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. For details, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#BKMK_CreateAutomaticDeploymentRule). 
 
 
 
@@ -250,7 +250,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 ### Report on Windows 10 Servicing details for a specific collection
 <!--1357653-->
-The **Windows 10 Servicing details for a specific collection** report displays general information about Windows 10 servicing for a specific collection. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. For more information, see the [list of reports](/sccm/core/servers/manage/list-of-reports.md#operating-system)
+The **Windows 10 Servicing details for a specific collection** report displays general information about Windows 10 servicing for a specific collection. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. For more information, see the [list of reports](/sccm/core/servers/manage/list-of-reports#operating-system)
 
 
 
@@ -266,11 +266,11 @@ The **Windows 10 Servicing details for a specific collection** report displays g
 
 ### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy.md#BKMK_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy.md#BKMK_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
-For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy.md#BKMK_HIS). 
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS). 
 1. Websites can be given access to the host’s virtual graphics processor. 
 2. Files downloaded inside the container can be persisted on the host. 
 
