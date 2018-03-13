@@ -128,7 +128,7 @@ The Surface device dashboard provides information about the Surface devices foun
 - percent of Surface models
 - top five operating system versions
 
-For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard.md) article.
+For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) article.
 
 ### Change in the Configuration Manager client install
 <!--1356195-->|
