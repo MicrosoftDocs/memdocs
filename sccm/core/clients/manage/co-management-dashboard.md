@@ -22,7 +22,7 @@ manager: dougeby
 # Co-management dashboard in System Center Configuration Manager
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning in version 1802, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.<!--1355788-->
+Beginning in version 1802, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.<!--1356648-->
 
 ## Open the co-management dashboard
 To open the co-management dashboard, use the following steps: 

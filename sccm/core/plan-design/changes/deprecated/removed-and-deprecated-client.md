@@ -33,6 +33,7 @@ This information is subject to change with future releases, and might not includ
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|
+|Linux and UNIX|March 16, 2018||
 |Windows 8: Professional, Enterprise|January 12, 2018||
 |Windows Embedded 8 Pro|January 12, 2018||
 |Windows Embedded 8 Industry|January 12, 2018||
