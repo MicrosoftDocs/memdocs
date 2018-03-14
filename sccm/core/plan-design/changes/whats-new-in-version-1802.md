@@ -44,11 +44,11 @@ Version 1802 drops support for the following products:
 
 ### Reassign distribution point
 <!-- 1306937 -->
-Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to retain distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly in terms of time and network bandwidth to distribute to these remote servers. This feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. For more information, see [reassign a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_reassign).
+Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to retain distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly in terms of time and network bandwidth to distribute to these remote servers. This feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. For more information, see [Reassign a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_reassign).
 
 ### Configure Windows Delivery Optimization to use Configuration Manager boundary groups
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. For more information, see [fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 ### Support for Windows 10 ARM64 devices
 <!-- 1353704 -->
@@ -67,7 +67,7 @@ Starting in this release, use CNG certificates for the following HTTPS-enabled s
 
 ### Boundary group fallback for management points
 <!-- 1324594 -->
-Configure fallback relationships for management points between [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups). This behavior provides greater control for the management points that clients use. For more information, see [configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+Configure fallback relationships for management points between [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
 
 
 ### Cloud distribution point site affinity
@@ -111,11 +111,11 @@ In Configuration Manager 1802, the following insights are available:
 When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate. For more information, see [CMG requirements](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements-for-cloud-management-gateway).
 
 > [!IMPORTANT]
-> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -124,9 +124,9 @@ Microsoft intends to deprecate the Linux and UNIX client support in System Cente
 ### Surface device dashboard
 <!--1355788-->
 The Surface device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. You can view the  items:
-- percent of Surfaces
-- percent of Surface models
-- top five operating system versions
+- Percent of Surfaces
+- Percent of Surface models
+- Top five operating system versions
 
 For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) article.
 
@@ -138,18 +138,18 @@ Starting in this release, Silverlight is no longer installed on client devices a
 
 ### Transition Endpoint Protection workload to Intune using co-management
 <!-- 1357365 -->
- The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). For more information about co-management, see [co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+ The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). For more information about co-management, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
  
 ### Co-management dashboard in System Center Configuration Manager
 <!--1356648-->
-Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [co-management dashboard](\sccm\core\clients\manage\client-management-dashboard) article. 
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](\sccm\core\clients\manage\client-management-dashboard) article. 
 
 
 ## Compliance settings
 
 ### Microsoft Edge browser policies
 <!-- 1357310 -->
-For customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. For more information, see [create Microsoft Edge browser profile](/sccm/compliance/deploy-use/browser-profiles). 
+For customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. For more information, see [Create Microsoft Edge browser profile](/sccm/compliance/deploy-use/browser-profiles). 
 
 
 
@@ -176,7 +176,7 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
+The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
@@ -184,7 +184,7 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 
 ### Improvements to PXE-enabled distribution points
 <!-- 1357580 -->
-On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which does not require Windows Deployment Services (WDS). Because WDS is not required, the PXE-enabled distribution point can be a client or server operating system, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. For more information, see [prepare distribution points for OS deployments](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments).
+On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which does not require Windows Deployment Services (WDS). Because WDS is not required, the PXE-enabled distribution point can be a client or server operating system, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. For more information, see [Prepare distribution points for OS deployments](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments).
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:
@@ -194,7 +194,7 @@ This release includes the following improvements to operating system deployment:
      - Support for all operating system deployment scenarios from Software Center, PXE, and media.
      - Improvements to console actions such as copy, import, export, and warning during object deletion.
      - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
-     - Integration with deployment verification. For more information, see [high-risk task sequence deployments](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
+     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
      - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
     
 ### Deployment templates for task sequences
@@ -242,15 +242,15 @@ Automatic deployment rules can be scheduled to evaluate offset from a base day. 
 
 ### Report for default browser counts
 <!-- 1357830 -->
-Now there is a new report to show the count of clients with a specific web browser as the Windows default. See the **Default Browser counts** report in the **Software - Companies and Products** reports group. For more information, see the [list of reports](/sccm/core/servers/manage/list-of-reports#software---companies-and-products).
+Now there is a new report to show the count of clients with a specific web browser as the Windows default. See the **Default Browser counts** report in the **Software - Companies and Products** reports group. For more information, see the [List of reports](/sccm/core/servers/manage/list-of-reports#software---companies-and-products).
 
 ### Report on Windows AutoPilot device information
 <!-- 1351442 -->
-Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows AutoPilot Device Information**, in the **Hardware - General** reports node. For more information, see [new Windows 10 devices](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) in preparing for co-management.
+Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [Overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows AutoPilot Device Information**, in the **Hardware - General** reports node. For more information, see [New Windows 10 devices](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) in preparing for co-management.
 
 ### Report on Windows 10 Servicing details for a specific collection
 <!--1357653-->
-The **Windows 10 Servicing details for a specific collection** report displays general information about Windows 10 servicing for a specific collection. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. For more information, see the [list of reports](/sccm/core/servers/manage/list-of-reports#operating-system)
+The **Windows 10 Servicing details for a specific collection** report displays general information about Windows 10 servicing for a specific collection. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. For more information, see the [List of reports](/sccm/core/servers/manage/list-of-reports#operating-system)
 
 
 
@@ -270,9 +270,9 @@ Additional policy settings for the [Attack Surface Reduction](/sccm/protect/depl
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
-For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS). 
-1. Websites can be given access to the host’s virtual graphics processor. 
-2. Files downloaded inside the container can be persisted on the host. 
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS): 
+- Websites can be given access to the host’s virtual graphics processor. 
+- Files downloaded inside the container can be persisted on the host. 
 
 
 
