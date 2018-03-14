@@ -32,10 +32,10 @@ Deploying Configuration Manager clients in your environment has the following ex
 > [!NOTE]  
 >  The software version numbers shown in this article only list the minimum version numbers required.  
 
-##  <a name="BKMK_prereqs_computers"></a> Prerequisites for Computer Clients  
+##  <a name="BKMK_prereqs_computers"></a> Prerequisites for computer clients  
  Use the following information to determine the prerequisites for when you install the Configuration Manager client on computers.  
 
-### Dependencies External to Configuration Manager  
+### Dependencies external to Configuration Manager  
 
 |||  
 |-|-|  
@@ -44,7 +44,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Microsoft Background Intelligent Transfer Service (BITS) version 2.5|Required to allow throttled data transfers between the client computer and Configuration Manager site systems. BITS is not automatically downloaded during client installation. When BITS is installed on computers, a restart is typically required to complete the installation.<br /><br /> Most operating systems include BITS, but if they do not (for example, Windows Server 2003 R2 SP2), you must install BITS before you install the Configuration Manager client.|  
 |Microsoft Task Scheduler|Enable this  service on the client for the client installation to complete.|  
 
-### <a name="bkmk_ExternalDependencies"></a> Dependencies External to Configuration Manager and Automatically Downloaded During Installation  
+### <a name="bkmk_ExternalDependencies"></a> Dependencies external to Configuration Manager and automatically downloaded during installation  
  The Configuration Manager client has some potential external dependencies. These dependencies depend on the operating system and the installed software on the client computer.  
 
  If these dependencies are required to complete the installation of the client, they are automatically installed with the client software.  
@@ -79,7 +79,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 
  After  .NET Framework 4.5.2 is installed, additional updates to it might be installed subsequently, which may require addition computer restarts.  
 
-### Configuration Manager Dependencies  
+### Configuration Manager dependencies  
  For more information about the following site system roles, see [Determine the site system roles for System Center Configuration Manager clients](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)  
 
 |||  
@@ -89,7 +89,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Fallback status point|The fallback status point is an optional, but recommended site system role for client deployment. The fallback status point tracks client deployment and enables computers in the Configuration Manager site to send state messages when they cannot communicate with a management point.|  
 |Reporting services point|The reporting services point is an optional, but recommended site system role that can display reports related to client deployment and management. For more information, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).|  
 
-### Installation Method Dependencies  
+### Installation method dependencies  
  The following prerequisites are specific to the various methods of client installation.  
 
 -   Client push installation  
@@ -156,13 +156,13 @@ Deploying Configuration Manager clients in your environment has the following ex
 
      You must be a member of the **Full Administrator** security role to configure automatic client upgrades.  
 
-### Firewall Requirements  
+### Firewall requirements  
  If there is a firewall between the site system servers and the computers onto which you want to install the Configuration Manager client, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
-##  <a name="BKMK_prereqs_mobiledevices"></a> Prerequisites for Mobile Device Clients  
+##  <a name="BKMK_prereqs_mobiledevices"></a> Prerequisites for mobile device clients  
  Use the following information to determine the prerequisites for when you install the Configuration Manager client on mobile devices and use Configuration Manager to enroll them.  
 
-### Dependencies External to Configuration Manager  
+### Dependencies external to Configuration Manager  
 
 -   A Microsoft enterprise certification authority (CA) with certificate templates to deploy and manage the certificates required for mobile devices.  
 
@@ -182,7 +182,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 
      See  [Supported operating systems for site system servers](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).  
 
-### Configuration Manager Dependencies  
+### Configuration Manager dependencies  
  For more information about the following site system roles, see [Determine the site system roles for System Center Configuration Manager clients](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
 
 -   Management point that is configured for HTTPS client connections and enabled for mobile devices  
@@ -225,7 +225,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 
      For more information about how to configure security permissions, see [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md) and  [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
-### Firewall Requirements  
+### Firewall requirements  
  Intervening network devices such as routers and firewalls, and Windows Firewall if applicable, must allow the traffic associated with mobile device enrollment:  
 
 -   Between mobile devices and the enrollment proxy point: HTTPS (by default, TCP 443)  
