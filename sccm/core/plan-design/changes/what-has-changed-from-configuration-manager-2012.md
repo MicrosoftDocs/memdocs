@@ -32,7 +32,7 @@ manager: dougeby
 
 -   Does not  use a year or product identifier in the product name, unlike past versions such as Configuration Manager 2007 or System Center 2012 Configuration Manager.
 
--   Supports incremental, in-product updates, also called update versions. The initial release was version 1511. Subsequent versions are released several times a year as in-console updates, like version 1610.
+-   Supports incremental, in-product updates, also called update versions. The initial release was version 1511. Subsequent versions are released several times a year as in-console updates, like version 1710.
 -   Is installed using a baseline version. While 1511 was the original baseline version, new baseline versions are also released from time to time, like 1802. Baseline versions can be used to install a new System Center Configuration Manager site and hierarchy or to upgrade from a supported version of Configuration Manager 2012.
 
 
@@ -42,7 +42,7 @@ manager: dougeby
  System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates.  
 
  Some versions are only available as updates for existing sites (from within the Configuration Manager console), and cannot be used to install new Configuration Manager sites.   
-For example, the 1610 update is only available from within the Configuration Manager console. It is used to update a site that already runs a version of System Center Configuration Manager.
+For example, the 1710 update is only available from within the Configuration Manager console. It is used to update a site that already runs a version of System Center Configuration Manager.
 
 Periodically, an update version is also released as a new baseline version (like update 1802). This kind of update can be used to install a new hierarchy, without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
 

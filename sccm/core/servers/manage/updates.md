@@ -44,7 +44,7 @@ If you use the Technical Preview branch, see [Technical Preview for System Cente
 
 
 ##  <a name="bkmk_Baselines"></a> Baseline and update versions  
- The first release of System Center Configuration Manager current branch was version 1511, which was a baseline version. More recent baseline versions include version 1606, and 1702:
+ The first release of System Center Configuration Manager current branch was version 1511, which was a baseline version. More recent baseline versions include version 1702, and 1802:
 
 -   Use the latest baseline version when you install a new site in a new hierarchy.  
 
@@ -72,6 +72,7 @@ The following versions of Configuration Manager are available as a baseline, an 
 
 |Version |Availability date|[Support end date](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|in-console update|  
 |-------------|-----------|------------|--------------|------------------------|  
+|[1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000|March 12, 2018|September 12, 2019|Yes|Yes|
 |[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|November 20, 2017|May 20, 2019|No|Yes|
 |[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|July 31, 2017|July 31, 2018|No|Yes|
 |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|March 27, 2017| March 27, 2018|Yes|Yes|
@@ -82,7 +83,7 @@ The following versions of Configuration Manager are available as a baseline, an 
 | 1511 <br /><br /> 5.00.8325.1000|December 8, 2015| December 8, 2016|Yes|No|  
 
 
-*(Note 1)* The 1606 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC). For example, on the VLSC you can search for *System Center Config Mgr (current branch and LTSB)*, and both 1606 and 1702 version baseline media are returned, and available for download.
+*(Note 1)* The 1802 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC). For example, on the VLSC you can search for *System Center Config Mgr (current branch and LTSB)*, and both 1802 and 1702 version baseline media are returned, and available for download.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
 
@@ -90,7 +91,7 @@ To check the version of your Configuration Manager site, in the console go to **
  When you use a production ready installation of System Center Configuration Manager, also referred to as the current branch, most updates you install are available using the Updates and Servicing channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration, and includes only updates that Microsoft recommends for all customers.   
  These include:  
 
--   New versions, like version 1610, 1702, or 1706.  
+-   New versions, like version 1702, 1706, 1710, or 1802.  
 
 -   Updates, that include new features for your current version.
 
