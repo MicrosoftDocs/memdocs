@@ -57,7 +57,15 @@ When you run setup from the CD.Latest folder created for version 1606, and use t
 <!-- ## Backup and recovery  -->
 
 
-<!-- ## Client deployment and upgrade  -->
+## Client deployment and upgrade
+
+### Azure AD-enabled clients can't communicate with management point
+<!--501089-->
+*Applies to: Configuration Manager version 1706*
+<!--also fixed in 1710 HFRU-->
+In the scenario to [install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure), client communication fails when the HTTPS-enabled management point uses alternate database credentials. Mitigate this issue with one of the following actions:
+- Update the site to the latest version, and apply the latest hotfix
+- Change the credentials that the management point uses.
 
 
 <!-- ## Operating system deployment  -->
