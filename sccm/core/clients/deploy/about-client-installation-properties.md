@@ -113,7 +113,7 @@ This property can specify the URL of a cloud management gateway. Use this URL to
 - Run the following command: `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
 - Append the "https://" prefix to use with the **/mp** property.
 
-Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
  > [!Important]
  > When specifying the URL of a cloud management gateway for the **/mp** property, it must start with **https://**.
@@ -251,14 +251,16 @@ Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` doesn't install Software Cente
 
 ### AADCLIENTAPPID
 
-Specifies the Azure Active Directory (Azure AD) client app identifier. The client app is created or imported when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. An Azure administrator can obtain the value for this property from the Azure portal. For more information, see [get application ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key). For the **AADCLIENTAPPID** property, this application ID is for the "Native" application type.
+Specifies the Azure Active Directory (Azure AD) client app identifier. The client app is created or imported when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key). For the **AADCLIENTAPPID** property, this application ID is for the "Native" application type.
 
 Example: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
 
 ### AADRESOURCEURI
 
-Specifies the Azure AD server app identifier. The server app is created or imported when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. When creating the server app, in the Create Server Application dialog, this property is the **App ID URI**. 
+Specifies the Azure AD server app identifier. The server app is created or imported when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. When creating the server app, in the Create Server Application dialog, this property is the **App ID URI**.
+
+An Azure administrator can get the value for this property from the Azure portal. In the **Azure Active Directory** blade, find the server app under **App registrations**. This app is of "Web app / API" application type. Open the app, click **Settings**, and then **Properties**. Use the **App ID URI** value for this AADRESOURCEURI client installation property.
 
 Example: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
@@ -626,7 +628,7 @@ Example: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
  Specifies the Configuration Manager site to assign the client to. This value can either be a three-character site code or the word AUTO. If you specify AUTO, or do not specify this property, the client attempts to determine its site assignment from Active Directory Domain Services or from a specified management point. To enable AUTO for client upgrades, you must also set [SITEREASSIGN](#sitereassign) to TRUE.    
 
 > [!NOTE]  
->  Don't use AUTO if you also specify the Internet-based management point (CCMHOSTNAME). In that case, you must directly assign the client to its site.  
+>  Don't use AUTO if you also specify the internet-based management point (CCMHOSTNAME). In that case, you must directly assign the client to its site.  
 
  Example: `CCMSetup.exe SMSSITECODE=XZY`  
 
