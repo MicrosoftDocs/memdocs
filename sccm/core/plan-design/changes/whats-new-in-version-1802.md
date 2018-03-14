@@ -24,6 +24,7 @@ Update 1802 for Configuration Manager current branch is available as an in-conso
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
+>
 >  Learn more about:    
 >   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
@@ -71,13 +72,34 @@ Configure fallback relationships for management points between [boundary groups]
 
 ### Cloud distribution point site affinity
 <!--503719-->
-This feature benefits customers with a multi-site, geographically-dispersed hierarchy using cloud distribution points. When an internet-based client searches for content, previously there was no order to the list of cloud distribution points received by the client. This behavior could result in internet-based clients receiving content from geographically-distant cloud distribution points. Downloading content from such a distant server is typically slower than a closer server.
+This feature benefits customers with a multi-site, geographically dispersed hierarchy using cloud distribution points. When an internet-based client searches for content, previously there was no order to the list of cloud distribution points received by the client. This behavior could result in internet-based clients receiving content from geographically distant cloud distribution points. Downloading content from such a distant server is typically slower than a closer server.
  
 With cloud distribution point site affinity, an internet-based client receives an ordered list. This list prioritizes cloud distribution points from the client's assigned site. This behavior allows the administrator to preserve their design intent for content downloads from site resources.
  
 
+## Management insights
+<!-- 1353967 -->
+Management insights in System Center Configuration Manager provide information about the current state of your environment. The information is based on analysis of data from the site database. Insights help you to better understand your environment and take action based on the insight. For details see, [Management Insights](/sccm/core/servers/manage/management-insights)
 
-
+In Configuration Manager 1802, the following insights are available:
+- Applications:
+    - Applications without deployments
+- Cloud Services: <!--1356412-->
+    - Assess co-management readiness 
+    - Enable your devices to be hybrid Azure Active Directory-joined
+    - Modernize your identity and access infrastructure
+    -  Upgrade your clients to Windows 10, version 1709 or above 
+- Collections:
+    - Empty Collections
+- Simplified Management:  <!--1355148-->
+    - Outdated client versions  
+- Software Center: 
+    - Direct users to Software Center instead of Application Catalog  
+    - Use the new version of Software Center 
+- Windows 10: <!--1357421-->
+    - Configure Windows telemetry and commercial ID key 
+    - Connect Configuration Manager to Upgrade Readiness 
+   
 <!-- ## Migration  -->
 
 
@@ -91,10 +113,36 @@ When creating an instance of the [cloud management gateway](/sccm/core/clients/m
 > [!IMPORTANT]
 > This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
+### Configure hardware inventory to collect strings larger than 255 characters
+<!-- 1357389 -->
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) article. 
 
+ ### Deprecation announcement for Linux and Unix client support
+ <!--510139-->
+Microsoft intends to deprecate the Linux and UNIX client support in System Center Configuration Manager roughly one year from now, such that the clients will not be included in the SCCM 1902 release in early calendar 2019.  The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810.  After Configuration Manager 1810, customers should consider Microsoft’s Operations Management Suite for managing Linux servers.  OMS has extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
-<!-- ## Co-management -->
+### Surface device dashboard
+<!--1355788-->
+The Surface device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. You can view the  items:
+- percent of Surfaces
+- percent of Surface models
+- top five operating system versions
 
+For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) article.
+
+### Change in the Configuration Manager client install
+<!--1356195-->|
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites fo deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies)
+
+## Co-management
+
+### Transition Endpoint Protection workload to Intune using co-management
+<!-- 1357365 -->
+ The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). For more information about co-management, see [co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+ 
+### Co-management dashboard in System Center Configuration Manager
+<!--1356648-->
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [co-management dashboard](\sccm\core\clients\manage\client-management-dashboard) article. 
 
 
 ## Compliance settings
@@ -119,6 +167,9 @@ Configure an application deployment to not automatically upgrade any superseded 
 <!-- 1357015 -->
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
 
+### Run scripts improvements 
+<!-- 1236459 -->
+ Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting and script output is truncated to 4 KB. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
 
 ## Operating system deployment
@@ -146,6 +197,15 @@ This release includes the following improvements to operating system deployment:
      - Integration with deployment verification. For more information, see [high-risk task sequence deployments](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
      - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
     
+### Deployment templates for task sequences
+<!-- 1357391 -->
+The [deployment wizard for task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
+
+### Phased deployments for task sequences
+<!--1356837-->
+ Phased deployments is a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections. You can [create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with the default of two phases, or manually configure multiple phases. Phased deployment of task sequences does not support PXE or media installation.
+
+
 
 
 ## Software Center
@@ -158,10 +218,23 @@ If an end user or desktop technician needs to install multiple applications on a
 <!-- 1322613 -->
 If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. <!-- For more information, see [](). -->
 
+### Hide installed applications in Software Center
+<!--1357592-->
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) has additional details.  
+
+### Hide unapproved applications in Software Center
+ <!--1355146-->
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) has additional details.  
+### Software Center shows user additional compliance information
+<!-- 1097546 -->
+ When using Device Health Attestation status as a compliance policy rule for conditional access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
 
 
+ ## Software updates 
 
-<!-- ## Software updates -->
+### Schedule automatic deployment rule evaluation to be offset from a base day. 
+<!--1357133-->
+Automatic deployment rules can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. For details, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates#BKMK_CreateAutomaticDeploymentRule). 
 
 
 
@@ -175,6 +248,10 @@ Now there is a new report to show the count of clients with a specific web brows
 <!-- 1351442 -->
 Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows AutoPilot Device Information**, in the **Hardware - General** reports node. For more information, see [new Windows 10 devices](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) in preparing for co-management.
 
+### Report on Windows 10 Servicing details for a specific collection
+<!--1357653-->
+The **Windows 10 Servicing details for a specific collection** report displays general information about Windows 10 servicing for a specific collection. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. For more information, see the [list of reports](/sccm/core/servers/manage/list-of-reports#operating-system)
+
 
 
 <!-- ## Inventory  -->
@@ -185,7 +262,18 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 
 
-<!-- ## Protect devices -->
+ ## Protect devices
+
+### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
+<!-- 1356220 -->
+Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+
+### New host interaction settings for Windows Defender Application Guard
+<!-- 1356256 -->
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS). 
+1. Websites can be given access to the host’s virtual graphics processor. 
+2. Files downloaded inside the container can be persisted on the host. 
+
 
 
 
@@ -196,6 +284,7 @@ This release includes the following improvements to the Configuration Manager co
 - Device lists under Assets and Compliance, Devices, now display the primary user by default. This column only displays in the Devices node. The last logged on user can also be added as an optional column.<!-- 1357280 --> Enable [user and device affinity](/sccm/core/clients/deploy/about-client-settings#user-and-device-affinity) client settings for the site to associate a primary user with a device.
 - If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
 - When using remote control on a client with multiple monitors at different DPI scaling, the mouse cursor now correctly maps between them. <!--433170-->
+- The [Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) displays a list of relevant devices when graph sections are selected. <!--1357281 --> 
 
 
 

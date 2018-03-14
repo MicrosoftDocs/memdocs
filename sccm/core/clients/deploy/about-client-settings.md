@@ -621,11 +621,11 @@ Select **Select Color** to define the primary color used by Software Center.
 - **Select a logo for Software Center** </br>
 Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces.  
          
-### Hide unapproved applications in Software Center
-Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   
+### <a name="bkmk_HideUnapproved"></a> Hide unapproved applications in Software Center
+Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   <!--1355146-->
 
-### Hide installed applications in Software Center
-Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled.    
+### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
+Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled. <!--1357592-->   
   
 ### Software Center tab visibility
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:

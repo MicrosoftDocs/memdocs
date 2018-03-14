@@ -43,6 +43,7 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
 
  |Feature          |Added as pre-release | Added as a full feature|  
 |------------------|---------------------|---------------------|
+|Phased Deployments<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Run Task Sequence Step <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Windows Defender Exploit Guard <!-- 1355468 --> |  [Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Device Health Attestation assessment for conditional access compliance policies <!-- 1235616 --> |  [Version 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|

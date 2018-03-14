@@ -44,7 +44,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Microsoft Background Intelligent Transfer Service (BITS) version 2.5|Required to allow throttled data transfers between the client computer and Configuration Manager site systems. BITS is not automatically downloaded during client installation. When BITS is installed on computers, a restart is typically required to complete the installation.<br /><br /> Most operating systems include BITS, but if they do not (for example, Windows Server 2003 R2 SP2), you must install BITS before you install the Configuration Manager client.|  
 |Microsoft Task Scheduler|Enable this  service on the client for the client installation to complete.|  
 
-### Dependencies External to Configuration Manager and Automatically Downloaded During Installation  
+### <a name="bkmk_ExternalDependencies"></a> Dependencies External to Configuration Manager and Automatically Downloaded During Installation  
  The Configuration Manager client has some potential external dependencies. These dependencies depend on the operating system and the installed software on the client computer.  
 
  If these dependencies are required to complete the installation of the client, they are automatically installed with the client software.  
@@ -58,7 +58,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Microsoft Visual C++ 2005 Redistributable version 8.0.50727.42|For version 1606 and earlier, required to support Microsoft SQL Server Compact operations.|  
 |Windows Imaging APIs 6.0.6001.18000|Required to allow Configuration Manager to manage Windows image (.wim) files.|  
 |Microsoft Policy Platform 1.2.3514.0|Required to allow clients to evaluate compliance settings.|  
-|Microsoft Silverlight 5.1.41212.0|Required to support the Application Catalog website user experience. Starting in Configuration Manager 1802, Silverlight is no longer installed automatically. The primary functionality of the Application Catalog is now included in Software Center. Support for the Application Catalog web site ends with the first update released after June 1, 2018.|  
+|Microsoft Silverlight 5.1.41212.0|Required to support the Application Catalog website user experience. Starting in Configuration Manager 1802, Silverlight is no longer installed automatically. The primary functionality of the Application Catalog is now included in Software Center. Support for the Application Catalog web site ends with the first update released after June 1, 2018.<!--1356195-->|  
 |Microsoft .NET Framework version 4.5.2|Required to support client operations. Automatically installed on the client computer if it does not have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 3.5 SP2 components|Required to store information related to client operations.|  
 |Microsoft Windows Imaging Components|Required by Microsoft .NET Framework 4.0 for Windows Server 2003 or Windows XP SP2 for 64-bit computers.|
