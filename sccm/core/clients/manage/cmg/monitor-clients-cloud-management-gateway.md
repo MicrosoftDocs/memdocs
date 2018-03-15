@@ -22,7 +22,7 @@ After the cloud management gateway is running and clients are connecting through
 
 ## Monitor clients
 
-Clients connected through the cloud management gateway appear in the Configuration Manager console the same way on-premises clients do. For more information, see [how to monitor clients](monitor-clients.md).
+Clients connected through the cloud management gateway appear in the Configuration Manager console the same way on-premises clients do. For more information, see [how to monitor clients](/sccm/core/clients/manage/monitor-clients).
 
 
 

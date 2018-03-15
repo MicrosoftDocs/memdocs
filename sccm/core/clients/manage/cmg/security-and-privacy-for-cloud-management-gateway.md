@@ -17,7 +17,7 @@ ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article includes security and privacy information for the Configuration Manager cloud management gateway. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway).
+This article includes security and privacy information for the Configuration Manager cloud management gateway. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
 
 ## Security guidance for cloud management gateway
@@ -43,7 +43,7 @@ This subset provides administrators with more control over security. The CTL res
 
 ## Next steps
 
-- [Plan for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [Set up cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway)
-- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cloud-management-gateway-faq)
-- [Certificates for cloud management gateway](/sccm/core/clients/manage/certificates-for-cloud-management-gateway)
+- [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+- [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)
+- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+- [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
