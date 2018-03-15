@@ -17,7 +17,7 @@ ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Depending upon the scenario you use to manage clients on the internet with the cloud management gateway (CMG), you need one or more digital certificates. For more information about the different scenarios, see [plan for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway).
+Depending upon the scenario you use to manage clients on the internet with the cloud management gateway (CMG), you need one or more digital certificates. For more information about the different scenarios, see [plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
 
 ## CMG server authentication certificate
@@ -138,6 +138,6 @@ Provision this certificate outside of the context of Configuration Manager. For 
 
 ## Next steps
 
-- [Set up cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway)
-- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cloud-management-gateway-faq)
-- [Security and privacy for cloud management gateway](/sccm/core/clients/manage/security-and-privacy-for-cloud-management-gateway)
+- [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)
+- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+- [Security and privacy for cloud management gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
