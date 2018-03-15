@@ -309,6 +309,9 @@
 
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
 ###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)
+###  [Security and privacy for cloud management gateway](clients/manage/security-and-privacy-for-cloud-management-gateway.md)
+###  [FAQ for cloud management gateway](clients/manage/cloud-management-gateway-faq.md)
+###  [Certificates for cloud management gateway](clients/manage/certificates-for-cloud-management-gateway.md)
 ###  [Set up cloud management gateway](clients/manage/setup-cloud-management-gateway.md)
 ###  [Monitor clients on cloud management gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
 ###  [Plan for Internet-based Client Management](clients/manage/plan-internet-based-client-management.md)
