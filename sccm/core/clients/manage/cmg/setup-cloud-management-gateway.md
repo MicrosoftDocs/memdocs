@@ -1,6 +1,6 @@
 ---
 title: Set up cloud management gateway
-titleSuffix: Configuration Manager
+titleSuffix: System Center Configuration Manager
 description: Use this step-by-step process for setting up a cloud management gateway (CMG).
 author: aczechowski
 ms.author: aaroncz
@@ -27,13 +27,13 @@ This process includes the steps required to set up a cloud management gateway (C
 
 ## Before you begin
 
-Start by reading the article [plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). Use that article to determine your CMG design. 
+Start by reading the article [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). Use that article to determine your CMG design. 
 
 Use the following checklist to make sure you have the necessary information and prerequisites to create a CMG:  
 
 - The Azure environment to use. For example, the Azure Public Cloud or the Azure US Government Cloud.  
 
-- You need one or more certificates for CMG, depending upon your design. For more information, see [certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
+- You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
 - Starting in version 1802, choose whether you use the **Azure Resource Manager deployment** or a **classic service deployment**. For more information, see [Planning for Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). You need the following requirements for an Azure Resource Manager deployment of CMG:  
 
