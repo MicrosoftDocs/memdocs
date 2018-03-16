@@ -57,7 +57,7 @@ This collection of links was chosen to give Configuration Manager administrators
 
 [For Windows 10, there is an API for an anti-malware scan interface](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/?source=mmpc)
 
-## PowerShell Parameters Security
+## PowerShell parameters security
 Passing parameters is a way to have flexibility with your scripts and defer decisions until run time. It also opens up another risk surface. 
 Best practices for preventing malicious parameters or script injection are:
 
