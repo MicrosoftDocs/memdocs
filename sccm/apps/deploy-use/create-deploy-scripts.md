@@ -16,7 +16,7 @@ caps.latest.revision: 14
 caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 
 ---
 
@@ -40,7 +40,7 @@ With this integration in System Center Configuration Manager, you can use the *R
 - Monitor script execution and view reporting results from script output.
 
 >[!WARNING]
->Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
+>Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts. [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security)
 
 ## Prerequisites
 
@@ -63,8 +63,9 @@ Run Scripts currently supports:
 - Scripting languages: PowerShell
 - Parameter types: integer, string, and list.
 
+
 >[!WARNING]
->Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include to secrets in your PowerShell scripts (no passwords, etc.). <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+>Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include to secrets in your PowerShell scripts (no passwords, etc.). [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
 
 ## Group Policy considerations for scripts
@@ -178,6 +179,10 @@ Adding parameters to a script provides increased flexibility for your work. The 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
 Each of your script's parameters has its own dialog for adding further details and validation.
+
+>[!IMPORTANT]
+> In Configuration Manager version 1802, parameter values can't contain an apostrophe. 
+
 
 ### Parameter validation
 
