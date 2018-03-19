@@ -3,7 +3,7 @@ title: Support for Windows features
 titleSuffix: Configuration Manager
 description: Learn which Windows and networking features System Center Configuration Manager supports.
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -123,7 +123,7 @@ Configuration Manager does not support the following functionality over DirectAc
 |Cloud management gateway|IPv4 is required to support Microsoft Azure and the cloud management gateway.|  
 |Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
 |Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
-|OS deployment|In version 1710 and prior, IPv4 is required to support OS deployment. </br></br>Starting in version 1802, enable a PXE responder on a distribution point without Windows Deployment Service. This new PXE responder service supports IPv6. Other aspects of the OS deployment feature, such as capturing or setting static IP addresses during the task sequence, continue to require IPv4. |  
+|OS deployment|IPv4 is required to support OS deployment. |  
 |Wake-up proxy communication|IPv4 is required to support the client wake-up proxy packets.|  
 |Windows CE|IPv4 is required to support the Configuration Manager client on Windows CE devices.|  
 

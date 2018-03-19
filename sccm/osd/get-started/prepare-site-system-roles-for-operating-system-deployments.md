@@ -3,7 +3,7 @@ title: Prepare site system roles for OSD
 titleSuffix: Configuration Manager
 description: Configure the site system roles before you deploy operating systems
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -72,9 +72,6 @@ You can customize the RamDisk TFTP block and window sizes for PXE-enabled distri
 
 -   **TFTP window size**: TFTP requires an acknowledgment (ACK) packet for each block of data that is sent. The server does not send the next block in the sequence until it receives the ACK packet for the previous block. TFTP windowing enables you to define how many data blocks it takes to fill a window. The server sends the data blocks back-to-back until the window is filled, and then the client sends an ACK packet. If you increase this window size, it reduces the number of round-trip delays between the client and server, and it decreases the overall required time to download a boot image.  
   
-
-> [!Note]  
-> Both Windows Deployment Services and the Configuration Manager PXE responder service support these TFTP configurations.
 
 
 #### Modify the RamDisk TFTP window size  

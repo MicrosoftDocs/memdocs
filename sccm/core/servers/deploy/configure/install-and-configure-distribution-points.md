@@ -3,7 +3,7 @@ title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Host the content that you deploy to devices and users by using distribution points
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -282,8 +282,6 @@ For each pull-distribution point that you configure, you must specify one or mor
 ### PXE  
 Specify whether to enable PXE on the distribution point. When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if necessary. WDS is the service that performs the PXE boot to install operating systems. After you finish the wizard to create the distribution point, Configuration Manager installs a provider in WDS that uses the PXE boot functions. 
 
-Starting in version 1802, you can enable PXE on a distribution point without WDS. 
-
 When you choose **Enable PXE support for clients**, configure the following settings:  
 
  > [!Note]  
@@ -294,8 +292,6 @@ When you choose **Enable PXE support for clients**, configure the following sett
 -   **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS so that it responds to PXE service requests. Use this box to enable and disable the service without removing the PXE functionality from the distribution point.  
 
 -   **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager does not manage. 
-
--   **Enable a PXE responder without Windows Deployment Service**: Starting in version 1802, this option enables a PXE responder on the distribution point, which does not require WDS. This PXE responder supports IPv6 networks. If you enable this option on a distribution point that is already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this option, but still **Enable PXE support for clients**, then the distribution point enables WDS again. <!--1357580-->
 
 -   **Require a password when computers use PXE**: To provide additional security for your PXE deployments, specify a strong password.  
 
@@ -348,11 +344,6 @@ When you **Enable multicast to simultaneously send data to multiple clients**, c
 
 > [!NOTE]  
 >  Multicast deployments conserve network bandwidth by simultaneously sending data to multiple Configuration Manager clients instead of sending a copy of the data to each client over a separate connection. For more information about using multicast for operating system deployment, see [Use multicast to deploy Windows over the network with System Center Configuration Manager](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
-
-> [!IMPORTANT]
-> Starting in version 1802, to enable and configure multicast on the **Multicast** tab of the distribution point properties, the distribution point must use WDS. 
-> - If you **Enable PXE support for clients** and **Enable multicast to simultaneously send data to multiple clients**, then you cannot **Enable a PXE responder without Windows Deployment Service**.
-> - If you **Enable PXE support for clients** and **Enable a PXE responder without Windows Deployment Service**, then you cannot **Enable multicast to simultaneously send data to multiple clients**
 
 
 

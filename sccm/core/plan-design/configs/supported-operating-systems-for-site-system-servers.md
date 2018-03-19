@@ -3,7 +3,7 @@ title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role.
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -217,7 +217,7 @@ This OS isn't supported for site servers or site system roles, except for the di
 
 -   Distribution point  
 
-    -   Distribution points on this OS are not supported for PXE with the default Windows Deployment Services. Starting in version 1802, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe). 
+    -   Distribution points on this OS are not supported for PXE. 
 
     -   Distribution points on this OS version do not support Multicast.  
 
@@ -230,7 +230,7 @@ This OS isn't supported for site servers or site system roles, except for the di
 
 -   Distribution point  
 
-    -   Distribution points on this OS are not supported for PXE with the default Windows Deployment Services. Starting in version 1802, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).  
+    -   Distribution points on this OS are not supported for PXE.  
 
     -   Distribution points on this OS version do not support Multicast.  
 
@@ -243,7 +243,7 @@ This OS isn't supported for site servers or site system roles, except for the di
 
 -   Distribution point  
 
-    -   Distribution points on this OS are not supported for PXE with the default Windows Deployment Services. Starting in version 1802, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).  
+    -   Distribution points on this OS are not supported for PXE.  
 
     -   Distribution points on this OS version do not support Multicast.  
 
@@ -254,7 +254,7 @@ This OS isn't supported for site servers or site system roles, except for the di
 ## The server core installation of Windows Server 2016
 With the hotfix rollup from KB3186654, this OS is supported for use as a distribution point with the following limitations:  
   -   Only the x64-bit version is supported.
-  -   Distribution points on this OS do not support PXE or Multicast with the default Windows Deployment Services. Starting in version 1802, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).  
+  -   Distribution points on this OS do not support PXE or Multicast.  
 
 
 
@@ -263,7 +263,7 @@ With the hotfix rollup from KB3186654, this OS is supported for use as a distrib
 
 -   Only the x64-bit version is supported.
 
--   Distribution points on this OS do not support PXE or Multicast with the default Windows Deployment Services. Starting in version 1802, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).  
+-   Distribution points on this OS do not support PXE or Multicast.  
 
 
 
@@ -272,4 +272,4 @@ With the hotfix rollup from KB3186654, this OS is supported for use as a distrib
 
 -   Only the 64-bit version is supported.  
 
--   Distribution points on this OS do not support PXE or Multicast with the default Windows Deployment Services. Starting in version 1802, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).
+-   Distribution points on this OS do not support PXE or Multicast.
