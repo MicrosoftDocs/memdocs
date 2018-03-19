@@ -3,7 +3,7 @@ title: OSD infrastructure requirements
 titleSuffix: Configuration Manager
 description: Learn the external and product dependencies and requirements for operating system deployment
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -94,7 +94,7 @@ For a list of the versions of the Windows 10 ADK that you can use with different
 
 
 ### Windows Deployment Services (WDS)  
- In version 1710 and prior, WDS is needed for PXE deployments. Starting in version 1802, you can enable PXE on a distribution point without WDS. For more information, see [Windows Deployment Services](#BKMK_WDS) in this topic. 
+ WDS is needed for PXE deployments and when you use multicast to optimize bandwidth in your deployments. For more information, see [Windows Deployment Services](#BKMK_WDS) in this article.  
 
 
 ### Dynamic Host Configuration Protocol (DHCP)  
@@ -174,9 +174,7 @@ For a list of the versions of the Windows 10 ADK that you can use with different
 
 
 ##  <a name="BKMK_WDS"></a> Windows Deployment Services  
- In version 1710 and prior, Windows Deployment Services (WDS) must be installed on the same server as the distribution points that you configure to support PXE or multicast. WDS is included in the operating system of the server. For PXE deployments, WDS is the service that performs the PXE boot. When the distribution point is installed and enabled for PXE, Configuration Manager installs a provider into WDS that uses the WDS PXE boot functions.  
-
- Starting in version 1802, you can enable PXE on a distribution point without WDS. For more information, see the **Enable a PXE responder without Windows Deployment Service** option in [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe)
+ Windows Deployment Services (WDS) must be installed on the same server as the distribution points that you configure to support PXE or multicast. WDS is included in the operating system of the server. For PXE deployments, WDS is the service that performs the PXE boot. When the distribution point is installed and enabled for PXE, Configuration Manager installs a provider into WDS that uses the WDS PXE boot functions.  
 
 > [!NOTE]  
 >  If the server requires a restart, the installation of WDS might fail. 

@@ -194,6 +194,40 @@ After clients receive the deployment, the following behavior applies:
 
 
 
+## Deploy user-available applications on Azure AD-joined devices
+<!-- 1322613 -->
+If you deploy applications as available to users, starting in version 1802 they can browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
+
+#### Prerequisites
+
+- Enable HTTPS on the management point  
+
+- Integrate the site with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**  
+
+    - Configure [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+
+- Deploy an application as available to a collection of users from Azure AD  
+
+- Distribute any application content to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)  
+
+- Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group  
+
+- The client OS must be Windows 10, and joined to Azure AD. Either as purely cloud domain-joined, or hybrid Azure AD-joined.  
+
+- To support internet-based clients:  
+
+    - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)  
+
+    - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group  
+
+- To support clients on the intranet:  
+
+    - Add the cloud distribution point to a boundary group used by the clients  
+
+    - Clients must be able to resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point  
+
+
+
 ## Next steps
 
    -  [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)  
