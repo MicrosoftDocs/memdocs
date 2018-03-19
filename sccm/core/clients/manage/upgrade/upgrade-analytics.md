@@ -2,13 +2,13 @@
 # required metadata
 
 title: Upgrade Readiness
-titleSuffix: "Configuration Manager"
+titleSuffix: "System Center Configuration Manager"
 description: Integrate Upgrade Readiness with Configuration Manager. Access upgrade compatibility data in your admin console. Target devices for upgrade or remediation.
 keywords:
-author: mattbriggs
-ms.author: mabrigg
-manager: angerobe
-ms.date: 7/31/2017
+author: mestew   
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -37,6 +37,8 @@ Upgrade Readiness (formerly Upgrade Analytics) is a part of [Windows Analytics](
 
 Upgrade Readiness is a solution that runs on [Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview). You can read more about Upgrade Readiness in [Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness).
 
+>[!WARNING]
+>For Upgrade Readiness to function within Configuration Manager, you must upgrade to Configuration Manager version 1802. The Upgrade Readiness Connector will no longer function in Configuration Manager versions earlier than 1802.  <!--507205-->
 ## Configure clients
 
 Upgrade Readiness, like all Windows Analytics solutions, relies on Windows telemetry data. In order for Upgrade Readiness to receive sufficient telemetry data, the following pre-requisites must be satisfied:
@@ -48,14 +50,14 @@ Upgrade Readiness, like all Windows Analytics solutions, relies on Windows telem
 Commercial ID key and Windows telemetry can be configured in **Client Settings**. To learn more, see [Use Windows Analytics with Configuration Manager](../monitor-windows-analytics.md).
 
 >[!NOTE]
->If you encounter issues with Upgrade Readiness not receiving telemetry data from devices in your environment as expected then some of these issues may be addressed by using the [Upgrade Readiness deployment script](/windows/deployment/upgrade/upgrade-readiness-deployment-script). However, in most environments deploying the correct KBs, configuring commercial ID key and telemetry in **Client Settings** should be sufficient.
+>If you encounter issues with Upgrade Readiness not receiving telemetry data from devices in your environment as expected, then some of these issues may be addressed by using the [Upgrade Readiness deployment script](/windows/deployment/upgrade/upgrade-readiness-deployment-script). However, in most environments, deploying the correct KBs, configuring commercial ID key, and telemetry in **Client Settings** should be sufficient.
 
 ## Connect Configuration Manager to Upgrade Readiness
 
 Beginning with Current Branch version 1706, the [Azure services wizard](../../../servers/deploy/configure/azure-services-wizard.md) is used to simplify the process of configuring Azure services you use with Configuration Manager. To connect Configuration Manager with Upgrade Readiness, an Azure AD app registration of type *Web app / API* must be created in the [Azure portal](https://portal.azure.com). To read more about how to create an app registration, see [Register your application with your Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration). In the **Azure portal**, you will also need to give your newly registered web app *contributor* permissions on the resource group that contains the OMS workspace that hosts your Upgrade Readiness data. The **Azure services wizard** will use this app registration to allow Configuration Manager to communicate securely with Azure AD and connect your infrastructure to your Upgrade Readiness data.
 
 >[!IMPORTANT]
->*Contributor* permissions must be granted to the app itself as opposed to an Azure AD user identity. This is because it is the registered app and not an Azure AD user that accesses the data on behalf of your Configuration Manager infrastructure. To do this, you will have to search for the name of the app registration in the **Add users** blade when assigning the permission. This the same process that must be followed when [providing Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) for connections to [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm). These steps must be completed before the app registration is imported into Configuration Manager with the *Azure services wizard*.
+>*Contributor* permissions must be granted to the app itself as opposed to an Azure AD user identity. This is because it is the registered app and not an Azure AD user that accesses the data on behalf of your Configuration Manager infrastructure. To grant the permissions, you will have to search for the name of the app registration in the **Add users** area when assigning the permission. The same process that must be followed when [providing Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) for connections to [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm). These steps must be completed before the app registration is imported into Configuration Manager with the *Azure services wizard*.
 
 ### Use the Azure Wizard to create the connection
 
@@ -66,7 +68,7 @@ On the *Configuration* page, the following values are pre-populated if the web a
 -  Azure resource group
 -  Windows Analytics workspace
 
-More than one resource group or workspace will be available only if the registered Azure AD web app has *Contributor* permissions on more than one resource group or if the selected resource group contains more than one OMS workspace.
+More than one resource group or workspace will be available only if the registered Azure AD web app has *Contributor* permissions on more than one resource group or if the selected resource group has more than one OMS workspace.
  
 ## View and use Upgrade Readiness information in Configuration Manager
 
