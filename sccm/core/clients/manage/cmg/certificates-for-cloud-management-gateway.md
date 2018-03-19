@@ -131,9 +131,10 @@ After issuing a client authentication certificate to a computer, use this proces
 
 ## Enable management point for HTTPS
 
-*When managing Windows 10 clients joined to Azure AD, this certificate is required for management points.*
-
-When managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.
+*Certificate requirements*
+- In versions 1706 or 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.
+- In version 1710, when managing Windows 10 clients joined to Azure AD, this certificate is required for management points. 
+- Starting in version 1802, this certificate is required in all scenarios. 
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 

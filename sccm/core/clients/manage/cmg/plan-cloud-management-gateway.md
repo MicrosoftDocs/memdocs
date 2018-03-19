@@ -33,7 +33,7 @@ This article provides the foundational knowledge to learn about the CMG, design 
 
 ## Scenarios 
 
-There are multiple scenarios for which a CMG is beneficial. Typical devices include roaming devices such as laptops, or remote/branch office devices that are less expensive to manage over the internet than across a WAN. The following scenarios are some of the more common:  
+There are several scenarios for which a CMG is beneficial. The following scenarios are some of the more common:  
 
 - Manage traditional Windows clients with Active Directory domain-joined identity. These clients include Windows 7, Windows 8.1, and Windows 10. It uses PKI certificates to secure the communication channel. Management activities include:  
     - Software updates and endpoint protection
@@ -47,8 +47,19 @@ There are multiple scenarios for which a CMG is beneficial. Typical devices incl
 
 - Install the Configuration Manager client on Windows 10 devices over the internet. Using Azure AD allows the device to authenticate to the CMG for client registration and assignment. You can install the client manually, or using another software distribution method, such as Microsoft Intune.  
 
-- Co-management. While CMG is not a prerequisite for co-management, CMG helps complete an end-to-end scenario for new devices involving Windows AutoPilot, Azure AD, Microsoft Intune, and Configuration Manager.  
+- New device provisioning with co-management. CMG is not required for co-management. It helps complete an end-to-end scenario for new devices involving Windows AutoPilot, Azure AD, Microsoft Intune, and Configuration Manager.  
 
+### Specific use cases
+Across these scenarios the following specific device use cases may apply:
+
+- Roaming devices such as laptops  
+
+- Remote/branch office devices that are less expensive and more efficient to manage over the internet than across a WAN or through a VPN.  
+
+- Mergers and acquisitions, where it may be easiest to join devices to Azure AD and manage through a CMG.  
+
+> [!Important]
+> By default all clients receive policy for a CMG, and start using it when they become internet-based. Depending upon the scenario and use case that applies to your organization, you may need to scope usage of the CMG. For more information, see the [Enable clients to use a cloud management gateway](/sccm/core/clients/deploy/about-client-settings#enable-clients-to-use-a-cloud-management-gateway) client setting.
 
 
 ## Topology design
@@ -141,9 +152,9 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-- Integration with **Azure AD** may be required for Windows 10 clients. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
+    - Starting in version 1802, you must configure all [**management points to use HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
 
-    - If using Azure AD, you must configure all [**management points to use HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+- Integration with **Azure AD** may be required for Windows 10 clients. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
 - Clients must use **IPv4**.  
 
@@ -176,7 +187,7 @@ The following table lists CMG support for Configuration Manager features:
 | Client install</br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1706) |
 | Software distribution (device-targeted)     | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)</br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1710) |
-| Software distribution (user-targeted, available)</br>([all requirements](/sccm/apps/deploy-use/deploy-applications))      | ![Supported](media/green_check.png)  (1802) |
+| Software distribution (user-targeted, available)</br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png)  (1802) |
 | Windows 10 in-place upgrade task sequence     | ![Supported](media/green_check.png)  (1802) |
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |
@@ -259,15 +270,21 @@ For more information on CMG scale, see [Size and scale numbers](/sccm/core/plan-
 
 The following recommendations can help you improve CMG performance:
 
-- If possible, configure the CMG, CMG connection point, and the Configuration Manager site server in same network region to reduce latency.
-- Currently, the connection between the Configuration Manager client and the CMG is not region-aware.
-- For high availability of the service, create at least two CMG services and two CMG connection points per site.
-- Scale the CMG to support more clients by adding more VM instances. The Azure load balancer controls client connections to the service.
-- Create more CMG connection points to distribute the load among them. The CMG distributes the traffic to its connecting CMG connection points in a round-robin fashion.
-- When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.
+- If possible, configure the CMG, CMG connection point, and the Configuration Manager site server in same network region to reduce latency.  
 
- > [!Note]  
- > While Configuration Manager has no hard limit on the number of clients for a CMG connection point, Windows Server has a default maximum TCP dynamic port range of 16,384. If a Configuration Manager site manages more than 16,384 clients with a single CMG connection point, you must increase the Windows Server limit. All clients maintain a channel for client notifications, which holds a port open on the CMG connection point. For more information on how to use the netsh command to increase this limit, see [Microsoft Support article 929851](https://support.microsoft.com/help/929851).
+- Currently, the connection between the Configuration Manager client and the CMG is not region-aware.  
+
+- For high availability of the service, create at least two CMG services and two CMG connection points per site.  
+
+- Scale the CMG to support more clients by adding more VM instances. The Azure load balancer controls client connections to the service.  
+
+- Create more CMG connection points to distribute the load among them. The CMG distributes the traffic to its connecting CMG connection points in a round-robin fashion.  
+
+- When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.  
+
+
+> [!Note]  
+> While Configuration Manager has no hard limit on the number of clients for a CMG connection point, Windows Server has a default maximum TCP dynamic port range of 16,384. If a Configuration Manager site manages more than 16,384 clients with a single CMG connection point, you must increase the Windows Server limit. All clients maintain a channel for client notifications, which holds a port open on the CMG connection point. For more information on how to use the netsh command to increase this limit, see [Microsoft Support article 929851](https://support.microsoft.com/help/929851).
 
 
 
@@ -277,11 +294,11 @@ You do not need to open any inbound ports to your on-premises network. The servi
 
 The following diagram is a basic, conceptual data flow for the CMG: 
 ![CMG data flow](media/cmg-data-flow.png)
-   1. The service connection point connects to Azure over port 443. It authenticates using Azure AD or the Azure management certificate. The service connection point deploys the CMG in Azure. The CMG creates the HTTPS cloud service using the server authentication certificate.  
+   1. The service connection point connects to Azure over HTTPS port 443. It authenticates using Azure AD or the Azure management certificate. The service connection point deploys the CMG in Azure. The CMG creates the HTTPS cloud service using the server authentication certificate.  
 
-   2. The CMG connection point connects to the CMG in Azure over port 443. It holds the connection open, and builds the channel for future two-way communication. (If the CMG uses more than one VM instance, it communicates on additional ports.)  
+   2. The CMG connection point connects to the CMG in Azure over TCP-TLS or HTTPS. It holds the connection open, and builds the channel for future two-way communication.   
 
-   3. The client connects to the CMG over port 443. It authenticates using Azure AD or the client authentication certificate.  
+   3. The client connects to the CMG over HTTPS port 443. It authenticates using Azure AD or the client authentication certificate.  
 
    4. The CMG forwards the client communication over the existing connection to the on-premises CMG connection point. You don't need to open any inbound firewall ports.  
 
@@ -292,16 +309,21 @@ This table lists the required network ports and protocols. The *Client* is the d
 
 | Client  | Protocol | Port  | Server  | Description  |
 |---------|---------|---------|---------|---------|
-| Service connection point     | HTTPS | 443        | Azure        | CMG deployment        |
-| CMG connection point     | HTTPS | 443        | CMG service       | Build CMG channel         |
-| CMG connection point     |  TCP | 10124-10140        | CMG service        | Build CMG channel to more than one VM instances<sup>1</sup>         |
-| Client     |  HTTPS | 443         | CMG        | General client communication         |
-| CMG connection point      | HTTPS | 443 or 80         | Management point         | On-premises traffic, port depends upon management point configuration        |
-| CMG connection point      | HTTPS | 443 or 80         | Software update point         | On-premises traffic, port depends upon software update point configuration        |
+| Service connection point     | HTTPS | 443        | Azure        | CMG deployment |
+| CMG connection point     |  TCP-TLS | 10140-10155        | CMG service        | Preferred protocol to build CMG channel <sup>1</sup> |
+| CMG connection point     | HTTPS | 443        | CMG service       | Fallback to build CMG channel to only one VM instance<sup>2</sup> |
+| CMG connection point     |  HTTPS   | 10124-10139     | CMG service       | Fallback to build CMG channel to two or more VM instances<sup>3</sup> |
+| Client     |  HTTPS | 443         | CMG        | General client communication |
+| CMG connection point      | HTTPS or HTTP | 443 or 80         | Management point</br>(version 1706 or 1710) | On-premises traffic, port depends upon management point configuration |
+| CMG connection point      | HTTPS | 443      | Management point</br>(version 1802) | On-premises traffic must be HTTPS |
+| CMG connection point      | HTTPS or HTTP | 443 or 80         | Software update point | On-premises traffic, port depends upon software update point configuration |
 
-<sup>1</sup> Examples: 
-- If you have a CMG with a single VM instance, the CMG connection point connects over port 443.
-- If you have a CMG with two VM instances, the CMG connection point connects over port 443 to the cloud service, 10124 to the first VM instance, and 10125 to the second VM instance.
+<sup>1</sup> The CMG connection point first tries to establish a long-lived TCP-TLS connection with each CMG VM instance. It connects to the first VM instance on port 10140. The second VM instance uses port 10141, up to the sixteenth on port 10155. A TCP-TLS connection performs the best, but it doesn’t support internet proxy. If the CMG connection point can’t connect via TCP-TLS, then it falls back to HTTPS<sup>2</sup>.  
+
+<sup>2</sup> If the CMG connection point can’t connect to the CMG via TCP-TLS<sup>1</sup>, it connects to the Azure network load balancer over HTTPS 443 only for one VM instance.  
+
+<sup>3</sup> If there are two or more VM instances, the CMG connection point uses HTTPS 10124 to the first VM instance, not HTTPS 443. It connects to the second VM instance on HTTPS 10125, up to the sixteenth on HTTPS port 10139.
+
 
 ### Internet access requirements
 
