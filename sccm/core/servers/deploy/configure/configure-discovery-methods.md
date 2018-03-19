@@ -1,9 +1,9 @@
 ---
-title: "Configure discovery"
-titleSuffix: "Configuration Manager"
-description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
+title: Configure discovery
+titleSuffix: Configuration Manager
+description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,32 +15,33 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 ---
 # Configure discovery methods for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-You configure discovery methods to run at a  System Center Configuration Manager site to find resources that you can manage from your network infrastructure and Active Directory. This requires you to enable and then configure each method that you want to use to search your environment. (You can also disable a method by using the same procedure that you use to enable it.)  The only exceptions to this are Heartbeat Discovery and Server Discovery:  
+Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory (Azure AD). First enable and then configure each method that you want to use to search your environment. You can also disable a method by using the same procedure that you use to enable it. The only exceptions to this process are Heartbeat Discovery and Server Discovery:  
 
--   By default, Heartbeat Discovery is already enabled when you install a Configuration Manager primary site, and configured to run on a basic schedule. It's a good idea to keep Heartbeat Discovery enabled because it ensures that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
+-   By default, **Heartbeat Discovery** is already enabled when you install a Configuration Manager primary site. It is configured to run on a basic schedule. Keep Heartbeat Discovery enabled. It ensures that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
--   Server Discovery is an automatic discovery method that finds computers that you use as site systems. You can't configure or disable it.  
+-   **Server Discovery** is an automatic discovery method. It finds computers that you use as site systems. You can't configure or disable it.  
 
-**To enable a configurable discovery method:**  
+### Enable a configurable discovery method  
  > [!NOTE]  
- > The following information does not apply to Azure Active Directory User Discovery. Instead, see [Configure Azure AD User Discovery](#azureaadisc) later in this topic.
+ > The following information doesn't apply to Azure AD User Discovery. Instead, see [Configure Azure AD User Discovery](#azureaadisc) later in this article.
 
-1.  In the Configuration Manager console, choose **Administration** > **Hierarchy Configuration**, and then choose **Discovery Methods**.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and then select **Discovery Methods**.  
 
 2.  Select the discovery method for the site where you want to enable discovery.  
 
-3.  On the **Home** tab, in the **Properties** group, choose **Properties**, and then on the **General** tab, check the **Enable&lt;discovery method\>** box.  
+3.  On the **Home** tab, in the **Properties** group, choose **Properties**. Then on the **General** tab, check the **Enable &lt;discovery method\>** box.  
 
      If this box is already checked, you can disable the discovery method by unchecking the box.  
 
 4.  Choose **OK** to save the configuration.  
+
 
 
 ##  <a name="BKMK_ConfigADForestDisc"></a> Configure Active Directory Forest Discovery  
@@ -88,7 +89,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 2.  On the **General** tab, finish configurations for the forest that you want to discover, and specify the **Active Directory Forest Account**.  
 
     > [!NOTE]  
-    >  Active Directory Forest Discovery requires a global account to discover and publish to untrusted forests. If you do not use the computer account of the site server, you can select only a global account.  
+    >  Active Directory Forest Discovery requires a global account to discover and publish to untrusted forests. If you don't use the computer account of the site server, you can select only a global account.  
 
 3.  If you plan to let sites publish site data to this forest, on the **Publishing** tab, finish configurations for publishing to this forest.  
 
@@ -97,8 +98,10 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 4.  When you finish the configuration of this forest for use with Active Directory Forest Discovery, choose **OK** to save the configuration.  
 
+
+
 ##  <a name="BKMK_ConfigADDiscGeneral"></a> Configure Active Directory Discovery for computers, users, or groups  
- Use the information in the following sections to configure discovery of computers, users, or groups. You'll use these discovery methods:  
+ To configure discovery of computers, users, or groups, use the information in these sections for the following discovery methods:  
 
 -   Active Directory Group Discovery  
 
@@ -107,12 +110,12 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 -   Active Directory User Discovery  
 
 > [!NOTE]  
->  The information in this section does not apply to Active Directory Forest Discovery.  
+>  The information in this section doesn't apply to Active Directory Forest Discovery.  
 
  Although each of these discovery methods is independent of the others, they share similar options. For more information about these configuration options, see [Shared options for Group, System, and User discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_shared).  
 
 > [!WARNING]  
->  The Active Directory polling by each of these discovery methods can generate significant network traffic. Consider scheduling each discovery method to run at a time when this network traffic does not adversely affect business uses of your network.  
+>  The Active Directory polling by each of these discovery methods can generate significant network traffic. Consider scheduling each discovery method to run at a time when this network traffic doesn't adversely affect business uses of your network.  
 
 #### To configure Active Directory Group Discovery  
 
@@ -142,7 +145,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 7.  On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
 
-8.  Optionally, on the **Option** tab, you can configure options to filter out or exclude stale computer records from discovery, and to discover the membership of distribution groups.  
+8.  Optionally, on the **Option** tab configure options to filter out or exclude stale computer records from discovery. Also configure the discovery of the membership of distribution groups.  
 
     > [!NOTE]  
     >  By default, Active Directory Group Discovery discovers only the membership of security groups.  
@@ -168,7 +171,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
     3.  For each location, specify the account to use as the **Active Directory Discovery Account**.  
 
         > [!TIP]  
-        >  For each location that you specify, you can configure a set of discovery options and a unique Active Directory Discovery Account.  
+        >  For each specified location, you can configure a set of discovery options and a unique Active Directory Discovery Account.  
 
     4.  Choose **OK** to save the Active Directory container configuration.  
 
@@ -199,7 +202,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
     3.  For each location, specify the account to use as the **Active Directory Discovery Account**.  
 
         > [!NOTE]  
-        >  For each location that you specify, you can configure a unique set of discovery options and a unique Active Directory Discovery Account.  
+        >  For each specified location, you can configure a unique set of discovery options and a unique Active Directory Discovery Account.  
 
     4.  Choose **OK** to save the Active Directory container configuration.  
 
@@ -209,16 +212,31 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 8.  When you have finished configuring Active Directory User Discovery for this site, choose **OK** to save the configuration.  
 
+
+
 ## <a name="azureaadisc"></a> Configure Azure AD User Discovery
-Beginning with version 1706, you can configure Azure Active Directory User Discovery when you connect Configuration Manager to your [Azure subscription, and Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard).
+Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD. When you [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**, you can also enable and configure this discovery method. 
 
-Azure AD User Discovery is configured as part of *Cloud Management*. The procedure to do so is detailed in [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
+When configuring the **Cloud Management** Azure service: 
+- On the **Discovery** page of the wizard, click **Enable Azure Active Directory User Discovery**. 
+- Click **Settings**. 
+- In the Azure AD User Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Azure AD. 
 
+For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+
+ > [!Important]  
+ > Before you *import* the Azure AD app into Configuration Manager, you need to grant the application permission to read directory data from Azure AD. 
+ >  - In the [Azure portal](https://portal.azure.com), go to the **Azure Active Directory** blade. 
+ >  - Click **App registrations**, and switch to **All apps** if necessary. 
+ >  - Select the app, and then click **Settings**. 
+ >  - Click **Required permissions**, and then click **Grant permissions**.
+ >  
+ > If you *create* the app from Configuration Manager, Azure AD automatically creates the permissions with the application. You still need to give consent to the application in the Azure portal.
 
 
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
- By default, Heartbeat Discovery is enabled when you install a Configuration Manager primary site. As a result, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point when you do not want to use the default of every seven days.  
+ By default, Heartbeat Discovery is enabled when you install a Configuration Manager primary site. As a result, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point when you don't want to use the default of every seven days.  
 
 > [!NOTE]  
 >  If both client push installation and the site maintenance task for **Clear Install Flag** are enabled at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. For more information about site maintenance tasks, see [Maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/maintenance-tasks.md).  
@@ -233,11 +251,13 @@ Azure AD User Discovery is configured as part of *Cloud Management*. The procedu
 
 4.  Configure the frequency with which clients submit a Heartbeat discovery data record, and then choose **OK** to save the configuration.  
 
+
+
 ##  <a name="BKMK_ConfigNetworkDisc"></a> Configure Network Discovery  
- Use the information in the following sections to help you configure Network Discovery.  
+ To help you configure Network Discovery, use the information in these sections.  
 
 ###  <a name="BKMK_AboutConfigNetworkDisc"></a> About configuring Network Discovery  
- Before you configure Network Discovery, you must understand the following:  
+ Before you configure Network Discovery, you must understand the following topics:  
 
 -   Available levels of Network Discovery  
 
@@ -249,21 +269,21 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
 
  The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, you must plan for the interactions that can affect the discovery results.  
 
- For example, you might want to discover all Simple Network Management Protocol (SNMP) devices that use a specific SNMP community name. Additionally, for the same discovery run, you might disable discovery on a specific subnet. When discovery runs, Network Discovery does not discover the SNMP devices with the specified community name on the subnet that you have disabled.  
+ For example, you might want to discover all Simple Network Management Protocol (SNMP) devices that use a specific SNMP community name. Additionally, for the same discovery run, you might disable discovery on a specific subnet. When discovery runs, Network Discovery doesn't discover the SNMP devices with the specified community name on the subnet that you've disabled.  
 
 ####  <a name="BKMK_DetermineNetTopology"></a> Determine your network topology  
- You can use a topology-only discovery to map your network. This kind of discovery does not discover potential clients. The topology-only Network Discovery relies on SNMP.  
+ You can use a topology-only discovery to map your network. This kind of discovery doesn't discover potential clients. The topology-only Network Discovery relies on SNMP.  
 
  When you're mapping your network topology, you must configure the **Maximum hops** on the **SNMP** tab in the **Network Discovery Properties** dialog box. Just a few hops can help control the network bandwidth that is used when discovery runs. As you discover more of your network, you can increase the number of hops to gain a better understanding of your network topology.  
 
- After you understand your network topology, you can configure additional properties for Network Discovery to discover potential clients and their operating systems while you are using available configurations to limit the network segments that Network Discovery can search.  
+ After you understand your network topology, you can configure additional properties for Network Discovery to discover potential clients and their operating systems while you're using available configurations to limit the network segments that Network Discovery can search.  
 
 ####  <a name="BKMK_LimitBySubnet"></a> Limit searches by using subnets  
- You can configure Network Discovery to search specific subnets during a discovery run. By default, Network Discovery searches the subnet of the server that runs discovery. Any additional subnets that you configure and enable apply only to SNMP and Dynamic Host Configuration Protocol (DHCP) search options. When Network Discovery searches domains, it is not limited by configurations for subnets.  
+ You can configure Network Discovery to search specific subnets during a discovery run. By default, Network Discovery searches the subnet of the server that runs discovery. Any additional subnets that you configure and enable apply only to SNMP and Dynamic Host Configuration Protocol (DHCP) search options. When Network Discovery searches domains, it isn't limited by configurations for subnets.  
 
  If you specify one or more subnets on the **Subnets** tab in the **Network Discovery Properties** dialog box, only the subnets that are marked as **Enabled** are searched.  
 
- When you disable a subnet, it is excluded from discovery, and the following conditions apply:  
+ When you disable a subnet, it's excluded from discovery, and the following conditions apply:  
 
 -   SNMP-based queries do not run on the subnet.  
 
@@ -276,7 +296,7 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
 
  If you specify one or more domains on the **Domains** tab in the **Network Discovery Properties** dialog box, only the domains that are marked as **Enabled** are searched.  
 
- When you disable a domain, it is excluded from discovery, and the following conditions apply:  
+ When you disable a domain, it's excluded from discovery, and the following conditions apply:  
 
 -   Network Discovery does not query domain controllers in that domain.  
 
@@ -290,12 +310,12 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
  Network Discovery uses community names to gain access to routers that are SNMP devices. A router can supply Network Discovery with information about other routers and subnets that are linked to the first router.  
 
 > [!NOTE]  
->  SNMP community names resemble passwords. Network Discovery can get information only from an SNMP device for which you have specified a community name. Each SNMP device can have its own community name, but often the same community name is shared among several devices. Additionally, most SNMP devices have a default community name of **public**. But some organizations delete the **public** community name from their devices as a security precaution.  
+>  SNMP community names resemble passwords. Network Discovery can get information only from an SNMP device for which you've specified a community name. Each SNMP device can have its own community name, but often the same community name is shared among several devices. Additionally, most SNMP devices have a default community name of **public**. But some organizations delete the **public** community name from their devices as a security precaution.  
 
- If multiple SNMP communities are shown on the **SNMP** tab in the **Network Discovery Properties** dialog box, Network Discovery searches them in the order in which they are shown. To help minimize network traffic that is generated by attempts to contact a device by using different names, ensure that the most frequently used names are at the top of the list.  
+ If multiple SNMP communities are shown on the **SNMP** tab in the **Network Discovery Properties** dialog box, Network Discovery searches them in the order in which they're shown. To help minimize network traffic that is generated by attempts to contact a device by using different names, ensure that the most frequently used names are at the top of the list.  
 
 > [!NOTE]  
->  In addition to using the SNMP community name, you can specify the IP address or resolvable name of a specific SNMP device. You do this on the **SNMP Devices** tab in the **Network Discovery Properties** dialog box.  
+>  Along with using the SNMP community name, you can specify the IP address or resolvable name of a specific SNMP device. You do this action on the **SNMP Devices** tab in the **Network Discovery Properties** dialog box.  
 
 ####  <a name="BKMK_SearchByDHCP"></a> Search a specific DHCP server  
  You can configure Network Discovery to use a specific DHCP server or multiple servers to discover DHCP clients during a discovery run.  
@@ -303,7 +323,7 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
  Network Discovery searches each DHCP server that you specify on the **DHCP** tab in the **Network Discovery Properties** dialog box. If the server that is running discovery leases its IP address from a DHCP server, you can configure discovery to search that DHCP server by checking the **Include the DHCP server that the site server is configured to use** box.  
 
 > [!NOTE]  
->  To successfully configure a DHCP server in Network Discovery, your environment must support IPv4. You cannot configure Network Discovery to use a DHCP server in a native IPv6 environment.  
+>  To successfully configure a DHCP server in Network Discovery, your environment must support IPv4. You can't configure Network Discovery to use a DHCP server in a native IPv6 environment.  
 
 ###  <a name="BKMK_HowToConfigNetDisc"></a> How to configure Network Discovery  
  Use the following procedures to first discover only your network topology, and then to configure Network Discovery to discover potential clients by using one or more of the available Network Discovery options.  
@@ -321,7 +341,7 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
     -   On the **Subnets** tab, check the **Search local subnets** box.  
 
         > [!TIP]  
-        >  If you know the specific subnets that constitute your network, you can uncheck the **Search local subnets** box and use the **New** icon ![New icon](media/Disc_new_Icon.gif) to add the specific subnets that you want to search. For large networks, it is often best to search only one or two subnets at a time to minimize the use of network bandwidth.  
+        >  If you know the specific subnets that constitute your network, uncheck the **Search local subnets** box. Then use the **New** icon ![New icon](media/Disc_new_Icon.gif) to add the specific subnets that you want to search. For large networks, it's often best to search only one or two subnets at a time to minimize the use of network bandwidth.  
 
     -   On the **Domains** tab, check the **Search local domain** box.  
 
@@ -333,7 +353,7 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
 4.  On the **Schedule** tab, choose the **New** icon ![New icon](media/Disc_new_Icon.gif) to set a schedule for running Network Discovery.  
 
     > [!NOTE]  
-    >  You cannot assign a different discovery configuration to separate Network Discovery schedules. Each time Network Discovery runs, it uses the current discovery configuration.  
+    >  You can't assign a different discovery configuration to separate Network Discovery schedules. Each time Network Discovery runs, it uses the current discovery configuration.  
 
 5.  Choose **OK** to accept the configurations. Network Discovery runs at the scheduled time.  
 
@@ -395,10 +415,10 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
 
 10. To configure discovery to query specific DHCP servers for DHCP clients, choose the **DHCP** tab, and then configure one or more of the following options:  
 
-    -   To query the DHCP server on the computer that is running discovery, check the **Always use the site server’s DHCP server** box.  
+    -   To query the DHCP server on the computer that is running discovery, choose to **Always use the site server’s DHCP server**.  
 
         > [!NOTE]  
-        >  To use this option, the server must lease its IP address from a DHCP server and cannot use a static IP address.  
+        >  To use this option, the server must lease its IP address from a DHCP server and can't use a static IP address.  
 
     -   To query a specific DHCP server, choose the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New DHCP Server** dialog box, specify the IP address or server name of the DHCP server, and then choose **OK**.  
 
@@ -410,12 +430,12 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
      You can configure multiple recurring schedules and multiple schedules that have no recurrence.  
 
     > [!NOTE]  
-    >  If multiple schedules are shown on the **Schedule** tab at the same time, all schedules result in a run of Network Discovery as it is configured at the time indicated in the schedule. This is also true for recurring schedules.  
+    >  If multiple schedules are shown on the **Schedule** tab at the same time, all schedules result in a run of Network Discovery as it is configured at the time indicated in the schedule. This behavior is also true for recurring schedules.  
 
 12. Choose **OK** to save your configurations.  
 
 ###  <a name="BKMK_HowToVerifyNetDisc"></a> How to verify that Network Discovery has finished  
- The time that Network Discovery requires to finish can vary depending on a variety of factors. These factors can include one or more of the following:  
+ The time that Network Discovery requires to finish can vary depending on one or more of the following factors:  
 
 -   The size of your network  
 
@@ -425,7 +445,7 @@ For more information, see [About Network Discovery](../../../../core/servers/dep
 
 -   The type of discovery that is being run  
 
-Because Network Discovery does not create messages to alert you when discovery has finished, you can use the following procedure to verify when discovery has finished.  
+Because Network Discovery doesn't create messages to alert you when discovery has finished, you can use the following procedure to verify when discovery has finished.  
 
 ##### To verify that Network Discovery has finished  
 
@@ -450,7 +470,7 @@ Because Network Discovery does not create messages to alert you when discovery h
 
     -   Description: **This component stopped**  
 
-    If this status message is not present, Network Discovery has not finished.  
+    If this status message isn't present, Network Discovery hasn't finished.  
 
 7.  To validate when Network Discovery started, search for a status message that has the following details:  
 
@@ -460,4 +480,4 @@ Because Network Discovery does not create messages to alert you when discovery h
 
     -   Description: **This component started**  
 
-    This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+    This information verifies that Network Discovery started. If this information isn't present, reschedule Network Discovery.  
