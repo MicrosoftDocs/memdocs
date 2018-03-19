@@ -38,7 +38,9 @@ Upgrade Readiness (formerly Upgrade Analytics) is a part of [Windows Analytics](
 Upgrade Readiness is a solution that runs on [Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview). You can read more about Upgrade Readiness in [Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness).
 
 >[!WARNING]
->For Upgrade Readiness to function within Configuration Manager, you must upgrade to Configuration Manager version 1802. The Upgrade Readiness Connector will no longer function in Configuration Manager versions earlier than 1802.  <!--507205-->
+>For Upgrade Readiness to function within Configuration Manager, you must upgrade to Configuration Manager version 1802.  <!--507205--> The Upgrade Readiness Connector will no longer function in Configuration Manager versions earlier than 1802. 
+
+
 ## Configure clients
 
 Upgrade Readiness, like all Windows Analytics solutions, relies on Windows telemetry data. In order for Upgrade Readiness to receive sufficient telemetry data, the following pre-requisites must be satisfied:
