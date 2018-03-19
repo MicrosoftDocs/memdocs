@@ -225,13 +225,13 @@ When configuring the **Cloud Management** Azure service:
 For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
  > [!Important]  
- > Before you *import* the Azure AD app into Configuration Manager, you need to grant the application permission to read directory data from Azure AD. 
+ > Before you *import* the Azure AD app into Configuration Manager, you need to grant the server application permission to read directory data from Azure AD. 
  >  - In the [Azure portal](https://portal.azure.com), go to the **Azure Active Directory** blade. 
  >  - Click **App registrations**, and switch to **All apps** if necessary. 
- >  - Select the app, and then click **Settings**. 
+ >  - Select the server app of type *Web app / API*, and then click **Settings**. 
  >  - Click **Required permissions**, and then click **Grant permissions**.
  >  
- > If you *create* the app from Configuration Manager, Azure AD automatically creates the permissions with the application. You still need to give consent to the application in the Azure portal.
+ > If you *create* the server app from Configuration Manager, Azure AD automatically creates the permissions with the application. You still need to give consent to the application in the Azure portal.
 
 
 
