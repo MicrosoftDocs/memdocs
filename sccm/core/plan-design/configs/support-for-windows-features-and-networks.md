@@ -120,6 +120,7 @@ Configuration Manager does not support the following functionality over DirectAc
 |Function| Exception to IPv6 support|  
 |--------------|-------------------------------|  
 |Cloud-based distribution points|IPv4 is required to support Microsoft Azure and cloud-based distribution points.|  
+|Cloud management gateway|IPv4 is required to support Microsoft Azure and the cloud management gateway.|  
 |Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
 |Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
 |OS deployment|In version 1710 and prior, IPv4 is required to support OS deployment. </br></br>Starting in version 1802, enable a PXE responder on a distribution point without Windows Deployment Service. This new PXE responder service supports IPv6. Other aspects of the OS deployment feature, such as capturing or setting static IP addresses during the task sequence, continue to require IPv4. |  

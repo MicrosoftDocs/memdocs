@@ -41,6 +41,7 @@ The CMG creates an HTTPS service to which internet-based clients connect. The se
 Clients must trust the CMG server authentication certificate. There are two methods to accomplish this trust:
 - Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, VeriSign or Thawte. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it. 
 - Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients do not automatically trust, you need to add the CA trusted root certificate to internet-based clients.
+    - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 ### Server authentication certificate issued by public provider
 
@@ -131,6 +132,8 @@ After issuing a client authentication certificate to a computer, use this proces
 ## Enable management point for HTTPS
 
 *When managing Windows 10 clients joined to Azure AD, this certificate is required for management points.*
+
+When managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 
