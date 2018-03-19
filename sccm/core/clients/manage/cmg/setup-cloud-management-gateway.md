@@ -35,7 +35,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-- Starting in version 1802, choose whether you use the **Azure Resource Manager deployment** or a **classic service deployment**. For more information, see [Planning for Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). You need the following requirements for an Azure Resource Manager deployment of CMG:  
+- Starting in version 1802, choose whether you use the **Azure Resource Manager deployment** or a **classic service deployment**. For more information, see [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). You need the following requirements for an Azure Resource Manager deployment of CMG:  
 
     - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery is not required.  
 
@@ -75,11 +75,15 @@ Perform this procedure on the top-level site. That site is either a standalone p
 
 4. On the Settings page of the wizard, first click **Browse** and select the .PFX file for the CMG server authentication certificate. The name from this certificate populates the required **Service FQDN** and **Service name** fields.  
 
-   > [!NOTE]
+   > [!NOTE]  
    > Starting in version 1802, the CMG server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (\*) in the **Service FQDN** field with the desired hostname for the CMG.  
    <!--491233-->  
 
 5. Click the **Region** drop-down list to choose the Azure region for this CMG.  
+
+6. In version 1802, and are using an Azure Resource Manager deployment, select a **Resource Group** option. 
+   1. If you choose **Use existing**, then select an existing resource group from the drop-down list.
+   2. If you choose **Create new**, then enter the new resource group name.
 
 6. In the **VM Instance** field, enter the number of VMs for this service. The default is one, but you can scale up to 16 VMs per CMG.  
 
@@ -92,6 +96,9 @@ Perform this procedure on the top-level site. That site is either a standalone p
 10. To monitor CMG traffic with a 14-day threshold, choose the check box to turn on the threshold alert. Then, specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.  
 
 11. Review the settings, and choose **Next**. Configuration Manager starts setting up the service. After you close the wizard, it will take between five to 15 minutes to provision the service completely in Azure. Check the **Status** column for the new CMG to determine when the service is ready.  
+
+ > [!Note]  
+ > To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
 
@@ -114,7 +121,10 @@ If you are using [client authentication certificates](/sccm/core/clients/manage/
 The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG. 
 
 > [!Important]
-> The CMG connection point must have a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).
+> The CMG connection point must have a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) in some scenarios. 
+
+ > [!Note]  
+ > To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
 
@@ -152,6 +162,9 @@ To verify that clients have the policy specifying the CMG, open a Windows PowerS
 `Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
 
 This command displays any internet-based management points the client knows about. While the CMG is not technically an internet-based management point, it appears as such to clients.
+
+ > [!Note]  
+ > To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
 
