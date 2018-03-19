@@ -109,18 +109,19 @@ This setting applies to users when their computer is on either the intranet or t
 
 Set this to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
 
--   The client and site are configured for internet-based client management.
+-   The client and site are configured for [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) or a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
 -   The **Enable user policy on clients** setting is **Yes**.  
 
--   The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
+-   The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+
+-   Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 If you set this option to **No**, or any of the previous requirements are not met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users do not receive user policies until the computer is connected to the intranet.  
 
-For more information about managing clients on the internet, see [Considerations for client communications from the internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
 > [!NOTE]  
->  Application approval requests from users do not require user policies or user authentication.  
+>  For internet-based client management, application approval requests from users do not require user policies or user authentication. The cloud management gateway does not support application approval requests.   
+
 
 
 ## Cloud services

@@ -216,7 +216,7 @@ If an end user or desktop technician needs to install multiple applications on a
 
 ### Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. <!-- For more information, see [](). -->
+If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).
 
 ### Hide installed applications in Software Center
 <!--1357592-->
