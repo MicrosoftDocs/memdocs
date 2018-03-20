@@ -26,7 +26,7 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
-The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [Trusted root certificate to clients](#trusted-root-certificate-to-clients).
+The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#cmg-trusted-root-certificate-to-clients).
 
  > [!TIP]
  > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Click **Create a resource**, select the **Compute** category, then click **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
