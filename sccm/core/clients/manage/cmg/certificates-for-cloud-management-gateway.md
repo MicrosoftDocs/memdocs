@@ -26,7 +26,7 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
-The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [Trusted root certificate to clients](#trusted-root-certificate-to-clients).
+The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#cmg-trusted-root-certificate-to-clients).
 
  > [!TIP]
  > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Click **Create a resource**, select the **Compute** category, then click **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
@@ -131,9 +131,10 @@ After issuing a client authentication certificate to a computer, use this proces
 
 ## Enable management point for HTTPS
 
-*When managing Windows 10 clients joined to Azure AD, this certificate is required for management points.*
-
-When managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.
+*Certificate requirements*
+- In versions 1706 or 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.
+- In version 1710, when managing Windows 10 clients joined to Azure AD, this certificate is required for management points. 
+- Starting in version 1802, this certificate is required in all scenarios. 
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 
