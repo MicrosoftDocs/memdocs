@@ -284,7 +284,7 @@
 #### [Linux and UNIX client commands](clients/deploy/linux-and-unix-clients-technical-reference.md)
 ###  [Prepare to deploy clients to Macs](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [How to deploy clients to Macs](clients/deploy/deploy-clients-to-macs.md)
-###  [Install clients from the internet using Azure AD](clients/deploy/deploy-clients-cmg-azure.md)
+###  [Install clients using Azure AD](clients/deploy/deploy-clients-cmg-azure.md)
 ###  [How to assign clients to a site](clients/deploy/assign-clients-to-a-site.md)
 ###  [How to configure client status](clients/deploy/configure-client-status.md)
 ###  [How to monitor client deployment status](clients/deploy/monitor-client-deployment-status.md)

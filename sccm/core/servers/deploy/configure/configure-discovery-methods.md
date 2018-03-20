@@ -233,6 +233,9 @@ For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/co
  >  
  > If you *create* the server app from Configuration Manager, Azure AD automatically creates the permissions with the application. You still need to give consent to the application in the Azure portal.
 
+ > [!Note]  
+ > If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+
 
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
