@@ -136,7 +136,10 @@ Configure the management point and software update point site systems to accept 
 
 2. Select the site system server you want to configure for CMG traffic. Select the **Management point** role in the details pane, and then click **Properties** in the ribbon.  
 
-3. In the Management point properties sheet under Client Connections, check the box next to **Allow Configuration Manager cloud management gateway traffic**. Depending upon your CMG design, you may need to enable the **HTTPS** option. Click **OK**.   
+3. In the Management point properties sheet under Client Connections, check the box next to **Allow Configuration Manager cloud management gateway traffic**. 
+    - Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+
+4. Click **OK**.   
 
 Repeat these steps for additional management points as needed, and for any software update points. 
 
@@ -209,6 +212,10 @@ Starting in version 1802, if you have an existing CMG on the classic deployment 
     2. Create a new CMG connection point and link with the new CMG.
     3. Wait at least one day for internet-based clients to receive policy about the new CMG.
     4. Delete the classic CMG.
+
+Only modify the CMG from the Configuration Manager console. Making modifications to the service or underlying VMs directly in Azure is not supported. Any changes may be lost without notice. As with any PaaS, the service can rebuild the VMs at anytime. These rebuilds can happen for backend hardware maintenance, or to apply updates to the VM OS.
+
+If you need to delete the CMG, also do so from the Configuration Manager console. Manually removing any components in Azure causes the system to be inconsistent. This state leaves orphaned information, and unexpected behaviors may occur. 
 
 
 
