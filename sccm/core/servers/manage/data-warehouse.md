@@ -3,7 +3,7 @@ title: "Data warehouse"
 titleSuffix: "Configuration Manager"
 description: "Data warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 02/26/2018
+ms.date: 03/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -85,6 +85,7 @@ When you install the role, Configuration Manager creates the data warehouse data
      - **Database name**: Specify a name for the data warehouse database. The database name cannot exceed 10 characters. (The supported name length will be increased in a future release).
      Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.
      - **SQL Server port used for connection**: Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
+     - **Data warehouse service point account**: Starting in version 1802, specify the account that SQL Server Reporting Services uses when connecting to the data warehouse database. 
 
 **Synchronization schedule** page:   
 - **Synchronization schedule**:
@@ -93,8 +94,12 @@ When you install the role, Configuration Manager creates the data warehouse data
          - **Daily**: Specify that synchronization runs every day.
          - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
 
+
 ## Reporting
 After you install a data warehouse service point, several reports become available on the reporting services point that is installed at the same site. If you install the data warehouse service point before installing a reporting services point, the reports are automatically added when you later install the reporting services point.
+
+>[!WARNING]
+>In Configuration Manager version 1802, alternative credential support was added for the data warehouse point. If you upgraded from a previous version of Configuration Manager, you need to specify credentials that SQL Server Reporting Services will use to connect to the data warehouse database. Data warehouse reports will not open and the until credentials are specified. To specify an account, go to **Administration** >**Site Configuration** >**Servers and Site System Roles**. Click on the server with the data warehouse service point, then right-click on the data warehouse service point role. Select **properties** then specify the **Data warehouse service point account**.
 
 The data warehouse site system role includes the following reports, which have a Category of **Data Warehouse**:
  - **Application Deployment - Historical**: View details for application deployment for a specific application and machine.
