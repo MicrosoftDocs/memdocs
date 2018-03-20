@@ -230,7 +230,7 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 
 - For more information on how many VMs you need to support your clients, see [Performance and scale](#performance-and-scale).
 
-- See the [Azure pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to help determine potential costs.
+- See the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to help determine potential costs.
 
     > [!NOTE]  
     > Virtual machine costs vary by region.
