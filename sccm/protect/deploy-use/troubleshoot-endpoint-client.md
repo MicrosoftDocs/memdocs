@@ -235,8 +235,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 3.  If you use a cable modem or DSL router, make sure the connections to the router and to the computer are firmly connected. Try unplugging and turning off the router and modem. Wait a few minutes, plug in the modem in first, wait one minute, then plug in the router, and restart your computer.  
 
 ##  Detected threat can't be remediated  
- When Windows Defender or  
-      Endpoint Protection detects a potential threat that's hiding inside a compressed file with a .zip file name extension or within a network share, it tries to deal with the threat by quarantining or removing the threat.  
+ When Windows Defender or Endpoint Protection detects a potential threat that's hiding inside a compressed file with a .zip file name extension or within a network share, it tries to deal with the threat by quarantining or removing the threat.  
 
 ### Remove or scan the file  
 

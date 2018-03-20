@@ -13,11 +13,16 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: NathBarn
+ms.author: nathbarn
+manager: angrobe
 
 ---
 
-# Configure Custom Client Settings for Endpoint Protection*Applies to: System Center Configuration Manager (Current Branch)*
+# Configure Custom Client Settings for Endpoint Protection
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This procedure configures custom client settings for Endpoint Protection which can be deployed to collections of computers in your hierarchy.
 
 > [!IMPORTANT]
@@ -54,7 +59,7 @@ Use the procedures in this topic to help you install and configure the Endpoint 
 ### Prerequisites for Installing the Endpoint Protection Client on the Reference Computer
 The following list contains the required prerequisites for installing the Endpoint Protection client software on a reference computer.
 
--   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center Configuration Manager installation folder on the site server.
+-   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center Configuration Manager installation folder on the site server. Windows 10 and Windows Server 2016 have Windows Defender installed. 
 
 -   To ensure that the Endpoint Protection client is deployed with the configuration that is required in your organization, create an antimalware policy, and then export that policy. You can then specify the antimalware policy to use when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
