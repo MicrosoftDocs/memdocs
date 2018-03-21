@@ -79,9 +79,26 @@ To confirm the device is joined to Azure AD, run `dsregcmd.exe /status` in a com
 
 ## Install and register the client using Azure AD identity
 
-To install the client, use the instructions in [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  <!--add anchor to AAD section-->
+To manually install the client using Azure AD identity, first review the general process on [How to install clients manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual). 
 
-For more information on the Azure AD client installation properties, see [Client.msi Properties](/sccm/core/clients/deploy/about-client-installation-properties#clientMsiProps).
+ > [!Note]  
+ > The device needs access to the internet to contact Azure AD, but doesn't need to be internet-based. 
+
+The following example shows the general structure of the command line:
+`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADTENANTNAME=<Azure AD tenant name> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
+
+For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+
+The /mp and CCMHOSTNAME properties specify one of the following, depending upon the scenario:
+- On-premises management point. Only specify the /mp property. The CCMHOSTNAME isn't required.
+- Cloud management gateway
+- Internet-based management point
+The SMSMP property specifies either the on-premises or internet-based management point.
+
+This example uses a cloud management gateway. It substitutes sample values for each property:
+`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADTENANTNAME=contoso AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+
+To automate the client install using Azure AD identity via Microsoft Intune, see the process to [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 
 
