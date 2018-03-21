@@ -181,7 +181,7 @@ In the **Create Script** dialog, click **Script Parameters** under **Script**.
 Each of your script's parameters has its own dialog for adding further details and validation.
 
 >[!IMPORTANT]
-> In Configuration Manager version 1802, parameter values can't contain an apostrophe. 
+> Parameter values can't contain an apostrophe. 
 
 
 ### Parameter validation
