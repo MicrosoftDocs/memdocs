@@ -27,9 +27,9 @@ You can use different methods to install the Configuration Manager client softwa
 
 ## Client push installation  
 
- **Supported client platform:** Windows  
+**Supported client platform**: Windows  
 
- **Advantages**  
+#### Advantages  
 
 -   Can be used to install the client on a single computer, a collection of computers, or to the results from a query.  
 
@@ -37,7 +37,7 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Automatically uses client installation properties defined on the **Client** tab in the **Client Push Installation Properties** dialog box.  
 
- **Disadvantages**  
+#### Disadvantages  
 
 -   Can cause high network traffic when pushing to large collections.  
 
@@ -51,18 +51,19 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   You can't cancel client push installation. Configuration Manager tries to install the client on all discovered resources. It retries any failures for up to seven days.  
 
- For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
 
 
 
 ## Software update point-based installation  
- **Supported client platform:** Windows  
 
- **Advantages:**  
+**Supported client platform**: Windows  
+
+#### Advantages  
 
 -   Can use your existing software updates infrastructure to manage the client software.  
 
--   If Windows Server Update Services (WSUS) and group policy settings in Active Directory Domain Services are configured correctly, it can automatically install the client software on new computers .  
+-   If Windows Server Update Services (WSUS) and group policy settings in Active Directory Domain Services are configured correctly, it can automatically install the client software on new computers.  
 
 -   Doesn't require computers to be discovered before the client can be installed.  
 
@@ -72,7 +73,7 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Doesn't require you to configure and maintain an installation account for the intended client computer.  
 
- **Disadvantages:**  
+#### Disadvantages  
 
 -   Requires a functioning software updates infrastructure as a prerequisite.  
 
@@ -82,14 +83,15 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   If the Active Directory schema isn't extended for Configuration Manager, you must use group policy settings to provision computers with client installation properties.  
 
- For more information, see [How to install clients with software update-based installation](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
+For more information, see [How to install clients with software update-based installation](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
 
 
 
 ## Group policy installation  
- **Supported client platform:** Windows  
 
- **Advantages:**  
+**Supported client platform**: Windows  
+
+#### Advantages  
 
 -   Doesn't require computers to be discovered before the client can be installed.  
 
@@ -99,39 +101,41 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Doesn't require you to configure and maintain an installation account for the intended client computer.  
 
- **Disadvantages:**  
+#### Disadvantages  
 
 -   If a large number of clients are being installed, it can cause high network traffic.  
 
 -   If the Active Directory schema isn't extended for Configuration Manager, you must use group policy settings to add client installation properties to computers in your site.  
 
- For more information, see [How to install clients with group policy](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientGP).  
+For more information, see [How to install clients with group policy](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientGP).  
 
 
 
 ## Logon script installation  
- **Supported client platform:** Windows  
 
- **Advantages:**  
+**Supported client platform**: Windows  
+
+#### Advantages  
 
 -   Doesn't require computers to be discovered before the client can be installed.  
 
 -   Supports using command-line properties for CCMSetup.  
 
- **Disadvantages:**  
+#### Disadvantages  
 
 -   If a large number of clients are being installed over a short time period, it can cause high network traffic.  
 
 -   If users don't frequently log on to the network, it can take a long time to install on all client computers.  
 
- For more information, see [How to install clients with logon scripts](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientLogonScript).  
+For more information, see [How to install clients with logon scripts](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientLogonScript).  
 
 
 
 ## Manual installation  
- **Supported client platform:** Windows, UNIX/Linux, Mac OS X  
 
- **Advantages:**  
+**Supported client platform**: Windows, UNIX/Linux, Mac OS X  
+
+#### Advantages  
 
 -   Doesn't require computers to be discovered before the client can be installed.  
 
@@ -139,11 +143,11 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Supports using command-line properties for CCMSetup.  
 
- **Disadvantages:**  
+#### Disadvantages  
 
 -   No automation, therefore time consuming.  
 
- For more information about how to manually install the client on each of platform, see the following articles:  
+For more information about how to manually install the client on each of platform, see the following articles:  
 
 -   [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)  
 
@@ -154,9 +158,10 @@ You can use different methods to install the Configuration Manager client softwa
 
 
 ## Microsoft Intune MDM installation
+
 **Supported client platforms**: Windows 10
 
-**Advantages**:
+#### Advantages  
 
 -   Doesn't require computers to be discovered before the client can be installed.  
 
@@ -168,7 +173,7 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Can automate with Windows AutoPilot and Microsoft Intune for co-management.  
 
-**Disadvantages**:
+#### Disadvantages  
 
 -   Requires additional technologies outside of Configuration Manager.  
 
@@ -176,6 +181,7 @@ You can use different methods to install the Configuration Manager client softwa
 
 For more information, see the following articles:  
 
--   [How to install clients to Intune MDM-managed Windows devices](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm)
--   [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+-   [How to install clients to Intune MDM-managed Windows devices](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm)  
+
+-   [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
 

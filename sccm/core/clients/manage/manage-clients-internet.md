@@ -29,23 +29,23 @@ Configuration Manager provides two ways to manage internet-connected clients:
 
 The cloud management gateway provides management of internet-based clients. It uses a combination of a Microsoft Azure cloud service, and a new site system role that communicates with that service. Internet-based clients use the cloud service to communicate with the on-premises Configuration Manager.
 
-Advantages:
+#### Advantages  
 
--   No additional infrastructure investment required.
+-   No additional infrastructure investment required.  
 
--   Does not expose on-premises infrastructure to the internet.
+-   Does not expose on-premises infrastructure to the internet.  
 
--   Cloud virtual machines that run the service are fully managed by Azure and require no maintenance.
+-   Cloud virtual machines that run the service are fully managed by Azure and require no maintenance.  
 
--   Easily set up and configured in the Configuration Manager console.
+-   Easily set up and configured in the Configuration Manager console.  
 
-Disadvantages:
+#### Disadvantages  
 
--   Cloud subscription cost.
+-   Cloud subscription cost.  
 
--   Management data sent through cloud service.
+-   Management data sent through cloud service.  
 
-For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md).
+For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md).  
 
 
 
@@ -53,20 +53,20 @@ For more information, see [Plan for cloud management gateway](plan-cloud-managem
 
 This method relies on internet-facing site system servers to which clients communicate for management purposes. It requires clients and site system servers to be configured for internet-based management.
 
-Advantages:
+#### Advantages  
 
--   No cloud service dependency.
+-   No cloud service dependency.  
 
--   No additional cost associated with a cloud subscription.
+-   No additional cost associated with a cloud subscription.  
 
--   Full control of servers and roles providing the service.
+-   Full control of servers and roles providing the service.  
 
-Disadvantages:
+#### Disadvantages  
 
--   Require additional infrastructure investment.
+-   Require additional infrastructure investment.  
 
--   Overhead and operational cost of additional infrastructure.
+-   Overhead and operational cost of additional infrastructure.  
 
--   Infrastructure must be exposed to the internet.
+-   Infrastructure must be exposed to the internet.  
 
-For more information, see [Plan for internet-based client management](plan-internet-based-client-management.md).
+For more information, see [Plan for internet-based client management](plan-internet-based-client-management.md).  

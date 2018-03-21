@@ -108,13 +108,15 @@ Deploying Configuration Manager clients in your environment has the following ex
 
    -   The client computer must be able to contact a distribution point or a management point to download the supporting files.  
 
- You must have the following security permissions to install the Configuration Manager client by using client push:  
+
+You must have the following security permissions to install the Configuration Manager client by using client push:  
 
    -   To configure the Client Push Installation account: **Modify** and Read permission for the **Site** object.  
 
    -   To use client push to install the client to collections, devices and queries: **Modify Resource** and **Read** permission for the Collection object.  
 
- The **Infrastructure Administrator** security role includes the required permissions to manage client push installation.  
+
+The **Infrastructure Administrator** security role includes the required permissions to manage client push installation.  
 
 
 #### Software update point-based installation  
@@ -125,7 +127,8 @@ Deploying Configuration Manager clients in your environment has the following ex
 
    -   The client computer must be able to contact a distribution point or a management point in order to download supporting files.  
 
- For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates](../../../sum/plan-design/prerequisites-for-software-updates.md).  
+
+For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates](../../../sum/plan-design/prerequisites-for-software-updates.md).  
 
 
 #### Group policy-based installation  
@@ -137,12 +140,12 @@ Deploying Configuration Manager clients in your environment has the following ex
 
 #### Logon script-based installation  
 
-  The client computer must be able to contact a distribution point or a management point in order to download supporting files. Unless you specified CCMSetup.exe with the command-line property **ccmsetup /source**.  
+The client computer must be able to contact a distribution point or a management point in order to download supporting files. Unless you specified CCMSetup.exe with the command-line property **ccmsetup /source**.  
 
 
 #### Manual installation  
 
- The client computer must be able to contact a distribution point or a management point in order to download supporting files. Unless you specified CCMSetup.exe with the command-line property **ccmsetup /source**.  
+The client computer must be able to contact a distribution point or a management point in order to download supporting files. Unless you specified CCMSetup.exe with the command-line property **ccmsetup /source**.  
 
 
 #### Microsoft Intune MDM installation
@@ -160,9 +163,9 @@ Deploying Configuration Manager clients in your environment has the following ex
 
 #### Workgroup computer installation  
 
- In order to access resources in the Configuration Manager site server domain, the network access account must be configured for the site.  
+In order to access resources in the Configuration Manager site server domain, the network access account must be configured for the site.  
 
- For more information about how to configure the network access account, see the [Fundamental concepts for content management](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
+For more information about how to configure the network access account, see the [Fundamental concepts for content management](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 
 #### Software distribution-based installation (for upgrades only)  
@@ -171,19 +174,24 @@ Deploying Configuration Manager clients in your environment has the following ex
 
    -   The client computer must be able to contact a distribution point or a management point to download the supporting files.  
 
- For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](../../../apps/plan-design/security-and-privacy-for-application-management.md).  
+
+For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](../../../apps/plan-design/security-and-privacy-for-application-management.md).  
 
 
 #### Automatic client upgrades  
 
- You must be a member of the **Full Administrator** security role to configure automatic client upgrades.  
+You must be a member of the **Full Administrator** security role to configure automatic client upgrades.  
 
 
 ### Firewall requirements  
- If there is a firewall between the site system servers and the computers onto which you want to install the Configuration Manager client, see [Windows Firewall and port settings for clients](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
+
+If there is a firewall between the site system servers and the computers onto which you want to install the Configuration Manager client, see [Windows Firewall and port settings for clients](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
+
+
 
 ##  <a name="BKMK_prereqs_mobiledevices"></a> Prerequisites for mobile device clients  
- When you install the Configuration Manager client on mobile devices and enroll them, use this information to determine the prerequisites.  
+
+When you install the Configuration Manager client on mobile devices and enroll them, use this information to determine the prerequisites.  
 
 ### Dependencies external to Configuration Manager  
 
@@ -249,10 +257,11 @@ Deploying Configuration Manager clients in your environment has the following ex
      For more information about how to configure security permissions, see [Fundamentals of role-based administration](../../../core/understand/fundamentals-of-role-based-administration.md) and [Configure role-based administration](../../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
 ### Firewall requirements  
- Intervening network devices such as routers and firewalls, and Windows Firewall if applicable, must allow the traffic associated with mobile device enrollment:  
+Intervening network devices such as routers and firewalls, and Windows Firewall if applicable, must allow the traffic associated with mobile device enrollment:  
 
 -   Between mobile devices and the enrollment proxy point: HTTPS (by default, TCP 443)  
 
 -   Between the enrollment proxy point and the enrollment point: HTTPS (by default, TCP 443)  
 
- If you use a proxy web server, it must be configured for SSL tunneling; SSL bridging is not supported for mobile devices.  
+
+If you use a proxy web server, it must be configured for SSL tunneling; SSL bridging is not supported for mobile devices.  

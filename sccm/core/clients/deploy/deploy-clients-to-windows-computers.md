@@ -191,9 +191,8 @@ For information about how to use group policy in Active Directory Domain Service
 
  You can specify command-line properties for both CCMSetup.exe and Client.msi to modify the behavior of the client installation. Make sure that you specify CCMSetup properties (the properties that begin with **/**) before you specify Client.msi properties. For example:  
 
-```  
-CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01  
-```  
+`CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01`    
+
 and the client installs by using the following properties:  
 
 |Property|Description|  
@@ -223,9 +222,8 @@ and the client installs by using the following properties:
 
  **Example 1:**  
 
-```  
-CCMSetup.exe  
-```  
+`CCMSetup.exe`  
+
 This example installs the client with no additional properties. The client is automatically configured with the client installation properties published to Active Directory Domain Services. It is automatically configured for the following settings: 
 - Site code. This setting requires the client's network location to be included in a boundary group that is configured for client assignment. 
 - Management point
@@ -236,9 +234,8 @@ For more information, see [About client installation properties published to Act
 
  **Example 2:**  
 
-```  
-CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=server05.contoso.com CCMFIRSTCERT=1 FSP=server06.constoso.com  
-```  
+`CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=server05.contoso.com CCMFIRSTCERT=1 FSP=server06.constoso.com`
+  
 This example overrides the automatic configuration that Active Directory Domain Services provides. It doesn't require that the client's network location is included in a boundary group that is configured for client assignment. Instead, the installation specifies the following settings:
 - Site code
 - Intranet management point 
@@ -302,15 +299,13 @@ For the procedure to install the Configuration Manager client on a modern Window
 > 
 > Starting in version 1710, clients do not unenroll from Intune. They can have both the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management](/sccm/core/clients/manage/co-management-overview).
 
-###  To install clients with Intune:
+###  Install clients with Intune:
 
 1. In Intune, [create an app](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) containing the Configuration Manager client installation file **ccmsetup.msi**. This file is found in the folder **&lt;ConfigMgr installation directory\>\bin\i386** on the Configuration Manager site server.
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use the following command line with a traditional client on the intranet:
 
-  ```
-  CCMSETUPCMD="/MP:&lt;FQDN of management point> SMSMP=&lt;FQDN of management point> SMSSITECODE=&lt;Your site code> DNSSUFFIX=&lt;DNS Suffix of management point>"
-  ```
+  `CCMSETUPCMD="/MP:&lt;FQDN of management point> SMSMP=&lt;FQDN of management point> SMSSITECODE=&lt;Your site code> DNSSUFFIX=&lt;DNS Suffix of management point>"`  
 
    > [!Note]  
    > For an example command line to use with a modern Windows 10 client using Azure AD authentication, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
@@ -431,10 +426,8 @@ When the Configuration Manager site supports [internet-based client management](
 
 5.  Verify whether you have to specify additional CCMSetup command-line properties. For example, you might have to specify a certificate selection criterion if the client has more than one valid PKI certificate. For a list of available properties, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
-   Example: 
-   ```
-   CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1  
-   ```  
+   Example:  
+   `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
    This example installs the client with the following behaviors:
    - Use source files from a folder on the D drive
