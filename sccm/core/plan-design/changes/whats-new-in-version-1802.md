@@ -169,7 +169,7 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Run scripts improvements 
 <!-- 1236459 -->
- Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting and script output is truncated to 4 KB. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+ Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
 
 ## Operating system deployment
