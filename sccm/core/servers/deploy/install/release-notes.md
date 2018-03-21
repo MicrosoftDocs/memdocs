@@ -48,9 +48,23 @@ When you run setup from the CD.Latest folder created for version 1606, and use t
   `ERROR: File hash check failed for defaultcategories.dll`  
   `ERROR: Manifest verification failed. Wrong version of manifest?`
 
-**Workaround:** Use one of the following options:
+#### Workaround
+Use one of the following options:
  - During Setup, choose to download the most current redistributable files from Microsoft. Use the latest redistributable files instead of the files included in the CD.Latest folder.
  - Manually delete the *cd.latest\redist\languagepack\zhh* folder, and then run Setup again.
+
+
+### Setup command-line option JoinCEIP must be specified
+<!--510806-->
+*Applies to: Configuration Manager version 1802*
+
+Starting in Configuration Manager version 1802, the Customer Experience Improvement Program (CEIP) feature is removed from the product. When [automating installation](/sccm/core/servers/deploy/install/command-line-options-for-setup) of a new site from a command-line or unattended script, setup returns an error that a required parameter is missing. 
+
+#### Workaround
+While it has no affect on the outcome of the setup process, include the **JoinCEIP** parameter in your setup command line.
+
+ > [!Note]  
+ > The EnableSQM parameter for [console setup](/sccm/core/servers/deploy/install/install-consoles) is not required.
 
 
 
@@ -63,7 +77,10 @@ When you run setup from the CD.Latest folder created for version 1606, and use t
 <!--501089-->
 *Applies to: Configuration Manager version 1706*
 <!--also fixed in 1710 HFRU-->
-In the scenario to [install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure), client communication fails when the HTTPS-enabled management point uses alternate database credentials. Mitigate this issue with one of the following actions:
+In the scenario to [install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure), client communication fails when the HTTPS-enabled management point uses alternate database credentials. 
+
+#### Workaround
+Mitigate this issue with one of the following actions:
 - Update the site to the latest version, and apply the latest hotfix
 - Change the credentials that the management point uses.
 
@@ -78,7 +95,8 @@ In the scenario to [install and assign Configuration Manager Windows 10 clients 
 <!-- 474326 -->
 By default, the Create Servicing Plan wizard currently runs after every software updates synchronization. Each time the wizard runs, it creates a new software update group and deployment. If you have a software updates synchronization schedule that runs several times a day, the Create Servicing Plan wizard creates multiple software update groups and deployments each day.  
 
-**Workaround**: After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
+#### Workaround
+ After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
 
 
 
@@ -90,7 +108,8 @@ By default, the Create Servicing Plan wizard currently runs after every software
 
 You can't create a VPN profile, using the Windows Phone 8.1 workflow, which is also applicable to Windows 10 devices. For these profiles, the creation wizard no longer shows the Supported Platforms page. Windows Phone 8.1 is automatically selected on the back-end. The Supported Platforms page is available in the profile properties, but it doesn't display the Windows 10 options.
 
-**Workaround**: Use the Windows 10 VPN profile workflow for Windows 10 devices. If this option isn't feasible for your environment, contact support. Support can help you add the Windows 10 targeting.
+#### Workaround
+ Use the Windows 10 VPN profile workflow for Windows 10 devices. If this option isn't feasible for your environment, contact support. Support can help you add the Windows 10 targeting.
 
 
 

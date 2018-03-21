@@ -91,10 +91,12 @@ On the **Deployment Settings** page of the Deploy Software wizard, specify the f
 
 - **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when the application is deployed to a device collection. <!--1357015-->  
 
-    > [!Important]
+    This is an optional feature. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). If this feature is not enabled, you see the prior experience.  
+
+    > [!Important]  
     > The Configuration Manager client must be on version 1802 as well. You must also be using the new Software Center.  
 
-    > [!Note]
+    > [!Note]  
     > View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There is now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.  
     >  If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 	>  After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices, but it does stop users from installing new copies of the application from Software Center.
