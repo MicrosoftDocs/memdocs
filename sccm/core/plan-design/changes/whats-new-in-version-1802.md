@@ -108,7 +108,7 @@ In Configuration Manager 1802, the following insights are available:
 
 ### Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate. For more information, see [CMG requirements](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements-for-cloud-management-gateway).
+When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate. For more information, see [CMG requirements](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements).
 
 > [!IMPORTANT]
 > This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -169,7 +169,7 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Run scripts improvements 
 <!-- 1236459 -->
- Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting and script output is truncated to 4 KB. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+ Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
 
 ## Operating system deployment
@@ -181,10 +181,6 @@ The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-win
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
 The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
-
-### Improvements to PXE-enabled distribution points
-<!-- 1357580 -->
-On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which does not require Windows Deployment Services (WDS). Because WDS is not required, the PXE-enabled distribution point can be a client or server operating system, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. For more information, see [Prepare distribution points for OS deployments](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments).
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:
@@ -225,8 +221,9 @@ Installed applications can now be hidden in Software Center. Applications that a
 ### Hide unapproved applications in Software Center
  <!--1355146-->
 When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) has additional details.  
+
 ### Software Center shows user additional compliance information
-<!-- 1097546 -->
+<!-- 1235616 -->
  When using Device Health Attestation status as a compliance policy rule for conditional access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
 
 
