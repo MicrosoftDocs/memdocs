@@ -139,7 +139,7 @@ Microsoft intends to deprecate the Linux and UNIX client support in System Cente
 The Surface device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. You can view the  items:
 - Percent of Surfaces
 - Percent of Surface models
-- Top five operating system versions
+- Top five firmware versions
 
 For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) article.
 
