@@ -1,7 +1,7 @@
 ---
-title: "New version 1802 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1802 of System Center Configuration Manager."
+title: New version 1802
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1802 of Configuration Manager.
 ms.custom: na
 ms.date:  03/09/2018
 ms.prod: configuration-manager
@@ -48,7 +48,7 @@ Many customers have large Configuration Manager infrastructures, and are reducin
 
 ### Configure Windows Delivery Optimization to use Configuration Manager boundary groups
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).
 
 ### Support for Windows 10 ARM64 devices
 <!-- 1353704 -->
@@ -108,10 +108,23 @@ In Configuration Manager 1802, the following insights are available:
 
 ### Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate. For more information, see [CMG requirements](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements).
+When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. For more information, see [CMG topology design](/sccm/core/clients/manage/plan-cloud-management-gateway#azure-resource-manager).
 
 > [!IMPORTANT]
-> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+
+### Improvements to cloud management gateway  
+
+- Starting in this release, the **cloud management gateway** is no longer a pre-release feature.  
+
+- The feature documentation is revised and enhanced. For more information, see the following articles:
+    - [Plan for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+    - [Cloud management gateway size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
+    - [Security and privacy for cloud management gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
+    - [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+    - [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
+    - [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
+
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
@@ -126,7 +139,7 @@ Microsoft intends to deprecate the Linux and UNIX client support in System Cente
 The Surface device dashboard provides information about the Surface devices found in your environment. In the console, go to **Monitoring** > **Surface Devices**. You can view the  items:
 - Percent of Surfaces
 - Percent of Surface models
-- Top five operating system versions
+- Top five firmware versions
 
 For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) article.
 
@@ -167,6 +180,10 @@ Configure an application deployment to not automatically upgrade any superseded 
 <!-- 1357015 -->
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
 
+ > [!Note]  
+ > This is an optional feature. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
+
+
 ### Run scripts improvements 
 <!-- 1236459 -->
  Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
@@ -176,11 +193,11 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
+The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg).
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
-The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
+The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-to-prepare-for-upgrade).
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:
@@ -208,7 +225,7 @@ The [deployment wizard for task sequences](/sccm/osd/deploy-use/manage-task-sequ
 
 ### Install multiple applications in Software Center
 <!-- 1357126 -->
-If an end user or desktop technician needs to install multiple applications on a device, Software Center now supports installing multiple selected applications. This behavior allows the user to be more efficient while not waiting for one installation to finish before starting the next.
+If an end user or desktop technician needs to install multiple applications on a device, Software Center now supports installing multiple selected applications. This behavior allows the user to be more efficient while not waiting for one installation to finish before starting the next. For more information, see [Install multiple applications](/sccm/core/understand/software-center#install-multiple-applications) in the new Software Center user guide.
 
 ### Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
