@@ -1,9 +1,9 @@
 ---
-title: "Client installation methods"
-titleSuffix: "Configuration Manager"
-description: "Learn client installation methods for System Center Configuration Manager."
+title: Client installation methods
+titleSuffix: Configuration Manager
+description: Learn about the methods of installing the Configuration Manager client.
 ms.custom: na
-ms.date: 04/25/2017
+ms.date: 03/21/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,16 +14,16 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 
 ---
 # Client installation methods in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can use different methods to install the Configuration Manager client software. You can use one method or a combination of methods. In this topic you can read about each method, to learn which will work best in your organization.  
+You can use different methods to install the Configuration Manager client software. Use one method, or a combination of methods. This article describes each method, so you can learn which one works best for your organization.  
 
 ## Client push installation  
 
@@ -43,15 +43,17 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Can only be used on computers that have been discovered by Configuration Manager.  
 
--   Cannot be used to install clients in a workgroup.  
+-   Can't be used to install clients in a workgroup.  
 
 -   A client push installation account must be specified that has administrative rights to the intended client computer.  
 
--   Windows Firewall must be configured on client computers with exceptions so that client push installation can be completed.  
+-   Windows Firewall must be configured with exceptions on client computers.   
 
--   You cannot cancel client push installation. When you use this client installation method for a site, Configuration Manager tries to install the client on all discovered resources and retries any failures for up to 7 days.  
+-   You can't cancel client push installation. Configuration Manager tries to install the client on all discovered resources. It retries any failures for up to seven days.  
 
- For more information about this installation method, see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+
+
 
 ## Software update point-based installation  
  **Supported client platform:** Windows  
@@ -60,72 +62,78 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   Can use your existing software updates infrastructure to manage the client software.  
 
--   Can automatically install the client software on new computers if Windows Server Update Services (WSUS) and Group Policy settings in Active Directory Domain Services are configured correctly.  
+-   If Windows Server Update Services (WSUS) and group policy settings in Active Directory Domain Services are configured correctly, it can automatically install the client software on new computers .  
 
--   Does not require computers to be discovered before the client can be installed.  
+-   Doesn't require computers to be discovered before the client can be installed.  
 
 -   Computers can read client installation properties that have been published to Active Directory Domain Services.  
 
--   Will reinstall the client software if it is removed.  
+-   If the client is removed, this method reinstalls it.  
 
--   Does not require you to configure and maintain an installation account for the intended client computer.  
+-   Doesn't require you to configure and maintain an installation account for the intended client computer.  
 
  **Disadvantages:**  
 
 -   Requires a functioning software updates infrastructure as a prerequisite.  
 
--   Must use the same server for client installation and software updates, and this server must reside in a primary site.  
+-   Must use the same server for client installation and software updates. This server must reside in a primary site.  
 
--   To install new clients, you must configure a Group Policy Object (GPO) in Active Directory Domain Services with the client's active software update point and port.  
+-   To install new clients, you must configure a group policy object in Active Directory Domain Services with the client's active software update point and port.  
 
--   If the Active Directory schema is not extended for Configuration Manager, you must use Group Policy settings to provision computers with client installation properties.  
+-   If the Active Directory schema isn't extended for Configuration Manager, you must use group policy settings to provision computers with client installation properties.  
 
- For more information about this installation method, see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ For more information, see [How to install clients with software update-based installation](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
 
-## Group Policy installation  
+
+
+## Group policy installation  
  **Supported client platform:** Windows  
 
  **Advantages:**  
 
--   Does not require computers to be discovered before the client can be installed.  
+-   Doesn't require computers to be discovered before the client can be installed.  
 
 -   Can be used for new client installations or for upgrades.  
 
 -   Computers can read client installation properties that have been published to Active Directory Domain Services.  
 
--   Does not require you to configure and maintain an installation account for the intended client computer.  
+-   Doesn't require you to configure and maintain an installation account for the intended client computer.  
 
  **Disadvantages:**  
 
--   Can cause high network traffic if a large number of clients are being installed.  
+-   If a large number of clients are being installed, it can cause high network traffic.  
 
--   If the Active Directory schema is not extended for Configuration Manager, you must use Group Policy settings to add client installation properties to computers in your site.  
+-   If the Active Directory schema isn't extended for Configuration Manager, you must use group policy settings to add client installation properties to computers in your site.  
 
- For more information about this installation method, see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ For more information, see [How to install clients with group policy](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientGP).  
+
+
 
 ## Logon script installation  
  **Supported client platform:** Windows  
 
  **Advantages:**  
 
--   Does not require computers to be discovered before the client can be installed.  
+-   Doesn't require computers to be discovered before the client can be installed.  
 
 -   Supports using command-line properties for CCMSetup.  
 
  **Disadvantages:**  
 
--   Can cause high network traffic if a large number of clients are being installed over a short time period.  
+-   If a large number of clients are being installed over a short time period, it can cause high network traffic.  
 
--   Can take a long time to install on all client computers if users do not frequently log on to the network.  
+-   If users don't frequently log on to the network, it can take a long time to install on all client computers.  
 
- For more information about this installation method, see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ For more information, see [How to install clients with logon scripts](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientLogonScript).  
+
+
 
 ## Manual installation  
  **Supported client platform:** Windows, UNIX/Linux, Mac OS X  
 
  **Advantages:**  
 
--   Does not require computers to be discovered before the client can be installed.  
+-   Doesn't require computers to be discovered before the client can be installed.  
 
 -   Can be useful for testing purposes.  
 
@@ -135,10 +143,39 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   No automation, therefore time consuming.  
 
- For more information about how to manually install the client on each of platform, see the following:  
+ For more information about how to manually install the client on each of platform, see the following articles:  
 
--   [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+-   [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)  
 
--   [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
+-   [How to deploy clients to UNIX and Linux servers](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)  
 
--   [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
+-   [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs)  
+
+
+
+## Microsoft Intune MDM installation
+**Supported client platforms**: Windows 10
+
+**Advantages**:
+
+-   Doesn't require computers to be discovered before the client can be installed.  
+
+-   Doesn't require you to configure and maintain an installation account for the intended client computer.  
+
+-   Can use modern authentication with Azure Active Directory.  
+
+-   Can install and assign computers on the internet.  
+
+-   Can automate with Windows AutoPilot and Microsoft Intune for co-management.  
+
+**Disadvantages**:
+
+-   Requires additional technologies outside of Configuration Manager.  
+
+-   Requires the device have access to the internet, even if it is not internet-based.  
+
+For more information, see the following articles:  
+
+-   [How to install clients to Intune MDM-managed Windows devices](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm)
+-   [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+
