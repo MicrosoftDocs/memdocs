@@ -129,9 +129,11 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |1610|Office 365 apps are shut down without warning before installing the update|
 |1610 with update <br/>1702|A restart flag is set and the update is installed after the computer restarts.|
 |1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
+|1802| The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update. </br>If any Office 365 applications are running during an Office 365 client update enforcement, the Office applications will not be forced to close. Instead, the update install will return as requiring a system restart <!--510006-->|
 
 > [!Important]
-> Starting in Configuration Manager version 1706, note the following details:
+>
+>In Configuration Manager version 1706, note the following details:
 >
 >- A notification icon displays in the notification area on the task bar for required apps where the deadline is within 48 hours in the future and the update content has been downloaded. 
 >- A countdown dialog displays for required apps where the deadline is within 7.5 hours in the future and the update has been downloaded. The user can postpone the countdown dialog up to three times before the deadline. When postponed, the countdown displays again after two hours. If not postponed, there is a 30-minute countdown and update gets installed when the countdown expires.
