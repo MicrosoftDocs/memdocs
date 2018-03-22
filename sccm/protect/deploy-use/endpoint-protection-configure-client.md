@@ -26,7 +26,7 @@ manager: dougeby
 This procedure configures custom client settings for Endpoint Protection, which can be deployed to collections of computers in your hierarchy.
 
 > [!IMPORTANT]
->  Only configure the default Endpoint Protection client settings if you're sure that you want them applied to all computers in your hierarchy.
+>  Only configure the default Endpoint Protection client settings if you're sure that you want them applied to all computers in your hierarchy. 
 
 ## To enable Endpoint Protection and configure custom client settings
 
@@ -68,6 +68,8 @@ The following list contains the required prerequisites for installing the Endpoi
 
 -   If you want to install the Endpoint Protection client with the latest definitions, you must download these from the [Microsoft Malware Protection Center](http://go.microsoft.com/fwlink/?LinkID=200965).
 
+>[!NOTE]
+> Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent (SCEPInstall) installed. If it is already installed on Windows 10 devices, Configuration Manager will not remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version. SCEPInstall.exe may still be present in C:\Windows\ccmsetup on some machines but should not be downloaded on new client installations. <!--503654-->
 ### How to Install the Endpoint Protection Client Software on the Reference Computer
 You can install the Endpoint Protection client locally on the reference computer from a command prompt. To do so, you must first obtain the installation file **scepinstall.exe**. You can also install the client with a preconfigured antimalware policy or with an antimalware policy that you previously exported.
 
