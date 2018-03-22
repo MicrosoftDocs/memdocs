@@ -3,7 +3,7 @@ title: "Updates"
 titleSuffix: "Configuration Manager"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -72,7 +72,7 @@ The following versions of Configuration Manager are available as a baseline, an 
 
 |Version |Availability date|[Support end date](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|in-console update|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000|March 12, 2018|September 12, 2019|Yes|Yes|
+|[1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000|March 22, 2018|September 22, 2019|Yes|Yes|
 |[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|November 20, 2017|May 20, 2019|No|Yes|
 |[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|July 31, 2017|July 31, 2018|No|Yes|
 |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|March 27, 2017| March 27, 2018|Yes|Yes|
