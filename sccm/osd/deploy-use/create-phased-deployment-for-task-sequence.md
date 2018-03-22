@@ -3,7 +3,7 @@ title: Create a phased deployment for a task sequence
 titleSuffix: "System Center Configuration Manager"
 description: "Create phased deployments for task sequences"
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,7 +27,16 @@ Phased deployments automate a coordinated, sequenced rollout of a task sequence 
 >[!NOTE]
 > Phased deployments is a pre-release feature introduced in Configuration Manager 1802. <!--1356837-->
 
+## Security scope and log file information
+
+**Security scope**:</br>
+Deployments created by Phased Deployments are not viewable to anyone that does not have the **All** security scope.
+
+**Log files**: </br>
+SMS_PhasedDeployment.log
+
 ## Create a default two-phased deployment for a task sequence
+
 Use the following instructions to create a phased deployment. 
 
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.

@@ -3,7 +3,7 @@ title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
 ms.custom: na
-ms.date: 03/16/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -334,7 +334,8 @@ The log file SMS_DM.log on the site system server also records communication bet
 |sinvproc.log|Records information about the processing of software inventory data to the site database.|Site server|  
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
-|sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|  
+|sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
+|SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
 |smsbkup.log|Records output from the site backup process.|Site server|  
@@ -705,7 +706,8 @@ The following table lists the log files that contain information related to Disc
 |smpmsi.log|Records installation and configuration details about the state migration point.|Site system server|  
 |smpperf.log|Records the state migration point performance counter updates.|Site system server|  
 |smspxe.log|Records details about the responses to clients that use PXE boot, and details about the expansion of boot images and boot files.|Site system server|  
-|smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|  
+|smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|
+| SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy| 
 |Smsts.log|Records task sequence activities.|Client|  
 |TSAgent.log|Records the outcome of task sequence dependencies before starting a task sequence.|Client|  
 |TaskSequenceProvider.log|Records details about task sequences when they are imported, exported, or edited.|Site system server|  
