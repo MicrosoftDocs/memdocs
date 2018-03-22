@@ -626,7 +626,7 @@ Select **Browse** to select an image to appear in Software Center. The logo must
 Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   <!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
-Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled. <!--1357592-->   
+Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. <!--1357592-->   
   
 ### Software Center tab visibility
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
