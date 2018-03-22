@@ -43,14 +43,37 @@ Pull-distribution points support the same configurations and functionality as ty
 
 -   As soon as content is distributed to a pull-distribution point, the Package Transfer Manager on the site server checks the site database to confirm if the content is available on a source distribution point. If it cannot confirm that the content is on a source distribution point for the pull-distribution point, it repeats the check every 20 minutes until the content is available.  
 
--   When the Package Transfer Manager confirms that the content is available, it notifies the pull-distribution point to download the content. When the pull-distribution point receives this notification, it attempts to download the content from its source distribution points.  
+-   When the Package Transfer Manager confirms that the content is available, it notifies the pull-distribution point to download the content. If this notification fails it will retry based on the Software Distribution Component **Retry settings** for pull-distribution points. When the pull-distribution point receives this notification, it attempts to download the content from its source distribution points.  
 
--   After the pull-distribution point completes the download of content, it submits this status to a management point. However, if after 60 minutes, this status has not been received, the Package Transfer Manager wakes up and checks with the pull-distribution point to confirm whether the pull-distribution point has downloaded the content. If the content download is in progress, the Package Transfer Manager sleeps for 60 minutes before it checks with the pull-distribution point again. This cycle continues until the pull-distribution point completes the content transfer.  
+-   While the pull-distribution point downloads the content the Package Transfer Manager will poll the status based on the Software Distribution Component **Status polling settings** for pull-distribution points.  When the pull-distribution point completes the download of content, it submits this status to a management point.
 
 **You can configure a pull-distribution point** when you install the distribution point or after it is installed by editing the properties of the distribution point site system role.  
 
 **You can remove the configuration to be a pull-distribution point** by editing the properties of the distribution point. When you remove the pull-distribution point configuration, the distribution point returns to normal operations, and the site server manages future content transfers to the distribution point.  
 
+## To configure Software Distribution Component for pull-distribution points
+
+1.  In the Configuration Manager console, choose **Administration** > **Sites**.  
+
+2.  Select the desired site and select **Configure Site Components** > **Software Distribution**
+
+3. Select the **Pull Distribution Point** tab.  
+
+4.  In the **Retry settings** list, configure the following values:  
+
+    -   **Number of retries** - The number of times that the Package Transfer Manager attempts to notify the pull-distribution point to download the content.  If this number is exceeded the Package Transfer Manager will cancel the transfer.
+
+    -   **Delay before retrying (minutes)** - The number of minutes that the Package Transfer Manager will wait between attempts. 
+
+5.  In the **Status polling settings** list, configure the following values:  
+
+    -   **Number of polls** - The number of times that the Package Transfer Manager contacts the pull-distribution point to retrieve the job status.  If this number is exceeded before the job completes the Package Transfer Manager will cancel the transfer.
+
+    -   **Delay before retrying (minutes)** - The number of minutes that the Package Transfer Manager will wait between attempts. 
+    
+    > [!NOTE]  
+    >  When the Package Transfer Manager cancels a job because the number of Status polling retries has been exceeded the pull-distribution point will continue to download the content.  When it finishes, the appropriate status message will be sent to the Package Transfer Manager and the console will reflect the new status.
+    
 ## Limitations for pull-distribution points  
 
 -   A cloud-based distribution point cannot be configured as a pull-distribution point.  
@@ -59,12 +82,12 @@ Pull-distribution points support the same configurations and functionality as ty
 
 -   **The prestage content configuration overrides the pull-distribution point configuration**. A pull-distribution point that is configured for prestaged content waits for the content. It does not pull content from the source distribution point, and, like a standard distribution point that has the prestage content configuration, does not receive content from the site server.  
 
--   **A pull-distribution point does not use configurations for rate limits** when it transfers content. If you configure a previously installed distribution point to be a pull-distribution point, configurations for rate limits are saved, but not used. If you later remove the pull-distribution point configuration, the rate limit configurations are implemented as previously configured.  
+-   **A pull-distribution point does not use configurations for schedule or rate limits** when it transfers content. If you configure a previously installed distribution point to be a pull-distribution point, configurations for schedule and rate limits are saved, but not used. If you later remove the pull-distribution point configuration, the schedule and rate limit configurations are implemented as previously configured.  
 
     > [!NOTE]  
-    >  When a distribution point is configured as a pull-distribution point, the **Rate Limits** tab is not visible in the properties of the distribution point.  
+    >  When a distribution point is configured as a pull-distribution point, the **Schedule** and **Rate Limits** tabs are not visible in the properties of the distribution point.  
 
--   A pull-distribution point does not use the **Retry settings** for content distribution. **Retry Settings** can be configured as part of the **Software Distribution Component Properties** for each site. To view or configure these properties, in the **Administration** workspace of the Configuration Manager console, expand **Site Configuration**, and then select **Sites**. Next, in the results pane, select a site, and then on the **Home** tab, select **Configure Site Components**. Finally, select **Software Distribution**.  
+-   Pull-distribution points do not use the settings on the **General** tab of the **Software Distribution Component Properties** for each site.  This includes the **Concurrent distribution** and **Multicast retry** setting.  Use the **Pull Distribution Point** tab to configure settings for pull-distribution points.
 
 -   To transfer content from a source distribution point in a remote forest, the computer that hosts the pull-distribution point must have a Configuration Manager client installed. A Network Access Account that can access the source distribution point must be configured for use.  
 
