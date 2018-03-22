@@ -3,7 +3,7 @@ title: Client installation properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line properties for installing the Configuration Manager client.
 ms.custom: na
-ms.date: 03/16/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

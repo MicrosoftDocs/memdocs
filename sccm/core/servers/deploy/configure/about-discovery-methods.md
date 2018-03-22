@@ -3,7 +3,7 @@ title: Discovery methods
 titleSuffix: Configuration Manager
 description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Azure Active Directory.
 ms.custom: na
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

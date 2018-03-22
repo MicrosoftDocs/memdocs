@@ -2,11 +2,13 @@
 # required metadata
 
 title: Co-management for Windows 10 devices  
+titleSuffix: Configuration Manager
 description: Learn how to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
 keywords:
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

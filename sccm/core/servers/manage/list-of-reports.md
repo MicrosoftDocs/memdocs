@@ -3,7 +3,7 @@ title: "List of reports"
 titleSuffix: "Configuration Manager"
 description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

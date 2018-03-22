@@ -3,7 +3,7 @@ title: "Learn more about PowerShell script security"
 titleSuffix: "System Center Configuration Manager"
 description: "Resources to help learn about PowerShell script security."
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

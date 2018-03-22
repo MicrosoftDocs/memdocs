@@ -3,7 +3,7 @@ title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
 ms.custom: na
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

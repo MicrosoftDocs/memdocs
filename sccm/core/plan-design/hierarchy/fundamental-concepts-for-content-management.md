@@ -3,7 +3,7 @@ title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
