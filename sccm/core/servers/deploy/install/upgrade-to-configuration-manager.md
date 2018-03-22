@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,6 +29,14 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
  > When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
+
+**Upgrade to version 1802**   
+When you have version 1702 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1802:   
+-	  An evaluation install of System Center Configuration Manager version 1802
+-	  System Center 2012 Configuration Manager with Service Pack 1
+-	  System Center 2012 Configuration Manager with Service Pack 2
+-	  System Center 2012 R2 Configuration Manager
+-	  System Center 2012 R2 Configuration Manager with Service Pack 1
 
 **Upgrade to version 1702**   
 When you have version 1702 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1702:   

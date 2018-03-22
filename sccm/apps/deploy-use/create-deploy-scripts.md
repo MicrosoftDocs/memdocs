@@ -3,7 +3,7 @@ title: "Create and run scripts"
 titleSuffix: "Configuration Manager"
 description: "Create and run Powershell scripts on client devices."
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ caps.latest.revision: 14
 caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 
 ---
 
@@ -24,12 +24,14 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
->[!TIP]
->Introduced with version 1706, the ability to run PowerShell scripts is a pre-release feature. To enable scripts, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
-We've now better integrated the ability to run Powershell scripts with System Center Configuration Manager. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get big jobs done more easily and more consistently.
+System Center Configuration Manager has an integrated ability to run Powershell scripts. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
-With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following:
+> [!TIP]  
+> This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.
+
+
+With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
 
 - Create and edit scripts for use with System Center Configuration Manager.
 - Manage script usage through roles and security scopes. 
@@ -38,33 +40,45 @@ With this integration in System Center Configuration Manager, you can use the *R
 - Monitor script execution and view reporting results from script output.
 
 >[!WARNING]
->Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts.
+>Given the power of scripts, we remind you to be intentional and careful with their usage. We have built in additional safeguards to assist you; segregated roles and scopes. Be sure to validate the accuracy of scripts before running them and confirm they are from a trusted source, to prevent unintended script execution. Be mindful of extended characters or other obfuscation and educate yourself about securing scripts. [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security)
 
 ## Prerequisites
 
 - To run PowerShell scripts, the client must be running PowerShell version 3.0 or later. However, if a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that version of PowerShell.
 - Configuration Manager clients must be running the client from the 1706 release, or later in order to run scripts.
 - To use scripts, you must be a member of the appropriate Configuration Manager security role.
-- To import and author scripts - Your account must have **Create** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
-- To run scripts - Your account must have **Run Script** permissions for **Collections** in the **Full Administrator** security role.
+- To import and author scripts - Your account must have **Create** permissions for **SMS Scripts**.
+- To approve or deny scripts - Your account must have **Approve** permissions for **SMS Scripts**.
+- To run scripts - Your account must have **Run Script** permissions for **Collections**.
 
-For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+For more information about Configuration Manager security roles:</br>
+[Security scopes for run scripts](#BKMK_Scopes)</br>
+[Security roles for run scripts](#BKMK_ScriptRoles)</br>
+[Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 ## Limitations
 
 Run Scripts currently supports:
 
 - Scripting languages: PowerShell
-- Parameter types: integer, string and, list
+- Parameter types: integer, string, and list.
+
+
+>[!WARNING]
+>Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include to secrets in your PowerShell scripts (no passwords, etc.). [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+
+
+## Group Policy considerations for scripts
+<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
+Setting an Execution Policy via Group Policy may not allow scripts to be run with Configuration Manager. For information about Execution Polices and how they get set see the [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) article. <!--507185-->
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is.
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#BKMK_ScriptRoles).
 
 ### Scripts roles control
 
-By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and can be deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing.
+By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and potentially deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You are able to turn off secondary approval, for ease of testing.
 
 ### Approve or Deny a script
 
@@ -73,7 +87,7 @@ Scripts must be approved, by the *script approver* role, before they can be run.
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
 3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
-4. In the **Approve or deny script** dialog box, select **Approve** or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
+4. In the **Approve or deny script** dialog box, select **Approve**, or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
 ![Script - Approval](./media/run-scripts/RS-approval.png)
 1. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
@@ -87,11 +101,59 @@ This approval is primarily used for the testing phase of script development.
 4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
 
 >[!IMPORTANT]
->As a best practice, you shouldn't allow a script author to approve their own scripts. This should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
+>As a best practice, you shouldn't allow a script author to approve their own scripts. It should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
 *(Introduced with version 1710)*  
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+
+## <a name="bkmk_ScriptRoles"></a> Create security roles for scripts
+The three security roles used for running scripts are not created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
+
+1. In the Configuration Manager console, go to **Administration** >**Security** >**Security Roles**
+2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Make sure you take only the permissions that you want. 
+3. Give the custom role a **Name** and a **Description**. 
+4. Assign the security role the permissions outlined below. 
+
+    ### **Security Role Permissions**
+
+     **Role Name**: Script Runners
+    - **Description**: These permissions enable this role to only run scripts that were previously created and approved by other roles. 
+    - **Permissions:** Ensure the following are set to **Yes**.
+         |**Category**|**Permission**|**State**|
+         |---|---|---|
+         |Collection|Run Script|Yes|
+         |SMS Scripts|Create|Yes|
+         |SMS Scripts|Read|Yes|
+
+     **Role Name**: Script Authors
+    - **Description**: These permissions enable this role to author scripts, but they can’t approve or run them. 
+    - **Permissions**: Ensure the following permissions are set.
+    - 
+         |**Category**|**Permission**|**State**|
+         |---|---|---|
+         |Collection|Run Script|No|
+         |SMS Scripts|Create|Yes|
+         |SMS Scripts|Read|Yes|
+         |SMS Scripts|Delete|Yes|
+         |SMS Scripts|Modify|Yes|
+
+    **Role Name**: Script Authors
+    - **Description**: These permissions enable this role to approve scripts, but they can’t create or run them. 
+    - **Permissions:** Ensure the following permissions are set.
+
+         |**Category**|**Permission**|**State**|
+         |---|---|---|
+         |Collection|Run Script|No|
+         |SMS Scripts|Read|Yes|
+         |SMS Scripts|Approve|Yes|
+         |SMS Scripts|Modify|Yes|
+     
+**Example of SMS Scripts permissions for the script authors role**
+
+ ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
+
+   
 
 ## Create a script
 
@@ -107,8 +169,8 @@ Run Scripts uses security scopes, an existing feature of Configuration Manager, 
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]
-    >  Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
-<!--SMS503978--Script reboot warning-->
+    >Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
+<!--SMS503978  -->
 
 ## Script parameters
 *(Introduced with version 1710)*  
@@ -117,6 +179,10 @@ Adding parameters to a script provides increased flexibility for your work. The 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
 Each of your script's parameters has its own dialog for adding further details and validation.
+
+>[!IMPORTANT]
+> Parameter values can't contain an apostrophe. 
+
 
 ### Parameter validation
 
@@ -149,7 +215,7 @@ Here are a couple examples that illustrate scripts you might want to use with th
 
 ### Create a new folder and file
 
-This script creates a new folder and a file within it given your naming input.
+This script creates a new folder and a file within the folder, given your naming input.
 
 ``` powershell
 Param(
@@ -200,6 +266,19 @@ After you have initiated running a script on a collection of devices, use the fo
 1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
+    - Beginning in Configuration Manager 1802, script output is truncated to 4 KB to allow for better display experience.  <!--510013-->
+      ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png) 
+
+## Script Output
+
+- Starting in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. 
+- Scripts that get an unknown result, or those where the client was offline, won't show in the charts or data set. <!--507179-->
+- Avoid returning large script output since it is truncated to 4 KB. <!--508488-->
+- Some functionality with script output formatting is not available when running Configuration Manager version 1802 or later with a down-level version of the client. <!--508487-->
+- Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
+   ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
+
+
 
 ## See Also
 

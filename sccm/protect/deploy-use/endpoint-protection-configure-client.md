@@ -3,7 +3,7 @@ title: "Configure Endpoint Protection Client"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,15 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mestew
+ms.author: mstewart
+manager: dougeby
 
 ---
 
-# Configure Custom Client Settings for Endpoint Protection*Applies to: System Center Configuration Manager (Current Branch)*
-This procedure configures custom client settings for Endpoint Protection which can be deployed to collections of computers in your hierarchy.
+# Configure Custom Client Settings for Endpoint Protection
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+This procedure configures custom client settings for Endpoint Protection, which can be deployed to collections of computers in your hierarchy.
 
 > [!IMPORTANT]
->  Only configure the default Endpoint Protection client settings if you are sure that you want them applied to all computers in your hierarchy.
+>  Only configure the default Endpoint Protection client settings if you're sure that you want them applied to all computers in your hierarchy. 
 
 ## To enable Endpoint Protection and configure custom client settings
 
@@ -49,28 +54,30 @@ Client computers will be configured with these settings when they next download 
 ## How to Provision the Endpoint Protection Client in a Disk Image in Configuration Manager
 You can install the Endpoint Protection client on a computer that you intend to use as a disk image source for Configuration Manager operating system deployment. This computer is typically called the reference computer. After you create the image of the operating system, you can then use Configuration Manager operating system deployment to deploy the image that can contain software packages, including Endpoint Protection, to your client computers.
 
-Use the procedures in this topic to help you install and configure the Endpoint Protection client on a reference computer
+Use the procedures in this article to help you install and configure the Endpoint Protection client on a reference computer
 
 ### Prerequisites for Installing the Endpoint Protection Client on the Reference Computer
 The following list contains the required prerequisites for installing the Endpoint Protection client software on a reference computer.
 
--   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center Configuration Manager installation folder on the site server.
+-   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center Configuration Manager installation folder on the site server. Windows 10 and Windows Server 2016 have Windows Defender installed. 
 
 -   To ensure that the Endpoint Protection client is deployed with the configuration that is required in your organization, create an antimalware policy, and then export that policy. You can then specify the antimalware policy to use when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
    > [!NOTE]
-   >  The **Default Client Antimalware Policy** cannot be exported.
+   >  The **Default Client Antimalware Policy** can't be exported.
 
 -   If you want to install the Endpoint Protection client with the latest definitions, you must download these from the [Microsoft Malware Protection Center](http://go.microsoft.com/fwlink/?LinkID=200965).
 
+>[!NOTE]
+> Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent (SCEPInstall) installed. If it is already installed on Windows 10 devices, Configuration Manager will not remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version. SCEPInstall.exe may still be present in C:\Windows\ccmsetup on some machines but should not be downloaded on new client installations. <!--503654-->
 ### How to Install the Endpoint Protection Client Software on the Reference Computer
-You can install the Endpoint Protection client locally on the reference computer from a command prompt. To do so, you must first obtain the installation file **scepinstall.exe**. You can also install the client with an preconfigured antimalware policy or with an antimalware policy that you previously exported.
+You can install the Endpoint Protection client locally on the reference computer from a command prompt. To do so, you must first obtain the installation file **scepinstall.exe**. You can also install the client with a preconfigured antimalware policy or with an antimalware policy that you previously exported.
 
 ## To install the Endpoint Protection client from a command prompt
 
 1.  Copy **scepinstall.exe** from the **Client** folder on the System Center Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.
 
-2.  Open a command prompt with administrator privileges, navigate to the folder where **scepinstall.exe** is located, and then run the following command, adding any additional command line properties that you require:
+2.  Open a command prompt with administrator privileges, navigate to the folder where **scepinstall.exe** is located, and then run the following command, adding any additional command-line properties that you require:
 
    ```
    scepinstall.exe
@@ -92,7 +99,7 @@ You can install the Endpoint Protection client locally on the reference computer
 4.  If you downloaded the latest update definition package, copy the package to the client computer, and then double-click the definition package to install it.
 
    > [!NOTE]
-   >  After the Endpoint Protection client installation is completed, the client automatically performs a definition update check. If this update check succeeds, you do not have to manually install the latest definition update package.
+   >  After the Endpoint Protection client installation is completed, the client automatically performs a definition update check. If this update check succeeds, you don't have to manually install the latest definition update package.
 
 ## To install the client software with an antimalware policy from the command prompt
 
@@ -109,18 +116,18 @@ You can install the Endpoint Protection client locally on the reference computer
 4.  If you downloaded the latest definition package, copy the package to the client computer, and then double-click the definition package to install it.
 
    > [!NOTE]
-   >  After the Endpoint Protection client installation is completed, the client automatically performs a definition update check. If this update check succeeds, you do not have to manually install the latest definition update package.
+   >  After the Endpoint Protection client installation is completed, the client automatically performs a definition update check. If this update check succeeds, you don't have to manually install the latest definition update package.
 
 ## Verify that the Endpoint Protection Client is Installed Correctly
 After you install the Endpoint Protection client on your reference computer, verify that the client is working correctly.
 
 ### To verify that the Endpoint Protection client is installed correctly
 
-1.  On the reference computer, open **System Center Endpoint Protection** from the Windows notification are.
+1.  On the reference computer, open **System Center Endpoint Protection** from the Windows notification area.
 
 2.  On the **Home** tab of the **System Center Endpoint Protection** dialog box, verify that **Real-time protection** is set to **On**.
 
-3.  Verify that **Up to date** is displayed for **Virus and spyware definitions**.
+3.  Verify that **Up-to-date** is displayed for **Virus and spyware definitions**.
 
 4.  To help make sure that your reference computer is ready for imaging, under **Scan options**, select **Full**, and then click **Scan now**.
 
@@ -143,7 +150,7 @@ For more information about operating system deployment in Configuration Manager,
    ```
 
    > [!IMPORTANT]
-   >  Use caution while you are running the Registry Editor in this manner; the -s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
+   >  Use caution while you're running the Registry Editor in this manner; the -s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
 
 4.  In the Registry Editor, navigate to each of the following registry keys and delete them.
 

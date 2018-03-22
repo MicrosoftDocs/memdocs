@@ -1,8 +1,8 @@
 ---
-title: "Privacy statement"
-titleSuffix: "Configuration Manager"
+title: Privacy statement
+titleSuffix: Configuration Manager
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,7 +14,7 @@ ms.assetid: de4e7752-7490-4c3f-9550-ac7f476d99d8
 caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
 
 ---
@@ -69,6 +69,9 @@ The information we collect from you will be used by Microsoft and its controlled
  The remainder of this document covers features that may transmit information to Microsoft and/or its affiliates. Configuration Manager may be used to collect, store, and manage additional information and devices within your organization including the ability to erase all data from devices. For more information about device management, see the online topic, [System Center Configuration Manager privacy statement - Mobile device addendum](../../../core/misc/privacy/privacy-statement-mobile-device-addendum.md). Use the Configuration Manager documentation library to learn more about the product features.  
 
 ## **Customer Experience Improvement Program**  
+
+> [!Note]  
+> Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
 ### What This Feature Does:  
  The Customer Experience Improvement Program ("CEIP") collects basic information from the administration console about your hardware configuration and how you use our software and services in order to identify trends and usage patterns. CEIP also collects the type and number of errors you encounter, software and hardware performance, and the speed of services. We will not collect your name, address, or other contact information. No CEIP data is collected from client computers.  
