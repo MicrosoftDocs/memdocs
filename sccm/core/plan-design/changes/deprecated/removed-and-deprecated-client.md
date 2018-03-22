@@ -3,7 +3,7 @@ title: "Deprecated for Configuration Manager clients"
 titleSuffix: "Configuration Manager"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports for clients."
 ms.custom: na
-ms.date: 01/25/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,6 +33,7 @@ This information is subject to change with future releases, and might not includ
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|
+|Linux and UNIX|March 22, 2018||
 |Windows 8: Professional, Enterprise|January 12, 2018||
 |Windows Embedded 8 Pro|January 12, 2018||
 |Windows Embedded 8 Industry|January 12, 2018||

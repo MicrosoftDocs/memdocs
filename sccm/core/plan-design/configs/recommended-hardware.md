@@ -3,7 +3,7 @@ title: "Recommended hardware"
 titleSuffix: "Configuration Manager"
 description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,7 +71,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 -   Increase the **WsusPool Queue Length** to **2000**.  
 
--   Increase the **WsusPool Private Memory limit** by 4 times, or set it to **0** (unlimited).  
+-   Increase the **WsusPool Private Memory limit** by four times, or set it to **0** (unlimited).  
 
 ###  <a name="bkmk_DiskSpace"></a> Disk space for site systems  
  Disk allocation and configuration contributes to the performance of Configuration Manager. Because each Configuration Manager environment is different, the values that you implement can vary from the following guidance.  
@@ -98,9 +98,9 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
     > [!NOTE]  
     >  When you have 50,000 or more clients at a site, plan to use four or more Temp database .mdf files.  
 
--   The Temp database size for a central administration site is typically much smaller than that for a primary site.  
+-   The Temp database size for a central administration site is typically much smaller than for a primary site.  
 
--   The secondary site database is limited in size to the following:  
+-   The secondary site database has the following size limitations:  
 
     -   SQL Server 2012 Express: 10 GB  
 
@@ -116,7 +116,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 -   **Disk space:** 500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache. Less disk space is required if you use customized settings to install the Configuration Manager client:  
 
-    -   Use the CCMSetup command-line property /skipprereq to avoid installing files that the client doesn't require. For example, run **CCMSetup.exe /skipprereq:silverlight.exe** if the client doesn't use the Application Catalog.  
+    -   Use the CCMSetup command-line property /skipprereq to avoid installing files that the client doesn't require. For example, run **CCMSetup.exe /skipprereq:silverlight.exe** if the client doesn't use the Application Catalog. Starting in Configuration Manager 1802, Silverlight is no longer automatically installed.  
 
     -   Use the Client.msi property SMSCACHESIZE to set a cache file that is smaller than the default of 5120 MB. The minimum size is 1 MB. For example, **CCMSetup.exe SMSCachesize=2** creates a cache that is 2 MB in size.  
 

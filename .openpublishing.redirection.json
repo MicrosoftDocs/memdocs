@@ -179,6 +179,21 @@
             "source_path": "sccm/core/plan-design/changes/removed-and-deprecated-features.md",
             "redirect_url": "/sccm/core/plan-design/changes/deprecated/removed-and-deprecated",
             "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/core/clients/manage/plan-cloud-management-gateway.md",
+            "redirect_url": "/sccm/core/clients/manage/cmg/plan-cloud-management-gateway",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/core/clients/manage/setup-cloud-management-gateway.md",
+            "redirect_url": "/sccm/core/clients/manage/cmg/setup-cloud-management-gateway",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/core/clients/manage/monitor-clients-cloud-management-gateway.md",
+            "redirect_url": "/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway",
+            "redirect_document_id": false
         }
     ]
 }

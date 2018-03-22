@@ -1,9 +1,9 @@
 ---
-title: "Pre-release features"
-titleSuffix: "Configuration Manager"
+title: Pre-release features
+titleSuffix: Configuration Manager
 description: "Pre-release features in System Center Configuration Manager"
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 
 ---
 # Pre-release features in System Center Configuration Manager
@@ -43,17 +43,19 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
 
  |Feature          |Added as pre-release | Added as a full feature|  
 |------------------|---------------------|---------------------|
-| Run Task Sequence Step <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Windows Defender Exploit Guard <!-- 1355468 --> |  [Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Device Health Attestation assessment for conditional access compliance policies <!-- 1235616 --> |  [Version 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Create and run PowerShell scripts from the Configuration Manager console <!-- 1236459 --> |  [Version 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|Phased Deployments<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Run Task Sequence Step <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
+| Windows Defender Exploit Guard <!-- 1355468 --> |  [Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[Version 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
+| Device Health Attestation assessment for conditional access compliance policies <!-- 1235616 --> |  [Version 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[Version 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
+| Create and run PowerShell scripts from the Configuration Manager console <!-- 1236459 --> |  [Version 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[Version 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
 | Manage Microsoft Surface driver updates <!-- 1098490 --> |  [Version 1706](/sccm/sum/get-started/configure-classifications-and-products) | [Version 1710](/sccm/sum/get-started/configure-classifications-and-products)|
 | Device Guard management with Configuration Manager <!-- 1319346 --> |  [Version 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Task sequence content pre-caching <!-- 1021244 --> |  [Version 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [Version 1706](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
 | Check for running executable files before installing an application <!-- 1284624 --> |   [Version 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[Version 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
 | Data Warehouse service point <!-- 1277922 --> |  [Version 1702](/sccm/core/servers/manage/data-warehouse) |[Version 1706](/sccm/core/servers/manage/data-warehouse)|
 | Peer Cache for content distribution to clients <!-- 1101436 --> |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [Version 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| Cloud management gateway <!-- 1101764 --> |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite Connector <!-- 1236739 --> | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Cloud management gateway <!-- 1101764 --> |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[Version 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
+| Microsoft Operations Management Suite Connector <!-- 1236739 --> | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |[Version 1802](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)|
 | Servicing a cluster aware collection (service a server group) <!-- 1081776 --> | [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Conditional access for PCs managed by System Center Configuration Manager <!--  --> | [Version 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [Version 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+<!--Image used = ![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif) -->
