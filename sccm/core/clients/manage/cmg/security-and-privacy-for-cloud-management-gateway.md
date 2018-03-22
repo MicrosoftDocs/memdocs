@@ -4,7 +4,7 @@ description: Learn about guidance and recommendations for security and privacy w
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/16/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:

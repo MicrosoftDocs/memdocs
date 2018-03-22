@@ -3,7 +3,7 @@ title: Technical Preview releases
 titleSuffix: Configuration Manager
 description: Learn about the Technical Preview release to test-drive new functionality and capabilities in Configuration Manager.
 ms.custom: na
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na

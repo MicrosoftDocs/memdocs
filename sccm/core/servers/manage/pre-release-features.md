@@ -1,9 +1,9 @@
 ---
-title: "Pre-release features"
-titleSuffix: "Configuration Manager"
+title: Pre-release features
+titleSuffix: Configuration Manager
 description: "Pre-release features in System Center Configuration Manager"
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 
 ---
 # Pre-release features in System Center Configuration Manager

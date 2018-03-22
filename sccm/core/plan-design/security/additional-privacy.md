@@ -3,7 +3,7 @@ title: Privacy statement - additional information
 titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data from System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

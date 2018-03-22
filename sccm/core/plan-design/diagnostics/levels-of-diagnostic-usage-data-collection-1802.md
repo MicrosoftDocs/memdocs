@@ -3,7 +3,7 @@ title: Diagnostic and usage data for 1802
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1802.
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

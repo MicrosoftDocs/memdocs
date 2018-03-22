@@ -3,7 +3,7 @@ title: Upgrade to Windows 10
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to upgrade an OS from Windows 7 or later to Windows 10.
 ms.custom: na
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

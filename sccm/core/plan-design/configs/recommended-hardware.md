@@ -3,7 +3,7 @@ title: "Recommended hardware"
 titleSuffix: "Configuration Manager"
 description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

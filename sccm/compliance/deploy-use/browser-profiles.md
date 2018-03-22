@@ -5,7 +5,7 @@ description: Configure settings for the Microsoft Edge web browser on Windows 10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/09/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:

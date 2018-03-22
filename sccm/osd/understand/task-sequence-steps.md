@@ -1,9 +1,9 @@
 ---
 title: Task sequence steps
-titleSuffix: "Configuration Manager"
-description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
+titleSuffix: Configuration Manager
+description: Learn about the steps that you can add to a Configuration Manager task sequence.
 ms.custom: na
-ms.date: 01/12/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ caps.latest.revision: 26
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Task sequence steps in System Center Configuration Manager
