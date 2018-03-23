@@ -1,9 +1,9 @@
 ---
-title: Use PXE to deploy Windows over the network
-titleSuffix: "Configuration Manager"
-description: "Use PXE-initiated operating system deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer."
+title: Use PXE for OSD over the network
+titleSuffix: Configuration Manager
+description: Use PXE-initiated OS deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer.
 ms.custom: na
-ms.date: 06/15/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,38 +16,44 @@ caps.latest.revision: 19
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Use PXE to deploy Windows over the network with System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Preboot execution environment (PXE) initiated operating system deployments in System Center Configuration Manager let client computers request and deploy operating systems over the network. In this deployment scenario, you send the operating system image and the x86 and x64 Windows PE boot images to a distribution point configured to accept PXE-boot requests.
+Preboot execution environment (PXE)-initiated OS deployments in Configuration Manager let clients request and deploy operating systems over the network. In this deployment scenario, you send the OS image and the boot images to a PXE-enabled distribution point.
 
 > [!NOTE]  
->  When you create an operating system deployment that targets only x64 BIOS computers, both the x64 boot image and x86 boot image must be available on the distribution point.
+>  When you create an OS deployment that targets only x64 BIOS computers, both the x64 boot image and x86 boot image must be available on the distribution point.
 
-You can use PXE-initiated operating system deployments in the following operating system deployment scenarios:
+You can use PXE-initiated OS deployments in the following scenarios:
 
 -   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
 -   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
-Complete the steps in one of the operating system deployment scenarios, and then use the following sections to prepare for PXE-initiated deployments.
+Complete the steps in one of the OS deployment scenarios, and then use the sections in this article to prepare for PXE-initiated deployments.
+
+
 
 ##  <a name="BKMK_Configure"></a> Configure at least one distribution point to accept PXE requests
-To deploy operating systems to clients that make PXE boot requests, use one or more distribution points configured to respond to the PXE-boot requests. For the steps to enable PXE on a distribution point, see [Configuring distribution points to accept PXE requests](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint).
+To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#pxe).  
+
+
 
 ## Prepare a PXE-enabled boot image
-To use PXE to deploy an operating system, you must have both x86 and x64 PXE-enabled boot images distributed to one or more PXE-enabled distribution points. Use the information to enable PXE on a boot image and distribute the boot image to distribution points:
+To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot images distributed to one or more PXE-enabled distribution points. Use the information to enable PXE on a boot image and distribute the boot image to distribution points:
 
 -   To enable PXE on a boot image, select **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.
 
 -   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
+
+
 ##  <a name="BKMK_PXEExclusionList"></a> Create an exclusion list for PXE deployments
-When you deploy operating systems with PXE, you can create an exclusion list on each distribution point. Add the MAC addresses to the exclusion list of the computers you want the distribution point to ignore. Listed computers won't receive the deployment task sequences that Configuration Manager uses for PXE deployment.
+When you deploy operating systems with PXE, you can create an exclusion list on each distribution point. Add the MAC addresses to the exclusion list of the computers you want the distribution point to ignore. Listed computers don't receive the deployment task sequences that Configuration Manager uses for PXE deployment.
 
 #### To create the exclusion list
 
@@ -66,11 +72,20 @@ When you deploy operating systems with PXE, you can create an exclusion list on 
 
      There is no need to restart the server after you make this registry change.
 
+
+
+## Manage duplicate hardware identifiers
+Configuration Manager may recognize multiple computers as the same device if they have duplicate SMBIOS attributes or you use a shared network adapter. You can mitigate these issues by managing duplicate hardware identifiers in hierarchy settings. For more information, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+
+
+
 ##  <a name="BKMK_RamDiskTFTP"></a>RamDisk TFTP block size and window size
-You can customize the RamDisk TFTP block size, and beginning in Configuration Manager version 1606, the window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error because the block or window size is too large. The RamDisk TFTP block size and window size customization allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. Test the customized settings in your environment to determine the most efficient method. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+You can customize the RamDisk TFTP block and window sizes for PXE-enabled distribution points. If you've customized your network, a large block or window size could cause the boot image download to fail with a time-out error. The RamDisk TFTP block and window size customizations allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. To determine what configuration is most efficient, test the customized settings in your environment. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+
+
 
 ## Configure deployment settings
-To use a PXE-initiated operating system deployment, you must configure the deployment to make the operating system available for PXE boot requests. You may configure available operating systems on the **Deployment Settings** page of the Deploy Software Wizard or the **Deployment Settings** tab in the properties for the deployment. For the **Make available to the following** setting, configure one of the following:
+To use a PXE-initiated OS deployment, configure the deployment to make the OS available for PXE boot requests. Configure available operating systems on the **Deployment Settings** tab in the deployment properties. For the **Make available to the following** setting, select one of the following options:
 
 -   Configuration Manager clients, media, and PXE
 
@@ -78,24 +93,28 @@ To use a PXE-initiated operating system deployment, you must configure the deplo
 
 -   Only media and PXE (hidden)
 
+
+
 ##  <a name="BKMK_Deploy"></a> Deploy the task sequence
-Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
+Deploy the OS to a target collection. For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
 
--   **Required deployment**: Required deployments use PXE without any user intervention. The user won't be able to bypass the PXE boot. However, if the user cancels the PXE boot before the distribution point responds, the operating system won't be deployed.
+-   **Required deployment**: Required deployments use PXE without any user intervention. The user can't bypass the PXE boot. However, if the user cancels the PXE boot before the distribution point responds, the OS isn't deployed.
 
--   **Available deployment**: Available deployments require that the user is present at the destination computer so that they can press the F12 key to continue the PXE boot process. If the user is not present to press F12, the computer will boot into the current operating system or from the next available boot device.
+-   **Available deployment**: Available deployments require that the user is present at the destination computer. A user must press the F12 key to continue the PXE boot process. If a user isn't present to press F12, the computer boots into the current OS, or from the next available boot device.
 
-You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. This action resets the status of that deployment and reinstalls the most recent required deployments.
+You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode) or [Manage collections](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections). This action resets the status of that deployment and reinstalls the most recent required deployments.
 
 > [!IMPORTANT]
 > The PXE protocol is not secure. Ensure that the PXE server and the PXE client are located on a physically secure network, such as in a data center to prevent unauthorized access to your site.
 
+
+
 ##  How is the boot image selected for clients booting with PXE?
-When a client boots with PXE, Configuration Manager provides the client with a boot image to use. Starting in Configuration Manager version 1606, Configuration Manager uses a boot image with an exact architecture match. If a boot image with the exact architecture isn't available, Configuration Manager uses a boot image with a compatible architecture. The following list provides details about how a boot image is selected for clients booting with PXE.
+When a client boots with PXE, Configuration Manager provides the client with a boot image to use. Configuration Manager uses a boot image with an exact architecture match. If a boot image with the exact architecture isn't available, Configuration Manager uses a boot image with a compatible architecture. The following list provides details about how a boot image is selected for clients booting with PXE.
 1. Configuration Manager looks in the site database for the system record that matches the MAC address or SMBIOS of the client that is trying to boot.  
 
     > [!NOTE]
-    > If a computer that is assigned to a site boots to PXE for a different site, the policies aren't visible for the computer. For example, if a client is already assigned to site A, the management point and distribution point for site B won't be able to access the policies from site A. The client won't successfully PXE boot.
+    > If a computer that is assigned to a site boots to PXE for a different site, the policies aren't visible for the computer. For example, if a client is already assigned to site A, the management point and distribution point for site B aren't able to access the policies from site A. The client doesn't successfully PXE boot.
 
 2. Configuration Manager looks for task sequences that are deployed to the system record found in step 1.
 

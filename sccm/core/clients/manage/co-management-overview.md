@@ -2,11 +2,13 @@
 # required metadata
 
 title: Co-management for Windows 10 devices  
+titleSuffix: Configuration Manager
 description: Learn how to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
 keywords:
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -58,7 +60,7 @@ The following are general prerequisites for you to enable co-management:
 - [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (when you use Intune to install the Configuration Manager client)
 
 ## Workloads you can switch to Intune
-After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. You can have Intune manage the following workloads.   
+After you enable co-management, Configuration Manager continues to manage all workloads. When you decide that you are ready, you can have Intune start managing available workloads. You can have Intune manage the following workloads:   
 
 ### Compliance policies
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. For details, see [Device compliance policies](/sccm/mdm/deploy-use/device-compliance-policies).  
@@ -68,6 +70,10 @@ Windows Update for Business policies let you configure deferral policies for Win
 
 ### Resource access policies
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices. For details, see [Deploy resource access profiles](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+
+### Endpoint Protection 
+<!-- 1357365 -->
+Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For details, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune) and [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
 
 ## Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.

@@ -1,9 +1,9 @@
 ---
-title: "Install and assign the client from the internet"
-titleSuffix: "Configuration Manager"
-description: "Install and assign the System Center Configuration Manager client from the internet."
+title: Install the client with Azure AD
+titleSuffix: Configuration Manager
+description: Install and assign the Configuration Manager client on Windows 10 devices using Azure Active Directory for authentication
 ms.custom: na
-ms.date: 8/07/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,80 +14,91 @@ ms.topic: article
 ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 
 ---
 
 # Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication
 
-You can use Configuration Manager cloud services with Azure AD to support the following scenarios:
-
-- Manually install the Configuration Manager client on Windows 10 devices from the internet, and have it assign to a Configuration Manager site (requires the cloud management gateway site system role).
-- Use Azure AD to authenticate clients to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates.
-- Discover Azure AD users into your site to use in collections, and other Configuration Manager operations.
-
-Use the following steps to help you accomplish this:
-
-- **Step 1: Set up the Azure Services app in Configuration Manager Cloud Services and configure Azure AD User Discovery**
-- **Step 2: Set up the Cloud Management Gateway** (optional for on-premises clients)
-- **Step 3: Configure client settings to join Windows 10 devices with Azure AD and enable clients to use the Cloud Management Gateway**
-- **Step 4: Install and register the Configuration Manager client using Azure Active Directory Identity**
+To install the Configuration Manager client on Windows 10 devices using Azure AD authentication, integrate Configuration Manager with Azure Active Directory (Azure AD). Clients can be on the intranet communicating directly with an HTTPS-enabled management point. They can also be internet-based communicating through the CMG or with an internet-based management point. This process uses Azure AD to authenticate clients to the Configuration Manager site. Azure AD replaces the need to configure and use client authentication certificates.
 
 
-## Before you start
 
-- You must have an Azure AD tenant.
-- Your devices must run Windows 10, be Azure AD joined, and be logged on using an Azure AD identity. Clients can also be domain joined in addition to Azure AD joined).
-- In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected) are enabled on the computer that hosts this site system role.
-- To use Configuration Manager to deploy the client:
-	- Configure at least one management point for HTTPS mode if you want to use Azure AD to authenticate instead of client certificates.
-		If you are using client certificates instead of the Cloud Management Gateway, an HTTPS management point is optional, but recommended. If you are using Azure AD to authenticate, whether for on premises, or Internet clients, the HTTPS management point is required.
-	- Set up a Cloud Management Gateway if you want to deploy Internet clients. For on-premises clients, that you are authenticating with Azure AD, you do not need to configure the Cloud Management Gateway.
+## Before you begin
+
+- An Azure AD tenant is a prerequisite  
+
+- Device requirements:  
+
+    - Windows 10  
+
+    - Joined to Azure AD, either pure cloud domain-joined, or hybrid Azure AD-joined  
+
+- User requirements:  
+
+    - The logged on user must be an Azure AD identity.   
+
+	- If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) as well as [Azure AD user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->  
+
+- In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
+
+- Configure all management points for HTTPS mode. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+
+- Optionally set up a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 
 
-## Step 1: Set up the Azure Services app in Configuration Manager Cloud Services
+## Configure Azure Services for Cloud Management
 
-This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. 
+Connect your Configuration Manager site to Azure AD as the first step. For details of this process, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). Create a connection to the **Cloud Management** service.
 
-Azure AD User Discovery is configured as part of *Cloud Management*. The procedure to do so is detailed in step **6** of the procedure [Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) in the topic *Configure Azure services for use with Configuration Manager*.
-	
-After you complete the procedure, you have connected your Configuration Manager site to Azure AD. 
+Enable [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc) as part of onboarding to **Cloud Management**. 
 
-## Step 2: Set up the Cloud Management Gateway
+After you complete these actions, your Configuration Manager site is connected to Azure AD. 
 
-Set up the Cloud Management Gateway to help enable the cloud management scenarios described in this topic. Find help in the following topics: 
 
-- [Plan for cloud management gateway in Configuration Manager](/sccm/core/clients/manage/plan-cloud-management-gateway).
-- [Set up cloud management gateway for Configuration Manager](/sccm/core/clients/manage/setup-cloud-management-gateway).
-- [Monitor cloud management gateway in Configuration Manager](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway).
 
-## Step 3: Configure client settings to join Windows 10 devices with Azure AD and enable clients to use the Cloud Management Gateway
+## Configure client settings
 
-1.	Configure the following client settings (found in the **Cloud Services**) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
-	- **Allow access to cloud distribution point** - Enable this setting to help Internet-based devices to get the required content to install the Configuration Manager client. If the content is not available on the cloud distribution point, devices can retrieve the content from a management point connected to the cloud management gateway.
-	- **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
-	- **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
+These client settings help join Windows 10 devices with Azure AD. They also enable internet-based clients to use the CMG and cloud distribution point.
+
+1.	Configure the following client settings in the **Cloud Services** section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
+
+	- **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. If the content isn't available on the cloud distribution point, devices can retrieve the content from the CMG. The client installation bootstrap retries the cloud distribution point for four hours before it falls back to the CMG.<!--495533-->  
+
+	- **Automatically register new Windows 10 domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows 10, version 1709.
+
+	- **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.  
+
 2.	Deploy the client settings to the required collection of devices. Do not deploy these settings to user collections.
 
-To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results shows **YES** if the device is Azure AD joined.
+To confirm the device is joined to Azure AD, run `dsregcmd.exe /status` in a command prompt. The **AzureAdjoined** field in the results shows **YES** if the device is Azure AD-joined.
 
 
-## Step 4: Install and register the Configuration Manager client using Azure Active Directory Identity
 
-To install the client, use the instructions in [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) using the following installation command line: 
+## Install and register the client using Azure AD identity
 
-**ccmsetup.exe /mp&#58; https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100 SMSSiteCode=DND SMSMP=https://sitename.contoso.corp.contoso.com AADTENANTID=44ba6fe0-c73e-4b38-80b6-85c557e7a7ed AADTENANTNAME=contoso  AADCLIENTAPPID=55ba7je0-c73e-4b38-97b6-85c557e7a7ed AADRESOURCEURI=https://contososerver**
+To manually install the client using Azure AD identity, first review the general process on [How to install clients manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual). 
 
-- **/MP** – Download source. Can set to CMG if bootstrap from internet.
-- **CCMHOSTNAME:** The name of your Internet management point. You can find this by running **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** from a command prompt on a managed client.
-- **SMSSiteCode:** The site code of your Configuration Manager site.
-- **SMSMP:** The name of your lookup management point – the management point can be on your intranet.
-- **AADTENANTID:**, **AADTENANTNAME:** The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
-- **AADCLIENTAPPID:** The Azure AD client app ID. For help finding this, see [Use portal to create an Azure Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
-- **AADResourceUri:** The identifier URI of the onboarded Azure AD server app. For more information, see [Configure Azure services for use with Configuration Manager](/sccm/core/servers/deploy/configure/azure-services-wizard).
+ > [!Note]  
+ > The device needs access to the internet to contact Azure AD, but doesn't need to be internet-based. 
 
+The following example shows the general structure of the command line:
+`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADTENANTNAME=<Azure AD tenant name> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
+
+For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+
+The /mp and CCMHOSTNAME properties specify one of the following, depending upon the scenario:
+- On-premises management point. Only specify the /mp property. The CCMHOSTNAME isn't required.
+- Cloud management gateway
+- Internet-based management point
+The SMSMP property specifies either the on-premises or internet-based management point.
+
+This example uses a cloud management gateway. It substitutes sample values for each property:
+`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADTENANTNAME=contoso AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+
+To automate the client install using Azure AD identity via Microsoft Intune, see the process to [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 
 

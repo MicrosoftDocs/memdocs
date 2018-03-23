@@ -6,7 +6,7 @@ keywords:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -21,13 +21,13 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 
-- [Office 365 Client Management dashboard](#office-365-client-management-dashboard): Beginning in Configuration Manager version 1610, you can review Office 365 client information from the Office 365 Client Management dashboard.    
+- [Office 365 Client Management dashboard](#office-365-client-management-dashboard): You can review Office 365 client information from the Office 365 Client Management dashboard. Beginning in Configuration Manager version 1802, the Office 365 client management dashboard displays a list of relevant devices when graph sections are selected. <!--1357281 -->
 
 - [Deploy Office 365 apps](#deploy-office-365-apps): Beginning in version 1702, you can start the Office 365 Installer from the Office 365 Client Management dashboard to make the initial Office 365 App installation experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.    
 
-- [Deploy Office 365 updates](#deploy-office-365-updates): Beginning in Configuration Manager version 1602, you can manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.    
+- [Deploy Office 365 updates](#deploy-office-365-updates): You can manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.    
 
-- [Add languages for Office 365 update downloads](#add-languages-for-office-365-update-downloads): Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager does not have to support the language as long as Office 365 does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients. 
+- [Add languages for Office 365 update downloads](#add-languages-for-office-365-update-downloads): You can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager does not have to support the language as long as Office 365 does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients. 
 
 - [Change the update channel](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
 
@@ -41,10 +41,10 @@ The Office 365 Client Management dashboard provides charts for the following inf
 - Office 365 client channels     
   For more information, see [Overview of update channels for Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
 
-To view the Office 365 Client Management dashboard in the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management**. At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection.
+To view the Office 365 Client Management dashboard in the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management**. At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection. Beginning in Configuration Manager version 1802, the Office 365 client management dashboard displays a list of relevant devices when graph sections are selected.
 
 ### Display data in the Office 365 Client Management dashboard
-The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 ProPlus Configurations** hardware inventory class for data to display in the dashboard.
+The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 ProPlus Configurations** hardware inventory class for data to display in the dashboard. 
 #### To display data in the Office 365 Client Management dashboard
 1. Enable hardware inventory, if it is not yet enabled. For details, see [Configure hardware inventory](\sccm\core\clients\manage\configure-hardware-inventory).
 2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.  
@@ -75,7 +75,7 @@ For previous Configuration Manager versions, you must take the following steps t
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
 2. Click **Office 365 Installer** in the upper-right pane. The Office 365 Client Installation Wizard opens.
 3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
-4. On the **Import Client Settings** page, choose whether to import the Office 365 client settings from an existing XML configuration file or to manually specify the settings, and then click **Next**.  
+4. On the **Import Client Settings** page, choose whether to import the Office 365 client settings from an existing XML configuration file or to manually specify the settings. Click **Next** when you are done.  
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. You must specify the location in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
     > [!IMPORTANT]    
@@ -95,7 +95,7 @@ After you create and deploy Office 365 applications using the Office 365 Install
 
 
 ## Deploy Office 365 updates
-Starting in Configuration Manager version 1706 Office 365 client updates have moved to the **Office 365 Client Management** >**Office 365 Updates** node. This will not impact your ADR configuration. 
+Starting in Configuration Manager version 1706 Office 365 client updates have moved to the **Office 365 Client Management** >**Office 365 Updates** node.  move will not impact your ADR configuration. 
 
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
@@ -104,7 +104,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 2.  [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Office 365 client updates. Set **Updates** for the classification and select **Office 365 Client** for the product. Synchronize software updates after you configure the software update points to use the **Updates** classification.
 3.  Enable Office 365 clients to receive updates from Configuration Manager. Use Configuration Manager client settings or group policy to enable the client.   
 
-    **Method 1**: Beginning in Configuration Manager version 1606, you can use the Configuration Manager client setting to manage the Office 365 client agent. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager takes inventory of Office 365 ProPlus Client settings.    
+    **Method 1**: Beginning in Configuration Manager version 1606, you can use the Configuration Manager client setting to manage the Office 365 client agent. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download the updates from a distribution point and install them. Configuration Manager takes inventory of Office 365 ProPlus Client settings.    
 
       1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.  
 
@@ -121,7 +121,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 > Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients. For example, let's say you have an Office 365 client configured with the en-us and de-de languages. On the site server, you download and deploy only en-us content for an applicable Office 365 update. When the user starts the installation from Software Center for this update, the update hangs while downloading the content for de-de.   
 
 ## Restart behavior and client notifications for Office 365 updates
-When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on which version of Configuration Manager you have. The following table provides information about the end-user experience when the client receives an Office 365 update:
+When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives an Office 365 update:
 
 |Configuration Manager version |End-user experience|  
 |----------------|---------------------|
@@ -129,14 +129,16 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |1610|Office 365 apps are shut down without warning before installing the update|
 |1610 with update <br/>1702|A restart flag is set and the update is installed after the computer restarts.|
 |1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
+|1802| The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update. </br>If any Office 365 applications are running during an Office 365 client update enforcement, the Office applications will not be forced to close. Instead, the update install will return as requiring a system restart <!--510006-->|
 
 > [!Important]
-> Starting in Configuration Manager version 1706, note the following details:
+>
+>In Configuration Manager version 1706, note the following details:
 >
 >- A notification icon displays in the notification area on the task bar for required apps where the deadline is within 48 hours in the future and the update content has been downloaded. 
 >- A countdown dialog displays for required apps where the deadline is within 7.5 hours in the future and the update has been downloaded. The user can postpone the countdown dialog up to three times before the deadline. When postponed, the countdown displays again after two hours. If not postponed, there is a 30-minute countdown and update gets installed when the countdown expires.
 >- A pop-up notification might not display until the user clicks the icon in the notification area. In addition, if the notification area has minimal space, the notification icon might not be visible unless the user opens or expands the notification area. 
->- The notification and countdown dialog could start while the user is not actively working on the device, for example when the device is locked overnight, so it’s possible Office apps running on the device could be forced to close to install the update. Before closing the app, Office saves app data to prevent data loss. 
+>- The notification and countdown dialog could start while the user is not actively working on the device. For example, when the device is locked overnight it’s possible Office apps running on the device could be forced to close to install the update. Before closing the app, Office saves app data to prevent data loss. 
 >- If the deadline is in the past or configured to start as soon as possible, running Office apps might be forced to close without notifications. 
 >- If the user installs an Office update before the deadline, Configuration Manager verifies that the update is installed when the deadline is reached. If the update is not detected on the device, the update is installed. 
 >- The in-app notification bar does not display on an Office app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays only for newly opened apps.
@@ -145,7 +147,7 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 
 
 ## Add languages for Office 365 update downloads
-Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages that are supported by Office 365, regardless of whether they are supported in Configuration Manager.    
+You can add support for Configuration Manager to download updates for any languages that are supported by Office 365, regardless of whether they are supported in Configuration Manager.    
 
 > [!IMPORTANT]  
 > Configuring additional Office 365 update languages is a site-wide setting. After you add the languages using the following procedure, all Office 365 updates are downloaded in those languages, as well as the languages that you select on the **Language Selection** page in the Download Software Updates or Deploy Software Updates wizards.
@@ -166,7 +168,7 @@ Use the following procedure on the software update point at the central administ
 8. Add additional languages to the **Value2** property and click **Save Property**. <br/> 
 For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc.  
 ![Add languages in Property Editor](..\media\4-props.png)  
-9. Click **Close**, click **Close**, click **Save Property**, click **Save Object** (if you click **Close** here the values are discarded), click **Close**, and then click **Exit** to exit the Windows Management Instrumentation Tester.
+9. Click **Close**, click **Close**, click **Save Property**, and click **Save Object** (if you click **Close** here the values are discarded). Click **Close**, and then click **Exit** to exit the Windows Management Instrumentation Tester.
 10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
 11. Now when you download Office 365 updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
 ![Filenames with additional languages](..\media\5-verification.png)

@@ -1,9 +1,9 @@
 ---
-title: "CEIP"
-titleSuffix: "Configuration Manager"
-description: "Learn about the Customer Experience Improvement Program settings for System Center Configuration Manager."
+title: CEIP
+titleSuffix: Configuration Manager
+description: Learn about the Customer Experience Improvement Program settings
 ms.custom: na
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,6 +21,9 @@ manager: dougeby
 # Customer Experience Improvement Program (CEIP) for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
+
+> [!Note]  
+> Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
 During installation of the Configuration Manager console, you can choose to participate in the **Customer Experience Improvement Program** (CEIP). CEIP is turned off by default. If it was previously enabled, it remains enabled.  
 

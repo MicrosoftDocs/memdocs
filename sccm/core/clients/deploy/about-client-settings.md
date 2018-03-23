@@ -1,9 +1,9 @@
 ---
-title: "Client settings"
-titleSuffix: "Configuration Manager"
-description: "Choose client settings by using the admin console in System Center Configuration Manager."
+title: Client settings
+titleSuffix: Configuration Manager
+description: Learn about the default and custom settings for controlling client behaviors
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ caps.latest.revision: 15
 caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # About client settings in System Center Configuration Manager
 
@@ -109,18 +109,19 @@ This setting applies to users when their computer is on either the intranet or t
 
 Set this to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
 
--   The client and site are configured for internet-based client management.
+-   The client and site are configured for [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) or a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
 -   The **Enable user policy on clients** setting is **Yes**.  
 
--   The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
+-   The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+
+-   Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 If you set this option to **No**, or any of the previous requirements are not met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users do not receive user policies until the computer is connected to the intranet.  
 
-For more information about managing clients on the internet, see [Considerations for client communications from the internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
 > [!NOTE]  
->  Application approval requests from users do not require user policies or user authentication.  
+>  For internet-based client management, application approval requests from users do not require user policies or user authentication. The cloud management gateway does not support application approval requests.   
+
 
 
 ## Cloud services
@@ -223,7 +224,7 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center.   
+If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
 
 The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
@@ -317,6 +318,21 @@ The following settings must be shorter in duration than the shortest maintenance
 
 For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
 
+
+
+## Delivery Optimization
+
+<!-- 1324696 -->
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers.
+
+ > [!Note]
+ > Delivery Optimization is only available on Windows 10 clients
+
+### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
+ Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. 
+
+
+
 ##  Endpoint Protection  
 >  [!Tip]   
 > In addition to the following information, you can find details about using Endpoint Protection client settings in [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
@@ -325,11 +341,11 @@ For more information about maintenance windows, see [How to use maintenance wind
 
 Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
 
-Choose this option if you have already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program.
+Choose this option if you have already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
 
 ### Install Endpoint Protection client on client computers
 
-Choose **Yes** to install and enable the Endpoint Protection client on client computers that are not already running the client.  
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that are not already running the client. Starting in Configuration Manager 1802, Windows 10 clients do not need to have the Endpoint Protection agent installed.  
 
 > [!NOTE]  
 >  If the Endpoint Protection client is already installed, choosing **No** does not uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
@@ -604,8 +620,14 @@ Enter the organization name that users see in Software Center.
 - **Color scheme for Software Center** </br>
 Select **Select Color** to define the primary color used by Software Center.
 - **Select a logo for Software Center** </br>
-Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces.  
+         
+### <a name="bkmk_HideUnapproved"></a> Hide unapproved applications in Software Center
+Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   <!--1355146-->
 
+### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
+Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. <!--1357592-->   
+  
 ### Software Center tab visibility
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 - **Applications**

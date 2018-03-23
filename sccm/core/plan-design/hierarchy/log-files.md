@@ -1,9 +1,9 @@
 ---
-title: "Log files for troubleshooting issues"
-titleSuffix: "Configuration Manager"
-description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
+title: Log files for troubleshooting
+titleSuffix: Configuration Manager
+description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
 ms.custom: na
-ms.date: 02/14/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,9 +23,9 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-In System Center Configuration Manager, client and site server components record process information in individual log files. You can use the information in the log files to help you troubleshoot issues that might occur in your Configuration Manager hierarchy. By default, client and server component logging is enabled in Configuration Manager.   
+In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.   
 
- The following sections provide details about the different log files available to you. You can use this information to view and monitor Configuration Manager client and server logs for operation details, and to identify error information that might help you troubleshoot any problems.  
+ The following sections provide details about the different log files available to you. Monitor Configuration Manager client and server logs for operation details, and view error information to troubleshoot problems.  
 
 -   [About Configuration Manager log files](#BKMK_AboutLogs)  
 
@@ -121,7 +121,7 @@ In System Center Configuration Manager, client and site server components record
  To view the logs, use the Configuration Manager log viewer tool CMTrace, located in the \\SMSSetup\\Tools folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library.  
 
 ###  <a name="BKMK_LogOptions"></a> Configure logging options by using Configuration Manager Service Manager  
- In Configuration Manager, you can change where log files are stored, and you can change the log file size.  
+ You can change where Configuration Manager stores the log files, and their size.  
 
  To modify the size of log files, change the name and location of the log file, or to force multiple components to write to a single log file, do the following steps:  
 
@@ -137,7 +137,7 @@ In System Center Configuration Manager, client and site server components record
 8.  Select **OK** to save the configuration.  
 
 ###  <a name="BKMK_LogLocation"></a> Find Configuration Manager logs  
-Configuration Manager log files are stored in various locations that depend on the process that creates the log file and on the configuration of your site systems. Because the location of the log on a computer can vary, use the search function to find the relevant log files on your Configuration Manager computers if you need to troubleshoot a specific scenario.  
+Configuration Manager stores log files in various locations. These locations depend on the process that creates the log file and the configuration of your site systems. Because the location of the log on a computer can vary, use the search function to find the relevant log files on your Configuration Manager computers if you need to troubleshoot a specific scenario.  
 
 ##  <a name="BKMK_ClientLogs"></a> Configuration Manager client logs  
 The following sections list the log files related to client operations and client installation.  
@@ -148,7 +148,7 @@ The following table lists the log files located on the Configuration Manager cli
 |Log name|Description|  
 |--------------|-----------------|  
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
-|Ccm32BitLauncher.log|Records actions for starting applications on the client marked "run as 32 bit".|  
+|Ccm32BitLauncher.log|Records actions for starting applications on the client marked *run as 32 bit*.|  
 |CcmEval.log|Records Configuration Manager client status evaluation activities and details for components that are required by the Configuration Manager client.|  
 |CcmEvalTask.log|Records the Configuration Manager client status evaluation activities that are initiated by the evaluation scheduled task.|  
 |CcmExec.log|Records activities of the client and the SMS Agent Host service. This log file also includes information about enabling and disabling wake-up proxy.|  
@@ -216,10 +216,10 @@ The following table lists the log files located on the Configuration Manager cli
 |client.msi.log|Records setup tasks performed by client.msi. Can be used to troubleshoot client installation or removal problems.|  
 
 ###  <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX  
- The Configuration Manager client for Linux and UNIX records information in the following log files.  
+ The Configuration Manager client for Linux and UNIX records information in the following log files:  
 
 > [!TIP]  
->  Beginning with clients for Linux and UNIX from Cumulative Update 1, you can use CMTrace to view the log files for the client for Linux and UNIX.  
+>  Use CMTrace to view the log files for the client for Linux and UNIX.  
 
 > [!NOTE]  
 >  When you use the initial release of the client for Linux and UNIX and reference the documentation in this section, replace the following references for each file or process:  
@@ -262,7 +262,7 @@ For example, you can use the standard Linux and UNIX command **logrotate** to ma
 For information about **logrotate**, see the documentation for the Linux and UNIX distributions that you use.  
 
 ###  <a name="BKMK_LogfilesforMac"></a> Client for Mac computers  
-The Configuration Manager client for Mac computers records information in the following log files.  
+The Configuration Manager client for Mac computers records information in the following log files:  
 
 |Log name|Details|  
 |--------------|-------------|  
@@ -334,7 +334,8 @@ The log file SMS_DM.log on the site system server also records communication bet
 |sinvproc.log|Records information about the processing of software inventory data to the site database.|Site server|  
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
-|sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|  
+|sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
+|SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
 |smsbkup.log|Records output from the site backup process.|Site server|  
@@ -393,7 +394,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |MP_GetPolicy.log|Records policy request activity from client computers.|Site system server|  
 |MP_Hinv.log|Records details about the conversion of XML hardware inventory records from clients and the copy of those files to the site server.|Site system server|  
 |MP_Location.log|Records location request and reply activity from clients.|Site system server|  
-|MP_OOBMgr.log|Records the management point activities related to receiving a OTP from a client.|Site system server|  
+|MP_OOBMgr.log|Records the management point activities related to receiving an OTP from a client.|Site system server|  
 |MP_Policy.log|Records policy communication.|Site system server|  
 |MP_Relay.log|Records the transfer of files that are collected from the client.|Site system server|  
 |MP_Retry.log|Records hardware inventory retry processes.|Site system server|  
@@ -512,16 +513,15 @@ The log file SMS_DM.log on the site system server also records communication bet
 
 The following table lists the log files that contain information related to the cloud management gateway.
 
-||||
-|-|-|-|
 |Log name|Description|Computer with log file|
-|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.<br>You can configure the logging level be editing the registry **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|The *installdir* folder on the primary site server or CAS.|
-|CMGSetup.log or CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Records details about the second phase of the cloud management gateway deployment (local deployment in Azure)<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|CMGHttpHandler.log or CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Records details about the cloud management gateway http handler binding with Internet Information Services in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|CMGService.log or CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Records details about the cloud management gateway service core component in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|SMS_Cloud_ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service.<br>You can configure the logging level be editing the **Logging level** value in the registry key HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER|The *installdir* folder on the primary site server or CAS.|
+|CMGSetup.log<sup>1</sup>|Records details about the second phase of the cloud management gateway deployment (local deployment in Azure)<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|CMGHttpHandler.log<sup>1</sup>|Records details about the cloud management gateway http handler binding with Internet Information Services in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|CMGService.log<sup>1</sup>|Records details about the cloud management gateway service core component in Azure<br>You can configure the logging level using the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
+|SMS_Cloud_</br>ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
 
-<sup>1</sup> These are local Configuration Manager log files that cloud service manager sync from Azure storage every 5 minutes. The cloud management gateway pushes logs to Azure storage every 5 minutes. so the maximum delay is 10 minutes. Verbose switches affect both local and remote logs.
+<sup>1</sup> These are local Configuration Manager log files that cloud service manager sync from Azure storage every five minutes. The cloud management gateway pushes logs to Azure storage every five minutes. So the maximum delay is 10 minutes. Verbose switches affect both local and remote logs. The actual file names include the service name and role instance identifier. For example, CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
 
 - For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
 - For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
@@ -695,7 +695,7 @@ The following table lists the log files that contain information related to Disc
 |MCSSetup.log|Records details about multicast server role installation.|Site system server|  
 |MCSMSI.log|Records details about multicast server role installation.|Site system server|  
 |Mcsperf.log|Records details about multicast performance counter updates.|Site system server|  
-|MP_ClientIDManager.log|Records management point responses to the client ID requests task sequences initiated from PXE or boot media.|Site system server|  
+|MP_ClientIDManager.log|Records management point responses to the client ID requests that task sequences initiate from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
 |Setupact.log|Records details about Windows Sysprep and setup logs.|Client|  
@@ -706,7 +706,8 @@ The following table lists the log files that contain information related to Disc
 |smpmsi.log|Records installation and configuration details about the state migration point.|Site system server|  
 |smpperf.log|Records the state migration point performance counter updates.|Site system server|  
 |smspxe.log|Records details about the responses to clients that use PXE boot, and details about the expansion of boot images and boot files.|Site system server|  
-|smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|  
+|smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|
+| SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy| 
 |Smsts.log|Records task sequence activities.|Client|  
 |TSAgent.log|Records the outcome of task sequence dependencies before starting a task sequence.|Client|  
 |TaskSequenceProvider.log|Records details about task sequences when they are imported, exported, or edited.|Site system server|  
@@ -725,7 +726,7 @@ The following table lists the log files that contain information related to Disc
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CMRcViewer.log|Records details about the activity of the remote control viewer.|In the %temp% folder on the computer that runs the remote control viewer|  
+|CMRcViewer.log|Records details about the activity of the remote control viewer.|On the computer that runs the remote control viewer, in the %temp% folder.|  
 
 ###  <a name="BKMK_ReportLog"></a> Reporting  
  The following table lists the Configuration Manager log files that contain information related to reporting.  

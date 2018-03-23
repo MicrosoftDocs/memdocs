@@ -1,9 +1,9 @@
 ---
-title: "Unattended recovery"
-titleSuffix: "Configuration Manager"
-description: "Use a script to recover your sites in System Center Configuration Manager."
+title: Unattended recovery
+titleSuffix: Configuration Manager
+description: Use a script to recover your sites in System Center Configuration Manager.
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,27 +15,28 @@ ms.assetid:  828c31d1-3d70-4412-b1a8-c92e7e504d39
 caps.latest.revision:
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 ---
 
 # Unattended site recovery for Configuration Manager   
 
 *Applies to: System Center Configuration Manager (Current Branch)*
- To perform an [unattended recovery](/sccm/protect/understand/recover-sites#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and then use Setup with the **/script** command option. The script provides the same type of information that the Setup Wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
 
- To use the /script setup command-line option, you must create an initialization file and specify the initialization file name after the /script setup command-line option. The name of the file is unimportant as long as it has the **.ini** file name extension. When you reference the setup initialization file from the command line, you must provide the full path to the file. For example, if your setup initialization file is named *setup.ini*, and it is stored in the *C:\setup folder*, your command line would be:
+ To perform an [unattended recovery](/sccm/protect/understand/recover-sites#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and then use setup with the **/script** command option. The script provides the same type of information that the setup wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
 
- **setup /script c:\setup\setup.ini**.
+ To use the /script setup command-line option, you must create an initialization file. Then specify this file name after the /script option. The name of the file is unimportant as long as it has the **.ini** file name extension. When you reference the setup initialization file from the command line, you must provide the full path to the file. For example, if your setup initialization file is named *setup.ini*, and it is stored in the *C:\setup folder*, your command line would be:
+
+ `setup /script c:\setup\setup.ini`
 
 > [!IMPORTANT]  
->  You must have Administrator rights to run Setup. When you run Setup with the unattended script, start the Command Prompt in an Administrator context by using **Run as administrator**.
+>  You must have Administrator rights to run setup. When you run setup with the unattended script, start the command prompt in an Administrator context by using **Run as administrator**.
 
- The script contains section names, key names, and values. Required section key names vary depending on the recovery type that you are scripting. The order of the keys within sections, and the order of sections within the file, is not important. The keys are not case sensitive. When you provide values for keys, the name of the key must be followed by an equals sign (=) and the value for the key.
+ The script contains section names, key names, and values. Required section key names vary depending on the recovery type that you are scripting. The order of the keys within sections, and the order of sections within the file, is not important. The keys are not case-sensitive. When you provide values for keys, the name of the key must be followed by an equals sign (=) and the value for the key.
 
  Use the following sections to help you to create your script for unattended site recovery. The tables list the available setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description for the key.
 
 ## Recover a central administration site unattended
- Use the following information to configure an unattended Setup script file to recover a central administration site.
+ Use the following information to configure an unattended setup script file to recover a central administration site.
 
  **Identification**
 
@@ -61,7 +62,7 @@ manager: angrobe
          1 = Recovery site server and SQL Server.   
          2 = Recover site server only.  
          4 = Recover SQL Server only.
-    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the ServerRecoveryOptions setting:  
+    -   **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The associated keys are required when you set the following value for the ServerRecoveryOptions setting:  
         -   **Value = 1** You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.
 
              The **BackupLocation** key is required when you configure a value of **10** for the **DatabaseRecoveryOptions** key, which is to restore the site database from backup.
@@ -73,19 +74,19 @@ manager: angrobe
 -   **Key name:** DatabaseRecoveryOptions
 
     -   **Required:** Maybe
-    -   **Values:** 10, 20, 40, 80  
-         10 = Restore the site database from backup.  
-         20 = Use a site database that has been manually recovered by using another method.   
-         40 = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
-         80 = skip database recovery.
-    -   **Details:** Specifies how Setup will recover the site database in SQL Server. This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.
+    -   **Values:**   
+         - **10** = Restore the site database from backup.  
+         - **20** = Use a site database that has been manually recovered by using another method.   
+         - **40** = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
+         - **80** = skip database recovery.
+    -   **Details:** Specifies how setup recovers the site database in SQL Server. This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.
 
 
 -   **Key name:** ReferenceSite  
 
     -   **Required:** Maybe
     -   **Values:** &lt;ReferenceSiteFQDN\>
-    -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change tracking retention period or when you recover the site without a backup.
+    -   **Details:** Specifies the reference primary site. If the database backup is older than the change tracking retention period, or you recover the site without a backup, the central administration site uses the reference site to recover global data.
 
          When you do not specify a reference site, and the backup is older than the change tracking retention period, all primary sites are reinitialized with the restored data from the central administration site.
 
@@ -112,8 +113,8 @@ manager: angrobe
 -   **Key name:** ProductID
     -   **Required:** Yes
     -   **Values:**   
-         xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-          Eval
+         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+         - Eval
     -   **Details:** The Configuration Manager installation product key, including the dashes. Enter **Eval** can install the evaluation version of Configuration Manager.  
 
 
@@ -121,7 +122,7 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:** &lt;Site code\>
-    -   **Details:** Three alpha-numeric characters that uniquely identifies the site in your hierarchy. You must specify the site code that was used by the site before the failure.
+    -   **Details:** Three alpha-numeric characters that uniquely identify the site in your hierarchy. Specify the site code that was used by the site before the failure.
 
 
 -   **Key name:** SiteName
@@ -143,7 +144,7 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:** &lt;*FQDN of SMS Provider*>
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.
+    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.
 
          You can configure additional SMS Providers for the site after the initial installation.
 
@@ -153,14 +154,14 @@ manager: angrobe
     -   **Values:** 0 or 1  
          0 = download   
          1 = already downloaded
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of 0, Setup will download the files.  
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of 0, setup downloads the files.  
 
 
 -   **Key name:** PrerequisitePath
 
     -   **Required:** Yes
     -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.
 
 -   **Key name:** AdminConsole
 
@@ -171,7 +172,9 @@ manager: angrobe
     -   **Details:** Specifies whether to install the Configuration Manager console. This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.
 
 
--   **Key name:** JoinCEIP
+-   **Key name:** JoinCEIP   
+    > [!Note]  
+    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
     -   **Required:** Yes
     -   **Values:** 0 or 1  
@@ -185,26 +188,26 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:** *&lt;SQLServerName\>*
-    -   **Details:** The name of the server, or clustered instance name, running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.
+    -   **Details:** The name of the server, or clustered instance name, running SQL Server that hosts the site database. Specify the same server that hosted the site database before the failure.
 
 
 -   **Key name:** DatabaseName
 
     -   **Required:** Yes
     -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
-    -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.
+    -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. Specify the same database name that was used before the failure.
 
         > [!IMPORTANT]  
-        >  You must specify the instance name and site database name if you do not use the default instance.
+        >  If you do not use the default instance, you must specify the instance name and site database name.
 
 -   **Key name:** SQLSSBPort
 
     -   **Required:** No
     -   **Values:** &lt;*SSBPortNumber*>
-    -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.
+    -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. Specify the same SSB port that was used before the failure.
 
 ## Recover a Primary Site Unattended
- Use the following information to configure an unattended Setup script file to recover a central administration site.
+ Use the following information to configure an unattended setup script file to recover a central administration site.
 
  **Identification**
 
@@ -231,7 +234,7 @@ manager: angrobe
          1 = Recovery site server and SQL Server.   
          2 = Recover site server only.  
          4 = Recover SQL Server only.
-    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the ServerRecoveryOptions setting:
+    -   **Details:** Specifies whether setup recovers the site server, SQL Server, or both. The associated keys are required when you set the following value for the ServerRecoveryOptions setting:
 
         -   **Value = 1** You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.
 
@@ -244,12 +247,12 @@ manager: angrobe
 -   **Key name:** DatabaseRecoveryOptions
 
     -   **Required:** Maybe
-    -   **Values:** 10, 20, 40, 80  
-         10 = Restore the site database from backup.  
-         20 = Use a site database that has been manually recovered by using another method.     
-         40 = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
-         80 = skip database recovery.
-    -   **Details:** Specifies how Setup will recover the site database in SQL Server. This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.
+    -   **Values:**   
+         - **10** = Restore the site database from backup.  
+         - **20** = Use a site database that has been manually recovered by using another method.     
+         - **40** = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
+         - **80** = skip database recovery.
+    -   **Details:** Specifies how setup recovers the site database in SQL Server. This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.
 
 
 -   **Key name:** SiteServerBackupLocation
@@ -271,8 +274,8 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:**     
-         xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-         Eval     
+         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+         - Eval     
     -   **Details:** The Configuration Manager installation product key, including the dashes. Enter **Eval** can install the evaluation version of Configuration Manager.  
 
 
@@ -280,7 +283,7 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:** &lt;Site code\>
-    -   **Details:** Three alpha-numeric characters that uniquely identifies the site in your hierarchy. You must specify the site code that was used by the site before the failure.
+    -   **Details:** Three alpha-numeric characters that uniquely identify the site in your hierarchy. Specify the site code that was used by the site before the failure.
 
 
 -   **Key name:** SiteName
@@ -303,7 +306,7 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:** &lt;*FQDN of SMS Provider*>
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.
+    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.
 
          You can configure additional SMS Providers for the site after the initial installation.
 
@@ -313,14 +316,14 @@ manager: angrobe
     -   **Values:** 0 or 1    
          0 = download   
          1 = already downloaded   
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of 0, Setup will download the files.
+    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of 0, setup downloads the files.
 
 
 -   **Key name:** PrerequisitePath
 
     -   **Required:** Yes
     -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.
+    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.
 
 
 -   **Key name:** AdminConsole
@@ -331,7 +334,9 @@ manager: angrobe
          1 = install  
     -   **Details:** Specifies whether to install the Configuration Manager console. This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.
 
--   **Key name:** JoinCEIP
+-   **Key name:** JoinCEIP  
+    > [!Note]  
+    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
 
     -   **Required:** Yes
     -   **Values:** 0 or 1    
@@ -346,23 +351,23 @@ manager: angrobe
 
     -   **Required:** Yes
     -   **Values:** *&lt;SQLServerName\>*
-    -   **Details:** The name of the server, or clustered instance name, running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.
+    -   **Details:** The name of the server, or clustered instance name, running SQL Server that hosts the site database. Specify the same server that hosted the site database before the failure.
 
 
 -   **Key name:** DatabaseName
 
     -   **Required:** Yes
     -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
-    -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.
+    -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. Specify the same database name that was used before the failure.
 
         > [!IMPORTANT]    
-        >  You must specify the instance name and site database name if you do not use the default instance.
+        >  If you do not use the default instance, you must specify the instance name and site database name.
 
 -   **Key name:** SQLSSBPort
 
     -   **Required:** No
     -   **Values:** &lt;*SSBPortNumber*>
-    -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.
+    -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. Specify the same SSB port that was used before the failure.
 
 **Hierarchy ExpansionOption**
 
@@ -370,13 +375,13 @@ manager: angrobe
 
     -   **Required:** Maybe
     -   **Values:** &lt;*SiteCodeForCentralAdministrationSite*>
-    -   **Details:** Specifies the central administration site that a primary site will attach to when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. You must specify the site code that was used for the central administration site before the failure.
+    -   **Details:** Specifies the central administration site that a primary site attaches to when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. Specify the site code that was used for the central administration site before the failure.
 
 -   **Key name:** CASRetryInterval
 
     -   **Required:** No
     -   **Values:** &lt;*Interval*>
-    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for CASRetryInterval, and then re-attempts the connection.
+    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for CASRetryInterval, and then reattempts the connection.
 
 
 -   **Key name:** WaitForCASTimeout
