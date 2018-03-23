@@ -3,7 +3,7 @@ title: Technical Preview releases
 titleSuffix: Configuration Manager
 description: Learn about the Technical Preview release to test-drive new functionality and capabilities in Configuration Manager.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/27/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -15,7 +15,7 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 caps.latest.revision: 157
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Technical Preview for System Center Configuration Manager
@@ -26,7 +26,7 @@ manager: angrobe
 
  Because this release is a technical preview, details and functionality are subject to change.  
 
- This article contains information that applies to all versions of the Technical Preview. It also lists each new capability (or feature) along with the Technical Preview version in which the capability first appears, like version 1802 for February of 2018. These capabilities are detailed in separate topics dedicated to each preview version.  
+ This article contains information that applies to all versions of the Technical Preview. It also lists each new capability (or feature) along with the Technical Preview version in which the capability first appears, like version 1803 for March of 2018. These capabilities are detailed in separate topics dedicated to each preview version.  
 
  For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -87,7 +87,7 @@ The following products and technologies are supported by this branch of Configur
 Each preview release is supported up until three successive releases are available. Meaning, when version 1708 released, version 1704 was no longer  in support, but versions 1705, 1706, and 1707 remained in support. When a baseline falls out of support, it is still supported for installing a new Technical Preview site until a new baseline version is available, so long as you then update that install to a supported version. Update to the latest available version and then repeat that process until you can install the most current version of the technical preview.
 
 > [!TIP]  
->  When you install  an update to the  technical preview, you  update your preview installation to that new technical preview version.    A technical preview installation  never has the option to upgrade to a current branch installation, nor  receive updates from the current branch release.  
+>  When you install an update to the technical preview, you update your preview installation to that new technical preview version. A technical preview installation never has the option to upgrade to a current branch installation, nor receive updates from the current branch release.  
 
 **Active baseline versions of the Technical Preview:**
    
@@ -110,28 +110,7 @@ The following are the capabilities delivered with the most recent Configuration 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1802
-- [Transition Endpoint Protection workload to Intune using co-management](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) <!-- 1357365 -->
-- [Configure Windows Delivery Optimization to use Configuration Manager boundary groups](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) <!-- 1324696 --> 
-- [Windows 10 in-place upgrade task sequence via cloud management gateway](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
-- [Improvements to Windows 10 in-place upgrade task sequence](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
-- [Improvements to PXE-enabled distribution points](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
-- [Deployment templates for task sequences](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
-- [Product lifecycle dashboard](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) <!--1319632 --> 
-- [Improvements to reporting](capabilities-in-technical-preview-1802.md#improvements-to-reporting) <!--1357653 --> 
-- [Improvements to Software Center](capabilities-in-technical-preview-1802.md#improvements-to-software-center) <!--1357592 --> 
-- [Improvements to Run Scripts](capabilities-in-technical-preview-1802.md#improvements-to-run-scripts) <!--1236459 --> 
-- [Boundary group fallback for management points](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
-- [Improved support for CNG certificates](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) <!-- 1357314 --> 
-- [Cloud management gateway support for Azure Resource Manager](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
-- [Approve application requests for users per device](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
-- [Use Software Center to browse and install user-available applications on Azure AD-joined devices](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) <!-- 1322613 --> 
-- [Report on Windows AutoPilot device information](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
-- [Improvements to Configuration Manager Policies for Windows Defender Exploit Guard](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard) <!-- 1356220 -->
-- [Microsoft Edge browser policies](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
-- [Report for default browser counts](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
-- [Support for Windows 10 ARM64 devices](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
-- [Changes to Phased Deployments](capabilities-in-technical-preview-1802.md#changes-to-phased-deployments) <!-- 1357405 -->
+### Technical Preview version 1803
 
 
 
@@ -180,8 +159,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Improvements to Office 365 Client Management dashboard <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) | [Version 1802](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) | 
  | Improvements to the Configuration Manager console <!-- 1357280,1357282 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) | Version 1802 | 
  | Improvements to OS deployment <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) | Version 1802 | 
- | Run task sequence step <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) | [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |
- | Allow user interaction when installing an application <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) | [Version 1802](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type) |
 
   
 
