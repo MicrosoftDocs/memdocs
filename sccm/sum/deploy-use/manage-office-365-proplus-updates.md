@@ -6,7 +6,7 @@ keywords:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -178,7 +178,7 @@ When you install an operating system where Office 365 is already installed in th
 
 To ensure that the update channel is set so applicable updates will be found, do the following steps:
 1. On a machine with the same version of Office 365 as the OS base image, open Task Scheduler (taskschd.msc) and identify the Office 365 automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
-2. Right-click on the automatic updates task and select **Properties**
+2. Right-click on the automatic updates task and select **Properties**.
 3. Go to the **Actions** tab and click **Edit**. Copy the command and any arguments. 
 4. In the Configuration Manager console, edit your task sequence.
 5. Add a new **Run Command Line** step before the **Install Updates** step in the task sequence. 
