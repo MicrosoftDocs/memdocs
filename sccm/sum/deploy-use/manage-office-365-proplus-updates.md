@@ -6,7 +6,7 @@ keywords:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -173,6 +173,17 @@ For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Afr
 11. Now when you download Office 365 updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
 ![Filenames with additional languages](..\media\5-verification.png)
 
+## Updating Office 365 during task sequences when Office 365 is installed in the base image
+When you install an operating system where Office 365 is already installed in the image, it is possible that the update channel registry key value has the original install location. In this case, the update scan will not show any Office 365 client updates as applicable. There is a scheduled Office automatic updates task that runs several times a week. After that task runs, the update channel will point to the configured Office CDN URL and the scan will then show these updates as applicable. <!--510452-->
+
+To ensure that the update channel is set so applicable updates will be found, do the following steps:
+1. On a machine with the same version of Office 365 as the OS base image, open Task Scheduler (taskschd.msc) and identify the Office 365 automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
+2. Right-click on the automatic updates task and select **Properties**.
+3. Go to the **Actions** tab and click **Edit**. Copy the command and any arguments. 
+4. In the Configuration Manager console, edit your task sequence.
+5. Add a new **Run Command Line** step before the **Install Updates** step in the task sequence. 
+6. Copy in the command and arguments that you gathered from the Office automatic updates scheduled task. 
+7. Click **OK**. 
 
 ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
 To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, use group policy to distribute a registry key value change to Office 365 clients. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
