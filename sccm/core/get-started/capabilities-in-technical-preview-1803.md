@@ -55,14 +55,41 @@ Many customers use [pull-distribution points](/sccm/core/plan-design/hierarchy/u
 
 ## Partial download support in client peer cache to reduce WAN utilization
 <!--1357346-->
-Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization.
+Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content. 
+
+### Example scenario
+Contoso has a single primary site with two boundary groups: Headquarters (HQ) and Branch Office. There is a 30-minute fallback relationship between the boundary groups. The management point and distribution point for the site are only in the HQ boundary. The branch office location has no local distribution point. Two of the four clients at the branch office are configured as peer cache sources. 
+
+![Diagram of network configuration as described for the example scenario](media/1357346-peer-cache-source-parts.png)
+
+1. You target a deployment with content to all four clients in the branch office. You only distributed the content to the distribution point.
+2. Client1 and Client2 do not have a local source, so they start to wait the 30 minutes fallback to the remote boundary group.
+3. PCS1 is the first peer cache source to refresh policy with the management point. It immediately starts downloading part A from the distribution point.
+4. When PCS2 contacts the management point, as part A is already in progress but not yet complete, it immediately starts downloading part B from the distribution point.
+5. PCS1 finishes downloading part A. It notifies the management point. As part B is already in progress but not yet complete, it starts downloading part C from the distribution point.
+6. PCS2 finishes downloading part B, and notifies the management point. It now starts downloading part A from PCS1. This transfer quickly completes across the local network. It communicates with the management point and then starts downloading part D from the distribution point.
+7. This process continues until both client peer cache sources have all of the parts. 
+8. Client 1 is the first to refresh policy after the 30-minute fallback period expires. It checks back with the management point, and learns that there are now local sources available. Instead of downloading the content in full from the distribution point across the WAN, it downloads the content in full from one of the client peer cache sources. 
+
+### Try it out!
+ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+
+1. Set up [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) and [peer cache sources](/sccm/core/plan-design/hierarchy/client-peer-cache) per normal.
+2. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Click **Hierarchy Settings** in the ribbon. 
+3. On the **General** tab, enable the option to **Configure client peer cache sources to divide content into parts**. 
+4. Create a required deployment with content.  
+   > [!Note]
+   > This functionality only works when the client downloads content in the background, such as with a required deployment. On-demand downloads, such as when the user installs an available deployment in Software Center, behaves as usual.
+1. To see them handling the download of content in parts, examine the **ContentTransferManager.log** on the client peer cache source and the **MP_Location.log** on the management point. 
+ 
 
 
 
 ## Maintenance windows in Software Center
 <!--1358131-->
-Software Center now displays the next scheduled maintenance window on the Installation Status tab.
+Software Center now displays the next scheduled maintenance window. On the Installation Status tab, switch the view from All to Upcoming. It displays the time range and the list of deployments that are scheduled. The list is blank if there are no future maintenance windows. 
 
+![Software Center showing the list of upcoming deployments on the Installation Status tab](media/1358131-software-center-maintenance-windows.png)
 
 
 ## Custom tab for webpage in Software Center
