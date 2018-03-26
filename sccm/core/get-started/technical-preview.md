@@ -111,7 +111,10 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1803
-
+- [Pull-distribution points support cloud distribution points as source](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source) <!--1321554--> 
+- [Partial download support in client peer cache to reduce WAN utilization](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization) <!--1357346--> 
+- [Maintenance windows in Software Center](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center) <!--1358131--> 
+- [Custom tab for webpage in Software Center](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center) <!--1358132--> 
 
 
 ## Capabilities delivered in recent supported technical previews
