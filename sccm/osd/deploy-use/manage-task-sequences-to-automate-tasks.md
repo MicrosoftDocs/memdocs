@@ -248,6 +248,12 @@ The following notification message displays when the end user opens the installa
 
     -   **Comments (optional)**: Specify additional information that describes this deployment of the task sequence.  
     - **Select Deployment Template**: Starting in Configuration Manager version 1802, you can save and specify a deployment template for a task sequence. <!--1357391-->
+        >[!IMPORTANT]
+        >In Configuration Manager version 1802, some items are not saved in the template. <!--510610--> Ensure you  apply the following items when you run the deployment wizard:
+        > - Software Installation 
+        > - Scheduling 
+        > - Pre-download content
+ 
 6.  On the **Deployment Settings** page, specify the following information, and then click **Next**.  
 
     -   **Purpose**: From the drop-down list, choose one of the following options:  
