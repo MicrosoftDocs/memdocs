@@ -247,11 +247,10 @@ The following notification message displays when the end user opens the installa
         >     - If the collection contains a server  
 
     -   **Comments (optional)**: Specify additional information that describes this deployment of the task sequence.  
-    - **Select Deployment Template**: Starting in Configuration Manager version 1802, you can save and specify a deployment template for a task sequence. <!--1357391-->
+    - **Select Deployment Template**: Starting in Configuration Manager version 1802,<!--1357391--> you can save and specify a deployment template for a task sequence.     
 
-
-         >[!IMPORTANT]
-         >In Configuration Manager version 1802, some items are not saved in the template.  <!--510610--> Ensure you  apply the following items when you run the deployment wizard:
+         > [!IMPORTANT]
+         > In Configuration Manager version 1802, some items are not saved in the template.  <!--510610--> Ensure you  apply the following items when you run the deployment wizard:
          > - Software Installation 
          > - Scheduling 
          > - Pre-download content
