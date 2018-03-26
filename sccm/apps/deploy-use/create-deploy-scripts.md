@@ -271,6 +271,10 @@ After you have initiated running a script on a collection of devices, use the fo
 - Scripts that get an unknown result, or those where the client was offline, won't show in the charts or data set. <!--507179-->
 - Avoid returning large script output since it is truncated to 4 KB. <!--508488-->
 - Some functionality with script output formatting is not available when running Configuration Manager version 1802 or later with a down-level version of the client. <!--508487-->
+    - When you have a pre-1802 Configuration Manager client, you get a string output.
+    -  For Configuration Manager client version 1802 and above, you get JSON formatting.
+        - For example, you might get results that say TEXT on one client version and "TEXT" on other version, which will be put in chart as two different categories.
+        - If you need to work around this behavior, consider running script against two different collections. One with  pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. 
 - Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
    ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
 
