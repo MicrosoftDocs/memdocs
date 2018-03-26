@@ -78,9 +78,11 @@ Contoso has a single primary site with two boundary groups: Headquarters (HQ) an
 2. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Click **Hierarchy Settings** in the ribbon. 
 3. On the **General** tab, enable the option to **Configure client peer cache sources to divide content into parts**. 
 4. Create a required deployment with content.  
-   > [!Note]
-   > This functionality only works when the client downloads content in the background, such as with a required deployment. On-demand downloads, such as when the user installs an available deployment in Software Center, behaves as usual.
-1. To see them handling the download of content in parts, examine the **ContentTransferManager.log** on the client peer cache source and the **MP_Location.log** on the management point. 
+
+   > [!Note]  
+   > This functionality only works when the client downloads content in the background, such as with a required deployment. On-demand downloads, such as when the user installs an available deployment in Software Center, behaves as usual.  
+
+1. To see them handling the download of content in parts, examine the **ContentTransferManager.log** on the client peer cache source and the **MP_Location.log** on the management point.  
  
 
 
