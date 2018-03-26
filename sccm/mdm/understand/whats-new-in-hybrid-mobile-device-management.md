@@ -3,7 +3,7 @@ title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
 ms.custom: na
-ms.date: 03/01/2018
+ms.date: 03/26/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -36,6 +36,16 @@ Each section of this article lists hybrid features under three different categor
 |**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases. This including System Center 2012 R2 Configuration Manager releases, since these features only require the Intune service and do not require additional functionality in Configuration Manager.|
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+
+
+## March 2018
+
+### New in Microsoft Intune
+
+#### Azure Active Directory web sites can require the Intune Managed Browser App and support Single Sign-On for the Managed Browser (Public Preview)
+<!-- 710595 --> 
+Using Azure Active Directory (Azure AD), you can now restrict access to web sites on mobile devices to the Intune Managed Browser app. In the managed browser, web site data will remain secure and separate from end-user personal data. In addition, the Managed Browser will support Single Sign-On capabilities for sites protected by Azure AD. Signing in to the Managed Browser, or using the Managed Browser on a device with another app managed by Intune, allows the Managed Browser to access corporate sites protected by Azure AD without the user having to enter their credentials. This functionality applies to sites like Outlook Web Access (OWA) and SharePoint Online, as well as other corporate sites like intranet resources accessed through the Azure App Proxy.
 
 
 
