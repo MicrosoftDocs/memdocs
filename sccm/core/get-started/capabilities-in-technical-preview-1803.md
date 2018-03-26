@@ -40,14 +40,47 @@ Review the [Technical Preview](/sccm/core/get-started/technical-preview) article
 
 
  
-## Feature name
-<!-- TFS -->
-Description
-
-### Prerequisites
+## Pull-distribution points support cloud distribution points as source  
+<!--1321554-->
+You can now use a cloud distribution point as a source for the pull-distribution point.
 
 ### Try it out!
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+
+
+
+## Partial download support in client peer cache to reduce WAN utilization
+<!--1357346-->
+Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization.
+
+
+
+## Maintenance windows in Software Center
+<!--1358131-->
+Software Center now displays the next scheduled maintenance window on the Installation Status tab.
+
+
+
+## Custom tab for webpage in Software Center
+<!--1358132-->
+You can now create a customized tab to open a webpage in Software Center. This feature allows you to show content to your end users in a consistent, reliable way. The following list includes a few examples:
+- Contact IT, with information on how to contact your organization's IT department
+- IT Support Center, for IT self-service actions such as searching a knowledge base or opening a support ticket.
+- End-user documentation, articles for users in your organization on various IT topics such as using applications or upgrading to Windows 10.
+
+### Prerequisites
+- Internet Explorer must be installed and enabled on the client. Software Center uses Internet Explorer libraries for displaying the web page.
+
+### Try it out!
+ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+
+1. In the Configuration Manager console, **Administration** workspace, **Client Settings** node, open the **Default Client Settings** policy.
+2. Select the **Software Center** group.
+3. For **Software Center settings**, click **Customize**.
+4. Switch to the **Tabs** tab.
+5. Enable the option to **Specify a custom tab for Software Center**.
+	1. Enter a name in the **Tab name** text field. This name is what displays to the user in Software Center.
+	2. Enter a valid URL in the **Content URL** text field. This URL is the content that Software Center displays when users click this tab.
 
 
 
