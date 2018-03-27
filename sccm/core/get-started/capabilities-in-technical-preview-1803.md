@@ -117,6 +117,23 @@ You can now create a customized tab to open a webpage in Software Center. This f
 > [!Tip]  
 > Software Center uses Internet Explorer components for rendering the web page.
 
+## Enable third party software update support on clients
+
+You can now enable configuration of Configuration Manager clients for third party software updates. When you **Enable third party software updates** for the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. <!--1357605-->
+
+Selecting **Enable third party software updates** in client settings does the following: 
+- On the client, it sets the policy for 'Allow signed updates for an intranet Microsoft update service location' 
+- Installs the signing certificate to the Trusted Publisher store on the client. 
+
+### Try it out!
+ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
+
+1. On the topmost site in the Configuration Manager hierarchy, go to the **Administration** node, expand **Site Configuration**, then **Sites**.
+2. Right-click on your topmost site server and select **Configure Site Components** then **Software Update Point**.
+3. Click on the **Third Party Updates** tab and check **Enable third party software updates**.
+4. Open **Client Settings** and go to the settings for **Software Updates**.
+5. Ensure **Enable third party software updates** is set to **Yes**.
+
 
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
