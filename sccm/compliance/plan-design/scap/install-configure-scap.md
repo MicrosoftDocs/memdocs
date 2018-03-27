@@ -22,16 +22,17 @@ robots: noindex,nofollow
 
 # Install and Configure the SCAP Extensions for Microsoft System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Technical Preview)*
+*Applies to: System Center Configuration Manager (Current Branch)*
 
-After preparing the prerequisite infrastructure, you are ready to install and configure the SCAP Extensions for Microsoft System Center Configuration Manager on the computer from which you want to run this process.
+> [!Tip]  
+> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager. 
+
+After preparing the prerequisite infrastructure, you're ready to install and configure the SCAP Extensions for Microsoft System Center Configuration Manager on the computer from which you want to run this process.
 
 ## Install SCAP Extensions Configuration Manager
 
 1. Run ConfigMgr\_Extensions\_for\_SCAP.msi to install the tool.
-2. In Windows Explorer, go to the folder where you downloaded the **ConfigMgr\_Extensions\_for\_SCAP.msi** file, and then double-click the **ConfigMgr\_Extensions\_for\_SCAP.msi** file.
-
-The SCAP Extensions for Microsoft System Center Configuration Manager Installation Wizard starts.
+2. In Windows Explorer, go to the folder where you downloaded the **ConfigMgr\_Extensions\_for\_SCAP.msi** file, and then double-click the **ConfigMgr\_Extensions\_for\_SCAP.msi** file. This starts the SCAP Extensions for Microsoft System Center Configuration Manager Installation Wizard.
 
 Complete the **SCAP Extensions for Microsoft System Center Configuration Manager Installation Wizard** using the information in the following table, accepting the wizard&#39;s default values unless you need to specify them.
 
@@ -71,7 +72,7 @@ The SCAP data streams published by NIST are organized into multiple bundles, whi
 
 ## Convert and Import the SCAP Data Stream Files using the Import SCAP Content Wizard
 
-After obtaining the SCAP data streams, you are ready to import and convert the data streams to Configuration baselines. The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there is a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
+After obtaining the SCAP data streams, you're ready to import and convert the data streams to Configuration baselines. The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
 
 ### To import the SCAP data streams into Configuration Manager
 
@@ -83,11 +84,11 @@ After obtaining the SCAP data streams, you are ready to import and convert the d
 
       ![Select Content Type](./media/import-new-scap-content.png)
 
-3. Select the SCAP datastream file, XCCDF and CPE dictionary file or Oval content file.
+3. Select the SCAP datastream file, XCCDF, and CPE dictionary file or Oval content file.
 
      ![Select the SCAP datastream file](./media/select-datastream-file.png)
 
-4. If SCAP 1.2 select the datastream. Then select the benchmark and profile for SCAP 1.x.  Select **Next** to convert the content. You will see a progress bar as this takes place.
+4. If SCAP 1.2 select the datastream. Then select the benchmark and profile for SCAP 1.x.  Select **Next** to convert the content. You will see a progress bar.
 
       ![Select the benchmark and profile for SCAP 1.2](./media/select-benchmark-and-profile.png)
 
@@ -101,9 +102,9 @@ After obtaining the SCAP data streams, you are ready to import and convert the d
 
 ## (Alternate method) Convert and Import the SCAP Data Stream Files using the cmd line tool
 
-After obtaining the SCAP data streams, you may use the Microsoft.Sces.ScapToDcm.exe tool to convert the SCAP data streams into Compliance Settings compliant .cab files and then import the .cab files into Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into configuration items and configuration baselines that you can access using the Compliance Settings feature in Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests, and then packages the XML manifests into a .cab file that you can import into Configuration Manager.
+After getting the SCAP data streams, you may use the Microsoft.Sces.ScapToDcm.exe tool to convert the SCAP data streams into Compliance Settings compliant .cab files and then import the .cab files into Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into configuration items and configuration baselines that you can access using the Compliance Settings feature in Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests. It then packages the XML manifests into a .cab file that you can import into Configuration Manager.
 
-The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there is a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
+The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
 
 
 
@@ -116,7 +117,7 @@ The SCAP data streams published by NIST are organized into multiple bundles. Fol
 
 ### Convert the SCAP Data Streams into Compliance Settings Compliant .cab Files
 
-Before you can analyze and assess the compliance of your systems, you need to convert the SCAP data streams in XML format into XML manifests that are compliant with Compliance Settings configuration items and configuration baselines. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests, and then packages the XML manifests into a .cab file that you can later import into Configuration Manager.
+Before you can analyze and assess the compliance of your systems, you need to convert the SCAP data streams in XML format into XML manifests that are compliant with Compliance Settings configuration items and configuration baselines. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests. It then packages the XML manifests into a .cab file that you can later import into Configuration Manager.
 
 #### **To convert the SCAP data streams into Compliance Settings compliant .cab files using the Microsoft.Sces.ScapToDcm.exe tool**
 
@@ -166,7 +167,7 @@ Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;e
 
 
 
-**The following is sample command line for the Microsoft.Sces.ScapToDcm.exe tool:**
+**The following command lines are samples for the Microsoft.Sces.ScapToDcm.exe tool:**
 
 SCAP1.2 Content:
 
@@ -180,7 +181,7 @@ SCAP OVAL Content:
 
      Microsoft.Sces.ScapToDcm.exe –oval myOvalFile.xml –variable myOvalExternalVariableFile.xml –out .\mytestfolder
 
-The following is sample output from the Microsoft.Sces.ScapToDcm.exe tool:
+The following output is sample from the Microsoft.Sces.ScapToDcm.exe tool:
 
      Compliance Settings compliant cab file created:
 
