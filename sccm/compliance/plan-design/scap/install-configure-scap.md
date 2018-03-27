@@ -64,7 +64,8 @@ The SCAP data streams published by NIST are organized into multiple bundles, whi
 
 2. Download the SCAP data streams from the [NVD Web site](http://nvd.nist.gov/home.cfm), which are stored in compressed files with a .zip file name extension or marked as DataStream XML file.
 
-    >[!IMPORTANT] There are many SCAP data stream files with the .xml extension that you can download from the NVD. However, only .xml files that include XCCDF (SCAP1.0 and 1.1)/DataStream (SCAP1.2) content are appropriate for use with the SCAP Extensions.
+    >[!IMPORTANT] 
+    >There are many SCAP data stream files with the .xml extension that you can download from the NVD. However, only .xml files that include XCCDF (SCAP1.0 and 1.1)/DataStream (SCAP1.2) content are appropriate for use with the SCAP Extensions.
 
 3. Extract the SCAP data streams .zip files/DataStream XML file that you downloaded into the same folder where you installed the SCAP Extensions.
 
