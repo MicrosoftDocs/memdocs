@@ -11,6 +11,11 @@
 ### [Create and deploy configuration baselines](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [Security and privacy](plan-design/security-and-privacy-for-compliance-settings.md)
 
+## [Security Content Automation Protocol (SCAP)](plan-design/scap/about-scap.md)
+### [Install and configure SCAP](plan-design/scap/install-configure-scap.md)
+### [Import SCAP compliance settings](plan-design/scap/install-configure-scap.md)
+### [Troubleshooting SCAP](plan-design/scap/troubleshooting-scap.md)
+
 # Deploy and use
 
 ## [Create configuration items](deploy-use/create-configuration-items.md)
