@@ -105,7 +105,7 @@ The following languages are supported for software update titles and description
 
 
 ## Install Updates Publisher
-Get the **UpdatesPubliser.msi** for installing System Center Updates Publisher from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=847967).
+Get the **UpdatesPubliser.msi** for installing System Center Updates Publisher from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55543).
 
 To install Updates Publisher, run **UpdatesPublisher.msi** on a computer that meets the *prerequisites*. The installer creates the following folder to contain the files necessary to run Updates Publisher: *&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*.
 
