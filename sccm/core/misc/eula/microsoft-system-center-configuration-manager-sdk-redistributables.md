@@ -16,16 +16,17 @@ manager: dougeby
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER SDK REDISTRIBUTABLES
+# System Center Configuration Manager SDK Redistributables
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-**MICROSOFT SOFTWARE LICENSE TERMS**
-**MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER SDK REDISTRIBUTABLES**
+**MICROSOFT SOFTWARE LICENSE TERMS**  
 
-**IF YOU LIVE IN (OR ARE A BUSINESS WITH YOUR PRINCIPAL PLACE OF BUSINESS IN) THE UNITED STATES, PLEASE READ THE "BINDING ARBITRATION AND CLASS ACTION WAIVER" SECTION BELOW. IT AFFECTS HOW DISPUTES ARE RESOLVED.**
+**System Center Configuration Manager SDK Redistributables**  
 
-These license terms are an agreement between you and Microsoft Corporation (or one of its affiliates). They apply to the software named above and any Microsoft services or software updates (except to the extent such services or updates are accompanied by new or additional terms, in which case those different terms apply prospectively and do not alter your or Microsoft's rights relating to pre-updated software or services). IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW.
+> **IF YOU LIVE IN (OR ARE A BUSINESS WITH YOUR PRINCIPAL PLACE OF BUSINESS IN) THE UNITED STATES, PLEASE READ THE "BINDING ARBITRATION AND CLASS ACTION WAIVER" SECTION BELOW. IT AFFECTS HOW DISPUTES ARE RESOLVED.**  
+
+These license terms are an agreement between you and Microsoft Corporation (or one of its affiliates). They apply to the software named above and any Microsoft services or software updates (except to the extent such services or updates are accompanied by new or additional terms, in which case those different terms apply prospectively and do not alter your or Microsoft's rights relating to pre-updated software or services). IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW.  
 
 1. **INSTALLATION AND USE RIGHTS.**  
 
