@@ -3,7 +3,7 @@ title: "The CD.Latest folder"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
-ms.date: 03/08/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
