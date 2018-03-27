@@ -3,7 +3,7 @@ title: "The CD.Latest folder"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -59,3 +59,6 @@ The source files from the CD.Latest folder are supported for the following:
 >   
 >  -   Installing a new site for a new hierarchy  
 >  -   Upgrading a Microsoft System Center 2012 Configuration Manager site to System Center Configuration Manager
+>  -   Installing Configuration Manager client
+>  -   Installing Configuration Manager administrative console
+
