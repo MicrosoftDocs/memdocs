@@ -1,8 +1,8 @@
 ---
-title: "Third Party Notices"
-titleSuffix: "Configuration Manager"
+title: Third Party Notices
+titleSuffix: Configuration Manager
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/22/2018
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -15,7 +15,7 @@ ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
 ---
 # Third Party Notices
@@ -53,6 +53,12 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 11. PlistCS Property List (plist) Serialization and Parsing Library  
 
 12. Active Directory Authentication Library (ADAL) for .NET  
+13. WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3
+14. Microsoft Azure Monitoring Services 4.1.0
+15. Microsoft Azure Common Library 2.1.0
+16. Common Library for Hyak Code Generator 1.0.1
+17. Microsoft Azure Resource Manager Library 2.18.0.0
+18. Microsoft Azure Management Authorization Library 2.0.0
 
 As the recipient of the above third-party software, Microsoft sets forth a copy of the notices and other information below.  
 
@@ -529,3 +535,61 @@ See the License for the specific language governing permissions and
 limitations under the License.  
 
 **END OF Common Library for Hyak Code Generator 1.0.1 NOTICES AND INFORMATION**
+
+
+
+## Microsoft Azure Resource Manager Library 2.18.0.0
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+The MIT License (MIT)
+
+Copyright (c) 2018 Microsoft Corporation
+
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+**END OF Microsoft Azure Resource Manager Library 2.18.0.0 NOTICES AND INFORMATION**
+
+
+
+## Microsoft Azure Management Authorization Library 2.0.0
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Copyright (c) 2018 Microsoft Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+**END OF Microsoft Azure Management Authorization Library 2.0.0 NOTICES AND INFORMATION**
+
+
+
+<!-- template
+## --title-- 
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+--body--
+
+**END OF --title-- NOTICES AND INFORMATION**
+(also add the --title-- to the numbered list at the top of the article)
+-->

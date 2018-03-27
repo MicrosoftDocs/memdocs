@@ -32,3 +32,14 @@
 ## [Manage Express installation files for Windows 10 updates](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Integration with Windows Update for Business in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [Example scenario to deploy security updates](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
+
+# [System Center Updates Publisher](tools/updates-publisher.md)
+## [Install](tools/install-updates-publisher.md)
+## [Configure options](tools/updates-publisher-options.md)
+## [Manage catalogs](tools/updates-publisher-catalogs.md)
+## [Manage updates](tools/manage-updates-with-updates-publisher.md)
+## [Manage publications](tools/updates-publisher-publications.md)
+## [Create new updates](tools/create-updates-with-updates-publisher.md)
+## [Applicability rules](tools/updates-publisher-applicability-rules.md)
+## [Certificates and security](tools/updates-publisher-security.md)
+

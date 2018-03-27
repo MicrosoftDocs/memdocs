@@ -3,7 +3,7 @@ title: "Plan the site database"
 titleSuffix: "Configuration Manager"
 description: "Consider the site database and the site database server role as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/08/20168
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -28,6 +28,12 @@ The site database server is a computer that runs a supported version of Microsof
 -   For central administration sites and primary sites, you can install SQL Server on the site server, or you can install SQL Server on a computer other than the site server.  
 
 -   For secondary sites, you can use SQL Server Express instead of a full SQL Server installation. The database server must, however, be run on the secondary site server.  
+
+-  For SQL Availability Group usage the Database Recovery Model must be set to FULL  
+
+-  For non-SQL Availability Group usage the Database Recovery Model must be set to SIMPLE  
+
+Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 The following SQL Server configurations can be used to host the site database:  
 

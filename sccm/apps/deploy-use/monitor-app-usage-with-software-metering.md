@@ -2,7 +2,6 @@
 title: "Monitor app usage with software metering"
 titleSuffix: "Configuration Manager"
 description: "Learn about operations that are available in System Center Configuration Manager software metering."
-description:
 ms.custom: na
 ms.date: 09/20/2017
 ms.prod: configuration-manager
