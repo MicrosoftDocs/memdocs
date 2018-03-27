@@ -63,14 +63,18 @@ Contoso has a single primary site with two boundary groups: Headquarters (HQ) an
 ![Diagram of network configuration as described for the example scenario](media/1357346-peer-cache-source-parts.png)
 
 1. You target a deployment with content to all four clients in the branch office. You only distributed the content to the distribution point.
-2. Client3 and Client4 do not have a local source, so they start to wait the 30 minutes fallback to the remote boundary group.
-3. Client1 (PCS1) is the first peer cache source to refresh policy with the management point. It immediately starts downloading part A from the distribution point.
-4. When Client2 (PCS2) contacts the management point, as part A is already in progress but not yet complete, it immediately starts downloading part B from the distribution point.
-5. PCS1 finishes downloading part A. It notifies the management point. As part B is already in progress but not yet complete, it starts downloading part C from the distribution point.
-6. PCS2 finishes downloading part B, and notifies the management point. It now starts downloading part D from the distribution point. 
-7. PCS1 finishes downloading part C, and notifies the management point. There are no more parts not started downloading from the remote distribution point, so it downloads part B from PCS2.
-8. This process continues until both client peer cache sources have all of the parts from each other. 
-9. Client3 is the first to refresh policy after the 30-minute fallback period expires. It checks back with the management point, and learns that there are now local sources available. Instead of downloading the content in full from the distribution point across the WAN, it downloads the content in full from one of the client peer cache sources. 
+2. Client3 and Client4 do not have a local source for the deployment. The management point instructs the clients to wait 30 minutes before falling back to the remote boundary group.
+3. Client1 (PCS1) is the first peer cache source to refresh policy with the management point. Because this client is enabled as a peer cache source, the management point instructs it to immediately start downloading part A from the distribution point.  
+4. When Client2 (PCS2) contacts the management point, as part A is already in progress but not yet complete, the management point instructs it to immediately start downloading part B from the distribution point.
+5. PCS1 finishes downloading part A, and immediately notifies the management point. As part B is already in progress but not yet complete, the management point instructs it to start downloading part C from the distribution point.
+6. PCS2 finishes downloading part B, and immediately notifies the management point. The management point instructs it to start downloading part D from the distribution point. 
+7. PCS1 finishes downloading part C, and immediately notifies the management point. The management point informs it that there are no more parts available from the remote distribution point. The management point instructs it to download part B from its local peer, PCS2.
+8. This process continues until both client peer cache sources have all of the parts from each other. The management point prioritizes parts from the remote distribution point before instructing the peer cache sources to download parts from local peers. 
+9. Client3 is the first to refresh policy after the 30-minute fallback period expires. It now checks back with the management point, which informs the client of new local sources. Instead of downloading the content in full from the distribution point across the WAN, it downloads the content in full from one of the client peer cache sources. Clients prioritize local peer sources. 
+
+> [!Note]  
+> If the number of client peer cache sources is greater than the number of content parts, then the management point instructs the additional peer cache sources to wait for fallback like a normal client. 
+
 
 ### Try it out!
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
