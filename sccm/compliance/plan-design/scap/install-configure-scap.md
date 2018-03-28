@@ -25,7 +25,7 @@ robots: noindex,nofollow
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!Tip]  
-> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606.  
+> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. The install file is located at cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi starting in 1803 technical preview.   
 
 After preparing the prerequisite infrastructure, you're ready to install and configure the SCAP Extensions for Microsoft System Center Configuration Manager on the computer from which you want to run this process.
 
@@ -72,7 +72,7 @@ The SCAP data streams published by NIST are organized into multiple bundles, whi
 
 ## Convert and Import the SCAP Data Stream Files using the Import SCAP Content Wizard
 
-After obtaining the SCAP data streams, you're ready to import and convert the data streams to Configuration baselines. The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
+After getting the SCAP data streams, you're ready to import and convert the data streams to Configuration baselines. The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
 
 ### To import the SCAP data streams into Configuration Manager
 
@@ -102,7 +102,7 @@ After obtaining the SCAP data streams, you're ready to import and convert the da
 
 ## (Alternate method) Convert and Import the SCAP Data Stream Files using the cmd line tool
 
-After getting the SCAP data streams, you may use the Microsoft.Sces.ScapToDcm.exe tool to convert the SCAP data streams into Compliance Settings compliant .cab files and then import the .cab files into Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into configuration items and configuration baselines that you can access using the Compliance Settings feature in Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests. It then packages the XML manifests into a .cab file that you can import into Configuration Manager.
+After getting the SCAP data streams, you may use the Microsoft.Sces.ScapToDcm.exe tool to convert the SCAP data streams into Compliance Settings compliant .cab files. Then import the .cab files into Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into configuration items and configuration baselines that you can access using the Compliance Settings feature in Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests. It then packages the XML manifests into a .cab file that you can import into Configuration Manager.
 
 The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST&#39;s instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer 8.0. Use the following procedures to accomplish this task.
 
@@ -153,118 +153,114 @@ Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;e
 
 | **Parameter** | **Usage** | **Required** |
 | --- | --- | --- |
-| -scap [scap data stream file] | Specify the SCAP data stream file | Yes(for SCAP 1.2 data stream, mutually exclusive with –xccdf and –oval / -variable) |
-| -xccdf [xccdf file] | Specify the XCCDF file | Yes(for SCAP 1.0/1.1 XCCDF, mutually exclusive with –scap and –oval / -variable) |
-| -cpe [cpe file] | Specify the CPE file | Yes(for SCAP 1.0/1.1 XCCDF, mutually exclusive with –scap and –oval / -variable) |
-| -oval [oval file] | Specify the OVAL file | Yes(for standalone OVAL file, mutually exclusive with –xccdf and -scap) |
-| -variable [oval external variable file] | Specify the OVAL external variable file | No(Optional for standalone OVAL file when there is an external OVAL variable file, mutually exclusive with –xccdf and -scap) |
-| -select [xccdf benchmark/profile] | Select XCCDF benchmark, profile from either the SCAP data stream or XCCDF file | No(We suggest specifying this switch. if not specified, then the tool will generate a cab for all the profiles in all embedded DataStream/benchmarks) |
-| -out [output directory] | Specify where to output the DCM cab file | No(if not specified, then the tool will only list the content without conversion) |
-| -log [log file] | Specify the log file | No(if not specified, then log is written to Microsoft.Sces.ScapToDcm.log file) |
+| -scap [scap data stream file] | Specify the SCAP data stream file | Yes (for SCAP 1.2 data stream, mutually exclusive with –xccdf and –oval / -variable) |
+| -xccdf [xccdf file] | Specify the XCCDF file | Yes (for SCAP 1.0/1.1 XCCDF, mutually exclusive with –scap and –oval / -variable) |
+| -cpe [cpe file] | Specify the CPE file | Yes (for SCAP 1.0/1.1 XCCDF, mutually exclusive with –scap and –oval / -variable) |
+| -oval [oval file] | Specify the OVAL file | Yes (for standalone OVAL file, mutually exclusive with –xccdf and -scap) |
+| -variable [oval external variable file] | Specify the OVAL external variable file | No (Optional for standalone OVAL file when there is an external OVAL variable file, mutually exclusive with –xccdf and -scap) |
+| -select [xccdf benchmark/profile] | Select XCCDF benchmark, profile from either the SCAP data stream or XCCDF file | No (We suggest specifying this switch. If not specified, then the tool will generate a cab for all the profiles in all embedded DataStream/benchmarks) |
+| -out [output directory] | Specify where to output the DCM cab file | No (if not specified, then the tool will only list the content without conversion) |
+| -log [log file] | Specify the log file | No (if not specified, then log is written to Microsoft.Sces.ScapToDcm.log file) |
 | -help / -? | Print out tool usage | No |
 
 
 
 
 
-**The following command lines are samples for the Microsoft.Sces.ScapToDcm.exe tool:**
+#### The following command lines are samples for the Microsoft.Sces.ScapToDcm.exe tool:
 
-SCAP1.2 Content:
+**SCAP1.2 Content:**
 
-     Microsoft.Sces.ScapToDcm.exe –scap scap\_gov.nist\_USTCB-ie8.xml –out .\mytestfolder –select mySCAPDataStreamID/myBenchMarkID/myProfileID
+  Microsoft.Sces.ScapToDcm.exe –scap scap\_gov.nist\_USTCB-ie8.xml –out .\mytestfolder –select mySCAPDataStreamID/myBenchMarkID/myProfileID
 
-SCAP1.0/1.1 Content:
+**SCAP1.0/1.1 Content:**
 
-     Microsoft.Sces.ScapToDcm.exe–xccdf scap\_gov.nist\_Test-WinXP\_xccdf.xml –cpe scap\_gov.nist\_Test-WinXP\_cpe.xml –out .\mytestfolder –select XCCDFBenchmarkID/MyProfileID
+   Microsoft.Sces.ScapToDcm.exe–xccdf scap\_gov.nist\_Test-WinXP\_xccdf.xml –cpe scap\_gov.nist\_Test-WinXP\_cpe.xml –out .\mytestfolder –select XCCDFBenchmarkID/MyProfileID
 
-SCAP OVAL Content:
+**SCAP OVAL Content:**
 
-     Microsoft.Sces.ScapToDcm.exe –oval myOvalFile.xml –variable myOvalExternalVariableFile.xml –out .\mytestfolder
+  Microsoft.Sces.ScapToDcm.exe –oval myOvalFile.xml –variable myOvalExternalVariableFile.xml –out .\mytestfolder
 
-The following output is sample from the Microsoft.Sces.ScapToDcm.exe tool:
+**The following output is sample from the Microsoft.Sces.ScapToDcm.exe tool:**
 
-     Compliance Settings compliant cab file created:
+  Compliance Settings compliant cab file created:
 
-     Validate the schema of SCAP data stream file C:\24SCAP\BVT\_Test\_Data\_Stream.xml
+  Validate the schema of SCAP data stream file C:\24SCAP\BVT\_Test\_Data\_Stream.xml
 
-     Successfully validate the schema of SCAP data stream file C:\24SCAP\BVT\_Test\_Data\_Stream.xml
+  Successfully validate the schema of SCAP data stream file C:\24SCAP\BVT\_Test\_Data\_Stream.xml
 
-     Process XCCDF Benchmark xccdf\_tst.bvt\_benchmark\_Windows-F
+  Process XCCDF Benchmark xccdf\_tst.bvt\_benchmark\_Windows-F
 
-     Process XCCDF Profile: xccdf\_tst.bvt\_profile\_version\_1.0.0.0-BVT Profile#1
+  Process XCCDF Profile: xccdf\_tst.bvt\_profile\_version\_1.0.0.0-BVT Profile #1
 
-     Process OVAL: scap\_tst.bvt\_comp\_Windows-F-oval.xml
+  Process OVAL: scap\_tst.bvt\_comp\_Windows-F-oval.xml
 
-     Successfully finished process OVAL: scap\_tst.bvt\_comp\_Windows-F-oval.xml
+  Successfully finished process OVAL: scap\_tst.bvt\_comp\_Windows-F-oval.xml
 
-     Process OVAL: scap\_tst.bvt\_comp\_Windows-F-cpe-oval.xml
+  Process OVAL: scap\_tst.bvt\_comp\_Windows-F-cpe-oval.xml
 
-     Successfully finished process OVAL: scap\_tst.bvt\_comp\_Windows-F-cpe-oval.xml
+  Successfully finished process OVAL: scap\_tst.bvt\_comp\_Windows-F-cpe-oval.xml
+   Process SCAP data stream: scap\_tst.bvt\_datastream\_Windows-F.zip
+    SCAP Data Stream: [scap\_tst.bvt\_datastream\_Windows-F.zip]
 
-     Process SCAP data stream: scap\_tst.bvt\_datastream\_Windows-F.zip
+  Version:        [1.2]
 
-     SCAP Data Stream: [scap\_tst.bvt\_datastream\_Windows-F.zip]
+  Timestamp:      [2/24/2012]
 
-     Version:        [1.2]
+  Use-case:       [CONFIGURATION]
 
-     Timestamp:      [2/24/2012]
+  CPE Dictionary:  [scap\_tst.bvt\_comp\_Windows-F-cpe-dictionary.xml]
 
-     Use-case:       [CONFIGURATION]
+  OVAL:              [Windows-F-cpe-oval.xml]
+  Product name:    [National Institute of Standards and Technology]
 
-     CPE Dictionary:  [scap\_tst.bvt\_comp\_Windows-F-cpe-dictionary.xml]
+  Product version: []
 
-     OVAL:              [Windows-F-cpe-oval.xml]
-     Product name:    [National Institute of Standards and Technology]
+  Schema version:  [5.3]
 
-     Product version: []
+  Timestamp:       [2/24/2012]
 
-     Schema version:  [5.3]
+  XCCDF Benchmark: [xccdf\_tst.bvt\_benchmark\_Windows-F]
 
-     Timestamp:       [2/24/2012]
+  Version:       [v1.0.0.0]
+   Update:        [http://usgcb.nist.gov]
 
-     XCCDF Benchmark: [xccdf\_tst.bvt\_benchmark\_Windows-F]
+  Timestamp:     [2/24/2012]
 
-     Version:       [v1.0.0.0]
+  Status:        [accepted]
 
-     Update:        [http://usgcb.nist.gov]
+  Status date:   [2/24/2012]
 
-     Timestamp:     [2/24/2012]
+  Title:         [Ohh New BVT for SCAP 1.2]
 
-     Status:        [accepted]
+ Description:   [My description]
 
-     Status date:   [2/24/2012]
-
-     Title:         [Ohh New BVT for SCAP 1.2]
-
-     Description:   [My description]
-
-     XCCDF Profile: [xccdf\_tst.bvt\_profile\_version\_1.0.0.0]
+  XCCDF Profile: [xccdf\_tst.bvt\_profile\_version\_1.0.0.0]
  
-     OVAL:              [Windows-F-oval.xml]
+  OVAL:              [Windows-F-oval.xml]
 
-      Product name:    [scaptool]
+   Product name:    [scaptool]
 
-      Product version: []
+   Product version: []
 
-      Schema version:  [5.4]
+   Schema version:  [5.4]
 
-      Timestamp:       [2/24/2012]
+   Timestamp:       [2/24/2012]
 
-     Start SCAP to DCM conversion...
+  Start SCAP to DCM conversion...
 
-     Processing SCAP data stream: scap\_tst.bvt\_datastream\_Windows-F.zip
+  Processing SCAP data stream: scap\_tst.bvt\_datastream\_Windows-F.zip
 
-     Processing CPE dictionary: scap\_tst.bvt\_comp\_Windows-F-cpe-dictionary.xml
+  Processing CPE dictionary: scap\_tst.bvt\_comp\_Windows-F-cpe-dictionary.xml
 
-     …
+  …
 
-     Generating CI baseline cab file: C:\28\bbt\xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
+  Generating CI baseline cab file: C:\28\bbt\xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
 
-     Successfully generated CI baseline cab file: C:\28\bbt\xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
+  Successfully generated CI baseline cab file: C:\28\bbt\xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
 
-     Successfully converted XCCDF profile: xccdf\_tst.bvt\_profile\_version\_1.0.0.0 into DCM baseline xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_t
-
-     st.bvt\_profile\_version\_1.0.0.0].cab
+  Successfully converted XCCDF profile: xccdf\_tst.bvt\_profile\_version\_1.0.0.0 into DCM baseline xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
 
 ## Next step
-[Import SCAP compliance settings and export compliance results](/sccm/compliance/plan-design/scap/import-scap-compliance-settings)
+> [!div class="nextstepaction"]
+> [Import SCAP compliance settings and export compliance results](/sccm/compliance/plan-design/scap/import-scap-compliance-settings)
