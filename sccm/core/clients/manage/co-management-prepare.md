@@ -28,7 +28,7 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 ## Command line to install Configuration Manager client
 Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
-`ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62; CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;"`
+`ccmsetup.msi CCMSETUPCMD="/mp:<*URL of cloud management gateway mutual auth endpoint*> CCMHOSTNAME=<*URL of cloud management gateway mutual auth endpoint*> SMSSiteCode=<*Sitecode*> SMSMP=https://<*FQDN of MP*> AADTENANTID=<*AAD tenant ID*> AADCLIENTAPPID=<*Server AppID for AAD Integration*> AADRESOURCEURI=https://<*Resource ID*>"`
 
 For example, if you had the following values:
 
@@ -48,7 +48,7 @@ For example, if you had the following values:
 
 You would use the following command line:
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https:/&#47;mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https:/&#47;ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > You can find the command-line parameters for your site by using the following steps:     
