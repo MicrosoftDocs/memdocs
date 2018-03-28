@@ -115,6 +115,10 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Partial download support in client peer cache to reduce WAN utilization](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization) <!--1357346--> 
 - [Maintenance windows in Software Center](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center) <!--1358131--> 
 - [Custom tab for webpage in Software Center](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center) <!--1358132--> 
+- [Enable third party software update support on clients](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) <!--1357605-->
+- [Enable copy/paste of asset details from monitoring views](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views) <!--1357552-->
+- [SCAP Extensions](capabilities-in-technical-preview-1803.md#scap-extensions) <!--1357552-->
+
 
 
 ## Capabilities delivered in recent supported technical previews
