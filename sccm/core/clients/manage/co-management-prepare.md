@@ -28,7 +28,7 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 ## Command line to install Configuration Manager client
 Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
-`ccmsetup.msi CCMSETUPCMD="/mp:<*URL of cloud management gateway mutual auth endpoint*> CCMHOSTNAME=<*URL of cloud management gateway mutual auth endpoint*> SMSSiteCode=<*Sitecode*> SMSMP=https://<*FQDN of MP*> AADTENANTID=<*AAD tenant ID*> AADCLIENTAPPID=<*Server AppID for AAD Integration*> AADRESOURCEURI=https://<*Resource ID*>"`
+`ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
 For example, if you had the following values:
 
