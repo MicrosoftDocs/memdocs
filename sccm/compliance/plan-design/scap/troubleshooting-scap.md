@@ -50,7 +50,7 @@ The following table lists some of the information that appears in the log file a
 | Information | Description |
 | --- | --- |
 | Drop | An item may be dropped because the test type is not a supported test type. |
-| Skip |The OVAL definition ID is for an invalid platform. </br> </br> The OVAL definition ID is not referred to by the XCCDF/DataStream input file.</br> </br> The OVAL test ID is not referred to by the XCCDF/DataStream input file. </br> </br> The XCCDF profile ID does not contain any @select statements equal to 1. </br></br> The XCCDF profile ID includes an abstract attribute that is true. </br></br> The XCCDF profile ID does not contain a qualifying rule.|
+| Skip |The OVAL definition ID is for an invalid platform. </br> </br> The OVAL definition ID is not referred to by the XCCDF/DataStream input file.</br> </br> The OVAL test ID is not referred to by the XCCDF/DataStream input file. </br> </br> The XCCDF profile ID does not contain any @select statements equal to 1. </br> </br> The XCCDF profile ID includes an abstract attribute that is true. </br></br> The XCCDF profile ID does not contain a qualifying rule.|
 
 ## Common Problems and Solutions
 
