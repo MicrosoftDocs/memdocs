@@ -3,7 +3,7 @@ title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud 
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -213,6 +213,10 @@ After a central administration site or primary site updates, each Configuration 
 We recommend that you install the update immediately.  
 
 After the console update completes, you can verify the console and site version is correct. Go to **About System Center Configuration Manager** at the top-left corner of the console.  
+
+ > [!Note]  
+ > Starting in version 1802, the console version is now slightly different from the site version. The minor version of the console now corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes to the 1802 release.
+
 
 
 ###  <a name="bkmk_toptier"></a> To start the update installation at the top-tier site  
