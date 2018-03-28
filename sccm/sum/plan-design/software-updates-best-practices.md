@@ -1,12 +1,13 @@
----
+ ---
 
 title: Best practices for software updates
 titleSuffix: "Configuration Manager"
 description: "Use these best practices for software updates in System Center Configuration Manager."
 keywords:
-author: dougebyms.author: dougeby
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 10/06/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -16,7 +17,10 @@ ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 
 
 ---
-# Best practices for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Best practices for software updates in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic includes best practices for software updates in System Center Configuration Manager. The information is sorted into best practices for initial installation and best practices for ongoing operations.  
 
 ## Installation best practices  

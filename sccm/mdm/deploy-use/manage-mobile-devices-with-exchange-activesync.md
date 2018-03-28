@@ -104,6 +104,12 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
     -   **New-ActiveSyncMailboxPolicy**  
 
     -   **Remove-ActiveSyncDevice**  
+    
+    -   **Get-CasMailbox**  
+    
+    -   **Get-User**  
+    
+    -   **Set-ActiveSyncOrganizationSettings**  
 
     > [!NOTE]  
     >  The following Exchange Server management roles include these cmdlets: Recipient Management, View-Only Organization Management, and Server Management. For more information about management role groups in Microsoft Exchange Server 2010, see [Understanding Management Role Groups](http://go.microsoft.com/fwlink/p/?LinkId=212914).  
