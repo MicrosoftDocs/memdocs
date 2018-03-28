@@ -1,9 +1,9 @@
 ---
-title: "Updates"
-titleSuffix: "Configuration Manager"
-description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
+title: Updates and Servicing
+titleSuffix: Configuration Manager
+description: Learn about an in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ caps.latest.revision: 51
 caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
+manager: dougeby
 
 ---
 # Updates for System Center Configuration Manager
@@ -86,6 +86,10 @@ The following versions of Configuration Manager are available as a baseline, an 
 *(Note 1)* The 1802 and 1702 baseline media are available as part of the Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch) releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC). For example, on the VLSC you can search for *System Center Config Mgr (current branch and LTSB)*, and both 1802 and 1702 version baseline media are returned, and available for download.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
+
+ > [!Note]  
+ > Starting in version 1802, the console version is now slightly different from the site version. The minor version of the console now corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes to the 1802 release.
+
 
 ##  <a name="bkmk_inconsole"></a> In-console updates and servicing  
  When you use a production ready installation of System Center Configuration Manager, also referred to as the current branch, most updates you install are available using the Updates and Servicing channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration, and includes only updates that Microsoft recommends for all customers.   
