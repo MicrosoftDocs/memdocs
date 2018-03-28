@@ -3,7 +3,7 @@ title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
 ms.custom: na
-ms.date: 03/26/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -461,6 +461,35 @@ The following additional hybrid features are also included in version 1702 of Co
 
 
 ## Notices
+
+### Windows Company Portal Send Feedback Option may no longer work
+
+The Windows Company Portal app has a 'Send Feedback' option allowing users to send feedback about the app to Microsoft. From April 30, 2018, this option continues to be supported only on the Windows 10 Company Portal app running on Windows 10 version 1607 and later.   
+
+#### How does this affect me?
+
+If you do not have the Windows Company Portal app installed for end users, please disregard this message.
+
+If any of your end users have the Company Portal app, note that starting April 30, the 'Send Feedback' button no longer works for the app in the following scenarios:  
+
+ - Windows 10 Company Portal app on Windows 10 version 1507 and version 1511  
+
+ - Windows Phone 8.1 Company Portal app  
+
+For impacted devices, the 'Send Feedback' option fails and doesn't succeed even on retrying. To send feedback to Microsoft about experiences on these platforms, there are alternate feedback channels listed below.
+
+#### What do I need to do to prepare for this change?
+
+Please inform your end users of this change and update any user guidance if necessary. 
+
+Inform end users using the Company Portal on Windows Phone 8.1, Windows 10 version 1507, and Windows 10 version 1511 that they have two alternate feedback channels available. They can:  
+
+- Use the Feedback Hub app on Windows 10  
+- Send an email to WinCPfeedback@microsoft.com  
+
+Ask end users on Windows 10 version 1607 or later to update to the latest version of the Windows Company Portal available in the Microsoft Store.
+
+
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 
 <!--1428681-->
