@@ -796,8 +796,9 @@ This setting configures the local port for the HTTP listener to download express
 
 When you set this to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
+### Enable third party software updates 
 
-
+When you set this to **Yes**, it sets the policy for 'Allow signed updates for an intranet Microsoft update service location' and installs the signing certificate to the Trusted Publisher store on the client. This client setting was added in Configuration Manager version 1802.
 ## State Messaging
 
 ### State message reporting cycle (minutes)
