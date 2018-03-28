@@ -25,7 +25,7 @@ robots: noindex,nofollow
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!Tip]  
-> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. The install file is located at cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi starting in the 1803 technical preview media. 
+> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. The install file is located at cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi starting in 1803 technical preview. 
 
 The next step in the process is to use the Configuration Manager Console to import the Compliance Settings-compliant .cab files into Configuration Manager. When you import the .cab files you created earlier in this process, one or more configuration items and configuration baselines are created in the Configuration Manager database. Later in the process you can assign each of the configuration baselines to a computer collection in Configuration Manager.
 
