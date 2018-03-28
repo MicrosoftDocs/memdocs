@@ -25,7 +25,7 @@ robots: noindex,nofollow
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!Tip]  
-> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. 
+> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. The install file is located at cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi starting in the 1803 technical preview media. 
 
 The next step in the process is to use the Configuration Manager Console to import the Compliance Settings-compliant .cab files into Configuration Manager. When you import the .cab files you created earlier in this process, one or more configuration items and configuration baselines are created in the Configuration Manager database. Later in the process you can assign each of the configuration baselines to a computer collection in Configuration Manager.
 
@@ -208,4 +208,5 @@ By default, the Microsoft.Sces.DcmToScap.exe tool accesses the Configuration Man
 After verifying that the appropriate **ARF** report: _ARF\_xxxx.xml_ and/or **Human-readable** report: xxx.txt, **Cyberscope** report: LASR\_xxx.xml, **ConsumedOval** report: xx-oval-&lt;machineName&gt;.xml, **XCCDF Benchmark result** report: xccdf\_xxx.xml files exist, on the command line, type exit and then press **ENTER** to exit the command prompt.
 
 ## Next step
-[Troubleshooting](/sccm/compliance/plan-design/scap/troubleshooting-scap)
+> [!div class="nextstepaction"]
+> [Troubleshooting](/sccm/compliance/plan-design/scap/troubleshooting-scap)

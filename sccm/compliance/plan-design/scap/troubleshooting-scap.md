@@ -26,7 +26,7 @@ robots: noindex,nofollow
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!Tip]  
-> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. 
+> This feature was first introduced in Technical Preview version 1803 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. The install file is located at cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi starting in the 1803 technical preview media. 
 
 SCAP Extensions for Microsoft System Center Configuration Manager are designed to work with the SCAP data streams intended for the SCAP validated tool with ACS capability to support USGCB. Typically, you won't experience problems with these USGCB SCAP data streams that are downloaded from the NIST Web site.
 
@@ -50,7 +50,7 @@ The following table lists some of the information that appears in the log file a
 | Information | Description |
 | --- | --- |
 | Drop | An item may be dropped because the test type is not a supported test type. |
-| Skip |The OVAL definition ID is for an invalid platform. </br> </br>The OVAL definition ID is not referred to by the XCCDF/DataStream input file.</br> </br>The OVAL test ID is not referred to by the XCCDF/DataStream input file. The XCCDF profile ID does not contain any @select statements equal to 1. </br></br>The XCCDF profile ID includes an abstract attribute that is true. </br></br> The XCCDF profile ID does not contain a qualifying rule.|
+| Skip |The OVAL definition ID is for an invalid platform. </br> </br>The OVAL definition ID is not referred to by the XCCDF/DataStream input file.</br> </br>The OVAL test ID is not referred to by the XCCDF/DataStream input file. The XCCDF profile ID does not contain any @select statements equal to 1. </br></br> The XCCDF profile ID includes an abstract attribute that is true. </br></br> The XCCDF profile ID does not contain a qualifying rule.|
 
 ## Common Problems and Solutions
 
@@ -65,4 +65,5 @@ Table 1.6 Common Problems and Solutions
 | I am having trouble providing the database connection with my organizational information. | For procedural information about how to configure your database connection information, see the [Install and configure SCAP](/sccm/compliance/plan-design/scap/install-configure-scap) article. 
 
 ## Next step
-[Install and configure SCAP](/sccm/compliance/plan-design/scap/install-configure-scap)
+> [!div class="nextstepaction"]
+> [Install and configure SCAP Extensions](/sccm/compliance/plan-design/scap/install-configure-scap)
