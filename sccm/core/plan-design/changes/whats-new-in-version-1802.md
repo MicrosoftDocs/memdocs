@@ -144,8 +144,8 @@ The Surface device dashboard provides information about the Surface devices foun
 For details, see the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) article.
 
 ### Change in the Configuration Manager client install
-<!--1356195-->|
-Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites fo deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies)
+<!--1356195-->
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#bkmk_ExternalDependencies)
 
 ## Co-management
 
