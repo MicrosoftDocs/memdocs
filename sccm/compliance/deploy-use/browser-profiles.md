@@ -5,7 +5,7 @@ description: Configure settings for the Microsoft Edge web browser on Windows 10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:
@@ -20,6 +20,7 @@ ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
 <!-- 1357310 -->
 Starting in version 1802, for customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. 
 
+This policy only applies to clients on Windows 10, version 1703 or later. <!--511552-->
 
 
 ## Policy settings
