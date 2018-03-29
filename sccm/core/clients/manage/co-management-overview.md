@@ -95,7 +95,7 @@ Starting in Configuration Manager 1802, the Endpoint Protection workload can be 
 ### Install Configuration Manager client to the devices enrolled in Intune
 When Windows 10 devices are enrolled in Intune, you can install the Configuration Manager client on the devices ([using a specific command-line argument](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)) to prepare the clients for co-management. Then, you enable co-management from the Configuration Manager console to start moving specific workloads to Intune for specific Windows 10 devices.
 For Windows 10 devices that are not yet enrolled in Intune, you can use automatic enrollment in Azure to enroll the devices. For new Windows 10 devices, you can use [Windows AutoPilot](https://docs.microsoft.com/intune/enrollment-autopilot) to configure the Out of Box Experience (OOBE), which includes automatic enrollment that enrolls devices in Intune.
- - Enable [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (only when you use Intune to install the Configuration Manager client>.
+ - Enable [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (only when you use Intune to install the Configuration Manager client.
 
 ## Monitor co-management
 [The co-management dashboard](/sccm/core/clients/manage/co-management-dashboard) helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.
