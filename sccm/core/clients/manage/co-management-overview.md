@@ -53,12 +53,18 @@ There are two main paths to reach to co-management. One is Configuration Manager
 
 ### **Configuration Manager**
  -	Upgrade to Configuration Manager version 1710 or later.
+
+
 ### **Azure Active Directory**
   - [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (joined to AD and Azure AD).
   - [Enable Windows 10 automatic enrollment.](https://docs.microsoft.com/intune/windows-enroll)
+
+
 ### **Intune**
  - [How to set up Intune subscription.](/sccm/mdm/deploy-use/configure-intune-subscription) or https://docs.microsoft.com/en-us/intune/setup-steps
  - [Start migrating from hybrid MDM to Intune standalone.](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)
+
+
 ### Enable co-management 
  In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**. Choose **Configure co-management** from the ribbon to open the **Co-management Onboarding Wizard** 
    
