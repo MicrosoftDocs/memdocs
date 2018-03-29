@@ -92,7 +92,7 @@ For Windows 10 devices that are not yet enrolled in Intune, you can use automati
  - Enable [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (only when you use Intune to install the Configuration Manager client>.
 
 ## Monitor co-management
-[The co-management dashboard](/sccm/core/clients/manage/co-management-dashboard.md) helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.
+[The co-management dashboard](/sccm/core/clients/manage/co-management-dashboard) helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.
 
 
 ## Next steps
