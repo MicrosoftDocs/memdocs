@@ -18,7 +18,14 @@ robots: noindex,nofollow
 ---
 # System Center Configuration Manager SDK Redistributables
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: System Center Configuration Manager (Current Branch)*  
+
+Specifically,  
+- Configuration Manager Client Messaging
+- Configuration Manager Management Point Interface
+- Status MIF Functions Class
+- SMSResGen COM Automation Class
+
 
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 

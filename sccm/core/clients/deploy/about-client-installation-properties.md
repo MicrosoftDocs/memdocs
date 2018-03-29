@@ -3,7 +3,7 @@ title: Client installation properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line properties for installing the Configuration Manager client.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -73,7 +73,7 @@ Use the CCMSetup.exe command to install the Configuration Manager client. If you
 
 
 
-##  CCMSetup.exe Command-Line Properties  
+##  CCMSetup.exe command-line properties  
 
 ### /?  
 
@@ -245,7 +245,21 @@ Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` doesn't install Software Cente
 
 
 
-##  <a name="clientMsiProps"></a> Client.msi Properties  
+## <a name="ccmsetupMsiProps"></a> Ccmsetup.msi properties  
+ The following properties can modify the installation behavior of ccmsetup.msi.
+
+### CCMSETUPCMD 
+
+Specifies command-line properties that are passed to ccmsetup.exe after it is installed by ccmsetup.msi. Include other properties inside quotation marks. Use this property when bootstrapping the Configuration Manager client using the Intune MDM installation method. 
+
+Example: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+
+ > [!Tip]
+ > Microsoft Intune limits the command line to 1024 characters. 
+
+
+
+##  <a name="clientMsiProps"></a> Client.msi properties  
  The following properties can modify the installation behavior of client.msi. If you use the client push installation method, you can also specify the properties in the **Client** tab of the **Client Push Installation Properties** dialog box.  
 
 
@@ -277,7 +291,7 @@ Specifies the Azure AD tenant identifier. This tenant is linked to Configuration
 
 Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
-
+<!-- 
 ### AADTENANTNAME
 
 Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To obtain the value for this property, use the following steps:
@@ -286,7 +300,7 @@ Specifies the Azure AD tenant name. This tenant is linked to Configuration Manag
 - In the Device State section, find the **TenantName** value. For example, `TenantName : Contoso`
 
 Example: `ccmsetup.exe AADTENANTNAME=Contoso`
-
+-->
 
 ### CCMADMINS  
 
@@ -632,7 +646,7 @@ Example: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
 
  Example: `CCMSetup.exe SMSSITECODE=XZY`  
 
-##  <a name="BKMK_attributevalues"></a> Supported Attribute Values for the PKI Certificate Selection Criteria  
+##  <a name="BKMK_attributevalues"></a> Supported attribute values for the PKI certificate selection criteria  
  Configuration Manager supports the following attribute values for the PKI certificate selection criteria:  
 
 |OID attribute|Distinguished Name attribute|Attribute definition|  
