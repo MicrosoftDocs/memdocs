@@ -24,6 +24,32 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 > Windows 10 mobile devices do not support co-management.
 
 
+## Prerequisites
+You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for devices with the Configuration Manager client and devices that do not have the client installed.
+### General prerequisites
+The following are general prerequisites for you to enable co-management:  
+
+- Configuration Manager version 1710 or later
+- Azure AD
+- EMS or Intune license for all users
+- [Azure AD automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) enabled
+- Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;
+
+
+   > [!Note]  
+   > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+
+### Additional prerequisites for devices with the Configuration Manager client
+- Windows 10, version 1709 or later
+- [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (joined to AD and Azure AD)
+
+### Additional prerequisites for devices without the Configuration Manager client
+- Windows 10, version 1709 or later
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (when you use Intune to install the Configuration Manager client)
+
+> [!IMPORTANT]
+> Windows 10 mobile devices do not support Co-management.
+
 
 ## Command line to install Configuration Manager client
 Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:

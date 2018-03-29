@@ -54,7 +54,6 @@ Certain workloads are available to be switched over to Intune. The following lis
 2. Resource access policies
 3. Windows Update policies
 4. Endpoint Protection (starting in Configuration Manager version 1802)
-      - Windows Defender Antivirus
       - Windows Defender Application Guard
       - Windows Defender Firewall
       - Windows Defender SmartScreen
@@ -68,6 +67,8 @@ Certain workloads are available to be switched over to Intune. The following lis
 
 ## Monitor co-management
 After you enable co-management, you can monitor co-management devices using the following methods:
+
+- [The co-management dashboard](/sccm/core/clients/manage/co-management-dashboard.md)
 - **SQL view and WMI class**: You can query the **v&#95;ClientCoManagementState** SQL view in the Configuration Manager site database or the **SMS&#95;Client&#95;ComanagementState** WMI class. With the information in the WMI class, you can create custom collections in Configuration Manager to help determine the status of your co-management deployment. For details, see [How to create collections](/sccm/core/clients/manage/collections/create-collections). The following fields are available in the SQL view and WMI class: 
     - **MachineId**: Specifies a unique device ID for the Configuration Manager client.
     - **MDMEnrolled**: Specifies whether the device is MDM-enrolled. 
