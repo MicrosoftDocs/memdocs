@@ -73,7 +73,7 @@ Resource access policies configure VPN, Wi-Fi, email, and certificate settings o
 
 ### Endpoint Protection 
 <!-- 1357365 -->
-Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For details, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune) and [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
+Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For details, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune) and [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
 
 ## Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.
