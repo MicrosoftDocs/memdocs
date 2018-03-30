@@ -3,7 +3,7 @@ title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/30/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -707,6 +707,10 @@ The following conditions affect the applications installed by the task sequence:
 -   If the value of a variable contains any information other than the name of the application. The task sequence does not install the application, and the task sequence continues.  
 
 -   If the task sequence does not find a variable with the specified base name and "01" suffix, the task sequence does not install any applications. 
+    
+> [!Important]  
+> These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. You must make another edit at the same time, for example, modify the step description.<!--509714-->   
+
    
 **If an application fails, continue installing other applications in the list**  
  This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you do not specify this setting, and the installation fails, the step immediately ends.  
@@ -785,6 +789,10 @@ In the task sequence editor, click **Add**, select **Software**, and select **In
 -   If the package ID contains lowercase characters, the software installation fails.  
 
 -   If the task sequence does not find a variable with the specified base name and "001" suffix, the task sequence does not install any packages. The task sequence continues.  
+    
+> [!Important]  
+> These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. You must make another edit at the same time, for example, modify the step description.<!--509714-->   
+
    
 **If installation of a software package fails, continue installing other packages in the list**  
  This setting specifies that the step continues if an individual software package installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you do not specify this setting, and the installation fails, the step immediately ends.  
