@@ -142,7 +142,7 @@ Selecting **Enable third party software updates** in client settings does the fo
 As a result of your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det) You can now enable copy/paste functionality in the asset details pane in deployment and distribution status monitoring views.  <!--1357552-->
 
 ## SCAP Extensions
-The pre-release version of SCAP Extensions is available in the Cd.latest folder under SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606.
+The pre-release version of SCAP Extensions is available in the Cd.latest folder under SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. This pre-release version of the SCAP extensions can be installed on any currently supported versions of Configuration Manager current branch and LTSB 1606. For more information, see [About the Security Content Automation Protocol (SCAP) extensions](/sccm/compliance/plan-design/scap/about-scap).
 
 
 
