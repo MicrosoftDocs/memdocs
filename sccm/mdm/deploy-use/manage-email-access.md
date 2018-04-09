@@ -44,7 +44,7 @@ You can control access to Exchange Online and Exchange On-premises from the buil
 
 Office desktop applications can access Exchange Online on PCs running:  
 
--   Office desktop 2013 and later with [modern authentication](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) enabled.  
+-   Office desktop 2013 and later with [modern authentication](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) enabled.  
 
 -   Windows 7.0 or Windows 8.1  
 
@@ -168,7 +168,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 #### For Exchange Online (and tenants in the new Exchange Online Dedicated environment)
 
 >[!NOTE]
->You can also create conditional access policy in the Azure AD management console. Azure AD management console allows you to create the Intune device conditional access policies (referred to as the device-based conditional access policy in Azure AD) in addition to other conditional access policies like multi-factor authentication. You can also set conditional access policies for third-party Enterprise apps like Salesforce and Box that Azure AD supports. For more details, see [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+>You can also create conditional access policy in the Azure AD management console. Azure AD management console allows you to create the Intune device conditional access policies (referred to as the device-based conditional access policy in Azure AD) in addition to other conditional access policies like multi-factor authentication. You can also set conditional access policies for third-party Enterprise apps like Salesforce and Box that Azure AD supports. For more details, see [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
  The following flow is used by conditional access policies for Exchange Online to evaluate whether to allow or block devices.  
 
@@ -182,7 +182,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
 -   Register the device in Azure Active Directory (this happens automatically when the device is enrolled with Intune.  
 
-     For domain joined PCs, you must  set it up to [automatically register the device](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.  
+     For domain joined PCs, you must  set it up to [automatically register the device](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.  
 
 -   Have activated email, which associates the device's Exchange ActiveSync ID with the device record in Azure Active Directory (applies to iOS and Android devices only).  
 

@@ -161,7 +161,7 @@ Conditional access to SharePoint Online supports devices that run:
 
  In order to be compliant, the PC must be enrolled in Microsoft Intune and comply with the policies.
 
- For domain joined PCs, you must  set it up to [automatically register the device](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.
+ For domain joined PCs, you must  set it up to [automatically register the device](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.
  -   [Office 365 modern authentication must be enabled](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/), and have all the latest Office updates.<br />     Modern authentication brings Active Directory Authentication Library (ADAL)-based sign-in to Office 2013 Windows clients and enables better security like multi-factor authentication and certificate-based authentication.
  -   Setup ADFS claims rules to block non-modern authentication protocols.  
 

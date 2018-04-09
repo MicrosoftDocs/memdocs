@@ -62,6 +62,6 @@ For more information and details on how to configure and connect to Upgrade Read
 
 ## Use Windows Analytics to identify gaps in Windows Information Protection Policies
 
-Windows 10 version 1703 and later devices configured with a [Windows Information Protection](https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) policy report telemetry on applications that access corporate data in your environment but the WIP policy application rules do not include. Users may need these applications to stay productive, but WIP blocks the users' access. Knowledge that users are accessing corporate data is useful in the maintenance of your Windows Information Protection policies in Configuration Manager. 
+Windows 10 version 1703 and later devices configured with a [Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) policy report telemetry on applications that access corporate data in your environment but the WIP policy application rules do not include. Users may need these applications to stay productive, but WIP blocks the users' access. Knowledge that users are accessing corporate data is useful in the maintenance of your Windows Information Protection policies in Configuration Manager. 
 
 Access this Windows Information Protection data using this [Operations Management Suite query](https://go.microsoft.com/fwlink/?linkid=849952).
