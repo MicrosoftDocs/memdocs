@@ -58,7 +58,7 @@ To monitor SCEP certificate compliance  do not use the console, rather, use [rep
     |0x00000004|Enrollment must be deferred.|  
     |0x00000010|An error occurred.|  
     |0x00000020|The enrollment status is unknown.|  
-    |0x00000040|The status information has been skipped. This can occur if a  HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" certification authority is not valid or has not been selected for monitoring.|  
+    |0x00000040|The status information has been skipped. This can occur if a  HYPERLINK "http://msdn.microsoft.com/windows/ms721572" \l "_security_certification_authority_gly" certification authority is not valid or has not been selected for monitoring.|  
     |0x00000100|Enrollment has been denied.|  
 
 ##  View Compliance Results by Using Reports
