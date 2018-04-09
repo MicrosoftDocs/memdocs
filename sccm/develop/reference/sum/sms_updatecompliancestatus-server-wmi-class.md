@@ -12,7 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4fsearchScope: - ConfigMgr SDK
+ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4f
+searchScope:
+ - ConfigMgr SDK
 caps.latest.revision: 15
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -191,7 +193,14 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
  Qualifiers: [read, not_null]  
 
- The status of the target computer.  
+ The status of the target computer.  Possible values are:  
+
+|||  
+|-|-|  
+|0|Detection state unknown|  
+|1|Update is not required|  
+|2|Update is required|  
+|3|Update is installed| 
 
  `UpdateLocales`  
  Data type: `String`  
