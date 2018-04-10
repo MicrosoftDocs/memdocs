@@ -103,7 +103,7 @@ Use this task to delete all aged data about the traffic that passes through the 
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Aged Discovery Data**: Use this task to delete aged discovery data from the database. This data can include records that result from heartbeat discovery, network discovery, and Active Directory Domain Services discovery methods (System, User, and Group). When this task runs at a site, data associated with that site is deleted, and those changes replicate to other sites. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
+**Delete Aged Discovery Data**: Use this task to delete aged discovery data from the database. This data can include records that result from heartbeat discovery, network discovery, and Active Directory Domain Services discovery methods (System, User, and Group). This task will also remove aged resources such as devices marked as inactive, obsolete or decommissioned. When this task runs at a site, data associated with that site is deleted, and those changes replicate to other sites. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 -   Central administration site: Not available    
 -   **Primary site**: Enabled    
