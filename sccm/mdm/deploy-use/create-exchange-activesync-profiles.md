@@ -35,7 +35,7 @@ By using Microsoft Intune and Exchange ActiveSync, you can set up devices with e
 - Samsung KNOX Standard (4 and later)
 - Android for Work
 
-To deploy email profiles to devices, you must enroll the devices in Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
+To deploy email profiles to devices, you must enroll the devices in Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/library/dn646962.aspx).
 
 > [!NOTE]
 > Intune provides two Android for Work email profiles, one each for the Gmail email app and the Nine Work email app. These apps are available in the Google Play Store, and they support connections to Exchange. To enable the email connectivity, deploy one of these email apps to your users' devices, and then create and deploy the appropriate profile. Email apps like Nine Work might not be free. Review the app’s licensing details or contact the app company with any questions.

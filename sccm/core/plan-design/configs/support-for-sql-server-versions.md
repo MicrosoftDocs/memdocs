@@ -71,7 +71,7 @@ Support for a specific SQL Server service pack includes cumulative updates unles
 >  When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
 ### SQL Server 2017: Standard, Enterprise  
-You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites: 
+You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites: 
 
 -   A central administration site  
 -   A primary site  
@@ -141,7 +141,7 @@ When supported by the Configuration Manager version, you can use this version of
 -   A secondary site
 
 ### SQL Server 2017 Express   
-You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites:
+You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites:
 -   A secondary site
 <!--SMS.498506-->
 
