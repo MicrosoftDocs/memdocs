@@ -283,5 +283,5 @@ To improve the security of your Configuration Manager clients and servers, do th
 -	Disable SSL 3.0, TLS 1.0, and TLS 1.1 
 -	Reorder the TLS-related cipher suites 
 
-For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) and [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx). These procedures do not affect Configuration Manager functionality.
+For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) and [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx). These procedures do not affect Configuration Manager functionality.
 

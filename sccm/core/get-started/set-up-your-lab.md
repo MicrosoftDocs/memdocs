@@ -39,7 +39,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
     -   **SQL_Latin1_General_CP1_CI_AS** as the **SQL Collation** class.  
 
-    -   **Windows authentication**, [rather than SQL authentication](https://technet.microsoft.com/en-us/library/ms144284.aspx), is required.  
+    -   **Windows authentication**, [rather than SQL authentication](https://technet.microsoft.com/library/ms144284.aspx), is required.  
 
     -   A dedicated **SQL Server instance** is required.  
 

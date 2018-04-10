@@ -85,7 +85,7 @@ To navigate between the different nodes of a workspace, you can now enter the fi
 The following are changes to Administration in the Configuration Manager console:
 ### OMS Connector
 
-You can now connect Configuration Manager as collections from System Center Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/en-us/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
+You can now connect Configuration Manager as collections from System Center Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
 
 The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
