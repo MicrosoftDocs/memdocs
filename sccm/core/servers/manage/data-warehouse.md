@@ -1,9 +1,9 @@
 ---
-title: "Data warehouse"
-titleSuffix: "Configuration Manager"
-description: "Data warehouse service point and database for System Center Configuration Manager"
+title: Data warehouse
+titleSuffix: Configuration Manager
+description: Data warehouse service point and database for System Center Configuration Manager
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,18 +13,24 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 caps.latest.revision:
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 
 ---
 #  The data warehouse service point for System Center Configuration Manager
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning with version 1702 you can use the data warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
+<!--1277922-->
+Use the data warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
 > [!TIP]
-> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.  
+
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Service point. Data that is synchronized to the data warehouse database is retained for three years. Periodically, a built-in task removes data that is older than three years.
 
@@ -167,7 +173,7 @@ A connection was successfully established with the server, but then an error occ
 
 
 ## Data warehouse dataflow   
-![Datawarehouse_flow](./media/datawarehouse.png)
+![Diagram showing the logical data flow between site components for the data warehouse](./media/datawarehouse.png)
 
 **Data storage and synchronization**
 
