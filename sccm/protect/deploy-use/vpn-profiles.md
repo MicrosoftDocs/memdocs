@@ -1,9 +1,9 @@
 ---
-title: "VPN profiles"
-titleSuffix: "Configuration Manager"
-description: "Learn how to use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization."
+title: VPN profiles
+titleSuffix: Configuration Manager
+description: Learn how to use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization.
 ms.custom: na
-ms.date: 11/27/2016
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,23 +14,25 @@ ms.topic: article
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 
 ---
 # VPN profiles in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+<!--1283610-->
+To deploy VPN settings to users in your organization, use VPN profiles in Configuration Manager. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
 
-Use VPN profiles in System Center Configuration Manager (also known as ConfigMgr or SCCM) to deploy VPN settings to users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
+ For example, you want to configure all Windows 10 devices with the settings required to connect to a file share on the corporate network. You can create a VPN profile with the settings necessary to connect to the corporate network. Then deploy this profile to all users that have devices running Windows 10. These users see the VPN connection in the list of available networks and can connect with little effort.  
 
- For example, you want to provision all devices that run the Windows RT operating system with the settings required to connect to a file share on the corporate network. You can create a VPN profile containing the settings necessary to connect to the corporate network and then deploy this profile to all users that have devices that run Windows RT in your hierarchy. Users of Windows RT devices see the VPN connection in the list of available networks and can connect to this network with minimum effort.  
+ When you create a VPN profile, you can include a wide range of security settings. These settings include certificates for server validation and client authentication that you provision with Configuration Manager certificate profiles. For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
- When you create a VPN profile, you can include a wide range of security settings, including certificates for server validation and client authentication that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
- The sections below explain what devices you can configure with VPN profiles if you are using Configuration Manager.
 
  See [VPN profiles on mobile devices](/sccm/mdm/deploy-use/create-vpn-profiles) to review the devices you can configure when using Configuration Manager with Microsoft Intune.  
 

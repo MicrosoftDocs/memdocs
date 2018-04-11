@@ -1,9 +1,9 @@
 ---
-title: "Manage access to O365 services for managed PCs"
-titleSuffix: "Configuration Manager"
-description: "Learn how to configure conditional access for PCs that are managed by System Center Configuration Manager."
+title: Manage access to O365 services
+titleSuffix: Configuration Manager
+description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
 ms.custom: na
-ms.date: 01/10/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,21 +13,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 caps.latest.revision: 15
-author: andredm7
-ms.author: andredm
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 
 ---
 # Manage access to O365 services for PCs managed by System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article describes how to configure conditional access for PCs managed by Configuration Manager.  
+<!--1191496-->
+Configure conditional access to Office 365 services for PCs managed by Configuration Manager.  
 
-<!--
- >> [!Tip]  
-> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
--->
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 For information on configuring conditional access for devices enrolled and managed by Microsoft Intune, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). That article also covers devices that are domain joined and not evaluated for compliance.
 
@@ -91,15 +91,18 @@ For information on configuring conditional access for devices enrolled and manag
     - **Require BitLocker to be enabled on the device**
     - **Require Secure Boot to be enabled on the device** 
     - **Require Code Integrity to be enabled on the device**
-    - **Require Early Launch Anti-Malware to be enabled on the device**
+    - **Require Early Launch Anti-Malware to be enabled on the device**  
 
->[!Tip]
-> Introduced with version 1710, the conditional access criteria for device health attestation is a pre-release feature. To enable this feature, see [Pre-release features](/sccm/core/servers/manage/pre-release-features). 
+    >[!Tip]  
+    > The conditional access criteria for device health attestation was first introduced in version 1710 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.<!--1235616-->  
+
+    > [!Note]  
+    > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 ### Step 2. Evaluate the effect of conditional access  
- Run the Conditional Access Compliance Report. It can be found in Monitoring section under Reports >Compliance and Settings Management. This report displays the compliance status for all devices.  Devices reporting as not compliant are blocked from accessing Exchange Online and SharePoint Online.  
+ Run the **Conditional Access Compliance Report**. It can be found in **Monitoring** workspace under **Reports** > **Compliance and Settings Management**. This report displays the compliance status for all devices. Devices reporting as not compliant are blocked from accessing Exchange Online and SharePoint Online.  
 
- ![CA&#95;compliance&#95;report](media/CA_compliance_report.png)  
+ ![Configuration Manager console, Monitoring workspace, Reporting, Reports, Compliance and Settings Management: Conditional Access Compliance Report](media/CA_compliance_report.png)  
 
 ### Configure Active Directory Security Groups  
  You target conditional access policies to groups of users depending on the policy types. These groups contain the users that the policy targets, or exempt from the policy. When a policy targets a user, each device they use must be compliant in order to access the service.  
@@ -110,12 +113,12 @@ For information on configuring conditional access for devices enrolled and manag
 
 -   **Targeted groups** - User groups  to which the policy is applied. The same group should be used both for compliance and conditional access policy.  
 
--   **Exempted groups** - User groups that are exempt from the policy (optional)  
+-   **Exempted groups** - User groups that are exempt from the policy (optional).  
     If a user is in both, they are exempt from the policy.  
 
      Only the groups, which are targeted by the conditional access policy, are evaluated.  
 
-### Step 3.  Create a conditional access policy, for Exchange Online and SharePoint Online  
+### Step 3. Create a conditional access policy, for Exchange Online and SharePoint Online  
 
 1.  In the Configuration Manager console, click **Assets and Compliance**.  
 
