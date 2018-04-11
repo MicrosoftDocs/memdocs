@@ -189,6 +189,7 @@ The following table lists CMG support for Configuration Manager features:
 | Endpoint protection     | ![Supported](media/green_check.png) |
 | Hardware and software inventory     | ![Supported](media/green_check.png) |
 | Client status and notifications     | ![Supported](media/green_check.png) |
+| Run scripts     | ![Supported](media/green_check.png) |
 | Compliance settings     | ![Supported](media/green_check.png) |
 | Client install</br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1706) |
 | Software distribution (device-targeted)     | ![Supported](media/green_check.png) |
