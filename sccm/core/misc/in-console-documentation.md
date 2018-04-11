@@ -26,13 +26,16 @@ This page displays in-console, under the Support workspace, Documentation node.
 
 # Configuration Manager Documentation
 
+</br>
+
+<a name="bkmk_recommend"></a>  
+
 > [!div class="op_single_selector"]
-> - [Recommended](#recommended)
-> - [Trending](#trending)
-> - [Recently updated](#recently-updated)
+> - [Recommended](#bkmk_recommend)
+> - [Trending](#bkmk_trend)
+> - [Recently updated](#bkmk_update)
 
-
-## Recommended 
+### Recommended 
 A manually curated list of important articles:
 
 - [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)
@@ -51,13 +54,14 @@ A manually curated list of important articles:
 
 </br>
 
+<a name="bkmk_trend"></a>  
 
 > [!div class="op_single_selector"]
-> - [Recommended](#recommended)
-> - [Trending](#trending)
-> - [Recently updated](#recently-updated)
+> - [Recommended](#bkmk_recommend)
+> - [Trending](#bkmk_trend)
+> - [Recently updated](#bkmk_update)
 
-## Trending
+### Trending
 Our most popular articles for the last month:
 
 - [New version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
@@ -78,13 +82,14 @@ Our most popular articles for the last month:
 
 </br>
 
+<a name="bkmk_update"></a>  
 
 > [!div class="op_single_selector"]
-> - [Recommended](#recommended)
-> - [Trending](#trending)
-> - [Recently updated](#recently-updated)
+> - [Recommended](#bkmk_recommend)
+> - [Trending](#bkmk_trend)
+> - [Recently updated](#bkmk_update)
 
-## Recently updated
+### Recently updated
 Articles revised in the last month:
 
 - [Site prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
