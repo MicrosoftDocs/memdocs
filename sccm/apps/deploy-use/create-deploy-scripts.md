@@ -1,9 +1,9 @@
 ---
-title: "Create and run scripts"
-titleSuffix: "Configuration Manager"
-description: "Create and run Powershell scripts on client devices."
+title: Create and run scripts
+titleSuffix: Configuration Manager
+description: Create and run Powershell scripts on client devices.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,11 +24,15 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-
-System Center Configuration Manager has an integrated ability to run Powershell scripts. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
+<!--1236459-->
+System Center Configuration Manager has an integrated ability to run Powershell scripts. Powershell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.  
 
 > [!TIP]  
-> This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.  
+
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 With this integration in System Center Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
