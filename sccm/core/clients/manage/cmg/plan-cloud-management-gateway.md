@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -15,11 +15,17 @@ manager: dougeby
 # Plan for the cloud management gateway in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
-
+ 
+<!--1101764-->
 The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients on the internet. By deploying the CMG as a cloud service in Microsoft Azure, you can manage traditional clients that roam on the internet without additional infrastructure. You also don't need to expose your on-premises infrastructure to the internet. 
 
 > [!Tip]  
-> This feature was first introduced in version 1610 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1610 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.  
+
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 After establishing the prerequisites, creating the CMG consists of the following three steps in the Configuration Manager console:
 1. Deploy the CMG cloud service to Azure.

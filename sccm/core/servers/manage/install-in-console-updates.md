@@ -3,7 +3,7 @@ title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud 
 ms.custom: na
-ms.date: 03/28/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 
 ---
@@ -307,7 +307,7 @@ When you are ready to retry the installation of an update, select the failed upd
 #### Retry installation for the hierarchy
 You can retry the installation of an update for the entire hierarchy when that update is in one of the following states:  
 
-  -   Prerequisite check passed with one or more warnings, and the option to ignore prerequisite check warnings was not set in the Update Wizard. (The update's value for **Ignore Prereq Warning** in the **Updates and servicing** node is **No**.)   
+  -   Prerequisite checks passed with one or more warnings, and the option to ignore prerequisite check warnings was not set in the Update Wizard. (The update's value for **Ignore Prereq Warning** in the **Updates and servicing** node is **No**.)   
   -   Prerequisite failed    
   -   Installation failed
   -   Replication of the content to the site failed   
@@ -320,7 +320,7 @@ Go to **Administration** > **Updates and Servicing**, select the update, and the
 #### Retry installation for the site  
  You can retry the installation of an update at a specific site when that update is in one of the following states:  
 
-  -   Prerequisite check passed with one or more warnings, and option to ignore prerequisite check warnings was not set in the Update Wizard. (The updates value for **Ignore Prereq Warning** in the Updates and servicing node is **No**.)  
+  -   Prerequisite checks passed with one or more warnings, and option to ignore prerequisite check warnings was not set in the Update Wizard. (The updates value for **Ignore Prereq Warning** in the Updates and servicing node is **No**.)  
   -   Prerequisite failed    
   -   Installation failed    
 
@@ -366,10 +366,36 @@ When an update includes one or more optional features, you have the opportunity 
 
 To view available features and their status, in the console navigate to **Administration** > **Updates and Servicing** > **Features**.
 
-When a feature is not optional, it's installed automatically and does not appear in the **Features** node.  
+When a feature isn't optional, it's installed automatically. It doesn't appear in the **Features** node.  
+
+> [!Important]  
+> In a multi-site hierarchy, you can only enable optional or pre-release features from the central administration site. This behavior ensures there are no conflicts across the hierarchy. <!--507197-->
+ 
+
+When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate, but it can take up to 30 minutes to complete, depending on the HMAN processing cycle. After the change is processed, you must restart the console before you can view new nodes related to that feature.
+
+#### List of optional features
+The following features are optional in the latest version of Configuration Manager:<!--505213-->  
+- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
+- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (also known as *Windows Hello for Business*) <!--1245704-->
+- [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
+- [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
+- [Microsoft Operations Management Suite (OMS) Connector](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) <!--1258052-->
+- [PFX Create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
+- [Client Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
+- [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
+- [Surface Driver Updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [Task Sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Run Task Sequence Step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
+- [Device Health Attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
+- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 
 
-When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate, but it can take up to 30 minutes to complete, depending on the HMAN processing cycle. After the change is processed, you must restart the console before you can view new UI related to that feature.
+> [!Tip]  
+> For more information on features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> For more information on features that are only available in the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
 

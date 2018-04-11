@@ -1,9 +1,9 @@
 ---
-title: "Sync data to Microsoft Operations Management Suite "
-titleSuffix: "Configuration Manager"
-description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
+title: Sync data to OMS
+titleSuffix: Configuration Manager
+description: Sync data from System Center Configuration Manager to Microsoft Operations Management Suite.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 
@@ -22,11 +22,18 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+<!--1258052-->
 You may use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. Beginning with version 1706, the wizard replaces previous workflows to configure this connection. For earlier versions, see [Sync data from Configuration Manager to the Microsoft Operations Management Suite (1702 and earlier)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier)).
 
 - 	The wizard is used to configure cloud services for Configuration Manager, like OMS, Microsoft Store for Business, and Azure Active Directory (Azure AD).  
 
 -   Configuration Manager connects to OMS for features like [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), or [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
+
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
+
 
 ## Prerequisites for the OMS Connector
 Prerequisites to configure a connection to OMS are unchanged from prerequisites [documented for the Current Branch version 1702](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites). That information is repeated here:  
