@@ -1,7 +1,7 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER"
+title: MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/10/2018
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,7 +14,7 @@ ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
 caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
 
 ---
@@ -32,3 +32,5 @@ robots: noindex,nofollow
 -   an online service customer, use of this software is subject to the online subscription agreement.  
 
 You may not use this software if you have not validly acquired a license for the software or online service from Microsoft or its licensed distributors.
+
+Third Party Programs. The software may include third party programs that Microsoft, not the third party, licenses to you under this agreement. Notices, if any, for the third party programs are included for your information only at http://go.microsoft.com/fwlink/?LinkID=789409.<!--511997-->
