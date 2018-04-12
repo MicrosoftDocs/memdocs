@@ -1,25 +1,20 @@
 ---
-title: "SMSResGen COM Automation Class"
-titleSuffix: "Configuration Manager"
-ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
+title: SMSResGen COM Automation Class
+titleSuffix: Configuration Manager
+description: Use the SMSResGen COM class to automate the creation of a data discovery record (DDR).
+ms.date: 04/12/2018
+ms.prod: configuration-manager
 ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 98b96b3e-3689-4cec-8617-597c2c850f19searchScope: - ConfigMgr SDK
+  - configmgr-other
+ms.topic: article
+ms.assetid: 98b96b3e-3689-4cec-8617-597c2c850f19
 caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: shill-ms
+ms.author: v-suhill
+manager: dougeby
 ---
 # SMSResGen COM Automation Class
-The `SMSResGen` COM class, in Configuration Manager, is used to create data discovery records (DDRs).  
+The `SMSResGen` COM class in Configuration Manager is used to create data discovery records (DDRs).  
 
 ## Methods  
 
@@ -30,12 +25,17 @@ The `SMSResGen` COM class, in Configuration Manager, is used to create data disc
 ## Remarks  
  `SMSResGen` is found in SMSResGenCtl.dll. Use the [ISMSResGen Interface](../../../../../develop/reference/core/servers/configure/ismsresgen-interface.md) interface to create and use DDRs.  
 
-> [!IMPORTANT]
->  The SMSResGenCtl.dll file is part of the downloadable SDK.  
+> [!IMPORTANT]  
+>  The latest version of SMSResGenCtl.dll is available from NuGet:  
+>  
+>    - [Microsoft.ConfigurationManagement.SMSRsGenCtl.i386](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.SMSRsGenCtl.i386/)  
+>  
+>    - [Microsoft.ConfigurationManagement.SMSRsGenCtl.amd64](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.SMSRsGenCtl.amd64/)  
+  
 
  Because the `SMSResGen` control is not thread safe, do not try to create more than one instance of this class.  
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 >  The function `DDRSendToSMS`, available in previous releases of the SDK and in versions of `SMSRsGen.dll`/`SMSResGenCtl.dll`, has been deprecated and should not be used with Configuration Manager.  
 
  The CLSID for `SMSResGen` is 19352BAD-BEE0-4193-95C4-588B6C5DBCD1.  
