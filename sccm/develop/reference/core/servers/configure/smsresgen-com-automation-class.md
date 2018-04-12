@@ -26,7 +26,7 @@ The `SMSResGen` COM class in Configuration Manager is used to create data discov
  `SMSResGen` is found in SMSResGenCtl.dll. Use the [ISMSResGen Interface](../../../../../develop/reference/core/servers/configure/ismsresgen-interface.md) interface to create and use DDRs.  
 
 > [!IMPORTANT]  
->  The latest version of SMSResGenCtl.dll is available from NuGet:  
+>  The latest version of SMSRsGenCtl.dll is available from NuGet:  
 >  
 >    - [Microsoft.ConfigurationManagement.SMSRsGenCtl.i386](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.SMSRsGenCtl.i386/)  
 >  

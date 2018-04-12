@@ -50,7 +50,10 @@ For more information, see the [ISMIFCOM documentation](/sccm/develop/reference/c
 
 ### Data discovery record creation libraries 
 
-SMSRsGen and SMSRsGenCtl are COM libraries used to create data discovery records (DDRs). 
+SMSRsGen and SMSRsGenCtl are legacy COM libraries used to create data discovery records (DDRs). 
+
+> [!Important]  
+> These are legacy libraries. The current recommendation is to use the Client Messaging SDK [DiscoveryDataRecordFile class](https://msdn.microsoft.com/library/microsoft.configurationmanagement.messaging.messages.server.discoverydatarecordfile.aspx). Use the latest [Client Messaging SDK package](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.Messaging/) from NuGet.  
 
 - [Microsoft.ConfigurationManagement.SMSRsGen.i386](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.SMSRsGen.i386/)  
 
