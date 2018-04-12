@@ -3,7 +3,7 @@ title: New version 1802
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1802 of Configuration Manager.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/11/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # What's new in version 1802 of System Center Configuration Manager
@@ -21,6 +21,13 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Update 1802 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1702, 1706, or 1710. <!-- baseline only statement: -->When installing a new site, it's also available as a baseline version.
+
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4101375).
+
+<!--
+The following additional updates to this release are also now available:
+- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517)
+-->
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  

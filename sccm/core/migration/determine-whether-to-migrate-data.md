@@ -56,8 +56,6 @@ These modifications don't affect the data in the source site database. Objects t
 
 ### Objects that you can migrate from System Center 2012 Configuration Manager or System Center Configuration Manager current branch
 
--   Advertisements  
-
 -   Applications for System Center 2012 Configuration Manager and later versions  
 
 -   App-V Virtual Environment from System Center 2012 Configuration Manager and later versions  
@@ -73,6 +71,8 @@ These modifications don't affect the data in the source site database. Objects t
     -   Configuration baselines  
 
     -   Configuration items  
+
+-   Deployments  
 
 -   Operating system deployment:  
 
