@@ -111,7 +111,10 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1804
-- [Feature one](capabilities-in-technical-preview-1804.md#feature-one) <!--TFSid-->
+- [Configure a remote content library for the site server](capabilities-in-technical-preview-1802.md#configure-a-remote-content-library-for-the-site-server) <!--1357525--> 
+- [Submit feedback from the Configuration Manager console](capabilities-in-technical-preview-1802.md#bkmk_feedback) <!--1357542--> 
+- [Support Center](capabilities-in-technical-preview-1802.md#support-center) <!--1357489--> 
+- [Configuration Manager Toolkit](capabilities-in-technical-preview-1802.md#configuration-manager-toolkit) <!--1357145--> 
 
 
 
