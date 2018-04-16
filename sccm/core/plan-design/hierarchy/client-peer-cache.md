@@ -1,9 +1,9 @@
 ---
-title: "Client Peer Cache"
-titleSuffix: "Configuration Manager"
-description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
+title: Client Peer Cache
+titleSuffix: Configuration Manager
+description: Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/07/2017
+ms.date: 04/10/2018
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,17 +15,23 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 
 # Peer Cache for Configuration Manager clients
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning with System Center Configuration Manager version 1610, you can use **Peer Cache** to help manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.   
+<!--1101436-->
+Use **Peer Cache** to help manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.   
 
 > [!TIP]  
-> This feature was first introduced in version 1610 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1610 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, this feature is no longer a pre-release feature.  
+
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 ## Overview
 A Peer Cache client is a Configuration Manager client that is enabled to use Peer Cache. A Peer Cache client that has content it can share with additional clients is a Peer Cache source.
@@ -34,7 +40,7 @@ A Peer Cache client is a Configuration Manager client that is enabled to use Pee
     -  Must be domain joined. However, a client that is not domain joined can get content from a domain joined Peer Cache source.
     -  Must be a member of the current boundary group of the client that's seeking the content. When a client uses fallback to seek content from a neighbor boundary group, the list of content source locations does not include a Peer Cache client in a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - The Configuration Manager client serves every type of content in the cache to other clients by using Peer Cache. This content includes Office 365 files and expresses installation files.<!--SMS.500850-->
- -	Peer Cache does not replace the use of other solutions like BranchCache. Peer Cache works along with other solutions to give you more options for extending traditional content deployment solutions such as distribution points. Peer Cache is a custom solution with no reliance on BranchCache.  If you don’t enable or use Windows BranchCache, Peer Cache still works.
+ -	Peer Cache does not replace the use of other solutions like BranchCache. Peer Cache works along with other solutions to give you more options for extending traditional content deployment solutions such as distribution points. Peer Cache is a custom solution with no reliance on BranchCache. If you don’t enable or use Windows BranchCache, Peer Cache still works.
 
 ### Operations
 
@@ -78,7 +84,7 @@ Use this report to understand rejection details for a specified boundary group o
 3. **Peer cache source content rejection details**:   
   Use this report to understand the content that the client was requesting when rejected.
 
- - **Known issue:** You cannot select from available parameters and instead must enter them manually. Enter the value for *Rejection Type* as displayed in the **Peer cache source content rejection** report. Then enter the *Resource ID* for the content source about which you want more information.  To find the Resource ID of the content source:  
+ - **Known issue:** You cannot select from available parameters and instead must enter them manually. Enter the value for *Rejection Type* as displayed in the **Peer cache source content rejection** report. Then enter the *Resource ID* for the content source about which you want more information. To find the Resource ID of the content source:  
 
     1. Find the computer name that displays as the *Peer cache source* in the results of the **Peer cache source content rejection by condition** report.  
     2. Next, go to **Assets and Compliance** > **Devices** and then search for that computers name. Use the value from the Resource ID column.  
@@ -89,7 +95,7 @@ Use this report to understand rejection details for a specified boundary group o
 
 -   Clients can only transfer content from Peer Cache clients that are in their current boundary group.
 
--   Prior to version 1706, each site where clients use Peer Cache must be configured with a [Network Access Account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). Beginning with version 1706, that account is no longer required with one exception.  The exception scenario is when a peer cache-enabled client runs a task sequence from the Software Center, and that task sequence reboots to a boot image. In this scenario, the client still requires the Network Access Account. When the client is in Windows PE, it uses the Network Access Account to get content from the peer cache source.
+-   Prior to version 1706, each site where clients use Peer Cache must be configured with a [Network Access Account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). Beginning with version 1706, that account is no longer required with one exception. The exception scenario is when a peer cache-enabled client runs a task sequence from the Software Center, and that task sequence reboots to a boot image. In this scenario, the client still requires the Network Access Account. When the client is in Windows PE, it uses the Network Access Account to get content from the peer cache source.
 
     When required, the Peer Cache source computer uses the Network Access Account to authenticate download requests from peers. This account requires only domain user permissions for this purpose.
 
