@@ -57,7 +57,8 @@ manager: dougeby
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later)
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
+    - For more information about .Net Framework versions see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
 
 -   Remote Differential Compression  
 
@@ -78,7 +79,8 @@ manager: dougeby
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later)   
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
+    - For more information about .Net Framework versions see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
 
 -   Remote Differential Compression  
 
@@ -119,9 +121,12 @@ manager: dougeby
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later):  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
+    - ASP.NET 4.5 
 
-    -   ASP.NET 4.5  
+    - For more information about .Net Framework versions see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)  
+
+    
 
 **IIS configuration:**  
 
@@ -154,7 +159,7 @@ manager: dougeby
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later):  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
 
     -   ASP.NET 4.5:  
 
@@ -189,12 +194,12 @@ manager: dougeby
 ###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2 (or later)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 ###  <a name="bkmk_2012crppreq"></a> Certificate registration point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2 (or later):  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
 
     -   HTTP Activation  
 
@@ -268,7 +273,7 @@ manager: dougeby
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2 (or later):  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -308,7 +313,7 @@ manager: dougeby
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
 
@@ -354,7 +359,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2012MPpreq"></a> Management point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 -   BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
 
@@ -377,7 +382,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2012RSpoint"></a> Reporting services point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 **SQL Server Reporting Services:**  
 
@@ -390,7 +395,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_SCPpreq"></a> Service connection point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -405,7 +410,7 @@ The default IIS configuration is required with the following additions:
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 The default IIS configuration is required.
 
@@ -434,7 +439,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 **Windows feature:**  
 
@@ -457,7 +462,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 **Visual C++ Redistributable:**  
 
@@ -494,7 +499,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 ###  <a name="bkmk_2008acwspreq"></a> Application Catalog website point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
 
 **IIS configuration:**
 
@@ -525,7 +530,7 @@ The default IIS configuration is required with the following additions:
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 **Windows Communication Foundation (WCF) activation:**  
 
@@ -556,12 +561,12 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence synchronization point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
 
 ###  <a name="bkmk_2008crppreq"></a> Certificate registration point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 -   HTTP Activation  
 
@@ -636,7 +641,7 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 ###  <a name="bkmk_2008Enrollpreq"></a> Enrollment point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
      When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -665,7 +670,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2008EnrollProxpreq"></a> Enrollment proxy point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
 
      When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -703,7 +708,7 @@ The default IIS configuration is required with the following additions:
 ###  <a name="bkmk_2008MPpreq"></a> Management point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later)
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
 
 **IIS configuration:**
 
@@ -744,7 +749,7 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 ###  <a name="bkmk_2008RSpoint"></a> Reporting services point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 **SQL Server Reporting Services:**  
 
@@ -757,7 +762,7 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 ###  <a name="bkmk_2008SCPpreq"></a> Service connection point  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
      When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -772,7 +777,7 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2 (or later) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 **IIS configuration:**
 
