@@ -24,6 +24,32 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 > Windows 10 mobile devices do not support co-management.
 
 
+## Prerequisites
+You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for devices with the Configuration Manager client and devices that do not have the client installed.
+### General prerequisites
+The following are general prerequisites for you to enable co-management:  
+
+- Configuration Manager version 1710 or later
+- Azure AD
+- EMS or Intune license for all users
+- [Azure AD automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) enabled
+- Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;
+
+
+   > [!Note]  
+   > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+
+### Additional prerequisites for devices with the Configuration Manager client
+- Windows 10, version 1709 or later
+- [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (joined to AD and Azure AD)
+
+### Additional prerequisites for devices without the Configuration Manager client
+- Windows 10, version 1709 or later
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (when you use Intune to install the Configuration Manager client)
+
+> [!IMPORTANT]
+> Windows 10 mobile devices do not support Co-management.
+
 
 ## Command line to install Configuration Manager client
 Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
@@ -39,8 +65,8 @@ For example, if you had the following values:
 
 - **FQDN of management point (MP)**: mp1.contoso.com    
 - **Sitecode**: PS1    
-- **Azure AD tenant ID**: daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
-- **Azure AD client app ID**: 7506ee10-f7ec-415a-b415-cd3d58790d97     
+- **Azure AD tenant ID**: 60a413f4-c606-4744-8adb-9476ae3XXXXX    
+- **Azure AD client app ID**: 9fb9315f-4c42-405f-8664-ae63283XXXXX     
 - **AAD Resource ID URI**: ConfigMgrServer    
 
   > [!Note]    
@@ -48,7 +74,7 @@ For example, if you had the following values:
 
 You would use the following command line:
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=60a413f4-c606-4744-8adb-9476ae3XXXXX AADCLIENTAPPID=9fb9315f-4c42-405f-8664-ae63283XXXXX AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > You can find the command-line parameters for your site by using the following steps:     
