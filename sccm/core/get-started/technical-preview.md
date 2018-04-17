@@ -111,7 +111,10 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1804
-- [Feature one](capabilities-in-technical-preview-1804.md#feature-one) <!--TFSid-->
+- [Configure a remote content library for the site server](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server) <!--1357525--> 
+- [Submit feedback from the Configuration Manager console](capabilities-in-technical-preview-1804.md#bkmk_feedback) <!--1357542--> 
+- [Support Center](capabilities-in-technical-preview-1804.md#support-center) <!--1357489--> 
+- [Configuration Manager Toolkit](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit) <!--1357145--> 
 
 
 
@@ -187,3 +190,8 @@ With each CB release, review and remove from this list for anything that's now a
 ## See Also  
 [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
+
+> [!Tip]  
+> For more information on current branch features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> For more information on current branch features that you must enable first, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
+
