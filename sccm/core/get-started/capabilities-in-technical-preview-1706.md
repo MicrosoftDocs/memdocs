@@ -102,7 +102,7 @@ To install a passive mode site server, you use the **Create Site System Server W
 
 -   The computer that will run the passive mode site server:
 
-    -   Must meet the [prerequisites for installing a primary site](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    -   Must meet the [prerequisites for installing a primary site](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
     -   Installs using source files that match the version of the active mode site server.
 

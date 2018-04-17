@@ -96,7 +96,7 @@ Synchronizing the list of apps purchased by your organization lets you see these
 2.  Under **Keys**, select a duration from the list, and then click **Save**. This action creates a new client key. Do not navigate away from this page until you have successfully onboarded the Microsoft Store for Business to Configuration Manager.
 
 **In the Microsoft Store for Business, configure Configuration Manager as the store management tool**
-1.  Open [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) and sign-in if prompted.
+1.  Open [https://businessstore.microsoft.com/managementtools](https://businessstore.microsoft.com/managementtools) and sign-in if prompted.
 2.  Accept the terms of use if requested.
 3.  Under **Management Tools**, click **Add a management tool**.
 4.  In **Search for the tool by name**, type the name of the application you created in AAD previously, then click **Add**.
@@ -148,6 +148,6 @@ For each store app you manage, you can view information about the app. This info
 
 After deploying online apps, any updates to that app will come directly from the Microsoft Store. Furthermore, Configuration Manager does not check version compliance of online apps, just that Windows reports the app as installed.  
 
-When deploying offline apps to Windows 10 devices with the Configuration Manager client, do not allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. One option to disable the Microsoft Store is by using [group policy](https://docs.microsoft.com/en-us/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy). 
+When deploying offline apps to Windows 10 devices with the Configuration Manager client, do not allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. One option to disable the Microsoft Store is by using [group policy](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy). 
 
 After the Microsoft Store for Business administrator purchases an offline app, do not publish the app to users via the store. This configuration ensures that users can't install or update online. Users will only receive offline app updates via Configuration Manager. 

@@ -42,7 +42,7 @@ Your users and groups are likely already in AAD because you have directory synch
 
 ## Configure role-based administration control (RBAC)
 As part of the migration, configure all the necessary RBAC roles in Intune and assign users to those roles. Note that there are differences between RBAC in Configuration Manager and Intune, such as scoping of resources. For details, see
-[Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/en-us/intune/role-based-access-control).
+[Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/intune/role-based-access-control).
 
 ## Assign apps and policies to AAD groups
 If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, many of your objects might already be assigned to AAD groups. However, you should verify that all objects (apps, policies, profiles, etc.) are assigned to the correct AAD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should be transparent to users. For details about assigning the objects to an AAD group, see the following: 
@@ -62,7 +62,7 @@ PowerShell scripts are available to help you prepare to transition your Exchange
 ### Steps to ensure conditional access works properly after user migration
 For conditional access to work properly after you migrate users, and to ensure that your users continue to have access to their email server, ensure the following is true:
 - If the Exchange ActiveSync default access level setting (DefaultAccessLevel) is set to Block or Quarantine, devices might lose access to email. 
-- If the Exchange Connector is installed in Configuration Manager and the **Access level when a mobile device is not managed by a rule** setting has a value of **Allow access**, you must install the [On-premises Exchange connector](https://docs.microsoft.com/en-us/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) in Intune before you migrate users. Configure the default access level setting in Intune on the **Exchange on-premises** blade in **Advanced Exchange ActiveSync access settings**. For details, see [Configure Exchange on-premises access](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
+- If the Exchange Connector is installed in Configuration Manager and the **Access level when a mobile device is not managed by a rule** setting has a value of **Allow access**, you must install the [On-premises Exchange connector](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) in Intune before you migrate users. Configure the default access level setting in Intune on the **Exchange on-premises** blade in **Advanced Exchange ActiveSync access settings**. For details, see [Configure Exchange on-premises access](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
 - Use the same configuration for both connectors. The last connector that you configure overwrites the ActiveSync organization settings previously written by the other connector. If you configure the connectors differently, it could result in unexpected conditional access changes.
 - Remove users from conditional access targeting in Configuration Manager once they are migrated to Intune standalone.
 

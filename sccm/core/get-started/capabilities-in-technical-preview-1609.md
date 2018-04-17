@@ -86,7 +86,7 @@ The procedure to create and deploy a Configuration Manager application from a pa
 
 We've added many new settings you can use in your configuration items for various device platforms.
 These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) and then select the settings subtopic for the platform you want.
+If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) and then select the settings subtopic for the platform you want.
 
 
 ### New settings for Android devices
