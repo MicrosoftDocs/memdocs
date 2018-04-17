@@ -3,7 +3,7 @@ title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 caps.latest.revision: 44
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 
 ---
@@ -23,7 +23,7 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-This article details the Windows versions that you can use to host a System Center Configuration Manager site or site system role.
+This article details the Windows versions that you can use to host a Configuration Manager site or site system role.
 
 
 Use the information in this article with the information in the following articles:
@@ -81,6 +81,14 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 -   Software update point  
 
 -   State migration point
+
+
+
+## Windows Storage Server 2016
+
+**Site system server:**  
+
+-   Distribution point  
 
 
 

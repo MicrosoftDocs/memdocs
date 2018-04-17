@@ -1,9 +1,9 @@
 ---
-title: "Supported clients and devices"
-titleSuffix: "Configuration Manager"
-description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
+title: Supported clients and devices
+titleSuffix: Configuration Manager
+description: Learn which operating systems System Center Configuration Manager supports for clients and devices.
 ms.custom: na
-ms.date: 8/30/2017
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,16 +13,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Supported operating systems for clients and devices for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
- System Center Configuration Manager supports installing client software on a variety of Windows, Mac, Linux, and UNIX computers.  
+ Configuration Manager supports installing client software on a variety of Windows, Mac, Linux, and UNIX computers.  
 
  **Requirements and limitations for all clients:**  
 
@@ -38,6 +38,8 @@ manager: angrobe
 
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
   - This operating system is supported beginning with Configuration Manager version 1606, with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October 2016).  
+
+-   **Windows Storage Server 2016**  
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
