@@ -138,7 +138,7 @@ The three security roles used for running scripts are not created by default in 
          |SMS Scripts|Delete|Yes|
          |SMS Scripts|Modify|Yes|
 
-    **Role Name**: Script Authors
+    **Role Name**: Script Approver
     - **Description**: These permissions enable this role to approve scripts, but they can’t create or run them. 
     - **Permissions:** Ensure the following permissions are set.
 
