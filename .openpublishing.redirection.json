@@ -194,6 +194,16 @@
             "source_path": "sccm/core/clients/manage/monitor-clients-cloud-management-gateway.md",
             "redirect_url": "/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway",
             "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-mp-interface.md",
+            "redirect_url": "/sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-client-messaging.md",
+            "redirect_url": "/sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables",
+            "redirect_document_id": false
         }
     ]
 }

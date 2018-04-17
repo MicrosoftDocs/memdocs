@@ -1,9 +1,9 @@
 ---
-title: Create a task sequence to upgrade an operating system
+title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
 description: Use a task sequence to automatically upgrade from Windows 7 or later to Windows 10
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -83,9 +83,16 @@ Use task sequences in Configuration Manager to automatically upgrade an operatin
 
 
 ## Configure pre-cache content
-The pre-cache feature for available deployments of task sequences lets clients download relevant OS upgrade package content before a user installs the task sequence.
+<!--1021244-->
+The pre-cache feature for available deployments of task sequences lets clients download relevant OS upgrade package content before a user installs the task sequence.  
+
 > [!TIP]  
-> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.  
+
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 For example, you only want a single in-place upgrade task sequence for all users, and have many architectures and languages. In previous versions, the content starts to download when the user installs an available task sequence deployment from Software Center. This delay adds additional time before the installation is ready to start. All content referenced in the task sequence is downloaded. This content includes the operating system upgrade package for all languages and architectures. If each upgrade package is roughly three GB in size, the total content is very large.
 

@@ -3,7 +3,7 @@ title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: nac
 ms.suite: na
@@ -15,7 +15,7 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Manage task sequences to automate tasks in System Center Configuration Manager
@@ -479,8 +479,12 @@ You can manage per-computer variables at a primary site or at a central administ
 6.  After you have added all the variables to the collection, click **OK**.  
 
 ## Add child task sequences to a task sequence
+<!--1261338-->
+Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This step creates a parent-child relationship between the task sequences. Using this step allows you to create more modular task sequences that you can reuse.  
 
-Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This step creates a parent-child relationship between the task sequences. Using this step allows you to create more modular task sequences that you can reuse.
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Consider the following when you add a child task sequence to a task sequence:
 

@@ -101,7 +101,7 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Azure AD:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com.
+ - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) on azure.microsoft.com.
  - [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
 
 ## Conditional access device compliance policy improvements
@@ -152,7 +152,7 @@ The new policy displays in the **Compliance Policies** node of the **Assets and 
 4. When you are done, click **OK**.
 
 ### Monitor the compliance policy
-After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
 
 
 ## Improvements to Software Center settings and notification messages for high-impact task sequences

@@ -3,7 +3,7 @@ title: "Deploy App-V virtual applications"
 titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy virtual applications."
 ms.custom: na
-ms.date: 02/16/2017
+ms.date: 03/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,10 +14,15 @@ ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: mattbriggsms.author: mabriggmanager: angrobe
+author: mattbriggs
+ms.author: mabrigg
+manager: angrobe
 
 ---
-# Deploy App-V virtual applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (current branch)*
+# Deploy App-V virtual applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (current branch)*
+
 When you use Configuration Manager to manage virtual applications, you gain the following benefits:  
 
 -   A single management infrastructure  
@@ -38,7 +43,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 -   When you sequence an application, you must save the package to a location that Configuration Manager can access. You can then create an application deployment that contains this virtual application.  
 
--   Configuration Manager does not support the use of the shared read-only cache feature of App-V.  
+-   Configuration Manager does not support the use of the shared read-only cache feature of App-V 4.6.  
 
 -   Configuration Manager supports the Shared Content Store feature in App-V 5.  
 
@@ -58,7 +63,7 @@ In addition to the other System Center Configuration Manager requirements and pr
      Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322).  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/en-us/kb/2963211) or use App-V 5.0 SP3.  
--   **App-V 5.2**: This is built into Windows 10 Enterprise (Anniversary Update and later).
+-   **App-V 5.2**: This is built into Windows 10 Education (1607 and later), Windows 10 Enterprise (1607 and later), and Windows Server 2016.
 
 For more information about App-V in Windows 10, see the following topics:
 
@@ -75,7 +80,7 @@ For more information about App-V in Windows 10, see the following topics:
 
 3.   **Distribute**: Distribution is the process of making App-V applications available on Configuration Manager distribution points.
 
-4.   **Deploy**: Deployment is the process of making the application available on client computers. This is called streaming in an App-V full infrastructure.  
+4.   **Deploy**: Deployment is the process of making the application available on client computers. This is called publishing and streaming in an App-V full infrastructure.  
 
 ##  Configuration Manager virtual application delivery methods  
 Configuration Manager supports two methods for delivery of virtual applications to clients: streaming delivery and local delivery (download and execute).
@@ -92,7 +97,7 @@ Use the information in this table to help you decide if streaming delivery is th
 |This method uses standard network protocols to stream package content from distribution points.<br /><br /> Program shortcuts for virtual applications invoke a connection to the distribution point, so the virtual application delivery is on demand.<br /><br /> This method works well for clients with high-bandwidth connections to the distribution points.<br /><br /> Updated virtual applications distributed throughout the enterprise are available as clients receive policy that informs them that the current version is superseded and they download only the changes from the previous version.<br /><br /> Access permissions are defined at the distribution point to prevent users from accessing unauthorized applications or packages.|Virtual applications are not streamed until the user runs the application for the first time. In this scenario, a user might receive program shortcuts for virtual applications and then disconnect from the network before running the virtual applications for the first time. If the user tries to run the virtual application while the client is offline, the user sees an error and can't run the virtualized application because a Configuration Manager distribution point is not available to stream the application. The application will be unavailable until the user reconnects to the network and runs the application.<br /><br /> To avoid this, you can use the local delivery method for virtual application delivery to clients, or you can enable the Internet-based client management for streaming delivery.|  
 
 ###  Local delivery (download and execute)  
-When you use the local delivery method, the Configuration Manager client first downloads the entire virtual application package into the Configuration Manager client cache. The Configuration Manager then instructs the App-V Client to stream the application from the Configuration Manager cache into the App-V cache. If you deploy a virtual application to client computers and its content is not in the App-V cache, the App-V Client streams the application content from the Configuration Manager client cache into the App-V cache, and then runs the application. After the application runs successfully, you can set the Configuration Manager client to delete any older versions of the package at the next deletion cycle, or to persist them in Configuration Manager client cache.  
+Download and execute is most common approach when using Configuration Manager because this approach closely mimics how other application formats are delivered with Configuration Manager. When you use the local delivery method, the Configuration Manager client first downloads the entire virtual application package into the Configuration Manager client cache. The Configuration Manager then instructs the App-V Client to stream the application from the Configuration Manager cache into the App-V cache. If you deploy a virtual application to client computers and its content is not in the App-V cache, the App-V Client streams the application content from the Configuration Manager client cache into the App-V cache, and then runs the application. After the application runs successfully, you can set the Configuration Manager client to delete any older versions of the package at the next deletion cycle, or to persist them in Configuration Manager client cache. Persisting content locally can take advantage of package content delivery optimization methods such as BranchCache and PeerCache.
 
 Use the information in this table to help you decide if local delivery is the best delivery method for you:   
 

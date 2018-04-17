@@ -30,7 +30,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
  ## VPN profiles when using Configuration Manager together with Intune
 
- To deploy profiles to iOS, Android, Windows Phone, and Windows 8.1 devices, these devices must be enrolled in Microsoft Intune. Devices on other platforms can also be enrolled to Intune. For information about how to enroll, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). This table shows the connection type that is supported for each device platform:  
+ To deploy profiles to iOS, Android, Windows Phone, and Windows 8.1 devices, these devices must be enrolled in Microsoft Intune. Devices on other platforms can also be enrolled to Intune. For information about how to enroll, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/library/dn646962.aspx). This table shows the connection type that is supported for each device platform:  
 
  |Connection type|iOS and macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
@@ -99,11 +99,11 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
             >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.  
 
         - **Conditional access**
-			- Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. Compliance policies are described in [Device compliance policies in System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md).
+			- Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. Compliance policies are described in [Device compliance policies in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies.md).
 			- Choose **Enable single sign-on (SSO) with alternate certificate** to choose a certificate other than the VPN Authentication certificate for device compliance. If you choose this option, provide the **EKU** (comma-separated list) and **Issuer Hash**, for the correct certificate that the VPN client should locate.
 
          - For **Windows Information Protection**, provide the enterprise-managed corporate identity, which is usually your organization's primary domain, for example, *contoso.com*. You can specify multiple domains that you organization owns by separating them with the "|" character. For example, *contoso.com|newcontoso.com*.   
-	      	For more about Windows Information Protection, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+	      	For more about Windows Information Protection, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune).   
 
          ![Configure conditional access for VPN](media/vpn-conditional-access.png)
 

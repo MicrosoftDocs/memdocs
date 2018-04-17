@@ -77,7 +77,10 @@ There are two main paths to reach to co-management. One is Configuration Manager
 - Upgrade to [Windows 10, version 1709 (also known as the Fall Creators Update) and later](/sccm/osd/deploy-use/manage-windows-as-a-service)
 
 ### Configure workloads to switch to Intune 
-The [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune) article shows you how to switch specific Configuration Manager workloads to Intune. The article also has instructions on changing the device groups for which workloads are transitioned.
+The [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads.#Workloads-able-to-be-transitioned-to-Intune) article shows you how to switch specific Configuration Manager workloads to Intune. The article also has instructions on changing the device groups for which workloads are transitioned.
+### Endpoint Protection 
+<!-- 1357365 -->
+Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For details, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune) and [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
 
 - **Compliance policies:** 
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. For details, see [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started).  
