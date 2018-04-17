@@ -163,5 +163,27 @@ The Configuration Manager server and client tools are now included with the tech
 
 
 
+## Improvements to OS deployment
+We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
+
+ - [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330--> The following behaviors apply when you enable this option:
+   - The value of the variable isn't displayed in smsts.log.
+   - The Configuration Manager console and SMS Provider handle this value the same as other secrets such as passwords.
+   - The value isn't included when you export the task sequence.
+   - The task sequence editor doesn't read this value when you edit the step. Retype the entire value to make changes.
+
+   > [!Important]  
+   > Variables and their values are saved with the task sequence as XML, and obfuscated in the database. When the client requests a task sequence policy from the management point, it is encrypted in transit and when stored on the client. However, all variable values are plain text in the task sequence environment in memory during runtime on the client. If the task sequence includes a step to output the value of the variable, this output is in plain text. This behavior requires an explicit action by the administrator to include such a step in the task sequence. 
+
+
+ - [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
+
+
+
+## Improvements to the Configuration Manager console
+- Primary user information is now visible when viewing the members of a collection under **Assets and Compliance**, **Device Collections**.<!--510252-->  
+
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
