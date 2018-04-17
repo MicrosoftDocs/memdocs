@@ -51,7 +51,11 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 ## Workloads able to be transitioned to Intune
 Certain workloads are available to be switched over to Intune. The following list  will be updated as workloads become available to transition:
 1. Device compliance policies
-2. Resource access policies
+2. Resource access policies: Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices. For more information, see [Deploy resource access profiles](https://docs.microsoft.com/intune/device-profiles).
+      - Email profile
+      - Wi-Fi profile
+      - VPN profile
+      - Certificate profile
 3. Windows Update policies
 4. Endpoint Protection (starting in Configuration Manager version 1802)
       - Windows Defender Application Guard

@@ -65,8 +65,8 @@ For example, if you had the following values:
 
 - **FQDN of management point (MP)**: mp1.contoso.com    
 - **Sitecode**: PS1    
-- **Azure AD tenant ID**: daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
-- **Azure AD client app ID**: 7506ee10-f7ec-415a-b415-cd3d58790d97     
+- **Azure AD tenant ID**: 60a413f4-c606-4744-8adb-9476ae3XXXXX    
+- **Azure AD client app ID**: 9fb9315f-4c42-405f-8664-ae63283XXXXX     
 - **AAD Resource ID URI**: ConfigMgrServer    
 
   > [!Note]    
@@ -74,7 +74,7 @@ For example, if you had the following values:
 
 You would use the following command line:
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=60a413f4-c606-4744-8adb-9476ae3XXXXX AADCLIENTAPPID=9fb9315f-4c42-405f-8664-ae63283XXXXX AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > You can find the command-line parameters for your site by using the following steps:     
