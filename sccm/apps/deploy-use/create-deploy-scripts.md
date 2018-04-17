@@ -181,7 +181,7 @@ In the **Create Script** dialog, click **Script Parameters** under **Script**.
 Each of your script's parameters has its own dialog for adding further details and validation.
 
 >[!IMPORTANT]
-> Parameter values can't contain an apostrophe. </br<>/br>
+> Parameter values can't contain an apostrophe. </br></br>
 > There is a known issue in Configuration Manager version 1802 where parameters with spaces don't get passed to the script properly. If a space is used in the parameter, only the first item in the parameter is passed to the script and everything after the space is not passed. Admins can script around this by substituting alternate characters for spaces and converting them, or with other methods.
 
 
