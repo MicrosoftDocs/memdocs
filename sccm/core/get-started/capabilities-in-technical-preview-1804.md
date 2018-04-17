@@ -163,5 +163,22 @@ The Configuration Manager server and client tools are now included with the tech
 
 
 
+## Improvements to OS deployment
+We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
+
+ - [Mask sensitive data stored in task sequence variables](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password.<!--1358330-->  
+
+   > [!Important]  
+   > This setting only applies to the task sequence editor. It doesn't impact how the site or client otherwise stores or handles the variable.  
+
+ - [Mask program name during Run Command Step of a task sequence](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step. <!--1358493-->  
+
+
+
+## Improvements to the Configuration Manager console
+- Primary user information is now visible when viewing the members of a collection under **Assets and Compliance**, **Device Collections**.<!--510252-->  
+
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    

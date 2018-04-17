@@ -115,6 +115,8 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Submit feedback from the Configuration Manager console](capabilities-in-technical-preview-1804.md#bkmk_feedback) <!--1357542--> 
 - [Support Center](capabilities-in-technical-preview-1804.md#support-center) <!--1357489--> 
 - [Configuration Manager Toolkit](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit) <!--1357145--> 
+- [Improvements to OS deployment](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) <!--1358330,1358493--> 
+- [Improvements to the Configuration Manager console](capabilities-in-technical-preview-1804.md#improvements-to-the-configuration-manager-console) <!--510252--> 
 
 
 
