@@ -31,7 +31,7 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
 
 **Upgrade to version 1802**   
-When you have version 1702 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1802:   
+When you have version 1802 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1802:   
 -	  An evaluation install of System Center Configuration Manager version 1802
 -	  System Center 2012 Configuration Manager with Service Pack 1
 -	  System Center 2012 Configuration Manager with Service Pack 2
