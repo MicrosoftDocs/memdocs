@@ -101,7 +101,8 @@ By default, the Create Servicing Plan wizard currently runs after every software
 
 ### Changing Office 365 client setting doesn’t apply 
 <!--511551-->
-*Applies to: Configuration Manager version 1802* 
+*Applies to: Configuration Manager version 1802*  
+
 Deploy a [client setting](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent) with **Enable Management of the Office 365 Client Agent** configured to `Yes`. Then change that setting to `No` or `Not Configured`. After updating policy on targeted clients, Office 365 updates are still managed by Configuration Manager. 
 
 #### Workaround
