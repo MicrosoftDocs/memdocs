@@ -258,7 +258,7 @@ This OS isn't supported for site servers or site system roles, except for the di
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ## The server core installation of Windows Server, version 1709
-Starting in Configuration Manager 1710, [Windows Server, version 1709](https://docs.microsoft.com/en-us/windows-server/get-started/get-started-with-1709) is supported for use as a distribution point with the following limitations:  
+Starting in Configuration Manager 1710, [Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) is supported for use as a distribution point with the following limitations:  
   -   Only the x64-bit version is supported.
   -   Distribution points on this OS do not support PXE or Multicast.  
 
