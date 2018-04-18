@@ -3,7 +3,7 @@ title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -97,6 +97,20 @@ By default, the Create Servicing Plan wizard currently runs after every software
 
 #### Workaround
  After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
+
+
+### Changing Office 365 client setting doesn’t apply 
+<!--511551-->
+*Applies to: Configuration Manager version 1802* 
+Deploy a [client setting](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent) with **Enable Management of the Office 365 Client Agent** configured to `Yes`. Then change that setting to `No` or `Not Configured`. After updating policy on targeted clients, Office 365 updates are still managed by Configuration Manager. 
+
+#### Workaround
+Change the following registry value to `0` and restart the **Microsoft Office Click-to-Run Service** (ClickToRunSvc):
+
+```
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
+"OfficeMgmtCOM"=dword:00000000
+```
 
 
 
