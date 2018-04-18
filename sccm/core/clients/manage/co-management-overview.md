@@ -46,7 +46,7 @@ Co-management enables you to concurrently manage Windows 10 devices by using bot
         - [Compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started)
         - [Resource access policies](https://docs.microsoft.com/intune/device-profiles)
         - [Windows Update policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)
-        - [Endpoint Protection](https://docs.microsoft.com/intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune), starting in Configuration Manager 1802. <!-- 1357365 -->
+        - [Endpoint Protection](https://docs.microsoft.com/en-us/intune/endpoint-protection-windows-10), starting in Configuration Manager 1802. <!-- 1357365 -->
     
 ## How to configure co-management
 There are two main paths to reach to co-management. One is Configuration Manager provisioned co-management where Windows 10 devices managed by Configuration Manager and hybrid Azure AD joined get enrolled into Intune. The other is Intune provisioned devices that are enrolled in Intune and then installed with the Configuration Manager client reach a co-management state.
@@ -92,7 +92,7 @@ Windows Update for Business policies let you configure deferral policies for Win
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices. For details, see [Deploy resource access profiles](https://docs.microsoft.com/intune/device-profiles).
 
 - **Endpoint Protection:**
-Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For more information, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)<!-- 1357365 --> and [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune)
+Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For more information, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/en-us/intune/endpoint-protection-windows-10)<!-- 1357365 --> and [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)
 
 
 ### Install Configuration Manager client to the devices enrolled in Intune
