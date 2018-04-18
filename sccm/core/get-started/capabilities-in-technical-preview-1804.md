@@ -163,6 +163,75 @@ The Configuration Manager server and client tools are now included with the tech
 
 
 
+## Uninstall application on approval revocation
+<!--1357891-->
+
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. 
+
+### Prerequisites
+- Enable the feature **Approve application requests for users per device**.
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, deploy to a user an application that requires approval. On the **Deployment Settings** tab of the deployment, enable the option **An administrator must approve a request for this application on the device**.  
+
+2. On the Configuration Manager client in Software Center, the user requests approval to install the application.  
+
+3. In the Configuration Manager console, approve the request for this user to install the application on the device. Application approval requests are displayed in the **Software Library** workspace, under **Application Management**, in the **Approval Requests** node.  
+
+4. On the client in Software Center, the user installs the application.  
+
+5. In the Configuration Manager console, deny the user's request for the application on the device.  
+
+### Known issues
+- After the user installs the application on the client, update user policy. In Software Center, switch to the **Options** tab, expand **Computer maintenance** and click **Sync Policy**.<!--480609-->  
+
+
+
+## Exclude Active Directory containers from discovery
+<!--1358143-->
+To reduce the number of discovered objects, you can now exclude specific containers from Active Directory system discovery. This feature is a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery).
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Hierarchy Configuration** and select **Discovery Methods**. Select **Active Directory System Discovery** and click **Properties** in the ribbon.  
+
+2. Click the New icon to specify a new Active Directory container.   
+
+3. In the Active Directory Container dialog box, browse to or enter the **Path** in the Location section to start the discovery.  
+
+4. In the Search Options section, enable the option to **Recursively search Active Directory child containers**. Then click **Add** to select subcontainers to be excluded from this discovery.  
+
+5. In the Select New Container dialog box, select a child container to exclude. Click **OK** to close the Select New Container dialog box.  
+
+6. Click **OK** to close the Active Directory Container dialog box.  
+
+7. In the Active Directory System Discovery Properties window, see the path of the Active Directory container at which discovery starts. The **Recursive** column shows **Yes**, and the new **Has Exclusions** column also shows **Yes**. Click **OK** to close the Active Directory System Discovery Properties window.  
+
+
+
+## Specify the visibility of the Application Catalog website link in Software Center
+<!--1358214-->
+
+You can now control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center. 
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, **Administration** workspace, **Client Settings** node, create a custom client device settings policy.  
+
+2. Select the **Software Center** group.  
+
+3. For **Software Center settings**, click **Customize**.  
+
+4. Enable the option to **Hide the Application Catalog web site link in Software Center**.   
+
+For more information on client settings, see [Configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+
+
+
 ## Improvements to OS deployment
 We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
 
