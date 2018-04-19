@@ -2,14 +2,10 @@
 title: Technical Preview 1804
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1804.
-ms.custom: na
-ms.date: 04/20/2018 
+ms.date: 04/23/2018 
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
@@ -215,7 +211,10 @@ To reduce the number of discovered objects, you can now exclude specific contain
 ## Specify the visibility of the Application Catalog website link in Software Center
 <!--1358214-->
 
-You can now control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center. 
+You can now control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center.  
+
+> [!Note]  
+> Support for the Application Catalog website user experience ends with the first update released after June 1, 2018. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
