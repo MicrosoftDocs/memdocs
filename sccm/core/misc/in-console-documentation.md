@@ -25,6 +25,10 @@ This page displays in-console, under the Support workspace, Documentation node.
 
 
 # Configuration Manager Documentation
+The links on this page represent curated content to assist you in learning and supporting Configuration Manager. 
+
+[Configuration Manager documentation library](https://docs.microsoft.com/sccm)
+
 
 </br>
 
@@ -36,7 +40,7 @@ This page displays in-console, under the Support workspace, Documentation node.
 > - [Recently updated](#bkmk_update)
 
 ### Recommended 
-A manually curated list of important articles:
+A manually curated list of important articles.
 
 - [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)
 - [Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service)
@@ -62,7 +66,7 @@ A manually curated list of important articles:
 > - [Recently updated](#bkmk_update)
 
 ### Trending
-Our most popular articles for the last month:
+The most popular articles for the last month.
 
 - [New version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 - [Log files for troubleshooting issues](/sccm/core/plan-design/hierarchy/log-files)
@@ -90,7 +94,7 @@ Our most popular articles for the last month:
 > - [Recently updated](#bkmk_update)
 
 ### Recently updated
-Articles revised in the last month:
+Articles revised in the last month.
 
 - [Site prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 - [Data warehouse](/sccm/core/servers/manage/data-warehouse)
@@ -104,3 +108,37 @@ Articles revised in the last month:
 - [Log files for troubleshooting issues](/sccm/core/plan-design/hierarchy/log-files)
 
 
+
+</br>
+
+</br>
+
+</br>
+
+### Troubleshooting articles
+Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
+
+- Troubleshooting PXE boot issues  
+- Troubleshooting software update synchronization issues  
+- Understanding and troubleshooting content distribution  
+- Understanding and troubleshooting the Microsoft Store for Business integration  
+- Software update management troubleshooting  
+- Troubleshooting the Install Application task sequence step  
+
+
+</br>
+
+</br>
+
+</br>
+
+### New and updated support articles
+Support articles that are new or updated in the last two months.
+
+- Configuration Manager clients do not receive policy data after you recover a primary site from a CAS  
+- Update rollup 2 for System Center Configuration Manager current branch, version 1710  
+- Automatic enrollment for co-managed device fails in System Center Configuration Manager current branch, version 1710  
+- Windows 10 deployments prompt for language choice in Configuration Manager  
+
+> [!Tip]  
+> To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
