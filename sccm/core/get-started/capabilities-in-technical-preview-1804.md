@@ -235,6 +235,73 @@ For more information on client settings, see [Configure client settings](/sccm/c
 
 
 
+
+## Filter automatic deployment rules by software update architecture
+ <!--1322266-->
+You can now filter automatic deployment rules to exclude architectures like Itanium and ARM64.
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, switch to the **Software Library** workspace. Expand **Software Updates** and select **Automatic Deployment Rules**. On the ribbon, select **Create Automatic Deployment Rule**.  
+
+2. Fill in the appropriate settings for the **General** tab and the **Deployment Settings** tab.  
+
+3. In the **Software Updates** tab, select **Architecture** then click on **items to find** in the **Search criteria**.  
+
+4. Select the architectures you want to include in the automatic deployment rule.  
+
+5. Click **Next** and proceed with the creation of the automatic deployment rule.  
+
+> [!IMPORTANT]  
+> Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.  
+
+
+
+## Create a phased deployment with manually configured phases for a task sequence
+<!--1358148--> 
+You can now create a phased deployments with manually configured phases for a task sequence. You can also add up to 10 additional phases from the **Phases** tab on **Create Phased Deployment** wizard. 
+
+### Try it out!
+Follow the instructions to create a phased deployment where you manually configure all phases. Add additional phases from the **Phases** tab on **Create Phased Deployment** wizard using steps 4 though 9. You can configure up to 10 phases. Send [Feedback](#bkmk_feedback) letting us know how it worked. 
+
+1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
+
+2. Right-click on an existing task sequence and select **Create Phased Deployment**.  
+
+3. On the **General** tab, give the phased deployment a name, description (optional), and select **Manually configure all phases**.  
+
+4. On the **Phases** tab, click on **Add**.  
+
+5. Populate the **Phase Collection** for your first phase and choose if you want to **pre-download content for this task sequence**.  
+
+6. On the **Phase Settings** tab, choose one option for each of the scheduling settings and select **Next** when complete.  
+    - **Criteria for success of the previous phase.** (Choose one. This is disabled for the first phase)
+        - **Deployment success percentage** -Specify percent of devices that successfully complete the deployment for the previous phase success criteria. 
+        - **Number of devices successfully deployed** -Specify number of devices that successfully complete the deployment for previous phase success criteria. 
+    - **Conditions for beginning this phase of deployment after success of the previous phase.** (choose one)
+        - **Automatically begin this phase after a deferral period (in days)** - Choose the number of days to wait before beginning the next phase after the success of the previous phase. 
+        - **Manually begin this phase of deployment** -Don't begin this phase automatically after success of the previous phase. 
+    - **Interval for targeting devices in this phase (in days)** -The number of days to span targeting of device deployments across for this phase. 
+    - **Once a device is targeted, install the software** (choose one)
+        - **As soon as possible** -Sets the deadline for installation on the device as soon as the device is targeted.
+        - **Deadline time (relative to the time device is targeted)** -Sets deadline for installation a certain number of days after device is targeted.  
+     
+7. Specify **User Experience** such as **User Notifications** and **Write filter handling for Windows Embedded devices**.  
+
+8. Specify **Distribution Point** settings for the phase. Verify the summary for the phase.  
+
+9. On the **Phases** tab, add, edit, remove, or reorder any  phases as needed then click **Next**.  
+
+10. The **Stop Criteria** tab allows you to specify when to automatically stop deploying for all phases.
+    - **Criteria for automatic stop of deployments in all phases** (choose one)
+        - **Percentage of deployments failed across all phases** - Select the percentage of deployment failures to stop deployments in all phases. 
+        - **Number of devices with failed deployments across all phases** - Choose the number of devices that failed the deployment to stop deployments in all phases.  
+
+11. Confirm your selections on the **Summary** tab. Then click **Next** and proceed though the wizard.  
+
+
+
 ## Improvements to OS deployment
 We made the following improvements to OS deployment, some of which were the result of your user voice feedback.  
 

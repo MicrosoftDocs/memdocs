@@ -114,6 +114,8 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Uninstall application on approval revocation](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation) <!--1357891--> 
 - [Exclude Active Directory containers from discovery](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery) <!--1358143--> 
 - [Specify the visibility of the Application Catalog website link in Software Center](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center) <!--1358214--> 
+- [Filter automatic deployment rules by software update architecture](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture) <!--1322266--> 
+- [Create a phased deployment with manually configured phases for a task sequence](capabilities-in-technical-preview-1804.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence) <!--1358148--> 
 - [Improvements to OS deployment](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) <!--1358330,1358493--> 
 - [Improvements to the Configuration Manager console](capabilities-in-technical-preview-1804.md#improvements-to-the-configuration-manager-console) <!--510252--> 
 
