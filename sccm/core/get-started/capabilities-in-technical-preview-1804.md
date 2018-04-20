@@ -98,6 +98,10 @@ The following anonymous information is always included with the feedback for con
 
 This data is consistent with the collection of our diagnostics and usage data. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 
+### Known issues
+
+If you attempt to send feedback from a device that isn't able to access the internet, the application may unexpectedly close. To send a smile or frown, make sure the device is able to access petrol.office.microsoft.com.
+
 
 
 ## Support Center
