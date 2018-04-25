@@ -39,7 +39,7 @@
       },
     "fileMetadata": {
       "feedback_system": {
-        "sccm/core/misc/**/*": "None"
+        "core/misc/**/*": "None"
       }
     },
     "template": [],
