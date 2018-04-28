@@ -2,21 +2,14 @@
 title: "Blocking clients"
 titleSuffix: "Configuration Manager"
 description: "Block client access for system security by using System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
-caps.latest.revision: 8
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Determine whether to block clients in System Center Configuration Manager
 

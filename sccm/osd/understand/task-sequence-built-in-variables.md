@@ -2,22 +2,14 @@
 title: Task sequence built-in variables
 titleSuffix: Configuration Manager
 description: Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence.
-ms.custom: na
 ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Task sequence built-in variables in System Center Configuration Manager
 

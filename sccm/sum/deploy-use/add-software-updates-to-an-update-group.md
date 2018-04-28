@@ -2,16 +2,14 @@
 title: "Add updates to an update group "
 titleSuffix: "Configuration Manager"
 description: "Manually or automatically add software updates to a software update group in your environment."
-keywords:
-author: dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Add software updates to an update group  *Applies to: System Center Configuration Manager (Current Branch)*

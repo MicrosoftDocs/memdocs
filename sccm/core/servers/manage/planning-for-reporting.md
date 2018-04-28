@@ -2,19 +2,14 @@
 title: "Planning for reporting"
 titleSuffix: "Configuration Manager"
 description: "From installation details to security and network bandwidth, it's important to plan for reporting in Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
-caps.latest.revision: 6
-author: Dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Planning for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services. Use the following sections to help you plan for reporting in Configuration Manager.  

@@ -1,21 +1,14 @@
 ---
 title: "Install and configure Security Content Automation Protocol (SCAP) extensions"
-titleSuffix: "System Center Configuration Manager"
+titleSuffix: Configuraton Manager
 description: "Install and configure the Security Content Automation Protocol (SCAP) extensions"
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: f53b484b-5123-48f0-be2f-4e30318f3d39
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
 ---

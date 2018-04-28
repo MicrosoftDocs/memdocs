@@ -2,22 +2,14 @@
 title: "Software inventory security privacy"
 titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for software inventory in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Security and privacy for software inventory in System Center Configuration Manager
 

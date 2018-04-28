@@ -1,34 +1,15 @@
 ---
-# required metadata
-
 title: "Maintain Mac clients"
 titleSuffix: "Configuration Manager"
 description: Maintenance tasks for Configuration Manager Mac clients.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: aaroncz
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
-caps.latest.revision: 12
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Maintain Mac clients

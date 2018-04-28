@@ -5,12 +5,10 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
-
 ---
 
 # Security and privacy for the cloud management gateway

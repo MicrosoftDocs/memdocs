@@ -2,22 +2,14 @@
 title: "Complete migration"
 titleSuffix: "Configuration Manager"
 description: "Learn how to finish migration to a System Center Configuration Manager destination hierarchy after a source hierarchy no longer has data."
-ms.custom: na
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
-caps.latest.revision: 5
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Plan to complete migration in System Center Configuration Manager
 

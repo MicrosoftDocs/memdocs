@@ -2,20 +2,14 @@
 title: "Create and apply power plans"
 titleSuffix: "Configuration Manager"
 description: "Create and apply power plans in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: arob98ms.author: angrobemanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to create and apply power plans in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Power management in System Center Configuration Manager enables you to apply power plans that are supplied with Configuration Manager to collections of computers in your hierarchy, or to create your own custom power plans. Use the procedure in this topic to apply a built-in or custom power plan to computers.  

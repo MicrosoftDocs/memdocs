@@ -2,22 +2,14 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article.
-ms.custom: na
 ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
-caps.latest.revision: 41
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Release notes for System Center Configuration Manager
 

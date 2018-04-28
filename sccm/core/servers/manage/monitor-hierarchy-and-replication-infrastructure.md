@@ -2,22 +2,14 @@
 title: "Monitor replication"
 titleSuffix: "Configuration Manager"
 description: "Learn how to monitor infrastructure and operations in Configuration Manager by using the Monitoring workspace in the console."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Monitor hierarchy and replication infrastructure in System Center Configuration Manager
 

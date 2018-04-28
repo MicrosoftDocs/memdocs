@@ -2,22 +2,14 @@
 title: Updates and Servicing
 titleSuffix: Configuration Manager
 description: Learn about an in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
-caps.latest.revision: 51
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # Updates for System Center Configuration Manager
 

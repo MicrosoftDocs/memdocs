@@ -2,22 +2,14 @@
 title: "Remote control"
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to remote control in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Introduction to remote control in System Center Configuration Manager
 

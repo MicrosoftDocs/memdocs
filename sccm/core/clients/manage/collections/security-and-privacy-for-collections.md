@@ -2,22 +2,14 @@
 title: "Collections security and privacy"
 titleSuffix: "Configuration Manager"
 description: "Get best practices for security and privacy in collections in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Security and privacy for collections in System Center Configuration Manager
 

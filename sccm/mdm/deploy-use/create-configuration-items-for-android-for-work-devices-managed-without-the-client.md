@@ -1,39 +1,13 @@
 ---
 title: "How to create configuration items for Android for Work devices managed with Intune"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 2017-07-31
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
-caps.latest.revision: 17
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: aczechowski
+ms.author: aaroncz
 ---
 # How to create configuration items for Android for Work devices managed with Intune
 

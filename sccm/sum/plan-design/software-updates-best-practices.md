@@ -1,21 +1,15 @@
- ---
-
+---
 title: Best practices for software updates
 titleSuffix: "Configuration Manager"
 description: "Use these best practices for software updates in System Center Configuration Manager."
-keywords:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 10/06/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-
-
 ---
 # Best practices for software updates in System Center Configuration Manager
 

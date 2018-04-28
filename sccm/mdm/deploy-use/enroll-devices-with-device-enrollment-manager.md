@@ -2,21 +2,14 @@
 title: "Enroll devices with device enrollment manager "
 titleSuffix: "Configuration Manager"
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
-ms.custom: na
 ms.date: 09/08/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: 8
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Enroll devices with device enrollment manager with Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Test client upgrades pre-production collection"
 titleSuffix: "Configuration Manager"
 description: "Test client upgrades in a pre-production collection in System Center Configuration Manager."
-ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
-caps.latest.revision: 10
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to test client upgrades in a pre-production collection in System Center Configuration Manager
 

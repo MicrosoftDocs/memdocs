@@ -2,18 +2,13 @@
 title: "New version 1702"
 titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
-ms.custom: na
-ms.date:  05/02/2017
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.date: 05/02/2017
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # What&#39;s new in version 1702 of System Center Configuration Manager
 

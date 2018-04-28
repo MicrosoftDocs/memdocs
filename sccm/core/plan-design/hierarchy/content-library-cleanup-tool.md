@@ -2,20 +2,14 @@
 title: "The content library cleanup tool"
 titleSuffix: "Configuration Manager"
 description: "Use the content library cleanup tool to remove orphaned content no longer associated with a System Center Configuration Manager deployment."
-ms.custom: na
 ms.date: 4/7/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # The Content library cleanup tool for System Center Configuration Manager
 

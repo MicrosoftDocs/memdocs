@@ -2,19 +2,14 @@
 title: "Common tasks for managing compliance"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use compliance settings in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
-caps.latest.revision: 5
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Common tasks for managing compliance with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In this section, you'll find some common scenarios that will help you learn to use compliance settings in System Center Configuration Manager.  

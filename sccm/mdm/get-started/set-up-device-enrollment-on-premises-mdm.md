@@ -2,21 +2,14 @@
 title: "Set up device enrollment "
 titleSuffix: "Configuration Manager"
 description: "Grant users permission to enroll their devices for On-premises Mobile Device Management in System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
-caps.latest.revision: 10
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
 

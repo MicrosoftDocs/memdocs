@@ -2,21 +2,14 @@
 title: "Deploy UNIX/Linux clients"
 titleSuffix: "Configuration Manager"
 description: "Learn how to deploy a client to a UNIX or Linux server in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
-caps.latest.revision: 9
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to deploy clients to UNIX and Linux servers in System Center Configuration Manager
 

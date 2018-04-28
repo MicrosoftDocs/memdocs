@@ -1,19 +1,12 @@
 ---
-title: "Create stand-alone media"
-titleSuffix: "Configuration Manager"
-description: "Use stand-alone media to deploy the operating system on a computer without a network connection."
-ms.custom: na
+title: Create stand-alone media
+titleSuffix: Configuration Manager
+description: Use stand-alone media to deploy the operating system on a computer without a network connection.
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
-caps.latest.revision: 21
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

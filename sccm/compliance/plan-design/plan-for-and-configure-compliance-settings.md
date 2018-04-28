@@ -2,19 +2,14 @@
 title: "Plan for and configure compliance settings"
 titleSuffix: "Configuration Manager"
 description: "Learn about the prerequisites and configuration tasks for working with compliance settings in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-caps.latest.revision: 8
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Plan for and configure compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you start working with System Center Configuration Manager compliance settings, there are a few prerequisites you need to know about, and some configuration tasks you'll need to perform.  

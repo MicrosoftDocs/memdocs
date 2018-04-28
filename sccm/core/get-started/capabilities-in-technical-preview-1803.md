@@ -2,15 +2,10 @@
 title: Technical Preview 1803
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1803.
-ms.custom: na
-ms.date: 03/27/2018 
+ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz

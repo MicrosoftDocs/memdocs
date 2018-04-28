@@ -2,19 +2,13 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # Configure discovery methods for System Center Configuration Manager

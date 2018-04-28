@@ -2,20 +2,14 @@
 title: "Service Windows"
 titleSuffix: "Configuration Manager"
 description: "Use service windows to control when System Center Configuration Manager sites install updates."
-ms.custom: na
 ms.date: 1/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 #  Service windows for site servers*Applies to: System Center Configuration Manager (Current Branch)*
 You can configure service windows at central administration sites and primary sites to control when in-console updates can install.  You can configure multiple windows, with the window allowed for installing updates being determined by a combination of all service windows for that site server.

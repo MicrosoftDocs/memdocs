@@ -2,22 +2,14 @@
 title: "Monitor migration"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use the Configuration Manager console to monitor the progress and success of migration jobs."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
-caps.latest.revision: 4
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Planning to monitor migration activity in System Center Configuration Manager
 

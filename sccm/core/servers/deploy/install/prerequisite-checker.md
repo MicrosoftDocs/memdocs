@@ -2,20 +2,14 @@
 title: "Prerequisite Checker"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use Prerequisite Checker to identify and fix problems that might block a site or site system role installation."
-ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisite Checker for System Center Configuration Manager
 

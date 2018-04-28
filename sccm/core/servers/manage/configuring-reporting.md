@@ -2,21 +2,14 @@
 title: "Configure reporting"
 titleSuffix: "Configuration Manager"
 description: "Read about how to set up reporting in your Configuration Manager hierarchy, including information about SQL Server Reporting Services."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: 6
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuring reporting in System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Firewalls and domains"
 titleSuffix: "Configuration Manager"
 description: "Set up firewalls, ports, and domains to prepare for System Center Configuration Manager communications."
-ms.custom: na
 ms.date: 2/6/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Set up firewalls, ports, and domains for System Center Configuration Manager
 

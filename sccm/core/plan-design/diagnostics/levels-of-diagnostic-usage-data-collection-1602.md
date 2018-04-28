@@ -2,39 +2,15 @@
 title: "Diagnostic data for 1602"
 titleSuffix: "Configuration Manager"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1602 collects."
-ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
 ---
 # Levels of diagnostic usage data collection for version 1602 of System Center Configuration Manager
 

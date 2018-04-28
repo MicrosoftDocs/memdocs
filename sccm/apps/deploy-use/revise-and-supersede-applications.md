@@ -2,20 +2,14 @@
 title: "Revise and supersede applications"
 titleSuffix: "Configuration Manager"
 description: "Learn how to work with System Center Configuration Manager application versions and supersede applications."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mattbriggsms.author: mabriggmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  

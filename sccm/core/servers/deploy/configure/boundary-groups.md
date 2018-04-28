@@ -2,21 +2,14 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # Configure boundary groups for System Center Configuration Manager
 

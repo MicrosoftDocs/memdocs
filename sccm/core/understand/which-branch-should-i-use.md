@@ -2,21 +2,14 @@
 title: "Which branch should I use"
 titleSuffix: "Configuration Manager"
 description: "Learn the differences between available branches of System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Which branch of Configuration Manager should I use?
 

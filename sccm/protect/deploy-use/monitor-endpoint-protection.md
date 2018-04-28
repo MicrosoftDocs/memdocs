@@ -2,21 +2,14 @@
 title: "Monitor Endpoint Protection status"
 titleSuffix: "Configuration Manager"
 description: "Learn how monitor Endpoint Protection in your System Center Configuration Manager hierarchy."
-ms.custom: na
 ms.date: 03/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: 8
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to monitor Endpoint Protection status
 

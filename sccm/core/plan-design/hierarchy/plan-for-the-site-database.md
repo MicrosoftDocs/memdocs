@@ -2,22 +2,14 @@
 title: "Plan the site database"
 titleSuffix: "Configuration Manager"
 description: "Consider the site database and the site database server role as you plan your System Center Configuration Manager hierarchy."
-ms.custom: na
-ms.date: 03/08/20168
+ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
-caps.latest.revision: 5
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Plan for the site database for System Center Configuration Manager
 

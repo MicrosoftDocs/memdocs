@@ -2,21 +2,14 @@
 title: "Plan the SMS Provider"
 titleSuffix: "Configuration Manager"
 description: "Learn about how the SMS Provider helps you manage System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Plan for the SMS Provider for System Center Configuration Manager
 

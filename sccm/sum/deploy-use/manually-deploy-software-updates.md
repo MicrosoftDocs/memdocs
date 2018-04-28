@@ -1,20 +1,15 @@
 ---
-
 title: Manually deploy software updates
 titleSuffix: "Configuration Manager"
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
-keywords:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-
 ---
 
 #  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  

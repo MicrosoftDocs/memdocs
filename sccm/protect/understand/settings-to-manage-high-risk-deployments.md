@@ -2,22 +2,14 @@
 title: "Manage high-risk deployments"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure site settings in System Center Configuration Manager to warn admins if they create a high-risk deployment."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
-caps.latest.revision: 6
-author: mestew
-ms.author: mstewart
-
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Settings to manage high-risk deployments for System Center Configuration Manager
 

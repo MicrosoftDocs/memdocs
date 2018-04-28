@@ -2,21 +2,14 @@
 title: "Site components"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure site components to modify the behavior of site system roles and site status reporting."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
-caps.latest.revision: 9
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Site components for System Center Configuration Manager
 

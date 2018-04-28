@@ -2,22 +2,14 @@
 title: "Prerequisites for reporting"
 titleSuffix: "Configuration Manager"
 description: "Understand various dependencies that impact your use of reporting in System Center Configuration Manager."
-ms.custom: na
 ms.date: 01/29/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisites for reporting in System Center Configuration Manager
 

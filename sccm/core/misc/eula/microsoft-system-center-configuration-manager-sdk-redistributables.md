@@ -1,20 +1,14 @@
 ---
 title: Microsoft System Center Configuration Manager SDK Redistributables
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 37075869-ebe8-4a25-a2d1-dfdf8cc029e6
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-
 ---
 # System Center Configuration Manager SDK Redistributables
 

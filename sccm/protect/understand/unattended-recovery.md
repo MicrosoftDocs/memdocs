@@ -2,19 +2,13 @@
 title: Unattended recovery
 titleSuffix: Configuration Manager
 description: Use a script to recover your sites in System Center Configuration Manager.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid:  828c31d1-3d70-4412-b1a8-c92e7e504d39
-caps.latest.revision:
-author: mestew
-ms.author: mstewart
+ms.technology: configmgr-protect
+ms.topic: conceptual
+ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 

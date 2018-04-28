@@ -2,21 +2,14 @@
 title: "Upgrade clients"
 titleSuffix: "Configuration Manager"
 description: "Get information about how to upgrade clients in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
-caps.latest.revision: 8
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Upgrade clients in System Center Configuration Manager
 

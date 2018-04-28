@@ -2,22 +2,14 @@
 title: "How to Create VPN profiles "
 titleSuffix: "Configuration Manager"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
-ms.custom:
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
-caps.latest.revision: 15
-author: lleonard-msft
-caps.handback.revision: 0
-ms.author: alleonar
-ms.manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create VPN profiles in System Center Configuration Manager
 

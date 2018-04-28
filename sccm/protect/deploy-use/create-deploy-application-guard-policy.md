@@ -1,21 +1,15 @@
 ---
 title: "Create and deploy a Windows Defender Application Guard policy"
-titleSuffix: "System Center Configuration Manager"
+titleSuffix: Configuraton Manager
 description: "Create and deploy Windows Defender Application Guard policy."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
-manager: angrobe
+ms.technology: configmgr-protect
+ms.topic: conceptual
+ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 
