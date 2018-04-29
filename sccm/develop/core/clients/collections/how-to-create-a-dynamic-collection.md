@@ -1,22 +1,14 @@
 ---
 title: "Create a Dynamic Collection"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7d27ea5b-8941-4453-b90b-35d9ad2891ebsearchScope: - ConfigMgr SDK
-caps.latest.revision: 16
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7d27ea5b-8941-4453-b90b-35d9ad2891eb
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Dynamic Collection
 In System Center Configuration Manager, your application uses the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) to define the attributes of a collection, such as the membership rules and the refresh schedule. The `MemberClassName` property contains the system-generated class name that contains the members of the collection.  

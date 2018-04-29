@@ -1,17 +1,14 @@
 ---
-title: Change the MDM authority for specific users (mixed MDM authority) 
+title: Change the MDM authority for specific users (mixed MDM authority)
 titleSuffix: "Configuration Manager"
 description: Learn how to change the MDM authority from hybrid MDM to Intune standalone for some users.
-keywords:
-author: dougeby
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service:
-ms.technology:
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-
 ---
 # Change the MDM authority for specific users (mixed MDM authority) 
 

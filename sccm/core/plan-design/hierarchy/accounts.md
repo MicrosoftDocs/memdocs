@@ -2,22 +2,14 @@
 title: "Accounts used"
 titleSuffix: "Configuraton Manager"
 description: "Identify and manage the Windows groups and the accounts in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/9/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: 7
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Accounts used in System Center Configuration Manager
 

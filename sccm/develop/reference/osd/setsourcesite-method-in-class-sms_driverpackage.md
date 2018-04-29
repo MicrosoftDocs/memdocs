@@ -1,22 +1,14 @@
 ---
 title: "SetSourceSite Method in SMS_DriverPackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b81c2f09-9270-4387-a0f7-b3a103ad99bbsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b81c2f09-9270-4387-a0f7-b3a103ad99bb
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SetSourceSite Method in Class SMS_DriverPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site for the driver package.  

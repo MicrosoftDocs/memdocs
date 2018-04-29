@@ -2,20 +2,14 @@
 title: "Manage Dynamics CRM Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access."
-ms.custom: na
 ms.date: 03/05/2017
-ms.reviewer: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-hybrid
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
-caps.latest.revision: 5
-author: andredm7
-ms.author: andredm
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Manage Dynamics CRM Online access in System Center Configuration Manager
 

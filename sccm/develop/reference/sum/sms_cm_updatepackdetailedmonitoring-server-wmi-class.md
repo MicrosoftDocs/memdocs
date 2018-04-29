@@ -1,20 +1,14 @@
 ---
 title: "SMS_CM_UpdatePackDetailedMonitoring Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0707d893-72e6-4fe5-8da2-2954e558ea13searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0707d893-72e6-4fe5-8da2-2954e558ea13
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_CM_UpdatePackDetailedMonitoring Server WMI Class
 The `SMS_CM_UpdatePackDetailedMonitoring` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used get the detailed update package installation status per site.  

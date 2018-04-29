@@ -1,22 +1,15 @@
 ---
 title: Create a custom task sequence
-titleSuffix: "Configuration Manager"
-description: "Edit a custom task sequence in System Center Configuration Manager to add steps to the task sequence."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: Edit a custom task sequence in System Center Configuration Manager to add steps to the task sequence.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create a custom task sequence with System Center Configuration Manager

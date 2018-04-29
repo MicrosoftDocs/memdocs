@@ -1,22 +1,14 @@
 ---
 title: "Unlock Method in SMS_OperatingSystemInstallPackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b7438a3c-7917-43a1-984d-d300ed86d963searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b7438a3c-7917-43a1-984d-d300ed86d963
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Unlock Method in Class SMS_OperatingSystemInstallPackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the operating system install package.  

@@ -2,20 +2,14 @@
 title: "Wi-Fi and VPN profile prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Learn about the security permissions needed to manage certificate profiles, Wi-Fi profiles, and VPN profiles in System Center Configuration Manager."
-ms.custom: na
 ms.date: 11/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies only within the product.  

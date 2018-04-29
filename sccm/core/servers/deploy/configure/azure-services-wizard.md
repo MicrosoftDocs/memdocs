@@ -2,21 +2,14 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Upgrade Readiness, Microsoft Store for Business, and Operations Management Suite.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid:  a26a653e-17aa-43eb-ab36-0e36c7d29f49
-caps.latest.revision: 0
-author: mestew
-ms.author: mstewart
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # Configure Azure services for use with Configuration Manager
 

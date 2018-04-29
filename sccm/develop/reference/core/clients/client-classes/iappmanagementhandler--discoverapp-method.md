@@ -1,22 +1,14 @@
 ---
 title: "IAppManagementHandler::DiscoverApp"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 818e9387-2599-405e-913a-642e96c97fd2searchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 818e9387-2599-405e-913a-642e96c97fd2
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # IAppManagementHandler::DiscoverApp Method
 The `IAppManagementHandler::DiscoverApp` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.  

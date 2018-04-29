@@ -2,22 +2,14 @@
 title: "Remotely administer Windows computer"
 titleSuffix: "Configuration Manager"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
-ms.custom: na
 ms.date: 07/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "About Package Definition Files"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fbd5743c-ff78-4890-9e32-5a133c02878csearchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fbd5743c-ff78-4890-9e32-5a133c02878c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Package Definition Files
 Package definition files are predefined scripts that you can use to help automate package creation with System Center Configuration Manager. These are files that contain the package and program information that is needed to distribute a package to clients, with the exception of the source file location.  

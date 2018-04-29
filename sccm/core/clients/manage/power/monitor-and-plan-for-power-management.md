@@ -2,20 +2,14 @@
 title: "Monitor and plan for power management"
 titleSuffix: "Configuration Manager"
 description: "Learn how to monitor and plan for power management in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: arob98ms.author: angrobemanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to monitor and plan for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to help you monitor and plan for power management in System Center Configuration Manager.  

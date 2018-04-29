@@ -1,22 +1,14 @@
 ---
 title: "OS Configuration Item Examples"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c298f263-f3f9-4a06-887a-bb30e9585e3dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c298f263-f3f9-4a06-887a-bb30e9585e3d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Operating System Configuration Item Examples
 This section provides information about authoring operating system configuration items in System Center Configuration Manager.  

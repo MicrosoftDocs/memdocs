@@ -2,22 +2,14 @@
 title: "Configuration items for client-managed devices "
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure Windows and Mac devices that are managed with the System Center Configuration Manager client."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 7daf71dc-3775-40d7-92e0-8679d7d90a78
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration items for devices managed with the System Center Configuration Manager client
 

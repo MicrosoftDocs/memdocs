@@ -1,22 +1,14 @@
 ---
 title: "CCM_Requested AppPolicy Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 600ccdef-b722-4e0d-a7dc-4e3591afcf1bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 600ccdef-b722-4e0d-a7dc-4e3591afcf1b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_Requested AppPolicy Client WMI Class
 The `CCM_RequestedAppPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application policy request.  

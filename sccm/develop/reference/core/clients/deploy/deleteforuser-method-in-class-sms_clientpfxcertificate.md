@@ -1,20 +1,14 @@
 ---
 title: "DeleteForUser Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: af6c7a1c-824e-4ccd-ac51-c3b20df3d543searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: af6c7a1c-824e-4ccd-ac51-c3b20df3d543
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # DeleteForUser Method in Class SMS_ClientPfxCertificate
 The `DeleteForUse` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes a certificate for a user.  

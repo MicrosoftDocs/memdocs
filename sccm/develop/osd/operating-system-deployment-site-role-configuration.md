@@ -1,22 +1,14 @@
 ---
 title: "OS Deployment Site Role Configuration"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 59a554c2-ba92-447f-ad32-c21b68ce1e48searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 59a554c2-ba92-447f-ad32-c21b68ce1e48
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Operating System Deployment Site Role Configuration
 This section provides information about using the System Center Configuration Manager state migration point and PXE service point roles that are used by operating system deployment.  

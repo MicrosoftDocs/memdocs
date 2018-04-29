@@ -1,21 +1,15 @@
 ---
-
 title: Introduction to software updates
 titleSuffix: "Configuration Manager"
 description: "Learn the basics of software updates in System Center Configuration Manager."
-keywords:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 10/30/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-
-
 ---
 # Introduction to software updates in System Center Configuration Manager
 

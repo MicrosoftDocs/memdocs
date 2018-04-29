@@ -2,22 +2,14 @@
 title: "Migrate content"
 titleSuffix: "Configuration Manager"
 description: "Use distribution points to manage content while you migrate data to a System Center Configuration Manager destination hierarchy."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
-caps.latest.revision: 8
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Plan a content deployment migration strategy in System Center Configuration Manager
 

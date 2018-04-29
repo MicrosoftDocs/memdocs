@@ -1,22 +1,14 @@
 ---
 title: "SMS_UserMachineRelationship Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 97f57654-c1d1-4a2f-b05f-9f16b22372b8searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 97f57654-c1d1-4a2f-b05f-9f16b22372b8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_UserMachineRelationship Server WMI Class
 The `SMS_UserMachineRelationship` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents …..   

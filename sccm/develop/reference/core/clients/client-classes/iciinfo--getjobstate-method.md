@@ -1,22 +1,14 @@
 ---
 title: "ICIINFO::GetJobState"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 07a12352-3271-43a8-8ebd-fd31ceaf5ce4searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 07a12352-3271-43a8-8ebd-fd31ceaf5ce4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICIINFO::GetJobState Method
 The `ICIINFO::GetJobState` method, in Configuration Manager, gets the current operational state of the configuration item that is part of a job or task.  

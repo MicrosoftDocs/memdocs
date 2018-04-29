@@ -2,21 +2,14 @@
 title: "Mobile Threat Defense"
 titleSuffix: "Configuration Manager"
 description: "Restrict access to company resources based on device, network and application risk using Configuration Manager and Intune Mobile Threat Defense partners"
-ms.custom: na
 ms.date: 03/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 4c0e6824-2dfe-4700-b817-d5631e0eb872
-caps.latest.revision:
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Intune Mobile Threat Defense connectors in Configuration Manager
 

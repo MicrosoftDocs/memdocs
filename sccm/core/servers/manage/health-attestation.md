@@ -2,19 +2,14 @@
 title: "Health attestation"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Device Health Attestation functionality viewable in the Configuration Manager console."
-ms.custom: na
 ms.date: 10/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
-caps.latest.revision: 17
-author: NathBarnms.author: nathbarnmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Health attestation for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Administrators can view the status of [Windows 10 Device Health Attestation](https://technet.microsoft.com/library/mt592023.aspx) in the Configuration Manager console.  Device health attestation lets the administrator ensure that client computers have the following trustworthy BIOS, TPM, and boot software configurations enabled:  

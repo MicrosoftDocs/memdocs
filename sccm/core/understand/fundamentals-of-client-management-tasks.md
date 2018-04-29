@@ -2,21 +2,14 @@
 title: "Client management fundamentals"
 titleSuffix: "Configuration Manager"
 description: "Learn about tasks that you run to manage System Center Configuration Manager clients."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Fundamentals of client management tasks for System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "SMS_SoftwareConversionRules Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b7b38ebe-43cf-496a-8cec-0fbef9b99ef9searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b7b38ebe-43cf-496a-8cec-0fbef9b99ef9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SoftwareConversionRules Server WMI Class
 The `SMS_SoftwareConversionRules` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that describes the rules to convert the company or product name resource string into a standard name for software inventory. For example, different Microsoft products might contain variations of the Microsoft company name, for example, "Microsoft Corporation" or "Microsoft."  

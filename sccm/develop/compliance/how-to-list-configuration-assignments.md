@@ -1,22 +1,14 @@
 ---
 title: "List Configuration Assignments"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to List Configuration Assignments
 The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  

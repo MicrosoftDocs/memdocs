@@ -2,20 +2,14 @@
 title: "Security and privacy for power management"
 titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for power management in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 469ff35f-59a1-484d-902b-107dd6070baf
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: arob98ms.author: angrobemanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Security and privacy for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This section contains security and privacy information for power management in System Center Configuration Manager.  

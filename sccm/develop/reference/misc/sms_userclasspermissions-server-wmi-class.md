@@ -1,22 +1,14 @@
 ---
 title: "SMS_UserClassPermissions Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 840ce395-0fe8-47c4-815a-cf70367e32bfsearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 840ce395-0fe8-47c4-815a-cf70367e32bf
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_UserClassPermissions Server WMI Class
 The `SMS_UserClassPermissions` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user's class-level permissions for a secured class.  

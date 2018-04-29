@@ -2,21 +2,14 @@
 title: "Collections introduction"
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to using collections in System Center Configuration Manager."
-ms.custom: na
 ms.date: 01/03/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
-caps.latest.revision: 8
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Introduction to collections in System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "UpdateStats Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6719d008-cc4d-43b2-ad11-08cb707a0631searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6719d008-cc4d-43b2-ad11-08cb707a0631
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateStats Method in Class SMS_ApplicationLatest
 The `UpdateStats` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the statistics for this application.  

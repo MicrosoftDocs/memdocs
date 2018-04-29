@@ -1,22 +1,14 @@
 ---
 title: "SMS_LocalizedNameLookup Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 550b49ed-d2f8-4bdf-bac6-26b1c6de9ffdsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 550b49ed-d2f8-4bdf-bac6-26b1c6de9ffd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_LocalizedNameLookup Server WMI Class
 The `SMS_LocalizedNameLookup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a localized name lookup.  

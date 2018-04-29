@@ -1,22 +1,14 @@
 ---
 title: "SmsLsaAccount"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 29ee2324-72c8-48a1-bf37-15c4e03d742esearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 29ee2324-72c8-48a1-bf37-15c4e03d742e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SmsLsaAccount
 In System Center Configuration Manager, the `SmsLsaAccount` function determines whether a particular account has administrator credentials, as required by Configuration Manager services. The function also checks the password.  

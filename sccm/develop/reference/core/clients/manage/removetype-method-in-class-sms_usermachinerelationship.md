@@ -1,22 +1,14 @@
 ---
 title: "RemoveType Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 9601f6bc-c383-40db-b1ec-cac40d6f3e9asearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 9601f6bc-c383-40db-b1ec-cac40d6f3e9a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RemoveType Method in Class SMS_UserMachineRelationship
 The `RemoveType` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, removes a type of the relationship between a user and a device.  

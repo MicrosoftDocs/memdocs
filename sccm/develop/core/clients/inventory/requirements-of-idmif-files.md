@@ -1,21 +1,14 @@
 ---
 title: "Requirements of IDMIF files"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "2017-1-03"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 089b823d-2532-46da-9d33-1d269a5adf03searchScope: - ConfigMgr SDK
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 089b823d-2532-46da-9d33-1d269a5adf03
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Requirements of IDMIF files
 Two delta header comments are required for an IDMIF file. Other comments are optional. The comments you must include are:

@@ -1,20 +1,14 @@
 ---
 title: "RetryContentReplication Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: fde34edf-3ba7-4a89-9004-05c793aaa7e2searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fde34edf-3ba7-4a89-9004-05c793aaa7e2
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RetryContentReplication Method in Class SMS_CM_UpdatePackages
 The `RetryContentReplication` Windows Management Instrumentation (WMI) class method, in Configuration Manager, triggers DistMgr to copy content from the source to the content library.  

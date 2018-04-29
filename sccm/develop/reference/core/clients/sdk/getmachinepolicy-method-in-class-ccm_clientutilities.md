@@ -1,20 +1,14 @@
 ---
 title: "GetMachinePolicy Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 3b5b6f45-d435-4096-8e7f-13290d4019c3searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3b5b6f45-d435-4096-8e7f-13290d4019c3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetMachinePolicy Method in Class CCM_ClientUtilities
 The `GetMachinePolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the machine policy for a client device.  

@@ -2,21 +2,14 @@
 title: "Update and retire applications"
 titleSuffix: "Configuration Manager"
 description: "Revise, supersede, or uninstall deployed applications by using System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
-caps.latest.revision: 9
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Update and retire applications with System Center Configuration Manager
 

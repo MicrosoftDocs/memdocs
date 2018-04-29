@@ -1,20 +1,14 @@
 ---
 title: "SMS_ServicePlan Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5a387a79-8915-4f09-a354-96da17798a89searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5a387a79-8915-4f09-a354-96da17798a89
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ServicePlan Server WMI Class
 The `SMS_ServicePlan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a service plan.  

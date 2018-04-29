@@ -2,18 +2,13 @@
 title: "New version 1706"
 titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1706 of System Center Configuration Manager."
-ms.custom: na
-ms.date:  08/11/2017
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.date: 08/11/2017
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # What&#39;s new in version 1706 of System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "SMS_ST_RecurMonthlyByWeekday Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: efed0902-d5cc-40e1-82aa-d6ff893ee44esearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: efed0902-d5cc-40e1-82aa-d6ff893ee44e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ST_RecurMonthlyByWeekday Server WMI Class
 The `SMS_ST_RecurMonthlyByWeekday` WMI class is an SMS Provider server class, in System Center Configuration Manager, that represents a schedule token for events that occur for a specific day of the week, on a given week of the month, at a given monthly interval, for example, the second Saturday of every month.  

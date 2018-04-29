@@ -2,20 +2,14 @@
 title: "Predeclare devices with IMEI or iOS serial numbers"
 titleSuffix: "Configuration Manager"
 description: "Predeclare corporate-owned devices with their IMEI or iOS serial number."
-ms.custom: na
 ms.date: 09/01/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
-caps.latest.revision: 3
-author: nathbarn
-ms.author: nathbarn
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Predeclare devices with IMEI or iOS serial numbers
 

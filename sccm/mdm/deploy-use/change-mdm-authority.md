@@ -6,12 +6,10 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 04/11/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-    - configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-
 ---
 # Change your MDM authority
 You can change your MDM authority without having to contact Microsoft Support and without having to unenroll and reenroll your existing managed devices. This article provides the steps to change an existing Microsoft Intune tenant configured from the Configuration Manager console (hybrid) to Intune standalone. When you complete the steps in this article, devices are managed by Microsoft Intune in the [Azure portal](https://portal.azure.com). 

@@ -2,21 +2,14 @@
 title: "Fundamentals of Configuration Manager as a service and Windows as a service"
 titleSuffix: "Configuration Manager"
 description: "Get basic information on adopting Configuration Manager as a service to support Windows as a service."
-ms.custom: na
 ms.date: 01/04/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Keep Windows 10 up-to-date in the enterprise using Configuration Manager

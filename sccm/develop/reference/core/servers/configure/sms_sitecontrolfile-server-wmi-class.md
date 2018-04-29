@@ -1,22 +1,14 @@
 ---
 title: "SMS_SiteControlFile Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 06c30f1a-fb2a-49c0-863c-6cf8adf3d162searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 06c30f1a-fb2a-49c0-863c-6cf8adf3d162
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SiteControlFile Server WMI Class
 The `SMS_SiteControlFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the site control file and contains methods to maintain version control of the site control file.  

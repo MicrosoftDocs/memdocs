@@ -2,19 +2,14 @@
 title: "Protect data and site infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how protect your organization's resources from exposure or malicious attack with System Center Configuration Manager."
-ms.custom: na
 ms.date: 11/27/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
-caps.latest.revision: 8
-author: arob98ms.author: angrobemanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Protect data and site infrastructure with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 

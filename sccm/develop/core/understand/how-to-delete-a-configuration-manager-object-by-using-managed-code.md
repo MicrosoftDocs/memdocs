@@ -1,22 +1,14 @@
 ---
 title: "Delete an Object by Using Managed Code"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3e797ee7-ebc6-4d4d-b5d7-8a3b901d8d51searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3e797ee7-ebc6-4d4d-b5d7-8a3b901d8d51
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Delete a Configuration Manager Object by Using Managed Code
 To delete a System Center Configuration Manager object by using the managed SMS Provider, use the [IResultObject.Delete](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.delete.aspx) method. You can get a [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object for a System Center Configuration Manager object in numerous ways. For more information, see [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)  

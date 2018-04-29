@@ -1,20 +1,14 @@
 ---
 title: "SMS_MDMBulkEnrollmentPackages Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: cf35074c-b179-4511-b824-27ef758bdb05searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cf35074c-b179-4511-b824-27ef758bdb05
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MDMBulkEnrollmentPackages Server WMI Class
 The  `SMS_MDMBulkEnrollmentPackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management  (MDM) bulk enrollment packages.  

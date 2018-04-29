@@ -2,22 +2,14 @@
 title: "Customize operating system images "
 titleSuffix: "Configuration Manager"
 description: "Use capture-and-build task sequences, manual configuration, or a combination of both to customize an operating system image."
-ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
-caps.latest.revision: 12
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Customize operating system images with System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "SmsGrantServiceLogonRight"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 47c084e5-af3c-4953-85bf-6b9cb4b9303fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 47c084e5-af3c-4953-85bf-6b9cb4b9303f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SmsGrantServiceLogonRight
 In System Center Configuration Manager, the `SmsGrantServiceLogonRight` function grants service logon credentials to the specified account.  

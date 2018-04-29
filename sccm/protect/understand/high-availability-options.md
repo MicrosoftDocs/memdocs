@@ -2,21 +2,14 @@
 title: "High availability"
 titleSuffix: "Configuration Manager"
 description: "Learn how to deploy System Center Configuration Manager by using options that maintain a high level of available service."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
-caps.latest.revision: 4
-author: mestew
-ms.author: mstewart
-
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # High availability options for System Center Configuration Manager
 

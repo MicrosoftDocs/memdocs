@@ -1,22 +1,14 @@
 ---
 title: "AddChangeNotification Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4b9442b1-d1c0-4d46-9bd8-f1a169a21360searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4b9442b1-d1c0-4d46-9bd8-f1a169a21360
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddChangeNotification Method in Class SMS_SoftwareUpdatesPackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds a software updates package change notification.  

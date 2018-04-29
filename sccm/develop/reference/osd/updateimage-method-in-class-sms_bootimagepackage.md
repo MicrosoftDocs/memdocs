@@ -1,22 +1,14 @@
 ---
 title: "UpdateImage Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: edd9c38e-004b-4bf9-9d9b-d8e6b7d4d179searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: edd9c38e-004b-4bf9-9d9b-d8e6b7d4d179
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateImage Method in Class SMS_BootImagePackage
 The `UpdateImage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a copy of the current boot image source .wim file and updates the copy with the most current operating system deployment binaries.  

@@ -2,18 +2,14 @@
 title: "Deploy Wi-Fi, VPN, email, and certificate profiles"
 titleSuffix: "Configuration Manager"
 description: "Learn how to deploy Wi-Fi, VPN, email, and certificate profiles in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
-caps.latest.revision: 5
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Deploy profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Profiles must be deployed to one or more collections before they can be used.  

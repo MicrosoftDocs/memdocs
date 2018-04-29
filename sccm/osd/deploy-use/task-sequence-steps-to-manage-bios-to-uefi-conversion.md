@@ -1,20 +1,15 @@
 ---
 title: Task sequence steps to manage BIOS to UEFI conversion
-titleSuffix: "Configuration Manager"
-description: "Learn how to customize an operating system deployment task sequence to prepare a FAT32 partition for transition to UEFI."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: Learn how to customize an operating system deployment task sequence to prepare a FAT32 partition for transition to UEFI.
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Task sequence steps to manage BIOS to UEFI conversion

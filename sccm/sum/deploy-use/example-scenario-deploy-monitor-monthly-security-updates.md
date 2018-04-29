@@ -1,20 +1,15 @@
 ---
-
 title: Example scenario to deploy and monitor security software updates
 titleSuffix: "Configuration Manager"
 description: "Use this example scenario of how to use software updates in Configuration Manager to deploy and monitor security software updates for Microsoft monthly releases."
-keywords:
-author: dougebyms.author: dougeby
-manager: angrobe
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
- - configmgr-sum
-ms.service:
+ms.technology: configmgr-sum
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-
-
+ms.author: aaroncz
 ---
 # Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft*Applies to: System Center Configuration Manager (Current Branch)*
 This topic provides an example scenario of how you can use software updates in System Center Configuration Manager to deploy and monitor the security software updates that Microsoft releases monthly.  

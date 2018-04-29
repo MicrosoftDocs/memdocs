@@ -1,22 +1,14 @@
 ---
 title: "Create a Collection Variable"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a309d431-d654-42f6-883b-07dac70216f8searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a309d431-d654-42f6-883b-07dac70216f8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Collection Variable in Configuration Manager
 You create a collection variable for a System Center Configuration Manager collection by adding instances of [SMS_CollectionVariable Server WMI Class](../../develop/reference/osd/sms_collectionvariable-server-wmi-class.md) to the `CollectionVariables` property of [SMS_CollectionSettings Server WMI Class](../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md).  

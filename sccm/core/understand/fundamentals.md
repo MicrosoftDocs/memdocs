@@ -2,21 +2,14 @@
 title: "Fundamentals"
 titleSuffix: "Configuration Manager"
 description: "Learn about basic concepts for System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
-caps.latest.revision: 11
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # Fundamentals of System Center Configuration Manager
 

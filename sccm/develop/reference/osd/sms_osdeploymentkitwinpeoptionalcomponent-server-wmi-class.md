@@ -1,20 +1,14 @@
 ---
 title: "SMS_OSDeploymentKitWinPEOptionalComponent Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 972bf59c-9d64-49ff-bd5d-77c7fed7eb36searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 972bf59c-9d64-49ff-bd5d-77c7fed7eb36
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_OSDeploymentKitWinPEOptionalComponent Server WMI Class
 The `SMS_OSDeploymentKitWinPEOptionalComponent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that Maps Assessment and Deployment Kit (ADK) versions to supported optional components.  

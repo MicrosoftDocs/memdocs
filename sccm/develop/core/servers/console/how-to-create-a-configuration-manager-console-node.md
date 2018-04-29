@@ -1,22 +1,14 @@
 ---
 title: "Create a Console Node"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: df3f9be7-c724-40f9-8d1e-368de8018bbdsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: df3f9be7-c724-40f9-8d1e-368de8018bbd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Configuration Manager Console Node
 In System Center Configuration Manager, to create a Configuration Manager console node, you create an XML description of the node and add it to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\Extensions\Nodes\\<GUID\> folder. GUID is the GUID namespace for the parent node.  

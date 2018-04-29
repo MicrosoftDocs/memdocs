@@ -1,22 +1,14 @@
 ---
 title: "CancelDistribution Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bfc44693-3266-461f-988a-886333ac9aafsearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bfc44693-3266-461f-988a-886333ac9aaf
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CancelDistribution Method in Class SMS_DistributionPoint
 The `CancelDistribution` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a package distribution. If there is a distribution in-progress for the specified package to the specified distribution point, then calling this method will cancel the ongoing distribution and the status of the package distribution will be set to failed for this distribution point.  

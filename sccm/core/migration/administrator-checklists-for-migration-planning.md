@@ -2,22 +2,14 @@
 title: "Migration checklists"
 titleSuffix: "Configuration Manager"
 description: "Use administrator checklists to help you plan a migration strategy to System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
-caps.latest.revision: 7
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Administrator checklists for migration planning in System Center Configuration Manager
 

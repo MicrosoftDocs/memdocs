@@ -1,22 +1,14 @@
 ---
 title: "SMS_GlobalCondition Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 671a582b-ccd0-4e5c-a2ba-795a4766aa6bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 14
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 671a582b-ccd0-4e5c-a2ba-795a4766aa6b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_GlobalCondition Server WMI Class
 The `SMS_GlobalCondition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to create, retrieve, modify, or delete global conditions of type Setting or Expression.  

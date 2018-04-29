@@ -1,22 +1,14 @@
 ---
 title: "ICCMEvent::EventType Property"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 049f86f3-634e-46ca-b162-7fa5b5ac8d14searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 049f86f3-634e-46ca-b162-7fa5b5ac8d14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICCMEvent::EventType Property
 `ICcmEvent::EventType` is a read/write property, in Configuration Manager, that indicates the type of Windows Management Instrumentation (WMI) event that is being raised.  

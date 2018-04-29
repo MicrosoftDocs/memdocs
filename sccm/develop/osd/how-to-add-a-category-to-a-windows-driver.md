@@ -1,22 +1,14 @@
 ---
 title: "Add a Category to a Windows Driver"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ed70a6c3-137b-41f9-b428-675737fb6a86searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ed70a6c3-137b-41f9-b428-675737fb6a86
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Add a Category to a Windows Driver
 In System Center Configuration Manager, you add a category to a Windows driver by adding the unique identifier for the category to the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)`CategoryInstance_UniqueIDs` array property. The array contains one or more string identifiers that match the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)`CategoryInstance_UniqueID` property value. There is an instance of [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) object for each category in the system.  

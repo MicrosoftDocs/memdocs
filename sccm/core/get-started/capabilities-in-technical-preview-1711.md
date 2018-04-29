@@ -2,19 +2,14 @@
 title: "Technical Preview 1711 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1711 for System Center Configuration Manager."
-ms.custom: na
 ms.date: 11/17/2017
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Capabilities in Technical Preview 1711 for System Center Configuration Manager
 

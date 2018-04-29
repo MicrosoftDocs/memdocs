@@ -2,16 +2,13 @@
 title: Automatically deploy software updates
 titleSuffix: "Configuration Manager"
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
-keywords:
-author: mestew   
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ---
 

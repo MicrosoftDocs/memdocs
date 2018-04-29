@@ -2,23 +2,14 @@
 title: "Create Endpoint Protection point site system role"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
-defintion: ""
-definition: ""
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
-caps.latest.revision: 21
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Create an Endpoint Protection point site system role
 

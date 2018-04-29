@@ -2,21 +2,14 @@
 title: "Product and Licensing FAQ"
 titleSuffix: "Configuration Manager"
 description: "Find answers for common product and license questions for System Center Configuration Manager."
-ms.custom: na
 ms.date: 02/21/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid:  ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
-caps.latest.revision: 0
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Frequently asked questions for Configuration Manager branches and licensing
 

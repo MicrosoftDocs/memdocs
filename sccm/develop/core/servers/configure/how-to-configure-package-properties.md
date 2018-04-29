@@ -1,22 +1,14 @@
 ---
 title: "Configure Package Properties"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 60d90c19-2810-4f10-860f-aa3087f35b03searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 60d90c19-2810-4f10-860f-aa3087f35b03
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Configure Package Properties
 The following example shows how to configure the properties of an existing package, in System Center Configuration Manager, by using the `SMS_Package` class.  

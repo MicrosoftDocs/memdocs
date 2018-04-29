@@ -2,17 +2,11 @@
 title: Client installation properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line properties for installing the Configuration Manager client.
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
