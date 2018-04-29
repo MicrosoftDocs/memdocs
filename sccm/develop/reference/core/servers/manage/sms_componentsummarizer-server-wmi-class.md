@@ -1,22 +1,14 @@
 ---
 title: "SMS_ComponentSummarizer Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 79363139-dce4-47c0-9c16-8a3979d2e4dfsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 79363139-dce4-47c0-9c16-8a3979d2e4df
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ComponentSummarizer Server WMI Class
 The `SMS_ComponentSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a component summarizer that reports on the health of individual Configuration Manager components.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_UserApplicationRequestHistoryItem Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4d140550-c95a-4367-8d24-b0704de33c0asearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4d140550-c95a-4367-8d24-b0704de33c0a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_UserApplicationRequestHistoryItem Server WMI Class
 The `SMS_UserApplicationRequestHistoryItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an update to an instance of `SMS_UserApplicationRequest`.  

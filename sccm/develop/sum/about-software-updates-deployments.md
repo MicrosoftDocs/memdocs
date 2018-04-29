@@ -1,22 +1,14 @@
 ---
 title: "Software Updates Deployments"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "12/30/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # About Software Updates Deployments

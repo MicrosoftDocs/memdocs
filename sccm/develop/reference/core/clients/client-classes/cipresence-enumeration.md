@@ -1,22 +1,14 @@
 ---
 title: "CIPresence Enumeration"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0874e405-5ab9-4f43-bb2f-42a95ae7a1c7searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0874e405-5ab9-4f43-bb2f-42a95ae7a1c7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CIPresence Enumeration
 In System Center Configuration Manager, the `CIPresence` enumeration defines configuration item presence types used in the discovery process.  

@@ -1,22 +1,14 @@
 ---
 title: "Allow Reboots Outside of a Maintenance Window"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c2f7999b-533d-493f-b2b4-079b25c36f2dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c2f7999b-533d-493f-b2b4-079b25c36f2d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Configure a Advertisement to Allow Reboots Outside of a Maintenance Window
 The following example shows how to configure an advertisement to allow reboots outside of a maintenance window by using the `SMS_Advertisement` class and the `AdvertFlags` class property in System Center Configuration Manager.  

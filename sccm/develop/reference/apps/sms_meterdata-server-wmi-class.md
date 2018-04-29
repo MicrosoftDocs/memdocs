@@ -1,22 +1,14 @@
 ---
 title: "SMS_MeterData Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 5e7733bb-3c1f-4b84-a7ff-9c100411b7cbsearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5e7733bb-3c1f-4b84-a7ff-9c100411b7cb
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MeterData Server WMI Class
 The `SMS_MeterData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents captured software metering data.  

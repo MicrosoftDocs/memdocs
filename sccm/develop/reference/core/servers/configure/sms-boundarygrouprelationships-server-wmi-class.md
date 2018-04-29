@@ -1,21 +1,14 @@
 ---
 title: "SMS_BoundaryGroupRelationships Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: <>
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 155ed51e-a6a9-4ed6-bddb-5eabbb77ec4c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_BoundaryGroupRelationships Server WMI Class
 

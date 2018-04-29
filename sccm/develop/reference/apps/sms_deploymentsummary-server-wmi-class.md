@@ -1,22 +1,14 @@
 ---
 title: "SMS_DeploymentSummary Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 615f6edc-392f-43d5-8078-29f8c21548f8searchScope: - ConfigMgr SDK
-caps.latest.revision: 24
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 615f6edc-392f-43d5-8078-29f8c21548f8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DeploymentSummary Server WMI Class
 The `SMS_DeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application, SUM or classic program deployment summary.  

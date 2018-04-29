@@ -1,20 +1,14 @@
 ---
 title: "RiskyDeploymentStatusMessage Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: cf2b7ba4-e61c-4c13-ac69-376f94a7e698searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cf2b7ba4-e61c-4c13-ac69-376f94a7e698
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RiskyDeploymentStatusMessage Method in Class SMS_Advertisement
 The `RiskyDeploymentStatusMessage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sends a warning status message about a user deployment to a risky collection.  

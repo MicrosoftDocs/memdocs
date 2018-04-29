@@ -1,22 +1,14 @@
 ---
 title: "SetGlobalLoggingConfiguration Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SetGlobalLoggingConfiguration Method in Class SMS_Client
 The `SetGlobalLoggingConfiguration` method, in Configuration Manager, defines the global logging configuration for the client. This configuration represents either component-level logging or default logging if component-level logging is not defined.  

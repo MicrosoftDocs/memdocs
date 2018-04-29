@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Summarizers"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1e868de3-9b0f-4d9a-a100-c0459049455csearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1e868de3-9b0f-4d9a-a100-c0459049455c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Summarizers
 This section provides information about the System Center Configuration Manager summarizers that can be used to obtain summary information about System Center Configuration Manager.  

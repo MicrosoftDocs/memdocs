@@ -1,22 +1,14 @@
 ---
 title: "Set an OS Deployment Task Sequence Variable"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 47653e95-da5f-40c8-b4a7-11a90ad71452searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 47653e95-da5f-40c8-b4a7-11a90ad71452
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Set an Operating System Deployment Task Sequence Variable
 In System Center Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](../../develop/reference/osd/sms_tasksequence_setvariableaction-server-wmi-class.md) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  

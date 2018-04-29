@@ -1,22 +1,14 @@
 ---
 title: "SMS_LocalMP Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 88444515-6694-45a4-b5af-87dfaad22b80searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 88444515-6694-45a4-b5af-87dfaad22b80
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_LocalMP Client WMI Class
 The `SMS_LocalMP` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the local management point.  

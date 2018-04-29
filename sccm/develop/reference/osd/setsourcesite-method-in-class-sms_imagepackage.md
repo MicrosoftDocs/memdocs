@@ -1,22 +1,14 @@
 ---
 title: "SetSourceSite Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 2fd150ee-dbb8-43d5-98b7-11222e5e4c85searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2fd150ee-dbb8-43d5-98b7-11222e5e4c85
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SetSourceSite Method in Class SMS_ImagePackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the image package.  

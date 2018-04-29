@@ -1,22 +1,14 @@
 ---
 title: "Create a Custom Action Control"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 74d39782-37a9-4358-8e39-7be750a13f98searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 74d39782-37a9-4358-8e39-7be750a13f98
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Configuration Manager Custom Action Control
 In System Center Configuration Manager, to create a custom action control, you create a Windows control by using the following two classes:  

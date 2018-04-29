@@ -1,22 +1,14 @@
 ---
 title: "Delete a Collection"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: 12/06/2016
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: nbigman
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Delete a Collection
 Your application can delete a collection in System Center Configuration Manager by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and class properties.  

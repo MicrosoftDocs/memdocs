@@ -1,22 +1,14 @@
 ---
 title: "AddDistributionPoints Method in SMS_BootImagePackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 46fc8e66-a1ab-4260-a5db-e12f6fd553e5searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 46fc8e66-a1ab-4260-a5db-e12f6fd553e5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddDistributionPoints Method in Class SMS_BootImagePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the boot image package.  

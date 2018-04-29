@@ -1,22 +1,14 @@
 ---
 title: "GetSummary Method in Class SMS_AICategory"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c912603e-0480-4518-a1df-fd4a9664ea3bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c912603e-0480-4518-a1df-fd4a9664ea3b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetSummary Method in Class SMS_AICategory
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, provides a summary count of all the categories, families, and tags used by Asset Intelligence.  

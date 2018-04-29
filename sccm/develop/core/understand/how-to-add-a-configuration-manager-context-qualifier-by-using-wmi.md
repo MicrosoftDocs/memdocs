@@ -1,22 +1,14 @@
 ---
 title: "Add a Context Qualifier by Using WMI"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7e6d8d4e-2454-40a3-9df7-649681f47dfesearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7e6d8d4e-2454-40a3-9df7-649681f47dfe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Add a Configuration Manager Context Qualifier by Using WMI
 In System Center Configuration Manager, you add context qualifiers to a connection ([SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)) or object ([SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)) by creating a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set as a parameter to connection and object methods.  

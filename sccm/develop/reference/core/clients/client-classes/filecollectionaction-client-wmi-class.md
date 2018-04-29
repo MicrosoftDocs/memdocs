@@ -1,22 +1,14 @@
 ---
 title: "FileCollectionAction Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 83a2cce8-789b-4599-9823-98d02a8e733fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 83a2cce8-789b-4599-9823-98d02a8e733f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # FileCollectionAction Client WMI Class
 In Configuration Manager, the **FileCollectionAction** class is a client Windows Management Instrumentation (WMI) class that associates a set of file collection rules with reporting details, tying together files to collect with the destination of the report.  

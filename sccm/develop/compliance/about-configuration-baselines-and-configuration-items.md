@@ -1,22 +1,14 @@
 ---
 title: "About Configuration Baselines and Items"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 56bdef4b-bcf8-46f5-bf92-d86e0dfce08dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 56bdef4b-bcf8-46f5-bf92-d86e0dfce08d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Baselines and Configuration Items
 In System Center Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in System Center Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  

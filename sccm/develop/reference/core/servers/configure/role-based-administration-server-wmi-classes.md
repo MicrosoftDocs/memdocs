@@ -1,22 +1,14 @@
 ---
 title: "Role-Based Administration Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e94bebe4-b7d9-4e87-9ee8-10554e1a4a72searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e94bebe4-b7d9-4e87-9ee8-10554e1a4a72
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Role-Based Administration Server WMI Classes
 Role-Based Administration Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager support security on the server. The System Center Configuration Manager server class schema is a set of WMI classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager SDK Requirements](../../../../../develop/core/reqs/configuration-manager-sdk-requirements.md).  

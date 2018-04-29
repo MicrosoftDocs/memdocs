@@ -1,20 +1,14 @@
 ---
 title: "SMS_MAMStoreApplication Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 2f1e23a4-4a19-4502-b14f-2f7ab3c78417searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2f1e23a4-4a19-4502-b14f-2f7ab3c78417
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MAMStoreApplication Server WMI Class
 The `SMS_MAMStoreApplication` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents mobile application management (MAM) store application lists.  

@@ -1,22 +1,14 @@
 ---
 title: "Use SMSCSTAT.DLL to Create Status Messages"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4149481d-d78d-422a-b342-cf7ddcf2962csearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4149481d-d78d-422a-b342-cf7ddcf2962c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Using SMSCSTAT.DLL to Create Status Messages
 Smscstat.dll is a library of 32-bit C APIs for reporting System Center Configuration Manager status messages from an application that is running on either client computer. Smscstat.dll is only present and only functions properly on Windows 95, Windows 98, Windows NT, Windows 2000, Windows Server 2003, Windows XP, and Windows Vista computers that have the client software installed on them.  

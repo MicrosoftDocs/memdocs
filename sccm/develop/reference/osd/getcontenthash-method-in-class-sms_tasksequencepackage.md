@@ -1,22 +1,14 @@
 ---
 title: "GetContentHash Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b3b83197-97f0-4d92-8b99-5b9954a6c3d4searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b3b83197-97f0-4d92-8b99-5b9954a6c3d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetContentHash Method in Class SMS_TaskSequencePackage
 The `GetContentHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of specific System Center Configuration Manager content.  

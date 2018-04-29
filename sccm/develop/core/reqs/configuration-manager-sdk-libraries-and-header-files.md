@@ -1,22 +1,14 @@
 ---
 title: "SDK Libraries and Header Files"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c3dbe6c9-31ba-48bb-b055-18a0a536e3eesearchScope: - ConfigMgr SDK
-caps.latest.revision: 19
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c3dbe6c9-31ba-48bb-b055-18a0a536e3ee
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager SDK Libraries and Header Files
 In System Center Configuration Manager, when you write unmanaged applications, you might have to include one or more of the following libraries, which are included with the Configuration Manager SDK. Use COM Interoperability to access COM objects from .NET Framework applications.  

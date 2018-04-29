@@ -1,20 +1,14 @@
 ---
 title: "ImportForUser Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6521620d-03b4-4a3b-9579-4fe211b3b718searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6521620d-03b4-4a3b-9579-4fe211b3b718
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ImportForUser Method in Class SMS_ClientPfxCertificate
 The `ImportForUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a certificate for a user, encrypted by using a password.  

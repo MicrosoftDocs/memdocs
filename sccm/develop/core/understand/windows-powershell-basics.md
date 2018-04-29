@@ -1,22 +1,14 @@
 ---
 title: "Windows PowerShell Basics"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 519ea4d0-94ed-4fff-beec-edb99e6089e8searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 519ea4d0-94ed-4fff-beec-edb99e6089e8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Windows PowerShell Basics
 System Center 2012 Configuration Manager SP1 introduced native PowerShell support. Windows PowerShell is Microsoft’s approach to automation and is being implemented across all System Center products. This topic will introduce you to some of the basics of using Windows PowerShell with Configuration Manager.  

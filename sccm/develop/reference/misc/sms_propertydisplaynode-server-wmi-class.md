@@ -1,22 +1,14 @@
 ---
 title: "SMS_PropertyDisplayNode Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: eb11b75c-4a5d-47f5-81cb-8869156fdb1fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: eb11b75c-4a5d-47f5-81cb-8869156fdb1f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_PropertyDisplayNode Server WMI Class
 The `SMS_PropertyDisplayNode` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the nodes that are displayed in Resource Explorer.  

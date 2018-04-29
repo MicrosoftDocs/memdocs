@@ -1,22 +1,14 @@
 ---
 title: "SMS_MeteredUser Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 368c8640-fb35-43bf-83c6-611c9fea173dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 368c8640-fb35-43bf-83c6-611c9fea173d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MeteredUser Server WMI Class
 The `SMS_MeteredUser` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists users that have used metered applications.  

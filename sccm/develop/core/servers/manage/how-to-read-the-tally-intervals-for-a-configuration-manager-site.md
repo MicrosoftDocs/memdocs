@@ -1,22 +1,14 @@
 ---
 title: "Read the Tally Intervals for a Site"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 856f0bb5-25cd-4c54-b452-6a0d6acc7500searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 856f0bb5-25cd-4c54-b452-6a0d6acc7500
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Read the Tally Intervals for a Configuration Manager Site
 In System Center Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file `SMS_COMPONENT_STATUS_SUMMARIZER` object `Summary_Intervals` embedded property list.  

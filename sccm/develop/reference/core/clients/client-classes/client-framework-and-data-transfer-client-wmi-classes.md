@@ -1,22 +1,14 @@
 ---
 title: "Client Framework and Data Transfer Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 939d7728-0e5c-4d98-8a70-0ffcfe41f479searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 939d7728-0e5c-4d98-8a70-0ffcfe41f479
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Client Framework and Data Transfer Client WMI Classes
 This section describes the Client Configuration Manager (CCM) framework and data transfer classes in System Center Configuration Manager for the client.  

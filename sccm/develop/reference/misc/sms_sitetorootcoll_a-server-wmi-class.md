@@ -1,22 +1,14 @@
 ---
 title: "SMS_SiteToROOTColl_a Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 31aa4a8c-0422-4d65-bd9c-c5006c2bc215searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 31aa4a8c-0422-4d65-bd9c-c5006c2bc215
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SiteToROOTColl_a Server WMI Class
 The `SMS_SiteToROOTColl_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates an [SMS_Site Server WMI Class](../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md) object with an [SMS_Collection Server WMI Class](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object representing the root of the collections to which the site belongs.  

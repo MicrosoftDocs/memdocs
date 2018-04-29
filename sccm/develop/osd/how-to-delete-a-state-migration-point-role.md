@@ -1,22 +1,14 @@
 ---
 title: "Delete a State Migration Point Role"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 69475541-e5e3-45c4-8989-142cf986d94csearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 69475541-e5e3-45c4-8989-142cf986d94c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Delete a State Migration Point Role
 You delete the state migration point role, in System Center Configuration Manager, by deleting the role's [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md) object.  

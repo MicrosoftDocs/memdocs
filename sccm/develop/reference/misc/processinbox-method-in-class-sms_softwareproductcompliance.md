@@ -1,22 +1,14 @@
 ---
 title: "ProcessInBox Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f47e1a8e-387d-44be-b45f-8e75c19485a9searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f47e1a8e-387d-44be-b45f-8e75c19485a9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ProcessInBox Method in Class SMS_SoftwareProductCompliance
 The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports all records, valid or invalid, found in the Software Product Compliance inbox, which is located in the \\*Smsinstalldir*\Y2k directory.  

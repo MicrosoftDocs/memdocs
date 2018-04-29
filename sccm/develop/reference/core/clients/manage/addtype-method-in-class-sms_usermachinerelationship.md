@@ -1,22 +1,14 @@
 ---
 title: "AddType Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8b292712-09c5-438e-adc1-0458c96a50ddsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8b292712-09c5-438e-adc1-0458c96a50dd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddType Method in Class SMS_UserMachineRelationship
 The `AddType` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds a type of the relationship between a user and a device.  

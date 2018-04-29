@@ -1,22 +1,14 @@
 ---
 title: "ITsMediaClass Interface"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: d2e2146c-8c64-40ab-8b6f-6b7d1dd571c2searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: d2e2146c-8c64-40ab-8b6f-6b7d1dd571c2
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ITsMediaClass Interface
 The `ITsMediaClass` automation interface, in System Center Configuration Manager, enables the creation of task sequence media for operating system deployment. This interface inherits from `IDispatch`.  

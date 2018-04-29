@@ -1,22 +1,14 @@
 ---
 title: "Enable and Disable Remote Tools"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bc7ee810-933e-403f-af2d-da75f4c17c1csearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bc7ee810-933e-403f-af2d-da75f4c17c1c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enable and Disable Remote Tools
 You enable or disable the Remote Tools Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  

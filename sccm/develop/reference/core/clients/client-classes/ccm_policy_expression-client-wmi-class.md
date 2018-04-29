@@ -1,22 +1,14 @@
 ---
 title: "CCM_Policy_Expression Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153esearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_Policy_Expression Client WMI Class
 In System Center Configuration Manager, the `CCM_Policy_Expression` class is a client Windows Management Instruementation (WMI) class that represents a policy expression that evaluates to either `true` or `false`.  

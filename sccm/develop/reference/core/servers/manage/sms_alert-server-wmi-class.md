@@ -1,22 +1,14 @@
 ---
 title: "SMS_Alert Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bbf073bd-7b90-4ada-b962-e3f905a86ccfsearchScope: - ConfigMgr SDK
-caps.latest.revision: 14
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bbf073bd-7b90-4ada-b962-e3f905a86ccf
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_Alert Server WMI Class
 The `SMS_Alert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents general alerts, which exclude client status alerts and System Center Endpoint Protection alerts.  

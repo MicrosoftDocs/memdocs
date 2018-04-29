@@ -1,22 +1,14 @@
 ---
 title: "SMS_FullCollectionMembership Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c8c0f370-89b4-4fcf-9057-0867d1f6dc3dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 19
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c8c0f370-89b4-4fcf-9057-0867d1f6dc3d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_FullCollectionMembership Server WMI Class
 The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all member resources of a specific collection.  

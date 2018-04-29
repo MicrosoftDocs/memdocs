@@ -1,22 +1,14 @@
 ---
 title: "SMS_DriverContainer Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 21cf7cfa-d55c-46a0-a8a5-9f7687d4d2ecsearchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 21cf7cfa-d55c-46a0-a8a5-9f7687d4d2ec
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DriverContainer Server WMI Class
 The `SMS_DriverContainer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents boot image or driver package information that refers to the specified driver.  

@@ -1,22 +1,14 @@
 ---
 title: "Enable or Disable the Advertised Programs Client Agent"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c6fcffc5-4695-4de5-9ec3-90595239049bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c6fcffc5-4695-4de5-9ec3-90595239049b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enable or Disable the Software Distribution Advertised Programs Client Agent
 In System Center Configuration Manager, the site control file maintains configuration for the site. This topic shows how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file. Details about reading from and writing to the site control file are discussed in the [Configuration Manager Site Control File](../../../../develop/core/understand/site-control-file.md) section of the Configuration Manager SDK.  

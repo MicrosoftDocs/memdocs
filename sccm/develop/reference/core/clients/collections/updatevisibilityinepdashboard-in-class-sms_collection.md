@@ -1,22 +1,14 @@
 ---
 title: "UpdateVisibilityInEPDashBoard Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1adf0ff2-437e-486d-b548-3470b5246641searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1adf0ff2-437e-486d-b548-3470b5246641
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateVisibilityInEPDashBoard Method in Class SMS_Collection
 The `UpdateVisibilityInEPDashBoard` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that shows this collection in the Endpoint Protection dashboard.  

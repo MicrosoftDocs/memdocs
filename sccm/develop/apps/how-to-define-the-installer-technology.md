@@ -1,22 +1,14 @@
 ---
 title: "How To Define the Installer Technology"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c47f7a79-62de-4afa-a901-a25789329f32searchScope: - ConfigMgr SDK
-caps.latest.revision: 23
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c47f7a79-62de-4afa-a901-a25789329f32
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How To Define the Installer Technology
 To define the application management installer technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology.InstallerTechnology` class. The new class instance will define the installer technology used to install a specific application to devices.  

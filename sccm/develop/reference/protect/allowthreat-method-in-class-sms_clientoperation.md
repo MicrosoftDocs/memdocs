@@ -1,22 +1,14 @@
 ---
 title: "AllowThreat Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 601d8cac-f0a7-4d98-82b6-60d3a8080b23searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 601d8cac-f0a7-4d98-82b6-60d3a8080b23
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AllowThreat Method in Class SMS_ClientOperation
 The `AllowThreat` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that allows the specified threat (identified by `ThreatID`) to all members in a specific collection.  

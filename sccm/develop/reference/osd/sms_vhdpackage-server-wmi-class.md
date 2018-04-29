@@ -1,22 +1,14 @@
 ---
 title: "SMS_VhdPackage Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ce81295e-34ff-4698-a973-9ecd44b03e04searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ce81295e-34ff-4698-a973-9ecd44b03e04
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_VhdPackage Server WMI Class
 The `SMS_VhdPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for virtual hard drives used to deploy a valid operating system. For example, to distribute Windows 8 in VHD format to a client computer.  
