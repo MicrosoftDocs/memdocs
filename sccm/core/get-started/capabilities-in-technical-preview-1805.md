@@ -88,8 +88,6 @@ Follow the instructions to create a phased deployment where you manually configu
 
 11. Confirm your selections on the **Summary** tab. Then click **Next** and proceed though the wizard.  
 
-### Known issues
-- When you edit a phase, it causes a console exception that a key is not found. As a temporary workaround in this technical preview, delete the phase, and then add a new phase with the desired changes.<!--512691-->  
 
 
 
