@@ -1,22 +1,14 @@
 ---
 title: "SMS_R_IPNetwork Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 05cbc962-ac74-4b55-b58f-f2ccd4a9fe75searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 05cbc962-ac74-4b55-b58f-f2ccd4a9fe75
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_R_IPNetwork Server WMI Class
 The `SMS_R_IPNetwork` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for resources discovered by the Network Discovery Agent.  

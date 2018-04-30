@@ -1,22 +1,14 @@
 ---
 title: "Import Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 384ee719-c047-49a3-9847-5df0e443245fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 384ee719-c047-49a3-9847-5df0e443245f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Import Method in Class SMS_AIMLSParser
 The `Import` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, imports the MLS statement as specified by the `MLSFilepath` parameter (in UNC format) into the System Center Configuration Manager database.  

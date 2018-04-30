@@ -2,20 +2,14 @@
 title: "Manage update catalogs"
 titleSuffix: "Configuration Manager"
 description: "Manage software update catalogs for System Center Updates Publisher"
-ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
 ---
 # Manage software update catalogs in Updates Publisher

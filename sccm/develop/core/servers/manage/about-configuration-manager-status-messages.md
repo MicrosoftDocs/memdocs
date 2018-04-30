@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Status Messages"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Status Messages
 In System Center Configuration Manager, status messages are the universal means for components to communicate information about their health to the System Center Configuration Manager administrator. Status messages are similar to Windows NT Events; they have a severity, ID, description, and so on.  

@@ -1,18 +1,15 @@
 ---
-
 title: Manage settings for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
-keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: aczechowski
 ms.date: 03/26/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
-
+manager: dougeby
+ms.author: aaroncz
 ---
 
 #  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  *Applies to: System Center Configuration Manager (Current Branch)*

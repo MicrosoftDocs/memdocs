@@ -1,22 +1,14 @@
 ---
 title: "RequestLock Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c13a5af4-d822-41ea-92c3-3bf17b9a5600searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c13a5af4-d822-41ea-92c3-3bf17b9a5600
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RequestLock Method in Class SMS_ObjectLock
 The `RequestLock` Windows Management Instrumentation (WMI) class, in Configuration Manager, synchronously acquires a lock to edit a global object.  

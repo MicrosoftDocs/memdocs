@@ -1,18 +1,11 @@
 ---
 title: Third Party Notices
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/22/2018
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

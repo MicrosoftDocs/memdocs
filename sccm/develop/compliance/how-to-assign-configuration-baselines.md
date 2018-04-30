@@ -1,22 +1,14 @@
 ---
 title: "Assign Configuration Baselines"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39esearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Assign Configuration Baselines
 In System Center Configuration Manager, to assign a configuration baseline to a collection, an assignment instance is created, populated with a minimum set of required values, and saved.  

@@ -1,22 +1,14 @@
 ---
 title: "PackNALPath Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bd0d9061-a06f-4dbc-b9b4-8f103bf954fesearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bd0d9061-a06f-4dbc-b9b4-8f103bf954fe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # PackNALPath Method in Class SMS_NAL_Methods
 The `PackNALPath` method, in Configuration Manager, encodes a network abstraction layer (NAL) path from its components. A NAL path is an abstract representation of a network path or a user account.  

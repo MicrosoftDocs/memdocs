@@ -2,19 +2,14 @@
 title: "Technical Preview 1801 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview version 1801 for System Center Configuration Manager."
-ms.custom: na
-ms.date: 01/19/2018 
+ms.date: 01/19/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5a352ae0-355f-4fcf-b863-fb0654f51c52
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # Capabilities in Technical Preview 1801 for System Center Configuration Manager
 

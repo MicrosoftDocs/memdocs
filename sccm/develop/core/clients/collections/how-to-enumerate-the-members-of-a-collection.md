@@ -1,22 +1,14 @@
 ---
 title: "Enumerate the Members of a Collection"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enumerate the Members of a Collection
 In System Center Configuration Manager, the preferred method to enumerate through a collection is to use `SMS_FullCollectionMembership Server WMI Class`.  

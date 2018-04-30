@@ -2,22 +2,14 @@
 title: "Deprecated for Configuration Manager clients"
 titleSuffix: "Configuration Manager"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports for clients."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Removed and deprecated items for System Center Configuration Manager clients
 

@@ -1,24 +1,14 @@
 ---
 title: "SMS_Collection Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: 7b900446-4a60-4343-9f8b-2d6ecc7ac951
-searchScope:
- - ConfigMgr SDK
-caps.latest.revision: 30
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_Collection Server WMI Class
 The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class in System Center Configuration Manager. It represents a collection of resources related logically by rules along with collection information.  

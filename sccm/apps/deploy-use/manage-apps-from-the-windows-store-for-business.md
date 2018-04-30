@@ -2,20 +2,14 @@
 title: "Manage apps from the Microsoft Store for Business"
 titleSuffix: "Configuration Manager"
 description: "Manage and deploy apps from the Microsoft Store for Business by using System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 
 # Manage apps from the Microsoft Store for Business with System Center Configuration Manager

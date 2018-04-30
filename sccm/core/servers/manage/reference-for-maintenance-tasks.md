@@ -2,22 +2,14 @@
 title: "Reference for maintenance tasks"
 titleSuffix: "Configuration Manager"
 description: "Read details for each of the System Center Configuration Manager site maintenance tasks and whether these tasks are enabled by default."
-ms.custom: na
 ms.date: 3/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-caps.latest.revision: 16
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Reference for maintenance tasks for System Center Configuration Manager
 

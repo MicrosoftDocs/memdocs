@@ -2,19 +2,14 @@
 title: "Endpoint Protection malware definitions"
 titleSuffix: "Configuration Manager"
 description: "Learn to configure Configuration Manager software updates to deliver definition updates to client computers."
-ms.custom: na
 ms.date: 10/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 
 #  Using Configuration Manager Software Updates to Deliver Definition Updates*Applies to: System Center Configuration Manager (Current Branch)*

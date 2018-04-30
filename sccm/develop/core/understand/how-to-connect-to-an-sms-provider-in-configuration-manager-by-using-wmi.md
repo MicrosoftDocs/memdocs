@@ -1,22 +1,14 @@
 ---
 title: "Connect to an SMS Provider by Using WMI"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8f5ee4ee-11bf-4ff3-95c9-4ec046308902searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8f5ee4ee-11bf-4ff3-95c9-4ec046308902
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using WMI
 Before connecting to the SMS Provider for a local or remote System Center Configuration Manager site server, you first need to locate the SMS Provider for the site server. The SMS Provider can be either local or remote to the Configuration Manager site server you are using. The Windows Management Instrumentation (WMI) class `SMS_ProviderLocation` is present on all Configuration Manager site servers, and one instance will contain the location for the Configuration Manager site server you are using.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_AppDeploymentRequirementsNotMetStatus Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: efaa6ef5-e9a0-4939-bf9a-855e42d2df65searchScope: - ConfigMgr SDK
-caps.latest.revision: 15
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: efaa6ef5-e9a0-4939-bf9a-855e42d2df65
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_AppDeploymentRequirementsNotMetStatus Server WMI Class
 The `SMS_AppDeploymentRequirementsNotMetStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of application deployment where requirements are not met.  

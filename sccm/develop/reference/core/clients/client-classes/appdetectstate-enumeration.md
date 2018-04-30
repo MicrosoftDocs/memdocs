@@ -1,22 +1,14 @@
 ---
 title: "AppDetectState Enumeration"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 68bdc4d6-31f9-4b50-964a-9fe82a32f548searchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 68bdc4d6-31f9-4b50-964a-9fe82a32f548
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AppDetectState Enumeration
 In Configuration Manager, the `AppDetectState` enumeration defines application installation states. This enumeration is used by the [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md).  

@@ -1,22 +1,14 @@
 ---
 title: "Handle Asynchronous Errors by Using WMI"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6371b349-5bd0-41c5-93e8-14157c053417searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6371b349-5bd0-41c5-93e8-14157c053417
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using WMI
 In System Center Configuration Manager, when an error occurs in an asynchronous call, the error object is passed as the second parameter to the `OnCompleted` method. Inside your `OnCompleted` implementation, you check the error object the same as you would for a synchronous call.  

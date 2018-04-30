@@ -2,20 +2,14 @@
 title: "Security and privacy for reporting"
 titleSuffix: "Configuration Manager"
 description: "Understand best practices for security and privacy when you are using the reporting functionality in Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Security and privacy for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security best practices and privacy information for reporting in System Center Configuration Manager.  

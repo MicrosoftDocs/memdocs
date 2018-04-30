@@ -2,22 +2,14 @@
 title: "Choose a device management solution "
 titleSuffix: "Configuration Manager"
 description: "Learn about the solutions that System Center Configuration Manager offers for managing PCs, servers, and devices."
-ms.custom: na
 ms.date: 12/08/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
-caps.latest.revision: 14
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Choose a device management solution for System Center Configuration Manager
 

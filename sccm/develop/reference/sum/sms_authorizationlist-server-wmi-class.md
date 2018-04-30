@@ -1,22 +1,14 @@
 ---
 title: "SMS_AuthorizationList Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b0720303-628d-4da2-a98f-74c160816ba7searchScope: - ConfigMgr SDK
-caps.latest.revision: 22
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b0720303-628d-4da2-a98f-74c160816ba7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_AuthorizationList Server WMI Class
 The `SMS_AuthorizationList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a collection of `SMS_SoftwareUpdate` objects for the software updates available on the site and authorized for deployment. Use of an authorization list is optional in a software update deployment.  

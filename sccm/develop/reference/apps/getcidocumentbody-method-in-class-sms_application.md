@@ -1,22 +1,14 @@
 ---
 title: "GetCIDocumentBody Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cd77676f-e824-47fe-bf6a-a78bc37a8d72searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cd77676f-e824-47fe-bf6a-a78bc37a8d72
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetCIDocumentBody Method in Class SMS_Application
 The `GetCIDocumentBody` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the configuration item document body.  

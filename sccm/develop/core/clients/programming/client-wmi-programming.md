@@ -1,22 +1,14 @@
 ---
 title: "Client WMI Programming"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fef48c66-7544-45f5-a76a-89bd30efa91bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fef48c66-7544-45f5-a76a-89bd30efa91b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Client WMI Programming
 This section discusses System Center Configuration Manager Windows Management Instrumentation (WMI) programming, using VBScript or managed code.  

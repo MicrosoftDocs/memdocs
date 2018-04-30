@@ -2,22 +2,14 @@
 title: Windows client deployment prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
-caps.latest.revision: 16
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Prerequisites for deploying clients to Windows computers in System Center Configuration Manager
 

@@ -2,21 +2,14 @@
 title: "SQL Server Always On"
 titleSuffix: "Configuration Manager"
 description: "Plan to use a SQL Server Always On Availability group with SCCM."
-ms.custom: na
 ms.date: 12/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
-caps.latest.revision: 16
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prepare to use SQL Server Always On availability groups with Configuration Manager
 

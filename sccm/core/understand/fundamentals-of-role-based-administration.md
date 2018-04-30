@@ -2,21 +2,14 @@
 title: "Role-based administration fundamentals"
 titleSuffix: "Configuration Manager"
 description: "Use role-based administration to control administrative access to Configuration Manager and objects that you manage."
-ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
-caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Fundamentals of role-based administration for System Center Configuration Manager
 

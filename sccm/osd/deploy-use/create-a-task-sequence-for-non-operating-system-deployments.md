@@ -1,21 +1,15 @@
 ---
 title: Create a task sequence for non-operating system deployments
-titleSuffix: "Configuration Manager"
-description: "Create task sequences that are not related to deploying operating systems, such as distributing software, updating drivers, editing user states, etc."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: Create task sequences that are not related to deploying operating systems, such as distributing software, updating drivers, editing user states, etc.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create a task sequence for non-operating system deployments with System Center Configuration Manager

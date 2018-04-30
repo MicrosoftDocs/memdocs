@@ -1,22 +1,14 @@
 ---
 title: "SMS_DCMDeploymentCompliantStatus Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 15f5c573-86b5-477f-a3a5-082e7f23765esearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 15f5c573-86b5-477f-a3a5-082e7f23765e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DCMDeploymentCompliantStatus Server WMI Class
 The `SMS_DCMDeploymentCompliantStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the compliant status of a deployment.  

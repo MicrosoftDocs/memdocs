@@ -1,21 +1,13 @@
 ---
 title: "About Configuration Manager Inventory"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cba720a8-679c-4b19-9c3b-431680994626searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cba720a8-679c-4b19-9c3b-431680994626
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Inventory
 You can use System Center Configuration Manager to collect hardware and software inventory from System Center Configuration Manager clients by enabling the client agents on a site-by-site basis.  

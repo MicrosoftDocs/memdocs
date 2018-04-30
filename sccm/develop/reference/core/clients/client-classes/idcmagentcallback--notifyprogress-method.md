@@ -1,22 +1,14 @@
 ---
 title: "IDCMAgentCallback::NotifyProgress"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 99e6837e-49af-4b57-8b79-be8e2c18cbacsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 99e6837e-49af-4b57-8b79-be8e2c18cbac
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # IDCMAgentCallback::NotifyProgress Method
 The `IDCMAgentCallback::NotifyProgress` method, in Configuration Manager, notifies the caller of progress made on a Desired Configuration Management Agent job.  

@@ -1,20 +1,14 @@
 ---
 title: "InsertMultipleResourceIds Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b0f727a9-9325-47f3-91e6-2b589033b37dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b0f727a9-9325-47f3-91e6-2b589033b37d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # InsertMultipleResourceIds Method in Class SMS_MDMDeviceEnrollmentManagers
 The `InsertMultipleResourceIds` Windows Management Instrumentation (WMI) class method, in Configuration Manager, inserts multiple resource IDs.  

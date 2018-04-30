@@ -2,22 +2,14 @@
 title: Client installation methods
 titleSuffix: Configuration Manager
 description: Learn about the methods of installing the Configuration Manager client.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
-caps.latest.revision: 9
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Client installation methods in System Center Configuration Manager
 

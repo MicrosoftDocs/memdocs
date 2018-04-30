@@ -1,17 +1,10 @@
 ---
 title: In-console Documentation
-ms.custom: na
 ms.date: 03/05/2018
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 955e56fa-6485-4a1a-90e6-77bc2cf8e326
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

@@ -1,22 +1,14 @@
 ---
 title: "UpdateAutoUpgradeConfigs Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4214f7a0-03e3-4e3a-bb31-5b958e45c5d0searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4214f7a0-03e3-4e3a-bb31-5b958e45c5d0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateAutoUpgradeConfigs Method in Class SMS_Site
 The `UpdateAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates configurations for auto-upgrade settings.  

@@ -1,22 +1,14 @@
 ---
 title: "List All Programs and Their Maximum Run Time Value"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8334dc55-78fe-4305-bd01-ce595c1a924asearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8334dc55-78fe-4305-bd01-ce595c1a924a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to List All Programs and Their Maximum Run Time Value
 In System Center Configuration Manager, you can list all programs with their maximum run time values by using the `SMS_Package` and `SMS_Program` classes and class properties.  

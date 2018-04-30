@@ -1,20 +1,14 @@
 ---
 title: "SMS_MAMPolicyTemplate Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 99486f0f-25c4-4ba5-8d3b-b4db13c2572asearchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 99486f0f-25c4-4ba5-8d3b-b4db13c2572a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MAMPolicyTemplate Server WMI Class
 The `SMS_MAMPolicyTemplate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents mobile application management (MAM) policy templates.  

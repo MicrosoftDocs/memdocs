@@ -2,21 +2,14 @@
 title: "Configure your Intune subscription"
 titleSuffix: "Configuration Manager"
 description: "Configure your Intune subscription using System Center Configuration Manager."
-ms.custom: na
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune
 

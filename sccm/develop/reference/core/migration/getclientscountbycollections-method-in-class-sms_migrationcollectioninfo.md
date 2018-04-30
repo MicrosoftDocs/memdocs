@@ -1,22 +1,14 @@
 ---
 title: "GetClientsCountByCollections Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1c44e69e-4a53-4f63-bd6a-441f15a0d97bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1c44e69e-4a53-4f63-bd6a-441f15a0d97b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetClientsCountByCollections Method in Class SMS_MigrationCollectionInfo
 The `GetClientsCountByCollections` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the number of clients in the specified collections.  

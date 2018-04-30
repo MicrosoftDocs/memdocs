@@ -1,22 +1,14 @@
 ---
 title: "SMS_VirtualEnvironment Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b6e5fec6-6d2f-442e-8f06-ac9269165a23searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b6e5fec6-6d2f-442e-8f06-ac9269165a23
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_VirtualEnvironment Server WMI Classes
 The `SMS_VirtualEnvironment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents   

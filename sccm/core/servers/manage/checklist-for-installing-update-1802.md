@@ -2,19 +2,13 @@
 title: "Checklist for 1802 | System Center Configuration Manager"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1802."
-ms.custom: na
 ms.date: 03/22/2018
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
-caps.latest.revision:
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # Checklist for installing update 1802 for System Center Configuration Manager

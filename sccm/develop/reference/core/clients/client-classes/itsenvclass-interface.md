@@ -1,22 +1,14 @@
 ---
 title: "ITSEnvClass Interface"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 86e27290-3dea-492a-aeaf-46e67b745670searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 86e27290-3dea-492a-aeaf-46e67b745670
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ITSEnvClass Interface
 The `ITSEnvClass` automation interface, in System Center Configuration Manager, represents the operating system deployment task sequencing environment. This interface inherits from `IDispatch`.  

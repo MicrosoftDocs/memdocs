@@ -1,22 +1,14 @@
 ---
 title: "Enumerate the Steps in an OS Deployment Task Sequence"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438asearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enumerate the Steps in an Operating System Deployment Task Sequence
 You enumerate an operating system deployment task sequence, in System Center Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.  

@@ -2,18 +2,14 @@
 title: Service a server group
 titleSuffix: "Configuration Manager"
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
-keywords:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-
 ---
 
 

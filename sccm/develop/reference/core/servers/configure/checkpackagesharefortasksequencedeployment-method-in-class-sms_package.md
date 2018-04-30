@@ -1,22 +1,14 @@
 ---
 title: "CheckPackageShareForTaskSequenceDeployment Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 94d247a9-c862-433d-84b5-d19d7ca39a0esearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 94d247a9-c862-433d-84b5-d19d7ca39a0e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CheckPackageShareForTaskSequenceDeployment Method in Class SMS_Package
 The `CheckPackageShareForTaskSequenceDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether the package share type meets the requirements of a task sequence deployment.  

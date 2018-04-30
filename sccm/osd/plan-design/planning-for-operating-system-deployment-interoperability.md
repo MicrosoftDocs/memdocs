@@ -2,21 +2,14 @@
 title: Planning for operating system deployment interoperability
 titleSuffix: "Configuration Manager"
 description: "Understand interoperability issues when different System Center Configuration Manager sites in a single hierarchy use different versions."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Planning for operating system deployment interoperability in System Center Configuration Manager
 

@@ -2,21 +2,14 @@
 title: "Update Registration Tool"
 titleSuffix: "Configuration Manager"
 description: "Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console."
-ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
-caps.latest.revision: 8
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Use the Update Registration Tool to import hotfixes to System Center Configuration Manager
 

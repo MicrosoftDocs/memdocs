@@ -1,22 +1,14 @@
 ---
 title: "GetPackageDefaultHash Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 157c52c0-4c83-415a-9f21-91807b5fd0ccsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 157c52c0-4c83-415a-9f21-91807b5fd0cc
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetPackageDefaultHash Method in Class SMS_TaskSequencePackage
 The `GetPackageDefaultHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of a System Center Configuration Manager package.  

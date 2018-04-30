@@ -1,21 +1,15 @@
 ---
 title: Use a task sequence to manage virtual hard disks
-titleSuffix: "Configuration Manager"
-description: "Create and modify a VHD, add applications and software updates, and publish the VHD to System Center Virtual Machine Manager (VMM) from Configuration Manager."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: Create and modify a VHD, add applications and software updates, and publish the VHD to System Center Virtual Machine Manager (VMM) from Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Use a task sequence to manage virtual hard disks in System Center Configuration Manager

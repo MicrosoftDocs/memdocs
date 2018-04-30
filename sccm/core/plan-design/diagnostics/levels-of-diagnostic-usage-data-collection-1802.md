@@ -2,38 +2,14 @@
 title: Diagnostic and usage data for 1802
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1802.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
-caps.latest.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
 ---
 # Levels of diagnostic usage data collection for version 1802 of System Center Configuration Manager
 

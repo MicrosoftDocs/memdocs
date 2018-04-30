@@ -2,20 +2,14 @@
 title: "Set up your lab"
 titleSuffix: "Configuration Manager"
 description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
-ms.custom: na
 ms.date: 09/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: erikjems.author: erikjemanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Set up your System Center Configuration Manager lab*Applies to: System Center Configuration Manager (Current Branch)*
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  

@@ -1,22 +1,14 @@
 ---
 title: "Compliance Settings Baselines and Configuration Items"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: dba6e75e-f043-4e8d-a901-6bff9c9ac06asearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: dba6e75e-f043-4e8d-a901-6bff9c9ac06a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Compliance Settings Baselines and Configuration Items
 This section provides topics about configuration baselines and configuration items in System Center Configuration Manager.  

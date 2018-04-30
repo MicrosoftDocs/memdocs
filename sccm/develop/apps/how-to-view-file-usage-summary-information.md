@@ -1,22 +1,14 @@
 ---
 title: "View File Usage Summary Information"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c8b466d3-3f6b-4f6b-a0fd-5928de665e60searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c8b466d3-3f6b-4f6b-a0fd-5928de665e60
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to View File Usage Summary Information
 You view file usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md) and [SMS_FileUsageSummary](../../develop/reference/apps/sms_fileusagesummary-server-wmi-class.md) classes.  

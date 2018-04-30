@@ -2,21 +2,14 @@
 title: "Site administration security and privacy"
 titleSuffix: "Configuration Manager"
 description: "Optimize security and privacy for site administration in System Center Configuration Manager."
-ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Security and privacy for site administration in System Center Configuration Manager
 

@@ -2,21 +2,14 @@
 title: "Deployment PKI certificates"
 titleSuffix: "Configuration Manager"
 description: "Follow a step-by-step example to learn how to create and deploy PKI certificates that System Center Configuration Manager uses."
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-caps.latest.revision: 11
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 certification authority
 

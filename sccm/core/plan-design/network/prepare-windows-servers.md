@@ -2,22 +2,14 @@
 title: "Prepare Windows Servers"
 titleSuffix: "Configuration Manager"
 description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-caps.latest.revision: 10
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prepare Windows Servers to support System Center Configuration Manager
 

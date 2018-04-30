@@ -2,22 +2,14 @@
 title: Planning considerations for automating tasks
 titleSuffix: "Configuration Manager"
 description: "Plan before you automate tasks in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
-caps.latest.revision: 13
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Planning considerations for automating tasks in System Center Configuration Manager
 

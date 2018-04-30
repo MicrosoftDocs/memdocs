@@ -1,22 +1,14 @@
 ---
 title: "Refresh Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Refresh Method in Class SMS_SiteInstallMap
 The `Refresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reloads the install map from the database, which repopulates the classes.  

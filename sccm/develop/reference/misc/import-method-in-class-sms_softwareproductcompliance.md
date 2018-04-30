@@ -1,22 +1,14 @@
 ---
 title: "Import Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7fe387a8-9ab5-43aa-b50e-d8ca5fb5825csearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7fe387a8-9ab5-43aa-b50e-d8ca5fb5825c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Import Method in Class SMS_SoftwareProductCompliance
 The `Import` Windows Management Instrumentation (WMI) class method, in Configuration Manager, overwrites any matching records of program-compliance data in the database. It also returns the number of records that were imported.  

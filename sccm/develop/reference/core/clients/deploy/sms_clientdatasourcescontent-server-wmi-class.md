@@ -1,20 +1,14 @@
 ---
 title: "SMS_ClientDataSourcesContent Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: ae23d777-a5a2-48a6-b04f-fa1b8ab9284esearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ae23d777-a5a2-48a6-b04f-fa1b8ab9284e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ClientDataSourcesContent Server WMI Class
 The `SMS_ClientDataSourcesContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client content data sources per boundary group.  

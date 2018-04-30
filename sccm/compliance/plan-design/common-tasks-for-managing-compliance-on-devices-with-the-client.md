@@ -2,19 +2,14 @@
 title: "Common compliance management tasks for client-managed devices "
 titleSuffix: "Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-caps.latest.revision: 8
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Common tasks for managing compliance on devices with the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 The scenarios in this topic give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  

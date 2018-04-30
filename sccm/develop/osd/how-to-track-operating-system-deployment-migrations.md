@@ -1,22 +1,14 @@
 ---
 title: "Track OS Deployment Migrations"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 08466d8e-e837-429d-a30b-2d90701a765esearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 08466d8e-e837-429d-a30b-2d90701a765e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Track Operating System Deployment Migrations in Configuration Manager
 You track System Center Configuration Manager operating system migrations by inspecting the [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md) class.  

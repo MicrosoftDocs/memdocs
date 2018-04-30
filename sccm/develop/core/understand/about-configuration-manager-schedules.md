@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Schedules"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 030ee838-5a53-45d0-8fd0-d797743d7630searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 030ee838-5a53-45d0-8fd0-d797743d7630
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Schedules
 In System Center Configuration Manager, scheduling information is configured by using schedule tokens. The `SMS_ScheduleToken` Windows Management Instrumentation (WMI) class is an abstract parent class for the SMS_ST_ schedule token classes that handle the scheduling of events with differing frequencies such as daily, weekly, and monthly.  

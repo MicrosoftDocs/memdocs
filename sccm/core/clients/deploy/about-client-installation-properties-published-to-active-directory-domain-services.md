@@ -2,21 +2,14 @@
 title: "Client installation properties in Active Directory Domain Services"
 titleSuffix: "Configuration Manager"
 description: "Use client installation properties published to Active Directory Domain Services in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About client installation properties published to Active Directory Domain Services
 

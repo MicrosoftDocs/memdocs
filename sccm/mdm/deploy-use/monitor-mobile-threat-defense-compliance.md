@@ -2,21 +2,14 @@
 title: "Monitor Mobile Threat Defense compliance"
 titleSuffix: "Configuration Manager"
 description: "Monitor the Mobile Threat Defense partner compliance status from the Configuration Manager manager console"
-ms.custom: na
 ms.date: 03/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
-caps.latest.revision:
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # **Monitor Mobile Threat Defense compliance**

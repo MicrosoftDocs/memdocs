@@ -1,22 +1,14 @@
 ---
 title: "SMS_G_System_UnknownFile Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0e608a1a-e069-4cbe-be18-e2173a6b8563searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0e608a1a-e069-4cbe-be18-e2173a6b8563
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_G_System_UnknownFile Server WMI Class
 The `SMS_G_System_UnknownFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents an unknown software file, that is, a file that does not contain product resource information or is not related to a software product that contains product resource information.  

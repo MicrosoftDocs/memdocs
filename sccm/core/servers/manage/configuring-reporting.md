@@ -2,21 +2,19 @@
 title: "Configure reporting"
 titleSuffix: "Configuration Manager"
 description: "Read about how to set up reporting in your Configuration Manager hierarchy, including information about SQL Server Reporting Services."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: 6
-author: Dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
-# Configuring reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configuring reporting in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you can create, modify, and run reports in the System Center Configuration Manager console, you must carry out a number of configuration tasks. Use the following sections in this topic to help you configure reporting in your Configuration Manager hierarchy:  
 
  Before you proceed with installing and configuring Reporting Services in your hierarchy, review the following Configuration Manager reporting topics:  
@@ -121,7 +119,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
 
     -   **Reporting Services Point Account**: Click **Set**, and then select an account to use when SQL Server Reporting Services on the reporting services point connects to the Configuration Manager site database to retrieve the data that are displayed in a report. Select **Existing account** to specify a Windows user account that has previously been configured as a Configuration Manager account, or select **New account** to specify a Windows user account that is not currently configured as a Configuration Manager account. Configuration Manager automatically grants the specified user access to the site database. The user is displayed in the **Accounts** subfolder of the **Security** node in the **Administration** workspace with the **ConfigMgr Reporting Services Point** account name.  
 
-         The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**, and have the **Read tokenGroupsGlobalAndUniversal** permission set to **Allow**. There must be a two-way trust established for users from a different domain than that of the Reporting Servicies Point Account to successfully run reports.
+         The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**, and have the **Read tokenGroupsGlobalAndUniversal** permission set to **Allow**. There must be a two-way trust established for users from a different domain than that of the Reporting Services Point Account to successfully run reports.
 
          The specified Windows user account and password are encrypted and stored in the Reporting Services database. Reporting Services retrieves the data for reports from the site database by using this account and password.  
 

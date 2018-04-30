@@ -1,22 +1,14 @@
 ---
 title: "Online Documentation"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Online Documentation for System Center Configuration Manager
 

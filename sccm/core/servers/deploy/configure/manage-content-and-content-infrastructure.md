@@ -2,22 +2,14 @@
 title: "Content infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how to deploy and then manage your content management infrastructure for System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ceff72f5-f19d-43a0-a8c0-72f1c09b9bf5
-caps.latest.revision: 17
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Manage content and content infrastructure for System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "IAppContentExt::GetExcludedFileList"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cff72c0f-e94e-4047-aa6d-f92c5e9cdcacsearchScope: - ConfigMgr SDK
-caps.latest.revision: 18
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cff72c0f-e94e-4047-aa6d-f92c5e9cdcac
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # IAppContentExt::GetExcludedFileList
 The `IAppContentExt::GetExcludedFileList` method, in Configuration Manager, gets the excluded file list for application content. This is used to support selective file download.  

@@ -1,22 +1,14 @@
 ---
 title: "ITSEnvClass::Value Property"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: af3dd230-5c84-485b-8335-9417ba863215searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: af3dd230-5c84-485b-8335-9417ba863215
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ITSEnvClass::Value Property
 In Configuration Manager, the `Value` property contains the value of an operating system deployment task sequence environment variable.  

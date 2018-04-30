@@ -1,20 +1,15 @@
 ---
-
 title: Security and privacy for software updates
 titleSuffix: "Configuration Manager"
 description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
-keywords:
-author: dougebyms.author: dougeby
-manager: angrobe
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
-
-
+ms.author: aaroncz
 ---
 # Security and privacy for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for software updates in System Center Configuration Manager.  

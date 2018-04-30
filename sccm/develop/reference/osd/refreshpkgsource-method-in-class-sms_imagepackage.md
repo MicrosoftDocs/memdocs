@@ -1,22 +1,14 @@
 ---
 title: "RefreshPkgSource Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b9c93bcb-6f43-4236-9ae1-568579e9719dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b9c93bcb-6f43-4236-9ae1-568579e9719d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RefreshPkgSource Method in Class SMS_ImagePackage
 The `RefreshPkgSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points.  

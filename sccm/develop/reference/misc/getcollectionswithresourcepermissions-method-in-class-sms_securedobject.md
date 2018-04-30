@@ -1,22 +1,14 @@
 ---
 title: "GetCollectionsWithResourcePermissions Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 31656a08-313b-4a42-a53c-6d9c97050fdfsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 31656a08-313b-4a42-a53c-6d9c97050fdf
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetCollectionsWithResourcePermissions Method in Class SMS_SecuredObject
 The `GetCollectionsWithResourcePermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the list of collection identifiers for which the user has the specified permissions. The collection must contain the specified resource.  

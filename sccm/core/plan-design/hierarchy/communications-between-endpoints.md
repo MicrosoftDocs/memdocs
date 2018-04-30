@@ -2,21 +2,14 @@
 title: "Communications between endpoints"
 titleSuffix: "Configuration Manager"
 description: "Learn about how System Center Configuration Manager site systems and components communicate across a network."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
-caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Communications between endpoints in System Center Configuration Manager
 

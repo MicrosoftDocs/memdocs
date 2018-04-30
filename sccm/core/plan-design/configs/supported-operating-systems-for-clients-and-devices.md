@@ -2,17 +2,11 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which operating systems System Center Configuration Manager supports for clients and devices.
-ms.custom: na
 ms.date: 04/17/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

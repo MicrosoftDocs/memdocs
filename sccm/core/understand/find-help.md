@@ -4,8 +4,7 @@ titleSuffix: Configuration Manager
 description: Find resources for additional information about System Center Configuration Manager.
 ms.date: 04/30/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski

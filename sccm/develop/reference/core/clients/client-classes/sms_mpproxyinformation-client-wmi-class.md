@@ -1,22 +1,14 @@
 ---
 title: "SMS_MPProxyInformation Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e327907b-13c8-4025-b066-e10dbf299f78searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e327907b-13c8-4025-b066-e10dbf299f78
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MPProxyInformation Client WMI Class
 The `SMS_MPProxyInformation` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents information about a proxy management point.  

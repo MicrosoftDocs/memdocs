@@ -2,21 +2,14 @@
 title: "Configure certificate infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
-ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Configure certificate infrastructure

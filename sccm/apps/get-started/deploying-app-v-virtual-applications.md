@@ -2,22 +2,14 @@
 title: "Deploy App-V virtual applications"
 titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy virtual applications."
-ms.custom: na
 ms.date: 03/12/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Deploy App-V virtual applications with System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Create Exchange ActiveSync email profiles"
 titleSuffix: "Configuration Manager"
 description: "Learn how to create and configure email profiles in System Center Configuration Manager that work with Microsoft Intune."
-ms.custom: na
 ms.date: 07/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Exchange ActiveSync email profiles in System Center Configuration Manager

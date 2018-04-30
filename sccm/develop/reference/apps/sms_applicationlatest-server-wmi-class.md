@@ -1,22 +1,14 @@
 ---
 title: "SMS_ApplicationLatest Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 51447f4f-dc60-428e-9ce7-25abdea37b7csearchScope: - ConfigMgr SDK
-caps.latest.revision: 20
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 51447f4f-dc60-428e-9ce7-25abdea37b7c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ApplicationLatest Server WMI Class
 The `SMS_ApplicationLatest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.  

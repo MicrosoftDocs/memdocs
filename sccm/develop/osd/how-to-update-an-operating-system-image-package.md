@@ -1,22 +1,14 @@
 ---
 title: "Update an OS Image Package"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c24fa670-0424-4ba1-9ca0-53e005f0d50asearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c24fa670-0424-4ba1-9ca0-53e005f0d50a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Update an Operating System Image Package in Configuration Manager
 In System Center Configuration Manager, you update the Windows Image (WIM) file that is associated with the operating system package by calling the image package's [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class instance [ReloadImageProperties](../../develop/reference/osd/reloadimageproperties-method-in-class-sms_imagepackage.md) method. The image is updated based on the location defined in the `pkgSourcePath` property.  

@@ -1,22 +1,14 @@
 ---
 title: "PxeAuthClass Client COM Automation Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c95a5ec0-0ec9-4c60-ad5f-4f3e93aabb5asearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c95a5ec0-0ec9-4c60-ad5f-4f3e93aabb5a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # PxeAuthClass Client COM Automation Class
 `PxeAuthClass` is a COM automation class, in System Center Configuration Manager, that supports PXE service point authorization in operating system deployment. The class implements the `IPxeAuthClass` interface.  

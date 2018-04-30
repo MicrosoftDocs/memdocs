@@ -1,22 +1,15 @@
 ---
 title: Monitor operating system deployments
-titleSuffix: "Configuration Manager"
-description: "To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Monitor operating system deployments in System Center Configuration Manager

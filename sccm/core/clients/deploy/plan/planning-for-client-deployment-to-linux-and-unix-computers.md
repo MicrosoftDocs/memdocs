@@ -2,22 +2,14 @@
 title: "Planning client deployment to Linux and UNIX computers"
 titleSuffix: "Configuration Manager"
 description: "Plan for client deployment to Linux and UNIX computers in System Center Configuration Manager."
-ms.custom: na
 ms.date: 08/30/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager
 

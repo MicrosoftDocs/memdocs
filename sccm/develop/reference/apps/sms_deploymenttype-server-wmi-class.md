@@ -1,22 +1,14 @@
 ---
 title: "SMS_DeploymentType Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bc6991d3-d016-49c9-84a6-ac0510dd8579searchScope: - ConfigMgr SDK
-caps.latest.revision: 21
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bc6991d3-d016-49c9-84a6-ac0510dd8579
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DeploymentType Server WMI Class
 The `SMS_DeploymentType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the deployment type of an application. This is read-only class.  For creation, modification, or deletion of deployment types, refer to [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md).  

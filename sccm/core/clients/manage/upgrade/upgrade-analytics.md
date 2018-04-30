@@ -1,32 +1,15 @@
 ---
-# required metadata
-
 title: Upgrade Readiness
-titleSuffix: "System Center Configuration Manager"
+titleSuffix: Configuraton Manager
 description: Integrate Upgrade Readiness with Configuration Manager. Access upgrade compatibility data in your admin console. Target devices for upgrade or remediation.
-keywords:
-author: mestew   
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
-  - configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: maayan
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Integrate Upgrade Readiness with System Center Configuration Manager

@@ -2,20 +2,14 @@
 title: "Import configuration data"
 titleSuffix: "Configuration Manager"
 description: "Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Import configuration data with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In addition to creating configuration baselines and configuration items in the System Center Configuration Manager console, you can import configuration data if it is contained in a cabinet (.cab) file format and adheres to the supported Service Modeling Language (SML) schema. You can import configuration data from:  

@@ -1,20 +1,14 @@
 ---
 title: "SMS_MDMDeviceCategory Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 2369dea2-a365-48d8-8450-1629059f8fa9searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2369dea2-a365-48d8-8450-1629059f8fa9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MDMDeviceCategory Server WMI Class
 The `SMS_MDMDeviceCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an On-premises Mobile Device Management (MDM) device category.  

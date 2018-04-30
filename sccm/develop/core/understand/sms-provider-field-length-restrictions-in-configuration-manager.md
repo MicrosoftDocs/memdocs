@@ -1,21 +1,13 @@
 ---
 title: "SMS Provider Field Length Restrictions in Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e5163571-37f5-4dfd-aac6-5bba3ea4c9easearchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e5163571-37f5-4dfd-aac6-5bba3ea4c9ea
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS Provider Field Length Restrictions in Configuration Manager
 The SMS Provider, in System Center Configuration Manager, places restrictions on the width of character fields for schema classes. If you write a program that writes to these classes, you should take these field widths into account. Where they are used in the user interface, the Configuration Manager online Help provides the maximum character widths. You can also determine the width by dividing the corresponding schema class table column width by two to give the field width in characters.  

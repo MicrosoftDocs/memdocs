@@ -1,22 +1,14 @@
 ---
 title: "Create Software Distribution Packages for Mobile Devices"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3becb7a9-cf6b-432b-85e7-a0087df0dbb6searchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3becb7a9-cf6b-432b-85e7-a0087df0dbb6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
 System Center Configuration Manager device management enables mobile device software distribution to mobile devices. Packages, programs, and advertisements for mobile devices are much the same as those for computer clients. For detailed information about creating packages, programs and advertisements, see the following topics:  

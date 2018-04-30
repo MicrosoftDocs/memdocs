@@ -1,22 +1,14 @@
 ---
 title: "Perform an Asynchronous Query by Using Managed Code"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cfbb34e8-9b47-48db-a8ef-408a0a89ad17searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cfbb34e8-9b47-48db-a8ef-408a0a89ad17
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
 In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  

@@ -1,22 +1,14 @@
 ---
 title: "GetSummary Method in Class SMS_AIMLSParser"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0c53d501-e55a-4224-bb40-154a16ff3855searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0c53d501-e55a-4224-bb40-154a16ff3855
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetSummary Method in Class SMS_AIMLSParser
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, retrieves the counts of imported Microsoft License count and non-Microsoft license count.  

@@ -1,22 +1,14 @@
 ---
 title: "Software Updates and Maintenance Windows"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 429dc421-cf1d-4c8c-92b8-27122d5e22b5searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 429dc421-cf1d-4c8c-92b8-27122d5e22b5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Software Updates and Maintenance Windows
 System Center Configuration Manager maintenance windows provide administrators with a way to define a period of time that limits when changes can be made on the systems that are members of a collection. Maintenance windows restrict when the software updates in deployments can be installed on client computers, in addition to restricting when operating system advertisements and software distribution advertisements can be installed.  

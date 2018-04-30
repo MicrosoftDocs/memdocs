@@ -1,22 +1,14 @@
 ---
 title: "RequestCatalogUpdate Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cd764f0e-44bf-4719-9ce2-4aefafee0674searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cd764f0e-44bf-4719-9ce2-4aefafee0674
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RequestCatalogUpdate Method in Class SMS_AIProxy
 The `RequestCatalogUpdate` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, synchronizes the Asset Intelligence catalog with the System Center Online service.  

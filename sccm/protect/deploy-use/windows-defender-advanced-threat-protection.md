@@ -2,20 +2,14 @@
 title: "Windows Defender Advanced Threat Protection"
 titleSuffix: "Configuration Manager"
 description: "Learn how to manage and monitor Windows Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks."
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: 5
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Windows Defender Advanced Threat Protection
 

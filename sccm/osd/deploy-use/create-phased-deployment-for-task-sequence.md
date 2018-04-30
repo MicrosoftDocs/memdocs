@@ -1,22 +1,15 @@
 ---
 title: Create a phased deployment for a task sequence
-titleSuffix: "System Center Configuration Manager"
-description: "Create phased deployments for task sequences"
-ms.custom: na
+titleSuffix: Configuration Manager
+description: Create phased deployments for task sequences
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # Create phased deployments for a task sequence with System Center Configuration Manager
 

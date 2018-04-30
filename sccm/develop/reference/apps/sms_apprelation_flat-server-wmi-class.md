@@ -1,22 +1,14 @@
 ---
 title: "SMS_AppRelation_Flat Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cdsearchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_AppRelation_Flat Server WMI Class
 The `SMS_AppRelation_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the flattened application relation. This includes direct and indirect relations.  

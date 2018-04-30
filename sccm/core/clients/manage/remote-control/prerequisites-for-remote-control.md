@@ -2,22 +2,14 @@
 title: "Remote control prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Get the prerequisites for remote control in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisites for remote control in System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Manage SharePoint Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use the System Center Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
-ms.custom: na
 ms.date: 12/09/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Manage SharePoint Online access in System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "Define the UI Extension Assembly"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 77311f19-a9dd-4383-8e21-fa460d45b28csearchScope: - ConfigMgr SDK
-caps.latest.revision: 23
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 77311f19-a9dd-4383-8e21-fa460d45b28c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Define the UI Extension Assembly
 The custom wizard assembly is responsible for collecting any data passed in from the Configuration Manager console, and passing it on to the wizard.  The assembly should be named, AdminUI.DeploymentType.\< *AssemblySuffix*>.dll.  

@@ -1,22 +1,14 @@
 ---
 title: "Stop Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 24a6f364-95bd-4f92-9c68-9edf45f97bc7searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 24a6f364-95bd-4f92-9c68-9edf45f97bc7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Stop Method in Class SMS_MigrationJob
 The `Stop` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, stops the migration job.  

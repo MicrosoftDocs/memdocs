@@ -2,18 +2,14 @@
 title: "Find a package family name (PFN) for per-app VPN"
 titleSuffix: "Configuration Manager"
 description: "Learn about the two ways to find a package family name so that you can configure a per-app VPN."
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-caps.latest.revision: 3
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Find a package family name (PFN) for per-app VPN*Applies to: System Center Configuration Manager (Current Branch)*
 
