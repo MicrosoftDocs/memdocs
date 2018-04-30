@@ -36,7 +36,7 @@ The Office 365 Client Management dashboard provides charts for the following inf
 - Office 365 client versions
 - Office 365 client languages
 - Office 365 client channels     
-  For more information, see [Overview of update channels for Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+  For more information, see [Overview of update channels for Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 To view the Office 365 Client Management dashboard in the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management**. At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection. Beginning in Configuration Manager version 1802, the Office 365 client management dashboard displays a list of relevant devices when graph sections are selected.
 
@@ -76,7 +76,7 @@ For previous Configuration Manager versions, you must take the following steps t
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. You must specify the location in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
     > [!IMPORTANT]    
-    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx).
+    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](/DeployOffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
 5. On the **Client Products** page, select the Office 365 suite that you use. Select the applications that you want to include. Select any additional Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
@@ -96,7 +96,7 @@ Starting in Configuration Manager version 1706 Office 365 client updates have mo
 
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
-1.  [Verify the requirements](https://technet.microsoft.com/library/mt628083.aspx) for using Configuration Manager to manage Office 365 client updates in the **Requirements for using Configuration Manager to manage Office 365 client updates** section of the article.  
+1.  [Verify the requirements](DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates) for using Configuration Manager to manage Office 365 client updates in the **Requirements for using Configuration Manager to manage Office 365 client updates** section of the article.  
 
 2.  [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Office 365 client updates. Set **Updates** for the classification and select **Office 365 Client** for the product. Synchronize software updates after you configure the software update points to use the **Updates** classification.
 3.  Enable Office 365 clients to receive updates from Configuration Manager. Use Configuration Manager client settings or group policy to enable the client.   
@@ -110,7 +110,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
       3.  Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
 
     **Method 2**:
-    [Enable Office 365 clients to receive updates](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
+    [Enable Office 365 clients to receive updates](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
 
 4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.   
 
