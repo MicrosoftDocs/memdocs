@@ -46,8 +46,11 @@ There are two main paths to reach to co-management. One is Configuration Manager
 
 
 ### **Intune**
- - [How to set up Intune subscription.](/sccm/mdm/deploy-use/configure-intune-subscription) or https://docs.microsoft.com/en-us/intune/setup-steps
- - [Start migrating from hybrid MDM to Intune standalone.](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)
+ - [How to set up Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription) or [Set up Intune](/intune/setup-steps)  
+ - [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+
+> [!Note]  
+> If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
 
 
 ### Enable co-management 
