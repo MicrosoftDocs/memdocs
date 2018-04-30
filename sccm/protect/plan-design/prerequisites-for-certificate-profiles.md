@@ -2,21 +2,14 @@
 title: "Certificate profile prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Learn about certificate profiles in System Center Configuration Manager and their external dependencies and dependencies in the product."
-ms.custom: na
 ms.date: 12/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
-caps.latest.revision: 9
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisites for certificate profiles in System Center Configuration Manager
 

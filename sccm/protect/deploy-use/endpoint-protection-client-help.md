@@ -2,19 +2,14 @@
 title: "Endpoint Protection Client Help"
 titleSuffix: "Configuration Manager"
 description: "Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats."
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
-caps.latest.revision: 6
-author: NathBarnms.author: nathbarnmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Endpoint Protection Client Help*Applies to: System Center Configuration Manager (Current Branch)*
 

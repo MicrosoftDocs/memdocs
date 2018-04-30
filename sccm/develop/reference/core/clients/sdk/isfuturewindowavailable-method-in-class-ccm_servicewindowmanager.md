@@ -1,22 +1,14 @@
 ---
 title: "IsFutureWindowAvailable Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 83ae2265-47db-441d-986f-7e3869ef8d9esearchScope: - ConfigMgr SDK
-caps.latest.revision: 20
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 83ae2265-47db-441d-986f-7e3869ef8d9e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # IsFutureWindowAvailable Method in Class CCM_ServiceWindowManager
 The `IsFutureWindowAvailable` WMI class method, in Configuration Manager, determines whether a service window of a specified type and the given duration is going to be available.  

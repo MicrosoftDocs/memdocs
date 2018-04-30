@@ -1,18 +1,15 @@
 ---
-
 title: Prepare for software updates management
 titleSuffix: "Configuration Manager"
 description: "To prepare to manage updates, complete these tasks to display compliance assessment data in the System Center Configuration Manager console."
-keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
-
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Prepare for software updates management*Applies to: System Center Configuration Manager (Current Branch)*

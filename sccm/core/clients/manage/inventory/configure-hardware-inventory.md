@@ -2,20 +2,14 @@
 title: "Configure hardware inventory"
 titleSuffix: "Configuration Manager"
 description: "Set up hardware inventory for all clients or for a collection in System Center Configuration Manager."
-ms.custom: na
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to configure hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This procedure configures the default client settings for hardware inventory and will apply to all the clients in your hierarchy. If you want these settings to apply to only some clients, create a custom device client setting and assign it to a collection that contains the devices that you want to use hardware inventory. See [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  

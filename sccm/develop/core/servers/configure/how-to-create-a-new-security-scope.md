@@ -1,22 +1,14 @@
 ---
 title: "Create a New Security Scope"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ccf65b5f-d1bc-4deb-babd-93dc48a9517bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ccf65b5f-d1bc-4deb-babd-93dc48a9517b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a New Security Scope
 Creating a security scope in System Center Configuration Manager is simple. All security scopes are defined by the `SMS_SecuredCategory` Windows Management Instrumentation (WMI) class. Only two properties are required when you are creating a new security scope, the name and description.  

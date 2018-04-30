@@ -1,19 +1,13 @@
 ---
 title: "Privacy statement - OMS addendum"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 11/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aa91afee-45b5-46eb-ad8a-e9c7d3122b38
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum
 

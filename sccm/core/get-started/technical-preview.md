@@ -4,15 +4,12 @@ titleSuffix: Configuration Manager
 description: Learn about the Technical Preview release to test-drive new functionality and capabilities in Configuration Manager.
 ms.date: 04/25/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
-caps.latest.revision: 157
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Technical Preview for System Center Configuration Manager
 

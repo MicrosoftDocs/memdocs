@@ -2,21 +2,14 @@
 title: "Use Boundaries and boundary groups"
 titleSuffix: "Configuration Manager"
 description: "Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage."
-ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Define site boundaries and boundary groups for System Center Configuration Manager
 

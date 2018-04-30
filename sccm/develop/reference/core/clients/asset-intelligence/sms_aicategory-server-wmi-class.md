@@ -1,22 +1,14 @@
 ---
 title: "SMS_AICategory Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 9c90f84f-e111-4195-9063-a09eacd83c50searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 9c90f84f-e111-4195-9063-a09eacd83c50
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_AICategory Server WMI Class
 The `SMS_AICategory` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, categorizes the software entries in the `SMS_AISoftwareList` Server WMI class.  

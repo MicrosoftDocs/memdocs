@@ -1,22 +1,14 @@
 ---
 title: "Console Extension Architecture"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4248fae0-66fa-44a9-b5bb-0fa23426194asearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4248fae0-66fa-44a9-b5bb-0fa23426194a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Console Extension Architecture
 The System Center Configuration Manager console architecture is built on the following four distinct layers.  

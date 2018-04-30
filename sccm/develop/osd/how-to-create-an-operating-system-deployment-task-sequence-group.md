@@ -1,22 +1,14 @@
 ---
 title: "Create an OS Deployment Task Sequence Group"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4a4e9896-549e-4a20-92fc-30bf9ae6e1c8searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4a4e9896-549e-4a20-92fc-30bf9ae6e1c8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create an Operating System Deployment Task Sequence Group
 An operating system deployment task sequence group, in System Center Configuration Manager, can be added to a task sequence by creating an instance of the [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) class. The group is then added to the list of steps of the task sequence. The list of steps is an array of the [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) derived classes. The array is stored in the task sequence, [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md), `Steps` property.  

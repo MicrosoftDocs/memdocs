@@ -1,22 +1,14 @@
 ---
 title: "RestartComputer Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 76b52467-5939-44be-b4d9-da88a055ad03searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 76b52467-5939-44be-b4d9-da88a055ad03
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RestartComputer Method in Class CCM_ClientUtilities
 The `RestartComputer` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that …   

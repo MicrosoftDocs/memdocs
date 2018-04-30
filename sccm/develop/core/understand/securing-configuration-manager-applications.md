@@ -1,22 +1,14 @@
 ---
 title: "Securing Applications"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fffd97ed-bbd8-482c-9d3e-0a566bfed8a6searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fffd97ed-bbd8-482c-9d3e-0a566bfed8a6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Securing Configuration Manager Applications
 The security model for System Center Configuration Manager has changed significantly from previous versions of Configuration Manager. The previous security model has been replaced by Role-Based Administration.  

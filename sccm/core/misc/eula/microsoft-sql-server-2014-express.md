@@ -1,22 +1,15 @@
 ---
 title: "MICROSOFT SQL SERVER 2014 EXPRESS"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.service:
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c147514c-e4bb-4c36-b8a6-b0ab2fef394a
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SQL SERVER 2014 EXPRESS
 

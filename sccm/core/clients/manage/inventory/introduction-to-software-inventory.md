@@ -2,22 +2,14 @@
 title: "Software inventory"
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to software inventory in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Introduction to software inventory in System Center Configuration Manager
 

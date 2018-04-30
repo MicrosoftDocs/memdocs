@@ -1,22 +1,14 @@
 ---
 title: "Clear a PXE Advertisement for a Resource"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Clear a PXE Advertisement for a Configuration Manager Resource
 To clear a PXE advertisement for a System Center Configuration Manager resource, you call the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object [ClearLastNBSAdvForMachines](../../develop/reference/core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md) method.  

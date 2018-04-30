@@ -1,22 +1,14 @@
 ---
 title: "SMS_DPContentInfo Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 95e54f24-0e0e-4b64-88ae-572393c964adsearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 95e54f24-0e0e-4b64-88ae-572393c964ad
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DPContentInfo Server WMI Class
 The `SMS_DPContentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes package information for a given distribution point.  

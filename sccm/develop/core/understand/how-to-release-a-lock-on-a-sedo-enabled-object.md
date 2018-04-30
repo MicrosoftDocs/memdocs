@@ -1,22 +1,14 @@
 ---
 title: "Release a Lock on a SEDO-Enabled Object"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 064a7248-6a42-4dbc-b937-9be7e3454cd4searchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 064a7248-6a42-4dbc-b937-9be7e3454cd4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Release a Lock on a SEDO-Enabled Object
 ### To Release an Explicit Lock on a SEDO-enabled Object  

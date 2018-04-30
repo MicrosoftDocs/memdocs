@@ -1,22 +1,14 @@
 ---
 title: "Special Queries"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: d9378514-6125-4bbe-b0bf-7e84e688203esearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: d9378514-6125-4bbe-b0bf-7e84e688203e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Special Queries
 Extended WMI Query Language (WQL) supports queries that are specific to System Center Configuration Manager needs. The following table describes the additional queries that are supported.  

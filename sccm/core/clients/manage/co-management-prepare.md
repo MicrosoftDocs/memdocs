@@ -1,20 +1,15 @@
 ---
-# required metadata
-
 title: Prepare Windows 10 for co-management
 titleSuffix: Configuration Manager
 description: Learn how to prepare your Windows 10 devices for co-management.
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
+ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-
-
 ---
 
 # Prepare Windows 10 devices for co-management

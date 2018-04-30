@@ -2,21 +2,14 @@
 title: "Create Windows Phone applications"
 titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy applications for Windows Phone devices."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 10
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Create Windows Phone applications with System Center Configuration Manager
 

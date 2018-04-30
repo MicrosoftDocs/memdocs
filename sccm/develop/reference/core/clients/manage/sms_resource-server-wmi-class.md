@@ -1,22 +1,14 @@
 ---
 title: "SMS_Resource Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: d123b9ea-bfde-4b95-9678-7f7820de7635searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: d123b9ea-bfde-4b95-9678-7f7820de7635
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_Resource Server WMI Class
 The `SMS_Resource` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as an abstract base class for all discovery resource classes, for example, [SMS_R_IPNetwork Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_r_ipnetwork-server-wmi-class.md).  

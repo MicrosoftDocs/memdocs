@@ -2,21 +2,14 @@
 title: "Upgrade macOS clients "
 titleSuffix: "Configuration Manager"
 description: "Upgrade clients on Mac computers in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
-caps.latest.revision: 10
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to upgrade clients on Mac computers in System Center Configuration Manager
 

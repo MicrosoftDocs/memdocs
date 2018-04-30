@@ -2,22 +2,14 @@
 title: "Remote control security privacy"
 titleSuffix: "Configuration Manager"
 description: "Get security and privacy information for remote control in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Security and privacy for remote control in System Center Configuration Manager
 

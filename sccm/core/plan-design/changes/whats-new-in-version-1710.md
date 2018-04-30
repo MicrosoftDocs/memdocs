@@ -2,18 +2,13 @@
 title: "New version 1710 | Microsoft Docs"
 titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1710 of System Center Configuration Manager."
-ms.custom: na
-ms.date:  1/08/2018
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.date: 1/08/2018
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # What&#39;s new in version 1710 of System Center Configuration Manager
 

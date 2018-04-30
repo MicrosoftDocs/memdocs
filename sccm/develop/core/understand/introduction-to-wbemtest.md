@@ -1,22 +1,14 @@
 ---
 title: "Introduction to WBEMTEST"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1a627513-494d-4e82-92e4-b3689c9ecf50searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1a627513-494d-4e82-92e4-b3689c9ecf50
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Introduction to WBEMTEST
 If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is “Windows Management Instrumentation��? and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM).  

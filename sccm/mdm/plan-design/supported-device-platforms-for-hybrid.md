@@ -2,22 +2,14 @@
 title: "Supported Device Platforms for hybrid MDM"
 titleSuffix: "Configuration Manager"
 description: "Supported Device Platforms for hybrid MDM."
-ms.custom: na
 ms.date: 09/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 6b0732c8-1be8-44ba-8f8e-6fb2b67782e1
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Supported Device Platforms for hybrid MDM
 

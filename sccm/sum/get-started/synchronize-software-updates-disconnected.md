@@ -1,19 +1,15 @@
 ---
-
 title: "Synchronize updates with no Internet connection "
 titleSuffix: "Configuration Manager"
 description: "Run software updates synchronization on the top-level software update point that is disconnected from the Internet."
-keywords:
-author: dougebyms.author: dougebymanager: angrobe
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-
-
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Synchronize software updates from a disconnected software update point  *Applies to: System Center Configuration Manager (Current Branch)*

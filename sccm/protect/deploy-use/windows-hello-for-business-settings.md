@@ -2,21 +2,14 @@
 title: Windows Hello for Business settings
 titleSuffix: Configuration Manager
 description: Learn how to integrate Windows Hello for Business with System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-caps.latest.revision: 17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Windows Hello for Business settings in System Center Configuration Manager
 

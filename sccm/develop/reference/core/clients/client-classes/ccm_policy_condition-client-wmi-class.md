@@ -1,22 +1,14 @@
 ---
 title: "CCM_Policy_Condition Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6a7f9c94-ccbd-43ef-9adb-ed620ba3fe5fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6a7f9c94-ccbd-43ef-9adb-ed620ba3fe5f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_Policy_Condition Client WMI Class
 In System Center Configuration Manager, the `CCM_Policy_Condition` class is a client Windows Management Instrumentation (WMI) class that represents a policy condition.  

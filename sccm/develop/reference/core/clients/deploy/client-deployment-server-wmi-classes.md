@@ -1,20 +1,14 @@
 ---
 title: "Client Deployment Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a4719ca1-ec08-4fb0-84a7-cc928ca6b0aasearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a4719ca1-ec08-4fb0-84a7-cc928ca6b0aa
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Client Deployment Server WMI Classes
 In System Center Configuration Manager, client deployment Windows Management Instrumentation (WMI) server classes deploy the Configuration Manager client to PCs, servers, and other devices in your organization.  

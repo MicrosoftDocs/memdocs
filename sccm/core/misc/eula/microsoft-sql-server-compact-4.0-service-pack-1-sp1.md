@@ -1,23 +1,15 @@
 ---
 title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)
 

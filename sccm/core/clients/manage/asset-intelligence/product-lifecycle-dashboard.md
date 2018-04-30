@@ -2,23 +2,15 @@
 title: "Product Lifecycle dashboard"
 titleSuffix: "Configuration Manager"
 description: "Get information about the Product Lifecycle dashboard in System Center Configuration Manager."
-ms.custom: na
 ms.date: 02/13/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-
 ---
 # Use the Product Lifecycle Dashboard to Manage Microsoft Lifecycle Policy in System Center Configuration Manager
 

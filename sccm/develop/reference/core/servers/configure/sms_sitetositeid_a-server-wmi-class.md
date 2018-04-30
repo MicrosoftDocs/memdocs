@@ -1,22 +1,14 @@
 ---
 title: "SMS_SiteToSiteID_a Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b3b16194-ddd8-4407-8f8b-b6f375f3e89dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b3b16194-ddd8-4407-8f8b-b6f375f3e89d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SiteToSiteID_a Server WMI Class
 The `SMS_SiteToSiteID_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates an [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md) object with an [SMS_Identification Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) object representing identifying information for the site.  

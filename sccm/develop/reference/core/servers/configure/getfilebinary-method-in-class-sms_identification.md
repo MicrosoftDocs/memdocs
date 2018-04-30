@@ -1,20 +1,14 @@
 ---
 title: "GetFileBinary Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0d7b1097-d386-48aa-8fc4-ff0e4c5d7dc3searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0d7b1097-d386-48aa-8fc4-ff0e4c5d7dc3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetFileBinary Method in Class SMS_Identification
 The `GetFileBinary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the binary user interface for a feature. The binary can be separated into multiple blocks starting with number 1. If `isTheLastBlock` equals `False`, then you need call the method again with blockNumber+1 to get the next block.  

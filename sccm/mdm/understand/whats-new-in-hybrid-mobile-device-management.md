@@ -2,15 +2,10 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.custom: na
-ms.date: 04/02/2018
+ms.date: 04/26/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
@@ -42,6 +37,25 @@ Each section of this article lists hybrid features under three different categor
 ## April 2018
 
 ### New in Microsoft Intune
+
+
+#### Improved device tiles in the Windows 10 Company Portal
+<!--2213364-->
+The tiles have been updated to be more accessible to low-vision users and to perform better for screen reading tools.
+
+
+#### Test the Company Portal for macOS on virtual machines
+<!--2216679-->
+We've published guidance to help IT admins test the Company Portal app for macOS on virtual machines in Parallels Desktop and VMware Fusion. For more information, see [enroll virtual macOS machines for testing](/intune/macos-enroll#enroll-virtual-macos-machines-for-testing).
+
+
+#### Send diagnostic reports in Company Portal app for macOS
+<!--2216677-->
+The Company Portal app for macOS devices was updated to improve how users report Intune-related errors. From the Company Portal app, your employees can:
+
+- Upload diagnostic reports directly to the Microsoft developer team.
+- Email an incident ID to your company's IT support team.
+
 
 #### Updated Help experience on Company Portal app for Android 
 <!--1631531-->

@@ -1,22 +1,14 @@
 ---
 title: "SMS_TaskSequence_RegistryConditionExpression Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3229c0e7-f7cd-4105-957a-11ba2339f25dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3229c0e7-f7cd-4105-957a-11ba2339f25d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequence_RegistryConditionExpression Server WMI Class
 The `SMS_TaskSequence_RegistryConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of a registry key and, optionally, compare it to specified data.  

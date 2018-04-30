@@ -1,22 +1,14 @@
 ---
 title: "CCM_Program Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 2c024101-cb8e-4185-b3b2-6b9c509f7919searchScope: - ConfigMgr SDK
-caps.latest.revision: 24
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2c024101-cb8e-4185-b3b2-6b9c509f7919
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_Program Client WMI Class
 The `CCM_Program` WMI class is a client class, in Configuration Manager, that represents a legacy software distribution program on the client.  

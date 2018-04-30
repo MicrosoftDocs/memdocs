@@ -1,21 +1,15 @@
 ---
 title: Refresh an existing computer with a new version of Windows
-titleSuffix: "Configuration Manager"
-description: "You can use several methods in Configuration Manager to partition and format (wipe) an existing computer and install a new operating system on the computer."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: You can use several methods in Configuration Manager to partition and format (wipe) an existing computer and install a new operating system on the computer.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Refresh an existing computer with a new version of Windows using System Center Configuration Manager

@@ -1,22 +1,14 @@
 ---
 title: "CreateSMSStatusMessage Function"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b7c7accc-d687-4cfa-ac67-611f3d5d23c4searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b7c7accc-d687-4cfa-ac67-611f3d5d23c4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CreateSMSStatusMessage Function
 In Configuration Manager, the `CreateSMSStatusMessage` function allocates a status message object, initializes it, and retrieves a handle to it.  

@@ -2,22 +2,14 @@
 title: "Use Asset Intelligence"
 titleSuffix: "Configuration Manager"
 description: "Do common Asset Intelligence tasks in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to use Asset Intelligence in System Center Configuration Manager
 

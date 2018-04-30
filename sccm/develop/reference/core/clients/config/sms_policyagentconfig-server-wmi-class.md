@@ -1,22 +1,14 @@
 ---
 title: "SMS_PolicyAgentConfig Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_PolicyAgentConfig Server WMI Class
 The `SMS_PolicyAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how the client policy system is configured. These settings affect which policies are retrieved, when and how often they are retrieved, and how the client policy processing component takes action on policy updates.  

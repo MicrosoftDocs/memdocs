@@ -2,17 +2,11 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: nac
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
-caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

@@ -1,21 +1,14 @@
 ---
 title: "AddBoundary Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: aae63f60-858e-4467-9c70-f6d94ce53d57
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddBoundary Method in Class SMS_DefaultBoundaryGroup
  The `AddBoundary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds one or more boundaries to a default boundary group.  

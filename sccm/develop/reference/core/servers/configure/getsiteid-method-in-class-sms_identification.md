@@ -1,22 +1,14 @@
 ---
 title: "GetSiteID Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 9e36aa9b-b824-4ea1-9d70-db562f46d212searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 9e36aa9b-b824-4ea1-9d70-db562f46d212
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetSiteID Method in Class SMS_Identification
 The `GetSiteID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the unique ID of the installed Configuration Manager site.  

@@ -1,20 +1,14 @@
 ---
 title: "SMS_ClientDeploymentFailureBucket Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8a5608be-1f8a-4aea-a87c-e2b379c98107searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8a5608be-1f8a-4aea-a87c-e2b379c98107
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ClientDeploymentFailureBucket Server WMI Class
 The  `SMS_ClientDeploymentFailureBucket` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment failure bucket that is used to get the total number of clients with the same failed state message ID.  

@@ -1,22 +1,14 @@
 ---
 title: "Use Objects with WMI"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 83ea82dc-6bcf-4462-a98e-57399babd7besearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 83ea82dc-6bcf-4462-a98e-57399babd7be
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Use Configuration Manager Objects with WMI
 This section provides information about using Windows Management Instrumentation (WMI) to manage System Center Configuration Manager objects. For example, you will find information about creating and updating objects. You will also find information on performing asynchronous and synchronous queries. All samples provided in VBScript.  

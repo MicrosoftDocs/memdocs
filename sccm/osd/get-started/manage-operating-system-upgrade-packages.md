@@ -2,22 +2,14 @@
 title: Manage operating system upgrade packages
 titleSuffix: "Configuration Manager"
 description: "Learn how to manage operating system upgrade packages in System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
-caps.latest.revision: 12
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Manage operating system upgrade packages with System Center Configuration Manager
 

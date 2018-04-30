@@ -1,22 +1,14 @@
 ---
 title: "AppContentInfo Structure"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: eae48844-c1fe-4dd1-9c76-21d7f53217b6searchScope: - ConfigMgr SDK
-caps.latest.revision: 15
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: eae48844-c1fe-4dd1-9c76-21d7f53217b6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AppContentInfo Structure
 In Configuration Manager, the `AppContentInfo` structure contains information about the application content.  

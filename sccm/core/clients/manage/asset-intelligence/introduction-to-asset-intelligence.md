@@ -2,22 +2,14 @@
 title: "Asset Intelligence introduction"
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to Asset Intelligence in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Introduction to Asset Intelligence in System Center Configuration Manager
 

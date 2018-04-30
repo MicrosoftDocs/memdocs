@@ -1,20 +1,14 @@
 ---
 title: "SMS_TaskSequence_DownloadPackageContentAction Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 59c5be42-51d9-45dc-a896-ad177a58f9b9searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 59c5be42-51d9-45dc-a896-ad177a58f9b9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequence_DownloadPackageContentAction Server WMI Class
 The `SMS_TaskSequence_DownloadPackageContentAction` Windows Management Instrumentation (WMI) class is an SMS provider server class, in Configuration Manager, that represents a task sequence action that downloads the contents of a package.  

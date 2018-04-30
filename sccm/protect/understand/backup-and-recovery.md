@@ -2,20 +2,14 @@
 title: "Backup sites"
 titleSuffix: "Configuration Manager"
 description: "Learn to back up your sites before the event of failure or data loss in System Center Configuration Manager."
-ms.custom: na
 ms.date: 6/5/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: 22
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Back up a Configuration Manager site

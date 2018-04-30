@@ -2,21 +2,14 @@
 title: "VPN profiles"
 titleSuffix: "Configuration Manager"
 description: "VPN Profiles on mobile devices in System Center Configuration Manager."
-ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # VPN Profiles on mobile devices in System Center Configuration Manager
 

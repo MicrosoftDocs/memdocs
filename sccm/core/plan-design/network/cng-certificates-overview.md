@@ -2,20 +2,14 @@
 title: CNG certificates overview
 titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) certificates for Configuration Manager clients and servers.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 
 # CNG certificates overview

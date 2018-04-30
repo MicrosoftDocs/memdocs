@@ -1,20 +1,13 @@
 ---
 title: "SQL Server Branded Components included with System Center Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 067675e6-bfae-44d9-ac86-3bf91e4fc600
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
 ---
 # SQL Server Branded Components included with System Center Configuration Manager

@@ -1,22 +1,14 @@
 ---
 title: "Reporting Status Messages from Clients"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4a5c2726-4ad8-4f94-95ba-acc24cc61faasearchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4a5c2726-4ad8-4f94-95ba-acc24cc61faa
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Reporting Status Messages from Configuration Manager Clients
 You can raise System Center Configuration Manager client status messages in the Windows event log by using a compiled Managed Object Format (MOF) file on client computers. This can be useful for administrators who are managing servers with System Center Operations Manager. A System Center Configuration Manager status message that is raised by the System Center Configuration Manager client can be caught by the Operations Manager agent on the same computer, which in turn raises an Operations Manager alert for the System Center Configuration Manager status message.  

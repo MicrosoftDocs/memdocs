@@ -2,22 +2,14 @@
 title: Support for Windows features
 titleSuffix: Configuration Manager
 description: Learn which Windows and networking features System Center Configuration Manager supports.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # Support for Windows features and networks in System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Add site system roles"
 titleSuffix: "Configuration Manager"
 description: "Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site."
-ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
-caps.latest.revision: 12
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Add site system roles for System Center Configuration Manager
 

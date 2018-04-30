@@ -1,20 +1,14 @@
 ---
 title: "SyncToken Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: da8257d2-4e32-4af9-9313-239127d0aab5searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: da8257d2-4e32-4af9-9313-239127d0aab5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SyncToken Method in Class SMS_MDMAppleVppToken
 The `SyncToken` Windows Management Instrumentation (WMI) class method, in Configuration Manager, initiates a synchronization of the Apple Volume Purchase Program (VPP) token.  

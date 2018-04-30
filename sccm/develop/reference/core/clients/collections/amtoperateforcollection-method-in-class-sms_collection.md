@@ -1,22 +1,14 @@
 ---
 title: "AMTOperateForCollection Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a3af06b4-8717-4d71-90e8-e0558fcb74a2searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a3af06b4-8717-4d71-90e8-e0558fcb74a2
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AMTOperateForCollection Method in Class SMS_Collection
 The `AMTOperateForCollection` Windows Management Instrumentation (WMI) class method, in Configuration Manager, executes an Intel Active Management (AMT) operation on a collection.  

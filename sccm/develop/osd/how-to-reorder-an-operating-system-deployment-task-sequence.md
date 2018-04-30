@@ -1,22 +1,14 @@
 ---
 title: "Reorder an OS Deployment Task Sequence"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1f01d10f-1aff-4f56-9f23-b53f222a57e9searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1f01d10f-1aff-4f56-9f23-b53f222a57e9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Reorder an Operating System Deployment Task Sequence
 In System Center Configuration Manager, you can reorder the steps (an action or a group) in a task sequence or group by rearranging the step sequence in the [Steps](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) property [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) array.  

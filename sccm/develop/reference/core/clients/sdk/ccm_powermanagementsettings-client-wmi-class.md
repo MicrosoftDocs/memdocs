@@ -1,22 +1,14 @@
 ---
 title: "CCM_PowerManagementSettings Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a9fd731b-0899-4d34-a8f7-7532d07df608searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a9fd731b-0899-4d34-a8f7-7532d07df608
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_PowerManagementSettings Client WMI Class
 The `CCM_PowerManagementSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains methods to help manage client power management settings.   

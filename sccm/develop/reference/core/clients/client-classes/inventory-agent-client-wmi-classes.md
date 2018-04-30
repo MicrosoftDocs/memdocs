@@ -1,22 +1,14 @@
 ---
 title: "Inventory Agent Client WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 244dda2b-da12-4618-81f2-79e7f3306b31searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 244dda2b-da12-4618-81f2-79e7f3306b31
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Inventory Agent Client WMI Classes
 In System Center Configuration Manager, the inventory client agent classes can be broken into three categories:  

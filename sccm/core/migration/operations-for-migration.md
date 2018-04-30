@@ -2,21 +2,14 @@
 title: "Migration operations"
 titleSuffix: "Configuration Manager"
 description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Operations for migrating to System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "Application Management Client Infrastructure"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0d22ecc3-d5f9-4833-a711-044c10d5e93asearchScope: - ConfigMgr SDK
-caps.latest.revision: 14
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0d22ecc3-d5f9-4833-a711-044c10d5e93a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Application Management Client Infrastructure
 This section provides reference information for the Configuration Manager application management client infrastructure.  

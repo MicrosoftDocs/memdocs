@@ -1,22 +1,14 @@
 ---
 title: "Enable or Disable a Windows Driver"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c13462bf-4652-46c4-9f26-818951bb7fe0searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c13462bf-4652-46c4-9f26-818951bb7fe0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enable or Disable a Windows Driver in Configuration Manager
 You enable or disable a Windows driver in the operating system deployment driver catalog, in System Center Configuration Manager, by setting the `IsEnabled` property of the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. A driver can be disabled to prevent it from being installed by the Auto Apply Driver action in a task sequence.  

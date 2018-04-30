@@ -1,20 +1,14 @@
 ---
 title: "UpdatePackageSiteState Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5c597141-bccd-4c52-a1d6-767a82e77019searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5c597141-bccd-4c52-a1d6-767a82e77019
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdatePackageSiteState Method in Class SMS_CM_UpdatePackageSiteStatus
 The `UpdatePackageSiteState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the package installation state of the site.  

@@ -2,22 +2,14 @@
 title: "Design a site hierarchy "
 titleSuffix: "Configuration Manager"
 description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
-ms.custom: na
 ms.date: 8/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
-caps.latest.revision: 22
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Design a hierarchy of sites for System Center Configuration Manager
 

@@ -2,19 +2,14 @@
 title: "Endpoint Protection malware definitions from network share"
 titleSuffix: "Configuration Manager"
 description: "Learn how to enable the download of Endpoint Protection malware definitions from Microsoft Updates for Configuration Manager."
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
-caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Enable Endpoint Protection malware definitions to download from Microsoft Updates for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

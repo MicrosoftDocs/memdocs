@@ -2,22 +2,14 @@
 title: "Prerequisites for email profiles"
 titleSuffix: "Configuration Manager"
 description: "Learn about email profiles in System Center Configuration Manager and their dependencies both externally and within the product."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Email profile prerequisites
 

@@ -2,22 +2,14 @@
 title: VPN profiles
 titleSuffix: Configuration Manager
 description: Learn how to use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # VPN profiles in System Center Configuration Manager
 

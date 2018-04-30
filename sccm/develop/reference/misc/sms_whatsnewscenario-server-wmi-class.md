@@ -1,20 +1,14 @@
 ---
 title: "SMS_WhatsNewScenario Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 9dca5dc2-06e5-4714-8eed-8e3b4a0d7eabsearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 9dca5dc2-06e5-4714-8eed-8e3b4a0d7eab
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_WhatsNewScenario Server WMI Class
 For internal use only.  

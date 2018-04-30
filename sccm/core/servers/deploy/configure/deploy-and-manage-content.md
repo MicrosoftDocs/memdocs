@@ -2,20 +2,14 @@
 title: "Deploy content"
 titleSuffix: "Configuration Manager"
 description: "After you install distribution points for System Center Configuration Manager, here's how you can begin to deploy content to them."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
-caps.latest.revision: 6
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Deploy and manage content for System Center Configuration Manager
 

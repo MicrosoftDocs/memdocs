@@ -1,22 +1,14 @@
 ---
 title: "ICIINFO::GetEvalState"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7a2f05e8-f5f8-4362-8e67-759624e80371searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7a2f05e8-f5f8-4362-8e67-759624e80371
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICIINFO::GetEvalState Method
 The `ICIINFO::GetEvalState` method, in Configuration Manager, gets the current evaluation state of the configuration item.  

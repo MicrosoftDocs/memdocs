@@ -1,22 +1,14 @@
 ---
 title: "AddContent Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 09bf18d9-4e97-42ee-bb5c-a87d2556449dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 09bf18d9-4e97-42ee-bb5c-a87d2556449d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddContent Method in Class SMS_ContentPackage
 The `AddContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds content to the [SMS_ContentPackage Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_contentpackage-server-wmi-class.md) content package.  

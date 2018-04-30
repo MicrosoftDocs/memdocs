@@ -1,20 +1,15 @@
 ---
-
 title: Plan for software updates
 titleSuffix: "Configuration Manager"
 description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
-keywords:
-author: mestew    
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-
 ---
 
 # Plan for software updates in System Center Configuration Manager

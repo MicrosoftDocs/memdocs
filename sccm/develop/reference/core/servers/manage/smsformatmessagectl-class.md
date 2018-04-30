@@ -1,22 +1,14 @@
 ---
 title: "SMSFormatMessageCtl Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 161adad1-6dd0-46da-9a3b-52a8455dee74searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 161adad1-6dd0-46da-9a3b-52a8455dee74
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMSFormatMessageCtl Class
 The `SMSFormatMessageCtl` class supports message formatting for the System Center Configuration Manager status system.  

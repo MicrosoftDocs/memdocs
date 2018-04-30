@@ -1,22 +1,14 @@
 ---
 title: "Modify Advertisement Properties"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Modify Advertisement Properties
 The following example shows how to modify an existing advertisement, in System Center Configuration Manager, by using the `SMS_Advertisement` class and class properties.  

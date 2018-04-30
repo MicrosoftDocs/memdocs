@@ -2,18 +2,14 @@
 title: Prerequisites for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
-keywords:
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 02/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-
 ---
 
 # Prerequisites for software updates in System Center Configuration Manager

@@ -1,22 +1,14 @@
 ---
 title: "SMS_DeviceMethods Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a775bb4c-6f9f-4918-bd96-892ca9e05467searchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a775bb4c-6f9f-4918-bd96-892ca9e05467
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DeviceMethods Server WMI Class
 The `SMS_DeviceMethods` Windows Management Instrumentation (WMI) class is an SMS Provider server class that  provides access to actions that you can take on mobile devices and Microsoft Exchange ActiveSync devices.  

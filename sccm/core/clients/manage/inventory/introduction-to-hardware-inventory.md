@@ -2,20 +2,14 @@
 title: "Hardware inventory "
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to hardware inventory in System Center Configuration Manager."
-ms.custom: na
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Introduction to hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, the **Enable hardware inventory on clients** setting must be enabled in client settings.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_StatAttr Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 954660ad-f047-4944-90a2-e50f91d1861esearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 954660ad-f047-4944-90a2-e50f91d1861e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_StatAttr Server WMI Class
 The `SMS_StatAttr` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a high-performance version of [SMS_StatMsgAttributes Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statmsgattributes-server-wmi-class.md).  

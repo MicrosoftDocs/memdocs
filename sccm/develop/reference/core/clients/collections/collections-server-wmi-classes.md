@@ -1,22 +1,14 @@
 ---
 title: "Collections Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c0fedd8b-0f37-4230-8654-1270b8bd9ed9searchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c0fedd8b-0f37-4230-8654-1270b8bd9ed9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Collections Server WMI Classes
 In System Center Configuration Manager, collections classes offer a way to manage collections and collection hierarchy. This section describes the collection classes.  

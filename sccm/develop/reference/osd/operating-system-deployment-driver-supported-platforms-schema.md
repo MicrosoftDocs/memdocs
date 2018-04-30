@@ -1,22 +1,14 @@
 ---
 title: "OS Deployment Driver Supported Platforms Schema"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b45c883b-d9c3-4c88-a7c9-f38b421d475asearchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b45c883b-d9c3-4c88-a7c9-f38b421d475a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Operating System Deployment Driver Supported Platforms Schema
 The following reference section documents the XML schema that is used to specify the platforms that are supported by an operating system deployment driver in Microsoft System Center Configuration Manager.  

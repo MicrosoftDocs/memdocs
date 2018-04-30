@@ -1,19 +1,14 @@
 ---
 title: "Endpoint Protection malware definitions from network share"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: eb4ab74b-b605-41dd-930c-ac18d2f40319
-caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Using the Microsoft Malware Protection Center to Download Definitions*Applies to: System Center Configuration Manager (Current Branch)*

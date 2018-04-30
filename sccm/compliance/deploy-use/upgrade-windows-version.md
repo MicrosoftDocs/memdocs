@@ -2,22 +2,14 @@
 title: "Upgrade Windows devices to a different version"
 titleSuffix: "Configuration Manager"
 description: "Automatically upgrade devices that run Windows 10 Desktop or Windows 10 Mobile to a different edition with Configuration Manager."
-ms.custom: na
 ms.date: 01/26/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-caps.latest.revision: 8
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 
 # Upgrade Windows devices with the edition upgrade policy in System Center Configuration Manager

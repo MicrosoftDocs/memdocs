@@ -1,22 +1,14 @@
 ---
 title: "Add a Windows Driver to a Boot Image Package"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 5887b585-618e-42ed-a707-d374d0da4b0bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5887b585-618e-42ed-a707-d374d0da4b0b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Add a Windows Driver to a Configuration Manager Boot Image Package
 In System Center Configuration Manager, you add a Windows driver to an operating system deployment boot image package by adding a reference to the required driver in the [SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) `ReferencedDrivers` array property.  

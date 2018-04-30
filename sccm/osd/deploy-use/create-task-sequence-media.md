@@ -1,22 +1,15 @@
 ---
-title: "Create task sequence media"
-titleSuffix: "Configuration Manager"
-description: "Create task sequence media, such as a CD, to deploy an operating system to a destination computer in your Configuration Manager environment."
-ms.custom: na
+title: Create task sequence media
+titleSuffix: Configuration Manager
+description: Create task sequence media, such as a CD, to deploy an operating system to a destination computer in your Configuration Manager environment.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
-caps.latest.revision: 8
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create task sequence media with System Center Configuration Manager

@@ -1,22 +1,14 @@
 ---
 title: "Modify an Object by Using Managed Code"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Modify a Configuration Manager Object by Using Managed Code
 To modify a System Center Configuration Manager object instance by using the managed SMS Provider, use the object's [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) interface to make modifications. You then call the [IResultObject.Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method to submit the changes.  

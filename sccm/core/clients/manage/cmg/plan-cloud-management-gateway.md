@@ -4,8 +4,7 @@ titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz

@@ -2,22 +2,14 @@
 title: "Upgrade on-premises infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
-ms.custom: na
 ms.date: 02/15/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Upgrade on-premises infrastructure that supports System Center Configuration Manager
 

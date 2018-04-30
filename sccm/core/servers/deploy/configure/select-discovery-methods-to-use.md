@@ -2,20 +2,14 @@
 title: "Select discovery methods"
 titleSuffix: "Configuration Manager"
 description: "Review considerations for which methods to use and at which sites to run them."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
-caps.latest.revision: 9
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Select discovery methods to use for System Center Configuration Manager
 

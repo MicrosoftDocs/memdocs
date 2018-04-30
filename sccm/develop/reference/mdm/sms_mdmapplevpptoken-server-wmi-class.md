@@ -1,20 +1,14 @@
 ---
 title: "SMS_MDMAppleVppToken Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 38903d4e-d6de-4209-8c36-db66d8822e36searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 38903d4e-d6de-4209-8c36-db66d8822e36
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MDMAppleVppToken Server WMI Class
 The `SMS_MDMAppleVppToken` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) token.  

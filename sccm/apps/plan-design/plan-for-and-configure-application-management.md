@@ -2,21 +2,14 @@
 title: "Plan for and configure application management"
 titleSuffix: "Configuration Manager"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
-ms.custom: na
 ms.date: 11/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: 13
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Plan for and configure application management in System Center Configuration Manager
 

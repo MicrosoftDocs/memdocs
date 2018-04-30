@@ -2,20 +2,14 @@
 title: "Monitor content"
 titleSuffix: "Configuration Manager"
 description: "Understand how to monitor distributed content by using the Configuration Manager console."
-ms.custom: na
 ms.date: 12/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Monitor content you have distributed with System Center Configuration Manager
 

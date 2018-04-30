@@ -1,24 +1,15 @@
 ---
-# required metadata
-
 title: "Prepare to deploy client software to Macs"
 titleSuffix: "Configuration Manager"
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
-ms.custom: na
 ms.date: 11/28/2017
 ms.prod: configuration-manager
-ms.reviewer: aaroncz
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
-caps.latest.revision: 12
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Prepare to deploy client software to Macs

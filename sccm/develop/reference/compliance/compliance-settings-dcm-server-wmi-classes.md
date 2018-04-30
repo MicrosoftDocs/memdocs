@@ -1,22 +1,14 @@
 ---
 title: "Compliance Settings Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 4dbfce7f-1b58-4998-9b38-f5f3c3ba77c6searchScope: - ConfigMgr SDK
-caps.latest.revision: 34
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4dbfce7f-1b58-4998-9b38-f5f3c3ba77c6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Compliance Settings (DCM) Server WMI Classes
 In System Center Configuration Manager, compliance settings (DCM) server Windows Management Instrumentation (WMI) classes, assist you in assessing computer compliance by considering a number of configurations, for example, installation and configuration of the correct versions of Microsoft Windows operating systems. You can also use these classes to check for compliance with software updates and security settings.  

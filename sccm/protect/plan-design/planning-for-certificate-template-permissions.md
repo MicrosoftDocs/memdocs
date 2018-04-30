@@ -2,22 +2,14 @@
 title: "Planning certificate template permissions"
 titleSuffix: "Configuration Manager"
 description: "Learn about planning for the permissions that you need to configure the certificate templates that System Center Configuration Manager uses."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Planning for certificate template permissions for certificate profiles in System Center Configuration Manager
 

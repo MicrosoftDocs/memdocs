@@ -1,23 +1,15 @@
 ---
 title: "Learn about updates"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 1fa7d0d9-4bb5-4475-82ff-0d5da4a3da61
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # Learn more about available updates for System Center Configuration Manager
 

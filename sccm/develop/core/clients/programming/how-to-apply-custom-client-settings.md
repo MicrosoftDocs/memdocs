@@ -1,22 +1,14 @@
 ---
 title: "Apply Custom Client Settings"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b171d930-dd3f-4587-ad24-058448fcfa30searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b171d930-dd3f-4587-ad24-058448fcfa30
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Apply Custom Client Settings
 In System Center Configuration Manager, you apply custom client settings by creating an instance of a Client Configuration class, and then deploying the custom client settings by creating an instance of the `SMS_ClientSettingsAssignment` class and associating the instance of the Client Configuration class and a target collection.  

@@ -1,22 +1,14 @@
 ---
 title: "SubmitAMTCert Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f7aa0ba7-ba01-4c7d-81e1-fa2dfca93f8bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f7aa0ba7-ba01-4c7d-81e1-fa2dfca93f8b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SubmitAMTCert Method in Class SMS_Site
 The `SubmitAMTCert` Windows Management Instrumentation (WMI) class method, in Configuration Manager, submits a certificate for a computer that implements Intel Active Management Technology (Intel AMT).  

@@ -1,22 +1,14 @@
 ---
 title: "RequestRefresh Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fd7b5351-a3ed-40c2-a629-156f22507f88searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fd7b5351-a3ed-40c2-a629-156f22507f88
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RequestRefresh Method in Class SMS_Collection
 The `RequestRefresh` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, triggers a re-evaluation of collection membership by the System Center Configuration Manager collection evaluator component.  

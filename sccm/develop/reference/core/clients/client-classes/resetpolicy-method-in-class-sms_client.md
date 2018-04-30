@@ -1,22 +1,14 @@
 ---
 title: "ResetPolicy Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c6f4411d-b917-4767-8f8b-3e165edbb9ebsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c6f4411d-b917-4767-8f8b-3e165edbb9eb
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ResetPolicy Method in Class SMS_Client
 In Configuration Manager, the `ResetPolicy` method, resets the policy on a client. As a result, the next policy request will receive a full policy instead of merely the change in policy since the last policy request.  

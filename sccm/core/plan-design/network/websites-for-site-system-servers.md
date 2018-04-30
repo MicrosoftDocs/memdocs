@@ -2,22 +2,14 @@
 title: "Websites for site systems"
 titleSuffix: "Configuration Manager"
 description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Websites for site system servers in System Center Configuration Manager
 

@@ -2,20 +2,14 @@
 title: "Configure client settings"
 titleSuffix: "Configuration Manager"
 description: "Select client settings in System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # How to configure client settings in System Center Configuration Manager
 

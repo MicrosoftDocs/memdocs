@@ -1,22 +1,14 @@
 ---
 title: "SMS_DmInvVersion Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 08db3d36-8ac8-4904-9466-eb2933023269searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 08db3d36-8ac8-4904-9466-eb2933023269
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DmInvVersion Client WMI Class
 The `SMS_DmInvVersion` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the device management inventory version.  

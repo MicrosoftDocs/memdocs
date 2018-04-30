@@ -1,22 +1,14 @@
 ---
 title: "GetPDFData Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1c071dbe-d601-4448-8e8f-3bb29398cd8csearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1c071dbe-d601-4448-8e8f-3bb29398cd8c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetPDFData Method in Class SMS_PDF_Package
 The `GetPDFData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, produces [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) and [SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md) objects from a loaded package definition file.  

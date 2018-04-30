@@ -2,20 +2,14 @@
 title: "New in version 1602"
 titleSuffix: "Configuraton Manager"
 description: "Get details about changes and new capabilities introduced in version 1602 of System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/30/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: noindex,nofollow
 ---
 # What&#39;s new in version 1602 of System Center Configuration Manager

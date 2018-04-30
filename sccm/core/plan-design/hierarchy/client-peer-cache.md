@@ -2,17 +2,11 @@
 title: Client Peer Cache
 titleSuffix: Configuration Manager
 description: Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/10/2018
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

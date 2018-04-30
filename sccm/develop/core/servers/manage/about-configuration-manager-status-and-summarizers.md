@@ -1,22 +1,14 @@
 ---
 title: "About Status and Summarizers"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 49d4227f-a50e-4f1d-871b-c388760f8a47searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 49d4227f-a50e-4f1d-871b-c388760f8a47
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Status and Summarizers
 This section provides topics about status and state in System Center Configuration Manager.  

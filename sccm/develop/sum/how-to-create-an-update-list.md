@@ -1,22 +1,14 @@
 ---
 title: "Create an Update List"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 21702068-b002-4f19-b84a-6e63fb032678searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 21702068-b002-4f19-b84a-6e63fb032678
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create an Update List
 You create an update list that contains a set of software updates, in System Center Configuration Manager, by creating an instance of the [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) class and populating the properties.  

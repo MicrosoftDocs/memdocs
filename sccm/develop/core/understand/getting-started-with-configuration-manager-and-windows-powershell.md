@@ -1,21 +1,13 @@
 ---
 title: "Get Started with Configuration Manager and PowerShell"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 5c861c07-d6e9-42d0-9d90-6a8f69c8591bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5c861c07-d6e9-42d0-9d90-6a8f69c8591b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Getting Started with Configuration Manager and Windows PowerShell
 In System Center Configuration Manager, Windows PowerShell allows you to manage a Configuration Manager hierarchy by using Windows PowerShell scripts, Windows PowerShell cmdlets, and the Windows PowerShell Drive Provider.  

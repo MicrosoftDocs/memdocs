@@ -1,22 +1,14 @@
 ---
 title: "Site Configuration Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fac9263e-4e47-4e15-b07a-27a39c9ecd74searchScope: - ConfigMgr SDK
-caps.latest.revision: 21
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fac9263e-4e47-4e15-b07a-27a39c9ecd74
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Site Configuration Server WMI Classes
 This section contains detailed reference information about the site configuration server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager. These classes include classes that relate to an installation of Configuration Manager that consists of one or more computers running the Configuration Manager components.  

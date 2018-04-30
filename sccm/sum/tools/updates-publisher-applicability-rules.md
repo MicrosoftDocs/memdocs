@@ -2,20 +2,14 @@
 title: "Applicability rules"
 titleSuffix: "Configuration Manager"
 description: "Manage applicability rules for System Center Updates Publisher"
-ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
 ---
 

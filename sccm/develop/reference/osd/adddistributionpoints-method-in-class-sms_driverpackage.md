@@ -1,22 +1,14 @@
 ---
 title: "AddDistributionPoints Method in SMS_DriverPackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bc7520bd-ec54-40db-bbee-03df22ebc593searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bc7520bd-ec54-40db-bbee-03df22ebc593
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddDistributionPoints Method in Class SMS_DriverPackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the driver package.  

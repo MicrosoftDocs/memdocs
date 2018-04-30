@@ -2,21 +2,14 @@
 title: "Interoperability between versions"
 titleSuffix: "Configuration Manager"
 description: "Learn how to avoid conflicts between multiple System Center Configuration Manager hierarchies on the same network."
-ms.custom: na
 ms.date: 1/30/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Interoperability between different versions of System Center Configuration Manager
 

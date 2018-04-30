@@ -1,21 +1,14 @@
 ---
 title: "FallbackSUP Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: 57854375-a2c6-461b-9631-d0dcb422c3d2
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # FallbackSUP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackSUP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a software update point (SUP). The default value is 120.  

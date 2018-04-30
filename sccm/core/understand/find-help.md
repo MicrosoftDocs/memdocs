@@ -2,22 +2,14 @@
 title: "Find help"
 titleSuffix: "Configuration Manager"
 description: "Find resources for additional information about System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: 19
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Find help for using System Center Configuration Manager
 

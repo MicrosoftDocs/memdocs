@@ -1,20 +1,14 @@
 ---
 title: "GetTsPoliciesSaMedia Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: dc495673-5bc2-43d8-b5fc-4dc53424d8adsearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: dc495673-5bc2-43d8-b5fc-4dc53424d8ad
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetTsPoliciesSaMedia Method in Class SMS_TaskSequencePackage
 The `GetTsPoliciesSaMedia` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets all policies associated with the specified task sequence.  The user must have rights to create stand-alone media.  

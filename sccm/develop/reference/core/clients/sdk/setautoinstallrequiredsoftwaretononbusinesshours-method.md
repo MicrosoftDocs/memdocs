@@ -1,22 +1,14 @@
 ---
 title: "SetAutoInstallRequiredSoftwaretoNonBusinessHours Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b02219c8-09b1-4328-8b5c-796d93bc62c0searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b02219c8-09b1-4328-8b5c-796d93bc62c0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings
 The `SetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that that sets the value for `AutomaticallyInstallSoftware`.   

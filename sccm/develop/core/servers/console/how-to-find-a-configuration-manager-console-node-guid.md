@@ -1,22 +1,14 @@
 ---
 title: "Find a Console Node GUID"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 80fd9154-6ec2-4586-bd9d-4cf88aa835a6searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 80fd9154-6ec2-4586-bd9d-4cf88aa835a6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Find a Configuration Manager Console Node GUID
 Globally Unique Identifiers (GUIDs) are used, in Adminconsole.xml, to identify parts of the System Center Configuration Manager console. For example, the action you create in [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md) is placed on the **Site Configuration** node in the console tree view by using the GUID 9770fc1b-0885-40e7-8a83-5dfc5eaaa8c2.  

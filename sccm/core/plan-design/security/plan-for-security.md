@@ -2,22 +2,14 @@
 title: "Plan for security"
 titleSuffix: "Configuration Manager"
 description: "Get best practices and other information about security in System Center Configuration Manager."
-ms.custom: na
 ms.date: 01/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Plan for security in System Center Configuration Manager
 

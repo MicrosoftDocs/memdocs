@@ -2,23 +2,15 @@
 title: "Migration job planning"
 titleSuffix: "Configuration Manager"
 description: "Use migration jobs to configure data that you want to migrate to your System Center Configuration Manager environment."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex
-
 ---
 # Plan a migration job strategy in System Center Configuration Manager
 

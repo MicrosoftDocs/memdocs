@@ -1,22 +1,14 @@
 ---
 title: "Export Configuration Baselines and Items"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0599e22f-3de3-4182-bcc2-3175d91b5b58searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0599e22f-3de3-4182-bcc2-3175d91b5b58
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Export Configuration Baselines and Configuration Items
 In System Center Configuration Manager, to export a configuration baseline or configuration item using the Configuration Manager SDK, read the relevant `SMS_ConfigurationItem` instance and write the `SDMPackageXML` property (string) to a file.  

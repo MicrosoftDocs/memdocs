@@ -2,21 +2,14 @@
 title: "Security and privacy resources"
 titleSuffix: "Configuration Manager"
 description: "Find resources about security and privacy for System Center Configuration Manager."
-ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
-caps.latest.revision: 9
-author: aczechowski  
-ms.author: aaroncz  
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Security and privacy for System Center Configuration Manager
 

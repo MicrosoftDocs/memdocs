@@ -1,22 +1,14 @@
 ---
 title: "SMS_TaskSequencePackageReference_Flat Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7dba381c-b2b2-461b-8e7c-fd6aadd8739asearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7dba381c-b2b2-461b-8e7c-fd6aadd8739a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequencePackageReference_Flat Server WMI Class
 The `SMS_TaskSequencePackageReference_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all classic package or application references for a task sequence. The list also includes the applications that are dependent on the applications directly referenced in the task sequence.  

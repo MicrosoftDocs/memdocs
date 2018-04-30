@@ -2,22 +2,14 @@
 title: "Ports used for connections"
 titleSuffix: "Configuration Manager"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
-ms.custom: na
 ms.date: 02/16/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: 8
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Ports used in System Center Configuration Manager
 

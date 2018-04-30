@@ -1,22 +1,14 @@
 ---
 title: "TriggerSchedule Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # TriggerSchedule Method in Class SMS_Client
 The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.  

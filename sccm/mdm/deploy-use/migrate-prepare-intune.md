@@ -1,19 +1,14 @@
 ---
-# required metadata
-
-title: Prepare Intune for user migration 
+title: Prepare Intune for user migration
 titleSuffix: "Configuration Manager"
 description: Learn how to prepare Intune on Azure for user migration from hybrid MDM.
-keywords:
-author: dougeby
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service:
-ms.technology:
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-
 ---
 
 # Prepare Intune for user migration 

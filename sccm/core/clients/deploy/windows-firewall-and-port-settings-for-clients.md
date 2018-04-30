@@ -2,22 +2,14 @@
 title: "Windows client firewall and port settings"
 titleSuffix: "Configuration Manager"
 description: "Select Windows Firewall and port settings for clients in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Windows Firewall and port settings for clients in System Center Configuration Manager
 

@@ -2,21 +2,14 @@
 title: "Fundamentals of security"
 titleSuffix: "Configuration Manager"
 description: "Learn about the layers of security for System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Fundamentals of security for System Center Configuration Manager
 
