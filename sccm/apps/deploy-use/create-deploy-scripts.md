@@ -105,43 +105,50 @@ The three security roles used for running scripts are not created by default in 
 1. In the Configuration Manager console, go to **Administration** >**Security** >**Security Roles**
 2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Make sure you take only the permissions that you want. 
 3. Give the custom role a **Name** and a **Description**. 
-4. Assign the security role the permissions outlined below. 
+4. Assign the security role the permissions outlined below.  
 
-    ### **Security Role Permissions**
+### Security Role Permissions  
 
-     **Role Name**: Script Runners
-    - **Description**: These permissions enable this role to only run scripts that were previously created and approved by other roles. 
-    - **Permissions:** Ensure the following are set to **Yes**.
-         |**Category**|**Permission**|**State**|
-         |---|---|---|
-         |Collection|Run Script|Yes|
-         |SMS Scripts|Create|Yes|
-         |SMS Scripts|Read|Yes|
+**Role Name**: Script Runners  
+- **Description**: These permissions enable this role to only run scripts that were previously created and approved by other roles.  
+- **Permissions:** Ensure the following are set to **Yes**.  
 
-     **Role Name**: Script Authors
-    - **Description**: These permissions enable this role to author scripts, but they can’t approve or run them. 
-    - **Permissions**: Ensure the following permissions are set.
-    - 
-         |**Category**|**Permission**|**State**|
-         |---|---|---|
-         |Collection|Run Script|No|
-         |SMS Scripts|Create|Yes|
-         |SMS Scripts|Read|Yes|
-         |SMS Scripts|Delete|Yes|
-         |SMS Scripts|Modify|Yes|
+|Category|Permission|State|
+|---|---|---|
+|Collection|Run Script|Yes|
+|Site|Read|Yes|
+|SMS Scripts|Create|Yes|
+|SMS Scripts|Read|Yes|
 
-    **Role Name**: Script Approver
-    - **Description**: These permissions enable this role to approve scripts, but they can’t create or run them. 
-    - **Permissions:** Ensure the following permissions are set.
 
-         |**Category**|**Permission**|**State**|
-         |---|---|---|
-         |Collection|Run Script|No|
-         |SMS Scripts|Read|Yes|
-         |SMS Scripts|Approve|Yes|
-         |SMS Scripts|Modify|Yes|
+**Role Name**: Script Authors  
+- **Description**: These permissions enable this role to author scripts, but they can’t approve or run them.  
+- **Permissions**: Ensure the following permissions are set.
+ 
+|Category|Permission|State|
+|---|---|---|
+|Collection|Run Script|No|
+|Site|Read|Yes|
+|SMS Scripts|Create|Yes|
+|SMS Scripts|Read|Yes|
+|SMS Scripts|Delete|Yes|
+|SMS Scripts|Modify|Yes|
+
+
+**Role Name**: Script Approvers  
+- **Description**: These permissions enable this role to approve scripts, but they can’t create or run them.  
+- **Permissions:** Ensure the following permissions are set.  
+
+|Category|Permission|State|
+|---|---|---|
+|Collection|Run Script|No|
+|Site|Read|Yes|
+|SMS Scripts|Read|Yes|
+|SMS Scripts|Approve|Yes|
+|SMS Scripts|Modify|Yes|
+
      
-**Example of SMS Scripts permissions for the script authors role**
+**Example of SMS Scripts permissions for the script authors role**  
 
  ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
 
