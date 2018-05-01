@@ -32,9 +32,16 @@
       "breadcrumb_path": "/enterprise-mobility-security/toc.json",
       "product_feedback_displaytext" : "Configuration Manager Feedback",
       "product_feedback_url": "https://configurationmanager.uservoice.com/",
-      "searchScope": ["ConfigMgr"]
+      "searchScope": ["ConfigMgr"],
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/SCCMdocs",
+      "feedback_product_url": "https://configurationmanager.uservoice.com/"
       },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "feedback_system": {
+        "core/misc/**/*": "None"
+      }
+    },
     "template": [],
     "dest": "sccm"
   }
