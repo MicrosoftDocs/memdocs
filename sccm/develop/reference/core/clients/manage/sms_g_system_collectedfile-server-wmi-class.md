@@ -1,22 +1,14 @@
 ---
 title: "SMS_G_System_CollectedFile Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 602346d5-3d06-4d2e-9fc7-103dd2c81c0csearchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 602346d5-3d06-4d2e-9fc7-103dd2c81c0c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_G_System_CollectedFile Server WMI Class
 The `SMS_G_System_CollectedFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that contains information about a file copied from the client computer to the site server.  

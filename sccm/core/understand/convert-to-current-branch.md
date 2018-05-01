@@ -2,20 +2,14 @@
 title: "Upgrade the long-term servicing branch to the current branch "
 titleSuffix: "Configuration Manager"
 description: "Learn how to convert a Long-Term Servicing Branch site to a Current Branch site."
-ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
-caps.latest.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 
 

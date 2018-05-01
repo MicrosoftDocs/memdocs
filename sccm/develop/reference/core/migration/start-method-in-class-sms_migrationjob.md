@@ -1,22 +1,14 @@
 ---
 title: "Start Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1f6682fd-3a51-4b5b-a72b-9e5eac591f03searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1f6682fd-3a51-4b5b-a72b-9e5eac591f03
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Start Method in Class SMS_MigrationJob
 The `Start` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, starts the migration job.  

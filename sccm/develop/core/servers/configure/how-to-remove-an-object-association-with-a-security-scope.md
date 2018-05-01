@@ -1,22 +1,14 @@
 ---
 title: "Remove an Object Association with a Security Scope"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b6be1a0c-58ba-4949-a78a-d09ab322293csearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b6be1a0c-58ba-4949-a78a-d09ab322293c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Remove an Object Association with a Security Scope
 Removing a security scope from an object instance is as simple as deleting the Windows Management Instrumentation (WMI)`SMS_SecuredCategoryMembership` class instance. However, object instances must have at least one security scope associated with them. The last object instance can never be removed. Every object is created with the `Default` security scope, and if all other security scopes are to be removed from an object instance, the `Default` should be added to it before removal.  

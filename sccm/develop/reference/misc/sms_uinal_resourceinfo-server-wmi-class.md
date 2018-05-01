@@ -1,22 +1,14 @@
 ---
 title: "SMS_UINAL_ResourceInfo Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 01f37e13-395e-4648-af97-525d95bfe7absearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 01f37e13-395e-4648-af97-525d95bfe7ab
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_UINAL_ResourceInfo Server WMI Class
 The `SMS_UINAL_ResourceInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents network abstraction layer (NAL) data specific to the Configuration Manager console.  

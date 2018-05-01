@@ -1,22 +1,14 @@
 ---
 title: "CCM_Service_EndpointConfiguration Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 2c1a08fa-687a-4a62-87d3-bf1699a3a01csearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2c1a08fa-687a-4a62-87d3-bf1699a3a01c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_Service_EndpointConfiguration Client WMI Class
 > [!IMPORTANT]

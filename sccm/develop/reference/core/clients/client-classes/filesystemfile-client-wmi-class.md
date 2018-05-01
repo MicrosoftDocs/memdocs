@@ -1,22 +1,14 @@
 ---
 title: "FileSystemFile Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: be3a4938-044d-464a-a77c-261a4531642bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: be3a4938-044d-464a-a77c-261a4531642b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # FileSystemFile Client WMI Class
 In Configuration Manager, the `FileSystemFile` class is a client Windows Management Instrumentation (WMI) class that represents local file information.  

@@ -1,22 +1,14 @@
 ---
 title: "UnPackNALPath Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 76960011-6155-4295-8c5c-d7181018011esearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 76960011-6155-4295-8c5c-d7181018011e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UnPackNALPath Method in Class SMS_NAL_Methods
 The `UnPackNALPath` method, in Configuration Manager, decodes a network abstraction layer (NAL) path into its components.  

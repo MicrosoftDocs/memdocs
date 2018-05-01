@@ -2,21 +2,14 @@
 title: "Alerts and the status system"
 titleSuffix: "Configuration Manager"
 description: "Configure alerts, and use the status system to remain informed about the state of your Configuration Manager deployment."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Use alerts and the status system for System Center Configuration Manager
 

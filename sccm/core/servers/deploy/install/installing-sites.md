@@ -2,22 +2,14 @@
 title: "Site installation resources"
 titleSuffix: "Configuration Manager"
 description: "Review a list of topics that help you install System Center Configuration Manager or add sites to your hierarchy."
-ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
-caps.latest.revision: 31
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Resources for installing System Center Configuration Manager sites
 

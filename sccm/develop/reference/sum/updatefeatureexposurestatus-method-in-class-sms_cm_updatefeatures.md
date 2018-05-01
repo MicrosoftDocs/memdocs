@@ -1,20 +1,14 @@
 ---
 title: "UpdateFeatureExposureStatus Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b01f156d-97c2-4cf1-870c-96623fa30262searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b01f156d-97c2-4cf1-870c-96623fa30262
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateFeatureExposureStatus Method in Class SMS_CM_UpdateFeatures
 The `UpdateFeatureExposureStatus` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the feature exposure status for an update feature extension.  

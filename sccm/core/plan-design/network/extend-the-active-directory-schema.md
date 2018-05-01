@@ -2,22 +2,14 @@
 title: "Publishing and the Active Directory schema"
 titleSuffix: "Configuration Manager"
 description: "Extend the Active Directory schema for System Center Configuration Manager to simplify the process of deploying and configuring clients."
-ms.custom: na
 ms.date: 2/6/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
-caps.latest.revision: 17
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prepare Active Directory for site publishing
 

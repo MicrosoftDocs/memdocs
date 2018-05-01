@@ -2,19 +2,13 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # Install the System Center Configuration Manager console

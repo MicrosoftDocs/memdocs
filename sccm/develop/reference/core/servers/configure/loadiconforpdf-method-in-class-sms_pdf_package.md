@@ -1,22 +1,14 @@
 ---
 title: "LoadIconForPDF Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 9936a9b1-243b-4bc7-a48c-ee6942b795d1searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 9936a9b1-243b-4bc7-a48c-ee6942b795d1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # LoadIconForPDF Method in Class SMS_PDF_Package
 The `LoadIconForPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a required icon for a package definition file.  

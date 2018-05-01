@@ -2,22 +2,14 @@
 title: "Migrate data"
 titleSuffix: "Configuration Manager"
 description: "Learn how to transfer data from a source hierarchy to a System Center Configuration Manager destination hierarchy."
-ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
-caps.latest.revision: 11
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Migrate data between hierarchies in System Center Configuration Manager
 

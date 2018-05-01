@@ -2,21 +2,14 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role.
-ms.custom: na
 ms.date: 04/17/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: 44
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Supported operating systems for System Center Configuration Manager site system servers
 

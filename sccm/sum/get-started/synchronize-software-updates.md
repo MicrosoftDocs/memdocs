@@ -1,20 +1,15 @@
 ---
-
 title: Manage software updates synchronization
 titleSuffix: "Configuration Manager"
 description: "Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization."
-keywords:
-author: dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-
-
+manager: dougeby
+ms.author: aaroncz
 ---
 
 #  <a name="BKMK_SUMSync"></a> Synchronize software updates*Applies to: System Center Configuration Manager (Current Branch)*

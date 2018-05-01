@@ -2,22 +2,14 @@
 title: Associate users with a destination computer
 titleSuffix: "Configuration Manager"
 description: "Configure System Center Configuration Manager to associate users with destination computers when deploying operating systems."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
-caps.latest.revision: 9
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Associate users with a destination computer in System Center Configuration Manager
 

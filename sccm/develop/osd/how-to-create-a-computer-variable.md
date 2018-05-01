@@ -1,22 +1,14 @@
 ---
 title: "Create a Computer Variable"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e4db0e59-84c0-44eb-8e41-acb91c4ee463searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e4db0e59-84c0-44eb-8e41-acb91c4ee463
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Computer Variable in Configuration Manager
 You create a computer variable for a computer that is running System Center Configuration Manager by adding instances of [SMS_MachineVariable](../../develop/reference/osd/sms_machinevariable-server-wmi-class.md) to the [SMS_MachineSettings](../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) class `MachineVariables` array property.  

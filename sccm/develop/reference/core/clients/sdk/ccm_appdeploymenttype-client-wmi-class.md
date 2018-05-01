@@ -1,22 +1,14 @@
 ---
 title: "CCM_AppDeploymentType Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: bf386bdb-7161-47f8-94c9-3b2613be2354searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: bf386bdb-7161-47f8-94c9-3b2613be2354
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_AppDeploymentType Client WMI Class
 The `CCM_AppDeploymentType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application deployment type.   

@@ -1,22 +1,14 @@
 ---
 title: "About Compliance Settings Extensibility"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0f9532cc-058c-46cf-8181-469cd6e1734bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0f9532cc-058c-46cf-8181-469cd6e1734b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Compliance Settings (DCM) Extensibility
 The content in this section provides information about extending the functionality of desired configuration management configuration items in System Center Configuration Manager.  

@@ -1,21 +1,14 @@
 ---
 title: "SMS_AdminUIContent Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-searchScope:
- - ConfigMgr SDK
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: c4bb10ba-7fad-4307-afc2-b0b4c7db7658
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_AdminUIContent Server WMI Class
 For internal use only.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_ClassicDeploymentStatus Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e20290e5-6bcd-4b77-a4c2-9d72fe420206searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e20290e5-6bcd-4b77-a4c2-9d72fe420206
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ClassicDeploymentStatus Server WMI Class
 The `SMS_ClassicDeploymentStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents classic software distribution deployment status.  

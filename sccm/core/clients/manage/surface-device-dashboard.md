@@ -1,32 +1,15 @@
 ---
-# required metadata
-
 title: Surface Device Dashboard
-titleSuffix: "System Center Configuration Manager"
+titleSuffix: Configuraton Manager
 description: Review information about Surface devices using the dashboard.
-keywords:
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 # Surface device dashboard in System Center Configuration Manager
 

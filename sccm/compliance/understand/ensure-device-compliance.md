@@ -2,19 +2,14 @@
 title: "Ensure device compliance"
 titleSuffix: "Configuration Manager"
 description: "Manage the configuration and compliance of devices in your organization by using System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-caps.latest.revision: 8
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Ensure device compliance with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Compliance settings in System Center Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. This helps you support the following business requirements:  

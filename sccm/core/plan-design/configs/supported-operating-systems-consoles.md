@@ -2,20 +2,14 @@
 title: "Console support"
 titleSuffix: "Configuration Manager"
 description: "Learn which operating systems a System Center Configuration Manager console supports."
-ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Supported operating systems for System Center Configuration Manager consoles
 

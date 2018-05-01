@@ -2,21 +2,14 @@
 title: "Fundamentals of sites and hierarchies"
 titleSuffix: "Configuration Manager"
 description: "Get basic information about System Center Configuration Manager sites and hierarchies."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Fundamentals of sites and hierarchies for System Center Configuration Manager
 

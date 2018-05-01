@@ -1,22 +1,14 @@
 ---
 title: "SMS Provider Fundamentals"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c308fa4a-8d8b-42dc-87ec-f42667e314fdsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c308fa4a-8d8b-42dc-87ec-f42667e314fd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS Provider Fundamentals in Configuration Manager
 You use the SMS Provider to access and modify System Center Configuration Manager data. The SMS Provider is a Windows Management Instrumentation (WMI) provider that can be accessed through either WMI or managed classes.  

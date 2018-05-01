@@ -1,20 +1,15 @@
 ---
-
 title: Integration with Windows Update for Business in Windows 10
 titleSuffix: "Configuration Manager"
 description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up to date for devices connected to the Windows Update service."
-keywords:
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-
 ---
 # Integration with Windows Update for Business in Windows 10
 

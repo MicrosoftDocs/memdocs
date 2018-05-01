@@ -1,22 +1,15 @@
 ---
 title: Create a task sequence to capture an operating system
-titleSuffix: "Configuration Manager"
-description: "A build-and-capture task sequence builds a reference computer that can include specific drivers and software updates along with the operating system."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: A build-and-capture task sequence builds a reference computer that can include specific drivers and software updates along with the operating system.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
-caps.latest.revision: 19
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create a task sequence to capture an operating system in System Center Configuration Manager

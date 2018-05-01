@@ -1,22 +1,14 @@
 ---
 title: "Create an Object by Using Managed Code"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 2c6984bf-f2be-4e07-8c7c-579928d02cacsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2c6984bf-f2be-4e07-8c7c-579928d02cac
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Configuration Manager Object by Using Managed Code
 To create a System Center Configuration Manager object by using the managed SMS Provider, use *WqlConnectionManager.CreateInstance* method. The [ConnectionManagerBase.CreateInstance](https://msdn.microsoft.com/library/cc146180.aspx) method takes the required object type as a string parameter and returns an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that is used to populate the new object. The [IResultObject.Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method must be called to submit the object to the SMS Provider.  

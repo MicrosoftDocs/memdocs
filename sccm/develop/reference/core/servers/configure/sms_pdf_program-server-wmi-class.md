@@ -1,22 +1,14 @@
 ---
 title: "SMS_PDF_Program Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 5acde161-499a-43f3-9470-a83cebb7a3cdsearchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5acde161-499a-43f3-9470-a83cebb7a3cd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_PDF_Program Server WMI Class
 The `SMS_PDF_Program` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a package definition file (PDF) template from which to create an initialized program.  

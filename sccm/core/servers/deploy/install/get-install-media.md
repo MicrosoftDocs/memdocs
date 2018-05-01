@@ -2,20 +2,14 @@
 title: "Get installation media"
 titleSuffix: "Configuration Manager"
 description: "Where to find installation media for new System Center Configuration Manager installations."
-ms.custom: na
 ms.date: 1/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Where to get installation media for System Center Configuration Manager
 

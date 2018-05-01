@@ -1,22 +1,15 @@
 ---
 title: In-console updates
 titleSuffix: Configuration Manager
-description: Install updates to Configuration Manager from the Microsoft cloud 
-ms.custom: na
+description: Install updates to Configuration Manager from the Microsoft cloud
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: 36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Install in-console updates for System Center Configuration Manager
 

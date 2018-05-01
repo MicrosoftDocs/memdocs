@@ -1,17 +1,14 @@
 ---
 title: "Import data to Microsoft Intune"
 titleSuffix: "Configuration Manager"
-description:
-keywords:
-author: dougeby
+description: Import Configuration Manager data to Microsoft Intune
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service:
-ms.technology:
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-
 ---
 
 # Import Configuration Manager data to Microsoft Intune 

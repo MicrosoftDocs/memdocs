@@ -1,22 +1,14 @@
 ---
 title: "DDRWrite"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 818ce2a2-5f8d-44c4-80f8-9683074c2508searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 818ce2a2-5f8d-44c4-80f8-9683074c2508
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # DDRWrite
 The `DDRWrite` function, in Configuration Manager, writes the data discovery records (DDRs) to a file.  

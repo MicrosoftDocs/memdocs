@@ -1,22 +1,14 @@
 ---
 title: "ReloadImageProperties Method in SMS_VhdPackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: dc8cdcda-5519-4555-87a1-09c875ffa8d1searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: dc8cdcda-5519-4555-87a1-09c875ffa8d1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ReloadImageProperties Method in Class SMS_VhdPackage
 The `ReloadImageProperties` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reloads image metadata from a VHD source file and synchronizes the metadata with the database.  

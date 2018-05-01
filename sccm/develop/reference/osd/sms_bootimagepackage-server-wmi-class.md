@@ -1,22 +1,14 @@
 ---
 title: "SMS_BootImagePackage Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c0b861c2-5856-4a5f-bdd4-b8252f8bbd1esearchScope: - ConfigMgr SDK
-caps.latest.revision: 23
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c0b861c2-5856-4a5f-bdd4-b8252f8bbd1e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_BootImagePackage Server WMI Class
 The `SMS_BootImagePackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for boot image source files that are used to start a computer with Windows Pre-Installation Environment (PE) 2.0 and allow operating system deployment task sequence actions.  

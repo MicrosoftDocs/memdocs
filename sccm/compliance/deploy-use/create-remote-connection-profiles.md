@@ -2,20 +2,14 @@
 title: "Create remote connection profiles"
 titleSuffix: "Configuration Manager"
 description: "Use System Center Configuration Manager remote connection profiles to enable your users to remotely connect to work computers."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Remote connection profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

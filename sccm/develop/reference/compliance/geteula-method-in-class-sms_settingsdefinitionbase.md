@@ -1,22 +1,14 @@
 ---
 title: "GetEULA Method in Class SMS_SettingsDefinitionBase"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b4be2023-a18c-4475-a10a-d269806507a3searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b4be2023-a18c-4475-a10a-d269806507a3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetEULA Method in Class SMS_SettingsDefinitionBase
 The `GetEULA` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets the localized Microsoft Software License Terms text of the configuration item.  

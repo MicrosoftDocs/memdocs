@@ -2,18 +2,14 @@
 title: "Capabilities in Technical Preview 1612"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1612."
-ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: 5
-author: erikjems.author: erikjemanager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Capabilities in Technical Preview 1612 for System Center Configuration Manager
 
@@ -115,7 +111,7 @@ After you install a Data Warehouse site system role, the following reports are a
 | **General Software Inventory Report**  | View all software inventory for a specific machine.|
 | **Infrastructure Health Overview**  |Displays an overview of the health of your Configuration Manager infrastructure.|
 | **List of Malware Detected**  |View malware that has been detected in the organization.|
-|** Software Distribution Summary Report** | A summary of software distribution for a specific advertisement and machine.|
+| **Software Distribution Summary Report** | A summary of software distribution for a specific advertisement and machine.|
 
 ### Move the Data Warehouse database
 Use the following steps to move the data warehouse database to a new SQL Server:

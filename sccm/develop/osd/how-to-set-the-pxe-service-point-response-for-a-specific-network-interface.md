@@ -1,22 +1,14 @@
 ---
 title: "Set the PXE Service Point Response for a Specific Network Interface"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fdfdbb2d-50d9-4f01-a1aa-a07aae85629dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fdfdbb2d-50d9-4f01-a1aa-a07aae85629d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Set the PXE Service Point Response for a Specific Network Interface
 In System Center Configuration Manager, you set the operating system deployment to respond to a specific set of network addresses by adding the required media access control (MAC) addresses to the `BindExcept` embedded property list. You must also set the `BindPolicy` embedded property to 1. This specifies that PXE requests are accepted on specified network address only. For more information about setting `BindPolicy`, see [How to Set the PXE Service Point Response to All Network Interfaces](../../develop/osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md).  

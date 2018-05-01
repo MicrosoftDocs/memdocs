@@ -1,22 +1,14 @@
 ---
 title: "GetNextServiceWindowID Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0d183452-3798-4ac8-a210-25368c575ddfsearchScope: - ConfigMgr SDK
-caps.latest.revision: 19
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0d183452-3798-4ac8-a210-25368c575ddf
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetNextServiceWindowID Method in Class CCM_ServiceWindowManager
 The `GetNextServiceWindowID` WMI class method, in Configuration Manager, gets the identifier of the next service window instance closest to the current time.  

@@ -1,22 +1,14 @@
 ---
 title: "Alternate Content Provider Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 018581ca-0204-4e10-ba90-eee650573c7fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 018581ca-0204-4e10-ba90-eee650573c7f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Alternate Content Provider Classes
 System Center Configuration Manager Alternate Content Provider exposes a set of API calls and modifies the function of Data Transfer Services, such that an additional provider other than BITS can be used to retrieve the packages.  

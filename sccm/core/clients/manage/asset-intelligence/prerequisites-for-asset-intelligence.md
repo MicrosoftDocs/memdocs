@@ -2,22 +2,14 @@
 title: "Asset Intelligence Prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Get the prerequisites for Asset Intelligence in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
-caps.latest.revision: 10
-caps.handback.revision: 0
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisites for Asset Intelligence in System Center Configuration Manager
 

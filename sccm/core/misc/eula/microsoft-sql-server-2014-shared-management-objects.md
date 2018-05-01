@@ -1,23 +1,15 @@
 ---
 title: "MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 77580c83-3fc5-479e-9f94-6bc59ac0fa69
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
 

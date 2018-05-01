@@ -1,20 +1,14 @@
 ---
 title: "SMS_SoftwareUpdateBase Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: f7a0910e-c452-4645-a40c-a5bf780e37f8searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f7a0910e-c452-4645-a40c-a5bf780e37f8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SoftwareUpdateBase Server WMI Class
 The `SMS_SoftwareUpdateBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that exposes software update information available on a site and serves as the core class for software updates.  

@@ -1,20 +1,15 @@
 ---
-# required metadata
-
 title: Prepare Windows 10 for co-management
 titleSuffix: Configuration Manager
 description: Learn how to prepare your Windows 10 devices for co-management.
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
+ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-
-
 ---
 
 # Prepare Windows 10 devices for co-management
@@ -30,7 +25,7 @@ You must have the following prerequisites in place before you can enable co-mana
 The following are general prerequisites for you to enable co-management:  
 
 - Configuration Manager version 1710 or later
-- Azure AD
+- [Site onboarded with Azure AD for cloud management](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - EMS or Intune license for all users
 - [Azure AD automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) enabled
 - Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;

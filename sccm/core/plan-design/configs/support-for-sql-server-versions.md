@@ -2,21 +2,14 @@
 title: "Supported SQL Server versions"
 titleSuffix: "Configuration Manager"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
-ms.custom: na
 ms.date: 02/14/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-caps.latest.revision: 21
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # Supported SQL Server versions for System Center Configuration Manager
 

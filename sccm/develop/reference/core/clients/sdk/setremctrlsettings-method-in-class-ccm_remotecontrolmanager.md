@@ -1,22 +1,14 @@
 ---
 title: "SetRemCtrlSettings Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: df307c37-020a-4972-8d7a-df0a57377eadsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: df307c37-020a-4972-8d7a-df0a57377ead
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SetRemCtrlSettings Method in Class CCM_RemoteControlManager
 The `SetRemCtrlSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that specifies the remote control settings on a client computer.   

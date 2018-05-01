@@ -1,22 +1,14 @@
 ---
 title: "SMS_CIRelation_Flat Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b6cde26a-9d69-4b24-bb21-dfd209fe1acasearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b6cde26a-9d69-4b24-bb21-dfd209fe1aca
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_CIRelation_Flat Server WMI Class
 The `SMS_CIRelation_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a flat list of relationship information for directly or indirectly related configuration items.  

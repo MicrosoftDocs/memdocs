@@ -2,22 +2,14 @@
 title: "Manage Linux and UNIX clients"
 titleSuffix: "Configuration Manager"
 description: "Manage clients on Linux and UNIX servers in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to manage clients for Linux and UNIX servers in System Center Configuration Manager
 

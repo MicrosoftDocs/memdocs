@@ -2,20 +2,14 @@
 title: "Monitor applications from the console"
 titleSuffix: "Configuration Manager"
 description: "Monitor deployment of software, including updates, compliance settings, and applications by using the Monitoring workspace in Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
-caps.latest.revision: 5
-author: mattbriggsms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Monitor applications from the System Center Configuration Manager console*Applies to: System Center Configuration Manager (Current Branch)*
 

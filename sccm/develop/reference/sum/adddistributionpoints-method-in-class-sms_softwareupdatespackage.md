@@ -1,22 +1,14 @@
 ---
 title: "AddDistributionPoints Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: dbb9325d-7346-4ba5-8eb5-9f6245d82aa7searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: dbb9325d-7346-4ba5-8eb5-9f6245d82aa7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddDistributionPoints Method in Class SMS_SoftwareUpdatesPackage
 In System Center Configuration Manager, the `AddDistributionPoints` Windows Management Instrumentation (WMI) class method adds the distribution points for the software updates package.  

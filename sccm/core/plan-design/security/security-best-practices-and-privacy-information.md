@@ -2,21 +2,14 @@
 title: "Security best practices and privacy information"
 titleSuffix: "Configuration Manager"
 description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
-ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
-caps.latest.revision: 10
-author: aczechowski  
-ms.author: aaroncz  
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Security best practices and privacy information for System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "Define the Installer Technology Registration File"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a86bf770-7386-4655-b264-a543fe954afasearchScope: - ConfigMgr SDK
-caps.latest.revision: 20
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a86bf770-7386-4655-b264-a543fe954afa
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Define the Installer Technology Registration File
 To define an installer technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom installer technology with Configuration Manager.  The deployment technology registration file is required for the installation of the custom installer technology.  See [Installing the Application Management Extension](../../develop/apps/installing-the-application-management-extension.md) for additional details.  

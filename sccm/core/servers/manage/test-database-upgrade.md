@@ -2,21 +2,14 @@
 title: "Test database update"
 titleSuffix: "Configuration Manager"
 description: "Test upgrade the site database when installing updates for Configuration Manager."
-ms.custom: na
 ms.date: 06/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
-caps.latest.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Test the database upgrade when installing an update
 

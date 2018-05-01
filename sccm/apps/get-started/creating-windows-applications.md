@@ -2,18 +2,14 @@
 title: "Create Windows applications"
 titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy applications for Windows devices."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: 8
-author: mattbriggsms.author: mabriggmanager: angrobe
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Create Windows applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows devices.  

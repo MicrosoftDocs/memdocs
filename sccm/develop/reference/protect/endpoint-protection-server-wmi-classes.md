@@ -1,22 +1,14 @@
 ---
 title: "Endpoint Protection Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 2a8d8c98-abd9-435b-917e-d62d998eb9f0searchScope: - ConfigMgr SDK
-caps.latest.revision: 14
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 2a8d8c98-abd9-435b-917e-d62d998eb9f0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Endpoint Protection Server WMI Classes
 Endpoint Protection server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager.  

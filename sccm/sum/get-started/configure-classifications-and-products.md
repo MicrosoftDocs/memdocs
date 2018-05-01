@@ -1,21 +1,15 @@
 ---
-
 title: Configure classifications and products
 titleSuffix: Configuration Manager
 description: Follow these steps to configure software update classifications and products to synchronize in the Configuration Manager console.
-keywords:
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 04/10/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-
-
 ---
 #  Configure classifications and products to synchronize  
 

@@ -1,22 +1,14 @@
 ---
 title: "GetEntityReferences Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 84d3851e-e98b-4c1f-a9cb-2df7821ca6cesearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 84d3851e-e98b-4c1f-a9cb-2df7821ca6ce
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetEntityReferences Method in Class SMS_MigrationEntity
 The `GetEntityReferences` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the referenced entities of the specified entities.  

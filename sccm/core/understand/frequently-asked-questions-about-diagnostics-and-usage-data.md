@@ -2,21 +2,14 @@
 title: Diagnostic and usage data FAQ
 titleSuffix: Configuration Manager
 description: Find frequently asked questions about diagnostic and usage data for System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Frequently asked questions about diagnostics and usage data for System Center Configuration Manager
 

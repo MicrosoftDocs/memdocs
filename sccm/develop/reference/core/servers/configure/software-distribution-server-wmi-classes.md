@@ -1,22 +1,14 @@
 ---
 title: "Software Distribution Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: de2f9b43-9d3a-4d81-9db9-537a55817ca4searchScope: - ConfigMgr SDK
-caps.latest.revision: 26
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: de2f9b43-9d3a-4d81-9db9-537a55817ca4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Software Distribution Server WMI Classes
 Microsoft System Center Configuration Manager allows you to distribute software across one or more sites in your Configuration Manager hierarchy. The following list shows some of the items you can distribute:  

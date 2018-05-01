@@ -1,22 +1,14 @@
 ---
 title: "Software Distribution"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 56e1f0d0-037a-421d-ada5-cf6309523dafsearchScope: - ConfigMgr SDK
-caps.latest.revision: 18
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 56e1f0d0-037a-421d-ada5-cf6309523daf
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Software Distribution
 This section provides task-based topics that show how to manage software distribution, manage collections, and track product compliance in System Center Configuration Manager. Software distribution can be programmatically controlled on both the Configuration Manager server and the Configuration Manager client. The majority of software distribution topics focus on programmatic use on the server through the SMS Provider.  

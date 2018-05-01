@@ -1,22 +1,14 @@
 ---
 title: "SMS_SiteDetailSummarizer Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6b3cce2b-4ba9-4598-ad5a-cb79fc7c1edasearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6b3cce2b-4ba9-4598-ad5a-cb79fc7c1eda
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SiteDetailSummarizer Server WMI Class
 The `SMS_SiteDetailSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides per-site status of components and the system. An instance of this class is created for each site.  

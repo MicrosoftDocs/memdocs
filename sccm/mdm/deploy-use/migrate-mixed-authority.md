@@ -1,17 +1,15 @@
 ---
-title: Change the MDM authority for specific users (mixed MDM authority) 
-titleSuffix: "Configuration Manager"
+title: Change the MDM authority for specific users (mixed MDM authority)
+titleSuffix: Configuration Manager
 description: Learn how to change the MDM authority from hybrid MDM to Intune standalone for some users.
-keywords:
-author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service:
-ms.technology:
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-
 ---
 # Change the MDM authority for specific users (mixed MDM authority) 
 
@@ -101,20 +99,19 @@ The cmdlet switches the management authority of MDM devices without user affinit
 
 
 ### PARAMETERS
-``` powershell
--Credential <PSCredential>
-Credential for Intune Tenant Admin or Service Admin account to use when switching device management authorities. The user is prompted for credentials if the parameter is not specified.
+#### `-Credential <PSCredential>`
+A PowerShell credential object for the Azure AD user account that is used when switching device management authorities. The user is prompted for credentials if the parameter isn't specified. The directory role for this user account should be either a **Global administrator** or a **Limited administrator** with the administrative role of **Intune administrator**.
 
--DeviceIds <Guid[]>
+#### `-DeviceIds <Guid[]>`
 The ids of the MDM devices that need to have their management authority switched. The device ids are unique identifiers for the devices displayed by the Configuration Manager console.
 
--Force [<SwitchParameter>]
+#### `-Force [<SwitchParameter>]`
 Specify parameter to disable the Should Continue prompt.<br>
  
--LogFilePath <string>
+#### `-LogFilePath <string>`
 Path to log file location.
  
--LoggingLevel <SourceLevels>
+#### `-LoggingLevel <SourceLevels>`
 The log level used to determine the type of logs that need to be written to the log file.
  
 The following are the possible values for LoggingLevel:
@@ -128,18 +125,17 @@ The following are the possible values for LoggingLevel:
   - Verbose
   - Warning
  
--Confirm [<SwitchParameter>]
+#### `-Confirm [<SwitchParameter>]`
 Prompts you for confirmation before executing the command.
  
--WhatIf [<SwitchParameter>]
+#### `-WhatIf [<SwitchParameter>]`
 Describes what would happen if you executed the command without actually executing the command.
  
-<CommonParameters>
+#### `<CommonParameters>`
 This cmdlet supports the common parameters: Verbose, Debug,
 ErrorAction, ErrorVariable, WarningAction, WarningVariable,
 OutBuffer, PipelineVariable, and OutVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-```
 
 ### Example 1
 
@@ -158,13 +154,13 @@ Description
  
 Successfully switched the management authority of the device from Configuration Manager to Intune.
 ```
+
 ### REMARKS
-``` powershell
-To see the examples, type: "get-help Switch-MdmDeviceAuthority -examples".
-For more information, type: "get-help Switch-MdmDeviceAuthority -detailed".
-For technical information, type: "get-help Switch-MdmDeviceAuthority -full".
-For online help, type: "get-help Switch-MdmDeviceAuthority -online".
-```
+- To see the examples, type: `get-help Switch-MdmDeviceAuthority -examples`  
+- For more information, type: `get-help Switch-MdmDeviceAuthority -detailed`  
+- For technical information, type: `get-help Switch-MdmDeviceAuthority -full`  
+- For online help, type: `get-help Switch-MdmDeviceAuthority -online`   
+
 
 ## Next steps
 After you have migrated users and tested Intune functionality, consider whether you are ready to [change the MDM authority](migrate-change-mdm-authority.md) of your Intune tenant from Configuration Manager to Intune. 

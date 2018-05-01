@@ -2,20 +2,14 @@
 title: "Manage configuration data"
 titleSuffix: "Configuration Manager"
 description: "After you create configuration items and baselines in System Center Configuration Manager, you can use other commands to perform various actions."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Manage configuration data in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform various actions.  

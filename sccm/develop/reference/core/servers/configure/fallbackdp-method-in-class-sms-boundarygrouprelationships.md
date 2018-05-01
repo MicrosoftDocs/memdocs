@@ -1,21 +1,14 @@
 ---
 title: "FallbackDP Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: 8debe455-119d-4ef0-a786-f4e76bd61273
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # FallbackDP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackDP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a distribution point (DP). The default value is 120.

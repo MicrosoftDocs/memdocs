@@ -1,22 +1,14 @@
 ---
 title: "Device Management Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cf75f787-c13e-49cf-9adb-e59cbb57bf7csearchScope: - ConfigMgr SDK
-caps.latest.revision: 14
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cf75f787-c13e-49cf-9adb-e59cbb57bf7c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Device Management Server WMI Classes
 Device management server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager assist in assessment of computer compliance considering a number of mobile device configurations.  

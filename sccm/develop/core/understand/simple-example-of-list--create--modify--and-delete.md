@@ -1,22 +1,14 @@
 ---
 title: "Example of List, Create, Modify, and Delete"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6f31059a-ec25-4113-b3a7-8de92269a351searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6f31059a-ec25-4113-b3a7-8de92269a351
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Simple Example of List, Create, Modify, and Delete
 The following example shows set of very basic methods using the `SMS_Package` class to demonstrate List, Create, Modify and Delete operations using the SMS Provider. This is a look at the structure of a basic Configuration Manager program – there are more useful method snippets in other areas of the SDK that accomplish specific tasks.  

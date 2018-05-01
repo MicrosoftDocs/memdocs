@@ -1,22 +1,14 @@
 ---
 title: "SMS_SoftwareDistributionAgentConfig Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f8102cde-c2ac-4760-b97b-2f11f1624351searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f8102cde-c2ac-4760-b97b-2f11f1624351
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SoftwareDistributionAgentConfig Server WMI Class
 The `SMS_SoftwareDistributionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers deploy software.  

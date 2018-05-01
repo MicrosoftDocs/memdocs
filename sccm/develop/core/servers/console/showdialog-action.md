@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager ShowDialog Action"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f5912944-21ac-40d2-a026-f9b2ea69d9c7searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f5912944-21ac-40d2-a026-f9b2ea69d9c7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager ShowDialog Action
 The `ShowDialog` action, in System Center Configuration Manager, opens a property sheet or regular dialog box in the Configuration Manager console. With the `ShowDialog` action, you can display existing dialog boxes or extension dialog boxes that you create.  

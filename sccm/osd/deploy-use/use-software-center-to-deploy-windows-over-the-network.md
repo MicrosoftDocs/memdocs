@@ -1,21 +1,15 @@
 ---
 title: Use Software Center to deploy Windows over the network
-titleSuffix: "Configuration Manager"
-description: "You can deploy an operating system to Software Center to refresh an existing computer with a new version of Windows or to upgrade Windows to the latest version."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: You can deploy an operating system to Software Center to refresh an existing computer with a new version of Windows or to upgrade Windows to the latest version.
 ms.date: 6/16/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Use Software Center to deploy Windows over the network with System Center Configuration Manager

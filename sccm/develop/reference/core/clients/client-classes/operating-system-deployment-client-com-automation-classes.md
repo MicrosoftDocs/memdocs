@@ -1,22 +1,14 @@
 ---
 title: "OS Deployment Client COM Automation Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b341d3e6-8015-4718-b628-020e5a5d4914searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b341d3e6-8015-4718-b628-020e5a5d4914
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Operating System Deployment Client COM Automation Classes
 This section provides reference content for the operating system deployment task client COM automation classes in System Center Configuration Manager.  

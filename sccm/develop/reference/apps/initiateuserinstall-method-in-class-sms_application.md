@@ -1,20 +1,14 @@
 ---
 title: "InitiateUserInstall Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 955b71e0-6890-4cae-8ce1-9d3e3b5d78fesearchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 955b71e0-6890-4cae-8ce1-9d3e3b5d78fe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # InitiateUserInstall Method in Class SMS_Application
 > [!WARNING]

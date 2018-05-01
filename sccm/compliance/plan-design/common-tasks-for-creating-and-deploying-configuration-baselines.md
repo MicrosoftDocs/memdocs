@@ -2,22 +2,14 @@
 title: "Common tasks for configuration baselines "
 titleSuffix: "Configuration Manager"
 description: "Learn about how to create and deploy System Center Configuration Manager configuration baselines."
-ms.custom: na
 ms.date: 07/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
 

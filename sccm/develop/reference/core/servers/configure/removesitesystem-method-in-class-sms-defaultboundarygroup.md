@@ -1,21 +1,14 @@
 ---
 title: "RemoveSiteSystem Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: 4cccccef-404a-4d15-adef-6cfc77502df5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RemoveSiteSystem Method in Class SMS_DefaultBoundaryGroup
  The `RemoveSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes one or more site system servers from a default boundary group.    

@@ -1,22 +1,14 @@
 ---
 title: "Resource Management Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 41eb032c-be38-42b2-b7b6-485619e0681fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 41eb032c-be38-42b2-b7b6-485619e0681f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Resource Management Server WMI Classes
 Resource management server WMI classes in Microsoft System Center Configuration Manager support resource management on the server.The System Center Configuration Manager server class schema is a set of Windows Management Instrumentation (WMI) classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  

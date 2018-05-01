@@ -1,22 +1,14 @@
 ---
 title: "SMS_Driver Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e42884a1-a4db-432c-ad22-5c2474e8a102searchScope: - ConfigMgr SDK
-caps.latest.revision: 20
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e42884a1-a4db-432c-ad22-5c2474e8a102
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_Driver Server WMI Class
 The `SMS_Driver` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents device drivers, in the driver catalog, that can be installed as part of a task sequence in an operating system deployment.  

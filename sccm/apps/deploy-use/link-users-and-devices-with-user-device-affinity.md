@@ -2,22 +2,14 @@
 title: "Link users and devices with user device affinity"
 titleSuffix: "Configuration Manager"
 description: "Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Link users and devices with user device affinity in System Center Configuration Manager
 

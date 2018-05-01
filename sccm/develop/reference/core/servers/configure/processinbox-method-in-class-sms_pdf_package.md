@@ -1,22 +1,14 @@
 ---
 title: "ProcessInBox Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ab2245c3-f676-47cc-82ea-f1787abf9b79searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ab2245c3-f676-47cc-82ea-f1787abf9b79
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ProcessInBox Method in Class SMS_PDF_Package
 The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports package definition files from the package definition file inbox.  

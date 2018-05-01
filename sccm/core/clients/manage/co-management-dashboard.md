@@ -1,22 +1,15 @@
 ---
 title: "Co-management Dashboard"
-titleSuffix: "System Center Configuration Manager"
+titleSuffix: Configuraton Manager
 description: "Review information about co-management using the dashboard."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 
 # Co-management dashboard in System Center Configuration Manager

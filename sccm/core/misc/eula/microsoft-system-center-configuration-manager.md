@@ -1,22 +1,14 @@
 ---
 title: MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
-ms.custom: na
 ms.date: 04/10/2018
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
 

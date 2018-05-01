@@ -1,22 +1,14 @@
 ---
 title: "How to Create an Application with the Script Deployment Type"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 16
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create an Application with the Script Deployment Type
 Applications are new to System Center Configuration Manager.  Prior to System Center Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model are referred to as Applications.  Packages still exist in System Center Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  

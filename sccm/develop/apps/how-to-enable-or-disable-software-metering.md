@@ -1,22 +1,14 @@
 ---
 title: "Enable or Disable Software Metering"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8e706653-7627-4cd9-853d-3690be0d567bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8e706653-7627-4cd9-853d-3690be0d567b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enable or Disable Software Metering
 You enable or disable the Software Metering Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  

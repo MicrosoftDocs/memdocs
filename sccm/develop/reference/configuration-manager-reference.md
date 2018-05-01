@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Reference"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 28104ac0-39e0-476a-9417-99719ae72897searchScope: - ConfigMgr SDK
-caps.latest.revision: 32
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 28104ac0-39e0-476a-9417-99719ae72897
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Reference
 This reference contains detailed information about the Microsoft System Center Configuration Manager class schema, extended WMI Query Language (WQL), named values and qualifiers, and the System Center Configuration Manager console libraries. It also provides information about the managed SMS Provider library.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_UpdatesAssignment Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7searchScope: - ConfigMgr SDK
-caps.latest.revision: 21
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_UpdatesAssignment Server WMI Class
 The `SMS_UpdatesAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment.  

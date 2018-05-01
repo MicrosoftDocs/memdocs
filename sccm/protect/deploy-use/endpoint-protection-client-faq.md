@@ -2,21 +2,14 @@
 title: "Endpoint Protection client frequently asked questions"
 titleSuffix: "Configuration Manager"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
-ms.custom: na
 ms.date: 12/09/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-caps.latest.revision: 15
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Endpoint Protection client frequently asked questions
 

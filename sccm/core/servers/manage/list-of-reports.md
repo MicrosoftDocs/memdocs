@@ -2,22 +2,14 @@
 title: "List of reports"
 titleSuffix: "Configuration Manager"
 description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
-caps.latest.revision: 10
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # List of reports in System Center Configuration Manager
 

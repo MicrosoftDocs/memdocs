@@ -2,20 +2,14 @@
 title: "Security and privacy for compliance settings"
 titleSuffix: "Configuration Manager"
 description: "Learn about the security best practices for compliance settings in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Security and privacy for compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 

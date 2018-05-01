@@ -2,21 +2,14 @@
 title: "Protect data and devices for On-premises Mobile Device Management "
 titleSuffix: "Configuration Manager"
 description: "Protect data and devices of On-premises Mobile Device Management in Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 692b86d5-dea7-4414-9e1f-043d2cadfd3b
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Protect data and devices in On-premises Mobile Device Management
 

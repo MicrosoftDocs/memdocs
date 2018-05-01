@@ -2,21 +2,14 @@
 title: "UNIX/Linux client component services and commands"
 titleSuffix: "Configuration Manager"
 description: "Learn about component services and commands on Linux and UNIX clients in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
-caps.latest.revision: 6
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Linux and UNIX clients component services and commands for System Center Configuration Manager
 

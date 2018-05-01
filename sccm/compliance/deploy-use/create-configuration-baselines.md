@@ -2,20 +2,14 @@
 title: "Create configuration baselines"
 titleSuffix: "Configuration Manager"
 description: "Create configuration baselines in System Center Configuration Manager that you can deploy to a collection."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Create configuration baselines in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 

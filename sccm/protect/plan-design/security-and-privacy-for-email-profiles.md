@@ -2,20 +2,14 @@
 title: "Email profile security and privacy"
 titleSuffix: "Configuration Manager"
 description: "Learn about the security best practices for managing email profiles for devices in System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/28/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
-caps.latest.revision: 3
-caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Security and privacy for email profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 ## Security Best Practices for Email Profiles  

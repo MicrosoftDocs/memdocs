@@ -1,28 +1,15 @@
 ---
-# required metadata
-
-title: [ARTICLE TITLE | Microsoft Docs]
-description:
-keywords:
-author: [GITHUB USERNAME]
-manager: [ALIAS]
-ms.date: 10/06/2016
-ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+title: [ARTICLE TITLE in 35 chars or less]
+titleSuffix: Configuration Manager
+description: 
+ms.date: mm/dd/yyyy
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.topic: conceptual
 ms.assetid: [GET ONE FROM guidgenerator.com]
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+author: [GITHUB USERNAME]
+ms.author: [ALIAS]
+manager: [ALIAS]
 ---
 
 # Metadata and Markdown Template

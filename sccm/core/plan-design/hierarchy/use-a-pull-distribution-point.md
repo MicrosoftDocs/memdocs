@@ -2,21 +2,14 @@
 title: "Pull-distribution point"
 titleSuffix: "Configuration Manager"
 description: "Learn about configurations and limitations for using a pull-distribution point with System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
-caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 
 # Use a pull-distribution point with System Center Configuration Manager

@@ -1,22 +1,14 @@
 ---
 title: "Configure the WSUS Settings"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c6d0f7c3-d794-4f15-89ce-dbdbb57d133csearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c6d0f7c3-d794-4f15-89ce-dbdbb57d133c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Configure the WSUS Settings
 You configure the Windows Server Update Services (WSUS) component settings, in System Center Configuration Manager, by modifying the site control file. For more information about WSUS, see the MSDN documentation for [Windows Server Update Services](http://go.microsoft.com/fwlink/?LinkId=93575).  

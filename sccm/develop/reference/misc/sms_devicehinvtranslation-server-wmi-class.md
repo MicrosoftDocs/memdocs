@@ -1,22 +1,14 @@
 ---
 title: "SMS_DeviceHinvTranslation Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ca23c16e-0eab-42ef-b315-89cbf67f7d53searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ca23c16e-0eab-42ef-b315-89cbf67f7d53
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DeviceHinvTranslation Server WMI Class
 The `SMS_DeviceHinvTranslation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a translation for an enumeration used in device hardware inventory.  

@@ -2,20 +2,14 @@
 title: "Current Branch versions"
 titleSuffix: "Configuration Manager"
 description: "Review the version history of System Center Configuration Manager, and learn about the phases of service offered."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
-caps.latest.revision: 8
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: noindex,nofollow
 ---
 # Support for System Center Configuration Manager current branch versions

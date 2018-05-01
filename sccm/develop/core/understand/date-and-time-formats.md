@@ -1,22 +1,14 @@
 ---
 title: "Date and Time Formats"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3c397b79-1209-4fe3-8c48-b3a4970faba7searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3c397b79-1209-4fe3-8c48-b3a4970faba7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Date and Time Formats
 Actions, in System Center Configuration Manager, that include date and time values are common, such as get current date and time, 50 days from today is what date?, or find out what day of the week falls on a certain date. When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format. An example is any expression that has a SQL Server `datetime` data type or that can be converted implicitly, such as an appropriately formatted character string (for example, “1998.10.31��?).  

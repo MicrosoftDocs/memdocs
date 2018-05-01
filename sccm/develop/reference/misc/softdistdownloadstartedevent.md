@@ -1,22 +1,14 @@
 ---
 title: "SoftDistDownloadStartedEvent"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: aa6b5aa8-1de9-4057-8c91-c996ed72c1a1searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: aa6b5aa8-1de9-4057-8c91-c996ed72c1a1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SoftDistDownloadStartedEvent
 In Configuration Manager, the `SoftDistDownloadStartedEvent` message is sent when the download for a package is completed. The message appears in **Package Status** in the Configuration Manager console.  

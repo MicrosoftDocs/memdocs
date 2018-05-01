@@ -2,22 +2,14 @@
 title: "Audit remote control usage"
 titleSuffix: "Configuration Manager"
 description: "Audit remote control use in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to audit remote control usage in System Center Configuration Manager
 

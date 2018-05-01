@@ -1,22 +1,14 @@
 ---
 title: "Synchronize the Software Update Point"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b394b01f-a87b-4f15-b364-558184921871searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b394b01f-a87b-4f15-b364-558184921871
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Synchronizing the Software Update Point
 In System Center Configuration Manager, software updates must be synchronized before the update information is available in the System Center Configuration Manager console. Synchronization is initiated at the highest level site in the hierarchy that has a software update point.  

@@ -1,20 +1,14 @@
 ---
 title: "GetNextID Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 54ce095c-443f-49e2-93d0-8ee3746608f1searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 54ce095c-443f-49e2-93d0-8ee3746608f1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetNextID Method in Class SMS_Advertisement
 The `GetNextID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the ID number that will be used for the next advertisement created.  
