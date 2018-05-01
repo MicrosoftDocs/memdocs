@@ -52,7 +52,7 @@ Plan to update the extended interoperability client on devices that you manage w
 3. Add these devices to a collection, and exclude that collection from automatic client upgrades. For more information, see [Use automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).  
 
 > [!TIP]  
-> To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, search for "system center config," and then select **System Center Config Mgr (current branch and LTSB)**.
+> To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, search for `System Center Config`, and then select **System Center Config Mgr (current branch)**.
 
 
 
