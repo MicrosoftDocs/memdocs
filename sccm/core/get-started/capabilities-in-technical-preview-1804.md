@@ -172,6 +172,9 @@ The Configuration Manager server and client tools are now included with the tech
 > 
 > <sup>1</sup> CMTrace doesn't depend upon .NET or Windows Presentation Foundation (WPF), so is still used in Windows PE boot images.
 
+### Known issues
+Some client and server tools may unexpectedly quit when launching. This issue is due to a missing file on the media. As a workaround, copy the **Microsoft.Diagnostics.Tracing.EventSource.dll** file from the AdminConsole\bin directory into both SMSSETUP\Tools\ClientTools and ServerTools directories. This file must be the same version as used by the Configuration Manager console. Other versions may not work. <!--513977-->
+
 
 
 ## Uninstall application on approval revocation
