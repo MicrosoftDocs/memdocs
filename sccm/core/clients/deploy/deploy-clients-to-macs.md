@@ -195,7 +195,7 @@ Use this procedure for automation of client installation and requesting and enro
 > -   The Bill of Materials (BOM) file and property list (.plist) file created by the Configuration Manager client installation.  
 > -   The contents of the folder /Library/Application Support/Microsoft/CCM/Logs.  
 >   
->  The information collected by CmDiagnostics is added to a zip file that is saved to the desktop of the computer and is named cmdiag-*<hostname\>***-***&gt;date and time\>*.zip
+>  The information collected by CmDiagnostics is added to a zip file that is saved to the desktop of the computer and is named `cmdiag-*<hostname\>***-***&gt;date and time\>*.zip`
 
 
 ##  Use a certificate request and installation method that is independent from Configuration Manager  
