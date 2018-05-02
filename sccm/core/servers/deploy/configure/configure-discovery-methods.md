@@ -173,6 +173,9 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 7.  Optionally, on the **Active Directory Attributes** tab, you can configure additional Active Directory attributes for computers that you want to discover. The default object attributes are also listed.  
 
+     > [!Tip]  
+     > For example, your organization uses the **Description** attribute on the computer account in Active Directory. Click **Custom**, and add `Description` as a custom attribute. After this discovery method runs, this attribute shows on the device Properties tab in the Configuration Manager console.<!--513948-->
+
 8.  Optionally, on the **Option** tab, you can configure options to filter out or exclude stale computer records from discovery.  
 
 9. When you have finished configuring Active Directory System Discovery for this site, choose **OK** to save the configuration.  
