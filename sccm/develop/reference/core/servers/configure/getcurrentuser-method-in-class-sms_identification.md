@@ -1,22 +1,14 @@
 ---
 title: "GetCurrentUser Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b156164d-d873-47fe-8fc8-043ccdb6b75asearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b156164d-d873-47fe-8fc8-043ccdb6b75a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetCurrentUser Method in Class SMS_Identification
 The `GetCurrentUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the domain\user name that is used by the SMS Provider for authentication.  

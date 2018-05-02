@@ -1,20 +1,14 @@
 ---
 title: "SMS_CM_UpdatePackageSiteStatus Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8183768c-9786-4dfa-9bc4-f3198a9dd594searchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8183768c-9786-4dfa-9bc4-f3198a9dd594
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_CM_UpdatePackageSiteStatus Server WMI Class
 The  `SMS_CM_UpdatePackageSiteStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to get the update package installation status per site.  

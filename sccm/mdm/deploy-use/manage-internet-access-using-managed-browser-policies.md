@@ -2,22 +2,14 @@
 title: "Manage Internet access using managed browser policies"
 titleSuffix: "Configuration Manager"
 description: "Deploy the Intune Managed Browser to manage and restrict Internet access."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager
 

@@ -2,21 +2,14 @@
 title: "Install roles for On-premises MDM "
 titleSuffix: "Configuration Manager"
 description: "Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
-caps.latest.revision: 9
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager
 

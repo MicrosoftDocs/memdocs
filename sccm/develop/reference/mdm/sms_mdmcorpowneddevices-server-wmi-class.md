@@ -1,20 +1,14 @@
 ---
 title: "SMS_MDMCorpOwnedDevices Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 564b7a4a-cc7c-4a56-a1cd-f4d21d4bda7fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 564b7a4a-cc7c-4a56-a1cd-f4d21d4bda7f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MDMCorpOwnedDevices Server WMI Class
 The `SMS_MDMCorpOwnedDevices` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management  (MDM)  corporate owned devices.  

@@ -1,21 +1,15 @@
 ---
-title: "Create prestaged media"
-titleSuffix: "Configuration Manager"
-description: "Create prestaged media in System Center Configuration Manager to simplify deployment of Windows in several scenarios."
-ms.custom: na
+title: Create prestaged media
+titleSuffix: Configuration Manager
+description: Create prestaged media in System Center Configuration Manager to simplify deployment of Windows in several scenarios.
 ms.date: 04/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
-caps.latest.revision: 12
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create prestaged media with System Center Configuration Manager

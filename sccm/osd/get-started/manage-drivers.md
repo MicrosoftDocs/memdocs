@@ -2,22 +2,14 @@
 title: "Manage drivers "
 titleSuffix: "Configuration Manager"
 description: "Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points."
-ms.custom: na
 ms.date: 01/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
-caps.latest.revision: 10
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Manage drivers in System Center Configuration Manager
 

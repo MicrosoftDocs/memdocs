@@ -2,21 +2,14 @@
 title: "Client deployment planning"
 titleSuffix: "Configuration Manager"
 description: "Plan to deploy clients and prepare the infrastructure in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
-caps.latest.revision: 3
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Planning considerations for deploying clients in System Center Configuration Manager
 

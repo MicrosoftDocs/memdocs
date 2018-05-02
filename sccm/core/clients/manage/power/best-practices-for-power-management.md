@@ -2,20 +2,14 @@
 title: "Best practices for power management"
 titleSuffix: "Configuration Manager"
 description: "Get best practices for power management in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: arob98ms.author: angrobemanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Best practices for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following best practices for power management in System Center Configuration Manager.  

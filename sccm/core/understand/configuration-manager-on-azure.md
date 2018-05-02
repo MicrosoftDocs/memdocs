@@ -1,20 +1,14 @@
 ---
 title: "Configuration Manager on Azure"
 description: "Information about using Configuration Manager on an Azure environment."
-ms.custom: na
 ms.date: 03/27/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
-caps.latest.revision: 2
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # Configuration Manager on Azure - Frequently Asked Questions
 *Applies to: System Center Configuration Manager (Current Branch)*

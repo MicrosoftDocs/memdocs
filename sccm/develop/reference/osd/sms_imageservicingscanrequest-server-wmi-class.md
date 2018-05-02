@@ -1,22 +1,14 @@
 ---
 title: "SMS_ImageServicingScanRequest Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 56060aed-2ae2-49c9-9446-a9016b4ea964searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 56060aed-2ae2-49c9-9446-a9016b4ea964
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ImageServicingScanRequest Server WMI Class
 The `SMS_ImageServicingScanRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents scan request for offline servicing image.  

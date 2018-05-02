@@ -2,20 +2,14 @@
 title: "Management tasks for applications"
 titleSuffix: "Configuration Manager"
 description: "Manage System Center Configuration Manager applications and deployment types."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
-caps.latest.revision: 8
-author: mattbriggsms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Management tasks for System Center Configuration Manager applications*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this article to help you manage System Center Configuration Manager applications and deployment types.  

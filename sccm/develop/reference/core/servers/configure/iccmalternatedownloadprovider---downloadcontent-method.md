@@ -1,24 +1,14 @@
 ---
 title: "ICcmAlternateDownloadProvider : DownloadContent"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: e3c904db-2838-47e2-ad60-68411e262778
-searchScope:
- - ConfigMgr SDK
-caps.latest.revision: 10
-author: "lleonard-msft"
-ms.author: "alleonar"
-manager: "angrobe"
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICcmAlternateDownloadProvider : DownloadContent Method
 The **ICcmAlternateDownloadProvider::DownloadContent** method, in Configuration Manager, instructs the provider to download content.  

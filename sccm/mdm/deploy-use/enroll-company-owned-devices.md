@@ -2,21 +2,14 @@
 title: "Enroll company-owned devices "
 titleSuffix: "Configuration Manager"
 description: "Learn about different methods to enroll company-owned devices for hybrid deployments with Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
-caps.latest.revision: 13
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Enroll company-owned devices for hybrid deployments with Configuration Manager
 

@@ -1,22 +1,15 @@
 ---
-title: "Create capture media "
-titleSuffix: "Configuration Manager"
-description: "Use the Create Task Sequence Media Wizard to create capture media in Configuration Manager to capture an operating system image from a reference computer."
-ms.custom: na
+title: Create capture media
+titleSuffix: Configuration Manager
+description: Use the Create Task Sequence Media Wizard to create capture media in Configuration Manager to capture an operating system image from a reference computer.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
+ms.technology: configmgr-osd
 ms.topic: article
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
-caps.latest.revision: 11
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create capture media with System Center Configuration Manager

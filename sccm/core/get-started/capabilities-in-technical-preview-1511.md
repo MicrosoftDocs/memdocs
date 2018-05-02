@@ -2,19 +2,15 @@
 title: "Capabilities in Technical Preview 1511"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1511."
-ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
-caps.latest.revision: 5
-author: erikjems.author: erikjemanager: angrobe
+author: aczechowski
 robots: noindex,nofollow
+manager: dougeby
+ms.author: aaroncz
 ---
 # Capabilities in Technical Preview 1511 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  

@@ -1,20 +1,14 @@
 ---
 title: "SMS_FeatureExtension Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0a40d370-575f-480d-b998-9fd3c8cf7f1csearchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0a40d370-575f-480d-b998-9fd3c8cf7f1c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_FeatureExtension Server WMI Class
 The `SMS_FeatureExtension` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents feature extensions.  

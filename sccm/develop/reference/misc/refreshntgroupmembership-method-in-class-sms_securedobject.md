@@ -1,22 +1,14 @@
 ---
 title: "RefreshNTGroupMembership Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b3971d0d-0cf8-4778-a564-812d767eb3b1searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b3971d0d-0cf8-4778-a564-812d767eb3b1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RefreshNTGroupMembership Method in Class SMS_SecuredObject
 The `RefreshNTGroupMembership` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the information that is stored about the user's Windows NT group membership.  

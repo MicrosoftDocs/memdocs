@@ -1,22 +1,14 @@
 ---
 title: "ValidateQuery Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: d4da35eb-a222-43fe-b8bd-992fd32f9b95searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: d4da35eb-a222-43fe-b8bd-992fd32f9b95
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ValidateQuery Method in Class SMS_Report
 The `ValidateQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies that a report query is a valid SQL statement and performs the same level of validation that occurs when the report is saved.  

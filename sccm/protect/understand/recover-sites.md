@@ -2,20 +2,14 @@
 title: "Site recovery"
 titleSuffix: "Configuration Manager"
 description: "Learn to recover your sites in System Center Configuration Manager."
-ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid:  19539f4d-1667-4b4c-99a1-9995f12cf5f7
-caps.latest.revision:
-author: mestew
-ms.author: mstewart
-manager: angrobe
+ms.technology: configmgr-protect
+ms.topic: conceptual
+ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 #  Recover a Configuration Manager site

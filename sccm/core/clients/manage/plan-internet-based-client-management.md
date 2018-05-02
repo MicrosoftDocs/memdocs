@@ -2,22 +2,14 @@
 title: "Internet-based client management"
 titleSuffix: "Configuration Manager"
 description: "Create a plan to manage Internet-based clients in System Center Configuration Manager."
-ms.custom: na
 ms.date: 05/16/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Plan for Internet-based client management in System Center Configuration Manager
 

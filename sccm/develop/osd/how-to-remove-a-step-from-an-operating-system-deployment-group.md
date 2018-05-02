@@ -1,22 +1,14 @@
 ---
 title: "Remove a Step from an OS Deployment Group"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1c143409-2ecd-44ae-9517-f37c15e0acc3searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1c143409-2ecd-44ae-9517-f37c15e0acc3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Remove a Step from an Operating System Deployment Group
 In System Center Configuration Manager, you delete a step (an action or a group) from an operating system deployment task sequence group by deleting the step from the group's list of task sequence steps.  

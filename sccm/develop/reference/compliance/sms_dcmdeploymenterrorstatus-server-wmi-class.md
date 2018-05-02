@@ -1,22 +1,14 @@
 ---
 title: "SMS_DCMDeploymentErrorStatus Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 457311dc-674c-4198-bec8-ee985199024csearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 457311dc-674c-4198-bec8-ee985199024c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_DCMDeploymentErrorStatus Server WMI Class
 The `SMS_DCMDeploymentErrorStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents error status for a deployment.  

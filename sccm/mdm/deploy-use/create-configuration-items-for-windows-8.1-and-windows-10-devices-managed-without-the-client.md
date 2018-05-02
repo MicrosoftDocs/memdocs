@@ -2,22 +2,14 @@
 title: "Create configuration items for Windows 8.1 and Windows 10 devices managed with Intune"
 titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers."
-ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: 20
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
 

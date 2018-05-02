@@ -1,22 +1,14 @@
 ---
 title: "Use Objects with Managed Code"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 33ff7a4d-6189-4c7e-92e3-8d861c3eb871searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 33ff7a4d-6189-4c7e-92e3-8d861c3eb871
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Use Configuration Manager Objects with Managed Code
 This section provides code examples for using the managed SMS Provider library with Configuration Manager objects. The examples generally use packages for illustration, but they can be easily adapted to use other Configuration Manager objects.  

@@ -1,22 +1,14 @@
 ---
 title: "Modify the Supported Platforms for a Program"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 58f4f08b-bc7f-4e6e-989c-39769f0f3f12searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 58f4f08b-bc7f-4e6e-989c-39769f0f3f12
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Modify the Supported Platforms for a Program
 Your application can add supported platforms to a package, in System Center Configuration Manager, by obtaining specific instances of the `SMS_Package` and `SMS_Program` classes and then adding an instance of the `SMS_OS_Details` class to the `SupportedOperatingSystems` property.  

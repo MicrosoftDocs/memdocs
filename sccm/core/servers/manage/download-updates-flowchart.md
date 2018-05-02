@@ -2,21 +2,14 @@
 title: "Flowchart - Download updates"
 titleSuffix: "Configuration Manager"
 description: "See the process by which a site with an online service connection point downloads in-console updates."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5d50a8d7-90d2-42da-b9fd-2edc190fa22e
-caps.latest.revision: 4
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Flowchart - Download updates for System Center Configuration Manager
 

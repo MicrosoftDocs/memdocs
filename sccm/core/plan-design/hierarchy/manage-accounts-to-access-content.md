@@ -2,20 +2,14 @@
 title: "Accounts to access content"
 titleSuffix: "Configuration Manager"
 description: "Learn about the accounts where clients access System Center Configuration Manager content."
-ms.custom: na
 ms.date: 2/6/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
-caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 ---
 # Manage accounts to access content in System Center Configuration Manager
 

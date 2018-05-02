@@ -4,15 +4,11 @@ titleSuffix: Configuration Manager
 description: Learn about the latest additions or changes to the Configuration Manager software development kit (SDK).
 ms.date: 04/12/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.topic: article
+ms.technology: configmgr-sdk
+ms.topic: conceptual
 ms.assetid: 0ed5fda0-71b4-471b-bcf7-20d4e3802bb3
-searchScope:
- - ConfigMgr SDK
-caps.latest.revision: 32
-author: shill-ms
-ms.author: v-suhill
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # What's new in the System Center Configuration Manager SDK

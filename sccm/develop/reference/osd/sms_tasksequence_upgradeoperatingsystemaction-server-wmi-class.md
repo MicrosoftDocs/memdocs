@@ -1,20 +1,14 @@
 ---
 title: "SMS_TaskSequence_UpgradeOperatingSystemAction Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "12/01/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 4a5f6ade-6ab5-4324-ac0e-6348b9488712searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 4a5f6ade-6ab5-4324-ac0e-6348b9488712
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequence_UpgradeOperatingSystemAction Server WMI Class
 The `SMS_TaskSequence_UpgradeOperatingSystemAction` Windows Management Instrumentation (WMI) class is an SMS provider server class, in Configuration Manager, that represents a task sequence action that upgrades the operating system. This is only supported for Windows 10 and Windows 10 Anniversary Update.  

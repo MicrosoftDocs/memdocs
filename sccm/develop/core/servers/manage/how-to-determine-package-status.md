@@ -1,22 +1,14 @@
 ---
 title: "Determine Package Status"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 005b6456-fbfd-49b3-b701-bf549ff611cesearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 005b6456-fbfd-49b3-b701-bf549ff611ce
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Determine Package Status
 In System Center Configuration Manager, the software distribution process can take from several minutes to several hours, depending on the site settings, network topography, whether the package includes source files, and the number of distribution points that have been specified for the package. Creating the package, distribution points, programs, and advertisement instances initiates the software distribution process that is managed by the System Center Configuration Manager Distribution Manager.  

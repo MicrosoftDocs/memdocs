@@ -2,20 +2,14 @@
 title: "Install Updates Publisher"
 titleSuffix: "Configuration Manager"
 description: "Install System Center Updates Publisher in your environment"
-ms.custom: na
 ms.date: 07/03/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
 ---
 # Install Updates Publisher

@@ -1,20 +1,14 @@
 ---
 title: "SMS_HealthAttestationDetails Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b402a603-f1cf-417a-a9f4-2f6bb79fd042searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b402a603-f1cf-417a-a9f4-2f6bb79fd042
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_HealthAttestationDetails Server WMI Class
 The `SMS_HealthAttestationDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Health Attestation details.  

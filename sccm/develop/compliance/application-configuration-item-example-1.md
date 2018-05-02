@@ -1,22 +1,14 @@
 ---
 title: "Application Configuration Item Example 1"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: adc63f00-8fcf-4212-910a-26ae9154d574searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: adc63f00-8fcf-4212-910a-26ae9154d574
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Application Configuration Item Example 1
 The following Application Configuration Item Instance example determines whether the System Center Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  

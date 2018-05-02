@@ -1,22 +1,14 @@
 ---
 title: "About Component Status Messages"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fb0d7f0c-a341-4c41-a84f-16c027433e2dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fb0d7f0c-a341-4c41-a84f-16c027433e2d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Component Status Messages
 The message text for both the System Center Configuration Manager components and the raw user-defined messages is contained in message DLLs. The [SMS_StatMsgInsStrings Server WMI Class](../../../../develop/reference/core/servers/manage/sms_statmsginsstrings-server-wmi-class.md) class contains the insertion strings for those messages that use insertion strings. To read the SMS component and raw user-defined messages, you must know the message DLL that contains the message text.  

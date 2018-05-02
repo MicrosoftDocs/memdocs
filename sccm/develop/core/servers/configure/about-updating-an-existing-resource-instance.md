@@ -1,22 +1,14 @@
 ---
 title: "Update an Existing Resource Instance"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0ccb114a-9666-40f5-a02c-894822f3d359searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0ccb114a-9666-40f5-a02c-894822f3d359
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Updating an Existing Resource Instance
 When the Data Discovery Manager (DDM), in System Center Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  

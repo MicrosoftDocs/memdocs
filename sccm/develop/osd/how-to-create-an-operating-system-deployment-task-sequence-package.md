@@ -1,22 +1,14 @@
 ---
 title: "Create an OS Deployment Task Sequence Package"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0caaf1d2-ffce-45f4-ae0c-d4e0eea2de71searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0caaf1d2-ffce-45f4-ae0c-d4e0eea2de71
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create an Operating System Deployment Task Sequence Package
 You create an operating system deployment task sequence, in System Center Configuration Manager, by creating an instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class. This class derives from the [SMS_Package](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class and holds the task sequence. It is advertised to clients who can then run the task sequence. The task sequence is associated with the task sequence package by using the `SMS_TaskSequencePackage` class [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method.  

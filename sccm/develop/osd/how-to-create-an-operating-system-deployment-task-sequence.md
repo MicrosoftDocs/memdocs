@@ -1,22 +1,14 @@
 ---
 title: "Create an OS Deployment Task Sequence"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 10cdc1b1-22b6-4d26-83e8-6f42580c985esearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 10cdc1b1-22b6-4d26-83e8-6f42580c985e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create an Operating System Deployment Task Sequence
 You create a System Center Configuration Manager operating system deployment task sequence by creating an instance of the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class.  

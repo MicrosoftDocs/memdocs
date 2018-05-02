@@ -1,22 +1,14 @@
 ---
 title: "AddSoftwareHashData Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3a07f56d-e00f-4d46-9f4b-36b99e3a243bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3a07f56d-e00f-4d46-9f4b-36b99e3a243b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddSoftwareHashData Method in Class SMS_AISoftwareList
 The `AddSoftwareHashData` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, adds the `SoftwarePropertiesHash` from `SoftwareCode` and `Title`.  

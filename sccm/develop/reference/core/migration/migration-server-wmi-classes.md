@@ -1,22 +1,14 @@
 ---
 title: "Migration Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 94193217-e9a1-4859-b3f1-05ad806d64cesearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 94193217-e9a1-4859-b3f1-05ad806d64ce
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Migration Server WMI Classes
 Migration, in System Center Configuration Manager, is a feature that enables the IT Administrator to migrate the objects and contents from Configuration Manager 2007 to System Center 2012 Configuration Manager and to monitor the status of the clients’ migration. This section explains how to manage migration using the WMI interface.  

@@ -1,22 +1,14 @@
 ---
 title: "Software Updates Setup and Configuration"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ddf3eeff-349e-4122-a0ce-fe735fe2c1aasearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ddf3eeff-349e-4122-a0ce-fe735fe2c1aa
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Software Updates Setup and Configuration
 This section provides information about software updates setup and configuration in System Center Configuration Manager.  

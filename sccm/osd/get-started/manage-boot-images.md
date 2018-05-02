@@ -2,22 +2,14 @@
 title: "Manage boot images "
 titleSuffix: "Configuration Manager"
 description: "In Configuration Manager, learn to manage the Windows PE boot images that you use during an operating system deployment."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
-caps.latest.revision: 23
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Manage boot images with System Center Configuration Manager
 

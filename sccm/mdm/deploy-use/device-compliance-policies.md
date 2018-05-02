@@ -2,21 +2,14 @@
 title: Device compliance policies
 titleSuffix: "Configuration Manager"
 description: "Learn how to manage compliance policies in System Center Configuration Manager to make devices compliant with conditional access polices."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Device compliance policies in System Center Configuration Manager
 

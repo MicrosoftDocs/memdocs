@@ -1,22 +1,14 @@
 ---
 title: "SMS_ClientAdvertisementStatus Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7cf70230-481e-4ab5-9f5b-30975b58b761searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7cf70230-481e-4ab5-9f5b-30975b58b761
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ClientAdvertisementStatus Server WMI Class
 The `SMS_ClientAdvertisementStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that records the last status message for every client and advertisement.  

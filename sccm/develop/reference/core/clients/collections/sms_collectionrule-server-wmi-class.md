@@ -1,22 +1,14 @@
 ---
 title: "SMS_CollectionRule Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 43c23dda-0881-44b0-ac6b-65428b0c68c3searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 43c23dda-0881-44b0-ac6b-65428b0c68c3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_CollectionRule Server WMI Class
 The `SMS_CollectionRule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a collection rule in a collection and serves as an abstract base class for [SMS_CollectionRuleDirect Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md) and [SMS_CollectionRuleQuery Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md).  

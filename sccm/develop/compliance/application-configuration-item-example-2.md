@@ -1,22 +1,14 @@
 ---
 title: "Application Configuration Item Example 2"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f359d17d-d2dc-4b34-9e1b-5c5c1d5fe060searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f359d17d-d2dc-4b34-9e1b-5c5c1d5fe060
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Application Configuration Item Example 2
 In System Center Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.  

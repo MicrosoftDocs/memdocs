@@ -1,22 +1,14 @@
 ---
 title: "SMS_MigrationSiteMapping Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ac9084b4-13fd-4c95-a183-86508a2e1e07searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ac9084b4-13fd-4c95-a183-86508a2e1e07
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_MigrationSiteMapping Server WMI Class
 The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a mapping between the Configuration Manager source site and the System Center Configuration Manager top site.  

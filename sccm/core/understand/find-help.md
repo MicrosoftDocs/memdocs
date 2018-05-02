@@ -1,54 +1,42 @@
 ---
-title: "Find help"
-titleSuffix: "Configuration Manager"
-description: "Find resources for additional information about System Center Configuration Manager."
-ms.custom: na
-ms.date: 12/22/2017
+title: Find help
+titleSuffix: Configuration Manager
+description: Find resources for additional information about System Center Configuration Manager.
+ms.date: 04/30/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: 19
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Find help for using System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article provides multiple resources to find help for using Configuration Manager.  
+This article provides the following sections with multiple resources to find help for using Configuration Manager:  
 
-For help with product accessibility, see
-  [Accessibility features in System Center Configuration Manager](../../core/understand/accessibility-features.md).
+- [Product documentation](#bkmk_Info)  
+
+- [Sharing product feedback](#product-feedback)  
+
+- [Follow the Configuration Manager team blog](#BKMK_ProductGroupBlog)  
+
+- [Support options and community resources](#BKMK_SupportOptions)  
+
+For help with product accessibility, see [Accessibility features in Configuration Manager](../../core/understand/accessibility-features.md).  
 
 
 ##  <a name="bkmk_Info"></a> Product documentation  
- Use the following resources for additional information about Configuration Manager.  
 
--   To access the most current product documentation, start at the [library index](https://docs.microsoft.com/sccm/)
+To access the most current product documentation, start at the [library index](https://docs.microsoft.com/sccm/).  
 
--   To provide feedback about the documentation, submit via [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation)  
+<a name="BKMK_SearchTips"></a>  
 
+For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](/sccm/core/understand/use-docs).  
 
-###  <a name="BKMK_SearchTips"></a> Search the documentation library  
- Use the following search tips to help you find the information that you need:  
-
--   When using your preferred search engine to locate content for Configuration Manager, focus the search results to the current content library by including the following two terms, **SCCM** and **Docs**.
-
--   Use search terms that match terminology in the user interface and online documentation. Avoid unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP"; "deployment type" rather than "DT"; and "software updates" rather than "SUM."  
-
--   To search within an article you are currently viewing on docs.microsoft.com, select Ctrl+F, and then enter search terms in the browser's **Find** box. 
-
--   Each article on docs.microsoft.com includes the following fields to assist with searching the content:
-    - **Search** in the upper right corner. To search all articles enter terms in this field. Articles in the Configuration Manager library  automatically include the "ConfigMgr" scope.
-    - **Filter** above the left table of contents. To search the current table of contents enter terms in this field. This field only matches terms that appear in the article titles. 
 
 
 ## Product feedback

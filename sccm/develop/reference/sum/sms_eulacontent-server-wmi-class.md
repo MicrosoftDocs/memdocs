@@ -1,22 +1,14 @@
 ---
 title: "SMS_EULAContent Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 542246a2-55b9-464a-8d52-eff405127c14searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 542246a2-55b9-464a-8d52-eff405127c14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_EULAContent Server WMI Class
 The `SMS_EULAContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides information about optional configuration item content associated with Microsoft Software License Terms.  

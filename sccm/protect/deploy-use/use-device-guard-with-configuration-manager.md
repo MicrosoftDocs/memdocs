@@ -2,22 +2,14 @@
 title: "How to manage Windows Device Guard"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use System Center Configuration Manager to manage Windows Device Guard."
-ms.custom: na
 ms.date: 12/19/2017
 ms.prod: configuration-manager
-ms.reviewer: dudeso
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
-caps.latest.revision: 13
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 

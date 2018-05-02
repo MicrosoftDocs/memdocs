@@ -1,22 +1,14 @@
 ---
 title: "CheckLockRequest Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 54032c44-cfa7-48cf-92bb-7f8bc482f822searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 54032c44-cfa7-48cf-92bb-7f8bc482f822
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CheckLockRequest Method in Class SMS_ObjectLock
 The `CheckLockRequest` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks a lock request.  

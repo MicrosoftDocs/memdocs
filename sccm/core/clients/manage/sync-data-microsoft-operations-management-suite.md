@@ -2,17 +2,11 @@
 title: Sync data to OMS
 titleSuffix: Configuration Manager
 description: Sync data from System Center Configuration Manager to Microsoft Operations Management Suite.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
-caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

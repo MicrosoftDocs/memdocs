@@ -1,22 +1,14 @@
 ---
 title: "RefreshPkgSource Method in SMS_TaskSequencePackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 24d3514f-b1b7-4ac3-b1ac-17548aa3f273searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 24d3514f-b1b7-4ac3-b1ac-17548aa3f273
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # RefreshPkgSource Method in Class SMS_TaskSequencePackage
 The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties have not changed.  

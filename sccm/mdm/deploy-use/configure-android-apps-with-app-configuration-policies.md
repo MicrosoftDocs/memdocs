@@ -2,21 +2,14 @@
 title: "Configure Android for Work apps with app configuration policies"
 titleSuffix: "Configuration Manager"
 description: "Help eliminate configuration problems on devices running Android for Work by deploying app configuration policies to users before they run apps."
-ms.custom: na
 ms.date: 09/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
-caps.latest.revision: 0
-caps.handback.revision: 0
-author: NathBarn
-ms.author: NathBarn
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Apply settings to Android for Work apps with app configuration policies in System Center Configuration Manager
 

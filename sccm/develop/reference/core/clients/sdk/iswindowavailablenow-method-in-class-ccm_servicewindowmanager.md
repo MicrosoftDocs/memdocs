@@ -1,22 +1,14 @@
 ---
 title: "IsWindowAvailableNow Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 37702798-5d54-4ea0-90c8-df8fc66a248dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 20
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 37702798-5d54-4ea0-90c8-df8fc66a248d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # IsWindowAvailableNow Method in Class CCM_ServiceWindowManager
 The `IsWindowAvailableNow` WMI class method, in Configuration Manager, determines whether a service window of a specified type and the given duration is available to run at the point of time when the call is made.  

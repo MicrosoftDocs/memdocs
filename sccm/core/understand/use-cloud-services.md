@@ -2,22 +2,14 @@
 title: "Use cloud services to supplement on-premises infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
-caps.latest.revision: 10
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Use cloud services with System Center Configuration Manager
 

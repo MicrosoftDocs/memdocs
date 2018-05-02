@@ -1,22 +1,14 @@
 ---
 title: "Encrypt Passwords or Data for a Site"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c640a87a-9eb6-400d-b9e2-eb71d265f50esearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c640a87a-9eb6-400d-b9e2-eb71d265f50e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Encrypt Passwords or Data for a Site
 In System Center Configuration Manager, user accounts connect to site systems and Active Directory to perform various tasks. Prior to System Center 2012 Configuration Manager, the Manage Site Accounts tool (MSAC) was used to manage these user accounts. The MSAC tool has been deprecated. Using a new WMI method, these account passwords can be encrypted for a specific site. The following code snipped demonstrates how user account passwords can be encrypted for a specific site.  

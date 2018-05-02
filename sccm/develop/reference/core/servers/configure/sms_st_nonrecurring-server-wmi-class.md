@@ -1,22 +1,14 @@
 ---
 title: "SMS_ST_NonRecurring Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c44ae9b7-6518-41e0-8c8f-3b2802eae34dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c44ae9b7-6518-41e0-8c8f-3b2802eae34d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ST_NonRecurring Server WMI Class
 The `SMS_ST_NonRecurring` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a schedule token for non-recurring events.  

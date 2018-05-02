@@ -2,20 +2,14 @@
 title: "Site system role options"
 titleSuffix: "Configuration Manager"
 description: "Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory."
-ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration options for site system roles for System Center Configuration Manager
 

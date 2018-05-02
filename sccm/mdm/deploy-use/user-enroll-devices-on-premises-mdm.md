@@ -2,22 +2,14 @@
 title: "How users enroll devices with On-premises MDM "
 titleSuffix: "Configuration Manager"
 description: "Understand how users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
 

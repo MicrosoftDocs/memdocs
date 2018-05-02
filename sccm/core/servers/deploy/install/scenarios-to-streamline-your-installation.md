@@ -2,21 +2,14 @@
 title: "Installation scenarios"
 titleSuffix: "Configuration Manager"
 description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading a site."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
-caps.latest.revision: 6
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Scenarios to streamline your installation of System Center Configuration Manager
 

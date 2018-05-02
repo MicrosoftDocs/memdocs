@@ -2,17 +2,11 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Host the content that you deploy to devices and users by using distribution points
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

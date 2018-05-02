@@ -1,22 +1,14 @@
 ---
 title: "WMI Provider Fundamentals"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 04ca780f-dd83-43de-b967-bb9f8a05eb3asearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 04ca780f-dd83-43de-b967-bb9f8a05eb3a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # WMI Configuration Manager Provider Fundamentals
 Windows Script Host-based applications and scripts work in Windows Management Instrumentation (WMI) through the WMI Object Model, which defines the programming interface to WMI. A number of WMI object types are used when manipulating System Center Configuration Manager objects. For more information about the WMI Object Model, see [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=276770).  

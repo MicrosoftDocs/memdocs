@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Status Summarizers"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 99ab10c8-3095-4a73-966e-9c14091341d2searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 99ab10c8-3095-4a73-966e-9c14091341d2
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Status Summarizers
 Summarizers are summary classes that help you determine the health, or status, of different aspects of your System Center Configuration Manager site. The summaries, which are produced from status messages, states, and counts, give you a real-time view of the health of System Center Configuration Manager sites, components, packages, and advertisements.  

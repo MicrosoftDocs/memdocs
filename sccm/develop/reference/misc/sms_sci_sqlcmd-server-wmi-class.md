@@ -1,22 +1,14 @@
 ---
 title: "SMS_SCI_SQLCmd Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ea2baeeb-6d74-4c40-9452-0b4ae7b4b961searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ea2baeeb-6d74-4c40-9452-0b4ae7b4b961
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SCI_SQLCmd Server WMI Class
 The `SMS_SCI_SQLCmd` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a Structured Query Language (SQL) command to be run periodically directly in the SQL Server database.  

@@ -2,21 +2,14 @@
 title: "Introduction to the Long-Term Servicing Branch"
 titleSuffix: "Configuration Manager"
 description: "Learn about the Long-Term Servicing Branch of System Center Configuration Manager."
-ms.custom: na
 ms.date: 05/01/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid:  694bc29f-a7fd-4e06-815a-1a9c5e9ac563
-caps.latest.revision: 0
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Introduction to the Long-Term Servicing Branch of System Center Configuration Manager
 

@@ -1,23 +1,15 @@
 ---
 title: "MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-mms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.topic: conceptual
+ms.technology: configmgr-other
 ms.assetid: a0539a3d-c56b-40e2-b291-55fb8f74d714
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
+ms.prod: configuration-manager
 ---
 # MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014
 

@@ -2,22 +2,14 @@
 title: "Migration prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
-ms.custom: na
 ms.date: 3/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: 10
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Prerequisites for migration in System Center Configuration Manager
 

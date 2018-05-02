@@ -2,22 +2,14 @@
 title: "International support"
 titleSuffix: "Configuration Manager"
 description: "Configure System Center Configuration Manager to comply with specific international requirements."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # International support in System Center Configuration Manager
 

@@ -1,20 +1,14 @@
 ---
 title: "SMS_ClientDataSourcesPolicy Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 55bd888c-93b7-49b8-98af-273953a5fa37searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 55bd888c-93b7-49b8-98af-273953a5fa37
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ClientDataSourcesPolicy Server WMI Class
 The  `SMS_ClientDataSourcesPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client policy data sources.  

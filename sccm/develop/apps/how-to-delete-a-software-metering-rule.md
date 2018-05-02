@@ -1,22 +1,14 @@
 ---
 title: "Delete a Software Metering Rule"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 26421f68-0708-4c5a-a0a3-f3a399ed9b8esearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 26421f68-0708-4c5a-a0a3-f3a399ed9b8e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Delete a Software Metering Rule
 You delete a software metering rule, in System Center Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.  

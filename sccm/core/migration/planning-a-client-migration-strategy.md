@@ -2,21 +2,14 @@
 title: "Plan client migration"
 titleSuffix: "Configuration Manager"
 description: "Learn about the tasks that migrate clients from a source hierarchy to a System Center Configuration Manager destination hierarchy."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Plan a client migration strategy in System Center Configuration Manager
 

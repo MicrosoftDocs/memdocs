@@ -2,19 +2,13 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # Configure discovery methods for System Center Configuration Manager
@@ -178,6 +172,9 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 6.  On the **Polling Schedule** tab, configure both the full discovery polling schedule and delta discovery.  
 
 7.  Optionally, on the **Active Directory Attributes** tab, you can configure additional Active Directory attributes for computers that you want to discover. The default object attributes are also listed.  
+
+     > [!Tip]  
+     > For example, your organization uses the **Description** attribute on the computer account in Active Directory. Click **Custom**, and add `Description` as a custom attribute. After this discovery method runs, this attribute shows on the device Properties tab in the Configuration Manager console.<!--513948-->
 
 8.  Optionally, on the **Option** tab, you can configure options to filter out or exclude stale computer records from discovery.  
 

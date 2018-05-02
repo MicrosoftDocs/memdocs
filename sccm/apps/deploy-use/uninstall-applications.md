@@ -2,22 +2,14 @@
 title: "Uninstall applications"
 titleSuffix: "Configuration Manager"
 description: "Uninstall an application by using System Center Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Uninstall applications with System Center Configuration Manager
 

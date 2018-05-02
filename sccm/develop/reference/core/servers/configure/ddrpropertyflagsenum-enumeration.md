@@ -1,22 +1,14 @@
 ---
 title: "DDRPropertyFlagsEnum Enumeration"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ab94d236-9868-4feb-a75d-5be49758b394searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ab94d236-9868-4feb-a75d-5be49758b394
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # DDRPropertyFlagsEnum Enumeration
 The `DDRPropertyFlagsEnum` enumeration, in Configuration Manager, specifies flags that are used by `ISMSResGen`.  

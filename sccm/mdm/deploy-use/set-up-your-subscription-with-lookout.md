@@ -2,21 +2,14 @@
 title: "Setup your subscription with Lookout"
 titleSuffix: "Configuration Manager"
 description: "This topics provides details on how to configure Lookout device threat protection."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
-caps.latest.revision:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Set up your subscription for  Lookout device threat protection
 

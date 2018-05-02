@@ -2,20 +2,14 @@
 title: "Prerequisites for sites"
 titleSuffix: "Configuration Manager"
 description: "Learn about prerequisites for installing the different types of System Center Configuration Manager sites."
-ms.custom: na
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisites for installing System Center Configuration Manager sites
 

@@ -1,22 +1,15 @@
 ---
-title: "Create bootable media "
-titleSuffix: "Configuration Manager"
-description: "Bootable media in Configuration Manager make it easy to install a new version of Windows or replace a computer and transfer settings."
-ms.custom: na
+title: Create bootable media
+titleSuffix: Configuration Manager
+description: Bootable media in Configuration Manager make it easy to install a new version of Windows or replace a computer and transfer settings.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
-caps.latest.revision: 11
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Create bootable media with System Center Configuration Manager

@@ -2,21 +2,14 @@
 title: "Language packs"
 titleSuffix: "Configuration Manager"
 description: "Learn about the language support available in System Center Configuration Manager."
-ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Language packs in System Center Configuration Manager
 

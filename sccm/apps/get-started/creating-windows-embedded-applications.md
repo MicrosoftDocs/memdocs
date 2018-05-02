@@ -2,19 +2,14 @@
 title: "Create Windows Embedded applications"
 titleSuffix: "Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy applications for Windows Embedded devices."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
-caps.latest.revision: 7
-author: mattbriggsms.author: mabriggmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Create Windows Embedded applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows Embedded devices.  

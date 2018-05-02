@@ -1,22 +1,14 @@
 ---
 title: "Create an Advertisement"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 97f583d0-701b-41e5-8897-4e64bec0b85bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 97f583d0-701b-41e5-8897-4e64bec0b85b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create an Advertisement
 The following example shows how to create an advertisement by using the `SMS_Advertisement` class and class properties in System Center Configuration Manager.  

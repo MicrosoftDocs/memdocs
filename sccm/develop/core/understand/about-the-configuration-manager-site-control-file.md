@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Site Control File"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About the Configuration Manager Site Control File
 The site control file in System Center Configuration Manager is an ASCII text file (Sitectrl.ct0) that contains the configuration of each site. There are two types of site control files:  

@@ -1,22 +1,14 @@
 ---
 title: "EvaluateMachinePolicy Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8f8b7106-2694-4a58-8931-6b18a9a2892bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8f8b7106-2694-4a58-8931-6b18a9a2892b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # EvaluateMachinePolicy Method in Class SMS_Client
 In Configuration Manager, the `EvaluateMachinePolicy` method initiates the evaluation of the policy assigned to a specified computer or device.  

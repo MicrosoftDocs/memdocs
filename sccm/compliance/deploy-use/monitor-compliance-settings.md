@@ -2,20 +2,14 @@
 title: "Monitor compliance settings"
 titleSuffix: "Configuration Manager"
 description: "Use one or more of the procedures in this topic to display the compliance status of the configuration baseline."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Monitor compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you have deployed System Center Configuration Manager configuration baselines to devices in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:

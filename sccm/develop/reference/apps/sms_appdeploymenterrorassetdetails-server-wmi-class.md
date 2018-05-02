@@ -1,22 +1,14 @@
 ---
 title: "SMS_AppDeploymentErrorAssetDetails Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 196e4faf-3c29-4184-933f-c240212ad519searchScope: - ConfigMgr SDK
-caps.latest.revision: 18
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 196e4faf-3c29-4184-933f-c240212ad519
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_AppDeploymentErrorAssetDetails Server WMI Class
 The `SMS_AppDeploymentErrorAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents error details of application deployment at the asset level.  

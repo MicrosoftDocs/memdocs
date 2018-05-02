@@ -1,22 +1,14 @@
 ---
 title: "Delete a Windows Driver"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 74926652-9b74-47cd-a0b4-2b93610b11f6searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 74926652-9b74-47cd-a0b4-2b93610b11f6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Delete a Windows Driver from Configuration Manager
 You delete a Windows driver from the operating system deployment driver catalog, in System Center Configuration Manager, by deleting its [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. When you delete a driver, its definition is deleted, and it is no longer matched by the apply driver action task sequences. However, if the content associated with the driver was added to a driver package, or if the driver was added to a boot image package, the content remains there until the packages are updated.  

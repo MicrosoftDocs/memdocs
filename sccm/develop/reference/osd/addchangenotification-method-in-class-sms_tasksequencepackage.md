@@ -1,22 +1,14 @@
 ---
 title: "AddChangeNotification Method in SMS_TaskSequencePackage"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a38f79cd-7493-470f-9ca0-489c985cdf75searchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a38f79cd-7493-470f-9ca0-489c985cdf75
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AddChangeNotification Method in Class SMS_TaskSequencePackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a task sequence package change notification.  

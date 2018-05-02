@@ -2,20 +2,14 @@
 title: "Deploy configuration baselines"
 titleSuffix: "Configuration Manager"
 description: "Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to deploy configuration baselines in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Configuration baselines in System Center Configuration Manager must be deployed to one or more collections of users or devices before client devices in those collections can assess their compliance with the configuration baseline.  

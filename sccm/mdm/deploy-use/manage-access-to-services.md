@@ -2,21 +2,14 @@
 title: "Conditional access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
-ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
-caps.latest.revision: 26
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Manage access to services in System Center Configuration Manager

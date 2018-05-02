@@ -2,21 +2,14 @@
 title: "Boundary groups for 1511, 1602, and 1606"
 titleSuffix: "Configuration Manager"
 description: "Use boundary groups with Configuration Manager versions 1511, 1602, and 1606."
-ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Boundary groups for System Center Configuration Manager version 1511, 1602, and 1606
 

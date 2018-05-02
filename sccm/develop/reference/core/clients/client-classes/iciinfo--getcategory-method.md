@@ -1,22 +1,14 @@
 ---
 title: "ICIINFO::GetCategory"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 76c96b11-787a-4a37-b592-f0bdd4e094easearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 76c96b11-787a-4a37-b592-f0bdd4e094ea
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICIINFO::GetCategory Method
 The `ICIINFO::GetCategory` method, in Configuration Manager, gets a localized category name by index and the group name of the category.  

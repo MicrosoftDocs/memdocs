@@ -1,20 +1,15 @@
 ---
 title: "Endpoint Protection malware definitions from WSUS"
 titleSuffix: "Configuration Manager"
-definition: "Learn how to configure Windows Server Updates Services to auto-approve definition updates."
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
-
+author: aczechowski
+description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
+manager: dougeby
+ms.author: aaroncz
 ---
 
 # Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

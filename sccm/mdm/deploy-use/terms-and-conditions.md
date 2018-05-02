@@ -2,21 +2,14 @@
 title: "Terms and Conditions"
 titleSuffix: "Configuration Manager"
 description: "Deploy terms and conditions to user groups in System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
-caps.latest.revision: 9
-author: nathbarn
-ms.author: nathbarn
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Add Terms and Conditions with System Center Configuration Manager
 

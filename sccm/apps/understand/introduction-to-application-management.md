@@ -2,23 +2,14 @@
 title: "Introduction to application management"
 titleSuffix: "Configuration Manager"
 description: "Discover the basic information you’ll need to manage and deploy System Center Configuration Manager applications."
-ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 18
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-experimental: true
-experiment_id: "rob-table-161101"
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Introduction to application management in System Center Configuration Manager
 

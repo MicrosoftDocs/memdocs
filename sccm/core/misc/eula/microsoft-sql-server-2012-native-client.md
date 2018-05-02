@@ -1,23 +1,15 @@
 ---
 title: "MICROSOFT SQL SERVER 2012 NATIVE CLIENT"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 72c505eb-f0bf-4f4d-97fd-327df76f17fc
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SQL SERVER 2012 NATIVE CLIENT
 

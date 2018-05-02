@@ -1,22 +1,14 @@
 ---
 title: "ICIINFO::GetDetailedComplianceInfo"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cdc74613-5c3d-4eb0-a6fd-d4e4c0ee05f6searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cdc74613-5c3d-4eb0-a6fd-d4e4c0ee05f6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICIINFO::GetDetailedComplianceInfo Method
 The `ICIINFO::GetDetailedComplianceInfo` method, in Configuration Manager, gets detailed compliance information from the last compliance evaluation run for the configuration item. The string returned by the method contains an XML report from the last evaluation of the configuration item.  

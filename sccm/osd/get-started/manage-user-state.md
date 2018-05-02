@@ -2,22 +2,14 @@
 title: "Manage user state "
 titleSuffix: "Configuration Manager"
 description: "System Center Configuration Manager uses the User State Migration Tool to capture and restore user state data in operating system deployment scenarios."
-ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
-caps.latest.revision: 12
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Manage user state in System Center Configuration Manager
 

@@ -2,19 +2,13 @@
 title: "New version 1610"
 titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
-ms.custom: na
-ms.date:  11/23/2016
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.date: 11/23/2016
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
-caps.latest.revision: 40
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
 # What&#39;s new in version 1610 of System Center Configuration Manager

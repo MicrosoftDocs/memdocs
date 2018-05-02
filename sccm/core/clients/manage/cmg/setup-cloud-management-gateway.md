@@ -1,16 +1,14 @@
 ---
 title: Set up cloud management gateway
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Use this step-by-step process for setting up a cloud management gateway (CMG).
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
-  - configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ---
 

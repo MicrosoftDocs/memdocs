@@ -2,21 +2,14 @@
 title: "The CD.Latest folder"
 titleSuffix: "Configuration Manager"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-caps.latest.revision: 6
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 # The CD.Latest folder for System Center Configuration Manager
 

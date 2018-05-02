@@ -1,21 +1,14 @@
 ---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER TECHNICAL PREVIEW"
-ms.custom: na
 ms.date: 10/21/2016
 ms.prod: configuration-manager
-ms.service:
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3e1167f-a3b2-4319-a042-9805a1d01250
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER TECHNICAL PREVIEW
 *Applies to: System Center Configuration Manager (Technical Preview)*

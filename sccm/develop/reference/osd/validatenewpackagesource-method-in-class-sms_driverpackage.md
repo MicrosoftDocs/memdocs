@@ -1,22 +1,14 @@
 ---
 title: "ValidateNewPackageSource Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 31ec804c-7dfa-41f5-9bac-2b2368cee254searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 31ec804c-7dfa-41f5-9bac-2b2368cee254
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ValidateNewPackageSource Method in Class SMS_DriverPackage
 The `ValidateNewPackageSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, validates a new location for a driver update.  

@@ -2,22 +2,14 @@
 title: "Evaluate in a lab environment"
 titleSuffix: "Configuration Manager"
 description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
-ms.custom: na
 ms.date: 2/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
-caps.latest.revision: 25
-caps.handback.revision: 0
-author: erikje
-ms.author: erikje
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Evaluate System Center Configuration Manager by building your own lab environment
 

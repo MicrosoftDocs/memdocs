@@ -1,22 +1,14 @@
 ---
 title: "Create a Static Collection"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 53023832-57ca-47f9-96bb-ab8ab4827172searchScope: - ConfigMgr SDK
-caps.latest.revision: 15
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 53023832-57ca-47f9-96bb-ab8ab4827172
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Static Collection
 In System Center Configuration Manager, your application uses [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) to define the attributes of a collection, such as the membership rules and the refresh schedule. The `MemberClassName` property contains the system-generated class name that contains the members of the collection.  

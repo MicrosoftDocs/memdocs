@@ -1,22 +1,14 @@
 ---
 title: "SMS_G_System_CI_ComplianceState Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a2242e16-4556-4e51-b2d8-f56b3c1014f5searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a2242e16-4556-4e51-b2d8-f56b3c1014f5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_G_System_CI_ComplianceState Server WMI Class
 The `SMS_G_System_CI_ComplianceState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents hardware inventory class objects for the compliance state of a configuration item.  

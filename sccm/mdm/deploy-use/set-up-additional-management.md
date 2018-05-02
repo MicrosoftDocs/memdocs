@@ -2,21 +2,14 @@
 title: "Set up additional management"
 titleSuffix: "Configuration Manager"
 description: "Set up additional management using System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Set up additional management with System Center Configuration Manager
 

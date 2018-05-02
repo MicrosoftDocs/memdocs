@@ -1,22 +1,14 @@
 ---
 title: "How to Define the AppSynclet MOF File"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ac9193e8-f6c8-4acf-ba1f-95e95d54d4adsearchScope: - ConfigMgr SDK
-caps.latest.revision: 20
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ac9193e8-f6c8-4acf-ba1f-95e95d54d4ad
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Define the AppSynclet MOF File
 To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class. The new class instance will identify the custom client-side handler.  Also, create instances of the CCM_HandlerSynclet class to store detect, install and uninstall property values.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_EndpointProtectionAgentConfig Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6c5c8c61-9afc-481e-a288-04352a1e0614searchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6c5c8c61-9afc-481e-a288-04352a1e0614
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_EndpointProtectionAgentConfig Server WMI Class
 The `SMS_EndpointProtectionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings for the Endpoint Protection client.  

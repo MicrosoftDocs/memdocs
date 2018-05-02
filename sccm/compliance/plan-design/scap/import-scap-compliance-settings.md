@@ -1,21 +1,14 @@
 ---
 title: "Import the SCAP compliance settings"
-titleSuffix: "System Center Configuration Manager"
+titleSuffix: Configuraton Manager
 description: "Import the SCAP compliance settings as configuration baselines and export the results"
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 0bdcb018-bac2-4540-b786-6242bac73ff4
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
 ---

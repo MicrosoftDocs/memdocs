@@ -1,22 +1,14 @@
 ---
 title: Add New Properties to an Existing Resource Type"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 55c3b4fc-7f44-4c5f-8bc5-a97bc0c4bab6searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 55c3b4fc-7f44-4c5f-8bc5-a97bc0c4bab6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Add New Properties to an Existing Resource Type
 In System Center Configuration Manager, when the Data Discovery Manager (DDM) detects that your data discovery record (DDR) contains a property that does not exist in the resource class, the property is added to the resource class. Depending on the data type of the new property, previous instances of the resource will contain either a zero or an empty string ("") for the value of the new property. You should specify all the class properties when you update an existing resource class. However, do not include the seven properties that the DDM creates for you. When the DDM creates a new resource class, it adds these additional properties to the class:  

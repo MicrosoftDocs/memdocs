@@ -1,22 +1,14 @@
 ---
 title: "GetProperty Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3002c0dd-4713-42c6-bda0-f7cc7d8d1b2dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3002c0dd-4713-42c6-bda0-f7cc7d8d1b2d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetProperty Method in Class CCM_AppDeploymentType
 The `GetProperty` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that retrieves an application deployment type property.   

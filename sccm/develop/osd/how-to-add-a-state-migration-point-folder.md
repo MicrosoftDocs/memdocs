@@ -1,22 +1,14 @@
 ---
 title: "Add a State Migration Point Folder"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 95b399e5-47fd-4519-a30e-c220ebdb5c95searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 95b399e5-47fd-4519-a30e-c220ebdb5c95
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Add a State Migration Point Folder
 In System Center Configuration Manager, you add an operating system deployment state migration point folder by adding the folder description to the `Directories` embedded property list.  

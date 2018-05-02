@@ -1,20 +1,14 @@
 ---
 title: "UpdateConsoleUsageData Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 189235fc-738b-4b3f-b81a-7d53dfb6c220searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 189235fc-738b-4b3f-b81a-7d53dfb6c220
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateConsoleUsageData Method in Class SMS_Site
 The `UpdateConsoleUsageData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates console usage data received from console connections.  

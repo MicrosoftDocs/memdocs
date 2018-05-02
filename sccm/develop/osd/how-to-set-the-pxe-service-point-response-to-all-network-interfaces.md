@@ -1,22 +1,14 @@
 ---
 title: "Set the PXE Service Point Response to All Network Interfaces"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 9ef702dc-1d13-4c4a-99d8-a5503628fde1searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 9ef702dc-1d13-4c4a-99d8-a5503628fde1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Set the PXE Service Point Response to All Network Interfaces
 In System Center Configuration Manager, you set the operating system deployment PXE service point response to network interfaces by setting the `BindPolicy` embedded property.  
