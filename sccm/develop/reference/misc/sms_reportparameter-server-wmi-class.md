@@ -1,22 +1,14 @@
 ---
 title: "SMS_ReportParameter Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ab6691e4-7620-43a6-949c-4dec7e8cf871searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ab6691e4-7620-43a6-949c-4dec7e8cf871
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ReportParameter Server WMI Class
 The `SMS_ReportParameter` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user-supplied parameter that is required to run the report.  

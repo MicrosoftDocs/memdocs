@@ -1,22 +1,14 @@
 ---
 title: "Software Distribution Deployments"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 879be718-4ce0-46bc-a2e3-161b97f836a5searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 879be718-4ce0-46bc-a2e3-161b97f836a5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Software Distribution Deployments
 In System Center Configuration Manager, after a software distribution package has been created, with programs to tell client computers what to do with the package, you need to advertise the program that you want the clients to run. Advertising the program makes a program available to a specified collection of clients.  

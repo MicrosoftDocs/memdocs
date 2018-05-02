@@ -2,22 +2,14 @@
 title: Task sequence built-in variables
 titleSuffix: Configuration Manager
 description: Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence.
-ms.custom: na
 ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Task sequence built-in variables in System Center Configuration Manager
 
@@ -74,7 +66,7 @@ manager: dougeby
 |SMSTSDriverReceiveTimeOut|The number of seconds before the connection to the server times out.|
 |SMSTSErrorDialogTimeout|When an error occurs in a task sequence, it displays a dialog box with the error. The task sequence automatically dismisses it after the number of seconds specified by this variable. By default, this value is **900** seconds (15 minutes).|  
 | TSDisableProgressUI | <!-- 1354291 --> Beginning in Configuration Manager version 1706, use this variable to control when the task sequence displays progress to end users. To hide or display progress at different times, set this variable multiple times in a task sequence. To hide task sequence progress, set the value of this variable to **True**. To display task sequence progress, set the value of this variable to **False**. | 
-| SMSTSDisableStatusRetry | <!--512358--> In disconnected scenarios, the task sequence engine repeatedly tries to send status messages to the management point. This behavior in this scenario causes delays in task sequence processing. Beginning in Configuration Manager version 1802, set this variable to **True** and the task sequence engine doesn't attempt to resend status messages after the first failure. This behavior lasts until the next reboot, or the value of this variable is set to **False**. NOTE: [task sequence status reporting](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. | 
+| SMSTSDisableStatusRetry | <!--512358--> In disconnected scenarios, the task sequence engine repeatedly tries to send status messages to the management point. This behavior in this scenario causes delays in task sequence processing. Beginning in Configuration Manager version 1802, set this variable to **True** and the task sequence engine doesn't attempt to send status messages after the first message fails to send. This first attempt includes multiple retries.<br/><br/>When the task sequence restarts, the value of this variable persists. However, the task sequence tries sending an initial status message. This first attempt includes multiple retries. If successful, the task sequence continues sending status regardless of the value of this variable. If status fails to send, the task sequence uses the value of this variable.<br/><br/>NOTE: [task sequence status reporting](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. | 
 |SMSTSLanguageFolder|Use this variable to change the display language of a language neutral boot image.|  
 |SMSTSLocalDataDrive|Specifies where temporary files are stored on the destination computer while the task sequence is running.<br /><br /> This variable must be set before the task sequence starts, such as by setting a collection variable. Once the task sequence starts, Configuration Manager defines the _SMSTSMDataPath variable once the Task Sequence starts.|  
 |SMSTSMP|Use this variable to specify the URL or IP address of the Configuration Manager management point.|  

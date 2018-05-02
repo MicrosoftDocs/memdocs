@@ -2,21 +2,14 @@
 title: "Monitor clients"
 titleSuffix: "Configuration Manager"
 description: "Learn how to monitor and manage clients in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
-caps.latest.revision: 5
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Monitor and manage clients in System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Supported Active Directory domains"
 titleSuffix: "Configuration Manager"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
-ms.custom: na
 ms.date: 9/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Supported Active Directory domains for System Center Configuration Manager
 

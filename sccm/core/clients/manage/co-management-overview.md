@@ -1,30 +1,15 @@
 ---
-# required metadata
-
-title: Co-management for Windows 10 devices  
+title: Co-management for Windows 10 devices
 titleSuffix: Configuration Manager
-description: Learn how to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
-keywords:
-author: mestew
-ms.author: mstewart
+description: Learn how to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
+ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Co-management for Windows 10 devices    
@@ -61,8 +46,11 @@ There are two main paths to reach to co-management. One is Configuration Manager
 
 
 ### **Intune**
- - [How to set up Intune subscription.](/sccm/mdm/deploy-use/configure-intune-subscription) or https://docs.microsoft.com/en-us/intune/setup-steps
- - [Start migrating from hybrid MDM to Intune standalone.](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)
+ - [How to set up Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription) or [Set up Intune](/intune/setup-steps)  
+ - [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+
+> [!Note]  
+> If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
 
 
 ### Enable co-management 

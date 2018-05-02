@@ -1,22 +1,14 @@
 ---
 title: "Extending Application Management Overview"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b12131ec-cbe0-4c93-9729-e78d904a1a11searchScope: - ConfigMgr SDK
-caps.latest.revision: 38
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b12131ec-cbe0-4c93-9729-e78d904a1a11
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Extending Application Management Overview
 By default, Application Management supports creating numerous deployment types such as Windows Installer, Script Installer, Microsoft Application Virtualization, Nokia SIS files and Windows Mobile Cabinet file deployment technologies. Partners that must continue to use a specific deployment technology not natively supported by Configuration Manager, can extend the Application Management model to support a custom deployment type.  

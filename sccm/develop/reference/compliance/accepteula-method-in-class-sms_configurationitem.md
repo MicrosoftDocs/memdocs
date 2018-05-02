@@ -1,22 +1,14 @@
 ---
 title: "AcceptEULA Method in Class SMS_ConfigurationItem"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 28f37dfd-92bb-4ea7-8670-630b43d19a59searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 28f37dfd-92bb-4ea7-8670-630b43d19a59
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # AcceptEULA Method in Class SMS_ConfigurationItem
 In Configuration Manager, the `AcceptEULA` Windows Management Instrumentation (WMI) class method accepts or declines the Microsoft Software License Terms of a configuration item.  

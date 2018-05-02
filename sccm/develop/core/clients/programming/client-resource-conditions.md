@@ -1,22 +1,14 @@
 ---
 title: "Client Resource Conditions"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a17b4116-4491-4775-9d80-dea6e071801dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 5
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a17b4116-4491-4775-9d80-dea6e071801d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Client Resource Conditions
 In System Center Configuration Manager SP1, the Configuration Manager client has added the ability to be aware of system resources state and act accordingly. The resources being monitored are power, network, and user idleness. This addition makes the Configuration Manager client a better citizen in terms of optimizing power utilization and not disturbing the end user experience as much as possible.  

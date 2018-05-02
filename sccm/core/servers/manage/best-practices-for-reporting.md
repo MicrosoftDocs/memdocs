@@ -2,20 +2,14 @@
 title: "Reporting best practices"
 titleSuffix: "Configuration Manager"
 description: "Read some helpful tips about using the reporting capability of System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: Dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Best practices for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following best practices for reporting in System Center Configuration Manager:  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_TaskSequence_ApplyDriverPackageAction Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a84ea8fa-ba47-4e73-a946-9eb579feadd6searchScope: - ConfigMgr SDK
-caps.latest.revision: 16
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a84ea8fa-ba47-4e73-a946-9eb579feadd6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequence_ApplyDriverPackageAction Server WMI Class
 The `SMS_TaskSequence_ApplyDriverPackageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an action used in a task sequence to make all device drivers in a driver package available for use by Windows setup.  

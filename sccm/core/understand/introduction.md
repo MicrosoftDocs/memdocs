@@ -2,21 +2,14 @@
 title: "Introduction"
 titleSuffix: "Configuration Manager"
 description: "Get basic information as an introduction to System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: 16
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Introduction to System Center Configuration Manager
 

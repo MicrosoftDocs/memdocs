@@ -2,22 +2,14 @@
 title: "Plan On-premises MDM"
 titleSuffix: "Configuration Manager"
 description: "Plan for On-premises Mobile Device Management to manage mobile devices in System Center Configuration Manager."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Plan for On-premises Mobile Device Management in System Center Configuration Manager
 

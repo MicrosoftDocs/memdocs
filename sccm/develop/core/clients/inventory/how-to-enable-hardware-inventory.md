@@ -1,22 +1,14 @@
 ---
 title: "Enable Hardware Inventory"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: f9ac0702-cab7-48bc-b9dd-cc8ce246e6bbsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: f9ac0702-cab7-48bc-b9dd-cc8ce246e6bb
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enable Hardware Inventory
 You enable or disable the Hardware Inventory Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  

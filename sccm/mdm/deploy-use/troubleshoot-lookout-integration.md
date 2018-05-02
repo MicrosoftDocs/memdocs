@@ -2,21 +2,14 @@
 title: "Troubleshoot Lookout integration"
 titleSuffix: "Configuration Manager"
 description: "This topic describes troubleshooting issues that commonly occur with Lookout Integration."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
-caps.latest.revision:
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Troubleshoot Lookout Integration with Intune
 

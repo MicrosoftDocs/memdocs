@@ -1,20 +1,14 @@
 ---
 title: "Enable the Partner Notification API"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 99994d2a-dbc5-4ae0-b77c-4cbfdbd8bcd6searchScope: - ConfigMgr SDK
-caps.latest.revision: 13
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 99994d2a-dbc5-4ae0-b77c-4cbfdbd8bcd6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Enable the Partner Notification API
 The Partner Notification API allows third-party partners to use the Wake on LAN feature of System Center Configuration Manager to receive a list of computers that need to be woken up based on advertisements for software distribution.  

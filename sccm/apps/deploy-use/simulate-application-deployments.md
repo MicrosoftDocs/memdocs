@@ -2,21 +2,14 @@
 title: "Simulate application deployments"
 titleSuffix: "Configuration Manager"
 description: "Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: mattbriggsms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Simulate application deployments with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use simulated deployments to test an application deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type. It reports the results in the **Deployments** node of the **Monitoring** workspace. Use the procedure in this topic to simulate an application deployment in System Center Configuration Manager (Configuration Manager).  

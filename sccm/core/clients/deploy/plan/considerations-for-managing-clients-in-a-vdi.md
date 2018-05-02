@@ -2,22 +2,14 @@
 title: "Virtual desktop infrastructure (VDI) client management "
 titleSuffix: "Configuration Manager"
 description: "Manage System Center Configuration Manager clients in a virtual desktop infrastructure (VDI)."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)
 

@@ -2,22 +2,14 @@
 title: "Monitor certificate profiles"
 titleSuffix: "Configuration Manager"
 description: "Learn how to monitor the compliance status of System Center Configuration Manager certificate profiles."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to monitor certificate profiles in System Center Configuration Manager
 

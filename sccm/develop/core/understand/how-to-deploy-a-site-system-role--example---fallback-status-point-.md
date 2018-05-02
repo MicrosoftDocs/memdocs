@@ -1,22 +1,14 @@
 ---
 title: "Deploy a Site System Role"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4searchScope: - ConfigMgr SDK
-caps.latest.revision: 16
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Deploy a Site System Role (Example:  Fallback Status Point)
 The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt621987.aspx).  

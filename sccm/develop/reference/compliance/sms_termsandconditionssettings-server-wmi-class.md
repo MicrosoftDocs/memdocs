@@ -1,20 +1,14 @@
 ---
 title: "SMS_TermsAndConditionsSettings Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: daf3bd12-cb05-46a8-83c7-485b4460bb85searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: daf3bd12-cb05-46a8-83c7-485b4460bb85
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TermsAndConditionsSettings Server WMI Class
 The  `SMS_TermsAndConditionsSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Terms and Conditions settings.  

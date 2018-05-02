@@ -2,21 +2,14 @@
 title: "Packages and programs"
 titleSuffix: "Configuration Manager"
 description: "Support deployments that use packages and programs or applications with System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: mattbriggsms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Packages and programs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager continues to support packages and programs that were used in Configuration Manager 2007. A deployment that uses packages and programs might be more suitable than a deployment that uses an application when you deploy any of the following:  

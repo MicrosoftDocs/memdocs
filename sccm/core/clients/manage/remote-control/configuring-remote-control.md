@@ -2,22 +2,14 @@
 title: "Configure remote control"
 titleSuffix: "Configuration Manager"
 description: "Set up remote control in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: dudeso
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuring remote control in System Center Configuration Manager
 

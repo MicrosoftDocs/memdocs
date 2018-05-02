@@ -1,22 +1,14 @@
 ---
 title: "SMS_ConfigurationItemLatestBaseClass Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c31f0f2e-09f6-41e6-ac20-622080053b73searchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c31f0f2e-09f6-41e6-ac20-622080053b73
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ConfigurationItemLatestBaseClass Server WMI Class
 The `SMS_ConfigurationItemLatestBaseClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the latest version of Configuration Items in the system.  

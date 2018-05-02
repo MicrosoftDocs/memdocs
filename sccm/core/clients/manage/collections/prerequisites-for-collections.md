@@ -2,22 +2,14 @@
 title: "Collections prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Get prerequisites for using collections in System Center Configuration Manager."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a53e4cf1-518a-4210-9c16-022c4261d2fe
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prerequisites for collections in System Center Configuration Manager
 

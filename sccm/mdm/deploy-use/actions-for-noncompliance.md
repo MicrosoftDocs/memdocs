@@ -2,21 +2,14 @@
 title: Actions for noncompliance
 titleSuffix: "Configuration Manager"
 description: "Learn how to setup actions for noncompliance with Configuration Manager"
-ms.custom: na
 ms.date: 11/10/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Set up actions for non-compliance
 

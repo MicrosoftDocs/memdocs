@@ -1,27 +1,19 @@
 ---
 title: "How to Create Node XML for a Grid View"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: d3ce62b0-287a-496f-ad82-3c3ce420aa04searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: d3ce62b0-287a-496f-ad82-3c3ce420aa04
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create Node XML for a Configuration Manager Console Grid View
 To create the node XML for the System Center Configuration Manager console default grid view you create an XML file describing a [RootNodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.aspx) element.  
 
- The XML in this procedure is used with the assembly you create in [How to Create a Configuration Manager Administrator Console View](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md).  When the user clicks on the “My Node�? node, it displays a list of `SMS_SCI_SysResUse` classes in the Configuration Manager in the view pane.  
+ The XML in this procedure is used with the assembly you create in [How to Create a Configuration Manager Administrator Console View](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md).  When the user clicks on the “My Node�? node, it displays a list of `SMS_SCI_SysResUse` classes in the Configuration Manager in the view pane.  
 
  The following elements and attributes are particularly important:  
 

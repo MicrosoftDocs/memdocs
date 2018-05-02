@@ -2,22 +2,14 @@
 title: Security and privacy for operating system deployment
 titleSuffix: "Configuration Manager"
 description: "Learn about security and privacy best practices for operating system deployment in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Security and privacy for operating system deployment in System Center Configuration Manager
 

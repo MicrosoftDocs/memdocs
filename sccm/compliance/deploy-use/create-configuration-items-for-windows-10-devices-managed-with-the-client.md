@@ -2,20 +2,14 @@
 title: "Create configuration items for client-managed Windows 10 "
 titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
-ms.custom: na
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-caps.latest.revision: 17
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
 Use the System Center Configuration Manager **Windows 10** configuration item to manage settings  for Windows 10 computers that are managed by the Configuration Manager client.  

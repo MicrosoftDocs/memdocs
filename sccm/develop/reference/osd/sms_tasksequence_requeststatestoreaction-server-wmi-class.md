@@ -1,22 +1,14 @@
 ---
 title: "SMS_TaskSequence_RequestStateStoreAction Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ba604e66-6252-4856-8f2f-6b4e105fbe00searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ba604e66-6252-4856-8f2f-6b4e105fbe00
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequence_RequestStateStoreAction Server WMI Class
 The `SMS_TaskSequence_RequestStateStoreAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that requests access to a state migration point when capturing a state from a computer or restoring a state to a computer.  

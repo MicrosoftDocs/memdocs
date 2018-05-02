@@ -2,22 +2,14 @@
 title: "Features and capabilities"
 titleSuffix: "Configuration Manager"
 description: "Learn about the primary management capabilities of System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Features and capabilities of System Center Configuration Manager
 

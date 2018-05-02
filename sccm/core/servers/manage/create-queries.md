@@ -2,22 +2,14 @@
 title: "Create queries"
 titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
-ms.custom: na
 ms.date: 12/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
-caps.latest.revision: 5
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # How to create queries in System Center Configuration Manager
 

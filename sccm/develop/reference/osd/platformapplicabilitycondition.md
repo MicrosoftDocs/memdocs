@@ -1,22 +1,14 @@
 ---
 title: "PlatformApplicabilityCondition"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c264dab1-07c2-4cc6-95e2-6283b850fb54searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c264dab1-07c2-4cc6-95e2-6283b850fb54
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # PlatformApplicabilityCondition
 `PlatformApplicabilityCondition` specifies one supported platform for an operating system deployment driver in System Center Configuration Manager.  

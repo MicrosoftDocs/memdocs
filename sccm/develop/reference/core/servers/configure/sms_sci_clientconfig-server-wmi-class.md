@@ -1,22 +1,14 @@
 ---
 title: "SMS_SCI_ClientConfig Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cad6e82b-ba60-4252-8336-f83d595b69bcsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cad6e82b-ba60-4252-8336-f83d595b69bc
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SCI_ClientConfig Server WMI Class
 The `SMS_SCI_ClientConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents general configuration information that can be used by more than one client component.  

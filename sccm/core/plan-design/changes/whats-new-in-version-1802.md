@@ -2,15 +2,10 @@
 title: New version 1802
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1802 of Configuration Manager.
-ms.custom: na
 ms.date: 04/11/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz

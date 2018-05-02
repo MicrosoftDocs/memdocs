@@ -2,21 +2,14 @@
 title: Security and privacy for application management
 titleSuffix: Configuration Manager
 description: Learn about guidance and recommendations for security and privacy when managing applications
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Security and privacy for application management in System Center Configuration Manager
 

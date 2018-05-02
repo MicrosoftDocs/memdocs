@@ -1,20 +1,14 @@
 ---
 title: "SetNextID Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6df3e624-10d6-42e0-b98d-86352df0751esearchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6df3e624-10d6-42e0-b98d-86352df0751e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SetNextID Method in Class SMS_Advertisement
 The `SetNextID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the ID number that will be used for the next advertisement created.  

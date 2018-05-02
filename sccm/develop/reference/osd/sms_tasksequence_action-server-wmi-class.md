@@ -1,22 +1,14 @@
 ---
 title: "SMS_TaskSequence_Action Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 12a29d69-ac46-45ea-b540-52a85c4c885fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 12a29d69-ac46-45ea-b540-52a85c4c885f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequence_Action Server WMI Class
 The `SMS_TaskSequence_Action` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for all task sequence actions.  

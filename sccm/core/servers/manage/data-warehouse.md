@@ -2,21 +2,14 @@
 title: Data warehouse
 titleSuffix: Configuration Manager
 description: Data warehouse service point and database for System Center Configuration Manager
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-caps.latest.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 #  The data warehouse service point for System Center Configuration Manager
 *Applies to: System Center Configuration Manager (Current Branch)*

@@ -1,22 +1,14 @@
 ---
 title: "GetDeployments Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 6545ae78-95b6-48b6-b8ba-c09046b6cc31searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 6545ae78-95b6-48b6-b8ba-c09046b6cc31
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetDeployments Method in Class SMS_Deployment_Info
 The `GetDeployments` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets advertisement identifier or Assignment identifier and related type for a deployment that is deployed to the specified resource.  

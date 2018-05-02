@@ -2,22 +2,14 @@
 title: "Deprecated items"
 titleSuffix: "Configuration Manager"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
-ms.custom: na
 ms.date: 01/25/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Removed and deprecated items for System Center Configuration Manager
 

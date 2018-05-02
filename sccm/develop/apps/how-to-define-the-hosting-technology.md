@@ -1,22 +1,14 @@
 ---
 title: "How to Define the Hosting Technology"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 242c1cf6-3cb8-4ed7-89fb-501130832730searchScope: - ConfigMgr SDK
-caps.latest.revision: 24
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 242c1cf6-3cb8-4ed7-89fb-501130832730
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Define the Hosting Technology
 To define a custom application management hosting technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class. The new class instance will define the hosting technology for a specific file type.  

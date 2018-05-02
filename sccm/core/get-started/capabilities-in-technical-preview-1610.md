@@ -2,20 +2,14 @@
 title: "Capabilities in Technical Preview 1610"
 titleSuffix: "Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1610."
-ms.custom: na
 ms.date: 01/23/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: 2
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Capabilities in Technical Preview 1610 for System Center Configuration Manager
 

@@ -1,22 +1,14 @@
 ---
 title: "SMS_ScheduleMethods Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e7ccc430-34b6-4c65-8933-d13bf8e8202fsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e7ccc430-34b6-4c65-8933-d13bf8e8202f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ScheduleMethods Server WMI Class
 The `SMS_ScheduleMethods` abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents methods for decoding and encoding schedule tokens into and from a System Center Configuration Manager interval string.  

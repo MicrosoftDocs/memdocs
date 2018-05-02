@@ -1,22 +1,14 @@
 ---
 title: "SMS_EndpointProtectionThreatData Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 845956a1-e322-4a3a-bf7b-ed6dfd55da08searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 845956a1-e322-4a3a-bf7b-ed6dfd55da08
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_EndpointProtectionThreatData Server WMI Class
 The `SMS_EndpointProtectionThreatData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft official threats. This is a metadata table/view and all data is extracted from the signature update.  

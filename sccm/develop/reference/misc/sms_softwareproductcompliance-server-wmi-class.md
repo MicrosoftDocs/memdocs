@@ -1,22 +1,14 @@
 ---
 title: "SMS_SoftwareProductCompliance Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: d4d6cae0-271e-4878-82ab-00b6734147e8searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: d4d6cae0-271e-4878-82ab-00b6734147e8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_SoftwareProductCompliance Server WMI Class
 The `SMS_SoftwareProductCompliance` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains compliance information about a software product.  

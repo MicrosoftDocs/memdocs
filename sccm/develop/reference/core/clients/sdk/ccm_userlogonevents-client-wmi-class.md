@@ -1,20 +1,14 @@
 ---
 title: "CCM_UserLogonEvents Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: e22cf0ef-08c1-41e7-9627-e3e19b15b664searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e22cf0ef-08c1-41e7-9627-e3e19b15b664
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # CCM_UserLogonEvents Client WMI Class
 The `CCM_UserLogonEvents` Client WMI class is a client class, in Configuration Manager, that represents a user logon event.  

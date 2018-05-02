@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager SDK Requirements"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 7e1a9f96-6e2d-4656-9bb1-a5b8d40b3416searchScope: - ConfigMgr SDK
-caps.latest.revision: 15
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 7e1a9f96-6e2d-4656-9bb1-a5b8d40b3416
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager SDK Requirements
 This section provides information about System Center Configuration Manager SDK requirements.  

@@ -2,20 +2,14 @@
 title: "Prepare to install sites"
 titleSuffix: "Configuration Manager"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
-ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Prepare to install System Center Configuration Manager sites
 

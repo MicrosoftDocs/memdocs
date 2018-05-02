@@ -1,22 +1,14 @@
 ---
 title: "ICIINFO::GetCategoryCount"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: cd89fdf9-84ca-44d2-8dbe-2e95bcfc53e6searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: cd89fdf9-84ca-44d2-8dbe-2e95bcfc53e6
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ICIINFO::GetCategoryCount Method
 The `ICIINFO::GetCategoryCount` method, in Configuration Manager, gets the count of categories that are associated with the configuration item.  

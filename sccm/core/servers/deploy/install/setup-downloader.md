@@ -2,20 +2,14 @@
 title: "Setup Downloader"
 titleSuffix: "Configuration Manager"
 description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
-ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Setup Downloader for System Center Configuration Manager
 

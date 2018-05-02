@@ -1,21 +1,15 @@
 ---
 title: Scenarios to deploy enterprise operating systems
-titleSuffix: "Configuration Manager"
-description: "Learn about several scenarios to deploy enterprise operating systems with System Center Configuration Manager."
-ms.custom: na
+titleSuffix: Configuration Manager
+description: Learn about several scenarios to deploy enterprise operating systems with System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
-caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 
 ---
 # Scenarios to deploy enterprise operating systems with System Center Configuration Manager

@@ -1,22 +1,14 @@
 ---
 title: "ImportInventoryReport Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 79ae21e0-8d58-4ec0-8cc1-9322031cb582searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 79ae21e0-8d58-4ec0-8cc1-9322031cb582
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ImportInventoryReport Method in Class SMS_InventoryReport
 The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, imports an inventory class from the MOF file content.  

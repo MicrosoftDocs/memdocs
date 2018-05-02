@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Console Extension"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ebfd3530-07f9-4d58-9e0a-f362c0e6dcd7searchScope: - ConfigMgr SDK
-caps.latest.revision: 12
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ebfd3530-07f9-4d58-9e0a-f362c0e6dcd7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Configuration Manager Console Extension
 The System Center Configuration Manager console has an XML-based architecture that can be easily extended. The Configuration Manager console supports the following extensions:  

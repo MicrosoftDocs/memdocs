@@ -2,20 +2,14 @@
 title: "Checklist for 1610"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1610."
-ms.custom: na
 ms.date: 6/6/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7b411cb0-4fd1-41f2-a2f6-33738a5bde96
-caps.latest.revision: 7
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager
 

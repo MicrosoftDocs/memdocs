@@ -2,20 +2,14 @@
 title: "Assign clients to a site"
 titleSuffix: "Configuration Manager"
 description: "Assign clients to a site in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
-caps.latest.revision: 10
-author: arob98
-ms.author: angrobe
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to assign clients to a site in System Center Configuration Manager
 

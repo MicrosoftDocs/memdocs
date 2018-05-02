@@ -6,10 +6,9 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
 ---
 

@@ -1,22 +1,14 @@
 ---
 title: "SMS_Content Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8973d915-1d74-46cd-a20d-a19de59a677asearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8973d915-1d74-46cd-a20d-a19de59a677a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_Content Server WMI Class
 The `SMS_Content` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides additional information about a `CI_Content` instance.  

@@ -1,22 +1,14 @@
 ---
 title: "ImportMachineEntry Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 89d8d59f-79b1-4be7-85a8-43e741528a8esearchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 89d8d59f-79b1-4be7-85a8-43e741528a8e
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ImportMachineEntry Method in Class SMS_Site
 The `ImportMachineEntry` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that imports computer information.  

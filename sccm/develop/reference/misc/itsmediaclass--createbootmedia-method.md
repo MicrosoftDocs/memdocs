@@ -1,22 +1,14 @@
 ---
 title: "ITsMediaClass::CreateBootMedia Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 5660503c-3bd2-415b-a090-77132e3da898searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 5660503c-3bd2-415b-a090-77132e3da898
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ITsMediaClass::CreateBootMedia Method
 In Configuration Manager, the `CreateBootMedia` method creates task sequence boot media that download policy from a management point and allow a user to run a task sequence for operating system deployment.  

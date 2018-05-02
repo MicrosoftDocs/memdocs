@@ -2,22 +2,14 @@
 title: "Upgrade clients"
 titleSuffix: "Configuration Manager"
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
-ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to upgrade clients for Windows computers in System Center Configuration Manager
 

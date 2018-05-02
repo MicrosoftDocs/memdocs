@@ -1,22 +1,15 @@
 ---
 title: Privacy statement
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: de4e7752-7490-4c3f-9550-ac7f476d99d8
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-
 ---
 # System Center Configuration Manager privacy statement
 

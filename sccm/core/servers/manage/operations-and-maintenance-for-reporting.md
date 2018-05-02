@@ -2,19 +2,14 @@
 title: "Operations and maintenance for reporting "
 titleSuffix: "Configuration Manager"
 description: "Learn the details of managing reports and report subscriptions in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
-caps.latest.revision: 5
-author: Dougebyms.author: dougebymanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # Operations and maintenance for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  

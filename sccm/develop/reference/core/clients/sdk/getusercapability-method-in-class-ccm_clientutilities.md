@@ -1,22 +1,14 @@
 ---
 title: "GetUserCapability Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: be25c931-3cc9-407d-b10e-b57b22a5b1c5searchScope: - ConfigMgr SDK
-caps.latest.revision: 4
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: be25c931-3cc9-407d-b10e-b57b22a5b1c5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetUserCapability Method in Class CCM_ClientUtilities
 The `GetUserCapability` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that …   

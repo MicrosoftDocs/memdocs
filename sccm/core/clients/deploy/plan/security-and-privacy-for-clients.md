@@ -2,22 +2,14 @@
 title: "Client security and privacy"
 titleSuffix: "Configuration Manager"
 description: "Learn about security and privacy for clients in System Center Configuration Manager."
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
-caps.latest.revision: 10
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Security and privacy for clients in System Center Configuration Manager
 

@@ -2,21 +2,14 @@
 title: "View hardware inventory with Resource Explorer"
 titleSuffix: "Configuration Manager"
 description: "Use Resource Explorer to view hardware inventory in System Center Configuration Manager."
-ms.custom: na
 ms.date: 01/03/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-caps.latest.revision: 7
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to use Resource Explorer to view hardware inventory in System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Service connection point"
 titleSuffix: "Configuration Manager"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
-ms.custom: na
 ms.date: 1/29/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About the service connection point in System Center Configuration Manager
 

@@ -2,20 +2,14 @@
 title: "Checklist for 1710 | System Center Configuration Manager"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1710."
-ms.custom: na
 ms.date: 12/19/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
-caps.latest.revision:
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Checklist for installing update 1710 for System Center Configuration Manager
 

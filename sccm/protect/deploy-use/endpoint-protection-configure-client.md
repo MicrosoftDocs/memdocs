@@ -2,21 +2,14 @@
 title: "Configure Endpoint Protection Client"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: 21
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
 ---
 
 # Configure Custom Client Settings for Endpoint Protection

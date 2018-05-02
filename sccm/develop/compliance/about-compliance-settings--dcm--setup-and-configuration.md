@@ -1,22 +1,14 @@
 ---
 title: "About Compliance Settings Setup and Configuration"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0ec16fc6-0775-4c7b-92db-a28f079c3404searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0ec16fc6-0775-4c7b-92db-a28f079c3404
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Compliance Settings (DCM) Setup and Configuration
 To use desired configuration management on your System Center Configuration Manager site, the following needs to be in place:  

@@ -1,21 +1,13 @@
 ---
 title: "Configuration Manager Executable Action"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 05f58b9c-80df-4c11-a5bc-d19f0c19bc04searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 05f58b9c-80df-4c11-a5bc-d19f0c19bc04
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Executable Action
 In System Center Configuration Manager, the executable action runs a program or opens a file by using the program registered with Windows for that file type.  

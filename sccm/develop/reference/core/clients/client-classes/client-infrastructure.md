@@ -1,22 +1,14 @@
 ---
 title: "Client Infrastructure"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1d9da14b-2239-4e8e-a4f4-1761014f6740searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1d9da14b-2239-4e8e-a4f4-1761014f6740
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Client Infrastructure
 This section provides reference information for the System Center Configuration Manager client infrastructure, including Control Panel, client framework and data transfer, and policy functionality.  

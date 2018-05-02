@@ -1,22 +1,14 @@
 ---
 title: "SMS_TaskSequenceAppReferenceDps Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 45bc90d3-77a5-4c99-bdc4-beffbd5c1929searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 45bc90d3-77a5-4c99-bdc4-beffbd5c1929
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_TaskSequenceAppReferenceDps Server WMI Class
 The `SMS_TaskSequenceAppReferenceDps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a distribution point to which a System Center Configuration Manager application in the task sequence is distributed.  

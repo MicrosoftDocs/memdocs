@@ -2,20 +2,14 @@
 title: "Create child configuration items"
 titleSuffix: "Configuration Manager"
 description: "Create child configuration items in System Center Configuration Manager."
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to create child configuration items in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Child configuration items in System Center Configuration Manager are copies of configuration items that retain a relationship to the original configuration item in that they inherit the original configuration from the parent configuration item.  

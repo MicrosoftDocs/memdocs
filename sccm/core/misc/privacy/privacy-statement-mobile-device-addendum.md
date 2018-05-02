@@ -1,22 +1,15 @@
 ---
 title: "Privacy statement - Mobile device addendum"
 titleSuffix: "Configuration Manager"
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 41e8d1ed-ce41-4070-9bb9-de0fe4948f20
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # System Center Configuration Manager privacy statement - Mobile device addendum
 

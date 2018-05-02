@@ -1,22 +1,14 @@
 ---
 title: "Create a Schedule Token"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 27028a26-7ec2-4f0c-842f-1c7a6255066bsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 27028a26-7ec2-4f0c-842f-1c7a6255066b
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create a Schedule Token
 You create a schedule token, in System Center Configuration Manager, by creating and populating an instance of the appropriate `SMS_ST_` schedule token class. `SMS_ST` schedule classes are child classes of the `SMS_ScheduleToken` class and handle the scheduling of events with differing frequencies such as daily, weekly and monthly.  

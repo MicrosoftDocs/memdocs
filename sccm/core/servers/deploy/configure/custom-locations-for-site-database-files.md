@@ -2,20 +2,14 @@
 title: "Custom database file locations"
 titleSuffix: "Configuration Manager"
 description: "Learn how to specify custom locations for SQL Server database files."
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Custom locations for System Center Configuration Manager site database files
 

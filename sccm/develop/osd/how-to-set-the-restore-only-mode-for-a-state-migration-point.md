@@ -1,22 +1,14 @@
 ---
 title: "Set the Restore-Only Mode for a State Migration Point"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e2cb40c3-7b94-4586-a5c2-75b1ed52f571searchScope: - ConfigMgr SDK
-caps.latest.revision: 11
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e2cb40c3-7b94-4586-a5c2-75b1ed52f571
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Set the Restore-Only Mode for a State Migration Point
 In System Center Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the **SMPQuiesceState** embedded property.  

@@ -1,22 +1,14 @@
 ---
 title: "Perform an Asynchronous Query by Using System.Management"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: caf4341e-edbe-45e8-8bc1-eb205ba57ca4searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: caf4341e-edbe-45e8-8bc1-eb205ba57ca4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Perform an Asynchronous Query by Using System.Management
 To perform an asynchronous query on a System Center Configuration Manager client Windows Instrumentation (WMI) namespace, create a `ManagementObjectSearcher` object that specifies a WQL query. You then create a `ManagementOperationObserver` that specifies an event handler for each query result and also for the end of the query.  

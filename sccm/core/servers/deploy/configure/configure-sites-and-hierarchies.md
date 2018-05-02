@@ -2,21 +2,14 @@
 title: "Configure sites"
 titleSuffix: "Configuration Manager"
 description: "Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies."
-ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: 15
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configure sites and hierarchies for System Center Configuration Manager
 

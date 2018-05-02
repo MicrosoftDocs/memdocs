@@ -1,22 +1,14 @@
 ---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION"
-ms.custom: na
 ms.date: 1/12/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service:
-ms.technology:
- - configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 4d7b19db-a915-4bc8-9962-2d1515ddff6c
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION
 

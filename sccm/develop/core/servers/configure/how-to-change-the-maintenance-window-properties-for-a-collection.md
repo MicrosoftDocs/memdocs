@@ -1,22 +1,14 @@
 ---
 title: "Change Maintenance Window Properties for a Collection"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: c73f7ea3-5f13-4b93-897e-ef865418ccfdsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: c73f7ea3-5f13-4b93-897e-ef865418ccfd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Change the Maintenance Window Properties for a Collection
 You can change maintenance window properties for a collection, in System Center Configuration Manager, by using the [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) and [SMS_ServiceWindow Server WMI Class](../../../../develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class.md) classes and properties.  

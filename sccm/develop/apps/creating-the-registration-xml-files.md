@@ -1,22 +1,14 @@
 ---
 title: "Creating the Registration XML Files "
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 0a491cf8-31f4-4e87-8726-96683e8165ddsearchScope: - ConfigMgr SDK
-caps.latest.revision: 17
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 0a491cf8-31f4-4e87-8726-96683e8165dd
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Creating the Registration XML Files
 This section provides task-based topics that show you how to create registration files for a custom application management deployment technology in Configuration Manager.  

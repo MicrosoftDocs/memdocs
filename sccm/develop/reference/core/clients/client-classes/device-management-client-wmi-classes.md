@@ -1,22 +1,14 @@
 ---
 title: "Device Management Client WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: fd12558f-89ee-48fd-9d23-73f29c26dbf9searchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fd12558f-89ee-48fd-9d23-73f29c26dbf9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Device Management Client WMI Classes
 In System Center Configuration Manager, the device management client Windows Management Instrumentation (WMI) classes are used by client applications to manage device setting packages and items on the client computer. They concern client-side behavior only.  

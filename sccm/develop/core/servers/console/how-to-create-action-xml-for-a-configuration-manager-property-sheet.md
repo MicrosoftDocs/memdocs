@@ -1,22 +1,14 @@
 ---
 title: "Create Action XML for a Property Sheet"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ab60b75e-b64a-44c0-ad63-d96d289f39casearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ab60b75e-b64a-44c0-ad63-d96d289f39ca
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Create Action XML for a Configuration Manager Property Sheet
 In System Center Configuration Manager, to display a property sheet or dialog box in the Configuration Manager console, you create a `ShowDialog` action. Like other actions, the `ShowDialog` action defines a context menu and action pane action that the user selects to show the dialog box. To define the `ShowDialog` action, you create an XML file that describes a [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element.  

@@ -1,22 +1,14 @@
 ---
 title: "About DDR Properties"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ec596c8c-868b-4228-8a3c-5e82d20e6c48searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ec596c8c-868b-4228-8a3c-5e82d20e6c48
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About DDR Properties
 In System Center Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record (DDR). If the architecture is not defined in the database, the definition is created from the setting in the DDR.  

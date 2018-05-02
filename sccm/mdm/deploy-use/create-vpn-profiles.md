@@ -4,8 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about VPN profiles on mobile devices in Configuration Manager.
 ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.topic: conceptual
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski

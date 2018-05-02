@@ -2,22 +2,14 @@
 title: "Migrate objects"
 titleSuffix: "Configuration Manager"
 description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
-ms.custom: na
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
-caps.latest.revision: 7
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Plan for the migration of Configuration Manager objects to System Center Configuration Manager
 

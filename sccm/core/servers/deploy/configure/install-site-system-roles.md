@@ -2,20 +2,14 @@
 title: "Install site system roles"
 titleSuffix: "Configuration Manager"
 description: "Wizards help you add site system roles to an existing or new site system server in the site."
-ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-caps.latest.revision: 4
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Install site system roles for System Center Configuration Manager
 

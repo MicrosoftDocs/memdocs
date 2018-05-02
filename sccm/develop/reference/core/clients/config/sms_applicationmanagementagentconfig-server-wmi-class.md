@@ -1,22 +1,14 @@
 ---
 title: "SMS_ApplicationManagementAgentConfig Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b84aafbf-df61-4324-a39f-3b50c4eb14cesearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b84aafbf-df61-4324-a39f-3b50c4eb14ce
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_ApplicationManagementAgentConfig Server WMI Class
 The `SMS_ApplicationManagementAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the configuration of Application Management client agent settings.  

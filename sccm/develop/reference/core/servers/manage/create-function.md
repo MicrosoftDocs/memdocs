@@ -1,22 +1,14 @@
 ---
 title: "Create Function"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 09542d06-6ab2-4835-b4d4-9388d1563369searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 09542d06-6ab2-4835-b4d4-9388d1563369
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Create Function
 The `Create` function creates a status MIF file that System Center Configuration Manager uses to correlate the install status for an advertisement.  

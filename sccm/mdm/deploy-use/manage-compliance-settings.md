@@ -2,21 +2,14 @@
 title: "Managing compliance on devices managed with Intune"
 titleSuffix: "Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
-caps.latest.revision: 5
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Managing compliance on devices managed with Intune
 

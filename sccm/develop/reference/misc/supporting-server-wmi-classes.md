@@ -1,22 +1,14 @@
 ---
 title: "Supporting Server WMI Classes"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 27bcd3aa-3ee3-4cea-ac07-9fc8edba56fcsearchScope: - ConfigMgr SDK
-caps.latest.revision: 9
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 27bcd3aa-3ee3-4cea-ac07-9fc8edba56fc
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configuration Manager Supporting Server WMI Classes
 This section contains detailed information about certain unrelated classes in System Center Configuration Manager. These classes either support more than one category of classes, or they are used to share additional information with the SMS Provider.  

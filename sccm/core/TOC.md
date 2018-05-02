@@ -1,6 +1,7 @@
 #   Understand and explore
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help for Configuration Manager](understand/find-help.md)
+### [How to use the docs](understand/use-docs.md)
 ### [Accessibility features](understand/accessibility-features.md)
 ### [Software Center user guide](understand/software-center.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
@@ -111,10 +112,10 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1804](get-started/capabilities-in-technical-preview-1804.md)
 ###  [Capabilities in 1803](get-started/capabilities-in-technical-preview-1803.md)
 ###  [Capabilities in 1802](get-started/capabilities-in-technical-preview-1802.md)
 ###  [Capabilities in 1801](get-started/capabilities-in-technical-preview-1801.md)
-###  [Capabilities in 1712](get-started/capabilities-in-technical-preview-1712.md)
 
 ##   [Migrate data between hierarchies](migration/migrate-data-between-hierarchies.md)
 ###  [Planning for migration](migration/planning-for-migration.md)

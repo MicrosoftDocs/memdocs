@@ -1,22 +1,15 @@
 ---
 title: Get started with compliance settings
 titleSuffix: Configuration Manager
-description: Learn about core concepts and how compliance settings work 
-ms.custom: na
+description: Learn about core concepts and how compliance settings work
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ---
 # Get started with compliance settings in System Center Configuration Manager
 

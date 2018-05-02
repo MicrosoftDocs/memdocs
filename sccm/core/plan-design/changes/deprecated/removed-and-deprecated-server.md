@@ -2,21 +2,14 @@
 title: "Deprecated for Configuration Manager site servers"
 titleSuffix: "Configuration Manager"
 description: "Learn about the products and operating systems that System Center Configuration Manager no longer supports for site servers."
-ms.custom: na
 ms.date: 01/25/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Removed and deprecated for System Center Configuration Manager site servers

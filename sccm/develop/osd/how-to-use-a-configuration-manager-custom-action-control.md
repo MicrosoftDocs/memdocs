@@ -1,22 +1,14 @@
 ---
 title: "Use a Custom Action Control"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: b08bf2a3-d433-4024-ab38-824620dacd05searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: b08bf2a3-d433-4024-ab38-824620dacd05
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Use a Configuration Manager Custom Action Control
 In System Center Configuration Manager, you use a custom action control by selecting it in the Configuration Manager console Task Sequence Editor. The custom action control is used to configure a custom action that you have defined. The custom action is then becomes a step in the task sequence you are editing. The following procedure assumes that you have completed the tasks in the following topics:  

@@ -1,22 +1,14 @@
 ---
 title: "DownloadContents Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 3f054d62-d84c-4c08-80b2-4d8869a05c09searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 3f054d62-d84c-4c08-80b2-4d8869a05c09
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # DownloadContents Method in Class CCM_Application
 The `DownloadContents` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that downloads the content for an application.   

@@ -2,21 +2,14 @@
 title: "Manage Skype for Business Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
-ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
-caps.latest.revision: 6
-author: andredm7
-ms.author: andredm
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Manage Skype for Business Online access
 

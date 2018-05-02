@@ -2,20 +2,14 @@
 title: "Create configuration items for client-managed Macs "
 titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
-ms.custom: na
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: andredm7ms.author: andredmmanager: angrobe
-
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
 ---
 # How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
 Use the System Center Configuration Manager**Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  

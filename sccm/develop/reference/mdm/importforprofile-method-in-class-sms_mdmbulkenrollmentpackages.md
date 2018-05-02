@@ -1,20 +1,14 @@
 ---
 title: "ImportForProfile Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: fdbb743a-c476-474e-a129-e789180c1bf5searchScope: - ConfigMgr SDK
-caps.latest.revision: 3
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: fdbb743a-c476-474e-a129-e789180c1bf5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ImportForProfile Method in Class SMS_MDMBulkEnrollmentPackages
 The `ImportForProfile` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an On-Premises Mobile Device Management (MDM)  bulk enrollment package for a profile.  

@@ -1,22 +1,14 @@
 ---
 title: "SMS_StatInsStr Class"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: a18643d4-b69c-4a2b-8acf-b897968e19besearchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: a18643d4-b69c-4a2b-8acf-b897968e19be
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # SMS_StatInsStr Server WMI Class
 The `SMS_StatInsStr` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a high-performance version of [SMS_StatMsgInsStrings Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statmsginsstrings-server-wmi-class.md).  

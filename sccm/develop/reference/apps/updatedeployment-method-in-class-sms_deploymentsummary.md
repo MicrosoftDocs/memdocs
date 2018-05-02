@@ -1,22 +1,14 @@
 ---
 title: "UpdateDeployment Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 22b3f4f4-a739-4c09-80c7-089fe1b34a46searchScope: - ConfigMgr SDK
-caps.latest.revision: 10
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 22b3f4f4-a739-4c09-80c7-089fe1b34a46
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # UpdateDeployment Method in Class SMS_DeploymentSummary
 The `UpdateDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the summarized results for a specific Classic Deployment.  

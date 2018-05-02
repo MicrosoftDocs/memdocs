@@ -2,19 +2,13 @@
 title: Setup command-line options
 titleSuffix: Configuration Manager
 description: Create automation scripts to install System Center Configuration Manager from a command line.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 # Command-line options for setup in System Center Configuration Manager

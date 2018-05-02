@@ -1,22 +1,14 @@
 ---
 title: "GetClientInfo Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 1049b6e8-d80d-4678-be17-e622b3a325eesearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 1049b6e8-d80d-4678-be17-e622b3a325ee
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # GetClientInfo Method in Class SMS_Site
 The `GetClientInfo` Windows Management Instrumentation (WMI) class method, in Configuration Manager,  gets information about a client.  

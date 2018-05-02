@@ -1,22 +1,14 @@
 ---
 title: "OS Deployment Driver Management"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 13e1e5e7-f633-4ca4-bad2-03d48bf9dadasearchScope: - ConfigMgr SDK
-caps.latest.revision: 8
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 13e1e5e7-f633-4ca4-bad2-03d48bf9dada
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Operating System Deployment Driver Management
 This section shows how to manage Windows drivers in operating system deployment in System Center Configuration Manager.  

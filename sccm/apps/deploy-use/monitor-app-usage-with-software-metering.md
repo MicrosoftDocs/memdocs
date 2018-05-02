@@ -2,21 +2,14 @@
 title: "Monitor app usage with software metering"
 titleSuffix: "Configuration Manager"
 description: "Learn about operations that are available in System Center Configuration Manager software metering."
-ms.custom: na
 ms.date: 09/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
-caps.latest.revision: 8
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Software metering in System Center Configuration Manager

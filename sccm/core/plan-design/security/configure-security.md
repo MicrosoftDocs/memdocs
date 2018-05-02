@@ -2,21 +2,14 @@
 title: "Configure security"
 titleSuffix: "Configuration Manager"
 description: "Configure security-related options for System Center Configuration Manager."
-ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
-caps.latest.revision: 5
-author: aczechowski  
-ms.author: aaroncz  
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Configure security in System Center Configuration Manager
 

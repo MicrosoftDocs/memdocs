@@ -1,22 +1,14 @@
 ---
 title: "OS Deployment Driver Management"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 789d981f-d0c5-447b-9d93-24d2e0eef5f0searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 789d981f-d0c5-447b-9d93-24d2e0eef5f0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # About Operating System Deployment Driver Management
 In System Center Configuration Manager, the driver catalog helps manage the cost and complexity of deploying an operating system in an environment that contains different types of computers and devices. By storing device drivers in the driver catalog and not with each individual operating system image, the number of operating system images that is needed is greatly reduced. For more information about the driver catalog, see [http://go.microsoft.com/fwlink/?LinkId=110504](http://go.microsoft.com/fwlink/?LinkId=110504).  

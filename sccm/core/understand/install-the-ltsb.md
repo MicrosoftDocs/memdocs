@@ -2,21 +2,14 @@
 title: "Install a site using the 1606 baseline media "
 titleSuffix: "Configuration Manager"
 description: "Install or upgrade to the LTSB for System Center Configuration Manager."
-ms.custom: na
 ms.date: 09/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid:  f4f9a5fd-f573-4b99-ad93-b2c76812e922
-caps.latest.revision: 0
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-
+manager: dougeby
 ---
 # Install and upgrade with the version 1606 baseline media for System Center Configuration Manager
 

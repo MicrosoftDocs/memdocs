@@ -1,22 +1,14 @@
 ---
 title: "IPxeAuthClass Interface"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 309571d9-2689-4b49-946d-927e782e96ecsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 309571d9-2689-4b49-946d-927e782e96ec
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # IPxeAuthClass Interface
 The `IPxeAuthClass` automation interface, in System Center Configuration Manager, enables configuration of a PXE service point by serializing certificate information in the form that is required for the [SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md). This interface inherits from `IDispatch`.  

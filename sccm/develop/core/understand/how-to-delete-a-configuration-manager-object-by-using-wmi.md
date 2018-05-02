@@ -1,22 +1,14 @@
 ---
 title: "Delete an Object by Using WMI"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: e843aaf1-f278-447d-82b1-642f4286b65dsearchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: e843aaf1-f278-447d-82b1-642f4286b65d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to Delete a Configuration Manager Object by Using WMI
 To delete a System Center Configuration Manager object, in System Center Configuration Manager, call the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object [Delete_](https://msdn.microsoft.com/library/aa393771.aspx) method.  

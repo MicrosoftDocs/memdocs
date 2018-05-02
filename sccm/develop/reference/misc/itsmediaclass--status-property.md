@@ -1,22 +1,14 @@
 ---
 title: "ITsMediaClass::Status Property"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: 8b0c8021-92ca-49fe-b8b4-3f80b1b67c59searchScope: - ConfigMgr SDK
-caps.latest.revision: 6
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: 8b0c8021-92ca-49fe-b8b4-3f80b1b67c59
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # ITsMediaClass::Status Property
 In Configuration Manager, the `Status` property contains the status for asynchronous task sequence media creation.  

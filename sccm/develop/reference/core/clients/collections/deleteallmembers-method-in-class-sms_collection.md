@@ -1,22 +1,14 @@
 ---
 title: "DeleteAllMembers Method"
 titleSuffix: "Configuration Manager"
-ms.custom: ""
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "configmgr-other"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
-ms.assetid: ae1b7baf-751d-49ab-9188-72d1816cd852searchScope: - ConfigMgr SDK
-caps.latest.revision: 7
-author: "shill-ms"
-ms.author: "v-suhill"
-manager: "mbaldwin"
+ms.technology: configmgr-sdk
+ms.topic: conceptual
+ms.assetid: ae1b7baf-751d-49ab-9188-72d1816cd852
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # DeleteAllMembers Method in Class SMS_Collection
 The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.  

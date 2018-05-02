@@ -2,21 +2,14 @@
 title: "Define boundaries"
 titleSuffix: "Configuration Manager"
 description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
-ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # Define network locations as boundaries for System Center Configuration Manager
 

@@ -2,22 +2,14 @@
 title: "Create collections"
 titleSuffix: "Configuration Manager"
 description: "Create collections in System Center Configuration Manager to more easily manage groups of users and devices."
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
-caps.latest.revision: 6
-caps.handback.revision: 0
-author: andredm7 
-ms.author: andredm 
-manager: angrobe
-
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 # How to create collections in System Center Configuration Manager
 
