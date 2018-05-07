@@ -120,21 +120,6 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 
 
 
-## Documentation node in new Support workspace of console
-<!--1357546-->
-There is a new **Support** workspace in the Configuration Manager console, which includes a **Documentation** node. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
-
-#### Product documentation library
-- **Recommended**: a manually curated list of important articles.
-- **Trending**: the most popular articles for the last month.
-- **Recently updated**: articles revised in the last month.
-
-#### Support articles
-- **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
-- **New and updated support articles**: articles that are new or updated in the last two months.
-
-
-
 ## Improvements to console feedback
 <!--1357542-->
 This release includes the following improvements to the new [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) mechanism in the Configuration Manager console:
