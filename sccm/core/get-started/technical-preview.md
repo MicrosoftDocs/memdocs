@@ -106,7 +106,6 @@ The following are the capabilities delivered with the most recent Configuration 
 ### Technical Preview version 1805
 - [Create a phased deployment with manually configured phases for a task sequence](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence) <!--1358148--> 
 - [Cloud distribution point support for Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager) <!--1322209--> 
-- [Documentation node in new Support workspace of console](capabilities-in-technical-preview-1805.md#documentation-node-in-new-support-workspace-of-console) <!--1357546--> 
 - [Improvements to console feedback](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback) <!--1357542--> 
 - [Improvements to support for CNG certificates](capabilities-in-technical-preview-1805.md#improvements-to-support-for-cng-certificates) <!--1357314--> 
 
