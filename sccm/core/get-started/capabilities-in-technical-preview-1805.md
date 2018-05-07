@@ -118,30 +118,6 @@ Configuration Manager does not migrate existing classic cloud distribution point
 
 Monitor the service deployment progress with **cloudmgr.log** on the service connection point.
 
-### Known issue
-If you need to collect diagnostic logging from the Azure VMs to help troubleshoot problems with your cloud distribution point, use the following PowerShell sample to enable the service diagnostic extension for the subscription:<!--514275-->
-
-``` PowerShell
-# Change these variables for your Azure environment. The current values are provided as examples. You can find the values for these from the Azure portal.
-$storage_name="4780E38368358502‬‭23C071" # The name of the storage account that goes with the CloudDP
-$key="3jSyvMssuTyAyj5jWHKtf2bV5JF^aDN%z%2g*RImGK8R4vcu3PE07!P7CKTbZhT1Sxd3l^t69R8Cpsdl1xhlhZtl" # The storage access key from the Storage Account view
-$service_name="4780E38368358502‬‭23C071" # The name of the cloud service for the CloudDP, which for a Cloud DP is the same as the storage name
-$azureSubscriptionName="8ba1cb83-84a2-457e-bd37-f78d2dd371ee" # The subscription name the tenant is using 
-$subscriptionId="8ba1cb83-84a2-457e-bd37-f78d2dd371ee" # The subscription ID the tenant is using 
-
-# This variable is constant
-$public_config="F:\PowerShellDiagFile\diagnostics.wadcfgx"
-
-# These variables are for the Azure management certificate. Install it in the Current User certificate store on the system running this script. 
-$thumbprint="dac9024f54d8f6df94935fb1732638ca6ad77c13" # The thumbprint of the Azure management certificate 
-$mycert = Get-Item cert:\\CurrentUser\My\$thumbprint
-
-Set-AzureSubscription -SubscriptionName $azureSubscriptionName -SubscriptionId $subscriptionId -Certificate $mycert
-
-Select-AzureSubscription $azureSubscriptionName
-
-Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
-``` 
 
 
 ## Improvements to console feedback
