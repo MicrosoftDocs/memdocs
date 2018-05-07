@@ -3671,8 +3671,8 @@ Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build
     New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
     ```  
     
-    ``` 
--   Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+-   ```
+    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
     ```
     
 ###  <a name="CreateLinkedDeployShare"></a> Creating a Linked Deployment Share  
