@@ -3670,9 +3670,11 @@ Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build
 -   ```  
     New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
     ```  
-
--   Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
-
+    
+-   ```
+    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+    ```
+    
 ###  <a name="CreateLinkedDeployShare"></a> Creating a Linked Deployment Share  
  The following Windows PowerShell commands create a deployment share that is linked to the Production deployment share and resides under the \\\\*remote\_server\_name*\\Deployment$ share. The Everything selection profile is used to determine which content is replicated to the linked deployment share. Content from the Production deployment share will be merged with content that already exists in the \\\\*remote\_server\_name*\\Deployment$ share.  
 
