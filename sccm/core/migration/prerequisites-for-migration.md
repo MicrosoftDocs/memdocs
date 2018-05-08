@@ -2,7 +2,7 @@
 title: "Migration prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
-ms.date: 3/7/2017
+ms.date: 5/7/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -41,7 +41,7 @@ To migrate from a supported source hierarchy, you must have access to each appli
 
 
 ##  <a name="BKMK_SorceSiteLanguage"></a> Source site languages that are supported for migration  
- When you migrate data between Configuration Manager hierarchies, the data is stored in the destination hierarchy in the language neutral format for System Center Configuration Manager. Because Configuration Manager2007 does not store data in a language neutral format, the migration process must convert objects to this format during migration from Configuration Manager 2007. Therefore, only Configuration Manager 2007 source sites that are installed with the following languages are supported for migration:  
+ When you migrate data between Configuration Manager hierarchies, the data is stored in the destination hierarchy in the language neutral format for System Center Configuration Manager. Because Configuration Manager 2007 does not store data in a language neutral format, the migration process must convert objects to this format during migration from Configuration Manager 2007. Therefore, only Configuration Manager 2007 source sites that are installed with the following languages are supported for migration:  
 
 -   English  
 
@@ -62,7 +62,7 @@ To migrate from a supported source hierarchy, you must have access to each appli
 When you migrate data from a System Center 2012 Configuration Manager or System Center Configuration Manager hierarchy, there are no source site language limitations. Objects in the source site database are already in a language neutral format.  
 
 ##  <a name="BKMK_Required_Configurations"></a> Required configurations for migration  
-The followingare required configurations for using migration and migration operations:  
+The following are required configurations for using migration and migration operations:  
 
 -   **To configure, run, and monitor migration in the Configuration Manager console:**  
 
@@ -74,7 +74,7 @@ The followingare required configurations for using migration and migration opera
 
     -   **Source Site Account:** This account is used to access the SMS Provider of the source site.  
 
-        -   For a Configuration Manager2007 SP2 source site, this account requires **Read** permission to all source site objects.  
+        -   For a Configuration Manager 2007 SP2 source site, this account requires **Read** permission to all source site objects.  
 
         -   For a System Center 2012 Configuration Manager or System Center Configuration Manager source site, this account requires **Read** permission to all source site objects, You grant this permission to the account by using role-based administration. For information about how to use role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
@@ -110,7 +110,7 @@ The followingare required configurations for using migration and migration opera
 
      The **Source Site Access Account** configured to gather data from the SMS Provider of the source site must have the following permissions:  
 
-    -   To upgrade a Configuration Manager2007 distribution point, the account requires **Read**, **Execute**, and **Delete** permissions to the **Site** class on the Configuration Manager2007 site server to successfully remove the distribution point from the Configuration Manager2007 source site  
+    -   To upgrade a Configuration Manager 2007 distribution point, the account requires **Read**, **Execute**, and **Delete** permissions to the **Site** class on the Configuration Manager2007 site server to successfully remove the distribution point from the Configuration Manager2007 source site  
 
     -   To reassign a System Center 2012 Configuration Manager or System Center Configuration Manager distribution point, the account must have **Modify** permission to the **Site** object on the source site. You grant this permission to the account by using role-based administration. For information about how to use role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
