@@ -176,6 +176,64 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 
 
 
+## Improved secure client communications
+<!--1356889,1358228,1358460-->
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+
+This release includes improvements to how clients communicate with site systems. There are two primary goals for these improvements:  
+
+- Don't require PKI certificates in order to secure client communication.  
+
+- Don't require a network access account for clients to access site resources on the network.  
+
+> [!Note]  
+> PKI certificates are still a valid option for customers that want to use it. PKI provides additional certificate capabilities such as a chain of trust, verification, and revocation.  
+
+The following scenarios benefit from these improvements:  
+
+- Azure AD-joined devices can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a self-signed certificate for the management point allowing it to communicate via a secure channel. <!--1356889-->  
+
+    > [!Note]  
+    > This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario.  
+
+- A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.<!--1358228-->   
+
+- An Azure-AD-joined or hybrid Azure AD device without an Azure AD user logged in can securely communicate through a CMG. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.<!--1358460-->  
+
+
+### Prerequisites  
+
+- A management point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties.  
+
+- A distribution point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties. Do not enable the option to **Allow clients to connect anonymously**.  
+
+- A cloud management gateway.  
+
+- Onboard the site to Azure AD for cloud management.  
+
+    - If you have already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then click **Update application setting** in the ribbon.  
+
+- A client running Windows 10 version 1803 and joined to Azure AD.  
+
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select the site and click **Properties** in the ribbon.  
+
+2. Switch to the **Client Computer Communication** tab. Select the option for **HTTPS or HTTP** and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**.  
+
+See the earlier list of scenarios to validate.
+
+You can see the **SMS Issuing** self-signed root certificate in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. This node provides options to block, unblock, and renew the certificate of type **SMS Issuing**.
+
+
+### Known issues
+- The user can't view in Software Center any applications targeted to them as available.
+- OS deployment scenarios still require the network access account.
+
+
+
 ## CMTrace installed with client
 <!--1357971-->
 
