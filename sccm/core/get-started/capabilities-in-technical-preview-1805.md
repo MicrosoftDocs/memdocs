@@ -207,7 +207,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
 
 3. In the CMG connection analyzer window, select one of the following options to authenticate with the service:  
 
-     1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged onto a Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
+     1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged on to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
      2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).  
 
@@ -315,9 +315,9 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
     - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables)
 
 - **Run diagnostic tools**: To run additional diagnostic tools, add steps in this group. These tools should be automated for collecting additional information from the system as soon after the failure as possible.
-    - One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It is a standalone diagnostic tool that can be used to obtain details about why a Windows 10 upgrade was unsuccessful.
+    - One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool that you can use to obtain details about why a Windows 10 upgrade was unsuccessful.
          - In Configuration Manager, [create a package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) for the tool.
-         - Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following is an example **Command line**:  
+         - Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
              `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`
 
 
