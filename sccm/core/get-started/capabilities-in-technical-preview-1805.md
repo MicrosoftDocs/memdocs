@@ -154,7 +154,9 @@ To transition this workload, go to the co-management properties page and move th
 > [!Note]  
 > Moving this workload also moves the **Resource Access** and **Endpoint Protection** workloads, which are a subset of the device configuration workload.
 
-You can make exceptions in a specific configuration baseline. When creating a configuration baseline in Configuration Manager, enable the option to **Always apply this baseline even for co-managed clients**.
+When you transition this workload, you can still deploy settings from Configuration Manager to co-managed devices, even though Intune is the device configuration authority. This exception might be used to configure settings that are required by your organization but not yet available in Intune. 
+
+Specify this exception on a Configuration Manager configuration baseline. Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline, or on the **General** tab of the properties of an existing baseline. To see the state of this option on all baselines, add the **Co-management Exception** column in the **Configuration Baselines** node of the Configuration Manager console.
 
 
 
