@@ -42,10 +42,11 @@ Steps to workaround, if any.
 
 ## Create a phased deployment with manually configured phases for a task sequence
 <!--1358148--> 
-You can now create a phased deployment with manually configured phases for a task sequence. You can also add up to 10 additional phases from the **Phases** tab on **Create Phased Deployment** wizard. 
+You can now [create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with manually configured phases for a task sequence. You can add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. 
+
 
 ### Try it out!
-Follow the instructions to create a phased deployment where you manually configure all phases. Add additional phases from the **Phases** tab on **Create Phased Deployment** wizard using steps 4 though 9. You can configure up to 10 phases. Send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked. 
+Follow the instructions to create a phased deployment where you manually configure all phases. Send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked. 
 
 1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
 
@@ -55,32 +56,26 @@ Follow the instructions to create a phased deployment where you manually configu
 
 4. On the **Phases** tab, click on **Add**.  
 
-5. Populate the **Phase Collection** for your first phase and choose if you want to **pre-download content for this task sequence**.  
+5. Specify a **Name** for the phase, and then browse to the target **Phase Collection**.  
 
 6. On the **Phase Settings** tab, choose one option for each of the scheduling settings and select **Next** when complete.  
-    - **Criteria for success of the previous phase** (This option is disabled for the first phase.)
-        - **Deployment success percentage**: Specify percent of devices that successfully complete the deployment for the previous phase success criteria. 
-        - **Number of devices successfully deployed**: Specify number of devices that successfully complete the deployment for previous phase success criteria. 
-    - **Conditions for beginning this phase of deployment after success of the previous phase** 
+
+    - Criteria for success of the previous phase (This option is disabled for the first phase.)
+        - **Deployment success percentage**: Specify percent of devices that successfully complete the deployment for the previous phase success criteria.  
+
+    - Conditions for beginning this phase of deployment after success of the previous phase  
         - **Automatically begin this phase after a deferral period (in days)**: Choose the number of days to wait before beginning the next phase after the success of the previous phase. 
-        - **Manually begin this phase of deployment**: Don't begin this phase automatically after success of the previous phase. 
-    - **Interval for targeting devices in this phase (in days)**: The number of days to span targeting of device deployments across for this phase. 
-    - **Once a device is targeted, install the software**
+        - **Manually begin this phase of deployment**: Don't begin this phase automatically after success of the previous phase.  
+
+    - Once a device is targeted, install the software
         - **As soon as possible**: Sets the deadline for installation on the device as soon as the device is targeted.
         - **Deadline time (relative to the time device is targeted)**: Sets deadline for installation a certain number of days after device is targeted.  
      
-7. Specify **User Experience** such as **User Notifications** and **Write filter handling for Windows Embedded devices**.  
+7. Complete the Phase Settings wizard.
 
-8. Specify **Distribution Point** settings for the phase. Verify the summary for the phase.  
+8. On the **Phases** tab of the Create Phased Deployment wizard you can now add, remove, reorder, or edit the phases for this deployment.  
 
-9. On the **Phases** tab, add, edit, remove, or reorder any  phases as needed then click **Next**.  
-
-10. The **Stop Criteria** tab allows you to specify when to automatically stop deploying for all phases.
-    - **Criteria for automatic stop of deployments in all phases**
-        - **Percentage of deployments failed across all phases**: Select the percentage of deployment failures to stop deployments in all phases. 
-        - **Number of devices with failed deployments across all phases**: Choose the number of devices that failed the deployment to stop deployments in all phases.  
-
-11. Confirm your selections on the **Summary** tab. Then click **Next** and proceed though the wizard.  
+9. Complete the Create Phased Deployment wizard.  
 
 
 
@@ -154,9 +149,7 @@ To transition this workload, go to the co-management properties page and move th
 > [!Note]  
 > Moving this workload also moves the **Resource Access** and **Endpoint Protection** workloads, which are a subset of the device configuration workload.
 
-When you transition this workload, you can still deploy settings from Configuration Manager to co-managed devices, even though Intune is the device configuration authority. This exception might be used to configure settings that are required by your organization but not yet available in Intune. 
-
-Specify this exception on a Configuration Manager configuration baseline. Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline, or on the **General** tab of the properties of an existing baseline. To see the state of this option on all baselines, add the **Co-management Exception** column in the **Configuration Baselines** node of the Configuration Manager console.
+When you transition this workload, you can still deploy settings from Configuration Manager to co-managed devices, even though Intune is the device configuration authority. This exception might be used to configure settings that are required by your organization but not yet available in Intune. Specify this exception on a Configuration Manager configuration baseline. Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline, or on the **General** tab of the properties of an existing baseline. 
 
 
 
