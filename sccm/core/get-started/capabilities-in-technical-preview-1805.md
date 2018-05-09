@@ -210,8 +210,31 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
      1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged onto a Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
      2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).  
-     
+
 4. Click **Start** to start the analysis. The results are displayed in the analyzer window. Select an entry to see more details in the Description field.  
+
+
+
+## CMPivot
+<!--1358456-->
+Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. However, that data is only as good as the last time it was collected from clients. 
+
+CMPivot is a new in-console utility that provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. You can then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents.
+
+### Prerequisites
+- The target clients must be updated to the latest version.  
+
+- The Configuration Manager administrator needs permissions to run scripts. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Device Collections**. Select a target collection, and click **CMPivot** in the ribbon to launch the tool.  
+
+2. The interface provides further information about using the tool. 
+     - You can manually enter query strings at the top, or click the links in the in-line documentation.
+     - Click one of the **Entities** to add it to the query string. 
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).
 
 
 
