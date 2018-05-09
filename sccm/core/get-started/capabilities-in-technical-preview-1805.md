@@ -176,6 +176,45 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 
 
 
+## Cloud management dashboard
+<!--1358461-->
+The new **cloud management dashboard** provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.  
+
+The following screenshot is a portion of the cloud management dashboard showing two of the available tiles:  
+![Cloud management dashboard tiles CMG traffic and Current online clients](media/cmg-dashboard-1805.png)
+
+This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic.
+
+
+### Prerequisites
+- An active [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) used by internet-based clients.  
+
+- The site onboarded to [Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for cloud management.  
+
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+#### Cloud management dashboard
+
+In the Configuration Manager console, go to the **Monitoring** workspace. Select the **Cloud Management** node, and view the dashboard tiles.  
+
+#### CMG connection analyzer
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services** and select **Cloud management gateway**.  
+
+2. Select the target CMG instance, and then select **Connection analyzer** in the ribbon.  
+
+3. In the CMG connection analyzer window, select one of the following options to authenticate with the service:  
+
+     1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged onto a Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
+
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).  
+     
+4. Click **Start** to start the analysis. The results are displayed in the analyzer window. Select an entry to see more details in the Description field.  
+
+
+
 ## Improved secure client communications
 <!--1356889,1358228,1358460-->
 Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
