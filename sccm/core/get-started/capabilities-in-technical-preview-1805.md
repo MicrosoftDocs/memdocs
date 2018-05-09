@@ -120,15 +120,130 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 
 
 
+## Take actions based on management insights
+<!--1357930-->
+Some [management insights](/sccm/core/servers/manage/management-insights) now have the option to take an action. Depending upon the rule, this action exhibits one of the following behaviors:  
+
+- Automatically navigate in the console to the node where you can take further action. For example, if the management insight recommends changing a client setting, taking action navigates to the Client Settings node. You can take further action by modifying the default or a custom client settings object.  
+
+- Navigate to a filtered view based on a query. For example, taking action on the empty collections rule shows just these collections in the list of collections. Here you can take further action, such as deleting a collection or modifying its membership rules.  
+
+The following management insight rules have actions in this release:
+- Security
+    - Unsupported antimalware client versions
+- Software Center
+    - Use the new version of Software Center
+- Applications
+    - Applications without deployments
+- Simplified Management
+    - Non-CB Client Versions
+- Collections
+    - Empty Collections 
+- Cloud Services
+    - Update clients to the latest Windows 10 version
+
+
+
+## Transition device configuration workload to Intune using co-management
+<!--1357903-->
+
+You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM polices, while continuing to use Configuration Manager for deploying applications. 
+
+To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+
+> [!Note]  
+> Moving this workload also moves the **Resource Access** and **Endpoint Protection** workloads, which are a subset of the device configuration workload.
+
+You can make exceptions in a specific configuration baseline. When creating a configuration baseline in Configuration Manager, enable the option to **Always apply this baseline even for co-managed clients**.
+
+
+
+## Enable distribution points to use network congestion control
+<!--1358112-->
+
+Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, you can enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
+
+For more information on Windows LEDBAT, see the [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) blog post.
+
+
+### Prerequisites
+- A distribution point on Windows Server, version 1709.  
+
+- A client device running at least Windows 10, version 1607.
+
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Select the **Distribution Points** node. Select the target distribution point, and click **Properties** in the ribbon.  
+
+2. On the **General** tab, enable the option to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**.  
+
+
+
+## CMTrace installed with client
+<!--1357971-->
+
+The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`.
+
+> [!Note]  
+> CMTrace is *not* automatically registered with Windows to open the .log file extension.
+
+
+
+## Improvement to the Configuration Manager console
+<!--1358202-->
+We've made the following improvement to the Configuration Manager console:
+
+- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
+
+
+
 ## Improvements to console feedback
 <!--1357542-->
-This release includes the following improvements to the new [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) mechanism in the Configuration Manager console:
-- The feedback dialog now remembers your previous settings, such as the selected options and your email address.
+This release includes the following improvements to the new [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) mechanism in the Configuration Manager console:  
+
+- The feedback dialog now remembers your previous settings, such as the selected options and your email address.  
+
 - It now supports offline feedback. Save your feedback from the console, and then upload to Microsoft from an internet-connected system. Use the new offline feedback uploader tool located in `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`. To see the available and required command-line options, run the tool with the `--help` option. The connected system needs access to **petrol.office.microsoft.com**.
 
 
 
-## Improvements to support for CNG certificates
+## Improvements to PXE-enabled distribution points
+<!--1357580-->
+
+This release includes the following additional improvements when you use the option to [**Enable a PXE responder without Windows Deployment Service**](/sccm/core/get-started/capabilities-in-technical-preview-1802#improvements-to-pxe-enabled-distribution-points) on a distribution point:  
+
+- Windows Firewall rules are automatically created on the distribution point when you enable this option  
+- Improvements to component logging
+
+
+
+## Improvement to hardware inventory for large integer values
+<!--1357880-->
+Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
+
+For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
+
+
+
+## Improvement to WSUS maintenance
+<!--1357898-->
+
+The WSUS cleanup wizard now declines updates that are either expired or superseded according to the supersedence rules. These rules are defined on the software update point component properties.
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Select the top-level site, click **Configure Site Components** in the ribbon, and select **Software Update Point**.  
+
+2. Switch to the **Supersedence Rules** tab. Enable the option to **Run WSUS cleanup wizard**. Specify the desired supersedence behavior.  
+
+3. Review the WSyncMgr.log file.
+
+
+
+## Improvement to support for CNG certificates
 <!--1357314-->
 In this release, use [CNG certificates](/sccm/core/plan-design/network/cng-certificates-overview) for the following additional HTTPS-enabled server roles:  
 - Certificate registration point, including the NDES server with the Configuration Manager policy module
