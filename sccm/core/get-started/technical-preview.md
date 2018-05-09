@@ -109,6 +109,10 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Take actions based on management insights](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights) <!--1357930--> 
 - [Transition device configuration workload to Intune using co-management](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management) <!--1357903--> 
 - [Enable distribution points to use network congestion control](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control) <!--1358112--> 
+- [Cloud management dashboard](capabilities-in-technical-preview-1805.md#cloud-management-dashboard) <!--1358461--> 
+- [CMPivot](capabilities-in-technical-preview-1805.md#cmpivot) <!--1358456--> 
+- [Improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications) <!--1356889,1358228,1358460--> 
+- [Improvements to Windows 10 in-place upgrade task sequence](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!--1358500--> 
 - [CMTrace installed with client](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client) <!--1357971--> 
 - [Improvement to the Configuration Manager console](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console) <!--1358202--> 
 - [Improvements to console feedback](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback) <!--1357542--> 

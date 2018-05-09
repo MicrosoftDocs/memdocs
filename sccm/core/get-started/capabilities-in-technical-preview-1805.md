@@ -176,6 +176,152 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 
 
 
+## Cloud management dashboard
+<!--1358461-->
+The new **cloud management dashboard** provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.  
+
+The following screenshot is a portion of the cloud management dashboard showing two of the available tiles:  
+![Cloud management dashboard tiles CMG traffic and Current online clients](media/cmg-dashboard-1805.png)
+
+This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic.
+
+
+### Prerequisites
+- An active [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) used by internet-based clients.  
+
+- The site onboarded to [Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for cloud management.  
+
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+#### Cloud management dashboard
+
+In the Configuration Manager console, go to the **Monitoring** workspace. Select the **Cloud Management** node, and view the dashboard tiles.  
+
+#### CMG connection analyzer
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services** and select **Cloud management gateway**.  
+
+2. Select the target CMG instance, and then select **Connection analyzer** in the ribbon.  
+
+3. In the CMG connection analyzer window, select one of the following options to authenticate with the service:  
+
+     1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged on to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
+
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).  
+
+4. Click **Start** to start the analysis. The results are displayed in the analyzer window. Select an entry to see more details in the Description field.  
+
+
+
+## CMPivot
+<!--1358456-->
+Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. However, that data is only as good as the last time it was collected from clients. 
+
+CMPivot is a new in-console utility that provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. You can then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents.
+
+### Prerequisites
+- The target clients must be updated to the latest version.  
+
+- The Configuration Manager administrator needs permissions to run scripts. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Device Collections**. Select a target collection, and click **CMPivot** in the ribbon to launch the tool.  
+
+2. The interface provides further information about using the tool. 
+     - You can manually enter query strings at the top, or click the links in the in-line documentation.
+     - Click one of the **Entities** to add it to the query string. 
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).
+
+
+
+## Improved secure client communications
+<!--1356889,1358228,1358460-->
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+
+This release includes improvements to how clients communicate with site systems. There are two primary goals for these improvements:  
+
+- Don't require PKI certificates in order to secure client communication.  
+
+- Don't require a network access account for clients to access site resources on the network.  
+
+> [!Note]  
+> PKI certificates are still a valid option for customers that want to use it. PKI provides additional certificate capabilities such as a chain of trust, verification, and revocation.  
+
+The following scenarios benefit from these improvements:  
+
+- Azure AD-joined devices can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a self-signed certificate for the management point allowing it to communicate via a secure channel. <!--1356889-->  
+
+    > [!Note]  
+    > This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario.  
+
+- A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.<!--1358228-->   
+
+- An Azure-AD-joined or hybrid Azure AD device without an Azure AD user logged in can securely communicate through a CMG. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.<!--1358460-->  
+
+
+### Prerequisites  
+
+- A management point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties.  
+
+- A distribution point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties. Do not enable the option to **Allow clients to connect anonymously**.  
+
+- A cloud management gateway.  
+
+- Onboard the site to Azure AD for cloud management.  
+
+    - If you have already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then click **Update application setting** in the ribbon.  
+
+- A client running Windows 10 version 1803 and joined to Azure AD.  
+
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select the site and click **Properties** in the ribbon.  
+
+2. Switch to the **Client Computer Communication** tab. Select the option for **HTTPS or HTTP** and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**.  
+
+See the earlier list of scenarios to validate.
+
+You can see the **SMS Issuing** self-signed root certificate in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. This node provides options to block, unblock, and renew the certificate of type **SMS Issuing**.
+
+
+### Known issues
+- The user can't view in Software Center any applications targeted to them as available.
+- OS deployment scenarios still require the network access account.
+
+
+
+## Improvements to Windows 10 in-place upgrade task sequence
+<!--1358500-->
+
+The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot.
+
+### New groups under **Run actions on failure**
+- **Collect logs**: To gather logs from the client, add steps in this group. 
+    - A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) step. 
+    - To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.
+    - Files to collect might include the following logs:
+         ```
+         %_SMSTSLogPath%\*.log
+         %SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log
+         ```
+    - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
+    - For more information on Configuration Manager client logs, see [Configuration Manager client logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)
+    - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables)
+
+- **Run diagnostic tools**: To run additional diagnostic tools, add steps in this group. These tools should be automated for collecting additional information from the system as soon after the failure as possible.
+    - One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool that you can use to obtain details about why a Windows 10 upgrade was unsuccessful.
+         - In Configuration Manager, [create a package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) for the tool.
+         - Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
+             `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`
+
+
+
 ## CMTrace installed with client
 <!--1357971-->
 
