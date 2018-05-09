@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 05/01/2018
+ms.date: 05/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -36,6 +36,13 @@ Each section of this article lists hybrid features under three different categor
 
 ## May 2018
 
+### New in Microsoft Intune
+
+#### Requesting help in the Company Portal for Windows 10 
+<!--1874137-->
+The Company Portal for Windows 10 now sends app logs directly to Microsoft when the user initiates the workflow to get help with an issue. This behavior makes it easier to troubleshoot and resolve issues that are raised to Microsoft.  
+
+
 ### New in Configuration Manager (current branch)
 
 #### Support for new versions of Cisco AnyConnect client for iOS
@@ -53,6 +60,9 @@ For more information on enabling this feature, see [Pre-release features](/sccm/
 
 ### New in Microsoft Intune
 
+#### Intune adapts to Fluent Design System in the Company Portal app for Windows 10 
+<!--1195010-->
+The Intune Company Portal app for Windows 10 has been updated with the [Fluent Design System's navigation view](/windows/uwp/design/basics/navigation-basics). Along the side of the app notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This update is the first of several you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune. To see the updated look, go to [What's new in the app UI](/intune/whats-new-app-ui).
 
 #### Improved device tiles in the Windows 10 Company Portal
 <!--2213364-->
@@ -107,6 +117,35 @@ To see the updated look go to [What's new in the app UI](/intune/whats-new-app-u
 ## March 2018
 
 ### New in Microsoft Intune
+
+#### Windows Company Portal Send Feedback Option may no longer work
+<!--2070166-->
+The Windows Company Portal app has a 'Send Feedback' option allowing users to send feedback about the app to Microsoft. From April 30, 2018, this option continues to be supported only on the Windows 10 Company Portal app running on Windows 10 version 1607 and later.   
+
+**How does this affect me?**
+
+If you do not have the Windows Company Portal app installed for end users, please disregard this message.
+
+If any of your end users have the Company Portal app, note that starting April 30, the 'Send Feedback' button no longer works for the app in the following scenarios:  
+
+ - Windows 10 Company Portal app on Windows 10 version 1507 and version 1511  
+
+ - Windows Phone 8.1 Company Portal app  
+
+For impacted devices, the 'Send Feedback' option fails and doesn't succeed even on retrying. To send feedback to Microsoft about experiences on these platforms, there are alternate feedback channels listed below.
+
+**What do I need to do to prepare for this change?**
+
+Please inform your end users of this change and update any user guidance if necessary. 
+
+Inform end users using the Company Portal on Windows Phone 8.1, Windows 10 version 1507, and Windows 10 version 1511 that they have two alternate feedback channels available. They can:  
+
+- Use the Feedback Hub app on Windows 10  
+- Send an email to WinCPfeedback@microsoft.com  
+
+Ask end users on Windows 10 version 1607 or later to update to the latest version of the Windows Company Portal available in the Microsoft Store.
+
+
 
 #### Azure Active Directory web sites can require the Intune Managed Browser App and support Single Sign-On for the Managed Browser (Public Preview)
 <!-- 710595 --> 
@@ -526,35 +565,6 @@ The following additional hybrid features are also included in version 1702 of Co
 
 
 ## Notices
-
-### Windows Company Portal Send Feedback Option may no longer work
-
-The Windows Company Portal app has a 'Send Feedback' option allowing users to send feedback about the app to Microsoft. From April 30, 2018, this option continues to be supported only on the Windows 10 Company Portal app running on Windows 10 version 1607 and later.   
-
-#### How does this affect me?
-
-If you do not have the Windows Company Portal app installed for end users, please disregard this message.
-
-If any of your end users have the Company Portal app, note that starting April 30, the 'Send Feedback' button no longer works for the app in the following scenarios:  
-
- - Windows 10 Company Portal app on Windows 10 version 1507 and version 1511  
-
- - Windows Phone 8.1 Company Portal app  
-
-For impacted devices, the 'Send Feedback' option fails and doesn't succeed even on retrying. To send feedback to Microsoft about experiences on these platforms, there are alternate feedback channels listed below.
-
-#### What do I need to do to prepare for this change?
-
-Please inform your end users of this change and update any user guidance if necessary. 
-
-Inform end users using the Company Portal on Windows Phone 8.1, Windows 10 version 1507, and Windows 10 version 1511 that they have two alternate feedback channels available. They can:  
-
-- Use the Feedback Hub app on Windows 10  
-- Send an email to WinCPfeedback@microsoft.com  
-
-Ask end users on Windows 10 version 1607 or later to update to the latest version of the Windows Company Portal available in the Microsoft Store.
-
-
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 
 <!--1428681-->
