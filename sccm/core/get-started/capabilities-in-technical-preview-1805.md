@@ -234,6 +234,32 @@ You can see the **SMS Issuing** self-signed root certificate in the Configuratio
 
 
 
+## Improvements to Windows 10 in-place upgrade task sequence
+<!--1358500-->
+
+The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot.
+
+### New groups under **Run actions on failure**
+- **Collect logs**: To gather logs from the client, add steps in this group. 
+    - A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) step. 
+    - To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.
+    - Files to collect might include the following logs:
+         ```
+         %_SMSTSLogPath%\*.log
+         %SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log
+         ```
+    - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
+    - For more information on Configuration Manager client logs, see [Configuration Manager client logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)
+    - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables)
+
+- **Run diagnostic tools**: To run additional diagnostic tools, add steps in this group. These tools should be automated for collecting additional information from the system as soon after the failure as possible.
+    - One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It is a standalone diagnostic tool that can be used to obtain details about why a Windows 10 upgrade was unsuccessful.
+         - In Configuration Manager, [create a package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) for the tool.
+         - Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following is an example **Command line**:  
+             `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`
+
+
+
 ## CMTrace installed with client
 <!--1357971-->
 
