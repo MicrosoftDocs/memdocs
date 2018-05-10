@@ -181,7 +181,7 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 The new **cloud management dashboard** provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.  
 
 The following screenshot is a portion of the cloud management dashboard showing two of the available tiles:  
-![Cloud management dashboard tiles CMG traffic and Current online clients](media/cmg-dashboard-1805.png)
+![Cloud management dashboard tiles CMG traffic and Current online clients](media/1358461-cmg-dashboard.png)
 
 This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic.
 
@@ -221,6 +221,18 @@ Configuration Manager has always provided a large centralized store of device da
 
 CMPivot is a new in-console utility that provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. You can then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents.
 
+For example, in [mitigating speculative execution side channel vulnerabilities](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/), one of the requirements is to update the system BIOS. You can use CMPivot to quickly query on system BIOS information, and find clients that are not in compliance. 
+
+In this screenshot, CMPivot displays two separate BIOS versions with a device count of one each. You can use this example query when you try out CMPivot:  
+`Registry('hklm:\\Hardware\\Description\\System\\BIOS') | where (Property == 'BIOSVersion') | summarize dcount( Device ) by Value`  
+
+![CMPivot window with example query fro BIOSVersion](media/1358456-cmpivot-biosversion.png)
+
+You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode):
+- Run Script
+- Remote Control
+- Resource Explorer
+
 ### Prerequisites
 - The target clients must be updated to the latest version.  
 
@@ -244,23 +256,31 @@ Using HTTPS communication is recommended for all Configuration Manager communica
 
 This release includes improvements to how clients communicate with site systems. There are two primary goals for these improvements:  
 
-- Don't require PKI certificates in order to secure client communication.  
+- You can secure client communication without the need for PKI server authentication certificates.  
 
-- Don't require a network access account for clients to access site resources on the network.  
+- Clients can securely access content from distribution points without the need for a network access account.  
 
 > [!Note]  
-> PKI certificates are still a valid option for customers that want to use it. PKI provides additional certificate capabilities such as a chain of trust, verification, and revocation.  
+> PKI certificates are still a valid option for customers that want to use it.  
 
+
+### <a name="bkmk_token"></a> Scenarios
 The following scenarios benefit from these improvements:  
 
-- Azure AD-joined devices can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a self-signed certificate for the management point allowing it to communicate via a secure channel. <!--1356889-->  
+#### <a name="bkmk_token1"></a> Scenario 1: Client to management point
+<!--1356889-->
+[Azure AD joined devices](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
-    > [!Note]  
-    > This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario.  
+> [!Note]  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
 
-- A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.<!--1358228-->   
+#### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
+<!--1358228-->
+A workgroup or Azure AD joined client can download content over a secure channel from a distribution point configured for HTTP.   
 
-- An Azure-AD-joined or hybrid Azure AD device without an Azure AD user logged in can securely communicate through a CMG. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.<!--1358460-->  
+#### <a name="bkmk_token3"></a> Scenario 3 Azure AD device identity 
+<!--1358460-->
+An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 
 ### Prerequisites  
@@ -275,7 +295,7 @@ The following scenarios benefit from these improvements:
 
     - If you have already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then click **Update application setting** in the ribbon.  
 
-- A client running Windows 10 version 1803 and joined to Azure AD.  
+- A client running Windows 10 version 1803 and joined to Azure AD. (This requirement is technically only for [Scenario 3](#bkmk_token3).) 
 
 
 ### Try it out!
@@ -285,14 +305,42 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 2. Switch to the **Client Computer Communication** tab. Select the option for **HTTPS or HTTP** and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**.  
 
-See the earlier list of scenarios to validate.
+See the earlier [list of scenarios](#bkmk_token) to validate.
 
-You can see the **SMS Issuing** self-signed root certificate in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. This node provides options to block, unblock, and renew the certificate of type **SMS Issuing**.
+> [!Tip]
+> In this release, wait up to 30 minutes for the management point and distribution point to receive and configure the new certificates from the site.
+
+You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
 
 ### Known issues
-- The user can't view in Software Center any applications targeted to them as available.
-- OS deployment scenarios still require the network access account.
+- The user can't view in Software Center any applications targeted to them as available.  
+
+- OS deployment scenarios still require the network access account.  
+
+- Rapidly and repeatedly enabling and disabling the option to **Use Configuration Manager-generated certificates for HTTP site systems** may cause the certificate to not properly bind to the site system roles. No certificates issued by the "SMS Issuing" certificate are bound to a website in Windows Server Internet Information Services (IIS). To work around this issue, delete all certificates issued by "SMS Issuing" from the **SMS** certificate store in Windows, and then restart the smsexec service.
+
+
+
+## Improvements for enabling third-party software update support
+<!--1357605-->
+As a result of your UserVoice feedback on [third-party software update support](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
+
+In this release, you can enable the Configuration Manager site to automatically configure the certificate. The site communicates with WSUS to generate a certificate for this purpose. Configuration Manager then continues to deploy that certificate to clients. This iteration removes the need to use the SCUP tool to create and manage the certificate. 
+
+For more information on general use of the SCUP tool, see [System Center Updates Publisher](/sccm/sum/tools/updates-publisher).
+
+### Prerequisites
+- Enable and deploy the client setting **Enable third party software updates** in the **Software Updates** group.
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Select the top-level site, click **Configure Site Components** in the ribbon, and select **Software Update Point**.  
+
+2. Switch to the **Third Party Updates** tab. Select the option to **Enable third-party software updates**, and then select the option for **Configuration Manager automatically manages the certificate**.
+
+3. Continue with the rest of the typical SCUP workflow for importing a third-party software update catalog, and then deploy the updates to clients.
 
 
 
@@ -307,8 +355,8 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
     - To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.
     - Files to collect might include the following logs:
          ```
-         %_SMSTSLogPath%\*.log
-         %SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log
+         %_SMSTSLogPath%\*.log  
+         %SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log  
          ```
     - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
     - For more information on Configuration Manager client logs, see [Configuration Manager client logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)
