@@ -112,6 +112,7 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Cloud management dashboard](capabilities-in-technical-preview-1805.md#cloud-management-dashboard) <!--1358461--> 
 - [CMPivot](capabilities-in-technical-preview-1805.md#cmpivot) <!--1358456--> 
 - [Improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications) <!--1356889,1358228,1358460--> 
+- [Improvements for enabling third-party software update support](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support) <!--1357605--> 
 - [Improvements to Windows 10 in-place upgrade task sequence](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!--1358500--> 
 - [CMTrace installed with client](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client) <!--1357971--> 
 - [Improvement to the Configuration Manager console](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console) <!--1358202--> 
