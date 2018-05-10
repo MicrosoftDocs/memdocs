@@ -11,7 +11,10 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ---
-# Create Windows applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create Windows applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows devices.  
 
 ## General considerations  
@@ -20,7 +23,9 @@ In addition to the other System Center Configuration Manager requirements and pr
 |Device type|Supported file types|  
 |-----------------|---------------------|  
 |Windows RT and Windows RT 8.1|*.appx, \*.appxbundle|  
-|Windows 8.1 and later enrolled as a mobile device|*.appx, \*.appxbundle|  
+|Windows 8.1 and later|*.appx, \*.appxbundle|  
+
+
 
  The following deployment actions are supported:  
 
