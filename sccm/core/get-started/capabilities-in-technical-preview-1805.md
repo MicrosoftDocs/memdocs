@@ -233,6 +233,15 @@ You can click on the device count to drill down to see the specific devices. Whe
 - Remote Control
 - Resource Explorer
 
+When right-clicking on a specific device, you can also pivot the view of the specific device to one of the following attributes:
+- Autostart Commands
+- Installed Products
+- Processes
+- Services
+- Users
+- Active Connections
+- Missing Updates
+
 ### Prerequisites
 - The target clients must be updated to the latest version.  
 
@@ -241,7 +250,7 @@ You can click on the device count to drill down to see the specific devices. Whe
 ### Try it out!
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Device Collections**. Select a target collection, and click **CMPivot** in the ribbon to launch the tool.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Device Collections**. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool.  
 
 2. The interface provides further information about using the tool. 
      - You can manually enter query strings at the top, or click the links in the in-line documentation.
@@ -308,7 +317,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 See the earlier [list of scenarios](#bkmk_token) to validate.
 
 > [!Tip]
-> In this release, wait up to 30 minutes for the management point and distribution point to receive and configure the new certificates from the site.
+> In this release, wait up to 30 minutes for the management point to receive and configure the new certificate from the site.
 
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
@@ -332,6 +341,10 @@ For more information on general use of the SCUP tool, see [System Center Updates
 
 ### Prerequisites
 - Enable and deploy the client setting **Enable third party software updates** in the **Software Updates** group.
+- If WSUS is on a separate server from the software update point, you must do one of the following options on the remote WSUS server:
+    - Enable the Remote Registry service in Windows  
+    or
+    - In the registry key `HKLM\Software\Microsoft\Update Services\Server\Setup`, create a new DWORD named **EnableSelfSignedCertificates** with a value of `1`. 
 
 ### Try it out!
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
@@ -353,11 +366,9 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 - **Collect logs**: To gather logs from the client, add steps in this group. 
     - A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) step. 
     - To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.
-    - Files to collect might include the following logs:
-         ```
-         %_SMSTSLogPath%\*.log  
-         %SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log  
-         ```
+    - Files to collect might include the following logs:  
+         `%_SMSTSLogPath%\*.log`   
+         `%SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log`  
     - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
     - For more information on Configuration Manager client logs, see [Configuration Manager client logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)
     - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables)
