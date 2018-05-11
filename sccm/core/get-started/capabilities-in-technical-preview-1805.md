@@ -366,7 +366,7 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 - **Collect logs**: To gather logs from the client, add steps in this group. 
     - A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) step. 
     - To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.
-    - Files to collect might include the following logs:
+    - Files to collect might include the following logs:  
          `%_SMSTSLogPath%\*.log`   
          `%SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log`  
     - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
