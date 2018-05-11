@@ -48,7 +48,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
   -   **Description** - Description of the device enrollment profile. (Not visible to users)  
   -   **User affinity** – Specifies how devices are enrolled. See [User affinity for hybrid managed devices in Configuration Manager](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md).  
 
-      -  **Prompt for user affinity**: The device must be affiliated with a user during initial setup and could then be permitted to access company data and email as that user.  User affinity should be configured for DEP-managed devices that belong to users and need to use the company portal (i.e. to install apps).  
+      -  **Prompt for user affinity**: The device must be affiliated with a user during initial setup and could then be permitted to access company data and email as that user.  User affinity should be configured for DEP-managed devices that belong to users and need to use the company portal (i.e., to install apps).  
       > [!NOTE]
       > DEP with user affinity requires ADFS WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user token.
 
@@ -68,7 +68,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
       -   **Enable** - (Requires **Preparation Mode** = **Supervised**) Disables iOS settings that could allow removal of the management profile  
 
 4.  On the **Setup Assistant** page, configure the settings that customize the iOS Setup Assistant that starts when the device is first powered on, and then click **Next**. These settings include:  
-  -   **Passcode** - Prompt for passcode during activation. Always require a passcode unless the device will be secured or have access controlled in some other manner (i.e. kiosk mode that restricts the device to one app).  
+  -   **Passcode** - Prompt for passcode during activation. Always require a passcode unless the device will be secured or have access controlled in some other manner (i.e., kiosk mode that restricts the device to one app).  
   -   **Location Services** - If enabled, Setup Assistant prompts for the service during activation  
   -   **Restore** - If enabled, Setup Assistant prompts for iCloud backup during activation  
   -   **Apple ID** - An Apple ID is required to download iOS App Store apps, including those installed by Intune. If enabled, iOS will prompt users for an Apple ID when Intune attempts to install an app without an ID.  
@@ -97,7 +97,10 @@ Companies can purchase iOS devices through Apple's device enrollment program and
     > [!NOTE]
     > In the Hybrid configuration, the DEP Sync operation is manually triggered by clicking **DEP Sync** in the Configuration Manager console.
 
-4.  **Assign DEP profile**<br>In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Select the DEP enrollment profile and then, in the **Home** tab, click **Assign to devices**. Select the devices that will use this enrollment profile, click **Add**, and then click **OK**.   
+4.  **Assign DEP profile**<br>In the **Assets and Compliance** workspace, go to **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Select the DEP enrollment profile and then, in the **Home** tab, click **Assign to devices**. Select the devices that will use this enrollment profile, click **Add**, and then click **OK**.
+
+    > [!NOTE]
+    > After a DEP profile is assigned to a device, you can replace the profile only with another DEP profile. However, you cannot remove the DEP profile assignment. To remove a DEP profile from a device, you must unenroll the device.  
      ![Screenshot of assigning DEP profile to iOS devices](../media/dep-assign-profile.png)
 
 ## Distribute devices to users
