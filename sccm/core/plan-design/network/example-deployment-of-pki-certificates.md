@@ -242,6 +242,9 @@ This certificate deployment has the following procedures:
 
 9. Select the **Enroll** permission for this group, and do not clear the **Read** permission.  
 
+    > [!NOTE]
+    > Ensure that **Minimum key size** on the **Cryptography** tab has been set to **2048**
+
 10. Choose **OK**, and then close **Certificate Templates Console**.  
 
 11. In the Certification Authority console, right-click **Certificate Templates**, choose **New**, and then choose **Certificate Template to Issue**.  
