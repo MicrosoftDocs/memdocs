@@ -92,7 +92,7 @@ After you create and deploy Office 365 applications using the Office 365 Install
 
 
 ## Deploy Office 365 updates
-Starting in Configuration Manager version 1706 Office 365 client updates have moved to the **Office 365 Client Management** >**Office 365 Updates** node.  move will not impact your ADR configuration. 
+Starting in Configuration Manager version 1706 Office 365 client updates have moved to the **Office 365 Client Management** >**Office 365 Updates** node. This move will not impact your current ADR configuration. 
 
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
