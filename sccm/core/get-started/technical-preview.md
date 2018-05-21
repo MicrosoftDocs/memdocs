@@ -2,7 +2,7 @@
 title: Technical Preview releases
 titleSuffix: Configuration Manager
 description: Learn about the Technical Preview release to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/11/2018
+ms.date: 06/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,7 +19,7 @@ manager: dougeby
 
  Because this release is a technical preview, details and functionality are subject to change.  
 
- This article contains information that applies to all versions of the Technical Preview. It also lists each new capability (or feature) along with the Technical Preview version in which the capability first appears, like version 1805 for May of 2018. These capabilities are detailed in separate topics dedicated to each preview version.  
+ This article contains information that applies to all versions of the Technical Preview. It also lists each new capability (or feature) along with the Technical Preview version in which the capability first appears, like version 1806 for June of 2018. These capabilities are detailed in separate topics dedicated to each preview version.  
 
  For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -103,27 +103,8 @@ The following are the capabilities delivered with the most recent Configuration 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1805
-- [Create a phased deployment with manually configured phases for a task sequence](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence) <!--1358148--> 
-- [Cloud distribution point support for Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager) <!--1322209--> 
-- [Take actions based on management insights](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights) <!--1357930--> 
-- [Transition device configuration workload to Intune using co-management](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management) <!--1357903--> 
-- [Enable distribution points to use network congestion control](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control) <!--1358112--> 
-- [Cloud management dashboard](capabilities-in-technical-preview-1805.md#cloud-management-dashboard) <!--1358461--> 
-- [CMPivot](capabilities-in-technical-preview-1805.md#cmpivot) <!--1358456--> 
-- [Improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications) <!--1356889,1358228,1358460--> 
-- [Improvements for enabling third-party software update support](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support) <!--1357605--> 
-- [Improvements to Windows 10 in-place upgrade task sequence](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!--1358500--> 
-- [CMTrace installed with client](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client) <!--1357971--> 
-- [Improvement to the Configuration Manager console](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console) <!--1358202--> 
-- [Improvements to console feedback](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback) <!--1357542--> 
-- [Improvements to PXE-enabled distribution points](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points) <!--1357580--> 
-- [Improvement to hardware inventory for large integer values](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values) <!--1357880--> 
-- [Improvement to WSUS maintenance](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance) <!--1357898--> 
-- [Improvement to support for CNG certificates](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates) <!--1357314--> 
-
-
-
+### Technical Preview version 1806
+- [Documentation node in new Support workspace of console](capabilities-in-technical-preview-1806.md#documentation-node-in-new-support-workspace-of-console) <!--1357546--> 
 
 
 
@@ -137,7 +118,24 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
- | Configure a remote content library for the site server <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![Not added](media/Red_X.gif) | 
+ | Create a phased deployment with manually configured phases for a task sequence <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![Not added](media/Red_X.gif) |  
+ | Cloud distribution point support for Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![Not added](media/Red_X.gif) |  
+ | Take actions based on management insights <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![Not added](media/Red_X.gif) |  
+ | Transition device configuration workload to Intune using co-management <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | ![Not added](media/Red_X.gif) |  
+ | Enable distribution points to use network congestion control <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | ![Not added](media/Red_X.gif) |  
+ | Cloud management dashboard <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | ![Not added](media/Red_X.gif) |  
+ | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | ![Not added](media/Red_X.gif) |  
+ | Improved secure client communications <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | ![Not added](media/Red_X.gif) |  
+ | Improvements for enabling third-party software update support <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | ![Not added](media/Red_X.gif) |  
+ | Improvements to Windows 10 in-place upgrade task sequence <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | ![Not added](media/Red_X.gif) |  
+ | CMTrace installed with client <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | ![Not added](media/Red_X.gif) |  
+ | Improvement to the Configuration Manager console <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | ![Not added](media/Red_X.gif) |  
+ | Improvements to console feedback <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | ![Not added](media/Red_X.gif) |  
+ | Improvements to PXE-enabled distribution points <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | ![Not added](media/Red_X.gif) |  
+ | Improvement to hardware inventory for large integer values <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![Not added](media/Red_X.gif) |  
+ | Improvement to WSUS maintenance <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![Not added](media/Red_X.gif) |  
+ | Improvement to support for CNG certificates <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![Not added](media/Red_X.gif) |  
+| Configure a remote content library for the site server <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![Not added](media/Red_X.gif) | 
  | Submit feedback from the Configuration Manager console <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![Not added](media/Red_X.gif) | 
  | Support Center <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![Not added](media/Red_X.gif) | 
  | Configuration Manager Toolkit <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![Not added](media/Red_X.gif) | 
@@ -153,25 +151,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Enable third party software update support on clients <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![Not added](media/Red_X.gif) | 
  | Enable copy/paste of asset details from monitoring views <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![Not added](media/Red_X.gif) | 
  | SCAP Extensions <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![Not added](media/Red_X.gif) | 
- | Transition Endpoint Protection workload to Intune using co-management <!-- 1357365 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) | [Version 1802](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) |  
- | Configure Windows Delivery Optimization to use Configuration Manager boundary groups <!-- 1324696 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) | [Version 1802](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) |  
- | Windows 10 in-place upgrade task sequence via cloud management gateway <!-- 1357149 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) | [Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg) |  
- | Improvements to Windows 10 in-place upgrade task sequence <!-- 1357425 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) | [Version 1802](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system) |  
- | Improvements to PXE-enabled distribution points <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | ![Not added](media/Red_X.gif) | 
- | Deployment templates for task sequences <!-- 1357391 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) | [Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) |  
- | Product lifecycle dashboard <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | ![Not added](media/Red_X.gif) | 
- | Improvements to reporting <!--1357653 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-reporting) | [Version 1802](/sccm/core/servers/manage/list-of-reports#operating-system) |  
- | Improvements to Software Center <!--1357592 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-software-center) | [Version 1802](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) |  
- | Boundary group fallback for management points <!-- 1324594 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) | [Version 1802](/sccm/core/servers/deploy/configure/boundary-groups#management-points) |  
- | Improved support for CNG certificates <!-- 1357314 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) | [Version 1802](/sccm/core/plan-design/network/cng-certificates-overview) |  
- | Cloud management gateway support for Azure Resource Manager <!-- 1324735 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) | [Version 1802](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) |  
- | Approve application requests for users per device <!-- 1357015 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) | [Version 1802](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) |  
- | Use Software Center to browse and install user-available applications on Azure AD-joined devices <!-- 1322613 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) | [Version 1802](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices) |  
- | Report on Windows AutoPilot device information <!-- 1351442 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) | [Version 1802](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) |  
- | Improvements to Configuration Manager Policies for Windows Defender Exploit Guard <!-- 1356220 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard) | [Version 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |  
- | Microsoft Edge browser policies <!-- 1357310 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) | [Version 1802](/sccm/compliance/deploy-use/browser-profiles) | 
- | Report for default browser counts <!-- 1357830 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) | [Version 1802](/sccm/core/servers/manage/list-of-reports#software---companies-and-products) | 
- | Support for Windows 10 ARM64 devices <!-- 1353704 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) | [Version 1802](/sccm/core/plan-design/configs/support-for-windows-10) |  
  
   
 
@@ -186,6 +165,8 @@ With each CB release, review and remove from this list for anything that's now a
 
  |Capability |Technical Preview version |  
  |----------------|---------------------|
+ | Improvements to PXE-enabled distribution points <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
+ | Product lifecycle dashboard <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
  | Client-based PXE responder service <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
  |Site server role high availability <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
  |PXE network boot support for IPv6 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
