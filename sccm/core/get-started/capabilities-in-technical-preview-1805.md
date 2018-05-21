@@ -2,7 +2,7 @@
 title: Technical Preview 1805
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1805.
-ms.date: 05/11/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -409,6 +409,9 @@ This release includes the following improvements to the new [Feedback](capabilit
 - The feedback dialog now remembers your previous settings, such as the selected options and your email address.  
 
 - It now supports offline feedback. Save your feedback from the console, and then upload to Microsoft from an internet-connected system. Use the new offline feedback uploader tool located in `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`. To see the available and required command-line options, run the tool with the `--help` option. The connected system needs access to **petrol.office.microsoft.com**.
+
+### Known issues
+When using **Send a smile** or **Send a frown** from the console on a machine with internet connectivity, it may return with the following message: "Error sending feedback." If you click on **More details**, it shows the following text: `{"Message":""}`. This error is due to a known issue with the response from the backend feedback system. You can dismiss the error. Microsoft still received your feedback. (If the details display a different message, use the offline feedback option to retry sending your feedback at a later time.)
 
 
 
