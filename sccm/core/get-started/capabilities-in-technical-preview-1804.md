@@ -2,7 +2,7 @@
 title: Technical Preview 1804
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1804.
-ms.date: 04/25/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,6 +23,14 @@ Review the [Technical Preview](/sccm/core/get-started/technical-preview) article
 
 <!--  Known Issues Template   -->
 ## Known Issues in this Technical Preview
+
+### <a name="bkmk_ki-prereqs"></a> Setup link to download updates not working
+<!--514334-->
+If you run setup from the media, the initial page includes a link titled **Get the latest Configuration Manager updates**, which doesn't work in this release. This link is for downloading the required files for setup.
+
+#### Workaround
+To download the required files for setup, run the setup wizard. On the Prerequisite Downloads page, use the option to **Download required files**. 
+
 
 ### <a name="bkmk_appcathttps"></a> The application catalog web service point can't be HTTPS-enabled
 <!--512637-->
