@@ -96,7 +96,13 @@ You can use the following optional parameters to specify a proxy server (More in
 Beginning with version 1706, the tools default download behavior has changed, and the tool supports options to control what files you download.
 - 	By default, the tool downloads only the latest available update that applies to the version of your site. It does not download hotfixes.
 
-To modify this behavior, use one of the following parameters to change what files are downloaded. The version of your site is determined from the data in the .cab file that is uploaded when the tool runs.
+To modify this behavior, use one of the following parameters to change what files are downloaded. 
+
+> [!NOTE]
+> The version of your site is determined from the data in the .cab file that is uploaded when the tool runs.
+>
+> You can verify the version by looking for the *SiteVersion*.txt file within the .cab file.
+
 - 	**-downloadall**  This option downloads everything, including updates and hotfixes, regardless of the version of your site.
 - 	**-downloadhotfix**  This option downloads all hotfixes regardless of the version of your site.
 - 	**-downloadsiteversion**  This option downloads updates and hotfixes that have a version that is higher than the version of your site.
@@ -157,6 +163,16 @@ Example command line that uses *-downloadsiteversion*:
 
 ## <a name="bkmk_cmd"></a> Command line options  
  To view help information for the service connection point tool, open command prompt to the folder that contains the tool and run the command:  **serviceconnectiontool.exe**.  
+
+## <a name="bkmk_cmd"></a> Log Files
+
+**ServiceConnectionTool.log**
+
+Each time you run the service connection tool, a log file will generate in the same location as the tool called **ServiceConnectionTool.log**.  This log file will provide simple details about the execution of the tool based on what commands are used.  An existing log file will be replaced each time you run the tool.
+
+**ConfigMgrSetup.log**
+
+If you are using the tool to connect and download updates, a log file will generate on the root of the system drive called **ConfigMgrSetup.log**.  This log file will provide you with more granular details such as what files are downloaded, extracted, and if the hash checks are successful.
 
 |Command-line options|Details|  
 |---------------------------|-------------|  
