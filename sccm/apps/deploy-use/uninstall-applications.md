@@ -36,7 +36,7 @@ Take the following actions to uninstall an application you previously deployed.
 -   A deployment with the deployment purpose of **Uninstall** does not check requirement rules. If the application is installed on the computer on which the deployment runs, it will be uninstalled.  
 
 > [!IMPORTANT]  
-> You must delete any existing deployments or simulated deployments of an application to a collection before you can deploy the application with a deployment action of **Uninstall**.  
+> You must delete any existing application deployments, simulated deployments OR Task sequence application deployment of an application to a collection before you can deploy the application with a deployment action of **Uninstall**.  
 
  For more information about how to create a deployment type, see [Create applications](../../apps/deploy-use/create-applications.md).  
 
