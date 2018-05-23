@@ -161,9 +161,6 @@ Example command line that uses *-downloadsiteversion*:
 
  For information about installing updates, see  [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
 
-## <a name="bkmk_cmd"></a> Command line options  
- To view help information for the service connection point tool, open command prompt to the folder that contains the tool and run the command:  **serviceconnectiontool.exe**.  
-
 ## <a name="bkmk_cmd"></a> Log Files
 
 **ServiceConnectionTool.log**
@@ -172,7 +169,11 @@ Each time you run the service connection tool, a log file will generate in the s
 
 **ConfigMgrSetup.log**
 
-If you are using the tool to connect and download updates, a log file will generate on the root of the system drive called **ConfigMgrSetup.log**.  This log file will provide you with more granular details such as what files are downloaded, extracted, and if the hash checks are successful.
+When using the tool to connect and download updates, a log file will generate on the root of the system drive called **ConfigMgrSetup.log**.  This log file will provide you with more detailed information such as what files are downloaded, extracted, and if the hash checks are successful.
+
+## <a name="bkmk_cmd"></a> Command line options  
+ To view help information for the service connection point tool, open command prompt to the folder that contains the tool and run the command:  **serviceconnectiontool.exe**.  
+
 
 |Command-line options|Details|  
 |---------------------------|-------------|  
