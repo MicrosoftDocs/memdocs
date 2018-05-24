@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role.
-ms.date: 04/17/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -249,6 +249,12 @@ This OS isn't supported for site servers or site system roles, except for the di
     -   Distribution points on this OS version do not support Multicast.  
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+
+## The server core installation of Windows Server, version 1803
+<!--503702-->
+Starting in Configuration Manager 1802, [Windows Server, version 1803](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803) is supported for use as a distribution point with the following limitations:  
+  -   Only the x64-bit version is supported.
+  -   Distribution points on this OS do not support PXE or Multicast.  
 
 ## The server core installation of Windows Server, version 1709
 Starting in Configuration Manager 1710, [Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) is supported for use as a distribution point with the following limitations:  
