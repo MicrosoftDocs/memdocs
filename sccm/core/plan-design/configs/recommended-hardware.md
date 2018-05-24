@@ -1,8 +1,8 @@
 ---
-title: "Recommended hardware"
-titleSuffix: "Configuration Manager"
-description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
-ms.date: 03/22/2018
+title: Recommended hardware
+titleSuffix: Configuration Manager
+description: Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment.
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -18,6 +18,7 @@ manager: dougeby
 The following recommendations are guidelines to help you scale your System Center Configuration Manager environment to support more than a very basic deployment of sites, site systems, and clients. They are not intended to cover all possible site and hierarchy configurations.  
 
  Use the information in the following sections as a guide to help you plan for hardware that can meet the processing loads for clients and sites that use the available Configuration Manager features with the default configurations.  
+
 
 
 ##  <a name="bkmk_ScaleSieSystems"></a> Site systems  
@@ -108,11 +109,11 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 -   **Disk space:** 500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache. Less disk space is required if you use customized settings to install the Configuration Manager client:  
 
-    -   Use the CCMSetup command-line property /skipprereq to avoid installing files that the client doesn't require. For example, run **CCMSetup.exe /skipprereq:silverlight.exe** if the client doesn't use the Application Catalog. Starting in Configuration Manager 1802, Silverlight is no longer automatically installed.  
+    -   Use the CCMSetup command-line property /skipprereq to avoid installing files that the client doesn't require. For example, run `CCMSetup.exe /skipprereq:silverlight.exe` if the client doesn't use the Application Catalog. Starting in Configuration Manager 1802, Silverlight is no longer automatically installed.  
 
-    -   Use the Client.msi property SMSCACHESIZE to set a cache file that is smaller than the default of 5120 MB. The minimum size is 1 MB. For example, **CCMSetup.exe SMSCachesize=2** creates a cache that is 2 MB in size.  
+    -   Use the Client.msi property SMSCACHESIZE to set a cache file that is smaller than the default of 5120 MB. The minimum size is 1 MB. For example, `CCMSetup.exe SMSCachesize=2` creates a cache that is 2 MB in size.  
 
-    For more information about these client installation settings, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+    For more information about these client installation settings, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
     > [!TIP]  
     >  Installing the client with minimal disk space is useful for Windows Embedded devices that typically have smaller disk sizes than standard Windows computers.  
@@ -168,6 +169,6 @@ In addition to PowerShell, Windows Management Framework (WMF) version 3.0 or lat
 
 |Role|CPU (cores)|Memory (GB)|Disk space (GB)|  
 |----------|---------------|-------------------|-----------------------|  
-|Site and database server|2 - 4|7 - 12|100|  
+|Site and database server|2 - 4|8 - 12|100|  
 |Site system server|1 - 4|2 - 4|50|  
 |Client|1 - 2|1 - 3|30|  
