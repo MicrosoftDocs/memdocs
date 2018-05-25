@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 05/09/2018
+ms.date: 05/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -44,6 +44,19 @@ The Company Portal for Windows 10 now sends app logs directly to Microsoft when 
 
 
 ### New in Configuration Manager (current branch)
+
+#### Android for Work and Lookout onboarding moved to Intune on Azure
+<!--2355022,2357366-->
+With the latest Intune update, you can enable and manage Android Enterprise integration and Lookout mobile threat defense integration on hybrid mobile device management tenants in the Intune on Azure portal. Prior to the update, these were only configurable in the Intune Classic (Silverlight) portal.
+ 
+Note: Lookout is the only mobile threat defense (MTD) provider supported in hybrid. If you have previously integrated with any other MTD provider, it still appears in the Intune on Azure portal. If you delete the connector for it, then you can't add it back.
+ 
+These changes do not impact existing functionality. Continue to use the Configuration Manager console for managing related apps, reporting, and policies.
+ 
+For more information, see the following articles:
+- [Set up Android hybrid device management](/sccm/mdm/deploy-use/enroll-hybrid-android)
+- [Manage access to company resource based on device, network, and application risk](/sccm/mdm/deploy-use/lookout-mobile-threat-defense-in-configuration-manager)
+
 
 #### Support for new versions of Cisco AnyConnect client for iOS
 <!--1357393-->
@@ -449,119 +462,6 @@ The following features were previously available in Configuration Manager Techni
 - **Cisco (IPsec) support for macOS VPN profiles**      
   You can create a macOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
   <!-- 1321367 -->
-
-
-## April 2017
-
-### New in Microsoft Intune
-
-- **MyApps available for Managed Browser**  
-  Microsoft MyApps now have better support within the Managed Browser. Managed Browser users who aren't targeted for management are brought directly to the MyApps service, where they can access their admin-provisioned SaaS apps. Users who are targeted for Intune management continue to access MyApps from the built-in Managed Browser bookmark.
-
-- **New icons for the Managed Browser and the Company Portal**  
-  The Managed Browser is receiving updated icons for both the Android and iOS versions of the app. The new icon contains the updated Intune badge to make it more consistent with other apps in Enterprise Mobility + Security (EM+S). You can see the new icon for the Managed Browser on the [what's new in Intune app UI page](https://docs.microsoft.com/intune/whats-new-app-ui).
-
-  The Company Portal is also receiving updated icons for the Android, iOS, and Windows versions of the app to improve consistency with other apps in EM+S. These icons are gradually released across platforms from April to late May.
-
-- **Sign-in progress indicator in Android Company Portal**  
-  An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app. You can see the new screens for the Company Portal app for Android on the [what's new in Intune app UI page](https://docs.microsoft.com/intune/whats-new-app-ui).
-
-- **Block apps from accessing SharePoint Online**  
-  You can now create an app-based conditional access policy to block apps, which don't have app protection policies applied to them, from accessing [SharePoint Online](https://docs.microsoft.com/intune-classic/deploy-use/mam-ca-for-sharepoint-online). In the apps-based conditional access scenario, you can specify the apps that you want to have access to SharePoint Online using the Azure portal.
-
-### New in Configuration Manager Technical Preview 1704
-
-- **Configure Android apps with app configuration policies**  
-  When a user runs an app on Android for Work devices, use app configuration policies in Configuration Manager to distribute pre-configured settings. Android app configuration policies are available only on devices running Android for Work. These policies apply to approved apps from the Play for Work store. For more information, see [Configure Android apps with app configuration policies](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies).
-
-
-
-## March 2017
-
-### New in Microsoft Intune
-
-- **New user experience for the Company Portal app for Android**  
-  The Company Portal app for Android has a more modern look and feel to its user interface. The notable updates are:
-
-  - Colors: Company Portal tab headers are colored in IT-defined branding.
-  - Apps: In the **Apps** tab, the **Featured Apps** and **All Apps** buttons are updated.
-  - Search: In the **Apps** tab, the **Search** button is a floating action button.
-  - Navigating Apps: **All Apps** view shows a tabbed view of **Featured**, **All**, and **Categories** for easier navigation.
-  - Support: **My Devices** and **Contact IT** tabs are updated to improve readability.
-
-  For more information about these changes, see [UI updates for Intune end-user apps](https://docs.microsoft.com/intune/whats-new-app-ui).
-
-- **Signing Script for Windows 10 Company Portal**  
-  If you need to download and sideload the Windows 10 Company Portal app, you can now use a script to simplify and streamline the app-signing process for your organization. To download the script and the instructions for using it, see  [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) on TechNet Gallery. For more information about this announcement, see [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) on the Intune Support Team Blog.
-
-- **Improved support for Android users based in China**  
-  Due to the absence of the Google Play Store in China, Android devices must obtain apps from Chinese marketplaces. The Company Portal supports this workflow. It redirects Android users in China to download the Company Portal and Outlook apps from local app stores. This behavior improves the user experience when Conditional Access policies are enabled, both for Mobile Device Management and for Mobile Application Management. The Company Portal and Outlook apps for Android are available on the following Chinese app stores:
-
-  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
-  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-
-- **Make sure your Company Portal apps are up-to-date**  
-  In December 2016, we released an update that enabled enforcement for multi-factor authentication (MFA) on a group of users when they enroll an iOS, Android, Windows 8.1+, or Windows Phone 8.1+ device. This feature can't work without certain baseline versions of the Company Portal app for Android (v5.0.3419.0+) and iOS (v2.1.17+).
-
-  Intune's management capabilities are continuously improving. Many improvements have coordinated updates to the Company Portal apps on all supported platforms. We recommend you keep the latest versions of the Company Portal apps on installed on devices. This practice takes advantage of improvements in Intune and for the best user experience.
-
-  >[!Tip]
-  > Have your users set their devices to automatically update apps from the appropriate app store. If you have made the Android Company Portal app available on a network share, you can download the latest version from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49140).
-
-- **Microsoft Teams is now enabled for MAM on iOS and Android**  
-  The Microsoft Teams apps for iOS and Android are now enabled with Intune mobile app management (MAM) capabilities. Empower your teams to work freely across devices, while ensuring that conversations and corporate data are protected. For more information, see [the Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) on the Enterprise Mobility and Security blog.
-
-### New in Configuration Manager Technical Preview 1703
-
-- **Additional support for Apple Volume Purchase Program scenarios**  
-   Beginning in Technical Preview 1703, you now have support for the following Volume Purchase Program (VPP) scenarios:
-
-   - Device licensing - Apps that support device licensing and are deployed to device collections now only require one license per device. Previously, you had to use a license for each user on a device. For more information, see [Deploy volume-purchased iOS apps to device collections](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
-   - Use of multiple VPP tokens to a single hybrid tenant with both tokens used for managing VPP apps.
-   - Use of VPP education tokens with the ability to distinguish between business and education tokens.
-
-### New in Configuration Manager (current branch)
-
-The following features were previously available in Configuration Manager Technical Preview releases. These features are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1702.
-
-- [Android for Work Support](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
-- [Non-Compliant Apps Compliance Settings](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
-- [PFX Certificate Creation and Distribution and S/MIME Support](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
-- [Android and iOS versions are no longer targetable in creation wizards for hybrid MDM](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
-
-The following additional hybrid features are also included in version 1702 of Configuration Manager (current branch):
-
-- **Improved support for Apple Volume Purchase Program (VPP)**  
-  - You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license is claimed when you deploy it, as follows:
-
-    | Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
-    |-|-|-|-|
-    |Earlier than 1702|Yes|User|User license|
-    |Earlier than 1702|No|User|User license|
-    |Earlier than 1702|Yes|Device|User license|
-    |Earlier than 1702|No|Device|User license|
-    |1702 and later|Yes|User|User license|
-    |1702 and later|No|User|User license|
-    |1702 and later|Yes|Device|Device license|
-    |1702 and later|No|Device|User license|
-
-  - You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
-
-  - You can now associate multiple Apple volume-purchase program tokens with Configuration Manager.
-
-  For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
-
-- **Support for line-of-business apps in Microsoft Store for Business**  
-  You can now sync custom line-of-business apps from the Microsoft Store for Business.
-
-- **New Mobile Threat Defense monitoring tools**  
-    You now have new ways to monitor the compliance status with your Mobile Threat Defense service provider.
-
-    For more information, see [how to monitor Mobile Threat Defense compliance](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
-
 
 
 ## Notices
