@@ -15,6 +15,7 @@ ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 In [Prepare Windows 10 devices for co-management](co-management-prepare.md), you prepared Windows 10 devices for co-management. These devices are joined to AD, Azure AD, they are enrolled in Intune, and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
 
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.    
+
 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Configuration Wizard.    
 3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.   
 4. On the Enablement page, choose either **Pilot** or **All**  to enable Automatic enrollment in Intune, and then click **Next**. When you choose **Pilot**, only the Configuration manager clients that are members of the Pilot group are automatically enrolled in Intune. This option allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach. The command line can be used to deploy the Configuration Manager client as an app in Intune for devices already enrolled in Intune. For details, see [Windows 10 devices enrolled in Intune](co-management-prepare.md#windows-10-devices-enrolled-in-intune).
@@ -50,8 +51,8 @@ Certain workloads are available to be switched over to Intune. The following lis
       - Windows Defender Application Control
       - Windows Defender Security Center
       - Windows Defender Advanced Threat Protection
-
-
+      - Windows Information Protection
+      
 
 ## Monitor co-management
 After you enable co-management, you can monitor co-management devices using the following methods:
