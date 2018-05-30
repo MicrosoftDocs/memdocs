@@ -157,5 +157,15 @@ This release continues to iterate on [improved secure client communications](/sc
 
 
 
+## Improvements to the Surface dashboard
+<!--1358654-->
+This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):
+- The Surface dashboard now displays a list of relevant devices when graph sections are selected.
+   - Clicking on the **Percent of Surface Devices** tile opens a list of Surface devices.
+   - Clicking on a bar in the **Top Five Firmware Versions** tile opens a list of Surface devices with that specific firmware version.
+- When viewing these device lists from the Surface dashboard, you can right-click a device and perform common actions.
+
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    

@@ -111,6 +111,7 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Office Customization Tool integration with the Office 365 Installer](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
 - [Improvements to cloud management gateway](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
 - [Improvements to secure client communications](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
+- [Improvements to the Surface dashboard](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
 
 
 
