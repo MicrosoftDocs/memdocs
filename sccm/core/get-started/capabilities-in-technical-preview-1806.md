@@ -99,6 +99,23 @@ You can now deploy software updates to devices without first downloading and dis
 
 
 
+## Office Customization Tool integration with the Office 365 Installer
+<!--1358149-->
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, you can now dynamically configure the latest Office manageability settings. The Office Customization Tool is updated at the same time as the release of new builds of Office 365. You can now take advantage of new manageability settings in Office 365 as soon as they are available. 
+
+### Prerequisites
+- The computer running the Configuration Manager console needs internet access via HTTPS port 443. The Office 365 Client Installation Wizard uses a Windows standard web browser API to open https://config.office.com. If an internet proxy is used, the user must be able to access this URL.
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Office 365 Client Management** node.
+2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps).
+3. On the **Office Setting** page, click **Go To Office Web Page**. Use the online Office Customization Tool to specify settings for this deployment. 
+4. Click **Submit** in the upper right corner when complete. Finish the Office 365 Client Installation Wizard.
+
+
+
 ## Improvements to cloud management gateway
 This release includes the following improvements to the cloud management gateway (CMG):
 
