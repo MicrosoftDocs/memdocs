@@ -40,21 +40,95 @@ Steps to workaround, if any.
 
 
 
-## Documentation node in new Support workspace of console
-<!--1357546-->
-There is a new **Support** workspace in the Configuration Manager console, which includes a **Documentation** node. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
-
-#### Product documentation library
-- **Recommended**: a manually curated list of important articles.
-- **Trending**: the most popular articles for the last month.
-- **Recently updated**: articles revised in the last month.
-
-#### Support articles
-- **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
-- **New and updated support articles**: articles that are new or updated in the last two months.
+## Configure Windows Defender SmartScreen settings for Microsoft Edge
+<!--1353701-->
+This release adds three settings for [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) to the [Microsoft Edge browser compliance settings policy](/sccm/compliance/deploy-use/browser-profiles). The policy now includes the following additional settings on the **SmartScreen Settings** page:
+- **Allow SmartScreen**: Specifies whether Windows Defender SmartScreen is allowed. For more information, see the [AllowSmartScreen browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Users can override SmartScreen prompt for sites**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about potentially malicious websites. For more information, see the [PreventSmartScreenPromptOverride browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Users can override SmartScreen prompt for files**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about downloading unverified files. For more information, see the [PreventSmartScreenPromptOverrideForFiles browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 
 
+## Sync MDM policy from Microsoft Intune for a co-managed device
+<!--1357377-->
+Starting in this release when you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+
+
+
+## Package Conversion Manager 
+<!--1357861-->
+Package Conversion Manager is now an integrated tool that allows you to convert legacy Configuration Manager 2007 packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
+
+> [!Tip]  
+> Legacy documentation for the existing functionality in Package Conversion Manager is available on [TechNet](https://technet.microsoft.com/library/hh531519.aspx). Relevant information is in process to migrate to the docs.microsoft.com library.
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+> [!Important]  
+> If you previously installed an older version of Package Conversion Manager, first uninstall it before upgrading your site. The new integrated version doesn't require installation, but may conflict with existing versions.  
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Application Management** and select **Packages**.  
+2. Select a package. The following three options are available in the **Package Conversion** group of the ribbon:  
+     - **Analyze Package**: Start the conversion process by analyzing the package.
+     - **Convert Package**: Some packages can easily be converted into applications with this action.
+     - **Fix and Convert**: Some packages require issues to be fixed before converting into applications.  
+
+   For more information on these actions, see [How to Analyze and Convert Packages](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29).  
+
+3. Go to the **Monitoring** workspace and select **Package Conversion Status**. This new dashboard shows the overall analysis and conversion state of packages in the site. A new background task automatically summarizes the analysis data.  
+
+   > [!Tip]  
+   > Package Conversion Manager doesn't require you to schedule analysis of packages. This action is now handled by the integrated summarization task.  
+
+
+
+## Deploy software updates without content
+<!--1357933-->
+You can now deploy software updates to devices without first downloading and distributing software update content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content in their cache.
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. Start a software update deployment per normal. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).
+2. In the Deploy Software Updates Wizard, on the **Deployment Package** page, select the new option for **No deployment package**.
+
+### Known issues
+- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](/sccm/sum/understand/software-updates-icons). <!--bugID-->  
+- This setting is only integrated with the Deploy Software Updates Wizard. It isn't currently available with automatic deployment rules. <!--bugID-->  
+
+
+
+## Improvements to cloud management gateway
+This release includes the following improvements to the cloud management gateway (CMG):
+
+### Simplified client bootstrap command line
+<!--1358215-->
+When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+
+The following command-line properties are required in all scenarios:
+  - CCMHOSTNAME  
+  - SMSSITECODE  
+
+The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
+  - AADCLIENTAPPID  
+  - AADRESOURCEURI  
+
+The following property is required if the client will roam back to the intranet:
+  - SMSMP  
+
+The following example includes all of the above properties:   
+`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
+
+For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+
+### Download content from a CMG
+<!--1358651-->
+Previously, you had to deploy a cloud distribution point and CMG as separate roles. Now in this release, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
+
+### Trusted root certificate isn't required with Azure AD
+<!--503899-->
+When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
 
 
