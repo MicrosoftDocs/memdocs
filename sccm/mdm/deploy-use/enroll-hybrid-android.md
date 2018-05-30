@@ -50,7 +50,7 @@ The following steps let Configuration Manager manage Android devices with a work
        5. Agree to the Android for Work agreement, and then choose **Confirm**. Your request will be processed.
 
    6. On Google's sign-in page, enter the Google account credentials from step 1, and then provide your company information.
-3. When you return to the Intune on Azure portal, Android for Work is enabled. You have two enrollment options for Android for Work devices:
+3. When you return to the Intune on Azure portal, go to the **Android for Work** enrollment blade, and click **Work profiles**. Android for Work is now enabled. You have two enrollment options for Android for Work devices:
    - **Manage all devices as Android** (disabled). All Android devices, including devices that support Android for Work, are enrolled as conventional Android devices.
    - **Manage supported devices as Android for Work** (enabled). All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that doesn't support Android for Work is enrolled as a conventional Android device.
 

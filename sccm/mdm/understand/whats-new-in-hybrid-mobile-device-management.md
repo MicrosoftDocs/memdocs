@@ -47,7 +47,7 @@ The Company Portal for Windows 10 now sends app logs directly to Microsoft when 
 
 #### Android for Work and Lookout onboarding moved to Intune on Azure
 <!--2355022,2357366-->
-With the latest Intune update, you can enable and manage Android Enterprise integration and Lookout mobile threat defense integration on hybrid mobile device management tenants in the Intune on Azure portal. Prior to the update, these were only configurable in the Intune Classic (Silverlight) portal.
+With the latest Intune update, you can enable and manage Android for Work integration and Lookout mobile threat defense integration on hybrid mobile device management tenants in the Intune on Azure portal. Prior to the update, these were only configurable in the Intune Classic (Silverlight) portal.
  
 Note: Lookout is the only mobile threat defense (MTD) provider supported in hybrid. If you have previously integrated with any other MTD provider, it still appears in the Intune on Azure portal. If you delete the connector for it, then you can't add it back.
  
