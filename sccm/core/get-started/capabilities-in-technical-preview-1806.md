@@ -99,5 +99,27 @@ You can now deploy software updates to devices without first downloading and dis
 
 
 
+## Improvements to cloud management gateway
+This release includes the following improvements to the cloud management gateway:
+
+### Simplified client bootstrap command line
+<!--1358215-->
+When installing the Configuration Manager client over a cloud management gateway, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+
+Only the following command-line properties are now required:
+  - CCMHOSTNAME
+  - SMSSITECODE
+  - AADCLIENTAPPID
+  - AADRESOURCEURI  
+
+For example:   
+`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+
+### Trusted root certificate isn't required with Azure AD
+<!--503899-->
+When you create a cloud management gateway, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
