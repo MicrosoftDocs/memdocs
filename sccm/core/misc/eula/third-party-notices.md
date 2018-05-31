@@ -1,7 +1,7 @@
 ---
 title: Third Party Notices
 titleSuffix: Configuration Manager
-ms.date: 03/22/2018
+ms.date: 06/01/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -19,39 +19,29 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
 > [!NOTE]  
 >  While Microsoft is not the author of the files below, Microsoft is offering you a license subject to the Microsoft license terms that govern the Microsoft software that includes the files listed below (the “Microsoft Program”). Microsoft reserves all other rights. The notices below are provided for informational purposes only and are not the license terms under which Microsoft distributes these files.  
-> The Microsoft Program includes the following third-party software:  
 
  The Microsoft Program includes the following third-party software:  
 
-1.  Newtonsoft.Json.DLL    
-
-2.  Open SSL implementation written by Eric Young (http://www.openssl.org/)  
-
-3.  Camellia assembler implementation by Andy Polyakov for a Camellia assembler implementation. (http://www.openssl.org/~appro/camellia/  
-
-4.  FreeBSD's cd.c. (http://www.freebsd.org/)  
-
-5.  Julian Elischer for TRW Financial Systems for use under the MACH(2.5) operating system  
-
-6.  The Internet Society (1999)  
-
-7.  AngularJS v1.4.3  
-
-8.  c3 v0.4.10  
-
-9. d3 v3.5.6  
-
-10. Closure Library  
-
-11. PlistCS Property List (plist) Serialization and Parsing Library  
-
-12. Active Directory Authentication Library (ADAL) for .NET  
-13. WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3
-14. Microsoft Azure Monitoring Services 4.1.0
-15. Microsoft Azure Common Library 2.1.0
-16. Common Library for Hyak Code Generator 1.0.1
-17. Microsoft Azure Resource Manager Library 2.18.0.0
-18. Microsoft Azure Management Authorization Library 2.0.0
+- [Newtonsoft.Json.DLL](#newtonsoftjsondll-version)
+- [OpenSSL](#openssl)
+- [SSLeay/SSL implementation written by Eric Young](#ssleayssl-implemenentation-written-by-eric-young)
+- [Camellia assembler implementation by Andy Polyakov](#camellia-assembler-implementation)
+- [FreeBSD's cd.c.](#freebsds-cdc)
+- [Julian Elischer for TRW Financial Systems for use under the MACH(2.5) operating system](#julian-elischer-juliantfscom-for-trw-financial-systems-for-use-under-the-mach25-operating-system)
+- [The Internet Society (1999)](#the-internet-society)
+- [AngularJS v1.4.3](#angularjs-v143)
+- [c3 v0.4.10](#c3-v0410)
+- [d3 v3.5.6](#d3-v356)
+- [Closure Library](#closure-library)
+- [PlistCS Property List (plist) Serialization and Parsing Library](#plistcs-property-list-plist-serialization-and-parsing-library)
+- [Active Directory Authentication Library (ADAL) for .NET](#active-directory-authentication-library-adal-for-net)
+- [WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3](#windowsazureconfigurationmanager-v-203)
+- [Microsoft Azure Monitoring Services 4.1.0](#microsoft-azure-monitoring-services-410)
+- [Microsoft Azure Common Library 2.1.0](#microsoft-azure-common-library-210)
+- [Common Library for Hyak Code Generator 1.0.1](#common-library-for-hyak-code-generator-101)
+- [Microsoft Azure Resource Manager Library 2.18.0.0](#microsoft-azure-resource-manager-library-21800)
+- [Microsoft Azure Management Authorization Library 2.0.0](#microsoft-azure-management-authorization-library-200)
+- [OPG-AvalonEdit v5.0.4](#opg-avalonedit-v504)
 
 As the recipient of the above third-party software, Microsoft sets forth a copy of the notices and other information below.  
 
@@ -113,8 +103,8 @@ THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT \''AS IS'' AND ANY
  **NOTICES AND INFORMATION BEGIN HERE**  
 
  This product includes cryptographic software written by Eric Young  
-(eay@cryptsoft.com).  This product includes software written by Tim  
-Hudson (tjh@cryptsoft.com).  
+(eay@cryptsoft.com). This product includes software written by Tim  
+Hudson (tjh@cryptsoft.com).
 
  Original SSLeay License  
  Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)  
@@ -577,6 +567,23 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 
+## OPG-AvalonEdit v5.0.4 
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+The MIT License (MIT)
+
+Copyright (c) 2009 Daniel Grunwald
+Copyright (c) 2014 AlphaSierraPapa for the SharpDevelop Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**END OF OPG-AvalonEdit v5.0.4 NOTICES AND INFORMATION**
+
+
 <!-- template
 ## --title-- 
 **NOTICES AND INFORMATION BEGIN HERE**  
@@ -584,5 +591,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 --body--
 
 **END OF --title-- NOTICES AND INFORMATION**
-(also add the --title-- to the numbered list at the top of the article)
+(also add the --title-- to the list at the top of the article)
 -->
