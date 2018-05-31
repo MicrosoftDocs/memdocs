@@ -108,7 +108,11 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Sync MDM policy from Microsoft Intune for a co-managed device](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
 - [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
 - [Deploy software updates without content](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
-- [Improvements to cloud management gateway](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,503899--> 
+- [Office Customization Tool integration with the Office 365 Installer](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
+- [Improvements to cloud management gateway](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
+- [Improvements to secure client communications](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
+- [Improvements to the Surface dashboard](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
+- [Hardware inventory default unit revision](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision) <!--514442-->
 
 
 

@@ -99,6 +99,23 @@ You can now deploy software updates to devices without first downloading and dis
 
 
 
+## Office Customization Tool integration with the Office 365 Installer
+<!--1358149-->
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, you can now dynamically configure the latest Office manageability settings. The Office Customization Tool is updated at the same time as the release of new builds of Office 365. You can now take advantage of new manageability settings in Office 365 as soon as they are available. 
+
+### Prerequisites
+- The computer running the Configuration Manager console needs internet access via HTTPS port 443. The Office 365 Client Installation Wizard uses a Windows standard web browser API to open https://config.office.com. If an internet proxy is used, the user must be able to access this URL.
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Office 365 Client Management** node.
+2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps).
+3. On the **Office Setting** page, click **Go To Office Web Page**. Use the online Office Customization Tool to specify settings for this deployment. 
+4. Click **Submit** in the upper right corner when complete. Finish the Office 365 Client Installation Wizard.
+
+
+
 ## Improvements to cloud management gateway
 This release includes the following improvements to the cloud management gateway (CMG):
 
@@ -129,6 +146,30 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 ### Trusted root certificate isn't required with Azure AD
 <!--503899-->
 When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+
+
+
+## Improvements to secure client communications
+<!--1358278,1358279-->
+This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:
+- OS deployment task sequence running from boot media 
+- OS deployment task sequence running from Software Center
+
+
+
+## Improvements to the Surface dashboard
+<!--1358654-->
+This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):
+- The Surface dashboard now displays a list of relevant devices when graph sections are selected.
+   - Clicking on the **Percent of Surface Devices** tile opens a list of Surface devices.
+   - Clicking on a bar in the **Top Five Firmware Versions** tile opens a list of Surface devices with that specific firmware version.
+- When viewing these device lists from the Surface dashboard, you can right-click a device and perform common actions.
+
+
+
+## Hardware inventory default unit revision
+<!--514442-->
+In [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure), the default unit used in many reporting views changed from megabytes (MB) to gigabytes (GB). Due to [improvements to hardware inventory for large integer values](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values), and based on customer feedback, this default unit is now MB again.
 
 
 
