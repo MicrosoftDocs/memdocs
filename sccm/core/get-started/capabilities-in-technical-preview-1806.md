@@ -59,10 +59,10 @@ Starting in this release when you [switch a co-management workload](/sccm/core/c
 <!--1357841-->
 You can now transition the Office 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
-When you transition this workload, the site creates a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to Office 365 deployments. 
+There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
 
-### Known issues
-- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates. <!--510876-->
+### Known issue
+- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes#changing-office-365-client-setting-doesnt-apply).
 
 
 
@@ -198,9 +198,11 @@ You can now provision an application with a Windows app package for all users on
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. Create a new application. This app must be from a Windows app package, or an offline-licensed app, which you've synchronized from the Microsoft Store for Business and Education. 
-2. On the **General Information** page of the Create Application Wizard, enable the option to **Provision this application for all users on the device**.
+2. On the **General Information** page of the Create Application Wizard, enable the option to **Provision this application for all users on the device**.  
+
    > [!Tip]  
-   > If you are modifying an existing application, this setting is on the **User Experience** tab of the application properties.
+   > If you are modifying an existing application, this setting is on the **User Experience** tab of the application properties.  
+
 3. Deploy the application to a device collection.
 4. Sign in to a targeted device with different user accounts and launch the application.
 
