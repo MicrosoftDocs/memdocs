@@ -106,6 +106,7 @@ The following are the capabilities delivered with the most recent Configuration 
 ### Technical Preview version 1806
 - [Configure Windows Defender SmartScreen settings for Microsoft Edge](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge) <!--1353701-->
 - [Sync MDM policy from Microsoft Intune for a co-managed device](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
+- [Transition Office 365 workload to Intune using co-management](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management) <!--1357841-->
 - [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
 - [Deploy software updates without content](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
 - [Office Customization Tool integration with the Office 365 Installer](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->

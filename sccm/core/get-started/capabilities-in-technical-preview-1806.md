@@ -55,6 +55,17 @@ Starting in this release when you [switch a co-management workload](/sccm/core/c
 
 
 
+## Transition Office 365 workload to Intune using co-management
+<!--1357841-->
+You can now transition the Office 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+
+When you transition this workload, the site creates a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to Office 365 deployments. 
+
+### Known issues
+- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates. <!--510876-->
+
+
+
 ## Package Conversion Manager 
 <!--1357861-->
 Package Conversion Manager is now an integrated tool that allows you to convert legacy Configuration Manager 2007 packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
@@ -94,8 +105,8 @@ You can now deploy software updates to devices without first downloading and dis
 2. In the Deploy Software Updates Wizard, on the **Deployment Package** page, select the new option for **No deployment package**.
 
 ### Known issues
-- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](/sccm/sum/understand/software-updates-icons). <!--bugID-->  
-- This setting is only integrated with the Deploy Software Updates Wizard. It isn't currently available with automatic deployment rules. <!--bugID-->  
+- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](/sccm/sum/understand/software-updates-icons). <!--515556-->  
+- This setting is only integrated with the Deploy Software Updates Wizard. It isn't currently available with automatic deployment rules. <!--515558-->  
 
 
 
@@ -147,12 +158,15 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 <!--503899-->
 When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
+> [!Important]  
+> If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+
 
 
 ## Improvements to secure client communications
 <!--1358278,1358279-->
 This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:
-- OS deployment task sequence running from boot media 
+- OS deployment task sequence running from boot media or PXE
 - OS deployment task sequence running from Software Center
 
 
