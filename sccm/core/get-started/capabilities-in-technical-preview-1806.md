@@ -55,6 +55,17 @@ Starting in this release when you [switch a co-management workload](/sccm/core/c
 
 
 
+## Transition Office 365 workload to Intune using co-management
+<!--1357841-->
+You can now transition the Office 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+
+There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
+
+### Known issue
+- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn’t apply](/sccm/core/servers/deploy/install/release-notes#changing-office-365-client-setting-doesnt-apply).
+
+
+
 ## Package Conversion Manager 
 <!--1357861-->
 Package Conversion Manager is now an integrated tool that allows you to convert legacy Configuration Manager 2007 packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
@@ -94,8 +105,8 @@ You can now deploy software updates to devices without first downloading and dis
 2. In the Deploy Software Updates Wizard, on the **Deployment Package** page, select the new option for **No deployment package**.
 
 ### Known issues
-- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](/sccm/sum/understand/software-updates-icons). <!--bugID-->  
-- This setting is only integrated with the Deploy Software Updates Wizard. It isn't currently available with automatic deployment rules. <!--bugID-->  
+- The icon for an update deployed with this setting incorrectly displays with a red X as if the update is invalid. For more information, see [Icons used for software updates](/sccm/sum/understand/software-updates-icons). <!--515556-->  
+- This setting is only integrated with the Deploy Software Updates Wizard. It isn't currently available with automatic deployment rules. <!--515558-->  
 
 
 
@@ -147,13 +158,56 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 <!--503899-->
 When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
+> [!Important]  
+> If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+
 
 
 ## Improvements to secure client communications
 <!--1358278,1358279-->
 This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:
-- OS deployment task sequence running from boot media 
+- OS deployment task sequence running from boot media or PXE
 - OS deployment task sequence running from Software Center
+
+
+
+## Software Center infrastructure improvements
+<!--1358309-->
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. Remove all application catalog roles from the site. These roles include the application catalog web service point and the application catalog website point.
+2. Deploy an application as available to a user collection.
+3. Use Software Center as a targeted user to browse for, request, and install the application.
+
+### Known issue
+- Don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**, as it currently conflicts with this feature.<!--bugID--> For more information on this setting, see [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).
+
+
+
+## Provision Windows app packages for all users on a device
+<!--1358310-->
+You can now provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
+
+> [!Important]  
+> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps). 
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. Create a new application. This app must be from a Windows app package, or an offline-licensed app, which you've synchronized from the Microsoft Store for Business and Education. 
+2. On the **General Information** page of the Create Application Wizard, enable the option to **Provision this application for all users on the device**.  
+
+   > [!Tip]  
+   > If you are modifying an existing application, this setting is on the **User Experience** tab of the application properties.  
+
+3. Deploy the application to a device collection.
+4. Sign in to a targeted device with different user accounts and launch the application.
+
+> [!Note]  
+> If you need to uninstall a provisioned application from devices to which users have already signed on, you need to create two uninstall deployments. Target the first uninstall deployment to a device collection that contains the devices. Target the second uninstall deployment to a user collection that contains the users who have already signed on to devices with the provisioned application. When uninstalling a provisioned app on a device, Windows currently doesn't uninstall that app for users as well. 
 
 
 

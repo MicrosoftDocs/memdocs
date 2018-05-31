@@ -85,7 +85,7 @@ Each preview release is supported up until three successive releases are availab
 **Active baseline versions of the Technical Preview:**
    
 You can install a baseline version for up to one year after its release. However, when you install a new technical preview site, we recommend you use the latest baseline version that is available.
--  **Technical Preview 1804** - The Configuration Manager Technical Preview 1804 is available as both an in-console update and as a new baseline version. Download baseline versions [from the TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical Preview 1806** - The Configuration Manager Technical Preview 1806 is available as both an in-console update and as a new baseline version. Download baseline versions [from the TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
@@ -106,11 +106,14 @@ The following are the capabilities delivered with the most recent Configuration 
 ### Technical Preview version 1806
 - [Configure Windows Defender SmartScreen settings for Microsoft Edge](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge) <!--1353701-->
 - [Sync MDM policy from Microsoft Intune for a co-managed device](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
+- [Transition Office 365 workload to Intune using co-management](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management) <!--1357841-->
 - [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
 - [Deploy software updates without content](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
 - [Office Customization Tool integration with the Office 365 Installer](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
 - [Improvements to cloud management gateway](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
 - [Improvements to secure client communications](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
+- [Software Center infrastructure improvements](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements) <!--1358309-->
+- [Provision Windows app packages for all users on a device](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device) <!--1358310-->
 - [Improvements to the Surface dashboard](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
 - [Hardware inventory default unit revision](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision) <!--514442-->
 
