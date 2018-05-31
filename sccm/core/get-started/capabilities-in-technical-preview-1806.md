@@ -171,6 +171,44 @@ This release continues to iterate on [improved secure client communications](/sc
 
 
 
+## Software Center infrastructure improvements
+<!--1358309-->
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. Remove all application catalog roles from the site. These roles include the application catalog web service point and the application catalog website point.
+2. Deploy an application as available to a user collection.
+3. Use Software Center as a targeted user to browse for, request, and install the application.
+
+### Known issue
+- Don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**, as it currently conflicts with this feature.<!--bugID--> For more information on this setting, see [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).
+
+
+
+## Provision Windows app packages for all users on a device
+<!--1358310-->
+You can now provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
+
+> [!Important]  
+> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps). 
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. Create a new application. This app must be from a Windows app package, or an offline-licensed app, which you've synchronized from the Microsoft Store for Business and Education. 
+2. On the **General Information** page of the Create Application Wizard, enable the option to **Provision this application for all users on the device**.
+   > [!Tip]  
+   > If you are modifying an existing application, this setting is on the **User Experience** tab of the application properties.
+3. Deploy the application to a device collection.
+4. Sign in to a targeted device with different user accounts and launch the application.
+
+> [!Note]  
+> If you need to uninstall a provisioned application from devices to which users have already signed on, you need to create two uninstall deployments. Target the first uninstall deployment to a device collection that contains the devices. Target the second uninstall deployment to a user collection that contains the users who have already signed on to devices with the provisioned application. When uninstalling a provisioned app on a device, Windows currently doesn't uninstall that app for users as well. 
+
+
+
 ## Improvements to the Surface dashboard
 <!--1358654-->
 This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):
