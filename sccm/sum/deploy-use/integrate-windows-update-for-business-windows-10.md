@@ -67,8 +67,8 @@ Beginning in Configuration Manager version 1706, you can configure deferral poli
 >Beginning in Configuration Manager version 1802, you can set deferral policies for Windows Insider. <!--507201-->For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
 
 ### Prerequisites
-Windows 10 version 1703 or later
-Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+-   Windows 10 version 1703 or later
+-   Windows 10 devices managed by Windows Update for Business must have Internet connectivity
 
 #### To create a Windows Update for Business deferral policy
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
