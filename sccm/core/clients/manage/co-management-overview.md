@@ -56,7 +56,7 @@ There are two main paths to reach to co-management. One is Configuration Manager
 ### Enable co-management 
  In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**. Choose **Configure co-management** from the ribbon to open the **Co-management Onboarding Wizard** 
    
-1. On the **Subscription** page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.    
+1. On the **Subscription** page, click **Sign In** and sign in to your Intune tenant, and then click **Next**. Make sure that the account used to sign in to your tenant has a Intune license assigned, otherwise it will fail with the error message "User not recognized".   
 2. In the **Enablement** page, choose your **Automatic enrollment into Intune** setting. Copy the command line for devices already enrolled in Intune, if needed. 
 3. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune.
 4. In the **Staging** page, select a device collection to be the **Pilot collection**. Verify the **Summary** and complete the wizard. 
