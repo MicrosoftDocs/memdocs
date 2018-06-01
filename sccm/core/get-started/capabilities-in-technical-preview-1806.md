@@ -184,6 +184,8 @@ Package Conversion Manager is now an integrated tool that allows you to convert 
    > [!Tip]  
    > Package Conversion Manager doesn't require you to schedule analysis of packages. This action is now handled by the integrated summarization task.  
 
+![Screenshot of Package Conversion Status dashboard](media/1357861-pcm-dashboard.png)
+
 
 
 ## Deploy software updates without content
@@ -258,8 +260,9 @@ When you create a CMG, you're no longer required to provide a [trusted root cert
 ## Improvements to secure client communications
 <!--1358278,1358279-->
 This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:
-- OS deployment task sequence running from boot media or PXE
-- OS deployment task sequence running from Software Center
+- Task sequences running from boot media or PXE
+- Task sequences running from Software Center
+These task sequences can be for OS deployment or custom. It is also supported for workgroup computers.
 
 
 
