@@ -42,6 +42,7 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 - [Microsoft Azure Resource Manager Library 2.18.0.0](#microsoft-azure-resource-manager-library-21800)
 - [Microsoft Azure Management Authorization Library 2.0.0](#microsoft-azure-management-authorization-library-200)
 - [OPG-AvalonEdit v5.0.4](#opg-avalonedit-v504)
+- [Command Line Parser Library 1.9.71](#command-line-parser-library-1971)
 
 As the recipient of the above third-party software, Microsoft sets forth a copy of the notices and other information below.  
 
@@ -414,6 +415,23 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 **END OF OPG-AvalonEdit v5.0.4 NOTICES AND INFORMATION**
+
+
+
+## Command Line Parser Library 1.9.71 
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Command Line Parser Library 1.9.71
+Copyright © 2005-2013 Giacomo Stelluti Scala
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**END OF Command Line Parser Library 1.9.71 NOTICES AND INFORMATION**
 
 
 <!-- template
