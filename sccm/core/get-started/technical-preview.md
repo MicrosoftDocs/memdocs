@@ -104,6 +104,7 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1806
+- [Third-party software updates](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) <!--1352101-->
 - [Configure Windows Defender SmartScreen settings for Microsoft Edge](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge) <!--1353701-->
 - [Sync MDM policy from Microsoft Intune for a co-managed device](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
 - [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->

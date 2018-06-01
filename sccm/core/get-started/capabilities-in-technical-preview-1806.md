@@ -124,7 +124,9 @@ Synchronization of third-party software updates is handled by the SMS_ISVUDPATES
 
 
 ### Known issues
-- The third-party software update synchronization service doesn't support the software update point configured to use a **WSUS Server Connection Account**. If this account is configured on the **Proxy and Account Settings** tab of the Software update point Properties page, you'll see the following error in the SMS_ISVUDPATES_SYNCAGENT.log: `WSUS access account appears to be configured, it is not yet supported for third party updates sync.` For more information on this account, see [Software Update Point Connection Account](/sccm/core/plan-design/hierarchy/accounts#software-update-point-connection-account).<!--515492-->  
+- The third-party software update synchronization service doesn't support the software update point configured to use a **WSUS Server Connection Account**. If this account is configured on the **Proxy and Account Settings** tab of the Software update point Properties page, you'll see the following error in the SMS_ISVUDPATES_SYNCAGENT.log:  
+`WSUS access account appears to be configured, it is not yet supported for third party updates sync.`  
+For more information on this account, see [Software Update Point Connection Account](/sccm/core/plan-design/hierarchy/accounts#software-update-point-connection-account).<!--515492-->  
 
 - Don't mix the use of other tools such as SCUP with this new integrated third-party software update feature. The third-party software update synchronization service can't publish content to metadata-only updates that were added to WSUS by another application, tool, or script, such as SCUP. The **Publish third-party software update content** action fails on these updates. If you need to deploy third-party updates that this feature doesn't yet support, use your existing process in full for deploying those updates.<!--515497-->  
 
