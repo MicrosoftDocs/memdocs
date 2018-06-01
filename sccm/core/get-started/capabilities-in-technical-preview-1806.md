@@ -259,9 +259,11 @@ When you create a CMG, you're no longer required to provide a [trusted root cert
 
 ## Improvements to secure client communications
 <!--1358278,1358279-->
-This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:
+This release continues to iterate on [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) by removing additional dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:  
+
 - Task sequences running from boot media or PXE
-- Task sequences running from Software Center
+- Task sequences running from Software Center  
+
 These task sequences can be for OS deployment or custom. It is also supported for workgroup computers.
 
 
@@ -278,7 +280,7 @@ Application catalog roles are no longer required to display user-available appli
 3. Use Software Center as a targeted user to browse for, request, and install the application.
 
 ### Known issue
-- Don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**, as it currently conflicts with this feature.<!--bugID--> For more information on this setting, see [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).
+- If you use an Azure Active Directory-joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).
 
 
 
@@ -292,14 +294,16 @@ You can now provision an application with a Windows app package for all users on
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
-1. Create a new application. This app must be from a Windows app package, or an offline-licensed app, which you've synchronized from the Microsoft Store for Business and Education. 
+1. Create a new application. This app must be from a Windows app package, or an offline-licensed app, which you've synchronized from the Microsoft Store for Business and Education.  
+
 2. On the **General Information** page of the Create Application Wizard, enable the option to **Provision this application for all users on the device**.  
 
    > [!Tip]  
    > If you are modifying an existing application, this setting is on the **User Experience** tab of the application properties.  
 
-3. Deploy the application to a device collection.
-4. Sign in to a targeted device with different user accounts and launch the application.
+3. Deploy the application to a device collection.  
+
+4. Sign in to a targeted device with different user accounts and launch the application.  
 
 > [!Note]  
 > If you need to uninstall a provisioned application from devices to which users have already signed on, you need to create two uninstall deployments. Target the first uninstall deployment to a device collection that contains the devices. Target the second uninstall deployment to a user collection that contains the users who have already signed on to devices with the provisioned application. When uninstalling a provisioned app on a device, Windows currently doesn't uninstall that app for users as well. 
