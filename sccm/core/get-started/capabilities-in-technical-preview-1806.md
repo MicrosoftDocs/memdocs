@@ -184,6 +184,8 @@ Package Conversion Manager is now an integrated tool that allows you to convert 
    > [!Tip]  
    > Package Conversion Manager doesn't require you to schedule analysis of packages. This action is now handled by the integrated summarization task.  
 
+![Screenshot of Package Conversion Status dashboard](media/1357861-pcm-dashboard.png)
+
 
 
 ## Deploy software updates without content
