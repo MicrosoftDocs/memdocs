@@ -40,6 +40,98 @@ Steps to workaround, if any.
 
 
 
+## <a name="bkmk-3pupdate"></a> Third-party software updates
+<!--1352101-->
+This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). You no longer require the use of System Center Updates Publisher (SCUP) for some common scenarios. The new **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients. 
+
+The following third-party software update catalogs are available in this release:
+ | Publisher | Catalog Name |
+ |--------|---------------------|
+ | HP | HP Client Updates Catalog |
+
+SCUP continues to support other catalogs and scenarios. The list of catalogs in the Third-Party Software Update Catalogs node of the Configuration Manager console is dynamic, and will be updated as additional catalogs are available and supported.
+
+
+### Prerequisites
+- Set up software updates management, with an HTTPS-enabled software update point. For more information, see [Prepare for software updates management](/sccm/sum/get-started/prepare-for-software-updates-management).  
+
+- Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
+
+- Enable and deploy the client setting [Enable third party software updates](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates) in the **Software Updates** group.  
+
+- The site server requires internet access to download.microsoft.com over HTTPS port 443. The third-party software update synchronization service currently runs on the site server. This service updates the list of available third-party catalogs, downloads the catalogs when you subscribe, and downloads the updates when published. Configure internet proxy settings, if necessary, on the **Proxy** tab of the Site System role properties of the site server computer. 
+
+
+### Try it out!
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+
+#### Phase 1: Enable and set up the feature
+Perform the following steps *once per hierarchy* to enable and set up the feature for use:  
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node.  
+
+2. Select the top-level site in the hierarchy. In the ribbon, click **Configure Site Components**, and select **Software Update Point**.  
+
+3. Switch to the **Third Party Updates** tab. Select the option to **Enable third-party software updates**. For more information on the certificate options, see [Improvements for enabling third-party software update support](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvements-for-enabling-third-party-software-update-support).  
+
+   > [!Note]  
+   > If you use the default option for Configuration Manager to manage this certificate, a new certificate of type **Third-party WSUS Signing** is created in the **Certificates** node under **Security** in the **Administration** workspace.  
+
+
+#### Phase 2: Subscribe to a third-party catalog and sync updates
+Perform the following steps for *each third-party catalog* to which you want to subscribe:  
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.  
+
+2. Select the catalog to subscribe, and click **Subscribe to Catalog** in the ribbon.   
+
+3. Review and approve the catalog certificate.  
+
+   > [!Note]  
+   > When you subscribe to a third-party software update catalog, the certificate that you review and approve in the wizard is added to the site. This certificate is of type **Third-party Software Updates Catalog**. You can manage it from the **Certificates** node under **Security** in the **Administration** workspace.  
+
+4. Complete the wizard.  
+
+   > [!Tip]  
+   > After initial subscription, the catalog should start to download immediately. It then resyncs every 24 hours in this release. If you don't want to wait for the catalog to automatically download, click **Sync now** in the ribbon.  
+   > 
+   > After the catalog is downloaded, the product metadata must be synchronized to the software update point. For more information on this process as well as how to manually initiate, see [Synchronize software updates](/sccm/sum/get-started/synchronize-software-updates). At this point, you can see the third-party updates in the **All Updates** node. 
+
+5. Next, configure the software update point **Products** for the third-party catalog to which you subscribed. For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products). After the product criteria changes, software update synchronization must occur again.
+
+Before you can see compliance results from clients, they need to scan and evaluate updates. You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action. For more information on the process, see [Software updates introduction](/sccm/sum/understand/software-updates-introduction).
+
+
+#### Phase 3: Deploy third-party software updates
+Perform the following steps for *any third-party software updates* you want to deploy to clients:  
+
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **All Software Updates** node.  
+
+   > [!Tip]  
+   > Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **Adobe Systems, Inc.** to view all updates from Adobe.  
+
+2. Select the updates that are required by clients. Click **Publish Third-Party Software Update Content** and review progress in the SMS_ISVUDPATES_SYNCAGENT.log. This action downloads the update binaries from the vendor, and stores them in the WSUSContent folder on the software update point. It also changes the state of the update from metadata-only to with content and deployable.  
+
+   > [!Note]  
+   > When you publish third-party software update content, any certificates used to sign the content are added to the site. These certificates are of type **Third-party Software Updates Content**. You can manage them from the **Certificates** node under **Security** in the **Administration** workspace.  
+
+3. Deploy the updates using the existing software updates management process. For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates). On the **Download Locations** page of the Deploy Software Updates Wizard, select the default option to **Download software updates from the internet**. In this scenario, the content is already published to the software update point, which is used to download the content for the deployment package.
+
+
+### Monitoring progress of third-party software updates
+Synchronization of third-party software updates is handled by the SMS_ISVUDPATES_SYNCAGENT component on the site server. You can view status messages from this component, or see more detailed status in the SMS_ISVUDPATES_SYNCAGENT.log. This log is on the site server in the **Logs** subfolder of the site installation directory. By default this path is `C:\Program Files\Microsoft Configuration Manager\Logs`. For more information on monitoring the general software update management process, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
+
+
+### Known issues
+- The third-party software update synchronization service doesn't support the software update point configured to use a **WSUS Server Connection Account**. If this account is configured on the **Proxy and Account Settings** tab of the Software update point Properties page, you'll see the following error in the SMS_ISVUDPATES_SYNCAGENT.log:  
+`WSUS access account appears to be configured, it is not yet supported for third party updates sync.`  
+For more information on this account, see [Software Update Point Connection Account](/sccm/core/plan-design/hierarchy/accounts#software-update-point-connection-account).<!--515492-->  
+
+- Don't mix the use of other tools such as SCUP with this new integrated third-party software update feature. The third-party software update synchronization service can't publish content to metadata-only updates that were added to WSUS by another application, tool, or script, such as SCUP. The **Publish third-party software update content** action fails on these updates. If you need to deploy third-party updates that this feature doesn't yet support, use your existing process in full for deploying those updates.<!--515497-->  
+
+
+
 ## Configure Windows Defender SmartScreen settings for Microsoft Edge
 <!--1353701-->
 This release adds three settings for [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) to the [Microsoft Edge browser compliance settings policy](/sccm/compliance/deploy-use/browser-profiles). The policy now includes the following additional settings on the **SmartScreen Settings** page:
