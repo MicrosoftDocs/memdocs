@@ -1,8 +1,8 @@
 ---
-title: "Enable Lookout MTP in Intune"
-titleSuffix: "Configuration Manager"
-description: "Enable Lookout mobile threat protection in the Intune admin console."
-ms.date: 03/05/2017
+title: Enable Lookout MTD in Intune
+titleSuffix: Configuration Manager
+description: Enable Lookout mobile threat defense (MTD) in the Microsoft Intune portal.
+ms.date: 05/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,20 +11,51 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Enable Lookout MTP connection in the Intune admin console
+# Enable Lookout MTD connection in the Intune admin console
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This topic shows you how to enable the Lookout MTP connection in Intune. You should have already configured the Intune Connector in the Lookout console before doing this step.  If you have not already done so, do the steps described in  [Set up your subscription with Lookout mobile threat protection](set-up-your-subscription-with-lookout.md).
+This article shows you how to enable the Lookout mobile threat defense (MTD) connection in Microsoft Intune. You should have already configured the Intune Connector in the Lookout console before doing this step. If you haven't already done so, do the steps described in [Set up your subscription with Lookout mobile threat defense](set-up-your-subscription-with-lookout.md).
 
-To enable the Lookout MTP connection in Intune, on the **Administration** page in the [Microsoft Intune administrator console](https://manage.microsoft.com), choose **Third Party Service Integration**. Choose **Lookout status** and enable **Synchronization with MTP** using the toggle button.
 
-![screenshot of the Lookout synchronization page with the enable toggle button highlighted](media/lookout-intune-synchronization.png)
 
-This completes the setup of the Lookout and Intune integration in the Intune administrator console.  The next few steps to implement this solution involve deploying the [Lookout for Work apps](configure-and-deploy-lookout-for-work-apps.md) and setting up the [compliance](enable-device-threat-protection-rule-compliance-policy.md) policy.
+## Enable the Lookout MTD connector
 
->[!IMPORTANT]
-> You **must** configure the Lookout for Work app before creating compliance policy rules and configuring conditional access. This ensures that the app is ready and available for end users to install before they can get access to email or other company resources.
+1. Go to the [Azure portal](https://portal.azure.com), and sign in with your Intune credentials. After you've successfully signed in, you see the **Azure Dashboard**.  
+
+2. On the **Azure Dashboard**, choose **All services** from the left menu, then type **Intune** in the text box filter.  
+
+3. Choose **Intune**; the **Intune Dashboard** opens.  
+
+4. On the **Intune Dashboard**, choose **Device compliance**, then choose **Mobile Threat Defense** under the **Setup** section.  
+
+5. On the **Mobile Threat Defense** pane, choose **Add**.  
+
+6. Choose **Lookout** as the **Mobile Threat Defense connector to setup** from the drop-down list.  
+
+7. Enable the toggle options according to your organization's requirements.  
+
+
+
+## MTD toggle options
+
+You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
+
+- **Connect Android 4.1+ devices to Lookout for Work MTD**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.  
+	- **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
+
+- **Connect iOS 8.0+ devices to Lookout for Work MTD**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.
+	- **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
+
+> [!TIP]  
+> You can see the **Connection status** and the **Last synchronized** time between Intune and Lookout from the Mobile Threat Defense pane.
+
+
 
 ## Next steps
-[Configure Lookout for Work app ](configure-and-deploy-lookout-for-work-apps.md)
+This completes the setup of the Lookout and Intune integration. The next few steps to implement this solution involve deploying the [Lookout for Work apps](configure-and-deploy-lookout-for-work-apps.md) and setting up the [compliance](enable-device-threat-protection-rule-compliance-policy.md) policy.
+
+>[!IMPORTANT]
+> You *must* configure the Lookout for Work app before creating compliance policy rules and configuring conditional access. This action ensures that the app is ready and available for end users to install before they can get access to email or other company resources.
+
+[Configure Lookout for Work app](configure-and-deploy-lookout-for-work-apps.md)
