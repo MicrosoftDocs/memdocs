@@ -69,12 +69,13 @@ SCUP continues to support other catalogs and scenarios. The list of catalogs in 
 
 ### Prerequisites
 - Set up software updates management, with an HTTPS-enabled software update point. For more information, see [Prepare for software updates management](/sccm/sum/get-started/prepare-for-software-updates-management).  
+   - The software update point must be on the site server for this feature in this release. <!--515810--> 
 
 - Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
 
 - Enable and deploy the client setting [Enable third party software updates](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates) in the **Software Updates** group.  
 
-- The site server requires internet access to download.microsoft.com over HTTPS port 443. The third-party software update synchronization service currently runs on the site server. This service updates the list of available third-party catalogs, downloads the catalogs when you subscribe, and downloads the updates when published. Configure internet proxy settings, if necessary, on the **Proxy** tab of the Site System role properties of the site server computer. 
+- The site server requires internet access to download.microsoft.com over HTTPS port 443. The third-party software update synchronization service currently runs on the site server. This service updates the list of available third-party catalogs, downloads the catalogs when you subscribe, and downloads the updates when published. Configure internet proxy settings, if necessary, on the **Proxy** tab of the Site System role properties of the site server computer.  
 
 
 ### Try it out!
