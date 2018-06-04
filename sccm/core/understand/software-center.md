@@ -41,7 +41,7 @@ Click the **Applications** tab to find and install applications that your IT adm
 - **Filters**: Your IT admin may create categories of applications. If available, click the drop-down list to filter the view to only those applications in a specific category. Select **All** to show all applications.
 - **Sort by**: Rearrange the list of applications. By default this list sorts by **Most recent**.
 - **Search**: Still can't find what you're looking for? Enter keywords in the Search box to find it!
--  Switch the view: Click the icons to switch the view between list view and tile view. By default the applications list shows as graphic tiles. 
+-  **Switch the view**: Click the icons to switch the view between list view and tile view. By default the applications list shows as graphic tiles. 
     - Tile view: Your IT admin can customize the icons. Below each tile displays the application name, publisher, and version. 
     - List view: This view displays the application icon, name, publisher, version, and status. 
 
