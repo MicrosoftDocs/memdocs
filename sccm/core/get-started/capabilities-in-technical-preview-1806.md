@@ -2,7 +2,7 @@
 title: Technical Preview 1806
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.
-ms.date: 06/01/2018
+ms.date: 06/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,13 +24,28 @@ Review the [Technical Preview](/sccm/core/get-started/technical-preview) article
 <!--  Known Issues Template
 ## Known Issues in this Technical Preview
 
-### <a name="bkmk_ANCHOR"></a> Known issue title
+### <a name="ki_ANCHOR"></a> Known issue title
 <!--bugID--
 Issue description and cause.
 
 #### Workaround
 Steps to workaround, if any.  
 -->
+## Known Issues in this Technical Preview
+
+### <a name="ki_contentlib"></a> Site fails to upgrade with remote content library
+<!--514642-->
+The site fails to upgrade with the following errors in **cmupdate.log**:  
+```  
+Failed to find any valid drives  
+GetContentLibraryParameters failed; 0x80070057  
+ERROR: Failed to process configuration manager update.  
+```  
+
+This issue occurs in this release when the content library is in a remote location.
+
+#### Workaround
+Move the content library to a drive local to the site server. For more information, see [Configure a remote content library for the site server](/sccm/core/get-started/capabilities-in-technical-preview-1804#configure-a-remote-content-library-for-the-site-server). 
 
 
 
@@ -54,12 +69,13 @@ SCUP continues to support other catalogs and scenarios. The list of catalogs in 
 
 ### Prerequisites
 - Set up software updates management, with an HTTPS-enabled software update point. For more information, see [Prepare for software updates management](/sccm/sum/get-started/prepare-for-software-updates-management).  
+   - The software update point must be on the site server for this feature in this release. <!--515810--> 
 
 - Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
 
 - Enable and deploy the client setting [Enable third party software updates](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates) in the **Software Updates** group.  
 
-- The site server requires internet access to download.microsoft.com over HTTPS port 443. The third-party software update synchronization service currently runs on the site server. This service updates the list of available third-party catalogs, downloads the catalogs when you subscribe, and downloads the updates when published. Configure internet proxy settings, if necessary, on the **Proxy** tab of the Site System role properties of the site server computer. 
+- The site server requires internet access to download.microsoft.com over HTTPS port 443. The third-party software update synchronization service currently runs on the site server. This service updates the list of available third-party catalogs, downloads the catalogs when you subscribe, and downloads the updates when published. Configure internet proxy settings, if necessary, on the **Proxy** tab of the Site System role properties of the site server computer.  
 
 
 ### Try it out!
