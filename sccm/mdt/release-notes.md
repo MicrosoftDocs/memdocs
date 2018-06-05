@@ -22,7 +22,12 @@ This article provides details on the latest release of the Microsoft Deployment 
 
 **MDT build 8450** is the latest version available on the [Microsoft Download Center](https://aka.ms/mdtdownload). 
 
-This update begins support for the Windows Assessment and Deployment Kit (ADK) for Windows 10, version 1709 (adksetup.exe file version 10.1.16299.15). For more information, see the [supported platforms](#supported-platforms) section.
+This update begins support for the Windows Assessment and Deployment Kit (ADK) for Windows 10, version 1709. 
+
+***Update***: As of May 2018, this build also supports Windows 10, version 1803.
+
+For more information, see the [supported platforms](#supported-platforms) section.
+
 
 ### Significant changes
 Here is a summary of the significant changes in this build of MDT.
@@ -56,8 +61,8 @@ MDT releases are no longer tagged with year or update version. To better align w
 Unlike Configuration Manager with a predetermined release schedule, MDT only releases as required to support new versions of Windows 10, the Windows ADK, or Configuration Manager current branch. Any known issues with these components will be documented in this article as necessary.
 
 The following OS versions are supported for deployment with MDT:
-- Windows 10 version 1803
-- Windows 10 version 1709
+- Windows 10, version 1803
+- Windows 10, version 1709
 - Other [supported versions](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) of Windows 10
 - Windows 8.1
 - Windows 7
