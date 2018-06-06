@@ -6,10 +6,10 @@ metadata:
   title: Microsoft Deployment Toolkit documentation
   description: Microsoft Deployment Toolkit provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
   keywords: freeware, tool, process, workflow, automation, deployment, automated, distribution
-  author: arob98
-  ms.author: angrobe
-  manager: angrobe
-  ms.date: 12/27/2017
+  author: aczechowski
+  ms.author: aaroncz
+  manager: dougeby
+  ms.date: 06/04/2018
   ms.topic: landing-page
   ms.devlang: na
   ms.prod: configuration-manager
@@ -24,11 +24,11 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - href: whats-new-in-mdt.md
-      html: <p>See what's new.</p>
+    - href: https://aka.ms/mdtdownload
+      html: <p>Download the latest MDT.</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-      title: What's new
+        src: https://docs.microsoft.com/media/common/i_download-generic.svg
+      title: Download MDT
     - href: release-notes.md
       html: <p>Details about fixes and bugs included in this release.</p>
       image:
@@ -39,11 +39,11 @@ sections:
       image:
         src: https://docs.microsoft.com/media/common/i_code-samples.svg
       title: Samples guide
-    - href: user-driven-installation-developers-guide.md
-      html: <p>Customize user-driven installation for your organization.</p>
+    - href: use-the-mdt.md
+      html: <p>Perform Windows deployments by using lite-touch (LTI), zero-touch (ZTI), or user-driven (UDI) installations.</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-      title: Developer's guide
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+      title: How to use the Microsoft Deployment Toolkit 
 
 - title: Quickstarts
   items:
@@ -75,10 +75,6 @@ sections:
     className: cardsM
     columns: 3
     items: 
-    - href: use-the-mdt.md
-      title: Perform deployments by using the Lite-Touch, Zero-Touch, and User-Driven Installation deployments. 
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
     - href: toolkit-reference.md
       title: Configuration settings that aid with deployments.
       image:
@@ -87,3 +83,7 @@ sections:
       title: Log files, error codes, and other troubleshooting details.
       image:
         src: https://docs.microsoft.com/media/common/i_support.svg
+    - href: user-driven-installation-developers-guide.md
+      title: Customize user-driven installation for your organization.
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
