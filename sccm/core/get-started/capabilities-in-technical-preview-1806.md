@@ -2,7 +2,7 @@
 title: Technical Preview 1806
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.
-ms.date: 06/04/2018
+ms.date: 06/06/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -127,7 +127,7 @@ Perform the following steps for *any third-party software updates* you want to d
    > [!Tip]  
    > Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **Adobe Systems, Inc.** to view all updates from Adobe.  
 
-2. Select the updates that are required by clients. Click **Publish Third-Party Software Update Content** and review progress in the SMS_ISVUDPATES_SYNCAGENT.log. This action downloads the update binaries from the vendor, and stores them in the WSUSContent folder on the software update point. It also changes the state of the update from metadata-only to with content and deployable.  
+2. Select the updates that are required by clients. Click **Publish Third-Party Software Update Content** and review progress in the SMS_ISVUPDATES_SYNCAGENT.log. This action downloads the update binaries from the vendor, and stores them in the WSUSContent folder on the software update point. It also changes the state of the update from metadata-only to with content and deployable.  
 
    > [!Note]  
    > When you publish third-party software update content, any certificates used to sign the content are added to the site. These certificates are of type **Third-party Software Updates Content**. You can manage them from the **Certificates** node under **Security** in the **Administration** workspace.  
@@ -136,11 +136,11 @@ Perform the following steps for *any third-party software updates* you want to d
 
 
 ### Monitoring progress of third-party software updates
-Synchronization of third-party software updates is handled by the SMS_ISVUDPATES_SYNCAGENT component on the site server. You can view status messages from this component, or see more detailed status in the SMS_ISVUDPATES_SYNCAGENT.log. This log is on the site server in the **Logs** subfolder of the site installation directory. By default this path is `C:\Program Files\Microsoft Configuration Manager\Logs`. For more information on monitoring the general software update management process, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
+Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the site server. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the site server in the **Logs** subfolder of the site installation directory. By default this path is `C:\Program Files\Microsoft Configuration Manager\Logs`. For more information on monitoring the general software update management process, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
 
 
 ### Known issues
-- The third-party software update synchronization service doesn't support the software update point configured to use a **WSUS Server Connection Account**. If this account is configured on the **Proxy and Account Settings** tab of the Software update point Properties page, you'll see the following error in the SMS_ISVUDPATES_SYNCAGENT.log:  
+- The third-party software update synchronization service doesn't support the software update point configured to use a **WSUS Server Connection Account**. If this account is configured on the **Proxy and Account Settings** tab of the Software update point Properties page, you'll see the following error in the SMS_ISVUPDATES_SYNCAGENT.log:  
 `WSUS access account appears to be configured, it is not yet supported for third party updates sync.`  
 For more information on this account, see [Software Update Point Connection Account](/sccm/core/plan-design/hierarchy/accounts#software-update-point-connection-account).<!--515492-->  
 
@@ -206,7 +206,7 @@ Package Conversion Manager is now an integrated tool that allows you to convert 
 
 ## Deploy software updates without content
 <!--1357933-->
-You can now deploy software updates to devices without first downloading and distributing software update content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content in their cache.
+You can now deploy software updates to devices without first downloading and distributing software update content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates. 
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
@@ -305,7 +305,9 @@ Application catalog roles are no longer required to display user-available appli
 You can now provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
 
 > [!Important]  
-> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps). 
+> Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps).  
+
+When provisioning an offline licensed app, Configuration Manager doesn't allow Windows to automatically update it from the Microsoft Store.  
 
 ### Try it out!
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
