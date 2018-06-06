@@ -204,6 +204,11 @@
             "source_path": "sccm/core/misc/eula/microsoft-system-center-configuration-manager-client-messaging.md",
             "redirect_url": "/sccm/core/misc/eula/microsoft-system-center-configuration-manager-sdk-redistributables",
             "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/mdt/whats-new-in-mdt.md",
+            "redirect_url": "/sccm/mdt/release-notes",
+            "redirect_document_id": false
         }
     ]
 }

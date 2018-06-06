@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 05/31/2018
+ms.date: 06/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -37,6 +37,10 @@ Each section of this article lists hybrid features under three different categor
 ## May 2018
 
 ### New in Microsoft Intune
+
+#### Intune app protection policies and Microsoft Edge 
+<!--1818968,1818969-->
+The Microsoft Edge browser for mobile devices (iOS and Android) now supports Microsoft Intune app protection policies. Users of iOS and Android devices who sign in with their corporate Azure Active Directory accounts in the Edge application are protected by Intune. On iOS devices, the policy to **Require managed browser for web content** allows users to open links in Edge when it's managed.
 
 #### Requesting help in the Company Portal for Windows 10 
 <!--1874137-->

@@ -55,7 +55,7 @@ The following steps let Configuration Manager manage Android devices with a work
    - **Manage supported devices as Android for Work** (enabled). All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that doesn't support Android for Work is enrolled as a conventional Android device.
 
 > [!NOTE]
-> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage all supported devices as Android for Work** option.
+> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups enroll as Android instead of Android for Work. To enable Android for Work, you must use the **Manage supported devices as Android for Work** option.
 
 
 After you're set up, tell your users how to enroll their devices. See [What to tell users about enrolling their devices](/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
