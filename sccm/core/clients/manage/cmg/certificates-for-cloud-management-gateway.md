@@ -1,4 +1,4 @@
-,---
+---
 title: CMG Certificates
 description: Learn about the different digital certificates to use with the cloud management gateway.
 author: aczechowski
