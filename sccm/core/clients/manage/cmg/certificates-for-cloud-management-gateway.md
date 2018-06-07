@@ -24,7 +24,7 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
-The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#cmg-trusted-root-certificate-to-clients).
+she CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#cmg-trusted-root-certificate-to-clients).
 
  > [!TIP]
  > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Click **Create a resource**, select the **Compute** category, then click **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
@@ -37,7 +37,7 @@ The CMG creates an HTTPS service to which internet-based clients connect. The se
 ### CMG trusted root certificate to clients
 
 Clients must trust the CMG server authentication certificate. There are two methods to accomplish this trust:
-- Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or Verisign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it. 
+- Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it. 
 - Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients do not automatically trust, you need to add the CA trusted root certificate to internet-based clients.
     - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
