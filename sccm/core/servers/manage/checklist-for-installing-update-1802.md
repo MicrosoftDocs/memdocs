@@ -142,6 +142,9 @@ Use service windows to define a period during which updates to a site server can
 
 This can help you control when sites in your hierarchy install the update. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
+**Review supported extensions:**   <!--SCCMdocs#587-->
+If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1806. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](/sccm/mdt/release-notes).
+
 **Run the setup prerequisite checker:**   
 When the update is listed in the console as **Available,** you can independently run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
@@ -168,3 +171,4 @@ Review the following actions to take after the update installation is finished.
 3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
 4.  Reconfigure database maintenance tasks that you disabled before starting the update.
 5.	If you configured client piloting before installing the update, upgrade clients per the plan you created.
+6.  If you use any extensions to Configuration Manager, update them to the latest version to support this Configuration Manager update. 
