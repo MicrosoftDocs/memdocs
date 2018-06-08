@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article.
-ms.date: 04/18/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,7 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Release notes for System Center Configuration Manager
+# Release notes for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -20,12 +20,12 @@ With Configuration Manager, product release notes are limited to urgent issues. 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
 > [!TIP]  
->  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md)  
+>  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../../core/get-started/technical-preview.md)  
 
 For information about the new features introduced with different versions, see the following articles:
+- [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 - [What's new in version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
-- [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 
 
 
