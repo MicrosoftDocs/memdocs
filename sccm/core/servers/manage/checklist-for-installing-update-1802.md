@@ -142,13 +142,14 @@ Use service windows to define a period during which updates to a site server can
 
 This can help you control when sites in your hierarchy install the update. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
-**Review supported extensions:**   <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1806. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](/sccm/mdt/release-notes).
+**Review supported extensions:**   
+<!--SCCMdocs#587-->   
+If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1802. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](/sccm/mdt/release-notes).
 
 **Run the setup prerequisite checker:**   
 When the update is listed in the console as **Available,** you can independently run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 1806** update package, and click **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 1802** update package, and click **Run prerequisite check** in the ribbon.
 
 For more information about starting and then monitoring the prerequisite check, see **Step 3: Run the prerequisite checker before installing an update** in the topic [Install in-console updates for System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
