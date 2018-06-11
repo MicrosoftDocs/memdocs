@@ -1,8 +1,8 @@
 ---
-title: "Checklist for 1802 | System Center Configuration Manager"
-titleSuffix: "Configuration Manager"
-description: "Learn about actions to take before updating to System Center Configuration Manager version 1802."
-ms.date: 03/22/2018
+title: Checklist for 1802
+titleSuffix: Configuration Manager
+description: Learn about actions to take before updating to System Center Configuration Manager version 1802.
+ms.date: 06/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,7 @@ manager: dougeby
 
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1802 to update your hierarchy from a previous version. <!-- baseline only statement: -->(Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)
 
-To get the update for version 1802, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
+To get the update for version 1802, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under the **Administration** workspace in the **Updates and Servicing** node.
 
 -   When the update is listed as **Available**, the update is ready to install. Before installing version 1802, review the following information [about installing update 1802](#about-installing-update-1802) and the [checklist](#checklist) for configurations to make before starting the update.
 
@@ -142,10 +142,14 @@ Use service windows to define a period during which updates to a site server can
 
 This can help you control when sites in your hierarchy install the update. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
+**Review supported extensions:**   
+<!--SCCMdocs#587-->   
+If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1802. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](/sccm/mdt/release-notes).
+
 **Run the setup prerequisite checker:**   
 When the update is listed in the console as **Available,** you can independently run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to **Administration > Overview > Cloud Services > Updates and Servicing.** Next, right-click  **Configuration Manager 1802 update package**, and then choose **Run prerequisite check**.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 1802** update package, and click **Run prerequisite check** in the ribbon.
 
 For more information about starting and then monitoring the prerequisite check, see **Step 3: Run the prerequisite checker before installing an update** in the topic [Install in-console updates for System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
@@ -168,3 +172,4 @@ Review the following actions to take after the update installation is finished.
 3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
 4.  Reconfigure database maintenance tasks that you disabled before starting the update.
 5.	If you configured client piloting before installing the update, upgrade clients per the plan you created.
+6.  If you use any extensions to Configuration Manager, update them to the latest version to support this Configuration Manager update. 
