@@ -83,14 +83,6 @@ Mitigate this issue with one of the following actions:
 
 ## Software updates
 
-### Servicing plans create many duplicate software update groups and deployments by default  
-<!-- 474326 -->
-By default, the Create Servicing Plan wizard currently runs after every software updates synchronization. Each time the wizard runs, it creates a new software update group and deployment. If you have a software updates synchronization schedule that runs several times a day, the Create Servicing Plan wizard creates multiple software update groups and deployments each day.  
-
-#### Workaround
- After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
-
-
 ### Changing Office 365 client setting doesn’t apply 
 <!--511551-->
 *Applies to: Configuration Manager version 1802*  
