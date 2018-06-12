@@ -2,7 +2,7 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the Current Branch for early testing in a production environment.
-ms.date: 05/01/2018
+ms.date: 06/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -39,7 +39,7 @@ When you install an update that includes pre-release features, those features ar
 
  |Feature          |Added as pre-release | Added as a full feature|  
 |------------------|---------------------|---------------------|
-|Support for Cisco AnyConnect 4.0.07x and later for iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|Support for Cisco AnyConnect 4.0.07x and later for iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Version 1802 with update 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |
 |Phased Deployments<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Run Task Sequence Step <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
 | Windows Defender Exploit Guard <!-- 1355468 --> |  [Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[Version 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
