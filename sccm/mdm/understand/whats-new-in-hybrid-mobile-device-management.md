@@ -66,7 +66,8 @@ For more information, see the following articles:
 <!--1357393-->
 You can enable support for Cisco AnyConnect for iOS version 4.0.7 or later. If you do this, existing Cisco AnyConnect VPN profiles are labeled **Cisco Legacy AnyConnect**, and continue to work as before. The **Cisco AnyConnect** option is for new VPN profiles that work with Cisco AnyConnect on iOS version 4.0.7 or later.
 
-For more information on enabling this feature, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
+  > [!Tip]  
+  > Cisco AnyConnect 4.0.07x and later for iOS was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with [update 4163547](https://support.microsoft.com/help/4163547) to version 1802, this feature is no longer a pre-release feature.  
 
 > [!Note]  
 > Continue to use the **Cisco Legacy AnyConnect** option for macOS VPN profiles. 

@@ -2,7 +2,7 @@
 title: VPN profiles
 titleSuffix: Configuration Manager
 description: Learn about VPN profiles on mobile devices in Configuration Manager.
-ms.date: 05/01/2018
+ms.date: 06/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -50,8 +50,8 @@ This table shows the connection type that is supported for each device platform:
    - Use the **Cisco AnyConnect** option for VPN profiles on the following versions:
        - iOS with Cisco AnyConnect version 4.0.7 or later
 
-     > [!Note]  
-     > Cisco AnyConnect 4.0.07x and later for iOS is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+     > [!Tip]  
+     > Cisco AnyConnect 4.0.07x and later for iOS was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with [update 4163547](https://support.microsoft.com/help/4163547) to version 1802, this feature is no longer a pre-release feature.  
 
 
 
