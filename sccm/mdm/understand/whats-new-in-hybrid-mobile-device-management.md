@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 06/04/2018
+ms.date: 06/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -66,7 +66,8 @@ For more information, see the following articles:
 <!--1357393-->
 You can enable support for Cisco AnyConnect for iOS version 4.0.7 or later. If you do this, existing Cisco AnyConnect VPN profiles are labeled **Cisco Legacy AnyConnect**, and continue to work as before. The **Cisco AnyConnect** option is for new VPN profiles that work with Cisco AnyConnect on iOS version 4.0.7 or later.
 
-For more information on enabling this feature, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
+  > [!Tip]  
+  > Cisco AnyConnect 4.0.07x and later for iOS was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with [update 4163547](https://support.microsoft.com/help/4163547) to version 1802, this feature is no longer a pre-release feature.  
 
 > [!Note]  
 > Continue to use the **Cisco Legacy AnyConnect** option for macOS VPN profiles. 
@@ -469,6 +470,23 @@ The following features were previously available in Configuration Manager Techni
 
 
 ## Notices
+
+### Plan for change: Intune moving to TLS 1.2
+
+Starting on October 31, 2018, Intune will support Transport Layer Security (TLS) protocol version 1.2 to provide best-in-class encryption, to ensure our service is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. Office communicated this change in MC128929.
+
+#### How does this affect me?
+
+As of October 31, 2018, Intune will no longer support TLS protocol versions 1.0 or 1.1. All client-server and browser-server combinations should use TLS version 1.2 to ensure connection without issues to Intune. Note that this change will impact end-user devices that are no longer supported by Intune but are still receiving policy through Intune, and that cannot use TLS version 1.2. This includes devices such as those running Android 4.3 and earlier. For a list of affected devices and browsers, see Additional Information below.
+
+After October 31, 2018, if you experience an issue related to the use of an old TLS version, you will be required to update to TLS 1.2 or to a device that supports TLS 1.2 as part of the resolution.
+
+#### What do I need to do to prepare for this change?
+
+We recommend that you proactively remove TLS 1.0 and 1.1 dependencies in your environments and disable TLS 1.0 and 1.1 at the operating system level where possible. Begin planning your migration to TLS 1.2 today. Check the support blog post below for the list of devices that are not supported by Intune today but might still be receiving policy, and that will not be able to communicate using TLS version 1.2. You might need to notify those end users that they’ll lose access to corporate resources.
+
+For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
+
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 
 <!--1428681-->
