@@ -1,10 +1,10 @@
 ---
-title: "Site recovery"
-titleSuffix: "Configuration Manager"
-description: "Learn to recover your sites in System Center Configuration Manager."
-ms.date: 11/20/2017
+title: Site recovery
+titleSuffix: Configuration Manager
+description: Learn to recover your sites in Configuration Manager.
+ms.date: 07/13/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: aczechowski

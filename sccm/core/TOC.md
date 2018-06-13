@@ -160,9 +160,13 @@
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [Boundaries](servers/deploy/configure/boundaries.md)
 #### [Boundary groups](servers/deploy/configure/boundary-groups.md)
-###  [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
-###  [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
-###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
+###  [High availability options](servers/deploy/configure/high-availability-options.md)
+#### [Site server high availability](servers/deploy/configure/site-server-high-availability.md)
+#### [Passive site server setup flowchart](servers/deploy/configure/passive-site-server-flowchart.md)
+#### [Promote site server flowchart](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+#### [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
+#### [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
 ###  [Configure Azure services](servers/deploy/configure/azure-services-wizard.md)
@@ -178,12 +182,9 @@
 ###  [Proxy server support](plan-design/network/proxy-server-support.md)
 ###  [Release notes](servers/deploy/install/release-notes.md)
 ###  [Unicode and ASCII support](plan-design/hierarchy/unicode-and-ascii-support.md)
-<!-- Deprecated from Content - still published but out of TOC:
-#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
--->
 
 #    Manage infrastructure
-## [Management insights](servers/manage/management-insights.md)
+##   [Management insights](servers/manage/management-insights.md)
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
@@ -205,6 +206,10 @@
 ###  [Checklist for installing update 1710](servers/manage/checklist-for-installing-update-1710.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 
+##   Backup and recovery
+###  [Back up sites](servers/manage/backup-and-recovery.md)
+###  [Recover sites](servers/manage/recover-sites.md)
+###  [Unattended site recovery](servers/manage/unattended-recovery.md)
 
 ##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)
@@ -228,6 +233,8 @@
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 ###  [Data warehouse](servers/manage/data-warehouse.md)
+
+## [Manage high-risk deployments](servers/manage/settings-to-manage-high-risk-deployments.md)
 
 #    Deploy clients
 ##   Planning for client deployment
