@@ -16,36 +16,37 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-With System Center Configuration Manager you can configure deployment verification site settings to warn admins if they create a high-risk task sequence deployment. A high-risk deployment is:  
+With Configuration Manager, you can configure deployment verification site settings. These settings warn administrators if they create a high-risk task sequence deployment. A high-risk deployment is:  
 
--   A deployment that is automatically installed  
+-   A deployment that's automatically installed  
 
 -   Has the potential to cause unwanted results  
 
- For example, a task sequence that has a purpose of **Required** that deploys an operating system is considered high-risk.  
+For example, a task sequence with a purpose of **Required** that deploys an operating system is considered high-risk.  
 
- To reduce the risk of an unwanted high-risk deployment, you can configure size limits in these deployment verification settings:  
+To reduce the risk of an unwanted high-risk deployment, you can configure size limits in these deployment verification settings:  
 
--   **Collection size limits**: Hide collections that contain more clients than your limit when you create a deployment.  
+-   **Collection size limits**: When you create a deployment, hide collections that include more clients than your limit.  
 
-    -   **Default size**: This setting hides collections, by default, with more clients than your limit when you create a deployment. You can still see these collections when creating the deployment, but they are hidden by default. The default value is 100. Enter a value of 0 to ignore this setting.  
+     -   **Default size**: When you create a deployment, this setting hides collections by default that include more clients than this limit. You can still see these collections when creating the deployment, but they're hidden by default. The default value is **100**. To ignore this setting, enter a value of **0**.  
 
-    -   **Maximum size**: This setting always hides collections with more clients than your limit when you create a deployment. The default value is 0, which ignores this setting. The **Maximum size** value must be greater than the **Default size** value.  
+     -   **Maximum size**: When you create a deployment, this setting always hides collections with more clients than this limit. The default value is **0**, which ignores this setting. The **Maximum size** value must be greater than the **Default size** value.  
 
-     For example, you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain fewer than 100 clients. If you clear the **Hide collections with a member count greater than the siteâ€™s minimum size configuration** setting, the window will display collections that contain fewer than 1000 clients.  
+     For example, you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high-risk deployment, the **Select Collection** window only displays collections that include fewer than 100 clients. If you clear the setting to **Hide collections with a member count greater than the site's minimum size configuration**, the window displays collections that include fewer than 1000 clients.  
 
--   **Collections with site system servers**: Block deployments, or require verification before creating the deployment, when the target collection contains a computer with a site system role. When a deployment is blocked, you must select a different collection that meets the deployment verification criteria.  
+-   **Collections with site system servers**: When the target collection includes a computer with a site system role, block deployments or require verification before creating the deployment. When a deployment is blocked, select a different collection that meets the deployment verification criteria to continue creating the deployment.  
 
 > [!NOTE]  
->  High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**.  
+>  High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**.  
 
-### To configure deployment verification for a site  
+### Configure deployment verification for a site  
 
-1.  In the Configuration Manager console, choose **Administration** >**Site Configuration** > **Sites**, and then select the primary site to configure.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select **Sites**, and then select the primary site to configure.  
 
-2.  On the **Home** tab, in the **Properties** group, choose **Properties**, and then choose the **Deployment Verification** tab.  
+2.  Click **Properties** in the ribbon, and then switch to the **Deployment Verification** tab.  
 
-3.  After setting configurations you want to use, choose  **OK**  to save the configuration.  
+3.  After setting configurations you want to use, click **OK** to save the configuration.  
+
 
 ### See also  
- [Configure sites and hierarchies for System Center Configuration Manager](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)
+ [Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)
