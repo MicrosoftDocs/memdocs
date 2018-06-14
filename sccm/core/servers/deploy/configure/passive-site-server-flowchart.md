@@ -1,7 +1,7 @@
 ---
-title: Flowchart - passive site server setup
+title: Set up site server in passive mode
 titleSuffix: Configuration Manager
-description: A flowchart diagram for how the passive site server is setup in Configuration Manager.
+description: A flowchart diagram for how the site server in passive mode is set up in Configuration Manager.
 ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,10 +12,10 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Flowchart - Passive site server setup in Configuration Manager
+# Flowchart - Set up a site server in passive mode
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This flowchart diagram shows the process by which the site sets up a passive site server. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
+This flowchart diagram shows the process by which the site sets up a site server in passive mode. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
-![Flowchart diagram to set up a passive site server](media/passive-site-server-setup.png)
+![Flowchart diagram to set up a site server in passive mode](media/passive-site-server-setup.png)

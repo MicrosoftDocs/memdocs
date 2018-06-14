@@ -45,7 +45,8 @@ For example, Configuration Manager clients typically operate autonomously by usi
 
 -   Built-in reports provide insight to ongoing operations, historical operations, and current trends. Configuration Manager also supports state-based messages that provide near real-time information for ongoing operations.  
 
-  Use the information in this article along with the following articles:
+
+Use the information in this article along with the following articles:
 -   [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)
 -   [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)  
 -   [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)

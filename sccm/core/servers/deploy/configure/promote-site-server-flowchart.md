@@ -1,7 +1,7 @@
 ---
 title: Flowchart - promote site server
 titleSuffix: Configuration Manager
-description: A flowchart diagram for how the passive site server is promoted to active in Configuration Manager.
+description: A flowchart diagram for how the site server in passive mode is promoted to active in Configuration Manager.
 ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,10 +12,10 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Flowchart - Promote site server in Configuration Manager
+# Flowchart - Promote site server
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This flowchart diagram shows the process by which a passive site server is promoted to an active site server. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
+This flowchart diagram shows the process by which a site server in passive mode is promoted to the site server in active mode. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
-![Flowchart diagram to promote a passive site server](media/promote-site-server.png)
+![Flowchart diagram to promote a site server in passive mode](media/promote-site-server.png)
