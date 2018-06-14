@@ -22,7 +22,7 @@ Windows 10 provides three types of updates:
 
 - **Feature updates**: Previously referred to as upgrades, feature updates contain security and quality revisions, but also significant feature additions and changes. They're released semi-annually.  
 
-- **Quality updates**: These are traditional OS updates, typically released the second Tuesday of each month (though they can be released at any time). Quality updates include security, critical, and driver updates. Non-Windows updates for other Microsoft products such as Microsoft Office or Visual Studio are also treated as quality updates. These non-Windows updates are known as Microsoft updates. Devices can be optionally configured to receive Microsoft updates along with Windows updates.  
+- **Quality updates**: These updates are traditional OS updates, typically released the second Tuesday of each month (though they can be released at any time). Quality updates include security, critical, and driver updates. Non-Windows updates for other Microsoft products such as Microsoft Office or Visual Studio are also treated as quality updates. These non-Windows updates are known as Microsoft updates. Devices can be optionally configured to receive Microsoft updates along with Windows updates.  
 
 - **Non-deferrable updates**: Antimalware and antispyware definition updates from the Windows Update service currently can't be deferred.  
 
@@ -49,7 +49,7 @@ Leveraging peers as a download source for quality updates can be beneficial for 
 
 ### Windows Delivery Optimization
 
-[Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is the main download technology and peer-to-peer distribution method built into Windows 10. Windows 10 clients can get content from other devices on their local network that download the same updates. Using the [Windows options available for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#delivery-optimization-options), you can configure clients into groups. This grouping allows your organization to identify devices that are possibly the best candidates to fulfill peer-to-peer requests. Delivery Optimization significantly reduces the overall bandwidth that's used to keep devices up to date while speeding up the download time.
+[Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is the main download technology and peer-to-peer distribution method built into Windows 10. Windows 10 clients can get content from other devices on their local network that download the same updates. Using the [Windows options available for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#delivery-optimization-options), you can configure clients into groups. This grouping allows your organization to identify devices that are possibly the best candidates to fulfill peer-to-peer requests. Delivery Optimization significantly reduces the overall bandwidth that's used to keep devices up-to-date while speeding up the download time.
 
 > [!NOTE]  
 > Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality.  
@@ -122,19 +122,21 @@ The Windows update agent (WUA) requests express content first. If it fails to in
 The express files (.psf) are sparse files. To determine the actual space being used on disk by the file, check the **Size on disk** property of the file. The Size on disk property should be considerably smaller than the Size value.  
 
 
-#### Is express supported for Windows 10 feature updates?
+#### Do Windows 10 feature updates support express updates?
 
 No, express installation files currently only support Windows 10 quality updates.  
 
 
 #### How much disk space is needed per quality update on the site server and distribution points?
 
-It depends. For each quality update, both the full-file and express version of the update are stored on servers. Windows 10 quality updates are cumulative, so the size of these files increases each month. Plan for a minimum of five gigabytes per update per language. 
+It depends. For each quality update, both the full-file and express version of the update are stored on servers. Windows 10 quality updates are cumulative, so the size of these files increases each month. Plan for a minimum of 5 GB per update per language. 
 
 
 #### Do Configuration Manager clients still benefit from express installation files when falling back to the Windows Update service?
 
-Yes. If you use the software update deployment option, **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates**, then clients still use express and Delivery Optimization when they fall back to the cloud service.
+Yes. If you use the following software update deployment option, then clients still use express updates and Delivery Optimization when they fall back to the cloud service:  
+
+**If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates**
 
 
 #### Why is express file content not downloaded for existing updates after I enable express file support? 

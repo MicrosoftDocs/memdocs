@@ -18,9 +18,9 @@ manager: dougeby
 
 System Center Configuration Manager provides comprehensive control over feature updates for Windows 10. To fully adopt the Windows as a service model, you also must adopt the Configuration Manager current branch model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience. New versions of Configuration Manager are required to take full advantage of the exciting new enterprise features for Windows 10. This article is intended to be a landing page for the key articles required to adopt Configuration Manager current branch. Configuration Manager current branch gets you on your way to Windows as a service.
 
-## Key topics about adopting Configuration Manager current branch
+## Key articles about adopting Configuration Manager current branch
 
-| Topic        | Description          | 
+| Article        | Description          | 
 | ------------- |-------------|
 |[Overview of Configuration Manager current branch](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Provides a brief summary of the key points for the new servicing model for Configuration Manager (Current Branch)|
 |[Support lifecycle](/sccm/core/servers/manage/current-branch-versions-supported)|Explains the new support and servicing model.|
@@ -33,8 +33,8 @@ System Center Configuration Manager provides comprehensive control over feature 
 |[Technical Previews for Configuration Manager](/sccm/core/get-started/technical-preview)|Provides information about the ConfigMgr technical preview program.|
 
 
-## Key topics about adopting Windows as a service
-| Topic        | Description          | 
+## Key articles about adopting Windows as a service
+| Article        | Description          | 
 | ------------- |-------------|
 |[Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service)|Explains how to use servicing plans to deploy Windows 10 feature updates.|
 |[Upgrade Windows 10 via task sequence](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)|The details of creating a task sequence to upgrade Windows 10 with additional recommendations.|
