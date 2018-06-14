@@ -16,7 +16,7 @@ ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 
 Configuration Manager supports express installation files for Windows 10 updates. Configure the client to download only the changes between the current month's Windows 10 cumulative quality update and the previous month's update. Without express installation files, Configuration Manager clients download the full Windows 10 cumulative update each month, including all updates from previous months. Using express installation files provides for smaller downloads and faster installation times on clients.
 
-To learn how to use Configuration Manager to manage update content to stay current with Windows 10, see [Optimize Windows 10 update delivery](deploy-use/optimize-windows-10-update-delivery).  
+To learn how to use Configuration Manager to manage update content to stay current with Windows 10, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).  
 
 
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ To start synchronizing the metadata for Windows 10 express installation files, e
 > You can't configure the software update point component to *only* download express updates.  The site downloads the express installation files in addition to the full files. This increases the amount of content stored in the content library, and distributed to and stored on your distribution points.
 
 > [!Tip]  
-> To determine the actual space being used on disk by the file, check the **Size on disk** property of the file. The Size on disk property should be considerably smaller than the Size value. For more information, see [FAQs to optimize Windows 10 update delivery](deploy-use/optimize-windows-10-update-delivery#bkmk_faq).  
+> To determine the actual space being used on disk by the file, check the **Size on disk** property of the file. The Size on disk property should be considerably smaller than the Size value. For more information, see [FAQs to optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery#bkmk_faq).  
 
 
 ### Enable clients to download and install express installation files

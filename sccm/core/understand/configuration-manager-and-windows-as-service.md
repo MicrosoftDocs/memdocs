@@ -39,7 +39,7 @@ System Center Configuration Manager provides comprehensive control over feature 
 |[Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service)|Explains how to use servicing plans to deploy Windows 10 feature updates.|
 |[Upgrade Windows 10 via task sequence](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)|The details of creating a task sequence to upgrade Windows 10 with additional recommendations.|
 |[Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|Phased deployments automate a coordinated, sequenced rollout of a task sequence across multiple collections.|  
-|[Optimize Windows 10 update delivery](deploy-use/optimize-windows-10-update-delivery)|Use Configuration Manager to manage update content to stay current with Windows 10.|
+|[Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Use Configuration Manager to manage update content to stay current with Windows 10.|
 |[Integrate with Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.| 
 |[Windows Update for Business integration (optional)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager.|
 |[Use co-management with Microsoft Intune and Windows Update for Business (optional)](/sccm/core/clients/manage/co-management-overview)|Provides an overview of co-management| 
