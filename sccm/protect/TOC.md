@@ -1,10 +1,5 @@
 # Understand and explore
 ## [Overview](understand\protect-data-and-site-infrastructure.md)
-## [Back up sites](understand/backup-and-recovery.md)
-## [Recover sites](understand/recover-sites.md)
-## [Unattended site recovery](understand/unattended-recovery.md)
-## [High availability options](understand/high-availability-options.md)
-## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
 # Plan and design
 ## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
