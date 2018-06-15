@@ -22,7 +22,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Administrative Security  
- The following reports are listed under the **Administrative Security** category.  
+ The following six reports are listed under the **Administrative Security** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -36,7 +36,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Alerts  
-
+The following two reports are listed under the **Alerts** category.  
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Alert scorecard**|Displays a summary of all postponed alerts that were generated between the specified start and finish date.|  
@@ -45,6 +45,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Asset Intelligence  
+The following sixty two reports are listed under the **Asset Intelligence** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -114,6 +115,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Client Push  
+The following four reports are listed under the **Client Push** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -125,6 +127,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Client Status  
+The following seven reports are listed under the **Client Status** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -139,6 +142,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Company Resource Access  
+The following three reports are listed under the **Company Resource Access** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -149,6 +153,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Compliance and Settings Management  
+The following twenty two reports are listed under the **Compliance and Settings Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -178,6 +183,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Device Management  
+The following thirty sever reports are listed under the **Device Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -222,6 +228,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Driver Management  
+The following thirteen reports are listed under the **Driver Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -242,7 +249,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Endpoint Protection  
-
+The following six reports are listed under the **Endpoint Protection** category. 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Antimalware activity report**|Displays an overview of antimalware activity.|  
@@ -255,7 +262,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - CD-ROM  
-
+The following four reports are listed under the **Hardware - CD-ROM** category. 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**CD-ROM information for a specific computer**|Displays information about the CD-ROM drives on a specified computer.|  
@@ -266,6 +273,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Disk  
+The following eight reports are listed under the **Hardware - Disk** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -281,6 +289,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - General  
+The following five reports are listed under the **Hardware - General** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -293,6 +302,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Memory  
+The following five reports are listed under the **Hardware - Memory** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -305,6 +315,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Modem  
+The following three reports are listed under the **Hardware - Modem** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -315,6 +326,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Network Adapter  
+The following three reports are listed under the **Hardware - Network Adapter** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -325,6 +337,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Processor  
+The following five reports are listed under the **Hardware - Processor** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -337,6 +350,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - SCSI  
+The following five reports are listed under the **Hardware - SCSI** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -347,6 +361,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Security
+The following one report is listed under the **Hardware - Security** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -355,6 +370,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Sound Card  
+The following three reports are listed under the **Hardware - SCSI** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -365,6 +381,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Hardware - Video Card  
+The following three reports are listed under the **Hardware - Video Card** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -375,6 +392,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Migration  
+
+The following five reports are listed under the **Migration** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -388,6 +407,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 ## Network  
 
+The following six reports are listed under the **Network** category.
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Count IP addresses by subnet**|Displays the number of IP addresses inventoried for each IP subnet.|  
@@ -400,6 +421,9 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Operating System  
+
+The following ten reports are listed under the **Operating System** category.
+
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -417,6 +441,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Power Management  
+
+The following eighteen reports are listed under the **Power Management** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -442,6 +468,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Replication Traffic  
+The following ten reports are listed under the **Replication Traffic** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -459,6 +486,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Site - Client Information  
+The following nineteen reports are listed under the **Site - Client Information** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -485,6 +513,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Site - Discovery and Inventory Information  
+The following ten reports are listed under the **Site - Discovery and Inventory Information** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -502,6 +531,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Site - General  
+The following three reports are listed under the **Site - General** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -512,6 +542,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Site - Server Information  
+The following one report is listed under the **Site - Server Information** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -520,6 +551,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software - Companies and Products  
+The following fifteen reports are listed under the **Software - Companies and Products** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -542,6 +574,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software - Files  
+The following five reports are listed under the **Software - Files** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -554,6 +587,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Distribution - Application Monitoring  
+The following ten reports are listed under the **Software Distribution - Application Monitoring** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -571,6 +605,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Distribution - Collections  
+The following three reports are listed under the **Software Distribution - Collections** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -581,6 +616,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Distribution - Content  
+The following sixteen reports are listed under the **Software Distribution - Content** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -603,7 +639,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 
-## Software Distribution - Package and Program Deployment  
+## Software Distribution - Package and Program Deployment 
+The following five reports are listed under the **Software Distribution - Package and Program Deployment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -616,6 +653,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Distribution - Package and Program Deployment Status  
+The following five reports are listed under the **Software Distribution - Package and Program Deployment Status** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -628,6 +666,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Metering  
+The following thirteen reports are listed under the **Software Metering** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -648,6 +687,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Updates - A Compliance  
+The following eight reports are listed under the **Software Updates - A Compliance** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -663,6 +703,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Updates - B Deployment Management  
+The following eight reports are listed under the **Software Updates - B Deployment Management** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -678,6 +719,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Updates - C Deployment States  
+The following six reports are listed under the **Software Updates - C Deployment States** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -691,6 +733,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Software Updates - D Scan  
+The following four reports are listed under the **Software Updates - D Scan** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -703,6 +746,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 ## Software Updates - E Troubleshooting  
 
+The following four reports are listed under the **Software Updates - E Troubleshooting** category.
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Troubleshooting 1 - Scan errors**|Displays scan errors at the site and a count of computers that are experiencing each error.|  
@@ -713,6 +758,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## State Migration  
+The following three reports are listed under the **State Migration** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -723,6 +769,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Status Messages  
+The following twelve reports are listed under the **Status Messages** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -743,6 +790,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 ## Status Messages - Audit  
 
+The following three reports are listed under the **Status Messages - Audit** category.
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All audit messages for a specific user**|Displays a summary of all audit status messages for a specified user. Audit messages describe actions taken in the Configuration Manager console that add, modify, or delete objects in Configuration Manager.|  
@@ -752,6 +801,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Task Sequence - Deployment Status  
+The following eleven reports are listed under the **Task Sequence - Deployment Status** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -770,6 +820,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Task Sequence - Deployments  
+The following eleven reports are listed under the **Task Sequence - Deployments** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -788,6 +839,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Task Sequence - Progress  
+The following five reports are listed under the **Task Sequence - Progress** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -800,6 +852,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Task Sequences - References  
+The following one report is listed under the **Task Sequences - References** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -809,6 +862,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 <!--
 ## Upgrade Assessment  
+The following eleven reports are listed under the **Upgrade Assessment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -829,6 +883,8 @@ The following reports are included with Configuration Manager. The reports appea
 
 ## User - Device Affinity  
 
+The following two reports are listed under the **User - Device Affinity** category.
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Pending user device affinity associations by collection**|This report shows all pending user device affinity assignments based on usage data, for members of a collection.|  
@@ -837,6 +893,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## User Data and Profiles Health  
+The following four reports are listed under the **User Data and Profiles Health** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -848,6 +905,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Users  
+The following three reports are listed under the **Users** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -858,6 +916,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Virtual Applications  
+The following seven reports are listed under the **Virtual Applications** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -872,6 +931,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Volume Purchase Programs - Apple
+The following one report is listed under the **Volume Purchase Programs - Apple** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -880,6 +940,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Vulnerability Assessment
+The following one report is listed under the **Vulnerability Assessment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -888,6 +949,7 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Wake On LAN  
+The following seven reports are listed under the **Wake On LAN** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
