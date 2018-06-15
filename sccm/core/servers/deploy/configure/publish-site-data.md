@@ -44,7 +44,7 @@ For information about how clients find a management point, see [Understand how c
 
 1.  In the Configuration Manager console, click **Administration**.  
 
-2.  In the **Administration** workspace, click **Active Directory Forests**. If Active Directory Forest Discovery has previously run, you see each discovered forest in the results pane. The local forest and any trusted forests are discovered when Active Directory Forest Discovery runs. Only untrusted forests must be manually added.  
+2.  In the **Administration** workspace, expand **Hierarchy Configuration**, and click **Active Directory Forests**. If Active Directory Forest Discovery has previously run, you see each discovered forest in the results pane. The local forest and any trusted forests are discovered when Active Directory Forest Discovery runs. Only untrusted forests must be manually added.  
 
     -   To set up a previously discovered forest, select the forest in the results pane. Then on the **Home** tab, in the **Properties** group, click **Properties** to open the forest properties. Continue with step 3.  
 
