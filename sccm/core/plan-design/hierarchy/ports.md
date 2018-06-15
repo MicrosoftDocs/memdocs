@@ -229,6 +229,12 @@ The Configuration Manager console uses internet access for the following:
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
+###  <a name="BKMK_PortsDWSPSQL"></a> Data warehouse service point -- > SQL Server  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
+
 ###  <a name="BKMK_PortsDist_MP"></a> Distribution point -- > Management point  
  A distribution point communicates to the management point in the following scenarios:  
 
