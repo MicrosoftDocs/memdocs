@@ -18,7 +18,7 @@ manager: dougeby
 
 <!--1128774-->
 
-High availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed.
+Starting in Configuration Manager version 1806, high availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed.
 
 A site server in passive mode:
 - Uses the same site database as your site server in active mode.
@@ -67,7 +67,7 @@ To install a site server in passive mode, use the **Create Site System Server Wi
 ## Limitations
 - A single site server in passive mode is supported at each primary site.  
 
-- Promotion of the site server in passive mode to active mode is manual. There is no automatic failover.  
+- Promotion of the site server in passive mode to active mode is manual. There's no automatic failover.  
 
 - Site system roles can be installed only on the site server that is in active mode.  
 
@@ -75,7 +75,7 @@ To install a site server in passive mode, use the **Create Site System Server Wi
 
      - Site system roles that use a database (like the reporting point) must have that database on a server that's remote from both site servers.  
 
-     - The SMS Provider doesn't install on the site server in passive mode. You must connect to a provider for the site to manually promote the site server in passive mode to active mode. Install at least one additional instance of the provider on another server. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+     - The SMS Provider doesn't install on the site server in passive mode. Connect to a provider for the site to manually promote the site server in passive mode to active mode. Install at least one additional instance of the provider on another server. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
 
 
 
@@ -91,9 +91,9 @@ For more information on the general process of adding roles, see [Install site s
 
 4. On the **Site Server In Passive Mode** page, provide the following information that's used to run setup and install the site server role on the specified server:
 
-     - Choose to copy installation files from the site server in active mode to the new site server, or specify a path to a location that contains the contents of the **CD.Latest** folder from the site server in active mode.  
+     - Choose to copy installation files from the site server in active mode to the new site server. Or specify a path to a location that contains the contents of the **CD.Latest** folder from the site server in active mode.  
 
-    - Specify the same site database server and database name as used by the site server in active mode.  
+     - Specify the same site database server and database name as used by the site server in active mode.  
 
 5. Complete the wizard. Configuration Manager then installs the site server in passive mode on the specified server.
 
@@ -101,7 +101,7 @@ For detailed installation status, in the console go to the **Administration** wo
 
 For more information on the setup process, see [Flowchart - Set up a site server in passive mode](/sccm/core/servers/deploy/configure/passive-site-server-flowchart).
 
-After you add a site server in passive mode, you can see both site servers on the **Nodes** pane in the **Sites** node of the console. 
+After you add a site server in passive mode, see both site servers on the **Nodes** pane in the **Sites** node of the console. 
 
 All Configuration Manager site server components are in standby on the site server in passive mode. The Windows services are still running.
 
@@ -122,7 +122,7 @@ This section describes how to change the site server in passive mode to active m
 
 4. In the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. The **Server Name** column for the site now displays the name of the new site server in active mode.  
 
-For detailed status, go to the **Monitoring** workspace, and select the **Site Server Status** node. The **Mode** column identifies which server is *Active* or *Passive*. While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This action opens the **Site Server Promotion Status** window that displays additional details about the process.
+For detailed status, go to the **Monitoring** workspace, and select the **Site Server Status** node. The **Mode** column identifies which server is *Active* or *Passive*. When you promote a server from passive mode to active mode, select the site server that you're promoting to active, and then choose **Show Status** from the ribbon. This action opens the **Site Server Promotion Status** window that displays additional details about the process.
 
 When a site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
 
