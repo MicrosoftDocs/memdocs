@@ -15,65 +15,91 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+This article describes how to deploy Configuration Manager using options that maintain a high level of available service.   
+
+The following Configuration Manager options support high availability:   
+
+- Starting in version 1806, configure the central administration site and each primary site with an additional site server in passive mode.  
+ 
+- Configure a SQL Server Always On availability group for the site database at primary sites and the central administration site.
+
+- Sites support multiple instances of site system roles that provide important services to clients. For example, management points and distribution points.  
+
+- Central administration sites and primary sites support the backup of the site database. The site database stores all the configurations for sites and clients. The sites in a hierarchy share this configuration data.  
+
+- Built-in site recovery options can reduce server downtime. These advanced options simplify recovery when you have a hierarchy with a central administration site.  
+
+- Clients can automatically remediate typical issues without administrative intervention.  
+
+- Sites generate alerts about clients that fail to submit recent data, which alerts administrators to potential problems.  
+
+- Configuration Manager provides several built-in reports and dashboards. Use these to identify problems and trends before they become problems for server or client operations.  
 
 
-You can deploy Configuration Manager using options that maintain a high level of available service.   
+Configuration Manager includes several features that provide near real-time service. If these features are critical to meet your business requirements, plan and configure your sites and hierarchies for high availability. For example:  
 
-Options that support high availability:   
+- [Client notification actions](/sccm/core/clients/manage/manage-clients), such as restart, start Windows Defender scans, or remote desktop.  
 
--   Sites support multiple instances of site system servers that provide important services to clients.  
+- State-based messages for monitoring features such as software updates and endpoint protection. 
 
--   Central administration sites and primary sites support the backup of the site database. The site database stores all the configurations for sites and clients. The sites in a hierarchy share this configuration data.  
+- [Scripts](/sccm/apps/deploy-use/create-deploy-scripts), starting in version 1706  
 
--   Built-in site recovery options can reduce server downtime. These advanced options simplify recovery when you have a hierarchy with a central administration site.  
+- [CMPivot](/sccm/core/servers/manage/cmpivot), starting in version 1806  
 
--   Clients can automatically remediate typical issues without administrative intervention.  
 
--   Sites generate alerts about clients that fail to submit recent data, which alerts administrators to potential problems.  
-
--   Configuration Manager provides several built-in reports that enable you to identify problems and trends before they become problems for server or client operations.  
-
-Configuration Manager doesn't provide a real-time service. Expect it to operate with some data latency. It's unusual for most scenarios that involve a temporary interruption of service to become a critical problem. When you've configured your sites and hierarchies with high availability in mind, you can minimize downtime, maintain autonomy of operations, and provide a high level of service.  
+Other features of Configuration Manager don't provide real-time service. These features include, but aren't limited to, client settings, hardware and software inventory, software deployments, and compliance settings. Expect them to operate with some data latency. It's unusual for most scenarios that involve a temporary interruption of service to become a critical problem. To minimize downtime, maintain autonomy of operations, and provide a high level of service, configure your sites and hierarchies with high availability in mind.  
 
 For example, Configuration Manager clients typically operate autonomously by using known schedules and configurations for operations, and schedules to submit data to the site for processing.  
 
--   When clients can't contact the site, they cache data to be submitted until they can contact the site.  
+- When clients can't contact the site, they cache data to be submitted until they can contact the site.  
 
--   Clients that can't contact the site continue to operate. They use the last known schedules and cached information, until they can contact the site and receive new policies. For example, a client may keep a previously downloaded application that they must run or install.   
+- Clients that can't contact the site continue to operate. They use the last known schedules and cached information, until they can contact the site and receive new policies. For example, a client may keep a previously downloaded application that they must run or install.   
 
--   The site monitors its site systems and clients for periodic status updates. It can generate alerts when these components fail to register.  
+- The site monitors its site systems and clients for periodic status updates. It can generate alerts when these components fail to register.  
 
--   Built-in reports provide insight to ongoing operations, historical operations, and current trends. Configuration Manager also supports state-based messages that provide near real-time information for ongoing operations.  
+- Built-in reports provide insight to ongoing operations, historical operations, and current trends. Configuration Manager also supports state-based messages that provide near real-time information for ongoing operations.  
 
 
-Use the information in this article along with the following articles:
--   [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)
--   [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)  
--   [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
+Use the information in this article along with the following articles:  
+
+- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)  
+
+- [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)   
+
+- [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)  
 
 
 
 ##  <a name="bkmk_snh"></a> High availability for sites and hierarchies  
+
+#### Use a site server in passive mode
+Starting with version 1806, install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+
+#### Use a remote content library
+Starting with version 1806, move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
+
+#### Centralize content sources
+All software content in Configuration Manager requires a package source location on the network. Use centralized, highly available storage to host a common package source location for all content. 
+
+#### Use a SQL Server Always On availability group to host the site database  
+Host the site database at primary sites and the central administration site on SQL Server Always On availability groups. For more information, see [SQL Server Always On for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
 #### Use a SQL Server cluster to host the site database  
 When you use a SQL Server cluster for the database at a central administration site or primary site, you use the fail-over support built into SQL Server.  
 
 Secondary sites can't use a SQL Server cluster, and don't support backup or restoration of their site database. Recover a secondary site by reinstalling the secondary site from its parent primary site.  
 
-#### Use a SQL Server Always On availability group to host the site database  
-You can use SQL Server Always On availability groups to host the site database at primary sites and the central administration site as a high-availability and disaster-recovery solution. For more information, see [SQL Server Always On for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
-
 #### Deploy a hierarchy of sites with a central administration site, and one or more child primary sites  
-This configuration can provide fault tolerance when your sites manage overlapping segments of your network. It also offers an additional recovery option to use the information in the shared database available at another site, to rebuild the site database at the recovered site. You can use this option to replace a failed or unavailable backup of the failed site's database.  
+This configuration can provide fault tolerance when your sites manage overlapping segments of your network. It also offers an additional recovery option to use the information in the shared database available at another site, to rebuild the site database at the recovered site. Use this option to replace a failed or unavailable backup of the failed site's database.  
 
 #### Create regular backups at central administration sites and primary sites  
-When you create and test a regular site backup, you make sure that you have the data necessary to recover a site. You also practice recovering a site in the minimal amount of time.  
+When you create and test a regular site backup, this makes sure that you have the data necessary to recover a site. You also practice recovering a site in the minimal amount of time.  
 
 #### Install multiple instances of site system roles  
 When you install multiple instances of critical site system roles, you provide redundant points of contact for clients. For example, multiple management points and distribution points provide redundant service in the event that a specific server is offline.  
 
 #### Install multiple instances of the SMS Provider at a site  
-The SMS Provider provides the point of administrative contact for one or more Configuration Manager consoles. When you install multiple SMS Providers, you can provide redundancy for contact points to administer your site and hierarchy.  
+The SMS Provider provides the point of administrative contact for one or more Configuration Manager consoles. To provide redundancy for contact points to administer your site and hierarchy, install multiple SMS Providers.  
 
 
 
@@ -93,33 +119,33 @@ At each site, you deploy site system roles to provide the services that you want
 
 -   State migration point  
 
-To provide redundancy for reporting on sites and clients, you can install multiple instances of the reporting services point.
+To provide redundancy for reporting on sites and clients, install multiple instances of the reporting services point.
 
-You can use Windows PowerShell to install the software update point on a Windows network load balancing (NLB) cluster to provide failover support.  
+For failover support with the software update point, use Windows PowerShell to install this role on a Windows network load balancing (NLB) cluster.  
 
 #### Built-in site backup  
 Configuration Manager includes a built-in backup task to help you back up your site and critical information on a regular schedule. Additionally, the Configuration Manager setup wizard supports site restoration actions to help you restore a site to operations.  
 
 #### Publishing to Active Directory Domain Services and DNS  
-You can configure each site to publish data about site system servers and services to Active Directory Domain Services and to DNS. This publishing enables clients to identify the most accessible server on the network. Clients also use it to identify when new site system servers are available to provide important services, such as management points.  
+Configure each site to publish data about the site to Active Directory Domain Services and DNS. This publishing enables clients to identify the most accessible server on the network. Clients also use it to identify when new site system servers are available to provide important services, such as management points.  
 
 #### SMS Provider and Configuration Manager console  
-Configuration Manager supports installing multiple SMS Providers on separate servers as multiple access points for the Configuration Manager console. This configuration ensures that if one SMS Provider computer is offline, you can still view and manage sites and clients.  
+Configuration Manager supports installing multiple SMS Providers on separate servers as multiple access points for the console. If one SMS Provider server is offline, you can still view and manage sites and clients.  
 
 When a Configuration Manager console connects to a site, it connects to an instance of the SMS Provider at that site. The instance of the SMS Provider is randomly selected. If the selected SMS Provider isn't available, you have the following options:  
 
 -   Reconnect the console to the site. Each new connection request is randomly assigned an instance of the SMS Provider. It's possible that the new connection is assigned an available instance.  
 
--   Connect the console to a different Configuration Manager site and manage the configuration from that connection. This option introduces a slight delay of configuration changes of no more than a few minutes. After the SMS Provider for the site is online, you can reconnect your Configuration Manager console directly to the site that you want to manage.  
+-   Connect the console to a different Configuration Manager site and manage the configuration from that connection. This option introduces a slight delay of configuration changes of no more than a few minutes. After the SMS Provider for the site is online, reconnect your Configuration Manager console directly to the site that you want to manage.  
 
-You can install the Configuration Manager console on multiple computers for use by administrators. Each SMS Provider supports connections from more than one console.  
+Install the Configuration Manager console on multiple computers for use by administrators. Each SMS Provider supports connections from more than one console.  
 
 #### Management point  
 Install multiple management points at each primary site, and enable the sites to publish site data to your Active Directory infrastructure, and to DNS.  
 
-Multiple management points help to load-balance the use of any single management point by multiple clients. In addition, you can install one or more database replicas for management points. This configuration decreases the processor-intensive operations of the management point. It also increases the availability of this critical site system role.  
+Multiple management points help to load-balance the use of any single management point by multiple clients. Also consider installing one or more database replicas for management points. This configuration decreases the processor-intensive operations of the management point. It also increases the availability of this critical site system role.  
 
-You can only install one management point in a secondary site, which must be located on the secondary site server. Management points at secondary sites aren't considered to have a highly available configuration.  
+Secondary sites only support installation of one management point, which must be located on the secondary site server. Management points at secondary sites aren't considered to have a highly available configuration.  
 
 > [!NOTE]  
 >  Devices managed by on-premises mobile device management connect to only one management point at a primary site. The management point is assigned by Configuration Manager to the mobile device during enrollment and then doesn't change. When you install multiple management points and enable more than one for mobile devices, the management point that's assigned to a mobile device client is non-deterministic.  
@@ -127,12 +153,12 @@ You can only install one management point in a secondary site, which must be loc
 >  If the management point that a mobile device client uses becomes unavailable, you must resolve the problem with that management point or wipe the mobile device and re-enroll the mobile device so that it can be assigned to an operational management point that is enabled for mobile devices.  
 
 #### Distribution point  
-Install multiple distribution points, and deploy content to multiple distribution points. You can configure overlapping boundary groups for content location to ensure that clients on each subnet can access a deployment from two or more distribution points. Finally, consider configuring one or more distribution points as fallback locations for content.  
+Install multiple distribution points, and deploy content to multiple distribution points. Configure overlapping boundary groups for content location, so clients on each subnet can access content from two or more distribution points. Finally, consider configuring one or more distribution points as fallback locations for content.  
 
 For more information about fallback locations for content, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 #### Application catalog web service point and application catalog website point  
-You can install multiple instances of each site system role. For best performance, deploy one of each on the same site system server.  
+Install more than one instance of each site system role. For best performance, deploy one of each on the same site system server.  
 
 Each application catalog site system role provides the same information as other instances of that role regardless of its location in the hierarchy. When a client makes a request for the application catalog, and you've configured clients to automatically detect the default application catalog website point, the client is directed to an available instance. Clients prefer local application catalog instances, based on the current network location of the client.  
 
