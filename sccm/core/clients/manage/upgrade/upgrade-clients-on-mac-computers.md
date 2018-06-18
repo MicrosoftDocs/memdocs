@@ -50,7 +50,7 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 ## Step 6: Users install the latest client  
  Users of Mac clients will be prompted that an update to the Configuration Manager client is available and must be installed. After users install the client, they must restart their Mac computer.  
 
- After the computer restarts, the Computer Enrollment wizard automatically runs to request a new user certificate.  
+ After the computer restarts, the Computer Enrollment wizard automatically runs to request a new user certificate. The Computer Enrollment wizard will be executed automatically only at the first time of SCCM client installation. And it won’t be executed again if you try to update the client with a new installer later since it already has a valid user certificate. 
 
  If you do not use Configuration Manager enrollment but install the client certificate independently from Configuration Manager, see [Configure the upgraded client to use an existing certificate](#BKMK_UpgradingClient_MachineEnrollment).  
 
