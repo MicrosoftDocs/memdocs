@@ -75,6 +75,12 @@ Use the information in this article along with the following articles:
 #### Use a site server in passive mode
 Starting with version 1806, install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
+#### Use a remote content library
+Starting with version 1806, move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
+
+#### Centralize content sources
+All software content in Configuration Manager requires a package source location on the network. Use centralized, highly available storage to host a common package source location for all content. 
+
 #### Use a SQL Server Always On availability group to host the site database  
 Host the site database at primary sites and the central administration site on SQL Server Always On availability groups. For more information, see [SQL Server Always On for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
