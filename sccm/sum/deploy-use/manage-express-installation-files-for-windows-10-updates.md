@@ -5,7 +5,7 @@ description: Configuration Manager supports express installation files for Windo
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/15/2018
+ms.date: 06/15/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
