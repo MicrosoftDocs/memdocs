@@ -18,25 +18,14 @@ manager: dougeby
 
 For many customers, a successful path to getting and staying current with Windows 10 monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
  
-Windows 10 provides three types of updates:
-
-- **Feature updates**: Previously referred to as upgrades, feature updates contain security and quality revisions, but also significant feature additions and changes. They're released semi-annually.  
-
-- **Quality updates**: These updates are traditional OS updates, typically released the second Tuesday of each month (though they can be released at any time). Quality updates include security, critical, and driver updates. Non-Windows updates for other Microsoft products such as Microsoft Office or Visual Studio are also treated as quality updates. These non-Windows updates are known as Microsoft updates. Devices can be optionally configured to receive Microsoft updates along with Windows updates.  
-
-- **Non-deferrable updates**: Antimalware and antispyware definition updates from the Windows Update service currently can't be deferred.  
-
-This article focuses on Windows 10 *quality updates*.
+Windows 10 provides several types of updates. For more information, see [Update types in Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types). This article focuses on Windows 10 *quality* updates with Configuration Manager. 
 
 
 ## Express update delivery
 
-> [!Important]  
-> Express update delivery currently only applies to quality update downloads.  
-
 Windows 10 quality update downloads can be large. Every package contains all previously released fixes to ensure consistency and simplicity. Microsoft has been able to reduce the size of Windows 10 update content that each client downloads with a feature called express. Express is used today by millions of devices that pull updates directly from the Windows Update service and significantly reduces the download size. This benefit is also available to customers whose clients don't directly download from the Windows Update service. 
 
-Configuration Manager added support for [express installation files](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates) in version 1702. However, for the best experience it's recommended that you use Configuration Manager version 1802 or later. For the best performance in download speeds, it's also recommended that you use Windows 10, version 1703 or later. 
+Configuration Manager added support for [express installation files](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates) of Windows 10 quality updates in version 1702. However, for the best experience it's recommended that you use Configuration Manager version 1802 or later. For the best performance in download speeds, it's also recommended that you use Windows 10, version 1703 or later. 
 
 > [!NOTE]  
 > The express version content is considerably larger than the full-file version. An express installation file contains all of the possible variations for each file it's meant to update. As a result, the required amount of disk space increases for updates in the update package source and on distribution points when you enable express support in Configuration Manager. Even though the disk space requirement on the distribution points increases, the content size that clients download from these distribution points decreases. Clients only download the bits they require (deltas) but not the whole update.
@@ -50,8 +39,10 @@ Even though clients download only the parts of the content that they require, ex
 Configuration Manager supports many peer-to-peer technologies, including the following:
 - Windows Delivery Optimization
 - Configuration Manager peer cache
-- Windows BranchCache
+- Windows BranchCache  
+
 The next sections provide further information on these technologies.
+
 
 ### Windows Delivery Optimization
 
@@ -64,12 +55,14 @@ For the best results, you may need to set the Delivery Optimization [download mo
 
 Manually configuring these Group IDs is challenging when clients roam across different networks. Configuration Manager version 1802 added a new feature to simplify management of this process by [integrating boundary groups with Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization). When a client wakes up, it talks to its management point to get policies, and provides its network and boundary group information. Configuration Manager creates a unique ID for every boundary group. The site uses the client's location information to automatically configure the client's Delivery Optimization Group ID with the Configuration Manager boundary ID. When the client roams to another boundary group, it talks to its management point, and is automatically reconfigured with a new boundary group ID. With this integration, Delivery Optimization can utilize the Configuration Manager boundary group information to find a peer from which to download updates.
 
+
 ### Configuration Manager peer cache
 
 [Peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) is a feature of Configuration Manager that enables clients to share with other clients content directly from their local Configuration Manager cache. Peer cache doesn't replace the use of other peer caching solutions like Windows BranchCache. It works together with them to provide more options for extending traditional content deployment solutions such as distribution points. Peer cache doesn't rely upon BranchCache. If you don’t enable or use BranchCache, peer cache still works.
 
 > [!NOTE]  
 > Clients can only download content from peer cache clients that are in their current boundary group.  
+
 
 ### Windows BranchCache
 [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) is a bandwidth optimization technology in Windows. Each client has a cache, and acts as an alternate source for content. Devices on the same network can request this content. [Configuration Manager can use BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache) to allow peers to source content from each other versus always having to contact a distribution point. Using BranchCache, files are cached on each individual client, and other clients can retrieve them as needed. This approach distributes the cache rather than having a single point of retrieval. This behavior saves a significant amount of bandwidth, while reducing the time for clients to receive the requested content. 
