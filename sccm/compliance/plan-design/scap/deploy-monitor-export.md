@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-After you have [converted and imported](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_convert-and-import) the SCAP data stream files, see the following next steps:  
+After you have [converted and imported](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import) the SCAP data stream files, see the following next steps:  
 
 - [Deploy](#bkmk_deploy) the configuration baselines to collections to assess devices for SCAP compliance  
 
