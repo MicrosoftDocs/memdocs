@@ -1,7 +1,7 @@
 ---
-title: Import the SCAP compliance settings
+title: Deploy and monitor SCAP compliance
 titleSuffix: Configuration Manager
-description: Import the SCAP compliance settings as configuration baselines and export the results
+description: Deploy the SCAP compliance settings as configuration baselines, monitor compliance, and export the results.
 ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,26 +12,21 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Import SCAP compliance settings into Configuration Manager
+# Deploy and monitor SCAP compliance in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The next step in the process is to use the Configuration Manager console to import the compliance settings-compliant .cab files into Configuration Manager. When you import the .cab files you created earlier in this process, one or more configuration items and configuration baselines are created in the Configuration Manager database. Later in the process you can deploy the configuration baselines to device collections.
+After you have [converted and imported](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import) the SCAP data stream files, see the following next steps:  
+
+- [Deploy](#bkmk_deploy) the configuration baselines to collections to assess devices for SCAP compliance  
+
+- [Monitor](#bkmk_monitor) the compliance data returned from the targeted clients  
+
+- [Export](#bkmk_export) the compliance results to SCAP format  
 
 
 
-## Import the .cab files 
-
-Follow the steps in the article to [Import configuration data](/sccm/compliance/deploy-use/import-configuration-data). Import the .cab file that you previously created. This location is the folder specified in the `–output` parameter of the Microsoft.Sces.ScapToDcm.exe tool.
-
-> [!IMPORTANT]  
-> Repeat this process for each .cab file that you created earlier in the process. There's a .cab file for each selected profile in the XCCDF/DataStreamXML file that you downloaded from the NVD web site. You can process these files by running the Microsoft.Sces.ScapToDcm.exe tool.  
-
-The imported configuration baseline is read-only, its status is *Enabled*, and its deployed state *No*. The **Date Modified** property shows the time that you imported the baseline. The name of the configuration baseline comes from the display name section of the XCCDF/Datastream XML. The name is constructed using the convention `ABC[XYZ]`, where **ABC** is the XCCDF Benchmark ID, and **XYZ** is the XCCDF Profile ID (if a profile is selected).
-
-
-
-## Deploy configuration baselines
+## <a name="bkmk_deploy"></a> Deploy SCAP configuration baselines
 
 First create the device collections for the computers that you want to assess for SCAP compliance. For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections).  
 
@@ -42,7 +37,7 @@ Now you're ready to deploy the configuration baselines that you imported to thes
 
 
 
-## Monitor the compliance data 
+## <a name="bkmk_monitor"></a> Monitor the SCAP compliance data 
 
 Before exporting the compliance data back to SCAP format, you need to verify that the site has collected the data. After you deploy a configuration baseline to a device collection, the Configuration Manager client on each computer in the collection automatically gathers the compliance information. Then the compliance information is stored in the Configuration Manager database.
 
@@ -66,7 +61,12 @@ For more information, see [Monitor compliance settings](/sccm/compliance/deploy-
 
 The next step in the process is to export the compliance data to SCAP format, which is an ARF report file in XML/human-readable format. The SCAP Extensions Export wizard and Microsoft.Sces.DcmToScap.exe command-line tool export a separate XCCDF/DataStreamARF results file for each configuration baseline. These files correspond to each XCCDF/DataStream input file that the Microsoft.Sces.ScapToDcm.exe tool uses to create each configuration baseline.
 
-### Export with the console wizard
+
+### Manually export with the console wizard
+
+> [!Note]  
+> This section describes the manual process to export the compliance results with the Configuration Manager console. To automate this process, see the next section to [Automatically export with the command-line tool](#bkmk_auto-export).  
+
 
 1. Start the **Export SCAP Report** wizard by right-clicking the **SCAP Dashboard** node.  
 ![Start the Export SCAP Report wizard from SCAP Dashboard](./media/import-from-scap-dashboard.png)
@@ -79,6 +79,8 @@ The next step in the process is to export the compliance data to SCAP format, wh
 
 4. Specify the organization name, and choose the folder location to export the SCAP report.  
  ![Choose datastream](./media/specify-org-export.png)
+   > [!Tip]  
+   > This page of the wizard displays the command line you would use with the **DcmToScap.exe** tool to automate the same process.  
 
 5. Confirm the settings.  
  ![Choose datastream](./media/confirm-export.png)
@@ -87,7 +89,7 @@ The next step in the process is to export the compliance data to SCAP format, wh
  ![Complete the export](./media/complete-report-export.png)
 
 
-### Export with the command-line tool
+### <a name="bkmk_auto-export"></a> Automatically export with the command-line tool
 
 Open the command prompt, and go to the Configuration Manager **AdminConsole\Bin** folder. Use one of the following command-line examples:  
 

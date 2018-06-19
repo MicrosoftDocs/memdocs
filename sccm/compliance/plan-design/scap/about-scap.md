@@ -73,14 +73,29 @@ This version of the SCEP extensions for Configuration Manager includes and suppo
 
 ## Deployment process
 
-Here's a brief summary of the overall deployment process:
+Here's a summary of the overall deployment process:  
 
-- [Prepare the infrastructure](#bkmk_prepare) to use the extensions. 
-- [Install and configure the SCAP extensions](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_install) for Configuration Manager.
-- [Download, install, and configure the SCAP data stream files](/sccm/compliance/plan-design/scap/install-configure-scap) from the [National Vulnerability Database](http://nvd.nist.gov) (NVD).
-- [Convert and import the SCAP data stream files](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import) directly into a Configuration Manager compliance settings baseline. 
-- [Import a cabinet (.cab) file](/sccm/compliance/plan-design/scap/import-scap-compliance-settings) using the import wizard in the console, or use the Microsoft.Sces.ScapToDcm.exe command-line tool.
-- [Export compliance results](/sccm/compliance/plan-design/scap/import-scap-compliance-settings#bkmk_export) to SCAP format using the export wizard in the console, or use the Microsoft.Sces.DcmToScap.exe command-line tool.
+- [Prepare the infrastructure](#bkmk_prepare) to use the extensions  
+
+- [Install and configure the SCAP extensions](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_install) for Configuration Manager  
+
+- [Download and install the SCAP data stream files](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_scap-data-stream-files) from NIST  
+
+- Convert and import the SCAP data stream files into a Configuration Manager compliance settings baseline. Use one of the two following methods:   
+
+    - [Manual process](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import) using the import wizard in the Configuration Manager console  
+
+    - [Automated process](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_auto-convert-and-import) with the Microsoft.Sces.ScapToDcm.exe command-line tool  
+
+- [Deploy](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_deploy) the configuration baselines to collections  
+
+- [Monitor](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_monitor) the compliance data  
+
+- Export compliance results to SCAP format using one of the two following methods:  
+
+    - [Manual process](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_export) using the export wizard in the console  
+
+    - [Automated process](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_auto-export) using the Microsoft.Sces.DcmToScap.exe command-line tool  
 
 
 
