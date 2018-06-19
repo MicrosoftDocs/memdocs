@@ -57,11 +57,12 @@ The SCAP data streams published by NIST are organized into multiple bundles, whi
 
 
 
-## <a name="bkmk_convert-and-import"></a> Convert and import the SCAP data stream files 
+## <a name="bkmk_convert-and-import"></a> Manually convert and import the SCAP data stream files 
 
-After getting the SCAP data streams, you're ready to import and convert the data streams to configuration baselines. The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST's instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer. Use the following procedures to accomplish this task.
+After getting the SCAP data streams, you're ready to import and convert the data streams to configuration baselines. The SCAP data streams published by NIST are organized into multiple bundles. Follow NIST's instructions to verify which bundles to use in your environment. For example, there's a separate bundle for each version of Windows, another version-specific bundle for the firewall configuration, and a bundle for Internet Explorer. Use the following procedures to accomplish this task.  
 
-### Import with the console wizard
+> [!Note]  
+> This section describes the manual process to convert and import the data stream files with the Configuration Manager console. To automate this process, see the next section to [Automatically convert and import the SCAP data stream files](#bkmk_auto-convert-and-import).  
 
 1. Click **Import SCAP Content** wizard in the ribbon from the configuration baseline group.
 
@@ -79,6 +80,9 @@ After getting the SCAP data streams, you're ready to import and convert the data
 
       ![Select the benchmark and profile for SCAP 1.2](./media/select-benchmark-and-profile.png)
 
+      > [!Tip]  
+      > This page of the wizard displays the command line you would use with the **ScapToDcm.exe** tool to automate the same process.  
+
 5. Confirm the configuration data to be imported.
 
       ![Confirm the configuration screenshot](./media/confirm-configuration.png)
@@ -87,9 +91,17 @@ After getting the SCAP data streams, you're ready to import and convert the data
 
       ![Complete the import](./media/complete-import.png)
 
+
+
+## <a name="bkmk_auto-convert-and-import"></a> Automatically convert and import the SCAP data stream files 
+
 ### Import with the command-line tool
 
 After getting the SCAP data streams, you can use the **Microsoft.Sces.ScapToDcm.exe** tool to convert the SCAP data streams into compliance settings-compliant .cab files. Then import the .cab files into Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into configuration items and configuration baselines that you can use in Configuration Manager. The Microsoft.Sces.ScapToDcm.exe tool converts the SCAP data streams into XML manifests. It then packages the XML manifests into a .cab file that you can import into Configuration Manager.
+
+> [!Tip]  
+> Step 4 of the manual process in the previous section shows the page of the wizard that displays the command line you would use with the **ScapToDcm.exe** tool to automate the same process.  
+
 
 #### Use Microsoft.Sces.ScapToDcm.exe to convert SCAP data streams into .cab files
 
@@ -234,7 +246,19 @@ At the command prompt, go to **AdminConsole\Bin** folder, and run **Microsoft.Sc
 ```
 
 
+### Import the .cab file
+
+The next step in the process is to use the Configuration Manager console to import the compliance settings-compliant .cab files into Configuration Manager. When you import the .cab files you created earlier in this process, one or more configuration items and configuration baselines are created in the Configuration Manager database. Later in the process you can deploy the configuration baselines to device collections. For more information, see [Import configuration data](/sccm/compliance/deploy-use/import-configuration-data).
+
+The location of the .cab file that you previously created is the folder specified by the `–output` parameter of the Microsoft.Sces.ScapToDcm.exe tool.
+
+> [!IMPORTANT]  
+> Repeat this process for each .cab file that you created earlier in the process. There's a .cab file for each selected profile in the XCCDF/DataStreamXML file that you downloaded from the NVD web site. You can process these files by running the Microsoft.Sces.ScapToDcm.exe tool.  
+
+The imported configuration baseline is read-only, its status is *Enabled*, and its deployed state *No*. The **Date Modified** property shows the time that you imported the baseline. The name of the configuration baseline comes from the display name section of the XCCDF/Datastream XML. The name is constructed using the convention `ABC[XYZ]`, where **ABC** is the XCCDF Benchmark ID, and **XYZ** is the XCCDF Profile ID (if a profile is selected).
+
+
 
 ## Next step
 > [!div class="nextstepaction"]
-> [Import SCAP compliance settings and export compliance results](/sccm/compliance/plan-design/scap/import-scap-compliance-settings)
+> [Deploy and monitor SCAP compliance, and export compliance results](/sccm/compliance/plan-design/scap/deploy-monitor-export)
