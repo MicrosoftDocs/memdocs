@@ -73,7 +73,7 @@ System Center Configuration Manager primary sites can use a database replica to 
 
     -   [Move a site server database that publishes a database replica](#BKMK_DBReplicaOps_Move)  
 
--   **Upgrades to System Center Configuration Manager**: Before you upgrade a site from System Center 2012 Configuration Manager to System Center Configuration Manager, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
+-   **Upgrades to System Center Configuration Manager**: Before you upgrade a site, either from System Center 2012 Configuration Manager to System Center Configuration Manager Current Branch or updating Configuration Manager Current Branch to the latest release, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
 
 -   **Multiple replicas on a single SQL Server:**  If you configure  a database replica server to host multiple database replicas for management points (each replica must be on a separate instance) you must use a modified configuration script (from Step 4 of the following section)  to prevent overwriting the self-signed certificate in use by previously configured database replicas on that server.  
 
