@@ -66,8 +66,14 @@ At least one subsection here about high available site server.
 
 
 
-<!--## Compliance settings-->
+## Compliance settings
 
+### Configure Windows Defender SmartScreen settings for Microsoft Edge
+<!--1353701-->
+The [Microsoft Edge browser compliance settings policy](/sccm/compliance/deploy-use/browser-profiles) adds the following three settings for Windows Defender SmartScreen: 
+- Allow SmartScreen
+- Users can override SmartScreen prompt for sites
+- Users can override SmartScreen prompt for files
 
 
 
