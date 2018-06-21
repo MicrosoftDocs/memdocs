@@ -32,6 +32,21 @@ Issue description and cause.
 Steps to workaround, if any.  
 -->
 
+## Known Issues in this Technical Preview
+
+### <a name="ki_version"></a> Version 1806.2 shows Version 1806 in About Configuration Manager
+<!--518148-->
+After upgrading to technical preview version 1806.2, if you open the **About Configuration Manager** window from the upper left corner of the console, it still shows **Version 1806**. 
+
+#### Workaround
+Use the **Site version** property to determine the difference between 1806 and 1806.2:
+
+| Site version  | Version
+|---------|---------|
+| 5.0.8672.1000 | 1806 |
+| 5.0.8682.1000 | 1806.2 |
+ 
+
 
 </br>
 
