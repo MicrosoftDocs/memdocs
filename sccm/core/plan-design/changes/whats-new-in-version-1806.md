@@ -98,6 +98,12 @@ The [Microsoft Edge browser compliance settings policy](/sccm/compliance/deploy-
 You can now deploy software updates to devices without first downloading and distributing software update content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates. For more information, see the **No deployment package** option when you [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates) or [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
 
+### Filter automatic deployment rules by software update architecture
+ <!--1322266-->
+You can now filter automatic deployment rules (ADR) to exclude architectures like Itanium and ARM64. On the **Software Updates** page of the Create Automatic Deployment Rule Wizard, the **Architecture** property filter is now available. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+
+
+
 
 <!--## Reporting-->
 
