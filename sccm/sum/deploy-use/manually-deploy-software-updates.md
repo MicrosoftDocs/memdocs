@@ -127,7 +127,7 @@ After you determine the updates you want to deploy, and add them to a software u
 
     -   **Schedule evaluation**: Specify the time that Configuration Manager evaluates the available time and installation deadline times. Choose to use Coordinated Universal Time (UTC) or the local time of the computer that runs the Configuration Manager console.  
 
-          - When you select **Client local time** here, and then select **As soon as possible** for the **Software available time**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available. This behavior is the same with the **Installation deadline** and the time when updates are installed on a client. If the client is in a different time zone, these actions occur when the client's time reaches the evaluation time.  
+        - When you select **Client local time** here, and then select **As soon as possible** for the **Software available time**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available. This behavior is the same with the **Installation deadline** and the time when updates are installed on a client. If the client is in a different time zone, these actions occur when the client's time reaches the evaluation time.  
 
     -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
 
@@ -141,8 +141,9 @@ After you determine the updates you want to deploy, and add them to a software u
 
         -   **Specific time**: Select this setting to automatically install the software updates in the deployment at a specific date and time.  
 
-             - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.   
-             - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+            - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.   
+
+            - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
     -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 
@@ -165,7 +166,7 @@ After you determine the updates you want to deploy, and add them to a software u
 
     -   **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the update is installed, applied to the temporary overlay, and committed later.  
 
-           -  When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
+        -  When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
 
     - **Software updates deployment re-evaluation behavior upon restart**: Select this setting to configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This setting enables the client to check for additional updates that become applicable after the client restarts, then installs them during the same maintenance window.  
 
@@ -186,16 +187,12 @@ After you determine the updates you want to deploy, and add them to a software u
 
     - Specify whether to allow clients to download after an installation deadline when they use metered internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you're on a metered connection.  
 
-</br>
-
-> [!Note]  
-> If you performed [Step 3: Download the content for the software update group](#BKMK_3DownloadContent), then the wizard doesn't display the **Deployment Package**, **Distribution Points**, and **Language Selection** pages. Skip to the [Summary](#bkmk_summary) page of the wizard.  
-> 
->  Software updates that have been previously downloaded to the content library on the site server aren't downloaded again. This behavior is true even when you create a new deployment package for the software updates. If all software updates have already been downloaded, the wizard skips to the [Summary](#bkmk_summary) page.  
-
-</br>
-
 9. On the **Deployment Package** page, select one of the following options:  
+
+    > [!Note]  
+    > If you already performed [Step 3: Download the content for the software update group](#BKMK_3DownloadContent), then the wizard doesn't display the **Deployment Package**, **Distribution Points**, and **Language Selection** pages. Skip to the [Summary](#bkmk_summary) page of the wizard.  
+    > 
+    >  Software updates that have been previously downloaded to the content library on the site server aren't downloaded again. This behavior is true even when you create a new deployment package for the software updates. If all software updates have already been downloaded, the wizard skips to the [Summary](#bkmk_summary) page.  
 
     - **Select a deployment package**: Add these updates to an existing deployment package.  
 
@@ -221,6 +218,9 @@ After you determine the updates you want to deploy, and add them to a software u
 
 10. On the **Distribution Points** page, specify the distribution points or distribution point groups to host the software update files. For more information about distribution points, see [Distribution point configurations](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).  
 
+    > [!Note]  
+    > If you already performed [Step 3: Download the content for the software update group](#BKMK_3DownloadContent), then the wizard doesn't display the **Deployment Package**, **Distribution Points**, and **Language Selection** pages. Skip to the [Summary](#bkmk_summary) page of the wizard.  
+
 11. On the **Download Location** page, specify whether to download the software update files from the internet or from your local network. Configure the following settings:  
 
     -   **Download software updates from the internet**: Select this setting to download the software updates from a specified location on the internet. This setting is enabled by default.  
@@ -229,6 +229,8 @@ After you determine the updates you want to deploy, and add them to a software u
 
 12. On the **Language Selection** page, select the languages for which the site downloads the selected software updates. The site only downloads these updates if they're available in the selected languages. Software updates that aren't language-specific are always downloaded. By default, the wizard selects the languages that you've configured in the software update point properties. At least one language must be selected before proceeding to the next page. When you select only languages that a software update doesn't support, the download fails for the update.  
 
+    > [!Note]  
+    > If you already performed [Step 3: Download the content for the software update group](#BKMK_3DownloadContent), then the wizard doesn't display the **Deployment Package**, **Distribution Points**, and **Language Selection** pages. Skip to the [Summary](#bkmk_summary) page of the wizard.  
 
 13. <a name="bkmk_summary"></a> On the **Summary** page, review the settings. To save the settings to a deployment template, click **Save As Template**. Enter a name and select the settings you want to include in the template, then click **Save**. To change a configured setting, click the associated wizard page and change the setting.  
 

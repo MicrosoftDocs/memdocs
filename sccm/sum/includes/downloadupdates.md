@@ -15,12 +15,12 @@
 
 3.  On the **Deployment Package** page of the Download Software Updates Wizard, configure the following settings:  
 
-    1.  **Select deployment package**: Choose this setting to select an existing deployment package for the software updates that are in the deployment.  
+    -  **Select deployment package**: Choose this setting to select an existing deployment package for the software updates that are in the deployment.  
 
         > [!NOTE]  
         >  Software updates that the site has already downloaded to the selected deployment package won't be downloaded again.  
 
-    2.  **Create a new deployment package**: Select this setting to create a new deployment package for the software updates in the deployment. Configure the following settings:  
+    -  **Create a new deployment package**: Select this setting to create a new deployment package for the software updates in the deployment. Configure the following settings:  
 
         -   **Name**: Specifies the name of the deployment package. The package must have a unique name that briefly describes the package content. It's limited to 50 characters.  
 
@@ -52,7 +52,7 @@
 
         -   **Manually copy the content in this package to the distribution point**: Use this setting to always prestage content on the distribution point. This option is the default.  
 
-         For more information about prestaging content to distribution points, see [Use Prestaged content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
+        For more information about prestaging content to distribution points, see [Use Prestaged content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
 
 
 6.  On the **Download Location** page, specify the location that Configuration Manager uses to download the software update source files. Use one of the following options:  
