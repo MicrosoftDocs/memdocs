@@ -104,7 +104,7 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1806.2
-- [Feature Name](capabilities-in-technical-preview-1806-2.md#feature-name) <!--tfs-->
+- [Support for new Windows app package formats](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
 
 
 
