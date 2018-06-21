@@ -100,6 +100,23 @@ When you upgrade the site, the existing behavior persists. Once you *open* the c
 
 
 
+## <a name="bkmk_insights"></a> Management insights for proactive maintenance
+<!--1352184,et al-->
+Additional management insights are available in this release to highlight potential configuration issues. Review the following rules in the new **Proactive Maintenance** group:  
+
+- **Unused configuration items**: Configuration items that aren't part of a configuration baseline and are older than 30 days.  
+
+- **Unused boot images**: Boot images not referenced for PXE boot or task sequence use.  
+
+- **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment.  
+
+- **Boundary groups with no members**: Boundary groups aren’t applicable for site assignment or content lookup if they don’t have any members.  
+
+- **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days based on the client download history reporting.  
+
+- **Expired updates found**: Expired updates aren't applicable for deployment.   
+
+
 
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
