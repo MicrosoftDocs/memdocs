@@ -43,8 +43,8 @@ Use the **Site version** property to determine the difference between 1806 and 1
 
 | Site version  | Version
 |---------|---------|
-| 5.0.8672.1000 | 1806 |
-| 5.0.8682.1000 | 1806.2 |
+| 5.0.**8672**.1000 | 1806 |
+| 5.0.**8684**.1000 | 1806.2 |
  
 
 
@@ -53,7 +53,7 @@ Use the **Site version** property to determine the difference between 1806 and 1
 **The following are new features you can try out with this version.**  
 
 
-## <a name="bkmk_msix"><a> Support for new Windows app package formats
+## <a name="bkmk_msix"></a> Support for new Windows app package formats
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. The latest [Windows Insider Preview](https://insider.windows.com/) builds currently support these new formats.
 
