@@ -60,7 +60,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **Use Wake on LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-    -   **Detail level**: Specify the level of detail for the state messages that are reported by client computers.  
+    -   **Detail level**: Specify the level of detail for the state messages that are reported by clients.  
 
         > [!IMPORTANT]  
         >  When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
@@ -102,13 +102,13 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **Schedule evaluation**: Specify the time that Configuration Manager evaluates the available time and installation deadline times. Choose to use Coordinated Universal Time (UTC) or the local time of the computer that runs the Configuration Manager console.  
 
-          - When you select local time here, and then select **As soon as possible** for the **Software available time**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available. This behavior is the same with the **Installation deadline** and the time when updates are installed on a client. If the client is in a different time zone, these actions occur when the client's time reaches the evaluation time.  
+          - When you select **Client local time** here, and then select **As soon as possible** for the **Software available time**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available. This behavior is the same with the **Installation deadline** and the time when updates are installed on a client. If the client is in a different time zone, these actions occur when the client's time reaches the evaluation time.  
 
     -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
 
-        -   **As soon as possible**: Makes the software updates in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment and can download the available updates for installation.  
+        -   **As soon as possible**: Makes the software updates in the deployment available to clients as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment and the software updates are available for installation.  
 
-        -   **Specific time**: Makes software updates included in the deployment available to client computers at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
+        -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
 
     -   **Installation deadline**: Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
@@ -116,13 +116,21 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         -   **Specific time**: Select this setting to automatically install the software updates in the deployment at a specific date and time. Configuration Manager determines the deadline to install software updates by adding the configured **Specific time** interval to the **Software available time**.  
 
-             - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of client computers in the collection installing updates in the deployment at the same time.  
+             - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.  
 
              - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
+    -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
+
+        - This behavior is typically required when a computer is turned off for long time, and needs to install many software updates or applications. For example, when a user returns from vacation, they have to wait for a long time as the client installs overdue deployments.  
+
+        - Configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) section. The enforcement grace period applies to all deployments with this option enabled and targeted to devices to which you also deployed the client setting.  
+
+        - After the deadline, the client installs the software updates in the first non-business window, which the user configured, up to this grace period. However, the user can still open Software Center and install the software updates at any time. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.  
+
 8. On the **User Experience** page, configure the following settings:  
 
-    -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the client computers.  
+    -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the clients.  
 
     -   **Deadline behavior**: Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
@@ -145,31 +153,38 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     - Specify if clients should download and install the updates from a distribution point in the site default boundary group, when the content for the software updates isn't available from a distribution point in the current or neighbor boundary groups.  
 
-    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see [Concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Starting in version 1802, BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
+    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Starting in version 1802, BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
 
-    - **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates**: Select this setting to have intranet connected clients download software updates from Microsoft Update if updates aren't available on distribution points. Internet-based clients always go to Microsoft Update for software updates content.  
+    - **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**: Select this setting to have intranet-connected clients download software updates from Microsoft Update if updates aren't available on distribution points. Internet-based clients always go to Microsoft Update for software updates content.  
 
     - Specify whether to allow clients to download after an installation deadline when they use metered internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you're on a metered connection.  
 
     > [!NOTE]  
-    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you've configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](/sccm/core/plan-design/hierarchy/content-source-location-scenarios).  
+    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you've configured the distribution point, deployment package, and the settings on this page.   
 
-11. On the **Deployment Package** page, select an existing deployment package or configure the following settings to create a new deployment package:  
+11. On the **Deployment Package** page, select one of the following options:  
 
-    1.  **Name**: Specify the name of the deployment package. Use a unique name that describes the package content. It's limited to 50 characters.  
+    - **Select a deployment package**: Add these updates to an existing deployment package.  
 
-    2.  **Description**: Specify a description that provides information about the deployment package. The optional description is limited to 127 characters.  
+    - **Create a new deployment package**: Add these updates to a new deployment package. Configure the following additional settings:  
 
-    3.  **Package source**: Specifies the location of the software update source files. Type a network path for the source location, for example, `\\server\sharename\path`, or click **Browse** to find the network location. Create the shared folder for the deployment package source files before you proceed to the next page.  
+        -  **Name**: Specify the name of the deployment package. Use a unique name that describes the package content. It's limited to 50 characters.  
 
-        - You can't use the specified location as the source of another software deployment package.  
+        -  **Description**: Specify a description that provides information about the deployment package. The optional description is limited to 127 characters.  
 
-        - You can change the package source location in the deployment package properties after Configuration Manager creates the deployment package. If you do, first copy the content from the original package source to the new package source location.  
+        -  **Package source**: Specifies the location of the software update source files. Type a network path for the source location, for example, `\\server\sharename\path`, or click **Browse** to find the network location. Create the shared folder for the deployment package source files before you proceed to the next page.  
 
-        -  The computer account of the SMS Provider and the user that's running the wizard to download the software updates must both have **Write** permissions to the download location. Restrict access to the download location. This restriction reduces the risk of attackers tampering with the software update source files.  
-       
+            - You can't use the specified location as the source of another software deployment package.  
 
-    4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses this priority when it sends the package to distribution points. Deployment packages are sent in priority order: high, medium, or low. Packages with identical priorities are sent in the order in which they were created. If there's no backlog, the package processes immediately regardless of its priority.  
+            - You can change the package source location in the deployment package properties after Configuration Manager creates the deployment package. If you do, first copy the content from the original package source to the new package source location.  
+
+            -  The computer account of the SMS Provider and the user that's running the wizard to download the software updates must both have **Write** permissions to the download location. Restrict access to the download location. This restriction reduces the risk of attackers tampering with the software update source files.  
+
+        -  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses this priority when it sends the package to distribution points. Deployment packages are sent in priority order: high, medium, or low. Packages with identical priorities are sent in the order in which they were created. If there's no backlog, the package processes immediately regardless of its priority.  
+
+        - **Enable binary differential replication**: Enable this setting to minimize network traffic between sites. Binary differential replication (BDR) only updates the content that has changed in the package, instead of updating the entire package contents. For more information, see [Binary differential replication](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication).  
+
+    - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates.<!--1357933-->  
 
 12. On the **Distribution Points** page, specify the distribution points or distribution point groups to host the software update files. For more information about distribution points, see [Distribution point configurations](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). This page is available only when you create a new software update deployment package.  
   
@@ -183,6 +198,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 14. On the **Language Selection** page, select the languages for which the site downloads the selected software updates. The site only downloads these updates if they're available in the selected languages. Software updates that aren't language-specific are always downloaded. By default, the wizard selects the languages that you've configured in the software update point properties. At least one language must be selected before proceeding to the next page. When you select only languages that a software update doesn't support, the download fails for the update.  
 
 15. On the **Summary** page, review the settings. To save the settings to a deployment template, click **Save As Template**. Enter a name and select the settings you want to include in the template, then click **Save**. To change a configured setting, click the associated wizard page and change the setting.  
+
     -  The template name can consist of alphanumeric ASCII characters as well as `\` (backslash) or `'` (single quotation mark).  
 
 16. Click **Next** to create the ADR.  
