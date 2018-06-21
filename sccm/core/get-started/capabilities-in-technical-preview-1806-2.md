@@ -31,22 +31,6 @@ Issue description and cause.
 #### Workaround
 Steps to workaround, if any.  
 -->
-## Known Issues in this Technical Preview
-
-### <a name="ki_contentlib"></a> Site fails to upgrade with remote content library
-<!--514642-->
-The site fails to upgrade with the following errors in **cmupdate.log**:  
-```  
-Failed to find any valid drives  
-GetContentLibraryParameters failed; 0x80070057  
-ERROR: Failed to process configuration manager update.  
-```  
-
-This issue occurs in this release when the content library is in a remote location.
-
-#### Workaround
-Move the content library to a drive local to the site server. For more information, see [Configure a remote content library for the site server](/sccm/core/get-started/capabilities-in-technical-preview-1804#configure-a-remote-content-library-for-the-site-server). 
-
 
 
 </br>
@@ -54,8 +38,24 @@ Move the content library to a drive local to the site server. For more informati
 **The following are new features you can try out with this version.**  
 
 
-## Feature Name
-Feature description
+## Support for new Windows app package formats
+<!--1357427-->
+Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. The latest [Windows Insider Preview](https://insider.windows.com/) builds currently support these new formats.
+
+For an overview of MSIX, see [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).
+
+For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
+
+### Prerequisites
+- A Windows 10 client running at least Windows Insider Preview build 17682
+- A Windows app package in the MSIX format
+
+### Try it out!
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, [create an application](/sccm/apps/deploy-use/create-applications). 
+2. Select the application installation file **Type** as **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**.
+3. [Deploy the application](/sccm/apps/deploy-use/deploy-applications) to the client running the latest Windows Insider Preview build.
 
 
 
