@@ -118,5 +118,17 @@ Additional management insights are available in this release to highlight potent
 
 
 
+## <a name="bkmk_comgmt"></a> Transition mobile apps workload for co-managed devices
+<!--1357892-->
+Manage mobile apps with Microsoft Intune while continuing to use Configuration Manager to deploy Windows desktop applications. To transition the modern apps workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. 
+
+For more information, see the following articles:  
+
+- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)  
+
+- [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management)  
+
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
