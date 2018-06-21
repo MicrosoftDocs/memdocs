@@ -44,7 +44,7 @@ Use the **Site version** property to determine the difference between 1806 and 1
 | Site version  | Version
 |---------|---------|
 | 5.0.**8672**.1000 | 1806 |
-| 5.0.**8684**.1000 | 1806.2 |
+| 5.0.**8685**.1000 | 1806.2 |
  
 
 
@@ -71,6 +71,33 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 1. In the Configuration Manager console, [create an application](/sccm/apps/deploy-use/create-applications). 
 2. Select the application installation file **Type** as **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**.
 3. [Deploy the application](/sccm/apps/deploy-use/deploy-applications) to the client running the latest Windows Insider Preview build.
+
+
+
+## <a name="bkmk_client-push"></a> Improvement to client push security
+<!--1358204-->
+When using the [client push](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation) method of installing the Configuration Manager client, the site server creates a remote connection to the client to start the install. Starting in this release, the site can require Kerberos mutual authentication before establishing the connection. This enhancement helps to secure the communication between the server and the client. 
+
+Depending on your security policies, your environment may already prefer or require Kerberos over older NTLM authentication. For more information on the security considerations of these authentication protocols, see the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+
+
+### Prerequisite
+
+To use this feature, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication. 
+
+
+### Try it out!
+
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+When you upgrade the site, the existing behavior persists. Once you *open* the client push installation properties, the site automatically enables the Kerberos check. You then have the option to allow the connection to fallback to use a less secure NTLM connection, which isn't recommended. 
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select the target site. In the ribbon, click **Client Installation Settings** and select **Client Push Installation**.  
+
+2. The site has now enabled the Kerberos check for client push. Click **OK** to close the window.  
+
+3. If necessary for your environment, in the Client Push Installation Properties window, on the **General** tab, see the option to **Allow connection fallback to NTLM**. This option is disabled by default. 
+
 
 
 
