@@ -104,11 +104,13 @@ The following are the capabilities delivered with the most recent Configuration 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1806.2
+- [Improvements to phased deployments](capabilities-in-technical-preview-1806-2.md#bkmk_pod) <!--1358577,1358147,1358578-->
 - [Support for new Windows app package formats](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
 - [Improvement to client push security](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
 - [Management insights for proactive maintenance](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
 - [Transition mobile apps workload for co-managed devices](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
 - [Boundary group options](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
+- [Third-party software updates support for custom catalogs](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
 
 
 
