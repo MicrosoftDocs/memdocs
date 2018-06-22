@@ -110,6 +110,7 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Management insights for proactive maintenance](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
 - [Transition mobile apps workload for co-managed devices](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
 - [Boundary group options](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
+- [Third-party software updates support for custom catalogs](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
 
 
 

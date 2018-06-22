@@ -204,5 +204,49 @@ Boundary groups now include additional settings to give you more control over co
 
 
 
+## <a name="bkmk_3pupdate"></a> Third-party software updates support for custom catalogs
+<!--1358714-->
+This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). [Technical preview version 1806](/sccm/core/get-started/capabilities-in-technical-preview-1806#bkmk-3pupdate) provided support for *partner catalogs*, which are registered catalogs from software vendors. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. Add custom catalogs in the Configuration Manager console.  
+
+
+### Prerequisites 
+
+- Set up [third-party software updates](/sccm/core/get-started/capabilities-in-technical-preview-1806#bkmk-3pupdate). Complete Phase 1: Enable and set up the feature.   
+
+- A digitally signed custom catalog that contains digitally signed software updates.  
+
+- The administrator requires the following permissions:  
+
+    - Site: Create, Modify  
+
+
+### Try it out!
+
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Software Updates**, and select the **Third-Party Software Update Catalogs** node. Click **Add Custom Catalog** in the ribbon.  
+
+2. On the **General** page, specify the following details:  
+
+    - **Download URL**: A valid HTTPS address of the custom catalog.  
+
+    - **Publisher**: The name of the organization that publishes the catalog.  
+
+    - **Name**: The name of the catalog to display in the Configuration Manager console.  
+
+    - **Description**: A description of the catalog.  
+
+    - **Support URL** (Optional): A valid HTTPS address of a website to get help with the catalog.  
+
+    - **Support Contact** (Optional): Contact information to get help with the catalog.  
+
+3. Complete the wizard. The wizard adds the new catalog in an unsubscribed state.  
+
+4. Subscribe to the custom catalog using the existing **Subscribe to Catalog** action. For more information, see [Phase 2: Subscribe to a third-party catalog and sync updates](/sccm/core/get-started/capabilities-in-technical-preview-1806#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
+
+#### Delete custom catalogs
+Delete custom catalogs from the same node of the console. Select a custom catalog in an *unsubscribed* state, and click **Delete Custom Catalog**. If you already subscribed to the catalog, first unsubscribe before you delete it. You can't delete partner catalogs. Deleting a custom catalog removes it from the list of catalogs. This action doesn't affect any software updates you've published to your software update point.
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
