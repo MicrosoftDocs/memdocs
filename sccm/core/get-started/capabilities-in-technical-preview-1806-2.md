@@ -103,9 +103,9 @@ You can't manually create phases for an application. The wizard automatically cr
 
 ### <a name="bkmk_pod-throttle"></a> Gradual rollout during phased deployments
 <!--1358578-->
-During a phased deployment, the rollout in each phase now happens gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site gradually makes the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase.
+During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase.
 
-When you create a phased deployment and manually configure a phase, on the **Phase Settings** page of the Add Phase Wizard, configure the option: **Gradually make this software available over this period of time (in days)**.
+When you create a phased deployment and manually configure a phase, on the **Phase Settings** page of the Add Phase Wizard, or on the **Settings** page of the Create Phased Deployment wizard, configure the option: **Gradually make this software available over this period of time (in days)**. The default value of this setting is **0**, so by default the deployment isn't throttled.
 
 
 
@@ -132,7 +132,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 ## <a name="bkmk_client-push"></a> Improvement to client push security
 <!--1358204-->
-When using the [client push](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation) method of installing the Configuration Manager client, the site server creates a remote connection to the client to start the install. Starting in this release, the site can require Kerberos mutual authentication before establishing the connection. This enhancement helps to secure the communication between the server and the client. 
+When using the [client push](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation) method of installing the Configuration Manager client, the site server creates a remote connection to the client to start the install. Starting in this release, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client. 
 
 Depending on your security policies, your environment may already prefer or require Kerberos over older NTLM authentication. For more information on the security considerations of these authentication protocols, see the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
@@ -192,7 +192,7 @@ For more information, see the following articles:
 <!--1356193-->
 Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
 
-- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
+- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. <!--This setting also affects applying Group IDs for Delivery Optimization.518268-->  
 
     There are two common scenarios in which you should consider disabling this option:  
 
@@ -246,6 +246,23 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 #### Delete custom catalogs
 Delete custom catalogs from the same node of the console. Select a custom catalog in an *unsubscribed* state, and click **Delete Custom Catalog**. If you already subscribed to the catalog, first unsubscribe before you delete it. You can't delete partner catalogs. Deleting a custom catalog removes it from the list of catalogs. This action doesn't affect any software updates you've published to your software update point.
+
+
+
+## <a name="bkmk_cloud"></a> Improvements to cloud management features
+
+This release includes the following improvements:  
+
+- The following features now support use of the Azure U.S. Government Cloud:<!--511980-->  
+
+    - Onboarding the site for **Cloud Management** through [Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard)  
+
+    - Deploying a [cloud management gateway with Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)  
+
+    - Deploying a [cloud distribution point with Azure Resource Manager](/sccm/core/get-started/capabilities-in-technical-preview-1805#cloud-distribution-point-support-for-azure-resource-manager)  
+
+- If you're using Windows AutoPilot to provision Windows 10 on an Azure Active Directory-joined device that's connected to your on-premises network, you don't need a cloud distribution point in order to install the Configuration Manager client. Enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, which allows the cloud domain-joined client to communicate with an on-premises HTTP-enabled distribution point. For more information, see [Improved secure client communications](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+
 
 
 ## Next steps
