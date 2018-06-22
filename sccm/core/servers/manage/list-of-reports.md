@@ -45,7 +45,7 @@ The following two reports are listed under the **Alerts** category.
 
 
 ## Asset Intelligence  
-The following sixty two reports are listed under the **Asset Intelligence** category.  
+The following 62 reports are listed under the **Asset Intelligence** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -153,7 +153,7 @@ The following three reports are listed under the **Company Resource Access** cat
 
 
 ## Compliance and Settings Management  
-The following twenty two reports are listed under the **Compliance and Settings Management** category. 
+The following 22 reports are listed under the **Compliance and Settings Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -183,7 +183,7 @@ The following twenty two reports are listed under the **Compliance and Settings 
 
 
 ## Device Management  
-The following thirty sever reports are listed under the **Device Management** category. 
+The following 37 reports are listed under the **Device Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -228,7 +228,7 @@ The following thirty sever reports are listed under the **Device Management** ca
 
 
 ## Driver Management  
-The following thirteen reports are listed under the **Driver Management** category. 
+The following 13 reports are listed under the **Driver Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -422,7 +422,7 @@ The following six reports are listed under the **Network** category.
 
 ## Operating System  
 
-The following ten reports are listed under the **Operating System** category.
+The following 10 reports are listed under the **Operating System** category.
 
 
 |Report name|Description|  
@@ -442,7 +442,7 @@ The following ten reports are listed under the **Operating System** category.
 
 ## Power Management  
 
-The following eighteen reports are listed under the **Power Management** category.
+The following 18 reports are listed under the **Power Management** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -468,7 +468,7 @@ The following eighteen reports are listed under the **Power Management** categor
 
 
 ## Replication Traffic  
-The following ten reports are listed under the **Replication Traffic** category.
+The following 10 reports are listed under the **Replication Traffic** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -486,7 +486,7 @@ The following ten reports are listed under the **Replication Traffic** category.
 
 
 ## Site - Client Information  
-The following nineteen reports are listed under the **Site - Client Information** category.
+The following 19 reports are listed under the **Site - Client Information** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -513,7 +513,7 @@ The following nineteen reports are listed under the **Site - Client Information*
 
 
 ## Site - Discovery and Inventory Information  
-The following ten reports are listed under the **Site - Discovery and Inventory Information** category.
+The following 10 reports are listed under the **Site - Discovery and Inventory Information** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -551,7 +551,7 @@ The following one report is listed under the **Site - Server Information** categ
 
 
 ## Software - Companies and Products  
-The following fifteen reports are listed under the **Software - Companies and Products** category.
+The following 15 reports are listed under the **Software - Companies and Products** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -587,7 +587,7 @@ The following five reports are listed under the **Software - Files** category.
 
 
 ## Software Distribution - Application Monitoring  
-The following ten reports are listed under the **Software Distribution - Application Monitoring** category.
+The following 10 reports are listed under the **Software Distribution - Application Monitoring** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -616,7 +616,7 @@ The following three reports are listed under the **Software Distribution - Colle
 
 
 ## Software Distribution - Content  
-The following sixteen reports are listed under the **Software Distribution - Content** category.
+The following 16 reports are listed under the **Software Distribution - Content** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -666,7 +666,7 @@ The following five reports are listed under the **Software Distribution - Packag
 
 
 ## Software Metering  
-The following thirteen reports are listed under the **Software Metering** category.
+The following 13 reports are listed under the **Software Metering** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -769,7 +769,7 @@ The following three reports are listed under the **State Migration** category.
 
 
 ## Status Messages  
-The following twelve reports are listed under the **Status Messages** category.
+The following 12 reports are listed under the **Status Messages** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -801,7 +801,7 @@ The following three reports are listed under the **Status Messages - Audit** cat
 
 
 ## Task Sequence - Deployment Status  
-The following eleven reports are listed under the **Task Sequence - Deployment Status** category.
+The following 11 reports are listed under the **Task Sequence - Deployment Status** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -820,7 +820,7 @@ The following eleven reports are listed under the **Task Sequence - Deployment S
 
 
 ## Task Sequence - Deployments  
-The following eleven reports are listed under the **Task Sequence - Deployments** category.
+The following 11 reports are listed under the **Task Sequence - Deployments** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -862,7 +862,7 @@ The following one report is listed under the **Task Sequences - References** cat
 
 <!--
 ## Upgrade Assessment  
-The following eleven reports are listed under the **Upgrade Assessment** category.
+The following 11 reports are listed under the **Upgrade Assessment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
