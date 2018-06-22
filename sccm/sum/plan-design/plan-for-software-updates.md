@@ -277,10 +277,10 @@ When you use WSUS on Windows Server 2012 or later, configure additional permissi
 -   Add the **SYSTEM** account to the **WSUS Administrators** group  
 
 -   Add the **NT AUTHORITY\SYSTEM** account as a user for the WSUS database (SUSDB). Configure a minimum of the webService database role membership.  
-
+  
 For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
-When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. If you share the same database, it significantly mitigates, but doesn't completely eliminate, the client and the network performance impact that you might experience when clients switch to a new software update point. A delta scan still occurs when a client switches to a new software update point that shares a database with the old software update point, but the scan is much smaller than it would be if the WSUS server has its own database.  
+When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](/sccm/sum/plan-design/software-updates-best-practices#bkmk_shared-susdb).  
 
 
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
