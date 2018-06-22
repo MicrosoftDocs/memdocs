@@ -90,7 +90,7 @@ To use this feature, clients must be in a trusted Active Directory forest. Kerbe
 
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
-When you upgrade the site, the existing behavior persists. Once you *open* the client push installation properties, the site automatically enables the Kerberos check. You then have the option to allow the connection to fallback to use a less secure NTLM connection, which isn't recommended. 
+When you upgrade the site, the existing behavior persists. Once you *open* the client push installation properties, the site automatically enables the Kerberos check. If necessary, you can allow the connection to fallback to use a less secure NTLM connection, which isn't recommended. 
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select the target site. In the ribbon, click **Client Installation Settings** and select **Client Push Installation**.  
 
@@ -112,7 +112,7 @@ Additional management insights are available in this release to highlight potent
 
 - **Boundary groups with no members**: Boundary groups aren’t applicable for site assignment or content lookup if they don’t have any members.  
 
-- **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days based on the client download history reporting.  
+- **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days. This data is based on reports from clients of their download history.  
 
 - **Expired updates found**: Expired updates aren't applicable for deployment.   
 
@@ -120,7 +120,9 @@ Additional management insights are available in this release to highlight potent
 
 ## <a name="bkmk_comgmt"></a> Transition mobile apps workload for co-managed devices
 <!--1357892-->
-Manage mobile apps with Microsoft Intune while continuing to use Configuration Manager to deploy Windows desktop applications. To transition the modern apps workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. 
+Manage mobile apps with Microsoft Intune while continuing to use Configuration Manager to deploy Windows desktop applications. To transition the modern apps workload, go to the co-management properties page. Move the slider bar from Configuration Manager to Pilot or All. 
+
+After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. 
 
 For more information, see the following articles:  
 
@@ -138,7 +140,7 @@ Boundary groups now include additional settings to give you more control over co
 
     There are two common scenarios in which you should consider disabling this option:  
 
-    - If you have a boundary group that includes all remote networks such as a VPNs. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
+    - If you have a boundary group that includes all remote networks such as a VPN. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
 
     - If you use a single, large boundary group for site assignment that doesn't include any site system servers.  
 
