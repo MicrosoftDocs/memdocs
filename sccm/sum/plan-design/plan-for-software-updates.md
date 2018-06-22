@@ -49,10 +49,6 @@ The number of supported clients depends on the version of Windows Server Update 
     For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).  
 
 
-> [!Note]  
-> Configuration Manager doesn't support configuring software update points with Windows Server network load balancer (NLB) clusters. Prior to version 1702, you could use the Configuration Manager SDK to configure up to four software update points on an NLB cluster. However, starting in version 1702, software update points aren't supported as NLB clusters.  
-
-
 ### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 
 Use the following capacity information to plan for software updates objects:  
@@ -86,7 +82,7 @@ The central administration site and all child primary sites must have a software
 > [!IMPORTANT]  
 >  For more information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates](prerequisites-for-software-updates.md).  
 
-Add multiple software update points at a Configuration Manager primary site. The ability to have multiple software update points at a site provides fault tolerance without requiring the complexity of network load balancing (NLB). The failover design of the software update point is different than the pure randomization model that's used in the design for management points. Unlike in the design of management points, there are client and network performance costs in the software update point design when clients switch to a new software update point. When the client switches to a new WSUS server to scan for software updates, the result is an increase in the catalog size and associated client-side and network performance demands. Therefore, the client preserves affinity with the last software update point from which it successfully scanned.  
+Add multiple software update points at a Configuration Manager primary site to provide fault tolerance. The failover design of the software update point is different than the pure randomization model that's used in the design for management points. Unlike in the design of management points, there are client and network performance costs in the software update point design when clients switch to a new software update point. When the client switches to a new WSUS server to scan for software updates, the result is an increase in the catalog size and associated client-side and network performance demands. Therefore, the client preserves affinity with the last software update point from which it successfully scanned.  
 
 The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you add software update points and start synchronization, view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
 
@@ -175,11 +171,6 @@ For example, you have a primary site in forest A with two software update points
 ###  <a name="BKMK_WSUSSyncSource"></a> Use an existing WSUS server as the synchronization source at the top-level site  
 
 Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your organizational security policy doesn't allow the top-level site to access to the internet, configure the synchronization source for the top-level site to use an existing WSUS server. This WSUS server isn't in your Configuration Manager hierarchy. For example, you have a WSUS server in an internet-connected network (DMZ), but your top-level site is in an internal network without internet access. Configure the WSUS server in the DMZ as your synchronization source for software updates metadata. Configure the WSUS server in the DMZ to synchronize software updates with the same criteria that you need in Configuration Manager. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS server connection account. This account needs access to the WSUS server in the DMZ. Also confirm that the firewall permits traffic for the appropriate ports. For more information, see the [ports used by the software update point to the synchronization source](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsSUP-WSUS).  
-
-
-###  <a name="BKMK_NLBSUPSP1"></a> Software update point configured to use an NLB  
-<!--NLBremove?-->
-Software update point switching likely addresses the fault tolerance needs that you have. By default, Configuration Manager does not support configuring software update points as NLB clusters. Prior to Configuration Manager version 1702, you could use the Configuration Manager SDK to configure up to four software update points on an NLB cluster. However, starting in Configuration Manager version 1702, software update points are not supported as NLB clusters and upgrades to Configuration Manager version 1702 will be blocked if this configuration is detected. For more information about the Set-CMSoftwareUpdatePoint PowerShell cmdlet, see the [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
 
 
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
@@ -277,10 +268,10 @@ When you use WSUS on Windows Server 2012 or later, configure additional permissi
 -   Add the **SYSTEM** account to the **WSUS Administrators** group  
 
 -   Add the **NT AUTHORITY\SYSTEM** account as a user for the WSUS database (SUSDB). Configure a minimum of the webService database role membership.  
-
+  
 For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
-When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. If you share the same database, it significantly mitigates, but doesn't completely eliminate, the client and the network performance impact that you might experience when clients switch to a new software update point. A delta scan still occurs when a client switches to a new software update point that shares a database with the old software update point, but the scan is much smaller than it would be if the WSUS server has its own database.  
+When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](/sccm/sum/plan-design/software-updates-best-practices#bkmk_shared-susdb).  
 
 
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
