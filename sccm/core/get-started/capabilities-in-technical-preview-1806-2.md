@@ -53,6 +53,62 @@ Use the **Site version** property to determine the difference between 1806 and 1
 **The following are new features you can try out with this version.**  
 
 
+## <a name="bkmk_pod"></a> Improvements to phased deployments
+
+This release includes the following improvements to [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence):
+- [Phased deployment status](#bkmk_pod-monitor)
+- [Phased deployment of applications](#bkmk_pod-app)
+- [Gradual rollout during phased deployments](#bkmk_pod-throttle)
+
+
+### <a name="bkmk_pod-monitor"></a> Phased deployment status
+<!--1358577-->
+Phased deployments now have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **View Status** in the ribbon.
+
+![Phased deployment status dashboard showing status of two phases](media/1358577-phased-deployment-status.png)
+
+This dashboard shows the following information for each phase in the deployment:  
+
+- **Total devices**: How many devices are targeted by this phase.  
+
+- **Status**: The current status of this phase. Each phase can be in one of the following states:  
+
+    - **Deployment created**: The phased deployment created a deployment of the software to the collection for this phase. Clients are actively targeted with this software.  
+
+    - **Waiting**: The previous phase hasn't yet reached the success criteria for the deployment to continue to this phase.  
+
+    - **Begins in # days**: The previous phase met its success criteria, and this phase deploys in the specified number of days. This period corresponds to the phase setting: **Automatically begin this phase after a deferral period (in days)**.  
+
+    - **Ready to begin**: The previous phase met its success criteria, and this phase is ready for an administrator to start the deployment. This period corresponds to the phase setting: **Manually begin the next phase of deployment**.  
+
+    - **Suspended**: An administrator suspended the deployment.  
+
+- **Progress**: The color-coded deployment states from clients. For example: Success, In Progress, Error, Requirements Not Met, and Unknown. 
+
+
+### <a name="bkmk_pod-app"></a> Phased deployment of applications
+<!--1358147-->
+Create phased deployments for applications. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
+
+In the Configuration Manager console, go to the **Software Library**, expand **Application Management**, and select **Applications**. Select an application, and then click **Create Phased Deployment** in the ribbon. 
+
+The behavior of an application phased deployment is the same as for task sequences. For more information, see [Create phased deployments for a task sequence](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
+
+#### Prerequisite
+Distribute the content for the application to a distribution point before creating the phased deployment.<!--518293-->
+
+#### Known issue
+You can't manually create phases for an application. The wizard automatically creates two phases for application deployments.
+
+
+### <a name="bkmk_pod-throttle"></a> Gradual rollout during phased deployments
+<!--1358578-->
+During a phased deployment, the rollout in each phase now happens gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site gradually makes the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase.
+
+When you create a phased deployment and manually configure a phase, on the **Phase Settings** page of the Add Phase Wizard, configure the option: **Gradually make this software available over this period of time (in days)**.
+
+
+
 ## <a name="bkmk_msix"></a> Support for new Windows app package formats
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. The latest [Windows Insider Preview](https://insider.windows.com/) builds currently support these new formats.
