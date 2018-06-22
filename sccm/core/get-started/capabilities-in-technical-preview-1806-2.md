@@ -130,5 +130,21 @@ For more information, see the following articles:
 
 
 
+## <a name="bkmk_bgoptions"></a> Boundary group options
+<!--1356193-->
+Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
+
+- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
+
+    There are two common scenarios in which you should consider disabling this option:  
+
+    - If you have a boundary group that includes all remote networks such as a VPNs. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
+
+    - If you use a single, large boundary group for site assignment that doesn't include any site system servers.  
+
+- **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
+
+
+
 ## Next steps
 For information about installing or updating the technical preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).    
