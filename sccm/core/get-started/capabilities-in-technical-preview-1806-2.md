@@ -44,7 +44,7 @@ Use the **Site version** property to determine the difference between 1806 and 1
 | Site version  | Version
 |---------|---------|
 | 5.0.**8672**.1000 | 1806 |
-| 5.0.**8684**.1000 | 1806.2 |
+| 5.0.**8685**.1000 | 1806.2 |
  
 
 
@@ -71,6 +71,80 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 1. In the Configuration Manager console, [create an application](/sccm/apps/deploy-use/create-applications). 
 2. Select the application installation file **Type** as **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**.
 3. [Deploy the application](/sccm/apps/deploy-use/deploy-applications) to the client running the latest Windows Insider Preview build.
+
+
+
+## <a name="bkmk_client-push"></a> Improvement to client push security
+<!--1358204-->
+When using the [client push](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation) method of installing the Configuration Manager client, the site server creates a remote connection to the client to start the install. Starting in this release, the site can require Kerberos mutual authentication before establishing the connection. This enhancement helps to secure the communication between the server and the client. 
+
+Depending on your security policies, your environment may already prefer or require Kerberos over older NTLM authentication. For more information on the security considerations of these authentication protocols, see the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+
+
+### Prerequisite
+
+To use this feature, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication. 
+
+
+### Try it out!
+
+Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
+
+When you upgrade the site, the existing behavior persists. Once you *open* the client push installation properties, the site automatically enables the Kerberos check. If necessary, you can allow the connection to fallback to use a less secure NTLM connection, which isn't recommended. 
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select the target site. In the ribbon, click **Client Installation Settings** and select **Client Push Installation**.  
+
+2. The site has now enabled the Kerberos check for client push. Click **OK** to close the window.  
+
+3. If necessary for your environment, in the Client Push Installation Properties window, on the **General** tab, see the option to **Allow connection fallback to NTLM**. This option is disabled by default. 
+
+
+
+## <a name="bkmk_insights"></a> Management insights for proactive maintenance
+<!--1352184,et al-->
+Additional management insights are available in this release to highlight potential configuration issues. Review the following rules in the new **Proactive Maintenance** group:  
+
+- **Unused configuration items**: Configuration items that aren't part of a configuration baseline and are older than 30 days.  
+
+- **Unused boot images**: Boot images not referenced for PXE boot or task sequence use.  
+
+- **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment.  
+
+- **Boundary groups with no members**: Boundary groups aren’t applicable for site assignment or content lookup if they don’t have any members.  
+
+- **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days. This data is based on reports from clients of their download history.  
+
+- **Expired updates found**: Expired updates aren't applicable for deployment.   
+
+
+
+## <a name="bkmk_comgmt"></a> Transition mobile apps workload for co-managed devices
+<!--1357892-->
+Manage mobile apps with Microsoft Intune while continuing to use Configuration Manager to deploy Windows desktop applications. To transition the modern apps workload, go to the co-management properties page. Move the slider bar from Configuration Manager to Pilot or All. 
+
+After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. 
+
+For more information, see the following articles:  
+
+- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)  
+
+- [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management)  
+
+
+
+## <a name="bkmk_bgoptions"></a> Boundary group options
+<!--1356193-->
+Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
+
+- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
+
+    There are two common scenarios in which you should consider disabling this option:  
+
+    - If you have a boundary group that includes all remote networks such as a VPN. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
+
+    - If you use a single, large boundary group for site assignment that doesn't include any site system servers.  
+
+- **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
 
 
 

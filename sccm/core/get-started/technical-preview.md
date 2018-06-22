@@ -28,7 +28,7 @@ manager: dougeby
 ##  <a name="bkmk_reqs"></a> Requirements and limitations for the Technical Preview  
 
 > [!IMPORTANT]     
->  The Technical Preview is licensed for use only in a lab environment.  Microsoft may not provide support services and certain features may not be available in the preview software. Additionally, the preview software may have reduced or different security, privacy, accessibility, availability, and reliability standards relative to commercially provided software.  
+>  The Technical Preview is licensed for use only in a lab environment. Microsoft may not provide support services and certain features may not be available in the preview software. Additionally, the preview software may have reduced or different security, privacy, accessibility, availability, and reliability standards relative to commercially provided software.  
 
  For most product prerequisites, use the information in the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). The following exceptions apply to the Technical Preview releases:  
 
@@ -56,7 +56,7 @@ manager: dougeby
 -   There is no support for upgrade to a production build (current branch) from this preview build. However, when updates are available for a preview version,  you can find and install them from the **Updates and Servicing** node of the Configuration Manager console. For a video of the in-console upgrade process, see [Installing ConfigMgr Update Packages](https://www.youtube.com/embed/KBd_EGFbUT8) on youtube.com.  
 -   Only a stand-alone primary site is supported. There is no support for a central administration site, multiple primary sites, or secondary sites.  
 
-The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not imply an extension of support for a product or version that is beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
+The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not imply an extension of support for a product or version that is beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
 
 -   Only the following versions of SQL Server are supported:  
 
@@ -91,7 +91,7 @@ You can install a baseline version for up to one year after its release. However
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
  We love to hear your feedback about the capabilities in our technical previews. For more information, see [Product feedback](../understand/find-help.md#product-feedback).
 
-If you have ideas about new features you would like to see, we want to know that as well. To submit new ideas and to vote on the ideas submitted by others, [visit our user voice page](http://configurationmanager.uservoice.com).  
+If you have ideas about new features you would like to see, we want to know that as well. To submit new ideas and to vote on the ideas submitted by others, [visit our user voice page](https://configurationmanager.uservoice.com).  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
@@ -99,12 +99,16 @@ If you have ideas about new features you would like to see, we want to know that
 
 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in the most recent technical preview  
-The following are the capabilities delivered with the most recent Configuration Manager technical preview release.  Capabilities that were available in a previous version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the Configuration Manager current branch remain available in technical preview releases.  Click through to the content for each preview version to learn more about a specific capability.  
+The following are the capabilities delivered with the most recent Configuration Manager technical preview release. Capabilities that were available in a previous version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the Configuration Manager current branch remain available in technical preview releases. Click through to the content for each preview version to learn more about a specific capability.  
 
 <!-- This is the full list of new features in the latest TP release -->
 
 ### Technical Preview version 1806.2
 - [Support for new Windows app package formats](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
+- [Improvement to client push security](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
+- [Management insights for proactive maintenance](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
+- [Transition mobile apps workload for co-managed devices](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
+- [Boundary group options](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
 
 
 
