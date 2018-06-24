@@ -63,7 +63,7 @@ This release includes the following improvements to [phased deployments](/sccm/o
 
 ### <a name="bkmk_pod-monitor"></a> Phased deployment status
 <!--1358577-->
-Phased deployments now have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **View Status** in the ribbon.
+Phased deployments now have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon.
 
 ![Phased deployment status dashboard showing status of two phases](media/1358577-phased-deployment-status.png)
 
@@ -77,13 +77,13 @@ This dashboard shows the following information for each phase in the deployment:
 
     - **Waiting**: The previous phase hasn't yet reached the success criteria for the deployment to continue to this phase.  
 
-    - **Begins in # days**: The previous phase met its success criteria, and this phase deploys in the specified number of days. This period corresponds to the phase setting: **Automatically begin this phase after a deferral period (in days)**.  
-
-    - **Ready to begin**: The previous phase met its success criteria, and this phase is ready for an administrator to start the deployment. This period corresponds to the phase setting: **Manually begin the next phase of deployment**.  
-
     - **Suspended**: An administrator suspended the deployment.  
 
 - **Progress**: The color-coded deployment states from clients. For example: Success, In Progress, Error, Requirements Not Met, and Unknown. 
+
+
+#### Known issue
+The phased deployment status dashboard may show multiple rows for the same phase.<!--518510-->
 
 
 ### <a name="bkmk_pod-app"></a> Phased deployment of applications
@@ -103,9 +103,12 @@ You can't manually create phases for an application. The wizard automatically cr
 
 ### <a name="bkmk_pod-throttle"></a> Gradual rollout during phased deployments
 <!--1358578-->
-During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase.
+During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. 
 
 When you create a phased deployment and manually configure a phase, on the **Phase Settings** page of the Add Phase Wizard, or on the **Settings** page of the Create Phased Deployment wizard, configure the option: **Gradually make this software available over this period of time (in days)**. The default value of this setting is **0**, so by default the deployment isn't throttled.
+
+> [!Note]  
+> This option is currently only available for phased deployments of task sequences.  
 
 
 
@@ -188,7 +191,7 @@ For more information, see the following articles:
 
 
 
-## <a name="bkmk_bgoptions"></a> Boundary group options
+## <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
 <!--1356193-->
 Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
 
@@ -201,6 +204,12 @@ Boundary groups now include additional settings to give you more control over co
     - If you use a single, large boundary group for site assignment that doesn't include any site system servers.  
 
 - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
+
+    Common scenarios for enabling this option:
+
+    - Your boundary group design includes one large boundary group that overlaps other smaller boundary groups. With this new setting, the list of content sources that the management point provides to clients only includes peer sources from the same subnet.
+
+    - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
 
 
@@ -244,7 +253,14 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 4. Subscribe to the custom catalog using the existing **Subscribe to Catalog** action. For more information, see [Phase 2: Subscribe to a third-party catalog and sync updates](/sccm/core/get-started/capabilities-in-technical-preview-1806#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
 
-#### Delete custom catalogs
+
+#### Unsubscribe from a catalog
+To unsubscribe from a catalog, select the desired catalog in the list, and click **Unsubscribe Catalog** in the ribbon. If you unsubscribe from a catalog, the following actions and behaviors occur: 
+- The site stops synchronization of new updates 
+- The site blocks the associated certificates for catalog signing and update content. 
+- Existing updates aren't removed, but you may not be able to publish or deploy them.
+
+#### Delete a custom catalog
 Delete custom catalogs from the same node of the console. Select a custom catalog in an *unsubscribed* state, and click **Delete Custom Catalog**. If you already subscribed to the catalog, first unsubscribe before you delete it. You can't delete partner catalogs. Deleting a custom catalog removes it from the list of catalogs. This action doesn't affect any software updates you've published to your software update point.
 
 
@@ -261,7 +277,7 @@ This release includes the following improvements:
 
     - Deploying a [cloud distribution point with Azure Resource Manager](/sccm/core/get-started/capabilities-in-technical-preview-1805#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- If you're using Windows AutoPilot to provision Windows 10 on an Azure Active Directory-joined device that's connected to your on-premises network, you don't need a cloud distribution point in order to install the Configuration Manager client. Enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, which allows the cloud domain-joined client to communicate with an on-premises HTTP-enabled distribution point. For more information, see [Improved secure client communications](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- Customers are using Windows AutoPilot to provision Windows 10 on Azure Active Directory-joined devices that are connected to the on-premises network. In order to install or upgrade the Configuration Manager client on these devices, now you don't need a cloud distribution point or on-premises distribution point configured to **Allow clients to connect anonymously**. Instead, enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, which allows a cloud domain-joined client to communicate with an on-premises HTTP-enabled distribution point. For more information, see [Improved secure client communications](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
 
 
