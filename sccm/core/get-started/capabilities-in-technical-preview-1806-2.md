@@ -277,7 +277,21 @@ This release includes the following improvements:
 
     - Deploying a [cloud distribution point with Azure Resource Manager](/sccm/core/get-started/capabilities-in-technical-preview-1805#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- Customers are using Windows AutoPilot to provision Windows 10 on Azure Active Directory-joined devices that are connected to the on-premises network. In order to install or upgrade the Configuration Manager client on these devices, now you don't need a cloud distribution point or on-premises distribution point configured to **Allow clients to connect anonymously**. Instead, enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, which allows a cloud domain-joined client to communicate with an on-premises HTTP-enabled distribution point. For more information, see [Improved secure client communications](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- Customers are using Windows AutoPilot to provision Windows 10 on Azure Active Directory-joined devices that are connected to the on-premises network. To install or upgrade the Configuration Manager client on these devices, now you don't need a cloud distribution point or on-premises distribution point configured to **Allow clients to connect anonymously**. Instead, enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, which allows a cloud domain-joined client to communicate with an on-premises HTTP-enabled distribution point. For more information, see [Improved secure client communications](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+
+
+
+## <a name="bkmk_report"></a> New software updates compliance report
+<!--1357775-->
+Viewing reports for software updates compliance traditionally includes data from clients that haven't recently contacted the site. A new report lets you filter compliance results for a specific software update group by "healthy" clients. This report shows the more realistic compliance state of the active clients in your environment. 
+ 
+To view the report, go to the **Monitoring** workspace, expand **Reporting**, expand **Reports**, expand **Software Updates - A Compliance**, and select **Compliance 9 - Overall health and compliance**. Specify the **Update Group**, **Collection Name**, and **Client Health** state.
+
+The report includes the following parts:
+- **Healthy Clients vs Total Clients**: This bar chart compares the "healthy" clients that have communicated with the site in the specified time period against the total number of clients in the specified collection.
+- **Compliance Overview**: This pie chart shows overall compliance state for the specific software update group on active clients in the specified collection.
+- **Top 5 Non-Compliant by Article ID**: This bar chart displays the top five software updates in the specified group that are non-compliant on active clients in the specified collection.
+- The bottom of the report is a table with further details, which lists the software updates in the specified group.
 
 
 

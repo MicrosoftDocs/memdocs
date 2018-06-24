@@ -112,6 +112,7 @@ The following are the capabilities delivered with the most recent Configuration 
 - [Boundary group options](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
 - [Third-party software updates support for custom catalogs](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
 - [Improvements to cloud management features](capabilities-in-technical-preview-1806-2.md#bkmk_cloud) <!--511980,515854-->
+- [New software updates compliance report](capabilities-in-technical-preview-1806-2.md#bkmk_report) <!--1357775-->
 
 
 
