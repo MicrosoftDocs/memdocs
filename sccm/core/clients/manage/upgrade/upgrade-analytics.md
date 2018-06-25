@@ -1,6 +1,6 @@
 ---
 title: Upgrade Readiness
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Integrate Upgrade Readiness with Configuration Manager. Access upgrade compatibility data in your admin console. Target devices for upgrade or remediation.
 author: aczechowski
 ms.author: aaroncz
