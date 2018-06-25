@@ -43,7 +43,7 @@ To view the Office 365 Client Management dashboard in the Configuration Manager 
 ### Display data in the Office 365 Client Management dashboard
 The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 ProPlus Configurations** hardware inventory class for data to display in the dashboard. 
 #### To display data in the Office 365 Client Management dashboard
-1. Enable hardware inventory, if it is not yet enabled. For details, see [Configure hardware inventory](\sccm\core\clients\manage\configure-hardware-inventory).
+1. Enable hardware inventory, if it is not yet enabled. For details, see [Configure hardware inventory](\sccm\core\clients\manage\inventory\configure-hardware-inventory).
 2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.  
 3. On the **Home** tab, in the **Properties** group, click **Properties**.  
 4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.  
