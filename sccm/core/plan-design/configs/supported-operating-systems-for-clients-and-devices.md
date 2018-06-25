@@ -33,7 +33,7 @@ manager: dougeby
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
   - This operating system is supported beginning with Configuration Manager version 1606, with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October 2016).  
 
--   **Windows Storage Server 2016**  
+-   **Windows Storage Server 2016**: Workgroup, Standard  
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
