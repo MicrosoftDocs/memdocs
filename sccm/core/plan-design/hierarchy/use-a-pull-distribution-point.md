@@ -1,8 +1,8 @@
 ---
-title: "Pull-distribution point"
-titleSuffix: "Configuration Manager"
-description: "Learn about configurations and limitations for using a pull-distribution point with System Center Configuration Manager."
-ms.date: 2/14/2017
+title: Pull-distribution point
+titleSuffix: Configuration Manager
+description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager."
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,117 +12,149 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Use a pull-distribution point with System Center Configuration Manager
+# Use a pull-distribution point with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-A pull-distribution point for System Center Configuration Manager is a standard distribution point that obtains distributed content by downloading it from a source location like a client, instead of having the content pushed to it from the site server.  
+When you distribute content to a standard distribution point in the Configuration Manager console, the site server pushes the content to the distribution point. A pull-distribution point gets content by downloading it from a source location like a client.  
 
- When you deploy content to a large number of distribution points at a site, pull-distribution points can help reduce the processing load on the site server and speed the transfer of the content to each distribution point. This efficiency is achieved by offloading the process of transferring the content to each distribution point from the distribution manager process on the site server.  
+When you distribute content to many distribution points, pull-distribution points help reduce the processing load on the site server. They can also speed the content transfer to each server. Normally the distribution manager component on the site server sends content to each distribution point. Instead, the site offloads the process of transferring the content to the pull-distribution points.  
 
--   You configure individual distribution points to be pull-distribution points.  
+You configure individual distribution points to be pull-distribution points. For each pull-distribution point, specify one or more source distribution points from which it can get content. A pull-distribution point can only download content from a distribution point that you specify as a source distribution point. 
 
--   For each pull-distribution point, you must specify one or more source distribution points from which it can get deployments (a pull-distribution point can only obtain content from a distribution point that is specified as a source distribution point).  
+When you distribute content to a pull-distribution point in the console, the site server sends it a notification. The pull-distribution point then downloads the content from a source distribution point. A pull-distribution point manages the content transfer by downloading from a distribution point that already has a copy of the content.  
 
--   When you distribute content to a pull-distribution point, the site server notifies the pull-distribution point, which then initiates the download (transfer) of the content from a source distribution point. A pull-distribution point individually manages the transfer of content by downloading content from a distribution point that already has a copy of the content.  
+Pull-distribution points support the same configurations and functionality as typical distribution points. For example, a pull-distribution point supports: 
+- Multicast and PXE configurations
+- Content validation
+- On-demand content distribution
+- HTTP or HTTPS communications from clients
+- The same certificate options as other distribution points
+- Manage individually or as a member of a distribution point group  
 
-Pull-distribution points support the same configurations and functionality as typical Configuration Manager distribution points. For example, a distribution point that is configured as a pull-distribution point supports the use of multicast and PXE configurations, content validation, and on-demand content distribution. A pull-distribution point supports HTTP or HTTPS communications from clients, supports the same certificates options as other distribution points, and can be managed individually or as a member of a distribution point group.  
+> [!IMPORTANT]  
+> Although a pull-distribution point supports communications over HTTP and HTTPS, when you use the Configuration Manager console, you can only specify source distribution points that are configured for HTTP. You can use the Configuration Manager SDK to specify a source distribution point that is configured for HTTPS.  
 
-> [!IMPORTANT]
-> Although a pull-distribution point supports communications over HTTP and HTTPS, when you use Configuration Manager, you can only specify source distribution points that are configured for HTTP. You can use the Configuration Manager SDK to specify a source distribution point that is configured for HTTPS.  
+Configure a pull-distribution point when you install the distribution point. After you create a distribution point, configure it as a pull-distribution point by editing the role properties. For more information on how to enable a distribution point as a pull-distribution point, see [Pull-distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pull-distribution-point).  
 
- **The following sequence of events occurs when you distribute content to a pull-distribution point:**  
+Remove the configuration to be a pull-distribution point by editing the properties of the distribution point. When you remove the configuration as a pull-distribution point, it returns to normal operation. The site server manages future content transfers to the distribution point.  
 
--   As soon as content is distributed to a pull-distribution point, the Package Transfer Manager on the site server checks the site database to confirm if the content is available on a source distribution point. If it cannot confirm that the content is on a source distribution point for the pull-distribution point, it repeats the check every 20 minutes until the content is available.  
 
--   When the Package Transfer Manager confirms that the content is available, it notifies the pull-distribution point to download the content. If this notification fails it will retry based on the Software Distribution Component **Retry settings** for pull-distribution points. When the pull-distribution point receives this notification, it attempts to download the content from its source distribution points.  
 
--   While the pull-distribution point downloads the content the Package Transfer Manager will poll the status based on the Software Distribution Component **Status polling settings** for pull-distribution points.  When the pull-distribution point completes the download of content, it submits this status to a management point.
+### Distribution process
 
-**You can configure a pull-distribution point** when you install the distribution point or after it is installed by editing the properties of the distribution point site system role.  
+When you distribute content to a pull-distribution point, the following sequence of events occurs:
 
-**You can remove the configuration to be a pull-distribution point** by editing the properties of the distribution point. When you remove the pull-distribution point configuration, the distribution point returns to normal operations, and the site server manages future content transfers to the distribution point.  
+-   Once you distribute content to a pull-distribution point in the console, the Package Transfer Manager component on the site server checks the site database to confirm if the content is available on a source distribution point. If it can't confirm that the content is on a source distribution point for the pull-distribution point, it repeats the check every 20 minutes until the content is available.  
 
-## To configure Software Distribution Component for pull-distribution points
+-   When the Package Transfer Manager confirms that the content is available, it notifies the pull-distribution point to download the content. If this notification fails, it retries based on the Software Distribution component **Retry settings** for pull-distribution points. When the pull-distribution point receives this notification, it tries to download the content from its source distribution points.  
 
-1.  In the Configuration Manager console, choose **Administration** > **Sites**.  
+-   While the pull-distribution point downloads the content, the Package Transfer Manager polls the status based on the Software Distribution component **Status polling settings** for pull-distribution points.  When the pull-distribution point completes the download of content, it submits this status to a management point.  
 
-2.  Select the desired site and select **Configure Site Components** > **Software Distribution**
 
-3. Select the **Pull Distribution Point** tab.  
 
-4.  In the **Retry settings** list, configure the following values:  
+## Configure site component settings
 
-    -   **Number of retries** - The number of times that the Package Transfer Manager attempts to notify the pull-distribution point to download the content.  If this number is exceeded the Package Transfer Manager will cancel the transfer.
+When you use a pull-distribution point, review and configure the following site component settings:  
 
-    -   **Delay before retrying (minutes)** - The number of minutes that the Package Transfer Manager will wait between attempts. 
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
 
-5.  In the **Status polling settings** list, configure the following values:  
+2.  Select the site. In the ribbon, click **Configure Site Components**, and select **Software Distribution**.  
 
-    -   **Number of polls** - The number of times that the Package Transfer Manager contacts the pull-distribution point to retrieve the job status.  If this number is exceeded before the job completes the Package Transfer Manager will cancel the transfer.
+3. Switch to the **Pull Distribution Point** tab.  
 
-    -   **Delay before retrying (minutes)** - The number of minutes that the Package Transfer Manager will wait between attempts. 
+4.  In the **Retry settings** group, review the following values:  
+
+    -   **Number of retries**: The number of times that the Package Transfer Manager tries to notify the pull-distribution point to download the content. After it tries this number of times, the Package Transfer Manager cancels the transfer. This value is 30 by default.  
+
+    -   **Delay before retrying (minutes)**: The number of minutes that the Package Transfer Manager waits between attempts. This value is 20 by default.  
+
+5.  In the **Status polling settings** group, review the following values:  
+
+    -   **Number of polls**: The number of times that the Package Transfer Manager contacts the pull-distribution point to retrieve the job status. If it tries this number of times before the job completes, the Package Transfer Manager cancels the transfer. This value is 72 by default.   
+
+    -   **Delay before retrying (minutes)**: The number of minutes that the Package Transfer Manager waits between attempts. This value is 60 by default.   
     
     > [!NOTE]  
-    >  When the Package Transfer Manager cancels a job because the number of Status polling retries has been exceeded the pull-distribution point will continue to download the content.  When it finishes, the appropriate status message will be sent to the Package Transfer Manager and the console will reflect the new status.
+    >  When the Package Transfer Manager cancels a job because it exceeds the number of polling retries, the pull-distribution point continues to download the content. When it finishes, the pull-distribution point sends the appropriate status message, and the console reflects the new status.  
     
-## Limitations for pull-distribution points  
 
--   A cloud-based distribution point cannot be configured as a pull-distribution point.  
 
--   A distribution point on a site server cannot be configured as a pull-distribution point.  
+## Limitations 
 
--   **The prestage content configuration overrides the pull-distribution point configuration**. A pull-distribution point that is configured for prestaged content waits for the content. It does not pull content from the source distribution point, and, like a standard distribution point that has the prestage content configuration, does not receive content from the site server.  
+-   You can't configure a cloud-based distribution point as a pull-distribution point.  
 
--   **A pull-distribution point does not use configurations for schedule or rate limits** when it transfers content. If you configure a previously installed distribution point to be a pull-distribution point, configurations for schedule and rate limits are saved, but not used. If you later remove the pull-distribution point configuration, the schedule and rate limit configurations are implemented as previously configured.  
+-   You can't configure the distribution point role on a site server as a pull-distribution point.  
+
+-   The prestage content configuration overrides the pull-distribution point configuration. If you turn on the option to **Enable this distribution point for prestaged content** on a pull-distribution point, it waits for the content. It doesn't pull content from the source distribution point. Like a standard distribution point enabled for prestaged content, it doesn't receive content from the site server. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+
+-   A pull-distribution point doesn't use schedule or rate limit configurations. When you configure a previously installed distribution point to be a pull-distribution point, configurations for schedule and rate limits are saved, but not used. If you later remove the pull-distribution point configuration, the schedule and rate limit configurations are implemented as previously configured.  
 
     > [!NOTE]  
-    >  When a distribution point is configured as a pull-distribution point, the **Schedule** and **Rate Limits** tabs are not visible in the properties of the distribution point.  
+    >  The **Schedule** and **Rate Limits** tabs aren't visible in the properties of the distribution point.  
 
--   Pull-distribution points do not use the settings on the **General** tab of the **Software Distribution Component Properties** for each site.  This includes the **Concurrent distribution** and **Multicast retry** setting.  Use the **Pull Distribution Point** tab to configure settings for pull-distribution points.
+-   Pull-distribution points don't use the settings on the **General** tab of the **Software Distribution Component Properties** for each site. These settings include **Concurrent distribution** and **Multicast retry**.  
 
--   To transfer content from a source distribution point in a remote forest, the computer that hosts the pull-distribution point must have a Configuration Manager client installed. A Network Access Account that can access the source distribution point must be configured for use.  
+-   To transfer content from a source distribution point in a remote forest, install the Configuration Manager client on the pull-distribution point. Also configure a network access account that can access the source distribution point. Starting in version 1806, if you enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, then you don't need a network access account.<!--1358228-->  
 
--   On a computer that is configured as a pull-distribution point and that runs a Configuration Manager client, the version of the client must be the same version as the Configuration Manager site that installs the pull-distribution point. This is a requirement for the pull-distribution point to use the CCMFramework that is common to both the pull-distribution point and the Configuration Manager client.  
+-   If the pull-distribution point is also a Configuration Manager client, the client version must be the same as the Configuration Manager site that installs the pull-distribution point. The pull-distribution point uses the CCMFramework that is common to both the pull-distribution point and the Configuration Manager client.  
+
+
 
 ## About source distribution points  
- When you configure the pull-distribution point, you must specify one or more source distribution points:  
 
--   Only distribution points that qualify to be source distribution points are displayed.  
+When you configure the pull-distribution point, specify one or more source distribution points:  
+
+-   The wizard only displays distribution points that qualify to be source distribution points.  
 
 -   A pull-distribution point can be specified as a source distribution point for another pull-distribution point.  
 
--   Only distribution points that support HTTP can be specified as source distribution points when you use Configuration Manager.  
+-   Only distribution points that support HTTP can be specified as source distribution points when you use the Configuration Manager console.  
 
--   You can use the Configuration Manager SDK to specify a source distribution point that is configured for HTTPS. To use a source distribution point that is configured for HTTPS, the pull-distribution point must be co-located on a computer that runs the Configuration Manager client.  
+-   Use the Configuration Manager SDK to specify a source distribution point that's configured for HTTPS. To use a source distribution point that's configured for HTTPS, install the Configuration Manager client on the pull-distribution point.  
 
-Each distribution point on a pull-distribution points source distribution point list can be assigned a priority:  
+-   Starting in version 1806, if your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source cloud distribution point.<!--1321554-->  
 
--   You can assign a separate priority to each source distribution point, or assign multiple source distribution points to the same priority.  
+    > [!Note]  
+    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_CloudDPCost).  
 
--   The priority determines in which order the pull-distribution point requests content from its source distribution points.  
 
--   Pull-distribution points initially contact a source distribution point with the lowest value for priority.  If there are multiple source distribution points with the same priority, the pull-distribution point nondeterministically selects one of the source distribution points that share that priority.  
+> [!Tip]  
+> When a pull-distribution point downloads content from a source distribution point, that pull-distribution point is counted as a client in the **Client Accessed (Unique)** column of the **Distribution point usage summary** report.  
 
--   When the content is not available on a selected source, the pull-distribution point then attempts to download the content from another distribution point with that same priority.  
 
--   If none of the distribution points with a given priority has the content, the pull-distribution point attempts to download the content from a distribution point that has an assigned priority with the next larger value, until the content is either located or the pull-distribution point sleeps for 30 minutes before it begins the process again.  
+### Source priorities
 
-When a pull-distribution point downloads content from a source distribution point, that pull-distribution point is counted as a client in the **Client Accessed (Unique)** column of the **Distribution point usage summary** report.  
+-   Assign a separate priority to each source distribution point, or assign multiple source distribution points to the same priority.  
 
- By default, a pull-distribution point uses its **computer account** to transfer content from a source distribution point. However, when the pull-distribution point transfers content from a source distribution point that is in a remote forest, the pull-distribution point always uses the network access account. This process requires that the computer has the Configuration Manager client installed and that a network access account is configured for use and has access to the source distribution point.  
+-   The priority determines the order in which the pull-distribution point requests content from its source distribution points.  
 
-## About content transfers  
- To manage the transfer of content, pull-distribution points use the **CCMFramework** component of the Configuration Manager client software.  
+-   Pull-distribution points initially contact a source distribution point with the lowest value for priority. If there are multiple source distribution points with the same priority, the pull-distribution point randomly selects one of the sources with that priority.  
 
--   This framework is installed by the **Pulldp.msi** when you configure the distribution point to be a pull-distribution point. The framework doesn't require the Configuration Manager client.  
+-   If the content isn't available on a selected source, the pull-distribution point then tries to download the content from another distribution point with that same priority.  
 
--   After the pull-distribution point is installed, the CCMExec service on the distribution point computer must be operational for the pull-distribution point to function.  
-<!--sms.503672 -Clarified BITS use-->
--   When the pull-distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. A pull-distribution point doesn't require the optional BITS IIS Server Extension feature to be installed.
+-   If none of the distribution points with a given priority has the content, the pull-distribution point tries to download the content from a source distribution point with the next priority level. It continues this search until the content is located.   
 
--  The pull-distribution point logs its operation in the **datatransferservice.log** and the **pulldp.log** on the distribution point computer.
+- If none of the assigned source distribution points have the content, the pull-distribution point waits for 30 minutes, and then starts the process again.  
+
+
+
+## Inside the pull-distribution point 
+
+-   To manage the transfer of content, pull-distribution points use the **CCMFramework** component. The Configuration Manager client includes this component.  
+
+-   When you enable the pull-distribution point, the site installs **pulldp.msi**. This installer also adds the CCMFramework component. The framework doesn't require the Configuration Manager client.  
+
+-   After the pull-distribution point is installed, it primarily uses the **CCMExec** service to function.  
+
+-   When the pull-distribution point transfers content, it uses the **Background Intelligent Transfer Service** (BITS) built into Windows. A pull-distribution point doesn't require that you install the BITS Extension for IIS Server.<!--sms.503672 -Clarified BITS use-->
+
+-  For operational details, see the following log files on the pull-distribution point:  
+    - **DataTransferService.log**
+    - **PullDP.log**
+
+
 
 ## See also  
- [Fundamental concepts for content management in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
+ [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
