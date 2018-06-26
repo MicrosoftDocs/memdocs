@@ -89,6 +89,14 @@ For more information on the general process of adding roles, see [Install site s
 
 3. On the **System Role Selection** page, select only **Site server in passive mode**.  
 
+    > [!Note]  
+    > The wizard performs the following initial prerequisite checks on this page:  
+    > - The selected server isn't a secondary site server
+    > - The selected server isn't already a site server in passive mode
+    > - The site's content library is in a remote location  
+    >  
+    > If these initial prerequisite checks fails, you can't continue past this page of the wizard.  
+
 4. On the **Site Server In Passive Mode** page, provide the following information that's used to run setup and install the site server role on the specified server:
 
      - Choose to copy installation files from the site server in active mode to the new site server. Or specify a path to a location that contains the contents of the **CD.Latest** folder from the site server in active mode.  

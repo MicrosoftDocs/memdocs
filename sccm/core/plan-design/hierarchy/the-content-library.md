@@ -78,7 +78,10 @@ A remote content library is a prerequisite for [site server high availability](/
 
 
 ### Prerequisites  
-The site server computer account needs **read** and **write** permissions to the network path to which you're moving the content library. No components are installed on the remote system. 
+
+- The site server computer account needs **read** and **write** permissions to the network path to which you're moving the content library. No components are installed on the remote system.  
+
+- The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.  
 
 
 ### Process to manage the content library
