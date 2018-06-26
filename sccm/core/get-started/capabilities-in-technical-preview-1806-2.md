@@ -2,7 +2,7 @@
 title: Technical Preview 1806.2
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.2.
-ms.date: 06/25/2018
+ms.date: 06/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -199,15 +199,15 @@ Boundary groups now include additional settings to give you more control over co
 
     There are two common scenarios in which you should consider disabling this option:  
 
-    - If you have a boundary group that includes all remote networks such as a VPN. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
+    - If you have a boundary group that includes boundaries from geographically dispersed locations such as a VPN. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
 
-    - If you use a single, large boundary group for site assignment that doesn't include any site system servers.  
+    - If you use a single, large boundary group for site assignment that doesn't reference any distribution points.  
 
 - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
 
     Common scenarios for enabling this option:
 
-    - Your boundary group design includes one large boundary group that overlaps other smaller boundary groups. With this new setting, the list of content sources that the management point provides to clients only includes peer sources from the same subnet.
+    - Your boundary group design for content distribution includes one large boundary group that overlaps other smaller boundary groups. With this new setting, the list of content sources that the management point provides to clients only includes peer sources from the same subnet.
 
     - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
