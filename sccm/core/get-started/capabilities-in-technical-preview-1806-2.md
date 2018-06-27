@@ -2,7 +2,7 @@
 title: Technical Preview 1806.2
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.2.
-ms.date: 06/26/2018
+ms.date: 06/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -210,6 +210,10 @@ Boundary groups now include additional settings to give you more control over co
     - Your boundary group design for content distribution includes one large boundary group that overlaps other smaller boundary groups. With this new setting, the list of content sources that the management point provides to clients only includes peer sources from the same subnet.
 
     - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
+
+
+### Known issue
+If the peer source client has more than one IP address (IPv4, IPv6, or both), then peer caching doesn't work. The new option, **During peer downloads, only use peers within the same subnet**, has no effect if the peer source has more than one IP address.<!--518661-->   
 
 
 
