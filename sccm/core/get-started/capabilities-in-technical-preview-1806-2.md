@@ -34,6 +34,31 @@ Steps to workaround, if any.
 
 ## Known Issues in this Technical Preview
 
+### <a name="ki_sqlncli"></a> Clients don't automatically update
+<!--518760-->
+When updating to version 1806.2, the site also updates the SQL Native Client, which may cause a pending restart on the site server. This delay causes certain files to not update, which impacts automatic client upgrade.
+
+#### Workarounds
+Avoid this issue by manually upgrading the SQL Native Client *before updating* Configuration Manager to version 1806.2. For more information, see the [latest servicing update for SQL Server 2012 Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
+
+If you already updated your site, automatic client upgrade and client push won't work. You need to update clients to fully test most new features. Manually update your technical preview clients using the following process:  
+
+1. Locate the client source files in the **CMUClient** folder of the Configuration Manager installation directory on the site server. For example, `C:\Program Files\Configuration Manager\CMUClient`  
+
+2. Copy the entire CMUClient folder to the client device. For example, `C:\Temp\CMUClient`  
+
+    This location can be a network share that's accessible from the clients.  
+
+3. Run the following command line from an elevated command prompt: `C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
+
+If you're installing a new client in your technical preview version 1806.2 site, use this same process. 
+
+> [!Important]  
+> Don't use the `/MP` command-line parameter in this scenario. This parameter takes priority over `/source` and causes ccmsetup to download client content from the management point or distribution point.
+> 
+> Command-line properties, such as SMSSITECODE or CCMLOGLEVEL, are ok to use, but shouldn't be necessary when upgrading an existing client. 
+
+
 ### <a name="ki_version"></a> Version 1806.2 shows Version 1806 in About Configuration Manager
 <!--518148-->
 After upgrading to technical preview version 1806.2, if you open the **About Configuration Manager** window from the upper left corner of the console, it still shows **Version 1806**. 
