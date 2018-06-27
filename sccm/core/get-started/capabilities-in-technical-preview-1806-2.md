@@ -257,6 +257,9 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 4. Subscribe to the custom catalog using the existing **Subscribe to Catalog** action. For more information, see [Phase 2: Subscribe to a third-party catalog and sync updates](/sccm/core/get-started/capabilities-in-technical-preview-1806#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
 
+> [!Note]  
+> You can't add catalogs with the same download URL, and you can't edit catalog properties. If you specify incorrect properties for a custom catalog, delete the catalog before you add it again.  
+
 
 #### Unsubscribe from a catalog
 To unsubscribe from a catalog, select the desired catalog in the list, and click **Unsubscribe Catalog** in the ribbon. If you unsubscribe from a catalog, the following actions and behaviors occur: 
@@ -266,6 +269,10 @@ To unsubscribe from a catalog, select the desired catalog in the list, and click
 
 #### Delete a custom catalog
 Delete custom catalogs from the same node of the console. Select a custom catalog in an *unsubscribed* state, and click **Delete Custom Catalog**. If you already subscribed to the catalog, first unsubscribe before you delete it. You can't delete partner catalogs. Deleting a custom catalog removes it from the list of catalogs. This action doesn't affect any software updates you've published to your software update point.
+
+
+### Known issue
+The delete action on custom catalogs is grayed out, thus you can't delete custom catalogs from the console. To workaround this issue, use the **wbemtest** tool on the site server. Query for the instance you want to delete with the name or download URL, for example: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"`. In the query result window, select the object, and click **Delete**.<!--518676-->  
 
 
 
