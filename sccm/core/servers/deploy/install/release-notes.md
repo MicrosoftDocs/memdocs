@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article.
-ms.date: 04/18/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,7 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Release notes for System Center Configuration Manager
+# Release notes for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -20,12 +20,12 @@ With Configuration Manager, product release notes are limited to urgent issues. 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
 > [!TIP]  
->  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md)  
+>  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../../core/get-started/technical-preview.md)  
 
 For information about the new features introduced with different versions, see the following articles:
+- [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 - [What's new in version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
-- [What's new in version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 
 
 
@@ -82,14 +82,6 @@ Mitigate this issue with one of the following actions:
 
 
 ## Software updates
-
-### Servicing plans create many duplicate software update groups and deployments by default  
-<!-- 474326 -->
-By default, the Create Servicing Plan wizard currently runs after every software updates synchronization. Each time the wizard runs, it creates a new software update group and deployment. If you have a software updates synchronization schedule that runs several times a day, the Create Servicing Plan wizard creates multiple software update groups and deployments each day.  
-
-#### Workaround
- After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
-
 
 ### Changing Office 365 client setting doesn’t apply 
 <!--511551-->
