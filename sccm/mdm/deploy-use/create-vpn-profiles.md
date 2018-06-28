@@ -53,7 +53,8 @@ This table shows the connection type that is supported for each device platform:
      > [!Tip]  
      > Cisco AnyConnect 4.0.07x and later for iOS was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with [update 4163547](https://support.microsoft.com/help/4163547) to version 1802, this feature is no longer a pre-release feature.  
 
-
+[!Note]
+F5 Access 2018 is not supported for VPN profiles in hybrid MDM. 
 
 ## Windows 10 VPN features available when using Configuration Manager with Intune  
 
