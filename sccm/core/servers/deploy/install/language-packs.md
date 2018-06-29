@@ -18,7 +18,15 @@ manager: dougeby
 This topic provides technical details about language support in System Center Configuration Manager.  
 
 ## <a name="BKMK_SupLanguagePacks"></a> Supported operating system languages  
- You can install support for the display languages in the following tables by installing **server language packs** or **client language packs** at a central administration site and at primary sites. You select the server and client languages to support at a site from the available language pack files during the site installation process.
+ 
+ Configuration Manager site servers and clients are considered language-neutral. You can install support for the display languages in the following tables by installing **server language packs** or **client language packs** at a central administration site and at primary sites. You select the server and client languages to support at a site from the available language pack files during the site installation process.
+ 
+ You can install multiple languages at each site, and only need to install the languages that you use:
+ * Each site support multiple languages for Configuration Manager consoles.
+ * At each site you can install individual client language packs, adding support for only the client lanaguages that you want to support.
+ 
+ When you install support for a language that matches the display language of a computer, Configuration Manager consoles and the cliet user interface that run on that computer display information in that language.
+ When you install support for a language that matches the language preference that is in use by the web browser of a computer, connections to web-based information, including the Application Catalog, or SQL Server Reporting Services, display in that language.
 
  Language pack files are downloaded when you run Setup as part of the prerequisites and redistributable file download. You also can use [Setup Downloader](setup-downloader.md) to download these files before you run Setup.   
 
