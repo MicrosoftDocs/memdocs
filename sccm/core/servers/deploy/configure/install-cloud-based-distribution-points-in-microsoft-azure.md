@@ -156,18 +156,9 @@ The following process shows how a client resolves the name of the cloud distribu
 
 ## <a name="bkmk_proxy"></a> Set up site server proxy  
 
-When you use a cloud distribution point, the primary site server that manages the cloud distribution point needs to communicate with Azure. The site connects using the **System** account of the primary site server. It makes this connection using web browser APIs. If your organization uses a proxy server to control internet access, configure the primary site server to use this proxy.   
+When you use a cloud distribution point, the primary site server that manages the cloud distribution point needs to communicate with Azure. If your organization uses a proxy server to control internet access, configure the primary site server to use this proxy.   
 
-1.  In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the primary site server that manages the cloud distribution point.  
-
-    > [!Tip]  
-    > To find the site, open the properties of the cloud distribution point. Switch to the **Settings** tab, and look at the **Primary site** value. Then locate the primary site server for that site.   
-
-2.  In the details pane, right-click the **Site system** role, and select **Properties**.  
-
-3.  In the Site system Properties window, switch to the **Proxy** tab. Configure the proxy settings for this primary site server as needed in your environment.  
-
-4.  Click **OK** to save the settings.  
+For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).  
 
 
 
