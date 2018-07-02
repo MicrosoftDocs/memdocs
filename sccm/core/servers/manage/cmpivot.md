@@ -80,19 +80,19 @@ The following components are required to use CMPivot:
 
 The CMPivot window contains the following elements:  
 
-- The collection that CMPivot currently targets is in the title bar at the top, and the status bar at the bottom of the window. For example, **All Systems** in the above screenshot.  
+- (1) The collection that CMPivot currently targets is in the title bar at the top, and the status bar at the bottom of the window. For example, **All Systems** in the above screenshot.  
 
-- The pane on the left lists the **Entities** that are available on clients. Some entities rely upon WMI while others use PowerShell to get data from clients.   
+- (2) The pane on the left lists the **Entities** that are available on clients. Some entities rely upon WMI while others use PowerShell to get data from clients.   
 
     - Right-click an entity to insert it into the current query pane, run a query for this entity on all devices, or query for this entity by a specific device.  
 
     - Expand an entity to see specific properties available for each entity.  
 
-- The **Home** tab shows general information about CMPivot, including links to sample queries and supporting documentation.  
+- (3) The **Home** tab shows general information about CMPivot, including links to sample queries and supporting documentation.  
 
-- The **Query** tab displays the query pane, results pane, and status bar. The query tab is selected in the above screenshot example.  
+- (4) The **Query** tab displays the query pane, results pane, and status bar. The query tab is selected in the above screenshot example.  
 
-- The query pane is where you build or type a query to run on clients in the collection.  
+- (5) The query pane is where you build or type a query to run on clients in the collection.  
 
     - CMPivot uses the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
 
@@ -106,7 +106,7 @@ The CMPivot window contains the following elements:
 
         - Export the query results to CSV or the clipboard
 
-- The results pane displays the data returned by active clients for the query.  
+- (6) The results pane displays the data returned by active clients for the query.  
 
     - The available columns vary based upon the entity and the query.  
 
@@ -120,7 +120,7 @@ The CMPivot window contains the following elements:
 
     - Click any hyperlinked text to pivot the view on that specific information.  
 
-- The status bar shows the following information (from left to right):  
+- (7) The status bar shows the following information (from left to right):  
 
     - The status of the current query on the active clients in the target collection. For example: `Query completed on 1 of 1 clients`  
 
@@ -177,7 +177,7 @@ You need to temporarily store a large file on a network file server, but aren't 
 
 CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. 
 
-The queries and the results are all just text. One of the largest queries currently available is for all installed products. During performance testing, the largest state message file size from one client for this query was **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate about 50 MB of data across the network.  
+The queries and the results are all just text. One of the largest queries currently available is for the entity **InstallSoftware**. During performance testing, the largest state message file size from one client for this query was **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate about 50 MB of data across the network.  
 
 A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are curently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they too receive the query and return results. 
 
