@@ -2,7 +2,7 @@
 title: Technical Preview releases
 titleSuffix: Configuration Manager
 description: Learn about the Technical Preview release to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 06/01/2018
+ms.date: 06/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -28,7 +28,7 @@ manager: dougeby
 ##  <a name="bkmk_reqs"></a> Requirements and limitations for the Technical Preview  
 
 > [!IMPORTANT]     
->  The Technical Preview is licensed for use only in a lab environment.  Microsoft may not provide support services and certain features may not be available in the preview software. Additionally, the preview software may have reduced or different security, privacy, accessibility, availability, and reliability standards relative to commercially provided software.  
+>  The Technical Preview is licensed for use only in a lab environment. Microsoft may not provide support services and certain features may not be available in the preview software. Additionally, the preview software may have reduced or different security, privacy, accessibility, availability, and reliability standards relative to commercially provided software.  
 
  For most product prerequisites, use the information in the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). The following exceptions apply to the Technical Preview releases:  
 
@@ -56,7 +56,7 @@ manager: dougeby
 -   There is no support for upgrade to a production build (current branch) from this preview build. However, when updates are available for a preview version,  you can find and install them from the **Updates and Servicing** node of the Configuration Manager console. For a video of the in-console upgrade process, see [Installing ConfigMgr Update Packages](https://www.youtube.com/embed/KBd_EGFbUT8) on youtube.com.  
 -   Only a stand-alone primary site is supported. There is no support for a central administration site, multiple primary sites, or secondary sites.  
 
-The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not imply an extension of support for a product or version that is beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
+The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not imply an extension of support for a product or version that is beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
 
 -   Only the following versions of SQL Server are supported:  
 
@@ -91,7 +91,7 @@ You can install a baseline version for up to one year after its release. However
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
  We love to hear your feedback about the capabilities in our technical previews. For more information, see [Product feedback](../understand/find-help.md#product-feedback).
 
-If you have ideas about new features you would like to see, we want to know that as well. To submit new ideas and to vote on the ideas submitted by others, [visit our user voice page](http://configurationmanager.uservoice.com).  
+If you have ideas about new features you would like to see, we want to know that as well. To submit new ideas and to vote on the ideas submitted by others, [visit our user voice page](https://configurationmanager.uservoice.com).  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
@@ -99,24 +99,20 @@ If you have ideas about new features you would like to see, we want to know that
 
 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in the most recent technical preview  
-The following are the capabilities delivered with the most recent Configuration Manager technical preview release.  Capabilities that were available in a previous version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the Configuration Manager current branch remain available in technical preview releases.  Click through to the content for each preview version to learn more about a specific capability.  
+The following are the capabilities delivered with the most recent Configuration Manager technical preview release. Capabilities that were available in a previous version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the Configuration Manager current branch remain available in technical preview releases. Click through to the content for each preview version to learn more about a specific capability.  
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1806
-- [Third-party software updates](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) <!--1352101-->
-- [Configure Windows Defender SmartScreen settings for Microsoft Edge](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge) <!--1353701-->
-- [Sync MDM policy from Microsoft Intune for a co-managed device](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
-- [Transition Office 365 workload to Intune using co-management](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management) <!--1357841-->
-- [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
-- [Deploy software updates without content](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
-- [Office Customization Tool integration with the Office 365 Installer](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
-- [Improvements to cloud management gateway](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
-- [Improvements to secure client communications](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
-- [Software Center infrastructure improvements](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements) <!--1358309-->
-- [Provision Windows app packages for all users on a device](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device) <!--1358310-->
-- [Improvements to the Surface dashboard](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
-- [Hardware inventory default unit revision](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision) <!--514442-->
+### Technical Preview version 1806.2
+- [Improvements to phased deployments](capabilities-in-technical-preview-1806-2.md#bkmk_pod) <!--1358577,1358147,1358578-->
+- [Support for new Windows app package formats](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
+- [Improvement to client push security](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
+- [Management insights for proactive maintenance](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
+- [Transition mobile apps workload for co-managed devices](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
+- [Boundary group options for peer downloads](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
+- [Third-party software updates support for custom catalogs](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
+- [Improvements to cloud management features](capabilities-in-technical-preview-1806-2.md#bkmk_cloud) <!--511980,515854-->
+- [New software updates compliance report](capabilities-in-technical-preview-1806-2.md#bkmk_report) <!--1357775-->
 
 
 
@@ -130,6 +126,19 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Capability |Technical Preview version |Current Branch version|  
  |----------------|---------------------|--------------------|
+ | Third-party software updates <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![Not added](media/Red_X.gif) |  
+ | Configure Windows Defender SmartScreen settings for Microsoft Edge <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![Not added](media/Red_X.gif) |  
+ | Sync MDM policy from Microsoft Intune for a co-managed device <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![Not added](media/Red_X.gif) |  
+ | Transition Office 365 workload to Intune using co-management <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | ![Not added](media/Red_X.gif) |  
+ | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | ![Not added](media/Red_X.gif) |  
+ | Deploy software updates without content <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | ![Not added](media/Red_X.gif) |  
+ | Office Customization Tool integration with the Office 365 Installer <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | ![Not added](media/Red_X.gif) |  
+ | Improvements to cloud management gateway <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | ![Not added](media/Red_X.gif) |  
+ | Improvements to secure client communications <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | ![Not added](media/Red_X.gif) |  
+ | Software Center infrastructure improvements <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | ![Not added](media/Red_X.gif) |  
+ | Provision Windows app packages for all users on a device <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | ![Not added](media/Red_X.gif) |  
+ | Improvements to the Surface dashboard <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | ![Not added](media/Red_X.gif) |  
+ | Hardware inventory default unit revision <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | ![Not added](media/Red_X.gif) |  
  | Create a phased deployment with manually configured phases for a task sequence <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![Not added](media/Red_X.gif) |  
  | Cloud distribution point support for Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![Not added](media/Red_X.gif) |  
  | Take actions based on management insights <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![Not added](media/Red_X.gif) |  

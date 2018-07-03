@@ -98,6 +98,7 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1806.2](get-started/capabilities-in-technical-preview-1806-2.md)
 ###  [Capabilities in 1806](get-started/capabilities-in-technical-preview-1806.md)
 ###  [Capabilities in 1805](get-started/capabilities-in-technical-preview-1805.md)
 ###  [Capabilities in 1804](get-started/capabilities-in-technical-preview-1804.md)
@@ -178,12 +179,10 @@
 ###  [Proxy server support](plan-design/network/proxy-server-support.md)
 ###  [Release notes](servers/deploy/install/release-notes.md)
 ###  [Unicode and ASCII support](plan-design/hierarchy/unicode-and-ascii-support.md)
-<!-- Deprecated from Content - still published but out of TOC:
-#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
--->
 
 #    Manage infrastructure
-## [Management insights](servers/manage/management-insights.md)
+##   [Management insights](servers/manage/management-insights.md)
+##   [CMPivot](servers/manage/cmpivot.md)
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
