@@ -107,7 +107,9 @@ You can now deploy software updates to devices without first downloading and dis
  <!--1322266-->
 You can now filter automatic deployment rules (ADR) to exclude architectures like Itanium and ARM64. On the **Software Updates** page of the Create Automatic Deployment Rule Wizard, the **Architecture** property filter is now available. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
-
+### Third party software updates
+ <!--1357605, 1352101, 1358714-->
+Third-party updates allows you to subscribe to partner catalogs in the Configuration Manager console and publish the updates to WSUS. You can then deploy these updates using the existing software update management process.
 
 
 <!--## Reporting-->
