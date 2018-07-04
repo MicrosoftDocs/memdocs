@@ -164,7 +164,8 @@
 ###  [High availability options](servers/deploy/configure/high-availability-options.md)
 #### [Site server high availability](servers/deploy/configure/site-server-high-availability.md)
 #### [Flowchart - Passive site server setup](servers/deploy/configure/passive-site-server-flowchart.md)
-#### [Flowchart - Promote site server](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [Flowchart - Promote site server (planned)](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [Flowchart - Promote site server (unplanned)](servers/deploy/configure/promote-site-server-unplanned-flowchart.md)
 #### [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 #### [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
 #### [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
@@ -211,6 +212,8 @@
 ###  [Back up sites](servers/manage/backup-and-recovery.md)
 ###  [Recover sites](servers/manage/recover-sites.md)
 ###  [Unattended site recovery](servers/manage/unattended-recovery.md)
+
+##   [Site failure impacts](servers/manage/site-failure-impacts.md)
 
 ##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)

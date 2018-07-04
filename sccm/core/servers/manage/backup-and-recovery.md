@@ -23,11 +23,15 @@ The sections in this article can help you back up your sites. To recover a site,
 
 
 ## Considerations before creating a backup  
+
 -   If you use a SQL Server Always On availability group to host the site database: Modify your backup and recovery plans as described in [Prepare to use SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).  
 
 -   Configuration Manager can recover the site database from the Configuration Manager backup task. It can also use a backup of the site database that you create with another process.   
 
      For example, you can restore the site database from a backup that's created as part of a Microsoft SQL Server maintenance plan. You can also use a backup that's created by using Data Protection Manager to back up your site database.  
+
+-   Starting with version 1806, install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability). While this role doesn't remove the need to plan for and practice backup and recovery operations, it significantly reduces the effort to recover a site when necessary.  
+  
 
 ####  Using Data Protection Manager to back up your site database
 You can use System Center Data Protection Manager (DPM) to back up your Configuration Manager site database.

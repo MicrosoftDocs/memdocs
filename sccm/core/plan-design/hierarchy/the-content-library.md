@@ -69,12 +69,15 @@ Use the following options to manage the content library on the central administr
 
 ## <a name="bkmk_remote"></a> Configure a remote content library for the site server  
 <!--1357525-->
-Starting in version 1806, to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](/sccm/protect/understand/high-availability-options).
+Starting in version 1806, to configure [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](/sccm/protect/understand/high-availability-options).
 
 A remote content library is a prerequisite for [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability). 
 
 > [!Note]  
 > This action only moves the content library on the site server. It doesn't impact the location of the content library on distribution points. 
+
+> [!Tip]  
+> Also plan for managing package source content, which is external to the content library. Every software object in Configuration Manager has a package source on a network share. Consider centralizing all sources to a single share, but make sure this location is redundant and highly available. If you move the content library to the same storage volume as your package sources, and this volume supports content de-duplication, this design may save the amount of necessary storage.  
 
 
 ### Prerequisites  
@@ -85,19 +88,30 @@ A remote content library is a prerequisite for [site server high availability](/
 
 
 ### Process to manage the content library
-1. In the Configuration Manager console, switch to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. On the **Summary** tab at the bottom of the details pane, notice a new column for the **Content Library**.  
 
-2. Click **Manage content library** on the ribbon.  
+1. Create a folder in a network share as the target for the content library. For example, `\\server\share\folder`.  
 
-3. Select **On a network share** and enter a valid network path. This path is the location to which the site moves the content library. Click **OK**.  
+2. In the Configuration Manager console, switch to the **Administration** workspace. Expand **Site Configuration**, select the **Sites** node, and select the site. On the **Summary** tab at the bottom of the details pane, notice a new column for the **Content Library**.  
 
-4. Note the **Status** property in the Content Library column on the details pane. It updates to show the site's progress in moving the content library. When in progress it displays the percentage complete. If there's an error state, it displays the error. Common errors include `access denied` or `disk full`. When complete it displays `OK`. See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
+3. Click **Manage Content Library** on the ribbon.   
+
+4. In the Manage Content Library window, the **Current Location** field shows the local drive and path. Enter a valid network path for the **New Location**. This path is the location to which the site moves the content library. It must include a folder name that already exists on the share, for example, `\\server\share\folder`. Click **OK**.  
+
+5. Note the **Status** value in the Content Library column on the Summary tab of the details pane. It updates to show the site's progress in moving the content library.  
+
+    - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
+
+    - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
+
+    - When complete it displays **Complete**.  
+    
+    See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
 
 For more information on this process, see [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart).
 
 The site actually *copies* the content library files to the remote location. This process doesn't delete the content library files at the original location on the site server. To free up space, an administrator must manually delete these original files.
 
-If you need to move the content library back to the site server, repeat this process but select the option **Local to the site server**. When the original content still exists, the process quickly moves the configuration to the location local to the site server. 
+If you need to move the content library back to the site server, repeat this process, but enter a local drive and path for the **New Location**. It must include a folder name that already exists on the drive, for example, `D:\SCCMContentLib`. When the original content still exists, the process quickly moves the configuration to the location local to the site server. 
 
 > [!Tip]  
 > To move the content to another drive on the site server, use the **Content Library Transfer** tool. For more information, see [Configuration Manager Toolkit](/sccm/core/support/toolkit).  

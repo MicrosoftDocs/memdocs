@@ -60,15 +60,6 @@ For example, Configuration Manager clients typically operate autonomously by usi
 - Built-in reports provide insight to ongoing operations, historical operations, and current trends. Configuration Manager also supports state-based messages that provide near real-time information for ongoing operations.  
 
 
-Use the information in this article along with the following articles:  
-
-- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)  
-
-- [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)   
-
-- [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)  
-
-
 
 ##  <a name="bkmk_snh"></a> High availability for sites and hierarchies  
 
@@ -213,6 +204,10 @@ The site database, rather than the individual client, retains important informat
 Several site systems don't support multiple instances at a site or in the hierarchy. This information can help you prepare for these site systems going offline.  
 
 #### Site server (site)  
+
+> [!Note]  
+> This section only applies to Configuration Manager versions 1802 and earlier. Starting with version 1806, Configuration Manager provides a high availability option for the site server. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+
 Configuration Manager doesn't support the installation of the site server for each site on a Windows Server cluster or NLB cluster.  
 
 The following information can help you prepare for when a site server fails or isn't operational:  
@@ -263,5 +258,23 @@ This site system role isn't considered mission critical and provides optional fu
 -   Uninstall the role from the current server, and install the role on a new server. Because clients are assigned the fallback status point during client installation, you need to modify existing clients to use the new site system server.  
 
 
+#### Service connection point (hierarchy)
+While this site system role is critical for keeping Configuration Manager current branch up to date, it's generally not used frequently. If this system goes offline, use one of the following options:
+
+-   Resolve the reason for the site system to be offline.  
+
+-   Uninstall the role from the current server, and install the role on a new server.  
+
+
+
 ## See also  
- [Supported configurations](/sccm/core/plan-design/configs/supported-configurations)
+- [Supported configurations](/sccm/core/plan-design/configs/supported-configurations)  
+
+- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)  
+
+- [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)   
+
+- [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)  
+
+- [Site failure impacts](/sccm/core/servers/manage/site-failure-impacts)  
+
