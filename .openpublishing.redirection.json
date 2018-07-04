@@ -234,6 +234,11 @@
             "source_path": "sccm/protect/understand/high-availability-options.md",
             "redirect_url": "/sccm/core/servers/deploy/configure/high-availability-options",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/plan-design/scap/import-scap-compliance-settings.md",
+            "redirect_url": "/sccm/compliance/plan-design/scap/deploy-monitor-export",
+            "redirect_document_id": false
         }
     ]
 }

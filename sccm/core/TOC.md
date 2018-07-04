@@ -99,6 +99,7 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1806.2](get-started/capabilities-in-technical-preview-1806-2.md)
 ###  [Capabilities in 1806](get-started/capabilities-in-technical-preview-1806.md)
 ###  [Capabilities in 1805](get-started/capabilities-in-technical-preview-1805.md)
 ###  [Capabilities in 1804](get-started/capabilities-in-technical-preview-1804.md)
@@ -187,6 +188,7 @@
 
 #    Manage infrastructure
 ##   [Management insights](servers/manage/management-insights.md)
+##   [CMPivot](servers/manage/cmpivot.md)
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)

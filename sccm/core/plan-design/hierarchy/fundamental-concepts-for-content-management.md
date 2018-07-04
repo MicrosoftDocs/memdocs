@@ -2,7 +2,7 @@
 title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
-ms.date: 03/22/2018
+ms.date: 06/15/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,7 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Fundamental concepts for content management in System Center Configuration Manager
+# Fundamental concepts for content management in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -64,7 +64,7 @@ Applications always use binary differential replication. BDR is optional for pac
 
 
 ## BranchCache  
- [BranchCache](/windows-server/networking/branchcache/branchcache) is a Windows technology. Clients that support BranchCache, and have downloaded a deployment that you configure for Branch Cache, then serve as a content source to other BranchCache-enabled clients.  
+ [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) is a Windows technology. Clients that support BranchCache, and have downloaded a deployment that you configure for BranchCache, then serve as a content source to other BranchCache-enabled clients.  
 
  For example, you have a distribution point that runs Windows Server 2012 or later, and is configured as a BranchCache server. When the first BranchCache-enabled client requests content from this server, the client downloads that content and caches it.  
 
@@ -72,20 +72,24 @@ Applications always use binary differential replication. BDR is optional for pac
 - Other clients on the same subnet don't have to download content from the distribution point.  
 - The content is distributed across multiple clients for future transfers.  
 
+For more information, see [Support for Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache).
+
 
 
 ## Delivery Optimization
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. For more information, see [delivery optimization](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) client settings.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. For more information, see [delivery optimization](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) client settings.
+
+Delivery Optimization is the recommended technology to [optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) of express installation files for Windows 10 quality updates.
 
 
 
-## Peer Cache
+## Peer cache
 Client peer cache helps you manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.
 
 After you deploy client settings that enable peer cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
 
-For more information, see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
+For more information, see [Peer cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
 
 
