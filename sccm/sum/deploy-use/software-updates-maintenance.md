@@ -17,7 +17,8 @@ ms.author: aaroncz
 
 You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization. By default, the WSUS cleanup job runs every 30 days.  
 
-## To schedule and run the WSUS cleanup job  
+## To schedule and run the WSUS cleanup job 
+Schedule the WSUS cleanup job by running the following steps:   
 
 1.  In the Configuration Manager console, navigate to **Administration** > **Overview** > **Site Configuration** > **Sites**. 
 2. Select the site at the top of your Configuration Manager hierarchy. 
