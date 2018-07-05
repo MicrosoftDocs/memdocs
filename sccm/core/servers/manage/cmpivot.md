@@ -145,7 +145,7 @@ Your security administrator asks you to stop and disable the Computer Browser se
 
 ### Example 2: Investigate app crash  
 
-To be proactive with operational maintenance, once a week you run CMPivot against a collection of servers that you manage, and select the **AppCrash** entity. One device returns seven results for sqlsqm.exe with a timestamp about 03:00 every day. You select the file name in one of the rows, right-click and select **Bing It**. Browsing the search results in the web browser, you find a Microsoft support article for this issue with more information and resolution. 
+To be proactive with operational maintenance, once a week you run CMPivot against a collection of servers that you manage, and select the **AppCrash** entity. One device returns seven results for sqlsqm.exe with a timestamp about 03:00 every day. You select the file name in one of the rows, right-click it, and select **Bing It**. Browsing the search results in the web browser, you find a Microsoft support article for this issue with more information and resolution. 
 
 
 ### Example 3: BIOS version
@@ -169,7 +169,7 @@ CMPivot sends queries to clients using the Configuration Manager "fast channel".
 
 The queries and the results are all just text. The entities **InstallSoftware** and **Process** return some of the largest result sets. During performance testing, the largest state message file size from one client for these queries was less than **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate less than 50 MB of data across the network.  
 
-A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are curently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they too receive the query and return results. 
+A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
 
 
 
