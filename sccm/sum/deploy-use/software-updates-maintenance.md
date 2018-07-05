@@ -49,7 +49,7 @@ Starting version 1806, the WSUS cleanup option does the following cleanup items:
 - The **Expired updates** option for WSUS servers on CAS and primary sites.
     - WSUS servers for secondary sites, don't run WSUS cleanup for expired updates. 
 - Configuration Manager builds a list of superseded updates from its database. The list is based on the supersedence behavior in the Software Update Point component properties. 
-    - The updates meeting the supersedence behavior criteria are expired in the Configuration Manager console.
+    - The update configuration items meeting the supersedence behavior criteria are expired in the Configuration Manager console.
     - The updates are declined in WSUS for CAS and primary sites but not for secondary sites.
 - A cleanup for software update configuration items in the Configuration Manager database occurs every seven days and removes unneeded updates from the console. 
     - This cleanup won't remove expired updates from the Configuration Manager console if they're currently deployed. 
@@ -68,8 +68,8 @@ All WSUS Maintenance needs to be run manually on secondary site WSUS databases. 
 ## Updates cleanup log entries
  
 You can verify this cleanup by reviewing the wsyncmgr.log for the following entries: 
-  - The decline of superseded updates in WSUS is complete when you see this log entry: `Cleanup processed <number> total updates and declined <number>`.
+  - The decline of superseded updates in WSUS is complete when you see this log entry: `Cleanup processed <number> total updates and declined <number>`
   - The WSUS cleanup for expired updates is starting when you see this entry: `WSUS cleanup interval is: 30 days and time since last WSUS Cleanup run is <number> days. Calling WSUS Cleanup.`
   - The WSUS cleanup for expired updates is complete when you see this entry: `Successfully completed WSUS Cleanup.`
-  - The Configuration Manager expired updates cleanup is starting when you see this entry: `Deleting old expired updates...`
-  - The Configuration Manager expired updates cleanup is complete when you see this entry: `Deleted <number> expired updates total`.
+  - The Configuration Manager expired updates configuration items cleanup is starting when you see this entry: `Deleting old expired updates...`
+  - The Configuration Manager expired updates configuration items cleanup is complete when you see this entry: `Deleted <number> expired updates total`
