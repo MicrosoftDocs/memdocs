@@ -2,7 +2,7 @@
 title: "Manage Internet access using managed browser policies"
 titleSuffix: "Configuration Manager"
 description: "Deploy the Intune Managed Browser to manage and restrict Internet access."
-ms.date: 03/05/2017
+ms.date: 07/06/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -80,55 +80,55 @@ The new policy is displayed in the **Application Management Policies** node of t
 
 Use the following information to learn about the allowed formats and wildcards you can use when specifying URLs in the allowed and blocked lists.  
 
--   You can use the wildcard symbol ‘**\***’ according to the rules in the permitted patterns list below.  
+-   Use the wildcard symbol `*` (asterisk) according to the rules in the permitted patterns list below.  
 
--   Ensure that you prefix all URLs with **http** or **https** when entering them into the list.  
+-   Prefix all URLs with **http** or **https** when entering them into the list.  
 
--   You can specify port numbers in the address. If you do not specify a port number, the values used will be:  
+-   Specify port numbers in the address. If you don't specify a port number, the following values are used:  
 
     -   Port 80 for http  
 
     -   Port 443 for https  
 
-     Using wildcards for the port number is not supported, for example, **http://www.contoso.com:\*** and **http://www.contoso.com: /\***  
+     Don't use wildcards for the port number, which isn't supported. For example, `http://www.contoso.com:*`   
 
 -   Use the following table to learn about the permitted patterns you can use when you specify URLs:  
 
     |URL|Matches|Does not match|  
     |---------|-------------|--------------------|  
-    |http://www.contoso.com<br /><br /> Matches a single page|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
-    |http://contoso.com<br /><br /> Matches a single page|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
-    |http://www.contoso.com/*<br /><br /> Matches all URLs beginning with www.contoso.com|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> Matches all sub-domains under contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
-    |http://www.contoso.com/images<br /><br /> Matches a single folder|www.contoso.com/images|www.contoso.com/images/dogs|  
-    |http://www.contoso.com:80<br /><br /> Matches a single page, using a port number|http://www.contoso.com:80||  
-    |https://www.contoso.com<br /><br /> Matches a single, secure page|https://www.contoso.com|http://www.contoso.com|  
-    |http://www.contoso.com/images/*<br /><br /> Matches a single folder and all subfolders|www.contoso.com/images/dogs<br /><br /> www.contoso.com/images/cats|www.contoso.com/videos|  
+    |`http://www.contoso.com`<br /><br /> Matches a single page|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
+    |`http://contoso.com`<br /><br /> Matches a single page|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
+    |`http://www.contoso.com/*`<br /><br /> Matches all URLs beginning with `www.contoso.com`|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
+    |`http://*.contoso.com/*`<br /><br /> Matches all sub-domains under contoso.com|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
+    |`http://www.contoso.com/images`<br /><br /> Matches a single folder|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
+    |`http://www.contoso.com:80`<br /><br /> Matches a single page, using a port number|`http://www.contoso.com:80`||  
+    |`https://www.contoso.com`<br /><br /> Matches a single, secure page|`https://www.contoso.com`|`http://www.contoso.com`|  
+    |`http://www.contoso.com/images/*`<br /><br /> Matches a single folder and all subfolders|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
 -   The following are examples of some of the inputs you cannot specify:  
 
-    -   *.com  
+    -   `*.com`  
 
-    -   *.contoso/\*  
+    -   `*.contoso/*`  
 
-    -   www.contoso.com/*images  
+    -   `www.contoso.com/*images`  
 
-    -   www.contoso.com/*images\*pigs  
+    -   `www.contoso.com/*images*pigs`  
 
-    -   www.contoso.com/page*  
+    -   `www.contoso.com/page*`  
 
     -   IP addresses  
 
-    -   https://*  
+    -   `https://*`  
 
-    -   http://*  
+    -   `http://*`  
 
-    -   http://www.contoso.com:*  
+    -   `http://www.contoso.com:*`  
 
-    -   http://www.contoso.com: /*  
+    -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
->  *.microsoft.com is always allowed.  
+>  `*.microsoft.com` is always allowed.  
 
 ### How conflicts between the allow and block list are resolved  
  If multiple managed browser policies are deployed to a device and the settings conflict, both the mode (allow or block) and the URL lists are evaluated for conflicts. In case of a conflict, the following behavior applies:  
