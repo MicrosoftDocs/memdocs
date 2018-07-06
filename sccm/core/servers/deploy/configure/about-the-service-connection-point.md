@@ -2,7 +2,7 @@
 title: "Service connection point"
 titleSuffix: "Configuration Manager"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
-ms.date: 1/29/2018
+ms.date: 07/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -92,6 +92,8 @@ To enable operation, the computer that hosts the service connection point and an
 -   download.windowsupdate.com
 
 -   sccmconnected-a01.cloudapp.net  
+
+- configmgrbits.azureedge.net
 
 **Microsoft Intune**  
 

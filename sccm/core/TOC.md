@@ -59,6 +59,7 @@
 #### [Use a cloud-based distribution point](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
+#### [Flowchart - Manage content library](plan-design/hierarchy/manage-content-library-flowchart.md)
 #### [Content library cleanup tool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
@@ -161,9 +162,14 @@
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [Boundaries](servers/deploy/configure/boundaries.md)
 #### [Boundary groups](servers/deploy/configure/boundary-groups.md)
-###  [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
-###  [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
-###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
+###  [High availability options](servers/deploy/configure/high-availability-options.md)
+#### [Site server high availability](servers/deploy/configure/site-server-high-availability.md)
+#### [Flowchart - Passive site server setup](servers/deploy/configure/passive-site-server-flowchart.md)
+#### [Flowchart - Promote site server (planned)](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [Flowchart - Promote site server (unplanned)](servers/deploy/configure/promote-site-server-unplanned-flowchart.md)
+#### [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+#### [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
+#### [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
 ###  [Configure Azure services](servers/deploy/configure/azure-services-wizard.md)
@@ -204,6 +210,12 @@
 ###  [Checklist for installing update 1710](servers/manage/checklist-for-installing-update-1710.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 
+##   Backup and recovery
+###  [Back up sites](servers/manage/backup-and-recovery.md)
+###  [Recover sites](servers/manage/recover-sites.md)
+###  [Unattended site recovery](servers/manage/unattended-recovery.md)
+
+##   [Site failure impacts](servers/manage/site-failure-impacts.md)
 
 ##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)
@@ -227,6 +239,8 @@
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 ###  [Data warehouse](servers/manage/data-warehouse.md)
+
+## [Manage high-risk deployments](servers/manage/settings-to-manage-high-risk-deployments.md)
 
 #    Deploy clients
 ##   Planning for client deployment
