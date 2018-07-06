@@ -83,7 +83,7 @@ When you use a pull-distribution point, review and configure the following site 
 
 ## Limitations 
 
--   You can't configure a cloud-based distribution point as a pull-distribution point.  
+-   You can't configure a cloud distribution point as a pull-distribution point.  
 
 -   You can't configure the distribution point role on a site server as a pull-distribution point.  
 
@@ -117,7 +117,7 @@ When you configure the pull-distribution point, specify one or more source distr
 -   Starting in version 1806, if your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source cloud distribution point.<!--1321554-->  
 
     > [!Note]  
-    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_CloudDPCost).  
+    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  
 
 
 > [!Tip]  
