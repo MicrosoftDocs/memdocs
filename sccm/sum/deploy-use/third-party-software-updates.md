@@ -64,7 +64,12 @@ The following steps should be run once per hierarchy to enable and set up the fe
 You'll need to decide if you want Configuration Manager to automatically manage the third-party WSUS signing certificate, or if you need to manually configure the certificate. 
 
 ### Automatically manage the WSUS signing certificate
-If you don't have a requirement to use PKI certificates and you have never used third-party updates with Configuration Manager, it is easier to use the automatically manage the signing certificates option.   
+If you don't have a requirement to use PKI certificates you can use the automatically manage the signing certificates option.
+
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node.
+2. Select the top-level site in the hierarchy. In the ribbon, click **Configure Site Components**, and select **Software Update Point**.
+3. Switch to the **Third-Party Updates** tab. Select the option for **Configuration Manager manages the certificate**.
+4. A new certificate of type **Third-party WSUS Signing** is created in the **Certificates** node under **Security** in the **Administration** workspace.  
 
 ### Manually manage the WSUS signing certificate
 If you need to manually configure the certificate, such as needing to use a PKI certificate, you'll need to use [System Center Updates Publisher](../tools/updates-publisher-options.md#update-server) to do so.  
