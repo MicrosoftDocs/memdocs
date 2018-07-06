@@ -46,7 +46,7 @@ Use the following checklist to make sure you have the necessary information and 
 
     - The Azure **Resource Group**.  
 
-    - A **subscription admin account** needs to log on during the wizard.  
+    - A **subscription admin account** needs to sign in during the wizard.  
 
 - If you plan to use the Azure **classic service deployment**, you need the following requirements:  
 
@@ -134,9 +134,9 @@ Before clients can use the cloud distribution point, they must be able to resolv
 > [!Note]  
 > The **Cloud Distribution Points** node in the console includes a column named **Service Name**, but actually shows the **Service FQDN** value. To see both values, open **Properties** for the cloud distribution point and switch to the **Settings** tab.  
 
-If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify a certificate like this in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
+If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 
-If you purchase a server authentication certificate from a public provider, or if your PKI requires it, then the certificate common name includes your domain name. For example, `WallaceFalls.contoso.com`. When you specify a certificate like this in the Create Cloud Distribution Point Wizard, the common name populates the **Service FQDN** property (`WallaceFalls.contoso.com`. The **Service name** takes the same hostname (`WallaceFalls`) and appends it to the Azure domain name, `cloudapp.net`. In this scenario, clients need to resolve your domain's **Service FQDN** (`WallaceFalls.contoso.com`) to the Azure **Service name** (`WallaceFalls.cloudapp.net`). Create a CNAME alias to map these names.
+If you purchase a server authentication certificate from a public provider, or if your PKI requires it, then the certificate common name includes your domain name. For example, `WallaceFalls.contoso.com`. When you specify this certificate in the Create Cloud Distribution Point Wizard, the common name populates the **Service FQDN** property (`WallaceFalls.contoso.com`). The **Service name** takes the same hostname (`WallaceFalls`) and appends it to the Azure domain name, `cloudapp.net`. In this scenario, clients need to resolve your domain's **Service FQDN** (`WallaceFalls.contoso.com`) to the Azure **Service name** (`WallaceFalls.cloudapp.net`). Create a CNAME alias to map these names.
 
 
 ### Create CNAME alias
@@ -172,7 +172,7 @@ For more information, see [Proxy server support](/sccm/core/plan-design/network/
 
 Distribute content to the cloud distribution point the same as any other on-premises distribution point. The management point doesn't include the cloud distribution point in the list of content locations unless it has the content that clients request. For more information, see [Distribute and manage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content). 
 
-Manage a cloud distribution point the same as any other on-premises distribution point. This includes assigning it to a distribution point group, and managing content packages. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).
+Manage a cloud distribution point the same as any other on-premises distribution point. These actions include assigning it to a distribution point group, and managing content packages. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).
 
 Default client settings automatically enable clients to use cloud distribution points. Control access to all cloud distribution points in your hierarchy with the following client setting:  
 
@@ -257,7 +257,7 @@ Starting in version 1806, if you have an existing cloud distribution point on th
 
 ### Stop or start the cloud service on demand
 
-Stop a cloud distribution point at any time in the Configuration Manager console. This action immediately prevent clients from downloading additional content from the service. Restart the cloud service from the Configuration Manager console to restore access for clients. For example, stop a cloud service when it reaches a data threshold.  
+Stop a cloud distribution point at any time in the Configuration Manager console. This action immediately prevents clients from downloading additional content from the service. Restart the cloud service from the Configuration Manager console to restore access for clients. For example, stop a cloud service when it reaches a data threshold.  
 
 When you stop a cloud distribution point, the cloud service doesn't delete the content from the storage account. It also doesn't prevent the site server from transferring additional content to the cloud distribution point. The management point still returns the cloud distribution point to clients as a valid content source. 
 
@@ -274,7 +274,7 @@ Use the following procedure to stop a cloud distribution point:
 
 To uninstall a cloud distribution point, select the distribution point in the Configuration Manager console, and then select **Delete**.  
 
-When you delete a cloud distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Azure.  
+When you delete a cloud distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Azure. 
 
 Manually removing any components in Azure causes the system to be inconsistent. This state leaves orphaned information, and unexpected behaviors may occur.
 
