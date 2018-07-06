@@ -32,7 +32,7 @@ Schedule the WSUS cleanup job by running the following steps:
  
 6. Click **OK** (Click **Close** if you're running version 1806).
 
-## WSUS cleanup behavior prior to version 1806
+## WSUS cleanup behavior in version 1802 and earlier
 Before Configuration Manager version 1806, the WSUS cleanup option runs the following item: 
 - The **Expired updates** option from the WSUS cleanup wizard on the top-level site's WSUS server only. 
 ![WSUS expired update cleanup screenshot](media/wsus-cleanup-expired.PNG)
