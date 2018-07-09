@@ -71,6 +71,16 @@ To configure site server high availability or to free up hard drive space on you
 - [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
 
 
+### Improvements to management insights
+This release includes the following improvements to management insights:  
+
+- Some management insights now have the option to take an action. This action is either navigating to the associated node in the console, or showing a filtered, query-based view.<!--1357930-->  
+
+- A new group for Proactive Maintenance is available with six new rules, which help highlight potential configuration issues to avoid through regular upkeep.<!--1352184-->  
+
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+
+
 
 <!-- ## Migration  -->
 
