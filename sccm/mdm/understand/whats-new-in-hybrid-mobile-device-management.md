@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 06/12/2018
+ms.date: 07/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -34,13 +34,43 @@ Each section of this article lists hybrid features under three different categor
 
 
 
-## May 2018
+## July 2018
 
 ### New in Microsoft Intune
+
+#### Updates to out-of-compliance messages in Company Portal app 
+<!--1832222--> 
+We're revising the messages that device users see when a device is out-of-compliance. Messages retain their original meanings, but are updated with friendlier language and less technical jargon. We're also refreshing links to documentation and remediation steps to keep them up-to-date.  
+
+The following before and after text is one example of the improvements in messaging you'll see:  
+
+- Before: *This device hasn’t contacted the Intune service in the specified time period required by your IT admin. To resolve this issue, please open the company portal app on your device and click on the Check Compliance button.*  
+
+- After: *Your device has not checked in with your organization in a while. To reestablish a connection, open the Company Portal app on your device and tap Check Settings for your device.*  
+
+#### Select device categories by using the Access Work or School settings 
+<!--1058963--> 
+If you've enabled [device group mapping](https://docs.microsoft.com/intune/device-group-mapping), users on Windows 10 are now prompted to select a device category after enrolling through the **Connect** button in **Settings** > **Accounts** > **Access work or school**.  
+
+
+
+## June 2018
+
+### New in Microsoft Intune
+
+#### Access to macOS Company Portal pre-release build 
+<!--1734766-->
+Using Microsoft AutoUpdate, sign up to receive builds early by joining the Insider program. Signing up enables you to use the updated Company Portal before it’s available to your end users.
 
 #### Intune app protection policies and Microsoft Edge 
 <!--1818968,1818969-->
 The Microsoft Edge browser for mobile devices (iOS and Android) now supports Microsoft Intune app protection policies. Users of iOS and Android devices who sign in with their corporate Azure Active Directory accounts in the Edge application are protected by Intune. On iOS devices, the policy to **Require managed browser for web content** allows users to open links in Edge when it's managed.
+
+
+
+## May 2018
+
+### New in Microsoft Intune
 
 #### Requesting help in the Company Portal for Windows 10 
 <!--1874137-->
@@ -470,6 +500,30 @@ The following features were previously available in Configuration Manager Techni
 
 
 ## Notices
+
+### Plan for change: Intune moving to support iOS 10 and later in September 2018 
+<!--2454656-->
+
+In September 2018, Apple is expected to release iOS 12. Shortly after the release, we will move Intune enrollment, the Company Portal, and the managed browser to support iOS 10 and later.
+
+#### How does this affect me?
+
+Office 365 mobile apps are supported on iOS 10 and later, so you may have already upgraded your OS or devices. If so, this move won't affect you.
+
+However, if you have any of the devices listed below, or want to enroll any of the devices listed below, be aware that they only support iOS 9 and earlier. To continue to access the Intune Company Portal, you must upgrade these devices by September to devices that support iOS 10 or later: 
+
+- iPhone 4S
+- iPod Touch 
+- iPad 2
+- iPad (3rd Generation)
+- iPad Mini (1st Generation)
+
+Starting in July, MDM-enrolled devices with both iOS 9 and the Company Portal will receive a prompt to upgrade their OS or device. If you use app protection policies, you can also set the "Require minimum iOS operating system (Warning only)" access setting.  
+
+#### What do I need to do to prepare for this change?
+
+Check for devices or users that are affected in your organization. In Intune in the Azure portal, go to **Devices** > **All devices**, and filter by **OS**.  Click **Columns** to surface details such as OS version. Request that your users upgrade their devices to a supported OS version before September.
+
 
 ### Plan for change: Intune moving to TLS 1.2
 
