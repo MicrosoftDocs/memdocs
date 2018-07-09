@@ -64,6 +64,13 @@ High availability for the site server role is a Configuration Manager-based solu
 - [Flowchart - Promote site server (unplanned)](/sccm/core/servers/deploy/configure/promote-site-server-unplanned-flowchart)
 
 
+### Configure a remote content library for the site server
+<!--1357525-->
+To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). For more information, see the following articles: 
+- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
+- [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
+
+
 
 <!-- ## Migration  -->
 
