@@ -55,12 +55,42 @@ Version 1806 drops support for the following products:
 Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. However, that data is only as good as the last time it was collected from clients. CMPivot is a new in-console utility that provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. You can then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents. For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot).  
 
 
+### Site server high availability
+<!--1128774,1358224-->
+High availability for the site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. For more information, see the following articles: 
+- [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) 
+- [Flowchart - Set up a site server in passive mode](/sccm/core/servers/deploy/configure/passive-site-server-flowchart)
+- [Flowchart - Promote site server (planned)](/sccm/core/servers/deploy/configure/promote-site-server-flowchart)
+- [Flowchart - Promote site server (unplanned)](/sccm/core/servers/deploy/configure/promote-site-server-unplanned-flowchart)
+
+
+### Configure a remote content library for the site server
+<!--1357525-->
+To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). For more information, see the following articles: 
+- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
+- [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
+
+
+### Improvements to management insights
+This release includes the following improvements to management insights:  
+
+- Some management insights now have the option to take an action. This action is either navigating to the associated node in the console, or showing a filtered, query-based view.<!--1357930-->  
+
+- A new group for Proactive Maintenance is available with six new rules, which help highlight potential configuration issues to avoid through regular upkeep.<!--1352184-->  
+
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+
+
 
 <!-- ## Migration  -->
 
 
 
-<!-- ## Client management -->
+## Client management
+
+### Improvement to client push security
+<!--1358204-->
+When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
 
