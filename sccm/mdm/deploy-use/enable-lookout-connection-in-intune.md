@@ -1,6 +1,5 @@
 ---
 title: Enable Lookout MTD in Intune
-titleSuffix: Configuration Manager
 description: Enable Lookout mobile threat defense (MTD) in the Microsoft Intune portal.
 ms.date: 05/31/2018
 ms.prod: configuration-manager
@@ -44,7 +43,7 @@ You can decide which MTD toggle options you need to enable according to your org
 - **Connect Android 4.1+ devices to Lookout for Work MTD**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.  
 	- **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
 
-- **Connect iOS 8.0+ devices to Lookout for Work MTD**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.
+- **Connect iOS 8.0+ devices to Lookout for Work MTD**: When you enable this option, you can have iOS 8.0+ devices reporting security risk back to Intune.
 	- **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
 
 > [!TIP]  
