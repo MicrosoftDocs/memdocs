@@ -12,4 +12,4 @@
       items:
       - name: Application management 
         tocHref: /sccm/osd/deploy-use
-        topicHref: /apps/understand/introduction-to-application-management
+        topicHref: /sccm/apps/understand/introduction-to-application-management
