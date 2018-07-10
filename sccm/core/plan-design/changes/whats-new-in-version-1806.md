@@ -86,7 +86,11 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 
 
 
-<!-- ## Client management -->
+## Client management
+
+### Improvement to client push security
+<!--1358204-->
+When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
 

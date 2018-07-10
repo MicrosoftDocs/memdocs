@@ -2,7 +2,7 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,7 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# How to deploy clients to Windows computers in System Center Configuration Manager
+# How to deploy clients to Windows computers in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -34,17 +34,27 @@ Client log files provide more detailed information for troubleshooting. The log 
 > [!IMPORTANT]  
 >  For client push to succeed, ensure that all the prerequisites are in place. For more information, see [Installation method dependencies](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).  
 
+
 ### Configure the site to automatically use client push for discovered computers
 
-1.  In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites**.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
 
-3.  Select the site for which you want to configure automatic site-wide client push installation.  
+2.  Select the site for which you want to configure automatic site-wide client push installation.  
 
-4.  On the **Home** tab, in the **Settings** group, choose **Client Installation Settings** > **Client Push Installation**.  
+3.  On the **Home** tab of the ribbon, in the **Settings** group, choose **Client Installation Settings**, and select **Client Push Installation**.  
 
-5.  On the **General** tab of the **Client Push Installation Properties** dialog, select **Enable automatic site-wide client push installation**. Select the system types to which Configuration Manager should push the client software.  
+4.  On the **General** tab of the Client Push Installation Properties window, select **Enable automatic site-wide client push installation**.   
 
-6.  Select whether you want to install the client on domain controllers.  
+5. Starting in version 1806, when you open this properties page for the first time after updating, the site enables a Kerberos check for client push. If necessary for your environment, see the option to **Allow connection fallback to NTLM**. This option is disabled by default, which is the recommended configuration.<!--1358204-->  
+
+    > [!Note]  
+    > When using client push to install the Configuration Manager client, the site server creates a remote connection to the client. Starting in version 1806, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client.  
+    > 
+    > Depending on your security policies, your environment may already prefer or require Kerberos over older NTLM authentication. For more information on the security considerations of these authentication protocols, see the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
+    > 
+    > To use this feature, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.  
+
+6.  Select the system types to which Configuration Manager should push the client software. Select whether you want to install the client on domain controllers.  
 
 7.  On the **Accounts** tab, specify one or more accounts for Configuration Manager to use when connecting to the target computer. Click the **Create** icon, enter the **User name** and **Password** (no more than 38 characters), confirm the password, and then click **OK**. Specify at least one client push installation account. This account must have local Administrator rights on the target computer to install the client. If you do not specify a client push installation account, Configuration Manager tries to use the site system computer account. Cross-domain client push fails when using the site system computer account.  
     > [!NOTE]  
@@ -58,6 +68,7 @@ Client log files provide more detailed information for troubleshooting. The log 
 
     > [!NOTE]  
     >  If you enable client push installation on a secondary site, ensure that the **SMSSITECODE** property is set to the Configuration Manager site name of its parent primary site. If the Active Directory schema is extended for Configuration Manager, you can also set this property to AUTO to automatically find the correct site assignment.  
+
 
 ### Use the Client Push Installation Wizard
 
@@ -156,7 +167,7 @@ The software update for the Configuration Manager client isn't automatically upd
 ##  <a name="BKMK_ClientGP"></a> How to install clients with group policy  
  You can use group policy in Active Directory Domain Services to publish or assign the Configuration Manager client to install on computers in your enterprise. The client installs when the computer starts. When you use group policy, the client displays in the Control Panel **Add or Remove Programs** for the user to install.  
 
- Use the Windows Installer package (CCMSetup.msi) for group policy-based installations. This file is found in the folder **&lt;ConfigMgr installation directory\>\bin\i386** on the Configuration Manager site server. You can't add properties to this file to modify installation behavior.  
+ Use the Windows Installer package (CCMSetup.msi) for group policy-based installations. This file is found in the folder `<ConfigMgr installation directory>\bin\i386` on the Configuration Manager site server. You can't add properties to this file to modify installation behavior.  
 
 > [!IMPORTANT]  
 >  You must have Administrator permissions to access the client installation files.  
@@ -170,11 +181,11 @@ For information about how to use group policy in Active Directory Domain Service
 
 
 ##  <a name="BKMK_Manual"></a> How to install clients manually  
- You can manually install the client software on computers in your enterprise by using the CCMSetup.exe program. This program and its supporting files can be found in the **Client** folder of the Configuration Manager installation folder on the site server and on management points in your site. This folder is shared to the network as  
+ You can manually install the client software on computers in your enterprise by using the CCMSetup.exe program. This program and its supporting files can be found in the **Client** folder of the Configuration Manager installation folder on the site server and on management points in your site. This folder is shared to the network as:  
 
- \\\\*&lt;Site Server Name\>*\SMS_*&lt;Site Code\>*\Client\  
+ `\\<Site Server Name>\SMS_<Site Code>\Client\` 
 
- where *&lt;Site Server Name\>* is the name of one of the servers hosting a management point, and *&lt;Site Code\>* is the primary site code to which the client is assigned. To run CCMSetup.exe from the command line on the client, you must map a network drive to this location, and then run the command.  
+ where `<Site Server Name>` is the name of one of the servers hosting a management point, and `<Site Code>` is the primary site code to which the client is assigned. To run CCMSetup.exe from the command line on the client, you must map a network drive to this location, and then run the command.  
 
 > [!IMPORTANT]  
 >  You must have Administrator permissions to access the client installation files.  
@@ -293,11 +304,11 @@ For the procedure to install the Configuration Manager client on a modern Window
 
 ###  Install clients with Intune:
 
-1. In Intune, [create an app](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) containing the Configuration Manager client installation file **ccmsetup.msi**. This file is found in the folder **&lt;ConfigMgr installation directory\>\bin\i386** on the Configuration Manager site server.
+1. In Intune, [create an app](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) containing the Configuration Manager client installation file **ccmsetup.msi**. This file is found in the folder `<ConfigMgr installation directory>\bin\i386` on the Configuration Manager site server.
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use the following command line with a traditional client on the intranet:
 
-  `CCMSETUPCMD="/MP:&lt;FQDN of management point> SMSMP=&lt;FQDN of management point> SMSSITECODE=&lt;Your site code> DNSSUFFIX=&lt;DNS Suffix of management point>"`  
+  `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
    > For an example command line to use with a modern Windows 10 client using Azure AD authentication, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
@@ -378,7 +389,7 @@ Check the prerequisites, then follow the directions in the section [How to insta
 
 When the Configuration Manager site supports [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) for clients that are sometimes on the intranet, and sometimes on the internet, you have two options when you install clients on the intranet:  
 
--   You can include the Client.msi property of CCMHOSTNAME=*&lt;internet FQDN of the internet-based management point\>* when you install the client, for example by using manual installation or client push. When you use this method, you must also directly assign the client to the site and cannot use automatic site assignment. The [How to install Configuration Manager clients manually](#BKMK_Manual) section in this topic provides an example of this configuration method.  
+-   You can include the Client.msi property of CCMHOSTNAME=`<internet FQDN of the internet-based management point>` when you install the client, for example by using manual installation or client push. When you use this method, you must also directly assign the client to the site and cannot use automatic site assignment. The [How to install Configuration Manager clients manually](#BKMK_Manual) section in this topic provides an example of this configuration method.  
 
 -   You can install the client for intranet client management, and then assign an internet-based client management point to the client. Change the management point by using the Configuration Manager client properties in Control Panel, or by using a script. When you use this method, you can use automatic client assignment. For more information, see the [How to configure clients for internet-based client management after client installation](#BKMK_ConfigureIBCM_MP) section in this topic.  
 
@@ -386,7 +397,7 @@ When the Configuration Manager site supports [internet-based client management](
 
 -   Provide a mechanism for these clients to temporarily connect to the intranet with a VPN. Then install the client by using any appropriate client installation method.  
 
--   Use an installation method that is independent from Configuration Manager. For example, package the client installation source files onto removable media that you can send to users to install with instructions. The client installation source files are located in the *&lt;InstallationPath\>*\Client folder on the Configuration Manager site server and management points. Include on the media a script to manually copy over the client folder and from this folder, install the client by using CCMSetup.exe and all the appropriate CCMSetup command-line properties.  
+-   Use an installation method that is independent from Configuration Manager. For example, package the client installation source files onto removable media that you can send to users to install with instructions. The client installation source files are located in the `<InstallationPath>\Client` folder on the Configuration Manager site server and management points. Include on the media a script to manually copy over the client folder and from this folder, install the client by using CCMSetup.exe and all the appropriate CCMSetup command-line properties.  
 
 > [!NOTE]  
 >  Configuration Manager doesn't support installing a client directly from the internet-based management point or from the internet-based software update point.  
@@ -397,22 +408,22 @@ When the Configuration Manager site supports [internet-based client management](
 
 1.  Follow the directions in the section [How to install Configuration Manager clients manually](#BKMK_Manual) and always include the following:  
 
-    -   CCMSetup command-line property **/source:***&lt;local path to the copied Client folder\>*  
+    -   CCMSetup command-line property `/source:<local path to the copied Client folder>`  
 
-    -   CCMSetup command-line property **/UsePKICert**  
+    -   CCMSetup command-line property `/UsePKICert`  
 
-    -   Client.msi property **CCMHOSTNAME=***&lt;FQDN of internet-based management point\>*  
+    -   Client.msi property `CCMHOSTNAME=<FQDN of internet-based management point>`  
 
-    -   Client.msi property **SMSSIGNCERT=***&lt;local path to exported site server signing certificate\>*  
+    -   Client.msi property `SMSSIGNCERT=<local path to exported site server signing certificate>`  
 
-    -   Client.msi property **SMSSITECODE=***&lt;site code of internet-based management point\>*  
+    -   Client.msi property `SMSSITECODE=<site code of internet-based management point>`  
 
     > [!NOTE]  
     >  If the site has more than one internet-based management point, it doesn't matter which internet-based management point you specify for the CCMHOSTNAME property. When a Configuration Manager client connects to the specified internet-based management point, the management point sends the client a list of available internet-based management points in the site. The client randomly selects one from the list.  
 
 2.  If you do not want the client to check the certificate revocation list (CRL), specify the CCMSetup command-line property **/NoCRLCheck**.  
 
-3.  If you are using an internet-based fallback status point, specify the Client.msi property **FSP=***&lt;internet FQDN of the internet-based fallback status point\>*.  
+3.  If you are using an internet-based fallback status point, specify the Client.msi property `FSP=<internet FQDN of the internet-based fallback status point>`.  
 
 4.  If you are installing the client for internet-only client management, specify the Client.msi property **CCMALWAYSINF=1**.  
 

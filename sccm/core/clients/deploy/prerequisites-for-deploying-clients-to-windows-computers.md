@@ -2,7 +2,7 @@
 title: Windows client deployment prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,7 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Prerequisites for deploying clients to Windows computers in System Center Configuration Manager
+# Prerequisites for deploying clients to Windows computers in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -99,6 +99,8 @@ Deploying Configuration Manager clients in your environment has the following ex
    -   **Enable client push installation to assigned resources** must be selected in the **Client Push Installation Properties** dialog box if you want to automatically push the Configuration Manager client to discovered resources.  
 
    -   The client computer must be able to contact a distribution point or a management point to download the supporting files.  
+
+   -   Starting in version 1806, when you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
 
 
 You must have the following security permissions to install the Configuration Manager client by using client push:  
