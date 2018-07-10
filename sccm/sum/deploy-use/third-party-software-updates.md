@@ -77,7 +77,7 @@ If you need to manually configure the certificate, such as needing to use a PKI 
 1. Configure the signing certificate using [System Center Updates Publisher](../tools/updates-publisher-options.md#update-server).
 2. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node.
 3. Select the top-level site in the hierarchy. In the ribbon, click **Configure Site Components**, and select **Software Update Point**.
-4. Switch to the **Third-Party Updates** tab. Select the option **Manually manage the certificate**.
+4. Switch to the **Third-Party Updates** tab. Select the option for **Manually manage the certificate**.
 
 
 ## Enable third-party updates on the clients
@@ -85,12 +85,12 @@ Enable third-party updates on the clients in the client settings. The setting se
 
 1. In the Configuration Manager console, go to the **Administration** workspace and select the **Client Settings** node.
 2. Select an existing custom client setting or create a new one. 
-3. Select the **Software Updates** tab on the left-hand side. If you don't have this tab, ensure that the **Software Updates** box is enabled.
+3. Select the **Software Updates** tab on the left-hand side. If you don't have this tab, make sure that the **Software Updates** box is enabled.
 4. Set **Enable third-party software updates** to **Yes**. 
 
 
 ## Add a custom catalog
-You can add a custom catalog from a third-party update vendor to Configuration Manager. 
+You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be signed. 
 
 1. Go to the **Software Updates Library** workspace, expand **Software updates**, and select the **Third-Party Software Update Catalogs** node. 
    
@@ -106,11 +106,10 @@ You can add a custom catalog from a third-party update vendor to Configuration M
     - **Support URL** (optional): A valid HTTPS address of a website to get help with the catalog. 
     - **Support Contact** (optional): Contact information to get help with the catalog. 
 2. Click **Next** to review the catalog summary and to continue with completing the **Third-party Software Updates Custom Catalog Wizard**.
-<!--this feels incomplete, check with Aaron for screenshots-->
+
 
 ## Subscribe to a third-party catalog and sync updates
-
-Perform the following steps for each third-party catalog to which you want to subscribe:  
+When you subscribe to a third-party catalog in the Configuration Manager console, the metadata for every update in the catalog are synced into the WSUS servers for your SUPs. The sync of the metadata allows the clients to determine if any of the updates are applicable. Perform the following steps for each third-party catalog to which you want to subscribe:  
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.  
 2. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon. 
@@ -130,7 +129,7 @@ Perform the following steps for each third-party catalog to which you want to su
 
 
 ## Publish and deploy third-party software updates 
-Once the third-party updates are in the **All Updates** node, you can choose which updates should be published. When you publish an update, the binary files are downloaded from the vendor and placed into the WSUSContent directory on the top-level SUP. 
+Once the third-party updates are in the **All Updates** node, you can choose which updates should be published for deployment. When you publish an update, the binary files are downloaded from the vendor and placed into the WSUSContent directory on the top-level SUP. 
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **All Software Updates** node.
 2. Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **Adobe Systems, Inc**. to view all updates from Adobe.  
@@ -151,4 +150,18 @@ Once the third-party updates are in the **All Updates** node, you can choose whi
 Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the top-level default software update point. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the  top-level software update point in the site system Logs folder. By default this path is C:\Program Files\Microsoft Configuration Manager\Logs. For more information on monitoring the general software update management process, see [Monitor software updates](../deploy-use/monitor-software-updates.md) 
 
 ## Known issues
+
+- The machine where the console is running is used to download the updates from WSUS and add it to the updates package. The WSUS signing certificate must be trusted on the console machine. If it isn't, you may see issues with the signature check during the download of third-party updates. 
+- The third-party software update synchronization service can't publish content to metadata-only updates that were added to WSUS by another application, tool, or script, such as SCUP. The **Publish third-party software update content** action fails on these updates. If you need to deploy third-party updates that this feature doesn't yet support, use your existing process in full for deploying those updates.  
+ -  Configuration Manager has a new version for the catalog cab file format. The new version includes the certificates for the vendor's binary files. These certificates are added to the **Certificates** node under **Security** in the **Administration** workspace once you approve and trust the catalog.  
+ - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used. 
+
+## Status messages
+
+| MessageID       | Severity           | Description | Possible cause| Possible solution
+| ------------- |-------------| -----|----|----|
+| 11516     | Error |Failed to publish content for update "Update ID" because the content is unsigned.  Only content with valid signatures can be published.  |Configuration Manager doesn't allow unsigned updates to be published.| Publish the update in an alternate way. </br></br>See if a signed update is available from the vendor|
+| 11523  | Warning |  Catalog "X" does not include content signing certificates, attempts to publish update content for updates from this catalog may be unsuccessful until content signing certificates are added and approved. | This message can occur when you import a catalog that is using an older version of the cab file format.|Contact the catalog provider to obtain an updated catalog that includes the content signing certificates. </br></br> The certificates for the binaries aren't included in the cab file so the content will fail to publish. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.|
+| 11524| Error  | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager.| Synchronize the update with Configuration Manager before attempting to publish it's content.  </br></br>If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content.|
+
 
