@@ -32,6 +32,7 @@
 ## [Optimize Windows 10 update delivery](deploy-use/optimize-windows-10-update-delivery.md)
 ## [Manage Express installation files for Windows 10 updates](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Integration with Windows Update for Business in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
+## [Third-party software updates](deploy-use/third-party-updates.md)
 ## [Example scenario to deploy security updates](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
 
 # [System Center Updates Publisher](tools/updates-publisher.md)
