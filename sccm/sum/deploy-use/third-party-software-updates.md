@@ -22,7 +22,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
 
 ## Prerequisites 
 - Sufficient disk space on the top-level software update point's WSUSContent folder to store the source binary content for third-party software updates.
-     - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
+    - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
     - If you need to move the WSUSContent folder to another drive with more free space, see the [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/) blog post.
 - The third-party software update synchronization service requires internet access.
     - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed. 
@@ -116,11 +116,10 @@ When you subscribe to a third-party catalog in the Configuration Manager console
     ![Third-party updates add custom catalog](media/third-party-updates-subscribe.png)
 1. Review and approve the catalog certificate.
     >[!NOTE]
-    >When you subscribe to a third-party software update catalog, the certificate that you review and approve in the wizard is added to the site. This certificate is of type **Third-party Software Updates Catalog**. You can manage it from the **Certificates** node under **Security** in the **Administration** workspace.  
-2. Complete the wizard. 
-    - After initial subscription, the catalog should start to download in a few minutes. 
-     - The catalog synchronizes automatically every 7 days.
-     - Click **Sync now** in the ribbon to force a sync.
+    > When you subscribe to a third-party software update catalog, the certificate that you review and approve in the wizard is added to the site. This certificate is of type **Third-party Software Updates Catalog**. You can manage it from the **Certificates** node under **Security** in the **Administration** workspace.  
+2. Complete the wizard. After initial subscription, the catalog should start to download in a few minutes. 
+    - The catalog synchronizes automatically every 7 days.
+    - Click **Sync now** in the ribbon to force a sync.
 3. After the catalog is downloaded, the product metadata needs to be synchronized to the software update point. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the product information.
 4. Once the product information is synchronized, [Configure the product to synchronize](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) its updates into Configuration Manager.  
 5. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the new product's updates into Configuration Manager.  
@@ -153,15 +152,15 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 
 - The machine where the console is running is used to download the updates from WSUS and add it to the updates package. The WSUS signing certificate must be trusted on the console machine. If it isn't, you may see issues with the signature check during the download of third-party updates. 
 - The third-party software update synchronization service can't publish content to metadata-only updates that were added to WSUS by another application, tool, or script, such as SCUP. The **Publish third-party software update content** action fails on these updates. If you need to deploy third-party updates that this feature doesn't yet support, use your existing process in full for deploying those updates.  
- -  Configuration Manager has a new version for the catalog cab file format. The new version includes the certificates for the vendor's binary files. These certificates are added to the **Certificates** node under **Security** in the **Administration** workspace once you approve and trust the catalog.  
- - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used. 
+-  Configuration Manager has a new version for the catalog cab file format. The new version includes the certificates for the vendor's binary files. These certificates are added to the **Certificates** node under **Security** in the **Administration** workspace once you approve and trust the catalog.  
+     - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used. 
 
 ## Status messages
 
 | MessageID       | Severity           | Description | Possible cause| Possible solution
 | ------------- |-------------| -----|----|----|
-| 11516     | Error |Failed to publish content for update "Update ID" because the content is unsigned.  Only content with valid signatures can be published.  |Configuration Manager doesn't allow unsigned updates to be published.| Publish the update in an alternate way. </br></br>See if a signed update is available from the vendor|
-| 11523  | Warning |  Catalog "X" does not include content signing certificates, attempts to publish update content for updates from this catalog may be unsuccessful until content signing certificates are added and approved. | This message can occur when you import a catalog that is using an older version of the cab file format.|Contact the catalog provider to obtain an updated catalog that includes the content signing certificates. </br></br> The certificates for the binaries aren't included in the cab file so the content will fail to publish. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.|
-| 11524| Error  | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager.| Synchronize the update with Configuration Manager before attempting to publish it's content.  </br></br>If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content.|
+| 11516     | Error |Failed to publish content for update "Update ID" because the content is unsigned.  Only content with valid signatures can be published.  |Configuration Manager doesn't allow unsigned updates to be published.| Publish the update in an alternate way. </br></br>See if a signed update is available from the vendor.|
+| 11523  | Warning |  Catalog "X" does not include content signing certificates, attempts to publish update content for updates from this catalog may be unsuccessful until content signing certificates are added and approved. | This message can occur when you import a catalog that is using an older version of the cab file format.|Contact the catalog provider to obtain an updated catalog that includes the content signing certificates. </br> </br> The certificates for the binaries aren't included in the cab file so the content will fail to publish. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.|
+| 11524| Error  | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager.| Synchronize the update with Configuration Manager before attempting to publish it's content.  </br> </br>If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content.|
 
 
