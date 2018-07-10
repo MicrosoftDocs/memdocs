@@ -45,7 +45,7 @@ Additional maintenance is still needed on the top-level WSUS database and all ot
 
 ## WSUS cleanup behavior starting in version 1806
 Starting version 1806, the WSUS cleanup option occurs after every sync and does the following cleanup items: 
-
+<!--1357898 -->
 - The **Expired updates** option for WSUS servers on CAS and primary sites.
     - WSUS servers for secondary sites, don't run WSUS cleanup for expired updates. 
 - Configuration Manager builds a list of superseded updates from its database. The list is based on the supersedence behavior in the Software Update Point component properties. 
