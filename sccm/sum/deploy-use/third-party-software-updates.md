@@ -19,6 +19,7 @@ manager: dougeby
 Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
 
+
 ## Prerequisites 
 - Sufficient disk space on the top-level software update point's WSUSContent folder to store the source binary content for third-party software updates.
      - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
@@ -56,6 +57,8 @@ If you enable this option, you can subscribe to third-party update catalogs in t
 2. Select the top-level site in the hierarchy. In the ribbon, click **Configure Site Components**, and select **Software Update Point**.
 3. Switch to the **Third-Party Updates** tab. Select the option **Enable third-party software updates**.
 
+    ![Third-party updates SUP properties screenshot](media/third-party-sup-properties.PNG)
+
 
 ## Configure the WSUS signing certificate
 You'll need to decide if you want Configuration Manager to automatically manage the third-party WSUS signing certificate, or if you need to manually configure the certificate. 
@@ -87,18 +90,22 @@ Enable third-party updates on the clients in the client settings. The setting se
 
 
 ## Add a custom catalog
+You can add a custom catalog from a third-party update vendor to Configuration Manager. 
 
 1. Go to the **Software Updates Library** workspace, expand **Software updates**, and select the **Third-Party Software Update Catalogs** node. 
+   
+     ![Third-party updates node screenshot](media/third-party-updates-node.PNG)
 2. Click **Add Custom Catalog** in the ribbon. 
-3. Select the catalog to subscribe to and click **Add Custom Catalog** in the ribbon.  
-4. On the **General** page, specify the following: 
+
+     ![Third-party updates add custom catalog](media/third-party-updates-custom-catalog.png)
+1. On the **General** page, specify the following items: 
     - **Download URL**: A valid HTTPS address of the custom catalog.
     - **Publisher**: The name of the organization that publishes the catalog. 
     - **Name**: The name of the catalog to display in the Configuration Manager Console. 
     - **Description**: A description of the catalog. 
     - **Support URL** (optional): A valid HTTPS address of a website to get help with the catalog. 
     - **Support Contact** (optional): Contact information to get help with the catalog. 
-
+2. Click **Next** to review the catalog summary and to continue with completing the **Third-party Software Updates Custom Catalog Wizard**.
 <!--this feels incomplete, check with Aaron for screenshots-->
 
 ## Subscribe to a third-party catalog and sync updates
@@ -107,16 +114,41 @@ Perform the following steps for each third-party catalog to which you want to su
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.  
 2. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon. 
-3. Review and approve the catalog certificate.
+    ![Third-party updates add custom catalog](media/third-party-updates-subscribe.png)
+1. Review and approve the catalog certificate.
     >[!NOTE]
     >When you subscribe to a third-party software update catalog, the certificate that you review and approve in the wizard is added to the site. This certificate is of type **Third-party Software Updates Catalog**. You can manage it from the **Certificates** node under **Security** in the **Administration** workspace.  
-4. Complete the wizard. 
+2. Complete the wizard. 
     - After initial subscription, the catalog should start to download in a few minutes. 
      - The catalog synchronizes automatically every 7 days.
-     - Click **Sync now** in the ribbon to sync it outside of the schedule.
-5. After the catalog is downloaded, the product metadata needs to be synchronized to the software update point. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the product information.
-6. Once the product information is synchronized, you can configure the new product to synchronize its updates into Configuration manager. 
+     - Click **Sync now** in the ribbon to force a sync.
+3. After the catalog is downloaded, the product metadata needs to be synchronized to the software update point. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the product information.
+4. Once the product information is synchronized, [Configure the product to synchronize](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) its updates into Configuration Manager.  
+5. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the new product's updates into Configuration Manager.  
+6. When the synchronization completes, you can see the third-party updates in the **All Updates** node. These updates are published as **metadata-only** updates until you choose to publish them. 
+     - The icon with the blue arrow represents a metadata-only software update. ![Metadata only software update icon](media/MetadataOnly.png)
 
 
+## Publish and deploy third-party software updates 
+Once the third-party updates are in the **All Updates** node, you can choose which updates should be published. When you publish an update, the binary files are downloaded from the vendor and placed into the WSUSContent directory on the top-level SUP. 
 
+1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **All Software Updates** node.
+2. Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **Adobe Systems, Inc**. to view all updates from Adobe.  
+3. Select the updates that are required by your organization. Click **Publish Third-Party Software Update Content**.
+    - This action downloads the update binaries from the vendor then stores them in the WSUSContent folder on the top-level software update point. 
+4. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to change the state of the published updates from metadata-only to deployable updates with content. 
+    >[!NOTE]
+    >When you publish third-party software update content, any certificates used to sign the content are added to the site. These certificates are of type **Third-party Software Updates Content**. You can manage them from the **Certificates** node under **Security** in the **Administration** workspace.  
+
+5. Review the progress in the SMS_ISVUPDATES_SYNCAGENT.log. The log is located on the  top-level software update point in the site system Logs folder.
+6. Deploy the updates using the [Deploy software updates](../deploy-use/deploy-software-updates.md) process. 
+7. On the **Download Locations** page of the **Deploy Software Updates Wizard**, select the default option to **Download software updates from the internet**. In this scenario, the content is already published to the software update point, which is used to download the content for the deployment package.
+8. Clients will need to run a scan and evaluate updates before you can see compliance results.  You can manually trigger this cycle from the Configuration Manager control panel on a client by running the **Software Updates Scan Cycle** action.
+
+
+## Monitoring progress of third-party software updates 
+
+Synchronization of third-party software updates is handled by the SMS_ISVUPDATES_SYNCAGENT component on the top-level default software update point. You can view status messages from this component, or see more detailed status in the SMS_ISVUPDATES_SYNCAGENT.log. This log is on the  top-level software update point in the site system Logs folder. By default this path is C:\Program Files\Microsoft Configuration Manager\Logs. For more information on monitoring the general software update management process, see [Monitor software updates](../deploy-use/monitor-software-updates.md) 
+
+## Known issues
 
