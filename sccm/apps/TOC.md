@@ -20,6 +20,7 @@
 
 ## Deploy applications
 ### [Deploy applications](deploy-use/deploy-applications.md)
+### [Create a phased deployment](../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [Share an application](deploy-use/share-applications.md)
 ### [Simulate application deployments](deploy-use/simulate-application-deployments.md)
 ### [Deploy App-V virtual applications](get-started/deploying-app-v-virtual-applications.md)
