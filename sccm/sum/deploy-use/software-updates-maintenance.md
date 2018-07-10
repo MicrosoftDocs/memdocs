@@ -15,7 +15,7 @@ ms.author: aaroncz
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization. By default, the WSUS cleanup job runs every 30 days.  
+You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization.  
 
 ## To schedule and run the WSUS cleanup job 
 Schedule the WSUS cleanup job by running the following steps:   
@@ -44,7 +44,7 @@ Additional maintenance is still needed on the top-level WSUS database and all ot
 
 
 ## WSUS cleanup behavior starting in version 1806
-Starting version 1806, the WSUS cleanup option does the following cleanup items: 
+Starting version 1806, the WSUS cleanup option occurs after every sync and does the following cleanup items: 
 
 - The **Expired updates** option for WSUS servers on CAS and primary sites.
     - WSUS servers for secondary sites, don't run WSUS cleanup for expired updates. 
@@ -55,7 +55,7 @@ Starting version 1806, the WSUS cleanup option does the following cleanup items:
     - This cleanup won't remove expired updates from the Configuration Manager console if they're currently deployed. 
 
 > [!NOTE]
-> The "Months to wait before a superseded update is expired" is based on the creation date of the update. For example, if you use 2 months for this setting, then updates that have been superseded and are 2 months old will be declined in WSUS and expired in Configuration Manager. This behavior is also seen in the PowerShell script to decline superseded updates from [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/) blog post.  
+> The "Months to wait before a superseded update is expired" is based on the creation date of the superseding update. For example, if you use 2 months for this setting, then updates that have been superseded will be declined in WSUS and expired in Configuration Manager when the superceding update is 2 months old. 
 
 All WSUS Maintenance needs to be run manually on secondary site WSUS databases. The following **WSUS Server Cleanup Wizard** options aren't run on the CAS and primary sites:
 
@@ -69,7 +69,7 @@ All WSUS Maintenance needs to be run manually on secondary site WSUS databases. 
  
 You can verify this cleanup by reviewing the wsyncmgr.log for the following entries: 
   - The decline of superseded updates in WSUS is complete when you see this log entry: `Cleanup processed <number> total updates and declined <number>`
-  - The WSUS cleanup for expired updates is starting when you see this entry: `WSUS cleanup interval is: 30 days and time since last WSUS Cleanup run is <number> days. Calling WSUS Cleanup.`
+  - The WSUS cleanup is starting when you see this entry: `Calling WSUS Cleanup.`
   - The WSUS cleanup for expired updates is complete when you see this entry: `Successfully completed WSUS Cleanup.`
   - The Configuration Manager expired updates configuration items cleanup is starting when you see this entry: `Deleting old expired updates...`
   - The Configuration Manager expired updates configuration items cleanup is complete when you see this entry: `Deleted <number> expired updates total`
