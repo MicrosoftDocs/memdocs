@@ -12,7 +12,7 @@ ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ---
 # Switch Configuration Manager workloads to Intune
-In [Prepare Windows 10 devices for co-management](co-management-prepare.md), you prepared Windows 10 devices for co-management. These devices are joined to AD, Azure AD, they are enrolled in Intune, and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
+In [Prepare Windows 10 devices for co-management](co-management-prepare.md), you prepared Windows 10 devices for co-management. These devices are joined to AD, Azure AD, they're enrolled in Intune, and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
 
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.    
 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Configuration Wizard.    
@@ -54,7 +54,11 @@ Certain workloads are available to be switched over to Intune. The following lis
       - Windows Defender Security Center
       - Windows Defender Advanced Threat Protection
       - Windows Information Protection
-      
+  5. Device Configuration (starting in Configuration Manager version 1806) <!--1357903-->
+     >[!NOTE]
+        > - Moving the device configuration workload also moves the **Resource Access** and **Endpoint Protection** workloads starting in version 1806.
+       > - Starting in version 1806, you can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that are required by your organization but not yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline, or on the **General** tab of the properties of an existing baseline.
+
 
 ## Monitor co-management
 After you enable co-management, you can monitor co-management devices using the following methods:
@@ -64,7 +68,7 @@ After you enable co-management, you can monitor co-management devices using the 
     - **MachineId**: Specifies a unique device ID for the Configuration Manager client.
     - **MDMEnrolled**: Specifies whether the device is MDM-enrolled. 
     - **Authority**: Specifies the authority for which the device is enrolled.
-    - **ComgmtPolicyPresent**: Specifies whether the Configuration Manager co-management policy exists on the client. If the **MDMEnrolled** value is **0**, the device is not co-managed regardless whether the co-management policy exists on the client.
+    - **ComgmtPolicyPresent**: Specifies whether the Configuration Manager co-management policy exists on the client. If the **MDMEnrolled** value is **0**, the device isn't. co-managed regardless whether the co-management policy exists on the client.
 
    > [!Note]    
    > A device is co-managed when the **MDMEnrolled** field and **ComgmtPolicyPresent** fields both have a value of **1**.
