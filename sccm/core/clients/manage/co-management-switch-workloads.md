@@ -55,10 +55,10 @@ Certain workloads are available to be switched over to Intune. The following lis
       - Windows Defender Advanced Threat Protection
       - Windows Information Protection
 
-  5. Device Configuration (starting in Configuration Manager version 1806) <!--1357903-->
-     >[!NOTE]
-        > - Moving the device configuration workload also moves the **Resource Access** and **Endpoint Protection** workloads starting in version 1806.
-       > - Starting in version 1806, you can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that are required by your organization but not yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline, or on the **General** tab of the properties of an existing baseline.
+5. Device Configuration (starting in Configuration Manager version 1806) <!--1357903-->
+      >[!NOTE]
+      > - Moving the device configuration workload also moves the **Resource Access** and **Endpoint Protection** workloads starting in version 1806.
+      > - Starting in version 1806, you can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that are required by your organization but not yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline, or on the **General** tab of the properties of an existing baseline.
 
 
 ## Monitor co-management
