@@ -139,8 +139,9 @@ You can now deploy software updates to devices without first downloading and dis
  <!--1322266-->
 You can now filter automatic deployment rules (ADR) to exclude architectures like Itanium and ARM64. On the **Software Updates** page of the Create Automatic Deployment Rule Wizard, the **Architecture** property filter is now available. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
-
-
+### Improved WSUS maintenance 
+<!--1357898-->
+The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](../../../sum/deploy-use/software-updates-maintenance.md).
 
 <!--## Reporting-->
 
