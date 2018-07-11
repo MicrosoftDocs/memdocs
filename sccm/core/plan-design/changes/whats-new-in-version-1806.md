@@ -94,7 +94,10 @@ When using the client push method of installing the Configuration Manager client
 
 
 
-<!--## Co-management-->
+## Co-management
+<!--1357377-->
+When you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+
 
 
 
