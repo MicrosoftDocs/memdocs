@@ -54,6 +54,7 @@ Certain workloads are available to be switched over to Intune. The following lis
       - Windows Defender Security Center
       - Windows Defender Advanced Threat Protection
       - Windows Information Protection
+
   5. Device Configuration (starting in Configuration Manager version 1806) <!--1357903-->
      >[!NOTE]
         > - Moving the device configuration workload also moves the **Resource Access** and **Endpoint Protection** workloads starting in version 1806.
