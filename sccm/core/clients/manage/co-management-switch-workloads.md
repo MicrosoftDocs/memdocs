@@ -14,6 +14,9 @@ ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 # Switch Configuration Manager workloads to Intune
 In [Prepare Windows 10 devices for co-management](co-management-prepare.md), you prepared Windows 10 devices for co-management. These devices are joined to AD, Azure AD, they're enrolled in Intune, and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
 
+
+## Switch Configuration Manager workloads to Intune
+
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.    
 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Configuration Wizard.    
 3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.   
