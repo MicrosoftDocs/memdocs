@@ -257,6 +257,9 @@ The following notification message displays when the end user opens the installa
 
         -   **Required**: The task sequence is deployed automatically, according to the configured schedule. If the task sequence is not hidden, a user can still track its deployment status. They can also install the task sequence before the deadline by using the Software Center.  
 
+        >  [!NOTE]  
+        >  Package and task sequence deployments may not appear in software center if multiple users are logged into the device.
+
     -   **Deploy automatically according to schedule whether or not a user is logged on**: This option is not available when you deploy a task sequence.  
 
     -   **Send wake-up packets**: If the deployment purpose is set to **Required** and this option is selected, the site sends a wake-up packet to computers before running the deployment. This packet wakes the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.  
