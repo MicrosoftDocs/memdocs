@@ -261,9 +261,9 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 
 - Internet-based clients get Microsoft software update content from Windows Update at no charge. Do not distribute update packages with Microsoft update content to a cloud distribution point, otherwise you may incur storage and data egress costs.  
 
-- For any other necessary content, such as applications or third-party software updates, you must distribute to a cloud-based distribution point. Currently, the CMG supports only the cloud-based distribution point for sending content to clients.  
+- For any other necessary content, such as applications or third-party software updates, you must distribute to a cloud distribution point. Currently, the CMG supports only the cloud distribution point for sending content to clients.  
 
-- For more information, see the cost of using [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution).  
+- For more information, see the cost of using [cloud distribution points](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  
 
 #### Other costs
 

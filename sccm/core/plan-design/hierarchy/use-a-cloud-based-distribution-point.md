@@ -1,8 +1,8 @@
 ---
-title: "Cloud-based distribution point"
-titleSuffix: "Configuration Manager"
-description: "Learn about configurations and limitations for using a cloud-based distribution point with System Center Configuration Manager."
-ms.date: 3/27/2017
+title: Cloud distribution point
+titleSuffix: Configuration Manager
+description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,194 +11,357 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Use a cloud-based distribution point with System Center Configuration Manager
+# Use a cloud distribution point in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A cloud-based distribution point is a System Center Configuration Manager distribution point that is hosted in Microsoft Azure. The following information is intended to help you learn about configurations and limitations for using a cloud-based distribution point.
+A cloud distribution point is a Configuration Manager distribution point that is hosted as Platform-as-a-Service (PaaS) in Microsoft Azure. This service supports the following scenarios:  
 
-After you have installed a primary site and are ready to install a cloud-based distribution point, see [Install cloud-based distribution points in Azure](../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
+- Provide software content to internet-based clients without additional on-premises infrastructure  
 
+- Cloud-enable your content distribution system  
 
-## Plan to use a cloud-based distribution point
-When you use a cloud-based distribution, you:  
-
--   **Configure client settings** to enable users and devices to access the content.  
-
--   **Specify a primary site to manage the transfer of content** to the distribution point.  
-
--   **Specify thresholds** for the amount of content that you want to store on the distribution point and the amount of content that you want to enable clients to transfer from the distribution point.  
+- Reduce the need for traditional distribution points  
 
 
-Based on the thresholds that you configure, Configuration Manager can raise alerts that warn you when the combined amount of content that you have stored on the distribution point is near the specified storage amount, or when transfers of data by clients are close to the thresholds that you defined.  
-
-Cloud-based distribution points support several features that are also offered by on-premises distribution points:  
-
--   You manage cloud-based distribution points individually or as members of distribution point groups.  
-
--   You can use a cloud-based distribution point as a fallback content location.  
-
--   You receive support for both intranet and Internet-based clients.  
-
-
-Cloud-based distribution points provide the following additional benefits:  
-
--   Content that is sent to a cloud-based distribution point is encrypted by Configuration Manager before Configuration Manager sends it to Azure.  
-
--   In Azure, you can manually scale the cloud service to meet changing demands for content requests by clients, without the requirement to install and provision additional distribution points.  
-
--   The cloud-based distribution point supports the download of content by clients that are configured for Windows BranchCache.  
+This article helps you learn about the cloud distribution point, plan for its use, and design your implementation. It includes the following sections:
+- [Features and benefits](#bkmk_features)
+- [Topology design](#bkmk_topology)
+- [Requirements](#bkmk_requirements)
+- [Specifications](#bkmk_spec)
+- [Cost](#bkmk_cost)
+- [Performance and scale](#bkmk_perf)
+- [Ports and data flow](#bkmk_dataflow)
+- [Certificates](#bkmk_certs)
+- [Frequently asked questions (FAQ)](#bkmk_faq)
 
 
-A cloud-based distribution point has the following limitations:  
 
--  Prior to using version 1610 with the Hotfix KB4010155, you cannot use a cloud-based distribution point to host software update packages. This issue is fixed beginning with version 1702, and later.  
+## <a name="bkmk_features"></a> Features and benefits
 
--   You cannot use a cloud-based distribution point for PXE or multicast-enabled deployments.  
+### Features
 
--   Clients are not offered a cloud-based distribution point as a content location for a task sequence that is deployed by using the deployment option **Download content locally when needed by running task sequence**. However, task sequences that are deployed by using the deployment option of **Download all content locally before starting task sequence** can use a cloud-based distribution point as a valid content location.  
+The cloud distribution point supports several features that are also offered by on-premises distribution points:  
 
--   A cloud-based distribution point does not support packages that run from the distribution point. All content must be downloaded by the client and then run locally.  
+-   Manage cloud distribution points individually or as members of distribution point groups  
 
--   A cloud-based distribution point does not support streaming applications by using Application Virtualization or similar programs.  
+-   Use a cloud distribution point as a fallback content location  
 
--   A cloud-based distribution point does not support prestaged content. The distribution manager of the primary site that manages the distribution point transfers all content to the distribution point.  
-
--   A cloud-based distribution point cannot be configured as a pull-distribution point.  
-
-##  <a name="BKMK_PrereqsCloudDP"></a> Prerequisites for cloud-based distribution points  
- A cloud-based distribution point requires the following prerequisites for its use:  
-
--   A subscription to Azure (see [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
-
--   A self-signed or public key infrastructure (PKI) management certificate for communication from a Configuration Manager primary site server to the cloud service in Azure (See [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
-
--   A service certificate (PKI) that Configuration Manager clients use to connect to cloud-based distribution points and download content from them by using HTTPS.  
-
--  A device or user must have **Allow Access to cloud distribution points** set to **Yes** in the client setting of **Cloud Services** before a device or user can access content from a cloud-based distribution point. By default, this value is set to **No**.  
-
--   A client must be able to resolve the name of the cloud service, which requires a Domain Name System (DNS) alias and a CNAME record in your DNS namespace.  
-
--   A client must be able to access the Internet to use the cloud-based distribution point.  
-
-##  <a name="BKMK_CloudDPCost"></a> Cost of using cloud-based distribution  
- When you use a cloud-based distribution point, plan for the cost of data storage and the download transfers that Configuration Manager clients perform.  
-
- Configuration Manager includes options to help control costs and monitor data access:  
-
--   You can control and monitor the amount of content that you store in a cloud service.  
-
--   You can configure Configuration Manager to alert you when **thresholds** for client downloads meet or exceed monthly limits.  
-
--   In addition, you can  use peer caching (Windows BranchCache) to help reduce the number of data transfers from cloud-based distribution points by clients. Configuration Manager clients that are configured for BranchCache can transfer content by using cloud-based distribution points.  
+-   Supports both intranet and internet-based clients  
 
 
-**Options:**  
+### Benefits
 
--   **Client Settings for Cloud**: You control access to all cloud-based distribution points in a hierarchy by using **Client Settings**.  
+The cloud distribution point provides the following additional benefits:  
 
-     In **Client Settings**, the category **Cloud Settings** supports the setting **Allow access to cloud distribution points**. By default, this setting is set to **No**. You can enable this setting for both users and devices.  
+-   The site encrypts the content before sending it to the cloud distribution point in Azure.  
 
--   **Thresholds for data transfers**: You can configure thresholds for the amount of data that you want to store on the distribution point, and for the amount of data that clients download from the distribution point.  
+-   To meet changing demands for content requests by clients, manually scale the cloud service in Azure. This action doesn't require that you install and provision additional distribution points in Configuration Manager.  
 
-     Thresholds for cloud-based distribution points include the following:  
+-   Supports content download from clients configured for other content technologies, such as Windows BranchCache and alternate content providers.  
 
-    -   **Storage alert threshold**: A storage alert threshold sets an upper limit on the amount of data or content that you want store on the cloud-based distribution point. Configuration Manager can generate a warning alert when the remaining free space reaches the level that you specify.  
+-   Starting in version 1806, use cloud distribution points as source locations for pull-distribution points.  
 
-    -   **Transfer alert threshold**: A transfer alert threshold helps you to monitor the amount of content that transfers from the distribution point to clients for a 30-day period. The transfer alert threshold monitors the transfer of data for the previous 30 days, and can raise a warning alert and a critical alert when transfers reach values that you define.  
 
-        > [!IMPORTANT]  
-        >  Configuration Manager monitors the transfer of data, but does not stop the transfer of data beyond the specified transfer alert threshold.  
+## <a name="bkmk_topology"></a> Topology design
 
- You can specify thresholds for each cloud-based distribution point during the installation of the distribution point, or you can edit the properties of each cloud-based distribution point after it is installed.  
+Deployment and operation of the cloud distribution point includes the following components:  
 
--   **Alerts**: You can configure Configuration Manager to raise alerts about data transfers to and from each cloud-based distribution point, based on the data transfer thresholds that you specify. These alerts help you monitor data transfers, and can help you decide when to stop the cloud service, adjust the content that you store on the distribution point, or modify which clients can use cloud-based distribution points.  
+- A **cloud service** in Azure. The site distributes content to this service, which stores it in Azure cloud storage. The management point provides to clients this content location in the list of available sources as appropriate.  
 
-     In an hourly cycle, the primary site that monitors the cloud-based distribution point downloads transaction data from Azure and stores it in the CloudDP-&lt;ServiceName\>.log on the site server. Configuration Manager then evaluates this information against the storage and transfer quotas for each cloud-based distribution point. When the transfer of data reaches or exceeds the specified volume for either warnings or critical alerts, Configuration Manager generates the appropriate alert.  
+- A **management point** site system role services client requests per normal.  
 
-    > [!WARNING]  
-    >  Because information about data transfers is downloaded from Azure hourly, that data usage might exceed a warning or critical threshold before Configuration Manager can access the data and raise an alert.  
+    - On-premises clients typically use an on-premises management point.  
+
+    - Internet-based clients either use a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway), or an [internet-based management point](/sccm/core/clients/manage/plan-internet-based-client-management).  
+
+- The cloud distribution point uses a **certificate-based HTTPS** web service to help secure network communication with clients. Clients must trust this certificate.  
+
+
+### Azure Resource Manager
+<!--1322209-->
+Starting in version 1806, create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+
+The cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, Microsoft recommends using the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
+
+Configuration Manager doesn't migrate existing classic cloud distribution points to the Azure Resource Manager deployment model. Create new cloud distribution points using Azure Resource Manager deployments, and then remove classic cloud distribution points. 
+
+> [!IMPORTANT]  
+> This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+
+
+### Hierarchy design
+
+Where you create the cloud distribution point depends upon which clients need to access the content. Starting in version 1806, there are three types of cloud distribution points:  
+
+- Classic service deployment: Create this type only at a primary site.  
+
+- Azure Resource Manager deployment: Create this type at a primary site or the central administration site.  
+
+- The cloud management gateway can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).<!--1358651-->  
+
+
+To determine whether to include cloud distribution points in boundary groups, consider the following behaviors:  
+
+- Internet-based clients don't rely on boundary groups. They only use internet-facing distribution points or cloud distribution points. If you're only using cloud distribution points to service these types of clients, then you don't need to include them in boundary groups.  
+
+- If you want clients on your internal network to use a cloud distribution point, then it needs to be in the same boundary group as the clients. Clients prioritize cloud distribution points last in their list of content sources, because there's a cost associated with downloading content out of Azure. So a cloud distribution point is typically used as a fallback source for intranet-based clients. If you want a cloud-first design, then design your boundary groups to meet this business requirement. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
+
+
+Even though you install cloud distribution points in specific regions of Azure, clients aren't aware of the Azure regions. They randomly select a cloud distribution point. If you install cloud distribution points in multiple regions, and a client receives more than one in the content location list, the client might not use a cloud distribution point from the same Azure region.  
+
+
+### Backup and recovery  
+
+When you use a cloud distribution point in your hierarchy, use the following information to help you plan for backup and recovery:  
+
+- When you use the **Backup Site Server** maintenance task, Configuration Manager automatically includes the configurations for the cloud distribution point.  
+
+- Back up and save a copy of the server authentication certificate. If you use the classic service deployment in Azure, also back up and save a copy of the Azure management certificate. When you restore the Configuration Manager primary site to a different server, you must reimport the certificates.  
+
+
+
+##  <a name="bkmk_requirements"></a> Requirements
+
+- You need an **Azure subscription** to host the service.  
+
+    - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona doesn't require permissions in Configuration Manager.  
+
+- The site server requires **internet access** to deploy and manage the cloud service.  
+
+- If using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Certificates](#bkmk_certs) section below.   
+
+    > [!TIP]  
+    > Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
+
+- If using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery isn't required.  
+
+- A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
+
+    - To reduce complexity, Microsoft recommends using a public certificate provider for the server authentication certificate. When doing so, you also need a **DNS CNAME alias** for clients to resolve the name of the cloud service.  
+
+- Set the client setting, **Allow access to cloud distribution points**, to **Yes** in the **Cloud Services** group. By default, this value is set to **No**.  
+
+- Client devices require **internet connectivity**, and must use **IPv4**.  
+
+
+
+## <a name="bkmk_spec"></a> Specifications
+
+- The cloud distribution point supports all Windows versions listed in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
+
+- An administrator distributes the following types of supported software content:  
+    - Applications
+    - Packages
+    - OS upgrade packages
+    - Third-party software updates  
+
+    > [!Important]  
+    > While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.    
+
+- Starting in version 1806, configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point#about-source-distribution-points).<!--1321554-->  
+
+
+### Deployment settings
+
+- When you deploy a task sequence with the option to **Download content locally when needed by running task sequence**, the management point doesn't include a cloud distribution point as a content location. Deploy the task sequence with the option to **Download all content locally before starting task sequence** for clients to use a cloud distribution point.  
+
+- A cloud distribution point doesn't support package deployments with the option to **Run program from distribution point**. Use the deployment option to **Download content from distribution point and run locally**.  
+
+
+### Limitations  
+
+- You can't use a cloud distribution point for PXE or multicast-enabled deployments.  
+
+- A cloud distribution point doesn't support App-V streaming applications.  
+
+- You can't [prestage content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) on a cloud distribution point. The distribution manager of the primary site that manages the cloud distribution point transfers all content.  
+
+- You can't configure a cloud distribution point as a pull-distribution point.  
+
+
+
+##  <a name="bkmk_cost"></a> Cost   
+<!--501018-->
+> [!IMPORTANT]  
+> The following cost information is for estimating purposes only. Your environment may have other variables that affect the overall cost of using a cloud distribution point.  
+
+Configuration Manager includes the following options to help control costs and monitor data access:  
+
+- Control and monitor the amount of content that you store in a cloud service. For more information, see [Monitor cloud distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_monitor).  
+
+- Configure Configuration Manager to alert you when thresholds for client downloads meet or exceed monthly limits. For more information, see [Data transfer threshold alerts](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts).   
+
+- To help reduce the number of data transfers from cloud distribution points by clients, use one of the following peer caching technologies:  
+    - Configuration Manager peer cache
+    - Windows BranchCache
+    - Windows 10 Delivery Optimization  
+
+   For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
+
+
+### Components
+
+A cloud distribution point uses the following Azure components, which incur charges to the Azure subscription account:  
+
+> [!Tip]  
+> Starting in version 1806, the cloud management gateway can also serve content to clients. This functionality reduces the cost by consolidating the Azure VMs. For more information, see [Cost for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#cost).  
+
+#### Virtual machine
+- The cloud distribution point uses Azure Cloud Services as platform as a service (PaaS). This service uses virtual machines (VMs) that incur compute costs.  
+
+- Each cloud distribution point service uses two Standard A0 VMs.  
+
+- See the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to help determine potential costs.
 
     > [!NOTE]  
-    >  Alerts for a cloud-based distribution point depend on usage statistics from Azure, which can take up to 24 hours to become available. For information about Storage Analytics for Azure, including how frequently Azure updates use statistics, see [Storage Analytics](http://go.microsoft.com/fwlink/p/?LinkID=275111) in the MSDN Library.  
+    > Virtual machine costs vary by region.
 
+#### Outbound data transfer
+- Any dataflows into Azure are free (ingress or upload). Distributing content from the site to the cloud distribution point is uploading to Azure.  
 
--   **Stop or start the cloud service on demand**: You can use the option to stop a cloud service at any time to prevent clients from using the service continuously. When you stop the cloud service, you immediately prevent clients from downloading additional content from the service. Additionally, you can restart the cloud service to restore access for clients. For example, you might want to stop a cloud service when data thresholds are reached.  
+- Charges are based on data flowing out of Azure (egress or download). Cloud distribution point dataflows out of Azure consist of the software content that clients download.  
 
-     When you stop a cloud service, the cloud service does not delete the content from the distribution point and does not prevent the site server from transferring additional content to the cloud-based distribution point.  
+- For more information, see [Monitor cloud distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_monitor).  
 
-     To stop a cloud service, in the Configuration Manager console, select the distribution point in the **Cloud Distribution Points** node under **Cloud Services**, in the **Administration** workspace. Next, choose **Stop service** to stop the cloud service that runs in Azure.  
+- See the [Azure bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/) to help determine potential costs. Pricing for data transfer is tiered. The more you use, the less you pay per gigabyte.  
 
-##  <a name="BKMK_CloudDPCerts"></a> About subscriptions and certificates for cloud-based distribution points  
- Cloud-based distribution points require certificates to enable Configuration Manager to manage the cloud service that hosts the distribution point, and for clients to access content from the distribution point. The following information provides an overview about these certificates. For more detailed information, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
+#### Content storage
+- Internet-based clients get Microsoft software update content from the Microsoft Update cloud service at no charge. Don't distribute software update deployment packages with Microsoft software updates to a cloud distribution point. Otherwise, you'll incur data storage costs for content that clients never use.  
 
- **Certificates**  
+- Cloud distribution points use the following standard blob storage depending upon the deployment model:  
 
--   **Management certificate for site server to distribution point communication**: The management certificate establishes trust between the Azure management API and Configuration Manager. This authentication enables Configuration Manager to call on the Azure API when you perform tasks such as deploying content or starting and stopping the cloud service. By using  Azure, you can create your own management certificates, which can be either self-signed certificates or certificates that are issued by a certification authority (CA):  
+    - A classic deployment uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
 
-    -   Provide the .cer file of the management certificate to Azure when you configure Azure for Configuration Manager. The .cer file contains the public key for the management certificate. You must upload this certificate to Azure before you install a cloud-based distribution point. This certificate enables Configuration Manager to access the Azure API.  
+    - An Azure Resource Manager deployment use Azure locally-redundant storage (LRS). This change reduces the cost of the storage account. The classic deployment wasn't using the additional features of GRS. For more information, see [Locally-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
 
-    -   Provide the .pfx file of the management certificate to Configuration Manager when you install the cloud-based distribution point. The .pfx file contains the private key for the management certificate. Configuration Manager stores this certificate in the site database. Because the .pfx file contains the private key, you must provide the password to import this certificate file into the Configuration Manager database.  
-
-    If you create a self-signed certificate, you must first export the certificate as a .cer file and then export it again as a .pfx file.  
-
-    Optionally, you can specify a version one **.publishsettings** file from the Azure SDK 1.7. For information about .publishsettings files, refer to the Azure documentation.  
-
-    For more information, see [How to create a management certificate](http://go.microsoft.com/fwlink/p/?LinkId=220281) and [How to add a management certificate to an Azure subscription](http://go.microsoft.com/fwlink/p/?LinkId=241722) in the Azure platform section of the MSDN Library.  
-
--   **Service certificate for client communication to the distribution point**: The Configuration Manager cloud-based distribution point service certificate establishes trust between the Configuration Manager clients and the cloud-based distribution point, and secures the data that clients download from it by using Secure Socket Layer (SSL) over HTTPS.  
-
-    > [!IMPORTANT]  
-    >  The common name in the certificate subject box of the service certificate must be unique in your domain and not match any domain-joined device.  
-
-   For an example deployment of this certificate, see the section **Deploying the service certificate for cloud-based distribution points** in the topic [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
-
-##  <a name="bkmk_Tasks"></a> Common management tasks for cloud-based distribution points  
-
--   **Site server to cloud-based distribution point communication**: When you install a cloud-based distribution point, you must assign one primary site to manage the transfer of content to the cloud service. This action is equivalent to installing the distribution point site system role on a specific site.  
-
--   **Client to cloud-based distribution point communication**: When a device or user of a device is configured with the client setting that enables the use of a cloud-based distribution point, the device can receive the cloud-based distribution point as a valid content location:  
-
-    -   The cloud-based distribution point is considered a remote distribution point when a client evaluates available content locations.  
-
-    -   Clients on the intranet only use cloud-based distribution points as a fallback option if on-premises distribution points are not available.  
-
-    Even though you install cloud-based distribution points in specific regions of Azure, clients that use cloud-based distribution points are not aware of the Azure regions and non-deterministically select a cloud-based-distribution point.
-
-This means that if you install cloud-based distribution points in multiple regions, and a client receives multiple cloud-based distribution points as content locations, the client might not use a cloud-based distribution point from the same Azure region as the client.  
-
-Clients that use cloud-based distribution points use the following sequence for content location requests:  
-
-1.  A client that is configured to use cloud-based distribution points always attempts to obtain content from a preferred distribution point first.  
-
-2.  When a preferred distribution point is not available, the client uses a remote distribution point, if the deployment supports this option and if a remote distribution point is available.  
-
-3.  When a preferred distribution point or remote distribution point is not available, the client can then fall back to obtain the content from a cloud-based distribution point.  
+#### Other costs
+- Each cloud service has a dynamic IP address. Each distinct cloud distribution point uses a new dynamic IP address. Adding additional VMs per cloud service doesn't increase these addresses.  
 
 
 
-  When a client uses a cloud-based distribution point as a content location, the client authenticates itself to the cloud-based distribution point by using a Configuration Manager access token. If the client trusts the Configuration Manager cloud-based distribution point certificate, the client can then download the requested content.  
+##  <a name="bkmk_dataflow"></a> Ports and data flow   
 
--   **Monitor cloud-based distribution points**: You can monitor the content that you deploy to each cloud-based distribution point, and you can monitor the cloud service that hosts the distribution point.  
+There are two primary data flows for the cloud distribution point:  
 
-    -   **Content**: You monitor content that you deploy to a cloud-based distribution point the same way you do when you deploy content to on-premises distribution points.  
+- The site server connects to Azure to set up the cloud distribution point service  
 
-    -   **Cloud service**: Configuration Manager periodically checks the Azure service and raises an alert if the service is not active, or if there are subscription or certificate issues. You can also view details about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. From this location, you view high-level information about the distribution point. You can also select a distribution point and then edit its properties.  
+- A client connects to the cloud distribution point to download content  
 
-    When you edit the properties of a cloud-based distribution point, you can:  
 
-    -   Adjust the data thresholds for storage and alerts.  
+### Site server to Azure
 
-    -   Manage content as you would for an on-premises distribution point.  
+You don't need to open any inbound ports to your on-premises network. The site server initiates all communication with Azure and the cloud distribution point to deploy, update, and manage the cloud service. The site server must be able to create outbound connections to the Microsoft cloud. This action is equivalent to installing the distribution point site system role on a specific site.  
 
-    Finally, for each cloud-based distribution point, you can view, but not edit, the subscription ID, service name, and other related details that are specified when the cloud-based distribution is installed.  
 
--   **Backup and recovery for cloud-based distribution points**: When you use a cloud-based distribution point in your hierarchy, use the following information to help you plan for backup or recovery of the distribution point:  
+### Client to cloud distribution point
 
-    -   When you use the predefined **Backup Site Server** maintenance task, Configuration Manager automatically includes the configurations for the cloud-based distribution point.  
+You don't need to open any inbound ports to your on-premises network. Internet-based clients communicate directly with the Azure service. Clients on your internal network that use a cloud distribution point must be able to connect the Microsoft cloud. 
 
-    -   It is a best practice to back up and save a copy of both the management certificate and service certificate that are in use with a cloud-based distribution point. If you restore the Configuration Manager primary site that manages the cloud-based distribution point to a different computer, you must re-import the certificates before you can continue to use them.  
+For more information on content location priority and when intranet-based clients use a cloud distribution point, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).
 
--   **Uninstall a cloud-based distribution point** : To uninstall a cloud-based distribution point, select the distribution point in the Configuration Manager console, and then select **Delete**.  
+When a client uses a cloud distribution point as a content location:  
 
-    When you delete a cloud-based distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Azure.  
+1. The management point gives the client an access token along with the list of content sources. This token is valid for 24 hours, and gives the client access to the cloud distribution point.  
+
+2. The management point responds to the client's location request with the **Service FQDN** of the cloud distribution point. This property is the same as the common name of the server authentication certificate.  
+
+    If you're using your domain name, for example, WallaceFalls.contoso.com, then the client first tries to resolve this FQDN. You need a CNAME alias in your domain's internet-facing DNS for clients to resolve the Azure service name, for example: WallaceFalls.cloudapp.net.  
+
+3. The client next resolves the Azure service name, for example, WallaceFalls.cloudapp.net, to a valid IP address. This response should be handled by Azure's DNS.  
+
+4. The client connects to the cloud distribution point. Azure load balances the connection to one of the VM instances. The client authenticates itself using the access token.  
+
+5. The cloud distribution point authenticates the client's access token, and then gives the client the exact content location in Azure storage.  
+
+6. If the client trusts the cloud distribution point's server authentication certificate, it connects to Azure storage to download the content. 
+
+
+
+##  <a name="bkmk_perf"></a> Performance and scale   
+<!--494872-->
+
+As with any distribution point design, consider the following factors:  
+- Number of concurrent client connections
+- The size of the content that clients download
+- The length of time allowed to meet your business requirements 
+
+Depending upon your [topology design](#bkmk_topology), if clients have the option of more than one cloud distribution point for any given content, then they naturally randomize across those cloud services. If you only distribute a certain piece of content to a single cloud distribution point, and a large number of clients try to download this content at the same time, this activity puts higher load on that single cloud distribution point. Adding an additional cloud distribution point also includes a separate Azure storage service. For more information on how the client communicates with the cloud distribution point components and downloads content, see [Ports and data flow](#bkmk_dataflow).  
+
+The cloud distribution point uses two Azure VMs as the front end to the Azure storage. This default deployment meets most customer's needs. In some extreme circumstances, with a large number of concurrent client connections (for example, 150,000 clients), the processing capacity of the Azure VMs can't keep up with the client requests. You can't resize the Azure VMs used for the cloud distribution point. While you can't configure the number of VM instances for the cloud distribution point in Configuration Manager, if necessary, reconfigure the cloud service in the Azure portal. Either manually add more VM instances, or configure the service to automatically scale. 
+
+> [!Important]  
+> When you update Configuration Manager, the site redeploys the cloud service. If you manually reconfigure the cloud service in the Azure portal, the number of instances resets to the default of two.  
+
+The Azure storage service supports 500 requests per second for a single file. Performance testing of a single cloud distribution point supported distribution of a single 100-MB file to 50,000 clients in 24 hours.<!--512106-->  
+
+
+
+##  <a name="bkmk_certs"></a> Certificates  
+
+Depending upon your cloud distribution point design, you need one or more digital certificates.  
+
+
+### Azure management certificate
+
+*This certificate is required for classic service deployments. It isn't required for Azure Resource Manager deployments.*
+
+If using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Azure management certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate) section of the cloud management gateway certificates article. The Configuration Manager site server uses this certificate to authenticate with Azure to create and manage the classic deployment.  
+
+> [!TIP]  
+> Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
+
+To reduce complexity, use the same Azure management certificate for all classic deployments of cloud distribution points and cloud management gateways, across all Azure subscriptions and all Configuration Manager sites.
+
+
+### Server authentication certificate
+
+*This certificate is required for all cloud distribution point deployments.*
+
+For more information, see [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate), and the following subsections, as necessary:  
+- CMG trusted root certificate to clients
+- Server authentication certificate issued by public provider
+- Server authentication certificate issued from enterprise PKI
+
+The cloud distribution point uses this type of certificate in the same way as the cloud management gateway. Clients also need to trust this certificate. To reduce complexity, Microsoft recommends using a certificate issued by a public provider. 
+
+Unless you use a wildcard certificate, don't reuse the same certificate. Each instance of the cloud distribution point and cloud management gateway requires a unique server authentication certificate. 
+
+For more information on creating this certificate from a PKI, see [Deploy the service certificate for cloud distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012).  
+
+
+
+##  <a name="bkmk_faq"></a> Frequently asked questions (FAQ)   
+
+### Does a client need a certificate to download content from a cloud distribution point?
+
+A client authentication certificate isn't required. The client does need to trust the server authentication certificate used by the cloud distribution point. If this certificate is issued by a public certificate provider, then most Windows devices already include trusted root certificates for these providers. If you issued a server authentication certificate from your organization's PKI, then your clients need to trust the issuing certificates in the entire chain. This chain includes the root certificate authority, and any intermediate certificate authorities. Depending upon your PKI design, this certificate can introduce additional complexity to the deployment of the cloud distribution point. To avoid this complexity, Microsoft recommends using a public certificate provider that your clients already trust.  
+
+
+### Can my on-premises clients use a cloud distribution point?
+
+Yes. If you want clients on your internal network to use a cloud distribution point, then it needs to be in the same boundary group as the clients. Clients prioritize cloud distribution points last in their list of content sources, because there's a cost associated with downloading content out of Azure. Thus, a cloud distribution point is typically used as a fallback source for intranet-based clients. If you want a cloud-first design, then design your boundary groups accordingly. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
+
+
+### Do I need Azure ExpressRoute?
+
+[Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud distribution point.  
+
+If your organization uses ExpressRoute, isolate the Azure subscription for the cloud distribution point from the subscription that uses ExpressRoute. This configuration ensures that the cloud distribution point isn't accidentally connected in this manner.  
+
+
+### Do I need to maintain the Azure virtual machines?
+
+No maintenance is required. The design of the cloud distribution point uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary VMs, storage, and networking. Azure secures and updates the virtual machines. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud distribution point is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Security advantages of a PaaS cloud service model](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
+
+
+### Does the cloud distribution point use Azure CDN?
+
+The Azure Content Delivery Network (CDN) is a global solution for rapidly delivering high-bandwidth content by caching the content at strategically placed physical nodes across the world. For more information, see [What is Azure CDN?](https://docs.microsoft.com/azure/cdn/cdn-overview).
+
+The Configuration Manager cloud distribution point currently doesn't support Azure CDN.
+
+
+
+## Next steps
+[Install cloud distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)
