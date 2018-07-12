@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 07/05/2018
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -37,6 +37,18 @@ Each section of this article lists hybrid features under three different categor
 ## July 2018
 
 ### New in Microsoft Intune
+
+#### Support for security enhancement in Intune service
+<!--2520152-->
+You can now specify that devices without any assigned compliance policies aren't compliant in hybrid. Configure this setting in the Intune on Azure portal. We strongly recommend that you enable this feature to secure your internal resources.
+
+This feature is off by default in hybrid tenants. When you enable this feature, devices that don't have an assigned compliance policy are considered non-compliant. If you also enable conditional access, these devices lose access to internal resources. Such resources may be Outlook or SharePoint, based on the conditional access policies in your environment. If you leave this setting off, these devices continue to have the same level of access as they do currently.
+
+To help you determine the impact of turning this feature on, we've provided a [script on the TechNet Gallery](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695). When you run this script against your Configuration Manager database, it lists the devices that aren't targeted by any compliance policies.
+
+For more information, see the following articles:
+- [Security Enhancements in the Intune Service](https://aka.ms/compliance_policies) blog post 
+- [Device compliance policies in Configuration Manager](/sccm/mdm/deploy-use/device-compliance-policies)
 
 #### Updates to out-of-compliance messages in Company Portal app 
 <!--1832222--> 
