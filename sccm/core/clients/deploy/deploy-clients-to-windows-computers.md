@@ -54,7 +54,7 @@ Client log files provide more detailed information for troubleshooting. The log 
 
 4.  On the **General** tab of the Client Push Installation Properties window, select **Enable automatic site-wide client push installation**.   
 
-5. Starting in version 1806, when you open this properties page for the first time after updating, the site enables a Kerberos check for client push. If necessary for your environment, see the option to **Allow connection fallback to NTLM**. This option is disabled by default, which is the recommended configuration.<!--1358204-->  
+5. Starting in version 1806, when you update the site, it enables a Kerberos check for client push. The option to **Allow connection fallback to NTLM** is enabled by default, which is consistent with previous behavior. If the site can't authenticate the client using Kerberos, it retries the connection using NTLM. The recommended configuration for improved security is to disable this setting, which requires Kerberos without NTLM fallback.<!--1358204-->  
 
     > [!Note]  
     > When using client push to install the Configuration Manager client, the site server creates a remote connection to the client. Starting in version 1806, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client.  
