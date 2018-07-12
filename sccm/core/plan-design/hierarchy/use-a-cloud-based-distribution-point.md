@@ -229,7 +229,11 @@ A cloud distribution point uses the following Azure components, which incur char
 #### Content storage
 - Internet-based clients get Microsoft software update content from the Microsoft Update cloud service at no charge. Don't distribute software update deployment packages with Microsoft software updates to a cloud distribution point. Otherwise, you'll incur data storage costs for content that clients never use.  
 
-- Cloud distribution points use Azure geo-redundant storage (GRS) standard blob storage. For more information, see [Geo-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+- Cloud distribution points use the following standard blob storage depending upon the deployment model:  
+
+    - A classic deployment uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+
+    - An Azure Resource Manager deployment use Azure locally-redundant storage (LRS). This change reduces the cost of the storage account. The classic deployment wasn't using the additional features of GRS. For more information, see [Locally-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
 
 #### Other costs
 - Each cloud service has a dynamic IP address. Each distinct cloud distribution point uses a new dynamic IP address. Adding additional VMs per cloud service doesn't increase these addresses.  
@@ -254,7 +258,7 @@ You don't need to open any inbound ports to your on-premises network. The site s
 
 You don't need to open any inbound ports to your on-premises network. Internet-based clients communicate directly with the Azure service. Clients on your internal network that use a cloud distribution point must be able to connect the Microsoft cloud. 
 
-For more information content location priority and when intranet-based clients use a cloud distribution point, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).
+For more information on content location priority and when intranet-based clients use a cloud distribution point, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).
 
 When a client uses a cloud distribution point as a content location:  
 
@@ -262,9 +266,7 @@ When a client uses a cloud distribution point as a content location:
 
 2. The management point responds to the client's location request with the **Service FQDN** of the cloud distribution point. This property is the same as the common name of the server authentication certificate.  
 
-    a. If you're using your domain name, for example, WallaceFalls.contoso.com, then the client first tries to resolve this FQDN. You need a CNAME alias in your domain's internet-facing DNS for clients to resolve the Azure service name, for example: WallaceFalls.cloudapp.net.  
-
-    b. If you created a custom certificate from your PKI, you could use the Azure service name, for example, WallaceFalls.cloudapp.net.  
+    If you're using your domain name, for example, WallaceFalls.contoso.com, then the client first tries to resolve this FQDN. You need a CNAME alias in your domain's internet-facing DNS for clients to resolve the Azure service name, for example: WallaceFalls.cloudapp.net.  
 
 3. The client next resolves the Azure service name, for example, WallaceFalls.cloudapp.net, to a valid IP address. This response should be handled by Azure's DNS.  
 

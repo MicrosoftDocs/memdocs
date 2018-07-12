@@ -134,9 +134,11 @@ Before clients can use the cloud distribution point, they must be able to resolv
 > [!Note]  
 > The **Cloud Distribution Points** node in the console includes a column named **Service Name**, but actually shows the **Service FQDN** value. To see both values, open **Properties** for the cloud distribution point and switch to the **Settings** tab.  
 
+<!-- Remove based on feedback from RoYork
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
+-->
 
-If you purchase a server authentication certificate from a public provider, or if your PKI requires it, then the certificate common name includes your domain name. For example, `WallaceFalls.contoso.com`. When you specify this certificate in the Create Cloud Distribution Point Wizard, the common name populates the **Service FQDN** property (`WallaceFalls.contoso.com`). The **Service name** takes the same hostname (`WallaceFalls`) and appends it to the Azure domain name, `cloudapp.net`. In this scenario, clients need to resolve your domain's **Service FQDN** (`WallaceFalls.contoso.com`) to the Azure **Service name** (`WallaceFalls.cloudapp.net`). Create a CNAME alias to map these names.
+The server authentication certificate common name should include your domain name. This name is required when you purchase a certificate from a public provider. It's recommended when issuing this certificate from your PKI. For example, `WallaceFalls.contoso.com`. When you specify this certificate in the Create Cloud Distribution Point Wizard, the common name populates the **Service FQDN** property (`WallaceFalls.contoso.com`). The **Service name** takes the same hostname (`WallaceFalls`) and appends it to the Azure domain name, `cloudapp.net`. In this scenario, clients need to resolve your domain's **Service FQDN** (`WallaceFalls.contoso.com`) to the Azure **Service name** (`WallaceFalls.cloudapp.net`). Create a CNAME alias to map these names.
 
 
 ### Create CNAME alias
