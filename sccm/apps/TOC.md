@@ -27,6 +27,7 @@
 
 ## Monitor applications
 ### [Monitor applications from the console](deploy-use/monitor-applications-from-the-console.md)
+### [Manage and monitor phased deployments](../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [Monitor app usage with software metering](deploy-use/monitor-app-usage-with-software-metering.md)
 
 ## Manage applications
