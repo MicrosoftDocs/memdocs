@@ -200,5 +200,5 @@ To access the product lifecycle dashboard, in the Configuration Manager console 
 
 
 
-## Next Steps
+## Next steps
 When you're ready to install this version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
