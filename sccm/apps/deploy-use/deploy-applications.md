@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Deploy applications with System Center Configuration Manager
+
+# Deploy applications with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -136,6 +137,18 @@ On the **App Configuration Policies** page, click **New** to associate this depl
 ### Deployment properties
 
 Find the new deployment in the **Deployments** node of the **Monitoring** workspace. You can edit the properties of this deployment or delete the deployment from the **Deployments** tab of the application detail pane.
+
+
+
+## Create a phased deployment
+<!--1358147-->
+Starting in version 1806, create a phased deployment for an application. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. 
+
+For more information, see the following articles:  
+
+- [Create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+
+- [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
 
 
