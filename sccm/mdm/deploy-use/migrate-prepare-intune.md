@@ -62,7 +62,7 @@ For conditional access to work properly after you migrate users, and to ensure t
 - Remove users from conditional access targeting in Configuration Manager once they are migrated to Intune standalone.
 
 ## Configure the Microsoft Intune Certificate Connector
-If you use NDES to issue certificates using SCEP, you need to configure the Microsoft Intune Certificate Connector. The computer that hosts the NDES connector in Intune cannot be the same computer that hosts the NDES connector in Configuration Manager. For details, see [Configure and manage SCEP certificates with Intune](https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
+If you use NDES to issue certificates using SCEP, you need to configure the Microsoft Intune Certificate Connector. The computer that hosts the NDES connector in Intune cannot be the same computer that hosts the NDES connector in Configuration Manager. For details, see [Configure and manage SCEP certificates with Intune](https://docs.microsoft.com/intune/certificates-scep-configure). 
 
 > [!Important]    
 > After you configure the connector, you must modify imported SCEP profiles to reference the new server URL.
