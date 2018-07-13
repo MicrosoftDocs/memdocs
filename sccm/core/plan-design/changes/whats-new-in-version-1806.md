@@ -132,13 +132,38 @@ Convert Security Content Automation Protocol (SCAP) content to compliance settin
 
 
 
-<!--## Application Management-->
+## Application Management
+
+### Phased deployment of applications
+<!--1358147-->
+Create a phased deployment for an application. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. 
+
+For more information, see the following articles:  
+
+- [Create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+
+- [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
 
 
-<!--## Operating system deployment-->
 
+## Operating system deployment
 
+### Improvements to phased deployments
+
+This release includes the following improvements to phased deployments:  
+
+#### Create a phased deployment with manually configured phases
+<!--1358148--> 
+For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
+
+#### Phased deployment status
+<!--1358577-->
+Phased deployments now have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon. For more information, see [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments).  
+
+#### Gradual rollout during phased deployments
+<!--1358578-->
+During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. For more information, see [Phase settings](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_settings).  
 
 
 
