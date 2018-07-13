@@ -77,10 +77,10 @@ After you enable co-management, you can monitor co-management devices using the 
    > [!Note]    
    > A device is co-managed when the **MDMEnrolled** field and **ComgmtPolicyPresent** fields both have a value of **1**.
 
-- **Deployment policies**:  There are two policies created in **Monitoring** > **Deployments**; one policy for the pilot group and one for production. These policies only report the number of devices where Configuration Manager has applied the policy. It doesn't consider how many devices are enrolled in Intune, which is a requirement before devices can be co-managed.  
+- **Deployment policies**:  Two policies are created in **Monitoring** > **Deployments**, one for the pilot group and one for production. These policies report only the number of devices where Configuration Manager has applied the policy. They don't consider how many devices are enrolled in Intune, which is a requirement before devices can be co-managed.  
 
 ## Check compliance for co-managed devices
-Users can use Software Center to check the compliance of their co-managed Windows 10 devices regardless of whether conditional access is managed by Configuration Manager or Intune. Users can also check compliance by using the Company Portal app when conditional access is managed by Intune.
+Users can use Software Center to check the compliance of their co-managed Windows 10 devices whether conditional access is managed by Configuration Manager or Intune. Users can also check compliance by using the Company Portal app when conditional access is managed by Intune.
 
 ## Next steps
 Use the following resources to help you manage the workloads that you switch to Intune:
