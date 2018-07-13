@@ -26,7 +26,7 @@ Configuration baselines in System Center Configuration Manager contain predefine
 
 -   Use the **Create Configuration Baseline** dialog box to create a new configuration baseline.  
 
- Use the following procedure to create a configuration baseline by using the **Create Configuration Baseline** dialog box.  
+To create a configuration baseline by using the **Create Configuration Baseline** dialog box, use the following procedure:  
 
 1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Baselines**.  
 
@@ -45,11 +45,11 @@ Configuration baselines in System Center Configuration Manager contain predefine
       > You must limit each configuration baseline to no more than 1000 software updates.
 5.  Use the **Change Purpose** list to specify the behavior of a configuration item that you've selected in the **Configuration data** list. You can select from the following items:  
 
-    -   **Required** The configuration baseline is evaluated as noncompliant if the configuration item isn't detected on a client device. If it's detected, it's evaluated for compliance  
+    -   **Required**: The configuration baseline is evaluated as noncompliant if the configuration item isn't detected on a client device. If it's detected, it's evaluated for compliance  
 
-    -   **Optional** The configuration item is only evaluated for compliance if the application it references is found on client computers. If the application is not found, the configuration baseline isn't marked as noncompliant (only applicable to application configuration items).  
+    -   **Optional**: The configuration item is only evaluated for compliance if the application it references is found on client computers. If the application is not found, the configuration baseline isn't marked as noncompliant (only applicable to application configuration items).  
 
-    -   **Prohibited** The configuration baseline is evaluated as noncompliant if the configuration item is detected on client computers (only applicable to application configuration items).  
+    -   **Prohibited**: The configuration baseline is evaluated as noncompliant if the configuration item is detected on client computers (only applicable to application configuration items).  
 
     > [!NOTE]
     >  The **Change Purpose** list is available only if you clicked the option **This configuration item contains application settings** on the **General** page of the **Create Configuration Item Wizard**.  
