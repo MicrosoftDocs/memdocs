@@ -64,13 +64,6 @@ High availability for the site server role is a Configuration Manager-based solu
 - [Flowchart - Promote site server (unplanned)](/sccm/core/servers/deploy/configure/promote-site-server-unplanned-flowchart)
 
 
-### Configure a remote content library for the site server
-<!--1357525-->
-To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). For more information, see the following articles: 
-- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
-- [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
-
-
 ### Improvements to management insights
 This release includes the following improvements to management insights:  
 
@@ -79,6 +72,31 @@ This release includes the following improvements to management insights:
 - A new group for Proactive Maintenance is available with six new rules, which help highlight potential configuration issues to avoid through regular upkeep.<!--1352184-->  
 
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+
+
+
+## Content management
+
+### Configure a remote content library for the site server
+<!--1357525-->
+To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). For more information, see the following articles: 
+- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
+- [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
+
+
+### Cloud distribution point support for Azure Resource Manager
+<!--1322209-->
+When creating a cloud distribution point, the wizard now provides the option to create an **Azure Resource Manager deployment**. Azure Resource Manager is a modern platform for managing all solution resources as a single entity, called a resource group. When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. 
+
+The feature documentation for the cloud distribution point is also revised and enhanced. For more information, see the following articles:
+- [Use a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)   
+- [Install a cloud distribution point](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)  
+
+
+### Pull-distribution points support cloud distribution points as source  
+<!--1321554-->
+Many customers use pull-distribution points in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a cloud distribution point in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. For more information, see [Use a pull-distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
+
 
 
 

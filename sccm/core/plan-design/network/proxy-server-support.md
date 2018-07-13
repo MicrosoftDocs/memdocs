@@ -1,8 +1,8 @@
 ---
-title: "Proxy server support"
-titleSuffix: "Configuration Manager"
-description: "Learn about System Center Configuration Manager support for proxy servers that site system servers and clients use."
-ms.date: 2/7/2017
+title: Proxy server support
+titleSuffix: Configuration Manager
+description: Learn how Configuration Manager site system servers use proxy servers.
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,66 +11,86 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Proxy server support in System Center Configuration Manager
+
+# Proxy server support in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Both System Center Configuration Manager site system servers and clients can use a proxy server.  
+Some Configuration Manager site system servers require connections to the internet. If your environment requires internet traffic to use a proxy server, configure these site system roles to use the proxy.  
 
-## Site system servers  
-When site system roles need to connect to the Internet, you can configure them to use a proxy server.  
-
--   A computer that hosts a site system server supports a single proxy server configuration that is shared by all site system roles on that same computer. If you need separate proxy servers for different roles or instances of a role, you must place those roles on separate site system servers.  
+-   A computer that hosts a site system server supports a single proxy server configuration. All site system roles on that computer share this same proxy configuration. If you need separate proxy servers for different roles or instances of a role, place those roles on separate site system servers.  
 
 -   When you configure new proxy server settings for a site system server that already has a proxy server configuration, the original configuration is overwritten.  
 
--   Connections to the proxy use the **System** account of the computer that hosts the site system role.  
+-   By default, connections to the proxy use the **System** account of the computer that hosts the site system role.  
 
-The following site system roles connect to the Internet and might require a proxy server.  With one exception, site system roles that can use a proxy do so with no additional configuration. The exception is the software update point. The following list has information about the additional configurations that a software update point requires:  
+-   If the computer account can't authenticate, the site system server can store user credentials to connect to the proxy server. These credentials are the **site system proxy server account**.  
 
-**Asset Intelligence synchronization point** - This site system role connects to Microsoft and uses a proxy server configuration on the computer that hosts the Asset Intelligence synchronization point.  
 
-**Cloud-based distribution point** - To set up a proxy server for a cloud-based distribution point, you set up the proxy on the primary site that manages the cloud-based distribution point.  
+
+## Site system roles that use a proxy
+
+The following site system roles connect to the internet, and if necessary, can use a proxy server:  
+
+
+#### Asset Intelligence synchronization point
+This site system role connects to Microsoft and uses a proxy server configuration on the computer that hosts the Asset Intelligence synchronization point.  
+
+
+#### Cloud distribution point
+The cloud distribution point role runs in Microsoft Azure. You don't configure this site system role to use a proxy. Set the proxy configuration on the primary site server that manages the cloud distribution point.  
 
 For this configuration, the primary site server:  
 
--   Must be able to connect to Microsoft Azure to set up, monitor, and distribute content to the distribution point.  
+-   Must be able to connect to Microsoft Azure to set up, monitor, and distribute content to the cloud distribution point.  
 
--   Uses that computer's System account to make the connection.  
+-   By default, uses the computer's **System** account to make the connection. It can also use the site system proxy server account, if necessary.  
 
--   Uses that computer's default web browser.  
+-   Uses Windows web browser APIs.  
 
-You cannot set up a proxy server on the cloud-based-distribution point in Microsoft Azure.  
 
-**Cloud connection point** - This site system role connects to the Configuration Manager cloud service to download version updates for Configuration Manager and uses a proxy server that's configured on the computer that hosts the service connection point.  
+#### Exchange Server connector
+This site system role connects to an Exchange Server. It uses a proxy server configuration on the computer that hosts the Exchange Server connector.  
 
-**Exchange Server connector** - This site system role connects to an Exchange Server and uses a proxy server configuration on the computer that hosts the Exchange Server connector.  
 
-**Service connection point** - This site system role connects to Microsoft Intune and uses a proxy server configuration on the computer that hosts the service connection point.  
+#### Service connection point
+This site system role connects to the Configuration Manager cloud service to download version updates for Configuration Manager, and connects to Microsoft Intune in a hybrid configuration. It uses a proxy server that's configured on the computer that hosts the service connection point.  
 
-**Software updates point** - This site system role can use the proxy when it connects to Microsoft Update to download patches and synchronize information about updates. Software update points use a proxy only for the following options when you enable that option as you set up the software update point:  
+
+#### Software update point
+This site system role uses the proxy when it connects to Microsoft Update to download patches and synchronize information about updates. Like every other site system role, first configure the site system proxy settings. Then configure the following options specific to the software update point:  
 
 -   **Use a proxy server when synchronizing software updates**  
 
--   **Use a proxy server when downloading content by using automatic deployment rules** (While available for use, this setting is not used by software update points at secondary sites.)  
+-   **Use a proxy server when downloading content by using automatic deployment rules**  
 
-Configure the proxy server settings on the Active Software Update Point page of the Add Site System Roles wizard or on the **General** tab in **Software Update Point Component Properties**.  
+    > [!Note]  
+    > While available for use, this setting isn't used by software update points at secondary sites.  
 
--   The proxy server settings are associated only with the software update point at the site.  
-
--   Proxy server options are only available when a proxy server is already set up for the site system server that hosts the software update point.  
+These settings are on the **Proxy and Account Settings** tab of the software update point properties.  
 
 > [!NOTE]  
->  By default, the **System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run.  
+>  By default, the **System** account for the server on which an automatic deployment rule was created is used to connect to the internet and download software updates when the automatic deployment rules run. Alternatively, configure and use the site system proxy server account. 
 >   
->  When this account cannot access the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007.**  
+>  When this account cannot access the internet, software updates fail to download. The following entry is logged to **ruleengine.log**:  
+> `Failed to download the update from internet. Error = 12007.`  
 
-#### To set up the proxy server for a site system server  
 
-1.  In the Configuration Manager console, choose **Administration**, expand **Site Configuration**, and then choose **Servers and Site System Roles**.  
 
-2.  Choose the site system server that you want to edit, in the details pane right-click **Site system**, and then choose **Properties**.  
+## Configure the proxy for a site system server  
 
-3.  In Site system Properties, select the **Proxy** tab, and then set up the proxy settings for this primary site server.  
+1.  In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and then select the **Servers and Site System Roles** node.  
+
+2.  Select the site system server that you want to edit. In the details pane, right-click the **Site system** role, and select **Properties**.  
+
+3.  In Site system Properties, switch to the **Proxy** tab. Configure the following proxy settings:  
+
+    - **Use a proxy server when synchronizing information from the internet**: Select this option to enable the site system server to use a proxy server.  
+
+    - **Proxy server name**: Specify the hostname or FQDN of the proxy server in your environment.  
+
+    - **Port**: Specify the network port on which to communicate with the proxy server. By default, it uses port **80**.  
+
+    - **Use credentials to connect to the proxy server**: Many proxy servers require a user to authenticate. By default, the site system server uses its computer account to connect to the proxy server. If necessary, enable this option, click **Set**, and then choose an **Existing Account** or specify a **New Account**. These credentials are the **site system proxy server account**.  For more information, see [Accounts used in Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
 
 4.  Choose **OK** to save the new proxy server configuration.  
