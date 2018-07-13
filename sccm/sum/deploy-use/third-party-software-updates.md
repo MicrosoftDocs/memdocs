@@ -90,7 +90,7 @@ Enable third-party updates on the clients in the client settings. The setting se
 
 
 ## Add a custom catalog
-You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be signed. 
+*Partner catalogs* are software vendor catalogs which are registered Microsoft. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be digitally signed. 
 
 1. Go to the **Software Updates Library** workspace, expand **Software updates**, and select the **Third-Party Software Update Catalogs** node. 
    
@@ -131,7 +131,7 @@ When you subscribe to a third-party catalog in the Configuration Manager console
 Once the third-party updates are in the **All Updates** node, you can choose which updates should be published for deployment. When you publish an update, the binary files are downloaded from the vendor and placed into the WSUSContent directory on the top-level SUP. 
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **All Software Updates** node.
-2. Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **Adobe Systems, Inc**. to view all updates from Adobe.  
+2. Click **Add Criteria** to filter the list of updates. For example, add **Vendor** for **HP**. to view all updates from HP.  
 3. Select the updates that are required by your organization. Click **Publish Third-Party Software Update Content**.
     - This action downloads the update binaries from the vendor then stores them in the WSUSContent folder on the top-level software update point. 
 4. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to change the state of the published updates from metadata-only to deployable updates with content. 
@@ -153,7 +153,8 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 - The machine where the console is running is used to download the updates from WSUS and add it to the updates package. The WSUS signing certificate must be trusted on the console machine. If it isn't, you may see issues with the signature check during the download of third-party updates. 
 - The third-party software update synchronization service can't publish content to metadata-only updates that were added to WSUS by another application, tool, or script, such as SCUP. The **Publish third-party software update content** action fails on these updates. If you need to deploy third-party updates that this feature doesn't yet support, use your existing process in full for deploying those updates.  
 -  Configuration Manager has a new version for the catalog cab file format. The new version includes the certificates for the vendor's binary files. These certificates are added to the **Certificates** node under **Security** in the **Administration** workspace once you approve and trust the catalog.  
-     - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used. 
+     - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.
+     - For more information, see status messages 11523 and 11524 in the below status message table.
 
 ## Status messages
 
