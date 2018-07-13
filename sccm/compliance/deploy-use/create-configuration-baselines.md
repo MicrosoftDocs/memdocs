@@ -58,7 +58,7 @@ Configuration baselines in System Center Configuration Manager contain predefine
 
 7.  To remove a configuration item from the configuration baseline, select a configuration item, and then click **Remove**.  
 
-8. Starting in version 1806, select if you want to **Always apply this baseline for co-managed clients**. This exception might be used to configure settings that are required by your organization but not yet available in Intune. 
+8. Starting in version 1806, select if you want to **Always apply this baseline for co-managed clients**. When checked, this baseline will apply even on clients that are managed by Intune.  This exception might be used to configure settings that are required by your organization but not yet available in Intune. 
 
 9. Optionally, click on **Categories** to assign categories to the baseline for searching and filtering. 
 

@@ -78,8 +78,10 @@ Windows Update for Business policies let you configure deferral policies for Win
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices. For details, see [Deploy resource access profiles](https://docs.microsoft.com/intune/device-profiles).
 
 - **Endpoint Protection:**
-Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For more information, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/en-us/intune/endpoint-protection-windows-10)<!-- 1357365 --> and [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)
+Starting in Configuration Manager 1802, the Endpoint Protection workload can be transitioned to Intune. For more information, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10)<!-- 1357365 --> and [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)
 
+- **Device configuration**
+Starting in Configuration Manager 1806, the device configuration workload can be transitioned to Intune. For more information, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create) and [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune).  <!--1357903-->
 
 ### Install Configuration Manager client to the devices enrolled in Intune
 When Windows 10 devices are enrolled in Intune, you can install the Configuration Manager client on the devices ([using a specific command-line argument](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)) to prepare the clients for co-management. Then, you enable co-management from the Configuration Manager console to start moving specific workloads to Intune for specific Windows 10 devices.
