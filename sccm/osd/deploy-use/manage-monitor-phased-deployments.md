@@ -28,7 +28,7 @@ When you select the setting, **Manually begin the second phase of deployment**, 
 
     - **Application** (only in version 1806 or later): Go to the **Software Library**, expand **Application Management**, and select **Applications**.   
 
-    - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. Select an existing task sequence, and then click **Create Phased Deployment** in the ribbon.  
+    - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.   
 
 2. Select the software with the phased deployment.  
 
