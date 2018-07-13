@@ -18,13 +18,8 @@ manager: dougeby
 
 Phased deployments automate a coordinated, sequenced rollout of software across multiple collections. For example, deploy software to a pilot collection, and then automatically continue the rollout based on success criteria. Create phased deployments with the default of two phases, or manually configure multiple phases. The phased deployment of task sequences doesn't support PXE or media installation. Starting in version 1806, create a phased deployment for an application.<!--1358147-->  
 
-> [!NOTE]  
-> Phased deployments is a pre-release feature introduced in Configuration Manager 1802. To enable the feature, see [pre-release feature](/sccm/core/servers/manage/pre-release-features).<!--1356837-->  
-
-<!--
 > [!Tip]
-> The phased deployment feature was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version ---YYMM---, it's no longer a pre-release feature.<!--1356837
--->
+> The phased deployment feature was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1806, it's no longer a pre-release feature.<!--1356837-->
 
 
 
