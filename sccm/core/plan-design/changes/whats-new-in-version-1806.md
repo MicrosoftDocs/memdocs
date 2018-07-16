@@ -226,6 +226,21 @@ Configuration Manager now supports the deployment of new Windows 10 app package 
 The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.
 
 
+### Package Conversion Manager 
+<!--1357861-->
+Package Conversion Manager is now an integrated tool that allows you to convert legacy Configuration Manager 2007 packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
+
+Start with the following actions from the **Packages** node in the Configuration Manager console:  
+
+   - **Analyze Package**: Start the conversion process by analyzing the package.  
+
+   - **Convert Package**: Some packages can easily be converted into applications with this action.  
+
+   - **Fix and Convert**: Some packages require issues to be fixed before converting into applications.  
+
+Then go to the **Package Conversion Status** dashboard in the **Monitoring** workspace. This new dashboard shows the overall analysis and conversion state of packages in the site.
+
+
 
 ## OS deployment
 
