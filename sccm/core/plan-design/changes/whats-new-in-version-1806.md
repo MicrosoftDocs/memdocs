@@ -56,8 +56,8 @@ Configuration Manager has always provided a large centralized store of device da
 
 
 ### Site server high availability
-<!--1128774,1358224-->
-High availability for the site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. For more information, see the following articles: 
+<!--1128774-->
+High availability for a standalone primary site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. For more information, see the following articles: 
 - [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) 
 - [Flowchart - Set up a site server in passive mode](/sccm/core/servers/deploy/configure/passive-site-server-flowchart)
 - [Flowchart - Promote site server (planned)](/sccm/core/servers/deploy/configure/promote-site-server-flowchart)

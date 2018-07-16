@@ -39,7 +39,7 @@ To make the site server in passive mode become active, you manually *promote* it
 
 - Both site servers must be joined to the same Active Directory domain.  
 
-- The site can be a standalone primary site, a child primary site, or a central administration site<!--1358224-->. 
+- The site is a standalone primary site. 
 
 - Both site servers must use the same site database, which must be remote each site server.  
 
@@ -69,6 +69,8 @@ To make the site server in passive mode become active, you manually *promote* it
 
 ## Limitations
 - A single site server in passive mode is supported at each primary site.  
+
+- A site server in passive mode isn't supported in a hierarchy. A hierarchy includes a central administration site and a child primary site. Only create a site server in passive mode at a standalone primary site.<!--1358224-->
 
 - Promotion of the site server in passive mode to active mode is manual. There's no automatic failover.  
 
