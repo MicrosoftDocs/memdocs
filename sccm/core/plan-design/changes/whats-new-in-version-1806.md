@@ -323,6 +323,11 @@ Use client settings to create a customized tab to open a webpage in Software Cen
 - End-user documentation: articles for users in your organization on various IT topics such as using applications or upgrading to Windows 10.  
 
 
+### Maintenance windows in Software Center
+<!--1358131-->
+Software Center now displays the next scheduled maintenance window. On the Installation Status tab, switch the view from All to Upcoming. It displays the time range and the list of deployments that are scheduled. If there are no future maintenance windows, the list is blank. 
+
+
 
 ## Software updates
 
