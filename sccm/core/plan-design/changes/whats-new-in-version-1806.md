@@ -157,7 +157,7 @@ For more information, see the following articles:
 
 
 
-## Operating system deployment
+## OS deployment
 
 ### Improvements to phased deployments
 
@@ -174,6 +174,13 @@ Phased deployments now have a native monitoring experience. From the **Deploymen
 #### Gradual rollout during phased deployments
 <!--1358578-->
 During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. For more information, see [Phase settings](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_settings).  
+
+
+### Improvements to Windows 10 in-place upgrade task sequence
+<!--1358500-->
+The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
+
+For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-on-failure).
 
 
 
