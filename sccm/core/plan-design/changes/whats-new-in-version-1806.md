@@ -104,6 +104,15 @@ Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Se
 Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. In Hierarchy Settings, enable the option to **Configure client peer cache sources to divide content into parts**. 
 
 
+### Boundary group options for peer downloads
+<!--1356193-->
+Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
+
+- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
+
+- **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
+
+
 
 <!-- ## Migration  -->
 
