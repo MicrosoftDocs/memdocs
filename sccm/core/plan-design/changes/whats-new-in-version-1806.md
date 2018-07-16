@@ -94,6 +94,10 @@ The feature documentation for the cloud distribution point is also revised and e
 Many customers use pull-distribution points in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a cloud distribution point in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. For more information, see [Use a pull-distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
 
+### Enable distribution points to use network congestion control
+<!--1358112-->
+Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
+
 
 
 <!-- ## Migration  -->
