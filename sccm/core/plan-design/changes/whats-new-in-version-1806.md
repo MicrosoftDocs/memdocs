@@ -264,6 +264,15 @@ Use client settings to control whether the link to **Open the Application Catalo
 > The Application Catalog website user experience isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
+### Custom tab for webpage in Software Center
+<!--1358132-->
+Use client settings to create a customized tab to open a webpage in Software Center. This feature allows you to show content to your end users in a consistent, reliable way. The following list includes a few examples:  
+
+- Contact IT: information on how to contact your organization's IT department  
+
+- IT Support Center: IT self-service actions such as searching a knowledge base or opening a support ticket.  
+
+- End-user documentation: articles for users in your organization on various IT topics such as using applications or upgrading to Windows 10.  
 
 
 
