@@ -389,6 +389,12 @@ This release includes the following improvements to the [Surface dashboard](/scc
 Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
 
+### Submit feedback from the Configuration Manager console  
+<!--1357542-->
+
+Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
+
+
 
 ## Next steps
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates).
