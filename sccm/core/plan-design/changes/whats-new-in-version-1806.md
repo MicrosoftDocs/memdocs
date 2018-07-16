@@ -333,6 +333,18 @@ The new [product lifecycle dashboard](/sccm/core/clients/manage/asset-intelligen
 To access the product lifecycle dashboard, in the Configuration Manager console go to the **Assets and Compliance** workspace, expand **Asset Intelligence**, and select the **Product Lifecycle** node.
 
 
+### Improvements to the Surface dashboard
+<!--1358654-->
+This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):  
+
+- The Surface dashboard now displays a list of relevant devices when you select specific graph sections:  
+
+   - Clicking on the **Percent of Surface Devices** tile opens a list of Surface devices.  
+
+   - Clicking on a bar in the **Top Five Firmware Versions** tile opens a list of Surface devices with that specific firmware version.  
+
+- When viewing these device lists from the Surface dashboard, right-click a device to perform common actions.  
+
 
 
 ## Next steps
