@@ -155,6 +155,10 @@ For more information, see the following articles:
 - [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
 
+### Support for new Windows app package formats
+<!--1357427-->
+Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats.
+
 
 
 ## OS deployment
