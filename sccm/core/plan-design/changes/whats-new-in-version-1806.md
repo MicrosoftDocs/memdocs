@@ -129,6 +129,11 @@ This option supports the following primary scenarios:
 An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 
+### CMTrace installed with client
+<!--1357971-->
+The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`.
+
+
 
 ## Co-management
 
@@ -167,7 +172,7 @@ Convert Security Content Automation Protocol (SCAP) content to compliance settin
 
 
 
-## Application Management
+## Application management
 
 ### Phased deployment of applications
 <!--1358147-->
