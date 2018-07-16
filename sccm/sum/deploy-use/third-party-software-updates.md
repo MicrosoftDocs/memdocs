@@ -64,7 +64,7 @@ If you enable this option, you can subscribe to third-party update catalogs in t
 You'll need to decide if you want Configuration Manager to automatically manage the third-party WSUS signing certificate, or if you need to manually configure the certificate. 
 
 ### Automatically manage the WSUS signing certificate
-If you don't have a requirement to use PKI certificates, you can choose to automatically manage the signing certificates for third-party updates.
+If you don't have a requirement to use PKI certificates, you can choose to automatically manage the signing certificates for third-party updates. The WSUS certificate management is done as part of the sync cycle and gets logged in the `wsyncmgr.log`. 
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node.
 2. Select the top-level site in the hierarchy. In the ribbon, click **Configure Site Components**, and select **Software Update Point**.
@@ -81,7 +81,7 @@ If you need to manually configure the certificate, such as needing to use a PKI 
 
 
 ## Enable third-party updates on the clients
-Enable third-party updates on the clients in the client settings. The setting sets the Windows Update agent policy for [Allow signed updates for an intranet Microsoft update service location](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#BKMK_comp3). This client setting also installs the WSUS signing certificate to the Trusted Publisher store on the client. Run these steps for each custom client setting you want to use for third-party updates. For more information, see the [About client settings](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates) article.
+Enable third-party updates on the clients in the client settings. The setting sets the Windows Update agent policy for [Allow signed updates for an intranet Microsoft update service location](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#BKMK_comp3). This client setting also installs the WSUS signing certificate to the Trusted Publisher store on the client. The certificate management logging is seen in `updatesdeployment.log` on the clients.  Run these steps for each custom client setting you want to use for third-party updates. For more information, see the [About client settings](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates) article.
 
 1. In the Configuration Manager console, go to the **Administration** workspace and select the **Client Settings** node.
 2. Select an existing custom client setting or create a new one. 
