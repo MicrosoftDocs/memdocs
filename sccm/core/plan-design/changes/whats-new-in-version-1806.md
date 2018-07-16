@@ -207,6 +207,11 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats.
 
 
+### Uninstall application on approval revocation
+<!--1357891-->
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.
+
+
 
 ## OS deployment
 
