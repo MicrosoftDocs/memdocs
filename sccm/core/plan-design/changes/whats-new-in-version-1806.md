@@ -118,10 +118,17 @@ When using the client push method of installing the Configuration Manager client
 <!--1357377-->
 When you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
 
-### Transition device configuration workload to Intune using co-management
-<!--1357903-->
-You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications. 
-To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+
+### Transition new workloads to Intune using co-management
+The following workloads are now able to transition from Configuration Manager to Intune after enabling co-management:  
+
+- **Device configuration**<!--1357903-->: This workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications.  
+
+- **Office 365**<!--1357841-->: Devices don't install Office 365 deployments from Configuration Manager.  
+
+- **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.  
+
+To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
 
 
