@@ -371,6 +371,17 @@ The new [product lifecycle dashboard](/sccm/core/clients/manage/asset-intelligen
 To access the product lifecycle dashboard, in the Configuration Manager console go to the **Assets and Compliance** workspace, expand **Asset Intelligence**, and select the **Product Lifecycle** node.
 
 
+### Copy asset details from monitoring views
+<!--1357856-->
+The following areas of the **Monitoring** workspace now support copying text:  
+
+- In the **Deployments** node, select a deployment, and click **View Status**. In the **Asset Details** pane of the Deployment Status view, select one or more devices.  
+
+- Expand the **Distribution Status** node, and select **Content Status**. Select a piece of software, and click **View Status**. In the **Asset Details** pane of the Content Status view, select one or more distribution points. 
+
+Right-click the asset, and select **Copy**. This action copies the selected assets as a comma-delimited list that includes the full details. The keyboard shortcut **CTRL** + **C** also works in these views. 
+
+
 ### Improvements to the Surface dashboard
 <!--1358654-->
 This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):  
