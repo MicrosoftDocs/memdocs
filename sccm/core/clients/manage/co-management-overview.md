@@ -33,6 +33,8 @@ Co-management enables you to concurrently manage Windows 10 devices by using bot
         - [Windows Update policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)
         - [Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10), starting in Configuration Manager 1802. <!-- 1357365 -->
         - [Device configuration](https://docs.microsoft.com/intune/device-profile-create), starting in Configuration Manager 1806. <!-- 1357903 -->
+        - [Office Click-to-Run apps](https://docs.microsoft.com/intune/apps-add-office365), starting in Configuration Manager 1806 <!--1357841-->
+        - [Mobile apps](https://docs.microsoft.com/intune/app-management), starting in Configuration Manager 1806 as a pre-release feature. <!--1357892-->
 
 ## How to configure co-management
 There are two main paths to reach to co-management. One path is Configuration Manager provisioned co-management, where Windows 10 devices managed by Configuration Manager and hybrid Azure AD joined get enrolled into Intune. The other path is Intune provisioned devices that are enrolled in Intune and then installed with the Configuration Manager client reach a co-management state.
@@ -82,6 +84,12 @@ Starting in Configuration Manager 1802, the Endpoint Protection workload can be 
 
 - **Device configuration**
 Starting in Configuration Manager 1806, the device configuration workload can be transitioned to Intune. For more information, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create) and [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune).  <!--1357903-->
+
+- **Office Click-to-Run apps:** 
+Starting in Configuration Manager 1806, the Office 365 workload can be transitioned to Intune. For more information see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). <!--1357841-->
+
+- **Mobile apps:** 
+Starting in Configuration Manager version 1806, the mobile apps workload can be transitioned to Intune. This is pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).(/sccm/core/servers/manage/pre-release-features.md). After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.<!--1357892-->
 
 ### Install Configuration Manager client to the devices enrolled in Intune
 When Windows 10 devices are enrolled in Intune, you can install the Configuration Manager client on the devices ([using a specific command-line argument](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)) to prepare the clients for co-management. Then, you enable co-management from the Configuration Manager console to start moving specific workloads to Intune for specific Windows 10 devices.
