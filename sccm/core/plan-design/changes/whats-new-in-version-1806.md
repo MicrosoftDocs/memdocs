@@ -155,6 +155,39 @@ The new cloud management dashboard provides a centralized view for cloud managem
 This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services**, and select **Cloud management gateway**. Select the target CMG instance, and then click **Connection analyzer** in the ribbon.
 
 
+### Improvements to cloud management gateway
+
+Version 1806 includes the following improvements to the cloud management gateway (CMG):
+
+#### Simplified client bootstrap command line
+<!--1358215-->
+When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+
+The following command-line properties are required in all scenarios:
+  - CCMHOSTNAME  
+  - SMSSITECODE  
+
+The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
+  - AADCLIENTAPPID  
+  - AADRESOURCEURI  
+
+The following property is required if the client will roam back to the intranet:
+  - SMSMP  
+
+The following example includes all of the above properties:   
+`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
+
+For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+
+#### Download content from a CMG
+<!--1358651-->
+Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
+
+#### Trusted root certificate isn't required with Azure AD
+<!--503899-->
+When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+
+
 
 ## Co-management
 
