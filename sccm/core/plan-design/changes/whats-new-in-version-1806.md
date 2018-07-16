@@ -111,6 +111,24 @@ Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Se
 When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
+### Enhanced HTTP site system
+<!--1356889,1358228-->
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+
+This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
+
+This option supports the following primary scenarios:  
+
+- **Client to HTTP management point**<!--1356889-->: [Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
+
+- **Client to HTTP distribution point**<!--1358228-->: A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.   
+
+
+### Azure AD device identity 
+<!--1358460-->
+An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+
+
 
 ## Co-management
 
