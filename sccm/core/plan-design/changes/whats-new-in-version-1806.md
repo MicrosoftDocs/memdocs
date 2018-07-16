@@ -167,6 +167,11 @@ For more information, see the following articles:
 Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
 
 
+## Office Customization Tool integration with the Office 365 Installer
+<!--1358149-->
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. The Office Customization Tool is updated at the same time as the release of new builds of Office 365. This allows you to take advantage of new manageability settings in Office 365 as soon as they are available. 
+
+
 ### Support for new Windows app package formats
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats.
