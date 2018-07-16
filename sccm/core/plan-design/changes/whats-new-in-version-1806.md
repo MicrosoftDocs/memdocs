@@ -1,7 +1,7 @@
 ---
-title: New version 1806
+title: New current branch version 1806
 titleSuffix: Configuration Manager
-description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager.
+description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
 ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,11 +11,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# What's new in version 1806 of System Center Configuration Manager
+
+# What's new in version 1806 of Configuration Manager current branch
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Update 1806 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1706, 1710, or 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+
+> [!Important]  
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 
 <!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4101375).
@@ -27,15 +31,7 @@ The following additional updates to this release are also now available:
 -->
 
 
-> [!TIP]  
-> To install a new site, you must use a baseline version of Configuration Manager.  
->
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
-
-The following sections provide details about the changes and new capabilities in version 1806 of Configuration Manager.  
+The following sections provide details about the changes and new features in version 1806 of Configuration Manager current branch.  
 
 
 
@@ -56,8 +52,8 @@ Configuration Manager has always provided a large centralized store of device da
 
 
 ### Site server high availability
-<!--1128774,1358224-->
-High availability for the site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. For more information, see the following articles: 
+<!--1128774-->
+High availability for a standalone primary site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. For more information, see the following articles: 
 - [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) 
 - [Flowchart - Set up a site server in passive mode](/sccm/core/servers/deploy/configure/passive-site-server-flowchart)
 - [Flowchart - Promote site server (planned)](/sccm/core/servers/deploy/configure/promote-site-server-flowchart)
@@ -98,6 +94,10 @@ The feature documentation for the cloud distribution point is also revised and e
 Many customers use pull-distribution points in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a cloud distribution point in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. For more information, see [Use a pull-distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
 
+### Enable distribution points to use network congestion control
+<!--1358112-->
+Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
+
 
 
 <!-- ## Migration  -->
@@ -118,10 +118,17 @@ When using the client push method of installing the Configuration Manager client
 <!--1357377-->
 When you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
 
-### Transition device configuration workload to Intune using co-management
-<!--1357903-->
-You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications. 
-To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+
+### Transition new workloads to Intune using co-management
+The following workloads are now able to transition from Configuration Manager to Intune after enabling co-management:  
+
+- **Device configuration**<!--1357903-->: This workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications.  
+
+- **Office 365**<!--1357841-->: Devices don't install Office 365 deployments from Configuration Manager.  
+
+- **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.  
+
+To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
 
 
@@ -155,9 +162,23 @@ For more information, see the following articles:
 - [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
 
+### Provision Windows app packages for all users on a device
+<!--1358310-->
+Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
 
 
-## Operating system deployment
+### Office Customization Tool integration with the Office 365 Installer
+<!--1358149-->
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. The Office Customization Tool is updated at the same time as the release of new builds of Office 365. This allows you to take advantage of new manageability settings in Office 365 as soon as they are available. 
+
+
+### Support for new Windows app package formats
+<!--1357427-->
+Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats.
+
+
+
+## OS deployment
 
 ### Improvements to phased deployments
 
@@ -174,6 +195,13 @@ Phased deployments now have a native monitoring experience. From the **Deploymen
 #### Gradual rollout during phased deployments
 <!--1358578-->
 During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. For more information, see [Phase settings](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_settings).  
+
+
+### Improvements to Windows 10 in-place upgrade task sequence
+<!--1358500-->
+The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
+
+For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-on-failure).
 
 
 
@@ -226,4 +254,12 @@ To access the product lifecycle dashboard, in the Configuration Manager console 
 
 
 ## Next steps
-When you're ready to install this version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
+When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates).
+
+> [!TIP]  
+> To install a new site, use a baseline version of Configuration Manager.  
+>
+>  Learn more about:    
+>   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+
