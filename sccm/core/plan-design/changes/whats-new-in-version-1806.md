@@ -384,6 +384,11 @@ This release includes the following improvements to the [Surface dashboard](/scc
 - When viewing these device lists from the Surface dashboard, right-click a device to perform common actions.  
 
 
+### View the currently signed on user for a device
+<!--1358202-->
+Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
+
+
 
 ## Next steps
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates).
