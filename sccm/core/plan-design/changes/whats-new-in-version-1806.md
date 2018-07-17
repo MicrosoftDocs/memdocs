@@ -77,6 +77,11 @@ Hardware inventory currently has a limit for integers larger than 4,294,967,296 
 For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
 
 
+### Exclude Active Directory containers from discovery
+<!--1358143-->
+To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
+
+
 
 ## Content management
 
