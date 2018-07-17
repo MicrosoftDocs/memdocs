@@ -70,6 +70,11 @@ This release includes the following improvements to management insights:
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
+### Configuration Manager Toolkit
+<!--1357145-->
+The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required.
+
+
 ### Improvement to hardware inventory for large integer values
 <!--1357880-->
 Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
