@@ -318,12 +318,22 @@ For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/de
 
 ## Software Center
 
+### Software Center infrastructure improvements
+<!--1358309-->
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+> [!Note]  
+> The Application Catalog web service point role is no longer required in 1806, but still a supported role. 
+> 
+> The Application Catalog website role isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+
+
 ### Specify the visibility of the application catalog website link in Software Center
 <!--1358214-->
 Use client settings to control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center.  
 
 > [!Note]  
-> The Application Catalog website user experience isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> The Application Catalog website role isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 ### Custom tab for webpage in Software Center
