@@ -135,7 +135,7 @@ Boundary groups now include additional settings to give you more control over co
 When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
-### Enhanced HTTP site system
+### <a name="bkmk_ehttp"></a> Enhanced HTTP site system
 <!--1356889,1358228-->
 Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
 
@@ -313,6 +313,16 @@ During a phased deployment, the rollout in each phase can now happen gradually. 
 The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
 
 For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-on-failure).
+
+
+### Network access account not required for some scenarios
+<!--1358278,1358279-->
+The [Enhanced HTTP site system](#bkmk_ehttp) feature also removes some dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:  
+
+- Task sequences running from boot media or PXE
+- Task sequences running from Software Center  
+
+These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
 
 
 
