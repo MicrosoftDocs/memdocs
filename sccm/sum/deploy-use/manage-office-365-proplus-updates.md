@@ -163,8 +163,9 @@ Use the following procedure on the software update point at the central administ
 7. Select **Value2** and click **Edit Property**.  
 ![Edit the Value2 property](..\media\3-queryresult.png)
 8. Add additional languages to the **Value2** property and click **Save Property**. <br/> 
-For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc.  
-![Add languages in Property Editor](..\media\4-props.png)  
+For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc. You would type `pt-pt,af-za,nn-no` for the example languages. Don't use spaces between the languages.
+ 
+   ![Add languages in Property Editor](..\media\4-props.png)  
 9. Click **Close**, click **Close**, click **Save Property**, and click **Save Object** (if you click **Close** here the values are discarded). Click **Close**, and then click **Exit** to exit the Windows Management Instrumentation Tester.
 10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
 11. Now when you download Office 365 updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
