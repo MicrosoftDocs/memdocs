@@ -70,6 +70,16 @@ This release includes the following improvements to management insights:
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
+### Configuration Manager Toolkit
+<!--1357145-->
+The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required.
+
+
+### Exclude Active Directory containers from discovery
+<!--1358143-->
+To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
+
+
 
 ## Content management
 
@@ -125,11 +135,11 @@ Boundary groups now include additional settings to give you more control over co
 When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
-### Enhanced HTTP site system
+### <a name="bkmk_ehttp"></a> Enhanced HTTP site system
 <!--1356889,1358228-->
 Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
 
-This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
+This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
 
 This option supports the following primary scenarios:  
 
@@ -208,7 +218,11 @@ The following workloads are now able to transition from Configuration Manager to
 To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
 
+### Support for multiple hierarchies to one Intune tenant
+<!--1357944-->
+Some customers have several Configuration Manager hierarchies and want to consolidate in the future to a single tenant for Azure Active Directory and Microsoft Intune. Co-management now supports connecting more than one Configuration Manager environment to the same Intune tenant.
 
+ 
 
 ## Compliance settings
 
@@ -246,7 +260,7 @@ Provision an application with a Windows app package for all users on the device.
 
 ### Office Customization Tool integration with the Office 365 Installer
 <!--1358149-->
-The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. The Office Customization Tool is updated at the same time as the release of new builds of Office 365. This allows you to take advantage of new manageability settings in Office 365 as soon as they are available. 
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Office 365. This integration allows you to take advantage of new manageability settings in Office 365 as soon as they're available. 
 
 
 ### Support for new Windows app package formats
@@ -271,7 +285,7 @@ Start with the following actions from the **Packages** node in the Configuration
 
    - **Fix and Convert**: Some packages require issues to be fixed before converting into applications.  
 
-Then go to the **Package Conversion Status** dashboard in the **Monitoring** workspace. This new dashboard shows the overall analysis and conversion state of packages in the site.
+Then go to the **Package Conversion Status** dashboard in the **Monitoring** workspace. This new dashboard shows the overall analysis and conversion state of packages in the site. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
 
 
 
@@ -301,15 +315,59 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-on-failure).
 
 
+### Improvements to PXE-enabled distribution points
+<!--1357580-->
+On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which doesn't require Windows Deployment Services (WDS). Because WDS isn't required, the PXE-enabled distribution point can be a client or server OS, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. <!--For more information, see [Prepare distribution points for OS deployments](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments).-->
+
+
+### Network access account not required for some scenarios
+<!--1358278,1358279-->
+The [Enhanced HTTP site system](#bkmk_ehttp) feature also removes some dependencies on the network access account. When you enable the new site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the following scenarios don't require a network access account to download content from a distribution point:  
+
+- Task sequences running from boot media or PXE
+- Task sequences running from Software Center  
+
+These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
+
+
+### Other improvements to OS deployment
+
+#### Mask sensitive data stored in task sequence variables
+<!--1358330-->
+In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password. 
+
+#### Mask program name during Run Command Step of a task sequence
+<!--1358493-->
+To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step.   
+
+#### Task sequence variable for DISM parameters when installing drivers
+<!--516679-->
+To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. Enable the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step setting to **Install driver package via running DISM with recurse option**. 
+
+#### Option to use full disk encryption
+<!--SCCMDocs-pr issue 2671-->
+Both the [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+
+
 
 ## Software Center
+
+### Software Center infrastructure improvements
+<!--1358309-->
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+> [!Note]  
+> The Application Catalog web service point role is no longer required in 1806, but still a supported role. 
+> 
+> The Application Catalog website role isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+
 
 ### Specify the visibility of the application catalog website link in Software Center
 <!--1358214-->
 Use client settings to control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center.  
 
 > [!Note]  
-> The Application Catalog website user experience isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> The Application Catalog website role isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 ### Custom tab for webpage in Software Center
@@ -331,25 +389,52 @@ Software Center now displays the next scheduled maintenance window. On the Insta
 
 ## Software updates
 
+### Third-party software updates
+<!--1357605, 1352101, 1358714-->
+Third-party software updates allow you to subscribe to partner catalogs in the Configuration Manager console and publish the updates to WSUS. You can then deploy these updates using the existing software update management process. For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates.md).
+
+
 ### Deploy software updates without content
 <!--1357933-->
-You can now deploy software updates to devices without first downloading and distributing software update content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates. For more information, see the **No deployment package** option when you [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates) or [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+Deploy software updates to devices without first downloading and distributing content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates. For more information, see the **No deployment package** option when you [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates) or [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
 
 ### Filter automatic deployment rules by software update architecture
  <!--1322266-->
 You can now filter automatic deployment rules (ADR) to exclude architectures like Itanium and ARM64. On the **Software Updates** page of the Create Automatic Deployment Rule Wizard, the **Architecture** property filter is now available. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
+
 ### Improved WSUS maintenance 
 <!--1357898-->
 The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](../../../sum/deploy-use/software-updates-maintenance.md).
 
-<!--## Reporting-->
+
+### Enable installation of express updates by default
+<!--SCCMDocs-pr issue 2699-->
+The [client setting](/sccm/core/clients/deploy/about-client-settings#enable-installation-of-express-installation-files-on-clients) to **Enable installation of Express installation files on clients** is now enabled in default client settings. If you've enabled your site to [download express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates), and the site has downloaded express update content, clients start using this content. Override this behavior using a custom client setting.
 
 
 
+## Reporting
 
-<!-- ## Inventory  -->
+### New software updates compliance report
+<!--1357775-->
+Viewing reports for software updates compliance traditionally includes data from clients that haven't recently contacted the site. A new report, **Compliance 9 - Overall health and compliance**, lets you filter compliance results for a specific software update group by "healthy" clients. This report shows the more realistic compliance state of the active clients in your environment. 
+
+
+
+## Inventory
+
+### <a name="bkmk_bigint"></a> Improvement to hardware inventory for large integer values
+<!--1357880-->
+Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
+
+For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
+
+
+### Hardware inventory default unit revision
+<!--514442-->
+In [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure), the default unit used in many reporting views changed from megabytes (MB) to gigabytes (GB). Due to [improvements to hardware inventory for large integer values](#bkmk_bigint), and based on customer feedback, this default unit is now MB again.
 
 
 
