@@ -258,7 +258,7 @@ The following notification message displays when the end user opens the installa
         -   **Required**: The task sequence is deployed automatically, according to the configured schedule. If the task sequence is not hidden, a user can still track its deployment status. They can also install the task sequence before the deadline by using the Software Center.  
 
         >  [!NOTE]  
-        >  Package and task sequence deployments may not appear in software center if multiple users are logged into the device.
+        >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
 
     -   **Deploy automatically according to schedule whether or not a user is logged on**: This option is not available when you deploy a task sequence.  
 
