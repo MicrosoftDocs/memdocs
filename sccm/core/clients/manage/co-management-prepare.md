@@ -25,6 +25,7 @@ You must have the following prerequisites in place before you can enable co-mana
 The following are general prerequisites for you to enable co-management:  
 
 - Configuration Manager version 1710 or later
+    - Beginning in Configuration Manager version 1806, you can connect multiple Configuration Manager instances to a single Intune tenant. <!--1357944-->
 - [Site onboarded with Azure AD for cloud management](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - EMS or Intune license for all users
 - [Azure AD automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) enabled
