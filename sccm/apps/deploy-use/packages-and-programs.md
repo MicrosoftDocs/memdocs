@@ -207,7 +207,7 @@ Packages can use some new features of Configuration Manager, including distribut
         -   **Required**: The package and program is deployed automatically, according to the configured schedule. However, a user can track the package and program deployment status and install it before the deadline by using Software Center.  
 
         >  [!NOTE]  
-        >  Package and task sequence deployments may not appear in software center if multiple users are logged into the device.
+        >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
         
     -   **Send wake-up packets**: If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers must be configured for Wake On LAN.  
 
