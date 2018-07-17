@@ -344,6 +344,9 @@ To prevent potentially sensitive data from being displayed or logged, set the ta
 <!--516679-->
 To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. Enable the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step setting to **Install driver package via running DISM with recurse option**. 
 
+#### Option to use full disk encryption
+<!--SCCMDocs-pr issue 2671-->
+Both the [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
 
 
 ## Software Center
