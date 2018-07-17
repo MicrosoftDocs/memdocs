@@ -330,7 +330,7 @@ The [Enhanced HTTP site system](#bkmk_ehttp) feature also removes some dependenc
 These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
 
 
-### Improvements to OS deployment
+### Other improvements to OS deployment
 
 #### Mask sensitive data stored in task sequence variables
 <!--1358330-->
@@ -339,6 +339,10 @@ In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKM
 #### Mask program name during Run Command Step of a task sequence
 <!--1358493-->
 To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step.   
+
+#### Task sequence variable for DISM parameters when installing drivers
+<!--516679-->
+To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. Enable the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step setting to **Install driver package via running DISM with recurse option**. 
 
 
 
@@ -412,11 +416,16 @@ Viewing reports for software updates compliance traditionally includes data from
 
 ## Inventory
 
-### Improvement to hardware inventory for large integer values
+### <a name="bkmk_bigint"></a> Improvement to hardware inventory for large integer values
 <!--1357880-->
 Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
 
 For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
+
+
+### Hardware inventory default unit revision
+<!--514442-->
+In [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure), the default unit used in many reporting views changed from megabytes (MB) to gigabytes (GB). Due to [improvements to hardware inventory for large integer values](#bkmk_bigint), and based on customer feedback, this default unit is now MB again.
 
 
 
