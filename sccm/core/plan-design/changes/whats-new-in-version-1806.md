@@ -99,6 +99,20 @@ Many customers use pull-distribution points in remote or branch offices, which d
 Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
 
 
+### Partial download support in client peer cache to reduce WAN utilization
+<!--1357346-->
+Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. In Hierarchy Settings, enable the option to **Configure client peer cache sources to divide content into parts**. 
+
+
+### Boundary group options for peer downloads
+<!--1356193-->
+Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
+
+- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
+
+- **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
+
+
 
 <!-- ## Migration  -->
 
@@ -109,6 +123,69 @@ Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Se
 ### Improvement to client push security
 <!--1358204-->
 When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
+
+
+### Enhanced HTTP site system
+<!--1356889,1358228-->
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+
+This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
+
+This option supports the following primary scenarios:  
+
+- **Client to HTTP management point**<!--1356889-->: [Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
+
+- **Client to HTTP distribution point**<!--1358228-->: A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.   
+
+
+### Azure AD device identity 
+<!--1358460-->
+An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+
+
+### CMTrace installed with client
+<!--1357971-->
+The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`.
+
+
+### Cloud management dashboard
+<!--1358461-->
+The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices. In the Configuration Manager console, go to the **Monitoring** workspace. Select the **Cloud Management** node, and view the dashboard tiles.  
+
+This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services**, and select **Cloud management gateway**. Select the target CMG instance, and then click **Connection analyzer** in the ribbon.
+
+
+### Improvements to cloud management gateway
+
+Version 1806 includes the following improvements to the cloud management gateway (CMG):
+
+#### Simplified client bootstrap command line
+<!--1358215-->
+When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+
+The following command-line properties are required in all scenarios:
+  - CCMHOSTNAME  
+  - SMSSITECODE  
+
+The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
+  - AADCLIENTAPPID  
+  - AADRESOURCEURI  
+
+The following property is required if the client will roam back to the intranet:
+  - SMSMP  
+
+The following example includes all of the above properties:   
+`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
+
+For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+
+#### Download content from a CMG
+<!--1358651-->
+Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
+
+#### Trusted root certificate isn't required with Azure AD
+<!--503899-->
+When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
 
 
 
@@ -149,7 +226,7 @@ Convert Security Content Automation Protocol (SCAP) content to compliance settin
 
 
 
-## Application Management
+## Application management
 
 ### Phased deployment of applications
 <!--1358147-->
@@ -175,6 +252,26 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
 ### Support for new Windows app package formats
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats.
+
+
+### Uninstall application on approval revocation
+<!--1357891-->
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.
+
+
+### Package Conversion Manager 
+<!--1357861-->
+Package Conversion Manager is now an integrated tool that allows you to convert legacy Configuration Manager 2007 packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
+
+Start with the following actions from the **Packages** node in the Configuration Manager console:  
+
+   - **Analyze Package**: Start the conversion process by analyzing the package.  
+
+   - **Convert Package**: Some packages can easily be converted into applications with this action.  
+
+   - **Fix and Convert**: Some packages require issues to be fixed before converting into applications.  
+
+Then go to the **Package Conversion Status** dashboard in the **Monitoring** workspace. This new dashboard shows the overall analysis and conversion state of packages in the site.
 
 
 
@@ -205,7 +302,30 @@ For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/de
 
 
 
-<!--## Software Center-->
+## Software Center
+
+### Specify the visibility of the application catalog website link in Software Center
+<!--1358214-->
+Use client settings to control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center.  
+
+> [!Note]  
+> The Application Catalog website user experience isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+
+
+### Custom tab for webpage in Software Center
+<!--1358132-->
+Use client settings to create a customized tab to open a webpage in Software Center. This feature allows you to show content to your end users in a consistent, reliable way. The following list includes a few examples:  
+
+- Contact IT: information on how to contact your organization's IT department  
+
+- IT Support Center: IT self-service actions such as searching a knowledge base or opening a support ticket.  
+
+- End-user documentation: articles for users in your organization on various IT topics such as using applications or upgrading to Windows 10.  
+
+
+### Maintenance windows in Software Center
+<!--1358131-->
+Software Center now displays the next scheduled maintenance window. On the Installation Status tab, switch the view from All to Upcoming. It displays the time range and the list of deployments that are scheduled. If there are no future maintenance windows, the list is blank. 
 
 
 
@@ -250,6 +370,40 @@ The new [product lifecycle dashboard](/sccm/core/clients/manage/asset-intelligen
 
 To access the product lifecycle dashboard, in the Configuration Manager console go to the **Assets and Compliance** workspace, expand **Asset Intelligence**, and select the **Product Lifecycle** node.
 
+
+### Copy asset details from monitoring views
+<!--1357856-->
+The following areas of the **Monitoring** workspace now support copying text:  
+
+- In the **Deployments** node, select a deployment, and click **View Status**. In the **Asset Details** pane of the Deployment Status view, select one or more devices.  
+
+- Expand the **Distribution Status** node, and select **Content Status**. Select a piece of software, and click **View Status**. In the **Asset Details** pane of the Content Status view, select one or more distribution points. 
+
+Right-click the asset, and select **Copy**. This action copies the selected assets as a comma-delimited list that includes the full details. The keyboard shortcut **CTRL** + **C** also works in these views. 
+
+
+### Improvements to the Surface dashboard
+<!--1358654-->
+This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):  
+
+- The Surface dashboard now displays a list of relevant devices when you select specific graph sections:  
+
+   - Clicking on the **Percent of Surface Devices** tile opens a list of Surface devices.  
+
+   - Clicking on a bar in the **Top Five Firmware Versions** tile opens a list of Surface devices with that specific firmware version.  
+
+- When viewing these device lists from the Surface dashboard, right-click a device to perform common actions.  
+
+
+### View the currently signed on user for a device
+<!--1358202-->
+Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
+
+
+### Submit feedback from the Configuration Manager console  
+<!--1357542-->
+
+Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
 
 
