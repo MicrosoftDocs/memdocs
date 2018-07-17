@@ -39,10 +39,11 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
    - Remote registry should be enabled on the SUP server.
    -  The **WSUS server connection account** should have remote registry permissions on the SUP/WSUS server. 
 
-    If the remote registry items aren't possible, do the following step:    
-   - In the registry key `HKLM\Software\Microsoft\Update Services\Server\Setup`, create a new DWORD named **EnableSelfSignedCertificates** with a value of `1`. 
 
-3. To enable installing the certificate to the Trusted Publishers and Trusted Root stores on the remote SUP server:
+3. Create the following registry key on the Configuration Manager site server: 
+    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, create a new DWORD named **EnableSelfSignedCertificates** with a value of `1`. 
+
+4. To enable installing the certificate to the Trusted Publishers and Trusted Root stores on the remote SUP server:
    - The **WSUS server connection account** should have remote administration permissions on the SUP server.
 
     If this item isn't possible, export the certificate from the local computer's WSUS store into the Trusted Publisher and Trusted Root stores. 
@@ -72,7 +73,7 @@ If you don't have a requirement to use PKI certificates, you can choose to autom
 4. A new certificate of type **Third-party WSUS Signing** is created in the **Certificates** node under **Security** in the **Administration** workspace.  
 
 ### Manually manage the WSUS signing certificate
-If you need to manually configure the certificate, such as needing to use a PKI certificate, you'll need to use [System Center Updates Publisher](../tools/updates-publisher-options.md#update-server) to do so.  
+If you need to manually configure the certificate, such as needing to use a PKI certificate, you'll need to use either [System Center Updates Publisher](../tools/updates-publisher-options.md#update-server) or another tool to do so.  
 
 1. Configure the signing certificate using [System Center Updates Publisher](../tools/updates-publisher-options.md#update-server).
 2. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and select the **Sites** node.
@@ -90,7 +91,7 @@ Enable third-party updates on the clients in the client settings. The setting se
 
 
 ## Add a custom catalog
-*Partner catalogs* are software vendor catalogs which are registered Microsoft. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be digitally signed. 
+*Partner catalogs* are software vendor catalogs which have their information already registered with Microsoft. With partner catalogs, you can subscribe to them without having to specify any additional information. Catalogs that you add are called *custom catalogs*. You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be digitally signed. 
 
 1. Go to the **Software Updates Library** workspace, expand **Software updates**, and select the **Third-Party Software Update Catalogs** node. 
    
@@ -120,8 +121,8 @@ When you subscribe to a third-party catalog in the Configuration Manager console
 2. Complete the wizard. After initial subscription, the catalog should start to download in a few minutes. 
     - The catalog synchronizes automatically every 7 days.
     - Click **Sync now** in the ribbon to force a sync.
-3. After the catalog is downloaded, the product metadata needs to be synchronized to the software update point. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the product information.
-4. Once the product information is synchronized, [Configure the product to synchronize](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) its updates into Configuration Manager.  
+3. After the catalog is downloaded, the product metadata needs to be synchronized from the WSUS database into the Configuration Manager database. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the product information.
+4. Once the product information is synchronized, [Configure the SUP to synchronize the desired product](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) into Configuration Manager.  
 5. [Manually start the software updates synchronization](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) to synchronize the new product's updates into Configuration Manager.  
 6. When the synchronization completes, you can see the third-party updates in the **All Updates** node. These updates are published as **metadata-only** updates until you choose to publish them. 
      - The icon with the blue arrow represents a metadata-only software update. ![Metadata only software update icon](media/MetadataOnly.png)
