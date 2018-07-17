@@ -349,6 +349,7 @@ To specify additional command-line parameters for DISM, use the new task sequenc
 Both the [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
 
 
+
 ## Software Center
 
 ### Software Center infrastructure improvements
@@ -406,6 +407,11 @@ You can now filter automatic deployment rules (ADR) to exclude architectures lik
 ### Improved WSUS maintenance 
 <!--1357898-->
 The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](../../../sum/deploy-use/software-updates-maintenance.md).
+
+
+### Enable installation of express updates by default
+<!--SCCMDocs-pr issue 2699-->
+The [client setting](/sccm/core/clients/deploy/about-client-settings#enable-installation-of-express-installation-files-on-clients) to **Enable installation of Express installation files on clients** is now enabled in default client settings. If you've enabled your site to [download express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates), and the site has downloaded express update content, clients start using this content. Override this behavior using a custom client setting.
 
 
 
