@@ -361,8 +361,13 @@ You can now filter automatic deployment rules (ADR) to exclude architectures lik
 <!--1357898-->
 The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](../../../sum/deploy-use/software-updates-maintenance.md).
 
-<!--## Reporting-->
 
+
+## Reporting
+
+### New software updates compliance report
+<!--1357775-->
+Viewing reports for software updates compliance traditionally includes data from clients that haven't recently contacted the site. A new report, **Compliance 9 - Overall health and compliance**, lets you filter compliance results for a specific software update group by "healthy" clients. This report shows the more realistic compliance state of the active clients in your environment. 
 
 
 
