@@ -59,6 +59,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
+| Enhanced HTTP site system<!--1356889,1358228-->|[Version 1806]()<!--NEED FINAL LINK-->|![Not yet](media/red_x.png)|
 | Mobile apps for co-managed devices<!--1357892-->|[Version 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Not yet](media/red_x.png)|
 | Package Conversion Manager<!--1357861-->|[Version 1806]()<!--NEED FINAL LINK-->|![Not yet](media/red_x.png)|
 | Support for Cisco AnyConnect 4.0.07x and later for iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Version 1802 with update 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |
