@@ -75,13 +75,6 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required.
 
 
-### Improvement to hardware inventory for large integer values
-<!--1357880-->
-Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
-
-For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
-
-
 ### Exclude Active Directory containers from discovery
 <!--1358143-->
 To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
@@ -371,7 +364,13 @@ Viewing reports for software updates compliance traditionally includes data from
 
 
 
-<!-- ## Inventory  -->
+## Inventory
+
+### Improvement to hardware inventory for large integer values
+<!--1357880-->
+Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
+
+For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
 
 
 
