@@ -218,7 +218,11 @@ The following workloads are now able to transition from Configuration Manager to
 To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
 
+### Support for multiple hierarchies to one Intune tenant
+<!--1357944-->
+Some customers have several Configuration Manager hierarchies and want to consolidate in the future to a single tenant for Azure Active Directory and Microsoft Intune. Co-management now supports connecting more than one Configuration Manager environment to the same Intune tenant.
 
+ 
 
 ## Compliance settings
 
