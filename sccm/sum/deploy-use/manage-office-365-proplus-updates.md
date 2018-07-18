@@ -102,7 +102,7 @@ After you deploy Office 365 apps, you can create automatic deployment rules to m
 
 
 ## Deploy Office 365 updates
-There is a scheduled [Automatic Updates task in Office 365](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) that runs several times a week. If you recently installed Office 365, it's possible that the update channel has not been set yet and and an update scan will not find applicable updates for it. For testing purposes, you can start the update task manually. 
+There is a scheduled [Automatic Updates task in Office 365](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) that runs several times a week. If you recently installed Office 365, it's possible that the update channel has not been set yet and an update scan will not find applicable updates for it. For testing purposes, you can start the update task manually. 
 
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
@@ -140,6 +140,7 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 |1706|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
 |1802| The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update. </br>If any Office 365 applications are running during an Office 365 client update enforcement, the Office applications will not be forced to close. Instead, the update install will return as requiring a system restart <!--510006-->|
 
+
 > [!Important]
 >
 >In Configuration Manager version 1706, note the following details:
@@ -152,6 +153,7 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 >- If the user installs an Office update before the deadline, Configuration Manager verifies that the update is installed when the deadline is reached. If the update is not detected on the device, the update is installed. 
 >- The in-app notification bar does not display on an Office app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays only for newly opened apps.
 >- For Office updates triggered by a service window or scheduled for non-business hours, it's possible that running Office apps might be forced to close to install the update without notifications. 
+>- For additional information, see [End-user update notifications for Office 365](https://docs.microsoft.com/deployoffice/end-user-update-notifications-for-office-365-proplus)
 
 
 
