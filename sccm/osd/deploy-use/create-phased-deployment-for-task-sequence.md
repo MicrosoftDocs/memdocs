@@ -54,7 +54,8 @@ These settings are unique to phased deployments. Configure these settings when c
 
 
 #### Gradually make this software available over this period of time (in days)
-Starting in version 1806, configure this setting for the rollout in each phase to happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network that is caused by the distribution of content to clients. The site gradually makes the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. The default value of this setting is zero, so by default the deployment isn't throttled.<!--1358578-->  
+<!--1358578-->
+Starting in version 1806, configure this setting for the rollout in each phase to happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network that is caused by the distribution of content to clients. The site gradually makes the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. The default value of this setting is zero, so by default the deployment isn't throttled. Don't set the value higher than 30.<!--SCCMDocs-pr issue 2767--> 
 
 
 #### Configure the deadline behavior relative to when the software is made available  

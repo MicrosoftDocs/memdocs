@@ -72,6 +72,8 @@ To make the site server in passive mode become active, you manually *promote* it
 
 - A site server in passive mode isn't supported in a hierarchy. A hierarchy includes a central administration site and a child primary site. Only create a site server in passive mode at a standalone primary site.<!--1358224-->
 
+- A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->  
+
 - Promotion of the site server in passive mode to active mode is manual. There's no automatic failover.  
 
 - Site system roles can't be installed on the new server before you add the site server in passive mode.  
