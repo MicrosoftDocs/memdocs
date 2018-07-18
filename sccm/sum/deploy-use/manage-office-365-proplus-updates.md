@@ -153,7 +153,7 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 >- If the user installs an Office update before the deadline, Configuration Manager verifies that the update is installed when the deadline is reached. If the update is not detected on the device, the update is installed. 
 >- The in-app notification bar does not display on an Office app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays only for newly opened apps.
 >- For Office updates triggered by a service window or scheduled for non-business hours, it's possible that running Office apps might be forced to close to install the update without notifications. 
->- For additional information, see [End-user update notifications for Office 365](https://docs.microsoft.com/deployoffice/end-user-update-notifications-for-office-365-proplus)
+>- For more information, see [End-user update notifications for Office 365](https://docs.microsoft.com/deployoffice/end-user-update-notifications-for-office-365-proplus)
 
 
 
