@@ -43,7 +43,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, and time zone
 
-- Basic database configuration: processors, cluster configuration, and configuration of distributed views
+- ***[Updated]*** Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, and configuration of distributed views
 
 - Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Azure Active Directory Services
 
@@ -55,7 +55,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Configuration Manager database schema (hash of all object definitions)
 
-- Configured telemetry level, online or offline mode, and fast update configuration
+- Configured level for diagnostics and usage data, online or offline mode, and fast update configuration
 
 - Count of client languages and locales
 
@@ -65,7 +65,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Count of Windows 10 devices by branch and build
 
-- ***[Moved]*** Count of Windows 10 clients that use Windows Update for Business  
+- Count of Windows 10 clients that use Windows Update for Business  
 
 - Database performance metrics: replication processing information, top SQL Server stored procedures by processor, and disk usage
 
@@ -88,24 +88,40 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - SQL version, service pack level, edition, collation ID, and character set     
 
-- Telemetry statistics: when run, runtime, errors
+- Diagnostics and usage data statistics: when run, runtime, errors
 
 - Whether network discovery is enabled or disabled
 
-- ***[Moved]*** Count of clients joined to Azure Active Directory
+- Count of clients joined to Azure Active Directory
 
-- ***[New]*** Count of phased deployments created by type
+- Count of phased deployments created by type
 
-- ***[New]*** Count of extended interoperability clients
+- Count of extended interoperability clients
 
-- ***[New]*** Hashed list of hardware inventory properties longer than 255 characters
+- Hashed list of hardware inventory properties longer than 255 characters
+
+- ***[Moved]*** Count of clients by co-management enrollment method  
+
+- ***[Moved]*** Error statistics for co-management enrollment  
+
+- ***[New]*** Count of clients by Windows OS age, to the nearest three-month interval  
+
+- ***[New]*** Top 10 processor names used on clients  
+
+- ***[New]*** Count and processing rates of key Configuration Manager objects: data discovery records (DDR), state messages, status messages, hardware inventory, software inventory, and overall count of files in inboxes  
+
+- ***[New]*** Site server disk and processor performance information  
+
+- ***[New]*** Uptime and memory usage information for Configuration Manager site server processes  
+
+- ***[New]*** Count of crashes for Configuration Manager site server processes, and Watson signature ID, if available  
 
 
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
 The Enhanced level is the default after setup finishes. This level includes data that's collected in the Basic level and feature-specific data (frequency and duration of use), Configuration Manager client settings (component name, state, and certain settings like polling intervals), and basic information about software updates.
 
-This level is recommended because it provides Microsoft with the minimum data that's required to make useful improvements in future versions of products and services. This level does not collect object names (sites, users, computer, or objects), details of security-related objects, or vulnerabilities like counts of systems that require software updates.
+This level is recommended because it provides Microsoft with the minimum data that's required to make useful improvements in future versions of products and services. This level doesn't collect object names (sites, users, computer, or objects), details of security-related objects, or vulnerabilities like counts of systems that require software updates.
 
 For Configuration Manager version 1806, this level includes the following data:
 
@@ -161,9 +177,24 @@ For Configuration Manager version 1806, this level includes the following data:
 
    - Universal Data Access usage, how created
 
-   - ***[New]*** Aggregated User Device Affinity statistics 
+   - Aggregated User Device Affinity statistics 
 
-   - ***[New]*** Max and average primary users per device
+   - Max and average primary users per device  
+
+   - ***[New]*** Application global condition usage by type  
+
+   - ***[New]*** Software Center customization configuration  
+
+   - ***[New]*** Package Conversion Manager readiness and counts  
+
+   - ***[New]*** Count of application detection methods by type  
+
+   - ***[New]*** Count of application enforcement errors  
+
+   - ***[New]*** MSI installer properties 
+
+   - ***[New]*** Statistics of user install requests
+
 
 
 ### Client  
@@ -182,7 +213,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
    - Client deployment download errors
 
-   - Client health statistics and top issue summary
+   - ***[Updated]*** Client health statistics and top issue summary by client version
 
    - Client notification operation action status: how many times each is run, max number of targeted clients, and average success rate
 
@@ -206,7 +237,11 @@ For Configuration Manager version 1806, this level includes the following data:
 
    - Statistics for device health attestation: most common error codes, number of on-premises servers, and counts of devices in various states
 
-   - ***[New]*** Count of devices by default browser
+   - Count of devices by default browser  
+
+   - ***[New]*** Count of Configuration Manager-generated server authentication certificates  
+
+   - ***[New]*** Count of Microsoft Surface devices by model  
 
 
 ### Cloud Services  
@@ -221,15 +256,13 @@ For Configuration Manager version 1806, this level includes the following data:
 
   - Count of Upgrade Analytics Connectors
 
-  - Whether the Operations Management Suite cloud connector is enabled
+  - Whether the Operations Management Suite cloud connector is enabled  
+
+  - ***[New]*** Count of pull-distribution points with a cloud distribution point as a source location  
 
 
 ### Co-management  
   - Aggregated usage statistics of co-management: number of enrolled clients, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors  
-
-  - Count of clients by co-management enrollment method  
-
-  - Error statistics for co-management enrollment  
 
   - Enrollment schedule and historical statistics  
 
@@ -261,14 +294,16 @@ For Configuration Manager version 1806, this level includes the following data:
 
   - Count of deployed Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificate (.pfx), and compliance policy templates
 
-  - Count of SCEP certificate, VPN, Wi-Fi, certificate (.pfx) and compliance policy deployments by platform
+  - Count of SCEP certificate, VPN, Wi-Fi, certificate (.pfx), and compliance policy deployments by platform
 
-  - Windows Hello for Business policy (created, deployed)
+  - Windows Hello for Business policy (created, deployed)  
+
+  - ***[New]*** Count of deployed Microsoft Edge browser policies  
 
 
 ### Content  
 
-  - ***[Updated]*** Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships
+  - Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships
 
   - Boundary group information: count of boundaries and site systems that are assigned to each boundary group  
 
@@ -285,6 +320,8 @@ For Configuration Manager version 1806, this level includes the following data:
   - Distribution point configuration information: use of branch cache and distribution point monitoring
 
   - Distribution point group information: count of packages and distribution points that are assigned to each distribution point group  
+
+  - ***[New]*** Content library type, whether local or remote  
 
 
 ### Endpoint Protection  
@@ -322,7 +359,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 ### Microsoft Intune troubleshooting  
 
-   - Count and size of device actions (wipe, retire, lock), telemetry, and data messages that are replicated to Microsoft Intune
+   - Count and size of device actions (wipe, retire, lock), usage data, and data messages that are replicated to Microsoft Intune
 
    - Count and size of state, status, inventory, RDR, DDR, UDX, Tenant state, POL, LOG, Cert, CRP, Resync, CFD, RDO, BEX, ISM, and compliance messages that are downloaded from Microsoft Intune
 
@@ -356,7 +393,9 @@ For Configuration Manager version 1806, this level includes the following data:
 
    - Counts of task sequence step usage
 
-   - Version of Windows ADK installed
+   - Version of Windows ADK installed  
+
+   - ***[New]*** Count of image servicing tasks  
 
 
 ### Site updates  
@@ -392,7 +431,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
    - Count of Windows Update for Business policies created and deployed
 
-   - ***[New]*** Aggregated statistics of Windows Update for Business configurations
+   - Aggregated statistics of Windows Update for Business configurations
 
    - Number of automatic deployment rules that are tied to synchronization  
 
@@ -413,6 +452,10 @@ For Configuration Manager version 1806, this level includes the following data:
    - Update scan error codes and machine count  
 
    - Windows 10 dashboard content versions  
+
+   - ***[New]*** Count of third-party software update catalog subscriptions and usage  
+
+   - ***[New]*** Count of software updates deployed with and without content  
 
 
 ### SQL/performance data  
@@ -444,7 +487,13 @@ For Configuration Manager version 1806, this level includes the following data:
 
    - Reporting usage and performance statistics
   
-   - ***[New]*** Phased deployment usage statistics
+   - Phased deployment usage statistics  
+
+   - ***[New]*** CMPivot usage statistics  
+
+   - ***[New]*** Management insights item counts and progress  
+
+   - ***[New]*** Count of crashes for unique non-Configuration Manager processes on the site server, and Watson signature ID, if available
 
 
 
@@ -479,7 +528,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Minimum/maximum/average number of software updates per package
 
-- ***[Updated]*** MSI product code deployment statistics 
+- MSI product code deployment statistics 
 
 - Overall compliance of software update deployments
 
