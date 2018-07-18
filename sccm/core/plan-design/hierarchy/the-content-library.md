@@ -86,6 +86,9 @@ A remote content library is a prerequisite for [site server high availability](/
 
 - The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.  
 
+> [!Important]  
+> Don't reuse a shared network location between multiple sites. For example, don't use the same path for both a central administration site and a child primary site. This configuration has the potential to corrupt the content library, and require you to rebuild it.<!--SCCMDocs-pr issue 2764-->  
+
 
 ### Process to manage the content library
 
