@@ -33,6 +33,8 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
 
 1. SSL must be enabled on the SUP when it's remote. 
     - [Configure SSL on WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
+        - When you configure SSL on WSUS, note some of the web services and the virtual directories are always HTTP and not HTTPS. 
+        - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
 2. To allow the creation of the self-signed WSUS certificate: 
@@ -91,7 +93,7 @@ Enable third-party updates on the clients in the client settings. The setting se
 
 
 ## Add a custom catalog
-*Partner catalogs* are software vendor catalogs which have their information already registered with Microsoft. With partner catalogs, you can subscribe to them without having to specify any additional information. Catalogs that you add are called *custom catalogs*. You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be digitally signed. 
+*Partner catalogs* are software vendor catalogs that have their information already registered with Microsoft. With partner catalogs, you can subscribe to them without having to specify any additional information. Catalogs that you add are called *custom catalogs*. You can add a custom catalog from a third-party update vendor to Configuration Manager. Custom catalogs must use https and the updates must be digitally signed. 
 
 1. Go to the **Software Updates Library** workspace, expand **Software updates**, and select the **Third-Party Software Update Catalogs** node. 
    
@@ -166,3 +168,12 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 | 11524| Error  | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager.| Synchronize the update with Configuration Manager before attempting to publish it's content.  </br> </br>If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content.|
 
 
+
+## Working with third-party updates video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bvAQeDSJIbs?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+
+
+## Next step
+> [!div class="nextstepaction"]
+> [Deploy software updates](./deploy-software-updates.md)
