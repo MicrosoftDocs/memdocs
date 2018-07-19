@@ -79,6 +79,12 @@ A Configuration Manager application has one or more deployment types. These depl
 
          For more information, see [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
 
+    - **Provision this application for all users on the device**<!--1358310-->: Starting in version 1806, provision an application with a Windows app package for all users on the device. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+
+       > [!Tip]  
+       > If you're modifying an existing application, this setting is on the **User Experience** tab of the Windows app package deployment type properties.  
+
+
 6.  Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
 
 The new application appears in the **Applications** node of the Configuration Manager console, and you have finished creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
