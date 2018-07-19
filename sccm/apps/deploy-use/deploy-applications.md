@@ -96,7 +96,7 @@ On the **Deployment Settings** page of the Deploy Software wizard, specify the f
 - **Automatically upgrade any superseded version of this application**: The client upgrades any superseded version of the application with the superseding application.    
 
     > [!NOTE]  
-    > Starting in version 1802, for either **Available** or **Required** install purpose, you can enable or disable this option. <!--1351266--> 
+    > Starting in version 1802, for **Available** install purpose, you can enable or disable this option. <!--1351266--> 
 
 
 ### Specify scheduling settings for the deployment
