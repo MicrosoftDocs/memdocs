@@ -174,7 +174,7 @@ Allow an end user to interact with an application installation during the runnin
 
 ### Do not automatically upgrade superseded applications
 <!-- 1351266 -->
-Configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for either **Available** or **Required** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+Configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for **Available** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
 
 ### Approve application requests for users per device
 <!-- 1357015 -->
