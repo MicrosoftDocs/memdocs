@@ -84,17 +84,17 @@ Specifies how frequently the following Configuration Manager clients download cl
 
 When you set this option to **Yes**, and use [user discovery](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
 
-The Application Catalog receives the list of available software for users from the site server. Thus, this setting does not have to be **Yes** for users to see and request applications from the Application Catalog. If this setting is **No**, the following behaviors do not work when users use the Application Catalog:  
+The Application Catalog receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the Application Catalog. If this setting is **No**, the following behaviors don't work when users use the Application Catalog:  
 
--   Users cannot install the applications that they see in the Application Catalog.  
+-   Users can't install the applications that they see in the Application Catalog.  
 
--   Users do not see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
+-   Users don't see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
 
--   Users do not receive revisions and updates for applications that are published to the Application Catalog. Users do see changes to application information in the Application Catalog.  
+-   Users don't receive revisions and updates for applications that are published to the Application Catalog. Users do see changes to application information in the Application Catalog.  
 
 -   If you remove an application deployment after the client installs the application from the Application Catalog, clients continue to check that the application is installed for up to two days.  
 
-In addition, if this setting is **No**, users do not receive required applications that you deploy to users. Users also do not receive any other management tasks in user policies.  
+In addition, if this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
 
 This setting applies to users when their computer is on either the intranet or the internet. It must be **Yes** if you also want to enable user policies on the internet.  
 
@@ -110,7 +110,7 @@ Set this to **Yes** for users to receive the user policy on internet-based compu
 
 -   Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
-If you set this option to **No**, or any of the previous requirements are not met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users do not receive user policies until the computer is connected to the intranet.  
+If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
 > [!NOTE]  
 >  For internet-based client management, application approval requests from users do not require user policies or user authentication. The cloud management gateway does not support application approval requests.   
@@ -120,7 +120,7 @@ If you set this option to **No**, or any of the previous requirements are not me
 ## Cloud services
 
 ### Allow access to cloud distribution point
-Set this to **Yes** for clients to obtain content from a cloud distribution point. This setting does not require the device to be internet-based.
+Set this to **Yes** for clients to obtain content from a cloud distribution point. This setting doesn't require the device to be internet-based.
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory 
 When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
@@ -163,13 +163,13 @@ Configuration Manager uses this setting to connect users to the Application Cata
 
 -   The management point gives internet-based clients an internet-based Application Catalog website point. The management point gives intranet-based clients an intranet-based Application Catalog website point.  
 
-Automatic detection does not guarantee that clients are given the closest Application Catalog website point. You might decide not to use **Automatically detect** for the following reasons:  
+Automatic detection doesn't guarantee that clients are given the closest Application Catalog website point. You might decide not to use **Automatically detect** for the following reasons:  
 
--   You want to manually configure the closest server for clients, or ensure that they do not connect to a server across a slow network connection.  
+-   You want to manually configure the closest server for clients, or ensure that they don't connect to a server across a slow network connection.  
 
 -   You want to control which clients connect to which server. This configuration might be for testing, performance, or business reasons.  
 
--   You do not want to wait up to 25 hours or for a network change for clients to use a different Application Catalog website point.  
+-   You don't want to wait up to 25 hours or for a network change for clients to use a different Application Catalog website point.  
 
 If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN. This configuration reduces the likelihood that the web browser prompts users for credentials when they access an intranet-based Application Catalog. To use the NetBIOS name, the following conditions must apply:  
 
@@ -194,7 +194,7 @@ Typically, users are prompted for credentials when the URL has an FQDN, but not 
 
 If this option is **Yes**, the client automatically adds the current default Application Catalog website URL to the Internet Explorer trusted sites zone.  
 
-This setting ensures that the Internet Explorer setting for Protected Mode is not enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the Application Catalog. By default, the trusted sites zone also supports user sign-in for the Application Catalog, which requires Windows authentication.  
+This setting ensures that the Internet Explorer setting for Protected Mode isn't enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the Application Catalog. By default, the trusted sites zone also supports user sign-in for the Application Catalog, which requires Windows authentication.  
 
 If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the Application Catalog. An alternative method is to configure these Internet Explorer settings in another zone for the Application Catalog URL that clients use.  
 
@@ -217,7 +217,7 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which is not a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
+If you set this to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
 
 The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
@@ -244,15 +244,15 @@ Configure how users can initiate the installation of software, software updates,
 
 -   **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer.  
 
--   **No Users**: No users signed in to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users cannot initiate the installation of software from the Application Catalog or Software Center.  
+-   **No Users**: No users signed in to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't initiate the installation of software from the Application Catalog or Software Center.  
 
 ### Suspend BitLocker PIN entry on restart
 
 If computers require BitLocker PIN entry, then this option bypasses the requirement to enter a PIN when the computer restarts after a software installation.  
 
--   **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart, and has initiated a restart of the computer. This setting applies only to a computer restart initiated by Configuration Manager. This setting does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
+-   **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart, and has initiated a restart of the computer. This setting applies only to a computer restart initiated by Configuration Manager. This setting doesn't suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
 
--   **Never**: Configuration Manager does not suspend BitLocker after it has installed software that requires a restart. In this scenario, the software installation cannot finish until the user enters the PIN to complete the standard startup process and load Windows.
+-   **Never**: Configuration Manager doesn't suspend BitLocker after it has installed software that requires a restart. In this scenario, the software installation can't finish until the user enters the PIN to complete the standard startup process and load Windows.
 
 ### Additional software manages the deployment of applications and software updates
 
@@ -292,7 +292,7 @@ Choose **Yes** to display a notification for deployments available for less than
 
 After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled.  
 
-For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you do not use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
+For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you don't use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
 
 If clients must install required software updates at the deployment deadline without delay, then configure this setting to **Yes**. 
 
@@ -334,11 +334,11 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
 
-Choose this option if you have already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
+Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Starting in Configuration Manager 1802, Windows 10 devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
 
 ### Install Endpoint Protection client on client computers
 
-Choose **Yes** to install and enable the Endpoint Protection client on client computers that are not already running the client. Starting in Configuration Manager 1802, Windows 10 clients do not need to have the Endpoint Protection agent installed.  
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Starting in Configuration Manager 1802, Windows 10 clients don't need to have the Endpoint Protection agent installed.  
 
 > [!NOTE]  
 >  If the Endpoint Protection client is already installed, choosing **No** does not uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
@@ -355,7 +355,7 @@ Set this to **Yes** to override typical installation behaviors with maintenance 
 
 Choose **Yes** to disable the write filter on the Windows Embedded device, and restart the device. This action commits the installation on the device.  
 
-If you choose **No**, the client installs on a temporary overlay that clears when the device restarts. In this scenario, the Endpoint Protection client does not fully install until another installation commits changes to the device. This configuration is the default.  
+If you choose **No**, the client installs on a temporary overlay that clears when the device restarts. In this scenario, the Endpoint Protection client doesn't fully install until another installation commits changes to the device. This configuration is the default.  
 
 ### Suppress any required computer restarts after the Endpoint Protection client is installed
 
@@ -412,7 +412,7 @@ Specify the maximum number of minutes for the Configuration Manager client to ra
 
 ### Maximum custom MIF file size (KB)
 
-Specify the maximum size, in kilobytes (KB), allowed for each custom Management Information Format (MIF) file that the client collects during a hardware inventory cycle. The Configuration Manager hardware inventory agent does not process any custom MIF files that exceed this size. You can specify a size of 1 KB to 5,120 KB. By default, this value is set to 250 KB. This setting does not affect the size of the regular hardware inventory data file.  
+Specify the maximum size, in kilobytes (KB), allowed for each custom Management Information Format (MIF) file that the client collects during a hardware inventory cycle. The Configuration Manager hardware inventory agent doesn't process any custom MIF files that exceed this size. You can specify a size of 1 KB to 5,120 KB. By default, this value is set to 250 KB. This setting doesn't affect the size of the regular hardware inventory data file.  
 
 > [!NOTE]  
 >  This setting is available only in the default client settings.  
@@ -466,7 +466,7 @@ Choose one of the following options for this setting:
 
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
--   **Block**: The Configuration Manager client does not try to communicate with Configuration Manager sites when it is on a metered internet connection. This is the default option.  
+-   **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it is on a metered internet connection. This is the default option.  
 
 
 
@@ -482,7 +482,7 @@ Choose **Yes** to let users of Software Center exclude their computer from any c
 
 ### Enable wake-up proxy
 
-Specify **Yes** to supplement the site’s Wake On LAN setting, when it is configured for unicast packets.  
+Specify **Yes** to supplement the site’s Wake On LAN setting, when it's configured for unicast packets.  
 
 For more information about wake-up proxy, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).  
 
@@ -495,7 +495,7 @@ Then, configure the following additional settings as needed:
          The port number that clients use to send wake-up packets to sleeping computers. Keep the default port 25536, or change the number to a value of your choice.  
 
 -   **Wake On LAN port number (UDP)** </br> 
-         Keep the default value of 9, unless you have changed the Wake On LAN (UDP) port number on the **Ports** tab of the site **Properties**.  
+         Keep the default value of 9, unless you've changed the Wake On LAN (UDP) port number on the **Ports** tab of the site **Properties**.  
 
     > [!IMPORTANT]  
     >  This number must match the number in the site **Properties**. If you change this number in one place, it isn't automatically updated in the other place.  
@@ -535,7 +535,7 @@ Choose whether the client computer shows a message asking for the user's permiss
 
 ### Prompt user for permission to transfer content from shared clipboard
 
-Allow your users the opportunity to accept or deny file transfers, before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer.
+Allow your users the opportunity to accept or deny file transfers, before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer doesn't have the ability to give themselves permission to proceed with the file transfer.
 
 ### Grant Remote Control permission to local Administrators group
 
@@ -571,7 +571,7 @@ Set this to use sound to indicate when a remote control session is active on a c
 
 Configure this setting to **Yes** to let Configuration Manager manage unsolicited Remote Assistance sessions.  
 
-In an unsolicited Remote Assistance session, the user at the client computer did not request assistance to initiate the session.  
+In an unsolicited Remote Assistance session, the user at the client computer didn't request assistance to initiate the session.  
 
 ### Manage solicited Remote Assistance settings
 
@@ -613,7 +613,7 @@ Enter the organization name that users see in Software Center.
 - **Color scheme for Software Center** </br>
 Select **Select Color** to define the primary color used by Software Center.
 - **Select a logo for Software Center** </br>
-Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name should not contain spaces.  
+Select **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.  
          
 ### <a name="bkmk_HideUnapproved"></a> Hide unapproved applications in Software Center
 Starting in Configuration Manager version 1802, when this option is enabled, user available applications that require approval are hidden in Software Center.   <!--1355146-->
@@ -622,7 +622,7 @@ Starting in Configuration Manager version 1802, when this option is enabled, use
 Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. <!--1357592-->   
  
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
-Starting in Configuration Manager version 1806, you can specify the visibility of the Application Catalog web site link in Software Center. When this option is set, users will not see the Application Catalog web site link in the Installation status node of Software Center. <!--1358214-->
+Starting in Configuration Manager version 1806, you can specify the visibility of the Application Catalog web site link in Software Center. When this option is set, users won't see the Application Catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
 
 ### Software Center tab visibility
@@ -637,7 +637,7 @@ Configure the additional settings in this group to **Yes** to make the following
     - **Tab name**
     - **Content URL**
 
-For example, if your organization does not use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
+For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 
 
 
@@ -683,9 +683,9 @@ If you want to specify the types of file to inventory, select **Set Types**, and
 
     -   **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the specified file, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
 
-    -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files are not inventoried.  
+    -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files aren't inventoried.  
 
-    -   **Exclude files in the Windows folder**: When you choose this option, any files in the Windows folder and its subfolders are not inventoried.  
+    -   **Exclude files in the Windows folder**: When you choose this option, any files in the Windows folder and its subfolders aren't inventoried.  
 
     Select **OK** to close the **Inventoried File Properties** dialog box. Add all the files that you want to inventory, and then select **OK** to close the **Configure Client Setting** dialog box.  
 
@@ -704,7 +704,7 @@ If you want to collect files from client computers, select **Set Files**, and th
 
     -   **Location**: Select **Set** to open the **Path Properties** dialog box. Configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
 
-    -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files are not collected.  
+    -   **Exclude encrypted and compressed files**: When you choose this option, any compressed or encrypted files aren't collected.  
 
     -   **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size, in kilobytes (KB), after which the client stops collecting the specified files.  
 
@@ -724,7 +724,7 @@ If you want to collect files from client computers, select **Set Files**, and th
 
 ### Set Names
 
-The software inventory agent retrieves manufacturer and product names from file header information. These names are not always standardized in the file header information. When you view software inventory in Resource Explorer, different versions of the same manufacturer or product name can appear. To standardize these display names, select **Set Names**, and then configure the following settings:  
+The software inventory agent retrieves manufacturer and product names from file header information. These names aren't always standardized in the file header information. When you view software inventory in Resource Explorer, different versions of the same manufacturer or product name can appear. To standardize these display names, select **Set Names**, and then configure the following settings:  
 
 -   **Name type**: Software inventory collects information about both manufacturers and products. Choose whether you want to configure display names for a **Manufacturer** or a **Product**.  
 
@@ -790,7 +790,7 @@ Set this to **Yes** to allow clients to use express installation files. For more
 
 ### Port used to download content for Express installation files
 
-This setting configures the local port for the HTTP listener to download express content. It is set to 8005 by default. You do not need to open this port in the client firewall.
+This setting configures the local port for the HTTP listener to download express content. It's set to 8005 by default. You don't need to open this port in the client firewall.
 
 ### Enable management of the Office 365 Client Agent
 

@@ -92,7 +92,7 @@ Click the **Installation status** tab to view the status of applications. You ma
 - **Downloading**: Software Center is downloading the software to install on this computer.
 - **Failed**: Software Center encountered an error in trying to install the software.
 - **Scheduled to install after**: Shows the date and time of the device's next maintenance window to install upcoming software. Maintenance windows are defined by your IT admin.<!--1358131-->
-    - The status can been seen in the **All** and the **Upcoming** tab. 
+    - The status can be seen in the **All** and the **Upcoming** tab. 
     - You can install before the maintenance window time by clicking the **Install Now** button. 
 
 Your IT admin may allow you to view applications from the Application catalog website. To view the website, click on **Open the Application Catalog web site** in the upper right corner. <!--1358214-->
