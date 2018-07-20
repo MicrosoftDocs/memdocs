@@ -132,5 +132,5 @@ Specify how Software Center applies changes to software before the deadline
 - **Suspend Software Center activities when my computer is in presentation mode**: This setting is enabled by default.
 - **Sync Policy**: click this button when instructed by your IT admin. This computer checks with the servers for anything new, such as applications, software updates, or operating systems.
 
-### Custom tab in Software Center
+## Custom tab in Software Center
 Your IT admin might have added an additional tab to Software Center. This tab is named by your admin and leads to a web site they specify. For instance, you might have a tab called **Help Desk** that leads to your organization's help desk web site. <!--1358132-->
