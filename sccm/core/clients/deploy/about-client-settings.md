@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -620,7 +620,11 @@ Starting in Configuration Manager version 1802, when this option is enabled, use
 
 ### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
 Starting in Configuration Manager version 1802, applications that are already installed will no longer show in the Applications tab when this option is enabled. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. <!--1357592-->   
-  
+ 
+### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
+Starting in Configuration Manager version 1806, you can specify the visibility of the Application Catalog web site link in Software Center. When this option is set, users will not see the Application Catalog web site link in the Installation status node of Software Center. <!--1358214-->
+
+
 ### Software Center tab visibility
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 - **Applications**
@@ -629,6 +633,9 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
+- **Specify a custom tab for Software Center** (starting in version 1810) <!--1358132-->
+    - **Tab name**
+    - **Content URL**
 
 For example, if your organization does not use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 

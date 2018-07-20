@@ -5,7 +5,7 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -91,8 +91,11 @@ Click the **Installation status** tab to view the status of applications. You ma
 - **Installed**: Software Center already installed this application on this computer.
 - **Downloading**: Software Center is downloading the software to install on this computer.
 - **Failed**: Software Center encountered an error in trying to install the software.
+- **Scheduled to install after**: Shows the date and time of the device's next maintenance window to install upcoming software. Maintenance windows are defined by your IT admin.<!--1358131-->
+    - The status can been seen in the **All** and the **Upcoming** tab. 
+    - You can install before the maintenance window time by clicking the **Install Now** button. 
 
-
+Your IT admin may allow you to view applications from the Application catalog website. To view the website, click on **Open the Application Catalog web site** in the upper right corner. <!--1358214-->
 
 ## Device compliance
 
@@ -129,3 +132,5 @@ Specify how Software Center applies changes to software before the deadline
 - **Suspend Software Center activities when my computer is in presentation mode**: This setting is enabled by default.
 - **Sync Policy**: click this button when instructed by your IT admin. This computer checks with the servers for anything new, such as applications, software updates, or operating systems.
 
+### Custom tab in Software Center
+Your IT admin might have added an additional tab to Software Center. This tab is named by your admin and leads to a web site they specify. For instance, you might have a tab called **Help Desk** that leads to your organization's help desk web site. <!--1358132-->

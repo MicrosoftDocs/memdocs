@@ -2,7 +2,7 @@
 title: "Use maintenance windows"
 titleSuffix: "Configuration Manager"
 description: "Use collections and maintenance windows to effectively manage clients in System Center Configuration Manager."
-ms.date: 02/22/2017
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Maintenance windows enable you to define a time when Configuration Manager operations can be carried out on a device collection. You can use maintenance windows to help ensure that client configuration changes occur during periods that do not affect productivity.  
+Maintenance windows enable you to define a time when Configuration Manager operations can be carried out on a device collection. You can use maintenance windows to help ensure that client configuration changes occur during periods that do not affect productivity. Starting in Configuration Manager version 1810, your users can see when their next maintenance window is from the **Installation status** tab in the **Software Center**. <!--1358131-->
 
  The following operations support maintenance windows:  
 
@@ -42,7 +42,7 @@ Maintenance windows enable you to define a time when Configuration Manager opera
 
  When a user initiates an application installation from Software Center, the application is installed immediately, regardless of any maintenance windows.  
 
- If an application deployment with a purpose of **Required** reaches its installation deadline during the nonbusiness hours configured by a user in Software Center, the application will be installed.  
+ If an application deployment with a purpose of **Required** reaches its installation deadline during the nonbusiness hours configured by a user in Software Center, the application will be installed. 
 
 ### How to configure maintenance windows  
 
