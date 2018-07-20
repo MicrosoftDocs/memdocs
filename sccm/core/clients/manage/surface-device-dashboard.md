@@ -32,7 +32,7 @@ To open the Surface device dashboard, use the following steps:
 
 ## Reviewing information in the Surface device dashboard
 
-The Surface device dashboard shows three graphs for your environment. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
+The Surface device dashboard shows three graphs for your environment. 
 
 - **Percent of Surface devices** -Gives you the percentage of Surface devices throughout your environment.
 
@@ -45,7 +45,7 @@ The Surface device dashboard shows three graphs for your environment. Starting i
         ![Surface model device list](media\Surface-Model-Device-List.PNG)
 
 - **Top five firmware versions**- Displays a chart with the top five firmware models in your environment. 
-    - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. 
+    - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
        ![Surface model device list](media\Surface-Firmware-Hover.PNG)
 
 
