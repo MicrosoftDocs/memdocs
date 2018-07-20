@@ -5,7 +5,7 @@ description: Review information about Surface devices using the dashboard.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -45,7 +45,7 @@ The Surface device dashboard shows three graphs for your environment.
         ![Surface model device list](media\Surface-Model-Device-List.PNG)
 
 - **Top five firmware versions**- Displays a chart with the top five firmware models in your environment. 
-    - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. 
+    - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
        ![Surface model device list](media\Surface-Firmware-Hover.PNG)
 
 
