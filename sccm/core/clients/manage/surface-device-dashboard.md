@@ -5,7 +5,7 @@ description: Review information about Surface devices using the dashboard.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -32,7 +32,7 @@ To open the Surface device dashboard, use the following steps:
 
 ## Reviewing information in the Surface device dashboard
 
-The Surface device dashboard shows three graphs for your environment. 
+The Surface device dashboard shows three graphs for your environment. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
 
 - **Percent of Surface devices** -Gives you the percentage of Surface devices throughout your environment.
 
