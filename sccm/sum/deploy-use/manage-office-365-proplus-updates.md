@@ -88,7 +88,7 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. You must specify the location in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
     > [!IMPORTANT]    
-    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](/DeployOffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
+    > The XML configuration file must contain only [languages supported by the Office 365 ProPlus client](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
 5. On the **Client Products** page, select the Office 365 suite that you use. Select the applications that you want to include. Select any additional Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
