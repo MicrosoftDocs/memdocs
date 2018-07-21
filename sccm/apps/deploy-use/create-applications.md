@@ -169,12 +169,10 @@ There are three ways to start the Create Deployment Type wizard:
 
 - **From application properties**: Select an existing application in the **Applications** node and click **Properties**. Switch to the **Deployment Types** tab, and click **Add**.
 
+Then use one of the following procedures to [automatically identify](#bkmk_auto-dt) or [manually specify](#bkmk_manual-dt) deployment type information.  
 
-### Automatically identify or manually specify deployment type information  
 
-Use one of the following procedures to [automatically identify](#bkmk_auto-dt) or [manually specify](#bkmk_manual-dt) deployment type information.  
-
-#### <a name="bkmk_auto-dt"></a> Automatically identify deployment type information  
+### <a name="bkmk_auto-dt"></a> Automatically identify deployment type information  
 
 1.  On the **General** page of the Create Deployment Type wizard:  
 
@@ -207,7 +205,7 @@ Use one of the following procedures to [automatically identify](#bkmk_auto-dt) o
 4.  Choose **Next**, and then continue to [Deployment type Content options](#bkmk_dt-content).  
 
 
-#### <a name="bkmk_manual-dt"></a> Manually specify the deployment type information  
+### <a name="bkmk_manual-dt"></a> Manually specify the deployment type information  
 
 1.  On the **General** page of the Create Deployment Type wizard, in the **Type** drop-down list, choose the application installation file type for this deployment type. 
 
@@ -515,7 +513,7 @@ Specify return codes to control behaviors after the deployment type completes. F
 
 1. On the **Return Codes** tab of the deployment type properties window, click **Add**.  
 
-2. In the Add Return Code window, specify the **Return Code Value** that you expect from this deployment type. This value is any positive or negative integer between -2147483648 and 2147483647.  
+2. In the Add Return Code window, specify the **Return Code Value** that you expect from this deployment type. This value is any positive or negative integer between `-2147483648` and `2147483647`.  
 
 3. Select a **Code Type** from the drop-down list. This setting defines how Configuration Manager interprets the specified return code from this deployment type. The available types vary based on the deployment type technology.   
 
