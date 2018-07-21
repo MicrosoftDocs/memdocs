@@ -119,9 +119,9 @@ On the **App** page of the Azure Services Wizard, first configure the **Azure en
 
 On the **Configurations** page of the Azure Services Wizard, specify the following information:  
 
-- **Path to Microsoft Store for Business app content storage**: Specify a shared network path, including a folder of the share. For example, `\\server\share\folder`.  
+- **Path to Microsoft Store for Business app content storage**: Specify a shared network path, including a folder. For example, `\\server\share\folder`. When the site server syncs with the store, it caches content in this location. When you create an application in Configuration Manager, the site server copies the app content from this local cache to the site's content library.  
 
-- **Selected languages**: Select the languages to display to users for apps you sync with the Microsoft Store for Business.  
+- **Selected languages**: Select the languages to sync from the store and display to users in Software Center. For example, if the user configures Windows for German, then Software Center shows German strings for the store app. This behavior requires that language to be synchronized, and to exist for the specific application.    
 
 - **Default language**: If the user's language is unavailable, select a default language to use.  
 
