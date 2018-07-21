@@ -1,8 +1,8 @@
 ---
 title: Deprecated features
 titleSuffix: Configuration Manager
-description: Learn about the features that System Center Configuration Manager no longer supports.
-ms.date: 05/01/2018
+description: Learn about the features that Configuration Manager no longer supports.
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Removed and deprecated features for System Center Configuration Manager
+# Removed and deprecated features for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -26,7 +26,7 @@ This information is subject to change with future releases. It might not include
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
-|User-available apps that would have previously appeared only in the application catalog now appear in the new Software Center. </br></br>Therefore, the web-based application catalog experience will not be available in the coming months.|August 11, 2017| Support for the application catalog web site user experience ends with the first update released after June 1, 2018|
+|The **application catalog website** user experience is no longer supported. Users should use the new Software Center.|August 11, 2017| Version 1806|
 |The previous version of Software Center.<br><br>For more information about the new Software Center, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only).|December 13, 2016|Version 1802|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. </br></br>This deprecation includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. </br></br>Existing VHDs are not deleted, but are no longer accessible from within the Configuration Manager console.  |January 6, 2017 |Version 1710|
 |Task sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |November 18, 2016|Version 1710|
