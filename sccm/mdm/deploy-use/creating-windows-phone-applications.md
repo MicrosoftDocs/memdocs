@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A Configuration Manager application has one or more deployment types that comprise the installation files and information that are required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.  
+A Configuration Manager application has one or more deployment types. The deployment type includes the installation files and information that's required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.  
 
 See [create an application](/sccm/apps/deploy-use/create-applications#bkmk_create) for the steps to create Configuration Manager applications and deployment types. 
 
@@ -27,8 +27,8 @@ Configuration Manager supports deploying the following app file types:
 
 |Device type|Supported file types|  
 |-----------------|---------------------|  
-|Windows Phone 8|.xap|  
-|Windows Phone 8.1|.xap, .appx, .appxbundle|
-|Windows 10 Mobile|.xap, .appx, .appxbundle|
+|Windows Phone 8|xap|  
+|Windows Phone 8.1|xap, appx, appxbundle|
+|Windows 10 Mobile|xap, appx, appxbundle|
 
 Deploy Windows Phone apps as **Available** or **Required**. Also use deployments to uninstall apps.  
