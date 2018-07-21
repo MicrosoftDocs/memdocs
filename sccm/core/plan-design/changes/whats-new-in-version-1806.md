@@ -255,7 +255,7 @@ For more information, see the following articles:
 
 ### Provision Windows app packages for all users on a device
 <!--1358310-->
-Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly.
+Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).
 
 
 ### Office Customization Tool integration with the Office 365 Installer
@@ -265,12 +265,12 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
 
 ### Support for new Windows app package formats
 <!--1357427-->
-Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats.
+Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).
 
 
 ### Uninstall application on approval revocation
 <!--1357891-->
-The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
 
 
 ### Package Conversion Manager 

@@ -155,6 +155,8 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 > - [Requirements](#bkmk_dt-require)
 > - [Return Codes](#bkmk_dt-return)
 > - [Dependencies](#bkmk_dt-depend)
+>  
+> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check).  
 
 
 ### Start the Create Deployment Type wizard  
