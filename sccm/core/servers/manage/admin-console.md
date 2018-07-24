@@ -78,8 +78,8 @@ At the bottom of the column right click menu, you can sort or group by a column.
 
 ![Configuration Manager group by column](media/column-group-by.png)
 
-## Console improvements in version 1810
-In Configuration Manager version 1810, the following console improvements are added:
+## Console improvements in version 1806
+In Configuration Manager version 1806, the following console improvements are added:
 
 - **Primary user(s)** is available as a column in the device node. <!--1357280-->
 - **Currently logged on user** is available as a column in the device node.<!--1358202-->
