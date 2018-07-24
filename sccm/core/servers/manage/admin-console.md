@@ -89,7 +89,7 @@ In Configuration Manager version 1810, the following console improvements are ad
 
     ![Configuration Manager copy asset details](media/1810-deployment-status.PNG)
 
- - Submit feedback from the console. You can save a copy to submit later if you don't have internet access. 
+ - Submit feedback from the console. You can save a copy to submit later if you don't have internet access. <!--1357542-->
    
     - **Send a smile**: Send feedback on what you liked.
     - **Send a frown**: Send feedback on what you didn't like. 
