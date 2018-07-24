@@ -2,7 +2,7 @@
 title: "Plan for and configure application management"
 titleSuffix: "Configuration Manager"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
-ms.date: 11/07/2017
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -195,6 +195,9 @@ With the 1710 release, you can manually add enterprise branding elements and spe
     -  Enable Installation Status tab
     -  Enable Device compliance tab
     -  Enable Options tab
+    -  Specify a custom tab for Software Center (starting in version 1810) <!--1358132 -->
+        - Tab name
+        - Content URL
 
 > [!IMPORTANT]  
 >  Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
