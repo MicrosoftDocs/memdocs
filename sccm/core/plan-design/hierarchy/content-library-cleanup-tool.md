@@ -55,7 +55,7 @@ To run the tool:
 When the tool is run, an error like the following might be returned when any package or deployment has failed, or is in progress:
 -  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.*
 
-**Workaround:** None. The tool cannot reliable identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool will not allow you to clean-up content until that issue is resolved.
+**Workaround:** None. The tool cannot reliably identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool will not allow you to clean-up content until that issue is resolved.
 
 ### Command line switches  
 The following command line switches can be used in any order.   
