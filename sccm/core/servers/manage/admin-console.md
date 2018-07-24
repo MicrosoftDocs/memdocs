@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# System Center Configuration Manager console
+# Using the System Center Configuration Manager console
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
