@@ -113,7 +113,7 @@ On peer cache-enabled clients that use the Windows Firewall, Configuration Manag
 
 
 
-## Partial download support
+## <a name="bkmk_parts"></a> Partial download support
 <!--1357346-->
 Starting in version 1806, client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. 
 
