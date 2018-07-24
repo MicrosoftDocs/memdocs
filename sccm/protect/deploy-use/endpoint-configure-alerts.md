@@ -12,7 +12,10 @@ manager: dougeby
 ms.author: aaroncz
 ---
 
-#  Configure Alerts for Endpoint Protection in Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+#  Configure Alerts for Endpoint Protection in Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  You can configure Endpoint Protection alerts in Microsoft System Center Configuration Manager to notify administrative users when specific events, such as a malware infection, occur in your hierarchy. Notifications display in the Endpoint Protection dashboard in the Configuration Manager console in the **Alerts** node of the **Monitoring** workspace, or can be emailed to specified users.
 
  Use the following steps and the supplemental procedures in this topic to configure alerts for Endpoint Protection in Configuration Manager.
@@ -79,7 +82,7 @@ ms.author: aaroncz
 
 ## Alert for outdated malware client
 
-Beginning with Configuration Manager version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
+Beginning with Configuration Manager version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Device Collections** > **All Desktops and Server Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
 
 To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
