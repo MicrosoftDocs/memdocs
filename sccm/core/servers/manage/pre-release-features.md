@@ -56,6 +56,17 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 ## Pre-release features
 
+<!--Note/tip for target article
+
+> [!Note]  
+> In this version of Configuration Manager, <feature name> is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+
+
+> [!Tip]  
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.  
+
+-->
+
 
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|

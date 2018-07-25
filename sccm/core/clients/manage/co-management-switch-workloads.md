@@ -65,7 +65,7 @@ Certain workloads are available to be switched over to Intune. The following lis
        - After moving the workload, the app shows up in the **Company Portal** on the device.
        - Office updates may take around 24 hours to show up on client unless the devices are restarted. 
        - There is a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
-7. Mobile apps (starting in Configuration Manager version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features.md) <!--1357892-->
+7. Mobile apps (starting in Configuration Manager version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features)) <!--1357892-->
       - After you transition this workload, any available apps deployed from Intune are available in the Company Portal. 
       -  Apps that you deploy from Configuration Manager are available in Software Center.
 
