@@ -2,7 +2,7 @@
 title: "Service connection point"
 titleSuffix: "Configuration Manager"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
-ms.date: 07/05/2018
+ms.date: 07/25/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -74,6 +74,12 @@ To use the Configuration Manager Service Manager, in the console go to **Monitor
 
 ##  <a name="bkmk_urls"></a> Internet access requirements  
 To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the internet must pass communications through outgoing port **TCP 443** for HTTPS and outgoing port **TCP 80** for HTTP to the below internet locations. The service connection point also supports using a web proxy (with or without authentication) to use these locations.  If you need to configure a web proxy account See: [Proxy server support in System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
+
+> [!TIP]
+> The Service Connection Point uses the Microsoft Intune service when it connects to http://go.Microsoft.com or
+  http://manage.Microsoft.com. There is a known issue in which the Intune Connector experiences connectivity issues if the Baltimore
+  CyberTrust Root Certificate is not installed, is expired, or is corrupted on the Configuration Manager Site System that has the
+  Service Connection Point role installed.
 
 **Updates and servicing**  
 
