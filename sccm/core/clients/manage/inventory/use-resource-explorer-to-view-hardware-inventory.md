@@ -29,11 +29,11 @@ Resource Explorer has the following sections related to hardware inventory:
 
 - **Hardware**: Shows the most recent hardware inventory collected from the specified client device.  
 
-    - THe **Workstation Status** node shows the time and date of the last hardware inventory from the device.  
+    - The **Workstation Status** node shows the time and date of the last hardware inventory from the device.  
 
 - **Hardware History**: A history of inventoried items that changed since the last hardware inventory cycle.  
 
-    - Each item contains a **Current** node and one or more nodes with the historical date. Compare the information in the current node to one of the historical nodes to discover the items that changed.  
+    - Expand an item to see a **Current** node and one or more nodes with the historical date. Compare the information in the current node to one of the historical nodes to see the items that changed.  
 
 > [!NOTE]  
 > By default, Configuration Manager deletes hardware inventory data that's been inactive for 90 days. Adjust this number of days in the **Delete Aged Inventory History** site maintenance task. For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks).  
@@ -49,15 +49,20 @@ Resource Explorer has the following sections related to hardware inventory:
 > [!Tip]  
 > In Resource Explorer, right-click an item in the right results pane for additional actions. Click **Properties** to view that item in a different format.  
 
-For information about how to view hardware inventory from clients that run Linux and UNIX, see [How to monitor clients for Linux and UNIX servers](/sccm/core/clients/manage/monitor-clients-for-linux-and-unix-servers).  
-
 
 
 ## <a name="bkmk_bigint"></a> Use of large integer values
 <!--1357880-->
-In Configuration Manager versions 1802 and prior, hardware inventory has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. 
+In Configuration Manager versions 1802 and prior, hardware inventory has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, so no value is stored in the database. 
 
 Starting in version 1806, the limit is increased to 18,446,744,073,709,551,616 (2^64). 
 
 For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
 
+
+
+## See also
+
+For information about how to view hardware inventory from clients that run Linux and UNIX, see [How to monitor clients for Linux and UNIX servers](/sccm/core/clients/manage/monitor-clients-for-linux-and-unix-servers).  
+
+Resource Explorer also shows Software Inventory. For more information, see [How to use Resource Explorer to view software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).
