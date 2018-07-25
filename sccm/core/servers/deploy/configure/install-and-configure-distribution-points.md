@@ -107,8 +107,7 @@ Distribution point groups provide a logical grouping of distribution points for 
 
 The next sections list the procedures for the following actions to manage distribution point groups:  
 - [Create and configure a new distribution point group](#bkmk_dpgroup-create)
-- [Add distribution points and associate collections with an existing distribution point group](#bkmk_dpgroup-modify)
-- [Add selected distribution points to a new distribution point group](#bkmk_dpgroup-addnew)
+- [Modify an existing distribution point group](#bkmk_dpgroup-modify)
 - [Add selected distribution points to existing distribution point groups](#bkmk_dpgroup-addexist)
 
 
@@ -131,7 +130,7 @@ The next sections list the procedures for the following actions to manage distri
 8.  In the Create New Distribution Point Group window, click **OK** to create the group.  
 
 
-You can also create a new group from an existing distribution point:
+#### Create a new group from an existing distribution point
 
 1.  In the Configuration Manager console, go to the **Administration** workspace, and select the **Distribution Points** node. Select one or more distribution points to add to a new distribution point group.  
 

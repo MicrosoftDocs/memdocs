@@ -28,9 +28,9 @@ Use peer cache to help manage deployment of content to clients in remote locatio
 
 Definitions:  
 
-- **Peer cache *client***: Any Configuration Manager client that downloads content from a peer  
+- **Peer cache client**: Any Configuration Manager client that downloads content from a peer  
 
-- **Peer cache *source***: A Configuration Manager client that you enable for peer cache, and that has content to share with other clients  
+- **Peer cache source**: A Configuration Manager client that you enable for peer cache, and that has content to share with other clients  
 
 Use client settings to enable clients to be peer cache sources. You don't need to enable peer cache clients. When you enable clients to be peer cache sources, the management point includes them in the list of content location sources.<!--510397--> For more information on this process, see [Operations](#operations).  
 
@@ -41,7 +41,7 @@ The Configuration Manager client uses peer cache to serve to other clients every
 Peer cache doesn't replace the use of other solutions like Windows BranchCache or Delivery Optimization. Peer cache works along with other solutions. These technologies give you more options for extending traditional content deployment solutions such as distribution points. Peer cache is a custom solution with no reliance on BranchCache. If you don't enable or use BranchCache, peer cache still works.  
 
   > [!Note]  
-  > Starting in version 1802, Windows BranchCache is always enabled on clients. The setting to **Allow clients to share content with other clients on the same subnet** is removed. Clients use BranchCache isf the distribution point supports it.<!--SCCMDocs issue 539-->  
+  > Starting in version 1802, Windows BranchCache is always enabled on clients. The setting to **Allow clients to share content with other clients on the same subnet** is removed. Clients use BranchCache if the distribution point supports it.<!--SCCMDocs issue 539-->  
 
 
 
