@@ -414,6 +414,14 @@ When you enable a new feature or pre-release feature, the Configuration Manager 
 #### List of optional features
 The following features are optional in the latest version of Configuration Manager:<!--505213-->  
 
+<!--Note to include in target articles
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
+
+-->
+
+- [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)<!--1128774-->
 - [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
 - [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 - [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->

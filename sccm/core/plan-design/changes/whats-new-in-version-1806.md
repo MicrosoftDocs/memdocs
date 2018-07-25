@@ -213,7 +213,7 @@ The following workloads are now able to transition from Configuration Manager to
 
 - **Office 365**<!--1357841-->: Devices don't install Office 365 deployments from Configuration Manager.  
 
-- **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.  
+- **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).  
 
 To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 

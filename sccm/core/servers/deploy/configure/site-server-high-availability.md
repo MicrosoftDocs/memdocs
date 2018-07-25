@@ -27,6 +27,9 @@ A site server in passive mode:
 
 To make the site server in passive mode become active, you manually *promote* it. This action switches the site server in active mode to be the site server in passive mode. The site system roles that are available on the original active mode server remain available so long as that computer is accessible. Only the site server role is switched between active and passive modes.
 
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+
 
 
 ## Prerequisites

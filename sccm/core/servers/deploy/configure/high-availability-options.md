@@ -144,9 +144,7 @@ Secondary sites only support installation of one management point, which must be
 >  If the management point that a mobile device client uses becomes unavailable, you must resolve the problem with that management point or wipe the mobile device and re-enroll the mobile device so that it can be assigned to an operational management point that is enabled for mobile devices.  
 
 #### Distribution point  
-Install multiple distribution points, and deploy content to multiple distribution points. Configure overlapping boundary groups for content location, so clients on each subnet can access content from two or more distribution points. Finally, consider configuring one or more distribution points as fallback locations for content.  
-
-For more information about fallback locations for content, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 #### Application catalog web service point and application catalog website point  
 Install more than one instance of each site system role. For best performance, deploy one of each on the same site system server.  
