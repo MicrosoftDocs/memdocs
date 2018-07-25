@@ -637,6 +637,9 @@ Configure the additional settings in this group to **Yes** to make the following
     - **Tab name**
     - **Content URL**
 
+>[!NOTE]
+> Some  website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+
 For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 
 

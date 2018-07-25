@@ -200,7 +200,8 @@ With the 1710 release, you can manually add enterprise branding elements and spe
         - Content URL
 
 > [!IMPORTANT]  
->  Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
+> - Some  website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659--> 
+> - Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
 
 ###  Step 5: Verify that the Application Catalog is operational  
  Use the following procedures to verify that the Application Catalog is operational. You can use the Application Catalog directly from a browser or from Software Center.  
