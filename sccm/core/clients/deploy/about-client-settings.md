@@ -786,7 +786,8 @@ Use this setting to specify the period of time for the previous setting. You can
 
 ### Enable installation of Express installation files on clients
 
-Set this to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates). Beginning with Configuration Manager version 1806, the default setting is **Yes**. 
+Set this to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates). 
+
 
 ### Port used to download content for Express installation files
 

@@ -53,4 +53,4 @@ Once you deploy client settings to enable this functionality on the client, it a
 
 3. Select the appropriate client settings, and click **Properties** on the ribbon.  
 
-4. Select the **Software Updates** group. Configure to **Yes** the setting to **Enable installation of Express Updates on clients**. Configure the **Port used to download content for Express Updates** with the port used by the HTTP listener on the client. Beginning with Configuration Manager version 1806, the default setting is **Yes**.  
+4. Select the **Software Updates** group. Configure to **Yes** the setting to **Enable installation of Express Updates on clients**. Configure the **Port used to download content for Express Updates** with the port used by the HTTP listener on the client.
