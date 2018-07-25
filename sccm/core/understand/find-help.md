@@ -42,7 +42,7 @@ Starting in Configuration Manager version 1806, you can send product feedback di
 
   - **Send a smile**: Send feedback on what you liked.
   - **Send a frown**: Send feedback on what you didn't like.
-  - **Send a suggestion**: Takes you to the UserVoice website to share your idea.
+  - **Send a suggestion**: Takes you to the [UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
 
 ![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
 
@@ -98,7 +98,7 @@ Report potential product defects through the [Feedback Hub app](https://support.
  - Configuration Manager OS Deployment
  - Configuration Manager Server
 
-Continue to use the [user voice page](http://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
+Continue to use the [user voice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
 
 
 ##  <a name="BKMK_ProductGroupBlog"></a> Configuration Manager team blog  
