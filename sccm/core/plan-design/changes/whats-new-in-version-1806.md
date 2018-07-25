@@ -427,9 +427,7 @@ Viewing reports for software updates compliance traditionally includes data from
 
 ### <a name="bkmk_bigint"></a> Improvement to hardware inventory for large integer values
 <!--1357880-->
-Hardware inventory currently has a limit for integers larger than 4,294,967,296 (2^32). This limit can be reached for attributes such as hard drive sizes in bytes. The management point doesn't process integer values above this limit, thus no value is stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
-
-For a property with a value that doesn't change, like total disk size, you may not immediately see the value after upgrading the site. Most hardware inventory is a delta report. The client only sends values that change. To work around this behavior, add another property to the same class. This action causes the client to update all properties in the class that changed. 
+Hardware inventory previously had a limit for integers larger than 4,294,967,296 (2^32). This limit could be reached for attributes such as hard drive sizes in bytes. The management point didn't process integer values above this limit, thus no value was stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). For more information, see [Use of large integer values](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory#bkmk_bigint).
 
 
 ### Hardware inventory default unit revision
