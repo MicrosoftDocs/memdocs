@@ -34,7 +34,8 @@ Starting with version 1802, use CNG certificates for the following HTTPS-enabled
 
 Starting with version 1806, use CNG certificates for the following HTTPS-enabled server roles:
 
-- Certificate registration point, including the NDES server with the Configuration Manager policy module <!--1357314-->
+- Certificate registration point
+    -  Including the NDES server with the Configuration Manager policy module <!--1357314-->
 
 > [!NOTE]
 > CNG is backward compatible with Crypto API (CAPI). CAPI certificates continue to be supported even when CNG support is enabled on the client.
