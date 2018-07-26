@@ -2,7 +2,7 @@
 title: CNG certificates overview
 titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) certificates for Configuration Manager clients and servers.
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -32,6 +32,10 @@ Starting with version 1802, use CNG certificates for the following HTTPS-enabled
 - Software update point
 - State migration point     
 
+Starting with version 1806, use CNG certificates for the following HTTPS-enabled server roles:
+
+- Certificate registration point, including the NDES server with the Configuration Manager policy module <!-->
+
 > [!NOTE]
 > CNG is backward compatible with Crypto API (CAPI). CAPI certificates continue to be supported even when CNG support is enabled on the client.
 
@@ -49,9 +53,11 @@ The following scenarios are currently not supported:
 
 - Using CNG certificates to create a Cloud Distribution Point.
 
-- If the NDES policy module is using a CNG certificate for client authentication, communication to the certificate registration point fails.
+- If the NDES policy module is using a CNG certificate for client authentication, communication to the certificate registration point fails. 
+    - This is supported starting in Configuration Manager version 1806.
 
 - If you specify a CNG certificate when creating task sequence media, the wizard fails to create bootable media.
+    - This is supported starting in Configuration Manager version 1806.
 
 ## To use CNG certificates
 
@@ -66,6 +72,7 @@ To use CNG certificates, your certification authority (CA) needs to provide CNG 
 - **Cryptography** tab
 
     - **Provider Category** must be **Key Storage Provider**. (required)
+    - **Request must use one of the following providers:** must be **Microsoft Software Key Storage Provider**. 
 
 > [!NOTE]
 > The requirements for your environment or organization may be different. Contact your PKI expert. The important point to consider is a certificate template must use a Key Storage Provider to take advantage of CNG.
