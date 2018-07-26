@@ -62,4 +62,7 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 
 9. Optionally, click on **Categories** to assign categories to the baseline for searching and filtering. 
 
-11. Click **OK** to close the **Create Configuration Baseline** dialog box and to create the configuration baseline.  
+10. Click **OK** to close the **Create Configuration Baseline** dialog box and to create the configuration baseline.  
+
+>[!NOTE]
+> Modifying an existing baseline, such as setting **Always apply this baseline for co-managed clients**, will increment the baseline content version. Clients will need to evaluate the new version to update the baseline reporting. 
