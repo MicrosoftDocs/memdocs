@@ -72,7 +72,7 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 
 ### Configuration Manager Toolkit
 <!--1357145-->
-The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required.
+The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required. For more information, see [Configuration Manager Tools](/sccm/core/support/tools).
 
 
 ### Exclude Active Directory containers from discovery
@@ -155,7 +155,7 @@ An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-ma
 
 ### CMTrace installed with client
 <!--1357971-->
-The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`.
+The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`. For more information, see [CMTrace](/sccm/core/support/cmtrace).
 
 
 ### Cloud management dashboard

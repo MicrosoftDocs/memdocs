@@ -40,7 +40,7 @@ For more information about how to configure the drive settings for the distribut
 
 
 >  [!IMPORTANT]  
->  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer** tool in the Configuration Manager Toolkit. Starting in version 1806, the toolkit is now available on the site server. For more information, see [Configuration Manager Toolkit](/sccm/core/support/toolkit). Otherwise, download the toolkit from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=279566). 
+>  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer** tool in the Configuration Manager tools. For more information, see the [Content Library Transfer tool](/sccm/core/support/content-library-transfer).  
 
 
 
@@ -60,7 +60,7 @@ Use the following options to manage the content library on the central administr
 
 - To prevent the content library from being installed on a specific drive, create an empty file named **no_sms_on_drive.sms**. Copy it to the root of the drive before the content library is created.  
 
-- After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager Toolkit to manage the location of the content library. Starting in version 1806, the toolkit is now available on the site server. For more information, see [Configuration Manager Toolkit](/sccm/core/support/toolkit). Otherwise, download the toolkit from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=279566).  
+- After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager tools to manage the location of the content library. For more information, see the [Content Library Transfer tool](/sccm/core/support/content-library-transfer).  
 
 > [!Note]  
 > Cloud distribution points don't use single-instance storage. The site encrypts packages before sending to Azure, and each package has a unique encrypted key. Even if two files were identical, the encrypted versions wouldn't be the same.  
@@ -117,7 +117,7 @@ The site actually *copies* the content library files to the remote location. Thi
 If you need to move the content library back to the site server, repeat this process, but enter a local drive and path for the **New Location**. It must include a folder name that already exists on the drive, for example, `D:\SCCMContentLib`. When the original content still exists, the process quickly moves the configuration to the location local to the site server. 
 
 > [!Tip]  
-> To move the content to another drive on the site server, use the **Content Library Transfer** tool. For more information, see [Configuration Manager Toolkit](/sccm/core/support/toolkit).  
+> To move the content to another drive on the site server, use the **Content Library Transfer** tool. For more information, see the [Content Library Transfer tool](/sccm/core/support/content-library-transfer).  
 
 
 
@@ -137,7 +137,7 @@ By default, the content library is stored on the root of a drive in a folder cal
 ![Diagram overview of Configuration Manager content library](media/content-library-overview.png)
 
 > [!Tip]  
-> Use the **Content Library Explorer** tool from the Configuration Manager Toolkit to browse the contents of the content library. You can't use this tool to modify the contents. It provides insight into what's present, as well as allowing validation and redistribution. Starting in version 1806, the toolkit is now available on the site server. For more information, see [Configuration Manager Toolkit](/sccm/core/support/toolkit). Otherwise, download the toolkit from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=279566).  
+> Use the **Content Library Explorer** tool from the Configuration Manager tools to browse the contents of the content library. You can't use this tool to modify the contents. It provides insight into what's present, as well as allowing validation and redistribution. For more information, see the [Content Library Explorer](/sccm/core/support/content-library-explorer).  
 
 
 ### Package library
@@ -178,7 +178,7 @@ The following tips may help you troubleshoot issues with the content library:
 
 - Review the logs on the site server (**distmgr.log** and **PkgXferMgr.log**) and the distribution point (**smsdpprov.log**) for any pointers to the failures.  
 
-- Use the **Content Library Explorer** tool.  
+- Use the [Content Library Explorer](/sccm/core/support/content-library-explorer) tool.  
 
 - Check for file locks by other processes, such as antivirus software. Exclude the content library on all drives from automatic antivirus scans, as well as the temporary staging directory, **SMS_DP$**, on each drive.  
 
