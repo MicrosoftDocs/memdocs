@@ -29,7 +29,7 @@ Policy Spy is primarily intended for use through its user interface. It does pro
 
 `PolicySpy.exe [/export <ExportFilename> [<computername>]]`
 
-### `/export`
+### Option: `/export`
 This option silently exports the policy of the local or remote computer. `<ExportFilename>` is the file name to which the tool saves the XML exported policy. If you specify the `<computername>` option, Policy Spy exports the policy of that computer instead of the local computer.
 
 > [!Note]  

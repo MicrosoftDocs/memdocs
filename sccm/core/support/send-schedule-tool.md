@@ -38,7 +38,7 @@ After you trigger the evaluation of a configuration baseline (DCM UID), see **DC
 ## Command-line options
 
 
-### `/L` 
+### Option: `/L` 
 List all Message GUID or DCM UID available for sending. Display the meaningful name of messages in the data table for each one. If the computer name is absent, it uses the local computer. If you specify a message without a machine name, then it sends the message to the local machine. 
 
 

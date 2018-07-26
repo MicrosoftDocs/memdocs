@@ -16,16 +16,21 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Content Library Explorer is one of the [Configuration Manager tools](/sccm/core/support/tools). Use the tool for the following activities: 
-- Explore the content library on a specific distribution point
-- Troubleshoot issues with the content library
-- Copy packages, contents, folders, and files out of the content library
-- Redistribute packages to the distribution point
-- Validate packages on remote distribution points
+Content Library Explorer is one of the [Configuration Manager tools](/sccm/core/support/tools). Use the tool for the following activities:  
+
+- Explore the content library on a specific distribution point  
+
+- Troubleshoot issues with the content library  
+
+- Copy packages, contents, folders, and files out of the content library  
+
+- Redistribute packages to the distribution point  
+
+- Validate packages on remote distribution points  
 
 
 
-## Requirements and limitations
+## Requirements
 
 - Run the tool using an account that has administrative access to:  
 
@@ -71,7 +76,7 @@ The tool also connects to the Configuration Manager provider. This connection is
 
 ### <a name="bkmk_disabled-packages"></a> Disabled packages
 
-Some packages are present on the distribution point but not visible in the Configuration Manager console. These packages are marked with an asterisk (`*`). No actions may be performed on these packages. Other packages may also be marked with an asterisk and have actions disabled. 
+Some packages are present on the distribution point but not visible in the Configuration Manager console. These packages are marked with an asterisk (\*). No actions may be performed on these packages. Other packages may also be marked with an asterisk and have actions disabled. 
 
 There are three primary reasons for disabled packages:  
 

@@ -38,7 +38,7 @@ All Windows operating systems listed as supported clients in [Supported operatin
 
 - [Power Viewer Tool](/sccm/core/support/power-viewer-tool): View status of power management feature  
 
-- [Send Schedule Tool](/sccm/core/support/send-schedule-tool): Trigger schedules and evaluations of DCM baselines  
+- [Send Schedule Tool](/sccm/core/support/send-schedule-tool): Trigger schedules and evaluations of configuration baselines  
 
 > [!Note]  
 > The ClientTools folder also includes the file Microsoft.Diagnostics.Tracing.EventSource.dll. Several client tools require this library. You can't directly use it.  
