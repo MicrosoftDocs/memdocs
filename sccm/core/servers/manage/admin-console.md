@@ -98,7 +98,7 @@ In Configuration Manager version 1806, the following console improvements are ad
        ![Send feedback for Configuration Manager](media/1810-send-a-smile.PNG)
 ![Configuration Manager feedback form](media/1810-feedback-form.PNG)
 
-## Next step
+## Next steps
 > [!div class="nextstepaction"]
 > [Accessibility Features](/sccm/core/understand/accessibility-features.md)
 
