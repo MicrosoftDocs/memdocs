@@ -38,7 +38,7 @@ To access the most current product documentation, start at the [library index](h
 For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](/sccm/core/understand/use-docs).  
 
 ## <a name="BKMK_1806Feedback"></a> Product feedback starting with version 1806
-Starting in Configuration Manager version 1806, you can send product feedback directly from the console. You can do the following things: <!--1357542-->
+Starting in Configuration Manager version 1806, you can send product feedback directly from the console. If you need to attach logs, use [Feedback Hub](#BKMK_FeedbackHub). You can do the following things: <!--1357542-->
 
   - **Send a smile**: Send feedback on what you liked.
   - **Send a frown**: Send feedback on what you didn't like.
@@ -81,17 +81,18 @@ To send feedback on something that you didn't like follow the instructions below
 
 1. Click on **Save** at the bottom of the **Provide feedback** window. 
 2. Save the .zip file. If the local machine doesn't have internet access,  copy the file to an internet connected machine. 
-3. On an internet connected machine, open a command prompt. 
-4. Run the following command: `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
+3. If needed, copy UploadOfflineFeedback.exe located at `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`
+4. On an internet connected machine, open a command prompt. 
+5. Run the following command: `UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
     
     - Optionally, you can specify the following:
         -  `-t, --timeout` Timeout in seconds for sending the data. 0 is unlimited. Default is 30.
         - `-s --silent`  No logging to console (Cannot combine with --verbose)
         - `-v, --verbose` Output verbose logging to console (Cannot combine with --silent)
         - `--help` Displays the help screen
-    - For more information about the cd.latest folder. see [The CD.Latest folder](../servers/manage/the-cd.latest-folder.md)
+    - For more information about the cd.latest folder, see [The CD.Latest folder](../servers/manage/the-cd.latest-folder.md)
 
-## Product feedback for versions 1802 and earlier
+##  <a name="BKMK_FeedbackHub"></a> Product feedback for versions 1802 and earlier
 Report potential product defects through the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) built-in to Windows 10. When you **Add new feedback**, be sure to select the **Enterprise Management** category, and then choose from one of the following subcategories:
  - Configuration Manager Client
  - Configuration Manager Console
