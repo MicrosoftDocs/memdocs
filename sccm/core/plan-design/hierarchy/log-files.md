@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Log files in System Center Configuration Manager
+
+# Log files in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -110,7 +111,7 @@ In Configuration Manager, client and site server components record process infor
 ##  <a name="BKMK_AboutLogs"></a> About Configuration Manager log files  
  Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by **.log** or **.lo_** file extensions. Configuration Manager writes to a .log file until that log reaches its maximum size. When the log is full, the .log file is copied to a file of the same name but with the .lo_ extension, and the process or component continues to write to the .log file. When the .log file again reaches its maximum size, the .lo_ file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by retaining the .log extension. An exception to the maximum size and use of the .lo_ file is the client for Linux and UNIX. For information about how the client for Linux and UNIX uses log files, see [Manage log files in the client for Linux and UNIX](#BKMK_ManageLinuxLogs) in this article.  
 
- To view the logs, use the Configuration Manager log viewer tool CMTrace, located in the \\SMSSetup\\Tools folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library.  
+ To view the logs, use the Configuration Manager log viewer tool CMTrace, located in the \\SMSSetup\\Tools folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library. Starting in version 1806, the CMTrace log viewing tool is automatically installed along with the Configuration Manager client.<!--1357971--> For more information, see [CMTrace](/sccm/core/support/cmtrace). 
 
 ###  <a name="BKMK_LogOptions"></a> Configure logging options by using Configuration Manager Service Manager  
  You can change where Configuration Manager stores the log files, and their size.  

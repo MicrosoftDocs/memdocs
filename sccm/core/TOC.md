@@ -241,6 +241,23 @@
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 ###  [Data warehouse](servers/manage/data-warehouse.md)
 
+## [Configuration Manager tools](support/tools.md)
+### [CMTrace](support/cmtrace.md) 
+### [Client Spy](support/clispy.md)
+### [Deployment Monitoring Tool](support/deployment-monitoring-tool.md)
+### [Policy Spy](support/policy-spy.md)
+### [Power Viewer Tool](support/power-viewer-tool.md)
+### [Send Schedule Tool](support/send-schedule-tool.md)
+### [DP Job Queue Manager](support/dp-job-manager.md)
+### [Collection Evaluation Viewer](support/ceviewer.md)
+### [Content Library Explorer](support/content-library-explorer.md)
+### [Content Library Transfer](support/content-library-transfer.md)
+### [Content Ownership Tool](support/content-ownership-tool.md)
+### [Role-based Administration and Auditing Tool](support/rbaviewer.md)
+### [Run Meter Summarization Tool](support/run-meter-summ.md)
+
+<!--## [Support Center]-->
+
 ## [Manage high-risk deployments](servers/manage/settings-to-manage-high-risk-deployments.md)
 
 #    Deploy clients
