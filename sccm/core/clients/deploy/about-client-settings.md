@@ -344,9 +344,11 @@ Choose **Yes** to install and enable the Endpoint Protection client on client co
 > [!NOTE]  
 >  If the Endpoint Protection client is already installed, choosing **No** doesn't uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
 
+<!-- removed in 1806, SMS 511544
 ### Automatically remove previously installed antimalware software before Endpoint Protection is installed
 
 Set this option to **Yes** for the Endpoint Protection client to attempt to uninstall other antimalware applications. Multiple antimalware clients on the same device can conflict, and impact system performance.
+-->
 
 ### Allow Endpoint Protection client installation and restarts outside maintenance windows. Maintenance windows must be at least 30 minutes long for client installation
 
