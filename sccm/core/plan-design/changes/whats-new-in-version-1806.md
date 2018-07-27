@@ -1,5 +1,5 @@
 ---
-title: New current branch version 1806
+title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
 ms.date: 07/13/2018
@@ -48,12 +48,16 @@ Version 1806 drops support for the following products:
 
 ### CMPivot
 <!--1358456-->
-Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. The site typically collects this data on a weekly basis. CMPivot is a new in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. You can then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents. For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot).  
+Configuration Manager has always provided a large centralized store of device data, which customers use for reporting purposes. The site typically collects this data on a weekly basis. CMPivot is a new in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. You can then filter and group this data in the tool. By providing real-time data from online clients, you can more quickly answer business questions, troubleshoot issues, and respond to security incidents. 
+
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot).  
 
 
 ### Site server high availability
 <!--1128774-->
-High availability for a standalone primary site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. For more information, see the following articles: 
+High availability for a standalone primary site server role is a Configuration Manager-based solution to install an additional site server in passive mode. The site server in passive mode is in addition to your existing site server that is in active mode. A site server in passive mode is available for immediate use, when needed. 
+
+For more information, see the following articles: 
 - [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) 
 - [Flowchart - Set up a site server in passive mode](/sccm/core/servers/deploy/configure/passive-site-server-flowchart)
 - [Flowchart - Promote site server (planned)](/sccm/core/servers/deploy/configure/promote-site-server-flowchart)
@@ -70,9 +74,11 @@ This release includes the following improvements to management insights:
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
-### Configuration Manager Toolkit
+### Configuration Manager tools
 <!--1357145-->
-The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required. For more information, see [Configuration Manager Tools](/sccm/core/support/tools).
+The Configuration Manager server and client tools are now included on the server. Find them in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation required. 
+
+For more information, see [Configuration Manager tools](/sccm/core/support/tools).
 
 
 ### Exclude Active Directory containers from discovery
@@ -85,7 +91,9 @@ To reduce the number of discovered objects, exclude specific containers from Act
 
 ### Configure a remote content library for the site server
 <!--1357525-->
-To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). For more information, see the following articles: 
+To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). 
+
+lFor more information, see the following articles: 
 - [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
 - [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
 
@@ -101,17 +109,23 @@ The feature documentation for the cloud distribution point is also revised and e
 
 ### Pull-distribution points support cloud distribution points as source  
 <!--1321554-->
-Many customers use pull-distribution points in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a cloud distribution point in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. For more information, see [Use a pull-distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
+Many customers use pull-distribution points in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a cloud distribution point in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise. 
+
+For more information, see [Use a pull-distribution points](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
 
 ### Enable distribution points to use network congestion control
 <!--1358112-->
-Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat).
+Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
+
+For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat).
 
 
 ### Partial download support in client peer cache to reduce WAN utilization
 <!--1357346-->
-Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. For more information, see [Partial download support](/sccm/core/plan-design/hierarchy/client-peer-cache#bkmk_parts). 
+Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. 
+
+For more information, see [Partial download support](/sccm/core/plan-design/hierarchy/client-peer-cache#bkmk_parts). 
 
 
 ### Boundary group options for peer downloads
@@ -132,7 +146,9 @@ Boundary groups now include additional settings to give you more control over co
 
 ### Improvement to client push security
 <!--1358204-->
-When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
+When using the client push method of installing the Configuration Manager client, the site can now require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. 
+
+For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
 ### <a name="bkmk_ehttp"></a> Enhanced HTTP site system
@@ -155,7 +171,9 @@ An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-ma
 
 ### CMTrace installed with client
 <!--1357971-->
-The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`. For more information, see [CMTrace](/sccm/core/support/cmtrace).
+The CMTrace log viewing tool is now automatically installed along with the Configuration Manager client. It's added to the client installation directory, which by default is `%WinDir%\ccm\cmtrace.exe`. 
+
+For more information, see [CMTrace](/sccm/core/support/cmtrace).
 
 
 ### Cloud management dashboard
@@ -171,7 +189,7 @@ Version 1806 includes the following improvements to the cloud management gateway
 
 #### Simplified client bootstrap command line
 <!--1358215-->
-When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+When installing the Configuration Manager client on the internet via a CMG, the command-line now requires fewer properties. This improvement reduces the size of the command line used in Microsoft Intune when preparing for co-management. 
 
 The following command-line properties are required in all scenarios:
   - CCMHOSTNAME  
@@ -187,7 +205,7 @@ The following property is required if the client will roam back to the intranet:
 The following example includes all of the above properties:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
-For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
 
 #### Download content from a CMG
 <!--1358651-->
@@ -203,7 +221,9 @@ When you create a CMG, you're no longer required to provide a [trusted root cert
 
 ### Sync MDM policy from Microsoft Intune for a co-managed device
 <!--1357377-->
-When you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+When you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. 
+
+For more information, see [Switch Configuration Manager workloads to Intune](/sccm/core/clients/manage/co-management-switch-workloads).
 
 
 ### Transition new workloads to Intune using co-management
@@ -215,28 +235,36 @@ The following workloads are now able to transition from Configuration Manager to
 
 - **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).  
 
-To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. 
+
+For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
 
 
 ### Support for multiple hierarchies to one Intune tenant
 <!--1357944-->
 Some customers have several Configuration Manager hierarchies and want to consolidate in the future to a single tenant for Azure Active Directory and Microsoft Intune. Co-management now supports connecting more than one Configuration Manager environment to the same Intune tenant.
 
+For more information, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare).
  
+
 
 ## Compliance settings
 
 ### Configure Windows Defender SmartScreen settings for Microsoft Edge
 <!--1353701-->
-The [Microsoft Edge browser compliance settings policy](/sccm/compliance/deploy-use/browser-profiles) adds the following three settings for Windows Defender SmartScreen: 
+The Microsoft Edge browser compliance settings policy adds the following three settings for Windows Defender SmartScreen: 
 - Allow SmartScreen
 - Users can override SmartScreen prompt for sites
 - Users can override SmartScreen prompt for files
 
+For more information, see [Configure Microsoft Edge settings](/sccm/compliance/deploy-use/browser-profiles).
+
 
 ### SCAP extensions
 <!--1357552-->
-Convert Security Content Automation Protocol (SCAP) content to compliance settings baselines and generate SCAP reports using a console extension. This feature also includes a new dashboard to visualize the client compliance as well as XCCDF rule compliance. For more information, see [About the SCAP extensions](/sccm/compliance/plan-design/scap/about-scap).
+Convert Security Content Automation Protocol (SCAP) content to compliance settings baselines and generate SCAP reports using a console extension. This feature also includes a new dashboard to visualize the client compliance as well as XCCDF rule compliance. 
+
+For more information, see [About the SCAP extensions](/sccm/compliance/plan-design/scap/about-scap).
 
 
 
@@ -255,22 +283,30 @@ For more information, see the following articles:
 
 ### Provision Windows app packages for all users on a device
 <!--1358310-->
-Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).
+Provision an application with a Windows app package for all users on the device. One common example of this scenario is provisioning an app from the Microsoft Store for Business and Education, like Minecraft: Education Edition, to all devices used by students in a school. Previously, Configuration Manager only supported installing these applications per user. After signing in to a new device, a student would have to wait to access an app. Now when the app is provisioned to the device for all users, they can be productive more quickly. 
+
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).
 
 
 ### Office Customization Tool integration with the Office 365 Installer
 <!--1358149-->
 The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Office 365. This integration allows you to take advantage of new manageability settings in Office 365 as soon as they're available. 
 
+For more information, see [Deploy Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps).
+
 
 ### Support for new Windows app package formats
 <!--1357427-->
-Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).
+Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. 
+
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).
 
 
 ### Uninstall application on approval revocation
 <!--1357891-->
-The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
+
+For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
 
 
 ### Package Conversion Manager 
@@ -297,15 +333,21 @@ This release includes the following improvements to phased deployments:
 
 #### Create a phased deployment with manually configured phases
 <!--1358148--> 
-For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
+For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. 
+
+For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
 
 #### Phased deployment status
 <!--1358577-->
-Phased deployments now have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon. For more information, see [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments).  
+Phased deployments now have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon. 
+
+For more information, see [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments).  
 
 #### Gradual rollout during phased deployments
 <!--1358578-->
-During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. For more information, see [Phase settings](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_settings).  
+During a phased deployment, the rollout in each phase can now happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network caused by the distribution of content to clients. The site can gradually make the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. 
+
+For more information, see [Phase settings](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_settings).  
 
 
 ### Improvements to Windows 10 in-place upgrade task sequence
@@ -317,7 +359,9 @@ For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/de
 
 ### Improvements to PXE-enabled distribution points
 <!--1357580-->
-On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which doesn't require Windows Deployment Services (WDS). Because WDS isn't required, the PXE-enabled distribution point can be a client or server OS, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. For more information, see [enable PXE on the distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which doesn't require Windows Deployment Services (WDS). Because WDS isn't required, the PXE-enabled distribution point can be a client or server OS, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. 
+
+For more information, see [enable PXE on the distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 
 
 ### Network access account not required for some scenarios
@@ -366,6 +410,8 @@ Application catalog roles are no longer required to display user-available appli
 <!--1358214-->
 Use client settings to control whether the link to **Open the Application Catalog web site** appears in the **Installation status** node of Software Center.  
 
+For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).
+
 > [!Note]  
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -380,10 +426,14 @@ Use client settings to create a customized tab to open a webpage in Software Cen
 
 - End-user documentation: articles for users in your organization on various IT topics such as using applications or upgrading to Windows 10.  
 
+For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center) and the [Software Center user guide](/sccm/core/understand/software-center).
+
 
 ### Maintenance windows in Software Center
 <!--1358131-->
 Software Center now displays the next scheduled maintenance window. On the Installation Status tab, switch the view from All to Upcoming. It displays the time range and the list of deployments that are scheduled. If there are no future maintenance windows, the list is blank. 
+
+For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows) and the [Software Center user guide](/sccm/core/understand/software-center).
 
 
 
@@ -391,27 +441,30 @@ Software Center now displays the next scheduled maintenance window. On the Insta
 
 ### Third-party software updates
 <!--1357605, 1352101, 1358714-->
-Third-party software updates allow you to subscribe to partner catalogs in the Configuration Manager console and publish the updates to WSUS. You can then deploy these updates using the existing software update management process. For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates).
+Third-party software updates allow you to subscribe to partner catalogs in the Configuration Manager console and publish the updates to WSUS. You can then deploy these updates using the existing software update management process. 
+
+For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates).
 
 
 ### Deploy software updates without content
 <!--1357933-->
-Deploy software updates to devices without first downloading and distributing content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates. For more information, see the **No deployment package** option when you [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates) or [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+Deploy software updates to devices without first downloading and distributing content to distribution points. This feature is beneficial when dealing with extremely large update content, or when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates. 
+
+For more information, see the **No deployment package** option when you [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates) or [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
 
 ### Filter automatic deployment rules by software update architecture
  <!--1322266-->
-You can now filter automatic deployment rules (ADR) to exclude architectures like Itanium and ARM64. On the **Software Updates** page of the Create Automatic Deployment Rule Wizard, the **Architecture** property filter is now available. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+You can now filter automatic deployment rules (ADR) to exclude architectures like Itanium and ARM64. On the **Software Updates** page of the Create Automatic Deployment Rule Wizard, the **Architecture** property filter is now available. 
+
+For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
 
 ### Improved WSUS maintenance 
 <!--1357898-->
-The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
+The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. 
 
-
-### Enable installation of express updates by default
-<!--SCCMDocs-pr issue 2699-->
-The [client setting](/sccm/core/clients/deploy/about-client-settings#enable-installation-of-express-installation-files-on-clients) to **Enable installation of Express installation files on clients** is now enabled in default client settings. If you've enabled your site to [download express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates), and the site has downloaded express update content, clients start using this content. Override this behavior using a custom client setting.
+For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
 
 
 
@@ -421,13 +474,17 @@ The [client setting](/sccm/core/clients/deploy/about-client-settings#enable-inst
 <!--1357775-->
 Viewing reports for software updates compliance traditionally includes data from clients that haven't recently contacted the site. A new report, **Compliance 9 - Overall health and compliance**, lets you filter compliance results for a specific software update group by "healthy" clients. This report shows the more realistic compliance state of the active clients in your environment. 
 
+For more information, see [Software updates reports](/sccm/sum/deploy-use/monitor-software-updates#BKMK_SUReports).
+
 
 
 ## Inventory
 
 ### <a name="bkmk_bigint"></a> Improvement to hardware inventory for large integer values
 <!--1357880-->
-Hardware inventory previously had a limit for integers larger than 4,294,967,296 (2^32). This limit could be reached for attributes such as hard drive sizes in bytes. The management point didn't process integer values above this limit, thus no value was stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). For more information, see [Use of large integer values](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory#bkmk_bigint).
+Hardware inventory previously had a limit for integers larger than 4,294,967,296 (2^32). This limit could be reached for attributes such as hard drive sizes in bytes. The management point didn't process integer values above this limit, thus no value was stored in the database. Now in this release the limit is increased to 18,446,744,073,709,551,616 (2^64). 
+
+For more information, see [Use of large integer values](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory#bkmk_bigint).
 
 
 ### Hardware inventory default unit revision
@@ -449,9 +506,9 @@ In [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new
 
 ### Product lifecycle dashboard
 <!--1319632-->
-The new [product lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard) shows the state of the Microsoft Lifecycle Policy for Microsoft products installed on devices managed with Configuration Manager. It also provides you with information about Microsoft products in your environment, supportability state, and support end dates. Use the dashboard to understand the availability of support for each product. This information helps you plan for when to update the Microsoft products you use before their current end of support is reached.   
+The product lifecycle dashboard shows the state of the Microsoft Lifecycle Policy for Microsoft products installed on devices managed with Configuration Manager. It also provides you with information about Microsoft products in your environment, supportability state, and support end dates. Use the dashboard to understand the availability of support for each product. This information helps you plan for when to update the Microsoft products you use before their current end of support is reached.   
 
-To access the product lifecycle dashboard, in the Configuration Manager console go to the **Assets and Compliance** workspace, expand **Asset Intelligence**, and select the **Product Lifecycle** node.
+For more information, see [Product lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
 
 
 ### Copy asset details from monitoring views
@@ -464,10 +521,12 @@ The following areas of the **Monitoring** workspace now support copying text:
 
 Right-click the asset, and select **Copy**. This action copies the selected assets as a comma-delimited list that includes the full details. The keyboard shortcut **CTRL** + **C** also works in these views. 
 
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806).
+
 
 ### Improvements to the Surface dashboard
 <!--1358654-->
-This release includes the following improvements to the [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard):  
+This release includes the following improvements to the Surface dashboard:  
 
 - The Surface dashboard now displays a list of relevant devices when you select specific graph sections:  
 
@@ -477,10 +536,14 @@ This release includes the following improvements to the [Surface dashboard](/scc
 
 - When viewing these device lists from the Surface dashboard, right-click a device to perform common actions.  
 
+For more information, see [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard).
+
 
 ### View the currently signed on user for a device
 <!--1358202-->
 Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
+
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806).
 
 
 ### Submit feedback from the Configuration Manager console  
@@ -488,9 +551,12 @@ Now by default the **Devices** node of the **Assets and Compliance** workspace d
 
 Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) and [Product feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
+
 
 
 ## Next steps
+
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates).
 
 > [!TIP]  
@@ -500,3 +566,4 @@ When you're ready to install this version, see [Installing updates for Configura
 >   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
+For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
