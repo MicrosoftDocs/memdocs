@@ -323,6 +323,8 @@ Specify whether to enable PXE on the distribution point. Use PXE to start OS dep
 
 When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if necessary. WDS is the service that performs the PXE boot to install operating systems. After you finish the wizard to create the distribution point, Configuration Manager installs a provider in WDS that uses the PXE boot functions. 
 
+Starting in version 1806, you can enable PXE on a distribution point without WDS. 
+
 Select the option to **Enable PXE support for clients**, and then configure the following settings:  
 
  > [!Note]  
@@ -333,6 +335,8 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 - **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable WDS to respond to PXE service requests. Use this setting to enable and disable the service without removing the PXE functionality from the distribution point.  
 
 - **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager doesn't manage. For more information, see [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
+
+- **Enable a PXE responder without Windows Deployment Service**: Starting in version 1806, this option enables a PXE responder on the distribution point, which doesn't require WDS. This PXE responder supports IPv6 networks. If you enable this option on a distribution point that's already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this option, but still **Enable PXE support for clients**, then the distribution point enables WDS again.<!--1357580-->  
 
 - **Require a password when computers use PXE**: To provide additional security for your PXE deployments, specify a strong password.  
 
@@ -347,6 +351,9 @@ Select the option to **Enable PXE support for clients**, and then configure the 
      For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 - **Network interfaces**: Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If the distribution point responds to specific network interfaces, then provide the MAC address for each network interface.  
+
+    > [!Note]  
+    > When changing the network interface, restart the WDS service to make sure it properly saves the configuration. Starting in version 1806, when using the PXE responder service, restart the **ConfigMgr PXE Responder Service** (SccmPxe).<!--SCCMDocs issue 642-->  
 
 - **Specify the PXE server response delay (seconds)**: When you use multiple PXE servers, specify how long this PXE-enabled distribution point should wait before it responds to computer requests. By default, the Configuration Manager PXE-enabled distribution point responds immediately.  
 
@@ -378,6 +385,12 @@ Select the option to **Enable multicast to simultaneously send data to multiple 
     - **Session start delay (minutes)**: Specify the number of minutes that Configuration Manager waits before it responds to the first deployment request.  
 
     - **Minimum session size (clients)**: Specify how many requests must be received before Configuration Manager starts to deploy the operating system.  
+
+
+> [!IMPORTANT]  
+> Starting in version 1806, to enable and configure multicast on the **Multicast** tab of the distribution point properties, the distribution point must use Windows Deployment Service.  
+> - If you **Enable PXE support for clients** and **Enable multicast to simultaneously send data to multiple clients**, then you can't **Enable a PXE responder without Windows Deployment Service**.  
+> - If you **Enable PXE support for clients** and **Enable a PXE responder without Windows Deployment Service**, then you can't **Enable multicast to simultaneously send data to multiple clients**  
 
 
 ### <a name="bkmk_config-group"></a> Group relationships  
