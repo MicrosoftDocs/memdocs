@@ -20,7 +20,7 @@ The Configuration Manager tools include [client-based](#client-tools) and [serve
 
 Starting in Configuration Manager version 1806, these tools are included in the `CD.Latest\SMSSETUP\Tools` folder on the site server. No further installation is required.<!--1357145--> Use these versions of the tools with Configuration Manager version 1806 and later.
 
-All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) are supported for use with these tools.
+All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) are supported for use with these tools.
 
 > [!Note]  
 > The [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/en-us/download/details.aspx?id=50012) is still available from the Microsoft Download Center. For Configuration Manager version 1806 and later, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included in version 1806. These legacy tools are no longer supported.
