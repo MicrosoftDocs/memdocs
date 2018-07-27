@@ -2,7 +2,7 @@
 title: Product and Licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for System Center Configuration Manager.
-ms.date: 04/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -16,9 +16,9 @@ manager: dougeby
  *Applies to: System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
 
 ## Summary
-This FAQ addresses common licensing questions about System Center Configuration Manager Current Branch and Long-Term Servicing Branch (LTSB) versions, available through Microsoft Volume Licensing programs. This article is for informational purposes. It does not supersede or replace any documentation covering System Center Configuration Manager licensing. For more information, see the product licensing for [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> and the [Product Terms](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). The Product Terms describe the use terms for all Microsoft products in Volume Licensing.
+This FAQ addresses common licensing questions about System Center Configuration Manager Current Branch and Long-Term Servicing Branch (LTSB) versions, available through Microsoft Volume Licensing programs. This article is for informational purposes. It does not supersede or replace any documentation covering System Center Configuration Manager licensing. For more information, see the product licensing for [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> and the [Product Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). The Product Terms describe the use terms for all Microsoft products in Volume Licensing.
 
-For more information about System Center Configuration Manager features, see the [product page](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
+For more information about Configuration Manager features, see the [product page](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
 
 
@@ -60,6 +60,8 @@ EMS grants rights to use System Center Configuration Manager (Current Branch and
 If your SA expired after October 1, 2016, depending on what program you acquired L&SA under, you could retain a perpetual license to use the Long-Term Servicing Branch (LTSB). If you currently use the Current Branch, you must uninstall it and then install the LTSB. There is no support to migrate to, or convert to the LTSB from the Current Branch.
 
 If your SA expired before October 1, 2016, and you retained a perpetual license to System Center Configuration Manager, then your only option for ongoing use is to install and use System Center 2012 R2 Configuration Manager and its available service packs. You were required to uninstall the Current Branch when your SA expired, and reinstall that earlier version of the product. There is no support to migrate to or downgrade from System Center Configuration Manager Current Branch to prior versions of Configuration Manager.   
+
+If you use System Center Endpoint Protection, you must uninstall it if your SA expires. System Center Endpoint Protection offers no *L (License)* rights, and no perpetual rights.<!--506238--> 
 
 
 ### <a name="bkmk_owncb"></a> Do I "own" the Current Branch?   
