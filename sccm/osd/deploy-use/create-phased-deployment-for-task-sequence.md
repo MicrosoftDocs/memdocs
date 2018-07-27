@@ -2,7 +2,7 @@
 title: Create a phased deployment
 titleSuffix: Configuration Manager
 description: Use phased deployments to automate the rollout of software to several collections.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

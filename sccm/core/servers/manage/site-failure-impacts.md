@@ -2,7 +2,7 @@
 title: Site failure impacts
 titleSuffix: Configuration Manager
 description: Understand the effects of various failures in a Configuration Manager site.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

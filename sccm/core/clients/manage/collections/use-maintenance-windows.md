@@ -2,7 +2,7 @@
 title: "Use maintenance windows"
 titleSuffix: "Configuration Manager"
 description: "Use collections and maintenance windows to effectively manage clients in System Center Configuration Manager."
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

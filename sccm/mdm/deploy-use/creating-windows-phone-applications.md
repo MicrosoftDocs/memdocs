@@ -2,7 +2,7 @@
 title: Create Windows Phone applications
 titleSuffix: Configuration Manager
 description: How to create and deploy applications for Windows Phone devices in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual

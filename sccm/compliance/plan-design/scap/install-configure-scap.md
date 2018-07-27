@@ -2,7 +2,7 @@
 title: Install and configure SCAP extensions
 titleSuffix: Configuration Manager
 description: Install and configure the Security Content Automation Protocol (SCAP) extensions for Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual

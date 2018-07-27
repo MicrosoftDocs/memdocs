@@ -2,7 +2,7 @@
 title: Install cloud distribution points
 titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

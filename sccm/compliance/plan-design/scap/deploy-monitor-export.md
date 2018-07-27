@@ -2,7 +2,7 @@
 title: Deploy and monitor SCAP compliance
 titleSuffix: Configuration Manager
 description: Deploy the SCAP compliance settings as configuration baselines, monitor compliance, and export the results.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual

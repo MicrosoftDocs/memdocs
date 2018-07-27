@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

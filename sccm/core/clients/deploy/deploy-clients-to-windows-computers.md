@@ -2,7 +2,7 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 07/30/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
