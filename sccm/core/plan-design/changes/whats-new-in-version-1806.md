@@ -391,7 +391,7 @@ Software Center now displays the next scheduled maintenance window. On the Insta
 
 ### Third-party software updates
 <!--1357605, 1352101, 1358714-->
-Third-party software updates allow you to subscribe to partner catalogs in the Configuration Manager console and publish the updates to WSUS. You can then deploy these updates using the existing software update management process. For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates.md).
+Third-party software updates allow you to subscribe to partner catalogs in the Configuration Manager console and publish the updates to WSUS. You can then deploy these updates using the existing software update management process. For more information, see [Enable third-party updates](/sccm/sum/deploy-use/third-party-software-updates).
 
 
 ### Deploy software updates without content
@@ -406,7 +406,7 @@ You can now filter automatic deployment rules (ADR) to exclude architectures lik
 
 ### Improved WSUS maintenance 
 <!--1357898-->
-The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](../../../sum/deploy-use/software-updates-maintenance.md).
+The WSUS cleanup wizard now declines updates that are expired according to the supersedence rules defined on the software update point component properties. For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
 
 
 ### Enable installation of express updates by default
