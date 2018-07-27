@@ -631,7 +631,7 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- **Specify a custom tab for Software Center** (starting in version 1810) <!--1358132-->
+- **Specify a custom tab for Software Center** (starting in version 1806) <!--1358132-->
     - **Tab name**
     - **Content URL**
 

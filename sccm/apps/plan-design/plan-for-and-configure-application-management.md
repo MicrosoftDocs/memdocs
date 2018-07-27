@@ -195,7 +195,7 @@ With the 1710 release, you can manually add enterprise branding elements and spe
     -  Enable Installation Status tab
     -  Enable Device compliance tab
     -  Enable Options tab
-    -  Specify a custom tab for Software Center (starting in version 1810) <!--1358132 -->
+    -  Specify a custom tab for Software Center (starting in version 1806) <!--1358132 -->
         - Tab name
         - Content URL
 
