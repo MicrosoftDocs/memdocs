@@ -70,9 +70,9 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
-| Enhanced HTTP site system<!--1356889,1358228-->|[Version 1806]()<!--NEED FINAL LINK-->|![Not yet](media/red_x.png)|
+| Enhanced HTTP site system<!--1356889,1358228-->|Version 1806|![Not yet](media/red_x.png)|
 | Mobile apps for co-managed devices<!--1357892-->|[Version 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Not yet](media/red_x.png)|
-| Package Conversion Manager<!--1357861-->|[Version 1806]()<!--NEED FINAL LINK-->|![Not yet](media/red_x.png)|
+| Package Conversion Manager<!--1357861-->|Version 1806|![Not yet](media/red_x.png)|
 | Support for Cisco AnyConnect 4.0.07x and later for iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Version 1802 with update 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |
 | Phased Deployments<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[Version 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
 | Run Task Sequence Step <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
