@@ -16,7 +16,9 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Windows-based computers require specific configurations to support their use as Configuration Manager site system servers.  
+Windows-based computers require specific configurations to support their use as Configuration Manager site system servers. 
+
+This article primarily focuses on [Windows Server 2012 and later](#bkmk_2012Prereq). [Windows Server 2008 R2 and Windows Server 2008](#bkmk_2008) are supported for the distribution point site system role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). 
 
 For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use. Only configurations that directly apply for use with Configuration Manager are included here.   
 
@@ -25,9 +27,9 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 
 
 
-## <a name="bkmk_generalprerewq"></a> General site server requirements and limitations
+## <a name="bkmk_generalprerewq"></a> General requirements and limitations
 
-#### The following requirements apply to all site system servers
+The following requirements apply to all site system servers:
 
 - Each site system server must use a 64-bit OS. The only exception is the distribution point site system role, which you can install on some 32-bit operating systems.  
 
@@ -48,10 +50,30 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
 
+###  <a name="bkmk_2012Prereq"></a> Prerequisites for Windows Server 2012 and later operating systems  
 
-##  <a name="bkmk_2012Prereq"></a> Prerequisites for Windows Server 2012 and later operating systems  
+See the main sections of this article for the specific prerequisites for site system servers and roles on Windows Server 2012 and later:
 
-###  <a name="bkmk_2012sspreq"></a> Site server: central administration site and primary site  
+- [Central administration site and primary site servers](#bkmk_2012sspreq)
+- [Secondary site server](#bkmk_2012secpreq)
+- [Database server](#bkmk_2012dbpreq)
+- [SMS Provider server](#bkmk_2012smsprovpreq)
+- [Application Catalog website point](#bkmk_2012acwspreq)
+- [Application Catalog web service point](#bkmk_2012ACwsitepreq)
+- [Asset Intelligence synchronization point](#bkmk_2012AIpreq)
+- [Certificate registration point](#bkmk_2012crppreq)
+- [Distribution point](#bkmk_2012dppreq)
+- [Endpoint Protection point](#bkmk_2012EPPpreq)
+- [Enrollment point](#bkmk_2012Enrollpreq)
+- [Enrollment proxy point](#bkmk_2012EnrollProxpreq)
+- [Fallback status point](#bkmk_2012FSPpreq)
+- [Management point](#bkmk_2012MPpreq)
+- [Reporting point](#bkmk_2012RSpoint)
+- [Service connection point](#bkmk_SCPpreq)
+- [Software update point](#bkmk_2012SUPpreq)
+- [State migration point](#bkmk_2012SMPpreq)
+
+##  <a name="bkmk_2012sspreq"></a> Central administration site and primary site servers 
 
 #### Windows Server roles and features  
 
@@ -76,7 +98,8 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 - Central administration sites and primary sites require both the x86 and x64 versions of the applicable redistributable file.  
 
 
-###  <a name="bkmk_2012secpreq"></a> Site server: secondary site  
+
+##  <a name="bkmk_2012secpreq"></a> Secondary site server   
 
 #### Windows Server roles and features  
 
@@ -101,7 +124,8 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 - Ensure that the secondary site server meets the prerequisites for these site system roles.  
 
 
-###  <a name="bkmk_2012dbpreq"></a> Database server  
+
+##  <a name="bkmk_2012dbpreq"></a> Database server  
 
 #### Remote Registry service  
 
@@ -116,7 +140,8 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 - If you choose to have Configuration Manager install SQL Server Express as part of the secondary site installation, ensure that the computer meets the requirements to run SQL Server Express.  
 
 
-###  <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
+
+##  <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
 
 #### Windows ADK  
 
@@ -125,7 +150,8 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 - For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 
-###  <a name="bkmk_2012acwspreq"></a> Application Catalog website point  
+
+##  <a name="bkmk_2012acwspreq"></a> Application Catalog website point  
 
 #### Windows Server roles and features  
 
@@ -165,7 +191,8 @@ For some products, like Windows Server Update Services (WSUS) for the software u
     -   IIS 6 Metabase Compatibility  
 
 
-###  <a name="bkmk_2012ACwsitepreq"></a> Application Catalog web service point  
+
+##  <a name="bkmk_2012ACwsitepreq"></a> Application Catalog web service point  
 
 #### Windows Server roles and features  
 
@@ -204,14 +231,16 @@ For some products, like Windows Server Update Services (WSUS) for the software u
 -   When this site system role is colocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
 
 
-###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
+
+##  <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
 
 #### Windows Server roles and features  
 
 -   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
 
 
-###  <a name="bkmk_2012crppreq"></a> Certificate registration point  
+
+##  <a name="bkmk_2012crppreq"></a> Certificate registration point  
 
 #### Windows Server roles and features  
 
@@ -234,7 +263,8 @@ For some products, like Windows Server Update Services (WSUS) for the software u
     -   IIS 6 WMI Compatibility  
 
 
-###  <a name="bkmk_2012dppreq"></a> Distribution point  
+
+##  <a name="bkmk_2012dppreq"></a> Distribution point  
 
 #### Windows Server roles and features  
 
@@ -286,14 +316,16 @@ For more information, see [Install and configure distribution points](/sccm/core
 > When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into Windows. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed, because the client doesn't upload information to it.  
 
 
-###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection point  
+
+##  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection point  
 
 #### Windows Server roles and features  
 
 -   .NET Framework 3.5 SP1 (or later)  
 
 
-###  <a name="bkmk_2012Enrollpreq"></a> Enrollment point  
+
+##  <a name="bkmk_2012Enrollpreq"></a> Enrollment point  
 
 #### Windows Server roles and features  
 
@@ -334,7 +366,8 @@ For more information, see [Install and configure distribution points](/sccm/core
 -   When this site system role is colocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
 
 
-###  <a name="bkmk_2012EnrollProxpreq"></a> Enrollment proxy point  
+
+##  <a name="bkmk_2012EnrollProxpreq"></a> Enrollment proxy point  
 
 #### Windows Server roles and features  
 
@@ -377,7 +410,8 @@ For more information, see [Install and configure distribution points](/sccm/core
 -   When this site system role is colocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
 
 
-###  <a name="bkmk_2012FSPpreq"></a> Fallback status point  
+
+##  <a name="bkmk_2012FSPpreq"></a> Fallback status point  
 
 The default IIS configuration is required with the following additions:  
 
@@ -386,7 +420,8 @@ The default IIS configuration is required with the following additions:
     -   IIS 6 Metabase Compatibility  
 
 
-###  <a name="bkmk_2012MPpreq"></a> Management point  
+
+##  <a name="bkmk_2012MPpreq"></a> Management point  
 
 #### Windows Server roles and features  
 
@@ -411,7 +446,8 @@ The default IIS configuration is required with the following additions:
     -   IIS 6 WMI Compatibility  
 
 
-###  <a name="bkmk_2012RSpoint"></a> Reporting point  
+
+##  <a name="bkmk_2012RSpoint"></a> Reporting point  
 
 #### Windows Server roles and features  
 
@@ -426,7 +462,8 @@ The default IIS configuration is required with the following additions:
 -   Additionally, the instance that you use can be shared with other System Center products, as long as the other System Center products don't have restrictions for sharing the instance of SQL Server.  
 
 
-###  <a name="bkmk_SCPpreq"></a> Service connection point  
+
+##  <a name="bkmk_SCPpreq"></a> Service connection point  
 
 #### Windows Server roles and features  
 
@@ -441,7 +478,8 @@ The default IIS configuration is required with the following additions:
 -   The site system role requires the x64 version.  
 
 
-###  <a name="bkmk_2012SUPpreq"></a> Software update point  
+
+##  <a name="bkmk_2012SUPpreq"></a> Software update point  
 
 #### Windows Server roles and features  
 
@@ -458,7 +496,8 @@ The default IIS configuration is required.
 -   For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).  
 
 
-### State migration point  
+
+##  <a name="bkmk_2012SMPpreq"></a> State migration point  
 <!--SCCMDocs issue 645-->
 #### Windows Server roles and features  
 
@@ -498,173 +537,7 @@ The default IIS configuration is required.
 
 Windows Server 2008 and Windows Server 2008 R2 are now in extended support and are no longer in mainstream support, as detailed by the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
-#### The following applies to all .NET Framework requirements  
-Install the full version of the .NET Framework before you install the site system roles. For example, see the [Microsoft .NET Framework 4 (Stand-Alone Installer)](https://go.microsoft.com/fwlink/p/?LinkId=193048). The .NET Framework 4 Client Profile is insufficient for this requirement.  
-
-#### The following applies to all Windows Communication Foundation (WCF) activation requirements  
-You can configure WCF activation as part of the .NET Framework Windows feature on the site system server. For example, on Windows Server 2008 R2, run the **Add Features Wizard** to install additional features on the server. On the **Select Features** page, expand **NET Framework 3.5.1 Features**, and expand **WCF Activation**. Check the boxes for both **HTTP Activation** and **Non-HTTP Activation** to enable these options.  
-
-
-###  <a name="bkmk_2008sspreq"></a> Site server: central administration site and primary site  
-
-#### .NET Framework  
-
--   .NET Framework 3.5 SP1 (or later)  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-#### Windows feature  
-
--   Remote Differential Compression  
-
-#### Windows ADK  
-
--   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).  
-
--   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
-
-#### Visual C++ Redistributable  
-
--   Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that installs a site server.  
-
--   Central administration sites and primary sites require both the x86 and x64 versions of the applicable Redistributable file.  
-
-
-###  <a name="bkmk_2008secpreq"></a> Site server: secondary site  
-
-#### .NET Framework  
-
--   .NET Framework 3.5 SP1 (or later)  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-#### Visual C++ Redistributable  
-
--   Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that installs a site server.  
-
--   Secondary sites require only the x64 version.  
-
-#### Default site system roles  
-
--   By default, a secondary site installs a **management point** and a **distribution point**.  
-
--   Ensure that the secondary site server meets the prerequisites for these site system roles.  
-
-
-###  <a name="bkmk_2008dbpreq"></a> Database server  
-
-#### Remote Registry service  
-
--   During installation of the Configuration Manager site, enable the **Remote Registry** service on the computer that hosts the site database.  
-
-#### SQL Server  
-
--   Before you install a central administration site or primary site, install a supported version of SQL Server to host the site database.  
-
--   Before you install a secondary site, you can install a supported version of SQL Server.  
-
--   If you choose to have Configuration Manager install SQL Server Express as part of the secondary site installation, ensure that the computer meets the requirements to run SQL Server Express.  
-
-
-###  <a name="bkmk_2008smsprovpreq"></a> SMS Provider server  
-
-#### Windows ADK  
-
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires. See [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).  
-
--   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
-
-
-###  <a name="bkmk_2008acwspreq"></a> Application Catalog website point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
-
-#### IIS configuration
-
-The default IIS configuration is required with the following additions:  
-
--   Common HTTP Features:  
-
-    -   Static Content  
-
-    -   Default Document  
-
--   Application Development:  
-
-    -   ASP.NET (and automatically selected options)  
-
-         In some scenarios, such as when IIS is installed or reconfigured after the .NET Framework version 4.5.2 is installed, you must explicitly enable ASP.NET version 4.5. For example, on a 64-bit computer that runs the .NET Framework version 4.0.30319, run the following command: **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
-
--   Security:  
-
-    -   Windows Authentication  
-
--   IIS 6 Management Compatibility:  
-
-    -   IIS 6 Metabase Compatibility  
-
-
-###  <a name="bkmk_2008ACwsitepreq"></a> Application Catalog web service point  
-
-#### .NET Framework  
-
--   .NET Framework 3.5 SP1 (or later)  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-#### Windows Communication Foundation (WCF) activation  
-
--   HTTP Activation  
-
--   Non-HTTP Activation  
-
-#### IIS configuration
-
-The default IIS configuration is required with the following additions:  
-
--   Application Development:  
-
-    -   ASP.NET (and automatically selected options)  
-
-         In some scenarios, such as when IIS is installed or reconfigured after the .NET Framework version 4.5.2 is installed, you must explicitly enable ASP.NET version 4.5. For example, on a 64-bit computer that runs the .NET Framework version 4.0.30319, run the following command: **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
-
--   IIS 6 Management Compatibility:  
-
-    -   IIS 6 Metabase Compatibility  
-
-#### Computer memory  
-
--   The computer that hosts this site system role must have a minimum of 5% of the computer's available memory free to enable the site system role to process requests.  
-
--   When this site system role is co-located with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
-
-
-###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence synchronization point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
-
-
-###  <a name="bkmk_2008crppreq"></a> Certificate registration point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
--   HTTP Activation  
-
-#### IIS configuration
-
-The default IIS configuration is required with the following additions:  
-
--   IIS 6 Management Compatibility:  
-
-    -   IIS 6 Metabase Compatibility  
-
-    -   IIS 6 WMI Compatibility  
+These OS versions aren't supported for site servers or most site system roles. They're still supported for the distribution point site system role, including pull-distribution points and for PXE and multicast.
 
 
 ###  <a name="bkmk_2008dppreq"></a> Distribution point  
@@ -716,185 +589,11 @@ When you use a custom IIS configuration, you can remove options that aren't requ
     > [!NOTE]  
     >  WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
+-   Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service.  
+
+For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+
 <!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
 > When the distribution point transfers content, it transfers using the **Background Intelligent Transfer Service** (BITS) built into the Windows operating system. The distribution point role doesn't require the optional BITS IIS Server Extension feature to be installed because the client does not  upload information to it.   
 
-
-###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection point  
-
-#### .NET Framework  
-
--   .NET Framework 3.5 SP1 (or later)  
-
-
-###  <a name="bkmk_2008Enrollpreq"></a> Enrollment point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
-
-#### Windows Communication Foundation (WCF) activation  
-
--   HTTP Activation  
-
--   Non-HTTP Activation  
-
-#### IIS configuration
-
-The default IIS configuration is required with the following additions:  
-
--   Application Development:  
-
-    -   ASP.NET (and automatically selected options)  
-
-         In some scenarios, such as when IIS is installed or reconfigured after the .NET Framework version 4.5.2 is installed, you must explicitly enable ASP.NET version 4.5. For example, on a 64-bit computer that runs the .NET Framework version 4.0.30319, run the following command: **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
-
-#### Computer memory  
-
--   The computer that hosts this site system role must have a minimum of 5% of the computer's available memory free to enable the site system role to process requests.  
-
--   When this site system role is co-located with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
-
-
-###  <a name="bkmk_2008EnrollProxpreq"></a> Enrollment proxy point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
-
-     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
-
-#### Windows Communication Foundation (WCF) activation  
-
--   HTTP Activation  
-
--   Non-HTTP Activation  
-
-#### IIS configuration
-
-The default IIS configuration is required with the following additions:  
-
--   Application Development:  
-
-    -   ASP.NET (and automatically selected options)  
-
-         In some scenarios, such as when IIS is installed or reconfigured after the .NET Framework version 4.5.2 is installed, you must explicitly enable ASP.NET version 4.5. For example, on a 64-bit computer that runs the .NET Framework version 4.0.30319, run the following command: **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
-
-#### Computer memory  
-
--   The computer that hosts this site system role must have a minimum of 5% of the computer's available memory free to enable the site system role to process requests.  
-
--   When this site system role is co-located with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.  
-
-
-###  <a name="bkmk_2008FSPpreq"></a> Fallback status point  
-
-#### IIS configuration
-
-The default IIS configuration is required with the following additions:  
-
--   IIS 6 Management Compatibility:  
-
-    -   IIS 6 Metabase Compatibility  
-
-
-###  <a name="bkmk_2008MPpreq"></a> Management point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1
-
-#### IIS configuration
-
-You can use the default IIS configuration or a custom configuration. Each management point that you enable to support mobile devices requires the additional IIS configuration for ASP.NET (and its automatically selected options).
-
-In some scenarios, such as when IIS is installed or reconfigured after the .NET Framework version 4.5.2 is installed, you must explicitly enable ASP.NET version 4.5. For example, on a 64-bit computer that runs the .NET Framework version 4.0.30319, run the following command: `%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable`  
-
-
-To use a custom IIS configuration, you must enable the following options for IIS:  
-
--   Application Development:  
-
-    -   ISAPI Extensions  
-
--   Security:  
-
-    -   Windows Authentication  
-
--   IIS 6 Management Compatibility:  
-
-    -   IIS 6 Metabase Compatibility  
-
-    -   IIS 6 WMI Compatibility  
-
-
-When you use a custom IIS configuration, you can remove options that aren't required, such as the following options:  
-
--   Common HTTP Features:  
-
-    -   HTTP Redirection  
-
--   IIS Management Scripts and Tools  
-
-#### Windows feature  
-
--   BITS Server Extensions (and automatically selected options), or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
-
-
-###  <a name="bkmk_2008RSpoint"></a> Reporting services point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-#### SQL Server Reporting Services  
-
--   Install and configure at least one instance of SQL Server to support SQL Server Reporting Services before installing the reporting services point.  
-
--   The instance that you use for SQL Server Reporting Services can be the same instance you use for the site database.  
-
--   Additionally, the instance that you use can be shared with other System Center products as long as the other System Center products don't have restrictions for sharing the instance of SQL Server.  
-
-
-###  <a name="bkmk_2008SCPpreq"></a> Service connection point  
-
-#### .NET Framework  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-     When this site system role installs, if the server doesn't already have a supported version of the .NET Framework installed, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
-
-#### Visual C++ Redistributable  
-
--   Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable Package on each computer that hosts a distribution point.  
-
--   The site system role requires the x64 version.  
-
-
-###  <a name="bkmk_2008SUPpreq"></a> Software update point  
-
-#### .NET Framework  
-
--   .NET Framework 3.5 SP1 (or later)  
-
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
-
-#### IIS configuration
-
-The default IIS configuration is required.  
-
-#### Windows Server Update Services  
-
--   You must install the Windows Server role Windows Server Update Services on a computer before installing a software update point.  
-
--   For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).
-
-
-###  <a name="bkmk_2008SMPpreq"></a> State migration point  
-
-#### IIS configuration
-
-The default IIS configuration is required.  

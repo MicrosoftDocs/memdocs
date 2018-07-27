@@ -124,7 +124,7 @@ OS images in Configuration Manager are stored in the Windows Imaging (WIM) file 
 
 ### Driver catalog  
 
-To deploy a device driver, import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](sccm/osd/get-started/manage-drivers).  
+To deploy a device driver, import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](/sccm/osd/get-started/manage-drivers).  
 
 
 ### Management point  

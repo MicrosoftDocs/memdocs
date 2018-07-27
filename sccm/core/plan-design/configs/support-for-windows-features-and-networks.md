@@ -49,7 +49,7 @@ For information, see [configure clients for BranchCache](https://docs.microsoft.
 
 ### Configuration Manager supported OS versions with Windows BranchCache
 
-|Operating system|Support details|  
+|Operating&nbsp;system|Support details|  
 |----------------------|---------------------|  
 |Windows 7 with SP1|Supported by default|  
 |Windows 8|Supported by default|  
@@ -110,15 +110,15 @@ Configuration Manager doesn't support the following functionality over DirectAcc
 
 
 
-##  <a name="bkmk_dualboot"></a> Dual boot computers  
+##  <a name="bkmk_dualboot"></a> Dual-boot computers  
 
 Configuration Manager can't manage more than one OS on a single computer. If there's more than one OS on a computer to manage, adjust the site's discovery and client installation methods to ensure that the Configuration Manager client is installed only on the OS that has to be managed.  
 
 
 
-##  <a name="bkmk_IPv6"></a> Internet Protocol version 6  
+##  <a name="bkmk_IPv6"></a> IPv6  
 
-In addition to Internet Protocol version 4 (IPv4), Configuration Manager supports Internet Protocol version 6 (IPv6) with the following exceptions:  
+In addition to Internet Protocol version 4 (IPv4), Configuration Manager supports Internet Protocol version 6 (IPv6), with the following exceptions:  
 
 |Function| Exception to IPv6 support|  
 |--------------|-------------------------------|  
@@ -126,7 +126,7 @@ In addition to Internet Protocol version 4 (IPv4), Configuration Manager support
 |Cloud management gateway|IPv4 is required to support Microsoft Azure and the cloud management gateway.|  
 |Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
 |Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
-|OS deployment|In version 1802 and prior, IPv4 is required to support OS deployment. </br></br>Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service. This new PXE responder service supports IPv6. Other aspects of the OS deployment feature, such as capturing or setting static IP addresses during the task sequence, continue to require IPv4. |  
+|OS deployment|In version 1802 and prior, IPv4 is required to support OS deployment.  </br> </br> Starting in version 1806, enable a PXE responder on a distribution point without Windows Deployment Service. This new PXE responder service supports IPv6. Other aspects of the OS deployment feature, such as capturing or setting static IP addresses during the task sequence, continue to require IPv4. |  
 |Wake-up proxy communication|IPv4 is required to support the client wake-up proxy packets.|  
 |Windows CE|IPv4 is required to support the Configuration Manager client on Windows CE devices.|  
 

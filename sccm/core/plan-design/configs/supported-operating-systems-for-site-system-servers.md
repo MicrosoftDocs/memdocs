@@ -195,9 +195,7 @@ This OS isn't supported for site servers or most site system roles. It's still s
 **Site system servers:**  
 -   Distribution point  
 
-    -   Distribution points on this OS don't support Multicast.  
-
-    -   Distribution points on this OS are supported for PXE.
+    -   Distribution points on this OS support PXE and Multicast.  
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
@@ -212,9 +210,9 @@ This OS isn't supported for site servers or site system roles, except for the di
 **Site system servers:**  
 -   Distribution point  
 
-    -   Distribution points on this OS don't support Multicast.  
+    -   Distribution points on this OS support PXE and Multicast.  
 
-    -   Distribution points on this OS are supported for PXE, but don't support network booting of client computers in EFI mode. Client computers with BIOS or with EFI booting in legacy mode are supported.  
+    -   Distribution points on this OS don't support network booting of client computers in EFI mode. Client computers with BIOS or with EFI booting in legacy mode are supported.  
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 

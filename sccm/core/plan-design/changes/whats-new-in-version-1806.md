@@ -317,7 +317,7 @@ For more information, see [Create a task sequence to upgrade an OS](/sccm/osd/de
 
 ### Improvements to PXE-enabled distribution points
 <!--1357580-->
-On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which doesn't require Windows Deployment Services (WDS). Because WDS isn't required, the PXE-enabled distribution point can be a client or server OS, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. For more information, see [Prepare distribution points for OS deployments](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments).
+On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. This new option enables a PXE responder on the distribution point, which doesn't require Windows Deployment Services (WDS). Because WDS isn't required, the PXE-enabled distribution point can be a client or server OS, including Windows Server Core. This new PXE responder service supports IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices. For more information, see [enable PXE on the distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 
 
 ### Network access account not required for some scenarios
