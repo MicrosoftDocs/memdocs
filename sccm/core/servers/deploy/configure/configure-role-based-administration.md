@@ -151,7 +151,7 @@ In System Center Configuration Manager, role-based administration combines secur
 
     -   **All securable objects that are relevant to their associated security roles**: This option associates the administrative user with the **All** security scope and the root level, built-in collections for **All Systems** and **All Users and User Groups**. The security roles that are assigned to the user define access to objects. New objects that this administrative user creates are assigned to the **Default** security scope.  
 
-    -   **Only securable objects in specified security scopes or collections**: By default, this option associates the administrative user with the **Default** security scope, and the **All Systems** and **All Users and User Groups** collections. However, the actual security scopes and collections are limited to those that are associated with the account that you used to create the new administrative user. This option supports the addition or removal of security scopes and collections to customize the administrative scope of the administrative user.  
+    -   **Only the instances of objects that are assigned to the specified security scopes and collections**: By default, this option associates the administrative user with the **Default** security scope, and the **All Systems** and **All Users and User Groups** collections. However, the actual security scopes and collections are limited to those that are associated with the account that you used to create the new administrative user. This option supports the addition or removal of security scopes and collections to customize the administrative scope of the administrative user.  
 
     > [!IMPORTANT]  
     >  The preceding options associate each assigned security scope and collection to each security role that is assigned to the administrative user. You can use a third option, **Only securable objects as determined by the security roles of the administrative user**, to associate individual security roles to specific security scopes and collections. This third option is available after you create the new administrative user, when you modify the administrative user.  
@@ -169,9 +169,9 @@ In System Center Configuration Manager, role-based administration combines secur
 
 -   **All securable objects that are relevant to their associated security roles**: This option associates the administrative user with the **All** scope and the root level built-in collections for **All Systems** and **All Users and User Groups**. The security roles that are assigned to the user define access to objects.  
 
--   **Only securable objects in specified security scopes or collections**: This option associates the administrative user to the same security scopes and collections that are associated to the account you use to configure the administrative user. This option supports the addition or removal of security roles and collections to customize the administrative scope of the administrative user.  
+-   **Only the instances of objects that are assigned to the specified security scopes and collections**: This option associates the administrative user to the same security scopes and collections that are associated to the account you use to configure the administrative user. This option supports the addition or removal of security roles and collections to customize the administrative scope of the administrative user.  
 
--   **Only securable objects as determined by the security roles of the administrative user**: This option lets you create specific associations between individual security roles and specific security scopes and collections for the user.  
+-   **Associate assigned security roles with specific security scopes and collections**: This option lets you create specific associations between individual security roles and specific security scopes and collections for the user.  
 
     > [!NOTE]  
     >  This option is available only when you modify the properties of an administrative user.  
