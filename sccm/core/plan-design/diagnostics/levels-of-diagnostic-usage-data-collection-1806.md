@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 1806
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1806.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

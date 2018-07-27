@@ -2,7 +2,7 @@
 title: Plan site system roles
 titleSuffix: Configuration Manager"
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
