@@ -66,7 +66,7 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.85xx.1000 | July 13, 2018 | January 13, 2020 | No | Yes |
+| [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | July 30, 2018 | January 30, 2020 | No | Yes |
 | [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes<sup>**1**</sup> | Yes |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | November 20, 2017 | May 20, 2019 | No | Yes |
 | [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | July 31, 2017 | July 31, 2018 | No | Yes |
