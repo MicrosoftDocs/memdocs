@@ -106,12 +106,12 @@ Many customers use pull-distribution points in remote or branch offices, which d
 
 ### Enable distribution points to use network congestion control
 <!--1358112-->
-Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
+Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat).
 
 
 ### Partial download support in client peer cache to reduce WAN utilization
 <!--1357346-->
-Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. In Hierarchy Settings, enable the option to **Configure client peer cache sources to divide content into parts**. 
+Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. For more information, see [Partial download support](/sccm/core/plan-design/hierarchy/client-peer-cache#bkmk_parts). 
 
 
 ### Boundary group options for peer downloads

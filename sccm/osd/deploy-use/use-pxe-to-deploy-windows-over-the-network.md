@@ -22,16 +22,16 @@ Preboot execution environment (PXE)-initiated OS deployments in Configuration Ma
 
 You can use PXE-initiated OS deployments in the following scenarios:
 
--   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [Refresh an existing computer with a new version of Windows](/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows)  
 
--   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
+-   [Install a new version of Windows on a new computer (bare metal)](/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal)  
 
 Complete the steps in one of the OS deployment scenarios, and then use the sections in this article to prepare for PXE-initiated deployments.
 
 
 
 ##  <a name="BKMK_Configure"></a> Configure at least one distribution point to accept PXE requests
-To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#pxe).  
+To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 
 
@@ -40,7 +40,7 @@ To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot imag
 
 -   To enable PXE on a boot image, select **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.
 
--   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+-   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
 
 
@@ -72,7 +72,7 @@ Configuration Manager may recognize multiple computers as the same device if the
 
 
 ##  <a name="BKMK_RamDiskTFTP"></a>RamDisk TFTP block size and window size
-You can customize the RamDisk TFTP block and window sizes for PXE-enabled distribution points. If you've customized your network, a large block or window size could cause the boot image download to fail with a time-out error. The RamDisk TFTP block and window size customizations allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. To determine what configuration is most efficient, test the customized settings in your environment. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+You can customize the RamDisk TFTP block and window sizes for PXE-enabled distribution points. If you've customized your network, a large block or window size could cause the boot image download to fail with a time-out error. The RamDisk TFTP block and window size customizations allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. To determine what configuration is most efficient, test the customized settings in your environment. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_RamDiskTFTP).
 
 
 
@@ -88,7 +88,7 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 
 
 ##  <a name="BKMK_Deploy"></a> Deploy the task sequence
-Deploy the OS to a target collection. For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
+Deploy the OS to a target collection. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
 
 -   **Required deployment**: Required deployments use PXE without any user intervention. The user can't bypass the PXE boot. However, if the user cancels the PXE boot before the distribution point responds, the OS isn't deployed.
 

@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager supports a robust system of tools and options to manage the content you deploy as applications, packages, software updates, and OS deployments. Configuration Manager stores the content on both site servers and distribution points. This content requires a large amount of network bandwidth when it's being transferred between locations. To effectively plan and use the content management infrastructure, we recommend that you understand the available options and configurations. Then consider how to use them to best fit your networking environment and content deployment needs.  
+Configuration Manager supports a robust system of tools and options to manage software content. Software deployments such as applications, packages, software updates, and OS deployments all need content. Configuration Manager stores the content on both site servers and distribution points. This content requires a large amount of network bandwidth when it's being transferred between locations. To plan and use the content management infrastructure effectively, first understand the available options and configurations. Then consider how to use them to best fit your networking environment and content deployment needs.  
 
 > [!TIP]    
 > For more information about the content distribution process and to find help in diagnosing and resolving general content distribution problems, see [Understanding and Troubleshooting Content Distribution in Microsoft Configuration Manager](https://support.microsoft.com/help/4000401/content-distribution-in-mcm).
@@ -35,7 +35,7 @@ The following topics are key concepts for content management. When a concept req
 
 -   **Multicast connection account**: Used for OS deployments.  
 
-For more information about these accounts, see [Manage accounts to access content](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).
+For more information about these accounts, see [Manage accounts to access content](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content).
 
 
 
@@ -47,19 +47,19 @@ For more information about these accounts, see [Manage accounts to access conten
 
 
 ## Binary differential replication  
- Binary differential replication (BDR) is a prerequisite for distribution points. It is sometimes known as delta replication. When you're distributing updates to content that you previously deployed to other sites or to remote distribution points, BDR is automatically used to reduce bandwidth.  
+ Binary differential replication (BDR) is a prerequisite for distribution points. It's sometimes known as delta replication. When you're distributing updates to content that you previously deployed to other sites or to remote distribution points, BDR is automatically used to reduce bandwidth.  
 
  BDR minimizes the network bandwidth used to send updates for distributed content. It resends only the new or changed content instead of sending the entire set of content source files each time you change those files.  
 
  When BDR is used, Configuration Manager identifies the changes that occur to source files for each set of content that you previously distributed.  
 
--   When files in the source content change, the site creates a new incremental version of the content set. It then replicates only the changed files to destination sites and distribution points. A file is considered changed if you renamed or moved it, or if you changed the contents of the file. For example, if you replace a single driver file for a driver package that you previously distributed to several sites, only the changed driver file is replicated.  
+-   When files in the source content change, the site creates a new incremental version of the content. It then replicates only the changed files to destination sites and distribution points. A file is considered changed if you renamed or moved it, or if you changed the contents of the file. For example, if you replace a single driver file for a driver package that you previously distributed to several sites, only the changed driver file is replicated.  
 
 -   Configuration Manager supports up to five incremental versions of a content set before it resends the entire content set. After the fifth update, the next change to the content set causes the site to create a new version of the content set. Configuration Manager then distributes the new version of the content set to replace the previous set and any of its incremental versions. After the new content set is distributed, subsequent incremental changes to the source files are again replicated by BDR.  
 
-BDR is supported between each parent and child site in a hierarchy. BDR is supported within a site between the site server and its regular distribution points. However, pull-distribution points and cloud-based distribution points don't support BDR to transfer content. Pull-distribution points support file-level deltas, transferring new files, but not blocks within a file.
+BDR is supported between each parent and child site in a hierarchy. BDR is supported within a site between the site server and its regular distribution points. However, pull-distribution points and cloud distribution points don't support BDR to transfer content. Pull-distribution points support file-level deltas, transferring new files, but not blocks within a file.
 
-Applications always use binary differential replication. BDR is optional for packages and is not enabled by default. To use BDR for packages, enable this functionality for each package. Select the option **Enable binary differential replication** when you create or edit a package.   
+Applications always use binary differential replication. BDR is optional for packages and isn't enabled by default. To use BDR for packages, enable this functionality for each package. Select the option **Enable binary differential replication** when you create or edit a package.   
 
 
 
@@ -84,19 +84,31 @@ Delivery Optimization is the recommended technology to [optimize Windows 10 upda
 
 
 
+## Windows LEDBAT
+<!--1358112-->
+Windows Low Extra Delay Background Transport (LEDBAT) is a network congestion control feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Then clients only use network bandwidth when it's available. 
+
+For more information on Windows LEDBAT in general, see the [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) blog post.
+
+For more information on how to use Windows LEDBAT with Configuration Manager distribution points, see the setting to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** when you [Configure the general settings of a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general).
+
+
+
 ## Peer cache
 Client peer cache helps you manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.
 
-After you deploy client settings that enable peer cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
+First deploy client settings that enable peer cache to a collection. Then members of that collection can act as a peer content source for other clients in the same boundary group.
+
+Starting in version 1806, client peer cache sources can divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group.<!--1357346-->
 
 For more information, see [Peer cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
 
 
 ## Windows PE peer cache
-When you deploy a new OS with Configuration Manager, computers that run the task sequence can use Windows PE peer cache. They download content from a peer cache source instead of from a distribution point. This behavior helps minimize WAN traffic in branch office scenarios where there is no local distribution point.
+When you deploy a new OS with Configuration Manager, computers that run the task sequence can use Windows PE peer cache. They download content from a peer cache source instead of from a distribution point. This behavior helps minimize WAN traffic in branch office scenarios where there's no local distribution point.
 
-For more information, see [Windows PE peer cache](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).
+For more information, see [Windows PE peer cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic).
 
 
 
@@ -107,19 +119,19 @@ For more information, see [Windows PE peer cache](../../../osd/get-started/prepa
 
     -   Distribution points can use HTTP or HTTPs.  
 
-    -   Only use a cloud-based distribution point for fallback when on-premises distribution points are not available.  
+    -   Only use a cloud distribution point for fallback when on-premises distribution points aren't available.  
 
 -   **Internet**:  
 
-    -   Requires distribution points to accept HTTPS.  
+    -   Requires internet-facing distribution points to accept HTTPS.  
 
-    -   Can use a cloud-based distribution point for fallback.  
+    -   Can use a cloud distribution point.  
 
 -   **Workgroup**:  
 
     -   Requires distribution points to accept HTTPS.  
 
-    -   Can use a cloud-based distribution point for fallback.  
+    -   Can use a cloud distribution point.  
 
 
 
@@ -145,7 +157,7 @@ When a client needs content, it makes a content location request to the manageme
 ## Content library  
  The content library is the single-instance store of content in Configuration Manager. This library reduces the overall size of content that you distribute.  
 
-- Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md).
+- Learn more about the [content library](/sccm/core/plan-design/hierarchy/the-content-library).
 - Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content that is no longer associated with an application.  
 
 
@@ -157,26 +169,29 @@ When a client needs content, it makes a content location request to the manageme
 
 -   **Pull-distribution point**: A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point). This process is similar to how clients download content from distribution points. Pull-distribution points can help you avoid network bandwidth bottlenecks that occur when the site server must directly distribute content to each distribution point. [Use a pull-distribution point](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Cloud-based distribution point**: A variation of a distribution point that's installed on Microsoft Azure. [Learn how to use a cloud-based distribution point](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
+-   **Cloud distribution point**: A variation of a distribution point that's installed on Microsoft Azure. [Learn how to use a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
 
 
 Standard distribution points support a range of configurations and features:  
 
 - Use controls such as **schedules** or **bandwidth throttling** to help control this transfer.  
-- Use other options, including **prestaged content**, and **pull-distribution points** to minimize and control network consumption. 
+
+- Use other options, including **prestaged content**, and **pull-distribution points** to minimize and control network consumption.  
+
 - **BranchCache**, **peer cache**, and **Delivery Optimization** are peer-to-peer technologies to reduce the network bandwidth that's used when you deploy content.  
-- There are different configurations for OS deployments, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)**
+
+- There are different configurations for OS deployments, such as **[PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)** and **[Multicast](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)**  
+
 - Options for **mobile devices**   
   
-  
-Cloud-based and pull distribution points support many of these same configurations, but have limitations that are specific to each distribution point variation.  
+Cloud and pull distribution points support many of these same configurations, but have limitations that are specific to each distribution point variation.  
 
 
 
 ## Distribution point groups  
  Distribution point groups are logical groupings of distribution points that can simplify content distribution.  
 
- For more information, see [Manage distribution point groups](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage).
+ For more information, see [Manage distribution point groups](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage).
 
 
 
@@ -187,7 +202,7 @@ Cloud-based and pull distribution points support many of these same configuratio
 
 -   When you distribute content to multiple distributions points at the same time, or to a distribution point group, the site first sends the content to the server with the highest priority. Then it sends that same content to a distribution point with a lower priority.  
 
--   Distribution point priority does not replace the distribution priority for packages. Package priority remains the deciding factor of when the site sends different content.  
+-   Distribution point priority doesn't replace the distribution priority for packages. Package priority remains the deciding factor of when the site sends different content.  
 
 For example, you have a package that has a high package priority. You distribute it to a server with a low distribution point priority. This high priority package always transfers before a package that has a lower priority. The package priority applies even if the site distributes lower priority packages to servers with higher distribution point priorities.
 
@@ -210,17 +225,6 @@ The concepts of preferred distribution points are no longer used, and settings f
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
-<!--
-**Version 1511, 1602, and 1606**   
-Fallback settings are related to the use of **preferred distribution points** and to content source locations that are used by clients.
-
--   By default, clients only download content from a preferred distribution point (one that is associated with the client's boundary groups).  
-
--   However, when a distribution point is configured with **Allow clients to use this site system as a fallback source location for content**, that distribution point is only offered as a valid content source to any client that can't get a deployment from one of its preferred distribution points.  
-
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
--->
-
 
 
 ## Network bandwidth  
@@ -241,19 +245,6 @@ Network connection speeds that define a distribution point as **Fast** or **Slow
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
-<!--
-**Version 1511, 1602, and 1606**   
- You can configure the network connection speed of each distribution point in a boundary group:  
-
--   Clients use this value when they connect to the distribution point.
-
--   By default, the network connection speed is configured as **Fast**, but it can also be set as **Slow**.  
-
--   The **network connection speed**, along with the configuration of a deployment, determine if a client can download content from a distribution point when the client is in an associated boundary group  
-
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
--->
-
 
 
 ## On-demand content distribution  
@@ -261,39 +252,18 @@ For information about the different content location and fallback scenarios, see
 
 -   To enable this setting for a deployment, enable: **Distribute the content for this package to preferred distribution points**.  
 
--   When this option is enabled for a deployment and a client attempts to request that content but the content is not available on any of the client's preferred distribution points, Configuration Manager automatically distributes that content to the client's preferred distribution points.  
+-   When you enable this option for a deployment, and a client requests that content but the content isn't available on any of the client's preferred distribution points, Configuration Manager automatically distributes that content to the client's preferred distribution points.  
 
 -   Although this triggers Configuration Manager to automatically distribute the content to that client's preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this behavior occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment.  
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
-
-<!--
-If you use version 1511, 1602, or 1606, see  [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for information about the different content location and fallback scenarios.
--->
 
 
 
 ## Package transfer manager  
  Package transfer manager is the site server component that transfers content to distribution points on other computers.  
 
- For more information, see [Package transfer manager](../../../core/plan-design/hierarchy/package-transfer-manager.md).  
-
-
-
-<!--
-## Preferred distribution point  
- A preferred distribution point includes any distribution points that are associated with a client's current boundary groups.  
-
- You have the option to associate each distribution point with one or more boundary groups:  
-
--   This association helps the client identify distribution points from which it can download content.  
--   By default, clients can only download content from a preferred distribution point.  
-
-
-For more information:
- - If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
- - If you use version 1511, 1602, or 1606, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
--->
+ For more information, see [Package transfer manager](/sccm/core/plan-design/hierarchy/package-transfer-manager).  
 
 
 
