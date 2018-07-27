@@ -57,7 +57,7 @@ After you configure the alert settings, if the specified conditions occur, Confi
  The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They are organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 ### Recommended software updates reports
-The following reports are useful in identifying potential issues. 
+The following are some of the reports that are useful in identifying potential issues: 
 
 #### Compliance 9 - Overall health and compliance (starting in version 1806)
 The report includes the following parts:
