@@ -2,7 +2,7 @@
 title: "List of reports"
 titleSuffix: "Configuration Manager"
 description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
-ms.date: 03/22/2018
+ms.date: 07/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -699,7 +699,7 @@ The following eight reports are listed under the **Software Updates - A Complian
 |**Compliance 6 - Specific software update states (secondary)**|Displays the count and percentage of computers in each compliance state for the specified software update.|  
 |**Compliance 7 - Computers in a specific compliance state for an update group (secondary)**|Displays all computers in a collection that have a specified overall compliance state against a software update group.|  
 |**Compliance 8 - Computers in a specific compliance state for an update (secondary)**|Displays all computers in a collection that have a specified compliance state for a software update.|  
-
+|**Compliance 9 - Overall health and compliance**|Displays the overall health and compliance data for a software update group.| 
 
 
 ## Software Updates - B Deployment Management  
