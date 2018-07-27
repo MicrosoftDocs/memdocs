@@ -23,7 +23,7 @@ Customers with active Software Assurance (SA) on System Center Configuration Man
 
 
 **Licensing specifics:**  
-[Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs can be found here](http://go.microsoft.com/fwlink/?LinkId=800052).
+[Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs can be found here](https://go.microsoft.com/fwlink/?LinkId=800052).
 
 
 ## System Center Configuration Manager licensed branches  
@@ -90,16 +90,15 @@ For more information about Software Assurance licensing and the Current Branch o
 Use the following links to learn more about product licensing details.
 
 **Microsoft Volume Licensing Service Center (VLSC) links:**
-- Overview of VLSC: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
+- [Overview of VLSC](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- Microsoft Volume Licensing Product Terms: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
+- [Microsoft Volume Licensing Product Terms](https://go.microsoft.com/fwlink/?LinkId=800052)
 
-- Volume license customers can get a summary of their licenses here:  [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
-  Go to the **Licenses** menu, and click **Licenses Summary** for an overview of licenses.
+- Volume license customers can get a summary of their licenses from the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Go to the **Licenses** menu, and click **Licenses Summary** for an overview of licenses.
 
 **VLSC Videos:**
-- Training videos on how VLSC works: m[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
+- [Training videos on how VLSC works](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)  
 
-- Where to look up your active Software Assurance agreement (starting around 43 seconds in): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
+- [Where to look up your active Software Assurance agreement](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (starting around 43 seconds in)  
 
-- How to get permissions for VLSC: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  You can delegate VLSC read and write permissions to other people in your organization.
+- [How to get permissions for VLSC](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4). You can delegate VLSC read and write permissions to other people in your organization.
