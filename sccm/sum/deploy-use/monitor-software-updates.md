@@ -5,7 +5,7 @@ description: "The System Center Configuration Manager console provides alerts an
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/20/2016
+ms.date: 07/13/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -55,6 +55,26 @@ After you configure the alert settings, if the specified conditions occur, Confi
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
  The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They are organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+
+### Recommended software updates reports
+The following reports are useful in identifying potential issues. 
+
+#### Compliance 9 - Overall health and compliance (starting in version 1806)
+The report includes the following parts:
+
+- **Healthy Clients vs Total Clients**: This bar chart compares the "healthy" clients that have communicated with the site in the specified time period against the total number of clients in the specified collection.
+- **Compliance Overview**: This pie chart shows overall compliance state for the specific software update group on active clients in the specified collection.
+- **Top 5 Non-Compliant by Article ID**: This bar chart displays the top five software updates in the specified group that are non-compliant on active clients in the specified collection.
+- The bottom of the report is a table with further details, which lists the software updates in the specified group.
+
+#### Management 2 - Updates required but not deployed
+
+This report displays vendor-specific software updates in a specific updates classification that have been detected as required on clients but that have not been deployed to a specific collection. 
+
+#### Troubleshooting 2 - Deployment errors
+
+This report returns the deployment errors at the site and a count of computers that are experiencing each error. 
+
 
 ##  <a name="BKMK_MonitorContent"></a> Monitor content  
  You can monitor content in the Configuration Manager console to review the status for all package types in relation to the associated distribution points. This can include the content validation status for the content in the package, the status of content assigned to a specific distribution point group, the state of content assigned to a distribution point, and the status of optional features for each distribution point (content validation, PXE, and multicast).  
