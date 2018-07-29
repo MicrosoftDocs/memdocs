@@ -2,7 +2,7 @@
 title: Client Spy
 titleSuffix: Configuration Manager
 description: Use Client Spy to troubleshoot software distribution, inventory, and software metering on Configuration Manager clients.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

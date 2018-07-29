@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

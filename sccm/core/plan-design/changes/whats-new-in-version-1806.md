@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -93,7 +93,7 @@ To reduce the number of discovered objects, exclude specific containers from Act
 <!--1357525-->
 To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). 
 
-lFor more information, see the following articles: 
+For more information, see the following articles: 
 - [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
 - [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
 

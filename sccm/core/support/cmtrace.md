@@ -2,7 +2,7 @@
 title: CMTrace
 titleSuffix: Configuration Manager
 description: Learn about how to use the CMTrace tool to view log files for Configuration Manager.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

@@ -5,7 +5,7 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
