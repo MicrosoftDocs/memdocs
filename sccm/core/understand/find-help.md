@@ -2,7 +2,7 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
 description: Use a task sequence to automatically upgrade from Windows 7 or later to Windows 10
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

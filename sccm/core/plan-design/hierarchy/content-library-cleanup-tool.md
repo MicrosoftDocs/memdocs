@@ -2,7 +2,7 @@
 title: Content library cleanup tool
 titleSuffix: Configuration Manager
 description: Use the content library cleanup tool to remove orphaned content no longer associated with a Configuration Manager deployment.
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

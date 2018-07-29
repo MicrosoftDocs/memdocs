@@ -2,7 +2,7 @@
 title: Prepare site system roles for OSD
 titleSuffix: Configuration Manager
 description: Configure the site system roles before you deploy operating systems in Configuration Manager
-ms.date: 07/13/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
