@@ -153,7 +153,7 @@ For how to create a new MSIX app, see [MSIX support introduced in Insider Build 
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, [create an application](/sccm/apps/deploy-use/create-applications). 
-2. Select the application installation file **Type** as **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**.
+2. Select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**.
 3. [Deploy the application](/sccm/apps/deploy-use/deploy-applications) to the client running the latest Windows Insider Preview build.
 
 
