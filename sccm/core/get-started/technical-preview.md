@@ -143,7 +143,7 @@ Each month, add features from the list above to the top of this table.
 Then remove the bottom of this list and/or move individual items not in CB to the third table below.
 -->
 
- |Capability |Technical Preview version |Current Branch version|  
+ |Feature |Technical preview version |Current branch version|  
  |----------------|---------------------|--------------------|
  | Improvements to phased deployments <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | ![Not added](media/Red_X.gif) |  
  | Support for new Windows app package formats <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | ![Not added](media/Red_X.gif) |  
@@ -197,7 +197,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Partial download support in client peer cache to reduce WAN utilization <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | ![Not added](media/Red_X.gif) | 
  | Maintenance windows in Software Center <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | ![Not added](media/Red_X.gif) | 
  | Custom tab for webpage in Software Center <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | ![Not added](media/Red_X.gif) | 
- | Enable third party software update support on clients <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![Not added](media/Red_X.gif) | 
+ | Enable third-party software update support on clients <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![Not added](media/Red_X.gif) | 
  | Enable copy/paste of asset details from monitoring views <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![Not added](media/Red_X.gif) | 
  | SCAP Extensions <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![Not added](media/Red_X.gif) | 
  
@@ -213,7 +213,7 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
- |Capability |Technical Preview version |  
+ |Feature |Technical preview version |  
  |----------------|---------------------|
  | Improvements to PXE-enabled distribution points <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
  | Product lifecycle dashboard <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 

@@ -22,7 +22,7 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 
 <!--  Known Issues Template
-## Known Issues in this Technical Preview
+## Known issues 
 
 ### <a name="ki_ANCHOR"></a> Known issue title
 <!--bugID--
@@ -31,6 +31,19 @@ Issue description and cause.
 #### Workaround
 Steps to workaround, if any.  
 -->
+
+
+
+## Known issues 
+
+### <a name="ki_o365"></a> Issues with Office 365 software updates
+<!--521365-->
+If you manage Office 365 updates using technical preview branch versions 1806 and 1806.2, they may fail to install on clients. 
+
+#### Workaround
+- Delete existing deployment packages and software update groups for Office 365.  
+
+- Starting on July 31, 2018, sync Office 365 software updates and deploy only the latest updates.  
 
 
 
@@ -44,15 +57,14 @@ Steps to workaround, if any.
 
 See the new **Community** workspace in the Configuration Manager console, and select the **Hub** node. Use the Community Hub to download the following types of Configuration Manager objects: 
 - Scripts
-- Reports
 - Configuration items
-- Reports
 
-<!--
 ![Configuration Manager console, Community workspace, Hub node](media/1357766-hub.png)
--->
 
-When you download an object from the hub, it's automatically added to your site. 
+To see more details about an available item, click it in the hub. From the details page, click **Download** to acquire the item. When you download an item from the hub, it's automatically added to your site. 
+
+![Configuration Manager console, Community workspace, Hub node, details page](media/1357766-hub-details.png)
+
 
 The **Community** workspace also includes the following nodes:
 
@@ -86,7 +98,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. In the ribbon, click **Configure Site Components** and select **Software Update Point**.  
 
-2. Switch to the **Offline Servicing** tab, and specify **A local drive to be used by offline servicing of images**.  
+2. Switch to the **Offline Servicing** tab, and specify the option for **A local drive to be used by offline servicing of images**.  
 
 By default, this setting is **Automatic**. With this value, Configuration Manager selects the drive on which it's installed. 
 
@@ -96,7 +108,7 @@ Review the **OfflineServicingMgr.log** log file.
 
 
 
-## <a name="bkmk_comgmt"></a> Co-managed device sync activity with Intune
+## <a name="bkmk_comgmt"></a> Co-managed device sync activity from Intune
 <!--1358565-->
 
 Display in the Configuration Manager console whether a co-managed device is active with Microsoft Intune. This state is based on data from the [Intune Data Warehouse](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). The **Client Status** dashboard in the Configuration Manager console shows **Inactive clients using Intune**. This new category is for co-managed devices that are inactive with Configuration Manager, but have synchronized with the Intune service in the past week.
@@ -157,7 +169,7 @@ Configure email notifications for application approval requests. When a user req
 #### To approve or deny requests from email
 If you don't configure these prerequisites, the site sends email notification for application requests without links to approve or deny the request.  
 
-- [Enable REST endpoint for all providers on this site](/sccm/core/get-started/capabilities-in-technical-preview-1612#odata-endpoint-data-access)  
+- In the site properties, **Enable REST endpoint for all providers roles on this site and allow Configuration Manager cloud management gateway traffic**. For more information, see [OData endpoint data access](/sccm/core/get-started/capabilities-in-technical-preview-1612#odata-endpoint-data-access).  
 
     - Restart the SMS_EXEC service after enabling the REST endpoint
 
@@ -235,7 +247,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 ## <a name="bkmk_3pupdate"></a> Improvement to third-party software updates
 <!--1358714-->
 
-You can now add, subscribe, and delete custom catalogs.
+You can now modify the properties of custom catalogs.
 
 For more information, see [Third-party software updates support for custom catalogs](/sccm/core/get-started/capabilities-in-technical-preview-1806-2#bkmk_3pupdate).
 
