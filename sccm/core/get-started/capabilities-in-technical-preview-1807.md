@@ -55,7 +55,7 @@ If you manage Office 365 updates using technical preview branch versions 1806 an
 ## <a name="bkmk_hub"></a> Community Hub
 <!--1357766-->
 
-See the new **Community** workspace in the Configuration Manager console, and select the **Hub** node. Use the Community Hub to download the following types of Configuration Manager objects: 
+The Community Hub is a centralized location for sharing useful Configuration Manager objects with others. See the new **Community** workspace in the Configuration Manager console, and select the **Hub** node. Use the Community Hub to download the following types of Configuration Manager objects: 
 - Scripts
 - Configuration items
 
@@ -64,7 +64,6 @@ See the new **Community** workspace in the Configuration Manager console, and se
 To see more details about an available item, click it in the hub. From the details page, click **Download** to acquire the item. When you download an item from the hub, it's automatically added to your site. 
 
 ![Configuration Manager console, Community workspace, Hub node, details page](media/1357766-hub-details.png)
-
 
 The **Community** workspace also includes the following nodes:
 
@@ -83,6 +82,11 @@ The **Community** workspace also includes the following nodes:
     - `https://aka.ms`  
     - `https://comfigmgr-hub.azurewebsites.net`  
     - `https://configmgronline.visualstudio.com`  
+
+
+### Known issue
+
+Contributing items to the hub isn't currently available in this version. 
 
 
 
