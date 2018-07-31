@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 07/30/2018
+ms.date: 07/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Updates and servicing for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -23,13 +24,13 @@ Configuration Manager uses an in-console service method called **Updates and Ser
 
 The following articles can help you understand how to find and install the different update types for Configuration Manager:  
 
--   [Install in-console updates](../../../core/servers/manage/install-in-console-updates.md)  
+-   [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates)  
 
--   [Use the service connection tool](../../../core/servers/manage/use-the-service-connection-tool.md)  
+-   [Use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool)  
 
--   [Use the update registration tool to import hotfixes](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)  
+-   [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
--   [Use the hotfix installer to install updates](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
+-   [Use the hotfix installer to install updates](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
 
 
 For more information about the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).
@@ -53,20 +54,22 @@ After you install a baseline version, additional versions of Configuration Manag
 
 -   Manually update secondary sites to a new update version from within the console.  
 
-When you install an update, the update stores installation files for that version on the site server in a folder named **CD.Latest**. For more information about these files, see [The CD.Latest folder](../../../core/servers/manage/the-cd.latest-folder.md).  
+When you install an update, the update stores installation files for that version on the site server in a folder named **CD.Latest**. For more information about these files, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).  
 
 -   Use the files in the CD.Latest folder during site recovery. Also, when your hierarchy no longer runs a baseline version, use these files to install additional sites.  
 
 -   You can't use installation files from CD.Latest to install the first site of a new hierarchy, or to upgrade a site from System Center 2012 Configuration Manager.  
 
+
 ### Version details
+
 Some updates for Configuration Manager are available as both an in-console update version for existing infrastructure, and as a new baseline version.  
 
 The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:  
 
 | Version | Availability date | [Support end date](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | July 30, 2018 | January 30, 2020 | No | Yes |
+| [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | July 31, 2018 | January 31, 2020 | No | Yes |
 | [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes<sup>**1**</sup> | Yes |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | November 20, 2017 | May 20, 2019 | No | Yes |
 | [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | July 31, 2017 | July 31, 2018 | No | Yes |
@@ -99,9 +102,10 @@ To check the version of your Configuration Manager site, in the console go to **
 
 
 ##  <a name="bkmk_inconsole"></a> In-console updates and servicing  
- When you use a production-ready installation of Configuration Manager current branch, most updates are available using the **Updates and Servicing** channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration. It includes only updates that Microsoft recommends for all customers.   
 
- These updates include:  
+When you use a production-ready installation of Configuration Manager current branch, most updates are available using the **Updates and Servicing** channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration. It includes only updates that Microsoft recommends for all customers.   
+
+These updates include:  
 
 -   New versions, like version 1710, 1802, or 1806.  
 
@@ -125,19 +129,19 @@ The in-console updates can apply to one or more of the following systems:
 
 Configuration Manager discovers new updates for you. Synchronize your Configuration Manager service connection point with the Microsoft cloud service, noting the following behaviors:  
 
--   When your service connection point is in online mode, your site synchronizes with Microsoft every day. It automatically identifies new updates that apply to your infrastructure. To download updates and redistributable files, the computer that hosts the service connection point site system role uses the **System** context to access the following internet locations: go.microsoft.com and download.microsoft.com. For more information about additional locations used by the service connection point, see [Internet access requirements](../../../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls).  
+-   When your service connection point is in online mode, your site synchronizes with Microsoft every day. It automatically identifies new updates that apply to your infrastructure. To download updates and redistributable files, the computer that hosts the service connection point site system role uses the **System** context to access the following internet locations: go.microsoft.com and download.microsoft.com. For more information about additional locations used by the service connection point, see [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls).  
 
--   When your service connection point is in offline mode, use the service connection tool to manually sync with the Microsoft cloud. For more information, see [Use the service connection tool](../../../core/servers/manage/use-the-service-connection-tool.md).  
+-   When your service connection point is in offline mode, use the service connection tool to manually sync with the Microsoft cloud. For more information, see [Use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool).  
 
 -   In-console updates replace the need to independently locate and install individual updates, service packs, and new features.  
 
--   Install only the in-console updates you choose. When installing some updates, you can select individual features to enable and use. For more information, see [Enable optional features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
+-   Install only the in-console updates you choose. When installing some updates, you can select individual features to enable and use. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
 
 When you install an in-console update, the following process occurs:  
 
 -   It automatically runs a prerequisite check. You can also manually run this check prior to starting the installation.  
 
--   It installs at the top-level site in your environment. This site is the central administration site if you have one. In a hierarchy, the update automatically installs at primary sites. Control when each primary site server is allowed to update by using [Service windows for site servers](../../../core/servers/manage/service-windows.md).  
+-   It installs at the top-level site in your environment. This site is the central administration site if you have one. In a hierarchy, the update automatically installs at primary sites. Control when each primary site server is allowed to update by using [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
 -   After a site server updates, all affected site system roles automatically update. These roles include instances of the SMS Provider. After the site installs the update, Configuration Manager consoles also prompt the console user to update the console.  
 
@@ -151,22 +155,25 @@ When you install an in-console update, the following process occurs:
 
 
 ##  <a name="bkmk_outofband"></a> Out-of-band hotfixes  
+
 Some hotfixes release with limited availability to address specific issues. Other hotfixes are applicable to all customers but can't install using the in-console method. These fixes are delivered out-of-band and not discovered from the Microsoft cloud service.  
 
 Typically, when you're seeking to fix or address a problem with your deployment of Configuration Manager, you can learn about out-of-band hotfixes from Microsoft customer support services, a Microsoft support knowledge base article, or [posts from the System Center Configuration Manager team](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) on the Enterprise Mobility + Security blog. 
 
 Install these fixes manually, using one of the following two methods:  
 
--   **Update Registration Tool**: This tool manually imports the hotfix into your Configuration Manager console. Then install the update as you would in-console updates that are discovered automatically.  
+#### Update Registration Tool
+This tool manually imports the hotfix into your Configuration Manager console. Then install the update as you would in-console updates that are discovered automatically.  
 
-    - This method is used for hotfixes that use the following file name structure:  
-         `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`    
+This method is used for hotfixes that use the following file name structure:  
+  `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`    
 
-    - For more information, see [Use the update registration tool to import hotfixes](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+For more information, see [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes).  
 
--   **Hotfix Installer**: Use this tool to manually install a hotfix that can't be installed using the in-console method.  
+#### Hotfix Installer
+Use this tool to manually install a hotfix that can't be installed using the in-console method.  
 
-    - This method is used for fixes that use the following file name structure:   
-         `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
+This method is used for fixes that use the following file name structure:   
+   `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
-    - For more information, see [Use the hotfix installer to install updates](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).  
+For more information, see [Use the hotfix installer to install updates](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  
