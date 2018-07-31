@@ -145,8 +145,6 @@ For more information, see CMG [Performance and scale](/sccm/core/clients/manage/
 
 -   A software update point that is remote from the site server can support up to 150,000 clients when the remote computer meets the Windows Server Update Services (WSUS) requirements to support this number of clients.  
 
--   By default, Configuration Manager doesn't support configuring software update points as Network Load Balancing (NLB) clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on an NLB cluster.  
-
 
 
 ##  <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies  

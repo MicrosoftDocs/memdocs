@@ -2,7 +2,7 @@
 title: Diagnostics and usage data
 titleSuffix: Configuration Manager
 description: Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -30,18 +30,12 @@ Configuration Manager collects diagnostics and usage data about itself, which is
 -   [How diagnostics and usage data is used](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
 -   Levels of diagnostic usage data collection:
+    - [Diagnostic data for 1806](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806)  
+
     - [Diagnostic data for 1802](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802)  
+
     - [Diagnostic data for 1710](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
-    - [Diagnostic data for 1706](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706)    
-
-<!--
-    - [Diagnostic data for 1702](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702)      
-    - [Diagnostic data for 1610](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)  
-    - [Diagnostic data for  1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)    
-    - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
-    - [Diagnostic data for  1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
--->
-
+    
 -   [How diagnostics and usage data is collected](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
 
 -   [How to view diagnostics and usage data](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)  
@@ -49,10 +43,12 @@ Configuration Manager collects diagnostics and usage data about itself, which is
 -   [Customer Experience Improvement Program (CEIP)](../../../core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md)  
 
      > [!Note]  
-     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
+     > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.  
 
 
 -   [Frequently asked questions about diagnostics and usage data](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  
+
+
 
 ## See Also  
  [About the service connection point](../../../core/servers/deploy/configure/about-the-service-connection-point.md)

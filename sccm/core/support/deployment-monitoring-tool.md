@@ -1,0 +1,67 @@
+---
+title: Deployment Monitoring Tool
+titleSuffix: Configuration Manager
+description: Use the Deployment Monitoring Tool to troubleshoot software deployments on a Configuration Manager client.
+ms.date: 07/30/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
+# Deployment Monitoring Tool
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+The Deployment Monitoring Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It's a graphical user interface designed to assist in troubleshooting application, software update, and configuration baseline deployments on a Configuration Manager client. The tool is read-only as it doesn't change any state on the client. You can safely use it to diagnose common deployment scenarios.
+
+
+## Features
+
+- Run it as an administrator to troubleshoot deployments on a local client.  
+
+- Troubleshoot deployments on a remote client. Launch the tool and connect to a remote machine as an administrator.  
+
+- Export to XML all the data collected in the tool. Share the XML file with others, and use it as a common platform for talking about troubleshooting deployments.  
+
+- Import previously exported data to a different machine, and use it to run the tool in offline mode.   
+
+
+## Usage
+
+The Deployment Monitoring Tool supports graphical user interface only. To launch the tool, run **DeploymentMonitoringTool.exe** as an administrator. There are three views:  
+
+- **Client Properties**: A list of useful attributes about the device and the Configuration Manager client. This view is the default.   
+
+- **Deployments**: View all of the currently targeted deployments. Select a deployment in the results pane to view more information in the details pane.  
+
+- **All Updates**: View all of the software updates and their status.  
+
+To copy data in any view, select a cell, and press **CTRL** + **C**.
+
+
+### Actions menu
+
+The following actions are available in the **Actions** menu:  
+
+- **Connect to remote machine**: Select a computer to connect to. When you don't specify a user name and password, it uses the current credentials. Click **Save** to connect to remote computer.  
+
+- **Export Data**: Select the file to write the data into, and click **Save**. Use the exported XML file for remote troubleshooting on a different computer.  
+
+- **Import Data**: Select a file to import into the tool.  
+
+- **View Log**: Opens an associated log file, depending upon the view:  
+    - Client Properties: `\\<hostname>\c$\Windows\CCM\Logs\PolicyAgent.log`
+    - Deployments: `\\<hostname>\c$\Windows\CCM\Logs\PolicyAgent.log`
+    - All Updates: `C:\Windows\WindowsUpdate.log`
+
+
+
+## See also
+
+- [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
+- [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates)
+- [Deploy configuration baselines](/sccm/compliance/deploy-use/deploy-configuration-baselines)
