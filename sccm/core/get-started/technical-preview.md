@@ -129,9 +129,6 @@ The following features are available with the most recent Configuration Manager 
 - [Improvement to script output](capabilities-in-technical-preview-1807.md#bkmk_script) <!--1236459-->
 - [Improvement to third-party software updates](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) <!--1358714-->
 
-> [!Note]  
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.   
-
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.   
