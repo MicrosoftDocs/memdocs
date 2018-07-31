@@ -2,7 +2,7 @@
 title: "Plan for and configure application management"
 titleSuffix: "Configuration Manager"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
-ms.date: 11/07/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -195,9 +195,13 @@ With the 1710 release, you can manually add enterprise branding elements and spe
     -  Enable Installation Status tab
     -  Enable Device compliance tab
     -  Enable Options tab
+    -  Specify a custom tab for Software Center (starting in version 1806) <!--1358132 -->
+        - Tab name
+        - Content URL
 
 > [!IMPORTANT]  
->  Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
+> - Some  website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659--> 
+> - Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.
 
 ###  Step 5: Verify that the Application Catalog is operational  
  Use the following procedures to verify that the Application Catalog is operational. You can use the Application Catalog directly from a browser or from Software Center.  

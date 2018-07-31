@@ -209,6 +209,36 @@
             "source_path": "sccm/mdt/whats-new-in-mdt.md",
             "redirect_url": "/sccm/mdt/release-notes",
             "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/protect/understand/backup-and-recovery.md",
+            "redirect_url": "/sccm/core/servers/manage/backup-and-recovery",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/protect/understand/recover-sites.md",
+            "redirect_url": "/sccm/core/servers/manage/recover-sites",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/protect/understand/unattended-recovery.md",
+            "redirect_url": "/sccm/core/servers/manage/unattended-recovery",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/protect/understand/settings-to-manage-high-risk-deployments.md",
+            "redirect_url": "/sccm/core/servers/manage/settings-to-manage-high-risk-deployments",
+            "redirect_document_id": false
+        },
+        {  
+            "source_path": "sccm/protect/understand/high-availability-options.md",
+            "redirect_url": "/sccm/core/servers/deploy/configure/high-availability-options",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/plan-design/scap/import-scap-compliance-settings.md",
+            "redirect_url": "/sccm/compliance/plan-design/scap/deploy-monitor-export",
+            "redirect_document_id": false
         }
     ]
 }

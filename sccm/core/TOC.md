@@ -2,6 +2,7 @@
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help for Configuration Manager](understand/find-help.md)
 ### [How to use the docs](understand/use-docs.md)
+### [Using the console](servers/manage/admin-console.md)
 ### [Accessibility features](understand/accessibility-features.md)
 ### [Software Center user guide](understand/software-center.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
@@ -30,15 +31,9 @@
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
+###  [What's new in version 1806](plan-design/changes/whats-new-in-version-1806.md)
 ###  [What's new in version 1802](plan-design/changes/whats-new-in-version-1802.md)
 ###  [What's new in version 1710](plan-design/changes/whats-new-in-version-1710.md)
-###  [What's new in version 1706](plan-design/changes/whats-new-in-version-1706.md)
-<!--
-###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
-###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
-###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
-###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
--->
 ###  [Removed and deprecated](plan-design/changes/deprecated/removed-and-deprecated.md)
 #### [Removed and deprecated features](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
 #### [Removed and deprecated for site servers](plan-design/changes/deprecated/removed-and-deprecated-server.md)
@@ -65,6 +60,7 @@
 #### [Use a cloud-based distribution point](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
+#### [Flowchart - Manage content library](plan-design/hierarchy/manage-content-library-flowchart.md)
 #### [Content library cleanup tool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
@@ -84,17 +80,9 @@
 
 ##   [Diagnostics and usage data](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [How diagnostics and usage data is used](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [Diagnostic data for 1806](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md)
 ###  [Diagnostic data for 1802](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md)
 ###  [Diagnostic data for 1710](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
-###  [Diagnostic data for 1706](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
-<!--
-###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
-###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
-###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
-###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
-
--->
 ###  [How diagnostics and usage data is collected](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [How to view diagnostics and usage data](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [Customer Experience Improvement Program (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -175,9 +163,14 @@
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [Boundaries](servers/deploy/configure/boundaries.md)
 #### [Boundary groups](servers/deploy/configure/boundary-groups.md)
-###  [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
-###  [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
-###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
+###  [High availability options](servers/deploy/configure/high-availability-options.md)
+#### [Site server high availability](servers/deploy/configure/site-server-high-availability.md)
+#### [Flowchart - Passive site server setup](servers/deploy/configure/passive-site-server-flowchart.md)
+#### [Flowchart - Promote site server (planned)](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [Flowchart - Promote site server (unplanned)](servers/deploy/configure/promote-site-server-unplanned-flowchart.md)
+#### [Prepare to use SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+#### [Configure SQL Server Always On](servers/deploy/configure/configure-aoag.md)
+#### [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
 ###  [Configure Azure services](servers/deploy/configure/azure-services-wizard.md)
@@ -193,12 +186,10 @@
 ###  [Proxy server support](plan-design/network/proxy-server-support.md)
 ###  [Release notes](servers/deploy/install/release-notes.md)
 ###  [Unicode and ASCII support](plan-design/hierarchy/unicode-and-ascii-support.md)
-<!-- Deprecated from Content - still published but out of TOC:
-#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
--->
 
 #    Manage infrastructure
-## [Management insights](servers/manage/management-insights.md)
+##   [Management insights](servers/manage/management-insights.md)
+##   [CMPivot](servers/manage/cmpivot.md)
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
@@ -215,17 +206,17 @@
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [Checklist for installing update 1806](servers/manage/checklist-for-installing-update-1806.md)
 ###  [Checklist for installing update 1802](servers/manage/checklist-for-installing-update-1802.md)
 ###  [Checklist for installing update 1710](servers/manage/checklist-for-installing-update-1710.md)
-###  [Checklist for installing update 1706](servers/manage/checklist-for-installing-update-1706.md)
-<!-- Deprecated from Content - still published but out of TOC:
-###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
-###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
-###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
-###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
--->
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 
+##   Backup and recovery
+###  [Back up sites](servers/manage/backup-and-recovery.md)
+###  [Recover sites](servers/manage/recover-sites.md)
+###  [Unattended site recovery](servers/manage/unattended-recovery.md)
+
+##   [Site failure impacts](servers/manage/site-failure-impacts.md)
 
 ##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)
@@ -249,6 +240,25 @@
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 ###  [Data warehouse](servers/manage/data-warehouse.md)
+
+## [Configuration Manager tools](support/tools.md)
+### [CMTrace](support/cmtrace.md) 
+### [Client Spy](support/clispy.md)
+### [Deployment Monitoring Tool](support/deployment-monitoring-tool.md)
+### [Policy Spy](support/policy-spy.md)
+### [Power Viewer Tool](support/power-viewer-tool.md)
+### [Send Schedule Tool](support/send-schedule-tool.md)
+### [DP Job Queue Manager](support/dp-job-manager.md)
+### [Collection Evaluation Viewer](support/ceviewer.md)
+### [Content Library Explorer](support/content-library-explorer.md)
+### [Content Library Transfer](support/content-library-transfer.md)
+### [Content Ownership Tool](support/content-ownership-tool.md)
+### [Role-based Administration and Auditing Tool](support/rbaviewer.md)
+### [Run Meter Summarization Tool](support/run-meter-summ.md)
+
+<!--## [Support Center]-->
+
+## [Manage high-risk deployments](servers/manage/settings-to-manage-high-risk-deployments.md)
 
 #    Deploy clients
 ##   Planning for client deployment

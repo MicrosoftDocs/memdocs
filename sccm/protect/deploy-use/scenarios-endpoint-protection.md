@@ -1,8 +1,8 @@
 ---
-title: Scenario Endpoint Protection protects computers from malware
-titleSuffix: "Configuration Manager"
-description: "Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks."
-ms.date: 03/22/2018
+title: Protect computers from malware
+titleSuffix: Configuration Manager
+description: Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks.
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,15 +12,24 @@ ms.author: aaroncz
 manager: doubeby
 ---
 
-# Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager
+# Example scenario: Use Endpoint Protection to protect computers from malware
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article provides an example scenario for how you can implement Endpoint Protection in Configuration Manager to protect computers in an organization from malware attacks.  
+This article provides an example scenario for how you can implement Endpoint Protection in Configuration Manager to protect computers in your organization from malware attacks.  
 
- John is the Configuration Manager administrator at Woodgrove Bank. The bank currently uses System Center Endpoint Protection to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
 
- John has been asked to upgrade the Woodgrove Bank antimalware software to System Center Endpoint Protection so that the bank can benefit from the latest antimalware features and be able to centrally manage the antimalware solution from the Configuration Manager console. This implementation has the following requirements:  
+
+## Scenario overview
+
+John is the Configuration Manager administrator at Woodgrove Bank. The bank currently uses System Center Endpoint Protection to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
+
+John has been asked to upgrade the Woodgrove Bank antimalware software to System Center Endpoint Protection so that the bank can benefit from the latest antimalware features and be able to centrally manage the antimalware solution from the Configuration Manager console. 
+
+
+## Business requirements
+
+This implementation has the following requirements:  
 
 -   Use Configuration Manager to manage the Windows Firewall settings that are currently managed by Group Policy.  
 
@@ -38,9 +47,9 @@ This article provides an example scenario for how you can implement Endpoint Pro
 
     -   More than 3 different types of malware are detected in any 24-hour period  
 
--   Uninstall the existing antimalware solution.  
-
  John then does the following steps to implement Endpoint Protection:  
+
+
 
 ##  Steps to implement Endpoint Protection  
 
@@ -58,7 +67,7 @@ This article provides an example scenario for how you can implement Endpoint Pro
 |John creates a custom antimalware policy named **Woodgrove Bank Server Policy**. He adds only the settings for **Scheduled scans** and makes the following changes:<br /><br /> **Scan type**:  **Full**<br /><br /> **Scan day**:  **Saturday**<br /><br /> **Scan time**: **1:00 AM**<br /><br /> **Run a daily quick scan on client computers**:  **No**.|See [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).|  
 |John deploys the **Woodgrove Bank Server Policy** custom antimalware policy to the **Woodgrove Bank Servers** collection.|See "To deploy an antimalware policy to client computers" [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md) article.|  
 |John creates a new set of custom client device settings for Endpoint Protection and names these **Woodgrove Bank Endpoint Protection Settings**.<br /><br /> **Note:** If you do not want to install and enable Endpoint Protection on all clients in your hierarchy, make sure that the options **Manage Endpoint Protection client on client computers** and **Install Endpoint Protection client on client computers** are both configured as **No** in the default client settings.|For more information, see [Configure Custom Client Settings for Endpoint Protection](endpoint-protection-configure-client.md).|  
-|He configures the following settings for Endpoint Protection:<br /><br /> **Manage Endpoint Protection client on client computers**:  **Yes**<br /><br /> This setting and value ensures that any existing Endpoint Protection client that is installed becomes managed by Configuration Manager.<br /><br /> **Install Endpoint Protection client on client computers**:  **Yes**.</br></br>**Note** Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent installed. If it is already installed on Windows 10 devices, Configuration Manager will not remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version.<br /><br /> **Automatically remove previously installed antimalware software before Endpoint Protection is installed**:  **Yes**.<br /><br /> This setting and value fulfills the business requirement that the existing antimalware software is removed before Endpoint Protection is installed and enabled.|For more information, see [Configure Custom Client Settings for Endpoint Protection](endpoint-protection-configure-client.md).|  
+|He configures the following settings for Endpoint Protection:<br /><br /> **Manage Endpoint Protection client on client computers**:  **Yes**<br /><br /> This setting and value ensures that any existing Endpoint Protection client that is installed becomes managed by Configuration Manager.<br /><br /> **Install Endpoint Protection client on client computers**:  **Yes**.</br></br>**Note** Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent installed. If it is already installed on Windows 10 devices, Configuration Manager will not remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version.|For more information, see [Configure Custom Client Settings for Endpoint Protection](endpoint-protection-configure-client.md).|  
 |John deploys the **Woodgrove Bank Endpoint Protection Settings** client settings to the **All Computers Protected by Endpoint Protection** collection.|See "Configure Custom Client Settings for Endpoint Protection" in [Configuring Endpoint Protection in Configuration Manager](endpoint-antimalware-policies.md).|  
 |John uses the Create Windows Firewall Policy Wizard to create a policy by configuring the following settings for the domain profile:<br /><br /> 1) **Enable Windows Firewall**: **Yes**<br /><br /> 2)<br />                    **Notify the user when Windows Firewall blocks a new program**: **Yes**|See [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/create-windows-firewall-policies.md)|  
 |John deploys the new firewall policy to the collection **All Computers Protected by Endpoint Protection** that he created earlier.|See "To deploy a Windows Firewall policy" in the [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](create-windows-firewall-policies.md)|  
