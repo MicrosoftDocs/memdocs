@@ -2,7 +2,7 @@
 title: "Service connection point"
 titleSuffix: "Configuration Manager"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
-ms.date: 07/25/2018
+ms.date: 08/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -79,7 +79,7 @@ To enable operation, the computer that hosts the service connection point and an
 > The Service Connection Point uses the Microsoft Intune service when it connects to http://go.Microsoft.com or
   http://manage.Microsoft.com. There is a known issue in which the Intune Connector experiences connectivity issues if the Baltimore
   CyberTrust Root Certificate is not installed, is expired, or is corrupted on the Configuration Manager Site System that has the
-  Service Connection Point role installed.
+  Service Connection Point role installed. For more information, see [Configuration Manager Service Connection Point doesn't download updates](https://support.microsoft.com/help/3187516).
 
 **Updates and servicing**  
 
