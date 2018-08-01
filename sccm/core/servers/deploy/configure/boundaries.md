@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager boundaries are locations on your network that contain devices that you want to manage. The boundary a device is on is equivalent to the Active Directory site, or network IP address that is identified by the Configuratoin Manager client that is installed on the device.
+Configuration Manager boundaries are locations on your network that contain devices that you want to manage. The boundary a device is on is equivalent to the Active Directory site, or network IP address that is identified by the Configuration Manager client that is installed on the device.
  - You can manually create individual boundaries. However, Configuration Manager does not support the direct entry of a supernet as a boundary. Instead, use the IP address range boundary type.
  - You can configure the [Active Directory Forest Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) method to auto-discover and create boundaries for each IP Subnet and Active Directory Site it discovers. When Active Directory Forest Discovery identifies a supernet that is assigned to an Active Directory site, Configuration Manager converts the supernet into an IP address range boundary.  
 
