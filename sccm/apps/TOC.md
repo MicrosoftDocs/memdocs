@@ -20,12 +20,14 @@
 
 ## Deploy applications
 ### [Deploy applications](deploy-use/deploy-applications.md)
+### [Create a phased deployment](../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [Share an application](deploy-use/share-applications.md)
 ### [Simulate application deployments](deploy-use/simulate-application-deployments.md)
 ### [Deploy App-V virtual applications](get-started/deploying-app-v-virtual-applications.md)
 
 ## Monitor applications
 ### [Monitor applications from the console](deploy-use/monitor-applications-from-the-console.md)
+### [Manage and monitor phased deployments](../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [Monitor app usage with software metering](deploy-use/monitor-app-usage-with-software-metering.md)
 
 ## Manage applications

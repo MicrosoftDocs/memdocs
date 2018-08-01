@@ -5,7 +5,7 @@ description: Configure settings for the Microsoft Edge web browser on Windows 10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/28/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -39,14 +39,24 @@ This policy currently includes the following settings:
 - **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 
+### Configure Windows Defender SmartScreen settings for Microsoft Edge
+<!--1353701-->
+Starting in version 1806, this policy adds three settings for [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview). The policy now includes the following additional settings on the **SmartScreen Settings** page:
+
+- **Allow SmartScreen**: Specifies whether Windows Defender SmartScreen is allowed. For more information, see the [AllowSmartScreen browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Users can override SmartScreen prompt for sites**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about potentially malicious websites. For more information, see the [PreventSmartScreenPromptOverride browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Users can override SmartScreen prompt for files**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about downloading unverified files. For more information, see the [PreventSmartScreenPromptOverrideForFiles browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+
+
 
 ## Create the Microsoft Edge browser profile
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings** and select the new **Microsoft Edge Browser Profiles** node. Click the ribbon option to **Create Microsoft Edge Browser Policy**.
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings** and select the **Microsoft Edge Browser Profiles** node. Click the ribbon option to **Create Microsoft Edge profile**.
 2. Specify a **Name** for the policy, optionally enter a **Description**, and click **Next**.
-3. On the **Settings** page, change the value to **Configured** for the settings to include in this policy, and click **Next**.
-4. On the **Supported Platforms** page, select the operating system versions and architectures to which this policy applies, and click **Next**. 
-5. Complete the wizard.
+3. On the **General Settings** page, change the value to **Configured** for the settings to include in this policy, and click **Next**. The setting to **Set Edge Browser as default** must be configured to continue.
+4. In version 1806 and later, configure settings on the **SmartScreen Settings** page, and then click **Next**. 
+5. On the **Supported Platforms** page, select the OS versions and architectures to which this policy applies, and click **Next**. 
+6. Complete the wizard.
 
 
 
@@ -54,9 +64,9 @@ This policy currently includes the following settings:
 
 1. Select your policy and click the ribbon option to **Deploy**.
 2. Click **Browse** to select the user or device collection to which to deploy the policy. 
-3. Select additional options as necessary. 
-    a. Generate alerts when the policy is not compliant. 
-    b. Set the schedule by which the client evaluates the device's compliance with this policy.
+3. Select additional options as necessary.  
+     a. Generate alerts when the policy is not compliant.  
+     b. Set the schedule by which the client evaluates the device's compliance with this policy. 
 4. Click **OK** to create the deployment.
 
 

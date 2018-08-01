@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 04/10/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
@@ -195,6 +195,7 @@ The following table lists CMG support for Configuration Manager features:
 | Software distribution (user-targeted, required)</br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1710) |
 | Software distribution (user-targeted, available)</br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png)  (1802) |
 | Windows 10 in-place upgrade task sequence     | ![Supported](media/green_check.png)  (1802) |
+| CMPivot     | ![Supported](media/green_check.png)  (1806) |
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |
 | Automatic site assignment     | ![Not supported](media/Red_X.png) |
@@ -260,9 +261,9 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 
 - Internet-based clients get Microsoft software update content from Windows Update at no charge. Do not distribute update packages with Microsoft update content to a cloud distribution point, otherwise you may incur storage and data egress costs.  
 
-- For any other necessary content, such as applications or third-party software updates, you must distribute to a cloud-based distribution point. Currently, the CMG supports only the cloud-based distribution point for sending content to clients.  
+- For any other necessary content, such as applications or third-party software updates, you must distribute to a cloud distribution point. Currently, the CMG supports only the cloud distribution point for sending content to clients.  
 
-- For more information, see the cost of using [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution).  
+- For more information, see the cost of using [cloud distribution points](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  
 
 #### Other costs
 

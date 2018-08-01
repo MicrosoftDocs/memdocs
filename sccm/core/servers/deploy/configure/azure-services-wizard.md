@@ -57,14 +57,14 @@ The following table lists details about each of the services.
 |Cloud management with</br>Azure AD User Discovery | Multiple | Public | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | Import, Create |
 |OMS Connector | One | Public, Private | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
 |Upgrade Readiness | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
-|Microsoft Store for</br>Business and Education | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import, Create |
+|Microsoft Store for</br>Business | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import, Create |
 
 
 ### About Azure AD apps
 
 Different Azure services require distinct configurations, which you make in the Azure portal. Additionally, the apps for each service can require separate permissions to Azure resources.  
 
-You can use a single app for multiple services. There is only one object to manage in Configuration Manager and Azure AD. When the security key on the app expires, you only have to refresh one key.
+You can use a single app for multiple services. There's only one object to manage in Configuration Manager and Azure AD. When the security key on the app expires, you only have to refresh one key.
 
 The most secure configuration is using separate apps for each service. An app for one service might require additional permissions that another service doesn't require. Using one app for different services can provide the app with more permissions than it otherwise requires. 
 
@@ -84,7 +84,7 @@ For more information about Azure apps, start with the following articles:
 
 After you decide the service to which you want to connect, refer to the table in [Service details](#service-details). This table provides information you need to complete the Azure Service Wizard. Have a discussion in advance with your Azure AD administrator. Decide if you manually create the apps in advance in the Azure portal, and then import the app details into Configuration Manager. Or use Configuration Manager to directly create the apps in Azure AD. To collect the necessary data from Azure AD, review the information in the other sections of this article.
 
-Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com). When configuring Upgrade Readiness or the OMS Connector, you need to give your newly registered web app *contributor* permission on the resource group that contains the relevant OMS workspace. This permission allows Configuration Manager to access that workspace. Search for the name of the app registration in the **Add users** blade when assigning the permission. This process is the same as when [providing Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
+Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com). When configuring Upgrade Readiness or the OMS Connector, you need to give your newly registered web app *contributor* permission on the resource group that contains the relevant OMS workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
 
 
 
@@ -151,7 +151,7 @@ After entering the information, click **Verify**. Then click **OK** to close the
 
 When you click **Create** from the Server app dialog, it opens the Create Server Application dialog. This page automates the creation of a web app in Azure AD. Specify the following information:
 - **Application Name**: A friendly name for the app.
-- **HomePage URL**: This value is not used by Configuration Manager, but required by Azure AD. By default this value is https://ConfigMgrService.  
+- **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is https://ConfigMgrService.  
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is https://ConfigMgrService.  
 - **Secret Key validity period**: click the drop-down list and select either **1 year** or **2 years**. One year is the default value.
 
@@ -190,7 +190,7 @@ After entering the information, click **Verify**. Then click **OK** to close the
 
 When you click **Create** from the Client App dialog, it opens the Create Client Application dialog. This page automates the creation of a native app in Azure AD. Specify the following information:
 - **Application Name**: A friendly name for the app.
-- **Reply URL**: This value is not used by Configuration Manager, but required by Azure AD. By default this value is https://ConfigMgrService. 
+- **Reply URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is https://ConfigMgrService. 
 
 Click **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference. 
 
@@ -199,7 +199,7 @@ Click **OK** to create the native app in Azure AD and close the Create Client Ap
 
 ## Configuration or Discovery
 
-After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you are connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
+After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
 
 -   **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
@@ -207,16 +207,16 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 -   **Upgrade Readiness Connector** service, **Configuration** page: [Use the Azure Wizard to create the connection](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 
--   **Microsoft Store for Business** service, **Configurations** page: [Set up Microsoft Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#for-configuration-manager-version-1706-and-later)  
+-   **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
 
 
-Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You have completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
+Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
 
 ## View the configuration of an Azure service
-You can view the properties of an Azure service you have configured for use. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Services**. Select the service you want to view or edit, and then click **Properties**.
+View the properties of an Azure service you've configured for use. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Services**. Select the service you want to view or edit, and then click **Properties**.
 
-If you select a service and then click **Delete** in the ribbon, this action deletes the connection in Configuration Manager. It doesn't remove the app in Azure AD. Ask your Azure administrator to delete the app when it is no longer needed. Or run the Azure Service Wizard to import the app.<!--483440-->
+If you select a service and then click **Delete** in the ribbon, this action deletes the connection in Configuration Manager. It doesn't remove the app in Azure AD. Ask your Azure administrator to delete the app when it's no longer needed. Or run the Azure Service Wizard to import the app.<!--483440-->
 
 
 ## Cloud management data flow

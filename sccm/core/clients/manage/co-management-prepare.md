@@ -20,11 +20,12 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 
 
 ## Prerequisites
-You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for devices with the Configuration Manager client and devices that do not have the client installed.
+You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for devices with the Configuration Manager client and devices that don't have the client installed.
 ### General prerequisites
 The following are general prerequisites for you to enable co-management:  
 
 - Configuration Manager version 1710 or later
+    - Beginning in Configuration Manager version 1806, you can connect multiple Configuration Manager instances to a single Intune tenant. <!--1357944-->
 - [Site onboarded with Azure AD for cloud management](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - EMS or Intune license for all users
 - [Azure AD automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) enabled
@@ -34,6 +35,16 @@ The following are general prerequisites for you to enable co-management:
    > [!Note]  
    > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you cannot enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
+### Prerequisite Azure Resource Manager roles
+For more information about Azure roles, see [Understand the different roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+|Action|Role needed|
+|----|----|
+|Set up a cloud management gateway|Azure Subscription Manager|
+|Set up a cloud distribution point|Azure Subscription Manager|
+|Create Azure Active Directory apps from the Configuration Manager console|Azure Active Directory Global Administrator|
+|Importing Azure client and server apps in the Configuration Manager console| Configuration Manager Administrator, no additional Azure roles needed.|
+|Set up Co-management through the Co-management wizard| Azure Active Directory user rights  along with being a Configuration Manager Administrator with all scope rights. 
+ 
 ### Additional prerequisites for devices with the Configuration Manager client
 - Windows 10, version 1709 or later
 - [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (joined to AD and Azure AD)
@@ -47,7 +58,7 @@ The following are general prerequisites for you to enable co-management:
 
 
 ## Command line to install Configuration Manager client
-Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
+Create an app in Intune for Windows 10 devices that aren't already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
 `ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
@@ -94,7 +105,7 @@ For new Windows 10 devices, you can use the Autopilot service to configure the o
 3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 ## Windows 10 devices not enrolled in Intune or a Configuration Manager client
-For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
+For Windows 10 devices that aren't enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
 1. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the Internet using Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 

@@ -1,8 +1,8 @@
 ---
 title: Supported site system servers
 titleSuffix: Configuration Manager
-description: Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role.
-ms.date: 05/23/2018
+description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Supported operating systems for System Center Configuration Manager site system servers
+
+# Supported operating systems for Configuration Manager site system servers
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -20,9 +21,9 @@ This article details the Windows versions that you can use to host a Configurati
 
 
 Use the information in this article with the information in the following articles:
--   [Recommended hardware for Configuration Manager](../../../core/plan-design/configs/recommended-hardware.md)
--   [Site and site system prerequisites for Configuration Manager](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
--   [Size and scale numbers for Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md)
+-   [Recommended hardware for Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware)
+-   [Site and site system prerequisites for Configuration Manager](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
+-   [Size and scale numbers for Configuration Manager](/sccm/core/plan-design/configs/size-and-scale-numbers)
 
 
 
@@ -49,7 +50,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   Distribution point  
 
-     Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 -   Endpoint Protection point  
 
@@ -67,7 +68,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   Site database server  
 
-     Site database servers are not supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](https://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base. Additionally, secondary site servers are not supported on any domain controller.  
+     Site database servers aren't supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911) in the Microsoft Knowledge Base. Additionally, secondary site servers aren't supported on any domain controller.  
 
 -   SMS_Provider  
 
@@ -86,6 +87,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 
 ## Windows Server 2012 R2 (x64): Standard and Datacenter  
+
 **Site servers:**  
 
 -   Central administration site  
@@ -106,7 +108,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   Distribution point  
 
-     Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 -   Endpoint Protection point  
 
@@ -124,7 +126,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   Site database server  
 
-     Site database servers are not supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](https://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base. Additionally, secondary site servers are not supported on any domain controller.  
+     Site database servers aren't supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911) in the Microsoft Knowledge Base. Additionally, secondary site servers aren't supported on any domain controller.  
 
 -   SMS_Provider  
 
@@ -132,7 +134,10 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   State migration point  
 
+
+
 ## Windows Server 2012 (x64): Standard and Datacenter  
+
 **Site servers:**  
 
 -   Central administration site  
@@ -153,7 +158,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   Distribution point  
 
-     Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 -   Endpoint Protection point  
 
@@ -171,7 +176,7 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 -   Site database server  
 
-     Site database servers are not supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](https://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base. Additionally, secondary site servers are not supported on any domain controller.  
+     Site database servers aren't supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911) in the Microsoft Knowledge Base. Additionally, secondary site servers aren't supported on any domain controller.  
 
 -   SMS_Provider  
 
@@ -182,104 +187,124 @@ With the hotfix rollup from KB3186654 this OS is supported for the following rol
 
 
 ## Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, and Datacenter  
- Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
- This OS isn't supported for site servers or most site system roles. It is still supported for the distribution point site system role, including pull-distribution points and for PXE and multicast.
+Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+
+This OS isn't supported for site servers or most site system roles. It's still supported for the distribution point site system role, including pull-distribution points and for PXE and multicast.
 
 **Site system servers:**  
 -   Distribution point  
 
-    -   Distribution points on this OS do not support Multicast.  
+    -   Distribution points on this OS support PXE and Multicast.  
 
-    -   Distribution points on this OS are supported for PXE.
-
-    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
 
 ## Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, and Datacenter  
- Windows Server 2008 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
-This OS isn't supported for site servers or site system roles, except for the distribution point and pull-distribution point. You can continue to use this OS as a distribution point until deprecation of this support is announced, or this OS's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
+Windows Server 2008 is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+
+This OS isn't supported for site servers or site system roles, except for the distribution point and pull-distribution point. Continue to use this OS as a distribution point until deprecation of this support is announced, or this OS's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
 
 **Site system servers:**  
 -   Distribution point  
 
-    -   Distribution points on this OS do not support Multicast.  
+    -   Distribution points on this OS support PXE and Multicast.  
 
-    -   Distribution points on this OS are supported for PXE, but do not support network booting of client computers in EFI mode. Client computers with BIOS or with EFI booting in legacy mode are supported.  
+    -   Distribution points on this OS don't support network booting of client computers in EFI mode. Client computers with BIOS or with EFI booting in legacy mode are supported.  
 
-    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
 
 ## Windows 10 (x86, x64): Pro and Enterprise  
+
 **Site system servers:**  
 
 -   Distribution point  
 
-    -   Distribution points on this OS are not supported for PXE. 
+    -   Distribution points on this OS aren't supported for PXE with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
-    -   Distribution points on this OS version do not support Multicast.  
+    -   Distribution points on this OS version don't support Multicast.  
 
-    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
 
 ## Windows 8.1 (x86, x64): Professional and Enterprise  
+
 **Site system servers:**  
 
 -   Distribution point  
 
-    -   Distribution points on this OS are not supported for PXE.  
+    -   Distribution points on this OS aren't supported for PXE with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
-    -   Distribution points on this OS version do not support Multicast.  
+    -   Distribution points on this OS version don't support Multicast.  
 
-    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
 
 ## Windows 7 with SP1 (x86, x64): Professional, Enterprise, and Ultimate  
+
 **Site system servers:**  
 
 -   Distribution point  
 
-    -   Distribution points on this OS are not supported for PXE.  
+    -   Distribution points on this OS aren't supported for PXE with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
-    -   Distribution points on this OS version do not support Multicast.  
+    -   Distribution points on this OS version don't support Multicast.  
 
-    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+
+
 
 ## The server core installation of Windows Server, version 1803
 <!--503702-->
 Starting in Configuration Manager 1802, [Windows Server, version 1803](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803) is supported for use as a distribution point with the following limitations:  
-  -   Only the x64-bit version is supported.
-  -   Distribution points on this OS do not support PXE or Multicast.  
+
+  -   Only the x64-bit version is supported.  
+
+  -   Distribution points on this OS don't support PXE or Multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+
+
 
 ## The server core installation of Windows Server, version 1709
+
 Starting in Configuration Manager 1710, [Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) is supported for use as a distribution point with the following limitations:  
-  -   Only the x64-bit version is supported.
-  -   Distribution points on this OS do not support PXE or Multicast.  
+
+  -   Only the x64-bit version is supported.  
+
+  -   Distribution points on this OS don't support PXE or Multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+
+
 
 ## The server core installation of Windows Server 2016
+
 With the hotfix rollup from KB3186654, this OS is supported for use as a distribution point with the following limitations:  
-  -   Only the x64-bit version is supported.
-  -   Distribution points on this OS do not support PXE or Multicast.  
+
+  -   Only the x64-bit version is supported.  
+
+  -   Distribution points on this OS don't support PXE or Multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 
 
 ## The server core installation of Windows Server 2012 R2  
- The server core installation of Windows Server 2012 R2 is supported for use as a distribution point with the following limitations:  
+
+The server core installation of Windows Server 2012 R2 is supported for use as a distribution point with the following limitations:  
 
 -   Only the x64-bit version is supported.
 
--   Distribution points on this OS do not support PXE or Multicast.  
+-   Distribution points on this OS don't support PXE or Multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)
+.  
 
 
 
 ## The server core installation of Windows Server 2012  
- The server core installation of Windows Server 2012 is supported for use as a distribution point with the following limitations:  
+
+The server core installation of Windows Server 2012 is supported for use as a distribution point with the following limitations:  
 
 -   Only the 64-bit version is supported.  
 
--   Distribution points on this OS do not support PXE or Multicast.
+-   Distribution points on this OS don't support PXE or Multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
