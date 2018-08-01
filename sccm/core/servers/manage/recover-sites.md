@@ -71,7 +71,7 @@ When you run Configuration Manager setup, you have the following recovery option
 
 - **Recover the site database using a backup set**: Use this option when you have a backup of the site database that was created as part of the **Backup Site Server** maintenance task run on the site before the site database failure. In a hierarchy, the changes that were made to the site database after the last site database backup are retrieved from the central administration site for a primary site, or from a reference primary site for the central administration site. When you recover the site database for a stand-alone primary site, you lose site changes after the last backup.  
 
-     When you recover the site database for a site in a hierarchy, the recovery behavior is different for a central administration site and primary site, and when the last backup is inside or outside of the SQL Server change tracking retention period. For more information, see the [Site database recovery scenarios](##site-database-recovery-scenarios) section in this article.  
+     When you recover the site database for a site in a hierarchy, the recovery behavior is different for a central administration site and primary site, and when the last backup is inside or outside of the SQL Server change tracking retention period. For more information, see the [Site database recovery scenarios](#site-database-recovery-scenarios) section in this article.  
 
      > [!NOTE]   
      > If you select to restore the site database by using a backup set, but the site database already exists, the recovery fails.   
@@ -148,7 +148,7 @@ Use one of the following procedures to help you recover your site server and sit
      - You can specify the original or a new path to use for the Configuration Manager installation in the setup wizard.  
 
 ### Start an unattended site recovery
-1. Prepare the unattended installation script for the options that you require for the site recovery. For more information, see [Unattended site recovery script file keys](/sccm/protect/understand/unattended-site-recovery-script-file-keys).  
+1. Prepare the unattended installation script for the options that you require for the site recovery. For more information, see [Unattended site recovery](/sccm/core/servers/manage/unattended-recovery).  
 
 2. Run Configuration Manager setup by using the `/script` command-line option. For example, if you named your setup initialization file **ConfigMgrUnattend.ini** and saved it in the `C:\Temp` directory of the computer on which you're running setup, the command would be as follows: `setup.exe /script C:\temp\ConfigMgrUnattend.ini`.  
 
