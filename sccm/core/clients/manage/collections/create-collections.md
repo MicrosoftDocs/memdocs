@@ -154,7 +154,7 @@ In the **Select Collections** dialog box, select the collections you want to inc
 In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
 
 
--   **Use incremental updates for this collection** - Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
+-   **Use incremental updates for this collection** - Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation, independently of a full collection evaluation. Incremental updates occur at 5 minute intervals by default.  
 
 > [!IMPORTANT]  
 >  Collections configured by using query rules that use the following classes do not support incremental updates:  
