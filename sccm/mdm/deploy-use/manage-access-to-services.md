@@ -121,7 +121,7 @@ Conditional access to Exchange on-premises supports:
 
 
 ## Requirements for Skype for Business Online
-Conditional access to SharePoint Online supports devices that run:
+Conditional access to Skype Online supports devices that run:
  -   iOS 7.1 and later
  -   Android 4.0 and later
  -   Samsung KNOX Standard 4.0 or later
