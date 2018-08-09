@@ -58,7 +58,8 @@ For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.
 
 Create a custom SSL certificate for the CMG the same as for a cloud distribution point. Follow the instructions for [Deploying the service certificate for cloud-based distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
 
-- When requesting the custom web server certificate, provide an FQDN for the certificate's common name. For using the CMG on Azure public cloud, use a name that ends in **cloudapp.net**, or **usgovcloudapp.net** for the Azure US Government cloud.
+- When requesting the custom web server certificate, provide an FQDN for the certificate's common name. This can be a public domain name you own or you may leverage the cloudapp.net domain. If using your own public domain, refer to the process above for creating a DNS alias in your organization's public DNS.
+- When using the cloudapp.net public domain for the CMG web server certificate, on the Azure public cloud, use a name that ends in **cloudapp.net**, or **usgovcloudapp.net** for the Azure US Government cloud.
 
 
 
