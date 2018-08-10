@@ -26,7 +26,7 @@ This information is subject to change with future releases. It might not include
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
-|Hybrid mobile device management. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->|August 13, 2018|August 13, 2019|
+|Hybrid mobile device management. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
 |The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. NOTE: The application catalog website point and web service point roles are still supported. In some scenarios, the new Software Center communicates with the application catalog website point.|August 11, 2017| Version 1806|
 |The previous version of Software Center.<br><br>For more information about the new Software Center, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only).|December 13, 2016|Version 1802|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. </br></br>This deprecation includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. </br></br>Existing VHDs are not deleted, but are no longer accessible from within the Configuration Manager console.  |January 6, 2017 |Version 1710|

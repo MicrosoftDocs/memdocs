@@ -18,7 +18,7 @@ ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
 This article is to migrate from hybrid MDM to a cloud-only experience using Intune on Azure. 
 
 > [!Important]  
-> As of August 13, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 Start migrating to Intune standalone using a phased approach. With this approach, you test a small subset of users and devices while most of your users and devices are still managed with hybrid MDM. After you verify Intune functionality, start migrating more resources to Intune.    

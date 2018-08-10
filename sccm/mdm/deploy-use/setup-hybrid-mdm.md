@@ -20,7 +20,7 @@ manager: dougeby
 Before you can manage iOS, Windows, and Android devices with Configuration Manager, they must be enrolled with Intune. Use the following steps to set up hybrid device enrollment with Configuration Manager using Intune. By completing the following steps, you will enable "bring your own device" (BYOD) enrollment for your users. These steps are also prerequisites for [enrolling BYOD devices](enroll-hybrid-ios-mac.md) and [enrolling company-owned devices](enroll-company-owned-devices.md).
 
 > [!Important]  
-> As of August 13, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 

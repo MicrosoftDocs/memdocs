@@ -17,7 +17,7 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
-> As of August 13, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 > <!--Intune feature 2683117--> 
 > Since launching on Azure over a year ago, Intune has added hundreds of new customer-requested and market-leading service capabilities. It now offers far more capabilities than those offered through hybrid mobile device management (MDM). Intune on Azure provides a more integrated, streamlined administrative experience for your enterprise mobility needs.
 > 
@@ -47,7 +47,7 @@ manager: dougeby
 > 
 > - Contact your partner of record or FastTrack for assistance. [FastTrack for Microsoft 365](https://aka.ms/hybrid_fasttrack) can assist in your migration from hybrid MDM to Intune on Azure. 
 > 
-> For more information, see [the support blog post](#).
+> For more information, see [the Intune support blog post](https://aka.ms/hybrid_notification).
 
 
 
