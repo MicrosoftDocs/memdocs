@@ -63,7 +63,7 @@ You have two options for running Setup Downloader:
 
     Example commands:
 
-    -   **setupd &lt;DownloadPath\>**  
+    -   **setupdl &lt;DownloadPath\>**  
 
         -   Setup Downloader starts, verifies the files in the specified download folder, and then downloads only the files that are missing or that have newer versions than existing files.     
 
