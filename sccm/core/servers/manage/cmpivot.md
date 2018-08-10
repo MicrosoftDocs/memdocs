@@ -227,17 +227,17 @@ A query times out after one hour. For example, a collection has 500 devices, and
 >[!TIP]
 > CMPivot interations are logged to the following log files:
 >
-> **Server-Side:**
+> **Server-side:**
 > - SmsProv.log
 > - bgbServer.log
 > - StateSys.log
 >
-> **Client-Side:**
+> **Client-side:**
 > - CcmNotificationAgent.log
 > - Scripts.log
 > - StateMessage.log
-
-For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
+>
+> For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
 
 
 ## See also
