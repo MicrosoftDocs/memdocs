@@ -79,6 +79,9 @@ Although there is no requirement to have a trust between a client's forest and t
     The recommended configuration when you use proxy web servers for Internet-based client management is SSL bridging to SSL, which uses SSL termination with authentication. Client computers must be authenticated by using computer authentication, and mobile device legacy clients are authenticated by using user authentication. Mobile devices that are enrolled by Configuration Manager do not support SSL bridging.  
 
      The benefit of SSL termination at the proxy web server is that packets from the Internet are subject to inspection before they are forwarded to the internal network. The proxy web server authenticates the connection from the client, terminates it, and then opens a new authenticated connection to the Internet-based site systems. When Configuration Manager clients use a proxy web server, the client identity (client GUID) is securely contained in the packet payload so that the management point does not consider the proxy web server to be the client. Bridging is not supported in Configuration Manager with HTTP to HTTPS, or from HTTPS to HTTP.  
+     
+    > [!Note]  
+    > Configuration Manager doesn't support setting third-party SSL bridging configurations. For example, Citrix Netscaler or F5 BIG-IP. Please work with your device vendor to configure it for use with Configuration Manager.  
 
 -   **Tunneling**:   
     If your proxy web server cannot support the requirements for SSL bridging, or you want to configure Internet support for mobile devices that are enrolled by Configuration Manager, SSL tunneling is also supported. It is a less secure option because the SSL packets from the Internet are forwarded to the site systems without SSL termination, so they cannot be inspected for malicious content. When you use SSL tunneling, there are no certificate requirements for the proxy web server.  
