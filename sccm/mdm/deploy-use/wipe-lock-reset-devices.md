@@ -1,8 +1,8 @@
 ---
-title: "Protect data with remote wipe, lock, or passcode reset"
-titleSuffix: "Configuration Manager"
-description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using System Center Configuration Manager."
-ms.date: 10/27/2017
+title: Protect data with remote wipe, lock, or passcode reset
+titleSuffix: Configuration Manager
+description: Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using Configuration Manager.
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,21 +11,28 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Protect data with remote wipe, lock, or passcode reset by using System Center Configuration Manager
+
+# Protect data with remote wipe, lock, or passcode reset by using Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To help protect devices, you can issue:  
+Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To help protect devices, you can issue:  
 
-- A full wipe to restore the device to its factory settings.  
+- A full wipe to restore the device to its factory settings  
 
-- A selective wipe to remove only company data.  
+- A selective wipe to remove only company data  
 
-- A remote lock to help secure a device that might be lost.  
+- A remote lock to help secure a device that might be lost  
 
-- A reset of the device passcode.  
+- A reset of the device passcode  
+
+> [!Important]  
+> As of August 13, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
+
 
 ## Full wipe  
+
 You might issue a wipe command to a device when you need to secure a lost device or when you retire a device from active use.  
 
 Issue a **full wipe** to a device to restore the device to its factory defaults. This removes all company and user data and settings. You can do a full wipe on Windows Phone, iOS, Android, and Windows 10 devices.  
@@ -44,7 +51,10 @@ Issue a **full wipe** to a device to restore the device to its factory defaults.
 
 3. Choose **Remote Device Actions** in **Device Group**, and then choose **Retire/Wipe**.  
 
+
+
 ## Selective wipe  
+
 Issue a **selective wipe** to a device to remove only company data. The following table describes, by platform, what data is removed and the effect on data that remains on the device after a selective wipe.  
 
 **iOS**  
@@ -130,7 +140,10 @@ The following settings are also removed from Windows 10 Mobile and Windows Phone
 
 3. Choose **Remote Device Actions** in **Device Group**, and then choose **Retire/Wipe**.  
 
+
+
 ## Wiping EFS-enabled content  
+
 Windows 8.1 and Windows RT 8.1 support selective wipe of Encrypting File System (EFS)-encrypted content. The following apply to a selective wipe of EFS-enabled content:  
 
 - Only apps and data that are protected by EFS through the same Internet domain as the Intune account are selectively wiped. For more information, see [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx).  
@@ -147,6 +160,7 @@ The data and apps that EFS selective wipe currently supports are:
 
 - Files and folders encrypted by EFS. For more information, see [Best practices for the Encrypting File System](http://support.microsoft.com/kb/223316).  
 
+
 ### Best practices for selective wipe  
 
 - For a successful wipe of email, set up email profiles to iOS and Windows Phone 8.1 devices.  
@@ -157,7 +171,10 @@ The data and apps that EFS selective wipe currently supports are:
 
 - If an account has been deactivated, then after one year, Intune will retire the account and a selective wipe will be done.  
 
+
+
 ##  Passcode reset  
+
 If a user forgets their passcode, you can help them by removing the passcode from a device or by forcing a new temporary passcode on a device. The following table lists how passcode reset works on different mobile platforms.  
 
 | Platform                              | Passcode reset                                                                               |
@@ -191,7 +208,10 @@ If a user forgets their passcode, you can help them by removing the passcode fro
 
 3. Choose **Remote Device Actions** in **Device Group**, and then choose **Show Passcode State**.  
 
+
+
 ## Remote lock  
+
 If a user loses their device, you can lock the device remotely. The following table lists how remote lock works on different mobile platforms.  
 
 |Platform|Remote lock|  
@@ -222,5 +242,8 @@ If a user loses their device, you can lock the device remotely. The following ta
 
 3. Choose **Remote Device Actions** in **Device Group**, and then choose **Show Remote Lock State**.  
 
-### See also  
+
+
+## See also  
+
 [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)   
