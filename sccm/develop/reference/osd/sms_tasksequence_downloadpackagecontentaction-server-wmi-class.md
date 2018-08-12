@@ -96,7 +96,7 @@ Class SMS_TaskSequence_DownloadPackageContentAction : SMS_TaskSequence_Action
 
  The destination location type. The default value is TSCache. Possible values are:  
 
-||  
+|Value|
 |-|  
 |TSCache|  
 |CCMCache|  

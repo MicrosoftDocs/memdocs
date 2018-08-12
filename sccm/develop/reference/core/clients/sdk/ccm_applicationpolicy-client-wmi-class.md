@@ -67,7 +67,7 @@ Class CCM_ApplicationPolicy : CCM_SoftwareBase
 
  Applicability state. Possible values are:   
 
-||  
+|Value|
 |-|  
 |Unknown|  
 |Applicable|  
@@ -91,7 +91,7 @@ Class CCM_ApplicationPolicy : CCM_SoftwareBase
 
  Configure state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |NotNeeded|  
 |NotConfigured|  
@@ -115,7 +115,7 @@ Class CCM_ApplicationPolicy : CCM_SoftwareBase
 
  Current state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |NotInstalled|  
 |Unknown|  
@@ -260,7 +260,7 @@ Class CCM_ApplicationPolicy : CCM_SoftwareBase
 
  Progress state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |Idle|  
 |EvaluationStarted|  
@@ -287,7 +287,7 @@ Class CCM_ApplicationPolicy : CCM_SoftwareBase
 
  Resolved state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |None|  
 |NotInstalled|  
