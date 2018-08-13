@@ -216,4 +216,4 @@ Successfully switched the management authority of the device from Configuration 
 
 ## Next steps
 
-After you migrate users and tested Intune functionality, consider whether you're ready to [change the MDM authority](migrate-change-mdm-authority.md) of your Intune tenant from Configuration Manager to Intune. 
+After you migrate users and test Intune functionality, consider whether you're ready to [change the MDM authority](migrate-change-mdm-authority.md) of your Intune tenant from Configuration Manager to Intune. 

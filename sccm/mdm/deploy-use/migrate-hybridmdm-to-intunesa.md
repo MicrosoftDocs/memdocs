@@ -27,19 +27,37 @@ For more information, see the following articles:
   
 1.	[Import Configuration Manager data to Microsoft Intune](migrate-import-data.md)   
 
-    The Intune Data Importer tool collects data about the objects you select from your Configuration Manager hierarchy, provides details about the objects you can select for import and information about why some object cannot be imported, and lets you import selected objects into your Microsoft Intune tenant. While this step is optional, it can save you much time by automating the process to recreate objects from Configuration Manager to Intune.  
+    The Intune Data Importer tool:  
+
+    - Collects data about the objects you select from your Configuration Manager hierarchy  
+
+    - Provides details about the objects you can select for import   
+
+    - Provides information about why some objects can't be imported  
+
+    - Lets you import selected objects into your Microsoft Intune tenant  
+
+    This step is optional. It can save you time by automating the process to recreate objects from Configuration Manager to Intune.  
 
 2.	[Prepare Intune for user migration](migrate-prepare-intune.md)    
 
-    Validate imported objects from Configuration Manager, create new objects, create AAD groups and make object assignments to these groups, install NDES and Exchange connectors, etc. When you complete the steps and start the migration to Intune standalone, it should be transparent to your users.   
+    - Validate imported objects from Configuration Manager  
+
+    - Create new objects  
+
+    - Create Azure AD groups and make object assignments to these groups  
+
+    - Install NDES and Exchange connectors  
+
+    When you complete the steps and start the migration to Intune standalone, it should be transparent to your users.   
 
 3.	[Change the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md)    
 
-    Configure a mixed MDM authority in the same tenant by selecting some users to be managed in Intune and while all other devices continue to be managed with hybrid MDM. Test that Intune functionality is working as expected on the devices for a small subset of users before you start migrating additional users.   
+    Configure a mixed MDM authority in the same tenant. Select some users to be managed in Intune, while continuing to manage all other devices with hybrid MDM. Test that Intune functionality is working on the devices for a small subset of users before you start migrating additional users.   
 
 4.	[Change your MDM authority to Intune standalone](change-mdm-authority.md)     
 
-    Change your tenant-level MDM authority from Configuration Manager to Intune. All remaining users and devices are migrated to Intune standalone. You will change your tenant-level MDM authority after you have thoroughly tested Intune functionality in the previous step and have likely migrated most or all of your users already.
+    Change your tenant-level MDM authority from Configuration Manager to Intune. All remaining users and devices are migrated to Intune standalone. After you've thoroughly tested Intune functionality in the previous step, and have migrated most or all of your users, then change your tenant-level MDM authority.
 
 
 

@@ -80,7 +80,7 @@ The process to change the MDM authority to Intune standalone includes the follow
 
     1. Sign in to the [Azure portal](https://portal.azure.com) using the same Intune tenant that you used earlier.  
 
-    2. Choose **More Services** > **Monitoring + Management** > **Intune** > **Device enrollment**. The MDM authority is displayed in the top-right section of **Overview**.  
+    2. Choose **All Services** > **Intune** > **Device enrollment**. The MDM authority is displayed in the top-right section of **Overview**.  
 
 
 
