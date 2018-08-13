@@ -10,6 +10,7 @@ ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+robots: noindex,nofollow
 ---
 
 # Choose between Microsoft Intune standalone and hybrid MDM with Configuration Manager

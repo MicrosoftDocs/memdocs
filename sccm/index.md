@@ -64,8 +64,8 @@ ms.topic: hub-page
                                             <div class="cardText">
                                                 <h3>Mobile device management</h3>
                                                 <p><a href="/sccm/mdm/understand/hybrid-mobile-device-management">Understand hybrid mobile device management</a></p>
-                                                <p><a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">Set up hybrid MDM with Intune</a></p>
-                                                <p><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">Choose between Intune standalone and hybrid MDM with Configuration Manager</a></p>
+                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">Migrate hybrid MDM users and devices to Intune standalone</a></p>
+                                                <p><a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">What's new in hybrid MDM</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -338,7 +338,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
+                                <a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -348,8 +348,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Set up hybrid MDM with Intune</h3>
-                                                <p>Enable your BYOD scenarios and meet prereqs for most company-owned device management strategies.</p>
+                                                <h3>Migrate hybrid MDM users and devices to Intune standalone</h3>
+                                                <p>Use a phased approach to migrate from hybrid MDM to the recommended Intune standalone solution.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -357,7 +357,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">
+                                <a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -367,8 +367,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Choose between Intune standalone and hybrid MDM with Configuration Manager</h3>
-                                                <p>Intune standaone or hybrid MDM? Why choose one over the other? </p>
+                                                <h3>What's new in hybrid MDM</h3>
+                                                <p>Learn about new features in Intune that are supported with hybrid MDM.</p>
                                             </div>
                                         </div>
                                     </div>
