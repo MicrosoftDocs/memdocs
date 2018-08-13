@@ -72,7 +72,7 @@ uint32 Install
 
  Priority. Possible values are:   
 
-||  
+|Value|
 |-|  
 |Foreground|  
 |High|  

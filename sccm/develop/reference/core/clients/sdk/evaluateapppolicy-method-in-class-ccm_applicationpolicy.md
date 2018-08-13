@@ -60,7 +60,7 @@ uint32 EvaluateAppPolicy
 
  Priority. Possible values are:   
 
-||  
+|Value|
 |-|  
 |Foreground|  
 |High|  

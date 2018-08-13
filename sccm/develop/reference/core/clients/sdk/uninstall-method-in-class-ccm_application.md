@@ -72,7 +72,7 @@ uint32 Uninstall
 
  Priority. Possible values are:   
 
-||  
+|Value|
 |-|  
 |Foreground|  
 |High|  
