@@ -171,7 +171,7 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 
 
 ## Working with third-party updates video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bvAQeDSJIbs?ecver=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 
