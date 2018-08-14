@@ -239,6 +239,11 @@
             "source_path": "sccm/compliance/plan-design/scap/import-scap-compliance-settings.md",
             "redirect_url": "/sccm/compliance/plan-design/scap/deploy-monitor-export",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/configuration-manager-mobile-threat-defense.md",
+            "redirect_url": "/sccm/mdm/deploy-use/mobile-threat-defense",
+            "redirect_document_id": false
         }
     ]
 }
