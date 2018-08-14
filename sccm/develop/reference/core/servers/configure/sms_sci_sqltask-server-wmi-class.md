@@ -158,7 +158,7 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Configuration Manager-defined task name. Possible values are listed below. The default value is "".  
 
-||  
+|Value|
 |-|  
 |Backup SMS Site Server|  
 |Check Application Title with Inventory Information|  

@@ -88,7 +88,7 @@ Class SMS_TaskSequence_Pointer : SMS_TaskSequence_Step
 
  The supported environment. The default value is WinPEandFullOS. Possible values are:  
 
-||  
+|Value|
 |-|  
 |WinPE|  
 |FullOS|  
