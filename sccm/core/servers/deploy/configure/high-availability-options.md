@@ -19,7 +19,7 @@ This article describes how to deploy Configuration Manager using options that ma
 
 The following Configuration Manager options support high availability:   
 
-- Starting in version 1806, configure the central administration site and each primary site with an additional site server in passive mode.  
+- Starting in version 1806, configure any standalone primary site with an additional site server in passive mode.  
  
 - Configure a SQL Server Always On availability group for the site database at primary sites and the central administration site.
 
@@ -64,7 +64,7 @@ For example, Configuration Manager clients typically operate autonomously by usi
 ##  <a name="bkmk_snh"></a> High availability for sites and hierarchies  
 
 #### Use a site server in passive mode
-Starting with version 1806, install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+Starting with version 1806, install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 #### Use a remote content library
 Starting with version 1806, move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).
