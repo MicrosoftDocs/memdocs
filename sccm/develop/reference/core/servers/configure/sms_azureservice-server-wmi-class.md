@@ -82,7 +82,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Deployment slot. Possible values are:  
 
-||  
+|Value|
 |-|  
 |Production|  
 |Staging|  
@@ -105,7 +105,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Flags for configuring the Windows Azure service. Possible values are:  
 
-||  
+|Value|
 |-|  
 |WAD_LOGS_DONT_DELETE(0)|  
 

@@ -45,7 +45,7 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 
  The architecture of WinPE optional components. Possible values are:  
 
-||  
+|Value|
 |-|  
 |X86|  
 |X64|  

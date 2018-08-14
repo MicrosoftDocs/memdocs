@@ -56,7 +56,7 @@ Class SMS_ClientDeploymentCollectionBucket: SMS_BaseClass
 
  The client deployment status bucket. Possible values are:  
 
-||  
+|Value|
 |-|  
 |CDUnknown|  
 |CDFullCompliant|  

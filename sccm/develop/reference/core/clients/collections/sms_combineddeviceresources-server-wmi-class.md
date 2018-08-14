@@ -268,7 +268,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Used by the Exchange connector. Possible values are:  
 
-||  
+|Value|
 |-|  
 |Allowed|  
 |Blocked|  
