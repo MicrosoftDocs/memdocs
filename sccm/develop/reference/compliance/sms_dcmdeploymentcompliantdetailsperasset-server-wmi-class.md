@@ -275,7 +275,7 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Represents the state of the rule reported by the asset. Possible values are:  
 
-||  
+|Value|
 |-|  
 |Compliant|  
 |Non-compliant|  
@@ -291,7 +291,7 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Represents the sub state of the rule reported by the asset. Possible values are:  
 
-||  
+|Value|
 |-|  
 |Not-Applicable|  
 |Not-Detected|  

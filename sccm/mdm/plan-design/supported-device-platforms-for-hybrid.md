@@ -1,8 +1,8 @@
 ---
-title: "Supported Device Platforms for hybrid MDM"
-titleSuffix: "Configuration Manager"
-description: "Supported Device Platforms for hybrid MDM."
-ms.date: 09/22/2017
+title: Supported Device Platforms for hybrid MDM
+titleSuffix: Configuration Manager
+description: Supported device platforms for hybrid MDM.
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,7 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Supported Device Platforms for hybrid MDM
+
+# Supported device platforms for hybrid MDM
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -19,4 +20,9 @@ Mobile device management with Configuration Manager using Microsoft Intune suppo
 
 [!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-You can only use one management solution, the mobile device management authority, to manage your mobile devices. Before making this setting you should [choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](../understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
+> [!Important]  
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
+
+You can only use one management solution, the mobile device management authority, to manage your mobile devices. Intune on Azure is Microsoft's recommended MDM solution. 
+
