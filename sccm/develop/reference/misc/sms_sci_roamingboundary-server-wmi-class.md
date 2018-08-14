@@ -119,7 +119,7 @@ Class SMS_SCI_RoamingBoundary : SMS_SiteControlItem
 
  Type of the roaming boundary. Possible values are:  
 
-||  
+|Value|
 |-|  
 |IP Subnets|  
 |AD Site Name|  

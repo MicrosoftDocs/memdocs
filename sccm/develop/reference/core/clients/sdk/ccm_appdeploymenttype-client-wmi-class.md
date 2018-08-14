@@ -78,7 +78,7 @@ Class CCM_AppDeploymentType : CCM_SoftwareBase
 
  Applicability state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |Unknown|  
 |Applicable|  
@@ -192,7 +192,7 @@ Class CCM_AppDeploymentType : CCM_SoftwareBase
 
  Installation state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |NotInstalled|  
 |Unknown|  
@@ -255,7 +255,7 @@ Class CCM_AppDeploymentType : CCM_SoftwareBase
 
  Post installation action. Possible values are:   
 
-||  
+|Value|
 |-|  
 |NoAction|  
 |BasedOnExitCode|  
@@ -290,7 +290,7 @@ Class CCM_AppDeploymentType : CCM_SoftwareBase
 
  Resolved state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |None|  
 |NotInstalled|  
@@ -324,7 +324,7 @@ Class CCM_AppDeploymentType : CCM_SoftwareBase
 
  Supersession state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |Unknown|  
 |None|  

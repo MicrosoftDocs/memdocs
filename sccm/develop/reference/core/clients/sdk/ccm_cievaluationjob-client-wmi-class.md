@@ -91,7 +91,7 @@ Class CCM_CIEvaluationJob :
 
  Job state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |Idle|  
 |Evaluating|  
@@ -126,7 +126,7 @@ Class CCM_CIEvaluationJob :
 
  Job type. Possible values are:   
 
-||  
+|Value|
 |-|  
 |DesiredConfiguration|  
 |ApplicationManagement|  
