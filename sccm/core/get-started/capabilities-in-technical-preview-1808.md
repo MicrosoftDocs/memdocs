@@ -39,10 +39,13 @@ Steps to workaround, if any.
 **The following sections describe the new features to try out in this version:**  
 
 
-## <a name="bkmk_anchor"></a> Feature
-<!--TFSID-->
+[!INCLUDE [Phased deployment of software updates](includes/1358146.md)]
 
-Blurb
+
+[!INCLUDE [Improvements to repair applications](includes/1357866.md)]
+
+
+[!INCLUDE [Improvements to Community Hub](includes/1358926.md)]
 
 
 
