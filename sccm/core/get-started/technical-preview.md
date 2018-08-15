@@ -121,7 +121,9 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical Preview version 1808
 
-- [Feature](capabilities-in-technical-preview-1808.md#bkmk_anchor) <!--TFSID-->
+- [Phased deployment of software updates](#) <!--1358146-->
+- [Improvements to repair applications](#) <!--1357866-->
+- [Improvements to Community Hub](#) <!--1358926-->
 
 
 > [!Note]  
