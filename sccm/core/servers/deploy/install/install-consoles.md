@@ -79,14 +79,14 @@ Administrators use the Configuration Manager console to manage the Configuration
   |/uninstall|Uninstalls the Configuration Manager console. Specify this option first when you use it with the **/q** option.|  
   |LangPackDir|Specifies the path to the folder that contains the language files. You can use **Setup Downloader** to download the language files. If you do not use this option, Setup looks for the language folder in the current folder. If the language folder is not found, Setup continues to install English only. For more information, see [Setup Downloader](setup-downloader.md).|  
   |TargetDir|Specifies the installation folder to install the Configuration Manager console. This option is required when you use the **/q** option.|  
-  |EnableSQM|Specifies whether to join the Customer Experience Improvement Program (CEIP). Use a value of **1** to join the CEIP, and a value of **0** to not join the program. This option is required when you use the **/q** option.</br></br>Note: Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.|  
+  |EnableSQM|Specifies whether to join the Customer Experience Improvement Program (CEIP). Use a value of **1** to join the CEIP, and a value of **0** to not join the program. This option is required when you use the **/q** option.</br></br>Note: Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.  Using the parameter will cause the install to fail.|  
   |DefaultSiteServerName|Specifies the FQDN of the site server to which the console connects when it opens. This option is required when you use the **/q** option.|  
 
 
   ### Examples
+  **For version 1802 and newer do NOT include the EnableSQM parameter**
+  -  `ConsoleSetup.exe /q TargetDir="%ProgramFiles%\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com`
 
-  -  `consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com`  
+  -  `ConsoleSetup.exe /q TargetDir="C:\Program Files\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com EnableSQM=1  LangPackDir=C:\Downloads\ConfigMgr`  
 
-  -  `consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr Console" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com`  
-
-  -  `consolesetup.exe /uninstall /q`  
+  -  `ConsoleSetup.exe /uninstall /q`  
