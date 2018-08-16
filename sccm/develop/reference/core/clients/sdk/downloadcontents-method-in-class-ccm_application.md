@@ -57,7 +57,7 @@ uint32 DownloadContents
 
  Priority. Possible values are:   
 
-||  
+|Value|
 |-|  
 |Foreground|  
 |High|  

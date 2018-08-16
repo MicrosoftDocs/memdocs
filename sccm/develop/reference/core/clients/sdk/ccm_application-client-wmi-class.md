@@ -104,7 +104,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Applicability state. Possible values are:   
 
-||  
+|Value|
 |-|  
 |Unknown|  
 |Applicable|  
@@ -119,7 +119,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Configure state. Possible values are:   
 
-||  
+|Value|
 |-|  
 |NotNeeded|  
 |NotConfigured|  
@@ -298,7 +298,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Installation state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |NotInstalled|  
 |Unknown|  
@@ -425,7 +425,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Resolved state.    
 
-||  
+|Value|
 |-|  
 |None|  
 |NotInstalled|  
@@ -469,7 +469,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Supersession state. Possible values are:    
 
-||  
+|Value|
 |-|  
 |Unknown|  
 |None|  

@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 08/01/2018
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -17,6 +17,10 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.     
+
+> [!Important]  
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
 
 > [!Note]    
 > Intune on Azure is Microsoft's recommended MDM solution.     
@@ -41,6 +45,13 @@ Each section of this article lists hybrid features under three different categor
 ## July 2018
 
 ### New in Microsoft Intune
+
+#### Updated Intune App SDK for Android is now available
+<!--2744271-->
+An updated version of the Intune App SDK for Android is available to support the Android 9 Pie release. If you're an app developer and use the Intune SDK for Android, install the updated version of the Intune app SDK. This update makes sure that Intune functionality within your Android apps continue to work as expected on Android 9 Pie devices. This version of the Intune App SDK provides a built-in plugin that performs the SDK updates. You don't need to rewrite any existing code that's integrated. For more information, see [Intune SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android). 
+
+If you're using the old badging style for Intune, switch to use the briefcase icon. For more information on branding, see the [Intune App Badging System](https://github.com/msintuneappsdk/intune-app-partner-badge).
+
 
 #### Support for security enhancement in Intune service
 <!--2520152-->

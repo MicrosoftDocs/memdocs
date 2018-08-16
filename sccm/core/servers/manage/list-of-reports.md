@@ -45,7 +45,7 @@ The following two reports are listed under the **Alerts** category.
 
 
 ## Asset Intelligence  
-The following 62 reports are listed under the **Asset Intelligence** category.  
+The following 66 reports are listed under the **Asset Intelligence** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -111,6 +111,10 @@ The following 62 reports are listed under the **Asset Intelligence** category.
 |**Software 14A - Search for software identification tag enabled software**|Displays a count of installed software with a software identification tag enabled.|  
 |**Software 14B - Computers with specific software identification tag enabled software installed**|Displays all computers that have installed software with a specified software identification tag enabled.|  
 |**Software 14C - Installed software identification tag enabled software on a specific computer**|Displays all installed software with a specified software identification tag enabled on a specified computer.|  
+|**Lifecycle 01A - Computers with a specific software product**|View a list of computers on which a specified product is detected.|
+|**Lifecycle 02A - List of machines with expired products in the organization**|View computers that have expired products on them. You can filter this report by product name.|
+|**Lifecycle 03A - List of expired products found in the organization**|View details for products in your environment that have expired lifecycle dates.|
+|**Lifecycle 04A - General Product Lifecycle overview**|View a list of product lifecycles. Filter the list by product name and days to expiration.|
 
 
 
@@ -180,6 +184,18 @@ The following 22 reports are listed under the **Compliance and Settings Manageme
 |**Summary of Users who have Noncompliant Apps**|Displays information about users that have apps installed that are not compliant with a policy you specified.|  
 |**Terms and Conditions acceptance**|Displays Terms and Conditions items and which version each user has accepted.|  
 
+## Data warehouse  
+The following 7 reports are listed under the **Data warehouse** category. 
+
+|Report name|Description|  
+|-----------------|-----------------|  
+|**Application Deployment**|Historical: View details for application deployment for a specific application and machine.|
+|**Endpoint Protection and Software Update Compliance**|Historical: View computers that are missing software updates.|
+|**General Hardware Inventory**|Historical: View all hardware inventory for a specific machine.|
+|**General Software Inventory**|Historical: View all software inventory for a specific machine.|
+|**Infrastructure Health Overview**|Historical: Displays an overview of the health of your Configuration Manager infrastructure.|
+|**List of Malware Detected**|Historical: View malware that has been detected in the organization.|
+|**Software Distribution Summary**|Historical: A summary of software distribution for a specific advertisement and machine.|
 
 
 ## Device Management  
@@ -437,7 +453,6 @@ The following 10 reports are listed under the **Operating System** category.
 |**Services - Services information for a specific computer**|Displays summary information about the services on a specified computer.|  
 |**Windows 10 Servicing details for a specific collection**|Displays general information about Windows 10 servicing for a specific collection.|
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|  
-
 
 
 ## Power Management  
