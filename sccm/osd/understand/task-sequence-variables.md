@@ -1,8 +1,8 @@
 ---
-title: Task sequence variables
+title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/03/2018
+ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -16,126 +16,13 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
- The task sequence engine in the OS deployment feature of Configuration Manager uses many variables to control its behaviors. Use these variables to: 
- - Set conditions on steps
- - Change behaviors for specific steps
- - Use in scripts for more complex actions
+This article is a reference for all of the available variables in alphabetical order. Use the browser **Find** function (typically **CTRL** + **F**) to find a specific variable. The variable notes if it's specific to particular step. The article on [task sequence steps](/sccm/osd/understand/task-sequence-steps) includes the list of variables specific to each step. 
 
-
-## <a name="bkmk_types"></a> Types of variables
-
- There are several types of variables:  
- - [Built-in](#bkmk_built-in)
- - [Action](#bkmk_action)
- - [Custom](#bkmk_custom)
- - [Read-only](#bkmk_read-only)
- - [Array](#bkmk_array)
-
-
-### <a name="bkmk_built-in"></a> Built-in variables
-
- Built-in variables provide information about the environment where the task sequence runs. Their values are available throughout the whole task sequence. Typically, the task sequence engine initializes built-in variables before it runs any steps. 
-
- For example, **\_SMSTSLogPath** is an environment variable that specifies the path to which Configuration Manager components write log files. Any task sequence step can access this environment variable. 
-
- The task sequence evaluates some variables before each step. For example, **\_SMSTSCurrentActionName** lists the name of the current step. 
-
-### <a name="bkmk_action"></a> Action variables
-
- Task sequence action variables specify configuration settings that a single task sequence step uses. By default, the step initializes its settings before it runs. These settings are available only while the associated task sequence step runs. The task sequence adds the action variable value to the environment before it runs the step. It then removes the value from the environment after the step runs.
-
- For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property in the task sequence environment as the **WorkingDirectory** variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the **WorkingDirectory** value. After the step completes, the task sequence removes the value of the **WorkingDirectory** variable from the environment. If the task sequence contains another **Run Command Line** step, it initializes a new **WorkingDirectory** variable. At that time, the task sequence sets the variable to the starting value for the current step.  
-
- The *default* value for an action variable is present when the step runs. If you set a *new* value, it's available to multiple steps in the task sequence. If you override a default value, the new value remains in the environment and overrides the default value for other steps in the task sequence. For example, you add a **Set Task Sequence Variable** step as the first step of the task sequence. This step sets the **WorkingDirectory** variable to `C:\`. Any **Run Command Line** step in the task sequence uses the new starting directory value.  
-
- Some task sequence steps mark certain action variables as *output*. Steps later in the task sequence read these output variables.
-
- > [!Note]  
- > Not all task sequence steps have action variables. For example, although there are variables associated with the **Enable BitLocker** action, there are no variables associated with the **Disable BitLocker** action.  
-
-
-### <a name="bkmk_custom"></a> Custom variables
-
- These variables are any that Configuration Manager doesn't create. Initialize your own variables to use as conditions, in command lines, or in scripts. 
-
-
-### <a name="bkmk_read-only"></a> Read-only variables
-
- You can't change the value of some variables, which are read-only. Usually the name begins with an underscore character (\_). The task sequence uses them for its operations, and are visible in the task sequence environment. 
-
- These variables are useful in scripts or command-lines. For example, running a command line and piping the output to a log file in **\_SMSTSLogPath** with the other log files.
-
-
-### <a name="bkmk_array"></a> Array variables
-
- The task sequence stores some variables as an array. Each element in the array represents the settings for a single object. Use these variables when a device has more than one object to configure. The following task sequence steps use array variables:
-
- - [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
-
- - [Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk)  
-
-
-
-## <a name="bkmk_set"></a> How to set variables
-
- For custom variables or those that aren't read-only, there are several methods to initialize and set the value of the variable:  
-
- - [Set Task Sequence Variable](#bkmk_set-ts-step)
- - [Set Dynamic Variables](#bkmk_set-dyn-step)
- - [Collection and device variables](#bkmk_set-coll-var)
- - [TSEnvironment COM object](#bkmk_set-com)
- - [Prestart command](#bkmk_set-prestart)
-
-
-### <a name="bkmk_set-ts-step"></a> Set Task Sequence Variable
-
- Use this step in the task sequence to set a single variable to a single value. 
-
- For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
-
-
-### <a name="bkmk_set-dyn-step"></a> Set Dynamic Variables
-
- Use this step in the task sequence to set one or more task sequence variables. You define rules in this step to determine which variables and values to use. 
-
- For more information, see [Set Dynamic Variables](/sccm/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
-
-
-### <a name="bkmk_set-coll-var"></a> Collection and device variables
-
- Set variables on the properties of a collection or a specific device. 
-
- For more information about device properties, see [How to manage clients](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode).
-
- For more information about collection properties, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections#BKMK_CollProp).
-
- If you set the same variable on a collection, on a device, and during the task sequence, the task sequence engine uses the following order:  
-
- 1. It evaluates collection variables first.  
-
- 2. Device-specific variables override the same variable set on a collection.  
-
- 3. Variables set by any method during the task sequence take precedence over collection or device variables.  
-
-
-### <a name="bkmk_set-com"></a> TSEnvironment COM object
-
- To work with variables from a script, use the **TSEnvironment** object. 
-
- For more information, see [How to use variables in a running task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence) in the Configuration Manager SDK.
-
-
-### <a name="bkmk_set-prestart"></a> Prestart command
-
- The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a task sequence variable for information, or prompt a user for information, and then save it in the task sequence environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command. 
-
- For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).
+For more information, see [Using task sequence variables](/sccm/osd/understand/using-task-sequence-variables).
 
 
 
 ## <a name="bkmk_tsvar"></a> Task sequence variable reference
-
-This reference includes all of the available variables in alphabetical order. Use the browser **Find** function (typically **CTRL** + **F**) to find a specific variable. The variable notes if it's specific to particular step. The article on [task sequence steps](/sccm/osd/understand/task-sequence-steps) includes the list of variables specific to each step. 
 
 
 ### _OSDDetectedWinDir
@@ -1143,16 +1030,6 @@ Use the following variable names to define the properties for the *first* partit
  - `MBR`: Use the master boot record partition style
 
 
-### OSDPreserveDriveLetter
-
- > [!Important]
- > This task sequence variable is deprecated. 
- >
- > During an OS deployment, by default, Windows Setup determines the best drive letter to use (typically C:). 
-
- *Previous behavior*: when applying an image, the OSDPreverveDriveLetter variable determines whether the task sequence uses the drive letter captured in the image file (WIM). Set the value for this variable to `false` to use the location that you specify for the **Destination** setting in the **Apply Operating System** task sequence step. For more information, see [Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
-
-
 ### OSDProductKey
 
  *Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
@@ -1710,3 +1587,32 @@ For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pau
  #### Examples
  - `C:\`  
  - `%SystemRoot%`  
+
+
+
+## Deprecated variables
+
+The following variables are deprecated:
+
+- **OSDAllowUnsignedDriver**: Isn't used when deploying Windows Vista and later operating systems
+- **OSDBuildStorageDriverList**: Only applies to Windows XP and Windows Server 2003
+- **OSDDiskpartBiosCompatibilityMode**: Only needed when deploying Windows XP or Windows Server 2003
+- **OSDInstallEditionIndex**: Not needed post-Windows Vista
+- **OSDPreserveDriveLetter**: For more information, see [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
+
+### OSDPreserveDriveLetter
+
+ > [!Important]
+ > This task sequence variable is deprecated. 
+ >
+ > During an OS deployment, by default, Windows Setup determines the best drive letter to use (typically C:). 
+
+ *Previous behavior*: when applying an image, the OSDPreverveDriveLetter variable determines whether the task sequence uses the drive letter captured in the image file (WIM). Set the value for this variable to `false` to use the location that you specify for the **Destination** setting in the **Apply Operating System** task sequence step. For more information, see [Apply OS image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
+
+
+
+## See also
+
+- [Task sequence steps](/sccm/osd/understand/task-sequence-steps)
+- [Using task sequence variables](/sccm/osd/understand/using-task-sequence-variables)
+- [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks)

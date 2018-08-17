@@ -173,7 +173,7 @@ Peer cache relies on the Configuration Manager client cache to share content. Co
 
 - The peer cache source client updates the last referenced time of content in the cache when a peer downloads it. The client uses this timestamp when it automatically maintains its cache, removing older content first. So it should wait to remove content that peer cache clients more frequently download, if at all.  
 
-- If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables).  
+- If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
 
 - If necessary, when creating the following software, use the option to **Persist content in the client cache**:  
     - Applications
