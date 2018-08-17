@@ -610,6 +610,16 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
  `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`
 
 
+### OSDDoNotLogCommand
+ <!--1358493-->
+ *Starting in version 1806*  
+ *Applies to the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+
+ (input)
+
+ To prevent potentially sensitive data from being displayed or logged, set this variable to `TRUE`. This variable masks the program name in the **smsts.log** during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step.   
+
+
 ### OSDEnableTCPIPFiltering
 
  *Applies to the [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings) step.*
@@ -674,6 +684,7 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
 
 ### OSDInstallDriversAdditionalOptions
 <!--516679/2840016-->
+ *Starting in version 1806*  
  *Applies to the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step.*
 
  (input)
