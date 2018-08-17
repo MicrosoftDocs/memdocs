@@ -24,12 +24,8 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 <!--  Known Issues Template
 ## Known issues 
 
-### <a name="ki_ANCHOR"></a> Known issue title
-<!--bugID--
-Issue description and cause.
+[!INCLUDE [known issue title](includes/known-issue-bugid.md)]
 
-#### Workaround
-Steps to workaround, if any.  
 -->
 
 
@@ -43,9 +39,6 @@ Steps to workaround, if any.
 
 
 [!INCLUDE [Improvements to repair applications](includes/1357866.md)]
-
-
-[!INCLUDE [Improvements to Community Hub](includes/1358926.md)]
 
 
 
