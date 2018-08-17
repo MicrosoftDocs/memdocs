@@ -121,9 +121,8 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical Preview version 1808
 
-- [Phased deployment of software updates](#) <!--1358146-->
-- [Improvements to repair applications](#) <!--1357866-->
-- [Improvements to Community Hub](#) <!--1358926-->
+- [Phased deployment of software updates](capabilities-in-technical-preview-1808.md#bkmk_pod) <!--1358146-->
+- [Improvements to repair applications](capabilities-in-technical-preview-1808.md#bkmk_repair) <!--1357866-->
 
 
 > [!Note]  
