@@ -388,12 +388,23 @@ In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKM
 To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step.   
 
 #### Task sequence variable for DISM parameters when installing drivers
-<!--516679-->
-To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. Enable the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step setting to **Install driver package via running DISM with recurse option**. 
+<!--516679/2840016-->
+***[Updated]***
+To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. 
+
+For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions). 
 
 #### Option to use full disk encryption
 <!--SCCMDocs-pr issue 2671-->
 Both the [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+
+#### Revised documentation for task sequence variables
+***[Updated]***
+ Two new articles are now available for understanding task sequence variables:  
+
+ - [How to use task sequence variables](/sccm/osd/understand/task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+
+ - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
 
 

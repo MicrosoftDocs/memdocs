@@ -672,6 +672,19 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
  An optional user-defined version number to assign to the captured OS image. This version number is stored in the WIM file. This value can be any combination of alphanumeric characters with a maximum length of 32.
 
 
+### OSDInstallDriversAdditionalOptions
+<!--516679/2840016-->
+ *Applies to the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step.*
+
+ (input)
+
+ Specifies additional options to add to the DISM command line when applying a driver package. The task sequence doesn't verify the command-line options. 
+
+ To use this variable, enable the setting, **Install driver package via running DISM with recurse option**, on the **Apply Driver Package** step. 
+
+ For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+
+
 ### OSDJoinAccount
 
  *Applies to the following steps:*
