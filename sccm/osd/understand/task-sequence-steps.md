@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 03/30/2018
+ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,230 +11,303 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Task sequence steps in System Center Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+# Task sequence steps in Configuration Manager
 
-The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+ *Applies to: System Center Configuration Manager (Current Branch)*
 
-The following settings are common to all task sequence steps:
+ The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_ModifyTaskSequence).  
 
-On the **Properties** tab:
- - **Name**: The task sequence editor requires that you specify a short name to describe this step. When you add a new step, the task sequence editor sets the name to the Type by default. The **Name** length cannot exceed 50 characters.
- - **Description**: Optionally, specify more detailed information about this step. The **Description** length cannot exceed 256 characters.
-The rest of this article describes the other settings on the **Properties** tab for each task sequence step.
+ The following settings are common to all task sequence steps:
 
-On the **Options** tab:  
--   **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor. 
--   **Continue on error**: The task sequence continues if an error occurs while running the step.  
--   **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step.   
-The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
+#### Properties tab
+ - **Name**: The task sequence editor requires that you specify a short name to describe this step. When you add a new step, the task sequence editor sets the name to the Type by default. The **Name** length can't exceed 50 characters.  
+
+ - **Description**: Optionally, specify more detailed information about this step. The **Description** length can't exceed 256 characters.  
+
+ The rest of this article describes the other settings on the **Properties** tab for each task sequence step.
+
+#### Options tab  
+
+ - **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor.  
+
+ - **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
+
+ - **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables #bkmk_access-condition).   
+
+ The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
 
 
 
 ##  <a name="BKMK_ApplyDataImage"></a> Apply Data Image   
+
  Use this step to copy the data image to the specified destination partition.  
 
- This step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
+ This step runs only in Windows PE. It doesn't run in the full OS. 
 
-In the task sequence editor, click **Add**, select **Images**, and select **Apply Data Image** to add this step. 
+ Use the following task sequence variables with this step:
+ - [OSDDataImageIndex](/sccm/osd/understand/task-sequence-variables#OSDDataImageIndex)
+ - [OSDWipeDestinationPartition](/sccm/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)
+
+ To add this step in the task sequence editor, click **Add**, select **Images**, and select **Apply Data Image**. 
+
 
 ### Properties  
+
  On the **Properties** tab for this step, configure the settings described in this section.  
 
- **Image Package**  
- Click **Browse** to specify the **Image Package** used by this task sequence. Select the package you want to install in the **Select a Package** dialog box. The associated property information for each existing image package is displayed at the bottom of the **Select a Package** dialog box. Use the drop-down list to select the **Image** you want to install from the selected **Image Package**.  
+#### Image Package  
+ Click **Browse** to specify the **Image Package** used by this task sequence. Select the package you want to install in the **Select a Package** dialog box. The bottom of the dialog box displays the associated property information for each existing image package. Use the drop-down list to select the **Image** you want to install from the selected **Image Package**.  
 
-> [!NOTE]  
->  This task sequence action treats the image as a data file. This action does not do any setup to boot the image as an operating system.  
+ > [!NOTE]  
+ >  This task sequence action treats the image as a data file. This action doesn't do any setup to boot the image as an OS.  
 
- **Destination**  
+#### Destination  
  Configure one of the following options:
 
--   **Next available partition**: Use the next sequential partition that an **Apply Operating System** or **Apply Data Image** action in this task sequence has not already targeted.  
+ - **Next available partition**: Use the next sequential partition that an **Apply Operating System** or **Apply Data Image** step in this task sequence has not already targeted.  
 
--   **Specific disk and partition**: Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
+ - **Specific disk and partition**: Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
 
--   **Specific logical drive letter**: Specify the **Drive Letter** assigned to the partition by Windows PE. This drive letter can be different from the drive letter that the newly deployed operating system assigns.  
+ - **Specific logical drive letter**: Specify the **Drive Letter** that Windows PE assigns to the partition. This drive letter can be different from the drive letter assigned by the newly deployed OS.  
 
--   **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
+ - **Logical drive letter stored in a variable**: Specify the task sequence variable that contains the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.  
 
-**Delete all content on the partition before applying the image**  
- Specifies that the task sequence deletes all files on the target partition before installing the image. By not deleting the content of the partition, this step can be used to apply additional content to a previously targeted partition.  
+#### Delete all content on the partition before applying the image  
+ Specifies that the task sequence deletes all files on the target partition before installing the image. By not deleting the content of the partition, this action can be used to apply additional content to a previously targeted partition.  
 
 
 
 ##  <a name="BKMK_ApplyDriverPackage"></a> Apply Driver Package  
- Use this step to download all of the drivers in the driver package and install them on the Windows operating system.
+
+ Use this step to download all of the drivers in the driver package and install them on the Windows OS.
 
  The **Apply Driver Package** task sequence step makes all device drivers in a driver package available for use by Windows. Add this step between the **Apply Operating System** and **Setup Windows and ConfigMgr** steps to make the drivers in the package available to Windows. Typically, the **Apply Driver Package** step is placed after the **Auto Apply Drivers** task sequence step. The **Apply Driver Package** task sequence step is also useful with stand-alone media deployment scenarios.  
 
- Ensure that similar device drivers are put into a driver package and distribute them to the appropriate distribution points. After they are distributed, Configuration Manager client computers can install them. For example, put all drivers from one manufacturer into a driver package. Then distribute the package to distribution points where the associated computers can access them.
+ Put similar device drivers into a driver package, and distribute them to the appropriate distribution points. For example, put all drivers from one manufacturer into a driver package. Then distribute the package to distribution points where the associated computers can access them.
 
- The **Apply Driver Package** step is useful for stand-alone media. This step is also useful if you want to install a specific set of drivers. These types of drivers include devices that will not be detected in a plug-and-play scan, such as network printers.  
+ The **Apply Driver Package** step is useful for stand-alone media. This step is also useful to install a specific set of drivers. These types of drivers include devices that Windows plug-and-play doesn't detect, such as network printers.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Driver Package Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyDriverPackage).  
+ This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
 
-In the task sequence editor, click **Add**, select **Drivers**, and select **Apply Driver Package** to add this step. 
+ Use the following task sequence variables with this step:
+ - [OSDApplyDriverBootCriticalContentUniqueID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalContentUniqueID)
+ - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)
+ - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)
+ - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)
+ - [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (starting in version 1806)
+
+ To add this step in the task sequence editor, click **Add**, select **Drivers**, and select **Apply Driver Package**. 
+
 
 ### Properties  
+
  On the **Properties** tab for this step, configure the settings described in this section.  
 
- **Driver package**  
- Specify the driver package that contains the needed device drivers by clicking **Browse** and launching the **Select a Package** dialog box. Specify an existing package to be made available. The associated package properties are displayed at the bottom of the dialog box.  
+#### Driver package
+ Specify the driver package that contains the needed device drivers. Click **Browse** to launch the **Select a Package** dialog box. Select an existing driver package to apply. The bottom of the dialog box displays the associated package properties.  
 
- **Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems**  
- Specify any mass storage drivers needed to install a classic operating system.  
+#### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
+ Specify any mass storage drivers needed to install a classic OS.  
 
- **Driver**  
- Select the mass storage driver file to install before setup of a classic operating system. The drop-down list populates from the specified package.  
+#### Driver
+ Select the mass storage driver file to install before setup of a classic OS. The drop-down list populates from the specified package.  
 
- **Model**  
- Specify the boot-critical device that is needed for pre-Windows Vista operating system deployments.  
+#### Model  
+ Specify the boot-critical device that is needed for pre-Windows Vista OS deployments.  
 
- **Do unattended installation of unsigned drivers on version of Windows where this is allowed**  
+#### Do unattended installation of unsigned drivers on version of Windows where this is allowed**  
  This option allows Windows to install drivers without a digital signature.  
 
 
 
 ##  <a name="BKMK_ApplyNetworkSettings"></a> Apply Network Settings   
+
  Use this step to specify the network or workgroup configuration information for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** action.  
 
- This task sequence step runs in either a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings).  
+ This task sequence step runs in either the full OS or Windows PE. 
 
- In the task sequence editor, click **Add**, select **Settings**, and select **Apply Network Settings** to add this step. 
+ Use the following task sequence variables with this step:
+ - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)
+ - [OSDAdapterCount](/sccm/osd/understand/task-sequence-variables#OSDAdapterCount)
+ - [OSDDNSDomain](/sccm/osd/understand/task-sequence-variables#OSDDNSDomain)
+ - [OSDDNSSuffixSearchOrder](/sccm/osd/understand/task-sequence-variables#OSDDNSSuffixSearchOrder)
+ - [OSDDomainName](/sccm/osd/understand/task-sequence-variables#OSDDomainName)
+ - [OSDDomainOUName](/sccm/osd/understand/task-sequence-variables#OSDDomainOUName)
+ - [OSDEnableTCPIPFiltering](/sccm/osd/understand/task-sequence-variables#OSDEnableTCPIPFiltering)
+ - [OSDJoinAccount](/sccm/osd/understand/task-sequence-variables#OSDJoinAccount)
+ - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)
+ - [OSDWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDWorkgroupName)
+
+ To add this step in the task sequence editor, click **Add**, select **Settings**, and select **Apply Network Settings**. 
+
 
 ### Properties  
+
  On the **Properties** tab for this step, configure the settings described in this section.  
 
- **Join a workgroup**  
- Select this option to have the destination computer join the specified workgroup. Enter the name of the workgroup on the **Workgroup** line. This value can be overridden by the value that is captured by the **Capture Network Settings** task sequence step.  
+#### Join a workgroup
+ Select this option to have the destination computer join the specified workgroup. Enter the name of the workgroup on the **Workgroup** line. The value that the **Capture Network Settings** task sequence step captures can override this value. 
 
- **Join a domain**  
- Select this option to have the destination computer join the specified domain. Specify or browse to the domain, such as *fabricam.com*. Specify or browse to a Lightweight Directory Access Protocol (LDAP) path for an organizational unit. For example: *LDAP//OU=computers, DC=Fabricam.com, C=com*  
+#### Join a domain
+ Select this option to have the destination computer join the specified domain. Specify or browse to the domain, such as `fabricam.com`. Specify or browse to a Lightweight Directory Access Protocol (LDAP) path for an organizational unit. For example: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
- **Account**  
- Click **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box you can enter the user name using the following format: **Domain\User**.  
+#### Account
+ Click **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account). 
 
- **Adapter settings**  
- Specify network configurations for each network adapter in the computer. Click **New** to open the **Network Settings** dialog box, and then specify the network settings. If you also use the **Capture Network Settings** step, the task sequence applies the previously captured settings to the network adapter. The task sequence does not apply the settings you specify in this step. If the task sequence did not previously capture network settings, it applies the settings specified in the **Apply Network Settings** step. The task sequence applies these settings to network adapters in Windows device enumeration order.  
+#### Adapter settings  
+ Specify network configurations for each network adapter in the computer. Click **New** to open the **Network Settings** dialog box, and then specify the network settings. 
+ - If you also use the **Capture Network Settings** step, the task sequence applies the previously captured settings to the network adapter. 
+ - If the task sequence didn't previously capture network settings, it applies the settings you specify in this step. 
+ - The task sequence applies these settings to network adapters in Windows device enumeration order.  
+ - The task sequence doesn't immediately apply the settings you specify in this step to the computer. 
 
 
 
 ##  <a name="BKMK_ApplyOperatingSystemImage"></a> Apply Operating System Image  
 
-> [!TIP]  
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+ > [!TIP]  
+ > Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
 
- Use this step to install an operating system on the destination computer. This step performs actions depending on whether it uses an OS image or an OS upgrade package.  
+ Use this step to install an OS on the destination computer. 
 
+ > [!NOTE]  
+ >  The **Setup Windows and ConfigMgr** step starts the installation of Windows. 
+
+ After the **Apply Operating System** action runs, it sets the **OSDTargetSystemDrive** variable to the drive letter of the partition containing the OS files.  
+
+ This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
+
+ Use the following task sequence variables with this step:
+ - [OSDConfigFileName](/sccm/osd/understand/task-sequence-variables#OSDConfigFileName)
+ - [OSDImageIndex](/sccm/osd/understand/task-sequence-variables#OSDImageIndex)
+ - [OSDTargetSystemDrive](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemDrive)
+
+ To add this step in the task sequence editor, click **Add**, select **Images**, and select **Apply Operating System Image**. 
+
+ This step performs actions depending on whether it uses an OS image or an OS upgrade package.  
+
+ #### OS image actions
  The **Apply Operating System Image** step performs the following actions when using an OS image:  
 
-1.  Delete all content on the targeted volume, except files in the folder the &#95;SMSTSUserStatePath variable specifies.
+ 1.  Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
 
-2.  Extract the contents of the specified .wim file to the specified destination partition.  
+ 2.  Extract the contents of the specified .wim file to the specified destination partition.  
 
-3.  Prepare the answer file:  
+ 3.  Prepare the answer file:  
 
-    1.  Create a new default Windows Setup answer file (sysprep.inf or unattend.xml) for the operating system that is being deployed.  
+    1.  Create a new default Windows Setup answer file (sysprep.inf or unattend.xml) for the deployed OS.  
 
     2.  Merge any values from the user-supplied answer file.  
 
-4.  Copy Windows boot loaders into the active partition.  
+ 4.  Copy Windows boot loaders into the active partition.  
 
-5.  Set the boot.ini or the Boot Configuration Database (BCD) to reference the newly installed operating system.  
+ 5.  Set the boot.ini or the Boot Configuration Database (BCD) to reference the newly installed OS.  
 
+#### OS upgrade package actions
  The **Apply Operating System Image** step performs the following actions when using an OS upgrade package:  
 
-1.  Delete all content on the targeted volume, except files in the folder the &#95;SMSTSUserStatePath variable specifies.  
+ 1.  Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
 
-2.  Prepare the answer file:  
+ 2.  Prepare the answer file:  
 
     1.  Create a fresh answer file with standard values created by Configuration Manager.  
 
     2.  Merge any values from the user-supplied answer file.  
 
-> [!NOTE]  
->  The **Setup Windows and ConfigMgr** step starts the installation of Windows. 
-
- After the **Apply Operating System** action runs, the OSDTargetSystemDrive variable is set to the drive letter of the partition containing the operating system files.  
-
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyOperatingSystem).  
-
- In the task sequence editor, click **Add**, select **Images**, and select **Apply Operating System Image** to add this step. 
 
 ### Properties  
+
  On the **Properties** tab for this step, configure the settings described in this section.  
 
- **Apply operating system from a captured image**  
- Installs an operating system image that has previously been captured. Click **Browse** to open the **Select a package** dialog box, and then select the existing image package you want to install. If multiple images are associated with the specified **Image package**, use the drop-down list to specify the associated image to use for this deployment. You can view basic information about each existing image by clicking on the image.  
+#### Apply operating system from a captured image
+ Installs an OS image that you captured. Click **Browse** to open the **Select a package** dialog box. Then select the existing image package you want to install. If multiple images are associated with the specified **Image package**, select from the drop-down list the associated image to use for this deployment. You can view basic information about each existing image by clicking on it.  
 
- **Apply operating system image from an original installation source**  
- Installs an operating system using an original installation source. Click **Browse** to open the **Select and Operating System Install Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by clicking on the image source. The associated image source properties are displayed in the results pane at the bottom of the dialog box. If there are multiple editions associated with the specified package, use the drop-down list to specify the associated **Edition** that is used.  
+#### Apply operating system image from an original installation source
+ Installs an OS using an OS upgrade package, which is also an original installation source. Click **Browse** to open the **Select and Operating System Install Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by clicking on it. The results pane at the bottom of the dialog box displays the associated image source properties. If there are multiple editions associated with the specified package, use the drop-down list to select the **Edition** you want to use.  
 
- **Use an unattended or sysprep answer file for a custom installation**  
- Use this option to provide a Windows setup answer file (**unattend.xml**, **unattend.txt**, or **sysprep.inf**) depending on the operating system version and installation method. The file you specify can include any of the standard configuration options supported by Windows answer files. For example, you can use it to specify the default Internet Explorer home page. Specify the package that contains the answer file and the associated path to the file in the package.  
+#### Use an unattended or sysprep answer file for a custom installation
+ Use this option to provide a Windows setup answer file (**unattend.xml**, **unattend.txt**, or **sysprep.inf**) depending on the OS version and installation method. The file you specify can include any of the standard configuration options supported by Windows answer files. For example, you can use it to specify the default Internet Explorer home page. Specify the package that contains the answer file and the associated path to the file in the package.  
 
-> [!NOTE]  
->  The Windows setup answer file that you supply can contain embedded task sequence variables of the form %*varname*%, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step substitutes the %*varname*% string for the actual variable values. These embedded task sequence variables cannot be used in numeric-only fields in an unattend.xml answer file.  
+ > [!NOTE]  
+ >  The Windows setup answer file that you supply can contain embedded task sequence variables of the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step substitutes the variable string for the actual value of the variable. You can't use these embedded task sequence variables in numeric-only fields in an unattend.xml answer file.  
 
- If you do not supply a Windows setup answer file, this task sequence action automatically generates an answer file.  
+ If you don't supply a Windows setup answer file, the task sequence automatically generates an answer file.  
 
- **Destination**  
+#### Destination  
  Configure one of the following options:  
 
--   **Next available partition**: Use the next sequential partition that an **Apply Operating System** or **Apply Data Image** action in this task sequence has not already targeted. 
+ - **Next available partition**: Use the next sequential partition not already targeted by an **Apply Operating System** or **Apply Data Image** step in this task sequence.  
 
--   **Specific disk and partition**: Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
+ - **Specific disk and partition**: Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
 
--   **Specific logical drive letter**: Specify the **Drive Letter** assigned to the partition by Windows PE. This drive letter can be different from the drive letter that the newly deployed operating system assigns.  
+ - **Specific logical drive letter**: Specify the **Drive Letter** assigned to the partition by Windows PE. This drive letter can be different from the drive letter assigned by the newly deployed OS.  
 
--   **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
+ - **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.  
+
 
 ### Options  
+
  Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
--   **Access content directly from the distribution point**  
-     Configure the task sequence to access the operating system image directly from the distribution point. For example, use this option when you deploy operating systems to embedded devices that have limited storage capacity. When selecting this option, also configure the package share settings on the **Data Access** tab of the package properties.  
+#### Access content directly from the distribution point
+ Configure the task sequence to access the OS image directly from the distribution point. For example, use this option when you deploy operating systems to embedded devices that have limited storage capacity. When selecting this option, also configure the package share settings on the **Data Access** tab of the OS image properties.  
 
-    > [!NOTE]  
-    >  This setting overrides the deployment option that you configure on the **Distribution Points** page in the **Deploy Software Wizard**. This override is only for the OS image that this step specifies, not for all task sequence content.  
+ > [!NOTE]  
+ >  This setting overrides the deployment option that you configure on the **Distribution Points** page in the **Deploy Software Wizard**. This override is only for the OS image that this step specifies, not for all task sequence content.  
 
 
 
 ##  <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings  
- Use this step to configure the Windows settings for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** action.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings).  
+ Use this step to configure the Windows settings for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** step.  
 
- In the task sequence editor, click **Add**, select **Settings**, and select **Apply Windows Settings** to add this step. 
+ This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
+
+ Use the following task sequence variables with this step:
+ - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-input)
+ - [OSDLocalAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDLocalAdminPassword)
+ - [OSDProductKey](/sccm/osd/understand/task-sequence-variables#OSDProductKey)
+ - [OSDRandomAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDRandomAdminPassword)
+ - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-input)
+ - [OSDRegisteredUserName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredUserName)
+ - [OSDServerLicenseConnectionLimit](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseConnectionLimit)
+ - [OSDServerLicenseMode](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseMode)
+ - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-input)
+
+ To add this step in the task sequence editor, click **Add**, select **Settings**, and select **Apply Windows Settings**. 
+
 
 ### Properties  
+
  On the **Properties** tab for this step, configure the settings described in this section.  
 
- **User name**  
- Specify the registered user name that is associated with the destination computer. This value can be overridden by the value that is captured by the **Capture Windows Settings** task sequence action.  
+#### User name
+ Specify the registered user name to associate with the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
- **Organization name**  
- Specify the registered organization name that is associated with the destination computer. This value can be overridden by the value that is captured by the **Capture Windows Settings** task sequence action.  
+#### Organization name
+ Specify the registered organization name to associate with the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
- **Product key**  
- Specify the product key that is used for the Windows installation on the destination computer.  
+#### Product key  
+ Specify the product key to use for the Windows installation on the destination computer.  
 
- **Server licensing**  
- Specify the server licensing mode. You can select **Per server** or **Per user** as the licensing mode. If you select **Per server**, also specify the maximum number of connections permitted per your license agreement. Select **Do not specify** if the destination computer is not a server or you do not want to specify the licensing mode.  
+#### Server licensing  
+ Specify the server licensing mode. 
+ - Select **Per server** or **Per user** as the licensing mode.  
+ - If you select **Per server**, also specify the maximum number of connections permitted per your license agreement.  
+ - If the destination computer isn't a server, or you don't want to specify the licensing mode, select **Do not specify**.   
 
- **Maximum connections**  
+#### Maximum connections
  Specify the maximum number of connections that are available for this computer as stated in your license agreement.  
 
- **Randomly generate the local administrator password and disable the account on all supported platforms (recommended)**  
+#### Randomly generate the local administrator password and disable the account on all supported platforms (recommended)  
  Select this option to set the local administrator password to a randomly-generated string. This option also disables the local administrator account on platforms that support this capability.  
 
- **Enable the account and specify the local administrator password**  
+#### Enable the account and specify the local administrator password  
  Select this option to enable the local administrator account using the specified password. Enter the password on the **Password** line and confirm the password on the **Confirm password** line.  
 
- **Time Zone**  
- Specify the time zone to configure on the destination computer. This value can be overridden by the value that is captured by the **Capture Windows Settings** task sequence step.  
+#### Time Zone
+ Specify the time zone to configure on the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
 
 
