@@ -380,8 +380,10 @@ These task sequences can be for OS deployment or custom. It's also supported for
 ### Other improvements to OS deployment
 
 #### Mask sensitive data stored in task sequence variables
-<!--1358330-->
-In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password. 
+ <!--1358330-->
+ ***[Updated]*** In the **Set Task Sequence Variable** step, select the new option to **Do not display this value**. 
+
+ For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
 
 #### Mask program name during Run Command Step of a task sequence
  <!--1358493-->

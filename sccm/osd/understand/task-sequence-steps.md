@@ -1285,7 +1285,7 @@ manager: dougeby
  This step can be run in the full OS or Windows PE.   
 
  Use the following task sequence variables with this step:
- - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)
+ - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->
  - [SMSTSDisableWow64Redirection](/sccm/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)
  - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)
  - [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)
@@ -1484,7 +1484,9 @@ manager: dougeby
 
  Use this step to set the value of a variable that's used with the task sequence.  
 
- This step can be run in either the full OS or Windows PE. Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables, see the following articles:
+ This step can be run in either the full OS or Windows PE. 
+
+ Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables and how to use them, see the following articles:
 - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables)
 - [Task sequence variables](/sccm/osd/understand/task-sequence-variables)  
 
@@ -1497,6 +1499,10 @@ manager: dougeby
 
 #### Task sequence variable
  Specify the name of a task sequence built-in or action variable, or specify your own user-defined variable name.  
+
+#### Do not display this value
+<!--1358330-->
+Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password. 
 
 #### Value  
  The task sequence sets the variable to this value. Set this task sequence variable to the value of another task sequence variable with the syntax `%varname%`.  
