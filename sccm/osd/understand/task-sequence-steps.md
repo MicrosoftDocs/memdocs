@@ -1015,7 +1015,7 @@ manager: dougeby
  If one of the updates unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.  
 
  > [!NOTE]  
- > Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](task-sequence-built-in-variables.md#SMSTSWaitForSecondReboot).  
+ > Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSWaitForSecondReboot).  
 
 
 
@@ -1413,6 +1413,9 @@ manager: dougeby
 
 
 ##  <a name="child-task-sequence"></a> Run Task Sequence
+
+ > [!Note]  
+ > Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
  Beginning with Configuration Manager version 1710, you can add a new step that runs another task sequence. This step creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
