@@ -1093,6 +1093,10 @@ manager: dougeby
 #### Do not reset activation flag
  Select this option to prevent Sysprep from resetting the product activation flag.  
 
+#### Shutdown the computer after running this action
+ <!--SCCMDocs-pr issue 2695-->
+ This option instructs Sysprep to shutdown the computer instead of its default restart behavior. 
+
 
 
 ##  <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker  
