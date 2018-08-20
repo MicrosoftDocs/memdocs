@@ -17,9 +17,10 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
  The task sequence engine in the OS deployment feature of Configuration Manager uses many variables to control its behaviors. Use these variables to: 
- - Set conditions on steps
- - Change behaviors for specific steps
- - Use in scripts for more complex actions
+ - Set conditions on steps  
+ - Change behaviors for specific steps  
+ - Use in scripts for more complex actions  
+
 
  For a reference of all available task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
 
@@ -28,11 +29,11 @@ manager: dougeby
 ## <a name="bkmk_types"></a> Types of variables
 
  There are several types of variables:  
- - [Built-in](#bkmk_built-in)
- - [Action](#bkmk_action)
- - [Custom](#bkmk_custom)
- - [Read-only](#bkmk_read-only)
- - [Array](#bkmk_array)
+ - [Built-in](#bkmk_built-in)  
+ - [Action](#bkmk_action)  
+ - [Custom](#bkmk_custom)  
+ - [Read-only](#bkmk_read-only)  
+ - [Array](#bkmk_array)  
 
 
 ### <a name="bkmk_built-in"></a> Built-in variables
@@ -74,7 +75,7 @@ manager: dougeby
  - Task sequence variable names aren't case-sensitive. For example, `OSDVAR` and `osdvar` are the same task sequence variable.  
 
  - Task sequence variable names can't begin or end with a space. They also can't have embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
-
+  
  There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 32 MB.  
 
 
@@ -103,13 +104,13 @@ manager: dougeby
 
  For custom variables or variables that aren't read-only, there are several methods to initialize and set the value of the variable:  
 
- - [Set Task Sequence Variable](#bkmk_set-ts-step)
- - [Set Dynamic Variables](#bkmk_set-dyn-step)
- - [Collection and device variables](#bkmk_set-coll-var)
- - [TSEnvironment COM object](#bkmk_set-com)
- - [Prestart command](#bkmk_set-prestart)
- - [Task Sequence Media Wizard](#bkmk_set-media)
-
+ - [Set Task Sequence Variable](#bkmk_set-ts-step)  
+ - [Set Dynamic Variables](#bkmk_set-dyn-step)  
+ - [Collection and device variables](#bkmk_set-coll-var)  
+ - [TSEnvironment COM object](#bkmk_set-com)  
+ - [Prestart command](#bkmk_set-prestart)  
+ - [Task Sequence Media Wizard](#bkmk_set-media)  
+  
  Delete a variable from the environment by using the same methods as creating a variable. To delete a variable, set the variable value to an empty string.  
 
  You can combine methods to set a task sequence variable to different values for the same sequence. For example, set the default values using the task sequence editor, and then set custom values using a script. 
@@ -190,11 +191,11 @@ manager: dougeby
  After you specify the variable and its value by using one of the methods from the previous section, use it in your task sequences. For example, access default values for built-in task sequence variables, or make a step conditional on the value of a variable.  
 
  Use the following methods to access variable values in the task sequence environment:
- - [Use in a step](#bkmk_access-step)
- - [Step condition](#bkmk_access-condition)
- - [Custom script](#bkmk_access-script)
- - [Windows setup answer file](#bkmk_access-answer)
-
+ - [Use in a step](#bkmk_access-step)  
+ - [Step condition](#bkmk_access-condition)  
+ - [Custom script](#bkmk_access-script)  
+ - [Windows setup answer file](#bkmk_access-answer)  
+  
 
 ### <a name="bkmk_access-step"></a> Use in a step
 
@@ -222,10 +223,10 @@ manager: dougeby
     - **Condition**: The condition to evaluate the variable value. For example, **equals**.  
 
     - **Value**: The value of the variable to check. For example, `false`.  
-
+  
  The three examples above form a common condition to test whether the task sequence is running from a boot image in Windows PE: 
 
- **Task Sequence Variable** `_SMSTSInWinPE equals "false"`
+ > **Task Sequence Variable** `_SMSTSInWinPE equals "false"`
 
  See this condition on the **Capture Files and Settings** group of the default task sequence template to install an existing OS image.
 
