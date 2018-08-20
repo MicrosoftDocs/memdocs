@@ -47,9 +47,9 @@ manager: dougeby
 
  Task sequence action variables specify configuration settings that a single task sequence step uses. By default, the step initializes its settings before it runs. These settings are available only while the associated task sequence step runs. The task sequence adds the action variable value to the environment before it runs the step. It then removes the value from the environment after the step runs.
 
- For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property in the task sequence environment as the **WorkingDirectory** variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the **WorkingDirectory** value. After the step completes, the task sequence removes the value of the **WorkingDirectory** variable from the environment. If the task sequence contains another **Run Command Line** step, it initializes a new **WorkingDirectory** variable. At that time, the task sequence sets the variable to the starting value for the current step.  
+ For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property as the **WorkingDirectory** variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the **WorkingDirectory** value. After the step completes, the task sequence removes the value of the **WorkingDirectory** variable from the environment. If the task sequence includes another **Run Command Line** step, it initializes a new **WorkingDirectory** variable. At that time, the task sequence sets the variable to the starting value for the current step. For more information, see [WorkingDirectory](using-task-sequence-variables.md#WorkingDirectory).  
 
- The *default* value for an action variable is present when the step runs. If you set a *new* value, it's available to multiple steps in the task sequence. If you override a default value, the new value remains in the environment and overrides the default value for other steps in the task sequence. For example, you add a **Set Task Sequence Variable** step as the first step of the task sequence. This step sets the **WorkingDirectory** variable to `C:\`. Any **Run Command Line** step in the task sequence uses the new starting directory value.  
+ The *default* value for an action variable is present when the step runs. If you set a *new* value, it's available to multiple steps in the task sequence. If you override a default value, the new value stays in the environment. This new value overrides the default value for other steps in the task sequence. For example, you add a **Set Task Sequence Variable** step as the first step of the task sequence. This step sets the **WorkingDirectory** variable to `C:\`. Any **Run Command Line** step in the task sequence uses the new starting directory value.  
 
  Some task sequence steps mark certain action variables as *output*. Steps later in the task sequence read these output variables.
 
@@ -63,7 +63,7 @@ manager: dougeby
 
  When you specify a name for a new task sequence variable, follow these guidelines:  
 
- - The task sequence variable name that you specify can contain letters, numbers, the underscore character (`_`), and a hyphen (`-`).  
+ - The task sequence variable name can include letters, numbers, the underscore character (`_`), and a hyphen (`-`).  
 
  - Task sequence variable names have a minimum length of one character and a maximum length of 256 characters.  
 
@@ -71,16 +71,16 @@ manager: dougeby
 
  - User-defined variable names can't begin with the underscore character. Only read-only task sequence variables are preceded by the underscore character.  
 
- - Task sequence variable names aren't case sensitive. For example, `OSDVAR` and `osdvar` represent the same task sequence variable.  
+ - Task sequence variable names aren't case-sensitive. For example, `OSDVAR` and `osdvar` are the same task sequence variable.  
 
- - Task sequence variable names can't begin or end with a space. They also can't contain embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
+ - Task sequence variable names can't begin or end with a space. They also can't have embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
 
  There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 32 MB.  
 
 
 ### <a name="bkmk_read-only"></a> Read-only variables
 
- You can't change the value of some variables, which are read-only. Usually the name begins with an underscore character (\_). The task sequence uses them for its operations, and are visible in the task sequence environment. 
+ You can't change the value of some variables, which are read-only. Usually the name begins with an underscore character (\_). The task sequence uses them for its operations. Read-only variables are visible in the task sequence environment. 
 
  These variables are useful in scripts or command-lines. For example, running a command line and piping the output to a log file in **\_SMSTSLogPath** with the other log files.
 
@@ -101,7 +101,7 @@ manager: dougeby
 
 ## <a name="bkmk_set"></a> How to set variables
 
- For custom variables or those that aren't read-only, there are several methods to initialize and set the value of the variable:  
+ For custom variables or variables that aren't read-only, there are several methods to initialize and set the value of the variable:  
 
  - [Set Task Sequence Variable](#bkmk_set-ts-step)
  - [Set Dynamic Variables](#bkmk_set-dyn-step)
@@ -110,11 +110,11 @@ manager: dougeby
  - [Prestart command](#bkmk_set-prestart)
  - [Task Sequence Media Wizard](#bkmk_set-media)
 
- You can delete a variable from the task sequence environment by using the same methods as creating a variable. To delete a variable from the task sequence environment, set the variable value to an empty string.  
+ Delete a variable from the environment by using the same methods as creating a variable. To delete a variable, set the variable value to an empty string.  
 
- You can combine methods to set a task sequence variable to different values for the same sequence. In an advanced scenario, you might set the default values for steps in a sequence using the Task Sequence Editor and then set a custom variable value using the different creation methods. 
+ You can combine methods to set a task sequence variable to different values for the same sequence. For example, set the default values using the task sequence editor, and then set custom values using a script. 
 
- If you set the same variable on a collection, on a device, and during the task sequence, the task sequence engine uses the following order:  
+ If you set the same variable by different methods, the task sequence engine uses the following order:  
 
  1. It evaluates collection variables first.  
 
@@ -125,11 +125,11 @@ manager: dougeby
 
 #### General limitations for task sequence variable values  
 
- - Task sequence variable values cannot exceed 4,000 characters.  
+ - Task sequence variable values can't be more than 4,000 characters.  
 
- - You can't change a read-only task sequence variable. Read-only variables are designated by names that start with an underscore character (`_`).  
+ - You can't change a read-only task sequence variable. Read-only variables have names that start with an underscore character (`_`).  
 
- - Task sequence variable values can be case-sensitive depending on the usage of the value. In most cases, task sequence variable values aren't case sensitive. A variable that contains a password is case-sensitive.  
+ - Task sequence variable values can be case-sensitive depending on the usage of the value. In most cases, task sequence variable values aren't case-sensitive. A variable that includes a password is case-sensitive.  
 
 
 ### <a name="bkmk_set-ts-step"></a> Set Task Sequence Variable
@@ -162,7 +162,7 @@ manager: dougeby
 
 ### <a name="bkmk_set-prestart"></a> Prestart command
 
- The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a task sequence variable for information, or prompt a user for information, and then save it in the task sequence environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command. 
+ The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a variable or prompt the user for information, and then save it in the environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command. 
 
  For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).
 
@@ -187,7 +187,7 @@ manager: dougeby
 
 ## <a name="bkmk_access"></a> How to access variables
 
- After you specify the task sequence variable and its value by using one of the methods from the previous section, you can use the environment variable value in your task sequences. You can access default values for built-in task sequence variables, specify a new value for a variable, or use a custom task sequence variable in a command line or script.  
+ After you specify the variable and its value by using one of the methods from the previous section, use it in your task sequences. For example, access default values for built-in task sequence variables, or make a step conditional on the value of a variable.  
 
  Use the following methods to access variable values in the task sequence environment:
  - [Use in a step](#bkmk_access-step)
@@ -198,9 +198,9 @@ manager: dougeby
 
 ### <a name="bkmk_access-step"></a> Use in a step
 
- Specify a variable value for a setting in a task sequence step. In the task sequence editor, edit the step, and specify the variable name as the field value. Enclose the variable name in percent signs (`%`) to indicate that it's an environment variable. 
+ Specify a variable value for a setting in a task sequence step. In the task sequence editor, edit the step, and specify the variable name as the field value. Enclose the variable name in percent signs (`%`). 
 
- For example, use the variable name as part of the **Command Line** field of the **Run Command Line** task sequence step. The following command line writes the computer name to a text file. 
+ For example, use the variable name as part of the **Command Line** field of the **Run Command Line** step. The following command line writes the computer name to a text file. 
 
  `cmd.exe /c %_SMSTSMachineName% > C:\File.txt`
 
@@ -223,7 +223,7 @@ manager: dougeby
 
     - **Value**: The value of the variable to check. For example, `false`.  
 
- The three examples above together represent a common condition to test whether the task sequence is running from a boot image in Windows PE: 
+ The three examples above form a common condition to test whether the task sequence is running from a boot image in Windows PE: 
 
  **Task Sequence Variable** `_SMSTSInWinPE equals "false"`
 
@@ -232,7 +232,7 @@ manager: dougeby
 
 ### <a name="bkmk_access-script"></a> Custom script
 
- Read and write task sequence variables by using the Microsoft.SMS.TSEnvironment COM object while the task sequence is running.
+ Read and write variables by using the **Microsoft.SMS.TSEnvironment** COM object while the task sequence is running.
 
  The following Windows PowerShell example queries the **_SMSTSLogPath** variable to get the current log location. The script also sets a custom variable.
 
@@ -257,7 +257,7 @@ manager: dougeby
 
 ###  <a name="bkmk_access-answer"></a> Windows setup answer file
 
-The Windows setup answer file that you supply can contain embedded task sequence variables. Use the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step substitutes the variable name string for the actual variable value. These embedded task sequence variables can't be used in numeric-only fields in an unattend.xml answer file.
+The Windows setup answer file that you supply can have embedded task sequence variables. Use the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step replaces the variable name string for the actual variable value. These embedded task sequence variables can't be used in numeric-only fields in an unattend.xml answer file.
 
 For more information, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
 
