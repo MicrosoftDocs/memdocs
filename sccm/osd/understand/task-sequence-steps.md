@@ -33,7 +33,7 @@ manager: dougeby
 
  - **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
 
- - **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables #bkmk_access-condition).   
+ - **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).   
 
  The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
 
@@ -817,7 +817,7 @@ manager: dougeby
  >  To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio isn't installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.  
 
  > [!NOTE]  
- > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](task-sequence-variables.md).
+ > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
@@ -982,7 +982,7 @@ manager: dougeby
  - [SMSTSWaitForSecondReboot](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)
 
  > [!NOTE]  
- > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](task-sequence-variables.md).  
+ > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
 
  To add this step in the task sequence editor, click **Add**, select **Software**, and select **Install Software Updates**. 
 
@@ -1004,7 +1004,7 @@ manager: dougeby
 
  In most circumstances, use the default setting to use cached scan results. 
 
- The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 30 minutes. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSSoftwareUpdateScanTimeout).
+ The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 30 minutes. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
 
 
 ### Options   
@@ -1015,7 +1015,7 @@ manager: dougeby
  If one of the updates unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.  
 
  > [!NOTE]  
- > Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSWaitForSecondReboot).  
+ > Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot).  
 
 
 
@@ -1649,7 +1649,7 @@ Starting in version 1806, enable this option to mask sensitive data stored in ta
 
  - **Driver package**: Click **Browse** and select an existing driver package from the list.  
 
- - **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
+ - **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
 
 #### Time-out (minutes)
  Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.  
