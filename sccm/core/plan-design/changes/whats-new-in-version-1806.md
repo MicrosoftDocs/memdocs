@@ -403,6 +403,12 @@ These task sequences can be for OS deployment or custom. It's also supported for
 
  For more information see [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker). 
 
+#### Client provisioning mode isn't enabled with Windows 10 upgrade compatibility scan
+ <!--SCCMDocs-pr issue 2812-->
+ ***[Updated]*** Now when you enable the option to **Perform Windows Setup compatibility scan without starting upgrade**, the **Upgrade Operating System** task sequence step doesn't put the Configuration Manager client into provisioning mode.
+
+ For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
+
 #### Revised documentation for task sequence variables
  ***[Updated]*** Two new articles are now available for understanding task sequence variables:  
 

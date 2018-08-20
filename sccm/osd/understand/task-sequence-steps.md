@@ -1652,17 +1652,22 @@ Starting in version 1806, enable this option to mask sensitive data stored in ta
  Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.  
 
 #### Perform Windows Setup compatibility scan without starting upgrade
- Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option. Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
+ Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option. 
 
-|Exit code|Details|  
-|-|-|  
-|MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|  
-|MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility issues.|  
-|MOSETUP_E_COMPAT_MIGCHOICE_BLOCK (0xC1900204)|Selected migration choice isn't available. For example, an upgrade from Enterprise to Professional.|  
-|MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|  
-|MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|  
+ <!--SCCMDocs-pr issue 2812-->
+ Starting in version 1806, when you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. 
 
-For more information about this parameter, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#6).  
+ Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
+
+ |Exit code|Details|  
+ |-|-|  
+ |MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|  
+ |MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility issues.|  
+ |MOSETUP_E_COMPAT_MIGCHOICE_BLOCK (0xC1900204)|Selected migration choice isn't available. For example, an upgrade from Enterprise to Professional.|  
+ |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|  
+ |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|  
+
+ For more information about this parameter, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#6).  
 
 #### Ignore any dismissible compatibility messages
  Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option `/Compat IgnoreWarning`.  
