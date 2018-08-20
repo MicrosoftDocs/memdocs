@@ -736,6 +736,10 @@ manager: dougeby
 
  To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.  
 
+#### Use full disk encryption
+ <!--SCCMDocs-pr issue 2671-->
+ By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+
 #### Choose where to create the recovery key
  To specify for BitLocker to create the recovery password and escrow it in Active Directory, select **In Active Directory**. This option requires that you extend Active Directory for BitLocker key escrow. BitLocker can then save the associated recovery information in Active Directory. Select **Do not create recovery key** to not create a password. Creating a password is the recommended option.  
 
@@ -1101,7 +1105,7 @@ manager: dougeby
 
 ##  <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker  
 
- Use this step to enable BitLocker on a drive while in Windows PE. Only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs. 
+ Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs. 
 
  This step runs only in Windows PE. It doesn't run in the full OS.  
 
@@ -1117,6 +1121,10 @@ manager: dougeby
 
 #### Apply BitLocker to the specified drive
  Specify the drive for which you want to enable BitLocker. BitLocker only encrypts the used space on the drive.  
+
+#### Use full disk encryption
+ <!--SCCMDocs-pr issue 2671-->
+ By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
 
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
  Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine.  

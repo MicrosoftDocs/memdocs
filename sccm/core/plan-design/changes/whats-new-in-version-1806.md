@@ -399,7 +399,9 @@ These task sequences can be for OS deployment or custom. It's also supported for
 
 #### Option to use full disk encryption
  <!--SCCMDocs-pr issue 2671-->
- Both the [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+ ***[Updated]*** Both the **Enable BitLocker** and **Pre-provision BitLocker** steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. 
+
+ For more information see [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker). 
 
 #### Revised documentation for task sequence variables
  ***[Updated]*** Two new articles are now available for understanding task sequence variables:  
