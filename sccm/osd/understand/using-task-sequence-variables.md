@@ -75,7 +75,8 @@ manager: dougeby
  - Task sequence variable names aren't case-sensitive. For example, `OSDVAR` and `osdvar` are the same task sequence variable.  
 
  - Task sequence variable names can't begin or end with a space. They also can't have embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
-  
+
+
  There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 32 MB.  
 
 
@@ -110,7 +111,8 @@ manager: dougeby
  - [TSEnvironment COM object](#bkmk_set-com)  
  - [Prestart command](#bkmk_set-prestart)  
  - [Task Sequence Media Wizard](#bkmk_set-media)  
-  
+
+
  Delete a variable from the environment by using the same methods as creating a variable. To delete a variable, set the variable value to an empty string.  
 
  You can combine methods to set a task sequence variable to different values for the same sequence. For example, set the default values using the task sequence editor, and then set custom values using a script. 
@@ -223,7 +225,8 @@ manager: dougeby
     - **Condition**: The condition to evaluate the variable value. For example, **equals**.  
 
     - **Value**: The value of the variable to check. For example, `false`.  
-  
+
+
  The three examples above form a common condition to test whether the task sequence is running from a boot image in Windows PE: 
 
  > **Task Sequence Variable** `_SMSTSInWinPE equals "false"`
