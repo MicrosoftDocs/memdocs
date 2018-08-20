@@ -193,6 +193,7 @@ manager: dougeby
  - [Use in a step](#bkmk_access-step)
  - [Step condition](#bkmk_access-condition)
  - [Custom script](#bkmk_access-script)
+ - [Windows setup answer file](#bkmk_access-answer)
 
 
 ### <a name="bkmk_access-step"></a> Use in a step
@@ -252,6 +253,13 @@ manager: dougeby
  # Set a custom variable "startTime" to the current time
  $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
  ```
+
+
+###  <a name="bkmk_access-answer"></a> Windows setup answer file
+
+The Windows setup answer file that you supply can contain embedded task sequence variables. Use the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step substitutes the variable name string for the actual variable value. These embedded task sequence variables can't be used in numeric-only fields in an unattend.xml answer file.
+
+For more information, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
 
 
 
