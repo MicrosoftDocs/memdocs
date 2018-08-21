@@ -1,8 +1,8 @@
 ---
 title: Release notes
 titleSuffix: Configuration Manager
-description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article.
-ms.date: 07/30/2018
+description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Support knowledge base article.
+ms.date: 08/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,17 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Release notes for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Knowledge Base article.  
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.  
 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
 > [!TIP]  
->  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../../core/get-started/technical-preview.md)  
+>  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
 
 For information about the new features introduced with different versions, see the following articles:
 - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
@@ -57,6 +58,16 @@ While it has no affect on the outcome of the setup process, include the **JoinCE
 
  > [!Note]  
  > The EnableSQM parameter for [console setup](/sccm/core/servers/deploy/install/install-consoles) is not required.
+
+
+### Cloud service manager component stopped on site server in passive mode
+<!--VSO 2858826, SCCMDocs issue 772-->
+*Applies to: Configuration Manager version 1806*
+
+If the [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) is co-located with a [site server in passive mode](/sccm/core/servers/deploy/configure/site-server-high-availability), then deployment and monitoring of a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) doesn't start. The cloud service manager component (SMS_CLOUD_SERVICES_MANAGER) is in a stopped state.
+
+#### Workaround
+Move the service connection point role to another server.
 
 
 
