@@ -14,9 +14,9 @@ manager: dougeby
 
 # Create a task sequence to capture and restore user state in Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+ *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use Configuration Manager task sequences to capture and restore the user state data in OS deployment scenarios. In these scenarios, you want to retain the user state of the current OS. Depending on the type of task sequence you create, the capture and restore steps might be automatically added as part of the task sequence. In other scenarios, you might need to manually add the capture and restore steps to the task sequence. This article provides the steps that you must add to an existing task sequence to capture and restore user state data.  
+ Use Configuration Manager task sequences to capture and restore the user state data in OS deployment scenarios. In these scenarios, you want to retain the user state of the current OS. Depending on the type of task sequence you create, the capture and restore steps might be automatically added as part of the task sequence. In other scenarios, you might need to manually add the capture and restore steps to the task sequence. This article provides the steps that you must add to an existing task sequence to capture and restore user state data.  
 
 
 
@@ -31,6 +31,7 @@ Use Configuration Manager task sequences to capture and restore the user state d
 - [Restore User State](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState): This step restores the user state data on the destination computer. It can retrieve the data from a state migration point or if hardlinked on the local disk.  
 
 - [Release State Store](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore): If you store the user state on the state migration point, you need this step. This step removes the data from the state migration point.  
+
 
  Use the following procedures to add the task sequence steps needed to capture and restore the user state. For more information about creating a task sequence, see [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).  
 
@@ -63,9 +64,9 @@ Use Configuration Manager task sequences to capture and restore the user state d
 
  To add task sequence steps to restore the user state, use the following steps:
 
-1.  In the **Task Sequence** list, select a task sequence, and then click **Edit**.  
+ 1.  In the **Task Sequence** list, select a task sequence, and then click **Edit**.  
 
-2.  Add the **Restore User State** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Restore User State**. This step establishes a connection to the state migration point if necessary. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Restore User State](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState).  
+ 2.  Add the **Restore User State** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Restore User State**. This step establishes a connection to the state migration point if necessary. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Restore User State](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState).  
 
     > [!Important]  
     >  When you use the [Capture User State](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState) step with the option to **Capture all user profiles with standard options**, you must select the **Restore local computer user profiles** setting in the **Restore User State** step. Otherwise the task sequence will fail.  
@@ -73,7 +74,7 @@ Use Configuration Manager task sequences to capture and restore the user state d
     > [!Note]  
     > If you store the user state by using local hardlinks and the restore isn't successful, you can manually delete the hardlinks that were created to store the data. The task sequence can run the USMTUtils tool to automate this action with a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. If you use USMTUtils to delete the hardlink, add a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step after you run USMTUtils.  
 
-3.  If you're using a state migration point to store the user state, add the **Release State Store** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Release State Store**. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Release State Store](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore).  
+ 3.  If you're using a state migration point to store the user state, add the **Release State Store** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Release State Store**. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Release State Store](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore).  
 
     > [!IMPORTANT]  
     >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step starts.  

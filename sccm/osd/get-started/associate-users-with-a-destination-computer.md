@@ -45,8 +45,9 @@ manager: dougeby
 
  The distribution point or media supports associating users with the destination computer where the OS is deployed. Use one of the following methods: 
 
- - [Configure a distribution point to accept PXE boot requests](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)
- - [Create bootable media](/sccm/osd/deploy-use/create-bootable-media)
- - [Create pre-staged media](/sccm/osd/deploy-use/create-prestaged-media) 
+ - [Configure a distribution point to accept PXE boot requests](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)  
+ - [Create bootable media](/sccm/osd/deploy-use/create-bootable-media)  
+ - [Create pre-staged media](/sccm/osd/deploy-use/create-prestaged-media)  
+
 
  Configuring user device affinity support doesn't have a built-in method to validate the user identity. This behavior is important when a technician is provisioning the computer and enters the information on behalf of the user. In addition to setting how task sequence handles the user information, configuring these options on the distribution point and media provides the ability to restrict the deployments that are started from a PXE boot or from a specific type of media.

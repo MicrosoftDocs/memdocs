@@ -22,13 +22,15 @@ manager: dougeby
 
 ##  <a name="BKMK_TSStepsActions"></a> Task sequence steps and actions  
 
- Steps are the basic components of a task sequence. They can include commands such as: 
+ Steps are the basic components of a task sequence. They can include commands such as:  
    - Configure and capture the OS of a reference computer  
    - Install Windows, hardware drivers, the Configuration Manager client, and software on the destination computer   
 
+
  The actions of the step define the commands of a task sequence step. There are two types of actions:  
    - An action that you define by using a command-line string is referred to as a *custom action*  
-   - An action that's predefined by Configuration Manager is referred to as a *built-in action*. 
+   - An action that's predefined by Configuration Manager is referred to as a *built-in action*.  
+
 
  A task sequence can perform any combination of custom and built-in actions.  
 
@@ -37,13 +39,14 @@ manager: dougeby
  The task sequence processes steps sequentially. This sequence includes the action of the step and any conditions on the step. When Configuration Manager starts to process a task sequence step, it doesn't start the next step until the previous action is complete. 
 
  A task sequence is considered complete when: 
-   - All its steps are complete
-   - A failed step causes Configuration Manager to stop running the task sequence before all its steps are completed.
+   - All its steps are complete  
+   - A failed step causes Configuration Manager to stop running the task sequence before all its steps are completed.  
+
 
  For example, if the step of a task sequence can't locate a referenced image or package on a distribution point, the task sequence includes a broken reference. Configuration Manager stops running the task sequence at that point, unless the failed step has a condition to continue when an error occurs.  
 
-> [!IMPORTANT]  
->  By default, a task sequence fails after one step or action fails. If you want the task sequence to continue even when a step fails, edit the task sequence, click the **Options** tab, and then select **Continue on error**.  
+ > [!IMPORTANT]  
+ >  By default, a task sequence fails after one step or action fails. If you want the task sequence to continue even when a step fails, edit the task sequence, click the **Options** tab, and then select **Continue on error**.  
 
  For more information about the steps that can be added to a task sequence, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps).  
 
@@ -55,40 +58,41 @@ manager: dougeby
 
  Assign a name to task sequence groups. It doesn't have to be unique. You can also provide an optional description for the task sequence group.  
 
-> [!IMPORTANT]  
->  By default, a task sequence group fails when any step or embedded group within the group fails. If you want the task sequence to continue when a step or embedded group fails, set the **Continue on error** option on the step or group.  
+ > [!IMPORTANT]  
+ >  By default, a task sequence group fails when any step or embedded group within the group fails. If you want the task sequence to continue when a step or embedded group fails, set the **Continue on error** option on the step or group.  
 
  The following table shows how the **Continue on error** option works when you group steps.  
 
  In this example, there are two groups of task sequences that include three task sequence steps each.  
 
-|Task sequence group or step|Continue on error setting|  
-|---------------------------------|-------------------------------|  
-|**Task sequence group 1**|**Continue on error** selected.|  
-|Task sequence step 1|**Continue on error** selected.|  
-|Task sequence step 2|Not set.|  
-|Task sequence step 3|Not set.|  
-|**Task sequence group 2**|Not set.|  
-|Task sequence step 4|Not set.|  
-|Task sequence step 5|Not set.|  
-|Task sequence step 6|Not set.|  
+ |Task sequence group or step|Continue on error setting|  
+ |---------------------------------|-------------------------------|  
+ |**Task sequence group 1**|**Continue on error** selected.|  
+ |Task sequence step 1|**Continue on error** selected.|  
+ |Task sequence step 2|Not set.|  
+ |Task sequence step 3|Not set.|  
+ |**Task sequence group 2**|Not set.|  
+ |Task sequence step 4|Not set.|  
+ |Task sequence step 5|Not set.|  
+ |Task sequence step 6|Not set.|  
 
--   If task sequence step 1 fails, the task sequence continues with task sequence step 2.  
 
--   If task sequence step 2 fails, the task sequence doesn't run task sequence step 3. Because task sequence group 1 is configured to **Continue on error**, the task sequence continues to task sequence group 2. It runs task sequence step 4 next.  
+ -   If task sequence step 1 fails, the task sequence continues with task sequence step 2.  
 
--   If task sequence step 4 fails, no more steps are run. The task sequence fails because the **Continue on error** setting isn't configured for task sequence group 2.  
+ -   If task sequence step 2 fails, the task sequence doesn't run task sequence step 3. Because task sequence group 1 is configured to **Continue on error**, the task sequence continues to task sequence group 2. It runs task sequence step 4 next.  
+
+ -   If task sequence step 4 fails, no more steps are run. The task sequence fails because the **Continue on error** setting isn't configured for task sequence group 2.  
 
 
 
 ## Add child task sequences to a task sequence
-<!--1261338-->
-Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This step creates a parent-child relationship between the task sequences. Using this step allows you to create more modular task sequences that you can reuse.  
+ <!--1261338-->
+ Beginning with Configuration Manager version 1710, you can add a new task sequence step that runs another task sequence. This step creates a parent-child relationship between the task sequences. Using this step allows you to create more modular task sequences that you can reuse.  
 
-For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence). 
+ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence). 
 
-> [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+ > [!Note]  
+ > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 
@@ -100,13 +104,14 @@ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence
 
  Use task sequence variables to perform the following actions:  
 
--   Configure settings for a task sequence action  
+ -   Configure settings for a task sequence action  
 
--   Supply command-line arguments for a task sequence step  
+ -   Supply command-line arguments for a task sequence step  
 
--   Evaluate a condition that determines whether a task sequence step or group runs 
+ -   Evaluate a condition that determines whether a task sequence step or group runs  
 
--   Provide values for custom scripts used in a task sequence  
+ -   Provide values for custom scripts used in a task sequence  
+
 
  For example, you have a task sequence that includes a **Join Domain or Workgroup** task sequence step. Deploy the task sequence to different collections, where the membership of the collection is determined by domain membership. Specify a per-collection task sequence variable for each collection's domain name. Then use that task sequence variable to supply the appropriate domain name in the task sequence.  
 
@@ -114,7 +119,7 @@ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence
 
 
 
-##  <a name="BKMK_TSCreate"></a> Create a  task sequence  
+##  <a name="BKMK_TSCreate"></a> Create a task sequence  
 
  Create task sequences by using the Create Task Sequence Wizard. The wizard can create built-in task sequences that perform specific tasks or custom task sequences that can perform many different tasks. The wizard lets you create the following types of task sequences:
 
@@ -125,6 +130,7 @@ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence
  - Upgrade to Windows 10 from an OS upgrade package on a destination computer   
 
  - Create a custom task sequence that performs a customized task or specialized OS deployment  
+
 
  For more information, see [Create task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTaskSequence).  
 
@@ -144,11 +150,13 @@ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence
 
  - Add conditions to the steps and groups of a task sequence  
 
+
  > [!IMPORTANT]  
- >  If the task sequence has any unassociated references to an object as a result of the edit, the editor requires you fix the reference before it can close. Possible actions include:
+ >  If the task sequence has any unassociated references to an object as a result of the edit, the editor requires you fix the reference before it can close. Possible actions include:  
  > - Correct the reference  
  > - Delete the unreferenced object from the task sequence  
  > - Temporarily disable the failed task sequence step until the broken reference is corrected or removed  
+
 
  For more information about how to edit task sequences, see [Edit a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_ModifyTaskSequence).  
 
@@ -230,8 +238,10 @@ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence
 
  - When you use a boot image to initiate an OS deployment. In this case, Configuration Manager uses the Windows PE environment, which isn't a full OS. The Windows PE environment uses an automatically generated, random name that isn't a member of any domain. If you don't correctly configure the network access account, the computer can't access the required content for the task sequence.  
 
+
  > [!NOTE]  
  >  The network access account is never used as the security context for running programs, installing applications, installing updates, or running task sequences. The network access account is only used to access the associated resources on the network.  
+
 
  For more information about the network access account, see [Network access account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#bkmk_NAA).  
 
@@ -263,8 +273,10 @@ For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence
 
  - Manually start the stand-alone media. If a user is signed in to the computer, they can initiate the task sequence from the media.  
 
+
  > [!IMPORTANT]  
  >  The steps of a stand-alone media task sequence must be able to run without retrieving any data from the network. Otherwise, the task sequence step that tries to retrieve the data fails. For example, a task sequence step that requires a distribution point to obtain a package fails. If the stand-alone media contains the necessary package, the task sequence step succeeds.  
+
 
  For more information, see [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media).  
 

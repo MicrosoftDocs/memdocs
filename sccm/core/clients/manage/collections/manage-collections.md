@@ -39,6 +39,7 @@ Use the overview information in this article to help you perform management task
 
  - **Add Selected Items to New Device Collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using an **Include Collections** membership rule.  
 
+
  For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
 
@@ -55,7 +56,7 @@ Use the overview information in this article to help you perform management task
 
 
 #### Clear Required PXE Deployments
- Clears any required PXE boot deployments from all members of the selected collection. For more information, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network)
+ Clears any required PXE boot deployments from all members of the selected collection. For more information, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
 
 
 #### Update Membership
@@ -97,7 +98,8 @@ Use the overview information in this article to help you perform management task
 
  - **Quick Scan**: Trigger Endpoint Protection or Windows Defender to run a *quick* antimalware scan  
 
- - **Download Definition**: Trigger Endpoint Protection or Windows Defender to download the latest antimalware definitions
+ - **Download Definition**: Trigger Endpoint Protection or Windows Defender to download the latest antimalware definitions  
+
 
  For more information, see [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
 
@@ -121,7 +123,7 @@ Use the overview information in this article to help you perform management task
 
 
 #### Simulate Deployment
- Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](/sccm/apps/deploy-use/simulate-application-deployments)
+ Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](/sccm/apps/deploy-use/simulate-application-deployments).
 
 
 #### Deploy
@@ -205,7 +207,7 @@ Use the overview information in this article to help you perform management task
  Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).
 
 #### Security
- Displays the administrative users who have permissions for the selected collection from associated roles and security scopes.  
+ Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).  
 
 #### Alerts 
  Configure when alerts are generated for client status and Endpoint Protection. For more information, see [How to configure client status](/sccm/core/clients/deploy/configure-client-status) and [How to monitor Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  

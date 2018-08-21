@@ -262,10 +262,16 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
 
  This variable stores the time zone information in the following format: 
 
- `Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName`
+ ```
+ Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName
+ ```
 
  #### Example
- For the time zone **Eastern Time (US and Canada)**: `300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
+ For the time zone **Eastern Time (US and Canada)**: 
+
+ ```
+ 300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time
+ ```
 
 
 ### <a name="SMSTSType"></a> _SMSTSType
@@ -334,73 +340,73 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
 
  Use the following variable names to define the properties of the *first* network adapter for the step to configure:
 
- #### OSDAdapter0EnableDHCP
+#### OSDAdapter0EnableDHCP
  This setting is required. Possible values are `True` or `False`. For example:
 
- - `true`: enable Dynamic Host Configuration Protocol (DHCP) for the adapter
+ `true`: enable Dynamic Host Configuration Protocol (DHCP) for the adapter
 
- #### OSDAdapter0IPAddressList
+#### OSDAdapter0IPAddressList
  Comma-delimited list of IP addresses for the adapter. This property is ignored unless **EnableDHCP** is set to `false`. This setting is required.
 
- #### OSDAdapter0SubnetMask
+#### OSDAdapter0SubnetMask
  Comma-delimited list of subnet masks. This property is ignored unless **EnableDHCP** is set to `false`. This setting is required.
 
- #### OSDAdapter0Gateways
+#### OSDAdapter0Gateways
  Comma-delimited list of IP gateway addresses. This property is ignored unless **EnableDHCP** is set to `false`. This setting is required.
 
- #### OSDAdapter0DNSDomain
+#### OSDAdapter0DNSDomain
  Domain Name System (DNS) domain for the adapter.
 
- #### OSDAdapter0DNSServerList
+#### OSDAdapter0DNSServerList
  Comma-delimited list of DNS servers for the adapter. This setting is required.
 
- #### OSDAdapter0EnableDNSRegistration
+#### OSDAdapter0EnableDNSRegistration
  Set to `true` to register the IP address for the adapter in DNS.
 
- #### OSDAdapter0EnableFullDNSRegistration
+#### OSDAdapter0EnableFullDNSRegistration
  Set to `true` to register the IP address for the adapter in DNS under the full DNS name for the computer.
 
- #### OSDAdapter0EnableIPProtocolFiltering
+#### OSDAdapter0EnableIPProtocolFiltering
  Set to `true` to enable IP protocol filtering on the adapter.
 
- #### OSDAdapter0IPProtocolFilterList
+#### OSDAdapter0IPProtocolFilterList
  Comma-delimited list of protocols allowed to run over IP. This property is ignored if **EnableIPProtocolFiltering** is set to `false`.
 
- #### OSDAdapter0EnableTCPFiltering
+#### OSDAdapter0EnableTCPFiltering
  Set to `true` to enable TCP port filtering for the adapter.
 
- #### OSDAdapter0TCPFilterPortList
+#### OSDAdapter0TCPFilterPortList
  Comma-delimited list of ports to be granted access permissions for TCP. This property is ignored if **EnableTCPFiltering** is set to `false`.
 
- #### OSDAdapter0TcpipNetbiosOptions
+#### OSDAdapter0TcpipNetbiosOptions
  Options for NetBIOS over TCP/IP. Possible values are as follows:  
 
  - `0`: Use NetBIOS settings from DHCP server  
  - `1`: Enable NetBIOS over TCP/IP  
  - `2`: Disable NetBIOS over TCP/IP  
 
- #### OSDAdapter0EnableWINS
+#### OSDAdapter0EnableWINS
  Set to `true` to use WINS for name resolution.
 
- #### OSDAdapter0WINSServerList
+#### OSDAdapter0WINSServerList
  Comma-delimited list of WINS server IP addresses. This property is ignored unless **EnableWINS** is set to `true`.
 
- #### OSDAdapter0MacAddress
+#### OSDAdapter0MacAddress
  MAC address used to match settings to the physical network adapter.
 
- #### OSDAdapter0Name
+#### OSDAdapter0Name
  The name of the network connection as it appears in the network connections control panel program. The name is between 0 and 255 characters long.
 
- #### OSDAdapter0Index
+#### OSDAdapter0Index
  Index of the network adapter settings in the array of settings.
 
- #### Example
- - **OSDAdapterCount** = `1`
- - **OSDAdapter0EnableDHCP** = `FALSE`
- - **OSDAdapter0IPAddressList** = `192.168.0.40`
- - **OSDAdapter0SubnetMask** = `255.255.255.0`
- - **OSDAdapter0Gateways** = `192.168.0.1`
- - **OSDAdapter0DNSSuffix** = `contoso.com`
+#### Example
+ - **OSDAdapterCount** = `1`  
+ - **OSDAdapter0EnableDHCP** = `FALSE`  
+ - **OSDAdapter0IPAddressList** = `192.168.0.40`  
+ - **OSDAdapter0SubnetMask** = `255.255.255.0`  
+ - **OSDAdapter0Gateways** = `192.168.0.1`  
+ - **OSDAdapter0DNSSuffix** = `contoso.com`  
 
 
 ### <a name="OSDAdapterCount"></a> OSDAdapterCount
@@ -642,8 +648,8 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
  Specifies whether to create an EFI partition on a GPT hard disk. EFI-based computers use this partition as the startup disk.
 
  #### Valid values
- `true`
- `false` (default)
+ - `true`  
+ - `false` (default)
 
 
 ### <a name="OSDImageCreator"></a> OSDImageCreator
@@ -698,9 +704,10 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
 
 ### <a name="OSDJoinAccount"></a> OSDJoinAccount
 
- *Applies to the following steps:*
- - [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
+ *Applies to the following steps:*  
+ - [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)   
  - [Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
+
 
  (input)
 
@@ -732,9 +739,10 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
   
 ### <a name="OSDJoinPassword"></a> OSDJoinPassword
 
- *Applies to the following steps:*
+ *Applies to the following steps:*  
  - [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
  - [Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
+
 
  (input)
 
@@ -890,9 +898,10 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
 
 ### <a name="OSDMigrateEnableVerboseLogging"></a> OSDMigrateEnableVerboseLogging
 
- *Applies to the following steps:*
- - [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)
- - [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)
+ *Applies to the following steps:*  
+ - [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)  
+ - [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)  
+
 
  (input)
 
@@ -1168,11 +1177,12 @@ Use the following variable names to define the properties for the *first* partit
 
 ### <a name="OSDStateStorePath"></a> OSDStateStorePath
 
- *Applies to the following steps:*
- - [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)
- - [Release State Store](task-sequence-steps.md#BKMK_ReleaseStateStore)
- - [Request State Store](task-sequence-steps.md#BKMK_RequestStateStore)
- - [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)
+ *Applies to the following steps:*  
+ - [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)  
+ - [Release State Store](task-sequence-steps.md#BKMK_ReleaseStateStore)  
+ - [Request State Store](task-sequence-steps.md#BKMK_RequestStateStore)  
+ - [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)  
+
 
  (input)
 
@@ -1271,8 +1281,8 @@ Use the following variable names to define the properties for the *first* partit
  Specifies the network drive letter to connect to. This value is optional. If it's not specified, then the network connection isn't mapped to a drive letter. If this value is specified, the value must be in the range from D to Z. Don't use X, it's the drive letter used by Windows PE during the Windows PE phase.
 
  #### Examples
- `D:`
- `E:`
+ - `D:`  
+ - `E:`  
 
 
 ### <a name="SMSConnectNetworkFolderPassword"></a> SMSConnectNetworkFolderPassword
@@ -1452,9 +1462,10 @@ Use the following variable names to define the properties for the *first* partit
 
 ### <a name="SMSTSMPListRequestTimeoutEnabled"></a> SMSTSMPListRequestTimeoutEnabled
 
- *Applies to the following steps:*
- - [Install Application](task-sequence-steps.md#BKMK_InstallApplication)
- - [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)
+ *Applies to the following steps:*  
+ - [Install Application](task-sequence-steps.md#BKMK_InstallApplication)  
+ - [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+
 
  (input) 
 
@@ -1465,9 +1476,10 @@ Use the following variable names to define the properties for the *first* partit
 
 ### <a name="SMSTSMPListRequestTimeout"></a> SMSTSMPListRequestTimeout
 
- *Applies to the following steps:*
- - [Install Application](task-sequence-steps.md#BKMK_InstallApplication)
- - [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)
+ *Applies to the following steps:*  
+ - [Install Application](task-sequence-steps.md#BKMK_InstallApplication)  
+ - [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+
 
  (input) 
 
@@ -1563,7 +1575,7 @@ Use the following variable names to define the properties for the *first* partit
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
- Specifies the primary users of the destination computer by using the following format: `<DomainName>\<UserName>`. Separate multiple users by using a comma (,). For more information, see [Associate users with a destination computer](/sccm/osd/get-started/associate-users-with-a-destination-computer).
+ Specifies the primary users of the destination computer by using the following format: `<DomainName>\<UserName>`. Separate multiple users by using a comma (`,`). For more information, see [Associate users with a destination computer](/sccm/osd/get-started/associate-users-with-a-destination-computer).
 
  #### Example
  `contoso\jqpublic, contoso\megb, contoso\janedoh`

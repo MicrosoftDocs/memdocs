@@ -71,6 +71,7 @@ You can return to a previous page when you run a task sequence and there's a fai
 
 5.  Click **OK** to save the changes.  
 
+
  For a list of the available task sequence steps, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps).  
 
 
@@ -299,7 +300,6 @@ The following notification message displays when the end user opens the installa
         >  [!NOTE]  
         >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.  
 
-
     -   **Make available to the following**: Specify whether the task sequence is available to one of the following types:  
         - Only Configuration Manager clients  
         - Configuration Manager clients, media, and PXE  
@@ -411,23 +411,24 @@ When you deploy an upgrade task sequence, use the following settings:
 
 ##  <a name="BKMK_ExportImport"></a> Export and import task sequences  
 
- You can export and import task sequences with or without their related objects. This referenced content includes the following objects:
- - OS images
- - Boot images
- - Packages like the client install package
- - Driver packages
- - Applications with dependencies
+ You can export and import task sequences with or without their related objects. This referenced content includes the following objects:  
+ - OS images  
+ - Boot images  
+ - Packages like the client install package  
+ - Driver packages  
+ - Applications with dependencies  
+
 
  Consider the following points when you export and import task sequences:  
 
-- Configuration Manager doesn't export passwords in the task sequence. If you export and import a task sequence that contains passwords, edit the imported task sequence to reenter any passwords. Review the following steps that may include a password:
+ - Configuration Manager doesn't export passwords in the task sequence. If you export and import a task sequence that contains passwords, edit the imported task sequence to reenter any passwords. Review the following steps that may include a password:  
     - [Join Domain or Workgroup](/sccm/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup)  
     - [Connect To Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)  
     - [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)  
 
-- When you export a task sequence with the **Set Dynamic Variables** step, Configuration Manager doesn't export values for variables that you configure with the **Secret value** setting. Reenter the values for these variables after you import the task sequence.  
+ - When you export a task sequence with the **Set Dynamic Variables** step, Configuration Manager doesn't export values for variables that you configure with the **Secret value** setting. Reenter the values for these variables after you import the task sequence.  
 
-- When you have multiple primary sites, import task sequences at the central administration site.  
+ - When you have multiple primary sites, import task sequences at the central administration site.  
 
 
 ### To export task sequences  
@@ -452,11 +453,13 @@ When you deploy an upgrade task sequence, use the following settings:
 
 6.  Complete the wizard.  
 
+
  The wizard creates the following output files:  
 
 -   If you don't export content: a .zip file.  
 
 -   If you export content: a .zip file and a folder named *export*_files, where *export* is the name of the .zip file that contains the exported content.  
+
 
  If you include content when you export a task sequence, make sure that you copy the .zip file and the *export*_files folder, or the import fails.  
 
@@ -482,6 +485,7 @@ When you deploy an upgrade task sequence, use the following settings:
         -   **Overwrite**: This action overwrites the existing object with the imported object. For applications, you can add a revision to update the existing application or create a new application.  
 
 6.  Complete the wizard.  
+
 
  After you import the task sequence, edit the task sequence to specify any passwords that were in the original task sequence. For security reasons, passwords aren't exported.  
 

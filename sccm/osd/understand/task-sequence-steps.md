@@ -25,6 +25,7 @@ manager: dougeby
 
  - **Description**: Optionally, specify more detailed information about this step. The **Description** length can't exceed 256 characters.  
 
+
  The rest of this article describes the other settings on the **Properties** tab for each task sequence step.
 
 #### Options tab  
@@ -34,6 +35,7 @@ manager: dougeby
  - **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
 
  - **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).   
+
 
  The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
 
@@ -45,9 +47,10 @@ manager: dougeby
 
  This step runs only in Windows PE. It doesn't run in the full OS. 
 
- Use the following task sequence variables with this step:
- - [OSDDataImageIndex](/sccm/osd/understand/task-sequence-variables#OSDDataImageIndex)
- - [OSDWipeDestinationPartition](/sccm/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)
+ Use the following task sequence variables with this step:  
+ - [OSDDataImageIndex](/sccm/osd/understand/task-sequence-variables#OSDDataImageIndex)  
+ - [OSDWipeDestinationPartition](/sccm/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Images**, and select **Apply Data Image**. 
 
@@ -90,12 +93,13 @@ manager: dougeby
 
  This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
 
- Use the following task sequence variables with this step:
- - [OSDApplyDriverBootCriticalContentUniqueID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalContentUniqueID)
- - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)
- - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)
- - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)
- - [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (starting in version 1806)
+ Use the following task sequence variables with this step:  
+ - [OSDApplyDriverBootCriticalContentUniqueID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalContentUniqueID)  
+ - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
+ - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
+ - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
+ - [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (starting in version 1806)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Drivers**, and select **Apply Driver Package**. 
 
@@ -116,7 +120,7 @@ manager: dougeby
 #### Model  
  Specify the boot-critical device that is needed for pre-Windows Vista OS deployments.  
 
-#### Do unattended installation of unsigned drivers on version of Windows where this is allowed**  
+#### Do unattended installation of unsigned drivers on version of Windows where this is allowed
  This option allows Windows to install drivers without a digital signature.  
 
 
@@ -127,17 +131,18 @@ manager: dougeby
 
  This task sequence step runs in either the full OS or Windows PE. 
 
- Use the following task sequence variables with this step:
- - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)
- - [OSDAdapterCount](/sccm/osd/understand/task-sequence-variables#OSDAdapterCount)
- - [OSDDNSDomain](/sccm/osd/understand/task-sequence-variables#OSDDNSDomain)
- - [OSDDNSSuffixSearchOrder](/sccm/osd/understand/task-sequence-variables#OSDDNSSuffixSearchOrder)
- - [OSDDomainName](/sccm/osd/understand/task-sequence-variables#OSDDomainName)
- - [OSDDomainOUName](/sccm/osd/understand/task-sequence-variables#OSDDomainOUName)
- - [OSDEnableTCPIPFiltering](/sccm/osd/understand/task-sequence-variables#OSDEnableTCPIPFiltering)
- - [OSDJoinAccount](/sccm/osd/understand/task-sequence-variables#OSDJoinAccount)
- - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)
- - [OSDWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDWorkgroupName)
+ Use the following task sequence variables with this step:  
+ - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
+ - [OSDAdapterCount](/sccm/osd/understand/task-sequence-variables#OSDAdapterCount)  
+ - [OSDDNSDomain](/sccm/osd/understand/task-sequence-variables#OSDDNSDomain)  
+ - [OSDDNSSuffixSearchOrder](/sccm/osd/understand/task-sequence-variables#OSDDNSSuffixSearchOrder)  
+ - [OSDDomainName](/sccm/osd/understand/task-sequence-variables#OSDDomainName)  
+ - [OSDDomainOUName](/sccm/osd/understand/task-sequence-variables#OSDDomainOUName)  
+ - [OSDEnableTCPIPFiltering](/sccm/osd/understand/task-sequence-variables#OSDEnableTCPIPFiltering)  
+ - [OSDJoinAccount](/sccm/osd/understand/task-sequence-variables#OSDJoinAccount)  
+ - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)  
+ - [OSDWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDWorkgroupName)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Settings**, and select **Apply Network Settings**. 
 
@@ -178,16 +183,17 @@ manager: dougeby
 
  This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
 
- Use the following task sequence variables with this step:
- - [OSDConfigFileName](/sccm/osd/understand/task-sequence-variables#OSDConfigFileName)
- - [OSDImageIndex](/sccm/osd/understand/task-sequence-variables#OSDImageIndex)
- - [OSDTargetSystemDrive](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemDrive)
+ Use the following task sequence variables with this step:  
+ - [OSDConfigFileName](/sccm/osd/understand/task-sequence-variables#OSDConfigFileName)  
+ - [OSDImageIndex](/sccm/osd/understand/task-sequence-variables#OSDImageIndex)  
+ - [OSDTargetSystemDrive](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemDrive)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Images**, and select **Apply Operating System Image**. 
 
  This step performs actions depending on whether it uses an OS image or an OS upgrade package.  
 
- #### OS image actions
+#### OS image actions
  The **Apply Operating System Image** step performs the following actions when using an OS image:  
 
  1.  Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
@@ -264,16 +270,17 @@ manager: dougeby
 
  This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
 
- Use the following task sequence variables with this step:
- - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-input)
- - [OSDLocalAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDLocalAdminPassword)
- - [OSDProductKey](/sccm/osd/understand/task-sequence-variables#OSDProductKey)
- - [OSDRandomAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDRandomAdminPassword)
- - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-input)
- - [OSDRegisteredUserName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredUserName)
- - [OSDServerLicenseConnectionLimit](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseConnectionLimit)
- - [OSDServerLicenseMode](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseMode)
- - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-input)
+ Use the following task sequence variables with this step:  
+ - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-input)  
+ - [OSDLocalAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDLocalAdminPassword)  
+ - [OSDProductKey](/sccm/osd/understand/task-sequence-variables#OSDProductKey)  
+ - [OSDRandomAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDRandomAdminPassword)  
+ - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-input)  
+ - [OSDRegisteredUserName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredUserName)  
+ - [OSDServerLicenseConnectionLimit](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseConnectionLimit)  
+ - [OSDServerLicenseMode](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseMode)  
+ - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-input)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Settings**, and select **Apply Windows Settings**. 
 
@@ -331,18 +338,20 @@ manager: dougeby
 
  5.  During the **Setup Windows and ConfigMgr** step in the task sequence, Windows Setup finds the drivers staged by this step.  
 
+
  > [!IMPORTANT]  
  >  Stand-alone media can't use the **Auto Apply Drivers** step. The task sequence has no connection to the Configuration Manager site in this scenario.  
 
  This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
- Use the following task sequence variables with this step:
- - [OSDAutoApplyDriverBestMatch](/sccm/osd/understand/task-sequence-variables#OSDAutoApplyDriverBestMatch)
- - [OSDAutoApplyDriverCategoryList](/sccm/osd/understand/task-sequence-variables#OSDAutoApplyDriverCategoryList)
- - [SMSTSDriverRequestConnectTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestConnectTimeOut)
- - [SMSTSDriverRequestReceiveTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestReceiveTimeOut)
- - [SMSTSDriverRequestResolveTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestResolveTimeOut)
- - [SMSTSDriverRequestSendTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)
+ Use the following task sequence variables with this step:  
+ - [OSDAutoApplyDriverBestMatch](/sccm/osd/understand/task-sequence-variables#OSDAutoApplyDriverBestMatch)  
+ - [OSDAutoApplyDriverCategoryList](/sccm/osd/understand/task-sequence-variables#OSDAutoApplyDriverCategoryList)  
+ - [SMSTSDriverRequestConnectTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestConnectTimeOut)  
+ - [SMSTSDriverRequestReceiveTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestReceiveTimeOut)  
+ - [SMSTSDriverRequestResolveTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestResolveTimeOut)  
+ - [SMSTSDriverRequestSendTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Drivers**, and select **Auto Apply Drivers**. 
 
@@ -377,9 +386,10 @@ manager: dougeby
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
- Use the following task sequence variables with this step:
- - [OSDMigrateAdapterSettings](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdapterSettings)
- - [OSDMigrateNetworkMembership](/sccm/osd/understand/task-sequence-variables#OSDMigrateNetworkMembership)
+ Use the following task sequence variables with this step:  
+ - [OSDMigrateAdapterSettings](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdapterSettings)  
+ - [OSDMigrateNetworkMembership](/sccm/osd/understand/task-sequence-variables#OSDMigrateNetworkMembership)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Settings**, and select **Capture Network Settings**. 
 
@@ -411,14 +421,15 @@ manager: dougeby
 
  This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
 
- Use the following task sequence variables with this step:
- - [OSDCaptureAccount](/sccm/osd/understand/task-sequence-variables#OSDCaptureAccount)
- - [OSDCaptureAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDCaptureAccountPassword)
- - [OSDCaptureDestination](/sccm/osd/understand/task-sequence-variables#OSDCaptureDestination)
- - [OSDImageCreator](/sccm/osd/understand/task-sequence-variables#OSDImageCreator)
- - [OSDImageDescription](/sccm/osd/understand/task-sequence-variables#OSDImageDescription)
- - [OSDImageVersion](/sccm/osd/understand/task-sequence-variables#OSDImageVersion)
- - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-input)
+ Use the following task sequence variables with this step:  
+ - [OSDCaptureAccount](/sccm/osd/understand/task-sequence-variables#OSDCaptureAccount)  
+ - [OSDCaptureAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDCaptureAccountPassword)  
+ - [OSDCaptureDestination](/sccm/osd/understand/task-sequence-variables#OSDCaptureDestination)  
+ - [OSDImageCreator](/sccm/osd/understand/task-sequence-variables#OSDImageCreator)  
+ - [OSDImageDescription](/sccm/osd/understand/task-sequence-variables#OSDImageDescription)  
+ - [OSDImageVersion](/sccm/osd/understand/task-sequence-variables#OSDImageVersion)  
+ - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-input)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Images**, and select **Capture Operating System Image**. 
 
@@ -456,15 +467,16 @@ manager: dougeby
 
  This task sequence step runs only in Windows PE. It doesn't run in the full OS.   
 
- Use the following task sequence variables with this step:
- - [_OSDMigrateUsmtPackageID](/sccm/osd/understand/task-sequence-variables#OSDMigrateUsmtPackageID)
- - [OSDMigrateAdditionalCaptureOptions](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdditionalCaptureOptions)
- - [OSDMigrateConfigFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateConfigFiles)
- - [OSDMigrateContinueOnLockedFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateContinueOnLockedFiles)
- - [OSDMigrateEnableVerboseLogging](/sccm/osd/understand/task-sequence-variables#OSDMigrateEnableVerboseLogging)
- - [OSDMigrateMode](/sccm/osd/understand/task-sequence-variables#OSDMigrateMode)
- - [OSDMigrateSkipEncryptedFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateSkipEncryptedFiles)
- - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)
+ Use the following task sequence variables with this step:  
+ - [_OSDMigrateUsmtPackageID](/sccm/osd/understand/task-sequence-variables#OSDMigrateUsmtPackageID)  
+ - [OSDMigrateAdditionalCaptureOptions](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdditionalCaptureOptions)  
+ - [OSDMigrateConfigFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateConfigFiles)  
+ - [OSDMigrateContinueOnLockedFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateContinueOnLockedFiles)  
+ - [OSDMigrateEnableVerboseLogging](/sccm/osd/understand/task-sequence-variables#OSDMigrateEnableVerboseLogging)  
+ - [OSDMigrateMode](/sccm/osd/understand/task-sequence-variables#OSDMigrateMode)  
+ - [OSDMigrateSkipEncryptedFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateSkipEncryptedFiles)  
+ - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
+
 
  To add this step in the task sequence editor, click **Add**, select **User State**, and select **Capture User State**. 
 
@@ -521,13 +533,14 @@ manager: dougeby
 
  This task sequence step runs in either Windows PE or the full OS.  
 
- Use the following task sequence variables with this step:
- - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-output)
- - [OSDMigrateComputerName](/sccm/osd/understand/task-sequence-variables#OSDMigrateComputerName)
- - [OSDMigrateRegistrationInfo](/sccm/osd/understand/task-sequence-variables#OSDMigrateRegistrationInfo)
- - [OSDMigrateTimeZone](/sccm/osd/understand/task-sequence-variables#OSDMigrateTimeZone)
- - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-output)
- - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-output)
+ Use the following task sequence variables with this step:  
+ - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-output)  
+ - [OSDMigrateComputerName](/sccm/osd/understand/task-sequence-variables#OSDMigrateComputerName)  
+ - [OSDMigrateRegistrationInfo](/sccm/osd/understand/task-sequence-variables#OSDMigrateRegistrationInfo)  
+ - [OSDMigrateTimeZone](/sccm/osd/understand/task-sequence-variables#OSDMigrateTimeZone)  
+ - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-output)  
+ - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-output)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Settings**, and select **Capture Windows Settings**. 
 
@@ -584,11 +597,12 @@ manager: dougeby
 
  This task sequence step runs in the full OS or Windows PE.  
 
- Use the following task sequence variables with this step:
- - [SMSConnectNetworkFolderAccount](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderAccount)
- - [SMSConnectNetworkFolderDriveLetter](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderDriveLetter)
- - [SMSConnectNetworkFolderPassword](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPassword)
- - [SMSConnectNetworkFolderPath](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPath)
+ Use the following task sequence variables with this step:  
+ - [SMSConnectNetworkFolderAccount](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderAccount)  
+ - [SMSConnectNetworkFolderDriveLetter](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderDriveLetter)  
+ - [SMSConnectNetworkFolderPassword](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPassword)  
+ - [SMSConnectNetworkFolderPath](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPath)  
+
 
  To add this step in the task sequence editor, click **Add**, select **General**, and select **Connect To Network Folder**. 
 
@@ -644,11 +658,13 @@ manager: dougeby
  - Packages  
  - Boot images  
 
+
  This step works well in a task sequence to upgrade an OS in the following scenarios:  
 
  - To use a single upgrade task sequence that can work with both x86 and x64 platforms. Include two **Download Package Content** steps in the **Prepare for Upgrade** group. Specify conditions on the **Options** tab to detect the client architecture, and download only the appropriate OS upgrade package. Configure each **Download Package Content** step to use the same variable. Use the variable for the media path on the **Upgrade Operating System** step.  
 
  - To dynamically download an applicable driver package, use two **Download Package Content** steps with conditions to detect the appropriate hardware type for each driver package. Configure each **Download Package Content** step to use the same variable. Use the variable for the **Staged content** value in the Drivers section of the **Upgrade Operating System** step.  
+
 
  > [!NOTE]    
  > When you deploy a task sequence that contains this step, don't select **Download all content locally before starting the task sequence** or **Access content directly from a distribution point** for **Deployment options** on the **Distribution Points** page of the Deploy Software Wizard.  
@@ -695,20 +711,23 @@ manager: dougeby
 
  This step runs only in the full OS. It doesn't run in Windows PE.   
 
- Use the following task sequence variables with this step:
- - [OSDBitLockerRecoveryPassword](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)
- - [OSDBitLockerStartupKey](/sccm/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)
+ Use the following task sequence variables with this step:  
+ - [OSDBitLockerRecoveryPassword](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)  
+ - [OSDBitLockerStartupKey](/sccm/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)  
+
 
  When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:  
  - Enabled  
  - Activated  
  - Ownership Allowed  
 
+
  This step completes any remaining TPM initialization. The remaining steps don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization steps, if necessary:  
  - Create endorsement key pair  
  - Create owner authorization value and escrow to Active Directory, which must have been extended to support this value  
  - Take ownership  
  - Create the storage root key, or reset if already present but incompatible  
+
    
  If you want the task sequence to wait for the **Enable BitLocker** step to complete the drive encryption process, then select the **Wait** option. If you don't select the **Wait** option, the drive encryption process happens in the background. The task sequence immediately proceeds to the next step.  
 
@@ -733,6 +752,7 @@ manager: dougeby
  - **TPM and Startup Key on USB**: Select this option to use TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer.  
 
  - **TPM and PIN**: Select this option to use TPM and a personal identification number (PIN). When you select this option, BitLocker locks the normal boot process until the user provides the PIN.  
+
 
  To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.  
 
@@ -759,11 +779,12 @@ manager: dougeby
 
  This step runs only in Windows PE. It doesn't run in the full OS.  
 
- Use the following task sequence variables with this step:
- - [OSDDiskIndex](/sccm/osd/understand/task-sequence-variables#OSDDiskIndex)
- - [OSDGPTBootDisk](/sccm/osd/understand/task-sequence-variables#OSDGPTBootDisk)
- - [OSDPartitions](/sccm/osd/understand/task-sequence-variables#OSDPartitions)
- - [OSDPartitionStyle](/sccm/osd/understand/task-sequence-variables#OSDPartitionStyle)
+ Use the following task sequence variables with this step:  
+ - [OSDDiskIndex](/sccm/osd/understand/task-sequence-variables#OSDDiskIndex)  
+ - [OSDGPTBootDisk](/sccm/osd/understand/task-sequence-variables#OSDGPTBootDisk)  
+ - [OSDPartitions](/sccm/osd/understand/task-sequence-variables#OSDPartitions)  
+ - [OSDPartitionStyle](/sccm/osd/understand/task-sequence-variables#OSDPartitionStyle)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Disks**, and select **Format and Partition Disk**. 
 
@@ -780,6 +801,7 @@ manager: dougeby
  - **Standard (MBR)**: Master Boot Record  
  - **GPT**: GUID Partition Table  
 
+
  > [!NOTE]  
  >  If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.  
    
@@ -788,10 +810,12 @@ manager: dougeby
  - Name  
  - Remaining disk space  
 
+
  To create a new partition, click **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it's a boot partition. To modify an existing partition, click the partition to be modified, and then click the **Properties** button. For more information about how to configure hard drive partitions, see one of the following articles:  
 
  - [UEFI/GPT-based hard drive partitions](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
  - [BIOS/MBR-based hard drive partitions](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+
 
  To delete a partition, select the partition, and then click **Delete**.  
 
@@ -811,6 +835,7 @@ manager: dougeby
 
  - It must not initiate a restart on its own. The application must request a restart by using the standard restart code, 3010. This behavior makes sure that this step correctly handles the restart. If the application returns a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
+
  When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 
  > [!NOTE]  
@@ -821,11 +846,12 @@ manager: dougeby
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
- Use the following task sequence variables with this step:
- - [_TSAppInstallStatus](/sccm/osd/understand/task-sequence-variables#TSAppInstallStatus)
- - [SMSTSMPListRequestTimeoutEnabled](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)
- - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)
- - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)
+ Use the following task sequence variables with this step:  
+ - [_TSAppInstallStatus](/sccm/osd/understand/task-sequence-variables#TSAppInstallStatus)  
+ - [SMSTSMPListRequestTimeoutEnabled](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)  
+ - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
+ - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Software**, and select **Install Application**. 
 
@@ -841,6 +867,7 @@ manager: dougeby
 
  - Only when a user is logged on  
  - Run with user rights  
+
 
  These applications don't appear in the **Select the application to install** dialog box.
 
@@ -870,6 +897,7 @@ manager: dougeby
  - If the value of a variable contains any information other than the name of the application. The task sequence doesn't install the application, and the task sequence continues.  
 
  - If the task sequence doesn't find a variable with the specified base name and "01" suffix, the task sequence doesn't install any applications.  
+
 
  > [!Important]  
  > These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. Make another edit at the same time, for example, modify the step description.<!--509714-->   
@@ -902,6 +930,7 @@ manager: dougeby
 
  - It must not initiate a restart on its own. The software must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the software does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
+
  Programs that use the **Run another program first** option to install a dependent program aren't supported when deploying an OS. If you enable the package option **Run another program first**, and the dependent program already ran on the destination computer, the dependent program runs and the task sequence continues. However, if the dependent program hasn't already run on the destination computer, the task sequence step fails.  
 
  > [!NOTE]  
@@ -914,6 +943,7 @@ manager: dougeby
  >  `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
  >   
  >  For more information about creating stand-alone media, see [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media).  
+
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
@@ -957,6 +987,7 @@ manager: dougeby
 
  - If the task sequence doesn't find a variable with the specified base name and "001" suffix, the task sequence doesn't install any packages. The task sequence continues.  
 
+
  > [!Important]  
  > These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. Make another edit at the same time, for example, modify the step description.<!--509714-->   
 
@@ -974,15 +1005,17 @@ manager: dougeby
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE. 
 
- Use the following task sequence variables with this step:
- - [SMSInstallUpdateTarget](/sccm/osd/understand/task-sequence-variables#SMSInstallUpdateTarget)
- - [SMSTSMPListRequestTimeoutEnabled](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)
- - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)
- - [SMSTSSoftwareUpdateScanTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)
- - [SMSTSWaitForSecondReboot](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)
+ Use the following task sequence variables with this step:  
+ - [SMSInstallUpdateTarget](/sccm/osd/understand/task-sequence-variables#SMSInstallUpdateTarget)  
+ - [SMSTSMPListRequestTimeoutEnabled](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)  
+ - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
+ - [SMSTSSoftwareUpdateScanTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)  
+ - [SMSTSWaitForSecondReboot](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)  
+
 
  > [!NOTE]  
  > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
+
 
  To add this step in the task sequence editor, click **Add**, select **Software**, and select **Install Software Updates**. 
 
@@ -1025,14 +1058,15 @@ manager: dougeby
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE.   
 
- Use the following task sequence variables with this step:
- - [OSDJoinAccount](/sccm/osd/understand/task-sequence-variables#OSDJoinAccount)
- - [OSDJoinDomainName](/sccm/osd/understand/task-sequence-variables#OSDJoinDomainName)
- - [OSDJoinDomainOUName](/sccm/osd/understand/task-sequence-variables#OSDJoinDomainOUName)
- - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)
- - [OSDJoinSkipReboot](/sccm/osd/understand/task-sequence-variables#OSDJoinSkipReboot)
- - [OSDJoinType](/sccm/osd/understand/task-sequence-variables#OSDJoinType)
- - [OSDJoinWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDJoinWorkgroupName)
+ Use the following task sequence variables with this step:  
+ - [OSDJoinAccount](/sccm/osd/understand/task-sequence-variables#OSDJoinAccount)  
+ - [OSDJoinDomainName](/sccm/osd/understand/task-sequence-variables#OSDJoinDomainName)  
+ - [OSDJoinDomainOUName](/sccm/osd/understand/task-sequence-variables#OSDJoinDomainOUName)  
+ - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)  
+ - [OSDJoinSkipReboot](/sccm/osd/understand/task-sequence-variables#OSDJoinSkipReboot)  
+ - [OSDJoinType](/sccm/osd/understand/task-sequence-variables#OSDJoinType)  
+ - [OSDJoinWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDJoinWorkgroupName)  
+
 
  To add this step in the task sequence editor, click **Add**, select **General**, and select **Join Domain or Workgroup**. 
 
@@ -1080,9 +1114,10 @@ manager: dougeby
 
  This step runs only in the full OS. It doesn't run in Windows PE.   
 
- Use the following task sequence variables with this step:
- - [OSDKeepActivation](/sccm/osd/understand/task-sequence-variables#OSDKeepActivation)
- - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)
+ Use the following task sequence variables with this step:  
+ - [OSDKeepActivation](/sccm/osd/understand/task-sequence-variables#OSDKeepActivation)  
+ - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Images**, and select **Prepare Windows for Capture**. 
 
@@ -1099,7 +1134,7 @@ manager: dougeby
 
 #### Shutdown the computer after running this action
  <!--SCCMDocs-pr issue 2695-->
- This option instructs Sysprep to shutdown the computer instead of its default restart behavior. 
+ Starting in version 1806, this option instructs Sysprep to shutdown the computer instead of its default restart behavior. 
 
 
 
@@ -1146,8 +1181,9 @@ manager: dougeby
 
  This step runs only in the full OS. It doesn't run in Windows PE.   
 
- Use the following task sequence variables with this step:
- - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)
+ Use the following task sequence variables with this step:  
+ - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
+
 
  To add this step in the task sequence editor, click **Add**, select **User State**, and select **Release State Store**. 
 
@@ -1171,11 +1207,12 @@ manager: dougeby
 
  This step runs in the full OS and in Windows PE for offline USMT.   
 
- Use the following task sequence variables with this step:
- - [OSDStateFallbackToNAA](/sccm/osd/understand/task-sequence-variables#OSDStateFallbackToNAA)
- - [OSDStateSMPRetryCount](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryCount)
- - [OSDStateSMPRetryTime](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryTime)
- - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)
+ Use the following task sequence variables with this step:  
+ - [OSDStateFallbackToNAA](/sccm/osd/understand/task-sequence-variables#OSDStateFallbackToNAA)  
+ - [OSDStateSMPRetryCount](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryCount)  
+ - [OSDStateSMPRetryTime](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryTime)  
+ - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
+
 
  To add this step in the task sequence editor, click **Add**, select **User State**, and select **Request State Store**. 
 
@@ -1211,9 +1248,10 @@ manager: dougeby
 
  This step can be run in either the full OS or Windows PE.   
 
- Use the following task sequence variables with this step:
- - [SMSRebootMessage](/sccm/osd/understand/task-sequence-variables#SMSRebootMessage)
- - [SMSRebootTimeout](/sccm/osd/understand/task-sequence-variables#SMSRebootTimeout)
+ Use the following task sequence variables with this step:  
+ - [SMSRebootMessage](/sccm/osd/understand/task-sequence-variables#SMSRebootMessage)  
+ - [SMSRebootTimeout](/sccm/osd/understand/task-sequence-variables#SMSRebootTimeout)  
+
 
  To add this step in the task sequence editor, click **Add**, select **General**, and select **Restart Computer**. 
 
@@ -1254,14 +1292,15 @@ manager: dougeby
 
  This step runs only in the full OS. It doesn't run in Windows PE.   
 
- Use the following task sequence variables with this step:
- - [_OSDMigrateUsmtRestorePackageID](/sccm/osd/understand/task-sequence-variables#OSDMigrateUsmtRestorePackageID)
- - [OSDMigrateAdditionalRestoreOptions](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdditionalRestoreOptions)
- - [OSDMigrateContinueOnRestore](/sccm/osd/understand/task-sequence-variables#OSDMigrateContinueOnRestore)
- - [OSDMigrateEnableVerboseLogging](/sccm/osd/understand/task-sequence-variables#OSDMigrateEnableVerboseLogging)
- - [OSDMigrateLocalAccounts](/sccm/osd/understand/task-sequence-variables#OSDMigrateLocalAccounts)
- - [OSDMigrateLocalAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDMigrateLocalAccountPassword)
- - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)
+ Use the following task sequence variables with this step:  
+ - [_OSDMigrateUsmtRestorePackageID](/sccm/osd/understand/task-sequence-variables#OSDMigrateUsmtRestorePackageID)  
+ - [OSDMigrateAdditionalRestoreOptions](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdditionalRestoreOptions)  
+ - [OSDMigrateContinueOnRestore](/sccm/osd/understand/task-sequence-variables#OSDMigrateContinueOnRestore)  
+ - [OSDMigrateEnableVerboseLogging](/sccm/osd/understand/task-sequence-variables#OSDMigrateEnableVerboseLogging)  
+ - [OSDMigrateLocalAccounts](/sccm/osd/understand/task-sequence-variables#OSDMigrateLocalAccounts)  
+ - [OSDMigrateLocalAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDMigrateLocalAccountPassword)  
+ - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
+
 
  To add this step in the task sequence editor, click **Add**, select **User State**, and select **Restore User State**. 
 
@@ -1296,12 +1335,13 @@ manager: dougeby
 
  This step can be run in the full OS or Windows PE.   
 
- Use the following task sequence variables with this step:
- - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->
- - [SMSTSDisableWow64Redirection](/sccm/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)
- - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)
- - [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)
- - [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory)
+ Use the following task sequence variables with this step:  
+ - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
+ - [SMSTSDisableWow64Redirection](/sccm/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
+ - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
+ - [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)  
+ - [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory)  
+
 
  To add this step in the task sequence editor, click **Add**, select **General**, and select **Run Command Line**. 
 
@@ -1407,6 +1447,7 @@ manager: dougeby
 
  -   **Bypass**: Load all configuration files and run all scripts. If you download an unsigned script from the internet, Windows PowerShell doesn't prompt for permission before running the script.  
 
+
  > [!IMPORTANT]  
  >  PowerShell 1.0 doesn't support Undefined and Bypass execution policies.  
 
@@ -1429,6 +1470,7 @@ manager: dougeby
 
  - The task sequence writes entries to the **smsts.log** file, with new log entries that make it clear when a child task sequence starts.  
 
+
  To add this step in the task sequence editor, click **Add**, select **General**, and select **Run Task Sequence**. 
 
 
@@ -1449,6 +1491,7 @@ manager: dougeby
 
  2.  Evaluate defined rules. Set task sequence variables based on the rules that evaluate to true.  
 
+
  The task sequence automatically sets the following read-only task sequence variables:  
  - [\_SMSTSMake](/sccm/osd/understand/task-sequence-variables#SMSTSMake)  
  - [\_SMSTSModel](/sccm/osd/understand/task-sequence-variables#SMSTSModel)  
@@ -1457,6 +1500,7 @@ manager: dougeby
  - [\_SMSTSSerialNumber](/sccm/osd/understand/task-sequence-variables#SMSTSSerialNumber)  
  - [\_SMSTSAssetTag](/sccm/osd/understand/task-sequence-variables#SMSTSAssetTag)  
  - [\_SMSTSUUID](/sccm/osd/understand/task-sequence-variables#SMSTSUUID)  
+
 
  This step can be run in either the full OS or Windows PE.  
 
@@ -1488,6 +1532,7 @@ manager: dougeby
 
      - **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as **OSDAdapter**, since variable arrays aren't in the list of existing task sequence variables.  
 
+
  After you select the variables for a rule, provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the **OSDCaptureAccountPassword** variable.  
 
  > [!IMPORTANT]  
@@ -1501,9 +1546,10 @@ manager: dougeby
 
  This step can be run in either the full OS or Windows PE. 
 
- Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables and how to use them, see the following articles:
-- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables)
-- [Task sequence variables](/sccm/osd/understand/task-sequence-variables)  
+ Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables and how to use them, see the following articles:  
+ - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables)  
+ - [Task sequence variables](/sccm/osd/understand/task-sequence-variables)  
+
 
  To add this step in the task sequence editor, click **Add**, select **General**, and select **Set Task Sequence Variable**. 
 
@@ -1516,8 +1562,8 @@ manager: dougeby
  Specify the name of a task sequence built-in or action variable, or specify your own user-defined variable name.  
 
 #### Do not display this value
-<!--1358330-->
-Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password. 
+ <!--1358330-->
+ Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password. 
 
 #### Value  
  The task sequence sets the variable to this value. Set this task sequence variable to the value of another task sequence variable with the syntax `%varname%`.  
@@ -1530,8 +1576,9 @@ Starting in version 1806, enable this option to mask sensitive data stored in ta
 
  This step runs only in Windows PE. It doesn't run in the full OS.  
 
- Use the following task sequence variables with this step:
- - [SMSClientInstallProperties](/sccm/osd/understand/task-sequence-variables#SMSClientInstallProperties)
+ Use the following task sequence variables with this step:  
+ - [SMSClientInstallProperties](/sccm/osd/understand/task-sequence-variables#SMSClientInstallProperties)  
+
 
  This step replaces sysprep.inf or unattend.xml directory variables, such as `%WINDIR%` and `%ProgramFiles%`, with the Windows PE installation directory, `X:\Windows`. The task sequence ignores variables specified by using these environment variables.  
 
@@ -1619,9 +1666,10 @@ Starting in version 1806, enable this option to mask sensitive data stored in ta
 
  This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
- Use the following task sequence variables with this step:
- - [_SMSTSOSUpgradeActionReturnCode](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)
- - [OSDSetupAdditionalUpgradeOptions](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)
+ Use the following task sequence variables with this step:  
+ - [_SMSTSOSUpgradeActionReturnCode](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)  
+ - [OSDSetupAdditionalUpgradeOptions](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)  
+
 
  To add this step in the task sequence editor, click **Add**, select **Images**, and select **Upgrade Operating System**. 
 
