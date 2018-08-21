@@ -79,3 +79,6 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 
  > [!Note]  
  > Configuration Manager only supports x86 and amd64 components of the Windows 10 ADK. It doesn't currently support ARM or ARM64 components. 
+
+# ADK version support for Server OS deployment: 
+Treat Server 2016 like Windows 10 LTSB 2016 as both of them are 10.14393.x
