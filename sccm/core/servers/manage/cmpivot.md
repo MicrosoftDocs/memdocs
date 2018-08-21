@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real-time.
-ms.date: 07/30/2018
+ms.date: 08/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -51,6 +51,8 @@ The following components are required to use CMPivot:
 - You can't customize entity properties, columns for results, or actions on devices.  
 
 - Only one instance of CMPivot can run at the same time on a computer that is running the Configuration Manager console.  
+
+- In version 1806, the query for the **Administrators** entity only works if the group is named "Administrators". It doesn't work if the group name is localized. For example, "Administrateurs" in French.<!--SCCMDocs issue 759-->  
 
 
 
