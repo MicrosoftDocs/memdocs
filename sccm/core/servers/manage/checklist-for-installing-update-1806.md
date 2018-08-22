@@ -209,3 +209,5 @@ If you use any extensions to Configuration Manager, update them to the latest ve
 Configuration Manager automatically updates the default boot images when you update the site. Even if there isn't a new version of the Windows ADK, the Configuration Manager client components often change. If you don't update boot images and media, task sequence deployments may fail on devices. 
 
 After updating the site, manually update any custom boot images. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+
+After you update a boot image, redistribute it to distribution points. This action makes sure that clients can use the latest version. Do this action for any updated boot image that you use, whether its a default or custom boot image. When you update the site, Configuration Manager automatically updates the default boot images, but it doesn't automatically distribute the updated content to distribution points. For more information, see [Distribute boot images to a distribution point](/sccm/osd/get-started/manage-boot-images#BKMK_DistributeBootImages).
