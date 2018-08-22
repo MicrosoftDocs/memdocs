@@ -22,6 +22,7 @@
         ],
         "exclude": [
           "**/obj/**",
+          "**/includes/**",
           "sccm/**"
         ]
       }
