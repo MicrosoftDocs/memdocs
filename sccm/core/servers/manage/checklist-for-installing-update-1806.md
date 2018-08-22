@@ -2,7 +2,7 @@
 title: Checklist for 1806
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1806.
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Checklist for installing update 1806 for System Center Configuration Manager
+
+# Checklist for installing update 1806 for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1806 to update your hierarchy from a previous version. <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
+When you use the current branch of Configuration Manager, you can install the in-console update for version 1806 to update your hierarchy from a previous version. <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
 To get the update for version 1806, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
@@ -156,16 +157,55 @@ For more information, see [Updates for Configuration Manager](/sccm/core/server
 
 
 ## Post-update checklist
-After the site updates, review the following actions:
 
-1.	For multi-site hierarchies, make sure that site-to-site replication is active. In the console, go to the **Site Hierarchy** and **Database Replication** nodes in the **Monitoring** workspace. These nodes provide indications of problems or confirmation that replication links are active.  
+After the site updates, use the following checklist to complete common tasks and configurations.
 
-2.	Make sure each site server and site system role has updated to version 1806. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version. Consider restarting remote site systems that don't successfully update at first.  
 
-3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.  
+#### Confirm version and restart (if necessary)
+Make sure each site server and site system role has updated to version 1806. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version. 
 
-4.  Reconfigure database maintenance tasks that you disabled before starting the update.  
+Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers have restarted successfully. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
-5.	If you configured client piloting before installing the update, upgrade clients per the plan you created.
 
-6.  If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 1806. 
+#### Confirm site-to-site replication is active
+In the Configuration Manager console, go to the following locations to view the status, and make sure that replication is active:  
+
+-   **Monitoring** workspace, **Site Hierarchy** node  
+
+-   **Monitoring** workspace, **Database Replication** node  
+
+For more information, see the following articles:  
+- [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
+- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+
+
+#### Update Configuration Manager consoles
+Update all remote Configuration Manager consoles to the same version. You're prompted to update the console when:  
+
+-   You open the console.  
+
+-   You go to a new node in the console.  
+
+
+#### Reconfigure database replicas for management points
+After you update a primary site, reconfigure the database replica for management points that you uninstalled before you updated the site. For more information, see [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+
+
+#### Reconfigure any disabled maintenance tasks
+If you disabled database [maintenance tasks](/sccm/core/servers/manage/maintenance-tasks) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.  
+
+
+#### Update clients
+Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).  
+
+
+#### Third-party extensions
+If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 1806. 
+
+
+#### Update custom boot images and media
+<!--SCCMDocs issue 775-->
+
+Configuration Manager automatically updates the default boot images when you update the site. Even if there isn't a new version of the Windows ADK, the Configuration Manager client components often change. If you don't update boot images and media, task sequence deployments may fail on devices. 
+
+After updating the site, manually update any custom boot images. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).

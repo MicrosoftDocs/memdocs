@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 08/14/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,6 +17,8 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Update 1806 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1706, 1710, or 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
 
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
@@ -581,7 +583,7 @@ For more information, see [Console improvements in version 1806](/sccm/core/serv
 
 ## Next steps
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates).
+When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806).
 
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
@@ -591,3 +593,5 @@ When you're ready to install this version, see [Installing updates for Configura
 >   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
+
+After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).

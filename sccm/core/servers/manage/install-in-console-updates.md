@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -360,40 +360,13 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 ##  <a name="bkmk_after"></a> After a site installs an update  
 
-Use the following checklist to complete common tasks and configurations that are made after you update a site.   
+After the site updates, review the post-update checklist for the applicable version:  
 
-#### Confirm site-to-site replication is active
-In the Configuration Manager console, go to the following locations to view the status and make sure that replication is active:  
+- [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
--   **Monitoring** workspace, **Site Hierarchy** node  
+- [Post-update checklist for version 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
 
--   **Monitoring** workspace, **Database Replication** node  
-
-For more information, see the following articles:  
-- [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
-
-#### Confirm that servers restarted (if necessary) 
-Review your site infrastructure and make sure that applicable site servers and remote site system servers have restarted successfully. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.  
-
-#### Update standalone Configuration Manager consoles
-Update all remote Configuration Manager consoles to the same version. You're prompted to update the console when:  
-
--   You go to a new node in the console.  
-
--   You open the console.  
-
-#### Reconfigure database replicas for management points
-If you use database replicas for management points at primary sites, uninstall the database replicas before you update the site. After you update a primary site, reconfigure the database replica for management points. For more information, see [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
-
-#### Reconfigure any disabled maintenance tasks
-If you disabled database [maintenance tasks](/sccm/core/servers/manage/maintenance-tasks) at a site before installing the update, reconfigure those tasks at the site. Use the same settings that were in place before the update.  
-
-#### Upgrade clients
-For information, see [How to upgrade clients for Windows computers](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).  
-
-#### Additional configurations
-Review the changes that you made before you started the update, and then restore those configurations to your sites and hierarchy.  
+- [Post-update checklist for version 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 
