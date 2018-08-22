@@ -334,7 +334,7 @@ The following notification message displays when the end user opens the installa
         - Log on or log off events  
 
         > [!NOTE]  
-        >  If you schedule a start time for a required deployment that's earlier than the date and time when the task sequence is available, the Configuration Manager client downloads the task sequence at the scheduled start time, even though the task sequence is available at an earlier time.  
+        >  If you schedule a start time for a required deployment that's earlier than the date and time when the task sequence is available, the Configuration Manager client downloads the content at the assigned start time. This behavior occurs even though you scheduled the task sequence to be available at a later time.<!--SCCMDocs issue 777-->  
 
     -   **Rerun behavior**: Specify when the task sequence reruns. Select one of the following options:  
 
