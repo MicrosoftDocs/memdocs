@@ -70,7 +70,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
         -   Click **Capture all user profiles with standard options** to capture all user profiles.  
 
-        -   Click **Customize user profile capture** to specify individual user profiles to capture. Select the configuration file (miguser.xml, migsys.xml, or migapp.xml) that contains the user profile information. You cannot use the config.xml configuration file here, but you can manually add it to the USMT command line using the OSDMigrageAdditionalCaptureOptions and OSDMigrateAdditionalRestoreOptions variables.
+        -   Click **Customize user profile capture** to specify individual user profiles to capture. Select the configuration file (miguser.xml, migsys.xml, or migapp.xml) that contains the user profile information. You cannot use the config.xml configuration file here, but you can manually add it to the USMT command line using the OSDMigrateAdditionalCaptureOptions and OSDMigrateAdditionalRestoreOptions variables.
 
     -   Select **Enable verbose logging** to specify how much information to write to log files if an error occurs.  
 
@@ -123,7 +123,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
         -   Click **Restore all captured user profiles with standard options** to restore all user profiles.  
 
-        -   Click **Customize user profile restore** to restore individual user profiles. Select the configuration file (miguser.xml, migsys.xml, or migapp.xml) that contains the user profile information. You cannot use the config.xml configuration file here, but you can manually add it to the USMT command line using the OSDMigrageAdditionalCaptureOptions and OSDMigrateAdditionalRestoreOptions variables.
+        -   Click **Customize user profile restore** to restore individual user profiles. Select the configuration file (miguser.xml, migsys.xml, or migapp.xml) that contains the user profile information. You cannot use the config.xml configuration file here, but you can manually add it to the USMT command line using the OSDMigrateAdditionalCaptureOptions and OSDMigrateAdditionalRestoreOptions variables.
 
     -   Select **Restore local computer user profiles** to provide a new password for the restored profiles. You cannot migrate passwords for local profiles.  
 
