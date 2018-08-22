@@ -38,6 +38,9 @@ Migrated users and their devices are managed in Intune and other devices continu
 
 - The devices for the users in the collection associated with the Intune subscription can enroll in hybrid MDM. All devices associated with users not in the collection are managed in Intune as long as the user has an Intune/EMS license.   
 
+    > [!Note]  
+    > Users can enroll into Intune standalone even if you've blocked them through the Configuration Manager console. To completely block a user from enrolling, don't license the unwanted users for Intune. They can't enroll without a license.<!--SCCMDocs issue 738-->  
+
 - When you migrate a user to Intune, the user and devices appear in the Intune on Azure portal after about 15 minutes.   
 
 - When you migrate users to Intune standalone, continue to manage the following settings from Configuration Manager for both Intune standalone and hybrid MDM devices:  
