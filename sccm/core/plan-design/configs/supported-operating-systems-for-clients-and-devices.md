@@ -110,6 +110,7 @@ manager: dougeby
 -   **Windows 10 Enterprise** (x86, x64)  
 
 -   **Windows 10 IoT Enterprise** (x86, x64)  
+    This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 -   **Windows Embedded 8.1 Industry** (x86, x64)    
 
@@ -120,6 +121,9 @@ manager: dougeby
 -   **Windows Embedded POSReady 7** (x86, x64)    
 
 -   **Windows Embedded Standard 7 with SP1** (x86, x64)    
+
+
+### Unsupported OS versions
 
 The following OS versions are based on Windows XP Embedded. Beginning with version 1702, these embedded OS versions aren't supported. For more information, see [Deprecated client operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems).  
 
@@ -345,6 +349,7 @@ The following versions are supported by using the indicated .tar file.
 - **Windows 10 Pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
+    This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 Mobile**  
 
