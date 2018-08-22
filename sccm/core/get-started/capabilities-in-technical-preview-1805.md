@@ -164,7 +164,7 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 ### Prerequisites
 - A distribution point on Windows Server, version 1709.  
 
-- A client device running at least Windows 10, version 1607.
+- There's no client prerequisite.<!--SCCMDocs issue 699-->  
 
 
 ### Try it out!
