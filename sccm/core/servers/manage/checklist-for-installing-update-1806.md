@@ -206,8 +206,10 @@ If you use any extensions to Configuration Manager, update them to the latest ve
 #### Update custom boot images and media
 <!--SCCMDocs issue 775-->
 
-Configuration Manager automatically updates the default boot images when you update the site. Even if there isn't a new version of the Windows ADK, the Configuration Manager client components often change. If you don't update boot images and media, task sequence deployments may fail on devices. 
+Use the **Update Distribution Points** action for any boot image that you use, whether its a default or custom boot image. This action makes sure that clients can use the latest version. Even if there isn't a new version of the Windows ADK, the Configuration Manager client components may change with an update. If you don't update boot images and media, task sequence deployments may fail on devices. 
 
-After updating the site, manually update any custom boot images. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+When you update the site, Configuration Manager automatically updates the *default* boot images. It doesn't automatically distribute the updated content to distribution points. Use the **Update Distribution Points** action on specific boot images when you're ready to distribute this content across your network. 
 
-After you update a boot image, redistribute it to distribution points. This action makes sure that clients can use the latest version. Do this action for any updated boot image that you use, whether its a default or custom boot image. When you update the site, Configuration Manager automatically updates the default boot images, but it doesn't automatically distribute the updated content to distribution points. For more information, see [Distribute boot images to a distribution point](/sccm/osd/get-started/manage-boot-images#BKMK_DistributeBootImages).
+After updating the site, manually update any *custom* boot images. This action updates the boot image with the latest client components if necessary, optionally reloads it with the current Windows PE version, and redistributes the content to the distribution points. 
+
+For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image). 
