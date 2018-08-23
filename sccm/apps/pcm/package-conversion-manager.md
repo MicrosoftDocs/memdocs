@@ -166,13 +166,7 @@ Identify the packages that are appropriate for testing. Then move them to a sepa
 
 #### Analyze packages
 
-Analyze packages using the following three methods:  
-
- - **Individually**: If you need to analyze only one package, use Package Conversion Manager integrated in the Configuration Manager console. For more information, see [How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert).  
-
- - **Small group**: If you need to analyze a small group of packages, use Package Conversion Manager integrated in the Configuration Manager console. For more information, see [How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert).  
-
- - **Large group** (bulk analysis): If you need to analyze a large group of packages, use the **Scheduled Analysis** features of Package Conversion Manager. For more information, see [How to Use Scheduled Analysis (Bulk Analysis) in Package Conversion Manager](hh846233\(v=technet.10\).md).<!--Checking with feature team on this-->  
+To analyze an individual package or a small group, use Package Conversion Manager integrated in the Configuration Manager console. For more information, see [How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert).  
 
 > [!NOTE]  
 > See the **Package Conversion Status** node in the **Monitoring** workspace. It displays summary information about the analysis and conversion processes.  
@@ -223,4 +217,4 @@ Test the applications, either in your test environment or your production enviro
 
 ## Next steps
 
-[Configure Package Conversion Manager](/sccm/apps/pcm/configure-pcm)
+[How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert)
