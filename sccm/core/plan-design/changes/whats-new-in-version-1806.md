@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 08/14/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,6 +17,8 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Update 1806 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1706, 1710, or 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
 
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
@@ -380,20 +382,41 @@ These task sequences can be for OS deployment or custom. It's also supported for
 ### Other improvements to OS deployment
 
 #### Mask sensitive data stored in task sequence variables
-<!--1358330-->
-In the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step, select the new option to **Do not display this value**. For example, when specifying a password. 
+ <!--1358330-->
+ ***[Updated]*** In the **Set Task Sequence Variable** step, select the new option to **Do not display this value**. 
+
+ For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
 
 #### Mask program name during Run Command Step of a task sequence
-<!--1358493-->
-To prevent potentially sensitive data from being displayed or logged, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`. This variable masks the program name in the smsts.log during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step.   
+ <!--1358493-->
+ ***[Updated]*** To prevent potentially sensitive data from being displayed or logged, configure the task sequence variable **OSDDoNotLogCommand**.  
+
+ For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand). 
 
 #### Task sequence variable for DISM parameters when installing drivers
-<!--516679-->
-To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. Enable the [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step setting to **Install driver package via running DISM with recurse option**. 
+ <!--516679/2840016-->
+ ***[Updated]*** To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. 
+
+ For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions). 
 
 #### Option to use full disk encryption
-<!--SCCMDocs-pr issue 2671-->
-Both the [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+ <!--SCCMDocs-pr issue 2671-->
+ ***[Updated]*** Both the **Enable BitLocker** and **Pre-provision BitLocker** steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. 
+
+ For more information see [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker). 
+
+#### Client provisioning mode isn't enabled with Windows 10 upgrade compatibility scan
+ <!--SCCMDocs-pr issue 2812-->
+ ***[Updated]*** Now when you enable the option to **Perform Windows Setup compatibility scan without starting upgrade**, the **Upgrade Operating System** task sequence step doesn't put the Configuration Manager client into provisioning mode.
+
+ For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
+
+#### Revised documentation for task sequence variables
+ ***[Updated]*** Two new articles are now available for understanding task sequence variables:  
+
+ - [How to use task sequence variables](/sccm/osd/understand/task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+
+ - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
 
 
@@ -560,7 +583,7 @@ For more information, see [Console improvements in version 1806](/sccm/core/serv
 
 ## Next steps
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates).
+When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806).
 
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
@@ -570,3 +593,5 @@ When you're ready to install this version, see [Installing updates for Configura
 >   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
+
+After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
