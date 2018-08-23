@@ -20,6 +20,9 @@ manager: dougeby
 
 Starting in version 1806, Package Conversion Manager helps you convert Configuration Manager legacy packages into applications. Applications have additional benefits such as dependencies, requirement rules, detection methods, and user device affinity.
 
+> [!Note]  
+> In this version of Configuration Manager, Package Conversion Manager is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+
 A Configuration Manager application contains files and programs that you deploy to client devices. However, unlike legacy packages and programs, an application provides additional user-centric functionality. For example, an application might contain deployment types for a local installation of a software package, a virtual application package, or a version of the application for mobile devices.
 
 For more information, see the following articles: 
