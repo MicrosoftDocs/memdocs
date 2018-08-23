@@ -45,7 +45,6 @@
 ### [Learn about PowerShell script security](deploy-use/learn-script-security.md)
 
 ## [Package Conversion Manager](pcm/package-conversion-manager.md)
-### [Configure Package Conversion Manager](pcm/configure-pcm.md)
 ### [How to analyze and convert packages](pcm/how-to-analyze-and-convert.md)
 ### [How to use the plug-in](pcm/how-to-use-plug-in.md)
 ### [Troubleshoot Package Conversion Manager](pcm/troubleshoot-pcm.md)
