@@ -1,26 +1,22 @@
 # Understand and explore
-## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
-## [Task sequence steps](understand/task-sequence-steps.md)
-## [Task sequence action variables](understand/task-sequence-action-variables.md)
-## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
-## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
+## [Introduction to OS deployment](understand/introduction-to-operating-system-deployment.md)
 
 # Plan and design
-## [Infrastructure requirements for operating system deployment](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+## [Infrastructure requirements for OS deployment](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [Planning considerations for automating tasks](plan-design/planning-considerations-for-automating-tasks.md)
-## [Security and privacy for operating system deployment](plan-design/security-and-privacy-for-operating-system-deployment.md)
-## [Planning for operating system deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
+## [Security and privacy for OS deployment](plan-design/security-and-privacy-for-operating-system-deployment.md)
+## [Planning for OS deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
 # Get started
-## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
-## [Prepare for operating system deployment](get-started/prepare-for-operating-system-deployment.md)
+## [Prepare site system roles for OS deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+## [Prepare for OS deployment](get-started/prepare-for-operating-system-deployment.md)
 ### [Manage boot images](get-started/manage-boot-images.md)
 #### [Customize boot images](get-started/customize-boot-images.md)
 
-### [Manage operating system images](get-started/manage-operating-system-images.md)
-#### [Customize operating system images](get-started/customize-operating-system-images.md)
+### [Manage OS images](get-started/manage-operating-system-images.md)
+#### [Customize OS images](get-started/customize-operating-system-images.md)
 
-### [Manage operating system upgrade packages](get-started/manage-operating-system-upgrade-packages.md)
+### [Manage OS upgrade packages](get-started/manage-operating-system-upgrade-packages.md)
 ### [Manage drivers](get-started/manage-drivers.md)
 ### [Manage user state](get-started/manage-user-state.md)
 ### [Prepare for unknown computer deployments](get-started/prepare-for-unknown-computer-deployments.md)
@@ -47,18 +43,18 @@
 ## [Manage Windows as a service](deploy-use/manage-windows-as-a-service.md)
 ## [Create a phased deployment](deploy-use/create-phased-deployment-for-task-sequence.md)
 ## [Manage and monitor phased deployments](deploy-use/manage-monitor-phased-deployments.md)
-## [Monitor operating system deployments](deploy-use/monitor-operating-system-deployments.md)
+## [Monitor OS deployments](deploy-use/monitor-operating-system-deployments.md)
 
 ## [Manage task sequences to automate tasks](deploy-use/manage-task-sequences-to-automate-tasks.md)
-### [Create a task sequence to install an operating system](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
-### [Create a task sequence to upgrade an operating system](deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)
-### [Create a task sequence to capture an operating system](deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
+### [Create a task sequence to install an OS](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
+### [Create a task sequence to upgrade an OS](deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)
+### [Create a task sequence to capture an OS](deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
 ### [Create a task sequence to capture and restore user state](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [Use a task sequence to manage virtual hard disks](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
 ## Custom task sequence scenarios
 ### [Create a custom task sequence](deploy-use/create-a-custom-task-sequence.md)
-### [Create a task sequence for non-operating system deployments](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
+### [Create a task sequence for non-OS deployments](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [Task sequence steps to manage BIOS to UEFI conversion](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
 ### [Preprovision BitLocker in Windows PE](deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
@@ -67,3 +63,10 @@
 ### [Create prestaged media](deploy-use/create-prestaged-media.md)
 ### [Create bootable media](deploy-use/create-bootable-media.md)
 ### [Create capture media](deploy-use/create-capture-media.md)
+
+# Technical references
+## [Task sequence steps](understand/task-sequence-steps.md)
+## [How to use task sequence variables](understand/using-task-sequence-variables.md)
+## [Task sequence variables](understand/task-sequence-variables.md)
+## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
+

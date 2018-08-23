@@ -41,7 +41,7 @@ The Configuration Manager client uses peer cache to serve to other clients every
 Peer cache doesn't replace the use of other solutions like Windows BranchCache or Delivery Optimization. Peer cache works along with other solutions. These technologies give you more options for extending traditional content deployment solutions such as distribution points. Peer cache is a custom solution with no reliance on BranchCache. If you don't enable or use BranchCache, peer cache still works.  
 
   > [!Note]  
-  > Starting in version 1802, Windows BranchCache is always enabled on clients. The setting to **Allow clients to share content with other clients on the same subnet** is removed. Clients use BranchCache if the distribution point supports it.<!--SCCMDocs issue 539-->  
+  > Starting in version 1802, Windows BranchCache is always enabled on deployments. The setting to **Allow clients to share content with other clients on the same subnet** is removed.<!--SCCMDocs issue 539--> If the distribution point supports it, and it's enabled in client settings, clients use BranchCache. For more information, see [Configure BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -173,7 +173,7 @@ Peer cache relies on the Configuration Manager client cache to share content. Co
 
 - The peer cache source client updates the last referenced time of content in the cache when a peer downloads it. The client uses this timestamp when it automatically maintains its cache, removing older content first. So it should wait to remove content that peer cache clients more frequently download, if at all.  
 
-- If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables).  
+- If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
 
 - If necessary, when creating the following software, use the option to **Persist content in the client cache**:  
     - Applications

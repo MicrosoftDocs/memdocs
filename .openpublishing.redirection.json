@@ -244,6 +244,16 @@
             "source_path": "sccm/protect/deploy-use/configuration-manager-mobile-threat-defense.md",
             "redirect_url": "/sccm/mdm/deploy-use/mobile-threat-defense",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/osd/understand/task-sequence-action-variables.md",
+            "redirect_url": "/sccm/osd/understand/task-sequence-variables",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/osd/understand/task-sequence-built-in-variables.md",
+            "redirect_url": "/sccm/osd/understand/task-sequence-variables",
+            "redirect_document_id": false
         }
     ]
 }
