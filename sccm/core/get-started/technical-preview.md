@@ -1,8 +1,8 @@
 ---
-title: Technical Preview releases
+title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 09/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Technical Preview for Configuration Manager
+# Technical preview for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
@@ -119,10 +119,10 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1808
+### Technical Preview version 1809
 
+<!--
 - [Phased deployment of software updates](capabilities-in-technical-preview-1808.md#bkmk_pod) <!--1358146-->
-- [Improvements to repair applications](capabilities-in-technical-preview-1808.md#bkmk_repair) <!--1357866-->
 
 
 > [!Note]  
@@ -141,6 +141,8 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Feature |Technical preview version |Current branch version|  
  |----------------|---------------------|--------------------|
+ | Phased deployment of software updates <!--1358146--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | ![Not added](media/Red_X.gif) | 
+ | Improvements to repair applications <!--1357866--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | ![Not added](media/Red_X.gif) | 
  | Community Hub <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | ![Not added](media/Red_X.gif) | 
  | Specify the drive for offline OS image servicing <!--1358924--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_osd) | ![Not added](media/Red_X.gif) | 
  | Co-managed device sync activity with Intune <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | ![Not added](media/Red_X.gif) | 
@@ -170,25 +172,8 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Provision Windows app packages for all users on a device <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
  | Improvements to the Surface dashboard <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
  | Hardware inventory default unit revision <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Create a phased deployment with manually configured phases for a task sequence <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Cloud distribution point support for Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Take actions based on management insights <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Transition device configuration workload to Intune using co-management <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Enable distribution points to use network congestion control <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Cloud management dashboard <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improved secure client communications <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements for enabling third-party software update support <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to Windows 10 in-place upgrade task sequence <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | CMTrace installed with client <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvement to the Configuration Manager console <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to console feedback <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to PXE-enabled distribution points <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvement to hardware inventory for large integer values <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvement to WSUS maintenance <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvement to support for CNG certificates <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
 
-  
+
 
 ## Features in previous technical previews
 
