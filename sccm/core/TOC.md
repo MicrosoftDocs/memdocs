@@ -99,13 +99,13 @@
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
-<!-- Only show the current plus three; four total) -->
+<!-- Only show the current month plus three months; four months total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1809](get-started/capabilities-in-technical-preview-1809.md)
 ###  [Capabilities in 1808](get-started/capabilities-in-technical-preview-1808.md)
 ###  [Capabilities in 1807](get-started/capabilities-in-technical-preview-1807.md)
 ###  [Capabilities in 1806.2](get-started/capabilities-in-technical-preview-1806-2.md)
 ###  [Capabilities in 1806](get-started/capabilities-in-technical-preview-1806.md)
-###  [Capabilities in 1805](get-started/capabilities-in-technical-preview-1805.md)
 
 ##   [Migrate data between hierarchies](migration/migrate-data-between-hierarchies.md)
 ###  [Planning for migration](migration/planning-for-migration.md)
