@@ -254,6 +254,11 @@
             "source_path": "sccm/osd/understand/task-sequence-built-in-variables.md",
             "redirect_url": "/sccm/osd/understand/task-sequence-variables",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/protect/deploy-use/cryptographic-controls-technical-reference.md",
+            "redirect_url": "/sccm/core/plan-design/security/cryptographic-controls-technical-reference",
+            "redirect_document_id": false
         }
     ]
 }
