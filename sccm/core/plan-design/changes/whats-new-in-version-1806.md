@@ -414,7 +414,7 @@ These task sequences can be for OS deployment or custom. It's also supported for
 #### Revised documentation for task sequence variables
  ***[Updated]*** Two new articles are now available for understanding task sequence variables:  
 
- - [How to use task sequence variables](/sccm/osd/understand/task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+ - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
 
  - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
