@@ -17,7 +17,7 @@ manager: dougeby
 
 System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
 
- The primary hashing algorithm that Configuration Manager uses for signing is SHA-256. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm implemented in Configuration Manager is 3DES. This is used for storing data in the Configuration Manager database and for client HTTP communication. When you use client communication over HTTPS, you can configure your public key infrastructure (PKI) to use RSA certificates with the maximum hashing algorithms and key lengths that are documented in [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
+ The primary hashing algorithm that Configuration Manager uses for signing is SHA-256. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm implemented in Configuration Manager is 3DES. This is used for storing data in the Configuration Manager database and for client HTTP communication. When you use client communication over HTTPS, you can configure your public key infrastructure (PKI) to use RSA certificates with the maximum hashing algorithms and key lengths that are documented in [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
  For most cryptographic operations for Windows-based operating systems, Configuration Manager uses SHA-2, 3DES and AES, and RSA algorithms from the Windows CryptoAPI library rsaenh.dll.  
 
@@ -58,7 +58,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
 -   Android. In addition, these devices do not use signature validation for application installation.  
 
--   Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager](../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md).  
+-   Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers).  
 
 ### Inventory signing and encryption  
  Inventory that clients send to management points is always signed by devices, regardless of whether they communicate with management points over HTTP or HTTPS. If they use HTTP, you can choose to encrypt this data, which is a security best practice.  
@@ -87,7 +87,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  If you use client notification, all communication uses TLS and the highest encryption that the server and client operating systems can negotiate. For example, a client computer running Windows 7 and a management point running Windows Server 2008 R2 can support 128-bit AES encryption, whereas a client computer running Vista to the same management point but will negotiate down to 3DES encryption. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses SHA-1 or SHA-2.  
 
 ##  Certificates used by Configuration Manager  
- For a list of the public key infrastructure (PKI) certificates that can be used by Configuration Manager, any special requirements or limitations, and how the certificates are used, see [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md). This list includes the supported hash algorithms and key lengths. Most certificates support SHA-256 and 2048 bits key length.  
+ For a list of the public key infrastructure (PKI) certificates that can be used by Configuration Manager, any special requirements or limitations, and how the certificates are used, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements). This list includes the supported hash algorithms and key lengths. Most certificates support SHA-256 and 2048 bits key length.  
 
 > [!NOTE]  
 >  All certificates that Configuration Manager uses must contain only single-byte characters in the subject name or subject alternative name.  
@@ -152,7 +152,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  These PKI certificates are automatically requested, generated, and installed by Microsoft Intune.  
 
 ### CRL checking for PKI certificates  
- A PKI certificate revocation list (CRL) increases administrative and processing overhead but it is more secure. However, if CRL checking is enabled but the CRL is inaccessible, the PKI connection fails. For more information, see [Security and privacy for System Center Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
+ A PKI certificate revocation list (CRL) increases administrative and processing overhead but it is more secure. However, if CRL checking is enabled but the CRL is inaccessible, the PKI connection fails. For more information, see [Security and privacy for Configuration Manager](/sccm/core/plan-design/security/security-and-privacy).  
 
  Certificate revocation list (CRL) checking is enabled by default in IIS, so if you are using a CRL with your PKI deployment, there is nothing additional to configure on most Configuration Manager site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.  
 
@@ -209,7 +209,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
 
 ### Server communication between sites  
- Configuration Manager transfers data between sites by using database replication and file-based replication. For more information, see [Communications between endpoints in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+ Configuration Manager transfers data between sites by using database replication and file-based replication. For more information, see [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  
 
  Configuration Manager automatically configures the database replication between sites and uses PKI certificates that have server authentication capability if these are available; if not, Configuration Manager creates self-signed certificates for server authentication. In both cases, authentication between sites is established by using certificates in the Trusted People Store that uses PeerTrust. This certificate store is used to ensure that only the SQL Server computers that are used by the Configuration Manager hierarchy participate in site-to-site replication. Whereas primary sites and the central administration site can replicate configuration changes to all sites in the hierarchy, secondary sites can replicate configuration changes only to their parent site.  
 
@@ -250,19 +250,19 @@ System Center Configuration Manager uses signing and encryption to help protect 
  When clients use HTTP communication to site system roles, they can use PKI certificates for client authentication, or self-signed certificates that Configuration Manager generates. When Configuration Manager generates self-signed certificates, they have a custom object identifier for signing and encryption, and these certificates are used to uniquely identify the client. For all supported operating systems except Windows Server 2003, these self-signed certificates use SHA-256, and have a key length of 2048 bits. For Windows Server 2003, SHA1 is used with a key length of 1024 bits.  
 
 ### Operating system deployment and self-signed certificates  
- When you use Configuration Manager to deploy operating systems with self-signed certificates, a client computer must also have a certificate to communicate with the management point, even if the computer is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario for HTTP client connections, Configuration Manager generates self-signed certificates that have a custom object identifier for signing and encryption, and these certificates are used to uniquely identify the client. For all supported operating systems except Windows Server 2003, these self-signed certificates use SHA-256, and have a key length of 2048 bits. For Windows Server 2003, SHA1 is used with a key length of 1024 bits.. If these self-signed certificates are compromised, to prevent attackers from using them to impersonate trusted clients, block the certificates in the **Certificates** node in the **Administration** workspace, **Security** node.  
+ When you use Configuration Manager to deploy operating systems with self-signed certificates, a client computer must also have a certificate to communicate with the management point, even if the computer is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario for HTTP client connections, Configuration Manager generates self-signed certificates that have a custom object identifier for signing and encryption, and these certificates are used to uniquely identify the client. For all supported operating systems except Windows Server 2003, these self-signed certificates use SHA-256, and have a key length of 2048 bits. For Windows Server 2003, SHA1 is used with a key length of 1024 bits. If these self-signed certificates are compromised, to prevent attackers from using them to impersonate trusted clients, block the certificates in the **Certificates** node in the **Administration** workspace, **Security** node.  
 
 ### Client and server authentication  
  When clients connect over HTTP, they authenticate the management points by using either Active Directory Domain Services or by using the Configuration Manager trusted root key. Clients do not authenticate other site system roles, such as state migration points or software update points.  
 
- When a management point first authenticates a client by using the self-signed client certificate, this mechanism provides minimal security because any computer can generate a self-signed certificate. In this scenario, the client identity process must be augmented by approval. Only trusted computers must be approved, either automatically by Configuration Manager, or manually, by an administrative user. For more information, see the approval section in [Communications between endpoints in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+ When a management point first authenticates a client by using the self-signed client certificate, this mechanism provides minimal security because any computer can generate a self-signed certificate. In this scenario, the client identity process must be augmented by approval. Only trusted computers must be approved, either automatically by Configuration Manager, or manually, by an administrative user. For more information, see the approval section in [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  
 
 ## About SSL vulnerabilities
 To improve the security of your Configuration Manager clients and servers, do the following:
 
 -	Enable TLS 1.2
 
-    To enable TLS 1.2 for Configuration Manager, see the following KB article: [How to enable TLS 1.2 for Configuration Manager]( https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
+    To enable TLS 1.2 for Configuration Manager, see the following KB article: [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
 -	Disable SSL 3.0, TLS 1.0, and TLS 1.1 
 -	Reorder the TLS-related cipher suites 
 
