@@ -2,7 +2,7 @@
 title: Backup sites
 titleSuffix: Configuration Manager
 description: Learn to back up your sites before the event of failure or data loss in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -124,7 +124,7 @@ Keep multiple archives of the backup snapshot for the following reasons:
 
 
 ## Using the AfterBackup.bat file  
-After successfully backing up the site, the backup task automatically tries to run a script named **AfterBackup.bat**. Manually create the AfterBackup.bat file on the site server in `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup`. If an AfterBackup.bat file exists in the correct folder, it automatically runs after the backup task completes.
+After successfully backing up the site, the backup task automatically tries to run a script named **AfterBackup.bat**. Manually create the AfterBackup.bat file on the site server in `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`. If an AfterBackup.bat file exists in the correct folder, it automatically runs after the backup task completes.
 
 The AfterBackup.bat file lets you archive the backup snapshot at the end of every backup operation. It can automatically perform other post-backup tasks that aren't part of the Backup Site Server maintenance task. The AfterBackup.bat file integrates the archive and the backup operations, thereby ensuring that every new backup snapshot is archived.
 
