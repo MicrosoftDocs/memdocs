@@ -51,18 +51,34 @@ The details pane of the **Packages** node in the Configuration Manager console s
 
 ## Log files
 
-### PCMTrace.log
+### Enable logging
 
-Each instance of Package Conversion Manager creates a log file. This file includes all of its actions, exceptions, and errors. 
+When you enable logging for Package Conversion Manager, it logs all of its actions, exceptions, and errors. 
 
-**PCMTrace.log** is on the computer running Package Conversion Manager in the following path:  
+To enable logging for this component in the Configuration Manager, modify **Microsoft.ConfigurationManagement.exe.Config**. By default, this configuration file is located in the following path:  
+`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+Insert the following **switches** and **trace** XML elements in the **system.diagnostics** element after the last **sources** element:
+
+``` XML
+</sources>
+
+    <switches>
+      <add name="PcmLogging" value="3"/>
+    </switches>
+    <trace autoflush="true" indentsize="4">
+      <listeners>
+        <add name="PcmTraceListener" type="Microsoft.ConfigurationManagement.UserCentric.Logging.RolloverLogTraceListener, Microsoft.ConfigurationManagement.UserCentric.Logging" initializeData="%UserProfile%\AppData\Local\Temp\PcmTrace.log"/>
+      </listeners>
+    </trace>
+
+</system.diagnostics>
+```
+
+This sample uses the file **PCMTrace.log**. This log is on the computer running the Configuration Manager console in the following path:  
 `%UserProfile%\AppData\Local\Temp`
 
-To configure the level of detail in this log, modify **Microsoft.ConfigurationManagement.exe.Config**. By default, this configuration file is located in the following path:  
-`C:\Program Files\Microsoft Configuration Manager\AdminConsole\bin`  
-
-In the `<switches>` element, use the **PcmLogging** trace switch setting. Set the this value to four levels of detail, from least detailed (`1`) to most detailed (`4`).
-
+To configure the level of detail, change the **PcmLogging** trace switch setting. Set the this value to four levels of detail, from least detailed (`1`) to most detailed (`4`).
 
 
 ### SMSProv.log
