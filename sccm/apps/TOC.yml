@@ -1,0 +1,74 @@
+- name: Understand and explore
+  items:
+  - name: Introduction
+    href: understand/introduction-to-application-management.md
+- name: Get started
+  items:
+  - name: Create and deploy an application
+    href: get-started/create-and-deploy-an-application.md
+- name: Plan and design
+  items:
+  - name: Plan for, and configure application management
+    href: plan-design/plan-for-and-configure-application-management.md
+  - name: Security and privacy
+    href: plan-design/security-and-privacy-for-application-management.md
+- name: Deploy and use
+  items:
+  - name: Create applications
+    href: deploy-use/create-applications.md
+    items:
+    - name: Create Mac computer applications
+      href: get-started/creating-mac-computer-applications.md
+    - name: Create Windows applications
+      href: get-started/creating-windows-applications.md
+    - name: Create Linux and UNIX server applications
+      href: get-started/creating-linux-and-unix-server-applications.md
+    - name: Create Windows Embedded applications
+      href: get-started/creating-windows-embedded-applications.md
+    - name: Create global conditions
+      href: deploy-use/create-global-conditions.md
+    - name: Packages and programs
+      href: deploy-use/packages-and-programs.md
+  - name: Deploy applications
+    items:
+    - name: Deploy applications
+      href: deploy-use/deploy-applications.md
+    - name: Create a phased deployment
+      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+    - name: Share an application
+      href: deploy-use/share-applications.md
+    - name: Simulate application deployments
+      href: deploy-use/simulate-application-deployments.md
+    - name: Deploy App-V virtual applications
+      href: get-started/deploying-app-v-virtual-applications.md
+  - name: Monitor applications
+    items:
+    - name: Monitor applications from the console
+      href: deploy-use/monitor-applications-from-the-console.md
+    - name: Manage and monitor phased deployments
+      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+    - name: Monitor app usage with software metering
+      href: deploy-use/monitor-app-usage-with-software-metering.md
+  - name: Manage applications
+    items:
+    - name: Management tasks
+      href: deploy-use/management-tasks-applications.md
+    - name: User device affinity
+      href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - name: Microsoft Store for Business volume-purchased apps
+      href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+    - name: App-V virtual environments
+      href: deploy-use/create-app-v-virtual-environments.md
+  - name: Update and retire applications
+    items:
+    - name: Update and retire applications
+      href: deploy-use/update-and-retire-applications.md
+    - name: Revise and supersede applications
+      href: deploy-use/revise-and-supersede-applications.md
+    - name: Uninstall applications
+      href: deploy-use/uninstall-applications.md
+  - name: Run and manage scripts
+    href: deploy-use/create-deploy-scripts.md
+    items:
+    - name: Learn about PowerShell script security
+      href: deploy-use/learn-script-security.md
