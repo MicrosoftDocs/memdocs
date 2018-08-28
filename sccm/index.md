@@ -769,8 +769,8 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -788,8 +788,8 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -807,8 +807,8 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg" alt="">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -826,8 +826,8 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg" alt="">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -845,8 +845,8 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -864,8 +864,8 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg" alt="" data-linktype="relative-path">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
