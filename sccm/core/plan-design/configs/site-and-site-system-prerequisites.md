@@ -79,7 +79,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - .NET Framework 3.5 SP1 (or later)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
 
     - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
@@ -105,7 +105,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - .NET Framework 3.5 SP1 (or later)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
 
     - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
 
@@ -157,7 +157,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - .NET Framework 3.5 SP1 (or later)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
 
     - ASP.NET 4.5  
 
@@ -198,7 +198,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
 
     -   ASP.NET 4.5:  
 
@@ -236,7 +236,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 #### Windows Server roles and features  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2 
 
 
 
@@ -244,7 +244,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 #### Windows Server roles and features  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
 
     -   HTTP Activation  
 
@@ -331,7 +331,7 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -373,7 +373,7 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2 
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
 
@@ -425,7 +425,7 @@ The default IIS configuration is required with the following additions:
 
 #### Windows Server roles and features  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2 
 
 -   BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
 
@@ -451,7 +451,7 @@ The default IIS configuration is required with the following additions:
 
 #### Windows Server roles and features  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2 
 
 #### SQL Server Reporting Services  
 
@@ -467,7 +467,7 @@ The default IIS configuration is required with the following additions:
 
 #### Windows Server roles and features  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2 
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -485,7 +485,7 @@ The default IIS configuration is required with the following additions:
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2 
 
 The default IIS configuration is required.
 
@@ -503,7 +503,7 @@ The default IIS configuration is required.
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, or 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 

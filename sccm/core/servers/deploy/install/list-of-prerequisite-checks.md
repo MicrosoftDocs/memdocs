@@ -1,8 +1,8 @@
 ---
-title: "Prerequisite checks"
-titleSuffix: "Configuration Manager"
-description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
-ms.date: 4/17/2017
+title: Prerequisite checks
+titleSuffix: Configuration Manager
+description: Reference of the specific prerequisite checks for Configuration Manager updates.
+ms.date: 08/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# List of prerequisite checks for System Center Configuration Manager
+
+# List of prerequisite checks for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 The following sections detail the available prerequisite checks.
 
-For information about using Prerequisite Checker, see [Prerequisite Checker](prerequisite-checker.md).  
+For more information, see [Prerequisite checker](prerequisite-checker.md).  
+
+
 
 ##  <a name="BKMK_Security"></a> Prerequisite checks for security rights  
-The following table lists checks that Prerequisite Checker performs for security rights.
 
 |Check performed|Explanation|Severity|Site applicability|
 |---|---|---|---|
@@ -35,8 +37,9 @@ The following table lists checks that Prerequisite Checker performs for security
 |**SQL Server sysadmin rights**|Verifies that the user account that runs Configuration Manager Setup has the **sysadmin** role on the SQL Server instance selected for site database installation. This check also fails when Setup is unable to access the instance for the SQL Server to verify permissions.|Error|SQL Server|
 |**SQL Server sysadmin rights for reference site**|Verifies that the user account that runs Configuration Manager Setup has the **sysadmin** role on the SQL Server role instance selected as the reference site database. SQL Server **sysadmin** role permissions are required to modify the site database.|Error|SQL Server|
 
+
+
 ##  <a name="BKMK_Dependencies"></a> Prerequisite checks for Configuration Manager dependencies
-The following table lists checks that Prerequisite Checker performs for Configuration Manager dependencies.
 
 |Check performed|Explanation|Severity|Site applicability|
 |---|---|---|---|
@@ -71,7 +74,7 @@ The following table lists checks that Prerequisite Checker performs for Configur
 |**PowerShell 2.0 on site server**|Verifies that Windows PowerShell 2.0 or a later version is installed on the site server for the Configuration Manager Exchange Connector. For more information about PowerShell 2.0, see [Article 968930](http://go.microsoft.com/fwlink/p/?LinkId=226450) in the Microsoft Knowledge Base.|Warning|Primary site|
 |**Primary FQDN**|Using a fully qualified domain name (FQDN), verifies that the NetBIOS name of the computer matches the local hostname (first label of the FQDN) of the computer.|Error|Central administration site, <br>Primary site, <br>Secondary site, <br>SQL Server|
 |**Remote Connection to WMI on Secondary Site**|Checks whether Setup is able to establish a remote connection to WMI on the secondary site server.|Warning|Secondary site|
-|**Required SQL Server Collation**|Verifies that the instance for SQL Server and the Configuration Manager site database, if installed, is configured to use the SQL_Latin1_General_CP1_CI_AS collation, unless you are using a Chinese operating system and require GB18030 support.<br><br>For information about changing your SQL Server instance and database collations, see [Setting and changing collations](http://go.microsoft.com/fwlink/p/?LinkID=234541) in the SQL Server 2008 R2 Books Online.  For information about enabling GB18030 support, see [International support in System Center Configuration Manager](../../../../core/plan-design/hierarchy/international-support.md).|Error|Central administration site, <br>Primary site, <br>Secondary site|
+|**Required SQL Server Collation**|Verifies that the instance for SQL Server and the Configuration Manager site database, if installed, is configured to use the **SQL_Latin1_General_CP1_CI_AS** collation, unless you are using a Chinese OS and require GB18030 support.<br><br>For information about changing your SQL Server instance and database collations, see [SQL collation and unicode support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support). For more information about enabling GB18030 support, see [International support](/sccm/core/plan-design/hierarchy/international-support).|Error|Central administration site, <br>Primary site, <br>Secondary site|
 |**Setup Source Folder**|Verifies that the computer account for the secondary site has **Read** NTFS file system permissions and **Read** share permissions to the Setup source folder and share.<br><br>**NOTE**: The secondary site computer account must be an **Administrator** user on the computer if you use administrative shares (for example, C$ and D$).|Error|Secondary site|
 |**Setup Source Version**|Verifies that the Configuration Manager version in the source folder that you specified for the secondary site installation matches the Configuration Manager version of the primary site.|Error|Secondary site|
 |**Site code in use**|Checks that the site code that you specified is not already in use in the Configuration Manager hierarchy. You must specify a unique site code for this site.|Error|Primary site|
@@ -79,10 +82,10 @@ The following table lists checks that Prerequisite Checker performs for Configur
 |**SQL Server Edition**|Checks that the edition of SQL Server at the site is not SQL Server Express.|Error|SQL Server|
 |**SQL Server Express on Secondary Site**|Checks that SQL Server Express can successfully install on the site server computer for a secondary site.|Error|Secondary site|
 |**SQL Server on the Secondary Site Computer**|Checks that SQL Server is installed on the secondary site computer. You cannot install SQL Server on a remote site system.<br><br>**WARNING**: This check applies only when you select to have Setup use an existing instance of SQL Server.|Error|Secondary site|
-|**SQL Server process memory allocation**|Verifies that SQL Server reserves a minimum of 8 GB of memory for the central administration site and primary site, and a minimum of 4 GB of memory for the secondary site. For more information about how to set a fixed amount of memory by using SQL Server Management Studio, see [How to set a fixed amount of memory (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).<br><br>**NOTE**: This check is not applicable to SQL Server Express on a secondary site, which is limited to 1 GB of reserved memory.|Warning|SQL Server|
+|**SQL Server process memory allocation**|Verifies that SQL Server reserves a minimum of 8 GB of memory for the central administration site and primary site, and a minimum of 4 GB of memory for the secondary site. For more information, see [How to configure memory options using SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd).<br><br>**NOTE**: This check is not applicable to SQL Server Express on a secondary site, which is limited to 1 GB of reserved memory.|Warning|SQL Server|
 |**SQL Server service running account**|Verifies that the logon account for the SQL Server service is not a local user account or LOCAL SERVICE. You must configure the SQL Server service to use a valid domain account, NETWORK SERVICE, or LOCAL SYSTEM.|Error|Central administration site, <br>Primary site, <br>Secondary site|
 |**SQL Server TCP Port**|Checks that TCP is enabled for the SQL Server instance and is set to use a static port.|Error|SQL Server|
-|**SQL Server version**|Verifies that a supported version of SQL Server is installed on the specified site database server. For more information, see [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).|Error|SQL Server|
+|**SQL Server version**|Verifies that a supported version of SQL Server is installed on the specified site database server. For more information, see [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).|Error|SQL Server|
 |**Unsupported site system operating system version for upgrade**|During an upgrade, this rule checks whether site system roles, other than distribution points, are installed on computers that run Windows Server 2008 or earlier versions.<br><br>**NOTE**: Because this check cannot resolve the status of site system roles that are installed in Azure or for the cloud storage used by Microsoft Intune, when you integrate Intune with Configuration Manager, you can ignore warnings for these roles as false positives.|Warning|Primary site, <br>Secondary site|
 |**Unsupported site system role 'Asset Intelligence synchronization point' on the expanded primary site**|Checks that the Asset Intelligence sync point site system role is not installed on the standalone primary site that you are expanding.|Error|Central administration site|
 |**Unsupported site system role 'Endpoint Protection point' on the expanded primary site**|Checks that the Endpoint Protection point site system role is not installed on the standalone primary site that you are expanding.|Error|Central administration site|
@@ -90,15 +93,17 @@ The following table lists checks that Prerequisite Checker performs for Configur
 |**User State Migration Tool (USMT) installed**|Checks whether the User State Migration Tool (USMT) component of Windows Assessment and Deployment Kit (ADK) for Windows 8.1 is installed.|Error|Central administration site, <br>Primary site (standalone only)|  
 |**Validate FQDN of SQL Server Computer**|Checks that the FQDN that you specified for the SQL Server computer is valid.|Error|SQL Server|
 |**Verify Central Administration Site Version**|Checks that the central administration site has the same version of Configuration Manager.|Error|Primary site|
-|**Verify site server permissions to publish to Active Directory**|Verifies that the computer account for the site server has **Full Control** permissions to the **System Management** container in the Active Directory domain. For more information about your options to configure required permissions, see [Prepare Active Directory for site publishing](../../../../core/plan-design/network/extend-the-active-directory-schema.md).<br><br>**NOTE**: You can ignore this warning if you have manually verified the permissions.|Warning|Central administration site, <br>Primary site, <br>Secondary site|
+|**Verify site server permissions to publish to Active Directory**|Verifies that the computer account for the site server has **Full Control** permissions to the **System Management** container in the Active Directory domain. For more information about your options to configure required permissions, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).<br><br>**NOTE**: You can ignore this warning if you have manually verified the permissions.|Warning|Central administration site, <br>Primary site, <br>Secondary site|
 |**Windows Deployment Tools installed**|Checks whether the Windows Deployment Tools component of Windows ADK for Windows 10 is installed.|Error|SMS Provider|
 |**Windows Failover Cluster**|Checks that computers that have a management point or distribution point are not part of a Windows Cluster.|Error|Management point<br>Distribution point|
 |**Windows Preinstallation Environment installed**|Checks whether the Windows Preinstallation Environment component of the Windows ADK for Windows 10 is installed.|Error|SMS Provider|
 |**Windows Remote Management (WinRM) v1.1**|Verifies that WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console. For more information about how to download WinRM 1.1, see [Article 936059](https://support.microsoft.com/en-us/kb/936059) in the Microsoft Knowledge Base.|Warning|Primary site, <br>Configuration Manager console|
-|**WSUS on site server**|Verifies that Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2) is installed on the site server. When you use a software update point on a computer that is not the site server, you must install the WSUS Administration Console on the site server. For more information about WSUS, see [Windows Server Update Services](http://go.microsoft.com/fwlink/p/?LinkID=79477).|Warning|Central administration site, <br>Primary site|  
+|**WSUS on site server**|Verifies that Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2) is installed on the site server. When you use a software update point on a computer that is not the site server, you must install the WSUS Administration Console on the site server. For more information about WSUS, see [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).|Warning|Central administration site, <br>Primary site|  
+|**Pending configuration item policy updates**|<!--SCCMDocs-pr issue 2814-->Starting in version 1806, if you're updating from version 1706 or later, you may see this warning if you have many application deployments and at least one of them requires approval. You have two options:<br/><br/> - Ignore the warning and continue with the update. This action causes higher processing on the site server during the update as it processes the policies. You may also see more processor load on the management point after the update.<br/><br/> - Revise one of the applications that has no requirements or a specific OS requirement. Pre-process some of the load on the site server at that time. Review **objreplmgr.log**, and then monitor the processor on the management point. After the processing is complete, update the site. There will still be some additional processing after the update, but less than if you ignore the warning with the first option.|Warning|Primary site|  
+
+
 
 ##  <a name="BKMK_Requirements"></a> Prerequisite checks for system requirements  
-The following table lists checks that Prerequisite Checker performs for system requirements.  
 
 |Check performed|Explanation|Severity|Site applicability|
 |---|---|---|---|
@@ -109,9 +114,9 @@ The following table lists checks that Prerequisite Checker performs for system r
 |**FAT Drive on Site Server**|Checks whether the disk drive is formatted with the FAT file system. For better security, install site server components on disk drives formatted with the NTFS file system.|Warning|Primary site|
 |**Free disk space on site server**|To install the site server, the site server computer must have at least 15 GB of free disk space. You must have an additional 1 GB of free space if you install the SMS Provider site system role on the same computer.|Error|Central administration site, <br>Primary site, <br>Secondary site|
 |**Pending system restart**|Checks whether another program requires the server to be restarted before you run Setup.|Error|Central administration site, <br>Primary site, <br>Secondary site, <br>Configuration Manager console, <br>SMS Provider, <br>SQL Server, <br>Management point, <br>Distribution point|
-|**Read-Only Domain Controller**|Site database servers and secondary site servers are not supported on a read-only domain controller (RODC). For more information, see [Problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base.|Error|Central administration site, <br>Primary site, <br>Secondary site|
-|**Schema extensions**|Determines whether the Active Directory Domain Services schema has been extended, and if so, the version of the schema extensions that were used. Configuration Manager Active Directory schema extensions are not required for site server installation, but we recommend them for the full use of all Configuration Manager features. For more information about the advantages of extending the schema, see [Prepare Active Directory for site publishing](../../../../core/plan-design/network/extend-the-active-directory-schema.md).|Warning|Central administration site, <br>Primary site|
+|**Read-Only Domain Controller**|Site database servers and secondary site servers are not supported on a read-only domain controller (RODC). For more information, see the Microsoft Support article on [Problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911).|Error|Central administration site, <br>Primary site, <br>Secondary site|
+|**Schema extensions**|Determines whether the Active Directory Domain Services schema has been extended, and if so, the version of the schema extensions that were used. Configuration Manager Active Directory schema extensions are not required for site server installation, but we recommend them for the full use of all Configuration Manager features. For more information about the advantages of extending the schema, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).|Warning|Central administration site, <br>Primary site|
 |**Site Server FQDN Length**|Checks the length of the FQDN of the site server computer.|Error|Central administration site, <br>Primary site, <br>Secondary site|
-|**Unsupported Configuration Manager console operating system**|Verifies that the Configuration Manager console can be installed on computers that run a supported operating system version. For more information, see the  [Supported operating systems for the System Center Configuration Manager console](/sccm/core/plan-design/configs/supported-operating-systems-consoles).|Error|Configuration Manager console|
-|**Unsupported site server operating system version for Setup**|Verifies that a supported operating system is running on the server. For more information, see [Supported operating systems for System Center Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).|Error|Central administration site, <br>Primary site, <br>Secondary site, <br>Configuration Manager console, <br>Management point, <br>Distribution point|
+|**Unsupported Configuration Manager console operating system**|Verifies that the Configuration Manager console can be installed on computers that run a supported OS version. For more information, see the  [Supported operating systems for the Configuration Manager console](/sccm/core/plan-design/configs/supported-operating-systems-consoles).|Error|Configuration Manager console|
+|**Unsupported site server operating system version for Setup**|Verifies that a supported OS is running on the server. For more information, see [Supported operating systems for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).|Error|Central administration site, <br>Primary site, <br>Secondary site, <br>Configuration Manager console, <br>Management point, <br>Distribution point|
 |**Verify database consistency**|Beginning with version 1602, this check verifies database consistency.|Error|Central administration site, <br>Primary site|  
