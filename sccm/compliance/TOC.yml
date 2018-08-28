@@ -1,0 +1,66 @@
+- name: Understand and explore
+  items:
+  - name: Ensure device compliance
+    href: understand/ensure-device-compliance.md
+- name: Get started
+  items:
+  - name: Get started with compliance settings
+    href: get-started/get-started-with-compliance-settings.md
+- name: Plan and design
+  items:
+  - name: Plan for, and configure compliance settings
+    href: plan-design/plan-for-and-configure-compliance-settings.md
+  - name: Common tasks for managing compliance
+    href: plan-design/common-tasks-for-managing-compliance.md
+    items:
+    - name: Devices with the Configuration Manager client
+      href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - name: Create and deploy configuration baselines
+      href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+  - name: Security and privacy
+    href: plan-design/security-and-privacy-for-compliance-settings.md
+  - name: Security Content Automation Protocol (SCAP) extensions
+    href: plan-design/scap/about-scap.md
+    items:
+    - name: Install and configure SCAP extensions
+      href: plan-design/scap/install-configure-scap.md
+    - name: Deploy and monitor SCAP compliance
+      href: plan-design/scap/deploy-monitor-export.md
+    - name: Troubleshoot SCAP extensions
+      href: plan-design/scap/troubleshooting-scap.md
+- name: Deploy and use
+  items:
+  - name: Create configuration items
+    href: deploy-use/create-configuration-items.md
+    items:
+    - name: Devices managed with the Configuration Manager client
+      href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
+      items:
+      - name: Windows 10
+        href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+      - name: Mac OS X
+        href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+      - name: Windows desktop and server (custom)
+        href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+  - name: Create child configuration items
+    href: deploy-use/create-child-configuration-items.md
+  - name: Create configuration baselines
+    href: deploy-use/create-configuration-baselines.md
+  - name: Deploy configuration baselines
+    href: deploy-use/deploy-configuration-baselines.md
+  - name: Manage configuration data
+    items:
+    - name: Manage configuration data
+      href: deploy-use/management-tasks-for-configuration-data.md
+    - name: Import configuration data
+      href: deploy-use/import-configuration-data.md
+  - name: Create user data and profiles configuration items
+    href: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - name: Create remote connection profiles
+    href: deploy-use/create-remote-connection-profiles.md
+  - name: Upgrade Windows devices to a new edition
+    href: deploy-use/upgrade-windows-version.md
+  - name: Configure Microsoft Edge settings
+    href: deploy-use/browser-profiles.md
+  - name: Monitor compliance settings
+    href: deploy-use/monitor-compliance-settings.md
