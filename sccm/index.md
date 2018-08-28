@@ -882,6 +882,67 @@ ms.topic: hub-page
                 </ul>
             </li>
             <li>
+                <a href="#sdk">SDK/Powershell</a>
+                <ul id="sdk">
+                    <li>
+                        <a href="#sdk-all">All</a>
+                        <ul id="sdk-all" class="cardsC">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="">System Center Configuration manager SDK</a></h3>
+                                                <p>Automate Configuration Manager through script and to developers adding features and extension.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="">Configuration Manager programming fundamentals</a></h3>
+                                                <p>Learn about the programming techniques that help you successfully program Configuration Manager.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-4.svgs" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="">Get starte with System Center Configuration Manager cmdlets</a></h3>
+                                                <p>Manage a Configuration Manager hierarchy by using Windows Powershell scripts, cmdlets, and the Drive Provider.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="#community">Community</a>
                 <ul id="community">
                     <li>
