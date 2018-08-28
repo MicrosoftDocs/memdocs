@@ -758,61 +758,124 @@ ms.topic: hub-page
                 </ul>
             </li>
             <li>
-                <a href="#sdkstools">SDKs/Tools</a>
-                <ul id="sdkstools">
+                <a href="#tools">Tools</a>
+                <ul id="tools">
                     <li>
-                        <a href="#sdkstools-all">All</a>
-                        <ul id="sdkstools-all" class="cardsC">
+                        <a href="#tools-all">All</a>
+                        <ul id="tools-all" class="cardsC">
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-tools-1.svg" alt="" />
+                                <a href="/sccm/core/support/tools">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3><a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">System Center Configuration Manager SDK</a></h3>
-                                                <p>Automate Configuration Manager through script and to developers adding features and extensions.</p>
+                                                <div class="cardText">
+                                                    <h3>Configuration Manager Tools</h3>
+                                                    <p>Use these client- and server-based tools to help support and troubleshoot.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                <a href="https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)" data-linktype="absolute-path">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3><a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">Configuration Manager programming fundamentals</a></h3>
-                                                <p>Learn about the programming techniques that help you successfully program Configuration Manager. </p>
+                                                <div class="cardText">
+                                                    <h3>Support Center</h3>
+                                                    <p>Gather information from clients for easier analysis when troubleshooting.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-tools-4.svg" alt="" />
+                                <a href="/sccm/mdt/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg" alt="">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3><a href="/powershell/sccm/configurationmanager/">Get started with System Center Configuration Manager cmdlets</a></h3>
-                                                <p>Manage a Configuration Manager hierarchy by using Windows PowerShell scripts, cmdlets, and the Drive Provider.</p>
+                                                <div class="cardText">
+                                                    <h3>Microsoft Deployment Toolkit (MDT)</h3>
+                                                    <p>A collection of tools, processes, and guidance for automating desktop and server OS deployments.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/sum/tools/updates-publisher">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>System Center Updates Publisher (SCUP)</h3>
+                                                    <p>A stand-alone tool to manage and import custom software updates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/compliance/plan-design/scap/about-scap">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Security Content Automation Protocol (SCAP) extensions</h3>
+                                                    <p>Analyze and assess your environment for compliance with NIST baselines.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/apps/pcm">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg" alt="" data-linktype="relative-path">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Package Conversion Manager</h3>
+                                                    <p>Convert legacy packages into applications.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
