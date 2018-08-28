@@ -762,14 +762,14 @@ ms.topic: hub-page
                 <ul id="tools">
                     <li>
                         <a href="#tools-all">All</a>
-                        <ul id="tools-all" class="cardsC">
+                        <ul id="tools-all" class="cardsF">
                             <li>
                                 <a href="/sccm/core/support/tools">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
+                                                    <div class="cardImage">
                                                         <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg"  alt="" />
                                                     </div>
                                                 </div>
@@ -788,7 +788,7 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
+                                                    <div class="cardImage">
                                                         <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg"  alt="" />
                                                     </div>
                                                 </div>
@@ -807,7 +807,7 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
+                                                    <div class="cardImage">
                                                         <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg"  alt="" />
                                                     </div>
                                                 </div>
@@ -826,7 +826,7 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
+                                                    <div class="cardImage">
                                                         <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg"  alt="" />
                                                     </div>
                                                 </div>
@@ -845,7 +845,7 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
+                                                    <div class="cardImage">
                                                         <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -864,7 +864,7 @@ ms.topic: hub-page
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
+                                                    <div class="cardImage">
                                                         <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg"  alt="" />
                                                     </div>
                                                 </div>
