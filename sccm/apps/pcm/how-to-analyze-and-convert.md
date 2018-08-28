@@ -110,3 +110,13 @@ Before you can convert a package, first analyze it. Depending on the results of 
     > [!Note]  
     > When you convert a package, the site records the date and time of the conversion as the UTC time.  
 
+
+
+## <a name="bkmk_monitor"></a> Monitor
+
+Go to the **Monitoring** workspace of the Configuration Manager console, and select **Package Conversion Status**. This dashboard shows the overall analysis and conversion state of packages in the site. A new background task automatically summarizes the analysis data.
+
+> [!Tip]  
+> Package Conversion Manager integrated with Configuration Manager doesn't require you to schedule analysis of packages. This action is handled by the integrated summarization task.
+
+![Screenshot of example Package Conversion Status dashboard](media/1357861-pcm-dashboard.png)
