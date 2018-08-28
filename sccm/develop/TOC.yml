@@ -158,7 +158,7 @@
       href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
     - name: How to Read a Site Control File Embedded Property List
       href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
-    - name: How to Deploy a Site System Role (Example:  Fallback Status Point)
+    - name: 'How to Deploy a Site System Role (Example:  Fallback Status Point)'
       href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
   - name: Configuration Manager Class Schema
     href: core/understand/configuration-manager-class-schema.md
@@ -223,7 +223,7 @@
   items:
   - name: Deployment Type Extension Versioning
     href: apps/deployment-type-extension-versioning.md
-  - name: Scenario: Extending Application Management
+  - name: 'Scenario: Extending Application Management'
     href: apps/scenario--extending-application-management.md
     items:
     - name: Extending Application Management Overview
