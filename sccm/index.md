@@ -882,11 +882,11 @@ ms.topic: hub-page
                 </ul>
             </li>
             <li>
-                <a href="#sdk">SDK/Powershell</a>
-                <ul id="sdk">
+                <a href="#sdkps">SDK/Powershell</a>
+                <ul id="sdkps">
                     <li>
-                        <a href="#sdk-all">All</a>
-                        <ul id="sdk-all" class="cardsC">
+                        <a href="#sdkps-all">All</a>
+                        <ul id="sdkps-all" class="cardsC">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -927,11 +927,11 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-4.svgs" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="">Get starte with System Center Configuration Manager cmdlets</a></h3>
+                                                <h3><a href="">Get started with System Center Configuration Manager cmdlets</a></h3>
                                                 <p>Manage a Configuration Manager hierarchy by using Windows Powershell scripts, cmdlets, and the Drive Provider.</p>
                                             </div>
                                         </div>
@@ -954,7 +954,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_blog.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -971,7 +971,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/hubs/sccm/sccm-social-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-social-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -988,7 +988,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_support.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1005,7 +1005,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_feedback.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1022,12 +1022,29 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_feedback.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation">Give feedback on the documentation</a></h3>
                                                 <p>Share your ideas about how to improve the technical content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://blogs.technet.microsoft.com/configurationmgr/">Configuration Manager Support Blog</a></h3>
+                                                <p>Support and servicing information from the Configuration Manager Team.</p>
                                             </div>
                                         </div>
                                     </div>
