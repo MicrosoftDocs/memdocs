@@ -263,7 +263,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -282,7 +282,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -301,7 +301,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -378,7 +378,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel5">Cloud-attached management</a>
+                        <a href="#tasksPanel5">Cloud-attached managements</a>
                         <ul id="tasksPanel5" class="cardsC">
                             <li>
                                 <a href="/sccm/protect/understand/backup-and-recovery">
@@ -622,6 +622,136 @@ ms.topic: hub-page
                                     </div>
                                 </div>
                                 </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#current">Get Current</a>
+                <ul id="current">
+                    <li>
+                        <a href="#current-all">All</a>
+                        <p>To fully adopt the Windows as a service model, you also must adopt the Configuration Manager as a service model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience.</p><br>
+                        <ul id="current-all" class="cardsC">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/core/understand/configuration-manager-and-windows-as-service">Keep Windows 10 up-to-date in the enterprise using Configuration Manager</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">Upgrade to Windows 10 via task sequence</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Manage Windows as a service</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Manage Office 365</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migrating to Configuration Manager current branch</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migration FAQ</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/core/migration/migrate-data-between-hierarchies">FastTrack program</a></h3>
+                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </li>
