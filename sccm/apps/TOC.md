@@ -46,8 +46,8 @@
 
 ## [Package Conversion Manager](pcm/package-conversion-manager.md)
 ### [How to analyze and convert packages](pcm/how-to-analyze-and-convert.md)
-### [How to use the plug-in](pcm/how-to-use-plug-in.md)
+<!--### [How to use the plug-in](pcm/how-to-use-plug-in.md)-->
 ### [Troubleshoot Package Conversion Manager](pcm/troubleshoot-pcm.md)
 ### Technical references
-#### [Plug-in configuration XML](pcm/plugin-config-xml.md)
+<!--#### [Plug-in configuration XML](pcm/plugin-config-xml.md)-->
 #### [Error messages](pcm/error-messages.md)
