@@ -1,0 +1,746 @@
+- name: Understand and explore
+  items:
+  - name: Introduction to Configuration Manager
+    href: understand/introduction.md
+    items:
+    - name: Find help for Configuration Manager
+      href: understand/find-help.md
+    - name: How to use the docs
+      href: understand/use-docs.md
+    - name: Using the console
+      href: servers/manage/admin-console.md
+    - name: Accessibility features
+      href: understand/accessibility-features.md
+    - name: Software Center user guide
+      href: understand/software-center.md
+  - name: Fundamentals of Configuration Manager
+    href: understand/fundamentals.md
+    items:
+    - name: Fundamentals of sites and hierarchies
+      href: understand/fundamentals-of-sites-and-hierarchies.md
+      items:
+      - name: About upgrade, update, and install for site and hierarchy infrastructure
+        href: understand/upgrade-update-install.md
+    - name: Fundamentals of managing devices
+      href: understand/fundamentals-of-managing-devices.md
+    - name: Fundamentals of client management
+      href: understand/fundamentals-of-client-management-tasks.md
+    - name: Fundamentals of security
+      href: understand/fundamentals-of-security.md
+    - name: Fundamentals of role-based administration
+      href: understand/fundamentals-of-role-based-administration.md
+  - name: Introduction to the Long-Term Servicing Branch
+    href: understand/introduction-to-the-ltsb.md
+    items:
+    - name: Supported Configurations for the Long-Term Servicing Branch
+      href: understand/supported-configurations-for-ltsb.md
+    - name: Install the Long-Term Service Branch
+      href: understand/install-the-ltsb.md
+    - name: Manage the Long-Term Servicing Branch
+      href: understand/manage-the-ltsb.md
+    - name: Upgrade the Long-Term Servicing Branch to the Current Branch
+      href: understand/convert-to-current-branch.md
+  - name: Which branch of Configuration Manager should I use
+    href: understand/which-branch-should-i-use.md
+  - name: Configuration Manager and Windows as a Service
+    href: understand/configuration-manager-and-windows-as-service.md
+  - name: Extended interoperability client
+    href: understand/interoperability-client.md
+  - name: Licensing for System Center Configuration Manager
+    href: understand/learn-more-editions.md
+  - name: Use cloud services
+    href: understand/use-cloud-services.md
+    items:
+    - name: Configuration Manager on Azure
+      href: understand/configuration-manager-on-azure.md
+  - name: FAQ for product and licensing
+    href: understand/product-and-licensing-faq.md
+  - name: FAQ for diagnostics and usage data
+    href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
+- name: Plan and design
+  href: plan-design/get-ready.md
+  items:
+  - name: Product changes
+    items:
+    - name: Features and capabilities
+      href: plan-design/changes/features-and-capabilities.md
+    - name: What's changed from Configuration Manager 2012
+      href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
+    - name: What’s new in incremental versions
+      href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 1806
+      href: plan-design/changes/whats-new-in-version-1806.md
+    - name: What's new in version 1802
+      href: plan-design/changes/whats-new-in-version-1802.md
+    - name: What's new in version 1710
+      href: plan-design/changes/whats-new-in-version-1710.md
+    - name: Removed and deprecated
+      href: plan-design/changes/deprecated/removed-and-deprecated.md
+      items:
+      - name: Removed and deprecated features
+        href: plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md
+      - name: Removed and deprecated for site servers
+        href: plan-design/changes/deprecated/removed-and-deprecated-server.md
+      - name: Removed and deprecated for clients
+        href: plan-design/changes/deprecated/removed-and-deprecated-client.md
+  - name: Supported configurations
+    href: plan-design/configs/supported-configurations.md
+    items:
+    - name: Size and scale numbers
+      href: plan-design/configs/size-and-scale-numbers.md
+    - name: Site and site system prerequisites
+      href: plan-design/configs/site-and-site-system-prerequisites.md
+    - name: Supported operating systems for site system servers
+      href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
+    - name: Supported operating systems for clients and devices
+      href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
+    - name: Support for Windows 10 as a client
+      href: plan-design/configs/support-for-windows-10.md
+    - name: Supported operating systems for consoles
+      href: plan-design/configs/supported-operating-systems-consoles.md
+    - name: Recommended hardware
+      href: plan-design/configs/recommended-hardware.md
+    - name: Support for SQL Server versions
+      href: plan-design/configs/support-for-sql-server-versions.md
+    - name: Support for Active Directory domains
+      href: plan-design/configs/support-for-active-directory-domains.md
+    - name: Support for Windows features and networks
+      href: plan-design/configs/support-for-windows-features-and-networks.md
+    - name: Support for Virtualization Environments
+      href: plan-design/configs/support-for-virtualization-environments.md
+  - name: Choose a device management solution
+    href: plan-design/choose-a-device-management-solution.md
+  - name: Design a hierarchy of sites
+    href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
+    items:
+    - name: Plan for the SMS Provider
+      href: plan-design/hierarchy/plan-for-the-sms-provider.md
+    - name: Plan for the site database
+      href: plan-design/hierarchy/plan-for-the-site-database.md
+    - name: Plan for site system servers
+      href: plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md
+    - name: Fundamental concepts for content management
+      href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
+      items:
+      - name: Use a cloud-based distribution point
+        href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
+      - name: Use a pull-distribution point
+        href: plan-design/hierarchy/use-a-pull-distribution-point.md
+      - name: The content library
+        href: plan-design/hierarchy/the-content-library.md
+      - name: Flowchart - Manage content library
+        href: plan-design/hierarchy/manage-content-library-flowchart.md
+      - name: Content library cleanup tool
+        href: plan-design/hierarchy/content-library-cleanup-tool.md
+      - name: Manage accounts to access content
+        href: plan-design/hierarchy/manage-accounts-to-access-content.md
+      - name: Peer Cache for Configuration Manager clients
+        href: plan-design/hierarchy/client-peer-cache.md
+      - name: Package Transfer Manager
+        href: plan-design/hierarchy/package-transfer-manager.md
+      - name: Manage network bandwidth for content management
+        href: plan-design/hierarchy/manage-network-bandwidth.md
+      - name: Security and privacy for content management
+        href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+    - name: How clients find resources and services
+      href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
+    - name: Security and privacy for site administration
+      href: plan-design/hierarchy/security-and-privacy-for-site-administration.md
+  - name: Plan for network infrastructure
+    href: plan-design/network/configure-firewalls-ports-domains.md
+    items:
+    - name: Prepare the Active Directory schema
+      href: plan-design/network/extend-the-active-directory-schema.md
+      items:
+      - name: Schema extensions
+        href: plan-design/network/schema-extensions.md
+    - name: Prepare Windows Servers to support site systems
+      href: plan-design/network/prepare-windows-servers.md
+    - name: Websites for site system servers
+      href: plan-design/network/websites-for-site-system-servers.md
+    - name: PKI certificate requirements
+      href: plan-design/network/pki-certificate-requirements.md
+    - name: CNG certificates overview
+      href: plan-design/network/cng-certificates-overview.md
+  - name: Diagnostics and usage data
+    href: plan-design/diagnostics/diagnostics-and-usage-data.md
+    items:
+    - name: How diagnostics and usage data is used
+      href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Diagnostic data for 1806
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
+    - name: Diagnostic data for 1802
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
+    - name: Diagnostic data for 1710
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
+    - name: How diagnostics and usage data is collected
+      href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
+    - name: How to view diagnostics and usage data
+      href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
+    - name: Customer Experience Improvement Program (CEIP)
+      href: plan-design/diagnostics/customer-experience-improvement-program-ceip.md
+  - name: Security and privacy for Configuration Manager
+    href: plan-design/security/security-and-privacy.md
+    items:
+    - name: Plan for security
+      href: plan-design/security/plan-for-security.md
+    - name: Security best practices and privacy information
+      href: plan-design/security/security-best-practices-and-privacy-information.md
+    - name: Privacy statement - Configuration Manager Cmdlet Library
+      href: plan-design/security/privacy-statement-cmdlet-library.md
+    - name: Additional privacy information
+      href: plan-design/security/additional-privacy.md
+    - name: Configure security
+      href: plan-design/security/configure-security.md
+    - name: Cryptographic controls technical reference
+      href: plan-design/security/cryptographic-controls-technical-reference.md
+- name: Get started
+  items:
+  - name: Evaluate Configuration Manager in a lab
+    href: get-started/evaluate-with-lab-environment.md
+    items:
+    - name: Set up your lab
+      href: get-started/set-up-your-lab.md
+  - name: Technical Preview
+    href: get-started/technical-preview.md
+    items:
+    - name: Capabilities in 1809
+      href: get-started/capabilities-in-technical-preview-1809.md
+    - name: Capabilities in 1808
+      href: get-started/capabilities-in-technical-preview-1808.md
+    - name: Capabilities in 1807
+      href: get-started/capabilities-in-technical-preview-1807.md
+    - name: Capabilities in 1806.2
+      href: get-started/capabilities-in-technical-preview-1806-2.md
+    - name: Capabilities in 1806
+      href: get-started/capabilities-in-technical-preview-1806.md
+  - name: Migrate data between hierarchies
+    href: migration/migrate-data-between-hierarchies.md
+    items:
+    - name: Planning for migration
+      href: migration/planning-for-migration.md
+      items:
+      - name: Prerequisites for migration
+        href: migration/prerequisites-for-migration.md
+      - name: Checklists for migration
+        href: migration/administrator-checklists-for-migration-planning.md
+      - name: Determine whether to migrate data
+        href: migration/determine-whether-to-migrate-data.md
+      - name: Planning the source hierarchy
+        href: migration/planning-a-source-hierarchy-strategy.md
+      - name: Planning migration jobs
+        href: migration/planning-a-migration-job-strategy.md
+      - name: Planning client migration
+        href: migration/planning-a-client-migration-strategy.md
+      - name: Planning for content deployment
+        href: migration/planning-a-content-deployment-migration-strategy.md
+      - name: Planning to migrate objects
+        href: migration/planning-for-the-migration-of-objects.md
+      - name: Planning to monitor migration
+        href: migration/planning-to-monitor-migration-activity.md
+      - name: Planning to complete migration
+        href: migration/planning-to-complete-migration.md
+    - name: Configure source hierarchies and source sites
+      href: migration/configuring-source-hierarchies-and-source-sites-for-migration.md
+    - name: Operations for migrating
+      href: migration/operations-for-migration.md
+    - name: Security and privacy for migration
+      href: migration/security-and-privacy-for-migration.md
+- name: Deploy servers and roles
+  href: servers/deploy/start-using.md
+  items:
+  - name: Install infrastructure
+    items:
+    - name: Get installation media
+      href: servers/deploy/install/get-install-media.md
+    - name: Before you run Setup
+      items:
+      - name: Setup reference
+        href: servers/deploy/install/setup-reference.md
+      - name: Setup Downloader
+        href: servers/deploy/install/setup-downloader.md
+      - name: Prerequisite checker
+        href: servers/deploy/install/prerequisite-checker.md
+      - name: Prerequisite checks
+        href: servers/deploy/install/list-of-prerequisite-checks.md
+    - name: Installing sites
+      href: servers/deploy/install/installing-sites.md
+      items:
+      - name: Prepare to install sites
+        href: servers/deploy/install/prepare-to-install-sites.md
+      - name: Prerequisites for installing sites
+        href: servers/deploy/install/prerequisites-for-installing-sites.md
+      - name: Use the Setup Wizard
+        href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+      - name: Use a command-line
+        href: servers/deploy/install/use-a-command-line-to-install-sites.md
+        items:
+        - name: Command-line options
+          href: servers/deploy/install/command-line-options-for-setup.md
+      - name: Install consoles
+        href: servers/deploy/install/install-consoles.md
+      - name: Upgrade an Evaluation install
+        href: servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md
+      - name: Upgrade to System Center Configuration Manager
+        href: servers/deploy/install/upgrade-to-configuration-manager.md
+      - name: Scenarios to streamline your installation
+        href: servers/deploy/install/scenarios-to-streamline-your-installation.md
+      - name: Uninstalling sites and hierarchies
+        href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+  - name: Configure sites and hierarchies
+    href: servers/deploy/configure/configure-sites-and-hierarchies.md
+    items:
+    - name: Add site system roles
+      href: servers/deploy/configure/add-site-system-roles.md
+      items:
+      - name: Install site system roles
+        href: servers/deploy/configure/install-site-system-roles.md
+      - name: Install cloud-based distribution points
+        href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
+      - name: About the service connection point
+        href: servers/deploy/configure/about-the-service-connection-point.md
+      - name: Configuration options for site system roles
+        href: servers/deploy/configure/configuration-options-for-site-system-roles.md
+      - name: Database replicas for management points
+        href: servers/deploy/configure/database-replicas-for-management-points.md
+    - name: Site components
+      href: servers/deploy/configure/site-components.md
+    - name: Publish site data
+      href: servers/deploy/configure/publish-site-data.md
+    - name: Manage content and content infrastructure
+      href: servers/deploy/configure/manage-content-and-content-infrastructure.md
+      items:
+      - name: Install and configure distribution points
+        href: servers/deploy/configure/install-and-configure-distribution-points.md
+      - name: Deploy and manage content
+        href: servers/deploy/configure/deploy-and-manage-content.md
+      - name: Monitor content
+        href: servers/deploy/configure/monitor-content-you-have-distributed.md
+    - name: Run discovery
+      href: servers/deploy/configure/run-discovery.md
+      items:
+      - name: About discovery methods
+        href: servers/deploy/configure/about-discovery-methods.md
+      - name: Select discovery methods
+        href: servers/deploy/configure/select-discovery-methods-to-use.md
+      - name: Configure discovery methods
+        href: servers/deploy/configure/configure-discovery-methods.md
+    - name: Site boundaries and boundary groups
+      href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
+      items:
+      - name: Boundaries
+        href: servers/deploy/configure/boundaries.md
+      - name: Boundary groups
+        href: servers/deploy/configure/boundary-groups.md
+    - name: High availability options
+      href: servers/deploy/configure/high-availability-options.md
+      items:
+      - name: Site server high availability
+        href: servers/deploy/configure/site-server-high-availability.md
+      - name: Flowchart - Passive site server setup
+        href: servers/deploy/configure/passive-site-server-flowchart.md
+      - name: Flowchart - Promote site server (planned)
+        href: servers/deploy/configure/promote-site-server-flowchart.md
+      - name: Flowchart - Promote site server (unplanned)
+        href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
+      - name: Prepare to use SQL Server Always On
+        href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
+      - name: Configure SQL Server Always On
+        href: servers/deploy/configure/configure-aoag.md
+      - name: Use a SQL Server cluster
+        href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
+    - name: Custom locations for database files
+      href: servers/deploy/configure/custom-locations-for-site-database-files.md
+    - name: Configure role-based administration
+      href: servers/deploy/configure/configure-role-based-administration.md
+    - name: Configure Azure services
+      href: servers/deploy/configure/azure-services-wizard.md
+  - name: Technical references
+    items:
+    - name: Accounts
+      href: plan-design/hierarchy/accounts.md
+    - name: Communications between endpoints
+      href: plan-design/hierarchy/communications-between-endpoints.md
+    - name: Hierarchy maintenance tool
+      href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
+    - name: International support
+      href: plan-design/hierarchy/international-support.md
+    - name: Interoperability between different versions
+      href: plan-design/hierarchy/interoperability-between-different-versions.md
+    - name: Language packs
+      href: servers/deploy/install/language-packs.md
+    - name: Log files
+      href: plan-design/hierarchy/log-files.md
+    - name: Ports
+      href: plan-design/hierarchy/ports.md
+    - name: Proxy server support
+      href: plan-design/network/proxy-server-support.md
+    - name: Release notes
+      href: servers/deploy/install/release-notes.md
+    - name: Unicode and ASCII support
+      href: plan-design/hierarchy/unicode-and-ascii-support.md
+- name: Manage infrastructure
+  items:
+  - name: Management insights
+    href: servers/manage/management-insights.md
+  - name: CMPivot
+    href: servers/manage/cmpivot.md
+  - name: Maintenance tasks
+    href: servers/manage/maintenance-tasks.md
+    items:
+    - name: Reference for maintenance tasks
+      href: servers/manage/reference-for-maintenance-tasks.md
+  - name: Modify your infrastructure
+    href: servers/manage/modify-your-infrastructure.md
+    items:
+    - name: The CD.Latest folder
+      href: servers/manage/the-cd.latest-folder.md
+  - name: Upgrade on-premises infrastructure
+    href: servers/manage/upgrade-on-premises-infrastructure.md
+  - name: Updates for Configuration Manager
+    href: servers/manage/updates.md
+    items:
+    - name: Install in-console updates
+      href: servers/manage/install-in-console-updates.md
+      items:
+      - name: Update reset tool
+        href: servers/manage/update-reset-tool.md
+      - name: Test database upgrade
+        href: servers/manage/test-database-upgrade.md
+      - name: Flowchart - Download updates
+        href: servers/manage/download-updates-flowchart.md
+      - name: Flowchart - Update replication
+        href: servers/manage/update-replication-flowchart.md
+    - name: Pre-release features
+      href: servers/manage/pre-release-features.md
+    - name: Service windows for site servers
+      href: servers/manage/service-windows.md
+    - name: Use the Service Connection Tool
+      href: servers/manage/use-the-service-connection-tool.md
+    - name: Use the Update Registration Tool
+      href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
+    - name: Use the Hotfix Installer
+      href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 1806
+      href: servers/manage/checklist-for-installing-update-1806.md
+    - name: Checklist for installing update 1802
+      href: servers/manage/checklist-for-installing-update-1802.md
+    - name: Checklist for installing update 1710
+      href: servers/manage/checklist-for-installing-update-1710.md
+    - name: Support for current branch versions
+      href: servers/manage/current-branch-versions-supported.md
+  - name: Backup and recovery
+    items:
+    - name: Back up sites
+      href: servers/manage/backup-and-recovery.md
+    - name: Recover sites
+      href: servers/manage/recover-sites.md
+    - name: Unattended site recovery
+      href: servers/manage/unattended-recovery.md
+  - name: Site failure impacts
+    href: servers/manage/site-failure-impacts.md
+  - name: Monitor infrastructure
+    items:
+    - name: Use alerts and the status system
+      href: servers/manage/use-alerts-and-the-status-system.md
+    - name: Health attestation
+      href: servers/manage/health-attestation.md
+    - name: Monitor hierarchy and replication infrastructure
+      href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
+      items:
+      - name: Data transfers between sites
+        href: servers/manage/data-transfers-between-sites.md
+    - name: Queries
+      href: servers/manage/queries-technical-reference.md
+      items:
+      - name: Introduction to queries
+        href: servers/manage/introduction-to-queries.md
+      - name: Operations and maintenance for queries
+        href: servers/manage/operations-and-maintenance-for-queries.md
+        items:
+        - name: How to manage queries
+          href: servers/manage/manage-queries.md
+        - name: How to create queries
+          href: servers/manage/create-queries.md
+      - name: Security and privacy for queries
+        href: servers/manage/security-and-privacy-for-queries.md
+    - name: Reporting
+      href: servers/manage/reporting.md
+      items:
+      - name: Introduction to reporting
+        href: servers/manage/introduction-to-reporting.md
+      - name: Planning for reporting
+        href: servers/manage/planning-for-reporting.md
+        items:
+        - name: Prerequisites for reporting
+          href: servers/manage/prerequisites-for-reporting.md
+        - name: Best practices for reporting
+          href: servers/manage/best-practices-for-reporting.md
+        - name: List of reports
+          href: servers/manage/list-of-reports.md
+      - name: Configure reporting
+        href: servers/manage/configuring-reporting.md
+      - name: Operations and maintenance for reporting
+        href: servers/manage/operations-and-maintenance-for-reporting.md
+      - name: Creating custom report models
+        href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
+      - name: Security and privacy for reporting
+        href: servers/manage/security-and-privacy-for-reporting.md
+    - name: Data warehouse
+      href: servers/manage/data-warehouse.md
+  - name: Configuration Manager tools
+    href: support/tools.md
+    items:
+    - name: CMTrace
+      href: support/cmtrace.md
+    - name: Client Spy
+      href: support/clispy.md
+    - name: Deployment Monitoring Tool
+      href: support/deployment-monitoring-tool.md
+    - name: Policy Spy
+      href: support/policy-spy.md
+    - name: Power Viewer Tool
+      href: support/power-viewer-tool.md
+    - name: Send Schedule Tool
+      href: support/send-schedule-tool.md
+    - name: DP Job Queue Manager
+      href: support/dp-job-manager.md
+    - name: Collection Evaluation Viewer
+      href: support/ceviewer.md
+    - name: Content Library Explorer
+      href: support/content-library-explorer.md
+    - name: Content Library Transfer
+      href: support/content-library-transfer.md
+    - name: Content Ownership Tool
+      href: support/content-ownership-tool.md
+    - name: Role-based Administration and Auditing Tool
+      href: support/rbaviewer.md
+    - name: Run Meter Summarization Tool
+      href: support/run-meter-summ.md
+  - name: Manage high-risk deployments
+    href: servers/manage/settings-to-manage-high-risk-deployments.md
+- name: Deploy clients
+  items:
+  - name: Planning for client deployment
+    items:
+    - name: Client installation methods
+      href: clients/deploy/plan/client-installation-methods.md
+    - name: Prerequisites for deploying clients to Windows computers
+      href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+      items:
+      - name: Windows Firewall and port settings for clients
+        href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
+    - name: Determine the site system roles for clients
+      href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
+    - name: Security and privacy for clients
+      href: clients/deploy/plan/security-and-privacy-for-clients.md
+    - name: Best practices for client deployment
+      href: clients/deploy/plan/best-practices-for-client-deployment.md
+    - name: Determine whether to block clients
+      href: clients/deploy/plan/determine-whether-to-block-clients.md
+    - name: Planning for client deployment to Linux and UNIX computers
+      href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
+    - name: Planning for client deployment to Mac computers
+      href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
+    - name: Planning for client deployment to Windows Embedded devices
+      href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
+      items:
+      - name: Example scenario
+        href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
+    - name: Plan how to wake up clients
+      href: clients/deploy/plan/plan-wake-up-clients.md
+    - name: Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)
+      href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
+  - name: Client deployment tasks
+    items:
+    - name: How to configure client communication ports
+      href: clients/deploy/configure-client-communication-ports.md
+    - name: How to configure client computers to find management points by using DNS publishing
+      href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
+    - name: How to configure client settings
+      href: clients/deploy/configure-client-settings.md
+      items:
+      - name: About client settings
+        href: clients/deploy/about-client-settings.md
+    - name: How to configure Wake on LAN
+      href: clients/deploy/configure-wake-on-lan.md
+    - name: How to deploy clients to Windows computers
+      href: clients/deploy/deploy-clients-to-windows-computers.md
+      items:
+      - name: Install clients using Azure AD
+        href: clients/deploy/deploy-clients-cmg-azure.md
+      - name: Client installation properties
+        href: clients/deploy/about-client-installation-properties.md
+      - name: Client installation properties published to AD
+        href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
+    - name: How to deploy clients to UNIX and Linux servers
+      href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
+      items:
+      - name: Linux and UNIX client commands
+        href: clients/deploy/linux-and-unix-clients-technical-reference.md
+    - name: Prepare to deploy clients to Macs
+      href: clients/deploy/prepare-to-deploy-mac-clients.md
+    - name: How to deploy clients to Macs
+      href: clients/deploy/deploy-clients-to-macs.md
+    - name: How to assign clients to a site
+      href: clients/deploy/assign-clients-to-a-site.md
+    - name: How to configure client status
+      href: clients/deploy/configure-client-status.md
+    - name: How to monitor client deployment status
+      href: clients/deploy/monitor-client-deployment-status.md
+- name: Manage clients
+  href: clients/manage/monitor-and-manage-clients.md
+  items:
+  - name: Monitor and manage clients
+    href: clients/manage/monitor-clients.md
+    items:
+    - name: How to monitor clients
+      href: clients/manage/monitor-clients.md
+    - name: Use Windows Analytics
+      href: clients/manage/monitor-windows-analytics.md
+    - name: How to monitor Linux and UNIX clients
+      href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
+    - name: How to manage clients
+      href: clients/manage/manage-clients.md
+    - name: How to manage Linux and UNIX clients
+      href: clients/manage/manage-clients-for-linux-and-unix-servers.md
+    - name: Sync data to OMS
+      href: clients/manage/sync-data-microsoft-operations-management-suite.md
+    - name: Maintain Mac clients
+      href: clients/manage/maintain-mac-clients.md
+    - name: Surface device dashboard
+      href: clients/manage/surface-device-dashboard.md
+  - name: Co-management for Windows 10 devices
+    href: clients/manage/co-management-overview.md
+    items:
+    - name: Prepare Windows 10 devices for co-management
+      href: clients/manage/co-management-prepare.md
+    - name: Switch Configuration Manager workloads to Intune
+      href: clients/manage/co-management-switch-workloads.md
+    - name: Co-management dashboard
+      href: clients/manage/co-management-dashboard.md
+  - name: Manage clients on the internet
+    href: clients/manage/manage-clients-internet.md
+    items:
+    - name: Plan for cloud management gateway
+      href: clients/manage/cmg/plan-cloud-management-gateway.md
+      items:
+      - name: Security and privacy for cloud management gateway
+        href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+      - name: FAQ for cloud management gateway
+        href: clients/manage/cmg/cloud-management-gateway-faq.md
+      - name: Certificates for cloud management gateway
+        href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
+      - name: Set up cloud management gateway
+        href: clients/manage/cmg/setup-cloud-management-gateway.md
+      - name: Monitor clients on cloud management gateway
+        href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
+    - name: Plan for internet-based Client Management
+      href: clients/manage/plan-internet-based-client-management.md
+  - name: Collections
+    items:
+    - name: Introduction to collections
+      href: clients/manage/collections/introduction-to-collections.md
+    - name: Prerequisites for collections
+      href: clients/manage/collections/prerequisites-for-collections.md
+    - name: Best practices for collections
+      href: clients/manage/collections/best-practices-for-collections.md
+    - name: How to create collections
+      href: clients/manage/collections/create-collections.md
+    - name: How to manage collections
+      href: clients/manage/collections/manage-collections.md
+    - name: How to use maintenance windows
+      href: clients/manage/collections/use-maintenance-windows.md
+    - name: How to automatically categorize devices into collections with
+      href: clients/manage/collections/automatically-categorize-devices-into-collections.md
+    - name: Security and privacy for collections
+      href: clients/manage/collections/security-and-privacy-for-collections.md
+  - name: Hardware inventory
+    items:
+    - name: Introduction to hardware inventory
+      href: clients/manage/inventory/introduction-to-hardware-inventory.md
+    - name: How to extend hardware inventory
+      href: clients/manage/inventory/extend-hardware-inventory.md
+    - name: How to configure hardware inventory
+      href: clients/manage/inventory/configure-hardware-inventory.md
+    - name: How to use Resource Explorer to view hardware inventory
+      href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
+    - name: Hardware inventory for Linux and UNIX
+      href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
+    - name: Security and privacy for hardware inventory
+      href: clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
+  - name: Software inventory
+    items:
+    - name: Introduction to software inventory
+      href: clients/manage/inventory/introduction-to-software-inventory.md
+    - name: How to configure software inventory
+      href: clients/manage/inventory/configure-software-inventory.md
+    - name: How to use Resource Explorer to view software inventory
+      href: clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md
+    - name: Security and privacy for software inventory
+      href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
+  - name: Asset Intelligence
+    items:
+    - name: Introduction to Asset Intelligence
+      href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
+    - name: Prerequisites for Asset Intelligence
+      href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
+    - name: Configure Asset Intelligence
+      href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
+    - name: Use Asset Intelligence
+      href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
+    - name: Security and privacy for Asset Intelligence
+      href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
+    - name: Example validation state transitions for Asset Intelligence
+      href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
+    - name: Example Asset Intelligence general license import file
+      href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
+    - name: Use the Product Lifecycle dashboard
+      href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+  - name: Remote control
+    items:
+    - name: Introduction to remote control
+      href: clients/manage/remote-control/introduction-to-remote-control.md
+    - name: Prerequisites for remote control
+      href: clients/manage/remote-control/prerequisites-for-remote-control.md
+    - name: Configuring remote control
+      href: clients/manage/remote-control/configuring-remote-control.md
+    - name: How to remotely administer a Windows client computer
+      href: clients/manage/remote-control/remotely-administer-a-windows-client-computer.md
+    - name: How to audit remote control usage
+      href: clients/manage/remote-control/audit-remote-control-usage.md
+    - name: Security and privacy for remote control
+      href: clients/manage/remote-control/security-and-privacy-for-remote-control.md
+  - name: Power management
+    items:
+    - name: Introduction to power management
+      href: clients/manage/power/introduction-to-power-management.md
+    - name: Prerequisites for power management
+      href: clients/manage/power/prerequisites-for-power-management.md
+    - name: Best practices for power management
+      href: clients/manage/power/best-practices-for-power-management.md
+    - name: Administrator checklist for power management
+      href: clients/manage/power/administrator-checklist-for-power-management.md
+    - name: Configuring power management
+      href: clients/manage/power/configuring-power-management.md
+    - name: How to create and apply power plans
+      href: clients/manage/power/create-and-apply-power-plans.md
+    - name: How to monitor and plan for power management
+      href: clients/manage/power/monitor-and-plan-for-power-management.md
+    - name: Security and privacy for power management
+      href: clients/manage/power/security-and-privacy-for-power-management.md
+  - name: Upgrade clients
+    href: clients/manage/upgrade/upgrade-clients.md
+    items:
+    - name: Test client upgrades in a pre-production collection
+      href: clients/manage/upgrade/test-client-upgrades.md
+    - name: Exclude Windows clients from upgrades
+      href: clients/manage/upgrade/exclude-clients-windows.md
+    - name: Upgrade Windows clients
+      href: clients/manage/upgrade/upgrade-clients-for-windows-computers.md
+    - name: Upgrade Linux and UNIX clients
+      href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
+    - name: Upgrade Mac clients
+      href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
+    - name: Upgrade readiness
+      href: clients/manage/upgrade/upgrade-analytics.md
