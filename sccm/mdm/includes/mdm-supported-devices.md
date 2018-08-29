@@ -5,7 +5,7 @@
 - PCs running Windows 10 (Home, Pro, Education, and Enterprise versions)
 - Devices running Windows 10 IoT Enterprise (x86, x64)
 - Devices running Windows 10 IoT Mobile Enterprise
-- Windows Holographic & Windows Holographic Enterprise
+- Windows Holographic for Business
 - Mac OS X 10.9 and later
 - Windows Phone 8.1, PCs running Windows 8.1, and Windows 8.1 RT are in sustaining mode (Windows Embedded 8.1 Handheld is not supported)
 
