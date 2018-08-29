@@ -72,3 +72,18 @@
     items:
     - name: Learn about PowerShell script security
       href: deploy-use/learn-script-security.md
+  - name: Package Conversion Manager
+    href: pcm/package-conversion-manager.md
+    items:
+    - name: How to analyze and convert packages
+      href: pcm/how-to-analyze-and-convert.md
+#    - name: How to use the plug-in
+#      href: pcm/how-to-use-plug-in.md
+    - name: Troubleshoot Package Conversion Manager
+      href: pcm/troubleshoot-pcm.md
+    - name: Technical references
+      items:
+#      - name: Plug-in configuration XML
+#        href: pcm/plugin-config-xml.md
+      - name: Error messages
+        href: pcm/error-messages.md
