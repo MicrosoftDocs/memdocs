@@ -130,6 +130,31 @@ During content deployment, if a client requests content that isn't available fro
 If the content is distributed on-demand, and not available on a distribution point when requested by a client, the process to transfer the content to that distribution point begins. It's possible the client finds that server as a content source before falling back to use a neighbor boundary group.
 
 
+### <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
+
+<!--1356193-->
+Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Configure a boundary group](#bkmk_config).
+
+#### Allow peer downloads in this boundary group
+This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).  
+
+There are two common scenarios in which you should consider disabling this option:  
+
+- If you have a boundary group that includes boundaries from geographically dispersed locations such as a VPN. Two clients may be in the same boundary group because they're connected through VPN, but in vastly different locations that are inappropriate for peer sharing of content.  
+
+- If you use a single, large boundary group for site assignment that doesn't reference any distribution points.  
+
+#### During peer downloads, only use peers within the same subnet
+This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
+
+Common scenarios for enabling this option:
+
+- Your boundary group design for content distribution includes one large boundary group that overlaps other smaller boundary groups. With this new setting, the list of content sources that the management point provides to clients only includes peer sources from the same subnet.
+
+- You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
+
+
+
 
 ## Software update points
 
@@ -379,6 +404,11 @@ When a client searches for a content source location, it tries to access each di
 
 2.  Select the boundary group you want to modify, and select **Properties** in the ribbon. This action opens the boundary group Properties window.  
 
+Configure the following settings:  
+- [Add or remove boundaries](#bkmk_add)  
+- [Configure site assignment and select site system servers](#bkmk_references)  
+- [Configure fallback behavior](#bkmk_bg-fallback)  
+- [Configure boundary group options](#bkmk_options)  
 
 #### <a name="bkmk_add"></a> Add or remove boundaries
 
@@ -429,6 +459,15 @@ To configure fallback behavior, switch to the **Relationships** tab in the bound
 - To remove a relationship, select the boundary group in the list, and select **Remove**.  
 
 For more information, see [Fallback](#fallback). 
+
+
+#### <a name="bkmk_options"></a> Configure boundary group options
+<!--1356193-->
+Starting in version 1806, to configure additional options for clients in this boundary group, switch to the **Options** tab. For more information, see [Boundary group options for peer downloads](#bkmk_bgoptions).
+
+- **Allow peer downloads in this boundary group**: This option is enabled by default. The management point provides clients a list of content locations that includes peer sources.  
+
+    - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
 
 
 ### <a name="bkmk_site-fallback"></a> Configure a fallback site for automatic site assignment  

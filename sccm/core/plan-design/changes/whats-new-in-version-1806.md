@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 08/22/2018
+ms.date: 08/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -133,11 +133,13 @@ For more information, see [Partial download support](/sccm/core/plan-design/hier
 
 ### Boundary group options for peer downloads
 <!--1356193-->
-Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
+***[Updated]*** Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
 
-- **Allow peer downloads in this boundary group**: This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
+- **Allow peer downloads in this boundary group**: The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
 
-- **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
+- **During peer downloads, only use peers within the same subnet**: The management point only includes in the content location list peer sources that are in the same subnet as the client.  
+
+For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 
 
