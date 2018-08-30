@@ -314,17 +314,9 @@ For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-app
 
 ### Package Conversion Manager 
 <!--1357861-->
-Package Conversion Manager is now an integrated tool that allows you to convert legacy Configuration Manager 2007 packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
+***[Updated]*** Package Conversion Manager is now an integrated tool that allows you to convert legacy packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
 
-Start with the following actions from the **Packages** node in the Configuration Manager console:  
-
-   - **Analyze Package**: Start the conversion process by analyzing the package.  
-
-   - **Convert Package**: Some packages can easily be converted into applications with this action.  
-
-   - **Fix and Convert**: Some packages require issues to be fixed before converting into applications.  
-
-Then go to the **Package Conversion Status** dashboard in the **Monitoring** workspace. This new dashboard shows the overall analysis and conversion state of packages in the site. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
+For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager).
 
 
 
