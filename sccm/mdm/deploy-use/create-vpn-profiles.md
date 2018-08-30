@@ -55,7 +55,7 @@ This table shows the connection type that is supported for each device platform:
   
   
 > [!Note]  
-> F5 Access 2018 is not supported for VPN profiles in hybrid MDM.  
+> F5 Access version 3.0 and later for iOS (also called F5 Access 2018) is not supported for VPN profiles in hybrid MDM. Use Intune standalone if you need to create VPN profiles for this VPN client. Note that iOS 12 will not support F5 Access version 2.1 and earlier. See this [blog post](https://aka.ms/iOS12_and_VPN) for more information.
 
 
 ## Windows 10 VPN features available when using Configuration Manager with Intune  
