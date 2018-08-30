@@ -391,7 +391,7 @@ Configuration Manager supports the following methods to search the network:
 5.  Select **OK** to accept the configurations. Network Discovery runs at the scheduled time.  
 
 
-#### <a name="bkmk_proc-config> How to configure Network Discovery  
+#### <a name="bkmk_proc-config"></a> How to configure Network Discovery  
 
 1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Discovery Methods** node.  
 
