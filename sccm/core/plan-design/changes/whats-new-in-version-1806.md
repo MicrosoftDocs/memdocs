@@ -86,7 +86,9 @@ For more information, see [Configuration Manager tools](/sccm/core/support/tools
 
 ### Exclude Active Directory containers from discovery
 <!--1358143-->
-To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
+***[Updated]*** To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
+
+For more information, see [Configure Active Directory System Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd).
 
 
 

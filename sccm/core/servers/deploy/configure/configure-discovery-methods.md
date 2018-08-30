@@ -164,9 +164,18 @@ Then use the information in the following sections to configure the specific dis
 
 1. On the **General** tab of the Active Directory System Discovery Properties window, select the **New** icon ![New icon](media/Disc_new_Icon.gif) to specify a new Active Directory container. In the **Active Directory Container** dialog box, finish the following configurations:  
 
-    1.  Specify one or more locations to search.  
+    1.  Type or browse to a location for the **Path**. This value is a valid LDAP path to a container or organizational unit (OU). The site queries this path for resources. For example, `LDAP://CN=Computers,DC=contoso,DC=com`  
 
-    2.  For each location, specify options that change the search behavior.  
+    2.  Specify options that change the search behavior:  
+
+        - **Discover objects within Active Directory groups**: The site also looks at the membership of groups in this path.  
+
+        - **Recursively search Active Directory child containers**: If you enable this option, the site searches any additional containers or OUs within the above path. If you disable this option, the site only searches for resources in the specific path.  
+
+            Starting in version 1806, select subcontainers to exclude from this recursive search. This option helps to reduce the number of discovered objects. Select **Add** to choose the containers under the above path. In the Select New Container dialog box, select a child container to exclude. Select **OK** to close the Select New Container dialog box.<!--1358143-->
+
+            > [!Tip]  
+            > The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.  
 
     3.  For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account).  
 
