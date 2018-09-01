@@ -271,7 +271,7 @@ Install the application catalog on a new site system server or an existing serve
     For more information, search for the **awebsvcMSI.log** and **portlwebMSI.log** log files.  
 
 
-### Step 4 Configure client settings
+### Step 4: Configure client settings
 
 If you want all users to have the same settings, configure the default client settings. Otherwise, configure custom client settings for specific collections.
 
@@ -299,15 +299,15 @@ Use the following procedures to verify that the Application Catalog is operation
 
 In a browser, enter the address of the Application Catalog website. Confirm that the web page shows the three tabs: **Application Catalog**, **My Application Requests**, and **My Devices**.  
 
-Use the appropriate address  for the Application Catalog from the following list, where &lt;server&gt; is the computer name, intranet FQDN, or internet FQDN:  
+Use the appropriate address for the Application Catalog from the following list, where &lt;server&gt; is the computer name, intranet FQDN, or internet FQDN:  
 
-    -   HTTPS client connections and default site system role settings: **https://&lt;server&gt;/CMApplicationCatalog**  
+- HTTPS client connections and default site system role settings: **https://&lt;server&gt;/CMApplicationCatalog**  
 
-    -   HTTP client connections and default site system role settings: **http://&lt;server&gt;/CMApplicationCatalog**  
+- HTTP client connections and default site system role settings: **http://&lt;server&gt;/CMApplicationCatalog**  
 
-    -   HTTPS client connections and custom site system role settings: **https://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
+- HTTPS client connections and custom site system role settings: **https://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
 
-    -   HTTP client connections and custom site system role settings: **http://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
+- HTTP client connections and custom site system role settings: **http://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
 
 > [!NOTE]  
 >  If you signed in to the device with a Domain Administrator account, the Configuration Manager client doesn't display notification messages. For example, messages indicating that new software is available.  
