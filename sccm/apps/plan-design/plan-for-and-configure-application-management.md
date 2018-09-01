@@ -180,16 +180,26 @@ Use the following table to help understand the requirements for Software Center 
 
 Change the appearance of Software Center to meet your organization's branding requirements. This configuration helps users trust Software Center. 
 
-Configuration Manager applies custom branding for Software Center according to the following rules:
+Configuration Manager applies custom branding for Software Center according to the following priorities:  
 
-1. If you haven't installed the Application Catalog website point, then Software Center displays the *organization name* that you specify in the **Organization name** client setting. This setting is in the **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+- If you haven't installed the application catalog (recommended):  
 
-2. If you've installed the Application Catalog website point, then Software Center displays the *organization name* and *color* that you specify in the Application Catalog website point properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
+    1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
 
-3. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
+    2. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
-    > [!Note]  
-    > - Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.  
+- If you've installed the application catalog:  
+
+    1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
+
+    2. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
+
+        > [!Note]  
+        > - Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.  
+
+    3. The *organization name* and *color* that you specify in the Application Catalog website point properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
+
+    4. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
 #### Configure Software Center branding
 <!-- 1351224 -->
