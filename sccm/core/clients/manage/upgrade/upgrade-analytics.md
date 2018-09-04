@@ -84,6 +84,12 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 
 4. View the devices in a particular readiness state, and then create a dynamic collection for those devices. Then use that collection to upgrade those devices, or take action to remediate devices that are in a blocked state.  
 
+> [!Note]  
+> The site synchronizes data with Upgrade Readiness once a week.<!--SCCMDocs issue 732--> To manually trigger synchronization:
+> 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.  
+> 2. Select the Upgrade Readiness connection from the list.  
+> 3. In the ribbon, select the option to synchronize.  
+
 
 
 ## Next steps
