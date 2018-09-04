@@ -897,8 +897,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="">System Center Configuration manager SDK</a></h3>
-                                                <p>Automate Configuration Manager through script and to developers adding features and extension.</p>
+                                                <h3><a href="">Configuration Manager Software Development Kit (SDK)</a></h3>
+                                                <p>Automate Configuration Manager with scripts. Developers can add features and extensions.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -931,8 +931,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="">Get started with System Center Configuration Manager cmdlets</a></h3>
-                                                <p>Manage a Configuration Manager hierarchy by using Windows Powershell scripts, cmdlets, and the Drive Provider.</p>
+                                                <h3><a href="">Configuration Manager PowerShell reference</a></h3>
+                                                <p>Manage a Configuration Manager hierarchy by using Windows Powershell cmdlets and scripts.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -958,8 +958,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://blogs.technet.microsoft.com/enterprisemobility/">Enterprise Mobility + Security Blog!</a></h3>
-                                                <p>The latest news about the Enterprise Mobility and Security services.</p>
+                                                <h3><a href="https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager">Enterprise Mobility + Security Blog</a></h3>
+                                                <p>The latest news about Configuration Manager.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -976,7 +976,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="https://twitter.com/hashtag/configmgr">#ConfigMgr on Twitter</a></h3>
-                                                <p>Read the latest tweets about System Center Configuration Manager. </p>
+                                                <p>Read the latest tweets about Configuration Manager. </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1026,7 +1026,7 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation">Give feedback on the documentation</a></h3>
+                                                <h3><a href="/sccm/core/understand/use-docs#bkmk_docfeedback">Give feedback on the documentation</a></h3>
                                                 <p>Share your ideas about how to improve the technical content.</p>
                                             </div>
                                         </div>
@@ -1044,7 +1044,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="https://blogs.technet.microsoft.com/configurationmgr/">Configuration Manager Support Blog</a></h3>
-                                                <p>Support and servicing information from the Configuration Manager Team.</p>
+                                                <p>Support and servicing information from the Configuration Manager team.</p>
                                             </div>
                                         </div>
                                     </div>
