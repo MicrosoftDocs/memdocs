@@ -598,6 +598,8 @@
       href: clients/manage/monitor-clients.md
     - name: Use Windows Analytics
       href: clients/manage/monitor-windows-analytics.md
+    - name: Upgrade Readiness
+      href: clients/manage/upgrade-readiness.md
     - name: How to monitor Linux and UNIX clients
       href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
     - name: How to manage clients
@@ -742,5 +744,3 @@
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Upgrade Mac clients
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-    - name: Upgrade readiness
-      href: clients/manage/upgrade/upgrade-analytics.md
