@@ -163,7 +163,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Updates for Configuration Manager</h3>
-                                                <p>Start here to keep Configuration Manager up to date. </p>
+                                                <p>Start here to keep Configuration Manager up-to-date. </p>
                                             </div>
                                         </div>
                                     </div>
@@ -368,7 +368,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Use Windows Update for Business</h3>
-                                                <p>Integrate Configuration Manager with Windows Update for Business to keep Windows 10 devices always up to date.</p>
+                                                <p>Integrate Configuration Manager with Windows Update for Business to keep Windows 10 devices always up-to-date.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -430,7 +430,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Windows as a service</h3>
-                                                <p>View the servicing channel of Windows 10 devices, and use servicing plans to keep them up to date.</p>
+                                                <p>View the servicing channel of Windows 10 devices, and use servicing plans to keep them up-to-date.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -454,7 +454,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Ensure device compliance</h3>
-                                                <p>Configure settings and evalute complicance on devices that you're managing.</p>
+                                                <p>Configure settings and evaluate compliance on devices that you're managing.</p>
                                             </div>
                                         </div>
                                     </div>
