@@ -48,8 +48,8 @@ ms.topic: hub-page
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Operating system deployment</h3>
-                                                <p><a href="/sccm/osd/understand/introduction-to-operating-system-deployment">Introduction to operating system deployment</a></p>
+                                                <h3>OS deployment</h3>
+                                                <p><a href="/sccm/osd/understand/introduction-to-operating-system-deployment">Introduction to OS deployment</a></p>
                                                 <p><a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">Upgrade to Windows 10</a></p>
                                                 <p><a href="/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence">Phased deployments</a></p>
                                             </div>
@@ -133,7 +133,7 @@ ms.topic: hub-page
                         <a data-default="true" href="#tasksPanel1">Core Infrastructure</a>
                         <ul id="tasksPanel1" class="cardsC">
                             <li>
-                                <a href="/sccm/core/understand/introduction">
+                                <a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -171,7 +171,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">
+                                <a href="/sccm/core/plan-design/configs/supported-configurations">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -182,7 +182,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Supported configurations for Configuration Manager</h3>
-                                                <p>Learn about supported OS versions, size and scale, and recommended hardwares.</p>
+                                                <p>Learn about supported OS versions, size and scale, and recommended hardware.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -195,18 +195,18 @@ ms.topic: hub-page
                         <a href="#tasksPanel2">Application Management</a>
                         <ul id="tasksPanel2" class="cardsC">
                             <li>
-                                <a href="/sccm/core/understand/introduction">
+                                <a href="/sccm/apps/understand/introduction-to-application-management">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/ms365enterprise-partner-news-2.svg" alt="" />
+                                                    <img src="/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>What's new in Configuration Manager incremental versions</h3>
-                                                <p>Learn about what's new in the latest update for Configuration Manager.</p>
+                                                <h3>Introduction to application management</h3>
+                                                <p>Learn the basics about managing applications.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -214,18 +214,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/core/servers/manage/updates">
+                                <a href="/sccm/apps/deploy-use/create-applications">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
+                                                    <img src="/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Updates for Configuration Manager</h3>
-                                                <p>Start here to keep Configuration Manager up to date. </p>
+                                                <h3>Create applications</h3>
+                                                <p>Learn everything you need to know to create applications.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -233,7 +233,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">
+                                <a href="/sccm/apps/deploy-use/create-deploy-scripts">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -243,8 +243,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Supported configurations for Configuration Manager</h3>
-                                                <p>Learn about supported OS versions, size and scale, and recommended hardwares.</p>
+                                                <h3>Create and run PowerShell scripts</h3>
+                                                <p>Use the Configuration Manager console to manage and deploy Windows PowerShell scripts to clients.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel3">Operating System Deployment</a>
+                        <a href="#tasksPanel3">OS Deployment</a>
                         <ul id="tasksPanel3" class="cardsC">
                             <li>
                                 <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
@@ -276,7 +276,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
+                                <a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -286,8 +286,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Scenarios to deploy operating systems</h3>
-                                                <p>Deploy operating systems using one of many operating system deployment scenarios.</p>
+                                                <h3>Upgrade to Windows 10</h3>
+                                                <p>Use a Configuration task sequence to upgrade devices to Windows 10.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -295,7 +295,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                                <a href="/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -305,8 +305,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Manage Windows as a service</h3>
-                                                <p>Create servicing plans to form deployment rings and ensure that Windows 10 current branch computers are updated when new builds are available.</p>
+                                                <h3>Phased deployments</h3>
+                                                <p>Automate a coordinated, sequenced rollout of software across multiple collections.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -338,7 +338,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
+                                <a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -348,8 +348,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Prepare for software updates management</h3>
-                                                <p>Prepare your software updates infrastructure, including software update points and synchronizing updates.</p>
+                                                <h3>Manage Office 365 ProPlus updates</h3>
+                                                <p>Use Configuration Manager to view Office 365 client information in a dashboard, configure and deploy the app to clients, and manage Office updates.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -357,7 +357,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/sum/deploy-use/deploy-software-updates">
+                                <a href="/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -367,8 +367,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Deploy software updates</h3>
-                                                <p>Deploy the software updates in the infrastructure that you've created.</p>
+                                                <h3>Use Windows Update for Business</h3>
+                                                <p>Integrate Configuration Manager with Windows Update for Business to keep Windows 10 devices always up to date.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -378,10 +378,10 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel5">Cloud-attached managements</a>
+                        <a href="#tasksPanel5">Cloud-attached management</a>
                         <ul id="tasksPanel5" class="cardsC">
                             <li>
-                                <a href="/sccm/protect/understand/backup-and-recovery">
+                                <a href="/sccm/core/clients/manage/co-management-overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -391,8 +391,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Backup and recovery options</h3>
-                                                <p>Avoid data loss with a backup and recovery plan. </p>
+                                                <h3>Co-management for Windows 10</h3>
+                                                <p>Concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -400,7 +400,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/protect/deploy-use/manage-access-to-services">
+                                <a href="/sccm/core/clients/manage/manage-clients-internet">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -410,8 +410,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Conditional access</h3>
-                                                <p>Help secure email, Office 365, and other services using conditional access.</p>
+                                                <h3>Manage clients on the internet</h3>
+                                                <p>Use features like the cloud management gateway, cloud-based distribution points, and Azure Active Directory to manage internet-based clients.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -419,7 +419,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/protect/deploy-use/endpoint-protection">
+                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -429,8 +429,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Endpoint Protection</h3>
-                                                <p>Manage Windows Defender, Endpoint Protection, and Windows Firewall to secure client computers.</p>
+                                                <h3>Windows as a service</h3>
+                                                <p>View the servicing channel of Windows 10 devices, and use servicing plans to keep them up to date.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -462,7 +462,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/compliance/deploy-use/create-configuration-items">
+                                <a href="/sccm/compliance/deploy-use/browser-profiles">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -472,8 +472,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>How to create configuration items</h3>
-                                                <p>Everything you need to know to create configuration items.</p>
+                                                <h3>Configure Microsoft Edge settings</h3>
+                                                <p>Use a Configuration Manager compliance policy to configure several Microsoft Edge settings.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -505,25 +505,6 @@ ms.topic: hub-page
                         <a href="#tasksPanel7">Protect Data and Infrastructure</a>
                         <ul id="tasksPanel7" class="cardsC">
                             <li>
-                                <a href="/sccm/protect/understand/backup-and-recovery">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Backup and recovery options</h3>
-                                                <p>Avoid data loss with a backup and recovery plan. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sccm/protect/deploy-use/manage-access-to-services">
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -553,8 +534,27 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Endpoint Protection</h3>
-                                                <p>Manage Windows Defender, Endpoint Protection, and Windows Firewall to secure client computers.</p>
+                                                <h3>Endpoint protection for Windows Defender</h3>
+                                                <p>Use Configuration Manager to manage and control features of the Windows Defender suite.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Windows Hello for Business</h3>
+                                                <p>Create policies to manage alternative sign-in methods for Windows 10 devices.</p>
                                             </div>
                                         </div>
                                     </div>
