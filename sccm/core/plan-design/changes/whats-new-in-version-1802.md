@@ -132,7 +132,7 @@ You can configure the length of strings to be greater than 255 characters for ha
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
-Microsoft intends to deprecate the Linux and UNIX client support in System Center Configuration Manager roughly one year from now, such that the clients will not be included in the SCCM 1902 release in early calendar 2019.  The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810.  After Configuration Manager 1810, customers should consider Microsoft’s Operations Management Suite for managing Linux servers.  OMS has extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+Microsoft intends to deprecate the Linux and UNIX client support in System Center Configuration Manager roughly one year from now, such that the clients will not be included in the SCCM 1902 release in early calendar 2019. The Configuration Manager 1810 release, in late calendar 2018, will be the last release to include the Linux and UNIX clients, and they will be supported for the full lifecycle of Configuration Manager 1810. After Configuration Manager 1810, customers should consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 ### Surface device dashboard
 <!--1355788-->

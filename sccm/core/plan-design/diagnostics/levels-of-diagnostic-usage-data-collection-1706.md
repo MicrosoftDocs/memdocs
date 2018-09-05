@@ -209,11 +209,11 @@ For System Center Configuration Manager version 1706, this level includes the fo
 
   - Count of clients joined to Azure Active Directory Services
 
-  - Count of collections synced to Operations Management Suite
+  - Count of collections synced to Azure Log Analytics
 
   - Count of Upgrade Analytics Connectors
 
-  - Whether the Operations Management Suite cloud connector is enabled
+  - Whether the Azure Log Analytics cloud connector is enabled
 
 
 

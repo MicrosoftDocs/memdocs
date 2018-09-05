@@ -79,8 +79,8 @@ The improved integration makes the following possible:
   -   Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the following Azure services you use with Configuration Manager.
       - **Cloud Management**
         Enable clients to authenticate by using Azure Active Directory (Azure AD). You can also configure Azure AD User Discovery.
-      - **OMS Connector**
-        Connect to Operations Manager Suite (OMS) and sync data like collections to OMS Log Analytics.
+      - **Log Analytics Connector**
+        Connect to Azure Log Analytics and sync collection data.
       - **Upgrade Readiness**
         Connect to Upgrade Readiness and view client upgrade-compatibility data.
       - **Windows Store for Business**
@@ -232,7 +232,7 @@ Improvements have been made to leverage the Office Click-to-Run user experience 
 
 ### Use Windows Analytics with Configuration Manager
 <!-- 1318608 -->
-Windows Analytics is a set of solutions that run on Operations Management Suite. The solutions allow you to form insight into the current state of your environment. Devices in your environment report Windows telemetry data. The data can be accessed through the Operations Management Suite web portal. In the case of Upgrade Readiness the data is directly available in the monitoring node of the Configuration Manager console.
+Windows Analytics is a set of solutions that allow you to form insight into the current state of your environment. Devices in your environment report Windows telemetry data. The data can be accessed through the Azure portal. In the case of Upgrade Readiness the data is directly available in the monitoring node of the Configuration Manager console.
 
 For more information, see [Use Windows Analytics with Configuration Manager](/sccm/core/clients/manage/monitor-windows-analytics).
 

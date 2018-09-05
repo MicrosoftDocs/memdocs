@@ -86,7 +86,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | Data Warehouse service point <!-- 1277922 --> |  [Version 1702](/sccm/core/servers/manage/data-warehouse) |[Version 1706](/sccm/core/servers/manage/data-warehouse)|
 | Peer Cache for content distribution to clients <!-- 1101436 --> |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [Version 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
 | Cloud management gateway <!-- 1101764 --> |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[Version 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Microsoft Operations Management Suite Connector <!-- 1236739 --> | [Version 1606](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) |[Version 1802](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)|
+| Log Analytics Connector <!-- 1236739 --> | [Version 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[Version 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
 | Servicing a cluster aware collection (service a server group) <!-- 1081776 --> | [Version 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![Not yet](media/red_x.png)|
 | Conditional access for PCs managed by System Center Configuration Manager <!--  --> | [Version 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [Version 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
 <!--Image used = ![Not yet](media/red_x.png) -->
