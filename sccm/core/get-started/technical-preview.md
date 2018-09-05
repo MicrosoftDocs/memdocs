@@ -125,7 +125,7 @@ The following features are available with the most recent Configuration Manager 
 - [Improvement to data warehouse](capabilities-in-technical-preview-1809.md#) <!--1358870-->
 - [Improvement to driver management](capabilities-in-technical-preview-1809.md#) <!--1358270-->
 - [Improvement to lifecycle dashboard](capabilities-in-technical-preview-1809.md#) <!--1358702-->
-
+- [Improvement to maintenance windows for software updates](capabilities-in-technical-preview-1809.md#) <!--vso2839307-->
 
 
 > [!Note]  

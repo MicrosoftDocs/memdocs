@@ -43,6 +43,7 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 [!INCLUDE [Improvement to lifecycle dashboard](includes/1358702.md)]
 
+[!INCLUDE [Improvement to maintenance windows for software updates](includes/vso2839307.md)]
 
 
 ## Next steps
