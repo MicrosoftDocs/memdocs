@@ -606,8 +606,8 @@
       href: clients/manage/manage-clients.md
     - name: How to manage Linux and UNIX clients
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
-    - name: Sync data to OMS
-      href: clients/manage/sync-data-microsoft-operations-management-suite.md
+    - name: Sync data to Log Analytics
+      href: clients/manage/sync-data-log-analytics.md
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard
