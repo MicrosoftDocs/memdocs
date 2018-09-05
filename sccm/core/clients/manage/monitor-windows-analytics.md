@@ -54,7 +54,7 @@ For more information, see [Configure Windows diagnostic data in your organizatio
 #### Windows 8.1 and earlier telemetry   
 For more information, see [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965).
 
-#### Enable Windows 8.1 and earlier Internet Explorer data collection**  
+#### Enable Windows 8.1 and earlier Internet Explorer data collection
 On devices running Windows 8.1 or earlier, Internet Explorer can collect data about web apps. This data can allow Upgrade Readiness to detect web application incompatibilities that could prevent a smooth upgrade to Windows 10. Enable Internet Explorer data collection based on the internet zone. For more information about internet zones, see [About URL Security Zones](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183\(v=vs.85\)).
 
 

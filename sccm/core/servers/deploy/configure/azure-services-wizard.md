@@ -32,7 +32,7 @@ Configure the following Azure services using this wizard:
 
     - Support certain [cloud management gateway scenarios](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
 
--   **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log analytics). Sync collection data to Log Analytics.  
+-   **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
 
     > [!Note]  
     > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/en-us/azure/monitoring/#operations-management-suite).  
