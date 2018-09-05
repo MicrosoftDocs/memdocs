@@ -121,8 +121,11 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical Preview version 1809
 
-<!--
-- [Phased deployment of software updates](capabilities-in-technical-preview-1808.md#bkmk_pod) <!--1358146-->
+- [Improvements to CMPivot](capabilities-in-technical-preview-1809.md#) <!--1359068-->
+- [Improvement to data warehouse](capabilities-in-technical-preview-1809.md#) <!--1358870-->
+- [Improvement to driver management](capabilities-in-technical-preview-1809.md#) <!--1358270-->
+- [Improvement to lifecycle dashboard](capabilities-in-technical-preview-1809.md#) <!--1358702-->
+
 
 
 > [!Note]  

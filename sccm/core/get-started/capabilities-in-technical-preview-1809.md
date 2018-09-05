@@ -2,7 +2,7 @@
 title: Technical preview 1809
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1809.
-ms.date: 09/04/2018
+ms.date: 09/07/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,8 +35,13 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 **The following sections describe the new features to try out in this version:**  
 
 
-<!--[!INCLUDE [Phased deployment of software updates](includes/1358146.md)]-->
+[!INCLUDE [Improvements to CMPivot](includes/1359068.md)]
 
+[!INCLUDE [Improvement to data warehouse](includes/1358870.md)]
+
+[!INCLUDE [Improvement to driver management](includes/1358270.md)]
+
+[!INCLUDE [Improvement to lifecycle dashboard](includes/1358702.md)]
 
 
 
