@@ -30,7 +30,7 @@ Use the **Azure Services Wizard** to configure a connection from Configuration M
 ## Prerequisites for the Log Analytics Connector
 
 > [!Note]  
-> This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/en-us/azure/monitoring/#operations-management-suite).  
+> This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
 
 - Before you install the Log Analytics connector in Configuration Manager, provide Configuration Manager with permissions. Grant *contributor access* to the Azure *resource group* that contains your Log Analytics workspace. For more information, see [Provide Configuration Manager with permissions to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics).  
 
@@ -47,7 +47,7 @@ Use the **Azure Services Wizard** to configure a connection from Configuration M
 Use the **Azure Services Wizard** to configure a connection from Configuration Manager to the Azure Log Analytics cloud service. For more information and details of this process, see [Configure Azure services](https://docs.microsoft.com/sccm/core/servers/deploy/configure/azure-services-wizard). Select the option in the wizard for the **OMS Connector**. 
 
 > [!Note]  
-> This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/en-us/azure/monitoring/#operations-management-suite).  
+> This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
 
 If you accomplished all the other procedures successfully, then the information on the **Connection Configuration** screen automatically appears after you import the web app. Information for the connection settings should appear for your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
 

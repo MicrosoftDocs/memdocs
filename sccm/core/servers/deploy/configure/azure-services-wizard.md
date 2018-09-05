@@ -35,7 +35,7 @@ Configure the following Azure services using this wizard:
 -   **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
 
     > [!Note]  
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/en-us/azure/monitoring/#operations-management-suite).  
+    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
 
 -   **Upgrade Readiness Connector**: Connect to Windows Analytics [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). View client upgrade compatibility data.  
 
