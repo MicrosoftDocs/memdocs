@@ -201,7 +201,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -220,7 +220,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -563,68 +563,6 @@ ms.topic: hub-page
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#tasksPanel8">Mobile Device Management</a>
-                        <ul id="tasksPanel8" class="cardsC">
-                            <li>
-                                <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-mobile-device-mgmt-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Understand hybrid mobile device management</h3>
-                                                <p>Learn how you can manage iOS, Android, and Windows devices with Configuration Manager.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-mobile-device-mgmt-2.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Migrate hybrid MDM users and devices to Intune standalone</h3>
-                                                <p>Use a phased approach to migrate from hybrid MDM to the recommended Intune standalone solution.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-mobile-device-mgmt-3.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>What's new in hybrid MDM</h3>
-                                                <p>Learn about new features in Intune that are supported with hybrid MDM.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </li>
             <li>
@@ -633,125 +571,139 @@ ms.topic: hub-page
                     <li>
                         <a href="#current-all">All</a>
                         <p>To fully adopt the Windows as a service model, you also must adopt the Configuration Manager as a service model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience.</p><br>
-                        <ul id="current-all" class="cardsC">
+                        <ul id="current-all" class="cardsF">
                             <li>
+                                <a href="/sccm/core/understand/configuration-manager-and-windows-as-service">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/core/understand/configuration-manager-and-windows-as-service">Keep Windows 10 up-to-date in the enterprise using Configuration Manager</a></h3>
+                                                <h3>Keep Windows 10 up-to-date in the enterprise using Configuration Manager</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">Upgrade to Windows 10 via task sequence</a></h3>
+                                                <h3>Upgrade to Windows 10 via task sequence</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Manage Windows as a service</a></h3>
+                                                <h3>Manage Windows as a service</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Manage Office 365</a></h3>
+                                                <h3>Manage Office 365</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/core/migration/migrate-data-between-hierarchies">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migrating to Configuration Manager current branch</a></h3>
+                                                <h3>Migrating to Configuration Manager current branch</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/core/migration/migrate-data-between-hierarchies">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migration FAQ</a></h3>
+                                                <h3>Migration FAQ</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/core/migration/migrate-data-between-hierarchies">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/system-center-configuration.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/core/migration/migrate-data-between-hierarchies">FastTrack program</a></h3>
+                                                <h3>FastTrack program</h3>
                                                 <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -949,6 +901,7 @@ ms.topic: hub-page
                         <a href="#community-all">All</a>
                         <ul id="community-all" class="cardsF">
                             <li>
+                                <a href="https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -958,14 +911,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager">Enterprise Mobility + Security Blog</a></h3>
+                                                <h3>Enterprise Mobility + Security Blog</h3>
                                                 <p>The latest news about Configuration Manager.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://twitter.com/hashtag/configmgr">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -975,14 +930,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://twitter.com/hashtag/configmgr">#ConfigMgr on Twitter</a></h3>
+                                                <h3>#ConfigMgr on Twitter</h3>
                                                 <p>Read the latest tweets about Configuration Manager. </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -992,14 +949,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">Configuration Manager TechNet forums</a></h3>
+                                                <h3>Configuration Manager TechNet forums</h3>
                                                 <p>See the latest questions and answers on the TechNet forums.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://configurationmanager.uservoice.com/forums/300492-ideas">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -1009,14 +968,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas">Give feedback on Configuration Manager</a></h3>
+                                                <h3>Give feedback on Configuration Manager</h3>
                                                 <p>Tell us what features you want to see!</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/core/understand/use-docs#bkmk_docfeedback">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -1026,14 +987,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/core/understand/use-docs#bkmk_docfeedback">Give feedback on the documentation</a></h3>
+                                                <h3>Give feedback on the documentation</h3>
                                                 <p>Share your ideas about how to improve the technical content.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://blogs.technet.microsoft.com/configurationmgr/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -1043,12 +1006,13 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://blogs.technet.microsoft.com/configurationmgr/">Configuration Manager Support Blog</a></h3>
+                                                <h3>Configuration Manager Support Blog</h3>
                                                 <p>Support and servicing information from the Configuration Manager team.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
