@@ -175,6 +175,10 @@ Use the following table to help understand the requirements for Software Center 
 | On-premises Active Directory domain-joined device | 1806 | Management point for all app deployments |
 
 
+> [!Important]  
+> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
+
 
 ## Branding Software Center
 
@@ -193,9 +197,6 @@ Configuration Manager applies custom branding for Software Center according to t
     1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
 
     2. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
-
-        > [!Note]  
-        > - Software Center branding is synchronized with the Intune service every 14 days. Therefore, there might be a delay before changes you make in Intune are displayed in Configuration Manager.  
 
     3. The *organization name* and *color* that you specify in the Application Catalog website point properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
 
