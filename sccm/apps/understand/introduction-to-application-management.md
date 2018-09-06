@@ -1,8 +1,8 @@
 ---
 title: Introduction to app management
 titleSuffix: Configuration Manager
-description: Discover the basic information you’ll need to manage and deploy Configuration Manager applications.
-ms.date: 07/30/2018
+description: Discover the basic information you'll need to manage and deploy applications in Configuration Manager.
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -181,9 +181,9 @@ For more information, see the following articles:
 - [Software Center user guide](/sccm/core/understand/software-center)
 
 > [!Note]  
-> The Application Catalog web service point role is no longer required in 1806, but still a supported role. 
+> The application catalog website point and web service point roles are no longer *required* in 1806, but still *supported* roles. 
 > 
-> The Application Catalog website role isn't supported in version 1806. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 

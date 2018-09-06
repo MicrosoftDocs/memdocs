@@ -2,7 +2,7 @@
 title: Client Peer Cache
 titleSuffix: Configuration Manager
 description: Use client peer cache for source locations when deploying content with Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 08/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -54,6 +54,8 @@ To enable peer cache, deploy the [client settings](#bkmk_settings) to a collecti
  -	Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
 
  -	As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
+
+Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  

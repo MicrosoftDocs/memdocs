@@ -407,7 +407,7 @@ The following features are optional in the latest version of Configuration Manag
 - [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
 - [Client Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
 - [PFX Create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Microsoft Operations Management Suite (OMS) Connector](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) <!--1258052-->
+- [Azure Log Analytics Connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
 - [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
 - [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (also known as *Windows Hello for Business*) <!--1245704-->
