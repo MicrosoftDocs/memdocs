@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 07/30/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -85,15 +85,7 @@ Specifies how frequently the following Configuration Manager clients download cl
 
 When you set this option to **Yes**, and use [user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
 
-The Application Catalog receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the Application Catalog. If this setting is **No**, the following behaviors don't work when users use the Application Catalog:  
-
--   Users can't install the applications that they see in the Application Catalog.  
-
--   Users don't see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
-
--   Users don't receive revisions and updates for applications that are published to the Application Catalog. Users do see changes to application information in the Application Catalog.  
-
--   If you remove an application deployment after the client installs the application from the Application Catalog, clients continue to check that the application is installed for up to two days.  
+The Application Catalog receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the Application Catalog. If this setting is **No**, users can't install the applications that they see in the Application Catalog.  
 
 In addition, if this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
 
@@ -156,42 +148,19 @@ For more information about the following three settings, see [User notifications
 
 ### Default Application Catalog website point
 
-Configuration Manager uses this setting to connect users to the Application Catalog from Software Center. Select **Set Website** to specify a server that hosts the Application Catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice, because it offers the following benefits:  
+> [!Note]  
+> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> 
+> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
--   If the site has an Application Catalog website point, then clients are automatically given an Application Catalog website point from their site.  
-
--   The client prefers HTTPS-enabled Application Catalog website points on the intranet over HTTP-only servers. This capability helps protect against a rogue server.
-
--   The management point gives internet-based clients an internet-based Application Catalog website point. The management point gives intranet-based clients an intranet-based Application Catalog website point.  
-
-Automatic detection doesn't guarantee that clients are given the closest Application Catalog website point. You might decide not to use the option to **Automatically detect** for the following reasons:  
-
--   You want to manually configure the closest server for clients, or ensure that they don't connect to a server across a slow network connection.  
-
--   You want to control which clients connect to which server. This configuration might be for testing, performance, or business reasons.  
-
--   You don't want to wait up to 25 hours or for a network change for clients to use a different Application Catalog website point.  
-
-If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN. This configuration reduces the likelihood that the web browser prompts users for credentials when they access an intranet-based Application Catalog. To use the NetBIOS name, the following conditions must apply:  
-
--   The NetBIOS name is specified in the Application Catalog website point properties.  
-
--   You use WINS, or all clients are in the same domain as the Application Catalog website point.  
-
--   You configure the Application Catalog website point for HTTP client connections, or configure the server for HTTPS and the web server certificate has the NetBIOS name.  
-
-Typically, users are prompted for credentials when the URL has an FQDN, but not when the URL is a NetBIOS name. Expect users always to be prompted when they connect from the internet, because this connection must use the internet FQDN. For an internet-based client, when the web browser prompts users for credentials, ensure that the Application Catalog website point can connect to a domain controller for the user’s account. This configuration allows the user to authenticate by using Kerberos.  
-
-> [!NOTE]  
->  Here is how automatic detection works:  
->   
->  The client makes a service location request to a management point. If there is an Application Catalog website point in the same site as the client, this server is given to the client as the Application Catalog server to use. When more than one Application Catalog website point is available in the site, an HTTPS-enabled server takes precedence over a server that isn't enabled for HTTPS. After this filtering, all clients are given one of the servers to use as the Application Catalog. Configuration Manager doesn't load-balance between multiple servers. When the client’s site doesn't have an Application Catalog website point, the management point nondeterministically returns an Application Catalog website point from the hierarchy.  
->   
->  For intranet-based clients, if you configure the Application Catalog website point with a NetBIOS name for the Application Catalog URL, the management point uses this. It doesn't use the intranet FQDN. For internet-based clients, the management point only gives the internet FQDN to the client.  
->   
->  The client makes this service location request every 25 hours, or whenever it detects a network change. For example, if the client moves from the intranet to the internet, that is a network change. If the client then locates an internet-based management point, the internet-based management point gives internet-based Application Catalog website point servers to clients.  
+Configuration Manager uses this setting to connect users to the Application Catalog from Software Center. Select **Set Website** to specify a server that hosts the Application Catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice.
 
 ### Add default Application Catalog website to Internet Explorer trusted sites zone
+
+> [!Note]  
+> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> 
+> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 If this option is **Yes**, the client automatically adds the current default Application Catalog website URL to the Internet Explorer trusted sites zone.  
 
@@ -199,12 +168,12 @@ This setting ensures that the Internet Explorer setting for Protected Mode isn't
 
 If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the Application Catalog. An alternative method is to configure these Internet Explorer settings in another zone for the Application Catalog URL that clients use.  
 
-> [!NOTE]  
->  Whenever Configuration Manager adds a default Application Catalog URL to the trusted sites zone, Configuration Manager removes any previously added Application Catalog URL.  
->   
->  If the URL is already specified in one of the security zones, Configuration Manager cannot add the URL. In this scenario, you must either remove the URL from the other zone, or manually configure the required Internet Explorer settings.  
-
 ### Allow Silverlight applications to run in elevated trust mode
+
+> [!Important]  
+> Starting in Configuration Manager version 1802, the client doesn't automatically install Silverlight.
+> 
+> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
 This setting must be **Yes** for users to use the Application Catalog.  
 
@@ -214,15 +183,18 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source.  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center).  
 
 ### Use new Software Center
 
-If you set this option to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center. Starting in Configuration Manager 1802, the default setting is **Yes**.  
+Starting in Configuration Manager 1802, the default setting is **Yes**.
 
-The Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
+If you set this option to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center.   
 
-For more information, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
+Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+ 
+> [!Note]  
+> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 ### Enable communication with Health Attestation Service
 

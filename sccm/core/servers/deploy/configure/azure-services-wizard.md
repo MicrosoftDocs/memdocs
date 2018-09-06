@@ -1,7 +1,7 @@
 ---
 title: Configure Azure services
 titleSuffix: Configuration Manager
-description: Connect your Configuration Manager environment with Azure services for cloud management, Upgrade Readiness, Microsoft Store for Business, and Operations Management Suite.
+description: Connect your Configuration Manager environment with Azure services for cloud management, Upgrade Readiness, Microsoft Store for Business, and Log Analytics.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Configure Azure services for use with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -31,7 +32,10 @@ Configure the following Azure services using this wizard:
 
     - Support certain [cloud management gateway scenarios](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
 
--   **OMS Connector**: [Connect to Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS). Sync data like collections to OMS Log Analytics.  
+-   **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
+
+    > [!Note]  
+    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
 
 -   **Upgrade Readiness Connector**: Connect to Windows Analytics [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). View client upgrade compatibility data.  
 
@@ -55,7 +59,7 @@ The following table lists details about each of the services.
 |Service  |Tenants  |Clouds  |Web app  |Native app  |Actions  |
 |---------|---------|---------|---------|---------|---------|
 |Cloud management with</br>Azure AD User Discovery | Multiple | Public | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | Import, Create |
-|OMS Connector | One | Public, Private | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
+|Log Analytics Connector | One | Public, Private | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
 |Upgrade Readiness | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
 |Microsoft Store for</br>Business | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import, Create |
 
@@ -84,7 +88,7 @@ For more information about Azure apps, start with the following articles:
 
 After you decide the service to which you want to connect, refer to the table in [Service details](#service-details). This table provides information you need to complete the Azure Service Wizard. Have a discussion in advance with your Azure AD administrator. Decide if you manually create the apps in advance in the Azure portal, and then import the app details into Configuration Manager. Or use Configuration Manager to directly create the apps in Azure AD. To collect the necessary data from Azure AD, review the information in the other sections of this article.
 
-Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com). When configuring Upgrade Readiness or the OMS Connector, you need to give your newly registered web app *contributor* permission on the resource group that contains the relevant OMS workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
+Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com). When configuring Upgrade Readiness or the Log Analytics Connector, you need to give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
 
 
 
@@ -203,7 +207,7 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 -   **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
--   **OMS Connector** service, **Configuration** page: [Configure the connection to OMS](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#use-the-azure-services-wizard-to-configure-the-connection-to-oms)  
+-   **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics)  
 
 -   **Upgrade Readiness Connector** service, **Configuration** page: [Use the Azure Wizard to create the connection](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 

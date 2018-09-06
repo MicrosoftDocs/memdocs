@@ -416,9 +416,15 @@ These task sequences can be for OS deployment or custom. It's also supported for
 
 ## Software Center
 
+> [!Important]  
+> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
+
 ### Software Center infrastructure improvements
 <!--1358309-->
-Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+***[Updated]*** Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)  
 
 > [!Note]  
 > The application catalog website point and web service point roles are no longer *required* in 1806, but still *supported* roles. 
