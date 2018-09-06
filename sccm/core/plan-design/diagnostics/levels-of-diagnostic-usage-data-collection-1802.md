@@ -217,11 +217,11 @@ For Configuration Manager version 1802, this level includes the following data:
 
   - Count of Azure Active Directory applications and services connected to Configuration Manager
 
-  - Count of collections synced to Operations Management Suite
+  - Count of collections synced to Azure Log Analytics
 
   - Count of Upgrade Analytics Connectors
 
-  - Whether the Operations Management Suite cloud connector is enabled
+  - Whether the Azure Log Analytics cloud connector is enabled
 
 
 ### Co-management  
