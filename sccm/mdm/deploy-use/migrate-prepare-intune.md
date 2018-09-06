@@ -3,6 +3,7 @@ title: Prepare Intune for user migration
 titleSuffix: "Configuration Manager"
 description: Learn how to prepare Intune on Azure for user migration from hybrid MDM.
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual
