@@ -4,6 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about managing clients with cloud management gateway and internet-based client management in Configuration Manager.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
+ms.topic: conceptual
 ms.technology: configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: aczechowski
