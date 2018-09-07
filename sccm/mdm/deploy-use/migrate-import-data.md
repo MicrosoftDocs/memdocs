@@ -3,6 +3,7 @@ title: "Import data to Microsoft Intune"
 titleSuffix: "Configuration Manager"
 description: Import Configuration Manager data to Microsoft Intune
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual

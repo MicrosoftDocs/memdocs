@@ -5,6 +5,7 @@ description: Plan and design the cloud management gateway (CMG) to simplify mana
 ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz

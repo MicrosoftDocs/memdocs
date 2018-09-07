@@ -3,6 +3,7 @@ title: Migrate hybrid MDM resources to Intune standalone
 titleSuffix: Configuration Manager
 description: Learn how to migrate hybrid MDM users and devices to Intune on Azure.
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 08/14/2018
 ms.topic: conceptual
