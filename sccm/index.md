@@ -34,6 +34,33 @@ ms.topic: hub-page
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
+                                                <h3>Cloud-attached management</h3>
+                                                <p><a href="/sccm/core/clients/manage/co-management-overview">Co-management for Windows 10</a></p>
+                                                <p><a href="/sccm/core/clients/manage/manage-clients-internet">Manage clients on the internet</a></p>
+                                                <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Windows as a service</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Real-time management</h3>
+                                                <p><a href="/sccm/apps/deploy-use/create-deploy-scripts">Create and run PowerShell scripts</a></p>
+                                                <p><a href=/sccm/core/servers/manage/cmpivot">CMPivot</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
                                                 <h3>Application management</h3>
                                                 <p><a href="/sccm/apps/understand/introduction-to-application-management">Introduction to application management</a></p>
                                                 <p><a href="/sccm/apps/get-started/create-and-deploy-an-application">Create applications</a></p>
@@ -76,34 +103,6 @@ ms.topic: hub-page
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Cloud-attached management</h3>
-                                                <p><a href="/sccm/core/clients/manage/co-management-overview">Co-management for Windows 10</a></p>
-                                                <p><a href="/sccm/core/clients/manage/manage-clients-internet">Manage clients on the internet</a></p>
-                                                <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Windows as a service</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3>Other releases and information</h3>
-                                                <p><a href="/sccm/core/get-started/technical-preview">Technical Preview of System Center Configuration Manager</a></p>
-                                                <p><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migrating to Configuration Manager current branch</a></p>
-                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">Migrate hybrid MDM users and devices to Intune standalone</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
                                                 <h3>Protect data and infrastructure</h3>
                                                 <p><a href="/sccm/protect/deploy-use/manage-access-to-services">Conditional access</a></p>
                                                 <p><a href="/sccm/protect/deploy-use/endpoint-protection">Endpoint protection for Windows Defender</a></p>
@@ -128,6 +127,20 @@ ms.topic: hub-page
                                 </div>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <div class="cardSize">
+                            <div class="cardPadding">
+                                <div class="card">
+                                    <div class="cardText">
+                                        <h3>Other releases and information</h3>
+                                        <p><a href="/sccm/core/get-started/technical-preview">Technical Preview of System Center Configuration Manager</a></p>
+                                        <p><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migrating to Configuration Manager current branch</a></p>
+                                        <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">Migrate hybrid MDM users and devices to Intune standalone</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <a data-default="true" href="#tasksPanel1">Core Infrastructure</a>
@@ -192,194 +205,8 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel2">Application Management</a>
+                        <a href="#tasksPanel2">Cloud-attached management</a>
                         <ul id="tasksPanel2" class="cardsC">
-                            <li>
-                                <a href="/sccm/apps/understand/introduction-to-application-management">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Introduction to application management</h3>
-                                                <p>Learn the basics about managing applications.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/apps/deploy-use/create-applications">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Create applications</h3>
-                                                <p>Learn everything you need to know to create applications.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/apps/deploy-use/create-deploy-scripts">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Create and run PowerShell scripts</h3>
-                                                <p>Use the Configuration Manager console to manage and deploy Windows PowerShell scripts to clients.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tasksPanel3">OS Deployment</a>
-                        <ul id="tasksPanel3" class="cardsC">
-                            <li>
-                                <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Introduction to operating system deployment</h3>
-                                                <p>Learn about deploying enterprise operating systems with Configuration Manager.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Upgrade to Windows 10</h3>
-                                                <p>Use a Configuration task sequence to upgrade devices to Windows 10.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Phased deployments</h3>
-                                                <p>Automate a coordinated, sequenced rollout of software across multiple collections.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tasksPanel4">Software Update Management</a>
-                        <ul id="tasksPanel4" class="cardsC">
-                            <li>
-                                <a href="/sccm/sum/understand/software-updates-introduction">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Introduction to software updates management</h3>
-                                                <p>Manage software updates with Configuration Manager.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Manage Office 365 ProPlus updates</h3>
-                                                <p>Use Configuration Manager to view Office 365 client information in a dashboard, configure and deploy the app to clients, and manage Office updates.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Use Windows Update for Business</h3>
-                                                <p>Integrate Configuration Manager with Windows Update for Business to keep Windows 10 devices always up-to-date.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tasksPanel5">Cloud-attached management</a>
-                        <ul id="tasksPanel5" class="cardsC">
                             <li>
                                 <a href="/sccm/core/clients/manage/co-management-overview">
                                 <div class="cardSize">
@@ -440,21 +267,188 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel6">Device Compliance</a>
+                        <a href="#tasksPanel3">Real-time management</a>
+                        <ul id="tasksPanel3" class="cardsC">
+                            <li>
+                                <a href="/sccm/apps/deploy-use/create-deploy-scripts">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Create and run PowerShell scripts</h3>
+                                                <p>Nunc viverrra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/servers/manage/cmpivot">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>CMPivot</h3>
+                                                <p>Nunc viverrra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel4">Application Management</a>
+                        <ul id="tasksPanel4" class="cardsC">
+                            <li>
+                                <a href="/sccm/apps/understand/introduction-to-application-management">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Introduction to application management</h3>
+                                                <p>Learn the basics about managing applications.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/apps/deploy-use/create-applications">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Create applications</h3>
+                                                <p>Learn everything you need to know to create applications.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/apps/deploy-use/create-deploy-scripts">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Create and run PowerShell scripts</h3>
+                                                <p>Use the Configuration Manager console to manage and deploy Windows PowerShell scripts to clients.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel5">OS Deployment</a>
+                        <ul id="tasksPanel5" class="cardsC">
+                            <li>
+                                <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Introduction to operating system deployment</h3>
+                                                <p>Learn about deploying enterprise operating systems with Configuration Manager.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Upgrade to Windows 10</h3>
+                                                <p>Use a Configuration task sequence to upgrade devices to Windows 10.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Phased deployments</h3>
+                                                <p>Automate a coordinated, sequenced rollout of software across multiple collections.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel6">Software Update Management</a>
                         <ul id="tasksPanel6" class="cardsC">
                             <li>
-                                <a href="/sccm/compliance/understand/ensure-device-compliance">
+                                <a href="/sccm/sum/understand/software-updates-introduction">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Ensure device compliance</h3>
-                                                <p>Configure settings and evaluate compliance on devices that you're managing.</p>
+                                                <h3>Introduction to software updates management</h3>
+                                                <p>Manage software updates with Configuration Manager.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -462,18 +456,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/compliance/deploy-use/browser-profiles">
+                                <a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configure Microsoft Edge settings</h3>
-                                                <p>Use a Configuration Manager compliance policy to configure several Microsoft Edge settings.</p>
+                                                <h3>Manage Office 365 ProPlus updates</h3>
+                                                <p>Use Configuration Manager to view Office 365 client information in a dashboard, configure and deploy the app to clients, and manage Office updates.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -481,18 +475,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
+                                <a href="/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Upgrade Windows devices with the edition upgrade policy</h3>
-                                                <p>Easily upgrade your Windows 10 devices to a newer edition with your product key or license file.</p>
+                                                <h3>Use Windows Update for Business</h3>
+                                                <p>Integrate Configuration Manager with Windows Update for Business to keep Windows 10 devices always up-to-date.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -555,6 +549,68 @@ ms.topic: hub-page
                                             <div class="cardText">
                                                 <h3>Windows Hello for Business</h3>
                                                 <p>Create policies to manage alternative sign-in methods for Windows 10 devices.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel8">Device Compliance</a>
+                        <ul id="tasksPanel8" class="cardsC">
+                            <li>
+                                <a href="/sccm/compliance/understand/ensure-device-compliance">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Ensure device compliance</h3>
+                                                <p>Configure settings and evaluate compliance on devices that you're managing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/compliance/deploy-use/browser-profiles">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Configure Microsoft Edge settings</h3>
+                                                <p>Use a Configuration Manager compliance policy to configure several Microsoft Edge settings.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Upgrade Windows devices with the edition upgrade policy</h3>
+                                                <p>Easily upgrade your Windows 10 devices to a newer edition with your product key or license file.</p>
                                             </div>
                                         </div>
                                     </div>
