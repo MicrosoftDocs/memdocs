@@ -12,7 +12,7 @@ ms.topic: hub-page
             <li>
                 <a href="#tasks">Tasks</a>
                 <ul id="tasks">
-                     <li>
+                    <li>
                         <a data-default="true" href="#all">All</a>
                         <ul id="all" class="cardsW">
                             <li>
@@ -126,21 +126,21 @@ ms.topic: hub-page
                                     </div>
                                 </div>
                             </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="cardSize">
-                            <div class="cardPadding">
-                                <div class="card">
-                                    <div class="cardText">
-                                        <h3>Other releases and information</h3>
-                                        <p><a href="/sccm/core/get-started/technical-preview">Technical Preview of System Center Configuration Manager</a></p>
-                                        <p><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migrating to Configuration Manager current branch</a></p>
-                                        <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">Migrate hybrid MDM users and devices to Intune standalone</a></p>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Other releases and information</h3>
+                                                <p><a href="/sccm/core/get-started/technical-preview">Technical Preview of System Center Configuration Manager</a></p>
+                                                <p><a href="/sccm/core/migration/migrate-data-between-hierarchies">Migrating to Configuration Manager current branch</a></p>
+                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">Migrate hybrid MDM users and devices to Intune standalone</a></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a data-default="true" href="#tasksPanel1">Core Infrastructure</a>
