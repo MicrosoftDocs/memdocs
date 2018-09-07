@@ -5,6 +5,7 @@ description: Monitor clients and network traffic through the cloud management ga
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: aczechowski
 ms.author: aaroncz
