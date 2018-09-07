@@ -50,7 +50,7 @@ ms.topic: hub-page
                                             <div class="cardText">
                                                 <h3>Real-time management</h3>
                                                 <p><a href="/sccm/apps/deploy-use/create-deploy-scripts">Create and run PowerShell scripts</a></p>
-                                                <p><a href=/sccm/core/servers/manage/cmpivot">CMPivot</a></p>
+                                                <p><a href="/sccm/core/servers/manage/cmpivot">CMPivot</a></p>
                                             </div>
                                         </div>
                                     </div>
