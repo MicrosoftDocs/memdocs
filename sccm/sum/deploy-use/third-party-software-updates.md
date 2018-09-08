@@ -31,18 +31,18 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
 
 ## Additional requirements when the SUP is remote from the top-level site server 
 
-1. SSL must be enabled on the SUP when it's remote. 
+1. SSL must be enabled on the SUP when it's remote. This requires a server authentication certificate generated from an internal certififcate autority or via a public provider.
     - [Configure SSL on WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
         - When you configure SSL on WSUS, note some of the web services and the virtual directories are always HTTP and not HTTPS. 
         - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. To allow the creation of the self-signed WSUS certificate: 
+2. When setting third-party updates WSUS signing certificate configuration to **Configuration Manager manages the updates** in the Software Update Point Component Properties, the following is required to allow the creation of the self-signed WSUS certificate: 
    - Remote registry should be enabled on the SUP server.
    -  The **WSUS server connection account** should have remote registry permissions on the SUP/WSUS server. 
 
 
-3. Create the following registry key on the Configuration Manager site server: 
+3. When using a self-signed certificate, create the following registry key on the Configuration Manager site server: 
     - `HKLM\Software\Microsoft\Update Services\Server\Setup`, create a new DWORD named **EnableSelfSignedCertificates** with a value of `1`. 
 
 4. To enable installing the certificate to the Trusted Publishers and Trusted Root stores on the remote SUP server:
@@ -64,7 +64,7 @@ If you enable this option, you can subscribe to third-party update catalogs in t
 
 
 ## Configure the WSUS signing certificate
-You'll need to decide if you want Configuration Manager to automatically manage the third-party WSUS signing certificate, or if you need to manually configure the certificate. 
+You'll need to decide if you want Configuration Manager to automatically manage the third-party WSUS signing certificate using a self-signed certificate, or if you need to manually configure the certificate. 
 
 ### Automatically manage the WSUS signing certificate
 If you don't have a requirement to use PKI certificates, you can choose to automatically manage the signing certificates for third-party updates. The WSUS certificate management is done as part of the sync cycle and gets logged in the `wsyncmgr.log`. 
