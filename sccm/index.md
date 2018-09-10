@@ -64,7 +64,7 @@ ms.topic: hub-page
                                                 <h3>Application management</h3>
                                                 <p><a href="/sccm/apps/understand/introduction-to-application-management">Introduction to application management</a></p>
                                                 <p><a href="/sccm/apps/get-started/create-and-deploy-an-application">Create applications</a></p>
-                                                <p><a href="/sccm/apps/deploy-use/create-deploy-scripts">Create and run PowerShell scripts</a></p>
+                                                <p><a href="/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business">Manage apps from the Microsoft Store for Business</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -895,6 +895,7 @@ ms.topic: hub-page
                         <a href="#sdkps-all">All</a>
                         <ul id="sdkps-all" class="cardsC">
                             <li>
+                              <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -904,14 +905,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="">Configuration Manager Software Development Kit (SDK)</a></h3>
+                                                <h3>Configuration Manager Software Development Kit (SDK)</a></h3>
                                                 <p>Automate Configuration Manager with scripts. Developers can add features and extensions.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                              </a>
                             </li>
                             <li>
+                              <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -921,14 +924,16 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="">Configuration Manager programming fundamentals</a></h3>
+                                                <h3>Configuration Manager programming fundamentals</a></h3>
                                                 <p>Learn about the programming techniques that help you successfully program Configuration Manager.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                              </a>
                             </li>
                             <li>
+                              <a href="/powershell/sccm/configurationmanager/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -938,12 +943,13 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="">Configuration Manager PowerShell reference</a></h3>
+                                                <h3>Configuration Manager PowerShell reference</a></h3>
                                                 <p>Manage a Configuration Manager hierarchy by using Windows Powershell cmdlets and scripts.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                              </a>
                             </li>
                         </ul>
                     </li>
