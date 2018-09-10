@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
-ms.date: 04/30/2018
+ms.date: 09/07/2018
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -58,9 +58,9 @@ For general help with the product, see [Find help](/sccm/core/understand/find-he
 
 Go to the Feedback section at the bottom by clicking the **Feedback** link in the upper right of any article. This section is integrated with GitHub Issues. For more information about integration with GitHub Issues, see the [docs platform blog post](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
 
-To share feedback on the Configuration Manager product itself, click **Give product feedback**. For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). 
+To share feedback on the Configuration Manager product itself, click **Product feedback**. For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). 
 
-A [GitHub account](https://github.com/join) is a prerequisite for providing documentation feedback. Once you sign in, there is a one-time authorization for MicrosoftDocs. Then when you click **Give documentation feedback**, enter a title and comment, and then **Submit feedback**. This action files a new issue for the target article in the [SCCMdocs repository](https://github.com/MicrosoftDocs/SCCMdocs/issues).
+A [GitHub account](https://github.com/join) is a prerequisite for providing documentation feedback. Once you sign in, there is a one-time authorization for MicrosoftDocs. Then when you click **Content feedback**, enter a title and comment, and then **Submit feedback**. This action files a new issue for the target article in the [SCCMdocs repository](https://github.com/MicrosoftDocs/SCCMdocs/issues).
 
 This integration also displays any existing open or closed issues for the target article. If any exist, review them before submitting a new issue. If you find a related issue, click the face icon to add a reaction, or you can expand it to add a comment. 
 
@@ -101,15 +101,49 @@ To receive notifications when content changes in the documentation library, use 
 The Configuration Manager documentation library, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](https://docs.microsoft.com/contribute). Creating a [GitHub account](https://github.com/join) is the only prerequisite.
 
 #### Basic steps to contribute to SCCMdocs
-1. From the target article, click **Edit**. This action opens the source file in GitHub.
-2. To edit the source file, click the pencil icon.
-3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown). 
-4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then click **Propose file change**.
-5. Scroll down and verify the changes you made. Click **Create pull request** to open the form. Describe *why* you made this change. Tag the article author and request that they review. Click **Create pull request**.
+1. From the target article, click **Edit**. This action opens the source file in GitHub.  
+
+2. To edit the source file, click the pencil icon.  
+
+3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+
+4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then click **Propose file change**.  
+
+5. Scroll down and verify the changes you made. Click **Create pull request** to open the form. Describe *why* you made this change. Tag the article author and request that they review. Click **Create pull request**.  
+
 
 ### What to contribute
-If you're interested in contributing but don't know where to start, see the following suggestions:
-- Review an article for accuracy. Then update the **ms.date** metadata using `mm/dd/yyyy` format. This contribution helps keep the content fresh.
-- Add clarifications, examples, or guidance based on your experience. This contribution uses the power of the community to share knowledge.  
-- Correct translations in a non-English language. This contribution improves the usability of localized content.
-- Search the list of issues for the community-targeted labels [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue) and [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted). These labels are assigned by Microsoft authors to issues that are good candidates for community contribution.
+
+If you're interested in contributing, but don't know where to start, see the following suggestions:  
+
+- Search the list of issues for the community-targeted labels:  
+    - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
+    - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
+
+    These labels are assigned by Microsoft authors to issues that are good candidates for community contribution.  
+
+- Review an article for accuracy. Then update the **ms.date** metadata using `mm/dd/yyyy` format. This contribution helps keep the content fresh.  
+
+- Add clarifications, examples, or guidance based on your experience. This contribution uses the power of the community to share knowledge.   
+
+- Correct translations in a non-English language. This contribution improves the usability of localized content.  
+
+> [!Note]  
+> Large contributions require signing a Contribution License Agreement (CLA) if you aren't a Microsoft employee. GitHub automatically requires you to sign this agreement when a contribution meets the threshold.  
+
+
+### Tips
+
+Follow these general guidelines when contributing to Configuration Manager docs:
+
+- Don't surprise us with large pull requests. Instead, [file an issue](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback) and start a discussion. Then we can agree on a direction before you invest a large amount of time.  
+
+- Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+
+- Use the [pull request template](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) as the starting point of your work.  
+
+- Follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).  
+
+- Blog and tweet (or whatever) about your contributions, frequently!  
+
+(This list was borrowed from the [.NET contributing guide](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md#dos-and-donts).)
