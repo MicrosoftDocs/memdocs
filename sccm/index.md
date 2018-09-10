@@ -723,7 +723,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/core/migration/migrate-data-between-hierarchies">
+                                <a href="/sccm/core/migration/planning-for-migration">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -733,8 +733,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Migration FAQ</h3>
-                                                <p>Frequently asked questions about migrating to Configuration Manager current branch</p>
+                                                <h3>Plan for migration</h3>
+                                                <p>Develop your plan for migrating to Configuration Manager current branch</p>
                                             </div>
                                         </div>
                                     </div>
