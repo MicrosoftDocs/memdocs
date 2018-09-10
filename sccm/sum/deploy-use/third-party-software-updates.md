@@ -37,7 +37,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
         - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. When setting third-party updates WSUS signing certificate configuration to **Configuration Manager manages the updates** in the Software Update Point Component Properties, the following is required to allow the creation of the self-signed WSUS certificate: 
+2. When setting the third-party updates WSUS signing certificate configuration to **Configuration Manager manages the updates** in the Software Update Point Component Properties, the following configurations are required to allow the creation of the self-signed WSUS signing certificate: 
    - Remote registry should be enabled on the SUP server.
    -  The **WSUS server connection account** should have remote registry permissions on the SUP/WSUS server. 
 
@@ -45,7 +45,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
 3. When using a self-signed certificate, create the following registry key on the Configuration Manager site server: 
     - `HKLM\Software\Microsoft\Update Services\Server\Setup`, create a new DWORD named **EnableSelfSignedCertificates** with a value of `1`. 
 
-4. To enable installing the certificate to the Trusted Publishers and Trusted Root stores on the remote SUP server:
+4. To enable installing the self-signed WSUS signing certificate to the Trusted Publishers and Trusted Root stores on the remote SUP server:
    - The **WSUS server connection account** should have remote administration permissions on the SUP server.
 
     If this item isn't possible, export the certificate from the local computer's WSUS store into the Trusted Publisher and Trusted Root stores. 
