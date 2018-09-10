@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/07/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -121,11 +121,9 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical Preview version 1809
 
-- [Improvements to CMPivot](capabilities-in-technical-preview-1809.md#) <!--1359068-->
-- [Improvement to data warehouse](capabilities-in-technical-preview-1809.md#) <!--1358870-->
-- [Improvement to driver management](capabilities-in-technical-preview-1809.md#) <!--1358270-->
-- [Improvement to lifecycle dashboard](capabilities-in-technical-preview-1809.md#) <!--1358702-->
-- [Improvement to maintenance windows for software updates](capabilities-in-technical-preview-1809.md#) <!--vso2839307-->
+- [Improvements to CMPivot](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) <!--1359068-->
+- [Improvement to lifecycle dashboard](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) <!--1358702-->
+- [Improvement to maintenance windows for software updates](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) <!--vso2839307-->
 
 
 > [!Note]  
