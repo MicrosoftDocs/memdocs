@@ -185,9 +185,13 @@ For more information, see [CMTrace](/sccm/core/support/cmtrace).
 
 ### Cloud management dashboard
 <!--1358461-->
-The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices. In the Configuration Manager console, go to the **Monitoring** workspace. Select the **Cloud Management** node, and view the dashboard tiles.  
+***[Updated]*** The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.   
 
-This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services**, and select **Cloud management gateway**. Select the target CMG instance, and then click **Connection analyzer** in the ribbon.
+This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. 
+
+For more information, see the following sections of the [Monitor CMG](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway) article:  
+- [Cloud management dashboard](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard)  
+- [Connection analyzer](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#connection-analyzer)  
 
 
 ### Improvements to cloud management gateway
