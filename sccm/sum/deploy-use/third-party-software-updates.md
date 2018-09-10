@@ -42,7 +42,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
    -  The **WSUS server connection account** should have remote registry permissions on the SUP/WSUS server. 
 
 
-3. When using a self-signed certificate, create the following registry key on the Configuration Manager site server: 
+3. Create the following registry key on the Configuration Manager site server: 
     - `HKLM\Software\Microsoft\Update Services\Server\Setup`, create a new DWORD named **EnableSelfSignedCertificates** with a value of `1`. 
 
 4. To enable installing the self-signed WSUS signing certificate to the Trusted Publishers and Trusted Root stores on the remote SUP server:
