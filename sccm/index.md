@@ -143,7 +143,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a data-default="true" href="#tasksPanel1">Core Infrastructure</a>
+                        <a data-default="true" href="#tasksPanel1">Core infrastructure</a>
                         <ul id="tasksPanel1" class="cardsC">
                             <li>
                                 <a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">
@@ -190,7 +190,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/nuget-tools-reference_2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -214,7 +214,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/virtualization-hperv-server-management-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -233,7 +233,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-get-started-get-started.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -252,7 +252,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-host-integration-update-center.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -276,12 +276,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Create and run PowerShell scripts</h3>
-                                                <p>Nunc viverrra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <p>Use the Configuration Manager console to manage and deploy Windows PowerShell scripts to clients.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -295,12 +295,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/teams-fast-track.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>CMPivot</h3>
-                                                <p>Nunc viverrra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <p>Immediately query online devices, then filter and group the data for deeper insights.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -310,7 +310,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel4">Application Management</a>
+                        <a href="#tasksPanel4">Application management</a>
                         <ul id="tasksPanel4" class="cardsC">
                             <li>
                                 <a href="/sccm/apps/understand/introduction-to-application-management">
@@ -351,18 +351,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/apps/deploy-use/create-deploy-scripts">
+                                <a href="/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Create and run PowerShell scripts</h3>
-                                                <p>Use the Configuration Manager console to manage and deploy Windows PowerShell scripts to clients.</p>
+                                                <h3>Manage apps from the Microsoft Store for Business</h3>
+                                                <p>Acquire and deploy online or offline apps from the Microsoft Store.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -372,7 +372,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel5">OS Deployment</a>
+                        <a href="#tasksPanel5">OS deployment</a>
                         <ul id="tasksPanel5" class="cardsC">
                             <li>
                                 <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
@@ -405,7 +405,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Upgrade to Windows 10</h3>
-                                                <p>Use a Configuration task sequence to upgrade devices to Windows 10.</p>
+                                                <p>Use a Configuration Manager task sequence to upgrade devices to Windows 10.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -434,7 +434,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel6">Software Update Management</a>
+                        <a href="#tasksPanel6">Software update management</a>
                         <ul id="tasksPanel6" class="cardsC">
                             <li>
                                 <a href="/sccm/sum/understand/software-updates-introduction">
@@ -496,7 +496,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel7">Protect Data and Infrastructure</a>
+                        <a href="#tasksPanel7">Protect data and infrastructure</a>
                         <ul id="tasksPanel7" class="cardsC">
                             <li>
                                 <a href="/sccm/protect/deploy-use/manage-access-to-services">
@@ -543,7 +543,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-password-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -558,7 +558,7 @@ ms.topic: hub-page
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel8">Device Compliance</a>
+                        <a href="#tasksPanel8">Device compliance</a>
                         <ul id="tasksPanel8" class="cardsC">
                             <li>
                                 <a href="/sccm/compliance/understand/ensure-device-compliance">
@@ -626,7 +626,6 @@ ms.topic: hub-page
                 <ul id="current">
                     <li>
                         <a href="#current-all">All</a>
-                        <p>To fully adopt the Windows as a service model, you also must adopt the Configuration Manager as a service model. To stay current with Windows 10, requires that you stay current with Configuration Manager for the best experience.</p><br>
                         <ul id="current-all" class="cardsF">
                             <li>
                                 <a href="/sccm/core/understand/configuration-manager-and-windows-as-service">
@@ -635,12 +634,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_progressive.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Keep Windows 10 up-to-date in the enterprise using Configuration Manager</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <h3>Keep Windows 10 up-to-date using Configuration Manager</h3>
+                                                <p>To stay current with Windows 10, stay current with Configuration Manager</p>
                                             </div>
                                         </div>
                                     </div>
@@ -654,12 +653,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Upgrade to Windows 10 via task sequence</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <h3>Upgrade to Windows 10</h3>
+                                                <p>Use a task sequence to upgrade devices to Windows 10</p>
                                             </div>
                                         </div>
                                     </div>
@@ -673,12 +672,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_Windows.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Manage Windows as a service</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <p>View the servicing channel, and use servicing plans</p>
                                             </div>
                                         </div>
                                     </div>
@@ -686,18 +685,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                                <a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_office.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Manage Office 365</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <p>Deploy, configure, and update Office 365 apps</p>
                                             </div>
                                         </div>
                                     </div>
@@ -711,12 +710,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_get-started.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Migrating to Configuration Manager current branch</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <h3>Migrate to Configuration Manager current branch</h3>
+                                                <p>Migrate from another hierarchy, such as Configuration Manager 2007</p>
                                             </div>
                                         </div>
                                     </div>
@@ -730,12 +729,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_guidelines.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Migration FAQ</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <p>Frequently asked questions about migrating to Configuration Manager current branch</p>
                                             </div>
                                         </div>
                                     </div>
@@ -743,18 +742,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/core/migration/migrate-data-between-hierarchies">
+                                <a href="https://www.microsoft.com/fasttrack/microsoft-365/ems">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_config-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>FastTrack program</h3>
-                                                <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+                                                <p>Request migration assistance from FastTrack for Microsoft 365 or EMS</p>
                                             </div>
                                         </div>
                                     </div>
