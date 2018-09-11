@@ -206,7 +206,9 @@ For more information, see [Prepare Windows 10 devices for co-management](/sccm/c
 
 #### Download content from a CMG
 <!--1358651-->
-Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
+***[Updated]*** Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
+
+For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
 #### Trusted root certificate isn't required with Azure AD
 <!--503899-->
