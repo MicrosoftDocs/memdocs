@@ -68,7 +68,7 @@ See the main sections of this article for the specific prerequisites for site sy
 - [Enrollment proxy point](#bkmk_2012EnrollProxpreq)
 - [Fallback status point](#bkmk_2012FSPpreq)
 - [Management point](#bkmk_2012MPpreq)
-- [Reporting point](#bkmk_2012RSpoint)
+- [Reporting Services point](#bkmk_2012RSpoint)
 - [Service connection point](#bkmk_SCPpreq)
 - [Software update point](#bkmk_2012SUPpreq)
 - [State migration point](#bkmk_2012SMPpreq)
@@ -447,7 +447,7 @@ The default IIS configuration is required with the following additions:
 
 
 
-##  <a name="bkmk_2012RSpoint"></a> Reporting point  
+##  <a name="bkmk_2012RSpoint"></a> Reporting Services point  
 
 #### Windows Server roles and features  
 
