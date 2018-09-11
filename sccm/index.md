@@ -905,7 +905,7 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configuration Manager Software Development Kit (SDK)</a></h3>
+                                                <h3>Configuration Manager Software Development Kit (SDK)</h3>
                                                 <p>Automate Configuration Manager with scripts. Developers can add features and extensions.</p>
                                             </div>
                                         </div>
@@ -924,7 +924,7 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configuration Manager programming fundamentals</a></h3>
+                                                <h3>Configuration Manager programming fundamentals</h3>
                                                 <p>Learn about the programming techniques that help you successfully program Configuration Manager.</p>
                                             </div>
                                         </div>
@@ -943,7 +943,7 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configuration Manager PowerShell reference</a></h3>
+                                                <h3>Configuration Manager PowerShell reference</h3>
                                                 <p>Manage a Configuration Manager hierarchy by using Windows Powershell cmdlets and scripts.</p>
                                             </div>
                                         </div>
