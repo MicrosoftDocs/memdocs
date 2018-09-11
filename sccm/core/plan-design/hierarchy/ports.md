@@ -137,6 +137,8 @@ In addition to the ports that are listed in this table, wake-up proxy also uses 
 |-----------------|---------|---------|  
 |HTTPS|--|443|  
 
+For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
+
 
 ###  <a name="bkmk_client-cmg"></a> Client -- > Cloud management gateway (CMG)  
 
@@ -222,8 +224,8 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |TCP-TLS (preferred)|--|10140-10155|  
-|HTTPS (fallback with one VM|--|443|  
-|HTTPS (fallback with two or more VMs|--|10124-10139|  
+|HTTPS (fallback with one VM)|--|443|  
+|HTTPS (fallback with two or more VMs)|--|10124-10139|  
 
 
 ###  <a name="bkmk_cmgcp-mp"></a> CMG connection point -- > Management point  
@@ -300,7 +302,7 @@ The Configuration Manager console uses internet access for the following actions
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
 
 
-###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager Policy Module (Network Device Enrollment Service) -- > Certificate registration point  
+###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager Network Device Enrollment Service (NDES) policy module -- > Certificate registration point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -480,11 +482,13 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 |Wake On LAN|9 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|--|  
 
 
-###  <a name="BKMK_PortsSiteServer-CloudDP"></a> Site server -- > Cloud-based distribution point  
+###  <a name="BKMK_PortsSiteServer-CloudDP"></a> Site server -- > Cloud distribution point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|  
+
+For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
 
 
 ###  <a name="BKMK_PortsSite-DP"></a> Site server -- > Distribution point  
