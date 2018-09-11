@@ -4,7 +4,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 09/10/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -16,6 +16,20 @@ ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Depending upon the scenario you use to manage clients on the internet with the cloud management gateway (CMG), you need one or more digital certificates. For more information about the different scenarios, see [plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+
+
+### General information
+<!--SCCMDocs issue #779-->
+Certificates for the cloud management gateway support the following configurations:  
+
+- **4096 bit key length**  
+
+- Starting in version 1710, support for **Version 3** certificates. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).  
+
+- Starting in version 1802, when you configure Windows with the following policy: **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**  
+
+- Starting in version 1802, support for **TLS 1.2**. For more information, see [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
+
 
 
 ## CMG server authentication certificate
