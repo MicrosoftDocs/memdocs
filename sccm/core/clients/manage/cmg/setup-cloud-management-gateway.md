@@ -211,16 +211,33 @@ Always keep at least one active CMG for internet-based clients to receive update
 
 Clients refresh policy by default every 24 hours, so wait at least one day after creating a new CMG before you delete the old one. If clients are turned off or without an internet connection, you may need to wait longer. 
 
-Starting in version 1802, if you have an existing CMG on the classic deployment method, you must deploy a new CMG to use the Azure Resource Manager deployment method.<!--509753--> There are two options:
-- If you want to reuse the same service name:
-    1. First delete the classic CMG, taking into account the guidance to always have at least one active CMG for internet-based clients.
-    2. Create a new CMG using a Resource Manager deployment. Reuse the same server authentication certificate.
-    3. Reconfigure the CMG connection point to use the new CMG instance.
-- If you want to use a new service name:
-    1. Create a new CMG using a Resource Manager deployment. Use a new server authentication certificate.
-    2. Create a new CMG connection point and link with the new CMG.
-    3. Wait at least one day for internet-based clients to receive policy about the new CMG.
-    4. Delete the classic CMG.
+Starting in version 1802, if you have an existing CMG on the classic deployment method, you must deploy a new CMG to use the Azure Resource Manager deployment method.<!--509753--> There are two options:  
+
+- If you want to reuse the same service name:  
+
+    1. First delete the classic CMG, taking into account the guidance to always have at least one active CMG for internet-based clients.  
+
+    2. Create a new CMG using a Resource Manager deployment. Reuse the same server authentication certificate.  
+
+    3. Reconfigure the CMG connection point to use the new CMG instance.  
+
+- If you want to use a new service name:  
+
+    1. Create a new CMG using a Resource Manager deployment. Use a new server authentication certificate.  
+
+    2. Create a new CMG connection point and link with the new CMG.  
+
+    3. Wait at least one day for internet-based clients to receive policy about the new CMG.  
+
+    4. Delete the classic CMG.  
+
+> [!Tip]  
+> To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->  
+> 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
+> 2. Select the CMG instance.  
+> 3. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**. 
+> 
+> You can also add the **Deployment Model** attribute as a column to the list view.  
 
 
 ### Modifications in the Azure portal
