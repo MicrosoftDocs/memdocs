@@ -24,10 +24,10 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
-The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Purchase a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#cmg-trusted-root-certificate-to-clients).
+The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Acquire a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#cmg-trusted-root-certificate-to-clients).
 
  > [!TIP]
- > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Click **Create a resource**, select the **Compute** category, then click **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
+ > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Select **Create a resource**, choose the **Compute** category, then select **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
   
  > [!NOTE]
  > Starting in version 1802, the CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, **\*.contoso.com**. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.
@@ -36,36 +36,55 @@ The CMG creates an HTTPS service to which internet-based clients connect. The se
 
 ### CMG trusted root certificate to clients
 
-Clients must trust the CMG server authentication certificate. There are two methods to accomplish this trust:
-- Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it. 
-- Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients do not automatically trust, you need to add the CA trusted root certificate to internet-based clients.
-    - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+Clients must trust the CMG server authentication certificate. There are two methods to accomplish this trust: 
+
+- Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate that one of these providers issue, your clients automatically trust it.  
+
+- Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to internet-based clients.  
+
+    - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+
+> [!Note]  
+> Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872-->  
+
 
 ### Server authentication certificate issued by public provider
 
 When you use this method, clients automatically trust the certificate and you don't need to create a custom certificate yourself. Configuration Manager creates the service in Azure with the cloudapp.net domain. A public certificate provider can't issue to you a certificate with this name. Use the following process to create a DNS alias:
 
 1. Create a canonical name record (CNAME) in your organization’s public DNS. This record creates an alias for the CMG to a friendly name that you use in the public certificate.
-For example, Contoso names their CMG **GraniteFalls**, which becomes **GraniteFalls.CloudApp.Net** in Azure. In Contoso’s public DNS contoso.com namespace, the DNS administrator creates a new CNAME record for **GraniteFalls.Contoso.com** for the real host name, **GraniteFalls.CloudApp.net**.
+
+    For example, Contoso names their CMG **GraniteFalls**, which becomes **GraniteFalls.CloudApp.Net** in Azure. In Contoso’s public DNS contoso.com namespace, the DNS administrator creates a new CNAME record for **GraniteFalls.Contoso.com** for the real host name, **GraniteFalls.CloudApp.net**.  
+
 2. Request a server authentication certificate from a public provider using the Common Name (CN) of the CNAME alias.
-For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.
-3. Create the CMG in the Configuration Manager console using this certificate. On the **Settings** page of the Create Cloud Management Gateway Wizard: 
-	- When you add the server certificate for this cloud service (from **Certificate file**), the wizard extracts the hostname from the certificate CN as the service name. 
-	- It then appends that hostname to **cloudapp.net**, or **usgovcloudapp.net** for the Azure US Government cloud, as the Service FQDN to create the service in Azure.
-	- For example, when Contoso creates the CMG, Configuration Manager extracts the hostname **GraniteFalls** from the certificate CN. Azure creates the actual service as **GraniteFalls.CloudApp.net**.
+For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.  
+
+3. Create the CMG in the Configuration Manager console using this certificate. On the **Settings** page of the Create Cloud Management Gateway Wizard:   
+
+    - When you add the server certificate for this cloud service (from **Certificate file**), the wizard extracts the hostname from the certificate CN as the service name.  
+
+    - It then appends that hostname to **cloudapp.net**, or **usgovcloudapp.net** for the Azure US Government cloud, as the Service FQDN to create the service in Azure.  
+
+    - For example, when Contoso creates the CMG, Configuration Manager extracts the hostname **GraniteFalls** from the certificate CN. Azure creates the actual service as **GraniteFalls.CloudApp.net**.  
+
 
 ### Server authentication certificate issued from enterprise PKI
 
 Create a custom SSL certificate for the CMG the same as for a cloud distribution point. Follow the instructions for [Deploying the service certificate for cloud-based distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
 
-- When requesting the custom web server certificate, provide an FQDN for the certificate's common name. This can be a public domain name you own or you may leverage the cloudapp.net domain. If using your own public domain, refer to the process above for creating a DNS alias in your organization's public DNS.
-- When using the cloudapp.net public domain for the CMG web server certificate, on the Azure public cloud, use a name that ends in **cloudapp.net** or **usgovcloudapp.net** for the Azure US Government cloud.
+- When requesting the custom web server certificate, provide an FQDN for the certificate's common name. This name can be a public domain name you own or you may use the cloudapp.net domain. If using your own public domain, refer to the process above for creating a DNS alias in your organization's public DNS.  
+
+- When using the cloudapp.net public domain for the CMG web server certificate:  
+
+    - On the Azure public cloud, use a name that ends in **cloudapp.net**  
+
+    - Use a name that ends in **usgovcloudapp.net** for the Azure US Government cloud  
 
 
 
 ## Azure management certificate
 
-*This certificate is required for classic service deployments. It is not required for Azure Resource Manager deployments.*
+*This certificate is required for classic service deployments. It's not required for Azure Resource Manager deployments.*
 
 You supply this certificate in the Azure portal, and when creating the CMG in the Configuration Manager console.
 
@@ -73,9 +92,9 @@ To create the CMG in Azure, the Configuration Manager service connection point n
 
 For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
 
-- [Cloud services and management certificates](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)
+- [Cloud services and management certificates](https://docs.mirosoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Upload an Azure Service Management Certificate](/azure/azure-api-management-certs)
+- [Upload an Azure Service Management Certificate](https://docs.mirosoft.com/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Make sure to copy the subscription ID associated with the management certificate. You use it for creating the CMG in the Configuration Manager console.
@@ -84,7 +103,7 @@ For more information and instructions for how to upload a management certificate
 
 ## Client authentication certificate
 
-*This certificate is required for internet-based clients running Windows 7, Windows 8.1, and Windows 10 devices not joined to Azure Active Directory (Azure AD). It's also required on the CMG connection point. It is not required for Windows 10 clients joined to Azure AD.*
+*This certificate is required for internet-based clients running Windows 7, Windows 8.1, and Windows 10 devices not joined to Azure Active Directory (Azure AD). It's also required on the CMG connection point. It isn't required for Windows 10 clients joined to Azure AD.*
 
 The clients use this certificate to authenticate with the CMG. Windows 10 devices that are hybrid or cloud domain-joined don't require this certificate because they use Azure AD to authenticate.
 
@@ -93,7 +112,7 @@ Provision this certificate outside of the context of Configuration Manager. For 
 
 ### Client trusted root certificate to CMG
 
-*This certificate is required when using client authentication certificates. When all clients use Azure AD for authentication, this certificate is not required.* 
+*This certificate is required when using client authentication certificates. When all clients use Azure AD for authentication, this certificate isn't required.* 
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
@@ -104,36 +123,45 @@ The CMG must trust the client authentication certificates. To accomplish this tr
 
 After issuing a client authentication certificate to a computer, use this process on that computer to export the trusted root.
 
-1.  Open the Start menu. Type "run" to open the Run window. Open **mmc**. 
+1.  Open the Start menu. Type "run" to open the Run window. Open `mmc`.  
 
-2.  From the File menu, choose **Add/Remove Snap-in...**.
+2.  From the File menu, choose **Add/Remove Snap-in...**.  
 
-3.  In the Add or Remove Snap-ins dialog box, select **Certificates**, then click **Add**. 
-    a. In the Certificates snap-in dialog box, select **Computer account**, then click **Next**. 
-    b. In the Select Computer dialog box, select **Local computer**, then click **Finish**. 
-    c. In the Add or Remove Snap-ins dialog box, click **OK**.
+3.  In the Add or Remove Snap-ins dialog box, select **Certificates**, then select **Add**.  
 
-4.  Expand **Certificates**, expand **Personal**, and select **Certificates**.
+    a. In the Certificates snap-in dialog box, select **Computer account**, then select **Next**.  
 
-5.  Select a certificate whose Intended Purpose is **Client Authentication**. 
-    a. From the Action menu, select **Open**. 
-    b. Switch to the **Certification Path** tab. 
-    c. Select the next certificate up the chain, and click **View Certificate**.
+    b. In the Select Computer dialog box, select **Local computer**, then select **Finish**.  
 
-6.  On this new Certificate dialog box, switch to the **Details** tab. Click **Copy to File...**.
+    c. In the Add or Remove Snap-ins dialog box, select **OK**.  
 
-7.  Complete the Certificate Export Wizard using the default certificate format, **DER encoded binary X.509 (.CER)**. Make note of the name and location of the exported certificate.
+4.  Expand **Certificates**, expand **Personal**, and select **Certificates**.  
 
-8. Export all of the certificates in the certification path of the original client authentication certificate. Make note of which exported certificates are intermediate CAs, and which ones are trusted root CAs.
+5.  Select a certificate whose Intended Purpose is **Client Authentication**.  
+
+    a. From the Action menu, select **Open**.  
+
+    b. Go to the **Certification Path** tab.  
+
+    c. Select the next certificate up the chain, and select **View Certificate**.  
+
+6.  On this new Certificate dialog box, go to the **Details** tab. Select **Copy to File...**.  
+
+7.  Complete the Certificate Export Wizard using the default certificate format, **DER encoded binary X.509 (.CER)**. Make note of the name and location of the exported certificate.  
+
+8. Export all of the certificates in the certification path of the original client authentication certificate. Make note of which exported certificates are intermediate CAs, and which ones are trusted root CAs.  
 
 
 
 ## Enable management point for HTTPS
 
 *Certificate requirements*
-- In versions 1706 or 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.
-- In version 1710, when managing Windows 10 clients joined to Azure AD, this certificate is required for management points. 
-- Starting in version 1802, this certificate is required in all scenarios. Only management points that you enable for CMG must be HTTPS. This change in behavior provides better support for Azure AD token-based authentication. 
+
+- In versions 1706 or 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.  
+
+- In version 1710, when managing Windows 10 clients joined to Azure AD, this certificate is required for management points.  
+
+- Starting in version 1802, this certificate is required in all scenarios. Only management points that you enable for CMG must be HTTPS. This change in behavior provides better support for Azure AD token-based authentication.  
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 

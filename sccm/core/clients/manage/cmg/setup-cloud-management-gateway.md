@@ -87,6 +87,9 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 7. Select **Certificates** to add client trusted root certificates. Add up to two trusted root CAs, and four intermediate (subordinate) CAs.  
 
+    > [!Note]  
+    > Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872-->  
+
 8. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. If you don't publish a CRL, deselect this option.  
 
 9. Starting in version 1806, by default, the wizard enables the following option: **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.  
