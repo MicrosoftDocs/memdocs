@@ -44,8 +44,9 @@ The CMG creates an HTTPS service to which internet-based clients connect. The se
  > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Select **Create a resource**, choose the **Compute** category, then select **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
   
  > [!NOTE]
- > Starting in version 1802, the CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, **\*.contoso.com**. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.
- <!--491233-->
+ > Starting in version 1802, the CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, **\*.contoso.com**. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.<!--491233-->  
+ > 
+ > For more information on how to use a wildcard certificate with a CMG, see [Set up a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
 
 ### CMG trusted root certificate to clients
@@ -64,7 +65,9 @@ Clients must trust the CMG server authentication certificate. There are two meth
 
 ### Server authentication certificate issued by public provider
 
-When you use this method, clients automatically trust the certificate and you don't need to create a custom certificate yourself. Configuration Manager creates the service in Azure with the cloudapp.net domain. A public certificate provider can't issue to you a certificate with this name. Use the following process to create a DNS alias:
+A third-party certificate provider can't create a certificate for CloudApp.net, as that domain is owned by Microsoft. You can only get a certificate issued for a domain you own. The main reason for acquiring a certificate from a third-party provider is that your clients already trust that provider's root certificate.
+
+Use the following process to create a DNS alias:
 
 1. Create a canonical name record (CNAME) in your organization’s public DNS. This record creates an alias for the CMG to a friendly name that you use in the public certificate.
 
@@ -80,6 +83,8 @@ For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.
     - It then appends that hostname to **cloudapp.net**, or **usgovcloudapp.net** for the Azure US Government cloud, as the Service FQDN to create the service in Azure.  
 
     - For example, when Contoso creates the CMG, Configuration Manager extracts the hostname **GraniteFalls** from the certificate CN. Azure creates the actual service as **GraniteFalls.CloudApp.net**.  
+
+When you create the CMG instance in Configuration Manager, while the certificate has GraniteFalls.Contoso.com, Configuration Manager only extracts the hostname, for example: GraniteFalls. It appends this hostname to CloudApp.net, which Azure requires when creating a cloud service. The CNAME alias in the DNS namespace for your domain, Contoso.com, maps together these two FQDNs. Configuration Manager gives clients a policy to access this CMG, the DNS mapping ties it together so that they can securely access the service in Azure.<!--SCCMDocs issue #565-->  
 
 
 ### Server authentication certificate issued from enterprise PKI
