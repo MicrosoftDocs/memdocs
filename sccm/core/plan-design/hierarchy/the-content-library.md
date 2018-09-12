@@ -77,7 +77,9 @@ A remote content library is a prerequisite for [site server high availability](/
 > This action only moves the content library on the site server. It doesn't impact the location of the content library on distribution points. 
 
 > [!Tip]  
-> Also plan for managing package source content, which is external to the content library. Every software object in Configuration Manager has a package source on a network share. Consider centralizing all sources to a single share, but make sure this location is redundant and highly available. If you move the content library to the same storage volume as your package sources, and this volume supports content de-duplication, this design may save the amount of necessary storage.  
+> Also plan for managing package source content, which is external to the content library. Every software object in Configuration Manager has a package source on a network share. Consider centralizing all sources to a single share, but make sure this location is redundant and highly available. 
+> 
+> If you move the content library to the same storage volume as your package sources, you can't mark this volume for data deduplication. While the content library supports data deduplication, the package sources volume doesn't support it. For more information, see [Data deduplication](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
 
 
 ### Prerequisites  
