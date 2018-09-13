@@ -11,4 +11,4 @@ ms.date: 08/17/2018
 Issue description and cause.
 
 #### Workaround
-Steps to workaround, if any.  
+Steps to work around, if any.  
