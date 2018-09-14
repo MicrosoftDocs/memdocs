@@ -71,7 +71,7 @@ The co-management dashboard shows four graphs for your environment.
 ## Next steps
 
 For more information about co-management, see:
- - [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview.md)
- - [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare.md)
+ - [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)
+ - [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare)
 
     
