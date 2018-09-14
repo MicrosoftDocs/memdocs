@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -53,7 +53,7 @@ There are several scenarios for which a CMG is beneficial. The following scenari
 
 - Install the Configuration Manager client on Windows 10 devices over the internet. Using Azure AD allows the device to authenticate to the CMG for client registration and assignment. You can install the client manually, or using another software distribution method, such as Microsoft Intune.  
 
-- New device provisioning with co-management. CMG is not required for co-management. It helps complete an end-to-end scenario for new devices involving Windows AutoPilot, Azure AD, Microsoft Intune, and Configuration Manager.  
+- New device provisioning with co-management. CMG isn't required for co-management. It helps complete an end-to-end scenario for new devices involving Windows AutoPilot, Azure AD, Microsoft Intune, and Configuration Manager.  
 
 ### Specific use cases
 Across these scenarios the following specific device use cases may apply:
@@ -77,7 +77,7 @@ Deployment and operation of the CMG includes the following components:
  
 - The **CMG connection point** site system role enables a consistent and high-performance connection from the on-premises network to the CMG service in Azure. It also publishes settings to the CMG including connection information and security settings. The CMG connection point forwards client requests from the CMG to on-premises roles according to URL mappings.
 
-- The [**service connection point**](/sccm/core/servers/deploy/configure/about-the-service-connection-point) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD. Ensure your service connection point is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).  
+- The [**service connection point**](/sccm/core/servers/deploy/configure/about-the-service-connection-point) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD. Make sure your service connection point is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).  
 
 - The **management point** site system role services client requests per normal.  
 
@@ -91,10 +91,12 @@ Deployment and operation of the CMG includes the following components:
 
 - A [**cloud distribution point**](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) provides content to internet-based clients, as needed.  
 
+    - Starting in version 1806, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).<!--1358651-->  
+
 
 ### Azure Resource Manager
 <!-- 1324735 -->
-Starting in version 1802, you can create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+Starting in version 1802, you can create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, using the Azure Resource Manager deployment model is recommended for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
@@ -143,7 +145,7 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - An **Azure subscription** to host the CMG.  
 
-    - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona does not require permissions in Configuration Manager.  
+    - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona doesn't require permissions in Configuration Manager.  
 
 - At least one on-premises Windows server to host the **CMG connection point**. You can co-locate this role with other Configuration Manager site system roles.  
 
@@ -172,11 +174,11 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - CMG only supports the management point and software update point roles.  
 
-- CMG does not support clients that only communicate with IPv6 addresses.<!--495606-->  
+- CMG doesn't support clients that only communicate with IPv6 addresses.<!--495606-->  
 
-- Software update points using a network load balancer do not work with CMG. <!--505311-->  
+- Software update points using a network load balancer don't work with CMG. <!--505311-->  
 
-- Starting in version 1802, CMG deployments using the Azure Resource Model do not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- Starting in version 1802, CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)  
 
 
 ### Support for Configuration Manager features
@@ -191,10 +193,10 @@ The following table lists CMG support for Configuration Manager features:
 | Client status and notifications     | ![Supported](media/green_check.png) |
 | Run scripts     | ![Supported](media/green_check.png) |
 | Compliance settings     | ![Supported](media/green_check.png) |
-| Client install</br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1706) |
+| Client install<br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1706) |
 | Software distribution (device-targeted)     | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, required)</br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1710) |
-| Software distribution (user-targeted, available)</br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png)  (1802) |
+| Software distribution (user-targeted, required)<br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1710) |
+| Software distribution (user-targeted, available)<br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png)  (1802) |
 | Windows 10 in-place upgrade task sequence     | ![Supported](media/green_check.png)  (1802) |
 | CMPivot     | ![Supported](media/green_check.png)  (1806) |
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
@@ -215,7 +217,7 @@ The following table lists CMG support for Configuration Manager features:
 |--|
 |![Supported](media/green_check.png) = This feature is supported with CMG by all supported versions of Configuration Manager  |
 |![Supported](media/green_check.png) (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
-|![Not supported](media/Red_X.png) = This feature is not supported with CMG |
+|![Not supported](media/Red_X.png) = This feature isn't supported with CMG |
 
 
 
@@ -260,11 +262,14 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 
 #### Content storage
 
-- Internet-based clients get Microsoft software update content from Windows Update at no charge. Do not distribute update packages with Microsoft update content to a cloud distribution point, otherwise you may incur storage and data egress costs.  
+- Internet-based clients get Microsoft software update content from Windows Update at no charge. Don't distribute update packages with Microsoft update content to a cloud distribution point, otherwise you may incur storage and data egress costs.  
 
 - For any other necessary content, such as applications or third-party software updates, you must distribute to a cloud distribution point. Currently, the CMG supports only the cloud distribution point for sending content to clients.  
 
 - For more information, see the cost of using [cloud distribution points](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  
+
+- Starting in version 1806, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).<!--1358651-->  
+
 
 #### Other costs
 
@@ -280,7 +285,7 @@ The following recommendations can help you improve CMG performance:
 
 - If possible, configure the CMG, CMG connection point, and the Configuration Manager site server in same network region to reduce latency.  
 
-- Currently, the connection between the Configuration Manager client and the CMG is not region-aware.  
+- Currently, the connection between the Configuration Manager client and the CMG isn't region-aware.  
 
 - For high availability of the service, create at least two CMG services and two CMG connection points per site.  
 
@@ -298,7 +303,7 @@ The following recommendations can help you improve CMG performance:
 
 ## Ports and data flow
 
-You do not need to open any inbound ports to your on-premises network. The service connection point and CMG connection point initiate all communication with Azure and the CMG. These two site system roles must be able to create outbound connections to the Microsoft cloud. The service connection point deploys and monitors the service in Azure, thus must be online mode. The CMG connection point connects to the CMG to manage communication between the CMG and on-premises site system roles.
+You don't need to open any inbound ports to your on-premises network. The service connection point and CMG connection point initiate all communication with Azure and the CMG. These two site system roles must be able to create outbound connections to the Microsoft cloud. The service connection point deploys and monitors the service in Azure, thus must be online mode. The CMG connection point connects to the CMG to manage communication between the CMG and on-premises site system roles.
 
 The following diagram is a basic, conceptual data flow for the CMG: 
 ![CMG data flow](media/cmg-data-flow.png)
@@ -322,15 +327,15 @@ This table lists the required network ports and protocols. The *Client* is the d
 | CMG connection point     | HTTPS | 443        | CMG service       | Fallback to build CMG channel to only one VM instance<sup>2</sup> |
 | CMG connection point     |  HTTPS   | 10124-10139     | CMG service       | Fallback to build CMG channel to two or more VM instances<sup>3</sup> |
 | Client     |  HTTPS | 443         | CMG        | General client communication |
-| CMG connection point      | HTTPS or HTTP | 443 or 80         | Management point</br>(version 1706 or 1710) | On-premises traffic, port depends upon management point configuration |
-| CMG connection point      | HTTPS | 443      | Management point</br>(version 1802) | On-premises traffic must be HTTPS |
+| CMG connection point      | HTTPS or HTTP | 443 or 80         | Management point<br>(version 1706 or 1710) | On-premises traffic, port depends upon management point configuration |
+| CMG connection point      | HTTPS | 443      | Management point<br>(version 1802) | On-premises traffic must be HTTPS |
 | CMG connection point      | HTTPS or HTTP | 443 or 80         | Software update point | On-premises traffic, port depends upon software update point configuration |
 
-<sup>1</sup> The CMG connection point first tries to establish a long-lived TCP-TLS connection with each CMG VM instance. It connects to the first VM instance on port 10140. The second VM instance uses port 10141, up to the sixteenth on port 10155. A TCP-TLS connection performs the best, but it doesn’t support internet proxy. If the CMG connection point can’t connect via TCP-TLS, then it falls back to HTTPS<sup>2</sup>.  
+<sup>1</sup> The CMG connection point first tries to establish a long-lived TCP-TLS connection with each CMG VM instance. It connects to the first VM instance on port 10140. The second VM instance uses port 10141, up to the 16th on port 10155. A TCP-TLS connection performs the best, but it doesn’t support internet proxy. If the CMG connection point can’t connect via TCP-TLS, then it falls back to HTTPS<sup>2</sup>.  
 
 <sup>2</sup> If the CMG connection point can’t connect to the CMG via TCP-TLS<sup>1</sup>, it connects to the Azure network load balancer over HTTPS 443 only for one VM instance.  
 
-<sup>3</sup> If there are two or more VM instances, the CMG connection point uses HTTPS 10124 to the first VM instance, not HTTPS 443. It connects to the second VM instance on HTTPS 10125, up to the sixteenth on HTTPS port 10139.
+<sup>3</sup> If there are two or more VM instances, the CMG connection point uses HTTPS 10124 to the first VM instance, not HTTPS 443. It connects to the second VM instance on HTTPS 10125, up to the 16th on HTTPS port 10139.
 
 
 ### Internet access requirements

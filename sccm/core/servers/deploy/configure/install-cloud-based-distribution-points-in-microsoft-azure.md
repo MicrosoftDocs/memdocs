@@ -219,17 +219,22 @@ In an hourly cycle, the primary site that monitors the cloud distribution point 
 
 View high-level information about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. Select a distribution point and click **Properties** to see more details.  
 
-When you edit the properties of a cloud distribution point, the following values are available to edit:  
+When you edit the properties of a cloud distribution point, the following tabs include settings to edit:  
 
-- **Settings** tab:  
+#### Settings  
 
-    - **Description**  
+- **Description**  
 
-    - **Certificate file**: Before the server authentication certificate expires, issue a new certificate with the same common name. Then add the new certificate here for the service to start using. If the certificate expires, clients won't trust and use the service.  
+- **Certificate file**: Before the server authentication certificate expires, issue a new certificate with the same common name. Then add the new certificate here for the service to start using. If the certificate expires, clients won't trust and use the service.  
 
-- **Alerts** tab: Adjust the data thresholds for storage and monthly transfer alerts.  
+#### Alerts
+Adjust the data thresholds for storage and monthly transfer alerts.  
 
-- **Content** tab: Manage content the same as for an on-premises distribution point.  
+#### Content
+Manage content the same as for an on-premises distribution point.  
+
+
+### Redeploy the service
 
 More significant changes, such as the following configurations, require redeploying the service:
 - Classic deployment method to Azure Resource Manager
@@ -255,6 +260,11 @@ Starting in version 1806, if you have an existing cloud distribution point on th
     2. Distribute the necessary software package content to the new cloud distribution point.  
 
     3. Delete the classic cloud distribution point.
+
+> [!Tip]  
+> To determine the current deployment model of a cloud distribution point:<!--SCCMDocs issue #611-->  
+> 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Distribution Points** node.  
+> 2. Add the **Deployment Model** attribute as a column to the list view. For a Resource Manager deployment, this attribute is **Azure Resource Manager**.  
 
 
 ### Stop or start the cloud service on demand
