@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 08/29/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -185,9 +185,13 @@ For more information, see [CMTrace](/sccm/core/support/cmtrace).
 
 ### Cloud management dashboard
 <!--1358461-->
-The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices. In the Configuration Manager console, go to the **Monitoring** workspace. Select the **Cloud Management** node, and view the dashboard tiles.  
+***[Updated]*** The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.   
 
-This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services**, and select **Cloud management gateway**. Select the target CMG instance, and then click **Connection analyzer** in the ribbon.
+This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. 
+
+For more information, see the following sections of the [Monitor CMG](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway) article:  
+- [Cloud management dashboard](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard)  
+- [Connection analyzer](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#connection-analyzer)  
 
 
 ### Improvements to cloud management gateway
@@ -196,27 +200,15 @@ Version 1806 includes the following improvements to the cloud management gateway
 
 #### Simplified client bootstrap command line
 <!--1358215-->
-When installing the Configuration Manager client on the internet via a CMG, the command-line now requires fewer properties. This improvement reduces the size of the command line used in Microsoft Intune when preparing for co-management. 
+***[Updated]*** When installing the Configuration Manager client on the internet via a CMG, the command-line now requires fewer properties. This improvement reduces the size of the command line used in Microsoft Intune when preparing for co-management. 
 
-The following command-line properties are required in all scenarios:
-  - CCMHOSTNAME  
-  - SMSSITECODE  
-
-The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
-
-The following property is required if the client will roam back to the intranet:
-  - SMSMP  
-
-The following example includes all of the above properties:   
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
-
-<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
+For more information, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 #### Download content from a CMG
 <!--1358651-->
-Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
+***[Updated]*** Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
+
+For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
 #### Trusted root certificate isn't required with Azure AD
 <!--503899-->
