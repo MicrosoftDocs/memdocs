@@ -2,7 +2,7 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Use a cloud distribution point in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -300,6 +301,19 @@ The Azure storage service supports 500 requests per second for a single file. Pe
 ##  <a name="bkmk_certs"></a> Certificates  
 
 Depending upon your cloud distribution point design, you need one or more digital certificates.  
+
+
+### General information
+<!--SCCMDocs issue #779-->
+Certificates for cloud distribution points support the following configurations:  
+
+- **4096 bit key length**  
+
+- Starting in version 1710, support for **Version 3** certificates. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).  
+
+- Starting in version 1802, when you configure Windows with the following policy: **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**  
+
+- Starting in version 1802, support for **TLS 1.2**. For more information, see [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 
 
 ### Azure management certificate
