@@ -16,6 +16,10 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+
+    > [!NOTE] 
+    >  Support for this feature was deprecated in Current Branch version 1710, see [Removed and deprecated features for Configuration Manager](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+
 In System Center Configuration Manager, you can manage virtual hard disks (VHDs) and integrate the VHDs that you create into your datacenter from the Configuration Manager console. Specifically, you can create and modify a VHD, add applications and software updates to the VHD, and publish the VHD to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.  
 
  Use the following sections to manage VHDs in Configuration Manager.
