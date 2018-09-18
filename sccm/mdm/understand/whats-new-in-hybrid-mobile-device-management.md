@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 08/29/2018
+ms.date: 09/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -476,6 +476,55 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
 
 
 ## Notices
+
+### Plan for Change: Intune supports macOS 10.12 and higher in December 
+<!--2970975--> 
+
+Apple released macOS 10.14, so starting in December 2018, Intune will support macOS 10.12 and higher. 
+
+#### How does this affect me?
+
+Starting in December, users on devices with macOS 10.11 and prior can't use the Company Portal to enroll into Intune. To continue to receive support and new features, they'll need to upgrade their device to macOS 10.12 or higher, and upgrade the Company Portal app to the latest version. 
+
+MacOS versions 10.12 and higher are currently supported on: 
+- MacBook (late 2009 or newer)  
+- iMac (late 2009 or newer)
+- MacBook Air (late 2010 or newer)  
+- MacBook Pro (late 2010 or newer)  
+- Mac Mini (late 2010 or newer)  
+- Mac Pro (late 2010 or newer)  
+
+After December, end users who have devices other than the ones listed above can't access the latest version of the Company Portal app for macOS. You can continue to manage existing enrolled devices running unsupported versions below macOS 10.12.
+
+#### What do I need to do to prepare for this change?
+
+- Request your users to upgrade their devices to a supported OS version before December 2018.  
+- Check your Intune reporting in the Azure portal, to see what devices or users may be affected. Go to **Devices** > **All devices**, and filter by **OS**. You can add in additional columns to help identify who in your organization has devices running macOS 10.11.  
+- If you're using hybrid mobile device management (MDM), in the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Devices** node. Right-click the columns to add the **Operating System** and **Client Version** columns. Then sort by OS version. Note that hybrid MDM is now deprecated, and you should move to Intune on Azure as soon as possible. 
+ 
+#### Additional Information
+For more information, see [Enroll your macOS device in Intune with the Company Portal app](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
+
+
+### Plan for Change: New Intune support experience for Premier customers 
+<!--2828727-->
+As a Microsoft Premier customer, you can currently use the [Microsoft Premier Online (MPO) portal](https://premier.microsoft.com) and [Intune on Azure](https://portal.azure.com) to create support requests for Intune. Starting on December 3, 2018, to continue enhancing the Premier support experience, you will be able to create support requests only in Intune on Azure.
+
+#### How does this affect me?
+After December 3, you can't create support requests in MPO. If you try, you’ll see a prompt that you can't dismiss redirecting you to Intune on Azure. When you create a support request in the Azure portal, it's routed to Intune-dedicated Microsoft Support. They'll diagnose and resolve your issue in a timely manner. If you create a support request in the MPO portal, you can't view it in the Azure portal. Start only creating support requests in Intune on Azure.  
+
+If you use hybrid mobile device management (hybrid MDM) or use co-management, continue to use MPO to create support requests for Configuration Manager, but use the Azure portal to create support requests for Intune. As a reminder, hybrid MDM is deprecated, and you should plan to move to Intune on Azure as soon as possible. For more information, see [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
+
+Note that only users with Global Administrator, Intune Service Administrator, and Service Support Administrator roles can create support tickets in the Azure portal.
+
+#### What can I do to prepare for this change?
+- Stop using MPO for Intune-related support requests. Use Intune on Azure to create and manage all your Intune support requests.  
+- Notify your helpdesk and update documentation, if necessary.  
+- If you have users without Global administrator or Intune Service Administrator roles currently creating support requests in MPO, assign them the Service Support Administrator role in Azure Active Directory. Users require one of these roles to create support tickets in the Azure portal.  
+
+#### Additional Information
+For more information, see the [Microsoft Intune support team blog post](https://aka.ms/IntuneSupport_MPO_to_Azure).
+
 
 ### Plan for change: Use Intune on Azure now for your MDM management 
 <!--1227338-->
