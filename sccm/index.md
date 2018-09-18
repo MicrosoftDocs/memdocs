@@ -866,7 +866,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/apps/pcm">
+                                <a href="/sccm/apps/pcm/package-conversion-manager">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
