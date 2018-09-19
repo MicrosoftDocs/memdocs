@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 09/10/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -142,6 +142,13 @@ For more information, see [Partial download support](/sccm/core/plan-design/hier
 - **During peer downloads, only use peers within the same subnet**: The management point only includes in the content location list peer sources that are in the same subnet as the client.  
 
 For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+
+
+### Improvement to peer cache source online status
+<!--SCCMDocs issue 850-->
+***[Updated]*** Configuration Manager is more efficient at determining if a peer cache source is online and available to provide content to peer clients. This efficiency requires that you upgrade peer cache sources to the 1806 client. The management point doesn't detect older client versions as online, so doesn't provide these peer cache sources in the list of content locations. If you're using the peer cache feature, after updating the site to version 1806, also update peer cache sources to the latest client version.  
+
+For more information, see [Requirements for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
 
 
