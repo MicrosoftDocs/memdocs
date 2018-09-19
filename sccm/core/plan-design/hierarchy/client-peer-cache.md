@@ -98,10 +98,10 @@ When the peer cache source rejects a request for the content, the peer cache cli
 
 - The client's last heartbeat discovery submission determines the current boundary of a peer cache source. A client that roams to a different boundary group might still be a member of its former boundary group for the purposes of peer cache. This behavior results in a client being offered a peer cache source that isn't in its immediate network location. Don't enable roaming clients as a peer cache source.<!--SCCMDocs issue 641-->  
 
-- Before attempting to download content, the management point first validates that the peer cache source is online.<!--sms.498675--> This validation happens via the "fast channel" for client notification, which uses TCP port 10123.<!--511673-->  
-
     > [!Important]  
-    > Starting in version 1806, Configuration Manager is more efficient at determining if a peer cache source is online and available to provide content to peer clients. This efficiency requires that you upgrade peer cache sources to the 1806 client. The management point doesn't detect older client versions as online, so doesn't provide these peer cache sources in the list of content locations. If you're using the peer cache feature, after updating the site to version 1806, also update peer cache sources to the latest client version.<!--SCCMDocs issue 850-->  
+    > Starting in version 1806, Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.<!--SCCMDocs issue 850-->  
+
+- Before attempting to download content, the management point first validates that the peer cache source is online.<!--sms.498675--> This validation happens via the "fast channel" for client notification, which uses TCP port 10123.<!--511673-->  
 
 > [!Note]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.  

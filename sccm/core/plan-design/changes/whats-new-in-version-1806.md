@@ -146,7 +146,7 @@ For more information, see [Boundary group options for peer downloads](/sccm/core
 
 ### Improvement to peer cache source online status
 <!--SCCMDocs issue 850-->
-***[Updated]*** Configuration Manager is more efficient at determining if a peer cache source is online and available to provide content to peer clients. This efficiency requires that you upgrade peer cache sources to the 1806 client. The management point doesn't detect older client versions as online, so doesn't provide these peer cache sources in the list of content locations. If you're using the peer cache feature, after updating the site to version 1806, also update peer cache sources to the latest client version.  
+***[Updated]*** Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.
 
 For more information, see [Requirements for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
