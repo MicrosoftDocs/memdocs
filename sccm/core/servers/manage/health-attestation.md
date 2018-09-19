@@ -11,7 +11,10 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ---
-# Health attestation for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Health attestation for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Administrators can view the status of [Windows 10 Device Health Attestation](https://technet.microsoft.com/library/mt592023.aspx) in the Configuration Manager console.  Device health attestation lets the administrator ensure that client computers have the following trustworthy BIOS, TPM, and boot software configurations enabled:  
 
 -   Early-launch antimalware - Early launch anti-malware (ELAM) protects your computer when it starts up and before third-party drivers initialize. [How to turn on ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
@@ -47,8 +50,9 @@ Starting with Configuration Manager 1702, the on-premises device health attestat
 2. Right-click the primary or secondary site with the management point that support on-premises device health attestation clients, and select **Configure site components** > **Management Point**. The **Management Point Component Properties** page opens.
 3. On the **Advanced Options** tab, select **Add** and specify a valid on-premises device health attestation service URL. You can add multiple URLs. If multiple on-premises URLs are specified, clients receive the full set and randomly choose which to use.
 4.  In the Configuration Manager console, choose **Administration** > **Overview** > **Client Settings**.  Select the tab for **Computer Agent** settings.  
-5.  In the **Default Settings** dialog box, select **Computer Agent** and then scroll down to **Use on-premises Health Attestaion Service**, and set to **Yes**.
-6. Target the collections of devices that should report device health with the client agent settings to enable device health attestation reporting.
+5.  Scroll down to **Enable communication with Health Attestation Service**, and set to **Yes**.
+7.  Click the **Use on-premises Health Attestaion Service** option, and set to **Yes**.
+8. Target the collections of devices that should report device health with the client agent settings to enable device health attestation reporting.
 
 You can also **Edit** or **Remove** device health attestation service URLs.
 
