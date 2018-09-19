@@ -2,7 +2,7 @@
 title: End of support
 titleSuffix: Configuration Manager 2007
 description: Support ends for System Center Configuration Manager 2007 and Forefront Endpoint Protection 2010 on July 9, 2019.
-ms.date: 08/27/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -36,7 +36,7 @@ For more information, see the following articles:
 
 - [Microsoft Support article](https://support.microsoft.com/help/4096323)  
 - [Configuration Manager support blog post](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/)  
-- [Iintroduction to Configuration Manager current branch](/sccm/core/understand/introduction)  
+- [Introduction to Configuration Manager current branch](/sccm/core/understand/introduction)  
 - [Documentation on how to migrate to Configuration Manager current branch](/sccm/core/migration/migrate-data-between-hierarchies)  
 
 
