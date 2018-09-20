@@ -83,6 +83,8 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
   -   Remote Enable
 5. Save the permissions to restore access for the Configuration Manager console.
 
+#### Known issue for remote Configuration Manager consoles
+After you upgrade a server that hosts the Management Point role Software\Microsoft\SMS may be missing from HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths on the Management Point server. Be sure to add this value if it is missing or state migration points will have issues uploading files to the inboxes.
 
 ### <a name="bkmk_2012r2"></a> Windows Server 2012 to Windows Server 2012 R2
 
