@@ -59,7 +59,7 @@ The server group settings are configured in the properties for a device collecti
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\start.txt`  
+    >  `Out-File C:\Windows\Temp\start.txt`  
     >   
     >  **Post-deployment**  
     >   
@@ -69,7 +69,7 @@ The server group settings are configured in the properties for a device collecti
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\end.txt`  
+    >  `Out-File C:\Windows\Temp\end.txt`  
 
 ## Deploy software updates to the server group and monitor status  
 You deploy software updates to the server group collection by using the typical deployment process. After you deploy the software updates, you can monitor the software update deployment in the Configuration Manager console.
