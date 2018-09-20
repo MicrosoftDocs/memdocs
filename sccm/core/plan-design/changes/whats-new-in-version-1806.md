@@ -25,6 +25,8 @@ Always review the latest checklist for installing this update. For more informat
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
 
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+
 <!--
 The following additional updates to this release are also now available:
 - [Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4057517)
