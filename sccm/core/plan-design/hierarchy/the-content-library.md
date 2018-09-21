@@ -2,7 +2,7 @@
 title: The content library
 titleSuffix: Configuration Manager
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # The content library in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -95,6 +96,9 @@ A remote content library is a prerequisite for [site server high availability](/
 ### Process to manage the content library
 
 1. Create a folder in a network share as the target for the content library. For example, `\\server\share\folder`.  
+
+    > [!Warning]  
+    > Don't reuse an existing folder with content. For example, don't use the same folder as your package sources. Before copying the content library, Configuration Manager removes any existing content from the location you specify.  
 
 2. In the Configuration Manager console, switch to the **Administration** workspace. Expand **Site Configuration**, select the **Sites** node, and select the site. On the **Summary** tab at the bottom of the details pane, notice a new column for the **Content Library**.  
 

@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 09/10/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,6 +24,8 @@ Always review the latest checklist for installing this update. For more informat
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
+
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 <!--
 The following additional updates to this release are also now available:
@@ -142,6 +144,13 @@ For more information, see [Partial download support](/sccm/core/plan-design/hier
 - **During peer downloads, only use peers within the same subnet**: The management point only includes in the content location list peer sources that are in the same subnet as the client.  
 
 For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+
+
+### Improvement to peer cache source location status
+<!--SCCMDocs issue 850-->
+***[Updated]*** Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.
+
+For more information, see [Requirements for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
 
 
