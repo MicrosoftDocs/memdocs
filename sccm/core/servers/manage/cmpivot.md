@@ -73,7 +73,7 @@ The following components are required to use CMPivot:
 
      - Click one of the **Entities** to add it to the query string.  
 
-     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
 3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.  
 
@@ -108,7 +108,7 @@ The CMPivot window contains the following elements:
 
 5. The query pane is where you build or type a query to run on clients in the collection.  
 
-    - CMPivot uses a subset of the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+    - CMPivot uses a subset of the same query language as [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Cut, copy, or paste content in the query pane.  
 
