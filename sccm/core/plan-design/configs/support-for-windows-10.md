@@ -32,7 +32,7 @@ Learn about the Windows 10 versions that Configuration Manager supports, includi
 
 Configuration Manager attempts to provide support as a client for each new Windows 10 version as soon as possible after it becomes available. Because the products have separate development and release schedules, the support that Configuration Manager provides depends on when each becomes available.
 
-A Configuration Manager version drops from the matrix after [support for that version](/sccm/core/servers/manage/current-branch-versions-supported) ends. Similarly, support for Windows 10 versions like the Enterprise 2015 LTSB or 1511 drops from the matrix when they are removed from support. For more information, see [Deprecated operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems).
+A Configuration Manager version drops from the matrix after [support for that version](/sccm/core/servers/manage/current-branch-versions-supported) ends. Similarly, support for Windows 10 versions like the Enterprise 2015 LTSB or 1511 drops from the matrix when they're removed from support. For more information, see [Deprecated operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems).
 
 -   The latest version of Configuration Manager current branch receives both security and critical updates, which can include fixes for issues with Windows 10 versions. When Microsoft releases a new version of Configuration Manager current branch, prior versions only receive security updates. For more information, see [Support for Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).  
 
@@ -75,7 +75,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 ## Windows 10 ADK
 
-When you deploy operating systems with Configuration Manager, the Windows ADK is a required external dependency. For more information, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).
+When you deploy operating systems with Configuration Manager, the Windows ADK is a required external dependency. For more information, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#windows-adk-for-windows-10).
 
 The following table lists the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
@@ -89,7 +89,7 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 |Key|
 |--|
 | ![Supported](media/green_check.png) = **Supported** <br/> Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. For example, use the Windows ADK for Windows 10 version 1703 when deploying Windows 10 version 1703. For more information on Windows ADK component supportability, see [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
-| ![Backwards compatible](media/blue_compat.png)  = **Backward compatible** <br/> This combination isn't tested but should work. We will document any known issues or caveats. |
+| ![Backwards compatible](media/blue_compat.png)  = **Backward compatible** <br/> This combination isn't tested but should work. We'll document any known issues or caveats. |
 | ![Not supported](media/Red_X.png) = **Not supported** |
 
  > [!Note]  
