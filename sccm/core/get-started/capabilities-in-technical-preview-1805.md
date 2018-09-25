@@ -255,7 +255,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 2. The interface provides further information about using the tool. 
      - You can manually enter query strings at the top, or click the links in the in-line documentation.
      - Click one of the **Entities** to add it to the query string. 
-     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).
 
 
 
