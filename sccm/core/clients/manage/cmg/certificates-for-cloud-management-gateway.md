@@ -111,9 +111,9 @@ To create the CMG in Azure, the Configuration Manager service connection point n
 
 For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
 
-- [Cloud services and management certificates](https://docs.mirosoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Cloud services and management certificates](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Upload an Azure Service Management Certificate](https://docs.mirosoft.com/azure/azure-api-management-certs)  
+- [Upload an Azure Service Management Certificate](https://docs.microsoft.com/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Make sure to copy the subscription ID associated with the management certificate. You use it for creating the CMG in the Configuration Manager console.
