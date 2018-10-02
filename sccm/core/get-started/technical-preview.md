@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/12/2018
+ms.date: 10/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,7 +20,7 @@ This article provides details about the monthly technical preview branch of Conf
 
 Because this release is a technical preview, details and functionality are subject to change.  
 
-This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **1806** for June (06) of 2018 (18). Separate articles dedicated to each preview version detail the individual features.  
+This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **1809** for September (09) of 2018 (18). Separate articles dedicated to each preview version detail the individual features.  
 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
@@ -119,12 +119,21 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1809
+### Technical Preview version 1810
 
-- [Improvements to CMPivot](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) <!--1359068-->
-- [Improvement to lifecycle dashboard](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) <!--1358702-->
-- [Improvement to data warehouse](capabilities-in-technical-preview-1809.md#bkmk_dataw) <!--1358870-->
-- [Improvement to maintenance windows for software updates](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) <!--vso2839307-->
+- [Native task sequence support for Windows Autopilot for existing devices](capabilities-in-technical-preview-1810.md#bkmk_autopilot) <!--1358333-->
+- [Improvements to OData endpoint](capabilities-in-technical-preview-1810.md#bkmk_odata) <!--1321523-->
+- [Required app compliance policy for co-managed devices](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) <!--1358196-->
+- [Improvement to co-management reporting](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) <!--1358980-->
+- [New boundary group options](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) <!--1358749-->
+- [Site system on Windows cluster node](capabilities-in-technical-preview-1810.md#bkmk_cluster) <!--1359132-->
+- [Improvements to CMPivot](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) <!--1359068-->
+- [Improvements to scripts](capabilities-in-technical-preview-1810.md#bkmk_scripts) <!--1358239-->
+- [New client notification action to wake up device](capabilities-in-technical-preview-1810.md#bkmk_wakeup) <!--1317364-->
+- [Boundary group relationship support of task sequences](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) <!--1359025-->
+- [Management insights dashboard](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
+- [Improvements to driver maintenance](capabilities-in-technical-preview-1810.md#bkmk_drivers) <!--1358270-->
+- [In-console documentation dashboard](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
 
 
 > [!Note]  
@@ -143,6 +152,10 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Feature |Technical preview version |Current branch version|  
  |----------------|---------------------|--------------------|
+ | Improvements to CMPivot <!--1359068--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | ![Not added](media/Red_X.gif) | 
+ | Improvement to lifecycle dashboard <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | ![Not added](media/Red_X.gif) | 
+ | Improvement to data warehouse <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | ![Not added](media/Red_X.gif) | 
+ | Improvement to maintenance windows for software updates <!--vso2839307--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | ![Not added](media/Red_X.gif) | 
  | Phased deployment of software updates <!--1358146--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | ![Not added](media/Red_X.gif) | 
  | Improvements to repair applications <!--1357866--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | ![Not added](media/Red_X.gif) | 
  | Community Hub <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | ![Not added](media/Red_X.gif) | 
@@ -152,28 +165,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Approve application requests via email <!--1321550--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_email-approve) | ![Not added](media/Red_X.gif) | 
  | Improvement to script output <!--1236459--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_script) | ![Not added](media/Red_X.gif) | 
  | Improvement to third-party software updates <!--1358714--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) | ![Not added](media/Red_X.gif) | 
- | Improvements to phased deployments <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Support for new Windows app package formats <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvement to client push security <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Management insights for proactive maintenance <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Transition mobile apps workload for co-managed devices <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Boundary group options for peer downloads <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Third-party software updates support for custom catalogs <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to cloud management features <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | New software updates compliance report <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Third-party software updates <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Configure Windows Defender SmartScreen settings for Microsoft Edge <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Sync MDM policy from Microsoft Intune for a co-managed device <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Transition Office 365 workload to Intune using co-management <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Deploy software updates without content <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Office Customization Tool integration with the Office 365 Installer <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to cloud management gateway <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to secure client communications <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Software Center infrastructure improvements <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Provision Windows app packages for all users on a device <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Improvements to the Surface dashboard <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Hardware inventory default unit revision <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [Version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
 
 
 
