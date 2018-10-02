@@ -77,9 +77,9 @@ Move the service connection point role to another server.
 ## Client deployment and upgrade
 
 ### Azure AD-enabled clients can't communicate with management point
-<!--501089-->
+<!--501089-->  
 *Applies to: Configuration Manager version 1706*
-<!--also fixed in 1710 HFRU-->
+<!--also fixed in 1710 HFRU-->  
 In the scenario to [install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure), client communication fails when the HTTPS-enabled management point uses alternate database credentials. 
 
 #### Workaround
