@@ -27,39 +27,6 @@ Use the information in this article with the information in the following articl
 
 
 
-## <a name="bkmk_2019"></a> Windows Server 2019: Standard and Datacenter
-<!--SCCMDocs-pr issue 2907-->
-Starting in version 1806, Windows Server 2019 is supported for the following roles:
-
-#### Site servers
-
--   Central administration site  
--   Primary site  
--   Secondary site  
-
-#### Site system servers
-
--   Application Catalog web service point  
--   Application Catalog website point  
--   Asset Intelligence synchronization point  
--   Certificate registration point  
--   Cloud management gateway connection point  
--   Data warehouse service point  
--   Distribution point <sup>[Note 1](#bkmk_note1)</sup>  
--   Endpoint Protection point  
--   Enrollment point  
--   Enrollment proxy point  
--   Fallback status point  
--   Management point
--   Reporting services point  
--   Service connection point  
--   Site database server <sup>[Note 2](#bkmk_note2)</sup>  
--   SMS_Provider  
--   Software update point  
--   State migration point
-
-
-
 ## <a name="bkmk_2016"></a> Windows Server 2016: Standard and Datacenter
 
 With Update Rollup 1 for Configuration Manager version 1606 ([KB3186654](https://support.microsoft.com/help/3186654)), this OS version is supported for the following roles:
@@ -224,16 +191,6 @@ This OS isn't supported for site servers or site system roles, except for the di
     -   Distribution points on this OS aren't supported for PXE with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
     -   Distribution points on this OS version don't support multicast.  
-
-
-
-## <a name="bkmk_core1809"></a> The server core installation of Windows Server, version 1809
-<!--SCCMDocs-pr issue 2907-->
-Starting in Configuration Manager 1806, [Windows Server, version 1809](https://docs.microsoft.com/windows-server/get-started/get-started-with-1809) is supported for use as a distribution point with the following limitations:  
-
-  -   Only the x64-bit version is supported.  
-
-  -   Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 
 
