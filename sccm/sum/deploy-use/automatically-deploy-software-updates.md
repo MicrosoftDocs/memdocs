@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/21/2018
+ms.date: 10/2/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -229,9 +229,9 @@ After you create an ADR, add additional deployments to the rule. This action hel
      - Alerts
      - Download Settings  
 
+Deployments can also be added programmatically using powerShell cmdelets. See [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) for a complete description of using this method.
 
 For more information about the deployment process, see [Software update deployment process](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).
-
 
 
 ## Next steps
