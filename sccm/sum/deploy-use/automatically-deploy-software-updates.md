@@ -229,7 +229,7 @@ After you create an ADR, add additional deployments to the rule. This action hel
      - Alerts
      - Download Settings  
 
-Deployments can also be added programmatically using powerShell cmdelets. See [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) for a complete description of using this method.
+Deployments can also be added programmatically using powerShell cmdelets. See [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) for a complete description of using this method.
 
 For more information about the deployment process, see [Software update deployment process](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).
 
