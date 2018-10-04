@@ -204,16 +204,14 @@
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
+    - name: Capabilities in 1810
+      href: get-started/capabilities-in-technical-preview-1810.md
     - name: Capabilities in 1809
       href: get-started/capabilities-in-technical-preview-1809.md
     - name: Capabilities in 1808
       href: get-started/capabilities-in-technical-preview-1808.md
     - name: Capabilities in 1807
       href: get-started/capabilities-in-technical-preview-1807.md
-    - name: Capabilities in 1806.2
-      href: get-started/capabilities-in-technical-preview-1806-2.md
-    - name: Capabilities in 1806
-      href: get-started/capabilities-in-technical-preview-1806.md
   - name: Migrate data between hierarchies
     href: migration/migrate-data-between-hierarchies.md
     items:
