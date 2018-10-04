@@ -121,8 +121,7 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical Preview version 1810
 
-- [Native task sequence support for Windows Autopilot for existing devices](capabilities-in-technical-preview-1810.md#bkmk_autopilot) <!--1358333-->
-- [Improvements to OData endpoint](capabilities-in-technical-preview-1810.md#bkmk_odata) <!--1321523-->
+- [Improvement to client installation](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) <!--1358840-->
 - [Required app compliance policy for co-managed devices](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) <!--1358196-->
 - [Improvement to co-management reporting](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) <!--1358980-->
 - [New boundary group options](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) <!--1358749-->
@@ -132,7 +131,6 @@ The following features are available with the most recent Configuration Manager 
 - [New client notification action to wake up device](capabilities-in-technical-preview-1810.md#bkmk_wakeup) <!--1317364-->
 - [Boundary group relationship support of task sequences](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) <!--1359025-->
 - [Management insights dashboard](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
-- [Improvements to driver maintenance](capabilities-in-technical-preview-1810.md#bkmk_drivers) <!--1358270-->
 - [In-console documentation dashboard](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
 
 

@@ -34,19 +34,16 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 **The following sections describe the new features to try out in this version:**  
 
-
-[!INCLUDE [Native task sequence support for Windows Autopilot for existing devices](includes/1810/1358333.md)]
-[!INCLUDE [Improvements to OData endpoint](includes/1810/1321523.md)]
+[!INCLUDE [Improvement to client installation](includes/1810/1358840.md)]
 [!INCLUDE [Required app compliance policy for co-managed devices](includes/1810/1358196.md)]
-[!INCLUDE [Improvement to co-management reporting](includes/1810/1358980.md)]
+[!INCLUDE [Improvement to co-management dashboard](includes/1810/1358980.md)]
 [!INCLUDE [New boundary group options](includes/1810/1358749.md)]
 [!INCLUDE [Site system on Windows cluster node](includes/1810/1359132.md)]
 [!INCLUDE [Improvements to CMPivot](includes/1810/1359068.md)]
 [!INCLUDE [Improvements to scripts](includes/1810/1358239.md)]
 [!INCLUDE [New client notification action to wake up device](includes/1810/1317364.md)]
-[!INCLUDE [Boundary group relationship support of task sequences](includes/1810/1359025.md)]
+[!INCLUDE [Task sequence support for boundary groups](includes/1810/1359025.md)]
 [!INCLUDE [Management insights dashboard](includes/1810/1357979.md)]
-[!INCLUDE [Improvements to driver maintenance](includes/1810/1358270.md)]
 [!INCLUDE [In-console documentation dashboard](includes/1810/1357546.md)]
 
 
