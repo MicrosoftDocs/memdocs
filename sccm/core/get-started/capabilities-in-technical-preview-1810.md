@@ -46,7 +46,6 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 [!INCLUDE [Management insights dashboard](includes/1810/1357979.md)]
 [!INCLUDE [In-console documentation dashboard](includes/1810/1357546.md)]
 [!INCLUDE [Improvements to driver maintenance](includes/1810/1358270.md)]
-[!INCLUDE [Task sequence support for Windows Autopilot on existing devices](includes/1810/1358333.md)]
 
 
 ## Next steps

@@ -133,7 +133,6 @@ The following features are available with the most recent Configuration Manager 
 - [Management insights dashboard](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
 - [In-console documentation dashboard](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
 - [Improvements to driver maintenance](capabilities-in-technical-preview-1810.md#bkmk_drivers)<!--1358270-->  
-- [Task sequence support for Windows Autopilot on existing devices](capabilities-in-technical-preview-1810.md#bkmk_autopilot) <!--1358333-->  
 
 
 > [!Note]  
