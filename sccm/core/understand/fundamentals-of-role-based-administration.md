@@ -79,7 +79,7 @@ When you  design and implement administrative security for Configuration Manager
 
 2.  Map these administrative tasks to one or more of the built-in security roles.  
 
-3.  If some of the administrative users perform the tasks of multiple security roles, assign the multiple security roles to these administrative users instead of in creating a new security role that combines the tasks.  
+3.  If some of the administrative users perform the tasks of multiple security roles, assign the multiple security roles to these administrative users instead of creating a new security role that combines the tasks.  
 
 4.  If the tasks that you identified do not map to the built-in security roles, create and test new security roles.  
 
