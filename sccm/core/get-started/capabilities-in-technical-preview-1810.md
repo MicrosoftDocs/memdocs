@@ -45,6 +45,7 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 [!INCLUDE [Task sequence support for boundary groups](includes/1810/1359025.md)]
 [!INCLUDE [Management insights dashboard](includes/1810/1357979.md)]
 [!INCLUDE [In-console documentation dashboard](includes/1810/1357546.md)]
+[!INCLUDE [Improvements to driver maintenance](includes/1810/1358270.md)]
 
 
 ## Next steps
