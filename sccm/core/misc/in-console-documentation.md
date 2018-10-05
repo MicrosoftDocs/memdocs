@@ -1,6 +1,6 @@
 ---
 title: In-console documentation
-ms.date: 05/03/2018
+ms.date: 09/05/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,7 +13,7 @@ robots: noindex,nofollow
 
 <!-- 
 feature 1357546
-This page displays in-console, under the Support workspace, Documentation node. 
+This page displays in-console, under the Community workspace, Documentation node. 
 -->
 
 
@@ -29,50 +29,52 @@ For more information, see the following articles:
 ## Recommended 
 A manually curated list of important articles.
 
-- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)
+- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  
+- [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Fundamentals of Configuration Manager current branch and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service)
 - [Technical preview releases](/sccm/core/get-started/technical-preview)
 - [Use cloud services to supplement on-premises infrastructure](/sccm/core/understand/use-cloud-services)
 - [Plan for the cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)
 - [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies)
-- [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 
 
 ## Trending
-The most popular articles in April 2018.
+The most popular articles in August 2018.
 
 | Page Views | Title | 
 | ----- | ----- | 
-| 23053 | [New version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) | 
-| 13785 | [Log files for troubleshooting](/sccm/core/plan-design/hierarchy/log-files) | 
-| 8432 | [Updates and Servicing](/sccm/core/servers/manage/updates) | 
-| 8149 | [New version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) | 
-| 7796 | [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) | 
-| 7312 | [Install console](/sccm/core/servers/deploy/install/install-consoles) | 
-| 6978 | [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates) | 
-| 6160 | [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions) | 
-| 6136 | [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware) | 
-| 6110 | [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview) | 
+| 27627 | [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [Log files for troubleshooting](/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [New version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [Updates and servicing](/sccm/core/servers/manage/updates) |
+| 8423 | [Install console](/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [Deploy clients to Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [Client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [Manage distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
 ## Recently updated
-Articles revised in the past month.
+Articles with a recent and significant update.
 
 | Last Reviewed | Title | 
 |-----|-----|
-| 1 May 2018 | [What's new in hybrid MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) | 
-| 1 May 2018 | [Extended interoperability client](/sccm/core/understand/interoperability-client) | 
-| 30 April 2018 | [Find help](/sccm/core/understand/find-help) | 
-| 25 April 2018 | [Technical Preview releases](/sccm/core/get-started/technical-preview) | 
-| 25 April 2018 | [Technical Preview 1804](/sccm/core/get-started/capabilities-in-technical-preview-1804) | 
-| 18 April 2018 | [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables) | 
-| 18 April 2018 | [Release notes](/sccm/core/servers/deploy/install/release-notes) | 
-| 17 April 2018 | [Supported clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) | 
-| 17 April 2018 | [Supported site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) | 
-| 12 April 2018 | [SDK what's new](/sccm/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk) | 
+| 04 September 2018 | [Technical preview releases](/sccm/core/get-started/technical-preview) |
+| 04 September 2018 | [Technical preview 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 30 August 2018 | [Configure discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 29 August 2018 | [Client Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 29 August 2018 | [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) |
+| 29 August 2018 | [What's new in hybrid MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 29 August 2018 | [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 24 August 2018 | [Backup sites](/sccm/core/servers/manage/backup-and-recovery) |
+| 24 August 2018 | [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) |
+| 23 August 2018 | [Prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
@@ -89,12 +91,13 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 
 ## New and updated support articles
-Support articles that are new or updated in March or April 2018.
+Support articles that are new or updated in September 2018.
 
-- [Configuration Manager clients do not receive policy data after you recover a primary site from a CAS](https://support.microsoft.com/help/4095539)
-- [Update rollup 2 for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4086143)
-- [Automatic enrollment for co-managed device fails in System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4088970)
-- [Windows 10 deployments prompt for language choice in Configuration Manager](https://support.microsoft.com/help/4088140)
+- [KB 4458169: Tips for troubleshooting application deployment problems](https://support.microsoft.com/help/4458169)  
+- [KB 4346901: Software updates in Configuration Manager Current Branch deep dive - client operations](https://support.microsoft.com/help/4346901)  
+- [KB 4345216: [Fixed] Software Center terminates unexpectedly in Configuration Manager Current Branch, version 1802](https://support.microsoft.com/help/4345216)  
+- [KB 4342419: [Fixed] The SMSExec.exe service terminates unexpectedly when reassigning distribution points in Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4342419)  
+- [KB 4339794: [Fixed] Windows express installation files are not downloaded in Configuration Manager Current Branch, version 1802](https://support.microsoft.com/help/4339794)  
 
-> [!Tip]  
-> To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
+
+To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  

@@ -2,7 +2,7 @@
 title: OSD infrastructure requirements
 titleSuffix: Configuration Manager
 description: Learn the external and product dependencies and requirements for OS deployment in Configuration Manager
-ms.date: 07/30/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -28,21 +28,6 @@ This section provides information about external tools, installation kits, and O
 
 The Windows Assessment and Deployment Kit (ADK) is a set of tools and documentation that support the configuration and deployment of Windows. Configuration Manager uses the Windows ADK to automate actions such as installing Windows, capturing images, and migrating user profiles and data.  
 
-The following features of the Windows ADK must be installed on the site server of the top-level site in the hierarchy, on the site server of each primary site in the hierarchy, and on the SMS Provider site system server:  
-
--   User State Migration Tool (USMT) <sup>1</sup>  
-
--   Windows Deployment Tools  
-
--   Windows Preinstallation Environment (Windows PE)  
-
-For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support For Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
-
- <sup>1</sup> USMT isn't required on the SMS Provider site system server.  
-
-> [!NOTE]  
->  You must manually install the Windows ADK on each site server before you install the Configuration Manager site.  
-
 For more information, see the following articles:  
 
 - [Windows ADK for Windows 10 scenarios for IT Pros](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
@@ -50,6 +35,37 @@ For more information, see the following articles:
 - [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
 
 - [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+
+
+#### Site systems
+The Windows ADK is a prerequisite for the following site systems servers:
+
+- The site server of the top-level site in the hierarchy  
+
+- The site server of each primary site in the hierarchy  
+
+- Every instance of the SMS Provider  
+
+
+> [!NOTE]  
+> Manually install the Windows ADK on each site server before you install the Configuration Manager site.  
+
+#### Windows ADK features
+Install the following features of the Windows ADK:  
+
+-   User State Migration Tool (USMT)  
+
+    > [!Note]  
+    > USMT isn't required on the SMS Provider.
+
+-   Windows Deployment Tools  
+
+-   Windows Preinstallation Environment (Windows PE)  
+
+    > [!Important]  
+    > Starting with Windows 10 version 1809, Windows PE is a separate installer. Otherwise there's no functional difference.<!--SCCMDocs-pr issue 2908-->  
+
+For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 
 
 ### User State Migration Tool (USMT)  
@@ -108,7 +124,7 @@ For more information about the OS versions and hard disk configurations that are
 
 ### Windows device drivers  
 
-Windows device drivers can be used when you install the OS on the destination computer. They are also used when you run Windows PE in a boot image. For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).  
+Windows device drivers can be used when you install the OS on the destination computer. They're also used when you run Windows PE in a boot image. For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).  
 
 
 
