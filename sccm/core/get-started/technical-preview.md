@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/03/2018
+ms.date: 10/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -133,6 +133,7 @@ The following features are available with the most recent Configuration Manager 
 - [Management insights dashboard](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
 - [In-console documentation dashboard](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
 - [Improvements to driver maintenance](capabilities-in-technical-preview-1810.md#bkmk_drivers)<!--1358270-->  
+- [Task sequence support of Windows Autopilot for existing devices](capabilities-in-technical-preview-1810.md#bkmk_autopilot) <!--1358333-->  
 
 
 > [!Note]  
