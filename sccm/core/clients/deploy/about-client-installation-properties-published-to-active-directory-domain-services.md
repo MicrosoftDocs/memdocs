@@ -67,12 +67,13 @@ Client installation (CCMSetup) uses the properties that are published to Active 
 ## Client push installation  
  Client push installation does not use Active Directory Domain Services to obtain installation properties.  
 
- Instead, you can specify client installation properties in the **Client** tab of the **Client Push Installation Properties** dialog box. These options and client-related site settings are stored in a file that the client reads during client installation.  
+ Instead, you can specify client installation properties in the **Installation Properties** tab of the **Client Push Installation Properties** dialog box. These options and client-related site settings are stored in a file that the client reads during client installation.  
 
 > [!NOTE]  
->  You do not have to specify any CCMSetup properties for client push installation, or the fallback status point, or the trusted root key in the **Client** tab. These settings are automatically supplied to clients when they are installed by using client push installation.  
+>  You do not have to specify any CCMSetup properties for client push installation, or the fallback status point, or the trusted root key in the **Installation Properties** tab. These settings are automatically supplied to clients when they are installed by using client push installation.
+In addition to Client.msi properties, CCMSetup supports the following parameters: /forcereboot, /skipprereq, /logon, /BITSPriority, /downloadtimeout, /forceinstall
 
- Any properties that you specify in the **Client** tab are published to Active Directory Domain Services if the site is published to Active Directory Domain Services. These settings are read by client installations where CCMSetup is run with no installation properties.  
+ Any properties that you specify in the **Installation Properties** tab are published to Active Directory Domain Services if the site is published to Active Directory Domain Services. These settings are read by client installations where CCMSetup is run with no installation properties.  
 
 ## Software update point-based installation  
  The software update point-based installation method does not support the addition of installation properties to the CCMSetup command line.  

@@ -60,7 +60,7 @@ If client assignment fails, the client software remains installed, but will be u
 -   IP address range  
 
 > [!NOTE]  
->  If a Configuration Manager client has multiple network adapters and therefore has multiple IP addresses, the IP address used to an evaluate client site assignment is assigned randomly.  
+>  If a Configuration Manager client has multiple network adapters and therefore has multiple IP addresses, the IP address used to evaluate client site assignment is assigned randomly.  
 
  For information about how to configure boundary groups for site assignment and how to configure a fallback site for automatic site assignment, see [Define site boundaries and boundary groups for System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
 

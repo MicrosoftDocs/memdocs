@@ -144,7 +144,7 @@ In this situation, the software might continue to be allowed to run even if the 
 - Do not deploy a policy with **Enforcement Enabled**, and then later deploy a policy with **Audit Only** to the same device. This configuration might result in untrusted software being allowed to run.
 - When you use Configuration Manager to enable Windows Defender Application Control on client PCs, the policy does not prevent users with local administrator rights from circumventing the Application Control policies or otherwise executing untrusted software. 
 - The only way to prevent users with local administrator rights from disabling Application Control is to deploy a signed binary policy. This deployment is possible through Group Policy but not currently supported in Configuration Manager.
-- Setting up Configuration Manager as a Managed Installer on client PCs uses AppLocker policy. AppLocker is only used to identify Managed Installers and all enforcement happens with Application. 
+- Setting up Configuration Manager as a Managed Installer on client PCs uses AppLocker policy. AppLocker is only used to identify Managed Installers and all enforcement happens with Windows Defender Application Control. 
 
 
 

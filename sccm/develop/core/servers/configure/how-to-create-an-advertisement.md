@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 # How to Create an Advertisement
-The following example shows how to create an advertisement by using the `SMS_Advertisement` class and class properties in System Center Configuration Manager.  
+The following example shows how to create an advertisement by using the [SMS_Advertisement] (../../../../reference/core/servers/configure/sms_advertisement-server-wmi-class.md) class and class properties in System Center Configuration Manager.  
 
 > [!IMPORTANT]
 >  To create an advertisement that targets a collection, you must have "Deploy Packages" permissions for the collection and "Read" permissions for the package.  
