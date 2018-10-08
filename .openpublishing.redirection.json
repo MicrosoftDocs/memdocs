@@ -272,7 +272,7 @@
         },
         {
             "source_path": "sccm/develop/reference/core/clients/deploy/sms_clientbaseline-sever-wmi-class.md",
-            "redirect_url": "sccm/develop/reference/core/clients/deploy/sms_clientbaseline-server-wmi-class",
+            "redirect_url": "/sccm/develop/reference/core/clients/deploy/sms_clientbaseline-server-wmi-class",
             "redirect_document_id": false
         }
     ]
