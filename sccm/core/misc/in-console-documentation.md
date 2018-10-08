@@ -29,16 +29,16 @@ For more information, see the following articles:
 ## Recommended 
 A manually curated list of important articles.
 
-- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)  
-- [CMPivot](/sccm/core/servers/manage/cmpivot)  
-- [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)  
-- [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
-- [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
-- [Fundamentals of Configuration Manager current branch and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service)
-- [Technical preview releases](/sccm/core/get-started/technical-preview)
-- [Use cloud services to supplement on-premises infrastructure](/sccm/core/understand/use-cloud-services)
-- [Plan for the cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies)
+- [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
+- [Create and run PowerShell scripts](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts)  
+- [Phased deployments](https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/sccm/core/understand/configuration-manager-and-windows-as-service)
+- [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview)
+- [Use cloud services to supplement on-premises infrastructure](https://docs.microsoft.com/sccm/core/understand/use-cloud-services)
+- [Plan for the cloud management gateway](https://docs.microsoft.com/sccm/core/clients/manage/plan-cloud-management-gateway)
+- [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)
 
 
 
@@ -47,16 +47,16 @@ The most popular articles in August 2018.
 
 | Page Views | Title | 
 | ----- | ----- | 
-| 27627 | [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
-| 19364 | [Log files for troubleshooting](/sccm/core/plan-design/hierarchy/log-files) |
-| 11113 | [New version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
-| 9419 | [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8688 | [Updates and servicing](/sccm/core/servers/manage/updates) |
-| 8423 | [Install console](/sccm/core/servers/deploy/install/install-consoles) |
-| 8408 | [Deploy clients to Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 8271 | [Client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties) |
-| 7751 | [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 7705 | [Manage distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
+| 27627 | [What's new in version 1806](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [New version 1802](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8423 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [Manage distribution points](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
@@ -65,16 +65,16 @@ Articles with a recent and significant update.
 
 | Last Reviewed | Title | 
 |-----|-----|
-| 04 September 2018 | [Technical preview releases](/sccm/core/get-started/technical-preview) |
-| 04 September 2018 | [Technical preview 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
-| 30 August 2018 | [Configure discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
-| 29 August 2018 | [Client Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) |
-| 29 August 2018 | [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) |
-| 29 August 2018 | [What's new in hybrid MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
-| 29 August 2018 | [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
-| 24 August 2018 | [Backup sites](/sccm/core/servers/manage/backup-and-recovery) |
-| 24 August 2018 | [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) |
-| 23 August 2018 | [Prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+| 04 September 2018 | [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 04 September 2018 | [Technical preview 1809](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 30 August 2018 | [Configure discovery](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 29 August 2018 | [Client peer cache](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 29 August 2018 | [Configure boundary groups](https://docs.microsoft.com/sccm/core/servers/deploy/configure/boundary-groups) |
+| 29 August 2018 | [What's new in hybrid MDM](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 29 August 2018 | [What's new in version 1806](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 24 August 2018 | [Backup sites](https://docs.microsoft.com/sccm/core/servers/manage/backup-and-recovery) |
+| 24 August 2018 | [Package Conversion Manager](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) |
+| 23 August 2018 | [Prerequisite checks](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
