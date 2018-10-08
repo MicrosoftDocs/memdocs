@@ -132,6 +132,7 @@ The following features are available with the most recent Configuration Manager 
 - [Task sequence support for boundary groups](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) <!--1359025-->
 - [Management insights dashboard](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
 - [In-console documentation dashboard](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
+- [Improvements to driver maintenance](capabilities-in-technical-preview-1810.md#bkmk_drivers)<!--1358270-->  
 
 
 > [!Note]  
