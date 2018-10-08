@@ -50,7 +50,7 @@ Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action
 
  Qualifiers: [VariableName("OSDLocalAdminPassword"), Secret, AllowedLen("0-255")]  
 
- Local administrator password. The name can be between 0 and 255 characters in length. This property must be set, but it is ignored if the `RandomAdminPassword` property is set to `e`.  
+ Local administrator password. The name can be between 0 and 255 characters in length. This property must be set, but it is ignored if the `RandomAdminPassword` property is set to `true`.  
 
  The task sequence variable associated with this property is OSDLocalAdminPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
 
