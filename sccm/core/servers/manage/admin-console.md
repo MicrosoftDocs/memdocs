@@ -78,6 +78,17 @@ At the bottom of the column right click menu, you can sort or group by a column.
 
 ![Configuration Manager group by column](media/column-group-by.png)
 
+##Console Command-Line Options
+The Microsoft System Center Configuration Manager console has the following command-line options.
+
+|Option|Description|  
+|------------|-----------------|  
+|**/sms:debugview=1**|A DebugView is included in all ResultViews that specify a view. DebugView shows raw properties (names and values).|  
+|**/sms:NamespaceView=1**|Shows namespace view in the System Center Configuration Manager console.|  
+|**/sms:ResetSettings**|The System Center Configuration Manager console ignores user persisted connection and view states (Microsoft Management Console window size is not reset).|  
+|**/sms:IgnoreExtensions**|Disables any System Center Configuration Manager extensions.|  
+|**/sms:NoRestore**|The System Center Configuration Manager console ignores previous persisted node navigation.|  
+
 ## Console improvements in version 1806
 In Configuration Manager version 1806, the following console improvements are added:
 
