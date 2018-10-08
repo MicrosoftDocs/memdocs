@@ -21,7 +21,7 @@ ms.author: aaroncz
 > [!NOTE]
 >  Clients must have read access to the shared folder to be able to download definition updates.
 
- For more information about how to download the definition and engine updates to store on the file share, see [Install the latest Microsoft antimalware and antispyware software](https://www.microsoft.com/en-us/wdsi/definitions).
+ For more information about how to download the definition and engine updates to store on the file share, see [Install the latest Microsoft antimalware and antispyware software](https://www.microsoft.com/wdsi/definitions).
 
 ## To configure definition downloads from a file share
 
