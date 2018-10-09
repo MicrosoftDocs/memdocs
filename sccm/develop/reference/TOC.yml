@@ -603,8 +603,8 @@
 - name: Client Deployment Server WMI Classes
   href: core/clients/deploy/client-deployment-server-wmi-classes.md
   items:
-  - name: SMS_ClientBaseline Sever WMI Class
-    href: core/clients/deploy/sms_clientbaseline-sever-wmi-class.md
+  - name: SMS_ClientBaseline Server WMI Class
+    href: core/clients/deploy/sms_clientbaseline-server-wmi-class.md
   - name: SMS_ClientBaselineItem Server WMI Class
     href: core/clients/deploy/sms_clientbaselineitem-server-wmi-class.md
   - name: SMS_ClientBaselineStatus Server WMI Class
