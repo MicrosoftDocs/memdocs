@@ -142,11 +142,9 @@ When a client needs content, it makes a content location request to the manageme
 1.	The distribution point on the same computer as the client
 2.	A peer source in the same network subnet
 3.	A distribution point in the same network subnet
-4.	A peer source in the same Active Directory site
-5.	A distribution point in the same Active Directory site
-6.	A peer source in the same boundary group
-7.	A distribution point in the current boundary group
-8.	A distribution point in a neighbor boundary group configured for fallback
+4.	A peer source in the same boundary group
+5.	A distribution point in the current boundary group
+6.	A distribution point in a neighbor boundary group configured for fallback
 9.	A distribution point in the default site boundary group 
 10.	The Windows Update cloud service
 11.	An internet-facing distribution point
