@@ -12,13 +12,16 @@ manager: dougeby
 ms.author: aaroncz
 ---
 
-# Enable Endpoint Protection malware definitions to download from a network share for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Enable Endpoint Protection malware definitions to download from a network share for Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  You can manually download the latest definition updates from Microsoft and then configure clients to download these definitions from a shared folder on the network. Users can also initiate definition updates when you use this update source.
 
 > [!NOTE]
 >  Clients must have read access to the shared folder to be able to download definition updates.
 
- For more information about how to download the definition and engine updates to store on the file share, see [Install the latest Microsoft antimalware and antispyware software](http://www.microsoft.com/security/portal/Definitions/HowToForeFront.aspx).
+ For more information about how to download the definition and engine updates to store on the file share, see [Install the latest Microsoft antimalware and antispyware software](https://www.microsoft.com/wdsi/definitions).
 
 ## To configure definition downloads from a file share
 

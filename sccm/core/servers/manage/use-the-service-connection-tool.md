@@ -89,7 +89,7 @@ Beginning with version 1606, when connecting to Microsoft you can upload multipl
 
 #### To specify a proxy server
 You can use the following optional parameters to specify a proxy server (More information about using these parameters is available in the Command line parameters section of this topic):
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  Use this parameter to specify the proxy server to use for this connection.
+  - **-proxyserveruri [FQDN_of_proxy_server]**  Use this parameter to specify the proxy server to use for this connection.
   -  **-proxyusername [username]**  Use this parameter when  you must specify a user for the proxy server.
 
 #### Specify the type of updates to download
