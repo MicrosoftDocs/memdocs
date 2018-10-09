@@ -15,7 +15,7 @@ In System Center Configuration Manager, client deployment Windows Management Ins
 
 ## Client Deployment Server WMI Classes  
 
--   [SMS_ClientBaseline Sever WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientbaseline-sever-wmi-class.md)  
+-   [SMS_ClientBaseline Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientbaseline-server-wmi-class.md)  
 
 -   [SMS_ClientBaselineItem Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientbaselineitem-server-wmi-class.md)  
 

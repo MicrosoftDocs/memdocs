@@ -269,6 +269,11 @@
             "source_path": "sccm/core/clients/manage/sync-data-microsoft-operations-management-suite.md",
             "redirect_url": "/sccm/core/clients/manage/sync-data-log-analytics",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/develop/reference/core/clients/deploy/sms_clientbaseline-sever-wmi-class.md",
+            "redirect_url": "/sccm/develop/reference/core/clients/deploy/sms_clientbaseline-server-wmi-class",
+            "redirect_document_id": false
         }
     ]
 }
