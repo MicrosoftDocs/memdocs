@@ -10,7 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# SMS_ClientBaseline Sever WMI Class
+# SMS_ClientBaseline Server WMI Class
 The `SMS_ClientBaseline` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment baseline.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
