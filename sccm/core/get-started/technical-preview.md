@@ -125,7 +125,7 @@ The following features are available with the most recent Configuration Manager 
 
 - [Improvements to collection evaluation](#) <!--1358981-->
 - [Configuration Manager administrator authentication](#) <!--1357013-->
-- [Management insights rule for peer cache source client version](#) <!--1358008-->
+- [Management insights rule for peer cache source client version](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
 - [Improvements to internet-based client setup](#) <!--1359181-->
 - [Convert applications to MSIX](#) <!--1359029-->
 
