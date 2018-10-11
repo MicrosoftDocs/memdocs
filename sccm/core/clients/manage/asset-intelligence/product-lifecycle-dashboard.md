@@ -58,7 +58,7 @@ The dashboard has the following tiles:
 
 - **Top five products past end-of-life**: This tile is a consolidated data view of products found in your environment past their end-of-life. The graph shows installed software that's expired when compared against the support lifecycle for operating systems and SQL server products.  
 
-- **Top five products nearing end-of-life**: This tile is a consolidated data view of products found in your environment that are nearing end-of-life in next six months. The graph shows installed software that's within six months of end-of-life when compared against the support lifecycle for operating systems and SQL server products.  
+- **Top five products nearing end-of-life**: This tile is a consolidated data view of products found in your environment that are nearing end-of-life in next eighteen months. The graph shows installed software that's within eighteen months of end-of-life when compared against the support lifecycle for operating systems and SQL server products.  
 
 - **Lifecycle data for installed products**: This tile gives you a general idea of when a product transitions from supported to the expired state. The chart provides a breakdown of the number of clients where the product is installed, the support availability state, and a link to learn more about the next steps to take. The following information is included in the chart:     
     - Support time remaining
