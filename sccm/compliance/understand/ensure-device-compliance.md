@@ -48,12 +48,12 @@ Compliance settings in System Center Configuration Manager gives you the tools a
  [Common tasks for managing compliance](../../compliance/plan-design/common-tasks-for-managing-compliance.md)  
 
 ## Remote connection profiles  
- This configuration item type allows your configures your user's PCs to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
+ This configuration item type allows you to configure your user's PCs to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
 
  [Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
 ## User data and profiles  
- The configuration item type contains settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy.  
+ This configuration item type contains settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy.  
 
  [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
 
