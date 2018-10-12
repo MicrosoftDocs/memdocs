@@ -11,7 +11,10 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ---
-# Ensure device compliance with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Ensure device compliance with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Compliance settings in System Center Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. This helps you support the following business requirements:  
 
 -   Compare the configuration of Windows PCs, Macs computers, servers, and mobile devices you manage against best practices configurations you create, or obtain from other vendors  
@@ -35,7 +38,7 @@ Compliance settings in System Center Configuration Manager gives you the tools a
  [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md)  
 
 ## Plan and design  
- Before you start working with compliance settings, make sure you have implements the necessary prerequisites that you'll find in this topic.  
+ Before you start working with compliance settings, make sure you have implemented the necessary prerequisites that you'll find in this topic.  
 
  [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 
