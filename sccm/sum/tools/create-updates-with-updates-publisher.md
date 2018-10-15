@@ -148,7 +148,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
     -   **Windows Installer –** Use this rule type to determine applicability based on an installed .MSI or Windows Installer patch (.MSP). You can also determine if specific components or features are installed as part of the requirement.
 
         > [!IMPORTANT]  
-        > On managed deices, the Windows Update Agent cannot detect Windows Install packages that are installed per-user. When you use this rule type, configure additional applicability rules, like file versions or registry key values, so that the Windows Installer package can be properly detected regardless of a per-user or per-system basis.
+        > On managed devices, the Windows Update Agent cannot detect Windows Install packages that are installed per-user. When you use this rule type, configure additional applicability rules, like file versions or registry key values, so that the Windows Installer package can be properly detected regardless of a per-user or per-system basis.
 
     -   **Saved rule –** This option lets you find and use rules you *created in the Rules Workspace*.
 
