@@ -2,7 +2,7 @@
 title: Technical preview 1810
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1810.
-ms.date: 10/03/2018
+ms.date: 10/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -46,6 +46,8 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 [!INCLUDE [Management insights dashboard](includes/1810/1357979.md)]
 [!INCLUDE [In-console documentation dashboard](includes/1810/1357546.md)]
 [!INCLUDE [Improvements to driver maintenance](includes/1810/1358270.md)]
+[!INCLUDE [Task sequence support of Windows Autopilot for existing devices](includes/1810/1358333.md)]
+
 
 
 ## Next steps
