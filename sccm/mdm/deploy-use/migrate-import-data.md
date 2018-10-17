@@ -50,6 +50,7 @@ The import tool can collect information about the following object types in Conf
 - The tool will attempt to give you a reason for why an object cannot be imported. In some cases, before you import objects to Intune, you can go back to the Configuration Manager console, fix the issue, start the Configuration Manager object discovery scan again, and then import the objects. Sometimes you may need, or may want, to recreate these objects manually in Intune.
 - There are some profiles that depend on other objects. If you want to import a profile that depends on another object, like an email profile that depends on a certificate, you must import both objects at the same time unless you have previously imported the other object from the same computer with the same user.  
 - After you run the tool, you might need to perform additional manual steps. For example, targeting apps and policies to AAD groups. 
+- If any web apps (sometimes called webclips) have been assigned to users, you should remove those web apps before migrating your users, then reassign the web apps once the migration is complete. If this is not done, the web clips will become unmanageable after the migration.
 
 ## Prerequisites
 - Configuration Manager version 1610 or later.- We recommend that you specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy. The tool only discovers objects accessible by the user running the tool. 
