@@ -128,6 +128,7 @@ The following features are available with the most recent Configuration Manager 
 - [Management insights rule for peer cache source client version](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
 - [Improvements to internet-based client setup](capabilities-in-technical-preview-1810-2#bkmk_cmg) <!--1359181-->
 - [Convert applications to MSIX](capabilities-in-technical-preview-1810-2#bkmk_msix) <!--1359029-->
+- [Changes to client notification action to wake up a device](capabilities-in-technical-preview-1810-2#bkmk_wakeup) <!--1317364-->
 
 
 > [!Note]  
