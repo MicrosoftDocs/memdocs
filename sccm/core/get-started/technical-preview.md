@@ -99,7 +99,7 @@ Microsoft supports each technical preview version up until three successive vers
    
 Install a baseline version for up to one year after its release. When you install a new technical preview site, if more than one baseline version is currently available, use the latest baseline version.
 
--  **Technical preview version 1806**: The Configuration Manager technical preview version 1806 is available as both an in-console update and as a new baseline version. Download baseline versions [from the TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical preview version 1810.2**: The Configuration Manager technical preview version 1810.2 is available as both an in-console update and as a new baseline version. Download baseline versions from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 
@@ -123,11 +123,12 @@ The following features are available with the most recent Configuration Manager 
 
 <!--capabilities-in-technical-preview-1810-2.md#bkmk_anchor-->
 
-- [Improvements to collection evaluation](#) <!--1358981-->
-- [Configuration Manager administrator authentication](#) <!--1357013-->
+- [Improvements to collection evaluation](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) <!--1358981-->
+- [Configuration Manager administrator authentication](capabilities-in-technical-preview-1810-2.md#bkmk_auth) <!--1357013-->
 - [Management insights rule for peer cache source client version](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
-- [Improvements to internet-based client setup](#) <!--1359181-->
-- [Convert applications to MSIX](#) <!--1359029-->
+- [Improvements to internet-based client setup](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) <!--1359181-->
+- [Convert applications to MSIX](capabilities-in-technical-preview-1810-2.md#bkmk_msix) <!--1359029-->
+- [Changes to client notification action to wake up a device](capabilities-in-technical-preview-1810-2.md#bkmk_wakeup) <!--1317364-->
 
 
 > [!Note]  
@@ -158,6 +159,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Management insights dashboard <!--1357979--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | ![Not added](media/Red_X.gif) | 
  | In-console documentation dashboard <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![Not added](media/Red_X.gif) | 
  | Improvements to driver maintenance <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | ![Not added](media/Red_X.gif) | 
+ | Task sequence support of Windows Autopilot for existing devices <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | ![Not added](media/Red_X.gif) | 
  | Improvements to CMPivot <!--1359068--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | ![Not added](media/Red_X.gif) | 
  | Improvement to lifecycle dashboard <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | ![Not added](media/Red_X.gif) | 
  | Improvement to data warehouse <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | ![Not added](media/Red_X.gif) | 

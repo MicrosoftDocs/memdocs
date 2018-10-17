@@ -44,6 +44,8 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 [!INCLUDE [Convert applications to MSIX](includes/1810-2/1359029.md)]
 
+[!INCLUDE [Changes to client notification action to wake up a device](includes/1810-2/1317364.md)]  
+
 
 
 ## Next steps
