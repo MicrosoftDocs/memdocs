@@ -123,12 +123,12 @@ The following features are available with the most recent Configuration Manager 
 
 <!--capabilities-in-technical-preview-1810-2.md#bkmk_anchor-->
 
-- [Improvements to collection evaluation](capabilities-in-technical-preview-1810-2#bkmk_colleval) <!--1358981-->
-- [Configuration Manager administrator authentication](capabilities-in-technical-preview-1810-2#bkmk_auth) <!--1357013-->
+- [Improvements to collection evaluation](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) <!--1358981-->
+- [Configuration Manager administrator authentication](capabilities-in-technical-preview-1810-2.md#bkmk_auth) <!--1357013-->
 - [Management insights rule for peer cache source client version](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
-- [Improvements to internet-based client setup](capabilities-in-technical-preview-1810-2#bkmk_cmg) <!--1359181-->
-- [Convert applications to MSIX](capabilities-in-technical-preview-1810-2#bkmk_msix) <!--1359029-->
-- [Changes to client notification action to wake up a device](capabilities-in-technical-preview-1810-2#bkmk_wakeup) <!--1317364-->
+- [Improvements to internet-based client setup](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) <!--1359181-->
+- [Convert applications to MSIX](capabilities-in-technical-preview-1810-2.md#bkmk_msix) <!--1359029-->
+- [Changes to client notification action to wake up a device](capabilities-in-technical-preview-1810-2.md#bkmk_wakeup) <!--1317364-->
 
 
 > [!Note]  
