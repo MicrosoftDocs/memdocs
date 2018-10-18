@@ -54,7 +54,7 @@ This role identifies a site system that runs an instance of the **SMS Executive*
 The site assigns this role to site system servers that hold an instance of the site database. Only move this role to a new server by running setup to modify the site to use a different instance of SQL Server to host the site database.  
 
 #### SMS Provider
-The assigns this role to each computer that hosts an instance of the SMS Provider. The provider is the interface between a Configuration Manager console and the site database. By default, this role automatically installs on the site server of a central administration site and primary sites. Install additional instances at each site to provide access to additional administrative users or for redundancy.  
+The site assigns this role to each computer that hosts an instance of the SMS Provider. The provider is the interface between a Configuration Manager console and the site database. By default, this role automatically installs on the site server of a central administration site and primary sites. Install additional instances at each site to provide access to additional administrative users or for redundancy.  
 
 To install additional providers, run Configuration Manager setup to [Manage the SMS Provider](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider). Then install additional providers on additional computers. Only install one instance of the SMS Provider on a computer. That computer must be in the same domain as the site server.  
 
