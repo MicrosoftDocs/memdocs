@@ -278,7 +278,7 @@ The account that you use to perform a site reset must have the following permiss
     -   **Primary site**: The account that you use to run a site reset at this site must be a local administrator on the primary site server and must have privileges that are equivalent to the **Full Administrator** role-based administration security role. If the primary site is in a hierarchy with a central administration site, this account must also be a local administrator on the central administration site server.  
 
 **Limitations for a site reset**
-  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sties so long as the hierarchy is configured to support [testing client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sites so long as the hierarchy is configured to support [testing client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 #### To perform a site reset  
 
