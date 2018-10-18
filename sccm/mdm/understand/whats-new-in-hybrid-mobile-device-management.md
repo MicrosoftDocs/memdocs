@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 09/18/2018
+ms.date: 10/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -41,11 +41,38 @@ Each section of this article lists hybrid features under three different categor
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch). If you're using an older version of Configuration Manager for your hybrid deployment, upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
 
 
+
+## October 2018
+
+### New in Microsoft Intune
+
+#### Access to key profile properties using the company portal app
+<!--772203-->  
+
+End users can now access key account properties and actions, such as password reset, from the Company Portal app. 
+
+#### PIN prompt when you change fingerprints or face ID on an iOS device  
+<!--2637704-->  
+
+Users are now prompted for a PIN after making biometric changes on their iOS device. This includes changes to registered fingerprints or face ID. The timing of the prompt depends on how the configuration of the *Recheck access requirements after (minutes)* timeout.  When no PIN is set, the user is prompted to set one.  
+
+This feature is only available for iOS, and requires the participation of applications that integrate the Intune APP SDK for iOS, version 8.1.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Yammer.
+
+#### End user device and app content menu 
+<!--2771453-->  
+End users can now use context menu on device and apps to trigger common actions like renaming a device or checking compliance. 
+
+#### Windows Company Portal keyboard shortcuts
+<!--2771518-->  
+End users can now trigger app and device actions in the Windows Company Portal using keyboard shortcuts (accelerators).
+
+
+
 ## August 2018
 
 ### New in Microsoft Intune
 
-### New user experience update for the Company Portal website
+#### New user experience update for the Company Portal website
 <!--2000968-->
 Based on your feedback, we've added new features to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your Android, iOS, and Windows devices. Areas of the site have received a new, modern, responsive design. These areas include device details, feedback and support, and device overview. You'll also see the following improvements:
 
