@@ -12,7 +12,10 @@ manager: dougeby
 ms.author: aaroncz
 ---
 
-# Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  If you use WSUS to keep your antimalware definitions up to date, you can configure it to auto-approve definition updates. Although using Configuration Manager software updates is the recommended method to keep definitions up to date, you can also configure WSUS as a method to allow users to manually initiate definition updated. Use the following procedures to configure WSUS as a definition update source.
 
 ## To synchronize Endpoint Protection definition updates in Configuration Manager software updates
@@ -29,7 +32,7 @@ ms.author: aaroncz
 
     -   For Windows 8.1 and earlier, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Forefront Endpoint Protection 2010** check box.
 
-    -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** and **Windows Technical Preview 2** check boxes.
+    -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** check boxes.
 
 6.  Click **OK** to close the **Software Update Point Component Properties** dialog box.
 
@@ -43,7 +46,7 @@ ms.author: aaroncz
 
     -   For Windows 8.1 and earlier, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Forefront Endpoint Protection 2010** check box.
 
-    -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** and **Windows Technical Preview 2** check boxes.
+    -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** check boxes.
 
 3.  On the **Classifications** tab of the **Products and Classifications** dialog box, select the **Definition Updates** and **Updates** check boxes.
 
