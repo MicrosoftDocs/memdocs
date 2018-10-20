@@ -113,7 +113,7 @@ Enabled
  `Get-WindowsErrorReporting` returns the current state, which in this case is `Enabled`. There are specific cmdlets to enable or disable Windows Error Reporting. As an example of taking action using a cmdlet, use the `Disable-WindowsErrorReporting` cmdlet to disable Windows Error Reporting.  
 
 > [!NOTE]
->  If you are not running Windows PowerShell as an administrator, you may not be able to change the value. In this case, the the `Disable-WindowsErrorReporting` cmdlet will return `False`, instead of `True` after running the cmdlet.  
+>  If you are not running Windows PowerShell as an administrator, you may not be able to change the value. In this case, the `Disable-WindowsErrorReporting` cmdlet will return `False`, instead of `True` after running the cmdlet.  
 
  Go to your Windows PowerShell window, and type `Disable-WindowsErrorReporting`:  
 
