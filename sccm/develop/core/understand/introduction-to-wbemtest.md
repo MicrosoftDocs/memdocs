@@ -35,7 +35,7 @@ If you spend much time around Configuration Manager you become aware that much o
 
  ![WBEMTEST Site](../../../develop/core/understand/media/wbemtest_site.jpg "WBEMTEST_SITE")  
 
- Once you are connected to a WMI namespace, there are many options. If you are already a WMI expert and know what you are after, you could hit the query button and type in a WMI query to look for something something specific.  
+ Once you are connected to a WMI namespace, there are many options. If you are already a WMI expert and know what you are after, you could hit the query button and type in a WMI query to look for something specific.  
 
  When just starting out, one approach is to explore WMI a bit by browsing the classes in the **ROOT\CIMV2** namespace.  
 
