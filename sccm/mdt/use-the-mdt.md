@@ -6540,7 +6540,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 -   Managing software packages for UDI in the Configuration Manager console as described in [Managing Software Packages in Configuration Manager](#ManagingSoftwarePackagesinConfigurationManager), which is the same process for UDI and ZTI deployments  
 
--   Managing advertisements for UDI as described in in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager), which is the same process for UDI and ZTI deployments  
+-   Managing advertisements for UDI as described in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager), which is the same process for UDI and ZTI deployments  
 
 -   Manually adding computers to the site database for UDI as described in [Manually Adding Computers to the Site Database in Configuration Manager](#ManuallyAddingComputerstotheSiteDatabaseinConfigurationManager), which is the same process for UDI and ZTI deployments  
 
@@ -6897,7 +6897,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 5.  In the **Save As** dialog box, go to ***folder_path*** (where *folder_path* is the fully qualified path to the Scripts folder in the MDT files package source), in **File name**, type ***file_name*** (where *file_name* is the file name for the configuration file), and then click **Save**.  
 
- After creating the new UDI Wizard configuration file, create a new task sequence or modify an existing task sequence steps to use the appropriate MDT files package. You also need to update the distribution points with the modified MDT files package as described in in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
+ After creating the new UDI Wizard configuration file, create a new task sequence or modify an existing task sequence steps to use the appropriate MDT files package. You also need to update the distribution points with the modified MDT files package as described in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
 ####  <a name="OpenanExistingUDIWizardConfigurationFile"></a> Open an Existing UDI Wizard Configuration File  
  The UDI Wizard displays pages based on the configuration options specified in the UDIWizard_Config.xml file in the Scripts folder of the MDT files package specified in the task sequence. Open an existing UDI Wizard configuration file using the UDI Wizard Designer.  
@@ -10001,7 +10001,7 @@ End Function
 > [!NOTE]
 >  For Configuration Manager task sequences, run the **Use Toolkit Package** task sequence step prior to running the **Run PowerShell Script** task sequence step.  
 
- If your script needs to load other custom modules, places those modules in a subfolder beneath the Tools\Modules folder. By default, the module path is modified to include the Tools\Modules folder and all subfolders. For example, if you have a module in the MyCustomModule.psm1 file, create the Tools\Modules\MyCustomModule folder and the place MyCustomModule.psm1 file in that folder. To load your custom module in your script, include the following line in in your script:  
+ If your script needs to load other custom modules, places those modules in a subfolder beneath the Tools\Modules folder. By default, the module path is modified to include the Tools\Modules folder and all subfolders. For example, if you have a module in the MyCustomModule.psm1 file, create the Tools\Modules\MyCustomModule folder and the place MyCustomModule.psm1 file in that folder. To load your custom module in your script, include the following line in your script:  
 
 ```  
 Import-Module MyCustomModule  
