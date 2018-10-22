@@ -78,7 +78,7 @@ When you use media from the CD.Latest folder to run a scripted install of the fo
 - Recover a central administration site
 - Recover a primary site
 
-This value is not supported for use with installation media that that you get from the Microsoft Volume License site.
+This value is not supported for use with installation media that you get from the Microsoft Volume License site.
 See [command-line options](/sccm/core/servers/deploy/install/command-line-options-for-setup) for information on how to use this key name in the script file.
 
 
