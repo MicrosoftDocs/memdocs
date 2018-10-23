@@ -11,14 +11,14 @@ ms.author: aaroncz
 manager: dougeby
 ---
 # Introduction to WBEMTEST
-If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is “Windows Management Instrumentation��? and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM).  
+If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM).  
 
  As you dig further into Configuration Manager - perhaps doing task sequences and wanting to provide intelligent branching, digging into hardware inventory to possibly extend it, or working with the Configuration Manger SDK – you will need to dig deeper in to WMI/WBEM.  One useful tool for working with WMI/WBEM is WBEMTEST. There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
 
 ## Opening WBEMTEST  
- WBEMTEST is available on any Windows system. Go to Start and type “WBEMTEST��? into the search or run box.  
+ WBEMTEST is available on any Windows system. Go to Start and type "WBEMTEST" into the search or run box.  
 
- When you launch WBEMTEST, different operating system will work slightly differently.  Some will automatically connect to a WMI namespace, others (like Windows 7) will not.  If you aren’t connected automatically to a WMI namespace, you can hit the connect button, make sure that “root\cimv2��? is selected, then hit connect again.  Now you are back in the main user interface with everything available (when not connected, most buttons are grayed out).  You can think of a WMI namespace as similar to a directory within WMI.  You can navigate to other WMI namespaces, just like you might change directories on the file system. ROOT\CIMV2 is a WMI namespace where a lot of hardware information is kept – a good starting point.  
+ When you launch WBEMTEST, different operating system will work slightly differently.  Some will automatically connect to a WMI namespace, others (like Windows 7) will not.  If you aren’t connected automatically to a WMI namespace, you can hit the connect button, make sure that "root\cimv2" is selected, then hit connect again.  Now you are back in the main user interface with everything available (when not connected, most buttons are grayed out).  You can think of a WMI namespace as similar to a directory within WMI.  You can navigate to other WMI namespaces, just like you might change directories on the file system. ROOT\CIMV2 is a WMI namespace where a lot of hardware information is kept – a good starting point.  
 
 > [!IMPORTANT]
 >  One limitation of WBEMTEST, is that it doesn’t browse the WMI namespaces – you need to know where you’re going to connect. ROOT\CIMV2 (all Windows systems), ROOT\CCM (Configuration Manager clients) and ROOT\SMS\site_\<site code> (Configuration Manager site server) are some useful starting points.  
@@ -35,7 +35,7 @@ If you spend much time around Configuration Manager you become aware that much o
 
  ![WBEMTEST Site](../../../develop/core/understand/media/wbemtest_site.jpg "WBEMTEST_SITE")  
 
- Once you are connected to a WMI namespace, there are many options. If you are already a WMI expert and know what you are after, you could hit the query button and type in a WMI query to look for something something specific.  
+ Once you are connected to a WMI namespace, there are many options. If you are already a WMI expert and know what you are after, you could hit the query button and type in a WMI query to look for something specific.  
 
  When just starting out, one approach is to explore WMI a bit by browsing the classes in the **ROOT\CIMV2** namespace.  
 
