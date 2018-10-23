@@ -105,7 +105,7 @@ For the steps to create a customized operating system image, see [Customize oper
 8.  On the **Completion** page, verify that the software updates were successfully applied to the operating system image.  
 
 > [!NOTE]  
->  To minimise the payload size, the servicing of Operating System Upgrade and Operating System Install packages removes the older     version.  
+>  To minimize the payload size, the servicing of OS upgrade packages and OS images removes the older version.  
 
 ##  <a name="BKMK_OSImageMulticast"></a> Prepare the operating system image for multicast deployments  
  Use multicast deployments to allow multiple computers to simultaneously download an operating system image. The image is multicast to clients by  the distribution point, rather than having the distribution point send a copy of the image to each client over a separate connection. When you choose the [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) operating system deployment method, you must configure the operating system image package to support multicast before you distribute the operating system image to a multicast-enabled distribution point. Use the following procedure to set the multicast options for an existing operating system image package.  
