@@ -83,4 +83,4 @@ An upgrade package in System Center Configuration Manager contains the Windows S
 8.  On the **Completion** page, verify that the software updates were successfully applied to the operating system image.  
 
 > [!NOTE]  
->  To minimise the payload size, the servicing of Operating System Upgrade and Operating System Install packages removes the older     version.  
+>  To minimize the payload size, the servicing of OS upgrade packages and OS images removes the older version. 
