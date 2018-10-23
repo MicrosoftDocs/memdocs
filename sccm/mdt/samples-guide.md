@@ -1802,7 +1802,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
 2.  *Distributors* are used to distribute the publication.  
 
-3.  *Readers* can subscribe to a publication so that that publication is delivered to the subscriber periodically (a *push subscription*).  
+3.  *Readers* can subscribe to a publication so that publication is delivered to the subscriber periodically (a *push subscription*).  
 
  This terminology is used through the SQL Server replication setup and configuration wizards.  
 

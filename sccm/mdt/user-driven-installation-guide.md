@@ -750,7 +750,7 @@ manager: angrobe
     |**Settings Package** |1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Reference**, and then click **Next**.|  
     |**Settings Package: Settings Details** |1.  In **Name**, type **MDT Reference Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the reference computer**, and then click **Next**.|  
     |**Sysprep Package** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the task sequence is displayed.|  
     |**Confirmation** |Click **Finish**.|  
 
@@ -785,7 +785,7 @@ manager: angrobe
     |**General** |Click **Next**.|  
     |**General: Content** |Click **Next**.|  
     |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for distributing the software is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -818,7 +818,7 @@ manager: angrobe
     |**Locate Driver: Driver Details** |Click **Next**.|  
     |**Locate Driver: Add Driver to Package** |<ol><li>Click **New Package**.</li><li>Complete the **New Driver Package** dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, type ***device_driver_name*** **Package** (where *device_driver_name* is a descriptive name for the device drivers).</li><li>In **Comment**, type **Device drivers that are necessary for the reference and target computers**.</li></ol></li><li>In **Driver package source**, type **\\\WDG-MDT-01\Packages$\Drivers**, and then click **OK**.</li><li>Click **Next**.</li></ol>|  
     |**Locate Driver: Add Driver to Boot Images** |1.  In the list of images, select the **Windows PE Custom** check box.<br />2.  Select the **Update distribution points when finished** check box, and then click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for importing the device drivers is displayed.|  
     |**Confirmation** |Click **Close**.|  
 
@@ -845,7 +845,7 @@ manager: angrobe
     |**General** |Click **Next**.|  
     |**General: Content** |Click **Next**.|  
     |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for distributing the software is displayed.|  
     |Completion|Click **Close**.|  
 
@@ -1025,7 +1025,7 @@ manager: angrobe
     |Select Source: Single Computer|1.  In **Computer Name**, type **WDG-REF-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the media access control [MAC] address of the primary network adapter for the reference computer, WDG-REF-01).<br />3.  Click **Next**.|  
     |**Select Source: Data Preview** |Click **Next**.|  
     |**Select Source: Choose Target Collection** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for importing the computer is displayed.|  
     |**Confirmation** |Click **Close**.|  
 
@@ -1054,7 +1054,7 @@ manager: angrobe
     |-|-|  
     |**General** |<ol><li>In **Name**, type **Microsoft Deployment – Reference Computer**.</li><li>In **Comment**, type **Computer that is to be the reference computer for the target computers to be deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
     |**Membership Rules** |<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-REF-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-REF-01**, and then click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Progress** page, view the progress for creating the new membership rule.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the device collection is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1089,7 +1089,7 @@ manager: angrobe
     |**Deployment Settings: User Experience** |Click **Next**.|  
     |**Deployment Settings: Alerts** |Click **Next**.|  
     |**Deployment Settings: Distribution Points** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for deploying the task sequence is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1122,7 +1122,7 @@ manager: angrobe
     |**Select Media Type: Security** |In **Password** and **Confirm password**, type **P@ssw0rd**, and then click **Next**.|  
     |**Select Media Type: Boot Image** |1.  In **Boot image**, click **Browse**.<br />2.  In the **Select a Boot Image** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  In **Distribution point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />4.  In **Management point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />5.  Click **Next**.|  
     |**Select Media Type: Customization** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the task sequence media is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1302,7 +1302,7 @@ manager: angrobe
     |-|-|  
     |**Data Source** |In Path, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**, and then click **Next**.|  
     |**General** |1.  In **Name**, type **Windows 8.1 Reference Image**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 captured image of reference computer (WDG-REF-01) used to deploy to target computers**, and then click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for importing the operating system image is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1352,7 +1352,7 @@ manager: angrobe
     |Settings Package|1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\UDICustomSettings_Target**, and then click **Next**.|  
     |**Settings Package: Settings Details** |1.  In **Name**, type **UDI Target Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process using UDI (such as CustomSettings.ini) for the target computer**, and then click **Next**.|  
     |**Sysprep Package** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the task sequence is displayed.|  
     |**Confirmation** |Click **Finish**.|  
 
@@ -1389,7 +1389,7 @@ manager: angrobe
     |**General** |Click **Next**.|  
     |**Content** |Click **Next**.|  
     |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for distributing the software is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1558,7 +1558,7 @@ manager: angrobe
     |**General: General** |1.  In **Name**, type **Microsoft Office Professional Plus 2010 – x86**.<br />2.  In **Administrator comments**, type **32-bit version of Microsoft Office Professional Plus 2010**.<br />3.  Select the **Allow this application to be installed from Install Application task sequence action instead of deploying it manually** check box.<br />4.  Click **Next**.|  
     |**General: Application Catalog** |1.  In **Localized description**, type **32-bit version of Microsoft Office Professional Plus 2010 for use by Woodgrove Bank Employees**.<br />2.  In **Keywords**, **type Office Professional Plus 2010**.<br />3.  Click **Next**.|  
     |**General: Deployment Type s** |<ol><li>Click **Add**.<br /><br />     The Create Deployment Type Wizard Starts.</li><li>In the **Create Deployment Type Wizard**, on the **General** page, click **Manually specify the deployment type information** and then click **Next**.</li><li>On the **General: General Information** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Name**, type **Microsoft Office Professional Plus 2010 – x32 (Windows Installer)**.</li><li>In **Administrator comments**, type **Deploy Microsoft Office Professional Plus 2010 using native Windows Installer**.</li></ol></li><li>On the **General: Content** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Content location**, type **\\\WDGMDT01\Source$\OfficeProPlus2010**.</li><li>In **Installation program**, type **setup.exe**.</li><li>In **Uninstall program**, type **setup.exe /uninstall PROPLUS**.</li></ol></li><li>On the **General: Detection Method** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>Click Add **Clause**,<br /><br />         The **Detection Rule** dialog box appears.</li><li>In the **Detection Rule** dialog box, in **Setting Type**, select **Windows Installer**.</li><li>In **Product code**, click **Browse**<br /><br />         The **Open** dialog box appears.</li><li>In the **Open dialog** box, in **File name**, type **\\\WDGMDT01\Source$\OfficeProPlus2010\ProPlus.WW\ProPlusWW.msi**, and then click **Open**.<br /><br />         The product code for Office Professional Plus 2010 appears in the **Product code** box.</li><li>In the **Detection Rule** dialog box, click **OK**.</li></ol></li><li>On the **General: User Experience** page, perform the following steps, and then click **Next**:<br /><br /> <ol><li>In **Installation behavior**, select **Install for system**.</li><li>In **Logon requirement**, select **Whether or not a user is logged on**.</li><li>In **Installation program visibility**, select **Normal**.</li><li>In **Estimated installation time**, type **120**.</li></ol></li><li>On the **Requirements** page, click **Next**.</li><li>On the **Dependencies** page, click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.<br /><br />     The Create Application Wizard starts.</li><li>Click **Next**.</li></ol>|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the application is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1590,7 +1590,7 @@ manager: angrobe
     |**General** |Click **Next**.|  
     |**General: Content** |Click **Next**.|  
     |**General: Content Destination** |1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution** Points dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDGMDT01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the Content destination list.<br />3.  Click **Next**.|  
-    |Summary|Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |Summary|Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for distributing the application is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1624,7 +1624,7 @@ manager: angrobe
     |**Deployment Settings** |Click **Next**.|  
     |**Scheduling** |Click **Next**.|  
     |**Alerts** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for deploying the application is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -1976,7 +1976,7 @@ Figure 1. Custom wizard page to be created
     |**Select Source: Single Computer** |1.  In **Computer Name**, type **WDG-CLI-01**.<br />2.  In *MAC address*, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer, WDG-CLI-01).<br />3.  Click **Next**.|  
     |**Select Source: Data Preview** |Click **Next**.|  
     |**Select Source: Choose Target Collection** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for importing the computer is displayed.|  
     |**Confirmation** |Click **Close**.|  
 
@@ -2005,7 +2005,7 @@ Figure 1. Custom wizard page to be created
     |-|-|  
     |**General** |<ol><li>In **Name**, type **Microsoft Deployment – Batch 01**.</li><li>In **Comment**, type **Computers that are to be included in the first batch of computers deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Browse Collections** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In the **Browse Collection** dialog box, in **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
     |**Membership Rules** |<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-CLI-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-CLI-01**, and then click **Next**. **Note:**          The process for adding the target computer (WDG-CLI-01) to All Systems can take a few minutes to finish. If WDG-CLI-01 does not appear in the list, repeat steps b and c until WDGCLI01 appears.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the device collection is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -2040,7 +2040,7 @@ Figure 1. Custom wizard page to be created
     |**Deployment Settings: User Experience** |Click **Next**.|  
     |**Deployment Settings: Alerts** |Click **Next**.|  
     |**Deployment Settings: Distribution Points** |Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box that that you provided while completing the previous wizard pages, and then click **Next**.|  
+    |**Summary** |Review the information in the **Details** box  that you provided while completing the previous wizard pages, and then click **Next**.|  
     |**Progress** |The progress for creating the deploying the task sequence is displayed.|  
     |**Completion** |Click **Close**.|  
 
@@ -2086,7 +2086,7 @@ Figure 1. Custom wizard page to be created
     |**User Device Affinity** |Select the **Set primary user** check box, and then click **Next**.|  
     |**Language** |Click **Next**.|  
     |**Install Programs** |Verify that the **Microsoft Office Professional Plus 2010 – x86** check box is selected, and then click **Next**.|  
-    |Summary|Review the information that that you provided while completing the previous wizard pages, and then click **Finish**.|  
+    |Summary|Review the information  that you provided while completing the previous wizard pages, and then click **Finish**.|  
 
  **To monitor the reference computer deployment process using the Deployment Workbench**  
 

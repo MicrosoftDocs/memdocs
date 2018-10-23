@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 # SetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings
-The `SetSuppressComputerActivityInPresentationMode` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that that sets the value for `SuppressComputerActivityInPresentationMode`.   
+The `SetSuppressComputerActivityInPresentationMode` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets the value for `SuppressComputerActivityInPresentationMode`.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

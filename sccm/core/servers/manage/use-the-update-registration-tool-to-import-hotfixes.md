@@ -51,7 +51,7 @@ When you must install an out-of-band release, and the update or hotfix file name
 
     After the hotfix is registered, it appears as a new update in the console within 24 hours.  You can accelerate the process:
 
-    - Open  the Configuration Manager console and go to  to **Administration** > **Updates and Servicing**, and then click **Check for Updates**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.) 
+    - Open  the Configuration Manager console and go to **Administration** > **Updates and Servicing**, and then click **Check for Updates**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.) 
 
     The update registration tool logs its actions to a .log file on the local computer. The log file has the same name as the hotfix .exe file and is written to the **%SystemRoot%/Temp** folder.  
 

@@ -14065,7 +14065,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
  **Figure 2. Process flow for the NEWCOMPUTER.Prestaged stage**  
 
 ####  <a name="REFRESHStage"></a> REFRESH Stage  
- Figure 3 illustrates the high\-level process flow for the REFRESH stage in in a task sequence created using the User\-Driven Installation Task Sequence task sequence template.  
+ Figure 3 illustrates the high\-level process flow for the REFRESH stage in a task sequence created using the User\-Driven Installation Task Sequence task sequence template.  
 
  ![UDI Reference 3](media/UDIReference3.jpg)  
 
