@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 09/19/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,8 +20,10 @@ Update 1806 for Configuration Manager current branch is available as an in-conso
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
 
+<!--
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
+-->
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
 
@@ -41,7 +43,7 @@ The following sections provide details about the changes and new features in ver
 
 Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-***[Updated]*** As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:
@@ -88,7 +90,7 @@ For more information, see [Configuration Manager tools](/sccm/core/support/tools
 
 ### Exclude Active Directory containers from discovery
 <!--1358143-->
-***[Updated]*** To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
+To reduce the number of discovered objects, exclude specific containers from Active Directory system discovery. 
 
 For more information, see [Configure Active Directory System Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd).
 
@@ -137,7 +139,7 @@ For more information, see [Partial download support](/sccm/core/plan-design/hier
 
 ### Boundary group options for peer downloads
 <!--1356193-->
-***[Updated]*** Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
+Boundary groups now include additional settings to give you more control over content distribution in your environment. This release adds the following options:  
 
 - **Allow peer downloads in this boundary group**: The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for Delivery Optimization.  
 
@@ -148,7 +150,7 @@ For more information, see [Boundary group options for peer downloads](/sccm/core
 
 ### Improvement to peer cache source location status
 <!--SCCMDocs issue 850-->
-***[Updated]*** Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.
+Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.
 
 For more information, see [Requirements for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
@@ -173,16 +175,14 @@ Using HTTPS communication is recommended for all Configuration Manager communica
 
 This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
 
-This option supports the following primary scenarios:  
-
-- **Client to HTTP management point**<!--1356889-->: [Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
-
-- **Client to HTTP distribution point**<!--1358228-->: A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.   
+For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### Azure AD device identity 
 <!--1358460-->
 An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+
+For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### CMTrace installed with client
@@ -194,7 +194,7 @@ For more information, see [CMTrace](/sccm/core/support/cmtrace).
 
 ### Cloud management dashboard
 <!--1358461-->
-***[Updated]*** The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.   
+The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.   
 
 This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. 
 
@@ -209,13 +209,13 @@ Version 1806 includes the following improvements to the cloud management gateway
 
 #### Simplified client bootstrap command line
 <!--1358215-->
-***[Updated]*** When installing the Configuration Manager client on the internet via a CMG, the command-line now requires fewer properties. This improvement reduces the size of the command line used in Microsoft Intune when preparing for co-management. 
+When installing the Configuration Manager client on the internet via a CMG, the command-line now requires fewer properties. This improvement reduces the size of the command line used in Microsoft Intune when preparing for co-management. 
 
 For more information, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 #### Download content from a CMG
 <!--1358651-->
-***[Updated]*** Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
+Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
 
 For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
@@ -319,7 +319,7 @@ For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-app
 
 ### Package Conversion Manager 
 <!--1357861-->
-***[Updated]*** Package Conversion Manager is now an integrated tool that allows you to convert legacy packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
+Package Conversion Manager is now an integrated tool that allows you to convert legacy packages into Configuration Manager current branch applications. Then you can use features of applications such as dependencies, requirement rules, and user device affinity.
 
 For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager).
 
@@ -378,36 +378,36 @@ These task sequences can be for OS deployment or custom. It's also supported for
 
 #### Mask sensitive data stored in task sequence variables
  <!--1358330-->
- ***[Updated]*** In the **Set Task Sequence Variable** step, select the new option to **Do not display this value**. 
+ In the **Set Task Sequence Variable** step, select the new option to **Do not display this value**. 
 
  For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
 
 #### Mask program name during Run Command Step of a task sequence
  <!--1358493-->
- ***[Updated]*** To prevent potentially sensitive data from being displayed or logged, configure the task sequence variable **OSDDoNotLogCommand**.  
+ To prevent potentially sensitive data from being displayed or logged, configure the task sequence variable **OSDDoNotLogCommand**.  
 
  For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand). 
 
 #### Task sequence variable for DISM parameters when installing drivers
  <!--516679/2840016-->
- ***[Updated]*** To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. 
+ To specify additional command-line parameters for DISM, use the new task sequence variable **OSDInstallDriversAdditionalOptions**. 
 
  For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions). 
 
 #### Option to use full disk encryption
  <!--SCCMDocs-pr issue 2671-->
- ***[Updated]*** Both the **Enable BitLocker** and **Pre-provision BitLocker** steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. 
+ Both the **Enable BitLocker** and **Pre-provision BitLocker** steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. 
 
  For more information see [Enable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) and [Pre-provision BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker). 
 
 #### Client provisioning mode isn't enabled with Windows 10 upgrade compatibility scan
  <!--SCCMDocs-pr issue 2812-->
- ***[Updated]*** Now when you enable the option to **Perform Windows Setup compatibility scan without starting upgrade**, the **Upgrade Operating System** task sequence step doesn't put the Configuration Manager client into provisioning mode.
+ Now when you enable the option to **Perform Windows Setup compatibility scan without starting upgrade**, the **Upgrade Operating System** task sequence step doesn't put the Configuration Manager client into provisioning mode.
 
  For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### Revised documentation for task sequence variables
- ***[Updated]*** Two new articles are now available for understanding task sequence variables:  
+ Two new articles are now available for understanding task sequence variables:  
 
  - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
 
@@ -423,7 +423,7 @@ These task sequences can be for OS deployment or custom. It's also supported for
 
 ### Software Center infrastructure improvements
 <!--1358309-->
-***[Updated]*** Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
 
 For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)  
 
