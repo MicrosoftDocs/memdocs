@@ -35,7 +35,8 @@ Complete the steps in one of the OS deployment scenarios, and then use the secti
 
 To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
-
+> [!NOTE]  
+>  When configuring a single PXE enabled distribution point to support multiple subnets it is not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
 
 ## Prepare a PXE-enabled boot image
 
