@@ -30,7 +30,7 @@ The following components are required to use CMPivot:
 
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 
-- The Configuration Manager administrator needs the **Read** permission on the **SMS Scripts** object, and the **Run Scripts** permission on the **Collection** object. The **Scripts Runner** role has these permissions. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
+- The Configuration Manager administrator needs the **Read** permission on the **SMS Scripts** object, the **Run Scripts** permission on the **Collection**, and the default scope. The **Scripts Runner** role has these permissions. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
 
 - To gather data for the following entities, target clients require PowerShell version 5.0:  
     - Administrators
