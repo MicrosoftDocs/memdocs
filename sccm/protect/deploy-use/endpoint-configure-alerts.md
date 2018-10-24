@@ -34,12 +34,12 @@ ms.author: aaroncz
     > [!NOTE]
     >  You cannot configure alerts for user collections.
 
-4.  On the **Alerts** tab of the *<Collection Name\>***Properties** dialog box, select **View this collection in the Endpoint Protection dashboard** if you want to view details about antimalware operations for this collection in the **Monitoring** workspace of the Configuration Manager console.
+4.  On the **Alerts** tab of the _<Collection Name\>_ **Properties** dialog box, select **View this collection in the Endpoint Protection dashboard** if you want to view details about antimalware operations for this collection in the **Monitoring** workspace of the Configuration Manager console.
 
     > [!NOTE]
     >  This option is unavailable for the **All Systems** collection.
 
-5.  On the **Alerts** tab of the *<Collection Name\>***Properties** dialog box, click **Add**.
+5.  On the **Alerts** tab of the _<Collection Name\>_ **Properties** dialog box, click **Add**.
 
 6.  In the **Add New Collection Alerts** dialog box, in the **Generate an alert when these conditions apply** section, select the alerts that you want Configuration Manager to generate when the specified Endpoint Protection events occur, and then click **OK**.
 
@@ -78,7 +78,7 @@ ms.author: aaroncz
 
         -   **Interval for detection (hours):** Specify the detection interval, in hours, in which the number of malware detections must occur. Specify a number from **1** through **168**.
 
-9. Click **OK** to close the *<Collection Name\>***Properties** dialog box.  
+9. Click **OK** to close the _<Collection Name\>_ **Properties** dialog box.  
 
 ## Alert for outdated malware client
 
