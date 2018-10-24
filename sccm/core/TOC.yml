@@ -361,6 +361,8 @@
       href: plan-design/hierarchy/accounts.md
     - name: Communications between endpoints
       href: plan-design/hierarchy/communications-between-endpoints.md
+    - name: Enhanced HTTP site systems
+      href: plan-design/hierarchy/enhanced-http.md
     - name: Hierarchy maintenance tool
       href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
     - name: International support
