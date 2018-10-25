@@ -143,6 +143,8 @@ The clients use this certificate to authenticate with the CMG. Windows 10 device
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue client authentication certificates. For more information, see [Deploying the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
+The CMG connection point requires this certificate to securely forward client requests to an HTTPS management point. If you're using Azure AD or Enhanced HTTP, this certificate isn't required. For more information, see [Enable management point for HTTPS](#bkmk_mphttps).
+
 
 ### <a name="bkmk_clientroot"></a> Client trusted root certificate to CMG
 
