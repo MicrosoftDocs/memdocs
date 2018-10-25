@@ -36,4 +36,4 @@ System Center Configuration Manager supports installing the Configuration Manage
 > [!NOTE]  
 >  With the exception of Windows Embedded clients that are in servicing mode, Configuration Manager clients that are not running in virtualized environments also use this randomized delay. When you have many deployed clients, this behavior helps avoid peaks in network bandwidth and reduces the CPU processing requirement on the Configuration Manager site systems, such as the management point and site server. The delay interval varies according to the Configuration Manager capability.  
 >   
->  The randomization delay is disabled by default for required software updates and required application deployments by using the following client setting: **Computer Agent**: **Disable deadline randomization**.
+>  The randomization delay is disabled by default for required software updates by using the following client setting: **Computer Agent**: **Disable deadline randomization**.
