@@ -50,7 +50,7 @@ The following scenarios benefit from these improvements:
 ### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
 <!--1358228-->
 
-A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP.   
+A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP. These types of devices can also download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
 
 
 ### <a name="bkmk_scenario3"></a> Scenario 3 Azure AD device identity 
@@ -69,7 +69,7 @@ An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/
 
 - Onboard the site to Azure AD for cloud management.  
 
-    - If you've already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then click **Update application setting** in the ribbon.  
+    - If you've already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then select **Update application setting** in the ribbon.  
 
 - *[Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 and joined to Azure AD. 
 
@@ -77,7 +77,7 @@ An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/
 
 ## Configure the site
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and selectthe  **Sites** node. Select the site and choose **Properties** in the ribbon.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node. Select the site and choose **Properties** in the ribbon.  
 
 2. Switch to the **Client Computer Communication** tab. Select the option for **HTTPS or HTTP** and then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.  
 
@@ -86,19 +86,6 @@ An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/
 
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
-
-
-## Known issues
-
-- The user can't view in Software Center any applications targeted to them as available.  
-
-- OS deployment scenarios still require the network access account.  
-
-- Rapidly and repeatedly enabling and disabling the option to **Use Configuration Manager-generated certificates for HTTP site systems** may cause the certificate to not properly bind to the site system roles. No certificates issued by the "SMS Issuing" certificate are bound to a website in Windows Server Internet Information Services (IIS). To work around this issue, delete all certificates issued by "SMS Issuing" from the **SMS** certificate store in Windows, and then restart the smsexec service.
-
-- Don't configure the site for **HTTPS only** and **Use Configuration Manager-generated certificates for HTTP site systems**.
-
-- When enabling enhanced HTTP, existing clients automatically re-register with the site. This behavior typically occurs during the next policy polling cycle. After you enable enhanced HTTP but before clients re-register, [client notification](/sccm/core/clients/manage/collections/manage-collections#client-notification) actions don't work. The site can't verify the client message signature. This interruption shouldn't be longer than the policy cycle, which is one hour by default. <!--SCCMDocs-pr issue #2823-->
 
 
 ## Technical details
