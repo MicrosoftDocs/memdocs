@@ -43,7 +43,7 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
     - **HTTPS or HTTP**: You don't require clients to use PKI certificates.  
 
-    - **Use Configuration Manager-generated certificates for HTTP site systems**: For more information on this setting, see [Enhanced HTTP](#bkmk_ehttp).  
+    - **Use Configuration Manager-generated certificates for HTTP site systems**: For more information on this setting, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 4.  Select the settings for client computers.  
 

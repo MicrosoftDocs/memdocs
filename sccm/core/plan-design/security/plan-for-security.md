@@ -58,7 +58,7 @@ This article describes the concepts for you to consider when planning for securi
 
 ### <a name="bkmk_plan-ehttp"></a> Enhanced HTTP  
 
- Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. Starting in version 1806, you can enable the site to use **Enhanced HTTP**. This configuration supports HTTPS on site systems by using a combination of self-signed certificates and Azure AD. It doesn't require PKI. For more information, see [Enhanced HTTP](#bkmk_ehttp).  
+ Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. Starting in version 1806, you can enable the site to use **Enhanced HTTP**. This configuration supports HTTPS on site systems by using a combination of self-signed certificates and Azure AD. It doesn't require PKI. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 
 ### <a name="bkmk_plan-cmgcdp"></a> Certificates for CMG and CDP

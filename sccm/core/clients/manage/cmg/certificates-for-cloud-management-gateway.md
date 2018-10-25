@@ -198,7 +198,7 @@ Provision this certificate outside of the context of Configuration Manager. For 
 
 - Starting in version 1802, this certificate is required in all scenarios. Only management points that you enable for CMG must be HTTPS. This change in behavior provides better support for Azure AD token-based authentication.  
 
-- Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](#bkmk_ehttp).
+- Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 ### Management point client connection mode summary
 These tables summarize whether the management point requires HTTP or HTTPS, depending upon the type of client and site version.

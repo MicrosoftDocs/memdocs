@@ -52,7 +52,7 @@ To use HTTPS, configure one of the following options:
 
 - Use a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
-- Starting in version 1806, configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](#bkmk_ehttp).  
+- Starting in version 1806, configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForSigningEncryption).  
 

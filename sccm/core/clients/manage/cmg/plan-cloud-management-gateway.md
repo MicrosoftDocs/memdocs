@@ -162,7 +162,7 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
     - Starting in version 1802, you must configure all CMG-enabled [**management points to use HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
-    - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](#bkmk_ehttp).  
+    - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 
 - Integration with **Azure AD** may be required for Windows 10 clients. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
