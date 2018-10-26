@@ -33,13 +33,11 @@ Use the following information to identify the Windows groups and the accounts th
     - [Active Directory system discovery account](#active-directory-system-discovery-account)  
     - [Active Directory user discovery account](#active-directory-user-discovery-account)  
     - [Active Directory forest account](#active-directory-forest-account)  
-    - [Asset Intelligence synchronization point proxy server account](#asset-intelligence-synchronization-point-proxy-server-account)  
     - [Certificate registration point account](#certificate-registration-point-account)  
     - [Capture OS image account](#capture-os-image-account)  
     - [Client push installation account](#client-push-installation-account)  
     - [Enrollment point connection account](#enrollment-point-connection-account)  
     - [Exchange Server connection account](#exchange-server-connection-account)  
-    - [Exchange Server connector proxy server account](#exchange-server-connector-proxy-server-account)  
     - [Management point connection account](#management-point-connection-account)  
     - [Multicast connection account](#multicast-connection-account)  
     - [Network access account](#network-access-account)  
@@ -47,9 +45,9 @@ Use the following information to identify the Windows groups and the accounts th
     - [Reporting services point account](#reporting-services-point-account)  
     - [Remote tools permitted viewer accounts](#remote-tools-permitted-viewer-accounts)  
     - [Site system installation account](#site-system-installation-account)  
+    - [Site system proxy server account](#site-system-proxy-server-account)  
     - [SMTP server connection account](#smtp-server-connection-account)  
     - [Software update point connection account](#software-update-point-connection-account)  
-    - [Software update point proxy server account](#software-update-point-proxy-server-account)  
     - [Source site account](#source-site-account)  
     - [Source site database account](#source-site-database-account)  
     - [Task sequence domain join account](#task-sequence-domain-join-account)  
@@ -263,16 +261,6 @@ By default, this group has **Full control** to the following folder: `C:\Program
  For more information, see [Active Directory forest discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutForest).
 
 
-### Asset Intelligence synchronization point proxy server account  
-
- The Asset Intelligence synchronization point uses the **Asset Intelligence synchronization point proxy server account** to access the internet via a proxy server or firewall that requires authenticated access.  
-
- > [!IMPORTANT]  
- >  Specify an account that has the least possible permissions for the required proxy server or firewall.  
-
- For more information, see [Introduction to Asset Intelligence](/sccm/core/clients/manage/asset-intelligence/introduction-to-asset-intelligence) and [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).
-
-
 ### Certificate registration point account  
 
  The certificate registration point uses the **Certificate registration point account** to connect to the Configuration Manager database. It uses its computer account by default, but you can configure a user account instead. When the certificate registration point is in an untrusted domain from the site server, you must specify a user account. This account requires only **Read** access to the site database, because the state message system handles write tasks.  
@@ -329,16 +317,6 @@ By default, this group has **Full control** to the following folder: `C:\Program
 ### Exchange Server connection account  
 
  The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
-
-
-### Exchange Server connector proxy server account  
-
- The Exchange Server connector uses the **Exchange Server connector proxy server account** to access the internet via a proxy server or firewall that requires authenticated access.  
-
-> [!IMPORTANT]  
->  Specify an account that has the least possible permissions for the required proxy server or firewall.  
-
- For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync) and [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).
 
 
 ### Management point connection account  
@@ -464,6 +442,21 @@ For more information, see [Introduction to remote control](/sccm/core/clients/ma
  >  When you specify a local account on each site system to be managed, this configuration is more secure than using domain accounts. It limits the damage that attackers can do if the account is compromised. However, domain accounts are easier to manage. Consider the trade-off between security and effective administration.  
 
 
+### Site system proxy server account
+<!--SCCMDocs issue #648-->
+ The following site system roles use the **Site system proxy server account** to access the internet via a proxy server or firewall that requires authenticated access:
+
+- Asset Intelligence synchronization point
+- Exchange Server connector
+- Service connection point
+- Software update point
+
+> [!IMPORTANT]  
+>  Specify an account that has the least possible permissions for the required proxy server or firewall.  
+
+ For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).
+
+
 ### SMTP server connection account  
 
  The site server uses the **SMTP server connection account** to send email alerts when the SMTP server requires authenticated access.  
@@ -487,16 +480,6 @@ The [site system installation account](#site-system-installation-account) can in
 This account must be a local administrator on the computer where you install WSUS. It must also be part of the local **WSUS Administrators** group.  
 
 For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).
-
-
-### Software update point proxy server account  
-
- The software update point uses the **Software update point proxy server account** to access the internet via a proxy server or firewall that requires authenticated access.  
-
-> [!IMPORTANT]  
->  Specify an account that has the least possible permissions for the required proxy server or firewall.  
-
- For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).
 
 
 ### Source site account  
