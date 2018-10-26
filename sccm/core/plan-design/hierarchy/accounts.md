@@ -44,6 +44,7 @@ Use the following information to identify the Windows groups and the accounts th
     - [Package access account](#package-access-account)  
     - [Reporting services point account](#reporting-services-point-account)  
     - [Remote tools permitted viewer accounts](#remote-tools-permitted-viewer-accounts)  
+    - [Site installation account](#site-installation-account)
     - [Site system installation account](#site-system-installation-account)  
     - [Site system proxy server account](#site-system-proxy-server-account)  
     - [SMTP server connection account](#smtp-server-connection-account)  
@@ -428,6 +429,26 @@ By default, this group has **Full control** to the following folder: `C:\Program
  The accounts that you specify as **Permitted Viewers** for remote control are a list of users who are allowed to use remote tools functionality on clients.  
 
 For more information, see [Introduction to remote control](/sccm/core/clients/manage/remote-control/introduction-to-remote-control).
+
+
+### Site installation account
+<!--SCCMDocs issue #572-->
+Use a domain user account to sign in to the server where you run Configuration Manager setup and install a new site.
+
+This account requires the following rights:  
+
+- **Administrator** on the following servers:
+    - The site server  
+    - Each server that hosts the site database  
+    - Each instance of the SMS Provider for the site  
+
+- **Sysadmin** on the instance of SQL Server that hosts the site database  
+
+Configuration Manager setup automatically adds this account to the [SMS Admins](#sms-admins) group.
+
+After installation, this account is the only user with rights to the Configuration Manager console. If you need to remove this account, make sure to add its rights to another user first.
+
+When expanding a standalone site to include a central administration site, this account requires either **Full Administrator** or **Infrastructure Administrator** role-based administration rights at the standalone primary site.
 
 
 ### Site system installation account  
