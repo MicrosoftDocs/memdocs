@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 10/24/2018
+ms.date: 10/25/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -53,7 +53,7 @@ The following scenarios benefit from these improvements:
 A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP. These types of devices can also download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
 
 
-### <a name="bkmk_scenario3"></a> Scenario 3 Azure AD device identity 
+### <a name="bkmk_scenario3"></a> Scenario 3: Azure AD device identity 
 <!--1358460-->
 
 An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
@@ -86,40 +86,7 @@ An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/
 
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
-
-
-## Technical details
-
-### Client to management point communication
-
-There are two stages when a client communicates with a management point: authentication (transport) and authorization (message). This process varies depending upon the following factors: 
-- Site configuration: HTTP, HTTPS, or enhanced HTTP
-- Management point configuration: HTTPS only, or allows HTTP or HTTPS
-- Device identity
-- User identity
-
-Use the following table to understand how this process works:
-
-
-| MP type  | Client authentication  | Client authorization<br>Device identity  | Client authorization<br>User identity  |
-|----------|---------|---------|---------|
-| HTTP     | No<br>With Enhanced HTTP, the site verifies the *user* and/or *device* Azure AD token. | Location request: No<br>Client package: No<br>Registration: Yes, using one of the following methods:<br> - Anonymous (manual approval)<br> - Active Directory domain<br> - Azure AD *device* token (Enhanced HTTP) | Yes for user scenarios, using one of the following methods:<br> - Active Directory domain<br> - Azure AD *user* token (Enhanced HTTP) |
-| HTTPS    | Yes, using one of the following methods:<br> - PKI certificate<br> - Active Directory domain<br> - Azure AD *user* and/or *device* token (version 1706) | Location request: No<br>Client package: No<br>Registration: Yes, using one of the following methods:<br> - Anonymous (manual approval)<br> - Active Directory domain<br> - PKI certificate<br> - Azure AD *device* token (version 1706) | Yes for user scenarios, using one of the following methods:<br> - Active Directory domain<br> - Azure AD *user* token (version 1706) |
-
-> [!Tip]  
-> For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
-
-
-### Client to distribution point communication
-
-When a client communicates with a distribution point, it only needs to authenticate before downloading the content. Use the following table to understand how this process works:
-
-
-| DP type  | Client authentication  |
-|----------|---------|
-|HTTP (anonymous) | No |
-|HTTP      | - Windows authentication (network access account)<br> - Content access token (Enhanced HTTP) |
-|HTTPS     | - PKI certificate<br> - Windows authentication (network access account)<br> - Content access token (Enhanced HTTP) |
+For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](/sccm/core/plan-design/hierarchy/communications-between-endpoints#Planning_Client_to_Site_System).
 
 
 

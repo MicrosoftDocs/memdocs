@@ -2,7 +2,7 @@
 title: Communications between endpoints
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
-ms.date: 10/22/2018
+ms.date: 10/25/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,6 +15,23 @@ manager: dougeby
 # Communications between endpoints in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
+
+This article describes how Configuration Manager site systems and clients communicate across your network. It includes the following sections:  
+
+- [Communications between site systems in a site](#Planning_Intra-site_Com)  
+    - [Site server to distribution point](#bkmk_site2dp)  
+
+- [Communications from clients to site systems and services](#Planning_Client_to_Site_System)  
+    - [Client to management point communication](#bkmk_client2mp)  
+    - [Client to distribution point communication](#bkmk_client2dp)  
+    - [Considerations for client communications from the internet or an untrusted forest](#BKMK_clientspan)  
+    - [About internet-facing site systems](#bkmk_internetfacing)  
+
+- [Communications across Active Directory forests](#Plan_Com_X-Forest)  
+    - [Support domain computers in a forest that's not trusted by your site server's forest](#bkmk_noforesttrust)  
+    - [Support computers in a workgroup](#bkmk_workgroup)  
+    - [Scenarios to support a site or hierarchy that spans multiple domains and forests](#bkmk_span)  
+
 
 
 ##  <a name="Planning_Intra-site_Com"></a> Communications between site systems in a site  
@@ -30,7 +47,7 @@ manager: dougeby
 With the exception of communication from the site server to a distribution point, server-to-server communications in a site can occur at any time. These communications don't use mechanisms to control the network bandwidth. Because you can't control the communication between site systems, make sure that you install site system servers in locations that have fast and well-connected networks.  
 
 
-### Site server to distribution point 
+### <a name="bkmk_site2dp"></a> Site server to distribution point 
 
 To help you manage the transfer of content from the site server to distribution points, use the following strategies:  
 
@@ -57,6 +74,37 @@ To use HTTPS, configure one of the following options:
 When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForSigningEncryption).  
 
 
+### <a name="bkmk_client2mp"></a> Client to management point communication
+
+There are two stages when a client communicates with a management point: authentication (transport) and authorization (message). This process varies depending upon the following factors: 
+- Site configuration: HTTP, HTTPS, or enhanced HTTP
+- Management point configuration: HTTPS only, or allows HTTP or HTTPS
+- Device identity
+- User identity
+
+Use the following table to understand how this process works:  
+
+| MP type  | Client authentication  | Client authorization<br>Device identity  | Client authorization<br>User identity  |
+|----------|---------|---------|---------|
+| HTTP     | No<br>With Enhanced HTTP, the site verifies the *user* and/or *device* Azure AD token. | Location request: No<br>Client package: No<br>Registration: Yes, using one of the following methods:<br> - Anonymous (manual approval)<br> - Active Directory domain<br> - Azure AD *device* token (Enhanced HTTP) | Yes for user scenarios, using one of the following methods:<br> - Active Directory domain<br> - Azure AD *user* token (Enhanced HTTP) |
+| HTTPS    | Yes, using one of the following methods:<br> - PKI certificate<br> - Active Directory domain<br> - Azure AD *user* and/or *device* token (version 1706) | Location request: No<br>Client package: No<br>Registration: Yes, using one of the following methods:<br> - Anonymous (manual approval)<br> - Active Directory domain<br> - PKI certificate<br> - Azure AD *device* token (version 1706) | Yes for user scenarios, using one of the following methods:<br> - Active Directory domain<br> - Azure AD *user* token (version 1706) |
+
+> [!Tip]  
+> For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+
+
+### <a name="bkmk_client2dp"></a> Client to distribution point communication
+
+When a client communicates with a distribution point, it only needs to authenticate before downloading the content. Use the following table to understand how this process works:
+
+
+| DP type  | Client authentication  |
+|----------|---------|
+|HTTP (anonymous) | No |
+|HTTP      | - Windows authentication (network access account)<br> - Content access token (Enhanced HTTP) |
+|HTTPS     | - PKI certificate<br> - Windows authentication (network access account)<br> - Content access token (Enhanced HTTP) |
+
+
 ###  <a name="BKMK_clientspan"></a> Considerations for client communications from the internet or an untrusted forest  
 
 The following site system roles installed at primary sites support connections from clients that are in untrusted locations, such as the internet or an untrusted forest. (Secondary sites don't support client connections from untrusted locations.) 
@@ -80,7 +128,7 @@ The following site system roles installed at primary sites support connections f
 -   Cloud management gateway (requires HTTPS)
 
 
-#### About internet-facing site systems
+### <a name="bkmk_internetfacing"></a> About internet-facing site systems
 
 > [!Note]  
 > The following section is about internet-based client management scenarios. It doesn't apply to cloud management gateway scenarios. For more information, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).  
@@ -112,11 +160,10 @@ As the previous example shows, you can place internet-based site systems in the 
 
 ##  <a name="Plan_Com_X-Forest"></a> Communications across Active Directory forests  
 
-Configuration Manager supports sites and hierarchies that span Active Directory forests.  
+Configuration Manager supports sites and hierarchies that span Active Directory forests. It also supports domain computers that aren't in the same Active Directory forest as the site server, and computers that are in workgroups.  
 
-Configuration Manager also supports domain computers that aren't in the same Active Directory forest as the site server, and computers that are in workgroups:  
 
-#### Support domain computers in a forest that's not trusted by your site server's forest 
+### <a name="bkmk_noforesttrust"></a> Support domain computers in a forest that's not trusted by your site server's forest 
 
 -   Install site system roles in that untrusted forest, with the option to publish site information to that Active Directory forest  
 
@@ -127,7 +174,8 @@ When you install site system servers in an untrusted Active Directory forest, th
 > [!NOTE]  
 >  If you want to manage devices that are on the internet, you can install internet-based site system roles in your perimeter network when the site system servers are in an Active Directory forest. This scenario doesn't require two-way trust between the perimeter network and the site server's forest.  
 
-#### Support computers in a workgroup  
+
+### <a name="bkmk_workgroup"></a> Support computers in a workgroup  
 
 -   Manually approve workgroup computers when they use HTTP client connections to site system roles. Configuration Manager can't authenticate these computers by using Kerberos.  
 
@@ -246,3 +294,12 @@ To publish site information to another Active Directory forest:
 ####  <a name="bkmk_xchange"></a> Scenario 4: Put the Exchange Server connector in a remote forest  
 
 To support this scenario, make sure that name resolution works between the forests. For example, configure DNS forwards. When you configure the Exchange Server connector, specify the intranet FQDN of the Exchange Server. For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+
+
+
+## See also
+
+- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+
+- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+
