@@ -243,7 +243,7 @@ manager: dougeby
  >  The network access account is never used as the security context for running programs, installing applications, installing updates, or running task sequences. The network access account is only used to access the associated resources on the network.  
 
 
- For more information about the network access account, see [Network access account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#bkmk_NAA).  
+ For more information about the network access account, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).  
 
 
 
