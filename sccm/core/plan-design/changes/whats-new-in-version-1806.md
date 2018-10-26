@@ -2,7 +2,7 @@
 title: What's new in version 1806
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
-ms.date: 10/24/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,14 +25,12 @@ Always review the latest checklist for installing this update. For more informat
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 -->
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
 
-<!--
 The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4057517)
--->
+- [Update rollup for Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978)
 
 
 The following sections provide details about the changes and new features in version 1806 of Configuration Manager current branch.  
