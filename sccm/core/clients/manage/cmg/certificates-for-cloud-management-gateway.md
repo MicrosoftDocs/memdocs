@@ -210,10 +210,15 @@ Configure an on-premises management point to allow connections from the CMG with
 
 | Type of client   | 1706        | 1710        | 1802        | 1806        |
 |------------------|-------------|-------------|-------------|-------------|
-| Workgroup        | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | HTTP, HTTPS |
-| AD domain-joined | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | HTTP, HTTPS |
+| Workgroup        | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
+| AD domain-joined | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
 | Azure AD-joined  | HTTPS       | HTTPS       | HTTPS       | E-HTTP, HTTPS |
-| Hybrid-joined    | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP, HTTP, HTTPS |
+| Hybrid-joined    | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS |
+
+<a name="bkmk_note1"></a> 
+
+> [!Note]  
+> **Note 1**: This configuration requires the client has a [client authentication certificate](#bkmk_clientauth), and only supports device-centric scenarios.  
 
 #### For on-premises clients communicating with the on-premises management point
 Configure an on-premises management point with the following client connection mode:
@@ -225,14 +230,20 @@ Configure an on-premises management point with the following client connection m
 | Azure AD-joined  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
 | Hybrid-joined    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
 
+> [!Note]  
+> In version 1806, AD domain-joined clients support both device- and user-centric scenarios communicating with an HTTP or HTTPS management point.  
+> 
+> Azure AD-joined and hybrid-joined clients can communicate via HTTP for device-centric scenarios, but need E-HTTP or HTTPS to enable user-centric scenarios. Otherwise they behave the same as workgroup clients.  
+
+
 #### Legend of terms
-- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a client authentication certificate
-- *AD domain-joined*: You join the device to an on-premises Active Directory domain
-- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure Active Directory tenant
-- *Hybrid-joined*: You join the device to both an Active Directory domain and an Azure AD tenant
-- *HTTP*: On the management point properties, you set the client connections to **HTTP**
-- *HTTPS*: On the management point properties, you set the client connections to **HTTPS**
-- *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP or HTTPS. 
+- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#bkmk_clientauth)  
+- *AD domain-joined*: You join the device to an on-premises Active Directory domain  
+- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure Active Directory tenant  
+- *Hybrid-joined*: You join the device to both an Active Directory domain and an Azure AD tenant  
+- *HTTP*: On the management point properties, you set the client connections to **HTTP**  
+- *HTTPS*: On the management point properties, you set the client connections to **HTTPS**  
+- *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP or HTTPS.  
 
 
 

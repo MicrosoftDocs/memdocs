@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 10/25/2018
+ms.date: 10/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,12 +25,14 @@ Microsoft recommends using HTTPS communication for all Configuration Manager com
 
 Configuration Manager version 1806 includes improvements to how clients communicate with site systems. There are two primary goals for these improvements:  
 
-- You can secure client communication without the need for PKI server authentication certificates.  
+- You can secure sensitive client communication without the need for PKI server authentication certificates.  
 
-- Clients can securely access content from distribution points without the need for a network access account.  
+- Clients can securely access content from distribution points without the need for a network access account, client PKI certificate, and Windows authentication.  
 
 > [!Note]  
-> PKI certificates are still a valid option for customers that want to use it.  
+> PKI certificates are still a valid option for customers with the following requirements:   
+> - All client communication is over HTTPS  
+> - Advanced control of the signing infrastructure  
 
 
 ## <a name="bkmk_scenario"></a> Scenarios
@@ -41,16 +43,16 @@ The following scenarios benefit from these improvements:
 ### <a name="bkmk_scenario1"></a> Scenario 1: Client to management point
 <!--1356889-->
 
-[Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
+[Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for Azure AD-joined clients communicating through a cloud management gateway. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
 
 ### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
 <!--1358228-->
 
-A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP. These types of devices can also download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
+A workgroup or Azure AD-joined client can authenticate and download content over a secure channel from a distribution point configured for HTTP. These types of devices can also authenticate and download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
 
 This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).<!--1358278-->
 
@@ -58,7 +60,7 @@ This behavior includes OS deployment scenarios with a task sequence running from
 ### <a name="bkmk_scenario3"></a> Scenario 3: Azure AD device identity 
 <!--1358460-->
 
-An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)  
 
 
 ## Prerequisites  
@@ -66,8 +68,6 @@ An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/
 - A management point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties.  
 
 - A distribution point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties. Don't enable the option to **Allow clients to connect anonymously**.  
-
-- A cloud management gateway.  
 
 - Onboard the site to Azure AD for cloud management.  
 

@@ -79,15 +79,15 @@ When you deploy a site system role that uses Internet Information Services (IIS)
 There are two stages when a client communicates with a management point: authentication (transport) and authorization (message). This process varies depending upon the following factors: 
 - Site configuration: HTTP, HTTPS, or enhanced HTTP
 - Management point configuration: HTTPS only, or allows HTTP or HTTPS
-- Device identity
-- User identity
+- Device identity for device-centric scenarios
+- User identity for user-centric scenarios
 
 Use the following table to understand how this process works:  
 
 | MP type  | Client authentication  | Client authorization<br>Device identity  | Client authorization<br>User identity  |
 |----------|---------|---------|---------|
-| HTTP     | No<br>With Enhanced HTTP, the site verifies the *user* and/or *device* Azure AD token. | Location request: No<br>Client package: No<br>Registration: Yes, using one of the following methods:<br> - Anonymous (manual approval)<br> - Active Directory domain<br> - Azure AD *device* token (Enhanced HTTP) | Yes for user scenarios, using one of the following methods:<br> - Active Directory domain<br> - Azure AD *user* token (Enhanced HTTP) |
-| HTTPS    | Yes, using one of the following methods:<br> - PKI certificate<br> - Active Directory domain<br> - Azure AD *user* and/or *device* token (version 1706) | Location request: No<br>Client package: No<br>Registration: Yes, using one of the following methods:<br> - Anonymous (manual approval)<br> - Active Directory domain<br> - PKI certificate<br> - Azure AD *device* token (version 1706) | Yes for user scenarios, using one of the following methods:<br> - Active Directory domain<br> - Azure AD *user* token (version 1706) |
+| HTTP     | Anonymous<br>With Enhanced HTTP, the site verifies the Azure AD *user* or *device* token. | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - Azure AD *device* token (Enhanced HTTP)<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Azure AD *user* token (Enhanced HTTP) |
+| HTTPS    | Using one of the following methods:<br> - PKI certificate<br> - Windows-integrated authentication<br> - Azure AD *user* or *device* token | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - PKI certificate<br> - Azure AD *user* or *device* token<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Azure AD *user* token |
 
 > [!Tip]  
 > For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
@@ -100,9 +100,8 @@ When a client communicates with a distribution point, it only needs to authentic
 
 | DP type  | Client authentication  |
 |----------|---------|
-|HTTP (anonymous) | No |
-|HTTP      | - Windows authentication (network access account)<br> - Content access token (Enhanced HTTP) |
-|HTTPS     | - PKI certificate<br> - Windows authentication (network access account)<br> - Content access token (Enhanced HTTP) |
+| HTTP     | - Anonymous, if allowed<br>- Windows-integrated authentication with computer account or network access account<br> - Content access token (Enhanced HTTP) |
+| HTTPS    | - PKI certificate<br> - Windows-integrated authentication with computer account or network access account<br> - Content access token |
 
 
 ###  <a name="BKMK_clientspan"></a> Considerations for client communications from the internet or an untrusted forest  
