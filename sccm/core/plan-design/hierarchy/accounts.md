@@ -351,7 +351,12 @@ By default, this group has **Full control** to the following folder: `C:\Program
 
  A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account. It continues to try using the network access account, even if it has previously failed.  
 
-<!--Starting in version 1806...-->
+ Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358228,1358278-->
+
+ > [!Note]  
+ > If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2008 R2 SP1 or later. <!--SCCMDocs-pr issue #2696-->
+>  
+> Upgrade clients to at least version 1806 before enabling this functionality. If you only allow **Enhanced HTTP** connections, older clients can't authenticate using this method, so can't download the client upgrade package from a distribution point. <!--vso2841213-->   
 
 #### Permissions
 

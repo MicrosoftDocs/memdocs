@@ -52,6 +52,8 @@ The following scenarios benefit from these improvements:
 
 A workgroup or Azure AD-joined client can download content over a secure channel from a distribution point configured for HTTP. These types of devices can also download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
 
+This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).<!--1358278-->
+
 
 ### <a name="bkmk_scenario3"></a> Scenario 3: Azure AD device identity 
 <!--1358460-->

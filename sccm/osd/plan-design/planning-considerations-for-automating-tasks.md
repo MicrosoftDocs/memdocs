@@ -2,7 +2,7 @@
 title: Plan for automating tasks
 titleSuffix: Configuration Manager
 description: Plan before you create task sequences to automate tasks with Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 10/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -232,7 +232,17 @@ manager: dougeby
 
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> Task sequences and the network access account  
 
- Although task sequences run only in the context of the Local System account, you might need to configure the [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access) in the following circumstances:  
+ > [!Note]  
+ > Starting in version 1806, when you enable **Enhanced HTTP**, the following scenarios don't require a network access account to download content from a distribution point:
+ >  
+ > - Task sequences running from boot media or PXE  
+ > - Task sequences running from Software Center  
+ > 
+ > These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
+ > 
+ > For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358278-->  
+
+ Although task sequences run only in the context of the Local System account, you might need to configure the [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account) in the following circumstances:  
 
  - If the task sequence tries to access Configuration Manager content on distribution points. Correctly configure the network access account, or the task sequence will fail.   
 
