@@ -371,6 +371,8 @@ The [Enhanced HTTP site system](#bkmk_ehttp) feature also removes some dependenc
 
 These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
 
+For more information, see [Task sequences and the network access account](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSNetworkAccessAccount).
+
 
 ### Other improvements to OS deployment
 
