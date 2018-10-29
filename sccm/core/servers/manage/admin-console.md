@@ -111,5 +111,5 @@ In Configuration Manager version 1806, the following console improvements are ad
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Accessibility Features](/sccm/core/understand/accessibility-features.md)
+> [Accessibility Features](../../understand/accessibility-features.md)
 
