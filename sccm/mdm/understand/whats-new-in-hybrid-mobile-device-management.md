@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 10/18/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -46,14 +46,30 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
+#### Updates for Application Transport Security 
+<!--748318-->
+Microsoft Intune supports Transport Layer Security (TLS) 1.2+ to provide best-in-class encryption, to ensure Intune is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. In order to meet this requirement, the iOS and macOS company portals will enforce Apple's updated Application Transport Security (ATS) requirements which also require TLS 1.2+. ATS is used to enforce stricter security on all app communications over HTTPS. This change impacts Intune customers using the iOS and macOS Company Portal apps. For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
+
+#### Remove an email profile from a device, even when there's only one email profile 
+<!--1818139-->
+Previously, you couldn't remove an email profile from a device if it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
+
+For more information, see [Add email settings to devices using Intune](https://docs.microsoft.com/intune/email-settings-configure) for details.
+
+#### Remove PKCS and SCEP certificates from your devices 
+<!--3218390-->
+In some scenarios, PKCS and SCEP certificates remained on devices, even when removing a policy from a group, deleting a configuration or compliance deployment, or an admin updating an existing SCEP or PKCS profile. 
+
+This update changes the behavior. There are some scenarios where PKCS and SCEP certificates are removed from devices, and some scenarios where these certificates remain on the device. 
+
+For more information, see [Remove SCEP and PKCS certificates in Microsoft Intune](https://docs.microsoft.com/intune/remove-certificates).
+
 #### Access to key profile properties using the company portal app
 <!--772203-->  
-
 End users can now access key account properties and actions, such as password reset, from the Company Portal app. 
 
 #### PIN prompt when you change fingerprints or face ID on an iOS device  
 <!--2637704-->  
-
 Users are now prompted for a PIN after making biometric changes on their iOS device. This includes changes to registered fingerprints or face ID. The timing of the prompt depends on how the configuration of the *Recheck access requirements after (minutes)* timeout.  When no PIN is set, the user is prompted to set one.  
 
 This feature is only available for iOS, and requires the participation of applications that integrate the Intune APP SDK for iOS, version 8.1.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Yammer.
@@ -594,7 +610,7 @@ Check for devices or users that are affected in your organization. In Intune in 
 
 
 ### Plan for change: Intune moving to TLS 1.2
-
+<!--748318-->
 Starting on October 31, 2018, Intune will support Transport Layer Security (TLS) protocol version 1.2 to provide best-in-class encryption, to ensure our service is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. Office communicated this change in MC128929.
 
 #### How does this change affect me?
