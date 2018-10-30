@@ -54,15 +54,11 @@ Microsoft Intune supports Transport Layer Security (TLS) 1.2+ to provide best-in
 <!--1818139-->
 Previously, you couldn't remove an email profile from a device if it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
 
-For more information, see [Add email settings to devices using Intune](https://docs.microsoft.com/intune/email-settings-configure) for details.
-
 #### Remove PKCS and SCEP certificates from your devices 
 <!--3218390-->
 In some scenarios, PKCS and SCEP certificates remained on devices, even when removing a policy from a group, deleting a configuration or compliance deployment, or an admin updating an existing SCEP or PKCS profile. 
 
 This update changes the behavior. There are some scenarios where PKCS and SCEP certificates are removed from devices, and some scenarios where these certificates remain on the device. 
-
-For more information, see [Remove SCEP and PKCS certificates in Microsoft Intune](https://docs.microsoft.com/intune/remove-certificates).
 
 #### Access to key profile properties using the company portal app
 <!--772203-->  
@@ -607,23 +603,6 @@ Starting in July, MDM-enrolled devices with both iOS 9 and the Company Portal wi
 #### What do I need to do to prepare for this change?
 
 Check for devices or users that are affected in your organization. In Intune in the Azure portal, go to **Devices** > **All devices**, and filter by **OS**.  Click **Columns** to surface details such as OS version. Request that your users upgrade their devices to a supported OS version before September.
-
-
-### Plan for change: Intune moving to TLS 1.2
-<!--748318-->
-Starting on October 31, 2018, Intune will support Transport Layer Security (TLS) protocol version 1.2 to provide best-in-class encryption, to ensure our service is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. Office communicated this change in MC128929.
-
-#### How does this change affect me?
-
-As of October 31, 2018, Intune will no longer support TLS protocol versions 1.0 or 1.1. All client-server and browser-server combinations should use TLS version 1.2 to ensure connection without issues to Intune. This change impacts end-user devices that aren't supported by Intune but are still receiving policy through Intune, and that can't use TLS version 1.2. These devices include those running Android 4.3 and earlier. For a list of affected devices and browsers, see the link below.
-
-After October 31, 2018, if you experience an issue related to the use of an old TLS version, update to TLS 1.2 or to a device that supports TLS 1.2 as part of the resolution.
-
-#### What do I need to do to prepare for this change?
-
-We recommend that you proactively remove TLS 1.0 and 1.1 dependencies in your environments and disable TLS 1.0 and 1.1 at the operating system level where possible. Begin planning your migration to TLS 1.2 today. Check the support blog post below for the list of devices that are not supported by Intune today but might still be receiving policy, and that won't be able to communicate using TLS version 1.2. You might need to notify those end users that they'll lose access to corporate resources.
-
-For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
 
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 
