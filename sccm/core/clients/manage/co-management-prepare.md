@@ -64,7 +64,7 @@ For more information about Azure roles, see [Understand the different roles](htt
 
 - Windows 10, version 1709 or later  
 
-- [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (joined to AD and Azure AD)  
+- [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (joined to AD and Azure AD) or Azure AD-joined only (this type is sometimes referred to as "cloud domain-joined").
 
 
 ### Additional prerequisites for devices without the Configuration Manager client
