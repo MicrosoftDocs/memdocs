@@ -274,6 +274,11 @@
             "source_path": "sccm/develop/reference/core/clients/deploy/sms_clientbaseline-sever-wmi-class.md",
             "redirect_url": "/sccm/develop/reference/core/clients/deploy/sms_clientbaseline-server-wmi-class",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/plan-design/hierarchy/manage-accounts-to-access-content.md",
+            "redirect_url": "/sccm/core/plan-design/hierarchy/accounts",
+            "redirect_document_id": false
         }
     ]
 }
