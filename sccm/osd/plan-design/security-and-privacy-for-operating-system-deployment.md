@@ -64,7 +64,7 @@ This article contains security and privacy information for the OS deployment fea
 
 ### Enable distribution points for PXE client communication only on secure network segments
 
- When a client sends a PXE boot request, you have no way to make sure that the request is serviced by a valid PXE-enabled distribution point. This scenario has the following security risks:  
+When a client sends a PXE boot request, you have no way to make sure that the request is serviced by a valid PXE-enabled distribution point. This scenario has the following security risks:  
 
  - A rogue distribution point that responds to PXE requests could provide a tampered image to clients.  
 
@@ -72,10 +72,10 @@ This article contains security and privacy information for the OS deployment fea
 
  - An attacker could use a malicious client to launch a denial of service attack against the distribution point.  
 
- Use defense in depth to protect the network segments where clients access PXE-enabled distribution points.  
+Use defense in depth to protect the network segments where clients access PXE-enabled distribution points.  
 
- > [!WARNING]  
- >  Because of these security risks, don't enable a distribution point for PXE communication when it's in an untrusted network, such as a perimeter network.  
+> [!WARNING]  
+>  Because of these security risks, don't enable a distribution point for PXE communication when it's in an untrusted network, such as a perimeter network.  
 
 
 ### Configure PXE-enabled distribution points to respond to PXE requests only on specified network interfaces  
