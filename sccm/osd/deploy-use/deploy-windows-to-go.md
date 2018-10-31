@@ -1,5 +1,5 @@
 ---
-title: Deploy Windows to Go
+title: Deploy Windows To Go
 titleSuffix: Configuration Manager
 description: Learn how to provision Windows To Go in System Center Configuration Manager to create a Windows To Go workspace that boots from an external drive.
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 
 ---
-# Deploy Windows to Go with System Center Configuration Manager
+# Deploy Windows To Go with System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -146,7 +146,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the boot image. The wizard retrieves the boot image from the distribution point and writes it to the media.  
 
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
+        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Package access account](/sccm/core/plan-design/hierarchy/accounts#package-access-account).  
 
     -   If you selected **Site-based media** on the **Media Management** page of this wizard, in the **Management point** box, specify a management point from a primary site.  
 
@@ -161,7 +161,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the operating system image package. The wizard retrieves the operating system image from the distribution point and writes it to the media.  
 
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
+        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Package access account](/sccm/core/plan-design/hierarchy/accounts#package-access-account).  
 
 11. On the **Select Application** page, select application content to include in the media file, and then click **Next**.  
 

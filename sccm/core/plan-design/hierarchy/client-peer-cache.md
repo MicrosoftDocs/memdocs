@@ -90,7 +90,7 @@ When the peer cache source rejects a request for the content, the peer cache cli
 
 - Clients can only download content from peer cache sources in their current boundary group.  
 
-- A [network access account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) isn't required with the following exception:  
+- A [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account) isn't required with the following exception:  
 
     - Configure a network access account in the site when a peer cache-enabled client runs a task sequence from Software Center, and it reboots to a boot image. When the device is in Windows PE, it uses the network access account to get content from the peer cache source.  
 
