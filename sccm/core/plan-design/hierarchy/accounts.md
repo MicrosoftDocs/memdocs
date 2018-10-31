@@ -344,12 +344,12 @@ By default, this group has **Full control** to the following folder: `C:\Program
 
 ### Network access account  
 
- Client computers use the **network access account** when they can't use their local computer account to access content on distribution points or peers. It mostly applies to workgroup clients and computers from untrusted domains. This account is also used during OS deployment, when the computer that's installing the OS doesn't yet have a computer account on the domain.  
+ Client computers use the **network access account** when they can't use their local computer account to access content on distribution points. It mostly applies to workgroup clients and computers from untrusted domains. This account is also used during OS deployment, when the computer that's installing the OS doesn't yet have a computer account on the domain.  
 
 > [!Important]  
 >  The network access account is never used as the security context to run programs, install software updates, or run task sequences. It's used only for accessing resources on the network.  
 
- A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account. It continues to try using the network access account, even if it has previously failed.  
+ A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.  
 
  Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358228,1358278-->
 
@@ -360,7 +360,7 @@ By default, this group has **Full control** to the following folder: `C:\Program
 
 #### Permissions
 
- Grant this account the minimum appropriate permissions on the content that the client requires to access the software. The account must have the **Access this computer from the network** right on the distribution point or peer that stores the package content. You can configure up to 10 network access accounts per site.  
+ Grant this account the minimum appropriate permissions on the content that the client requires to access the software. The account must have the **Access this computer from the network** right on the distribution point. You can configure up to 10 network access accounts per site.  
 
  Create the account in any domain that provides the necessary access to resources. The network access account must always include a domain name. Pass-through security isn't supported for this account. If you have distribution points in multiple domains, create the account in a trusted domain.  
 

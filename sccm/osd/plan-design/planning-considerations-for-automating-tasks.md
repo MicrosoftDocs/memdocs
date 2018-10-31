@@ -232,15 +232,8 @@ manager: dougeby
 
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> Task sequences and the network access account  
 
- > [!Note]  
- > Starting in version 1806, when you enable **Enhanced HTTP**, the following scenarios don't require a network access account to download content from a distribution point:
- >  
- > - Task sequences running from boot media or PXE  
- > - Task sequences running from Software Center  
- > 
- > These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
- > 
- > For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358278-->  
+> [!Important]  
+> Starting in version 1806, some OS deployment scenarios don't require use of the network access account. For more information, see [Enhanced HTTP](#enhanced-http).
 
  Although task sequences run only in the context of the Local System account, you might need to configure the [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account) in the following circumstances:  
 
@@ -254,6 +247,29 @@ manager: dougeby
 
 
  For more information about the network access account, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).  
+
+
+### Enhanced HTTP
+<!--1358278-->
+
+ Starting in version 1806, when you enable **Enhanced HTTP**, the following scenarios don't require a network access account to download content from a distribution point:
+  
+ - Task sequences running from boot media or PXE  
+ - Task sequences running from Software Center  
+
+ These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
+ 
+ For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
+
+ > [!Note]  
+ > The following OS deployment scenarios still require the use of a network access account:
+ >  
+ > - The task sequence [deployment option](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS), **Access content directly from a distribution point when needed by the running task sequence**   
+ > - The [Request State Store](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore) step option, **If computer account fails to connect to a state store, use the network access account** 
+ > - When connecting with an untrusted domain or across Active Directory forests 
+ > - The [Apply OS Image](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage) step option, **Access content directly from the distribution point** 
+ > - The task sequence [advanced setting](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) to **Run another program first** 
+ > - [Multicast](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
 
 
 
