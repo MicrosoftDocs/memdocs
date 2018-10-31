@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 10/18/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -46,14 +46,26 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
+#### Updates for Application Transport Security 
+<!--748318-->
+Microsoft Intune supports Transport Layer Security (TLS) 1.2+ to provide best-in-class encryption, to ensure Intune is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. In order to meet this requirement, the iOS and macOS company portals will enforce Apple's updated Application Transport Security (ATS) requirements which also require TLS 1.2+. ATS is used to enforce stricter security on all app communications over HTTPS. This change impacts Intune customers using the iOS and macOS Company Portal apps. For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
+
+#### Remove an email profile from a device, even when there's only one email profile 
+<!--1818139-->
+Previously, you couldn't remove an email profile from a device if it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
+
+#### Remove PKCS and SCEP certificates from your devices 
+<!--3218390-->
+In some scenarios, PKCS and SCEP certificates remained on devices, even when removing a policy from a group, deleting a configuration or compliance deployment, or an admin updating an existing SCEP or PKCS profile. 
+
+This update changes the behavior. There are some scenarios where PKCS and SCEP certificates are removed from devices, and some scenarios where these certificates remain on the device. 
+
 #### Access to key profile properties using the company portal app
 <!--772203-->  
-
 End users can now access key account properties and actions, such as password reset, from the Company Portal app. 
 
 #### PIN prompt when you change fingerprints or face ID on an iOS device  
 <!--2637704-->  
-
 Users are now prompted for a PIN after making biometric changes on their iOS device. This includes changes to registered fingerprints or face ID. The timing of the prompt depends on how the configuration of the *Recheck access requirements after (minutes)* timeout.  When no PIN is set, the user is prompted to set one.  
 
 This feature is only available for iOS, and requires the participation of applications that integrate the Intune APP SDK for iOS, version 8.1.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Yammer.
@@ -591,23 +603,6 @@ Starting in July, MDM-enrolled devices with both iOS 9 and the Company Portal wi
 #### What do I need to do to prepare for this change?
 
 Check for devices or users that are affected in your organization. In Intune in the Azure portal, go to **Devices** > **All devices**, and filter by **OS**.  Click **Columns** to surface details such as OS version. Request that your users upgrade their devices to a supported OS version before September.
-
-
-### Plan for change: Intune moving to TLS 1.2
-
-Starting on October 31, 2018, Intune will support Transport Layer Security (TLS) protocol version 1.2 to provide best-in-class encryption, to ensure our service is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. Office communicated this change in MC128929.
-
-#### How does this change affect me?
-
-As of October 31, 2018, Intune will no longer support TLS protocol versions 1.0 or 1.1. All client-server and browser-server combinations should use TLS version 1.2 to ensure connection without issues to Intune. This change impacts end-user devices that aren't supported by Intune but are still receiving policy through Intune, and that can't use TLS version 1.2. These devices include those running Android 4.3 and earlier. For a list of affected devices and browsers, see the link below.
-
-After October 31, 2018, if you experience an issue related to the use of an old TLS version, update to TLS 1.2 or to a device that supports TLS 1.2 as part of the resolution.
-
-#### What do I need to do to prepare for this change?
-
-We recommend that you proactively remove TLS 1.0 and 1.1 dependencies in your environments and disable TLS 1.0 and 1.1 at the operating system level where possible. Begin planning your migration to TLS 1.2 today. Check the support blog post below for the list of devices that are not supported by Intune today but might still be receiving policy, and that won't be able to communicate using TLS version 1.2. You might need to notify those end users that they'll lose access to corporate resources.
-
-For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
 
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 

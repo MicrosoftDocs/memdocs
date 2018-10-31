@@ -132,8 +132,6 @@
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
-      - name: Manage accounts to access content
-        href: plan-design/hierarchy/manage-accounts-to-access-content.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager
@@ -361,6 +359,8 @@
       href: plan-design/hierarchy/accounts.md
     - name: Communications between endpoints
       href: plan-design/hierarchy/communications-between-endpoints.md
+    - name: Enhanced HTTP site systems
+      href: plan-design/hierarchy/enhanced-http.md
     - name: Hierarchy maintenance tool
       href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
     - name: International support
