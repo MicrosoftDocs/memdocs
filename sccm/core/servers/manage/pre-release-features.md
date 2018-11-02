@@ -2,7 +2,7 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the Current Branch for early testing in a production environment.
-ms.date: 10/24/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -70,25 +70,27 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
-| Enhanced HTTP site system<!--1356889,1358228-->|[Version 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![Not yet](media/red_x.png)|
-| Mobile apps for co-managed devices<!--1357892-->|[Version 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Not yet](media/red_x.png)|
-| Package Conversion Manager<!--1357861-->|[Version 1806](/sccm/apps/pcm/package-conversion-manager)|![Not yet](media/red_x.png)|
-| Support for Cisco AnyConnect 4.0.07x and later for iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Version 1802 with update 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |
-| Phased Deployments<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[Version 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
-| Run Task Sequence Step <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
-| Windows Defender Exploit Guard <!-- 1355468 --> |  [Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[Version 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
-| Device Health Attestation assessment for conditional access compliance policies <!-- 1235616 --> |  [Version 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[Version 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
-| Create and run PowerShell scripts from the Configuration Manager console <!-- 1236459 --> |  [Version 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[Version 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
-| Manage Microsoft Surface driver updates <!-- 1098490 --> |  [Version 1706](/sccm/sum/get-started/configure-classifications-and-products) | [Version 1710](/sccm/sum/get-started/configure-classifications-and-products)|
-| Device Guard management with Configuration Manager <!-- 1319346 --> |  [Version 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![Not yet](media/red_x.png)|
-| Task sequence content pre-caching <!-- 1021244 --> |  [Version 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [Version 1710](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
-| Check for running executable files before installing an application <!-- 1284624 --> |   [Version 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[Version 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
-| Data Warehouse service point <!-- 1277922 --> |  [Version 1702](/sccm/core/servers/manage/data-warehouse) |[Version 1706](/sccm/core/servers/manage/data-warehouse)|
-| Peer Cache for content distribution to clients <!-- 1101436 --> |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [Version 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| Cloud management gateway <!-- 1101764 --> |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[Version 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Log Analytics Connector <!-- 1236739 --> | [Version 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[Version 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
-| Servicing a cluster aware collection (service a server group) <!-- 1081776 --> | [Version 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![Not yet](media/red_x.png)|
-| Conditional access for PCs managed by System Center Configuration Manager <!--  --> | [Version 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [Version 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+| SMS Provider API <!--1359052--> | Version 1810 | ![Not yet](media/red_x.png) |
+| [Enhanced HTTP site system](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
+| [Mobile apps for co-managed devices](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | Version 1806 | ![Not yet](media/red_x.png) |
+| [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
+| [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>with update 4163547 |
+| [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |
+| [Run task sequence step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
+| [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
+| [Device health attestation assessment for conditional access compliance policies](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Version 1710 | Version 1802 |
+| [Create and run Windows PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Version 1706 | Version 1802 |
+| [Manage Microsoft Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | Version 1706 | Version 1710 |
+| [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | Version 1702 | ![Not yet](media/red_x.png) |
+| [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | Version 1702 | Version 1710 |
+| [Check for running executable files before installing an application](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | Version 1702 | Version 1706 |
+| [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | Version 1702 | Version 1706 |
+| [Peer cache for content distribution to clients](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Version 1610 | Version 1710 |
+| [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |
+| [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | Version 1606 | Version 1802 |
+| [Servicing a cluster-aware collection (service a server group)](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | Version 1602 | ![Not yet](media/red_x.png) |
+| [Conditional access for PCs managed by Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | Version 1602 | Version 1702 |
+
 <!--Image used = ![Not yet](media/red_x.png) -->
 
 > [!Tip]  

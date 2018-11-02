@@ -2,7 +2,7 @@
 title: Current branch versions
 titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Support for Configuration Manager current branch versions
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -27,8 +28,8 @@ Figure 1. Example of the release cycle overlap for current branch servicing supp
 > [!NOTE]  
 >  The latest current branch version is always in the **Security and Critical Updates** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates.
 > - For versions 1710 and later, all support ends after the 18-month lifecycle for a current branch version has expired.
-> - For versions prior to 1710, support ends after the 12-month lifecycle expires.
-
+> - For versions 1706 and earlier, support ends after the 12-month lifecycle expires.
+> 
 > Update your Configuration Manager environment to the latest version before support for your current version expires.
 
 For a list of the current branch versions, see [Version details](/sccm/core/servers/manage/updates#version-details).

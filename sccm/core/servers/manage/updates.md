@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 07/31/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,20 +20,6 @@ Configuration Manager uses an in-console service method called **Updates and Ser
 
 > [!TIP]  
 > The terms *upgrade*, *update*, and *install* are used to describe three separate concepts in Configuration Manager. For more information about how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).  
-
-
-The following articles can help you understand how to find and install the different update types for Configuration Manager:  
-
--   [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates)  
-
--   [Use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool)  
-
--   [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
--   [Use the hotfix installer to install updates](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
-
-
-For more information about the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).
 
 
 
@@ -65,35 +51,40 @@ When you install an update, the update stores installation files for that versio
 
 Some updates for Configuration Manager are available as both an in-console update version for existing infrastructure, and as a new baseline version.  
 
+#### Supported versions
 The following supported versions of Configuration Manager are currently available as a baseline, an update, or both:  
 
 | Version | Availability date | [Support end date](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8735.1000 | November 16, 2018 | May 16, 2020 | No | Yes |
 | [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | July 31, 2018 | January 31, 2020 | No | Yes |
-| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes<sup>**1**</sup> | Yes |
+| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | March 22, 2018 | September 22, 2019 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | November 20, 2017 | May 20, 2019 | No | Yes |
-| [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | July 31, 2017 | July 31, 2018 | No | Yes |
+
+<a name="bkmk_note1"></a> 
 
 > [!Note]  
-> <sup>**1**</sup> The 1802 baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
+> <sup>**Note 1:**</sup> The 1802 baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 > - System Center Config Mgr (current branch)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
 > 
 > For example, search the VLSC for `System Center Config Mgr (current branch)`. Find the 1802 baseline media in the list of files, and download for that release.  
 
+#### Historical versions
 The following table lists historical versions of Configuration Manager current branch that are out of support:
 
 | Version | Availability date | Support end date | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| 1706 <br /><br /> 5.00.8540.1000 | July 31, 2017 | July 31, 2018 | No | Yes |
 | 1702 <br /><br /> 5.00.8498.1000 | March 27, 2017 | March 27, 2018 | Yes | Yes |
 | 1610 <br /><br /> 5.00.8458.1000 | November 18, 2016 | November 18, 2017 | No | Yes |
 | 1606 <br /><br /> 5.00.8412.1000 | July 22, 2016 | July 22, 2017 | No | Yes |
-| 1606 with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 | October 12, 2016 | October 12, 2017 | Yes | No |
+| 1606 with the 1606 hotfix rollup (KB3186654) <br><br>5.00.8412.1307 | October 12, 2016 | October 12, 2017 | Yes | No |
 | 1602<br /><br /> 5.00.8355.1000 | March 11, 2016 | March 11, 2017 | No | Yes |
 | 1511 <br /><br /> 5.00.8325.1000 | December 8, 2015 | December 8, 2016 | Yes | No |  
 
-
+#### How to check the version
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console. This dialog displays the site and console versions.  
 
  > [!Note]  
@@ -107,7 +98,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:  
 
--   New versions, like version 1710, 1802, or 1806.  
+-   New versions, like version 1802, 1806, or 1810.  
 
 -   Updates that include new features for your current version.
 
@@ -177,3 +168,20 @@ This method is used for fixes that use the following file name structure:
    `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 For more information, see [Use the hotfix installer to install updates](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  
+
+
+
+## Next steps
+
+The following articles can help you understand how to find and install the different update types for Configuration Manager:  
+
+-   [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates)  
+
+-   [Use the service connection tool](/sccm/core/servers/manage/use-the-service-connection-tool)  
+
+-   [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+-   [Use the hotfix installer to install updates](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
+
+
+For more information about the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).
