@@ -185,6 +185,17 @@ Configure email notifications for application approval requests. When a user req
 <!--For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).-->
 
 
+### Detection methods don't load Windows PowerShell profiles
+<!--1359239-->
+You can use Windows PowerShell scripts for detection methods on applications, as well as in compliance settings. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
+
+A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start. 
+
+> [!Note]  
+> This change in behavior doesn't apply to [Scripts](/sccm/apps/deploy-use/create-deploy-scripts).  
+
+<!--For more information, see []().-->
+
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -306,7 +317,9 @@ For more information on additional performance and troubleshooting improvements 
 
 ### <a name="bkmk_scripts"></a> Improvements to scripts
 <!--1358239-->
-The following performance and troubleshooting improvements apply to both CMPivot and Scripts:
+You can now view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. 
+
+The following performance and troubleshooting improvements apply to both CMPivot and scripts:
 
 - Updated clients return output less than 80 KB to the site over a fast communication channel. This change increases the performance of viewing script or query output.  
 

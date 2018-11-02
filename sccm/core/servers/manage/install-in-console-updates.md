@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 08/22/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -100,11 +100,11 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
+
 - [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 - [Checklist for installing update 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-- [Checklist for installing update 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710)  
 
 
 ###  <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
@@ -362,11 +362,11 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
+
 - [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
 - [Post-update checklist for version 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
-
-- [Post-update checklist for version 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 
@@ -394,23 +394,23 @@ The following features are optional in the latest version of Configuration Manag
 
 -->
 
-- [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)<!--1128774-->
+- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
 - [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
 - [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 - [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
-- [Device Health Attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
+- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
 - [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
-- [Run Task Sequence Step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
-- [Task Sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
-- [Surface Driver Updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
-- [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
+- [Run task sequence step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
 - [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
-- [Client Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
-- [PFX Create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Azure Log Analytics Connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
+- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
+- [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
 - [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (also known as *Windows Hello for Business*) <!--1245704-->
+- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704-->
 - [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
 
 
