@@ -122,7 +122,7 @@ The following changes in collection evaluation behavior can improve site perform
 <!--1358840-->
 When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. Previously in this process the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content. Now the management point returns distribution points based on boundary group configuration. 
 
-<!--For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).-->
+For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_ccmsetup).
 
 
 ### Improvements to internet-based client setup
