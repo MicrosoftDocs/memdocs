@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 08/29/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -130,6 +130,20 @@ During content deployment, if a client requests content that isn't available fro
 If the content is distributed on-demand, and not available on a distribution point when requested by a client, the process to transfer the content to that distribution point begins. It's possible the client finds that server as a content source before falling back to use a neighbor boundary group.
 
 
+### <a name="bkmk_ccmsetup"></a> Client installation
+<!--1358840-->
+
+When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. During this process in versions 1806 and earlier, the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content. 
+
+Starting in version 1810, the management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
+1. Current boundary group  
+2. Neighbor boundary groups  
+3. The site default boundary group  
+
+> [!Note]  
+> The client setup process doesn't use the fallback time. To locate content as quickly as possible, it immediately falls back to the next boundary group.  
+
+
 ### <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
 
 <!--1356193-->
@@ -183,7 +197,6 @@ After 120 minutes, if the client hasn't established contact, it then begins fall
 
 ### Fallback configurations for software update points
 
-#### Beginning with version 1706   
 You can configure **Fallback times (in minutes)** for software update points to be less than 120 minutes. However, the client still tries to reach its original software update point for 120 minutes. Then it expands its search to additional servers. Boundary group fallback times start when the client first fails to reach its original server. When the client expands its search, the site provides any boundary groups configured for less than 120 minutes.
 
 To block fallback for a software update point to a neighbor boundary group, configure the setting to **Never fallback**.
@@ -198,16 +211,6 @@ You configure software update points in boundary group *A* to fallback after **1
 - After trying to contact the original software update point for 120 minutes, the client expands its search. It adds servers to the available pool of software update points that are in it's current and any neighbor boundary groups configured for 120 minutes or less. This pool includes the servers in boundary group A, which were previously added to the pool of available servers.  
 
 - After 10 more minutes, the client expands the search to include software update points from boundary group B. This period is 130 minutes of total time after the client first failed to reach its last known-good software update point.  
-
-
-#### Versions 1702 and earlier
-With version 1702 and earlier, fallback configurations for software update points don't support a configurable time in minutes. Instead, fallback behavior is limited to the following options:
-
-- **Fallback times (in minutes):** This option is set to 120 minutes. You can't configure it.  
-
-- **Never fallback:** Block fallback for a software update point to a neighbor boundary group.  
-
-When a client that already has a software update point fails to reach it, the client then falls back to find another. When using fallback, the client receives a list of all software update points for its current boundary group. If it fails to find an available server for 120 minutes, it then falls back to its neighbor boundary groups and the default site boundary group. Fallback to both boundary groups happens at the same time. The software update point's fallback time to neighbor groups is set to 120 minutes. You can't change this fallback time. 120 minutes is also the default period used for fallback to the default site boundary group. When a client falls back to both a neighbor and default site boundary group, the client tries to contact software update points from the neighbor boundary group before trying to use one from the default site boundary group.
 
 
 ### Manually switch to a new software update point
@@ -234,6 +237,8 @@ When upgrading the site to version 1802, Configuration Manager adds all intranet
 If a client is in a boundary group that with no assigned management point, the site gives the client the entire list of management points. This behavior makes sure that a client always receives a list of management points.
 
 Management point boundary group fallback doesn't change the behavior during client installation (ccmsetup.exe). If the command line doesn't specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
+
+For more information on the client's behavior to acquire content during installation, see [Client installation](#bkmk_ccmsetup).
 
 During client upgrade, if you don't specify the /MP command-line parameter, the client queries sources such as Active Directory and WMI for any available management point. Client upgrade doesn't honor the boundary group configuration. <!--VSO 2841292-->  
 
