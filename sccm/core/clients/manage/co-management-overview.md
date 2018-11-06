@@ -67,7 +67,7 @@ Immediate use of the following Intune features:
 
  - Windows 10 devices must be joined to Azure AD. They can be either of the following types:  
 
-     - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), where the device is joined to both Azure AD and your on-premises domain  
+     - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
 
      - Azure AD-joined only. (This type is sometimes referred to as "cloud domain-joined")<!--SCCMDocs issue 605-->
 
