@@ -1,8 +1,8 @@
 ---
-title: Create a phased deployment
+title: Create phased deployments
 titleSuffix: Configuration Manager
 description: Use phased deployments to automate the rollout of software to several collections.
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -16,10 +16,16 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Phased deployments automate a coordinated, sequenced rollout of software across multiple collections. For example, deploy software to a pilot collection, and then automatically continue the rollout based on success criteria. Create phased deployments with the default of two phases, or manually configure multiple phases. The phased deployment of task sequences doesn't support PXE or media installation. Starting in version 1806, create a phased deployment for an application.<!--1358147-->  
+Phased deployments automate a coordinated, sequenced rollout of software across multiple collections. For example, deploy software to a pilot collection, and then automatically continue the rollout based on success criteria. Create phased deployments with the default of two phases, or manually configure multiple phases. 
 
-> [!Tip]
-> The phased deployment feature was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1806, it's no longer a pre-release feature.<!--1356837-->
+Create phased deployments for the following objects:
+- **Task sequence**  
+    - The phased deployment of task sequences doesn't support PXE or media installation   
+- **Application** (starting in version 1806) <!--1358147-->  
+- **Software update** (starting in version 1810) <!--1358146-->  
+
+> [!Tip]  
+> The phased deployment feature was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1806, it's no longer a pre-release feature.<!--1356837-->  
 
 
 
@@ -75,25 +81,34 @@ Include a timeline diagram
 
 1. Start the Create Phased Deployment wizard in the Configuration Manager console. This action varies based on the type of software you're deploying:  
 
-    - **Application** (only in version 1806 or later): Go to the **Software Library**, expand **Application Management**, and select **Applications**. Select an existing application, and then click **Create Phased Deployment** in the ribbon.  
+    - **Application** (only in version 1806 or later): Go to the **Software Library**, expand **Application Management**, and select **Applications**. Select an existing application, and then choose **Create Phased Deployment** in the ribbon.  
 
-    - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. Select an existing task sequence, and then click **Create Phased Deployment** in the ribbon.  
+    - **Software update** (only in version 1810 or later): Go to the **Software Library**, expand **Software Updates**, and select **All Software Updates**. Select one or more updates, and then choose **Create Phased Deployment** in the ribbon.  
+
+        This action is available for software updates from the following nodes:  
+        - Software Updates  
+            - **All Software Updates**  
+            - **Software Update Groups**   
+        - Windows 10 Servicing, **All Windows 10 Updates**  
+        - Office 365 Client Management, **Office 365 Updates**  
+
+    - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. Select an existing task sequence, and then choose **Create Phased Deployment** in the ribbon.  
 
 2. On the **General** page, give the phased deployment a **Name**, **Description** (optional), and select **Automatically create a default two phase deployment**.  
 
-3. Click **Browse** and select a target collection for both the **First Collection** and **Second Collection** fields. For a task sequence, select from device collections. For an application, select from user or device collections. Click **Next**.  
+3. Select **Browse** and choose a target collection for both the **First Collection** and **Second Collection** fields. For a task sequence and software updates, select from device collections. For an application, select from user or device collections. Select **Next**.  
 
     > [!Important]  
     > The Create Phased Deployment wizard doesn't notify you if a deployment is potentially high-risk. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments) and the note when you [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
 
-4. On the **Settings** page, choose one option for each of the scheduling settings. For more information, see [Phase settings](#bkmk_settings). Click **Next** when complete.  
+4. On the **Settings** page, choose one option for each of the scheduling settings. For more information, see [Phase settings](#bkmk_settings). Select **Next** when complete.  
 
-5. On the **Phases** page, see the two phases that the wizard creates for the specified collections. Click **Next**.   
+5. On the **Phases** page, see the two phases that the wizard creates for the specified collections. Select **Next**.   
 
     > [!Note]  
-    > This section covers the procedure to automatically create a default two phase deployment. The wizard lets you add, remove, reorder, edit, or view phases for a phased deployment. For more information on these additional actions, see [Create a phased deployment with manually configured phases](#bkmk_manual).  
+    > This section covers the procedure to automatically create a default two-phase deployment. The wizard lets you add, remove, reorder, edit, or view phases for a phased deployment. For more information on these additional actions, see [Create a phased deployment with manually configured phases](#bkmk_manual).  
 
-6. Confirm your selections on the **Summary** tab, and then click **Next** to complete the wizard.  
+6. Confirm your selections on the **Summary** tab, and then select **Next** to complete the wizard.  
 
 
 
@@ -106,37 +121,35 @@ Starting in version 1806, create a phased deployment with manually configured ph
 > You can't currently manually create phases for an application. The wizard automatically creates two phases for application deployments.
 
 
-1. In the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
+1. Start the Create Phased Deployment wizard for either a task sequence or software updates.  
 
-2. Right-click on an existing task sequence and select **Create Phased Deployment**.  
+2. On the **General** page of the Create Phased Deployment wizard, give the phased deployment a **Name**, **Description** (optional), and select **Manually configure all phases**.  
 
-3. On the **General** page of the Create Phased Deployment wizard, give the phased deployment a **Name**, **Description** (optional), and select **Manually configure all phases**.  
-
-4. From the **Phases** page of the Create Phased Deployment wizard, the following actions are available:  
+3. From the **Phases** page of the Create Phased Deployment wizard, the following actions are available:  
 
     - **Filter** the list of deployment phases. Enter a string of characters for a case-insensitive match of the Order, Name, or Collection columns. 
 
     - **Add** a new phase:  
 
-        1. On the **General** page of the Add Phase Wizard, specify a **Name** for the phase, and then browse to the target **Phase Collection**. The additional settings on this page are the same as when normally deploying a task sequence.  
+        1. On the **General** page of the Add Phase Wizard, specify a **Name** for the phase, and then browse to the target **Phase Collection**. The additional settings on this page are the same as when normally deploying a task sequence or software updates.  
 
         2. On the **Phase Settings** page of the Add Phase Wizard, configure the scheduling settings, and select **Next** when complete. For more information, see [Settings](#bkmk_settings).   
 
             > [!Note]  
             > You can't edit the phase setting, **Deployment success percentage**, on the first phase. This setting only applies to phases that have a previous phase.  
 
-        3. The settings on the **User Experience** and **Distribution Points** pages of the Add Phase Wizard are the same as when normally deploying a task sequence.  
+        3. The settings on the **User Experience** and **Distribution Points** pages of the Add Phase Wizard are the same as when normally deploying a task sequence or software updates.  
 
         4. Review the settings on the **Summary** page, and then complete the Add Phase Wizard.  
 
-    - **Edit**: After you've added a phase, select it, and click this button to edit the phase. This action opens the phase's Properties window, which has tabs the same as the pages of the Add Phase Wizard.  
+    - **Edit**: This action opens the selected phase's Properties window, which has tabs the same as the pages of the Add Phase Wizard.  
 
-    - **Remove**: Select an existing phase and click this button to delete the phase.  
+    - **Remove**: This action deletes the selected phase.  
 
        > [!Warning]  
        > There is no confirmation, and no way to undo this action.  
 
-    - **Move Up** or **Move Down**: The wizard orders the phases by how you add them. The most recently added phase is last in the list. To change the order, select a phase, and then click one of these buttons to move the phase's location in the list.  
+    - **Move Up** or **Move Down**: The wizard orders the phases by how you add them. The most recently added phase is last in the list. To change the order, select a phase, and then use these buttons to move the phase's location in the list.  
 
        > [!Important]  
        > Review the phase settings after changing the order. Make sure the following settings are still consistent with your requirements for this phased deployment:  
@@ -144,7 +157,7 @@ Starting in version 1806, create a phased deployment with manually configured ph
        > - Criteria for success of the previous phase  
        > - Conditions for beginning this phase of deployment after success of the previous phase   
 
-5. Click **Next**. Review the settings on the **Summary** page, and then complete the Create Phased Deployment wizard.  
+5. Select **Next**. Review the settings on the **Summary** page, and then complete the Create Phased Deployment wizard.  
 
 
 After you create a phased deployment, open its properties to make changes:  
@@ -160,4 +173,5 @@ After you create a phased deployment, open its properties to make changes:
 
 
 ## Next steps
-[Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments)
+> [!div class="nextstepaction"]
+> [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments)
