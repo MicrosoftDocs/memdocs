@@ -47,6 +47,7 @@
       href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
   - name: Monitor software updates
     href: deploy-use/monitor-software-updates.md
+    items:
     - name: Manage and monitor phased deployments
       href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
   - name: Software updates maintenance
