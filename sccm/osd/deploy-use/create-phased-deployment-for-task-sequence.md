@@ -173,5 +173,9 @@ After you create a phased deployment, open its properties to make changes:
 
 
 ## Next steps
-> [!div class="nextstepaction"]
-> [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments)
+
+Manage and monitor phased deployments:
+- [Application](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Software update](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Task sequence](/sccm/osd/deploy-use/manage-monitor-phased-deployments)  
+
