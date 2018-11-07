@@ -38,6 +38,9 @@ There are three main scenarios for deploying software updates:
 
 Typically, you start by manually deploying software updates to create a baseline for your clients, and then you manage software updates on clients by using an automatic or phased deployment.  
 
+> [!Note]  
+> You can't use an automatic deployment rule with a phased deployment.
+
 
 
 ## <a name="BKMK_ManualDeployment"></a> Manually deploy software updates

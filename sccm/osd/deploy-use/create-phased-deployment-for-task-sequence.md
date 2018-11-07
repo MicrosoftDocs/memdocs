@@ -23,6 +23,7 @@ Create phased deployments for the following objects:
     - The phased deployment of task sequences doesn't support PXE or media installation   
 - **Application** (starting in version 1806) <!--1358147-->  
 - **Software update** (starting in version 1810) <!--1358146-->  
+    - You can't use an automatic deployment rule with a phased deployment
 
 > [!Tip]  
 > The phased deployment feature was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1806, it's no longer a pre-release feature.<!--1356837-->  
@@ -34,8 +35,14 @@ Create phased deployments for the following objects:
 #### Security scope
 Deployments created by phased deployments aren't viewable to any administrative user that doesn't have the **All** security scope. For more information, see [Security scopes](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_PlanScope).
 
-#### Distribute application content
-Before creating a phased deployment for an application, distribute the content to a distribution point.<!--518293-->
+#### Distribute content
+Before creating a phased deployment, distribute the associated content to a distribution point.<!--518293-->  
+
+- **Application**: Select the target application in the console and use the **Distribute Content** action in the ribbon. For more information, see [Deploy and manage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content).   
+
+- **Task sequence**: You have to create referenced objects like the OS upgrade package before creating the task sequence. Distribute these objects before creating a deployment. Use the **Distribute Content** action on each object, or the task sequence. To view status of all referenced content, select the task sequence, and switch to the **References** tab in the details pane. For more information, see the specific object type in [Prepare for OS deployment](/sccm/osd/get-started/prepare-for-operating-system-deployment).   
+
+- **Software update**: create the deployment package and distribute it. Use the Download Software Updates Wizard. For more information, see [Download software updates](/sccm/sum/deploy-use/download-software-updates).  
 
 
 
