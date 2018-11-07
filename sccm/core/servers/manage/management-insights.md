@@ -87,9 +87,12 @@ The dashboard includes the following tiles:
 
 - **Management insights groups**: Shows percent of rules in each group, honoring the filters. Select a group to drill down to the specific rules in this group.  
 
-- **Management insights priority**: Shows percent of rules by priority, honoring the filters. Select a priority to drill down to the specific rules with this priority.  
+- **Management insights priority**: Shows percent of rules by priority, honoring the filters.   
 
-- **All insights**: A table of insights including priority and state.  
+- **All insights**: A table of insights including priority and state. Use the **Filter** field at the top of the table to match strings in any of the available columns. The dashboard sorts the table in the following order:
+    - Status: Action Needed, Completed, Unknown  
+    - Priority: Critical, Recommended, Optional  
+    - Last Changed: older dates on top   
 
 ![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
 
