@@ -129,7 +129,7 @@ manager: dougeby
 
  Use this step to specify the network or workgroup configuration information for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** action.  
 
- This task sequence step runs in either the full OS or Windows PE. 
+ This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
 
  Use the following task sequence variables with this step:  
  - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
