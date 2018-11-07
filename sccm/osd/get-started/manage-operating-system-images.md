@@ -29,9 +29,9 @@ Operating system images in Configuration Manager are stored in the Windows Imagi
 
 -   **Disadvantages**  
 
-    -   Operating system installation can take more time because the app installation and other configurations occur after the operating system installation completes.  
+    -   Operating system installation can take more time because the app installation and other configurations occur after the operating system installation completes.
 
- **Captured image**  
+**Captured image**  
 
  To create a customized operating system image, you build a reference computer with the desired operating system, and install apps, configure settings, etc. Then, you capture the operating system image from the reference computer to create the WIM file. You can build the reference computer manually or use a task sequence to automate some or all of the build steps.   
 For the steps to create a customized operating system image, see [Customize operating system images](customize-operating-system-images.md).  
@@ -42,8 +42,9 @@ For the steps to create a customized operating system image, see [Customize oper
 
 -   **Disadvantages**  
 
-    -   Operating system installation can take more time because the app installation and other configurations occur after the operating system installation completes.  
-
+    -   The image size is potentially larger than the default image.
+    
+    -   Need to create a new image when updates for applications and tools are required.
 
 ##  <a name="BKMK_AddOSImages"></a> Add operating system images to Configuration Manager  
  Before you can use an operating system image, you must add the image to a Configuration Manager site. Use the following procedure to add an operating system image to a site.  
