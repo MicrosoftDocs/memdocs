@@ -97,7 +97,15 @@ The dashboard includes the following tiles:
 
 ## Groups and rules
 
-Rules are organized into different management insight groups. See the following list for the groups and rules that are currently available:
+Rules are organized into the following management insight groups:
+- [Applications](#applications)  
+- [Cloud services](#cloud-services)  
+- [Collections](#collections)  
+- [Proactive maintenance](#proactive-maintenance)  
+- [Security](#security)  
+- [Simplified management](#simplified-management)  
+- [Software Center](#software-center)  
+- [Windows 10](#windows-10)  
 
 
 ### Applications
@@ -107,7 +115,7 @@ Insights for your application management.
 - **Applications without deployments**: Lists the applications in your environment that don't have active deployments. This rule helps you find and delete unused applications to simplify the list of applications displayed in the console. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).  
 
 
-### Cloud Services
+### Cloud services
 
 Helps you integrate with many cloud services, which enable modern management of your devices. 
 
@@ -127,7 +135,7 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 - **Empty Collections**: Lists collections in your environment that have no members. For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).  
 
 
-### Proactive Maintenance
+### Proactive maintenance
 <!--1352184-->
 Starting in version 1806, the rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.	
 
@@ -152,7 +160,7 @@ Insights for improving the security of your infrastructure and devices.
 - **Unsupported antimalware client versions**: More than 10% of clients are running versions of System Center Endpoint Protection that aren't supported. For more information, see [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).  
 
 
-### Simplified Management
+### Simplified management
 
 Insights that help you simplify the day-to-day management of your environment. 
 
