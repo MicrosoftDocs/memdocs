@@ -78,7 +78,7 @@ You will also need to copy the ServiceConnectionTool folder with all of its cont
 
 2.  **Connect**: For this step you run the tool on a remote computer that connects to the Internet so you can upload your usage data and then download updates.  
 
-3.  **Import**: This step runs on the computer that hosts the service connection point. When run, the tool imports the you downloaded and adds them to your site so you can then view and install those updates from the Configuration Manager console.  
+3.  **Import**: This step runs on the computer that hosts the service connection point. When run, the tool imports the updates you downloaded and adds them to your site so you can then view and install those updates from the Configuration Manager console.  
 
 Beginning with version 1606, when connecting to Microsoft you can upload multiple .cab files at one time (each from a different hierarchy), and specify a proxy server and a user for the proxy server.   
 
