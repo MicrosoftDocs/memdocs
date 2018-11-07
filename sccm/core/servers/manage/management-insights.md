@@ -26,11 +26,12 @@ To view the rules, your account needs the **read** permission on the **site** ob
 
 1. Open the Configuration Manager Console.  
 
-2. Go to the **Administration** workspace and select **Management Insights**.  
+2. Go to the **Administration** workspace, expand **Management Insights**, and select **All Insights**.  
 
-3. Select **All Insights**.  
+    > [!Note]  
+    > Starting in version 1810, when you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).  
 
-4. Open the management insights group name you want to review. Select **Show Insights** in the ribbon.  
+3. Open the management insights group name you want to review. Select **Show Insights** in the ribbon.  
 
 The following four tabs are available for review: 
 
@@ -66,6 +67,31 @@ Depending upon the rule, this action has one of the following behaviors:
 - Automatically navigate in the console to the node where you can take further action. For example, if the management insight recommends changing a client setting, taking action navigates to the Client Settings node. Then take further action by modifying the default or a custom client settings object.  
 
 - Navigate to a filtered view based on a query. For example, taking action on the empty collections rule shows just these collections in the list of collections. Then take further action, such as deleting a collection or modifying its membership rules.  
+
+
+
+## <a name="bkmk_insights"></a> Management insights dashboard
+<!--1357979-->
+
+Starting in version 1810, the **Management Insights** node includes a graphical dashboard. This dashboard displays an overview of the rule states, which makes it easier for you to show your progress. 
+
+Use the following filters at the top of the dashboard to refine the view:
+- Show Completed
+- Optional
+- Recommended
+- Critical
+
+The dashboard includes the following tiles:  
+
+- **Management insights index**: Tracks overall progress on management insights rules. The index is a weighted average. Critical rules are worth the most. This index gives the least weight to optional rules.  
+
+- **Management insights groups**: Shows percent of rules in each group, honoring the filters. Select a group to drill down to the specific rules in this group.  
+
+- **Management insights priority**: Shows percent of rules by priority, honoring the filters. Select a priority to drill down to the specific rules with this priority.  
+
+- **All insights**: A table of insights including priority and state.  
+
+![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
 
 
 
