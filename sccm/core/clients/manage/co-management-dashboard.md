@@ -110,7 +110,7 @@ A table that shows the count of enrollment errors from devices.
 
 *Applies to all versions*
 
-Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads. (The list of workloads vary by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune).)
+Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads. (The list of workloads varies by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune).)
 
 Hover over a chart section to show the number of devices transitioned for the workload. 
  ![Workload transition bar graph](media\co-management-dashboard\Workload-Transition.PNG)
