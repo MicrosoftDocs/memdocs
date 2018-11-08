@@ -23,4 +23,6 @@ You can copy a hyperlink to an application in Software Center using the  ![Share
 3. Click **Copy** in the window.
 4. Paste the URL into an email to share the application.
 > [!TIP]
->  In Outlook, press CTRL+k OR Right-click and select Insert > Link on the context menu to open the Insert Hyperlink dialogue box. Paste the URL here to create a click-able hyperlink in the email. By default, a security alert is presented for the software center protocol when the hyperlink is clicked. You can prevent this in your environment by adding a Trusted Protocol Key to the registry. For example, HKCU\Software\Policies\Microsoft\Office\16.0\Common\Security\Trusted Protocols\All Applications\softwarecenter:
+>  To create a link in an Outlook email, press **CTRL** + **K**, and then paste the URL.  
+>  
+> By default, Outlook shows a security alert for the Software Center protocol when the recipient clicks the link. Prevent this in your environment by adding a trusted protocol key to the registry. For example, `HKCU\Software\Policies\Microsoft\Office\16.0\Common\Security\Trusted Protocols\All Applications\softwarecenter:`  
