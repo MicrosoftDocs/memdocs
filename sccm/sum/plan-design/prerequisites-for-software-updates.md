@@ -28,8 +28,10 @@ This article lists the prerequisites for software updates in System Center Confi
  Windows Server Update Services (WSUS) is necessary for software updates synchronization and for the software updates applicability scan on clients. The WSUS server must be installed before you create the software update point role. The following versions of WSUS are supported for a software update point:  
 
 -   WSUS 10.0 (role in Windows Server 2016)
--   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)  
--   WSUS 3.2 (role in Windows Server 2008 R2)  
+-   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
+
+>[!NOTE]
+>-   Beginning with version 1702, Windows Server 2008 R2 is not supported for the software update point role.
 
 When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
 
