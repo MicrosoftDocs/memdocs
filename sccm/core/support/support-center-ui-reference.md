@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-## Support Center user interface reference
+# Support Center user interface reference
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -367,9 +367,6 @@ This tab is almost identical to the **Log Viewer** tool. The **Log Viewer** tool
 
 #### Configure client logging
 
-> [!Note]  
-> This feature is only on the **Logs** tab of the Support Center tool. It's not in the Log Viewer tool.  
-
 Set the following options: 
 - **Client log level**: Log verbosity and file size  
 - **Maximum file count**: Allow more than one log file of a given type  
@@ -379,9 +376,6 @@ Set the following options:
 > If you set these values too low, the client may not log any useful information. If you set these values too high, the client logs can consume large amounts of storage.  
 
 #### Log groups
-
-> [!Note]  
-> This feature is only on the **Logs** tab of the Support Center tool. It's not in the Log Viewer tool.  
 
 Instead of manually selecting log files using the **Open logs** button, use this drop-down list to open all log files associated with the following feature areas: 
 - **Desired Configuration Management**
