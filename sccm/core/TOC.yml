@@ -488,6 +488,17 @@
         href: servers/manage/security-and-privacy-for-reporting.md
     - name: Data warehouse
       href: servers/manage/data-warehouse.md
+  - name: Support Center
+    href: support/support-center.md
+    items:
+    - name: Quickstart guide
+      href: support/support-center-quickstart.md
+    - name: Accessibility
+      href: support/support-center-accessibility.md
+    - name: User interface reference
+      href: support/support-center-ui-reference.md
+    - name: Customizations
+      href: support/support-center-customize.md
   - name: Configuration Manager tools
     href: support/tools.md
     items:
