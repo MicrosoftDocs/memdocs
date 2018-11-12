@@ -1,0 +1,23 @@
+- name: Desktop Analytics
+  items:
+  - name: Overview
+    href: overview.md
+  - name: Pilot Office 365
+    href: tutorial-office-365.md
+  - name: How-to guides
+    items:
+    - name: Configuration Manager dashboard
+      href: dashboard.md
+    - name: Review assets in Azure
+      href: review-assets.md
+    - name: Create deployment plans in Azure
+      href: deployment-plans.md
+    - name: Deploy to pilot
+      href: deploy-pilot.md
+    - name: Deploy to production
+      href: deploy-prod.md
+  - name: Technical references
+    items:
+      - name: Troubleshooting
+      - name: User flow diagram
+      - name: System diagram
