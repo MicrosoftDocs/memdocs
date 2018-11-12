@@ -10,6 +10,7 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+robots: noindex,nofollow
 ---
 
 # What is Desktop Analytics?

@@ -10,6 +10,7 @@ ms.assetid: 0b2b633a-91d7-4497-8c2a-1fc7aa310bb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+robots: noindex,nofollow
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Office 365 so that I can understand the best devices to start with getting current with Office.
 ---
 
@@ -65,7 +66,7 @@ begin.--->
 
 ## Sign in to <service/product/tool name>
 
-Sign in to the [<service> portal](url).
+Sign in to the [<service> portal]().
 <!---If you need to sign in to the portal to do the tutorial, this H2 and
 link are required.--->
 

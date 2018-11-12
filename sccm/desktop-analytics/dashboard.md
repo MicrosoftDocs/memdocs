@@ -10,6 +10,7 @@ ms.assetid: 886abffa-83f6-4ea3-af83-479e8c7b9fc0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+robots: noindex,nofollow
 ---
 
 # How to use the Desktop Analytics dashboard in Configuration Manager 

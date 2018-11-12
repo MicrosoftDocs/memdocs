@@ -10,6 +10,7 @@ ms.assetid: b6ec2ab2-aada-45ab-a150-b294854e0fe9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+robots: noindex,nofollow
 ---
 
 # Review assets with Desktop Analytics in Azure
