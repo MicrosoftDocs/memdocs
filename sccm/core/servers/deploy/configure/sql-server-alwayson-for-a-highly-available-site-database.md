@@ -166,7 +166,7 @@ Only make these configurations on a primary replica. To configure a secondary re
 
 Run the following SQL script to verify database configurations for both primary and secondary replicas. Before you can fix an issue on a secondary replica, change that secondary replica to be the primary replica.
 
-``` SQL
+```SQL
     SET NOCOUNT ON
 
     DECLARE @dbname NVARCHAR(128)
@@ -177,7 +177,7 @@ Run the following SQL script to verify database configurations for both primary 
     RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
     GOTO Branch_Exit;
     END ELSE
-    PRINT N'INFO: Targetted database is ' + @dbname + N'.'
+    PRINT N'INFO: Targeted database is ' + @dbname + N'.'
 
     PRINT N'INFO: Running verifications....'
 

@@ -94,7 +94,7 @@ Class SMS_AMTCertificate : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: enumeration("RequestPending(1), ReqestSuccess(2),IssuedToAMT(3),Revoked(4),Active(5)")  
+ Qualifiers: enumeration("RequestPending(1), RequestSuccess(2),IssuedToAMT(3),Revoked(4),Active(5)")  
 
  Certificate status. Possible values are:  
 
