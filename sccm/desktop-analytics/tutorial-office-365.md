@@ -49,7 +49,7 @@ If you don’t have a Desktop Analytics subscription, create a free trial accoun
 Because tutorials are intended to help new customers use the product or
 service to complete a top task, include a link to a free trial before the
 first H2, if one exists. You can find listed examples in
-[Write tutorials](contribute-how-to-mvc-tutorial.md)
+contribute-how-to-mvc-tutorial
 --->
 
 
@@ -94,10 +94,9 @@ procedure.
 1. Step one of the procedure
 1. Step two of the procedure
 1. Step three of the procedure
-   ![Browser](media/contribute-how-to-mvc-tutorial/browser.png)
    <!---Use screenshots but be judicious to maintain a reasonable length. 
    Make sure screenshots align to the
-   [current standards](contribute-mvc-screen-shots.md).
+   current standards (contribute-mvc-screen-shots).
    If users access your product/service via a web browser the first 
    screenshot should always include the full browser window in Chrome or
    Safari. This is to show users that the portal is browser-based - OS 
