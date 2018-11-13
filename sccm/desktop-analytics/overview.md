@@ -28,29 +28,31 @@ Desktop Analytics is a cloud-based service that integrates with Configuration Ma
 
 - Create pilot groups that represent the entire application and driver estate across a minimal set of devices  
 
-- Deploy Windows 10 and Office 365 ProPlus to pilot and production managed devices  
+- Deploy Windows 10 and Office 365 ProPlus to pilot and production-managed devices  
 
 
+<!--
 > **editorial notes during development; not for publishing**  
 > *From [Write an overview](https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-overview?branch=master) in the contributor guide:*  
 > *The introductory paragraph helps customers quickly determine whether an article is relevant.*  
 > *Describe in customer-friendly terms what the service is and does, and why the customer should care. Keep it short for the intro.*  
 > *You can go into more detail later in the article. Many services add artwork or videos below the introduction.*
-
+-->
 
 
 ## Benefits
+<!-- 
 > *After the intro, you can develop your overview by discussing the features that answer the "Why should I care" question with a bit more depth.*  
 > *Be sure to call out any basic requirements and dependencies, as well as limitations or overhead.*  
 > *Don't catalog every feature, and some may only need to be mentioned as available, without any discussion.*  
-
+ -->
 Many customers have challenges with getting and staying current with Windows 10 and Office 365 ProPlus. The primary challenge is testing applications. This process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications. Then remediate any issues that arise. 
 
 Desktop Analytics provides the following benefits:
 
 - **Device and software inventory**: Inventory of key factors such as apps, add-ins, macros, and versions of Office and Windows.  
 
-- **Pilot identification**: Identification of the smallest set of devices that will provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows and Office upgrades and updates. Making sure the pilot is more successful allows you to proceed more quickly and confidently to broad deployments in production.  
+- **Pilot identification**: Identification of the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows and Office upgrades and updates. Making sure the pilot is more successful allows you to proceed more quickly and confidently to broad deployments in production.  
 
 - **Issue identification**: Using aggregated market data along with data from your environment, the service predicts potential issues to getting and staying current with Windows and Office. It then suggests potential mitigations.  
 
@@ -86,10 +88,11 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 
 
 ## Top task
+<!-- 
 > *Optional*  
 > *An effective way to structure your overview article is to create an H2 for the top customer tasks and describe how the product/service helps customers with that task.*  
 > *Create a new H2 for each task you list.*  
-
+ -->
 
 
 
