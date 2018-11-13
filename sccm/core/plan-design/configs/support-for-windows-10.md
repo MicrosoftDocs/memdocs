@@ -48,8 +48,9 @@ The following table lists the versions of Windows 10 that you can use as a clien
 
 | Windows 10 version | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
 |---------------------|-----|-----|-----|-----|
-| Enterprise 2015 LTSB            <!--10/14/2025-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| Enterprise 2016 LTSB            <!--10/13/2026-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| Enterprise 2015 LTSB <!--10/14/2025-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| Enterprise 2016 LTSB <!--10/13/2026-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| Enterprise LTSC 2019 <!--10/10/2028-->   | ![Not supported](media/Red_X.png)   | ![Not supported](media/Red_X.png)   | ![Supported](media/green_check.png) |
 | 1607   <!--04/09/2019-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | 1703   <!--10/08/2019-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | 1709   <!--04/14/2020-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
