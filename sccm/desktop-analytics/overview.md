@@ -86,9 +86,8 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 - Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
 
 
-
-## Top task
 <!-- 
+## Top task
 > *Optional*  
 > *An effective way to structure your overview article is to create an H2 for the top customer tasks and describe how the product/service helps customers with that task.*  
 > *Create a new H2 for each task you list.*  
