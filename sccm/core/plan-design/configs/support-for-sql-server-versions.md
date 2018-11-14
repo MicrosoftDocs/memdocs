@@ -100,6 +100,12 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   A primary site  
 -   A secondary site  
 
+### SQL Server 2014 SP3: Standard, Enterprise  
+You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+
+-   A central administration site  
+-   A primary site  
+-   A secondary site
 
 ### SQL Server 2014 SP2: Standard, Enterprise  
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
@@ -149,12 +155,15 @@ You can use this version of SQL Server with no minimum cumulative update version
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:
 -   A secondary site
 
+### SQL Server 2014 Express SP3   
+You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+
+-   A secondary site  
 
 ### SQL Server 2014 Express SP2   
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A secondary site  
-
 
 ### SQL Server 2014 Express SP1   
  You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
