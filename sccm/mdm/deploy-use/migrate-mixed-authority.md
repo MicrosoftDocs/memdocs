@@ -50,7 +50,7 @@ Manage migrated users and their devices in Intune. Continue to manage other devi
     - [Device Enrollment Program](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)  
 
         > [!Note]  
-        > You don't need to recreate your DEP token or remove it from Configuration Manager. It automatically migrates to Intune 24 hours after you change the tenant's MDM authority from Configuration Manager to Intune. This change is the final step in the migration.  
+        > You don't need to recreate your DEP token or remove it from Configuration Manager. It automatically migrates to Intune 24 hours after you change the tenant's MDM authority from Configuration Manager to Intune. This change is the final step in the migration. (If the DEP token doesn't migrate within 24 hours, contact Microsoft support for assistance.)  
 
     - Enrollment profiles  
 
