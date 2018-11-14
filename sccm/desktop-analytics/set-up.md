@@ -162,7 +162,33 @@ For more information, see [Compatibility update for keeping Windows up-to-date i
 
 
 
-## Methods to enroll devices
+## Device enrollment
+
+The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. These settings control to which Desktop Analytics instance the device should send its data, and other configuration options.
+
+> [!NOTE]  
+> If you're already using Windows Analytics, select the same workspace from the displayed list. All of those devices automatically show up in your Desktop Analytics workspace. You don't need to reenroll them. 
+> 
+> If you chose to configure a different workspace, first split your entries between devices that you monitor with Windows Analytics and devices that you monitor with Desktop Analytics. Then enroll devices you want Desktop Analytics to monitor.  
+
+
+### Commercial ID
+
+Microsoft uses a unique commercial ID to map information from user computers to your Desktop Analytics workspace. The service should automatically generate this ID. When you integrate Configuration Manager with Desktop Analytics, it automatically queries the service for this ID. 
+
+If you're not using Configuration Manager, use the following procedure to copy your Commercial ID:  
+
+1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
+
+2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
+
+    > [!Important]  
+    > Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
+
+<!--screenshot-->
+
+
+### Methods to enroll devices
 
 There are several methods to enroll devices with Desktop Analytics. Microsoft recommends using Configuration Manager.
 
