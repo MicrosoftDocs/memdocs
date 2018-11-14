@@ -95,9 +95,8 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
     - **Workspace Owners**: Create and manage workspaces. These accounts need owner access to the Azure subscription.  
 
     - **Workspace Contributors**: Create and manage deployment plans in this workspace. They don't need any additional Azure access.  
-
-
-    To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**. 
+  
+   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**. 
 
 5. On the page to **Set up your workspace**:  
 
@@ -132,9 +131,8 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
         - **Assign access to**: **Azure AD user, group, or application**  
 
         - **Select**: **MALogAnalyticsReader**  
-
-
-    Select **Save**. The portal shows a notification that it added the role assignment.  
+  
+   Select **Save**. The portal shows a notification that it added the role assignment.  
 
 11. Create an app in Azure AD for Configuration Manager.  
 
@@ -147,9 +145,8 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
         - **Application type**: **Web app / API**  
 
         - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
-
-
-        Select **Create**.  
+  
+       Select **Create**.  
 
     3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
 
@@ -191,9 +188,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - Specify an optional **Description** to help you identify the service  
 
     - Select **Desktop Analytics** from the list of available services  
-
-
-    Select **Next**.  
+  
+   Select **Next**.  
 
 3. On the **App** page, select the appropriate **Azure environment**. Then select **Import** for the web app. Configure the following settings in the **Import Apps** window:  
 
@@ -208,9 +204,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Secret Key Expiry**: The same expiration date of the key   
 
     - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
-
-
-    Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
+  
+   Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
 
 4. On the **Diagnostic Data** page, configure the following settings:  
 
@@ -219,9 +214,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Windows 10 diagnostic data level**: select at least **Enhanced**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
-
-
-    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
+  
+   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
 
 5. On the **Collections** page, configure the following settings:  
 
