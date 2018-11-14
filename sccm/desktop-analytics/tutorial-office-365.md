@@ -96,6 +96,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
     - **Workspace Contributors**: Create and manage deployment plans in this workspace. They don't need any additional Azure access.  
 
+
     To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**. 
 
 5. On the page to **Set up your workspace**:  
@@ -132,6 +133,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         - **Select**: **MALogAnalyticsReader**  
 
+
     Select **Save**. The portal shows a notification that it added the role assignment.  
 
 11. Create an app in Azure AD for Configuration Manager.  
@@ -145,6 +147,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
         - **Application type**: **Web app / API**  
 
         - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
+
 
         Select **Create**.  
 
@@ -181,13 +184,14 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select **Configure Azure Services** in the ribbon.  
 
-2. On the **Azure Services** page of the Azure Services Wizard:  
+2. On the **Azure Services** page of the Azure Services Wizard, configure the following settings:  
 
-    1. Specify a **Name** for the object in Configuration Manager.  
+    - Specify a **Name** for the object in Configuration Manager  
 
-    2. Specify an optional **Description** to help you identify the service.  
+    - Specify an optional **Description** to help you identify the service  
 
-    3. Select **Desktop Analytics** from the list of available services.  
+    - Select **Desktop Analytics** from the list of available services  
+
 
     Select **Next**.  
 
@@ -205,6 +209,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
 
+
     Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
 
 4. On the **Diagnostic Data** page, configure the following settings:  
@@ -214,6 +219,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Windows 10 diagnostic data level**: select at least **Enhanced**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
+
 
     Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
 
@@ -291,6 +297,8 @@ Use this procedure to create a deployment plan in Desktop Analytics.
     2. Select each device, and select **Add to Pilot**. If you disagree with the recommendation, select **Replace**.  
 
         For more information on how Desktop Analytics makes these recommendations, select the information icon in the top right corner of the **Identify pilot** pane.
+
+
 
 ## Deploy Office 365 in Configuration Manager
 
@@ -381,7 +389,7 @@ Clean up resources (H2) should come just before Next steps (H2)
 
 Advance to the next article to learn more about Desktop Analytics deployment plans.
 > [!div class="nextstepaction"]  
-> [Next steps button](/sccm/desktop-analytics/deployment-plans)  
+> [Deployment plans](/sccm/desktop-analytics/deployment-plans)  
 
 <!--- Required:
 Tutorials should always have a Next steps H2 that points to the next
