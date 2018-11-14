@@ -4,18 +4,32 @@
     href: overview.md
   - name: Pilot Office 365
     href: tutorial-office-365.md
+  - name: Concepts
+    items:
+    - name: Deployment plans
+      href: about-deployment-plans.md
+    - name: Assets
+      href: about-assets.md
+    - name: Quality and feature updates
+      href: about-updates.md
   - name: How-to guides
     items:
-    - name: Configuration Manager dashboard
-      href: dashboard.md
-    - name: Review assets in Azure
-      href: review-assets.md
-    - name: Create deployment plans in Azure
-      href: deployment-plans.md
+    - name: Set up Desktop Analytics
+      href: set-up.md
+    - name: Enable data sharing
+      href: enable-data-sharing.md
+    - name: Connect Configuration Manager
+      href: connect-configmgr.md
+    - name: Create deployment plans
+      href: create-deployment-plans.md
     - name: Deploy to pilot
       href: deploy-pilot.md
     - name: Deploy to production
       href: deploy-prod.md
+    - name: Compatibility assessment with App Health Analyzer
+      href: app-health-analyzer.md
+    - name: Compatibility risk for Windows apps
+      href: compat-risk.md
   - name: Technical references
     items:
       - name: Troubleshooting
