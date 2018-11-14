@@ -96,7 +96,7 @@ After creating a deployment plan, use Configuration Manager to deploy the produc
 
 - [Learn about Desktop Analytics assets](/sccm/desktop-analytics/about-assets): devices, apps, Office apps, Office add-ins, and Office macros  
 
-- [Learn about feature and quality updates](/sccm/desktop-analytics/about-updates)  
+- [Learn about security and feature updates](/sccm/desktop-analytics/about-updates)  
 
 - [Create a deployment plan](/sccm/desktop-analytics/create-deployment-plans)  
 
