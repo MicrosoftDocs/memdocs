@@ -2,7 +2,7 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,6 +19,8 @@ manager: dougeby
 Beginning with version 1806, you can use the Configuration Manager product lifecycle dashboard to view the Microsoft Lifecycle Policy. The dashboard shows the state of the Microsoft Lifecycle Policy for Microsoft products installed on devices managed with Configuration Manager. It also provides you with information about Microsoft products in your environment, supportability state, and support end dates. Use the dashboard to understand the availability of support for each product. This information helps you plan for when to update the Microsoft products you use before their current end of support is reached.  
 
 For more information, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).
+
+Starting in version 1810, the dashboard includes information for System Center 2012 Configuration Manager and later.<!--1358702-->  
 
 
 
@@ -53,6 +55,13 @@ To access the lifecycle dashboard in the Configuration Manager console, go to th
 ### Product lifecycle dashboard
 
 ![Screenshot of the product lifecycle dashboard in the console](media/product-lifecycle-dashboard.png)
+
+Change the view by selecting one of the following options from the **Product category** list:  
+- **All**: View all products together  
+- **Windows Client**: View Windows client OS versions  
+- **Windows Server**: View Windows server OS versions  
+- **Database**: View SQL Server versions  
+- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions  
 
 The dashboard has the following tiles:  
 
