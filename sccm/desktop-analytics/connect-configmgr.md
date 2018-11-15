@@ -56,9 +56,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   
-   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
-
-<!--screenshot-->
+   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.<!--screenshot-->  
 
 5. On the **Collections** page, configure the following settings:  
 
