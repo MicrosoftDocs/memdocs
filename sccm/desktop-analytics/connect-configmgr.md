@@ -58,6 +58,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
   
    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
 
+<!--screenshot-->
+
 5. On the **Collections** page, configure the following settings:  
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name. Use it to differentiate between different hierarchies. For example, *test lab* or *production*.  
@@ -78,7 +80,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
 
-### Monitor connection health
+## Monitor connection health
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Connection Health** dashboard.  
 

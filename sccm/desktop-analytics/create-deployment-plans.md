@@ -66,7 +66,7 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
 
 
-## Next steps
+### Next steps
 
 Advance to the next article to deploy to pilot devices.
 > [!div class="nextstepaction"]  
