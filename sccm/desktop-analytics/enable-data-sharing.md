@@ -77,3 +77,10 @@ For more information, see [Windows Analytics and privacy](https://docs.microsoft
 
 <!--{DO WE NEED TO ADDRESS PRIVACY ISSUES IN SOME WAY ANALOGOUS TO THE WA PRIVACY TOPIC?}-->
 
+
+
+## Next steps
+
+Advance to the next article to connect Configuration Manager with Desktop Analytics.
+> [!div class="nextstepaction"]  
+> [Connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr)  

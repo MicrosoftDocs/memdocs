@@ -64,3 +64,10 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
         For more information on how Desktop Analytics makes these recommendations, select the information icon in the top right corner of the **Identify pilot** pane.
 
+
+
+## Next steps
+
+Advance to the next article to deploy to pilot devices.
+> [!div class="nextstepaction"]  
+> [Deploy to pilot](/sccm/desktop-analytics/deploy-pilot)  

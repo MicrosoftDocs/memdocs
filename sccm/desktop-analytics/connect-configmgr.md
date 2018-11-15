@@ -86,3 +86,10 @@ Monitor the configuration of your devices for Desktop Analytics. In the Configur
 
 Configuration Manager synchronizes any Desktop Analytics deployment plans within 15 minutes of creating the connection. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Deployment Plans** node. 
 
+
+
+## Next steps
+
+Advance to the next article to create deployment plans in Desktop Analytics.
+> [!div class="nextstepaction"]  
+> [Create deployment plans](/sccm/desktop-analytics/create-deployment-plans)  
