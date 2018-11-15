@@ -32,17 +32,17 @@ Configuration Manager supports the in-place upgrade of the server OS that hosts 
 
 - In-place upgrade from:  
 
-    - Windows Server 2016 to Windows Server 2019 ([See additional details](#bkmk_2019))  
+    - Windows Server 2016 to Windows Server 2019   
 
-    - Windows Server 2012 R2 to Windows Server 2019 ([See additional details](#bkmk_2019))  
+    - Windows Server 2012 R2 to Windows Server 2019   
 
-    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#bkmk_2016))  
+    - Windows Server 2012 R2 to Windows Server 2016   
 
-    - Windows Server 2012 to Windows Server 2016 ([See additional details](#bkmk_2016))  
+    - Windows Server 2012 to Windows Server 2016   
 
-    - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#bkmk_2012r2))  
+    - Windows Server 2012 to Windows Server 2012 R2   
 
-    - Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#bkmk_2012r2)  
+    - Windows Server 2008 R2 to Windows Server 2012 R2   
 
 To upgrade a server, use the upgrade procedures provided by the OS you're upgrading to. See the following articles:  
 
@@ -53,72 +53,17 @@ To upgrade a server, use the upgrade procedures provided by the OS you're upgrad
 - [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11))   
 
 
-### <a name="bkmk_2019"></a> Upgrade to Windows Server 2019
+### <a name="bkmk_2016-2019"></a> Upgrade to Windows Server 2016 or 2019
 
-When you upgrade either Windows Server 2012 R2 or Windows Server 2016 to Windows Server 2019, the following conditions apply:
+Use the steps in this section for any of the following upgrade scenarios:  
+
+- Upgrade either Windows Server 2012 R2 or Windows Server 2016 to Windows Server 2019  
+
+- Upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016  
+
 
 #### Before upgrade  
-- (Windows Server 2012 R2): Remove the System Center Endpoint Protection (SCEP) client. Windows Server 2019 has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server 2019.  
-
-- Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
-
-#### After upgrade   
-- Make sure Windows Defender is enabled, set for automatic start, and running.  
-
-- Make sure the following Configuration Manager services are running:  
-
-    - SMS_EXECUTIVE  
-
-    - SMS_SITE_COMPONENT_MANAGER  
-
-- Make sure the **Windows Process Activation** and **WWW/W3svc** services are enabled and set for automatic start. The upgrade process disables these services, so make sure they're running for the following site system roles:  
-
-    - Site server  
-
-    - Management point  
-
-    - Application Catalog web service point  
-
-    - Application Catalog website point  
-
-- Make sure each server that hosts a site system role continues to meet all [prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
-
-- After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.  
-
-- If you're upgrading the primary site server, then [run a site reset](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
-
-#### Known issue for remote Configuration Manager consoles   
-After you upgrade the site server, or an instance of the SMS Provider, you can't connect with the Configuration Manager console. To work around this problem, manually restore permissions for the **SMS Admins** group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
-
-1. On the applicable servers, open the Microsoft Management Console (MMC) and add the snap-in for  **WMI Control**, and then select **Local computer**.  
-
-2. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.  
-
-3. Expand the tree below Root, select the **SMS** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:  
-
-    - Enable Account  
-
-    - Remote Enable  
-
-4. On the **Security tab** below the **SMS** node, select the **site_&lt;sitecode**> node, and then choose **Security**. Make sure the **SMS Admins** group has the following permissions:  
-
-    - Execute Methods  
-
-    - Provider Write  
-
-    - Enable Account  
-
-    - Remote Enable  
-
-5. Save the permissions to restore access for the Configuration Manager console.  
-
-
-### <a name="bkmk_2016"></a> Upgrade to Windows Server 2016
-
-When you upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016, the following conditions apply:
-
-#### Before upgrade  
-- Remove the System Center Endpoint Protection (SCEP) client. Windows Server 2016 has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server 2016.  
+- (Windows Server 2012 or Windows Server 2012 R2): Remove the System Center Endpoint Protection (SCEP) client. Windows Server now has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server.  
 
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
 
@@ -218,7 +163,7 @@ The following Windows Server upgrade scenarios are commonly asked about, but not
 
 
 
-##  <a name="BKMK_SupConfigUpgradeClient"></a> Upgrade the OS of Configuration Manager clients  
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Upgrade the OS of clients  
 
 Configuration Manager supports an in-place upgrade of the OS for Configuration Manager clients in the following situations:  
 
@@ -230,7 +175,7 @@ Configuration Manager supports an in-place upgrade of the OS for Configuration M
 
 
 
-##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Upgrade SQL Server on the site database server  
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Upgrade SQL Server  
 
 Configuration Manager supports an in-place upgrade of SQL Server on the site database server. 
 
