@@ -147,9 +147,23 @@ Starting in version 1810, the management point returns distribution points based
 ### <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
 
 <!--1356193-->
-Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Configure a boundary group](#bkmk_config).
+Starting in version 1806, boundary groups include the following additional settings to give you more control over content distribution in your environment:  
 
-#### Allow peer downloads in this boundary group
+- [Allow peer downloads in this boundary group](#bkmk_bgoptions1)  
+
+- [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
+
+<!--1358749-->
+Version 1810 adds the following options:  
+
+- [Prefer distribution points over peers with the same subnet](#bkmk_bgoptions3)  
+
+- [Prefer cloud distribution points over distribution points](#bkmk_bgoptions4)  
+
+For more information on how to configure these settings, see [Configure a boundary group](#bkmk_config).
+
+
+#### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
 This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).  
 
 There are two common scenarios in which you should consider disabling this option:  
@@ -158,8 +172,8 @@ There are two common scenarios in which you should consider disabling this optio
 
 - If you use a single, large boundary group for site assignment that doesn't reference any distribution points.  
 
-#### During peer downloads, only use peers within the same subnet
-This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
+#### <a name="bkmk_bgoptions2"></a> During peer downloads, only use peers within the same subnet
+This setting is dependent upon the preceding option. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
 
 Common scenarios for enabling this option:
 
@@ -167,6 +181,11 @@ Common scenarios for enabling this option:
 
 - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
+#### <a name="bkmk_bgoptions3"></a> Prefer distribution points over peers with the same subnet
+By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.  
+
+#### <a name="bkmk_bgoptions4"></a> Prefer cloud distribution points over distribution points
+If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
 
 
