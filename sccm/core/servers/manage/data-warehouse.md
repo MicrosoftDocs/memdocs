@@ -69,14 +69,6 @@ Starting in version 1810, you can synchronize more tables from the site database
 
 For more information on SQL Server licensing, see the [product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq). <!-- sms500967 -->
 
-
-> [!IMPORTANT]  
-> The data warehouse isn't supported when the data warehouse service point or the server that hosts the data warehouse database runs one of the following OS languages:  
-> - JPN – Japanese  
-> - KOR – Korean  
-> - CHS – Simple Chinese  
-> - CHT – Traditional Chinese  
-
 Size the data warehouse database the same as your site database. While the data warehouse is smaller at first, it will grow over time. <!--SCCMDocs issue 756-->
 
 
@@ -98,7 +90,7 @@ When you install the role, Configuration Manager creates the data warehouse data
 
 - **SQL Server instance name, if applicable**: If you don't use a default instance of SQL Server, specify the named instance.  
 
-- **Database name**: Specify a name for the data warehouse database. The database name can't be longer than 10 characters. Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.  
+- **Database name**: Specify a name for the data warehouse database. Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.  
 
 - **SQL Server port used for connection**: Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. The data warehouse synchronization service uses this port to connect to the data warehouse database. By default, it uses SQL Server port **1433** for communication.  
 
@@ -146,19 +138,19 @@ After you install a data warehouse service point, several reports become availab
 
 The data warehouse site system role includes the following reports, under the **Data Warehouse** category:  
 
- - **Application Deployment - Historical**: View details for application deployment for a specific application and machine.  
+- **Application Deployment - Historical**: View details for application deployment for a specific application and machine.  
 
- - **Endpoint Protection and Software Update Compliance - Historical**: View computers that are missing software updates.  
+- **Endpoint Protection and Software Update Compliance - Historical**: View computers that are missing software updates.  
 
- - **General Hardware Inventory - Historical**: View all hardware inventory for a specific machine.  
+- **General Hardware Inventory - Historical**: View all hardware inventory for a specific machine.  
 
- - **General Software Inventory - Historical**: View all software inventory for a specific machine.  
+- **General Software Inventory - Historical**: View all software inventory for a specific machine.  
 
- - **Infrastructure Health Overview - Historical**: Displays an overview of the health of your Configuration Manager infrastructure  
+- **Infrastructure Health Overview - Historical**: Displays an overview of the health of your Configuration Manager infrastructure.  
 
- - **List of Malware Detected - Historical**:	View malware that has been detected in the organization.  
+- **List of Malware Detected - Historical**:	View malware that has been detected in the organization.  
 
- - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.  
+- **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.  
 
 
 
