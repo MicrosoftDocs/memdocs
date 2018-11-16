@@ -36,7 +36,7 @@ The following additional updates to this release are also now available:
 > [!Important]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-The following sections provide details about the changes and new features in version 1810 of Configuration Manager current branch.  
+This article summarizes the changes and new features in Configuration Manager, version 1810.  
 
 
 
@@ -44,7 +44,7 @@ The following sections provide details about the changes and new features in ver
 
 Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+Starting on August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux will be discontinued after the end of support. For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).
 <!--
@@ -103,7 +103,7 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 
 ### New client notification action to wake up device
 <!--1317364-->
-You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to perform maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet, and uses that client to send a wake on LAN request (magic packet).
+You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet).
 
 <!--For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).-->
 
@@ -129,7 +129,7 @@ For more information, see [Configure boundary groups](/sccm/core/servers/deploy/
 ### Improvements to internet-based client setup
 <!--1359181-->
 <!--move this under co-management?-->
-This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with multiple Azure AD tenants. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
+This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
 
 <!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
 
@@ -189,7 +189,7 @@ Configure email notifications for application approval requests. When a user req
 
 ### Detection methods don't load Windows PowerShell profiles
 <!--1359239-->
-You can use Windows PowerShell scripts for detection methods on applications, as well as in compliance settings. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
+You can use Windows PowerShell scripts for detection methods on applications and in compliance settings. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
 
 A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start. 
 
@@ -281,7 +281,7 @@ For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hie
 
 ### Support Center
 <!--1357489-->
-Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools. Find the Support Center installer on the site server in the **cd.latest\SMSSETUP\Tools\SupportCenter** folder.
+Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to combine many administrator troubleshooting tools. Find the Support Center installer on the site server in the **cd.latest\SMSSETUP\Tools\SupportCenter** folder.
 
 <!--For more information, see [Support Center](/sccm/core/support/about-support-center).-->
 
@@ -337,6 +337,14 @@ The following performance and troubleshooting improvements apply to both CMPivot
 ### SMS Provider API
 <!--1321523-->
 The SMS Provider now provides read-only API interoperability access to WMI over HTTPS. The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device. For more information, see [Approve application requests via email](#approve-application-requests-via-email).
+
+
+
+## <a name="bkmk_opmdm"></a> On-premises MDM
+
+### An Intune connection is no longer required for on-premises MDM
+<!--1359124-->
+The on-premises MDM prerequisite to configure a Microsoft Intune subscription is no longer required. Your organization still requires Intune licenses to use this feature. 
 
 
 
