@@ -213,7 +213,7 @@ A PowerShell profile is a script that runs when PowerShell starts. You can creat
 <!--1358924-->
 Now specify the drive that Configuration Manager uses when adding software updates to OS images and OS upgrade packages. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use. 
 
-<!--For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates) or [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages#BKMK_OSUpgradePkgApplyUpdates).-->
+For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive) or [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages#bkmk_servicing-drive).
 
 
 ### Task sequence support for boundary groups
