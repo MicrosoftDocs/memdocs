@@ -77,6 +77,8 @@ For more information on SQL Server licensing, see the [product and licensing FAQ
 > - CHS – Simple Chinese  
 > - CHT – Traditional Chinese  
 
+Size the data warehouse database the same as your site database. While the data warehouse is smaller at first, it will grow over time. <!--SCCMDocs issue 756-->
+
 
 
 ## Install
