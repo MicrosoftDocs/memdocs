@@ -88,7 +88,7 @@ Boundary groups now include the following additional settings to give you more c
 
 - **Prefer cloud distribution points over distribution points**: If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
-<!--For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).-->
+For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 
 ### Management insights rule for peer cache source client version
@@ -220,7 +220,7 @@ For more information, see [Manage OS images](/sccm/osd/get-started/manage-operat
 <!--1359025-->
 When a device runs a task sequence and needs to acquire content, it now uses boundary group behaviors similar to the Configuration Manager client.   
 
-<!--For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).-->
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd).
 
 
 ### Improvements to driver maintenance
