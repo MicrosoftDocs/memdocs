@@ -275,7 +275,7 @@ You can now synchronize more tables from the site database to the data warehouse
 <!--1357013-->
 You can now specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. To configure this setting, find the **Authentication** tab in **Hierarchy Settings**. 
 
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console).-->
+For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth).
 
 
 ### Support Center
