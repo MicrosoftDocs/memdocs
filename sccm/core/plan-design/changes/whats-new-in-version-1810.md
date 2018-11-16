@@ -256,7 +256,7 @@ For more information on this dashboard, see [Use the Product Lifecycle dashboard
 <!--1358870--> 
 You can now synchronize more tables from the site database to the data warehouse. This change allows you to create more reports based on your business requirements.
 
-<!--For more information, see [Data warehouse](/sccm/core/servers/manage/data-warehouse).-->
+For more information, see [Data warehouse](/sccm/core/servers/manage/data-warehouse).
 
 
 
