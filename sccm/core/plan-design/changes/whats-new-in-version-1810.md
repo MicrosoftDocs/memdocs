@@ -239,7 +239,7 @@ Driver packages now have additional metadata fields for **Manufacturer** and **M
 <!--1358146-->
 Create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
 
-<!--For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).-->
+For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 
 
 
