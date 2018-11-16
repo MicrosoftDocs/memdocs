@@ -55,7 +55,7 @@ Starting in version 1810, you can synchronize more tables from the site database
 
     - Either **DB_owner** or **DB_reader** with **execute** permissions to the top-tier site's database.  
 
-- The data warehouse database requires the use of SQL Server 2012 or later. The edition can be Standard, Enterprise, or Datacenter.  
+- The data warehouse database requires the use of SQL Server 2012 or later. The edition can be Standard, Enterprise, or Datacenter. The SQL Server version for the data warehouse doesn't need to be the same as the site database server.<!--SCCMDocs issue 662-->  
 
 - The warehouse database supports the following SQL Server configurations:  
 
