@@ -149,6 +149,5 @@ Starting in version 1806, copy information from the **Asset Details** pane for t
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Accessibility features](https://docs.microsoft.com/en-us/sccm/core/understand/accessibility-features)
+[Accessibility features](/sccm/core/understand/accessibility-features)
 
