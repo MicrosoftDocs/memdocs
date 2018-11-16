@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -26,11 +26,12 @@ To view the rules, your account needs the **read** permission on the **site** ob
 
 1. Open the Configuration Manager Console.  
 
-2. Go to the **Administration** workspace and click on **Management Insights**.  
+2. Go to the **Administration** workspace, expand **Management Insights**, and select **All Insights**.  
 
-3. Select **All Insights**.  
+    > [!Note]  
+    > Starting in version 1810, when you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).  
 
-4. Double-click on the **Management Insight Group Name** you want to review. Or highlight it and click on **Show Insights** in the ribbon.  
+3. Open the management insights group name you want to review. Select **Show Insights** in the ribbon.  
 
 The following four tabs are available for review: 
 
@@ -40,7 +41,7 @@ The following four tabs are available for review:
 
 - **In Progress**: Shows rules where some, but not all, prerequisites are complete.  
 
-- **Action Needed**: Rules needing actions taken are listed. Right-click and select **More Details** to retrieve specific items where action is needed.  
+- **Action Needed**: Rules needing actions taken are listed. Select **More Details** to retrieve specific items where action is needed.  
 
 The **Prerequisites** pane lists the required items needed to run the rule.
 
@@ -48,7 +49,7 @@ The **Prerequisites** pane lists the required items needed to run the rule.
 ![Management insights- All rules and prerequisites for cloud services group](./media/Management-insights-all-cloud-rules.png)
 
 
-Select a rule and click **More Details** to see the rule details.
+Select a rule and then select **More Details** to see the rule details.
 
 
 
@@ -59,7 +60,7 @@ The management insight rules reevaluate their applicability on a weekly schedule
 The log file for management insight rules is **SMS_DataEngine.log** on the site server.
 
 <!--1357930-->
-Starting in version 1806, some rules let you take action. Select a rule, click **More Details**, and then if available click **Take action**. 
+Starting in version 1806, some rules let you take action. Select a rule, select **More Details**, and then if available select **Take action**. 
 
 Depending upon the rule, this action has one of the following behaviors:  
 
@@ -69,9 +70,45 @@ Depending upon the rule, this action has one of the following behaviors:
 
 
 
+## <a name="bkmk_insights"></a> Management insights dashboard
+<!--1357979-->
+
+Starting in version 1810, the **Management Insights** node includes a graphical dashboard. This dashboard displays an overview of the rule states, which makes it easier for you to show your progress. 
+
+Use the following filters at the top of the dashboard to refine the view:
+- Show Completed
+- Optional
+- Recommended
+- Critical
+
+The dashboard includes the following tiles:  
+
+- **Management insights index**: Tracks overall progress on management insights rules. The index is a weighted average. Critical rules are worth the most. This index gives the least weight to optional rules.  
+
+- **Management insights groups**: Shows percent of rules in each group, honoring the filters. Select a group to drill down to the specific rules in this group.  
+
+- **Management insights priority**: Shows percent of rules by priority, honoring the filters.   
+
+- **All insights**: A table of insights including priority and state. Use the **Filter** field at the top of the table to match strings in any of the available columns. The dashboard sorts the table in the following order:
+    - Status: Action Needed, Completed, Unknown  
+    - Priority: Critical, Recommended, Optional  
+    - Last Changed: older dates on top   
+
+![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
+
+
+
 ## Groups and rules
 
-Rules are organized into different management insight groups. See the following list for the groups and rules that are currently available:
+Rules are organized into the following management insight groups:
+- [Applications](#applications)  
+- [Cloud services](#cloud-services)  
+- [Collections](#collections)  
+- [Proactive maintenance](#proactive-maintenance)  
+- [Security](#security)  
+- [Simplified management](#simplified-management)  
+- [Software Center](#software-center)  
+- [Windows 10](#windows-10)  
 
 
 ### Applications
@@ -81,7 +118,7 @@ Insights for your application management.
 - **Applications without deployments**: Lists the applications in your environment that don't have active deployments. This rule helps you find and delete unused applications to simplify the list of applications displayed in the console. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).  
 
 
-### Cloud Services
+### Cloud services
 
 Helps you integrate with many cloud services, which enable modern management of your devices. 
 
@@ -101,7 +138,7 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 - **Empty Collections**: Lists collections in your environment that have no members. For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).  
 
 
-### Proactive Maintenance
+### Proactive maintenance
 <!--1352184-->
 Starting in version 1806, the rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.	
 
@@ -117,6 +154,8 @@ Starting in version 1806, the rules in this group highlight potential configurat
 
 - **Unused configuration items**: Configuration items that aren't part of a configuration baseline and are older than 30 days. For more information, see [Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).  
 
+- **Upgrade peer cache sources to the latest version of the Configuration Manager client**: Identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients.<!--1358008-->  
+
 
 ### Security
 Insights for improving the security of your infrastructure and devices.	
@@ -124,7 +163,7 @@ Insights for improving the security of your infrastructure and devices.
 - **Unsupported antimalware client versions**: More than 10% of clients are running versions of System Center Endpoint Protection that aren't supported. For more information, see [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).  
 
 
-### Simplified Management
+### Simplified management
 
 Insights that help you simplify the day-to-day management of your environment. 
 

@@ -95,7 +95,7 @@ Boundary groups now include the following additional settings to give you more c
 <!-- 1358008 -->
 The **Management Insights** node has a new rule to identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. The new rule is **Upgrade peer cache sources to the latest version of the Configuration Manager client**, and is part of the new **Proactive Maintenance** rule group. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients. 
 
-<!--For more information, see [Management insights](/sccm/core/servers/manage/management-insights).-->
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
 
@@ -298,9 +298,9 @@ The **Management Insights** node now includes a graphical dashboard. This dashbo
 
 - **All insights**: A table of insights including priority and state.  
 
-<!-- ![Screenshot of management insights dashboard](../../media/1357979-management-insights-dashboard.png)
+![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
 
-For more information, see [Management insights](/sccm/core/servers/manage/management-insights).-->
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
 ### Improvements to CMPivot
