@@ -175,9 +175,9 @@ Starting in version 1806, Configuration Manager supports deployment of the new W
 
 ### Repair applications
 <!--1357866-->
-Now specify a repair command line for Windows Installer and Script Installer deployment types. A new button is available in Software Center to **Repair** an application. When you configure an application with a repair program, users can start the command from Software Center. 
+Specify a repair command line for Windows Installer and Script Installer deployment types. Then if you enable the option on the deployment, a new button is available in Software Center to **Repair** the application. When you configure an application with a repair program, users can start the command from Software Center. 
 
-<!--For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).-->
+For more information, see [Create applications](/sccm/apps/deploy-use/create-applications#bkmk_dt-content) and [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
 
 ### Approve application requests via email
