@@ -115,25 +115,9 @@ One of the following approval settings appears, depending upon your version of C
 
 - **Require administrator approval if users request this application**: For versions 1710 and prior, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
-	Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
-
-	After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
-
 - **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->  
 
-    This feature is optional. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). If you don't enable this feature, you see the prior experience.  
-
-    > [!Note]  
-    > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->  
-
-    View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There's now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.  
-
-    If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
-
-	After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
-
-    > [!Important]  
-    > Starting in version 1806, *the behavior has changed* when you revoke approval for an application that was previously approved and installed. Now when you **Deny** the request for the application, the client uninstalls the application from the user's device.<!--1357891-->  
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 
 #### Deployment properties **Deployment Settings**

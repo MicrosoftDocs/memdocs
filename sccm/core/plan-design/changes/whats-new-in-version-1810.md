@@ -184,7 +184,7 @@ For more information, see [Create applications](/sccm/apps/deploy-use/create-app
 <!--1321550-->
 Configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
 
-<!--For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).-->
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 
 ### Detection methods don't load Windows PowerShell profiles
