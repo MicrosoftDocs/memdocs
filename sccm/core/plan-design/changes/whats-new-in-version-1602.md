@@ -116,7 +116,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
  For details, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### Restricting access based on the health of devices  
- You can now restrict access to email and 0ffice 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  
+ You can now restrict access to email and Office 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  
 
  The Configuration Manager console features a new compliance rule that allows you to specify if the devices should be allowed or blocked access based on their health status. For details about Health Attestation Service and how the health of devices is reported in Intune, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
