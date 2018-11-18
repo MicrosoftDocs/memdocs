@@ -1,6 +1,6 @@
 ---
 title: "Learn more about PowerShell script security"
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: "Resources to help learn about PowerShell script security."
 ms.date: 03/22/2018
 ms.prod: configuration-manager

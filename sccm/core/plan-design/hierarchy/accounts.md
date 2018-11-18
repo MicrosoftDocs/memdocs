@@ -1,6 +1,6 @@
 ---
 title: Accounts used
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups and the accounts used in Configuration Manager.
 ms.date: 10/26/2018
 ms.prod: configuration-manager
