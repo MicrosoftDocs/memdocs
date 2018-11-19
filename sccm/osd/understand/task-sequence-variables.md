@@ -121,7 +121,7 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
  Specifies the IP addresses used by the computer.
 
 
-### <a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionName
+### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
  *Starting in version 1810*  
 
  Stores the name of the last action that was run. This variable relates to **_SMSTSLastActionRetCode**. The task sequence logs these values to the smsts.log file. This variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
