@@ -68,40 +68,11 @@ Use the overview information in this article to help you perform management task
 
 
 #### Client Notification
- Instructs all clients in the selected device collection to immediately do one of the following actions:
-
- - **Download Computer Policy**: Refresh the device policy. For more information, see [Initiate policy retrieval for a Configuration Manager client](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
-
- - **Download User Policy**: Refresh the user policy.  
-
- - **Collect Discovery Data**: Trigger clients to send a discovery data record (DDR). For more information, see [Heartbeat discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat).  
-
- - **Collect Software Inventory**: Trigger clients to run a software inventory cycle. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
-
- - **Collect Hardware Inventory**: Trigger clients to run a hardware inventory cycle. For more information, see [Introduction to hardware inventory](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).  
-
- - **Evaluate Application Deployments**: Trigger clients to run an application deployment evaluation cycle. For more information, see [Schedule re-evaluation for deployments](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments).  
-
- - **Evaluate Software Update Deployments**: Trigger clients to run a software updates deployment evaluation cycle. For more information, see [Introduction to software updates](/sccm/sum/understand/software-updates-introduction).  
-
- - **Switch to the next Software Update Point**: Trigger clients to switch to the next available software update point. For more information, see [Software update point switching](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
-
- - **Evaluate Device Health Attestation**: Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](/sccm/core/servers/manage/health-attestation).  
-
- - **Check Conditional Access Compliance**: Trigger clients to check their compliance with conditional access. For more information, see [Manage access to O365 services for PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+ For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
 
 
 #### Endpoint Protection
- Instructs all clients in the selected device collection to immediately do one of the following actions:
-
- - **Full Scan**: Trigger Endpoint Protection or Windows Defender to run a *full* antimalware scan  
-
- - **Quick Scan**: Trigger Endpoint Protection or Windows Defender to run a *quick* antimalware scan  
-
- - **Download Definition**: Trigger Endpoint Protection or Windows Defender to download the latest antimalware definitions  
-
-
- For more information, see [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
+ For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
 
 
 #### Export

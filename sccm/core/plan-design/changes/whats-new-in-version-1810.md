@@ -76,6 +76,17 @@ The Configuration Manager setup process no longer blocks installation of the sit
 <!--For more information, see [High availability options](/sccm/core/servers/deploy/configure/high-availability-options).-->
 
 
+### New permission for client notification actions
+<!--SCCMDocs-pr issue #2972-->
+Client notification actions now require the **Notify Resource** permission on the SMS_Collection class. The following built-in roles have this permission by default:
+- Full Administrator  
+- Infrastructure Administrator  
+
+Add this permission to any custom roles that need to use client notification actions. 
+
+For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
+
+
 
 ## <a name="bkmk_content"></a> Content management
 

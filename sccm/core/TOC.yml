@@ -605,7 +605,6 @@
   href: clients/manage/monitor-and-manage-clients.md
   items:
   - name: Monitor and manage clients
-    href: clients/manage/monitor-clients.md
     items:
     - name: How to monitor clients
       href: clients/manage/monitor-clients.md
@@ -617,6 +616,8 @@
       href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
     - name: How to manage clients
       href: clients/manage/manage-clients.md
+    - name: Client notification
+      href: clients/manage/client-notification.md
     - name: How to manage Linux and UNIX clients
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
     - name: Sync data to Log Analytics
