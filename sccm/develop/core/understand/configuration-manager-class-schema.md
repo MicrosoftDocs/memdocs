@@ -21,7 +21,7 @@ The Systems Management Server (SMS) class schema is a set of Windows Management 
 
 -   [Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)  
 
--   [Interpreting Bitfield Propeties](../../../develop/core/understand/interpreting-bitfield-properties.md)  
+-   [Interpreting Bitfield Properties](../../../develop/core/understand/interpreting-bitfield-properties.md)  
 
 -   [Lazy Properties](../../../develop/core/understand/lazy-properties.md)  
 

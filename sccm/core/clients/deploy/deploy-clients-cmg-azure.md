@@ -36,9 +36,7 @@ To install the Configuration Manager client on Windows 10 devices using Azure AD
 
 - In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
 
-- Configure all management points for HTTPS mode. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
-    - If you are using the cloud management gateway, then you only need to configure HTTPS for management points that you enable for the cloud management gateway.
-    - If you are deploying clients on the intranet using Azure AD token-based authentication, then all management points that these clients may contact must be enabled for HTTPS. 
+- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
 - Optionally set up a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 

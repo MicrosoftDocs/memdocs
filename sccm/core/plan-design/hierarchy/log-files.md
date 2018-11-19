@@ -329,7 +329,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.|
-|SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy|   
+|SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
 |smsbkup.log|Records output from the site backup process.|Site server|  
@@ -703,7 +703,7 @@ The following table lists the log files that contain information related to Disc
 |smpperf.log|Records the state migration point performance counter updates.|Site system server|  
 |smspxe.log|Records details about the responses to clients that use PXE boot, and details about the expansion of boot images and boot files.|Site system server|  
 |smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|
-| SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy| 
+| SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy| 
 |Smsts.log|Records task sequence activities.|Client|  
 |TSAgent.log|Records the outcome of task sequence dependencies before starting a task sequence.|Client|  
 |TaskSequenceProvider.log|Records details about task sequences when they are imported, exported, or edited.|Site system server|  

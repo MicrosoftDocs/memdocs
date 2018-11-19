@@ -5,7 +5,7 @@ description: Learn how to manually or automatically deploy software updates in t
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -31,7 +31,15 @@ After you create the deployment, the site sends an associated software update po
 
 If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows).  
 
-There are two main scenarios for deploying software updates: manual deployment and automatic deployment. Typically, you start by manually deploying software updates to create a baseline for your clients, and then you manage software updates on clients by using automatic deployment.  
+There are three main scenarios for deploying software updates: 
+- [Manual deployment](#BKMK_ManualDeployment)  
+- [Automatic deployment](#bkmk_auto)  
+- [Phased deployment](#bkmk_phased)  
+
+Typically, you start by manually deploying software updates to create a baseline for your clients, and then you manage software updates on clients by using an automatic or phased deployment.  
+
+> [!Note]  
+> You can't use an automatic deployment rule with a phased deployment.
 
 
 
@@ -60,7 +68,7 @@ For more information and detailed steps, see [Manually deploy software updates](
 
 
 
-## Automatically deploy software updates
+## <a name="bkmk_auto"></a> Automatically deploy software updates
 
 Configure automatic software updates deployment by using an automatic deployment rule (ADR). This method of deployment is common for monthly software updates (typically known as "Patch Tuesday") and for managing definition updates. You define the criteria for an ADR to automate the deployment process. The following list provides the general workflow to automatically deploy software updates:  
 
@@ -95,4 +103,13 @@ Each new deployment that you add:
 
 
 For more information and detailed steps, see [Automatically deploy software updates](automatically-deploy-software-updates.md)
+
+
+
+## <a name="bkmk_phased"></a> Deploy software updates in phases
+
+<!--1358146-->
+Starting in version 1810, create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
+
+For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 

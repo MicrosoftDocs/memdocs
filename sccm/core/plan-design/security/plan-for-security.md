@@ -2,7 +2,7 @@
 title: Plan for security
 titleSuffix: Configuration Manager
 description: Get best practices and other information about security in Configuration Manager.
-ms.date: 10/22/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,6 +35,8 @@ This article describes the concepts for you to consider when planning for securi
 - [Plan for role-based administration](#BKMK_PlanningForRBA)  
 
 - [Plan for Azure Active Directory](#bkmk_planazuread)  
+
+- [Plan for SMS Provider authentication](#bkmk_auth)
 
 
 
@@ -404,6 +406,25 @@ The returned string is the trusted root key. Verify that it matches the **SMSPub
 
 
  For more information about Azure AD, see [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/).
+
+
+
+## <a name="bkmk_auth"></a> Plan for SMS Provider authentication
+<!--1357013--> 
+
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. It applies to all components that access the SMS Provider. For example, the Configuration Manager console, SDK methods, and Windows PowerShell cmdlets. 
+
+This configuration is a hierarchy-wide setting. Before you change this setting, make sure that all Configuration Manager administrators can sign in to Windows with the required authentication level. 
+
+The following levels are available:
+
+- **Windows authentication**: Require authentication with Active Directory domain credentials.   
+
+- **Certificate authentication**: Require authentication with a valid certificate that's issued by a trusted PKI certificate authority.  
+
+- **Windows Hello for Business authentication**: Require authentication with strong two-factor authentication that's tied to a device and uses biometrics or a PIN.  
+
+For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). 
 
 
 

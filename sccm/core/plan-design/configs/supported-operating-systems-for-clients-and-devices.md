@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -28,10 +28,24 @@ manager: dougeby
 
 ##  Windows computers  
 
- Use the client that's included with Configuration Manager to manage the following Windows OS versions. For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  
+ To manage the following Windows OS versions, use the client that's included with Configuration Manager. For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  
 
 
-### Supported OS versions  
+### Supported client OS versions
+
+-   **Windows 10**  
+
+    For more detailed information, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
+
+-   **Windows 8.1** (x86, x64): Professional, Enterprise    
+
+-   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate    
+
+
+### Supported server OS versions
+
+-  **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
+    (Starting with Configuration Manager version 1806.)
 
 -  **Windows Server 2016**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
 
@@ -51,32 +65,30 @@ manager: dougeby
 
 -   **Windows Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>    
 
--   **Windows 10**  
 
-    For more information about the different release versions of Windows 10 that are supported by the different versions of Configuration Manager, see [Support for versions of Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
+#### Server Core
+The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>  
 
--   **Windows 8.1** (x86, x64): Professional, Enterprise    
+Windows Server semi-annual channel versions are Server Core installations, such as, Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 10 semi-annual channel version. For more information, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).
 
--   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate    
 
--   **The Server Core installation of Windows Server, version 1709** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Note 3](#bkmk_note3)</sup>  
-    This OS version is supported beginning with Configuration Manager version 1710.  
+-   **Windows Server 2019** (x64) <sup>[Note 2](#bkmk_note2)</sup>  
 
--   **The Server Core installation of Windows Server 2016** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Note 3](#bkmk_note3)</sup>  
+-   **Windows Server 2016** (x64) <sup>[Note 2](#bkmk_note2)</sup>   
 
--   **The Server Core installation of Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Note 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup>     
 
--   **The Server Core installation of Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Note 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup>     
 
--   **The Server Core installation of Windows Server 2008 R2** with no service pack, or with SP1 (x64) <sup>[Note 3](#bkmk_note3)</sup>    
+-   **Windows Server 2008 R2** with no service pack, or with SP1 (x64)     
 
--   **The Server Core installation of Windows Server 2008 SP2** (x86, x64) <sup>[Note 3](#bkmk_note3)</sup>  
+-   **Windows Server 2008 SP2** (x86, x64)   
 
 #### <a name="bkmk_note1"></a> Note 1
- Datacenter releases are supported but not certified for Configuration Manager. Hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition.  
+ Configuration Manager tests and supports Windows Server Datacenter editions, but isn't officially certified for Windows Server. Configuration Manager hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition. For more information on the Windows Server certification program, see [Windows Server Catalog](https://www.windowsservercatalog.com/). 
 
 #### <a name="bkmk_note2"></a> Note 2
- To support client push installation, the computer that runs this OS version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps).  
+ To support [client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps).  
 
 #### <a name="bkmk_note3"></a> Note 3
  The new Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->
@@ -102,8 +114,6 @@ manager: dougeby
 
 -   The Application Catalog isn't supported for any Windows Embedded device.  
 
--   Before you can monitor detected malware on Windows Embedded devices that are based on Windows XP, you must install the Microsoft Windows WMI scripting package on the device. Use Windows Embedded Target Designer to install this package. The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in the folder **%windir%\System32\WBEM** on the embedded device to ensure that detected malware is reported.  
-
 
 ### Supported OS versions  
 
@@ -121,21 +131,6 @@ manager: dougeby
 -   **Windows Embedded POSReady 7** (x86, x64)    
 
 -   **Windows Embedded Standard 7 with SP1** (x86, x64)    
-
-
-### Unsupported OS versions
-
-The following OS versions are based on Windows XP Embedded. Beginning with version 1702, these embedded OS versions aren't supported. For more information, see [Deprecated client operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems).  
-
--   **WEPOS 1.1 with SP3** (x86)    
-
--   **Windows Embedded POSReady 2009** (x86)    
-
--   **Windows Fundamentals for Legacy PCs (WinFLP)** (x86)    
-
--   **Windows XP Embedded SP3** (x86)    
-
--   **Windows Embedded Standard 2009** (x86)  
 
 
 
@@ -206,6 +201,7 @@ The following OS versions are based on Windows XP Embedded. Beginning with versi
 
 -   **Mac OS X 10.13** (macOS High Sierra)
 
+- **macOS Mojave (10.14)** 
 
 
 ##  Linux and UNIX servers  
@@ -320,15 +316,6 @@ The following versions are supported by using the indicated .tar file.
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 |Version 16.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 16.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-
-
-
-##  Mobile devices enrolled by Microsoft Intune  
-
- For more information about the computers and devices that you can manage when you integrate Microsoft Intune with Configuration Manager, see the following articles in the Microsoft Intune documentation library:  
-
--   [Mobile device management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
--   [Windows PC management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
 
 
 

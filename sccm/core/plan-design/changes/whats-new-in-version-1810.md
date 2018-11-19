@@ -36,7 +36,7 @@ The following additional updates to this release are also now available:
 > [!Important]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-The following sections provide details about the changes and new features in version 1810 of Configuration Manager current branch.  
+This article summarizes the changes and new features in Configuration Manager, version 1810.  
 
 
 
@@ -44,8 +44,9 @@ The following sections provide details about the changes and new features in ver
 
 Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-As of August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+Starting on August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
+Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux will be discontinued after the end of support. For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).
 <!--
 Version 1810 drops support for the following products:
 -->
@@ -94,7 +95,7 @@ Boundary groups now include the following additional settings to give you more c
 <!-- 1358008 -->
 The **Management Insights** node has a new rule to identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. The new rule is **Upgrade peer cache sources to the latest version of the Configuration Manager client**, and is part of the new **Proactive Maintenance** rule group. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients. 
 
-<!--For more information, see [Management insights](/sccm/core/servers/manage/management-insights).-->
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
 
@@ -102,7 +103,7 @@ The **Management Insights** node has a new rule to identify clients that serve a
 
 ### New client notification action to wake up device
 <!--1317364-->
-You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to perform maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet, and uses that client to send a wake on LAN request (magic packet).
+You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet).
 
 <!--For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).-->
 
@@ -128,7 +129,7 @@ For more information, see [Configure boundary groups](/sccm/core/servers/deploy/
 ### Improvements to internet-based client setup
 <!--1359181-->
 <!--move this under co-management?-->
-This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with multiple Azure AD tenants. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
+This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
 
 <!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
 
@@ -142,6 +143,7 @@ Define compliance policy rules in Configuration Manager for required application
 
 <!--For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).-->
 
+
 ### Improvement to co-management dashboard
 <!--1358980-->
 The co-management dashboard is enhanced with the following more detailed information:  
@@ -152,9 +154,9 @@ The co-management dashboard is enhanced with the following more detailed informa
 
 - A new tile with counts of **Enrollment errors**
 
-<!--![Co-management dashboard screenshot showing the top four tiles](../../media/1358980-comgmt-dashboard.png)-->
+![Co-management dashboard screenshot showing the top four tiles](media/1358980-comgmt-dashboard.png)
 
-<!--For more information, see [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard).-->
+For more information, see [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard).
 
 
 
@@ -187,7 +189,7 @@ Configure email notifications for application approval requests. When a user req
 
 ### Detection methods don't load Windows PowerShell profiles
 <!--1359239-->
-You can use Windows PowerShell scripts for detection methods on applications, as well as in compliance settings. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
+You can use Windows PowerShell scripts for detection methods on applications and in compliance settings. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
 
 A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start. 
 
@@ -211,7 +213,7 @@ A PowerShell profile is a script that runs when PowerShell starts. You can creat
 <!--1358924-->
 Now specify the drive that Configuration Manager uses when adding software updates to OS images and OS upgrade packages. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use. 
 
-<!--For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates) or [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages#BKMK_OSUpgradePkgApplyUpdates).-->
+For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive) or [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages#bkmk_servicing-drive).
 
 
 ### Task sequence support for boundary groups
@@ -237,7 +239,7 @@ Driver packages now have additional metadata fields for **Manufacturer** and **M
 <!--1358146-->
 Create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
 
-<!--For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).-->
+For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 
 
 
@@ -254,7 +256,7 @@ For more information on this dashboard, see [Use the Product Lifecycle dashboard
 <!--1358870--> 
 You can now synchronize more tables from the site database to the data warehouse. This change allows you to create more reports based on your business requirements.
 
-<!--For more information, see [Data warehouse](/sccm/core/servers/manage/data-warehouse).-->
+For more information, see [Data warehouse](/sccm/core/servers/manage/data-warehouse).
 
 
 
@@ -274,12 +276,12 @@ You can now synchronize more tables from the site database to the data warehouse
 <!--1357013-->
 You can now specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. To configure this setting, find the **Authentication** tab in **Hierarchy Settings**. 
 
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console).-->
+For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth).
 
 
 ### Support Center
 <!--1357489-->
-Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools. Find the Support Center installer on the site server in the `cd.latest\SMSSETUP\Tools\SupportCenter` folder.
+Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to combine many administrator troubleshooting tools. Find the Support Center installer on the site server in the **cd.latest\SMSSETUP\Tools\SupportCenter** folder.
 
 For more information, see [Support Center](/sccm/core/support/support-center).
 
@@ -297,9 +299,9 @@ The **Management Insights** node now includes a graphical dashboard. This dashbo
 
 - **All insights**: A table of insights including priority and state.  
 
-<!-- ![Screenshot of management insights dashboard](../../media/1357979-management-insights-dashboard.png)
+![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
 
-For more information, see [Management insights](/sccm/core/servers/manage/management-insights).-->
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
 ### Improvements to CMPivot
@@ -335,6 +337,14 @@ The following performance and troubleshooting improvements apply to both CMPivot
 ### SMS Provider API
 <!--1321523-->
 The SMS Provider now provides read-only API interoperability access to WMI over HTTPS. The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device. For more information, see [Approve application requests via email](#approve-application-requests-via-email).
+
+
+
+## <a name="bkmk_opmdm"></a> On-premises MDM
+
+### An Intune connection is no longer required for on-premises MDM
+<!--1359124-->
+The on-premises MDM prerequisite to configure a Microsoft Intune subscription is no longer required. Your organization still requires Intune licenses to use this feature. 
 
 
 

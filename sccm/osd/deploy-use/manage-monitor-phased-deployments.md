@@ -2,7 +2,7 @@
 title: Manage & monitor phased deployments
 titleSuffix: Configuration Manager
 description: Understand how to manage and monitor phased deployments for software in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -16,7 +16,10 @@ manager: dougeby
 
 This article describes how to manage and monitor phased deployments. Management tasks include manually beginning the next phase, and suspend or resume a phase. 
 
-First, you need to [create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). 
+First, you need to create a phased deployment: 
+- [Application](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Software update](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Task sequence](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
 
 
 
@@ -26,7 +29,14 @@ When you select the setting, **Manually begin the second phase of deployment**, 
 
 1. How to start this action varies based on the type of deployed software:  
 
-    - **Application** (only in version 1806 or later): Go to the **Software Library**, expand **Application Management**, and select **Applications**.   
+    - **Application** (only in version 1806 or later): Go to the **Software Library** workspace, expand **Application Management**, and select **Applications**.   
+
+    - **Software update** (only in version 1810 or later): Go to the **Software Library** workspace, and then select one of the following nodes:    
+        - Software Updates  
+            - **All Software Updates**  
+            - **Software Update Groups**   
+        - Windows 10 Servicing, **All Windows 10 Updates**  
+        - Office 365 Client Management, **Office 365 Updates**  
 
     - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.   
 
@@ -42,11 +52,18 @@ When you select the setting, **Manually begin the second phase of deployment**, 
 
 ## <a name="bkmk_suspend"></a> Suspend and resume phases 
 
-You may need to manually suspend or resume a phased deployment. For example, you create a phased deployment for a task sequence. While monitoring the phase to your pilot group, you notice a large number of failures. You suspend the phased deployment to stop further devices from running the task sequence. After resolving the issue, you resume the phased deployment to continue the rollout. 
+You can manually suspend or resume a phased deployment. For example, you create a phased deployment for a task sequence. While monitoring the phase to your pilot group, you notice a large number of failures. You suspend the phased deployment to stop further devices from running the task sequence. After resolving the issue, you resume the phased deployment to continue the rollout. 
 
 1. How to start this action varies based on the type of deployed software:  
 
-    - **Application** (only in version 1806 or later): Go to the **Software Library**, expand **Application Management**, and select **Applications**.   
+    - **Application** (only in version 1806 or later): Go to the **Software Library** workspace, expand **Application Management**, and select **Applications**.   
+
+    - **Software update** (only in version 1810 or later): Go to the **Software Library** workspace, and then select one of the following nodes:    
+        - Software Updates  
+            - **All Software Updates**  
+            - **Software Update Groups**   
+        - Windows 10 Servicing, **All Windows 10 Updates**  
+        - Office 365 Client Management, **Office 365 Updates**  
 
     - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. Select an existing task sequence, and then click **Create Phased Deployment** in the ribbon.  
 
@@ -86,7 +103,8 @@ This dashboard shows the following information for each phase in the deployment:
 
 Use the **Select Phase** drop-down list to change the display of the **Success Criteria** tile. This tile compares the **Phase Goal** against the current compliance of the deployment. With the default settings, the phase goal is 95%. This value means that the deployment needs a 95% compliance to move to the next phase. 
 
-In this example, the phase goal is 65%, and the current compliance is 66.7%. The phased deployment automatically moved to the second phase, because the first phase met the success criteria.
+In this example, the phase goal is 65%, and the current compliance is 66.7%. The phased deployment automatically moved to the second phase, because the first phase met the success criteria.  
+
 ![Example Success Criteria tile from Phased Deployment Status](media/pod-status-success-criteria-tile.png)
 
 The phase goal is the same as the **Deployment success percentage** on the Phase Settings for the *next* phase. For the phased deployment to start the next phase, that second phase defines the criteria for success of the first phase. To view this setting: 

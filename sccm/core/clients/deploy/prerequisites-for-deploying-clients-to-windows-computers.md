@@ -55,7 +55,7 @@ If the client requires these dependencies to complete the installation, it autom
 |Microsoft Policy Platform 1.2.3514.0|Required to allow clients to evaluate compliance settings.|  
 |Microsoft Silverlight 5.1.41212.0|Required to support the Application Catalog website user experience. Starting in Configuration Manager 1802, the client doesn't automatically install Silverlight. The primary functionality of the Application Catalog is now included in Software Center. Support for the Application Catalog website ends in version 1806.<!--1356195-->|  
 |Microsoft .NET Framework version 4.5.2|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
-|Microsoft SQL Server Compact 3.5 SP2 components|Required to store information related to client operations.|  
+|Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
 
 
 ####  <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
