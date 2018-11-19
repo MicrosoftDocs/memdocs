@@ -20,10 +20,9 @@ Update 1810 for Configuration Manager current branch is available as an in-conso
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist).
 
-<!--
-> [!Important]  
+> [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
--->
+
 <!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4459701).
 
@@ -226,6 +225,11 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 ### Improvements to driver maintenance
 <!--1358270-->
 Driver packages now have additional metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete.
+
+
+### New task sequence variable for last action name
+<!--SCCMDocs-pr issue #2964-->
+Along with the task sequence variable _SMSTSLastActionRetCode, the task sequence also sets a new variable **_SMSTSLastActionName**. It also logs this value to the smsts.log file. This new variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
 
 
