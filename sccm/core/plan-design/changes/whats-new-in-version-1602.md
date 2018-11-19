@@ -1,6 +1,6 @@
 ---
 title: "New in version 1602"
-titleSuffix: "Configuraton Manager"
+titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1602 of System Center Configuration Manager."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
