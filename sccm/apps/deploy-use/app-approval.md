@@ -19,6 +19,7 @@ manager: dougeby
 When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request. 
 
 
+
 ## <a name="bkmk_approval"></a> Approval settings
 
 The application approval behavior depends upon your version of Configuration Manager. One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
@@ -28,7 +29,7 @@ The application approval behavior depends upon your version of Configuration Man
 
 The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
-Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
@@ -50,7 +51,7 @@ The administrator approves any user requests for the application before the user
 
 View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There's now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.  
 
-If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
@@ -67,17 +68,21 @@ Starting in version 1810, configure email notifications for application approval
 
 ### Prerequisites
 
-#### To send email notifications
+#### To send email notifications and take action on internal network
+With these prerequisites, recipients receive an email with notification of the request. If they are on the internal network, they can also approve or deny the request from the email.
+
 - Enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
 
 - Configure [email notification for alerts](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts).  
 
-#### To approve or deny requests from email
-If you don't configure these prerequisites, the site sends email notification for application requests without links to approve or deny the request.  
 
-- In the site properties, **Enable REST endpoint for all providers roles on this site and allow Configuration Manager cloud management gateway traffic**. For more information, see [OData endpoint data access](/sccm/core/get-started/capabilities-in-technical-preview-1612#odata-endpoint-data-access).  
 
-    - Restart the SMS_EXEC service after enabling the REST endpoint
+#### To take action from internet
+With these additional optional prerequisites, recipients can approve or deny the request from anywhere they have internet access.
+
+- Enable the SMS Provider administration service through the cloud management gateway. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the server with the SMS Provider role. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the Site Role tab. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
+
+    - The SMS Provider requires **.NET 4.5.2** or later.  
 
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)  
 
@@ -101,13 +106,14 @@ If you don't configure these prerequisites, the site sends email notification fo
 
 2. As a user, request the application in Software Center.  
 
-3. You receive an email notification similar to the following example:  
+3. You receive an email notification within five minutes. The content of the email is similar to the following example:  
 
 ![Example email notification for application approval](media/1321550-email.png)
 
 > [!Note]  
 > The link to approve or deny is for one-time use. For example, you configure a group alias to receive notifications. Meg approves the request. Now Bruce can't deny the request.  
 
+Review the **NotiCtrl.log** file on the site server for troubleshooting.
 
 
 ## Maintenance 
