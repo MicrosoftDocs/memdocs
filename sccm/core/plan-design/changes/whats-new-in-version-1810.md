@@ -283,7 +283,7 @@ For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hie
 <!--1357489-->
 Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to combine many administrator troubleshooting tools. Find the Support Center installer on the site server in the **cd.latest\SMSSETUP\Tools\SupportCenter** folder.
 
-<!--For more information, see [Support Center](/sccm/core/support/about-support-center).-->
+For more information, see [Support Center](/sccm/core/support/support-center).
 
 
 ### Management insights dashboard
