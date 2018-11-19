@@ -330,6 +330,8 @@
         href: servers/deploy/configure/boundaries.md
       - name: Boundary groups
         href: servers/deploy/configure/boundary-groups.md
+      - name: Procedures for boundary groups
+        href: servers/deploy/configure/boundary-group-procedures.md
     - name: High availability options
       href: servers/deploy/configure/high-availability-options.md
       items:

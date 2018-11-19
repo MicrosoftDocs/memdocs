@@ -23,7 +23,7 @@ By default, Configuration Manager creates a default site boundary group at each 
 
 To configure boundary groups, associate boundaries (network locations) and site system roles, like distribution points, to the boundary group. This configuration helps associate clients to site system servers like distribution points that are located near the clients on the network.
 
-To increase the availability of site systems servers to a wider range of network locations, assign the same boundary and the same server to multiple boundary groups.
+To increase the availability of servers to a wider range of network locations, assign the same boundary and the same server to more than one boundary group.
 
 Clients use a boundary group for:  
 
@@ -45,15 +45,15 @@ For each boundary group in your hierarchy, you can assign:
 
 - One or more boundaries. A client's **current** boundary group is a network location that's defined as a boundary assigned to a specific boundary group. A client can have more than one current boundary group.  
 
-- One or more site system roles. Clients can always use site system roles associated with their current boundary group. Depending on additional configurations, they might be able to use site system roles in additional boundary groups.  
+- One or more site system roles. Clients can always use roles associated with their current boundary group. Depending on additional configurations, they can use roles in additional boundary groups.  
 
-For each boundary group you create, you can configure a one-way link to another boundary group. The link is called a **relationship**. The boundary groups you link to are called **neighbor** boundary groups. A boundary group can have multiple relationships, each with a specific neighbor boundary group.
+For each boundary group you create, you can configure a one-way link to another boundary group. The link is called a **relationship**. The boundary groups you link to are called **neighbor** boundary groups. A boundary group can have more than one relationship, each with a specific neighbor boundary group.
 
-When a client fails to find an available site system server in its current boundary group, the configuration of each relationship determines when it begins to search a neighbor boundary group. This search of additional groups is called **fallback**.
+When a client fails to find an available site system in its current boundary group, the configuration of each relationship determines when it begins to search a neighbor boundary group. This search of additional groups is called **fallback**.
 
 For more information, see the following procedures:  
-- [Create a boundary group](#bkmk_create)  
-- [Configure a boundary group](#bkmk_config)  
+- [Create a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_create)  
+- [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config)  
 
 
 
@@ -61,7 +61,7 @@ For more information, see the following procedures:
 
 To prevent problems when clients can't find an available site system in their current boundary group, define the relationship between boundary groups for fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
 
-Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of supported site system role, configure independent settings for fallback to the neighbor boundary group. For more information, see [Configure fallback behavior](#bkmk_bg-fallback).
+Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of supported site system role, configure independent settings for fallback to the neighbor boundary group. For more information, see [Configure fallback behavior](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_bg-fallback).
 
 For example, when you configure a relationship to a specific boundary group, set fallback for distribution points to occur after 20 minutes. The default is 120 minutes For a more extensive example, see [Example of using boundary groups](#example-of-using-boundary-groups).
 
@@ -69,7 +69,7 @@ If a client fails to find an available site system role in its current boundary 
 
 When a client can't find an available site system, it begins to search locations from neighbor boundary groups. This behavior increases the pool of available site systems. The configuration of boundary groups and their relationships defines the client's use of this pool of available site systems.
 
-- A boundary group can have more than one relationship. With multiple relationships, you can configure fallback for each type of site system to different neighbors to occur after different periods of time.    
+- A boundary group can have more than one relationship. With this configuration, you can configure fallback for each type of site system to different neighbors to occur after different periods of time.    
 
 - Clients only fallback to a boundary group that's a direct neighbor of their current boundary group.  
 
@@ -78,7 +78,7 @@ When a client can't find an available site system, it begins to search locations
 
 ### The default site boundary group
 
-In addition to the boundary groups you create, each site has a default site boundary group that is created by Configuration Manager. This group is named **Default-Site-Boundary-Group&lt;sitecode>**. For example, the group for site ABC would be named **Default-Site-Boundary-Group&lt;ABC>**.
+You can create your own boundary groups, and each site has a default site boundary group that Configuration Manager creates. This group is named **Default-Site-Boundary-Group&lt;sitecode>**. For example, the group for site ABC would be named **Default-Site-Boundary-Group&lt;ABC>**.
 
 For each boundary group you create, Configuration Manager automatically creates an implied link to each default site boundary group in the hierarchy.  
 
@@ -103,7 +103,7 @@ To manage fallback to the default site boundary group:
 
 -   After assigning to a site, a client doesn't change its site assignment when it changes its network location. For example, a client roams to a new network location. This location is a boundary in a boundary group with a different site assignment. The client's assigned site doesn't change.  
 
--   When Active Directory System Discovery discovers a new resource, the site evaluates network information for the discovered resource against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.  
+-   When Active Directory System Discovery discovers a new resource, the site evaluates network information for the resource against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.  
 
 -   When a boundary is a member of more than one boundary groups that have different assigned sites, clients randomly select one of the sites.  
 
@@ -112,22 +112,24 @@ To manage fallback to the default site boundary group:
 For more information about client site assignment, see [Using automatic site assignment for computers](/sccm/core/clients/deploy/assign-clients-to-a-site#BKMK_AutomaticAssignment).  
 
 For more information on how to configure site assignment, see the following procedures:
-- [Configure site assignment and select site system servers](#bkmk_references)
-- [Configure a fallback site for automatic site assignment](#bkmk_site-fallback)
+- [Configure site assignment and select site system servers](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_references)
+- [Configure a fallback site for automatic site assignment](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback)
 
 
 
 ## Distribution points
 
-When a client requests the location of a distribution point, Configuration Manager sends the client a list of site systems. These site systems are of the appropriate type associated with each boundary group that includes the clients current network location:
+When a client requests the location of a distribution point, Configuration Manager sends the client a list of site systems. These site systems are of the appropriate type associated with each boundary group that includes the client's current network location:
 
 -   **During software distribution**, clients request a location for deployment content on a valid content source. This location may be a distribution point, or a peer cache source.  
 
 -   **During OS deployment**, clients request a location to send or receive their state migration information.  
 
-During content deployment, if a client requests content that isn't available from a source in its current boundary group, the client continues to request that content. The client tries different content sources in its current boundary group until it reaches the fallback period for a neighbor boundary group or the default site boundary group. If the client still hasn't found content, it then expands its search for content sources to include the neighbor boundary groups.
+    - Starting in version 1810, clients acquire content based on boundary group behaviors. For more information, see [Task sequence support for boundary groups](#bkmk_bgr-osd).  
 
-If the content is distributed on-demand, and not available on a distribution point when requested by a client, the process to transfer the content to that distribution point begins. It's possible the client finds that server as a content source before falling back to use a neighbor boundary group.
+During content deployment, if a client requests content that isn't available from a source in its current boundary group, the client continues to request that content. The client tries different content sources in its current boundary group until it reaches the fallback period for a neighbor or the default site boundary group. If the client still hasn't found content, it then expands its search for content sources to include the neighbor boundary groups.
+
+If you configure the content to distribute on-demand, and it isn't available on a distribution point when a client requests it, the site begins to transfer the content to that distribution point. It's possible the client finds that server as a content source before falling back to use a neighbor boundary group.
 
 
 ### <a name="bkmk_ccmsetup"></a> Client installation
@@ -144,12 +146,57 @@ Starting in version 1810, the management point returns distribution points based
 > The client setup process doesn't use the fallback time. To locate content as quickly as possible, it immediately falls back to the next boundary group.  
 
 
+### <a name="bkmk_bgr-osd"></a> Task sequence support for boundary groups
+<!--1359025-->
+
+Starting in version 1810, when a device runs a task sequence and needs to acquire content, it now uses boundary group behaviors similar to the Configuration Manager client.   
+
+Configure this behavior using the following settings on the **Distribution Points** page of the task sequence deployment: 
+
+- **When no local distribution point is available, use a remote distribution point**: For this deployment, the task sequence can fall back to distribution points in a neighbor boundary group.  
+
+- **Allow clients to use distribution points from the default site boundary group**: For this deployment, the task sequence can fall back to distribution points in the default site boundary group.  
+
+To use this new behavior, make sure to update clients to the latest version.
+
+#### Location priority  
+
+The task sequence tries to acquire content in the following order:  
+
+1. Peer cache sources  
+
+2. Distribution points in the *current* boundary group  
+
+3. Distribution points in a *neighbor* boundary group  
+
+    > [!Important]  
+    > Due to the real-time nature of task sequence processing, it doesn't wait for the failover time on a neighbor boundary group. It uses the failover times for prioritizing the neighbor boundary groups. For example, if the task sequence fails to acquire content from a distribution point in its current boundary group, it immediately tries a distribution point in a neighbor boundary group with the shortest failover time. If that process fails, it then fails over to a distribution point in a neighbor boundary group with a larger failover time.  
+
+4. Distribution points in the *site default* boundary group  
+
+The task sequence log file **smsts.log** shows the priority of the location sources that it uses based on the deployment properties.
+
+
 ### <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
 
 <!--1356193-->
-Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Configure a boundary group](#bkmk_config).
+Starting in version 1806, boundary groups include the following additional settings to give you more control over content distribution in your environment:  
 
-#### Allow peer downloads in this boundary group
+- [Allow peer downloads in this boundary group](#bkmk_bgoptions1)  
+
+- [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
+
+<!--1358749-->
+Version 1810 adds the following options:  
+
+- [Prefer distribution points over peers with the same subnet](#bkmk_bgoptions3)  
+
+- [Prefer cloud distribution points over distribution points](#bkmk_bgoptions4)  
+
+For more information on how to configure these settings, see [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config).
+
+
+#### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
 This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).  
 
 There are two common scenarios in which you should consider disabling this option:  
@@ -158,8 +205,8 @@ There are two common scenarios in which you should consider disabling this optio
 
 - If you use a single, large boundary group for site assignment that doesn't reference any distribution points.  
 
-#### During peer downloads, only use peers within the same subnet
-This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
+#### <a name="bkmk_bgoptions2"></a> During peer downloads, only use peers within the same subnet
+This setting is dependent upon the preceding option. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
 
 Common scenarios for enabling this option:
 
@@ -167,6 +214,11 @@ Common scenarios for enabling this option:
 
 - You have a single large boundary group for all remote office locations. Enable this option and clients only share content within the subnet at the remote office location, instead of risking sharing content between locations.
 
+#### <a name="bkmk_bgoptions3"></a> Prefer distribution points over peers with the same subnet
+By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.  
+
+#### <a name="bkmk_bgoptions4"></a> Prefer cloud distribution points over distribution points
+If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
 
 
@@ -245,7 +297,7 @@ During client upgrade, if you don't specify the /MP command-line parameter, the 
 For clients to use this capability, enable the following setting: **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. 
 
 > [!Note]  
-> OS deployment processes aren't aware of boundary groups.  
+> OS deployment processes aren't aware of boundary groups for management points.  
 
 
 ### Troubleshooting
@@ -258,7 +310,7 @@ New entries appear in the **LocationServices.log**. The **Locality** attribute i
 
 - **2**: The specified management point is in a remote or neighbor boundary group. When the management point is in both a neighbor and the site default boundary groups, the locality is 2.  
 
-- **3**: The specified management point is in the local or current boundary group. When the management point is in the current boundary group as well as either a neighbor or the site default boundary group, the locality is 3. If you don't enable the preferred management points setting in Hierarchy Settings, the locality is always 3 no matter which boundary group the management point is in.  
+- **3**: The specified management point is in the local or current boundary group. When the management point is in the current boundary group and either a neighbor or the site default boundary group, the locality is 3. If you don't enable the preferred management points setting in Hierarchy Settings, the locality is always 3 no matter which boundary group the management point is in.  
 
 Clients use local management points first (locality 3), remote second (locality 2), then fallback (locality 1). 
 
@@ -275,7 +327,7 @@ When a client receives five errors in 10 minutes and fails to communicate with a
 
 - A client tries to use a preferred management point from its assigned site before using one not configured as preferred from its assigned site.  
 
-- To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries. For more information, see [Enable use of preferred management points](#bkmk_proc-prefer).  
+- To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
 - When you configure preferred management points, and a client organizes its list of management points, the client places the preferred management points at the top of its list. This list includes all management points from the client's assigned site.  
 
@@ -389,115 +441,10 @@ When a client searches for a content source location, it tries to access each di
 
 
 
-## Procedures for boundary groups
+## See also
 
+- [Procedures for boundary groups](/sccm/core/servers/deploy/configure/boundary-group-procedures)  
 
-### <a name="bkmk_create"></a> Create a boundary group  
+- [About boundaries](/sccm/core/servers/deploy/configure/boundaries)  
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Boundary Groups** node.  
-
-2.  On the **Home** tab, in the **Create** group, select **Create Boundary Group**.  
-
-3.  In the **Create Boundary Group** dialog box, on the **General** tab, specify a **Name** for this boundary group. Optionally include a **Description**.  
-
-4.  Select **OK** to save the new boundary group, or continue to the next section to configure the boundary group.  
-
-
-### <a name="bkmk_config"></a> Configure a boundary group  
-
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Hierarchy Configuration**, and select the **Boundary Groups** node.  
-
-2.  Select the boundary group you want to modify, and select **Properties** in the ribbon. This action opens the boundary group Properties window.  
-
-Configure the following settings:  
-- [Add or remove boundaries](#bkmk_add)  
-- [Configure site assignment and select site system servers](#bkmk_references)  
-- [Configure fallback behavior](#bkmk_bg-fallback)  
-- [Configure boundary group options](#bkmk_options)  
-
-#### <a name="bkmk_add"></a> Add or remove boundaries
-
-In the boundary group Properties window, use the **General** tab to modify the boundaries that are members of this boundary group:  
-
-- To add boundaries, select **Add**. In the Add Boundaries window, select the check box for one or more boundaries, and select **OK**.  
-
-- To remove boundaries, select the boundary in the list, and select **Remove**.  
-
-
-#### <a name="bkmk_references"></a> Configure site assignment and select site system servers
-
-To modify the site assignment and associated site system server configuration, switch to the **References** tab in the boundary group Properties window.  
-
-- To enable this boundary group for use by clients for site assignment, select **Use this boundary group for site assignment**. Then select a site from the **Assigned site** dropdown list. For more information, see [Site assignment](#site-assignment).  
-
-- To associate available site system servers with this boundary group, select **Add**. The Add Site Systems window only lists servers that have supported site system roles. Select the check box for one or more servers, and select **OK**. It adds them as associated site system servers for this boundary group.  
-
-    > [!NOTE]  
-    >  You can select any combination of available site systems from any site in the hierarchy. Selected site systems are listed on the **Site Systems** tab in the properties of each boundary that's a member of this boundary group.  
-
-- To remove a server from this boundary group, select the server and then select **Remove**.  
-
-    > [!NOTE]  
-    >  To stop use of this boundary group for associating site systems, remove all servers listed as associated site system servers.  
-
-
-#### <a name="bkmk_bg-fallback"></a> Configure fallback behavior
-
-To configure fallback behavior, switch to the **Relationships** tab in the boundary group Properties window.  
-
-- To create a relationship with another boundary group:  
-
-    - Select **Add**. In the Fallback Boundary Groups window, select the boundary group to configure.  
-
-    - Set a fallback time for the following site system roles:  
-        - Distribution point  
-        - Software update point  
-        - Management point  
-
-        > [!Note]  
-        > For example, you open the Properties window for the Branch Office boundary group. In the Fallback Boundary Groups window, you select the Main Office boundary group. You set the distribution point fallback time to `20`. When you save this configuration, clients in the Branch Office boundary group will start searching for content from the distribution points in the Main Office boundary group after 20 minutes.  
-
-    - To prevent fallback to a specific boundary group, select the boundary group, and then select **Never fallback** for the type of site system role. This action can include the *default site boundary group*.  
-
-- To modify the configuration of an existing relationship, select the boundary group in the list, and select **Change**. This action opens the Fallback Boundary Groups window for just this boundary group.  
- 
-- To remove a relationship, select the boundary group in the list, and select **Remove**.  
-
-For more information, see [Fallback](#fallback). 
-
-
-#### <a name="bkmk_options"></a> Configure boundary group options
-<!--1356193-->
-Starting in version 1806, to configure additional options for clients in this boundary group, switch to the **Options** tab. For more information, see [Boundary group options for peer downloads](#bkmk_bgoptions).
-
-- **Allow peer downloads in this boundary group**: This option is enabled by default. The management point provides clients a list of content locations that includes peer sources.  
-
-    - **During peer downloads, only use peers within the same subnet**: This setting is dependent upon the one above. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.  
-
-
-### <a name="bkmk_site-fallback"></a> Configure a fallback site for automatic site assignment  
-
-If clients aren't in a boundary group with an assigned site, assign them to this site when they're installed.
-
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
-
-2.  On the **Home** tab of the ribbon, in the **Sites** group, select **Hierarchy Settings**.  
-
-3.  On the **General** tab, select the checkbox to **Use a fallback site**. Then select a site from the **Fallback site** drop-down list.  
-
-4.  Select **OK** to save the configuration.  
-
-For more information, see [Site assignment](#site-assignment).
-
-
-### <a name="bkmk_proc-prefer"></a> Enable use of preferred management points  
-
-For more information, see [Preferred management points](#bkmk_preferred).
-
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
-
-2. On the **Home** tab of the ribbon, in the **Sites** group, select **Hierarchy Settings**.  
-
-3. On the **General** tab, select **Clients prefer to use management points specified in boundary groups**.  
-
-4. Select **OK** to save the configuration.  
+- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)  
