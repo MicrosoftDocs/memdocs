@@ -259,6 +259,17 @@ Create phased deployments for software updates. Phased deployments allow you to 
 For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 
 
+### Improvement to maintenance windows for software updates
+<!--vso2839307-->
+The following client setting is in the **Software Updates** group to control the installation behavior of software updates in maintenance windows: 
+
+**Enable installation of updates in "All deployments" maintenance window when "Software update" maintenance window is available**
+
+By default, this option is **No** to keep consistent with the existing behavior. Change it to **Yes** to allow clients to use other available maintenance windows to install software updates.
+
+<!--For more information, see []().-->
+
+
 
 ## <a name="bkmk_report"></a> Reporting
 
