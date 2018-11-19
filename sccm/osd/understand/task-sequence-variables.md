@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/17/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -119,6 +119,12 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
  *Applies to the [Set Dynamic Variables](task-sequence-steps.md#BKMK_SetDynamicVariables) step.*
 
  Specifies the IP addresses used by the computer.
+
+
+### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
+ *Starting in version 1810*  
+
+ Stores the name of the last action that was run. This variable relates to **_SMSTSLastActionRetCode**. The task sequence logs these values to the smsts.log file. This variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
 
 ### <a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode
