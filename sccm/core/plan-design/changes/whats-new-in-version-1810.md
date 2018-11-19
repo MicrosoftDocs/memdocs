@@ -231,6 +231,8 @@ Driver packages now have additional metadata fields for **Manufacturer** and **M
 <!--SCCMDocs-pr issue #2964-->
 Along with the task sequence variable _SMSTSLastActionRetCode, the task sequence also sets a new variable **_SMSTSLastActionName**. It also logs this value to the smsts.log file. This new variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
+For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSLastActionName).
+
 
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
