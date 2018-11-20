@@ -1,6 +1,6 @@
 ---
 title: Incremental versions
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager

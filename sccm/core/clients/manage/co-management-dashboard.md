@@ -1,6 +1,6 @@
 ---
 title: "Co-management Dashboard"
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: "Review information about co-management using the dashboard."
 ms.date: 03/22/2018
 ms.prod: configuration-manager

@@ -1,6 +1,6 @@
 ---
 title: "Create and deploy a Windows Defender Application Guard policy"
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: "Create and deploy Windows Defender Application Guard policy."
 ms.date: 03/22/2018
 ms.prod: configuration-manager

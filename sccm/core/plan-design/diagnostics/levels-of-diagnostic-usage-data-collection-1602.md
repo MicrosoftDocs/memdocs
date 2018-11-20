@@ -250,7 +250,7 @@ Beginning with System Center Configuration Manager version 1602, this level incl
 
 -   ***[New] Site updates:***
 
-    - ***[New]*** Versions of installed Configuraton Manager hotfixes
+    - ***[New]*** Versions of installed Configuration Manager hotfixes
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full
 The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots, which might include personal information that existed in memory or log files at the time of capture.
