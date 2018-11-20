@@ -72,18 +72,15 @@ Central administration sites and child primary sites can now have an additional 
 
 When you install or update to version 1810, Configuration Manager setup now includes or improves the following prerequisite checks:
 
-- **Pending system restart**: This prerequisite check is now more resilient. It checks additional registry keys for Windows features. <!--SCCMDocs-pr issue 3010-->  
+- **Pending system restart**: This prerequisite check is now more resilient. It checks additional registry keys for Windows features. For more information, see [Pending system restart](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart). <!--SCCMDocs-pr issue 3010-->  
 
-- **SQL ChangeTracking cleanup**: A new check if the site database has a backlog of SQL change tracking data.<!--SCCMDocs-pr issue 3023-->  
+- **SQL change tracking cleanup**: A new check if the site database has a backlog of SQL change tracking data. For more information, including a procedure to verify and clear this backlog, see [SQL change tracking cleanup](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-<!--
-- **SQL Native Client version**: A new check for the version of the SQL Native Client component.  
--->
+- **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is 11.4.7001.0. For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).  
 
-- **Site system on Windows cluster node**: The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. <!--1359132-->  
+- **Site system on Windows cluster node**: The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [Windows Failover Cluster](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
 
-<!-- For more information, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).
- -->
+
 
 
 ### New permission for client notification actions
