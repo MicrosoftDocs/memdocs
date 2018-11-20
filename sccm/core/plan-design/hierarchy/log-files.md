@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 09/10/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -309,6 +309,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
+|NotiCtrl.log|Application request notifications.|Site server|  
 |ntsvrdis.log|Records the discovery activity of site system servers.|Site server|  
 |Objreplmgr|Records the processing of object change notifications for replication.|Site server|  
 |offermgr.log|Records advertisement updates.|Site server|  
@@ -431,6 +432,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
 |ConfigMgrSoftwareCatalog.log|Records the activity of the Application Catalog, which includes its use of Silverlight.|Client|  
+|NotiCtrl.log|Application request notifications.|Site server|  
 |portlctl.log|Records the monitoring activities for the Application Catalog website point site system role.|Site system server|  
 |portlwebMSI.log|Records the MSI installation activity for the Application Catalog website role.|Site system server|  
 |PrestageContent.log|Records details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system server|  

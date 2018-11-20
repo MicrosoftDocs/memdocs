@@ -185,16 +185,16 @@ Starting in version 1806, Configuration Manager supports deployment of the new W
 
 ### Repair applications
 <!--1357866-->
-Now specify a repair command line for Windows Installer and Script Installer deployment types. A new button is available in Software Center to **Repair** an application. When you configure an application with a repair program, users can start the command from Software Center. 
+Specify a repair command line for Windows Installer and Script Installer deployment types. Then if you enable the option on the deployment, a new button is available in Software Center to **Repair** the application. When you configure an application with a repair program, users can start the command from Software Center. 
 
-<!--For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).-->
+For more information, see [Create applications](/sccm/apps/deploy-use/create-applications#bkmk_dt-content) and [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
 
 ### Approve application requests via email
 <!--1321550-->
 Configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
 
-<!--For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).-->
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 
 ### Detection methods don't load Windows PowerShell profiles

@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 07/30/2018
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -231,11 +231,15 @@ On the **Content** page, specify the following information:
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
-    - **Installation start in**: Optionally, specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client, or a path to the distribution point folder that has the installation files.  
+    - **Installation start in**: Optionally specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client, or a path to the distribution point folder that has the installation files.  
 
-- **Uninstall program**: Optionally, specify the name of the uninstall program and any required parameters.  
+- **Uninstall program**: Optionally specify the name of the uninstall program and any required parameters.  
 
-    - **Uninstall start in**: Optionally, specify the folder that has the uninstall program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
+    - **Uninstall start in**: Optionally specify the folder that has the uninstall program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
+
+- **Repair program**: Starting in version 1810, for Windows Installer and Script Installer deployment types, optionally specify the name of the repair program and any required parameters.<!--1357866-->  
+
+    - **Repair start in**: Optionally specify the folder that has the repair program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
 
 - **Run installation and uninstall program as 32-bit process on 64-bit clients**: Use the 32-bit file and registry locations on Windows-based computers to run the installation program for the deployment type.  
 
