@@ -90,11 +90,27 @@ With these additional optional prerequisites, recipients can approve or deny the
 
     - Enable [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
-    - Manually configure the following settings for this native app in Azure AD:  
+    - Manually configure settings in Azure AD:  
 
-        - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name (FQDN) of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.   
+        1. Go to the [Azure portal](https://portal.azure.com), select **Azure Active Directory**, and then select **App registrations**.  
 
-        - **Manifest**: set **oauth2AllowImplicitFlow** to true: `"oauth2AllowImplicitFlow": true,`  
+        2. Select the application of type **Native** that you created for Configuration Manager **Cloud Management** integration.  
+
+        3. In the app properties, select **Settings**, then select **Redirect URIs**.  
+
+            1. In the Redirect URIs pane, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+
+            2. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.  
+
+            3. Then select **Save**. Close the **Settings** pane.  
+
+        4. In the app properties, select **Manifest**.  
+
+            1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.  
+
+            2. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`   
+
+            3. Select **Save**.  
 
 
 ### Configure email approval
