@@ -68,12 +68,22 @@ Central administration sites and child primary sites can now have an additional 
 <!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
 
 
-### Site system on Windows cluster node
-<!--1359132-->
+### Improvements to setup prerequisites
 
-The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. 
+When you install or update to version 1810, Configuration Manager setup now includes or improves the following prerequisite checks:
 
-<!--For more information, see [High availability options](/sccm/core/servers/deploy/configure/high-availability-options).-->
+- **Pending system restart**: This prerequisite check is now more resilient. It checks additional registry keys for Windows features. <!--SCCMDocs-pr issue 3010-->  
+
+- **SQL ChangeTracking cleanup**: A new check if the site database has a backlog of SQL change tracking data.<!--SCCMDocs-pr issue 3023-->  
+
+<!--
+- **SQL Native Client version**: A new check for the version of the SQL Native Client component.  
+-->
+
+- **Site system on Windows cluster node**: The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. <!--1359132-->  
+
+<!-- For more information, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).
+ -->
 
 
 ### New permission for client notification actions
