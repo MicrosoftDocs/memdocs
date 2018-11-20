@@ -277,6 +277,8 @@ By default, this option is **No** to keep consistent with the existing behavior.
 <!--1358702-->
 The product lifecycle dashboard now includes information for **System Center 2012 Configuration Manager and later**. 
 
+There's also a new report, **Lifecycle 05A - Product lifecycle dashboard**. It includes similar information as the in-console dashboard.
+
 For more information on this dashboard, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
 
 
