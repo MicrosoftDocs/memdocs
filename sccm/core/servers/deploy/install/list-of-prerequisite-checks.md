@@ -552,5 +552,5 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 A supported version of the SQL Native Client. Starting in version 1810, the minimum version is 11.4.7001.0. 
 
 This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
-- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/en-us/3135244/tls-1-2-support-for-microsoft-sql-server)  
+- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 - [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
