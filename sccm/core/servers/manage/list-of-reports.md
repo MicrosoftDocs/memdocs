@@ -1,8 +1,8 @@
 ---
-title: "List of reports"
-titleSuffix: "Configuration Manager"
-description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
-ms.date: 07/30/2018
+title: List of reports
+titleSuffix: Configuration Manager
+description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
+ms.date: 11/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,24 +11,26 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# List of reports in System Center Configuration Manager
+
+# List of reports in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager supplies many built-in reports covering many of the reporting tasks that you might want to perform. You can also use the SQL statements in these reports to help you to write your own reports.   
+Configuration Manager supplies many built-in reports covering many of the reporting tasks that you might want to do. You can also use the SQL statements in these reports to help you to write your own reports.   
 
 The following reports are included with Configuration Manager. The reports appear in various categories.  
 
 
 
-## Administrative Security  
- The following six reports are listed under the **Administrative Security** category.  
+## Administrative security  
+
+The following six reports are listed under the **Administrative Security** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Administration activity log**|Displays a record of administrative changes made for administrative users, security roles, security scopes, and collections.|  
 |**Administrative users security assignments**|Displays administrative users, their associated security roles, and the security scopes associated with each security role for each user.|  
-|**Objects secured by a single security scope**|Displays objects that an administrator assigned to only the specified security scope. This report does not display objects that an administrator associates with more than one security scope.|  
+|**Objects secured by a single security scope**|Displays objects that an administrator assigned to only the specified security scope. This report doesn't display objects that an administrator associates with more than one security scope.|  
 |**Security for a specific or multiple Configuration Manager objects**|Displays securable objects, the security scopes associated with the objects, and which administrative users have rights to the objects.|  
 |**Security roles summary**|Displays security roles and the Configuration Manager administrators associated with each role.|  
 |**Security scopes summary**|Displays security scopes and the Configuration Manager administrative users and security groups associated with each scope.|  
@@ -36,7 +38,9 @@ The following reports are included with Configuration Manager. The reports appea
 
 
 ## Alerts  
+
 The following two reports are listed under the **Alerts** category.  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Alert scorecard**|Displays a summary of all postponed alerts that were generated between the specified start and finish date.|  
@@ -45,21 +49,22 @@ The following two reports are listed under the **Alerts** category.
 
 
 ## Asset Intelligence  
-The following 66 reports are listed under the **Asset Intelligence** category.  
+
+The following 67 reports are listed under the **Asset Intelligence** category.  
 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Hardware 01A - Summary of computers in a specific collection**|Displays an Asset Intelligence summary view of computers in a collection you specify.|  
-|**Hardware 03A - Primary computer users**|Displays users and the count of computers on which they are the primary user.|  
+|**Hardware 03A - Primary computer users**|Displays users and the count of computers on which they're the primary user.|  
 |**Hardware 03B - Computers for a specific primary console user**|Displays all computers for which a specified user is the primary console user.|  
-|**Hardware 04A - Computers with multiple users (shared)**|Displays computers that do not have a primary user because no one user has a % console login time greater than 66%.|  
+|**Hardware 04A - Computers with multiple users (shared)**|Displays computers that don't have a primary user because no one user has a signed-in time greater than 66%.|  
 |**Hardware 05A - Console users on a specific computer**|Displays all of the console users on a specified computer.|  
 |**Hardware 06A - Computers for which console users could not be determined**|Helps administrative users identify computers that need to have security logging turned on.|  
 |**Hardware 07A - USB devices by manufacturer**|Displays USB devices, grouped by manufacturer.|  
 |**Hardware 07B - USB devices by manufacturer and description**|Displays USB devices, grouped by manufacturer and description.|  
 |**Hardware 07C - Computers with a specific USB device**|Displays all the computers with a specified USB device.|  
 |**Hardware 07D - USB devices on a specific computer**|Displays all USB devices on a specified computer.|  
-|**Hardware 08A - Hardware that is not ready for a software upgrade**|Displays hardware that does not meet the minimum hardware requirements.|  
+|**Hardware 08A - Hardware that is not ready for a software upgrade**|Displays hardware that doesn't meet the minimum hardware requirements.|  
 |**Hardware 09A - Search for computers**|Displays a summary of computers matching keyword filters. These filters are computer name, Configuration Manager site, domain, top console user, operating system, manufacturer, or model.|  
 |**Hardware 10A - Computers in a specified collection that have changed during a specified timeframe**|Displays a list of computers in a specified collection where a hardware class has changed during a specified time period.|  
 |**Hardware 10B - Changes on a specified computer within a specified timeframe**|Displays the classes that have changed on a specified computer within a specified time period.|  
@@ -73,13 +78,13 @@ The following 66 reports are listed under the **Asset Intelligence** category.
 |**License 03A - Count of licenses by license status**|Displays products, by license status, which have their licenses managed by the Software Licensing Service.|  
 |**License 03B - Computers with a specific license status**|Displays products, with a specified license status, whose licenses are managed by the Software Licensing Service.|  
 |**License 04A - Count of products managed by software licensing**|Displays a count of products that have their licenses managed by the Software Licensing Service.|  
-|**License 04B - Computers with a specific product managed by Software Licensing Service**|Displays computers, managed by the Software Licensing Service, that contain a specified product.|  
+|**License 04B - Computers with a specific product managed by Software Licensing Service**|Displays computers, managed by the Software Licensing Service, that include a specified product.|  
 |**License 05A - Computers providing Key Management Service**|Displays computers that act as Key Management Servers.|  
 |**License 06A - Processor counts for per-processor licensed products**|Displays the number of processors on computers using Microsoft products that support per-processor licensing.|  
 |**License 06B - Computers with a specific product that supports per-processor licensing**|Displays a list of computers where a specified Microsoft product that supports per-processor licensing is installed.|  
-|**License 14A - Microsoft Volume Licensing reconciliation report**|Displays reconciliation on software licenses purchased through Microsoft Volume License Agreement and the actual inventory count.|  
-|**License 14B - List of Microsoft software inventory not found in MVLS**|This report displays Microsoft software titles in use that are not found in the Microsoft Volume License Agreement.|  
-|**License 15A - General license reconciliation report**|Displays reconciliation on general software licenses purchased and the actual inventory count.|  
+|**License 14A - Microsoft Volume Licensing reconciliation report**|Displays reconciliation on software licenses acquired through Microsoft Volume License Agreement and the actual inventory count.|  
+|**License 14B - List of Microsoft software inventory not found in MVLS**|This report displays Microsoft software titles in use that aren't found in the Microsoft Volume License Agreement.|  
+|**License 15A - General license reconciliation report**|Displays reconciliation on general software licenses acquired and the actual inventory count.|  
 |**License 15B - General license reconciliation report by computer**|Displays computers that installed the licensed product with a specified version.|  
 |**Software 01A - Summary of installed software in a specific collection**|Displays a summary of installed software ordered by the number of instances found from inventory.|  
 |**Software 02A - Product families for a specific collection**|Displays the product families and the count of software in the family for a specified collection.|  
@@ -102,12 +107,12 @@ The following 66 reports are listed under the **Asset Intelligence** category.
 |**Software 08A - Recently used executable programs by the count of users**|Displays executable programs that users recently used. It also includes a count of users that most recently used the program. This report requires that you enable the software metering client setting.|  
 |**Software 08B - Users that recently used a specified executable program**|Displays the users that most recently used a specified executable program. This report requires that you enable the software metering client setting.|  
 |**Software 08C - Recently used executable programs by a specified user**|Displays executable programs that the specified user used recently. This report requires that you enable the software metering client setting.|  
-|**Software 09A - Infrequently used software**|Displays software titles that users have not used during a specified period of time.|  
-|**Software 09B - Computers with infrequently used software installed**|Displays computers with installed software that users have not used for a specified period of time. The specified period of time is based on the value specified in the 'Software 09A - Infrequently used software' report.|  
+|**Software 09A - Infrequently used software**|Displays software titles that users haven't used during a specified period of time.|  
+|**Software 09B - Computers with infrequently used software installed**|Displays computers with installed software that users haven't used for a specified period of time. The specified period of time is based on the value specified in the 'Software 09A - Infrequently used software' report.|  
 |**Software 10A - Software titles with specific multiple custom labels defined**|Displays software titles based on matching of all specified custom label criteria. Up to three custom labels can be selected to refine a software title search.|  
 |**Software 10B - Computers with a specific custom-labeled software title installed**|Displays all computers in this collection that have the specified custom-labeled software title installed.|  
 |**Software 11A - Software titles with a specific custom label defined**|Displays software titles based on matching of at least one of the specified custom label criteria.|  
-|**Software 12A - Software titles without a custom label**|Displays all software titles that do not have a custom label defined.|  
+|**Software 12A - Software titles without a custom label**|Displays all software titles that don't have a custom label defined.|  
 |**Software 14A - Search for software identification tag enabled software**|Displays a count of installed software with a software identification tag enabled.|  
 |**Software 14B - Computers with specific software identification tag enabled software installed**|Displays all computers that have installed software with a specified software identification tag enabled.|  
 |**Software 14C - Installed software identification tag enabled software on a specific computer**|Displays all installed software with a specified software identification tag enabled on a specified computer.|  
@@ -115,10 +120,12 @@ The following 66 reports are listed under the **Asset Intelligence** category.
 |**Lifecycle 02A - List of machines with expired products in the organization**|View computers that have expired products on them. You can filter this report by product name.|
 |**Lifecycle 03A - List of expired products found in the organization**|View details for products in your environment that have expired lifecycle dates.|
 |**Lifecycle 04A - General Product Lifecycle overview**|View a list of product lifecycles. Filter the list by product name and days to expiration.|
+|**Lifecycle 05A - Product lifecycle dashboard**|Starting in version 1810, this report includes similar information as the in-console dashboard.|
 
 
 
-## Client Push  
+## Client push  
+
 The following four reports are listed under the **Client Push** category.  
 
 |Report name|Description|  
@@ -130,7 +137,8 @@ The following four reports are listed under the **Client Push** category.
 
 
 
-## Client Status  
+## Client status  
+
 The following seven reports are listed under the **Client Status** category.  
 
 |Report name|Description|  
@@ -145,7 +153,8 @@ The following seven reports are listed under the **Client Status** category.
 
 
 
-## Company Resource Access  
+## Company resource access  
+
 The following three reports are listed under the **Company Resource Access** category. 
 
 |Report name|Description|  
@@ -156,7 +165,8 @@ The following three reports are listed under the **Company Resource Access** cat
 
 
 
-## Compliance and Settings Management  
+## Compliance and settings management  
+
 The following 22 reports are listed under the **Compliance and Settings Management** category. 
 
 |Report name|Description|  
@@ -166,26 +176,29 @@ The following 22 reports are listed under the **Compliance and Settings Manageme
 |**Conditional Access Compliance for User**|Displays detailed conditional access compliance for a specific user.|
 |**Conditional Access Compliance Report**|A conditional access compliance report for each targeted compliance policy.|
 |**Details of compliant rules of configuration items in a configuration baseline for an asset**|Displays information about the rules evaluated as compliant for a specified configuration item for a specified device or user.|  
-|**Details of conflicting rules of configuration items in a configuration baseline for an asset**|Displays information about rules in a deployed configuration item that conflict with other rules. The other rules can be contained in the same or another deployed configuration item.|  
+|**Details of conflicting rules of configuration items in a configuration baseline for an asset**|Displays information about rules in a deployed configuration item that conflict with other rules. Include the other rules in the same or another deployed configuration item.|  
 |**Details of errors of configuration items in a configuration baseline for an asset**|Displays information about errors generated by a specified configuration item for a specified device or user.|  
 |**Details of non-compliant rules of configuration items in a configuration baseline for an asset**|Displays information about rules that were evaluated as noncompliant for a specified configuration item, for a specified device or user.|  
 |**Details of remediated rules of configuration items in a configuration baseline for an asset**|Displays information about rules that were remediated by a specified configuration item for a specified device or user.|  
 |**List of assets by compliance state for a configuration baseline**|Displays the devices or users in a specified compliance state following the evaluation of a specified configuration baseline.|  
 |**List of assets by compliance state for a configuration item in a configuration baseline**|Displays the devices or users in a specified compliance state following the evaluation of a specified configuration item.|  
-|**List of noncompliant Apps and Devices for a specified user**|Displays information about users and devices that have apps installed that are not compliant with a policy you specified.|  
+|**List of noncompliant Apps and Devices for a specified user**|Displays information about users and devices that have apps installed that aren't compliant with a policy you specified.|  
 |**List of rules conflicting with a specified rule for an asset**|Displays a list of rules that conflict with a specified rule for a deployed configuration item.|  
-|**List of unknown assets for a configuration baseline**|Displays a list of devices or users that have not yet reported any compliance data for a specified configuration baseline.|  
-|**List of unknown assets for a configuration item**|Displays a list of devices or users that have not yet reported any compliance data for a specified configuration item.|  
+|**List of unknown assets for a configuration baseline**|Displays a list of devices or users that haven't yet reported any compliance data for a specified configuration baseline.|  
+|**List of unknown assets for a configuration item**|Displays a list of devices or users that haven't yet reported any compliance data for a specified configuration item.|  
 |**Rules and errors summary of configuration items in a configuration baseline for an asset**|Displays a summary of the compliance state of the rules and any setting errors for a specified configuration item. The configuration item must be deployed to a device or user.|  
 |**Summary compliance by configuration baseline**|Displays a summary of the overall compliance of deployed configuration baselines in the hierarchy.|  
 |**Summary compliance by configuration items for a configuration baseline**|Displays a summary of the compliance of configuration items in a specified configuration baseline.|  
 |**Summary compliance by configuration policies**|Displays a summary of the compliance of configuration policies.|  
 |**Summary compliance of a configuration baseline for a collection**|Displays a summary of the overall compliance of a specified configuration baseline. The configuration item must be deployed to the specified collection.|  
-|**Summary of Users who have Noncompliant Apps**|Displays information about users that have apps installed that are not compliant with a policy you specified.|  
+|**Summary of Users who have Noncompliant Apps**|Displays information about users that have apps installed that aren't compliant with a policy you specified.|  
 |**Terms and Conditions acceptance**|Displays Terms and Conditions items and which version each user has accepted.|  
 
+
+
 ## Data warehouse  
-The following 7 reports are listed under the **Data warehouse** category. 
+
+The following seven reports are listed under the **Data warehouse** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -198,13 +211,14 @@ The following 7 reports are listed under the **Data warehouse** category.
 |**Software Distribution Summary**|Historical: A summary of software distribution for a specific advertisement and machine.|
 
 
-## Device Management  
+## Device management  
+
 The following 37 reports are listed under the **Device Management** category. 
 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All corporate-owned mobile devices**|Displays all corporate owned mobile devices.|
-|**All mobile device clients**|Displays information about all mobile device clients. Devices that are managed by the Exchange Server connector are not included.|  
+|**All mobile device clients**|Displays information about all mobile device clients. Devices that are managed by the Exchange Server connector aren't included.|  
 |**Certificate issues on mobile devices that are managed by the Configuration Manager client for Windows CE and that are not healthy**|Displays detailed information about certificate issues on mobile devices that are managed by the Configuration Manager client for Windows CE.|  
 |**Client deployment failure for mobile devices that are managed by the Configuration Manager client for Windows CE**|Displays detailed information about deployment failure for mobile devices that are managed by the Configuration Manager client for Windows CE.|  
 |**Client deployment status details for mobile devices that are managed by the Configuration Manager client for Windows CE**|Displays information about the status of mobile devices that are managed by the Configuration Manager client for Windows CE.|  
@@ -217,7 +231,7 @@ The following 37 reports are listed under the **Device Management** category.
 |**Count of mobile devices by storage memory configurations**|Count of mobile devices by storage memory configurations|  
 |**Health information for mobile devices that are managed by the Configuration Manager client for Windows CE**|Displays detailed health information for mobile devices that are managed by the Configuration Manager client for Windows CE.|  
 |**Health summary for mobile devices that are managed by the Configuration Manager client for Windows CE**|Displays health summary information for mobile devices that are managed by the Configuration Manager client for Windows CE.|  
-|**Inactive mobile devices that are managed by the Exchange Server connector**|Displays the mobile devices managed by the Exchange Server connector that have not connected to an Exchange Server in a specified number of days.|  
+|**Inactive mobile devices that are managed by the Exchange Server connector**|Displays the mobile devices managed by the Exchange Server connector that haven't connected to an Exchange Server in a specified number of days.|  
 |**List of devices by Conditional Access State**|Displays information about the current compliance and conditional access state of devices. You can use this report with conditional access policies. This report is available beginning in version 1602 of Configuration Manager.|  
 |**List of devices by Health Attestation state**|Displays a list of devices with attributes reported by Health Attestation Service|
 |**List of Devices enrolled per user in Microsoft Intune**|Displays all devices a user has enrolled with Microsoft Intune.|  
@@ -230,7 +244,7 @@ The following 37 reports are listed under the **Device Management** category.
 |**Mobile devices that are unmanaged because they enrolled but failed to assign to a site**|Displays the mobile devices that completed enrollment with Configuration Manager, have a certificate, but failed to complete site assignment.|  
 |**Mobile devices with a specific amount of free program memory**|Displays all mobile devices with their specified amount of free program memory.|  
 |**Mobile devices with a specific amount of free removable storage memory**|Displays all mobile devices with the specified amount of free removable memory.|  
-|**Mobile devices with certificate renewal issues**|Displays the enrolled mobile devices that failed to renew their certificate. If you do not renew the certificate before the expiry period, the mobile devices become unmanaged.|  
+|**Mobile devices with certificate renewal issues**|Displays the enrolled mobile devices that failed to renew their certificate. If you don't renew the certificate before the expiry period, the mobile devices become unmanaged.|  
 |**Mobile devices with low free program memory (less than specified KB free)**|Displays the mobile devices for which the program memory is lower than a specified size in KB.|  
 |**Mobile devices with low free removable storage memory (less than specified KB free)**|Displays the mobile devices for which the removable storage memory is lower than a specified size in KB.|  
 |**Number of devices enrolled per user in Microsoft Intune**|Displays the users enabled for the Microsoft Intune subscription. It also shows the total number of devices enrolled for each user.|  
@@ -243,7 +257,8 @@ The following 37 reports are listed under the **Device Management** category.
 
 
 
-## Driver Management  
+## Driver management  
+
 The following 13 reports are listed under the **Driver Management** category. 
 
 |Report name|Description|  
@@ -265,7 +280,9 @@ The following 13 reports are listed under the **Driver Management** category.
 
 
 ## Endpoint Protection  
+
 The following six reports are listed under the **Endpoint Protection** category. 
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Antimalware activity report**|Displays an overview of antimalware activity.|  
@@ -278,7 +295,9 @@ The following six reports are listed under the **Endpoint Protection** category.
 
 
 ## Hardware - CD-ROM  
+
 The following four reports are listed under the **Hardware - CD-ROM** category. 
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**CD-ROM information for a specific computer**|Displays information about the CD-ROM drives on a specified computer.|  
@@ -289,6 +308,7 @@ The following four reports are listed under the **Hardware - CD-ROM** category.
 
 
 ## Hardware - Disk  
+
 The following eight reports are listed under the **Hardware - Disk** category. 
 
 |Report name|Description|  
@@ -305,6 +325,7 @@ The following eight reports are listed under the **Hardware - Disk** category.
 
 
 ## Hardware - General  
+
 The following five reports are listed under the **Hardware - General** category.
 
 |Report name|Description|  
@@ -318,6 +339,7 @@ The following five reports are listed under the **Hardware - General** category.
 
 
 ## Hardware - Memory  
+
 The following five reports are listed under the **Hardware - Memory** category.
 
 |Report name|Description|  
@@ -331,6 +353,7 @@ The following five reports are listed under the **Hardware - Memory** category.
 
 
 ## Hardware - Modem  
+
 The following three reports are listed under the **Hardware - Modem** category.
 
 |Report name|Description|  
@@ -341,7 +364,8 @@ The following three reports are listed under the **Hardware - Modem** category.
 
 
 
-## Hardware - Network Adapter  
+## Hardware - Network adapter  
+
 The following three reports are listed under the **Hardware - Network Adapter** category.
 
 |Report name|Description|  
@@ -353,6 +377,7 @@ The following three reports are listed under the **Hardware - Network Adapter** 
 
 
 ## Hardware - Processor  
+
 The following five reports are listed under the **Hardware - Processor** category.
 
 |Report name|Description|  
@@ -366,6 +391,7 @@ The following five reports are listed under the **Hardware - Processor** categor
 
 
 ## Hardware - SCSI  
+
 The following five reports are listed under the **Hardware - SCSI** category.
 
 |Report name|Description|  
@@ -377,6 +403,7 @@ The following five reports are listed under the **Hardware - SCSI** category.
 
 
 ## Hardware - Security
+
 The following one report is listed under the **Hardware - Security** category.
 
 |Report name|Description|  
@@ -385,7 +412,8 @@ The following one report is listed under the **Hardware - Security** category.
 
 
 
-## Hardware - Sound Card  
+## Hardware - Sound card  
+
 The following three reports are listed under the **Hardware - SCSI** category.
 
 |Report name|Description|  
@@ -396,7 +424,8 @@ The following three reports are listed under the **Hardware - SCSI** category.
 
 
 
-## Hardware - Video Card  
+## Hardware - Video card  
+
 The following three reports are listed under the **Hardware - Video Card** category.
 
 |Report name|Description|  
@@ -436,10 +465,9 @@ The following six reports are listed under the **Network** category.
 
 
 
-## Operating System  
+## Operating system  
 
 The following 10 reports are listed under the **Operating System** category.
-
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -455,7 +483,7 @@ The following 10 reports are listed under the **Operating System** category.
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|  
 
 
-## Power Management  
+## Power management  
 
 The following 18 reports are listed under the **Power Management** category.
 
@@ -474,7 +502,7 @@ The following 18 reports are listed under the **Power Management** category.
 |**Power Management - Energy cost by day**|Displays the total energy consumption cost for a specified collection over the past 31 days.|  
 |**Power Management - Environmental impact**|Displays a graph showing carbon dioxide (CO2) emissions generated by a specified collection over a specified time period.|  
 |**Power Management - Environmental impact by day**|Displays a graph showing CO2 emissions generated by a specified collection over the past 31 days.|  
-|**Power Management - Insomnia computer details**|Displays detailed information about computers that did not sleep or hibernate within a specified time period.|  
+|**Power Management - Insomnia computer details**|Displays detailed information about computers that didn't sleep or hibernate within a specified time period.|  
 |**Power Management - Insomnia report**|Displays a list of common causes that prevented computers from sleeping or hibernating. It also shows the number of computers affected by each cause over a specified time period.|  
 |**Power Management - Power capabilities**|Displays the power management capabilities of computers in the specified collection.|  
 |**Power Management - Power settings**|Displays an aggregated list of power settings used by computers in a specified collection.|  
@@ -482,7 +510,8 @@ The following 18 reports are listed under the **Power Management** category.
 
 
 
-## Replication Traffic  
+## Replication traffic  
+
 The following 10 reports are listed under the **Replication Traffic** category.
 
 |Report name|Description|  
@@ -500,7 +529,8 @@ The following 10 reports are listed under the **Replication Traffic** category.
 
 
 
-## Site - Client Information  
+## Site - Client information  
+
 The following 19 reports are listed under the **Site - Client Information** category.
 
 |Report name|Description|  
@@ -513,10 +543,10 @@ The following 19 reports are listed under the **Site - Client Information** cate
 |**Client deployment status details**|Displays summary information for the status of client installations.|  
 |**Client deployment success report**|Displays detailed information for clients that have successfully deployed.|  
 |**Clients incapable of HTTPS communication**|Displays detailed information about each client that runs the HTTPS Communication Readiness Tool, and reports to be incapable of communicating over HTTPS.|  
-|**Computers assigned but not installed for a particular site**|Displays a list of computers assigned to a specified site, but are not reporting to that site.|  
+|**Computers assigned but not installed for a particular site**|Displays a list of computers assigned to a specified site, but aren't reporting to that site.|  
 |**Computers with a specific Configuration Manager client version**|Displays a list of computers running a specified version of the Configuration Manager client software.|  
 |**Count of clients and protocol used for communication**|Displays a summary of the communication methods used by clients (HTTP or HTTPS).|  
-|**Count of clients assigned and installed for each site**|Displays the number of computers assigned and installed for each site. Clients with a network location associated to multiple sites are only counted as installed if they are reporting to that site.|  
+|**Count of clients assigned and installed for each site**|Displays the number of computers assigned and installed for each site. Clients with a network location associated to multiple sites are only counted as installed if they're reporting to that site.|  
 |**Count of clients capable of HTTPS communication**|Displays detailed information about each client that runs the HTTPS Communication Readiness Tool, and reports to be either capable or incapable of communicating over HTTPS.|  
 |**Count of clients for each site**|Displays the number of Configuration Manager clients installed by site code.|  
 |**Count of Configuration Manager clients by client versions**|Displays the number of computers discovered by Configuration Manager client version.|  
@@ -527,16 +557,17 @@ The following 19 reports are listed under the **Site - Client Information** cate
 
 
 
-## Site - Discovery and Inventory Information  
+## Site - Discovery and inventory information  
+
 The following 10 reports are listed under the **Site - Discovery and Inventory Information** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
-|**Clients that have not reported recently (in a specified number of days)**|Displays a list of clients that have not reported discovery data, hardware inventory, or software inventory in a specified number of days.|  
+|**Clients that have not reported recently (in a specified number of days)**|Displays a list of clients that haven't reported discovery data, hardware inventory, or software inventory in a specified number of days.|  
 |**Computers discovered by a specific site**|Displays a list of all computers that the specified site discovered. It also shows the date of the most recent discovery.|  
 |**Computers discovered recently by discovery method**|Displays a list of computers that the site discovered within the specified number of days. It also lists the agents that discovered them. If multiple agents discovered a computer, it may appear more than once in the list.|  
-|**Computers not discovered recently (in a specified number of days)**|Displays a list of computers that the site has not recently discovered. It also shows the number of days since the site discovered the computer.|  
-|**Computers not inventoried recently (in a specified number of days)**|Displays a list of computers that the site has not recently inventoried. It also shows the last times the client inventoried the computer.|  
+|**Computers not discovered recently (in a specified number of days)**|Displays a list of computers that the site hasn't recently discovered. It also shows the number of days since the site discovered the computer.|  
+|**Computers not inventoried recently (in a specified number of days)**|Displays a list of computers that the site hasn't recently inventoried. It also shows the last times the client inventoried the computer.|  
 |**Computers that might share the same Configuration Manager unique identifier**|Displays a list of computers that have changed their names. A change in name is a possible symptom that a computer shares a Configuration Manager Unique Identifier with another computer.|  
 |**Computers with duplicate MAC addresses**|Displays computers that share MAC address.|  
 |**Count computers in resource domains or workgroups**|Displays the number of computers in each resource domain or workgroup.|  
@@ -546,6 +577,7 @@ The following 10 reports are listed under the **Site - Discovery and Inventory I
 
 
 ## Site - General  
+
 The following three reports are listed under the **Site - General** category.
 
 |Report name|Description|  
@@ -556,7 +588,8 @@ The following three reports are listed under the **Site - General** category.
 
 
 
-## Site - Server Information  
+## Site - Server information  
+
 The following one report is listed under the **Site - Server Information** category.
 
 |Report name|Description|  
@@ -565,7 +598,8 @@ The following one report is listed under the **Site - Server Information** categ
 
 
 
-## Software - Companies and Products  
+## Software - Companies and products  
+
 The following 15 reports are listed under the **Software - Companies and Products** category.
 
 |Report name|Description|  
@@ -573,14 +607,14 @@ The following 15 reports are listed under the **Software - Companies and Product
 |**All inventoried products for a specific software company**|Displays a list of the inventoried software products and versions from a specified software company.|  
 |**All software companies**|Displays a list of all companies manufacturing inventoried software.|  
 |**All Windows apps**|Displays a summary of installed Windows apps. It searches using the following criteria: application name, architecture, or publisher.|  
-|**Computers with a specific product**|Displays a list of the computers that a specified product is inventoried on, as well as the versions of that product.|  
+|**Computers with a specific product**|Displays a list of the computers that a specified product is inventoried on, and the versions of that product.|  
 |**Computers with a specific product name and version**|Displays a list of the computers that a specified version of a product is inventoried on.|  
 |**Computers with specific software registered in Add Remove Programs**|Displays a summary of all computers with specified software registered in Add Remove Programs or Programs and Features.|  
 |**Count all inventoried products and versions**|Displays a list of the inventoried software products and versions, and the number of computers each is installed on.|  
 |**Count inventoried products and versions for a specific product**|Displays a list of the inventoried versions of a specified product, and the number of computers each is installed on.|  
 |**Count of all instances of software registered with Add or Remove Programs**|Displays a summary of all instances of software installed and registered with Add or Remove Programs or Programs and Features on computers within the specified collection.|  
 |**Count of instances of specific software registered with Add or Remove Programs**|Displays a count of instances for specified software packages installed and registered in Add or Remove Programs or Programs and Features.|  
-|**Default Browser counts**|Shows the count of clients with a specific web browser as the Windows default. </br>Use the following reference for common BrowserProgIDs:</br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v: Microsoft Edge</br> - IE.HTTP: Microsoft Internet Explorer</br> - ChromeHTML: Google Chrome</br> - OperaStable: Opera Software</br> - FirefoxURL-308046B0AF4A39CB: Mozilla Firefox</br> - Unknown: the client OS doesn't support the query, the query hasn't run, or a user hasn't logged on|
+|**Default Browser counts**|Shows the count of clients with a specific web browser as the Windows default. <br>Use the following reference for common BrowserProgIDs:<br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v: Microsoft Edge<br> - IE.HTTP: Microsoft Internet Explorer<br> - ChromeHTML: Google Chrome<br> - OperaStable: Opera Software<br> - FirefoxURL-308046B0AF4A39CB: Mozilla Firefox<br> - Unknown: the client OS doesn't support the query, the query hasn't run, or a user hasn't logged on|
 |**Installations of specified Windows apps**|This report lists all computers with a specified Windows app.|  
 |**Products on a specific computer**|Displays a summary of the inventoried software products and their manufacturers on a specified computer.|  
 |**Software registered in Add Remove Programs on a specific computer**|Displays a summary of the software installed on a specified computer that is registered in Add Remove Programs or Programs and Features.|  
@@ -589,6 +623,7 @@ The following 15 reports are listed under the **Software - Companies and Product
 
 
 ## Software - Files  
+
 The following five reports are listed under the **Software - Files** category.
 
 |Report name|Description|  
@@ -601,7 +636,8 @@ The following five reports are listed under the **Software - Files** category.
 
 
 
-## Software Distribution - Application Monitoring  
+## Software distribution - Application monitoring  
+
 The following 10 reports are listed under the **Software Distribution - Application Monitoring** category.
 
 |Report name|Description|  
@@ -619,7 +655,8 @@ The following 10 reports are listed under the **Software Distribution - Applicat
 
 
 
-## Software Distribution - Collections  
+## Software distribution - Collections  
+
 The following three reports are listed under the **Software Distribution - Collections** category.
 
 |Report name|Description|  
@@ -630,7 +667,8 @@ The following three reports are listed under the **Software Distribution - Colle
 
 
 
-## Software Distribution - Content  
+## Software distribution - Content  
+
 The following 16 reports are listed under the **Software Distribution - Content** category.
 
 |Report name|Description|  
@@ -642,19 +680,20 @@ The following 16 reports are listed under the **Software Distribution - Content*
 |**All status messages for a specific package on a specific distribution point**|Displays all status messages for a specified package on a specified distribution point.|  
 |**Application content distribution status**|Displays information about the distribution status for application content.|  
 |**Applications targeted to distribution point group**|Displays information about application content that was deployed to a specified distribution point group.|  
-|**Applications that are out of synchronization on a specified distribution point group**|Displays the applications for which associated content files have not been updated with the latest version on a specified distribution point group.|  
+|**Applications that are out of synchronization on a specified distribution point group**|Displays the applications for which associated content files haven't been updated with the latest version on a specified distribution point group.|  
 |**Distribution point group**|Displays information about a specified distribution point group.|  
 |**Distribution point usage summary**|Displays the distribution point usage summary for each distribution point.|  
 |**Distribution status of specified package**|Displays the distribution status for specified package content on each distribution point.|  
 |**Packages targeted to distribution point group**|Displays information about packages that target a specified distribution point group.|  
-|**Packages that are out of synchronization on a specified distribution point group**|Displays packages for which associated content files have not been updated with the latest version on a specified distribution point group.|  
+|**Packages that are out of synchronization on a specified distribution point group**|Displays packages for which associated content files haven't been updated with the latest version on a specified distribution point group.|  
 |**Peer cache source content rejection**|Displays the number of peer cache source rejections per boundary group.|
 |**Peer cache source content rejection by condition**|Displays the peer cache sources that rejected to serve content based on a condition.|
 |**Peer cache source content rejection details**|Displays the name of the content that was rejected by a peer source.|
 
 
 
-## Software Distribution - Package and Program Deployment 
+## Software distribution - Package and program deployment 
+
 The following five reports are listed under the **Software Distribution - Package and Program Deployment** category.
 
 |Report name|Description|  
@@ -667,7 +706,8 @@ The following five reports are listed under the **Software Distribution - Packag
 
 
 
-## Software Distribution - Package and Program Deployment Status  
+## Software distribution - Package and program deployment status  
+
 The following five reports are listed under the **Software Distribution - Package and Program Deployment Status** category.
 
 |Report name|Description|  
@@ -680,28 +720,30 @@ The following five reports are listed under the **Software Distribution - Packag
 
 
 
-## Software Metering  
+## Software metering  
+
 The following 13 reports are listed under the **Software Metering** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All software metering rules applied to this site**|Displays a list of all software metering rules at the site.|  
-|**Computers that have a metered program installed but have not run the program since a specified date**|Displays all computers with the specified metered application, but no user has run the program since the specified date.|  
+|**Computers that have a metered program installed but haven't run the program since a specified date**|Displays all computers with the specified metered application, but no user has run the program since the specified date.|  
 |**Computers that have run a specific metered software program**|Displays a list of computers that have run programs matching the specified software metering rule within the specified month and year.|  
 |**Concurrent usage for all metered software programs**|Displays the maximum number of users who concurrently ran each metered software program during the specified month and year.|  
 |**Concurrent usage trend analysis of a specific metered software program**|Displays the maximum number of users who concurrently ran the specified metered software program during each month for the past year.|  
 |**Install base for all metered software programs**|Displays the number of computers that have metered software programs installed as reported by software inventory. This report requires that the computer collects software inventory.|  
 |**Software metering summarization progress**|Displays the time at which the most recently summarized metering data was processed on the site server. The software metering reports only reflect metering data processed before these dates.|  
 |**Time of day usage summary for a specific metered software program**|Displays the average number of usages of a particular program for the past 90 days, broken down by hour and day.|  
-|**Total usage for all metered software programs**|Displays the number of users who ran programs within the specified month and year, and that match each software metering rule. These rules are for locally-installed software, or using Terminal Services.|  
+|**Total usage for all metered software programs**|Displays the number of users who ran programs within the specified month and year, and that match each software metering rule. These rules are for locally installed software, or using Terminal Services.|  
 |**Total usage for all metered software programs on Windows Terminal Servers**|Displays the number of users who ran programs matching each software metering rule using Terminal Services within the specified month and year.|  
-|**Total usage trend analysis for a specific metered software program**|Displays the number of users who ran programs during each month for the past year, and that match the specified software metering rule. These rules are for locally-installed software, or using Terminal Services.|  
+|**Total usage trend analysis for a specific metered software program**|Displays the number of users who ran programs during each month for the past year, and that match the specified software metering rule. These rules are for locally installed software, or using Terminal Services.|  
 |**Total usage trend analysis for a specific metered software program on Windows Terminal Servers**|Displays the number of users who ran programs during each month for the past year, and that match the specified software metering rule. These rules are for using Terminal Services.|  
 |**Users that have run a specific metered software program**|Displays a list of users who have run programs within the specified month and year, and that match the specified software metering rule.|  
 
 
 
-## Software Updates - A Compliance  
+## Software updates - A Compliance  
+
 The following eight reports are listed under the **Software Updates - A Compliance** category.
 
 |Report name|Description|  
@@ -717,23 +759,25 @@ The following eight reports are listed under the **Software Updates - A Complian
 |**Compliance 9 - Overall health and compliance**|Displays the overall health and compliance data for a software update group. (starting in version 1806)| 
 
 
-## Software Updates - B Deployment Management  
+## Software updates - B Deployment management  
+
 The following eight reports are listed under the **Software Updates - B Deployment Management** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
-|**Management 1 - Deployments of an update group**|Displays all deployments that contain all of the software updates defined in a specified software update group.|  
-|**Management 2 - Updates required but not deployed**|Displays all vendor-specific software updates that clients detect as required, but an administrator has not deployed to a specified collection.|  
+|**Management 1 - Deployments of an update group**|Displays all deployments that include all of the software updates defined in a specified software update group.|  
+|**Management 2 - Updates required but not deployed**|Displays all vendor-specific software updates that clients detect as required, but an administrator hasn't deployed to a specified collection.|  
 |**Management 3 - Updates in a deployment**|Displays the software updates that are contained in a specified deployment.|  
 |**Management 4 - Deployments that target a collection**|Displays all software update deployments that target a specified collection.|  
 |**Management 5 - Deployments that target a computer**|Displays all software update deployments that are deployed to a specified computer.|  
-|**Management 6 - Deployments that contain a specific update**|Displays all deployments that contain a specified software update and the associated target collection for the deployment.|  
-|**Management 7 - Updates in a deployment missing content**|Displays the software updates in a specified deployment that do not have all of the associated content retrieved. This state prevents clients from installing the update, which prevents the deployment from achieving 100% compliance.|  
-|**Management 8 - Computers missing content (secondary)**|Displays all computers requiring the specified software update, but the associated content is not yet distributed to a distribution point.|  
+|**Management 6 - Deployments that contain a specific update**|Displays all deployments that include a specified software update and the associated target collection for the deployment.|  
+|**Management 7 - Updates in a deployment missing content**|Displays the software updates in a specified deployment that don't have all of the associated content retrieved. This state prevents clients from installing the update, which prevents the deployment from achieving 100% compliance.|  
+|**Management 8 - Computers missing content (secondary)**|Displays all computers requiring the specified software update, but the associated content isn't yet distributed to a distribution point.|  
 
 
 
-## Software Updates - C Deployment States  
+## Software updates - C Deployment states  
+
 The following six reports are listed under the **Software Updates - C Deployment States** category.
 
 |Report name|Description|  
@@ -747,7 +791,8 @@ The following six reports are listed under the **Software Updates - C Deployment
 
 
 
-## Software Updates - D Scan  
+## Software updates - D Scan  
+
 The following four reports are listed under the **Software Updates - D Scan** category.
 
 |Report name|Description|  
@@ -759,7 +804,7 @@ The following four reports are listed under the **Software Updates - D Scan** ca
 
 
 
-## Software Updates - E Troubleshooting  
+## Software updates - E Troubleshooting  
 
 The following four reports are listed under the **Software Updates - E Troubleshooting** category.
 
@@ -772,7 +817,8 @@ The following four reports are listed under the **Software Updates - E Troublesh
 
 
 
-## State Migration  
+## State migration  
+
 The following three reports are listed under the **State Migration** category.
 
 |Report name|Description|  
@@ -783,7 +829,8 @@ The following three reports are listed under the **State Migration** category.
 
 
 
-## Status Messages  
+## Status messages  
+
 The following 12 reports are listed under the **Status Messages** category.
 
 |Report name|Description|  
@@ -803,7 +850,7 @@ The following 12 reports are listed under the **Status Messages** category.
 
 
 
-## Status Messages - Audit  
+## Status messages - Audit  
 
 The following three reports are listed under the **Status Messages - Audit** category.
 
@@ -815,15 +862,16 @@ The following three reports are listed under the **Status Messages - Audit** cat
 
 
 
-## Task Sequence - Deployment Status  
+## Task sequence - Deployment status  
+
 The following 11 reports are listed under the **Task Sequence - Deployment Status** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All system resources for a task sequence deployment in a specific state**|Displays a list of the destination computers for the specified task sequence deployment in a specified deployment state.|  
 |**All system resources for a task sequence deployment that is in a specific state and that is available to unknown computers**|Displays a list of the destination computers for the specified task sequence deployment that is in the specified deployment state.|  
-|**Count of system resources that have task sequence deployments assigned but not yet run**|Displays the number of computers that have accepted task sequences, but have not run the task sequence.|  
-|**History of a task sequence deployment on a computer**|Displays the status of each step of the specified task sequence deployment on the specified destination computer. If no record is returned, the task sequence has not started on the computer.|  
+|**Count of system resources that have task sequence deployments assigned but not yet run**|Displays the number of computers that have accepted task sequences, but haven't run the task sequence.|  
+|**History of a task sequence deployment on a computer**|Displays the status of each step of the specified task sequence deployment on the specified destination computer. If no record is returned, the task sequence hasn't started on the computer.|  
 |**List of computers that exceeded a specific length of time to run a task sequence deployment**|Displays the list of destination computers that exceeded the specified length of time to run a task sequence.|  
 |**Run time for a specific task sequence deployment on a specific destination computer**|Displays the total time that it took to successfully complete a specified task sequence on a specified computer.|  
 |**Run time for each step of a task sequence deployment on a specific destination computer**|Displays the time that it took to complete each step of the specified task sequence deployment on the specified destination computer.|  
@@ -834,7 +882,8 @@ The following 11 reports are listed under the **Task Sequence - Deployment Statu
 
 
 
-## Task Sequence - Deployments  
+## Task sequence - Deployments  
+
 The following 11 reports are listed under the **Task Sequence - Deployments** category.
 
 |Report name|Description|  
@@ -853,7 +902,8 @@ The following 11 reports are listed under the **Task Sequence - Deployments** ca
 
 
 
-## Task Sequence - Progress  
+## Task sequence - Progress  
+
 The following five reports are listed under the **Task Sequence - Progress** category.
 
 |Report name|Description|  
@@ -862,11 +912,12 @@ The following five reports are listed under the **Task Sequence - Progress** cat
 |**Progress of a task sequence**|Displays the progress of the specified task sequence.|  
 |**Progress of all task sequences**|Displays a summary of the progress of all task sequences.|  
 |**Progress of task sequences for operating system deployments**|Displays the progress of all task sequences that deploy operating systems.|  
-|**Status of all unknown computers**|Displays a list of computers that were unknown at the time they ran a task sequence deployment, and whether they are now known computers.|  
+|**Status of all unknown computers**|Displays a list of computers that were unknown at the time they ran a task sequence deployment, and whether they're now known computers.|  
 
 
 
-## Task Sequences - References  
+## Task sequences - References  
+
 The following one report is listed under the **Task Sequences - References** category.
 
 |Report name|Description|  
@@ -896,7 +947,7 @@ The following 11 reports are listed under the **Upgrade Assessment** category.
 
 
 
-## User - Device Affinity  
+## User - Device affinity  
 
 The following two reports are listed under the **User - Device Affinity** category.
 
@@ -907,7 +958,8 @@ The following two reports are listed under the **User - Device Affinity** catego
 
 
 
-## User Data and Profiles Health  
+## User data and profiles health  
+
 The following four reports are listed under the **User Data and Profiles Health** category.
 
 |Report name|Description|  
@@ -920,6 +972,7 @@ The following four reports are listed under the **User Data and Profiles Health*
 
 
 ## Users  
+
 The following three reports are listed under the **Users** category.
 
 |Report name|Description|  
@@ -930,7 +983,8 @@ The following three reports are listed under the **Users** category.
 
 
 
-## Virtual Applications  
+## Virtual applications  
+
 The following seven reports are listed under the **Virtual Applications** category.
 
 |Report name|Description|  
@@ -945,8 +999,9 @@ The following seven reports are listed under the **Virtual Applications** catego
 
 
 
-## Volume Purchase Programs - Apple
-The following one report is listed under the **Volume Purchase Programs - Apple** category.
+## Volume purchase programs - Apple
+
+The following report is listed under the **Volume Purchase Programs - Apple** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -954,7 +1009,8 @@ The following one report is listed under the **Volume Purchase Programs - Apple*
 
 
 
-## Vulnerability Assessment
+## Vulnerability assessment
+
 The following one report is listed under the **Vulnerability Assessment** category.
 
 |Report name|Description|  
@@ -964,6 +1020,7 @@ The following one report is listed under the **Vulnerability Assessment** catego
 
 
 ## Wake On LAN  
+
 The following seven reports are listed under the **Wake On LAN** category.
 
 |Report name|Description|  

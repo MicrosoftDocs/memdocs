@@ -83,14 +83,16 @@ The dashboard has the following tiles:
 
 ## Reporting
 
-Additional reports are available as well. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and expand **Reports**. The following new reports are added under the category **Product Lifecycle**:  
-
-- **Lifecycle 04A - General Product Lifecycle overview**: View a list of product lifecycles. Filter the list by product name and days to expiration.  
+Additional reports are available as well. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and expand **Reports**. The following new reports are added under the category **Asset Intelligence**:  
 
 - **Lifecycle 01A - Computers with a specific software product**: View a list of computers on which a specified product is detected.  
 
+- **Lifecycle 02A - List of machines with expired products in the organization**: View computers that have expired products on them. You can filter this report by product name.
+
 - **Lifecycle 03A - List of expired products found in the organization**: View details for products in your environment that have expired lifecycle dates.  
 
-- **Lifecycle 02A - List of machines with expired products in the organization**: View computers that have expired products on them. You can filter this report by product name.
+- **Lifecycle 04A - General Product Lifecycle overview**: View a list of product lifecycles. Filter the list by product name and days to expiration.  
+
+- **Lifecycle 05A - Product lifecycle dashboard**: Starting in version 1810, this report includes similar information as the in-console dashboard. Select a category to view the count of products in your environment, and the days of support remaining.  
 
 For more information, see [List of reports](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  
