@@ -17,7 +17,7 @@ manager: dougeby
 
 When you run Setup from the version 1606 baseline media for Configuration Manager, you can install the Long-Term Servicing Branch or a Current branch site of System Center Configuration Manager.
 
-The baseline media is available on DVD as part of Microsoft System Center 2016, or from System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. To learn about baseline media, see [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+The baseline media is available on DVD as part of Microsoft System Center 2016, or from System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. To learn about baseline media, see [Baseline and update versions](../servers/manage/updates.md#bkmk_Baselines).
 
 
 When you use the version 1606 baseline media, the site you install or upgrade to is:
