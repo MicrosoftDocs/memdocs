@@ -1,6 +1,6 @@
 ---
 title: SCAP extensions
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Learn about the Security Content Automation Protocol (SCAP) extensions for Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
