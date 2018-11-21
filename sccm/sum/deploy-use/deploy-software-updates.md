@@ -21,7 +21,7 @@ The software update deployment phase is the process of deploying the software up
 - Distributes the update content to distribution points
 - Deploys the update group to clients  
 
-After you create the deployment, the site sends an associated software update policy to targeted clients. The clients download the software update content files from a content source to their local cache. Clients on the internet alway download content from the Microsoft Update cloud service. The software updates are then available for installation by the client.   
+After you create the deployment, the site sends an associated software update policy to targeted clients. The clients download the software update content files from a content source to their local cache. Clients on the internet always download content from the Microsoft Update cloud service. The software updates are then available for installation by the client.   
 
 > [!Tip]  
 >  If a distribution point isn't available, clients on the intranet can also download software updates from Microsoft Update.  
