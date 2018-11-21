@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 11/16/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -33,13 +33,16 @@ Use the following checklist to make sure you have the necessary information and 
 
 - You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-- Starting in version 1802, choose whether you use the **Azure Resource Manager deployment** or a **classic service deployment**. For more information, see [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). You need the following requirements for an Azure Resource Manager deployment of CMG:  
+- Starting in version 1802, select the **Azure Resource Manager deployment**. For more information, see [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). You need the following requirements for an Azure Resource Manager deployment of CMG:  
 
     - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
 
     - A subscription admin needs to sign in.  
 
 - You need the following requirements for a classic service deployment of CMG:  
+
+    > [!Important]  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
 
     - Azure subscription ID  
 
@@ -61,11 +64,14 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 2. Select **Create Cloud Management Gateway** in the ribbon.  
 
-3. Starting in version 1802, on the General page of the wizard, first choose the CMG deployment method, **Azure Resource Manager deployment** or **Classic service deployment**.  
+3. Starting in version 1802, on the General page of the wizard, select **Azure Resource Manager deployment** as the CMG deployment method.  
 
-    1. For the **Azure Resource Manager deployment**: Select **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
+    Select **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.
 
-    2. For the **classic service deployment**, *and Configuration Manager versions 1706 and 1710*: enter your Azure **Subscription ID**. Then select **Browse** and choose the .PFX file for the Azure management certificate. 
+    > [!Note]  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. 
+    > 
+    > If you need to use a classic service deployment, select that option on this page. First enter your Azure **Subscription ID**. Then select **Browse**, and choose the .PFX file for the Azure management certificate. 
 
 4. Specify the **Azure environment** for this CMG. The options in the drop-down list may vary depending upon the deployment method.  
 
