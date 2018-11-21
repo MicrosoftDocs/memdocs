@@ -459,7 +459,7 @@ Starting in version 1810, this check is more resilient. To see if the computer i
 - `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
 - `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
 - `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
-- `HKLM: Software\Microsoft\ServerManager, CurrentRebootAttempts`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
 
 #### Read-only domain controller 
 *Applies to: Central administration site, primary site, secondary site*
@@ -546,7 +546,8 @@ This command starts a cleanup of syscommittab and all of the associated side tab
 SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 ```
 
-#### SQL Native Client
+<!-- #### SQL Native Client
+<!--SCCMDocs-pr issue 3094->
 *Applies to: Central administration site, primary site, secondary site*
 
 A supported version of the SQL Native Client. Starting in version 1810, the minimum version is 11.4.7001.0. 
@@ -554,3 +555,4 @@ A supported version of the SQL Native Client. Starting in version 1810, the mini
 This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 - [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
+ -->
