@@ -2,7 +2,7 @@
 title: Procedures for boundary groups
 titleSuffix: Configuration Manager
 description: Configure boundary groups to logically organize related network locations called boundaries.
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
