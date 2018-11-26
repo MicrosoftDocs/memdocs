@@ -2,7 +2,7 @@
 title: Manage OS upgrade packages
 titleSuffix: Configuration Manager
 description: Learn how to manage OS upgrade packages in Configuration Manager.
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

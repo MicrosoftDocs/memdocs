@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

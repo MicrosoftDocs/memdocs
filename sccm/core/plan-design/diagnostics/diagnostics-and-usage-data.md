@@ -2,7 +2,7 @@
 title: Diagnostics and usage data
 titleSuffix: Configuration Manager
 description: Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself.
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

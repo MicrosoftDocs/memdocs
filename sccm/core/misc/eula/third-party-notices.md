@@ -1,7 +1,7 @@
 ---
 title: Third-party notices
 titleSuffix: Configuration Manager
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
