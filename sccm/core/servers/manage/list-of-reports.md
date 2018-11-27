@@ -2,7 +2,7 @@
 title: List of reports
 titleSuffix: Configuration Manager
 description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

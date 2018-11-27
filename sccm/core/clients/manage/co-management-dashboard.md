@@ -2,7 +2,7 @@
 title: Co-management dashboard
 titleSuffix: Configuration Manager
 description: Use the co-management dashboard to review information about co-managed devices.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

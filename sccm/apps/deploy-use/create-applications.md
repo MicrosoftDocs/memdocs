@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Current branch versions
 titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

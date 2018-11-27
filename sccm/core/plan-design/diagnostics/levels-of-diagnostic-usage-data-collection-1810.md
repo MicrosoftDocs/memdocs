@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 1810
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1810.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

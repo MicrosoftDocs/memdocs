@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client

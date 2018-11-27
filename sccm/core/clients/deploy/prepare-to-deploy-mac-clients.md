@@ -2,7 +2,7 @@
 title: Prepare to deploy the client to Macs
 titleSuffix: Configuration Manager
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

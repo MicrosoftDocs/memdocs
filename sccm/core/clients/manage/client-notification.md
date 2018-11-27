@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
