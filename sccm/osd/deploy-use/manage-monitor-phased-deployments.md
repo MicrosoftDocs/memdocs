@@ -2,7 +2,7 @@
 title: Manage & monitor phased deployments
 titleSuffix: Configuration Manager
 description: Understand how to manage and monitor phased deployments for software in Configuration Manager.
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

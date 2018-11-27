@@ -3,7 +3,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 11/26/2018
+ms.date: 11/27/2018
 ---
 
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> Apply software updates to an image  
