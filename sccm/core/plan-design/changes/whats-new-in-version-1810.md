@@ -208,12 +208,12 @@ For more information, see [Approve applications](/sccm/apps/deploy-use/app-appro
 
 ### Detection methods don't load Windows PowerShell profiles
 <!--1359239-->
-You can use Windows PowerShell scripts for detection methods on applications and in compliance settings. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
+You can use Windows PowerShell scripts for detection methods on applications and settings in configuration items. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
 
 A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start. 
 
 > [!Note]  
-> This change in behavior doesn't apply to [Scripts](/sccm/apps/deploy-use/create-deploy-scripts).  
+> This change in behavior doesn't apply to [Scripts](/sccm/apps/deploy-use/create-deploy-scripts) or [CMPivot](/sccm/core/servers/manage/cmpivot). Both of these features already use this PowerShell parameter.    
 
 <!--For more information, see []().-->
 
