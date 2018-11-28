@@ -37,18 +37,18 @@ Co-management requires the use of several certificates, configuration of Azure, 
 > [!div class="checklist"]
 > * Review your Azure configurations
 > * Configure the PKI environment, including:
->   - Create custom certificate templates and certificates
->   - Identify an Azure Cloud Service Name for your cloud management gateway
->   - Request externally issued SSL certificates for your cloud services
->   - Enroll and export certificates on your primary site server
+>     - Create custom certificate templates and certificates
+>     - Identify an Azure Cloud Service Name for your cloud management gateway
+>     - Request externally issued SSL certificates for your cloud services
+>     - Enroll and export certificates on your primary site server
 > * Configure site system roles:
->   - Enable Azure services in Configuration Manager
->   - Deploy the cloud-based site system roles  
->   - Create DNS CNAME records for the cloud-based site system roles
->   - Configure the management point for use with the cloud management gateway
->   - Create a Configuration Manager client settings profile
+>     - Enable Azure services in Configuration Manager
+>     - Deploy the cloud-based site system roles  
+>     - Create DNS CNAME records for the cloud-based site system roles
+>     - Configure the management point for use with the cloud management gateway
+>     - Create a Configuration Manager client settings profile
 > * Enable co-management in Configuration Manager, including:   
->   - Enable Auto mobile device management (MDM) enrollment
+>     - Enable Auto mobile device management (MDM) enrollment
 > * Deploy an Intune app in install the Configuration Manager client
 
 
