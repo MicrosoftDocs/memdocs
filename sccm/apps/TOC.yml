@@ -35,6 +35,8 @@
       href: deploy-use/deploy-applications.md
     - name: Create a phased deployment
       href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+    - name: Approve applications
+      href: deploy-use/app-approval.md
     - name: Share an application
       href: deploy-use/share-applications.md
     - name: Simulate application deployments

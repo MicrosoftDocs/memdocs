@@ -1,8 +1,8 @@
 ---
 title: Release notes
 titleSuffix: Configuration Manager
-description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/21/2018
+description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,9 +24,9 @@ Feature-specific documentation includes information about known issues that affe
 >  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
 
 For information about the new features introduced with different versions, see the following articles:
+- [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-- [What's new in version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 
 
 
@@ -74,18 +74,8 @@ Move the service connection point role to another server.
 <!-- ## Backup and recovery  -->
 
 
-## Client deployment and upgrade
+<!--## Client deployment and upgrade-->
 
-### Azure AD-enabled clients can't communicate with management point
-<!--501089-->  
-*Applies to: Configuration Manager version 1706*
-<!--also fixed in 1710 HFRU-->  
-In the scenario to [install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure), client communication fails when the HTTPS-enabled management point uses alternate database credentials. 
-
-#### Workaround
-Mitigate this issue with one of the following actions:
-- Update the site to the latest version, and apply the latest hotfix
-- Change the credentials that the management point uses.
 
 
 <!-- ## Operating system deployment  -->

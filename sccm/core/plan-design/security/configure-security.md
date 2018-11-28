@@ -2,7 +2,7 @@
 title: Configure security
 titleSuffix: Configuration Manager
 description: Configure security-related options for Configuration Manager.
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -22,6 +22,7 @@ Use the information in this article to help you set up security-related options 
 - [Role-based administration](#BKMK_ConfigureRBA)  
 - [Manage accounts](#BKMK_ManageAccounts)  
 - [Configure Azure Active Directory](#bkmk_azuread)  
+- [Configure SMS Provider authentication](#bkmk_auth)  
 
 
 
@@ -140,6 +141,12 @@ For more information, see [Accounts used in Configuration Manager](/sccm/core/pl
 ##  <a name="bkmk_azuread"></a> Configure Azure Active Directory
 
 Integrate Configuration Manager with Azure Active Directory (Azure AD) to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Azure AD. For more information, see the **Cloud Management** service in [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+
+
+## <a name="bkmk_auth"></a> Configure SMS Provider authentication
+
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
 
 
 
