@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -96,12 +96,15 @@ Deployment and operation of the CMG includes the following components:
 
 ### Azure Resource Manager
 <!-- 1324735 -->
-Starting in version 1802, you can create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+Starting in version 1802, you can create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+
+> [!Note]  
+> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services). 
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, using the Azure Resource Manager deployment model is recommended for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
-> [!IMPORTANT]  
-> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services). 
+> [!Important]  
+> Starting in version 1810, the classic service deployment in Azure is deprecated for use in Configuration Manager. This version is the last to support creation of these Azure deployments. This functionality will be removed in the first Configuration Manager version released after July 1, 2019. Move your CMG and cloud distribution points to Azure Resource Manager deployments before this time. <!--SCCMDocs-pr issue #2993-->  
 
 
 ### Hierarchy design
@@ -156,7 +159,9 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 - If using the Azure classic deployment method, you must use an [**Azure management certificate**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > Starting with Configuration Manager version 1802, Microsoft recommends using the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
+    > Starting with Configuration Manager version 1802, Microsoft recommends using the **Azure Resource Manager** deployment model. It doesn't require this management certificate. 
+    > 
+    > The classic deployment method is deprecated as of version 1810.   
 
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
@@ -181,7 +186,7 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->  
 
-- Starting in version 1802, CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- Starting in version 1802, CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
 
 
 ### Support for Configuration Manager features

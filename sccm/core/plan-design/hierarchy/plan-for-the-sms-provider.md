@@ -1,8 +1,8 @@
 ---
-title: "Plan the SMS Provider"
-titleSuffix: "Configuration Manager"
-description: "Learn about how the SMS Provider helps you manage System Center Configuration Manager."
-ms.date: 2/7/2017
+title: Plan for the SMS Provider
+titleSuffix: Configuration Manager
+description: Learn about the SMS Provider site system role in Configuration Manager.
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,182 +11,232 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Plan for the SMS Provider for System Center Configuration Manager
+
+# Plan for the SMS Provider 
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-To manage System Center Configuration Manager, you use a Configuration Manager console that connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on the site server when you install a central administration site or primary site. 
+To manage Configuration Manager, you use a Configuration Manager console that connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on the site server when you install a central administration site or primary site. 
+
 
 
 ##  <a name="BKMK_PlanSMSProv"></a> About the SMS Provider  
- The SMS Provider is a Windows Management Instrumentation (WMI) provider that assigns **read** and **write** access to the Configuration Manager database at a site:  
 
--   Each central administration site and primary site require at least one SMS Provider. You can install additional providers as needed.  
--   The **SMS Admins** security group provides access to the SMS Provider. Configuration Manager automatically creates this group on the site server, and on each computer where you install an instance of the SMS Provider.  
+The SMS Provider is a Windows Management Instrumentation (WMI) provider that assigns **read** and **write** access to the Configuration Manager database at a site.  
 
--   Secondary sites do not support the SMS Provider.  
+- Each central administration site and primary site require at least one SMS Provider. You can install additional providers as needed.  
 
+- The **SMS Admins** security group provides access to the SMS Provider. Configuration Manager automatically creates this group on the site server, and on each computer where you install an instance of the SMS Provider. For more information, see [SMS Admins](/sccm/core/plan-design/hierarchy/accounts#sms-admins).  
 
-Configuration Manager administrative users use an SMS Provider to access information that is stored in the database. To do so, admins can use the Configuration Manager console, Resource Explorer, tools, and custom scripts. The SMS Provider does not interact with Configuration Manager clients. When a Configuration Manager console connects to a site, the Configuration Manager console queries WMI on the site server to locate an instance of the SMS Provider to use.  
+- Secondary sites don't support the SMS Provider role.  
 
- The SMS Provider helps enforce Configuration Manager security. It returns only the information that the administrative user who is running the Configuration Manager console is authorized to view.  
+Configuration Manager administrative users use an SMS Provider to access information that's stored in the database. To do so, admins can use the Configuration Manager console, Resource Explorer, tools, and custom scripts. The SMS Provider doesn't interact with Configuration Manager clients. When a Configuration Manager console connects to a site, it queries WMI on the site server to locate an instance of the SMS Provider to use.  
+
+The SMS Provider helps enforce Configuration Manager security. It returns only the information that the console user is authorized to view.  
 
 > [!IMPORTANT]  
->  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that site's database.  
+>  When each instance of the SMS Provider for a site is offline, Configuration Manager consoles can't connect to the site.  
 
- For information about how to manage the SMS Provider, see [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) in [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md).  
-
-## Prerequisites to install the SMS Provider  
-
- To support the SMS Provider:  
-
--   The computer must be in a domain that has a two-way trust relationship with the site server and the site database site systems.  
-
--   The computer cannot have a site system role from a different site.  
-
--   The computer cannot have an SMS Provider from any site.  
-
--   The computer must run an operating system that is supported for a site server.  
-
--   The computer must have at least 650 MB of free disk space to support the Windows Automated Deployment Kit (Windows ADK) components that are installed with the SMS Provider. For more information about Windows ADK and the SMS Provider, see [Operating System Deployment requirements for the SMS Provider](#BKMK_WAIKforSMSProv) in this topic.  
-
-##  <a name="bkmk_location"></a> SMS Provider locations  
- When you install a site, you automatically install the first SMS Provider for the site. You can specify any of the following supported locations for the SMS Provider:  
-
--   The site server computer  
-
--   The site database computer  
-
--   A server-class computer that does not hold an SMS Provider, or a site system role from a different site  
+ For more information about how to manage the SMS Provider, see [Manage the SMS Provider](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider).  
 
 
-To view the locations of each SMS Provider that is installed at a site, select the **General** tab of the site **Properties** dialog box.  
 
- Each SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available on the SMS Provider computer, and the available resources on the SMS Provider computer to service the connection requests.  
+## Installation prerequisites  
 
- After a site is installed, you can run Setup on the site server again to change the location of an existing SMS Provider, or to install additional SMS Providers at that site. You can install only one SMS Provider on a computer, and a computer cannot install an SMS Provider from more than one site.  
+ To support the SMS Provider, the target server must meet the following prerequisites:  
 
- Use the following to identify the advantages and disadvantages of installing an SMS Provider on each supported location:  
+-   In a domain that has a two-way trust relationship with the site server and the site database site systems  
 
- **Configuration Manager site server**  
+-   Can't have a site system role from a different site  
 
--   **Advantages:**  
+-   Can't already have an SMS Provider from any site  
 
-    -   The SMS Provider does not use the system resources of the site database computer.  
+-   Run a supported OS version  
+
+-   At least 650 MB of free disk space to support the Windows ADK components. For more information about Windows ADK and the SMS Provider, see [OS deployment requirements](#BKMK_WAIKforSMSProv).  
+
+
+
+##  <a name="bkmk_location"></a> Locations  
+
+When you install a site, you automatically install the first SMS Provider for the site. You can specify any of the following supported locations for the SMS Provider:  
+
+-   The site server  
+
+-   The site database server  
+
+-   Another server, which meets the [installation prerequisites](#installation-prerequisites)  
+
+
+To view the locations of each SMS Provider for a site: 
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and then select the **Sites** node.  
+
+2. Select the desired site from the list, and then choose **Properties** in the ribbon.  
+
+3. On the **General** tab of the site **Properties**, view the **SMS Provider location** field.    
+
+
+Each SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available to Windows, and the available resources on the server to service the connection requests.  
+
+After you install a site, you can run Configuration Manager setup on the site server again. Use setup to change the location of an existing SMS Provider, or to install additional SMS Providers at that site. Install only one SMS Provider on a computer. A computer can't host an SMS Provider from more than one site.  
+
+
+### Choosing a location 
+
+The following sections describe the advantages and disadvantages of installing an SMS Provider on each supported location:  
+
+#### Configuration Manager site server
+
+- **Advantages:**  
+
+    -   The SMS Provider doesn't use the system resources of the site database computer.  
 
     -   This location can provide better performance than an SMS Provider located on a computer other than the site server or site database computer.  
 
--   **Disadvantages:**  
+- **Disadvantages:**  
 
     -   The SMS Provider uses system and network resources that could be dedicated to site server operations.  
 
 
-**SQL Server that is hosting the site database**  
+#### SQL Server that hosts the site database
 
--   **Advantages:**  
+- **Advantages:**  
 
-    -   The SMS Provider does not use site system resources on the site server.  
+    -   The SMS Provider doesn't use system resources on the site server.  
 
     -   This location can provide the best performance of the three locations, if sufficient server resources are available.  
 
--   **Disadvantages:**  
+- **Disadvantages:**  
 
     -   The SMS Provider uses system and network resources that could be dedicated to site database operations.  
 
     -   When the site database is hosted on a clustered instance of SQL Server, you can't use this location.  
 
 
-**Computer other than the site server or site database computer**  
+#### Computer other than the site server or site database server
 
--   **Advantages:**  
+- **Advantages:**  
 
-    -   SMS Provider does not use site server or site database computer resources.  
+    -   SMS Provider doesn't use site server or site database system resources.  
 
     -   This type of location lets you deploy additional SMS Providers to provide high availability for connections.  
 
--   **Disadvantages:**  
+- **Disadvantages:**  
 
-    -   The SMS Provider performance might be reduced due to the additional network activity that is required to coordinate with the site server and the site database computer.  
+    -   The SMS Provider performance might be reduced. This behavior is due to the additional network activity that it requires to coordinate with the site server and the site database computer.  
 
-    -   This server must be always accessible to the site database computer, and to all computers with the Configuration Manager console installed.  
+    -   This server must be always accessible to the site database server, and to all computers with the Configuration Manager console installed.  
 
     -   This location can use system resources that would otherwise be dedicated to other services.  
 
+
+
+## <a name="bkmk_auth"></a> Authentication
+<!--1357013-->
+
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. It applies to all components that access the SMS Provider. For example, the Configuration Manager console, SDK methods, and Windows PowerShell cmdlets. 
+
+
+### Configure authentication
+
+To configure this setting, first sign in to Windows with the intended authentication level. 
+
+> [!Important]  
+> This configuration is a hierarchy-wide setting. Before you change this setting, make sure that all Configuration Manager administrators can sign in to Windows with the required authentication level. 
+
+To configure this setting, use the following steps:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
+
+2. Select **Hierarchy Settings** in the ribbon.  
+
+3. Switch to the **Authentication** tab. Select the desired [authentication level](#authentication-levels), and then select **OK**.  
+
+    - Only when necessary, select **Add** to exclude specific users or groups. For more information, see [Exclusions](#exclusions).  
+
+
+### Authentication levels
+
+The following levels are available:
+
+- **Windows authentication**: Require authentication with Active Directory domain credentials. This setting is the previous behavior, and the current default setting. When you update the site, there's no change to the authentication level.  
+
+- **Certificate authentication**: Require authentication with a valid certificate that's issued by a trusted PKI certificate authority. You don't configure this certificate in Configuration Manager. Configuration Manager requires the administrator to be signed into Windows using PKI.  
+
+- **Windows Hello for Business authentication**: Require authentication with strong two-factor authentication that's tied to a device and uses biometrics or a PIN. You can use Configuration Manager to manage and deploy Windows Hello for Business policies. For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).  
+
+
+### Exclusions
+
+From the **Authentication** tab of Hierarchy Settings, you can also exclude certain users or groups. Use this option sparingly. For example, when specific users require access to the Configuration Manager console, but can't authenticate to Windows at the required level. It may also be necessary for automation or services that run under the context of a system account.
+
+
+
 ##  <a name="BKMK_SMSProvLanguages"></a> About SMS Provider languages  
- The SMS Provider operates independently of the display language of the computer where it is installed.  
 
- When an administrative user or Configuration Manager process requests data by using the SMS Provider, the SMS Provider attempts to return that data in a format that matches the operating system language of the requesting computer.
+The SMS Provider operates independently of the display language of the server where you install it.  
 
-The way it attempts to match the language is somewhat indirect. The SMS Provider does not translate information from one language to another. Instead, when data is returned for display in the Configuration Manager console, the display language of the data depends on the source of the object and type of storage.  
+When an administrative user or Configuration Manager process requests data by using the SMS Provider, it attempts to return that data in a format that matches the OS language of the requesting computer.
 
- When data for an object is stored in the database, the languages that will be available depend on the following:  
+The way it attempts to match the language is indirect. The SMS Provider doesn't translate information from one language to another. When it returns data for display in the Configuration Manager console, the display language of the data depends on the source of the object and type of storage.  
 
--   Objects that Configuration Manager creates are stored in the database by using support for multiple languages. The object is stored by using the languages that are configured at the site where the object is created when you run Setup. These objects are displayed in the Configuration Manager console in the display language of the requesting computer, when that language is available for the object. If the object cannot be displayed in the display language of the requesting computer, it is displayed in the default language, which is English.  
+When Configuration Manager stores data for an object in the database, the available languages depend on the following factors:  
 
--   Objects that an administrative user creates are stored in the database by using the language that was used to create the object. These objects display in the Configuration Manager console in this same language. They cannot be translated by the SMS Provider, and do not have multiple language options.  
+-   Configuration Manager stores objects that it creates by using support for multiple languages. It stores the object in the site database by using the languages that you configure for the site when you run setup. The Configuration Manager console displays these objects in the display language of the requesting computer, when that language is available for the object. If the console can't display the object in the display language of the requesting computer, it displays the object in the default language, which is English.  
+
+-   Configuration Manager stores objects that an administrative user creates by using the language that was used to create the object. These objects display in the Configuration Manager console in this same language. The SMS Provider can't translate them, and they don't have multiple language options.  
+
+
 
 ##  <a name="BKMK_MultiSMSProv"></a> Use multiple SMS Providers  
- After a site completes installation, you can install additional SMS Providers for the site. To install additional SMS Providers, run Configuration Manager Setup on the site server. Consider installing additional SMS Providers when any of the following is true:  
 
--   You will have many administrative users who run a Configuration Manager console and connect to a site at the same time.  
+ After a site completes installation, you can install additional SMS Providers for the site. To install additional SMS Providers, run Configuration Manager setup on the site server. 
 
--   You will use the Configuration Manager SDK, or other products, that might introduce frequent calls to the SMS Provider.  
+Consider installing additional SMS Providers when any of the following are true:  
 
--   You want to ensure high availability for the SMS Provider.  
+- Many administrative users need to use the Configuration Manager console and connect to a site at the same time.  
 
+- You use the Configuration Manager SDK, or other products, that might introduce frequent calls to the SMS Provider.  
 
-When multiple SMS Providers are installed at a site, and a connection request is made, the site randomly assigns each new connection request to use an installed SMS Provider. You cannot specify the SMS Provider location to use with a specific connection session.  
+- You have a business requirement for high availability of the SMS Provider.  
 
-> [!NOTE]  
->  Consider the advantages and disadvantages of each SMS Provider location. Balance these considerations with the information that you cannot control which SMS Provider is used for each new connection.  
-
-For example, when you first connect a Configuration Manager console to a site, the connection queries WMI on the site server to identify an instance of the SMS Provider that the console will use. This specific instance of the SMS Provider remains in use by the Configuration Manager console until the Configuration Manager console session ends. If the session ends because the SMS Provider computer becomes unavailable on the network, when you reconnect the Configuration Manager console, the site simply repeats the task of identifying an instance of the SMS Provider to connect to. It is possible to be assigned to the same SMS Provider computer that is not available. If this occurs, you can attempt to reconnect the Configuration Manager console until an available SMS Provider computer is assigned.  
-
-##  <a name="BKMK_AboutSMSAdmins"></a> About the SMS Admins group  
- You use the SMS Admins group to provide administrative users access to the SMS Provider. The group is automatically created on the site server when the site installs, and on each computer that installs an SMS Provider. Here is additional information about the SMS Admins group:  
-
--   When the computer is a member server, the SMS Admins group is created as a local group.  
-
--   When the computer is a domain controller, the SMS Admins group is created as a domain local group.  
-
--   When the SMS Provider is uninstalled from a computer, the SMS Admins group is not removed from the computer.  
-
-
-Before a user can make a successful connection to an SMS Provider, their user account must be a member of the SMS Admins group. Each administrative user that you configure in the Configuration Manager console is automatically added to the SMS Admins group on each site server and to each SMS Provider computer in the hierarchy. When you delete an administrative user from the Configuration Manager console, that user is removed from the SMS Admins group on each site server and on each SMS Provider computer in the hierarchy.  
-
-After a user makes a successful connection to the SMS Provider, role-based administration determines what Configuration Manager resources that user can access or manage.  
-
-You can view and configure SMS Admins group rights and permissions by using the WMI Control MMC snap-in. By default, **Everyone** has **Execute Methods**, **Provider Write**, and **Enable Account** permissions. After a user connects to the SMS Provider, that user is granted access to data in the site database, based on their role-based administrative security rights as defined in the Configuration Manager console. The SMS Admins group is explicitly granted **Enable Account** and **Remote Enable** permissions on the **Root\SMS** namespace.  
+When you install multiple SMS Providers at a site, and a connection request is made, the site randomly assigns each new connection request to use an installed SMS Provider. You can't specify the SMS Provider to use with a specific connection session.  
 
 > [!NOTE]  
->  Each administrative user who uses a remote Configuration Manager console requires Remote Activation DCOM permissions on the site server computer and on the SMS Provider computer. Although you can grant these rights to any user or group, it's a good idea to grant them to the SMS Admins group to simplify administration. For more information, see the [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) section in the [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) topic.  
+>  Consider the advantages and disadvantages of each SMS Provider location. For more information, see [Locations](#bkmk_location). Balance these considerations with the information that you can't control which SMS Provider is used for each new connection.  
+
+When you first connect a Configuration Manager console to a site, the connection queries WMI on the site server. This query identifies an instance of the SMS Provider that the console uses. This specific instance of the SMS Provider remains in use by the console until the session ends. If the session ends because the SMS Provider server is unavailable on the network, when you reconnect the console to the site, it repeats the initial query. It's possible the site assigns the same SMS Provider instance that's not available. If this behavior occurs, attempt to reconnect the console until the site returns an available SMS Provider.  
+
 
 
 ##  <a name="BKMK_SMSProvNamespace"></a> About the SMS Provider namespace  
-The structure of the SMS Provider is defined by the WMI schema. Schema namespaces describe the location of Configuration Manager data within the SMS Provider schema. The following table contains some of the common namespaces that are used by the SMS Provider.  
+
+The Configuration Manager WMI schema defines the structure of the SMS Provider. Schema namespaces describe the location of Configuration Manager data within the SMS Provider schema. The following table contains some of the common namespaces that the SMS Provider uses:  
 
 |Namespace|Description|  
 |---------------|-----------------|  
-|Root\SMS\site_*&lt;site code\>*|The SMS Provider, which is extensively used by the Configuration Manager console, Resource Explorer, Configuration Manager tools, and scripts.|  
-|Root\SMS\SMS_ProviderLocation|The location of the SMS Provider computers for a site.|  
-|Root\CIMv2|The location inventoried for WMI namespace information during hardware and software inventory.|  
-|Root\CCM|Configuration Manager client configuration policies and client data.|  
-|root\CIMv2\SMS|The location of inventory reporting classes that are collected by the inventory client agent. These settings are compiled by clients during computer policy evaluation, and are based on the client settings configuration for the computer.|  
+|`Root\SMS\site_<site code>`|The SMS Provider, which is extensively used by the Configuration Manager console, Resource Explorer, Configuration Manager tools, and scripts.|  
+|`Root\SMS\SMS_ProviderLocation`|The location of the SMS Provider computers for a site.|  
+|`Root\CIMv2`|The location inventoried for WMI namespace information during hardware and software inventory.|  
+|`Root\CCM`|Configuration Manager client configuration policies and client data.|  
+|`Root\CIMv2\SMS`|The location of inventory reporting classes that the inventory client agent collects. Clients compile these settings during computer policy evaluation. These settings are based on the client settings configuration for the computer.|  
 
-##  <a name="BKMK_WAIKforSMSProv"></a> Operating system deployment requirements for the SMS Provider  
-The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're using requires.  
 
- -   For example, version 1511 of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
- -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
+##  <a name="BKMK_WAIKforSMSProv"></a> OS deployment requirements
 
-When you manage operating system deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:  
+The computer where you install an instance of the SMS Provider requires a supported version of the Windows ADK.  
 
--   View WIM file details.  
+For more information about this requirement, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#windows-adk-for-windows-10) and [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
 
--   Add driver files to existing boot images.  
+When you manage OS deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:  
 
--   Create boot .ISO files.  
+-   View WIM file details  
+
+-   Add driver files to existing boot images  
+
+-   Create boot ISO files  
 
 
 The Windows ADK installation can require up to 650 MB of free disk space on each computer that installs the SMS Provider. This high disk space requirement is necessary for Configuration Manager to install the Windows PE boot images.  

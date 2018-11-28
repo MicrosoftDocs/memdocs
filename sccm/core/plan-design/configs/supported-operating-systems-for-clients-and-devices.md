@@ -201,6 +201,7 @@ Windows Server semi-annual channel versions are Server Core installations, such 
 
 -   **Mac OS X 10.13** (macOS High Sierra)
 
+- **macOS Mojave (10.14)** 
 
 
 ##  Linux and UNIX servers  

@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with System Center Configuration Manager
-ms.date: 10/02/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -46,16 +46,16 @@ A Configuration Manager version drops from the matrix after [support for that ve
 <br/>
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+| Windows 10 version | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
 |---------------------|-----|-----|-----|-----|
-| Enterprise 2015 LTSB <!--10/14/2025-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| Enterprise 2016 LTSB <!--10/13/2026-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| Enterprise LTSC 2019 <!--10/10/2028-->   | ![Not supported](media/Red_X.png)   | ![Not supported](media/Red_X.png)   | ![Supported](media/green_check.png) |
-| 1607   <!--04/09/2019-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| 1703   <!--10/08/2019-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| 1709   <!--04/14/2020-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| 1803   <!--11/10/2020-->   | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| 1809   <!--04/12/2021?-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) |
+| Enterprise 2015 LTSB <!--10/14/2025-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| Enterprise 2016 LTSB <!--10/13/2026-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| Enterprise LTSC 2019 <!--10/10/2028-->   | ![Not supported](media/Red_X.png)   | ![Not supported](media/Red_X.png)   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| 1607   <!--04/09/2019-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| 1703   <!--10/08/2019-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| 1709   <!--04/14/2020-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| 1803   <!--11/10/2020-->   | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| 1809   <!--04/12/2021?-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -80,12 +80,12 @@ When you deploy operating systems with Configuration Manager, the Windows ADK is
 
 The following table lists the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-| Windows 10 ADK version  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+| Windows 10 ADK version  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
 |--------------------|-----|-----|-----|-----|
-| 1703  | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png)   |
-| 1709  | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) |
-| 1803  | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| 1809  | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) |
+| 1703  | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
+| 1709  | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png)   |
+| 1803  | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) |
+| 1809  | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 |Key|
 |--|

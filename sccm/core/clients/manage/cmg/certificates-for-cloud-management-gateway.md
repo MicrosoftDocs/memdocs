@@ -4,7 +4,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -119,6 +119,9 @@ Create a custom SSL certificate for the CMG the same as for a cloud distribution
 ## <a name="bkmk_azuremgmt"></a> Azure management certificate
 
 *This certificate is required for classic service deployments. It's not required for Azure Resource Manager deployments.*
+
+> [!Important]  
+> Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
 You supply this certificate in the Azure portal, and when creating the CMG in the Configuration Manager console.
 

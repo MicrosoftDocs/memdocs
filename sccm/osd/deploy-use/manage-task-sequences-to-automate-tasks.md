@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -386,6 +386,9 @@ The following notification message displays when the end user opens the installa
     -   **When no local distribution point is available, use a remote distribution point**: Specify whether clients can use distribution points from a neighbor boundary group to download the content that's required by the task sequence.  
 
     - **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download content from a distribution point in the site default boundary group, when it isn't available from a distribution point in the current or neighbor boundary groups.  
+
+        > [!Note]  
+        > Starting in version 1810, when a device runs a task sequence and needs to acquire content, it uses boundary group behaviors similar to the Configuration Manager client. For more information, see [Task sequence support for boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd).<!--1359025-->  
 
 11. Beginning in Configuration Manager 1802, on the **Summary** tab, click on **Save As Template** if you wish to save settings to use again. Supply a name for the template and select the settings to save.  
 
