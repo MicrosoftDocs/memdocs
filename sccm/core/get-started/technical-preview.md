@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -119,16 +119,15 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1810.2
+### Technical Preview version 1811
 
-<!--capabilities-in-technical-preview-1810-2.md#bkmk_anchor-->
+<!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
 
-- [Improvements to collection evaluation](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) <!--1358981-->
-- [Configuration Manager administrator authentication](capabilities-in-technical-preview-1810-2.md#bkmk_auth) <!--1357013-->
-- [Management insights rule for peer cache source client version](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
-- [Improvements to internet-based client setup](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) <!--1359181-->
-- [Convert applications to MSIX](capabilities-in-technical-preview-1810-2.md#bkmk_msix) <!--1359029-->
-- [Changes to client notification action to wake up a device](capabilities-in-technical-preview-1810-2.md#bkmk_wakeup) <!--1317364-->
+- [Don't load Windows PowerShell profiles](capabilities-in-technical-preview-1811.md#) <!--1359239-->
+- [An Intune connection is no longer required for on-premises MDM](capabilities-in-technical-preview-1811.md#) <!--1359124-->
+- [Configuration Manager console notifications](capabilities-in-technical-preview-1811.md#) <!--1318035-->
+- [Specify temp storage for task sequence media creation](capabilities-in-technical-preview-1811.md#) <!--1359388-->
+- [Improvement to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1811.md#) <!--1359389-->
 
 
 > [!Note]  
@@ -147,6 +146,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Improvements to collection evaluation <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | Version 1810 | 
+ | Configuration Manager administrator authentication <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | Version 1810 | 
+ | Management insights rule for peer cache source client version <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Version 1810 | 
+ | Improvements to internet-based client setup <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | Version 1810 | 
+ | Convert applications to MSIX <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | Version 1810 | 
  | Improvement to client installation <!--1358840--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | Version 1810 | 
  | Required app compliance policy for co-managed devices <!--1358196--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | Version 1810 | 
  | Improvement to co-management dashboard <!--1358980--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | Version 1810 | 
@@ -164,8 +168,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Improvement to lifecycle dashboard <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | Version 1810 | 
  | Improvement to data warehouse <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | Version 1810 | 
  | Improvement to maintenance windows for software updates <!--vso2839307--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | Version 1810 | 
- | Phased deployment of software updates <!--1358146--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | Version 1810 | 
- | Improvements to repair applications <!--1357866--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | Version 1810 | 
 
 
 
