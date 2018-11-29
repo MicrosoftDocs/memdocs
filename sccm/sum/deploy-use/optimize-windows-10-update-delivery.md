@@ -83,7 +83,7 @@ Selecting the right peer caching technology for express installation files depen
 | Partial content support | Yes | Only for Office 365 and Express Updates | Yes |
 | Cache size on disk control | Yes | Yes | Yes |
 | Discovery of a peer source | Automatic | Manual (client agent setting) | Automatic |
-| Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Broadcast |
+| Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Multicast |
 | Reporting | Yes (using Windows Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
 | WAN usage control | Yes (native, can be controlled via group policy settings) | Boundary groups | Subnet support only |
 | Supported content types | - Express updates (through ConfigMgr)</br> - Windows and security updates</br> - Drivers</br> - Windows Store apps</br> - Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
