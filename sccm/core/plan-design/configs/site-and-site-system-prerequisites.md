@@ -411,7 +411,13 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 
 
-##  <a name="bkmk_2012FSPpreq"></a> Fallback status point  
+##  <a name="bkmk_2012FSPpreq"></a> Fallback status point 
+
+#### Windows Server roles and features 
+
+-   BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options) 
+
+#### IIS configuration 
 
 The default IIS configuration is required with the following additions:  
 
