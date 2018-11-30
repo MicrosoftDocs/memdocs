@@ -1,11 +1,17 @@
-﻿
+---
+author: aczechowski
+ms.author: aaroncz
+ms.prod: configuration-manager
+ms.topic: include
+ms.date: 11/30/2018
+---
+
 - Apple iOS 9.0 and later
 - Google Android 4.0 and later (including Samsung KNOX Standard 4.0 and higher)*
 - Windows 10 Mobile
 - PCs running Windows 10 (Home, Pro, Education, and Enterprise versions)
 - Devices running Windows 10 IoT Enterprise (x86, x64)
 - Devices running Windows 10 IoT Mobile Enterprise
-- Windows Holographic for Business
 - Mac OS X 10.9 and later
 - Windows Phone 8.1, PCs running Windows 8.1, and Windows 8.1 RT are in sustaining mode (Windows Embedded 8.1 Handheld is not supported)
 
