@@ -18,8 +18,9 @@ manager: dougeby
 
 <!--1356889,1358460-->
 
-> [!Note]  
-> In this version of Configuration Manager, Enhanced HTTP is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> [!Tip]  
+> This feature was first introduced in version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1810, this feature is no longer a pre-release feature.  
+
 
 Microsoft recommends using HTTPS communication for all Configuration Manager communication paths, but it's challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
 
