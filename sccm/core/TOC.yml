@@ -74,6 +74,8 @@
       href: plan-design/changes/whats-new-in-version-1806.md
     - name: What's new in version 1802
       href: plan-design/changes/whats-new-in-version-1802.md
+    - name: What's new in version 1710
+      href: plan-design/changes/whats-new-in-version-1710.md
     - name: Removed and deprecated
       href: plan-design/changes/deprecated/removed-and-deprecated.md
       items:
@@ -171,6 +173,8 @@
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Diagnostic data for 1802
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
+    - name: Diagnostic data for 1710
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
     - name: How diagnostics and usage data is collected
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: How to view diagnostics and usage data
@@ -429,6 +433,8 @@
       href: servers/manage/checklist-for-installing-update-1806.md
     - name: Checklist for installing update 1802
       href: servers/manage/checklist-for-installing-update-1802.md
+    - name: Checklist for installing update 1710
+      href: servers/manage/checklist-for-installing-update-1710.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery

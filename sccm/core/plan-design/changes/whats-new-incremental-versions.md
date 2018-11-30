@@ -29,6 +29,7 @@ manager: dougeby
   - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
   - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
   - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
+  - [What's new in version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 
 
 For versions of Configuration Manager released prior to 1710, support is for 12 months. Beginning with the 1710 release, each update version remains in support for 18 months from its general availability (GA) release date.  Stay current with the most recent update version. For more information, see [Support for Configuration Manager current branch versions](/sccm/core/servers/manage/current-branch-versions-supported).  
