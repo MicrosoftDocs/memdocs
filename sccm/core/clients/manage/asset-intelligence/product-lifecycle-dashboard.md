@@ -2,7 +2,7 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,6 +19,8 @@ manager: dougeby
 Beginning with version 1806, you can use the Configuration Manager product lifecycle dashboard to view the Microsoft Lifecycle Policy. The dashboard shows the state of the Microsoft Lifecycle Policy for Microsoft products installed on devices managed with Configuration Manager. It also provides you with information about Microsoft products in your environment, supportability state, and support end dates. Use the dashboard to understand the availability of support for each product. This information helps you plan for when to update the Microsoft products you use before their current end of support is reached.  
 
 For more information, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).
+
+Starting in version 1810, the dashboard includes information for System Center 2012 Configuration Manager and later.<!--1358702-->  
 
 
 
@@ -54,6 +56,13 @@ To access the lifecycle dashboard in the Configuration Manager console, go to th
 
 ![Screenshot of the product lifecycle dashboard in the console](media/product-lifecycle-dashboard.png)
 
+Change the view by selecting one of the following options from the **Product category** list:  
+- **All**: View all products together  
+- **Windows Client**: View Windows client OS versions  
+- **Windows Server**: View Windows server OS versions  
+- **Database**: View SQL Server versions  
+- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions  
+
 The dashboard has the following tiles:  
 
 - **Top five products past end-of-life**: This tile is a consolidated data view of products found in your environment past their end-of-life. The graph shows installed software that's expired when compared against the support lifecycle for operating systems and SQL server products.  
@@ -74,13 +83,16 @@ The dashboard has the following tiles:
 
 ## Reporting
 
-Additional reports are available as well. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and expand **Reports**. The following new reports are added under the category **Product Lifecycle**:  
+Additional reports are available as well. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and expand **Reports**. The following new reports are added under the category **Asset Intelligence**:  
 
-- **General Product Lifecycle overview**: View a list of product lifecycles. Filter the list by product name and days to expiration.  
+- **Lifecycle 01A - Computers with a specific software product**: View a list of computers on which a specified product is detected.  
 
-- **Computers with a specific software product**: View a list of computers on which a specified product is detected.  
+- **Lifecycle 02A - List of machines with expired products in the organization**: View computers that have expired products on them. You can filter this report by product name.
 
-- **List of expired products found in the organization**: View details for products in your environment that have expired lifecycle dates.  
+- **Lifecycle 03A - List of expired products found in the organization**: View details for products in your environment that have expired lifecycle dates.  
 
-- **List of machines with expired products in the organization**: View computers that have expired products on them. You can filter this report by product name.
+- **Lifecycle 04A - General Product Lifecycle overview**: View a list of product lifecycles. Filter the list by product name and days to expiration.  
 
+- **Lifecycle 05A - Product lifecycle dashboard**: Starting in version 1810, this report includes similar information as the in-console dashboard. Select a category to view the count of products in your environment, and the days of support remaining.  
+
+For more information, see [List of reports](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  

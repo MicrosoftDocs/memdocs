@@ -1,8 +1,8 @@
 ---
-title: "Console support"
-titleSuffix: "Configuration Manager"
-description: "Learn which operating systems a System Center Configuration Manager console supports."
-ms.date: 1/3/2017
+title: Console support
+titleSuffix: Configuration Manager
+description: Learn about which OS versions you can install the Configuration Manager console.
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,17 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Supported operating systems for System Center Configuration Manager consoles
+
+# Supported OS versions for Configuration Manager consoles
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
- To support the System Center Configuration Manager console, the following operating systems require a minimum .NET Framework version of 4.5.2. The exception is Windows 10, which requires a minimum of .NET Framework 4.6.  
+To support the Configuration Manager console, the following OS versions require a minimum .NET Framework version of 4.5.2. The exception is Windows 10, which requires a minimum of .NET Framework 4.6.  
+
+- **Windows Server 2019**: Standard, Datacenter (starting in version 1810)  
 
 -   **Windows Server 2016**: Standard, Datacenter  
-  - Windows Server 2016 is supported beginning with Configuration Manager version 1606, with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October of 2016).  
-
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter  
 
@@ -32,6 +33,12 @@ manager: dougeby
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise  
 
-<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
-
 -   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, Ultimate  
+
+
+For more information about the Configuration Manager console, see the following articles:
+
+- [Install consoles](/sccm/core/servers/deploy/install/install-consoles)  
+
+- [Using the console](/sccm/core/servers/manage/admin-console)  
+

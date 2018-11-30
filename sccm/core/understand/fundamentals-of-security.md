@@ -61,6 +61,8 @@ In addition to security provided by the Windows server and network infrastructur
 
 The next layer of security is based on access through Windows Management Instrumentation (WMI), specifically the SMS Provider. The SMS Provider is a Configuration Manager component that grants a user access to query the site database for information. By default, access to the provider is restricted to members of the local SMS Admins group. This group at first contains only the user who installed Configuration Manager. To grant other accounts permission to the Common Information Model (CIM) repository and the SMS Provider, add the other accounts to the SMS Admins group.  
 
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. <!--1357013-->  
+
 For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).
 
 #### <a name="bkmk_layer-db"></a> Site database permissions
