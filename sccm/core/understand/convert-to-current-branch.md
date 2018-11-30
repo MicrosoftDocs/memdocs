@@ -42,6 +42,6 @@ If your site runs the LTSB, you can use the following option in the Configuratio
 
  1. In the console, go to **Administration** > **Site Configuration** > **Sites**, and then open **Hierarchy Settings**.  
 
- 2. In **Hierarchy Settings**, switch to the **Licensing** tab, and select the option to **Convert to Current Branch**, and then choose **Apply**.  
+ 2. In **Hierarchy Settings**, switch to the **Licensing** tab. Select the option to **Convert to Current Branch**, and then choose **Apply**.  
 
 When your site has converted to the Current Branch, previously unavailable features and capabilities will be available for use.
