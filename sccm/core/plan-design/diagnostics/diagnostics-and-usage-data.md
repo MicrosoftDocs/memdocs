@@ -36,6 +36,8 @@ Configuration Manager collects diagnostics and usage data about itself, which is
 
     - [Diagnostic data for 1802](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802)  
     
+    - [Diagnostic data for 1710](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
+
 -   [How diagnostics and usage data is collected](/sccm/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected)  
 
 -   [How to view diagnostics and usage data](/sccm/core/plan-design/diagnostics/view-diagnostics-and-usage-data)  
