@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/30/2018
+ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,11 +123,11 @@ The following features are available with the most recent Configuration Manager 
 
 <!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
 
-- [Don't load Windows PowerShell profiles](capabilities-in-technical-preview-1811.md#) <!--1359239-->
-- [An Intune connection is no longer required for on-premises MDM](capabilities-in-technical-preview-1811.md#) <!--1359124-->
-- [Configuration Manager console notifications](capabilities-in-technical-preview-1811.md#) <!--1318035-->
-- [Specify temp storage for task sequence media creation](capabilities-in-technical-preview-1811.md#) <!--1359388-->
-- [Improvement to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1811.md#) <!--1359389-->
+- [Don't load Windows PowerShell profiles](capabilities-in-technical-preview-1811.md#bkmk_noprofile) <!--1359239-->
+- [An Intune connection is no longer required for on-premises MDM](capabilities-in-technical-preview-1811.md#bkmk_opmdm) <!--1359124-->
+- [Configuration Manager console notifications](capabilities-in-technical-preview-1811.md#bkmk_notify) <!--1318035-->
+- [Improvements to task sequence media creation](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) <!--1359388-->
+- [Improvement to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1811.md#bkmk_posh) <!--1359389-->
 
 
 > [!Note]  
