@@ -513,7 +513,7 @@ Dependencies define one or more deployment types from another application that t
 > [!Note]  
 > This page isn't in the Create Deployment Type wizard. It's only a tab on the properties of an existing deployment type.  
 
-Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete, or customize the text shown to users. 
+Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete. 
 
 1. On the **Return Codes** tab of the deployment type properties window, click **Add**.  
 
@@ -531,7 +531,7 @@ Specify return codes to control behaviors after the deployment type completes. F
 
     - **Fast Retry**: Another installation is already in progress on the device. The client retries every two hours, for a total of 10 times.  
 
-4. Optionally, enter a **Name** and **Description** for this return code. This text is shown to the user.  
+4. Optionally, enter a **Name** and **Description** for this return code.
 
 5. Click **OK** to close the Add Return Code window.  
 
