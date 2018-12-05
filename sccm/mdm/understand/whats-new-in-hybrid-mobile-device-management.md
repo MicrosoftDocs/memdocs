@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 10/31/2018
+ms.date: 12/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -39,6 +39,30 @@ Each section of this article lists hybrid features under three different categor
 |**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases. This including System Center 2012 R2 Configuration Manager releases, since these features only require the Intune service and don't require additional functionality in Configuration Manager.|
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified technical preview branch. To try out these features, you must install the technical preview version specified in the feature description. For more information, see [Technical preview for Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch). If you're using an older version of Configuration Manager for your hybrid deployment, upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## November 2018
+
+### New in Microsoft Intune
+
+#### New Intune device subscription SKU
+<!--3312071-->
+To help lower the cost of managing devices in enterprises, a new device-based subscription SKU is now available. This Intune device SKU is licensed per device on a monthly basis. Price varies by the licensing program. It's available in Direct Channel, Enterprise Agreement (EA), Microsoft Products and Services Program (MPSA), and Open and Cloud Solution Provider (CSP).
+
+#### New apps support with app protection policies 
+<!--3330037-->
+You can now manage the following apps with [Intune app protection policies](https://docs.microsoft.com/intune/app-protection-policies):
+
+- Stream (iOS)  
+- To DO (Android, iOS)  
+- PowerApps (Android, iOS)  
+- Flow (Android, iOS)  
+
+Use app protection policies to protect corporate data and control data transfer for these apps, like other Intune policy managed apps. 
+
+> [!Note]  
+> If Flow isn't yet visible in the console, add Flow when you create or edit any app protection policies. Select **More apps**, and then specify the *App ID* for Flow in the input field. For Android use `com.microsoft.flow`, and for iOS use `com.microsoft.procsimo`.  
 
 
 
