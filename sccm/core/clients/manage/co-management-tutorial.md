@@ -21,20 +21,16 @@ ms.assetid:
 
 # Enable co-management for Microsoft Intune and System Center Configuration Manager
 
-In this tutorial, you’ll set co-management of your Windows 10 devices.  
+In this tutorial, you’ll set up co-management of your Windows 10 devices.  
 
-With co-management, you can use both Microsoft Intune and System Center Configuration Manager to manage a device. You can also use co-management as a bridge to help migrate from managing your devices on-premises to modern cloud-based management.
+With co-management, you can use both Microsoft Intune and System Center Configuration Manager to manage the same device. You can also use co-management as a bridge to help migrate from managing your devices on-premises to modern cloud-based management.
 
-You can reach co-management from either of the following starting points, though this tutorial follows the path of the second:  
-- **Your devices are enrolled in Intune**
-- **Your devices are enrolled with Configuration Manager**
+You can reach co-management whether you currently use Intune or Configuration Manager to manage your devices.  This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.  
 
-When you have Windows 10 devices that are Configuration Manager clients, you can enroll these devices in Intune and enable co-management from the Configuration Manager console. Configuration Manager triggers automatic enrollment into Intune based on the Azure Active Directory (AD) tenant information. 
+Co-management requires the use of some certificates, configuration of Azure, and public DNS records. You'll get the certificate and configure Azure and DNS before you enable co-management from the Configuration Manager console. When the configurations are in place and you enable co-management, Configuration Manager can automatically enroll clients into Intune based on the Azure Active Directory (AD) tenant information. We'll also set up Intune to support autoenrollment of devices. We also configure Intune to deploy the Configuration Manager client to newly enrolled devices.
 
-Co-management requires the use of some certificates, configuration of Azure, and public DNS records for key components from Configuration Manager.  
-
-For this tutorial, we use the following configurations that help to simplify the end-to-end configuration tasks and complexity of enabling co-management:  
-- The Configuration Manager site will use the Azure Resource Manager deployment for Azure Services for cloud management. This deployment method removes the need for an Azure management certificate. Additionally, as of Configuration Manager version 1810, classic service deployment in Azure is deprecated.  
+The following are configurations for Configuration Manager that simplify the configuration tasks and complexity of enabling co-management:  
+- The Configuration Manager site will use the Azure Resource Manager deployment for Azure Services for cloud management. This deployment method removes the need for an Azure management certificate. Classic service deployment in Azure is deprecated begining with Configuration Manager version 1810.  
 - We use Configuration Manager’s Enhanced HTTP feature. This feature first appears as a pre-release feature in version 1806 and is a full feature in version 1810 and later. Use of enhanced HTTP removes several certificate requirements.  
 - We use a server authentication certificate from a trusted third-party provider. While it's possible to use self-signed certificates, doing so creates complexity and limits access to your cloud-based infrastructure from devices that are on the internet.  
 - When we configure the cloud management gateway, we use the option to have that cloud-based service also function as a cloud distribution point. This choice also removes the need to separately configure a cloud-based distribution point and set up the certificates for its use.  
@@ -52,7 +48,7 @@ For this tutorial, we use the following configurations that help to simplify the
 
 
 ## Prerequisites
-Co-management combines your on-premises Configuration Manager and PKI infrastructure with cloud-based resources. Review and configure the following prerequisites before you continue this tutorial.
+
  
 ### Azure services and environment
 - Azure Subscription ([free trial](https://azure.microsoft.com/free))  
@@ -64,25 +60,25 @@ Co-management combines your on-premises Configuration Manager and PKI infrastruc
 
 - *If you use an on-premises domain:* [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) is configured between your on-premises Active Directory and your Azure Active Directory (AD) tenant
 
-> [! TIP]  
+> [!TIP]  
 > An Enterprise Mobility + Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
 
 ### On-premises infrastructure
 - System Center Configuration Manager current branch, version 1810 or later.  
 
-  Version 1810 introduces two changes that we use in this tutorial. The first is Enhanced HTTP. The second is improvements to internet-based client setup. This setup is used by Intune to install the Configuration Manager client on Windows 10 devices that enroll with Intune.
+  Version 1810 introduces changes that we use in this tutorial. One is Enhanced HTTP. The second is a change that simplifies the command line for  internet-based installation of the Configuration Manager client.  
 
-- The [MDM Authority](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) must be set to Intune
+- The [MDM Authority](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) must be set to Intune  
+
 - The primary site must be configured to use Configuration Manager-generated certificates for HTTP site systems. For more information, see [Enhanced HTTP](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/enhanced-http). This prerequisite is available beginning with Configuration Manager version 1810.  
 
-In this tutorial, you'll create, configure, or request the following objects.
-- On your Configuration Manager [primary site](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/design-a-hierarchy-of-sites#BKMK_ChoosePriimary) server:
-  - [Azure services](https://docs.microsoft.com/sccm/core/servers/deploy/configure/azure-services-wizard)  
-  - [Cloud management gateway](https://docs.microsoft.com/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)   
+### External certificates:
+  - CMG server authentication certificate. 
+    
+    As part of this tutorial you'll request this certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. This certificate will be exported as .PFX file with Private Key. 
 
-- External certificates:
-  - CMG server authentication certificate  - Request this certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. This certificate will be exported as .PFX file with Private Key.
+    As part of the section [configure your PKI environment](#configure-your-pki-environment), we'll guide you on how to configure the request for this certificate.  
 
 ### Permissions
 Throughout this tutorial, you'll need the following permissions to complete tasks:  
@@ -91,25 +87,25 @@ Throughout this tutorial, you'll need the following permissions to complete task
 - An account that is a *full administrator* for *all* scopes in Configuration Manager  
 
 ## Configure your PKI environment
-Co-management requires a cloud management gateway (CMG), which requires an SSL certificate. In this tutorial we use a public certificate called **CMG server authentication certificate** that derives authority from a globally trusted certificate provider. It's possible to configure Co-management using certificates that derive authority from your on-premises Microsoft certificate authority, but that is beyond the scope of this tutorial.  
+Co-management requires a cloud management gateway (CMG), which requires an SSL certificate. In this tutorial, we use a public certificate called **CMG server authentication certificate** that derives authority from a globally trusted certificate provider. It's possible to configure Co-management using certificates that derive authority from your on-premises Microsoft certificate authority. Using self-signed certificates is beyond the scope of this tutorial.  
 
-The **CMG server authentication certificate** is used to encrypt traffic between the Configuration Manager client and the CMG. The certificate traces back to a Trusted Root to verify the server's identity to the client. When you use a public certificate, that is a Trusted Root that is already trusted by Windows clients.  
+The **CMG server authentication certificate** is used to encrypt traffic between the Configuration Manager client and the CMG. The certificate traces back to a Trusted Root to verify the server's identity to the client. The public certificate includes a Trusted Root that is already trusted by Windows clients.  
  
 ### Identify a unique name for your cloud management gateway in Azure
 When you request the CMG server authentication certificate, you specify what must be a unique name to identify your service in Azure.  By default, the Azure public cloud uses *cloudapp.net*, and the CMG is hosted within the cloudapp.net domain as *\<YourUniqueDnsName>.cloudapp.net*.  
 
-In this tutorial, the **CMG server authentication certificate** uses an FQDN that ends in *contoso.com*.  Therefore, in addition to using a publicly issued certificate, after we create the CMG we’ll then configure a canonical name record (CNAME) in our organization’s public DNS. This record creates an alias for the CMG that maps to the name that we use in the public certificate.  
+In this tutorial, the **CMG server authentication certificate** uses an FQDN that ends in *contoso.com*.  After we create the CMG we’ll then configure a canonical name record (CNAME) in our organization’s public DNS. This record creates an alias for the CMG that maps to the name that we use in the public certificate.  
 
 Before you request your public certificate, confirm the public name you want to use is available:  
 1. Sign in to the [Microsoft Azure portal](https://portal.azure.com/).  
 
 2. Select **Create a resource**, choose the **Compute** category, then select **Cloud Service**.  
 
-3. In the **DNS name** field, specify your desired prefix. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
+3. In the **DNS name** field, specify the prefix you want to use. The interface confirms whether the domain name is available or already in use by another service. Don't create the service in the portal. Only use this process to check the name availability. 
 
-4. After you identify a public FQDN you will use, you are ready to submit the Certificate Signing Request (CSR) for that name to the certificate provider. 
+4. After you identify a public FQDN you can use, you're ready to submit the Certificate Signing Request (CSR) for that name to the certificate provider. 
 
-### Request public certificates
+### Request the certificate
 Use the following information when you submit a certificate signing request for your CMG to a public certificate provider. Change the following values to be relevant to your environment.  
 
 - *MyCMG* to identify the service name of the cloud management gateway
@@ -120,10 +116,11 @@ We recommend you use your primary site server to generate the certificate signin
 
 Request a version 2 key provider type when you generate a CSR. Only version 2 certificates are supported.  
 
-> [! TIP]  
+> [!TIP]  
 > When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn’t required to use co-management, it is useful in most environments.  
 >
 > If you will use additional cloud distribution points for co-management, you’ll need to request separate certificates for each additional server. To request a pubic certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
+
 **Details for the cloud management gateway CSR**
 - **Common Name**: ClousServiceNameCMG.YourCompanyPubilcDomainName.com  
 Example: MyCSG.contoso.com  
@@ -139,7 +136,7 @@ Example: MyCSG.contoso.com
 ### Import the certificate
 After you receive the public certificate, import it to the local certificate store of the computer that created the CSR. Then export the certificate as a .PFX file so you can use it for your CMG in Azure.  
 
-Public certificate providers typically provide instructions for import of the certificate. The process to import the certificate should resemble the following:  
+Public certificate providers typically provide instructions for import of the certificate. The process to import the certificate should resemble the following guidance:  
 
 1. On the computer that the certificate is to be imported to, locate the certificate .pfx file.  
 
@@ -151,14 +148,14 @@ Public certificate providers typically provide instructions for import of the ce
 
 5. On the **Password** page, enter the password for the private key in the Password box, and then select **Next**.  
   
-   You do not have to select the option to make the key exportable, because you already have an exported copy.  
+   Select the option to make the key exportable.
 
 6. On the **Certificate Store page**, select **Automatically select the certificate store based on the type of certificate**, and then select **Next**.  
 
 7.	Select **Finish**.
 
 ### Export the certificate
-Export the *CMG server authentication certificate* from your server. This makes the certificate usable for your cloud management gateway in Azure.  
+Export the *CMG server authentication certificate* from your server. Re-exporting the certificate makes it usable for your cloud management gateway in Azure.  
 
 1. On the member server you'll use to manage the cloud-based site system roles, run **certlm.msc** to open the Certificate Manager console.  
 
@@ -166,7 +163,7 @@ Export the *CMG server authentication certificate* from your server. This makes 
 
 3. In the Certificate Export Wizard, select **Next**, select **Yes, export the private key**, and then **Next**.  
 
-4. On the Export File Format page, select **Personal Information Exchange - PKCS #12 (.PFX)**, select **Next**, and provide a password. For file name, specify a simple name like **C:\ConfigMgrCloudMGServer**. You’ll reference this file when you create the CMG in Azure.  
+4. On the Export File Format page, select **Personal Information Exchange - PKCS #12 (.PFX)**, select **Next**, and provide a password. For file name, specify a name like **C:\ConfigMgrCloudMGServer**. You’ll reference this file when you create the CMG in Azure.  
 
 5. Select **Next**, and then confirm the following settings before selecting **Finish** to complete the export:  
 
@@ -192,7 +189,7 @@ Run the following procedure from the primary site server that has your exported 
 
    Then select **Cloud Management**, and then select **Next**.  
    
-   > [! TIP]  
+   > [!TIP]  
    > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](https://docs.microsoft.com/sccm/core/servers/deploy/configure/Azure-services-wizard#start-the-azure-services-wizard)
 
 
@@ -259,17 +256,17 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
    
    2. Select **Azure Resource Manager deployment**.  
   
-   3. **Sign in** to your Azure subscription. Configuration Manager fills in the remaining information based on the information you configured when you enabled Azure cloud services for Configuration Manager.  
+   3. **Sign in** to your Azure subscription. Configuration Manager fills in additional information based on the information you configured when you enabled Azure cloud services for Configuration Manager.  
 
    Select **Next** to continue.  
 
 3. On the **Settings** page, set your **Region**.  
 
-4. For **Resource Group**, create a new group with a friendly name that uses no spaces, like **CofigMgrCloudServices**. This creates that resource group in Azure. You can also use an existing resource group if you prefer.  
+4. For **Resource Group**, use an existing resource group or create a new group with a friendly name that uses no spaces, like **CofigMgrCloudServices**. If you choose to create a new group, the group is added as a resource group in Azure.  
 
-5. Unless you are ready to configure at scale, use one (1) for the number of **VM Instances**. The number of VM Instances allows a single Cloud Management Gateway (CMG) Cloud service to scale out to support more client connections. After this service is created, you can use the Configuration Manager console to return and edit the number of VM instances you use.  
+5. Unless you're ready to configure at scale, use one (1) for the number of **VM Instances**. The number of VM Instances allows a single Cloud Management Gateway (CMG) Cloud service to scale out to support more client connections. After this service is created, you can use the Configuration Manager console to return and edit the number of VM instances you use.  
 
-6. For *Certificate file*, browse to and select the file named **ConfigMgrCloudMGServer.pfx**.  this is the file that you exported after importing the CMG server authentication certificate. After you specify the password, the **Service name** and **Service FQDN** automatically fill-in on the Settings page of the Wizard, based on the details in the .pfx certificate file.  
+6. For *Certificate file*, browse to and select the file named **ConfigMgrCloudMGServer.pfx**, which is the file you exported after importing the CMG server authentication certificate. After you specify the password, the **Service name** and **Service FQDN** are automatically filled in on the Settings page of the Wizard, based on the details in the .pfx certificate file.  
 
 7. Enable the checkbox for **Verify Client Certificate Revocation**. 
 
@@ -293,36 +290,20 @@ The CNAME record example uses the following details:
 
 - The CMG service name is **MyCMG**, which becomes ***MyCMG.CloudApp.Net*** in Azure.  
 
-The CNAME record creates redirects the name of your CMG (*MyCMG.contoso.com*) to the Azure service *MyCMG.cloudapp.net*.
-
- 
-
- 
-
-
-
-
-
-
-
-
-
+CNAME record example: *MyCMG.contoso.com => My.cloudapp.net*
 
 ## Configure the management point and clients to use the CMG
-In the following procedures, you'll configure settings that enable management points and clients to use the cloud management gateway.  
+Configure settings that enable management points and clients to use the cloud management gateway.  
 
-We do not need to configure an HTTPS management point as we are using a management point configured with Enhanced HTTP. [Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate with a management point configured for HTTP.  
-
-### Create the CMG connection point
- 
+There's no need to configure an HTTPS management point as we're using a management point configured with Enhanced HTTP. [Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate with a management point configured for HTTP.  
 
 ### Create the CMG connection point
-In the following procedure, you enable an existing management point for HTTPs, and then add a CMG connection point to the server.
+Add a cloud management gateway connection point to the Enhanced HTTP management point.
 1. In the Configuration Manager console, go to **Administration > Overview > Site Configuration > Servers and Site System Roles**, and select the server with the management point that will host the CMG connection point.
 
 2. In the **Site System Roles** pane, right-click on the **Management point** Role Name, and select **Properties**.  
 
-3. On the **General** tab select **HTTPS**, and then select **Allow Configuration Manager cloud management gateway traffic** and ensure the drop-down displays **Allow intranet and Internet connections**.  
+3. On the **General** tab select **HTTPS**, and then select **Allow Configuration Manager cloud management gateway traffic** and make sure the drop-down displays **Allow intranet and Internet connections**.  
 
 4. Select **OK** to close the Properties of the management point.
 
@@ -330,7 +311,7 @@ In the following procedure, you enable an existing management point for HTTPs, a
 
 6. Select **Next**> **Next**, and then select the **Cloud management gateway connection point**.  Select **Next** to continue.  
 
-7. Review the default selections on the **Cloud management gateway connection point** page, ensure the correct CMG is selected. If you have multiple cloud management gateways, you can use the dropdown list to specify a different CMG. You can also change the CMG in use, after installation. Select **Next** to continue.
+7. Review the default selections on the **Cloud management gateway connection point** page and make sure the correct CMG is selected. If you have multiple cloud management gateways, you can use the dropdown list to specify a different CMG. You can also change the CMG in use, after installation. Select **Next** to continue.
 
 8. Select **Next** to start installation and then view the results on the Completion page.  Select **Close** to complete the installation.
 
@@ -356,9 +337,10 @@ Use Client Settings to configure Configuration Manager clients to communicate wi
 
 
 ## Enable co-management in Configuration Manager
-With certificates, site system roles, and client certificates and settings in place, you are ready to flip the switch and enable co-management of your Windows 10 devices from within the Configuration Manager console.  
+With certificates, site system roles, and client certificates and settings in place, you're ready to flip the switch and enable co-management of your Windows 10 devices from within the Configuration Manager console.  
 
-During step six of the following procedure, you assign a collection as a *Pilot group* for co-management. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.  
+> [!TIP]  
+>  In step six of the following procedure, you'll assign a collection as a *Pilot group* for co-management. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.  
  
 
 1. In the Configuration Manager console, go to **Administration > Overview > Cloud Services > Co-management**.
@@ -369,7 +351,7 @@ During step six of the following procedure, you assign a collection as a *Pilot 
 
 4. On the Enablement page, from the *Automatic enrollment in Intune* dropdown list, select one of the following options:  
 
-   - **Pilot** - Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You'll specify the collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then rollout co-management to additional clients using a phased approach.  
+   - **Pilot** - Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You'll specify the collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.  
 
    - **All** - Co-management is enabled for all clients.
 Next, select **Copy** to copy the *CCMSETUPCMD* command line for deploying the Configuration Manager client. Save this command line for use when you create an app in Intune that deploys the Configuration Manager client.  Select **Next**.  
@@ -380,7 +362,7 @@ Next, select **Copy** to copy the *CCMSETUPCMD* command line for deploying the C
    
    - **Intune** - Switches the associated workload for all co-managed Windows 10 devices.  
 
-   You do not need to switch any workloads at the time you enable co-management. You can revisit this configuration from the Configuration Manager console later, after co-management is configured.  
+   You don't need to switch any workloads at the time you enable co-management. You can revisit this configuration from the Configuration Manager console later, after co-management is configured.  
 
    Before you switch a workload, make sure the corresponding workload in Intune is properly configured and deployed. Doing so ensures that workloads are always managed by one of the management tools for your devices.  
 
@@ -391,7 +373,7 @@ Next, select **Copy** to copy the *CCMSETUPCMD* command line for deploying the C
 With the completion of this procedure, you’ve enabled co-management and your Azure subscription and on-premises infrastructure is configured to support co-management. When co-management is working, use the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard) to review the status of co-managed devices.  
  
 ## Use Intune to deploy the Configuration Manager client  
-After you enable co-management in the Configuration Manager console, use Intune to install Configuration Manager clients on Windows 10 devices that are currently managed only with Intune.  
+After you enable co-management in the Configuration Manager console, use Intune to install Configuration Manager clients on Windows 10 devices that you already manage with Intune.  
 
 ### Create an Intune app to install the Configuration Manager client
 1. From the primary site server, sign in to the [Azure portal](https://portal.azure.com/) and go to the **Intune > Client apps > Apps > Add**.
@@ -412,7 +394,7 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
  
          CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
 
-     > [! TIP]  
+     > [!TIP]  
      > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line.    
 
 5. Select **OK > Add**.  The app is created and becomes available in the Intune console. After the app is available, you assign it to groups to deploy the Configuration Manager client to Windows 10 devices.
