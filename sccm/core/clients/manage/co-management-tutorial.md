@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2018
+ms.date: 12/13/2018
 ms.topic: tutorial
 ms.prod:
 ms.service:  
@@ -185,7 +185,7 @@ Run the following procedure from the primary site server that has your exported 
 
 1. From the primary site server, open the Configuration Manager console and go to **Administration > Cloud Services > Azure Services**, and select **Configure Azure Services**.  
 
-   On the Configure Azure Service page, specify a friendly Name for the cloud management service you’re configuring. For example: Name = My cloud management gateway  
+   On the Configure Azure Service page, specify a friendly Name for the cloud management service you’re configuring. For example: *My cloud management gateway*   
 
    Then select **Cloud Management**, and then select **Next**.  
    
@@ -205,9 +205,9 @@ Run the following procedure from the primary site server that has your exported 
 
    After you sign in, the results display. Select **OK** to close the Create Server Application dialog and return to the App Properties page. 
 
-4. For **Native Client app**, select **Browse** to open the **Client app** dialog. 
+3. For **Native Client app**, select **Browse** to open the **Client app** dialog. 
 
-5. Select **Create** to open the **Create Client Application** dialog, and then configure the following fields:  
+4. Select **Create** to open the **Create Client Application** dialog, and then configure the following fields:  
 
    - **Application Name**: Specify a friendly name for the app, like *Cloud Management native client app*.
    
@@ -216,25 +216,27 @@ Run the following procedure from the primary site server that has your exported 
    
    After you sign in, the results are display. Select **OK** to close the Create Client Application dialog and return to the App Properties page. Then, select **Next** to continue.
 
-6. On the **Configure Discovery Settings** page, check the box for **Enable Azure Active Directory User Discovery**, select **Next**, and then complete configuration of the Discovery dialogs for your environment.  
+5. On the **Configure Discovery Settings** page, check the box for **Enable Azure Active Directory User Discovery**, select **Next**, and then complete configuration of the Discovery dialogs for your environment.  
 
-7. Continue through the Summary, Progress, and Completion pages, to complete and then close the wizard.  
+6. Continue through the Summary, Progress, and Completion pages, to complete and then close the wizard.  
 
    Azure Services for Azure AD User discovery is now enabled in Configuration Manager.  Leave the console open for now.  
 
-8. Open a browser and sign in to the [Azure portal](https://portal.azure.com/).  
+7. Open a browser and sign in to the [Azure portal](https://portal.azure.com/).  
 
-9. Select **All services > Azure Active Directory > App registrations**, and then:
+8. Select **All services > Azure Active Directory > App registrations**, and then:
 
-   1. Select your Configuration Manager Server Application.  
+   1. Select the Web app you just created. 
 
-   2. Go to **Settings > Required Permissions**, select **Grant Permissions**, and then select **Yes**.  
+   2. Go to **Settings > Required permissions**, select **Grant permissions**, and then select **Yes**.  
 
-   3. Go to **Settings > Required Permissions**, select **Grant Permissions**, and then select **Yes**.  
+   3. Select the Native Client app you just created. 
 
-10. In the Configuration Manager console, go to **Administration > Overview > Cloud Services > Azure Services**, and select your Azure Service.  Then select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
+   4. Go to **Settings > Required permissions**, select **Grant permissions**, and then select **Yes**.  
 
-11. On the primary site server, open the Configuration Manager **SMS_AZUREAD_DISCOVERY_AGENT.log** and look for the following entry to confirm that discovery is working:  *Successfully published UDX for Azure Active Directory users*  
+9. In the Configuration Manager console, go to **Administration > Overview > Cloud Services > Azure Services**, and select your Azure Service. Then right-click on **Azure Active Directory User Discover** and select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
+
+10. On the primary site server, open the Configuration Manager **SMS_AZUREAD_DISCOVERY_AGENT.log** and look for the following entry to confirm that discovery is working:  *Successfully published UDX for Azure Active Directory users*  
 
     By default, the log file is in *%Program_Files%\Microsoft Configuration Manager\Logs*.  
 
@@ -270,7 +272,7 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
 
 7. Enable the checkbox for **Verify Client Certificate Revocation**. 
 
-8. Leave the box checked for **Allow CMG to function as a cloud distribution point and serve content from Azure storage** if you want to deploy a cloud distribution point with the CMG.
+8. Enable the checkbox for **Allow CMG to function as a cloud distribution point and serve content from Azure storage** if you want to deploy a cloud distribution point with the CMG.
 
 9. Select **Next** to continue.
 
