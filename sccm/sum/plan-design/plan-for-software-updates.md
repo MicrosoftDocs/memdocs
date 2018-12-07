@@ -449,7 +449,7 @@ Consider the following scenarios in which you might need to deploy a superseded 
 -   If a superseding software update wasn't approved for deployment in your production environment.  
 
     > [!NOTE]  
-    > Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager  For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).  
+    > Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
 
 
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
