@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/07/2018
+ms.date: 12/10/2018
 ms.topic: tutorial
 ms.prod:
 ms.service:  
@@ -44,7 +44,7 @@ The following configurations for Configuration Manager simplify the tasks and co
 > * Deploy and configure a cloud management gateway in Azure  
 > * Configure clients to use the cloud management gateway  
 > * Enable co-management in Configuration Manager 
-> * Configure Intune to autoenroll devices and deploy the Configuration Manager client  
+> * Configure Intune to autoenroll devices and to deploy the Configuration Manager client  
 
 
 ## Prerequisites
@@ -380,9 +380,35 @@ With the Azure configurations, site system roles, and client settings in place, 
 7. On the Summary page, select **Next**, and then **Close** to complete the Wizard.  
 
 With the completion of this procedure, you’ve enabled co-management and your Azure subscription and on-premises infrastructure is configured to support co-management. You can use the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard) to review the status of co-managed devices.  
+
+## Configure auto-enrollment of devices to Intune   
+With automatic enrollment, devices you manage with Configuration Manager will automatically enroll with Intune.
+
+Automatic enrollment also lets users enroll their Windows 10 devices to Intune, by adding their work account to their personally owned devices or joining a corporate-owned device to Azure Active Directory.  
+1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune**.  
+
+2. Configure **MDM user scope**. Specify one of the following to configure which users’ devices are managed by Microsoft Intune and accept the defaults for the URL values.  
+
+   - **Some** - Select the **Groups** that can automatically enroll their Windows 10 devices  
+
+   - **All** - All users can automatically enroll their Windows 10 devices
+when set to **None**, MDM automatic enrollment is disabled  
+
+   > [!IMPORTANT]  
+   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only MAM is added for users in that group when they workplace join personal device. Devices are not automatically MDM enrolled.  
+
+3. Select **Save** to complete configuration of automatic enrollment.  
+
+4. Return to **Mobility (MDM and MAM)** and then select **Microsoft Intune Enrollment**.  
+
+5. For MDM user scope, select **All**, and then **Save**.  
+
  
 ## Use Intune to deploy the Configuration Manager client  
-After you enable co-management in the Configuration Manager console, use Intune to install Configuration Manager clients on Windows 10 devices that you already manage with Intune.  
+You can use Intune to install the Configuration Manager client on Windows 10 devices that are only managed with Intune. 
+
+Then, wen a previously unmanaged Windows 10 device enrolls with Intune, it will automatically install the Configuration Manager client to become co-managed.  
+
 
 ### Create an Intune app to install the Configuration Manager client
 1. From the primary site server, sign in to the [Azure portal](https://portal.azure.com/) and go to the **Intune > Client apps > Apps > Add**.
@@ -418,29 +444,6 @@ The following procedure deploys the app for installing the Configuration Manager
 3. Select **OK** and then **Save** the configuration.
 The app is now required by the users and devices you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.  
 
-## Configure auto-enrollment of devices to Intune   
-Automatic enrollment lets users enroll their Windows 10 devices. To enroll, users add their work account to their personally owned devices or join a corporate-owned device to Azure Active Directory.  
-
-With the Intune app to install the Configuration Manager client in place, devices that enroll with Intune will automatically install the Configuration Manager client and become co-managed.  
-
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune**.  
-
-2. Configure **MDM user scope**. Specify one of the following to configure which users’ devices are managed by Microsoft Intune and accept the defaults for the URL values.  
-
-   - **Some** - Select the **Groups** that can automatically enroll their Windows 10 devices  
-
-   - **All** - All users can automatically enroll their Windows 10 devices
-when set to **None**, MDM automatic enrollment is disabled  
-
-   > [!IMPORTANT]  
-   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only MAM is added for users in that group when they workplace join personal device. Devices are not automatically MDM enrolled.  
-
-3. Select **Save** to complete configuration of automatic enrollment.  
-
-4. Return to **Mobility (MDM and MAM)** and then select **Microsoft Intune Enrollment**.  
-
-5. For MDM user scope, select **All**, and then **Save**.  
 
 ## Next Steps
 After you complete the configurations for co-management, you can use co-management to manage devices of users when they enroll their devices with Intune (which installs the Configuration Manager client), or when they sign in to the company portal on a domain joined computer that runs the Configuration Manager client.  
