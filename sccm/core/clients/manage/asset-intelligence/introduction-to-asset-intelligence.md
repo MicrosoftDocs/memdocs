@@ -144,7 +144,12 @@ The **Asset Intelligence** node in the **Assets and Compliance** workspace is th
 
 The **Asset Intelligence** home page includes the following sections:  
 
-- **Catalog Synchronization**: Information about whether asset intelligence is enabled and the current status of the asset intelligence synchronization point. The section also provides the following information:  
+- **Catalog Synchronization**: Information about whether asset intelligence is enabled and the current status of the asset intelligence synchronization point.  
+
+    > [!NOTE]  
+    > The home page only displays this section when you install an asset intelligence synchronization point.  
+
+    The section also provides the following information:  
 
     - Synchronization schedule  
 
@@ -155,9 +160,6 @@ The **Asset Intelligence** home page includes the following sections:
     - The time for the next scheduled update  
 
     - The number of changes after you installed the asset intelligence synchronization point   
-
-    > [!NOTE]  
-    > The home page only displays this section when you install an asset intelligence synchronization point.  
 
 - **Inventoried Software Status**: The count and percentage of inventoried software, software categories, and software families that are identified by Microsoft, identified by an administrator, pending online identification, or unidentified and not pending. The information displayed in table format shows the count for each, and the information displayed in the chart shows the percentage for each.  
 

@@ -99,7 +99,7 @@ For more information, see [How to configure client settings](/sccm/core/clients/
 
 
 
-## <a name="bkmk_enroll"></a> Install the client and then enroll the client certificate on the Mac  
+## <a name="bkmk_enroll"></a> Enroll the Mac client  
 
 Enroll individual clients with the [Mac computer enrollment wizard](#enroll-the-client-with-the-mac-computer-enrollment-wizard).
 
@@ -182,7 +182,7 @@ To verify that the client installation is successful, open the **Configuration M
 
 
 
-## <a name="bkmk_external"> Manage certificates external to Configuration Manager
+## <a name="bkmk_external"></a> Manage certificates external to Configuration Manager
 
 You can use a certificate request and installation method independent from Configuration Manager. Use the same general process, but include the following additional steps: 
 
