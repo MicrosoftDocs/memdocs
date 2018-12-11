@@ -101,7 +101,7 @@ Perform this procedure on the site to host this cloud distribution point as dete
     - **Certificate file**: Select **Browse** and select the .PFX file for this cloud distribution point's server authentication certificate. The common name from this certificate populates the required **Service FQDN** and **Service name** fields.  
 
         > [!NOTE]  
-        > The cloud distribution point server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (*) in the **Service FQDN** field with the desired hostname for the service.  
+        > The cloud distribution point server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (\*) in the **Service FQDN** field with the desired hostname for the service.  
 
 5. On the **Alerts** page, set up storage quotas, transfer quotas, and at what percentage of these quotas you want Configuration Manager to generate alerts. Then select **Next**.  
 
