@@ -510,7 +510,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
     <!-- 1132468 -->     
 
 - **Inform end users what device information can be seen for iOS**   
-    We added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This information allows users to find out more about privacy directly from the Intune end-user docs. They can also locate this information on the About screen. 
+    We added **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This information allows users to find out more about privacy directly from the Intune end-user docs. They can also locate this information on the About screen. 
     <!--739894-->    
 
 - **Easier-to-understand phrasing for the Company Portal app for Android**   
