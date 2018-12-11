@@ -41,10 +41,10 @@ The following are general prerequisites for you to enable co-management:
 
 - Intune subscription, and the MDM authority in Intune set to **Intune**.  
 
-    - If you're using [mixed authority](/sccm/mdm/deploy-use/migrate-mixed-authority), first complete the migration to Intune standalone. Then set the MDM authority to Intune before setting up co-management.<!--SCCMDocs issue #797-->
+    - If you're using [mixed authority](/sccm/mdm/deploy-use/migrate-mixed-authority), first complete the migration to Intune standalone. Then, set the MDM authority to Intune before setting up co-management.<!--SCCMDocs issue #797-->
 
 
-> [!Note]  
+> [!NOTE]
 > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you can't enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
 
@@ -81,16 +81,22 @@ For more information about Azure roles, see [Understand the different roles](htt
 
 ## Command line to install Configuration Manager client
 
-Create an app in Intune for Windows 10 devices that aren't already Configuration Manager clients. When you create the app in the next sections, use the following command line:
+Create an app in Intune for Windows 10 devices that aren't already Configuration Manager clients. To do this, follow these steps:
+
+1. Navigate to portal.azure.com, and then open the Intune blade.
+2. Click **Client Apps** > **Apps** > **Add**. 
+3. Under **Other**, select **Line-of-business app**.
+4. Upload the Ccmsetup.msi app package file. (This file is found in the following folder on the site server: <*ConfigMgr installation directory*>\bin\i386.) 
+5. After the app is updated, configure the app information by running the following command-line argument:
 
 `ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
-#### Example command line
+#### Example command line input
 If you have the following values:
 
 - **URL of cloud management gateway mutual auth endpoint**: `https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500`    
 
-   >[!Note]    
+   >[!NOTE]    
    >Use the **MutualAuthPath** value in the **vProxy_Roles** SQL view for the **URL of cloud management gateway mutual auth endpoint** value.  
 
 - **FQDN of management point (MP)**: `mp1.contoso.com`    
@@ -99,7 +105,7 @@ If you have the following values:
 - **Azure AD client app ID**: `51e781eb-aac6-4265-8030-4cd1ddaa9dd0`     
 - **AAD Resource ID URI**: `ConfigMgrServer`    
 
-  > [!Note]    
+  > [!NOTE]    
   > Use the **IdentifierUri** value found in the **vSMS_AAD_Application_Ex** SQL view for the **AAD Resource ID URI** value.  
 
 Then use the following command line:
@@ -127,7 +133,7 @@ The following example includes all of the above properties:
 For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
 
 
-> [!Tip]
+> [!TIP]
 > Find the command-line parameters for your site by using the following steps:     
 > 
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
@@ -140,7 +146,7 @@ For more information, see [Client installation properties](/sccm/core/clients/de
 > 
 > 5. Click **Cancel** to exit the wizard.  
 
-> [!Important]    
+> [!IMPORTANT]    
 > If you customize the command line to install the Configuration Manager client, make sure the command line doesn't exceed 1024 characters. When the command line is greater than 1024 characters, the client installation fails.
 
 
