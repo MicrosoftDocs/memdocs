@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/03/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -119,15 +119,14 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1811
+### Technical Preview version 1812
 
-<!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
+<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
 
-- [Don't load Windows PowerShell profiles](capabilities-in-technical-preview-1811.md#bkmk_noprofile) <!--1359239-->
-- [An Intune connection is no longer required for on-premises MDM](capabilities-in-technical-preview-1811.md#bkmk_opmdm) <!--1359124-->
-- [Configuration Manager console notifications](capabilities-in-technical-preview-1811.md#bkmk_notify) <!--1318035-->
-- [Improvements to task sequence media creation](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) <!--1359388-->
-- [Improvement to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1811.md#bkmk_posh) <!--1359389-->
+- [Improvements to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1812.md) <!--3556028 fka 1359389-->
+- [Improvements to email app approvals](capabilities-in-technical-preview-1812.md) <!--3594063-->
+- [Configure user device affinity in Software Center](capabilities-in-technical-preview-1812.md) <!--3485366-->
+- [MMS DE cabana features](capabilities-in-technical-preview-1812.md) <!--3594151-->
 
 
 > [!Note]  
@@ -146,6 +145,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Don't load Windows PowerShell profiles <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![Not added](media/Red_X.gif) | 
+ | An Intune connection is no longer required for on-premises MDM <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![Not added](media/Red_X.gif) | 
+ | Configuration Manager console notifications <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Not added](media/Red_X.gif) | 
+ | Improvements to task sequence media creation <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![Not added](media/Red_X.gif) | 
+ | Improvement to Run PowerShell Script task sequence step <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![Not added](media/Red_X.gif) | 
  | Improvements to collection evaluation <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | Version 1810 | 
  | Configuration Manager administrator authentication <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | Version 1810 | 
  | Management insights rule for peer cache source client version <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Version 1810 | 
@@ -164,10 +168,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | In-console documentation dashboard <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![Not added](media/Red_X.gif) | 
  | Improvements to driver maintenance <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | Version 1810 | 
  | Task sequence support of Windows Autopilot for existing devices <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | Version 1810 | 
- | Improvements to CMPivot <!--1359068--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | Version 1810 | 
- | Improvement to lifecycle dashboard <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | Version 1810 | 
- | Improvement to data warehouse <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | Version 1810 | 
- | Improvement to maintenance windows for software updates <!--vso2839307--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | Version 1810 | 
 
 
 
