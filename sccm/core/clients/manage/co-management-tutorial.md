@@ -31,7 +31,7 @@ Co-management requires use of some certificates, configuration of Azure, and pub
 
 The following configurations for Configuration Manager simplify the tasks and complexity of enabling co-management:  
 - In Configuration Manager, we use the Azure Resource Manager deployment for Azure Services for cloud management. This deployment method removes the need for an Azure management certificate. In Azure, its's Cloud services (classic) that  hosts the cloud management gateway. 
-- We use Configuration Manager’s Enhanced HTTP feature. This feature first appears as a pre-release feature in version 1806 and is a full feature begining with 1810. Use of enhanced HTTP removes several certificate requirements.  
+- We use Configuration Manager’s Enhanced HTTP feature. This feature first appears as a pre-release feature in version 1806 and is a full feature beginning with 1810. Use of enhanced HTTP removes several certificate requirements.  
 - We use a server authentication certificate from a trusted third-party provider. Public certificates will already be trusted by Windows 10 devices, further simplifying our tasks. While it's possible to use self-signed certificates, doing so creates complexity and limits access to your cloud-based infrastructure from devices that are on the internet.  
 - When we configure the cloud management gateway, we use the option to have that cloud-based service also function as a cloud distribution point. While a cloud distribution point isn't required, it's almost always of use. This configuration path removes the need to separately configure a cloud-based distribution point and set up certificates for its use.  
 
@@ -362,7 +362,7 @@ With the Azure configurations, site system roles, and client settings in place, 
    - **Pilot**  - *(Recommended)* Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You'll specify the pilot collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.  
 
    - **All** - Co-management is enabled for all clients.  
-   - 
+
    Next, select **Copy** to copy the *CCMSETUPCMD* command line. You can use this command line later when you configure Intune to deploy the Configuration manager client. Select **Next**.  
 
 5. On the Workloads page you can switch workloads from **Configuration Manager** to one of the following, and then when ready to continue, select **Next**.  
@@ -407,7 +407,7 @@ when set to **None**, MDM automatic enrollment is disabled
 ## Use Intune to deploy the Configuration Manager client  
 You can use Intune to install the Configuration Manager client on Windows 10 devices that are only managed with Intune. 
 
-Then, wen a previously unmanaged Windows 10 device enrolls with Intune, it will automatically install the Configuration Manager client to become co-managed.  
+Then, when a previously unmanaged Windows 10 device enrolls with Intune, it will automatically install the Configuration Manager client to become co-managed.  
 
 
 ### Create an Intune app to install the Configuration Manager client
