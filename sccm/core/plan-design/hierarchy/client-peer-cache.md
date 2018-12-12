@@ -60,7 +60,7 @@ Starting in version 1806, boundary groups include additional settings to give yo
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  
 
-Choose only clients best suited as peer cache sources. Evaluate client suitability based on attributes such as chassis type, disk space, and network connectivity. For more information that can help you select the best clients to use for peer cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
+Choose only clients best suited as peer cache sources. Evaluate client suitability based on attributes such as chassis type, disk space, and network connectivity. For more information that can help you select the best clients to use for peer cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/askpfeplat/2018/11/21/configuration-manager-peer-cache-custom-reporting-examples/).
 
 
 ### Limited access to a peer cache source  
