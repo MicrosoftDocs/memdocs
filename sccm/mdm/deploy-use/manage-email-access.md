@@ -240,31 +240,31 @@ The message is displayed on the device for Exchange Online users and tenants in 
 
     Using Exchange Online with Configuration Manager and Intune, you can not only manage mobile devices with conditional access, but also desktop computers as well. PCs must either be domain-joined, or be enrolled in Intune and compliant. You can set the following requirements:  
 
-        - **Devices must be domain joined or compliant.** PCs must either be domain-joined or compliant with the policies. If a PC doesn't meet either of these requirements, the user is prompted to enroll the device with Intune.  
+    - **Devices must be domain joined or compliant.** PCs must either be domain-joined or compliant with the policies. If a PC doesn't meet either of these requirements, the user is prompted to enroll the device with Intune.  
 
-        - **Devices must be domain joined.** PCs must be domain-joined to access Exchange Online. If a PC isn't domain-joined, access to email is blocked and the user is prompted to contact the IT admin.  
+    - **Devices must be domain joined.** PCs must be domain-joined to access Exchange Online. If a PC isn't domain-joined, access to email is blocked and the user is prompted to contact the IT admin.  
 
-        - **Devices must be compliant.** PCs must be enrolled in Intune and compliant. If a PC isn't enrolled, a message with instructions on how to enroll is displayed.  
+    - **Devices must be compliant.** PCs must be enrolled in Intune and compliant. If a PC isn't enrolled, a message with instructions on how to enroll is displayed.  
 
 7. Under **Outlook web access (OWA)**, you can choose to allow access to Exchange Online only through the supported browsers: Safari (iOS), and Chrome (Android). Access from other browsers will be blocked. The same platform restrictions you selected for Application access for Outlook also apply here.  
 
-    On **Android** devices, users must enable the browser access. To do this action, the user must enable the "Enable Browser Access" option on the enrolled device as follows:  
+    - On **Android** devices, users must enable the browser access. To do this action, the user must enable the "Enable Browser Access" option on the enrolled device as follows:  
 
-    1. Launch the **Company Portal app**.  
+        1. Launch the **Company Portal app**.  
 
-    2. Go to the **Settings** page from the triple dots (...) or the hardware menu button.  
+        2. Go to the **Settings** page from the triple dots (...) or the hardware menu button.  
 
-    3. Press the **Enable Browser Access** button.  
+        3. Press the **Enable Browser Access** button.  
 
-    4. In the Chrome browser, sign out of Office 365 and restart Chrome.  
+        4. In the Chrome browser, sign out of Office 365 and restart Chrome.  
 
-    On **iOS and Android** platforms, to identify the device that's used to access the service, Azure AD will issue a TLS certificate to the device. The device displays the certificate with a prompt to the user to select the certificate as seen in the screenshots below. The user must select this certificate before they can continue to use the browser.  
+    - On **iOS and Android** platforms, to identify the device that's used to access the service, Azure AD will issue a TLS certificate to the device. The device displays the certificate with a prompt to the user to select the certificate as seen in the screenshots below. The user must select this certificate before they can continue to use the browser.  
 
-        **iOS**  
+        - **iOS**  
 
         ![screenshot of the certificate prompt on an ipad](media/mdm-browser-ca-ios-cert-prompt_v2.png)  
 
-        **Android**  
+        - **Android**  
 
         ![screenshot of the certificate prompt on an Android device](media/mdm-browser-ca-android-cert-prompt.png)  
 
