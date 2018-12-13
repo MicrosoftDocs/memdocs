@@ -57,7 +57,7 @@ Context objects are used, in System Center Configuration Manager, to provide add
 >  After you cache your context qualifiers, you can override your cached values by adding the same context qualifiers, with different values, to your context object.  
 
 ## InstanceCount  
- The `InstanceCount` context qualifier is an integer value that is used to limit the number of instances returned from the [ExecQuery](https://msdn.microsoft.com/library/aa392107.aspx) and CreateInstanceEnum](https://msdn.microsoft.com/library/aa392097.aspx) methods. You set `InstanceCount` equal to the maximum number of instances that you want returned from the query or enumerator. For example, setting `InstanceCount` to 10 returns, at most, 10 instances.  
+The `InstanceCount` context qualifier is an integer value that is used to limit the number of instances returned from the [ExecQuery](https://msdn.microsoft.com/library/aa392107.aspx) and [CreateInstanceEnum](https://msdn.microsoft.com/library/aa392097.aspx) methods. You set `InstanceCount` equal to the maximum number of instances that you want returned from the query or enumerator. For example, setting `InstanceCount` to 10 returns, at most, 10 instances.  
 
 ## LimitToCollectionIDs  
  The `LimitToCollectionIDs` context qualifier is a string array that contains a list of `CollectionID` values. Currently, you can specify only one `CollectionID` value. You use this qualifier to limit the results of a resource query to the members of the named collection. A resource query is a query that includes classes derived from [SMS_Resource](https://msdn.microsoft.com/library/cc143626.aspx) or [SMS_Group](https://msdn.microsoft.com/library/hh458257.aspx).  
@@ -67,7 +67,7 @@ Context objects are used, in System Center Configuration Manager, to provide add
  You cannot use this qualifier when querying collections.  
 
 ## LocaleID  
- The `LocaleID` context qualifier is a string value that accepts either a hexadecimal value or a decimal value in the form MS\x, where x is the locale ID. For example, you can enter the English `LocaleID` value as ms\0x0409 or ms\1033. The SMS Provider only accepts `LocaleID` values that use the Microsoft format. You can find a list of `locale IDs` at [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=110805).  
+ The `LocaleID` context qualifier is a string value that accepts either a hexadecimal value or a decimal value in the form MS\x, where x is the locale ID. For example, you can enter the English `LocaleID` value as ms\0x0409 or ms\1033. The SMS Provider only accepts `LocaleID` values that use the Microsoft format. You can find a list of `locale IDs` at [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=110805).  
 
  If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 
