@@ -23,17 +23,17 @@ ms.assetid:
 
 In this tutorial, you’ll set up co-management of your Windows 10 devices.  
 
-With co-management, you can use both Microsoft Intune and System Center Configuration Manager to manage the same device. You can also use co-management as a bridge to help migrate from managing your devices on-premises to modern cloud-based management.
+With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization, while investing in the cloud through use of Intune for security and modern provisioning.
 
-You can reach co-management whether you currently use Intune or Configuration Manager to manage your devices.  This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.  
+This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.  
 
-Co-management requires use of some certificates, configuration of Azure, and public DNS records.  Before we enable co-management from the Configuration Manager console, we set up a public SSL certificate as a server authentication certificate and configure Azure and DNS. After we enable co-management, we'll set up Intune to support autoenrollment and to deploy the Configuration Manager client to newly enrolled devices. Configuration Manager can automatically enroll clients into Intune based on the Azure Active Directory (AD) tenant information.
+Before we enable co-management from the Configuration Manager console, we'll set up a public SSL certificate as a server authentication certificate and configure Azure and DNS. After we enable co-management, we'll set up Intune to support autoenrollment and to deploy the Configuration Manager client to newly enrolled devices. Configuration Manager can automatically enroll clients into Intune based on the Azure Active Directory (AD) tenant information.
 
-The following configurations for Configuration Manager simplify the tasks and complexity of enabling co-management:  
-- In Configuration Manager, we use the Azure Resource Manager deployment for Azure Services for cloud management. This deployment method removes the need for an Azure management certificate. In Azure, its's Cloud services (classic) that  hosts the cloud management gateway. 
-- We use Configuration Manager’s Enhanced HTTP feature. This feature first appears as a pre-release feature in version 1806 and is a full feature beginning with 1810. Use of enhanced HTTP removes several certificate requirements.  
-- We use a server authentication certificate from a trusted third-party provider. Public certificates will already be trusted by Windows 10 devices, further simplifying our tasks. While it's possible to use self-signed certificates, doing so creates complexity and limits access to your cloud-based infrastructure from devices that are on the internet.  
-- When we configure the cloud management gateway, we use the option to have that cloud-based service also function as a cloud distribution point. While a cloud distribution point isn't required, it's almost always of use. This configuration path removes the need to separately configure a cloud-based distribution point and set up certificates for its use.  
+The following are configurations we'll use to simplify the tasks and complexity of enabling co-management:  
+- In Configuration Manager, we'll use the Azure Resource Manager deployment for Azure Services. Using this deployument for cloud management removes the need for an Azure management certificate. In Azure, its's Cloud services (classic) that  hosts the cloud management gateway. 
+- We'll use Configuration Manager’s Enhanced HTTP feature. This feature first appears as a pre-release feature in version 1806 and is a full feature beginning with 1810. Use of enhanced HTTP removes several certificate requirements.  
+- The cloud management gateway we deploy to Azure uses  a server authentication certificate from a trusted third-party provider. Public certificates will already be trusted by Windows 10 devices, further simplifying our tasks. While it's possible to use self-signed certificates, doing so creates complexity and limits access to your cloud-based infrastructure from devices that are on the internet.  
+- When we configure the cloud management gateway, we'll also install a cloud distribution point. While a cloud distribution point isn't required, it's almost always of use. We'll use a checkbox option to deploy it with the cloud management gateway which removes the need to configure separate certificates.  
 
 
 **In this tutorial you will:**
@@ -95,9 +95,9 @@ The **CMG server authentication certificate** is used to encrypt traffic between
 When you request the CMG server authentication certificate, you specify what must be a unique name to identify your *Cloud service (classic)* in Azure. By default, the Azure public cloud uses *cloudapp.net*, and the CMG is hosted within the cloudapp.net domain as *\<YourUniqueDnsName>.cloudapp.net*.  
 
 > [!TIP]  
-> In this tutorial, the **CMG server authentication certificate** uses an FQDN that ends in *contoso.com*.  After we create the CMG we’ll then configure a canonical name record (CNAME) in our organization’s public DNS. This record creates an alias for the CMG that maps to the name that we use in the public certificate.  
+> In this tutorial, the **CMG server authentication certificate** uses an FQDN that ends in *contoso.com*.  After we create the CMG we’ll configure a canonical name record (CNAME) in our organization’s public DNS. This record creates an alias for the CMG that maps to the name that we use in the public certificate.  
 
-Before you request your public certificate, confirm the name you want to use is available in Azure. You don't directly create the service in Azure. Instead, the name that's specified in the public certificate you request is used to create the cloud service when you install the CMG.  
+Before you request your public certificate, confirm the name you want to use is available in Azure. You don't directly create the service in Azure. Instead, the name that's specified in the public certificate you request is used by Configuration Manager to create the cloud service when you install the CMG.  
 
 1. Sign in to the [Microsoft Azure portal](https://portal.azure.com/).  
 
@@ -382,9 +382,9 @@ With the Azure configurations, site system roles, and client settings in place, 
 With the completion of this procedure, you’ve enabled co-management and your Azure subscription and on-premises infrastructure is configured to support co-management. You can use the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard) to review the status of co-managed devices.  
 
 ## Configure auto-enrollment of devices to Intune   
-With automatic enrollment, devices you manage with Configuration Manager will automatically enroll with Intune.
+Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager will automatically enroll with Intune.
 
-Automatic enrollment also lets users enroll their Windows 10 devices to Intune, by adding their work account to their personally owned devices or joining a corporate-owned device to Azure Active Directory.  
+Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory.  
 1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune**.  
 
 2. Configure **MDM user scope**. Specify one of the following to configure which users’ devices are managed by Microsoft Intune and accept the defaults for the URL values.  
@@ -407,7 +407,7 @@ when set to **None**, MDM automatic enrollment is disabled
 ## Use Intune to deploy the Configuration Manager client  
 You can use Intune to install the Configuration Manager client on Windows 10 devices that are only managed with Intune. 
 
-Then, when a previously unmanaged Windows 10 device enrolls with Intune, it will automatically install the Configuration Manager client to become co-managed.  
+Then, when a previously unmanaged Windows 10 device enrolls with Intune, it automatically installs the Configuration Manager client to become co-managed.  
 
 
 ### Create an Intune app to install the Configuration Manager client
