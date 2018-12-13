@@ -38,11 +38,15 @@ robots: noindex
 
     - **Noncompliance severity for reports** -Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are:  
 
-          - **None**: Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
-          - **Information**: Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
-          - **Warning**: Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
-          - **Critical**: Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
-          - **Critical with event**: Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. The **critical with event** severity level is also logged as a Windows event in the application event log.  
+        - **None**: Devices that fail this compliance rule don't report a failure severity for Configuration Manager reports.  
+
+        - **Information**: Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+
+        - **Warning**: Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+
+        - **Critical**: Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+
+        - **Critical with event**: Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. The **critical with event** severity level is also logged as a Windows event in the application event log.  
 
 5. On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on. You can also **Select all** to choose all device platforms. The supported platforms are: Windows 7, Windows 8.1, and Windows 10; Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.  
 
@@ -113,10 +117,10 @@ robots: noindex
 
     - **Compliance Error Location**: More details on where the compliance failed. If this column is blank, it means no errors were found, and the compliance status was successfully reported. Examples of where the compliance process might fail:  
 
-          - ConfigMgr Client  
-          - Management point  
-          - Intune  
-          - Azure Active Directory  
+        - ConfigMgr Client  
+        - Management point  
+        - Intune  
+        - Azure Active Directory  
 
     - **Compliance Evaluation Time**: Last time the compliance was checked.  
 
