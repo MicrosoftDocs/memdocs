@@ -527,17 +527,17 @@ Class SMS_Package : SMS_PackageBaseclass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Configuration Manager uses packages to distribute software to clients. Every package must contain at least one program ([SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md)), identifying what actions should occur on the client when the package is received. You can also identify whether the program provides an install status Management Information Format (MIF) file to report status or just uses an exit code.  
+  Configuration Manager uses packages to distribute software to clients. Every package must contain at least one program ([SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md)), identifying what actions should occur on the client when the package is received. You can also identify whether the program provides an install status Management Information Format (MIF) file to report status or just uses an exit code.  
 
- When your application deletes an `SMS_Package` object, it is not fully deleted until deletion of its related items, for example, programs, source files, distribution points, and advertisements. Instead, Configuration Manager sets the `ActionInProgress` property to DELETE to mark the package for deletion. In SMS 2.0, to ensure that a query does not retrieve packages that have been marked for deletion, add this case to the WHERE clause. In SMS 2003, the WHERE clause is not required, because packages that are marked for deletion are not retrieved by a query. Use a status MIF file to generate detailed status reporting. To generate a status MIF file, your application must call the InstallStatusMIF function. For more information, see Status MIF Functions.  
+  When your application deletes an `SMS_Package` object, it is not fully deleted until deletion of its related items, for example, programs, source files, distribution points, and advertisements. Instead, Configuration Manager sets the `ActionInProgress` property to DELETE to mark the package for deletion. In SMS 2.0, to ensure that a query does not retrieve packages that have been marked for deletion, add this case to the WHERE clause. In SMS 2003, the WHERE clause is not required, because packages that are marked for deletion are not retrieved by a query. Use a status MIF file to generate detailed status reporting. To generate a status MIF file, your application must call the InstallStatusMIF function. For more information, see Status MIF Functions.  
 
- The values that your application provides when creating a package are entirely dependent on the programs that the package contains. For example, if the package contains a simple program that does not use source files and does not generate a status MIF file, the application can create a package that merely contains a value for the `Name` property.  
+  The values that your application provides when creating a package are entirely dependent on the programs that the package contains. For example, if the package contains a simple program that does not use source files and does not generate a status MIF file, the application can create a package that merely contains a value for the `Name` property.  
 
- Changing the `ShareName` or the `PkgSourcePath` property causes the Distribution Manager to delete and recreate the package on all distribution points of the current site. Because this can be an expensive process, your application should be efficient when updating these fields.  
+  Changing the `ShareName` or the `PkgSourcePath` property causes the Distribution Manager to delete and recreate the package on all distribution points of the current site. Because this can be an expensive process, your application should be efficient when updating these fields.  
 
 > [!NOTE]
 >  Your application can also use the [GetPDFData Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md) to generate an `SMS_Package` object.  

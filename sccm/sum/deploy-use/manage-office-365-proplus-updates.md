@@ -167,21 +167,21 @@ Use the following procedure on the software update point at the central administ
 2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Click **Query**, and then run the following query:
    *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
-![WMI query](..\media\1-wmiquery.png)
+   ![WMI query](../media/1-wmiquery.png)
 4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
 5. Select the **Props** property, click **Edit Property**, and then click **View Embedded**.
-![Property editor](..\media\2-propeditor.png)
+   ![Property editor](../media/2-propeditor.png)
 6. Starting at the first query result, open each object until you find the one with **AdditionalUpdateLanguagesForO365** for the **PropertyName** property.
 7. Select **Value2** and click **Edit Property**.  
-![Edit the Value2 property](..\media\3-queryresult.png)
+   ![Edit the Value2 property](../media/3-queryresult.png)
 8. Add additional languages to the **Value2** property and click **Save Property**. <br/> 
-For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc. You would type `pt-pt,af-za,nn-no` for the example languages. Don't use spaces between the languages.
+   For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc. You would type `pt-pt,af-za,nn-no` for the example languages. Don't use spaces between the languages.
  
-   ![Add languages in Property Editor](..\media\4-props.png)  
+   ![Add languages in Property Editor](../media/4-props.png)  
 9. Click **Close**, click **Close**, click **Save Property**, and click **Save Object** (if you click **Close** here the values are discarded). Click **Close**, and then click **Exit** to exit the Windows Management Instrumentation Tester.
 10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
 11. Now when you download Office 365 updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
-![Filenames with additional languages](..\media\5-verification.png)
+    ![Filenames with additional languages](../media/5-verification.png)
 
 ## Updating Office 365 during task sequences when Office 365 is installed in the base image
 When you install an operating system where Office 365 is already installed in the image, it's possible that the update channel registry key value has the original install location. In this case, the update scan won't show any Office 365 client updates as applicable. There's a scheduled Office automatic updates task that runs several times a week. After that task runs, the update channel will point to the configured Office CDN URL and the scan will then show these updates as applicable. <!--510452-->

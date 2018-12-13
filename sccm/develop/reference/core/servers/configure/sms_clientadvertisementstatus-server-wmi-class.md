@@ -198,15 +198,15 @@ Class SMS_ClientAdvertisementStatus : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Using this class is the primary way to determine advertisement status. Even if a client is no longer in the collection targeted by an advertisement, an instance still appears in this class. It records the last status message for every advertisement for each client.  
+  Using this class is the primary way to determine advertisement status. Even if a client is no longer in the collection targeted by an advertisement, an instance still appears in this class. It records the last status message for every advertisement for each client.  
 
- Advertisement status is divided into two stages, Acceptance and Delivery, which are recorded separately. Acceptance is whether the client has received the advertisement and whether the client decides that the advertisement applies to it. Delivery is the status of everything that comes after; that is, the actual download and execution of the advertisement. Advertisement status messages have been categorized into several groups that indicate similar status for the advertisement.  
+  Advertisement status is divided into two stages, Acceptance and Delivery, which are recorded separately. Acceptance is whether the client has received the advertisement and whether the client decides that the advertisement applies to it. Delivery is the status of everything that comes after; that is, the actual download and execution of the advertisement. Advertisement status messages have been categorized into several groups that indicate similar status for the advertisement.  
 
- For more information about categories see [SMS_AdvertisementStatusInformation Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisementstatusinformation-server-wmi-class.md).  
+  For more information about categories see [SMS_AdvertisementStatusInformation Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisementstatusinformation-server-wmi-class.md).  
 
 ## Requirements  
 

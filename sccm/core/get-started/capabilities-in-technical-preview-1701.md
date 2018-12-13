@@ -37,26 +37,26 @@ However, with this preview, boundary groups for software update points are only 
 
 The following describes the behavior for software update points with this technical preview:  
 
--	**New clients use boundary groups to select software update points,**
-A client that you install after you install version 1701 selects a software update point from those associated with the client’s boundary group.
+- **New clients use boundary groups to select software update points,**
+  A client that you install after you install version 1701 selects a software update point from those associated with the client’s boundary group.
 
   This replaces the previous behavior where clients select a software update point randomly from a list of those that share the clients forest.   
 
--	**Previously installed clients continue to use their current software update point until they fallback to find a new one.**
-Clients that were previously installed and that already have a software update point will continue to use that software update point until they fallback. This includes software update points that are not associated with the client’s current boundary group. They do not immediately attempt to find and use a software update point from their current boundary group.
+- **Previously installed clients continue to use their current software update point until they fallback to find a new one.**
+  Clients that were previously installed and that already have a software update point will continue to use that software update point until they fallback. This includes software update points that are not associated with the client’s current boundary group. They do not immediately attempt to find and use a software update point from their current boundary group.
 
   A client that already has a software update point begins to use this new boundary group behavior only after the client fails to reach its current software update point and starts fallback.
-This delay in switching over to the new behavior is intentional. This is because a change of software update point can result in a large use of network bandwidth as the client synchronizes data with the new software update point. The delay in transition can help to avoid saturating your network should all your clients switch to new software update points at the same time.
+  This delay in switching over to the new behavior is intentional. This is because a change of software update point can result in a large use of network bandwidth as the client synchronizes data with the new software update point. The delay in transition can help to avoid saturating your network should all your clients switch to new software update points at the same time.
 
--	**Configurations for fallback time:**
-Configurations for when clients start fallback to search for a new software update point are not supported in this technical preview. This includes configurations for **Fallback times (in minutes)** and **Never fallback**, that you might configure for different boundary group relationships.
+- **Configurations for fallback time:**
+  Configurations for when clients start fallback to search for a new software update point are not supported in this technical preview. This includes configurations for **Fallback times (in minutes)** and **Never fallback**, that you might configure for different boundary group relationships.
 
   Instead, clients retain their current behavior where a client attempts to connect to its current software update point for two hours before it starts fallback, to find a new software update point it can use.
 
   When a client does use fallback, it will use the boundary group configurations for fallback to create a pool of available software update points. This pool includes all software update points from the clients *current boundary group*, *neighbor boundary groups*, and the clients *site default boundary group*.
 
 - **Configure the default site boundary group:**  
- Consider adding a software update point to the *Default-Site-Boundary-Group&lt;sitecode>*. This ensures that clients that are not members of another boundary group can fallback to find a software update point.
+  Consider adding a software update point to the *Default-Site-Boundary-Group&lt;sitecode>*. This ensures that clients that are not members of another boundary group can fallback to find a software update point.
 
 
 To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), but remember that fallback times you might configure are not yet used for software update points.
@@ -104,35 +104,35 @@ With this technical preview, you can now use the Microsoft Operations Management
 To do so, you modify a configuration file to point to the Government cloud, and then install the OMS connector.
 
 ### Set up an OMS connector to Microsoft Azure Government cloud
-1.  On any computer that has the Configuration Manager console installed, edit the following configuration file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+1. On any computer that has the Configuration Manager console installed, edit the following configuration file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
-  **Edits:**
+   **Edits:**
 
-    Change the value for the setting name *FairFaxArmResourceID* to be equal to “https://management.usgovcloudapi.net/”
+   Change the value for the setting name *FairFaxArmResourceID* to be equal to “<https://management.usgovcloudapi.net/”>
 
    - **Original:**
-      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
-      &lt;value>&lt;/value>   
-      &lt;/setting>
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+     &lt;value>&lt;/value>   
+     &lt;/setting>
 
    - **Edited:**     
-      &lt;setting name="FairFaxArmResourceId" serializeAs="String">
-      &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
-      &lt;/setting>
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String">
+     &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;/setting>
 
-  Change the value for the setting name *FairFaxAuthorityResource* to be equal to "https://login.microsoftonline.com/"
+   Change the value for the setting name *FairFaxAuthorityResource* to be equal to "<https://login.microsoftonline.com/>"
 
-  - **Original:**
-    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>&lt;/value>
+   - **Original:**
+     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;value>&lt;/value>
 
-	- **Edited:**
-    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>https://login.microsoftonline.com/&lt;/value>
+   - **Edited:**
+     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;value><https://login.microsoftonline.com/&lt;/value>>
 
-2.	After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
+2. After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
 
-3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
+3. After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
 
 ## Android and iOS versions are no longer targetable in creation wizards for hybrid MDM
 

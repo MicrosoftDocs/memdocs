@@ -75,13 +75,15 @@ After the tool runs:
 
 **Command line parameters:**  
 
-| Parameter        |Description                 |  
-|------------------|----------------------------|  
-|**-S &lt;FQDN of the SQL Server of your top-tier site>** | *Required* <br> You must specify the FQDN of the SQL Server that hosts the site database for the top-tier site of your hierarchy.    |  
-| **-D &lt;Database name>**                        | *Required* <br> You must specify the name of the top-tier sites database.  |  
-| **-P &lt;Package GUID>**                         | *Required* <br> You must specify the GUID for the update package you want to reset.   |  
-| **-I &lt;SQL Server instance name>**             | *Optional* <br> Use this to identify the instance of SQL Server that hosts the site database. |
-| **-FDELETE**                              | *Optional* <br> Use this to force deletion of a successfully downloaded update package. |  
+
+|                        Parameter                         |                                                            Description                                                            |
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;FQDN of the SQL Server of your top-tier site>** | *Required* <br> You must specify the FQDN of the SQL Server that hosts the site database for the top-tier site of your hierarchy. |
+|                **-D &lt;Database name>**                 |                             *Required* <br> You must specify the name of the top-tier sites database.                             |
+|                 **-P &lt;Package GUID>**                 |                        *Required* <br> You must specify the GUID for the update package you want to reset.                        |
+|           **-I &lt;SQL Server instance name>**           |                   *Optional* <br> Use this to identify the instance of SQL Server that hosts the site database.                   |
+|                       **-FDELETE**                       |                      *Optional* <br> Use this to force deletion of a successfully downloaded update package.                      |
+
  **Examples:**  
  In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
@@ -108,13 +110,13 @@ Beginning with this technical preview, Peer Cache [no longer uses the Network Ac
 ## Improvements for SQL Server Always On Availability Groups  
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
 
--   Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  See [site database recovery options](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
+- Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  See [site database recovery options](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
 
--   This release does not support failover to use the asynchronous commit replica as your site database.
-> [!CAUTION]  
-> Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+- This release does not support failover to use the asynchronous commit replica as your site database.
+  > [!CAUTION]  
+  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
 
--   You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
+- You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
 To add an asynchronous replica to an [availability group you use with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary replicas to availability groups.
@@ -164,11 +166,11 @@ Ensure you have read the blog post to understand the basics about Windows Defend
 
 To create a policy, and to browse the available settings:
 
-1.	In the Configuration Manager console, choose **Assets and Compliance**.
-2.	In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
-3.	In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
-4.	Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
-5.	When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
+1.  In the Configuration Manager console, choose **Assets and Compliance**.
+2.  In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
+3.  In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
+4.  Using the blog post as a reference, you can browse and configure the available settings to try the feature out.
+5.  When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
 ### Further reading
 
@@ -197,11 +199,11 @@ You can discover Azure AD users into your site to use in collections, and other 
 - Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined).
 - In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected with this) are enabled on the computer that hosts this site system role.
 - To use Microsoft Intune to deploy the Configuration Manager client:
-	- You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
-	- In Intune, you have created and deployed an app containing the Configuration Manager client. For details about how to do this, see How to install clients to Intune MDM-managed Windows devices.
+    - You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
+    - In Intune, you have created and deployed an app containing the Configuration Manager client. For details about how to do this, see How to install clients to Intune MDM-managed Windows devices.
 - To use Configuration Manager to deploy the client:
-	- At least one management point must be configured for HTTPS mode.
-	- You must set up a Cloud Management Gateway.
+    - At least one management point must be configured for HTTPS mode.
+    - You must set up a Cloud Management Gateway.
 
 
 ### Set up the Cloud Management Gateway
@@ -218,20 +220,20 @@ You'll find help about how to do this in the following topics:
 
 This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. To do this:
 
-1.	In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
-2.	On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
-3.	On the **Azure Services** page of the Azure Services Wizard, select **Cloud Management** to allow clients to authenticate with the hierarchy using Azure AD.
-4.	On the **General** page of the wizard, specify a name, and a description for your Azure service.
-5.	On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the server and client apps that will be used to configure the Azure service:
-	- In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
-		- **Create**: To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
-		- **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue. This opton is not currently available in this technical preview.
-	- Repeat the same process for the client app.
+1. In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
+2. On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
+3. On the **Azure Services** page of the Azure Services Wizard, select **Cloud Management** to allow clients to authenticate with the hierarchy using Azure AD.
+4. On the **General** page of the wizard, specify a name, and a description for your Azure service.
+5. On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the server and client apps that will be used to configure the Azure service:
+   - In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
+       - **Create**: To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
+       - **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you Verify the information, click **OK** to continue. This opton is not currently available in this technical preview.
+   - Repeat the same process for the client app.
 
-  You need to grant the *Read directory data* application permission when you use Application Import, to set the correct permissions in the portal. If you use Application Creation the permissions are automatically created with the application, but you still need to give consent to the application in the Azure portal.
-6.	On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**.
-In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD.
-7.	Complete the wizard.
+   You need to grant the *Read directory data* application permission when you use Application Import, to set the correct permissions in the portal. If you use Application Creation the permissions are automatically created with the application, but you still need to give consent to the application in the Azure portal.
+6. On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**.
+   In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD.
+7. Complete the wizard.
 
 At this point, you have connected your Configuration Manager site to Azure AD.
 
@@ -241,7 +243,7 @@ At this point, you have connected your Configuration Manager site to Azure AD.
 Before you start, ensure that the client installation source files are stored locally on the device to which you want to install the client.
 Then, use the instructions in [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) using the following installation command line (replace the values in the example with your own values):
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>**
 
 - **/NoCrlCheck**: If your management point or cloud management gateway uses a non-public server certificate, then the client might not be able to reach the CRL location.
 - **/Source**: Local folder:   Location of the client installation files.
@@ -255,39 +257,39 @@ Then, use the instructions in [How to deploy clients to Windows computers in Sys
 ## Use Azure Services Wizard to configure a connection to OMS
 Beginning with the 1705 technical preview release, you use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. The wizard replaces previous workflows to configure this connection.
 
-- 	The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
+-   The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
 
 -   Configuration Manager connects to OMS for features like [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), or [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
 
 ### Prerequisites for the OMS Connector
 Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites). That information is repeated here:  
 
-- 	Providing Configuration Manager permission to OMS.
+-   Providing Configuration Manager permission to OMS.
 
-- 	The OMS connector must be installed on the computer that hosts a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) that is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation).
+-   The OMS connector must be installed on the computer that hosts a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) that is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation).
 
-- 	You must install a Microsoft Monitoring Agent for OMS installed on the service connection point along with the OMS connector. The Agent and the OMS connector must be configured to use the same **OMS Workspace**. To install the agent, see [Download and install the agent](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent) in the OMS documentation.
-- 	After you install the connector and agent, you must configure OMS to use Configuration Manager data. To do so, in the OMS Portal you [Import Configuration Manager collections](/azure/log-analytics/log-analytics-sccm#import-collections).
+-   You must install a Microsoft Monitoring Agent for OMS installed on the service connection point along with the OMS connector. The Agent and the OMS connector must be configured to use the same **OMS Workspace**. To install the agent, see [Download and install the agent](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent) in the OMS documentation.
+-   After you install the connector and agent, you must configure OMS to use Configuration Manager data. To do so, in the OMS Portal you [Import Configuration Manager collections](/azure/log-analytics/log-analytics-sccm#import-collections).
 
 ### Use the Azure Services Wizard to configure the connection to OMS
 
-1.	In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
+1.  In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
 
-2.	On the **Azure Services** page, select the Operation Management Suite cloud service. Provide a friendly name for the **Azure service name** and an optional description, and then click **Next**.
+2.  On the **Azure Services** page, select the Operation Management Suite cloud service. Provide a friendly name for the **Azure service name** and an optional description, and then click **Next**.
 
-3.	On the **App** page, specify your Azure environment (the technical preview supports only the Public Cloud). Then, click **Browse** to open the Server App window.
+3.  On the **App** page, specify your Azure environment (the technical preview supports only the Public Cloud). Then, click **Browse** to open the Server App window.
 
-4.	Select a web app:
+4.  Select a web app:
 
-    - 	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
+    -   **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
 
-    > [!NOTE] 	
+    > [!NOTE]   
     > When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
 
-5.	If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
+5.  If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
 
-6.	The wizard connects to the OMS service using the information you've input. Select the device collections that you want to sync with OMS and then click **Add**.
+6.  The wizard connects to the OMS service using the information you've input. Select the device collections that you want to sync with OMS and then click **Add**.
 
-7.	Verify your connection settings on the **Summary** screen, then select **Next**. The **Progress** screen shows the connection status, then should **Complete**.
+7.  Verify your connection settings on the **Summary** screen, then select **Next**. The **Progress** screen shows the connection status, then should **Complete**.
 
-8.	After the wizard completes, the Configuration Manager console shows that you have configured **Operation Management Suite** as a **Cloud Service Type**.
+8.  After the wizard completes, the Configuration Manager console shows that you have configured **Operation Management Suite** as a **Cloud Service Type**.

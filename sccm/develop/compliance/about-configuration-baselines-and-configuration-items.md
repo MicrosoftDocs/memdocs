@@ -21,13 +21,13 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  You can create your own configuration baselines with the Configuration Manager console, and you can import configuration baselines from the following sources:  
 
--   A Best Practices configuration baseline from Microsoft or other vendors  
+- A Best Practices configuration baseline from Microsoft or other vendors  
 
--   Custom authored configuration baselines from within your own organization, but external to Configuration Manager  
+- Custom authored configuration baselines from within your own organization, but external to Configuration Manager  
 
--   Another Configuration Manager site  
+- Another Configuration Manager site  
 
- When configuration baselines are imported, unless they were originally created in the same Configuration Manager site, you cannot directly modify them in the Configuration Manager console. If you need to refine the configuration items to meet your business requirements, the recommended path is as follows:  
+  When configuration baselines are imported, unless they were originally created in the same Configuration Manager site, you cannot directly modify them in the Configuration Manager console. If you need to refine the configuration items to meet your business requirements, the recommended path is as follows:  
 
 1.  Create child configuration items with your custom values.  
 
@@ -55,13 +55,13 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  The assignment consists of the following properties:  
 
--   The configuration baseline itself  
+- The configuration baseline itself  
 
--   Which collection to target for compliance evaluation, and whether it includes any defined sub-collections  
+- Which collection to target for compliance evaluation, and whether it includes any defined sub-collections  
 
--   The compliance evaluation schedule, which is initially configured with the default compliance evaluation schedule but can be changed for each assignment  
+- The compliance evaluation schedule, which is initially configured with the default compliance evaluation schedule but can be changed for each assignment  
 
- Configuration baseline assignments are optional properties for a configuration baseline. A single configuration baseline can be assigned to multiple collections by defining multiple configuration baseline assignments.  
+  Configuration baseline assignments are optional properties for a configuration baseline. A single configuration baseline can be assigned to multiple collections by defining multiple configuration baseline assignments.  
 
 ### Dependent Configuration Baseline  
  One of the configuration baseline rules is to include another configuration baseline. This nesting capability provides a layered method of defining a base configuration baseline for a wide range of computers and then refining this base configuration with additional configuration baselines that have more specific configurations for computers with similar roles.  
@@ -98,19 +98,19 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  The other configuration items can be imported, created, and configured with the Configuration Manager console. These configuration items display a number of properties, which include the following:  
 
--   General  
+- General  
 
--   Objects  
+- Objects  
 
--   Settings  
+- Settings  
 
--   Windows version  
+- Windows version  
 
--   Applicability  
+- Applicability  
 
--   Detection method  
+- Detection method  
 
- The properties that are available to each configuration item depend on the configuration item type. For example, you can configure an operating system configuration item to check for the exact version of the operating system. This property is not applicable to the other configuration items, so you do not see the Windows Version property that is available for other configuration items. The following table lists the configurable properties of a configuration item in Configuration Manager, and it shows whether the configurable property is available for each configuration item type.  
+  The properties that are available to each configuration item depend on the configuration item type. For example, you can configure an operating system configuration item to check for the exact version of the operating system. This property is not applicable to the other configuration items, so you do not see the Windows Version property that is available for other configuration items. The following table lists the configurable properties of a configuration item in Configuration Manager, and it shows whether the configurable property is available for each configuration item type.  
 
 ||||  
 |-|-|-|  

@@ -24,33 +24,33 @@ When you upload serial numbers for company-owned iOS devices, they must be paire
 
 ## How to predeclare corporate-owned devices
 
-1.	In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned devices** > **Predeclared devices**.
+1. In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned devices** > **Predeclared devices**.
 
-2.  Click **Create Predeclared Devices**. The Create Predeclared Devices wizard opens.
+2. Click **Create Predeclared Devices**. The Create Predeclared Devices wizard opens.
 
-3.	Choose how you want to add device information:
+3. Choose how you want to add device information:
 
-     -	**Upload a CSV file containing IMEI or serial numbers and details**
+    -  **Upload a CSV file containing IMEI or serial numbers and details**
 
-        For this option, click **Browse** to specify the .csv file containing information to predeclare corporate-owned devices. The .csv file must be formatted correctly. For more information, see [Format for uploading .csv files](#format-for-uploading-csv-files).
+       For this option, click **Browse** to specify the .csv file containing information to predeclare corporate-owned devices. The .csv file must be formatted correctly. For more information, see [Format for uploading .csv files](#format-for-uploading-csv-files).
 
-     -	**Manually add IMEI or serial numbers and details**
+    -  **Manually add IMEI or serial numbers and details**
 
-        To manually enter information, type the IMEI number or iOS serial number and details for the devices. Correct any error or warnings before continuing.
+       To manually enter information, type the IMEI number or iOS serial number and details for the devices. Correct any error or warnings before continuing.
 
-    Click **Next**.
+   Click **Next**.
 
 4. If you uploaded a .csv file, review the results of the file import. If a device number was previously imported, Configuration Manager displays those devices and the replacement **Details**. Select the devices whose details you want to overwrite. Device details can only be modified by reimporting the device identification or serial number.
 
-  If you chose to manually enter number, complete the form for the devices you want to predeclare.
+   If you chose to manually enter number, complete the form for the devices you want to predeclare.
 
-  Click **Next** to continue.
+   Click **Next** to continue.
 
-4. If your list includes iOS serial numbers, select the **Enrollment Profile to Assign** from the list of available profiles, and then click **Next**.
+5. If your list includes iOS serial numbers, select the **Enrollment Profile to Assign** from the list of available profiles, and then click **Next**.
 
-5. Click **Next** to review the details, and then click **Next** again to upload the data.
+6. Click **Next** to review the details, and then click **Next** again to upload the data.
 
-6. Click **Close** to finish.
+7. Click **Close** to finish.
 
 ## Format for uploading .csv files
 

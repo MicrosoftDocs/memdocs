@@ -20,21 +20,21 @@ robots: noindex
 
 ## Create a compliance policy
 
-1.  In the System Center Configuration Manager console, choose **Assets and Compliance**.
+1. In the System Center Configuration Manager console, choose **Assets and Compliance**.
 
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance Policies**.
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then choose **Compliance Policies**.
 
-3.  On the **Home** tab, in the **Create** group, choose **Create Compliance Policy**.
+3. On the **Home** tab, in the **Create** group, choose **Create Compliance Policy**.
 
-4.  On the **General** page of the Create Compliance Policy Wizard, specify the following information:
+4. On the **General** page of the Create Compliance Policy Wizard, specify the following information:
 
-  * **Name** -Enter a unique name for the compliance policy. You can use up to 256 characters.
+   * **Name** -Enter a unique name for the compliance policy. You can use up to 256 characters.
 
-  * **Description** -Enter a description that gives an overview of the VPN profile and helps identify it in the Configuration Manager console. You can use up to 256 characters.
+   * **Description** -Enter a description that gives an overview of the VPN profile and helps identify it in the Configuration Manager console. You can use up to 256 characters.
 
-  * **Type of compliance policy** -Select the type of policy that you want to create, depending on whether the device is managed by Configuration Manager. <br /><br /> For devices managed by Intune, choose the **Compliance rules for devices managed without configuration manager client** option. When you select this option, you can also select the type of platform that you want this policy to apply to.
+   * **Type of compliance policy** -Select the type of policy that you want to create, depending on whether the device is managed by Configuration Manager. <br /><br /> For devices managed by Intune, choose the **Compliance rules for devices managed without configuration manager client** option. When you select this option, you can also select the type of platform that you want this policy to apply to.
 
-  * **Noncompliance severity for reports** -Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are:
+   * **Noncompliance severity for reports** -Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are:
 
      * **None** -Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.
      * **Information** -Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.   
@@ -42,17 +42,17 @@ robots: noindex
      * **Critical** -Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.
      * **Critical with event** -Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. The **critical with event** severity level is also logged as a Windows event in the application event log.      
 
-5.  On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on. You can also **Select all** to choose all device platforms. The supported platforms are: Windows 7, Windows 8.1, and Windows 10; Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
+5. On the **Supported Platforms** page, choose the device platforms that this compliance policy will be evaluated on. You can also **Select all** to choose all device platforms. The supported platforms are: Windows 7, Windows 8.1, and Windows 10; Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
 
-6.  On the **Rules** page, you define one or more rules that define the configuration that devices must have in order to be evaluated as compliant. When you create a compliance policy, some rules are enabled by default, but you can edit or delete these rules. For a full list of all the rules, see the "Compliance policy rules" section later in this article.
+6. On the **Rules** page, you define one or more rules that define the configuration that devices must have in order to be evaluated as compliant. When you create a compliance policy, some rules are enabled by default, but you can edit or delete these rules. For a full list of all the rules, see the "Compliance policy rules" section later in this article.
 
-  > [!NOTE]  
-  >  On Windows PCs, Windows operating system version 8.1 is reported as 6.3 instead of 8.1. If the OS version rule is set to Windows 8.1 for Windows, then the device will be reported as noncompliant even if the device has Windows 8.1. Make sure you're setting the right *reported* version of Windows for the minimum and maximum OS rules. The version number must match the version that the **winver** command returns. Windows Phones don't have this issue; the version is reported as 8.1 as expected. 
-  >  For Windows PCs with the Windows 10 operating system, the version should be set as **10.0** plus the OS build number that the **winver** command returns.
+   > [!NOTE]  
+   >  On Windows PCs, Windows operating system version 8.1 is reported as 6.3 instead of 8.1. If the OS version rule is set to Windows 8.1 for Windows, then the device will be reported as noncompliant even if the device has Windows 8.1. Make sure you're setting the right *reported* version of Windows for the minimum and maximum OS rules. The version number must match the version that the **winver** command returns. Windows Phones don't have this issue; the version is reported as 8.1 as expected. 
+   >  For Windows PCs with the Windows 10 operating system, the version should be set as **10.0** plus the OS build number that the **winver** command returns.
 
-7.  On the **Summary** page of the wizard, review the settings that you made, and then finish the wizard.
+7. On the **Summary** page of the wizard, review the settings that you made, and then finish the wizard.
 
- The new policy appears in the **Compliance Policies** node of the **Assets and Compliance** workspace.
+   The new policy appears in the **Compliance Policies** node of the **Assets and Compliance** workspace.
 
 ## Deploy a compliance policy
 
@@ -92,32 +92,32 @@ robots: noindex
 
 #### To monitor the compliance status of an individual device
 
-1.  In the Configuration Manager console, choose the **Assets and compliance** workspace.
+1. In the Configuration Manager console, choose the **Assets and compliance** workspace.
 
-2.  Choose **Devices**.
+2. Choose **Devices**.
 
 3. To enable more columns, right-click one of the columns.
 
-  You can add the following columns:
+   You can add the following columns:
 
-  - **Azure Active Directory device ID** -Unique identifier for the device in Azure Active Directory.
+   - **Azure Active Directory device ID** -Unique identifier for the device in Azure Active Directory.
 
-  - **Compliance Error Details** -Error message details when the process goes wrong. If this column is blank, it means no errors were found, and the compliance status was successfully reported.
+   - **Compliance Error Details** -Error message details when the process goes wrong. If this column is blank, it means no errors were found, and the compliance status was successfully reported.
 
-  - **Compliance Error Location** -More details on where the compliance failed. If this column is blank, it means no errors were found, and the compliance status was successfully reported. Examples of where the compliance process might fail: 
+   - **Compliance Error Location** -More details on where the compliance failed. If this column is blank, it means no errors were found, and the compliance status was successfully reported. Examples of where the compliance process might fail: 
 	  - ConfigMgr Client
 	  - Management point
 	  - Intune
 	  - Azure Active Directory
-<br></br>
-  - **Compliance Evaluation Time** -Last time the compliance was checked.
+   <br></br>
+   - **Compliance Evaluation Time** -Last time the compliance was checked.
 
-  - **Compliance Set Time** -Last time the compliance was updated to Azure Active Directory.
+   - **Compliance Set Time** -Last time the compliance was updated to Azure Active Directory.
 
-  - **Conditional Access Compliant** -Whether or not the machine complies with conditional access policies.
+   - **Conditional Access Compliant** -Whether or not the machine complies with conditional access policies.
 
-  > [!IMPORTANT]
-  > These columns aren't shown by default.
+   > [!IMPORTANT]
+   > These columns aren't shown by default.
 
 #### To view Intune compliance policies charts
 1. In the Configuration Manager console, choose **Monitoring**.
@@ -244,9 +244,9 @@ robots: noindex
 
   - **BitLocker is enabled** -When BitLocker is on, the device can protect data that is stored on the drive from unauthorized access, when the system is turned off or goes to hibernation.
 
-   Windows BitLocker Drive Encryption encrypts all data stored on the Windows operating system volume. BitLocker uses the TPM to help protect the Windows operating system and user data. It helps to ensure that a computer isn't tampered with, even if it is left unattended, lost, or stolen.
+    Windows BitLocker Drive Encryption encrypts all data stored on the Windows operating system volume. BitLocker uses the TPM to help protect the Windows operating system and user data. It helps to ensure that a computer isn't tampered with, even if it is left unattended, lost, or stolen.
    
-   If the computer is equipped with a compatible TPM, BitLocker uses the TPM to lock the encryption keys that protect the data. As a result, the keys can't be accessed until the TPM has verified the state of the computer.
+    If the computer is equipped with a compatible TPM, BitLocker uses the TPM to lock the encryption keys that protect the data. As a result, the keys can't be accessed until the TPM has verified the state of the computer.
 
   - **Code integrity is enabled** -Code integrity is a feature that validates the integrity of a driver or system file each time it is loaded into memory. Code integrity detects whether an unsigned driver or system file is being loaded into the kernel. It also detects whether a system file has been changed by malicious software that is being run by a user account with admin privileges.
 
@@ -254,7 +254,7 @@ robots: noindex
 
   - **Early-launch antimalware is enabled** -This setting applies only to PCs. Early launch anti-malware (ELAM) provides protection for the computers in your network when they start up and before third-party drivers initialize.
   
-   This rule is turned off by default.
+    This rule is turned off by default.
 
   For information on how the HAS service works, see [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx).
 
@@ -272,27 +272,27 @@ robots: noindex
 	  * iOS 6+
 	  * Android 4.0+
 	  * Samsung KNOX Standard 4.0+
-<br></br>
-* **Required password type** -Specify whether the user must create an Alphanumeric password or a Numeric password. For Alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: lowercase, uppercase letters, symbols, and numbers.
+  <br></br>
+- **Required password type** -Specify whether the user must create an Alphanumeric password or a Numeric password. For Alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: lowercase, uppercase letters, symbols, and numbers.
 
   	**Supported on:**
   	* Windows Phone 8+
   	* Windows 8.1+
   	* iOS 6+
-<br></br>
-* **Block USB debugging on device** -You do not have to configure this setting as USB debugging is already disabled on Android for Work devices.
+  <br></br>
+- **Block USB debugging on device** -You do not have to configure this setting as USB debugging is already disabled on Android for Work devices.
 
  	**Supported on:**
   	* Android 4.0+
   	* Samsung KNOX Standard 4.0+
-<br></br>
-* **Block apps from unknown sources** -Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
+  <br></br>
+- **Block apps from unknown sources** -Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
 
   	**Supported on:**
   	* Android 4.0+
   	* Samsung KNOX Standard 4.0+
-<br></br>
-* **Require threat scan on apps** -This setting specifies that the verify apps feature is enabled on the device. 
+  <br></br>
+- **Require threat scan on apps** -This setting specifies that the verify apps feature is enabled on the device. 
 
   	**Supported on:**
   	* Android 4.2 through 4.4
@@ -306,13 +306,13 @@ An app ID is an identifier that uniquely identifies the app within the Apple and
 	- You can find the app ID in the Google Play store URL that was used to create the app. An example app ID is: *…?id=com.companyname.appname&hl=en*
 
 - **iOS**
-	1. In the iTunes store URL, find the ID number, like the one in this example: */id875948587?mt=8*
+  1. In the iTunes store URL, find the ID number, like the one in this example: */id875948587?mt=8*
 
-	2. In a web browser, go to the following URL, replacing the number with the ID number that you just found (in this case, the previous example): https://itunes.apple.com/lookup?id=875948587
+  2. In a web browser, go to the following URL, replacing the number with the ID number that you just found (in this case, the previous example): https://itunes.apple.com/lookup?id=875948587
 
-	3. Download and open the text file.
+  3. Download and open the text file.
   
-	4. Search for the text **bundleId**.
+  4. Search for the text **bundleId**.
 
-    An example app ID is: "*bundleId*":"*com.companyname.appname*" 
+     An example app ID is: "*bundleId*":"*com.companyname.appname*" 
 

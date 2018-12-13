@@ -15,23 +15,25 @@ The following example shows how to create a package in System Center Configurati
 
 ### To create a package  
 
-1.  Set up a connection to the SMS Provider.  
+1. Set up a connection to the SMS Provider.  
 
-2.  Create the new package object by using the `SMS_Package` class.  
+2. Create the new package object by using the `SMS_Package` class.  
 
-3.  Populate the new package properties.  
+3. Populate the new package properties.  
 
-    > [!TIP]
-    >  When you are creating a Virtual Application Package, you must set the `SMS_Package` properties to specific values. Instances of the `SMS_VirtualApp` class must reference instances of the `SMS_Package` class that use the properties described in the following table.  
+   > [!TIP]
+   >  When you are creating a Virtual Application Package, you must set the `SMS_Package` properties to specific values. Instances of the `SMS_VirtualApp` class must reference instances of the `SMS_Package` class that use the properties described in the following table.  
 
-     Virtual Application Package  
-     |Property Name|Property Value|  
-    |-------------------|--------------------|  
-    |PackageType|7|  
-    |PkgSourceFlag|2|  
-    |PkgSourcePath|\\\someserver\somesharepath|  
+    Virtual Application Package  
 
-4.  Save the package.  
+   | Property Name |       Property Value        |
+   |---------------|-----------------------------|
+   |  PackageType  |              7              |
+   | PkgSourceFlag |              2              |
+   | PkgSourcePath | \\\someserver\somesharepath |
+
+
+4. Save the package.  
 
 ## Example  
  The following example method creates a new package and populates its properties for use in software distribution.  

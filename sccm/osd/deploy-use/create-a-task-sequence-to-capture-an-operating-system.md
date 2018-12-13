@@ -43,60 +43,60 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 #### To create a task sequence that builds and captures an operating system image  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
 
-4.  On the **Create a New Task Sequence** page, select **Build and capture a reference operating system image**.  
+4. On the **Create a New Task Sequence** page, select **Build and capture a reference operating system image**.  
 
-5.  On the **Task Sequence Information** page, specify the following settings, and then click **Next**.  
+5. On the **Task Sequence Information** page, specify the following settings, and then click **Next**.  
 
-    -   **Task sequence name**: Specify a name that identifies the task sequence.  
+   -   **Task sequence name**: Specify a name that identifies the task sequence.  
 
-    -   **Description**: Specify a description of the task that is performed by the task sequence, such as a description of the operating system that is created by the task sequence.  
+   -   **Description**: Specify a description of the task that is performed by the task sequence, such as a description of the operating system that is created by the task sequence.  
 
-    -   **Boot image**: Specify the boot image that installs the operating system image.  
+   -   **Boot image**: Specify the boot image that installs the operating system image.  
 
-        > [!IMPORTANT]  
-        >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
+       > [!IMPORTANT]  
+       >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
 
-6.  On the **Install Windows** page, specify the following settings, and then click **Next**.  
+6. On the **Install Windows** page, specify the following settings, and then click **Next**.  
 
-    -   **Image package**: Specify the operating system image package, which contains the files that are required to install the operating system.  
+   -   **Image package**: Specify the operating system image package, which contains the files that are required to install the operating system.  
 
-    -   **Image index**: Specify the operating system to install. If the operating system image contains multiple versions, select the  version that you want to install.  
+   -   **Image index**: Specify the operating system to install. If the operating system image contains multiple versions, select the  version that you want to install.  
 
-    -   **Product key**: Specify the product key for the Windows operating system to install. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of 5 characters must be separated by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+   -   **Product key**: Specify the product key for the Windows operating system to install. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of 5 characters must be separated by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Server licensing mode**: Specify that the server license is **Per seat**, **Per server**, or that no license is specified. If the server license is **Per server**, also specify the maximum number of server connections.  
+   -   **Server licensing mode**: Specify that the server license is **Per seat**, **Per server**, or that no license is specified. If the server license is **Per server**, also specify the maximum number of server connections.  
 
-    -   Specify how to handle the administrator account that is used when the operating system is deployed.  
+   -   Specify how to handle the administrator account that is used when the operating system is deployed.  
 
-        -   **Randomly generate the local administrator password and disable the account on all supported platforms**: Specify whether to have Configuration Manager create a random password for the local administrator account and disable the account when the operating system is deployed.  
+       -   **Randomly generate the local administrator password and disable the account on all supported platforms**: Specify whether to have Configuration Manager create a random password for the local administrator account and disable the account when the operating system is deployed.  
 
-        -   **Enable the account and specify the local administrator password**: Specify whether the same password is used for the local administrator account on all computers where the operating system is deployed.  
+       -   **Enable the account and specify the local administrator password**: Specify whether the same password is used for the local administrator account on all computers where the operating system is deployed.  
 
-7.  On the **Configure Network** page, specify the following settings, and then click **Next**.  
+7. On the **Configure Network** page, specify the following settings, and then click **Next**.  
 
-    -   **Join a workgroup**: Specify whether to add the destination computer to a workgroup when the operating system is deployed.  
+   -   **Join a workgroup**: Specify whether to add the destination computer to a workgroup when the operating system is deployed.  
 
-    -   **Join a domain**: Specify whether to add the destination computer to a domain when the operating system is deployed. In **Domain**, specify the name of the domain.  
+   -   **Join a domain**: Specify whether to add the destination computer to a domain when the operating system is deployed. In **Domain**, specify the name of the domain.  
 
-        > [!IMPORTANT]  
-        >  You can browse to locate domains in the local forest, but you must specify the domain name for a remote forest.  
+       > [!IMPORTANT]  
+       >  You can browse to locate domains in the local forest, but you must specify the domain name for a remote forest.  
 
-         You can also specify an organizational unit (OU). This is an optional setting that specifies the LDAP X.500-distinguished name of the OU in which to create the computer account if it does not already exist.  
+        You can also specify an organizational unit (OU). This is an optional setting that specifies the LDAP X.500-distinguished name of the OU in which to create the computer account if it does not already exist.  
 
-    -   **Account**: Specify the user name and password for the account that has permissions to join the specified domain. For example: *domain\user* or *%variable%*.  
+   -   **Account**: Specify the user name and password for the account that has permissions to join the specified domain. For example: *domain\user* or *%variable%*.  
 
-        > [!IMPORTANT]  
-        >  You must enter the appropriate domain credentials if you plan to migrate either the domain settings or the workgroup settings.  
+       > [!IMPORTANT]  
+       >  You must enter the appropriate domain credentials if you plan to migrate either the domain settings or the workgroup settings.  
 
-8.  On the **Install Configuration Manager** page, specify the Configuration Manager client package that contains the source files to install the Configuration Manager client, add any additional properties needed to install the client, and then click **Next**.  
+8. On the **Install Configuration Manager** page, specify the Configuration Manager client package that contains the source files to install the Configuration Manager client, add any additional properties needed to install the client, and then click **Next**.  
 
-     For more information about properties that can be used to install a client, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
+    For more information about properties that can be used to install a client, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
 
 9. On the **Include Updates** page, specify whether to install required software updates, all software updates, or no software updates, and then click **Next**. If you specify to install software updates, Configuration Manager installs only those software updates that are targeted to the collections that the destination computer is a member of.  
 
@@ -126,7 +126,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 15. To add additional steps to the task sequence, select the task sequence that you created and click **Edit**. For information about how to edit a task sequence, see [Edit a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
- Deploy the task sequence to a reference computer in one of the following ways:  
+    Deploy the task sequence to a reference computer in one of the following ways:  
 
 -   If the reference computer is a Configuration Manager client, you can deploy the build and capture task sequence to the collection that contains the reference computer. For information about how to deploy the operating system image, see [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md).  
 
@@ -142,21 +142,21 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 #### To capture an operating system from an existing reference computer  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
 
-4.  On the **Create a New Task Sequence** page, select **Create a new custom task sequence**.  
+4. On the **Create a New Task Sequence** page, select **Create a new custom task sequence**.  
 
-5.  On the **Task Sequence Information** page, specify a name for the task sequence and a description of the task sequence.  
+5. On the **Task Sequence Information** page, specify a name for the task sequence and a description of the task sequence.  
 
-6.  Specify a boot image for the task sequence. This boot image is used to start the reference computer with Windows PE.  For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
+6. Specify a boot image for the task sequence. This boot image is used to start the reference computer with Windows PE.  For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
-7.  Complete the wizard.  
+7. Complete the wizard.  
 
-8.  In **Task Sequences**, select the custom task sequence, and then on the **Home** tab,  in the **Task Sequence** group, click **Edit** to open the task sequence editor.  
+8. In **Task Sequences**, select the custom task sequence, and then on the **Home** tab,  in the **Task Sequence** group, click **Edit** to open the task sequence editor.  
 
 9. Use this step only if the Configuration Manager client is installed on the reference computer.  
 
@@ -169,17 +169,17 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 11. Click **Add**, click **Images**, and then click [Capture Operating System Image](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage).  This task sequence step will only run from Windows PE to capture the hard drives on the reference computer. Configure the following settings for the task sequence step.  
 
-    -   **Name** and **Description**: Optionally, you can change the name of the task sequence step and provide a description.  
+    - **Name** and **Description**: Optionally, you can change the name of the task sequence step and provide a description.  
 
-    -   **Destination**: Specify a shared network folder where the output .WIM file is stored. This file contains the operating system image that is based on the settings that you specify by using this wizard. If you specify a folder that contains an existing .WIM file, the existing file is overwritten.  
+    - **Destination**: Specify a shared network folder where the output .WIM file is stored. This file contains the operating system image that is based on the settings that you specify by using this wizard. If you specify a folder that contains an existing .WIM file, the existing file is overwritten.  
 
-    -   **Description**, **Version**, and **Created by**: Optionally, provide details about the image that you will capture.  
+    - **Description**, **Version**, and **Created by**: Optionally, provide details about the image that you will capture.  
 
-    -   **Capture operating system image account**: Specify the Windows account that has permissions to the network share you specified. Click **Set** to specify the name of that Windows account.  
+    - **Capture operating system image account**: Specify the Windows account that has permissions to the network share you specified. Click **Set** to specify the name of that Windows account.  
 
-     Click **OK** to close the task sequence editor.  
+      Click **OK** to close the task sequence editor.  
 
- Deploy the task sequence to a reference computer in one of the following ways:  
+    Deploy the task sequence to a reference computer in one of the following ways:  
 
 -   If the reference computer is a Configuration Manager client, you can deploy the task sequence to the collection that contains the reference computer. For information about how to deploy the operating system image, see [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md).  
 

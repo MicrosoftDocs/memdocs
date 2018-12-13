@@ -12,15 +12,15 @@ manager: dougeby
 # About the Configuration Manager Site Control File
 The site control file in System Center Configuration Manager is an ASCII text file (Sitectrl.ct0) that contains the configuration of each site. There are two types of site control files:  
 
--   Actual site control file - A working copy of the site control file that is stored in the System Center Configuration Manager site database and in the inbox in the site control manager.  
+- Actual site control file - A working copy of the site control file that is stored in the System Center Configuration Manager site database and in the inbox in the site control manager.  
 
--   Delta site control file - Contains the proposed site control file changes that are to be processed.  
+- Delta site control file - Contains the proposed site control file changes that are to be processed.  
 
- The site control file is stored on each site server in the site control manager inbox.  
+  The site control file is stored on each site server in the site control manager inbox.  
 
- On the primary site, there is a copy of the site control file for the current site in the database. The primary site also has a copy of the site control file for all lower level sites in the hierarchy, including secondary sites.  
+  On the primary site, there is a copy of the site control file for the current site in the database. The primary site also has a copy of the site control file for all lower level sites in the hierarchy, including secondary sites.  
 
- Each child site passes a copy of its site control file to its parent site. Each parent site passes a copy of the site control file for itself and for each of its child sites up the hierarchy. Therefore, the central site's database contains copies of the site control files of every Configuration Manager site in the hierarchy.  
+  Each child site passes a copy of its site control file to its parent site. Each parent site passes a copy of the site control file for itself and for each of its child sites up the hierarchy. Therefore, the central site's database contains copies of the site control files of every Configuration Manager site in the hierarchy.  
 
 ## Site Control File Format  
  The site control file is a collection of resource definitions that contain embedded properties, embedded property lists and multi-string lists. The following example shows a section of site control file that defines client component information. The resource is declared by the BEGIN_CLIENT_COMPONENT. The embedded properties are denoted by PROPERTY and have a name and value. The property lists are denoted by the BEGIN_PROPERTY_LIST section and list a property list name and several property names and associated values. The multi-string lists are denoted by the BEGIN_CLIENT_REG_MULTI_STRING_LIST and provide a list of string values.  

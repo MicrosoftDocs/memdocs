@@ -28,19 +28,19 @@ Use the following sections to manage Peer Cache.
 ##  <a name="BKMK_PeerCacheObjects"></a> Objects stored on a Peer Cache source  
  A task sequence configured to use Windows PE Peer Cache can get the following content objects while running in Windows PE:  
 
--   Operating system image  
+- Operating system image  
 
--   Driver package  
+- Driver package  
 
--   Packages and Programs (When the client continues to run the task sequence in the full operating system, the client gets this content from a peer cache source if the task sequence was originally configured for peer cache when running in Windows PE.)  
+- Packages and Programs (When the client continues to run the task sequence in the full operating system, the client gets this content from a peer cache source if the task sequence was originally configured for peer cache when running in Windows PE.)  
 
--   Additional boot images  
+- Additional boot images  
 
- The following content objects never transfer using peer cache. Instead, they transfer from a distribution point or by  Windows BranchCache if you have configured Windows BranchCache in your environment:  
+  The following content objects never transfer using peer cache. Instead, they transfer from a distribution point or by  Windows BranchCache if you have configured Windows BranchCache in your environment:  
 
--   Applications  
+- Applications  
 
--   Software updates  
+- Software updates  
 
 ##  <a name="BKMK_PeerCacheWork"></a> How does  Windows PE Peer Cache work?  
  Consider a scenario with a branch office that does not have a distribution point but does have several clients enabled to use Windows PE Peer Cache. You deploy the task sequence configured to use peer cache to several clients that are configured to be part of the peer cache source. The first client to run the task sequence broadcasts a request for a peer with the content. It doesn't find one so it gets the content from a distribution point across the WAN. The client installs the new image and then stores the content in its Configuration Manager client cache so it can function as a peer cache source to other clients. When the next client runs the task sequence, it broadcasts a request on the subnet for a peer cache source, and that first client responds and makes its cached content  available.  
@@ -71,59 +71,59 @@ Use the following sections to manage Peer Cache.
 ##  <a name="BKMK_PeerCacheConfigure"></a> Configure Windows PE Peer Cache  
  You can use the following methods to provision a client with peer cache content so it can serve as a peer cache source:  
 
--   A peer cache client that cannot find a peer cache source with the content will download it from a distribution point.  If  the client receives client settings that enable peer cache and the task sequence is configured to preserve the cached content, the client becomes a peer cache source.  
+- A peer cache client that cannot find a peer cache source with the content will download it from a distribution point.  If  the client receives client settings that enable peer cache and the task sequence is configured to preserve the cached content, the client becomes a peer cache source.  
 
--   A peer cache client can get content from another peer cache client (a peer cache source).  Because the client is configured for peer cache, when it runs a task sequence that is configured to preserve the cached content, the client becomes a peer cache source.  
+- A peer cache client can get content from another peer cache client (a peer cache source).  Because the client is configured for peer cache, when it runs a task sequence that is configured to preserve the cached content, the client becomes a peer cache source.  
 
--   A  client runs a task sequence that includes the optional step, [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), which is used to prestage the relevant content that is included in the Windows PE Peer Cache task sequence. When you use this method:  
+- A  client runs a task sequence that includes the optional step, [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), which is used to prestage the relevant content that is included in the Windows PE Peer Cache task sequence. When you use this method:  
 
-    -   The client does not need to install the image that is being deployed.  
+  -   The client does not need to install the image that is being deployed.  
 
-    -   In addition to the **Download Package Content** option, the task sequence must also use the **Configuration Manager client cache** option. You use this option to store the content in the clients cache so the client can act as a peer cache source for other peer cache clients.  
+  -   In addition to the **Download Package Content** option, the task sequence must also use the **Configuration Manager client cache** option. You use this option to store the content in the clients cache so the client can act as a peer cache source for other peer cache clients.  
 
- The following procedures will help you configure Windows PE Peer Cache on clients and configure task sequences that support peer cache.  
+  The following procedures will help you configure Windows PE Peer Cache on clients and configure task sequences that support peer cache.  
 
 ### To configure the Windows PE Peer Cache source computers  
 
-1.  In the Configuration Manager console, navigate to **Administration** > **Client Settings**, and then   create a new **Custom Client Device Settings** or edit an existing settings object. You can also configure this for the **Default Client Settings** object.  
+1. In the Configuration Manager console, navigate to **Administration** > **Client Settings**, and then   create a new **Custom Client Device Settings** or edit an existing settings object. You can also configure this for the **Default Client Settings** object.  
 
-    > [!TIP]  
-    >  Use a custom settings object to manage which clients receive this configuration. For example, you might want to avoid configuring this on the laptops of users who are frequently on the move. A highly mobile system can be a poor source to provide content to other peer cache clients.  
-    >   
-    >  Also remember that when you configure this setting as part of the **Default Client Settings**, the configuration applies to all clients in your environment.  
+   > [!TIP]  
+   >  Use a custom settings object to manage which clients receive this configuration. For example, you might want to avoid configuring this on the laptops of users who are frequently on the move. A highly mobile system can be a poor source to provide content to other peer cache clients.  
+   >   
+   >  Also remember that when you configure this setting as part of the **Default Client Settings**, the configuration applies to all clients in your environment.  
 
-2.  Under **Windows PE Peer Cache**, set **Enable Configuration Manager client in full OS to share content** to **Yes**.  
+2. Under **Windows PE Peer Cache**, set **Enable Configuration Manager client in full OS to share content** to **Yes**.  
 
-    -   By default, only HTTP is enabled. If you want to enable clients to download content over HTTPS, set **Enable HTTPS for client peer communication** to **Yes**.  
+   -   By default, only HTTP is enabled. If you want to enable clients to download content over HTTPS, set **Enable HTTPS for client peer communication** to **Yes**.  
 
-    -   By default, the port for broadcasts is set to 8004 and the port for content downloads is set to 8003. You can change both.  
+   -   By default, the port for broadcasts is set to 8004 and the port for content downloads is set to 8003. You can change both.  
 
-3.  Save and deploy the Client Settings to the clients that you select to be a peer cache source.  
+3. Save and deploy the Client Settings to the clients that you select to be a peer cache source.  
 
- After a device is configured with this settings object, the device  is configured to act as a peer cache source. These settings should be deployed to potential peer cache clients to configure the required ports and protocols.  
+   After a device is configured with this settings object, the device  is configured to act as a peer cache source. These settings should be deployed to potential peer cache clients to configure the required ports and protocols.  
 
 ###  <a name="BKMK_PeerCacheConfigureTS"></a> Configure a task sequence for Windows PE Peer Cache  
  When you configure the task sequence, use the following task sequence variables as Collection Variables on the collection to which the task sequence is deployed:  
 
--   **SMSTSPeerDownload**  
+- **SMSTSPeerDownload**  
 
-     Value:  TRUE  
+   Value:  TRUE  
 
-     This enables the client to use Windows PE Peer Cache.  
+   This enables the client to use Windows PE Peer Cache.  
 
--   **SMSTSPeerRequestPort**  
+- **SMSTSPeerRequestPort**  
 
-     Value: <Port number\>  
+   Value: <Port number\>  
 
-     When you do not use the default port configured in the Client Settings (8004), you must configure this variable with a custom value of the network port to use for the initial broadcast.  
+   When you do not use the default port configured in the Client Settings (8004), you must configure this variable with a custom value of the network port to use for the initial broadcast.  
 
--   **SMSTSPreserveContent**  
+- **SMSTSPreserveContent**  
 
-     Value: TRUE  
+   Value: TRUE  
 
-     This flags the content in the task sequence to be retained in the Configuration Manager client cache after the deployment. This is different than using SMSTSPersisContent which only preserves the content for the duration of the task sequence and uses the task sequence cache, not the Configuration Manager client cache.  
+   This flags the content in the task sequence to be retained in the Configuration Manager client cache after the deployment. This is different than using SMSTSPersisContent which only preserves the content for the duration of the task sequence and uses the task sequence cache, not the Configuration Manager client cache.  
 
- For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
+  For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Validate the success of using Windows PE peer cache  
  After you use Windows PE peer cache to deploy and install a task sequence, you can confirm that peer cache was successfully used in the process by viewing the **smsts.log** on the client that ran the task sequence.  

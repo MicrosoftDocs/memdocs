@@ -196,30 +196,30 @@ manager: dougeby
 #### OS image actions
  The **Apply Operating System Image** step performs the following actions when using an OS image:  
 
- 1.  Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
+1. Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
 
- 2.  Extract the contents of the specified .wim file to the specified destination partition.  
+2. Extract the contents of the specified .wim file to the specified destination partition.  
 
- 3.  Prepare the answer file:  
+3. Prepare the answer file:  
 
-    1.  Create a new default Windows Setup answer file (sysprep.inf or unattend.xml) for the deployed OS.  
+   1.  Create a new default Windows Setup answer file (sysprep.inf or unattend.xml) for the deployed OS.  
 
-    2.  Merge any values from the user-supplied answer file.  
+   2.  Merge any values from the user-supplied answer file.  
 
- 4.  Copy Windows boot loaders into the active partition.  
+4. Copy Windows boot loaders into the active partition.  
 
- 5.  Set the boot.ini or the Boot Configuration Database (BCD) to reference the newly installed OS.  
+5. Set the boot.ini or the Boot Configuration Database (BCD) to reference the newly installed OS.  
 
 #### OS upgrade package actions
  The **Apply Operating System Image** step performs the following actions when using an OS upgrade package:  
 
- 1.  Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
+1. Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
 
- 2.  Prepare the answer file:  
+2. Prepare the answer file:  
 
-    1.  Create a fresh answer file with standard values created by Configuration Manager.  
+   1.  Create a fresh answer file with standard values created by Configuration Manager.  
 
-    2.  Merge any values from the user-supplied answer file.  
+   2.  Merge any values from the user-supplied answer file.  
 
 
 ### Properties  

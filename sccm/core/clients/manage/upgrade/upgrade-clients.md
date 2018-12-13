@@ -25,19 +25,19 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Advantages**  
 
--   Does not require computers to be discovered before the client can be upgraded.  
+- Does not require computers to be discovered before the client can be upgraded.  
 
--   Can be used for new client installations or for upgrades.  
+- Can be used for new client installations or for upgrades.  
 
--   Computers can read client installation properties that have been published to Active Directory Domain Services.  
+- Computers can read client installation properties that have been published to Active Directory Domain Services.  
 
--   Does not require you to configure and maintain an installation account for the intended client computer.  
+- Does not require you to configure and maintain an installation account for the intended client computer.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   Can cause high network traffic if you're upgrading a lot of clients.  
+- Can cause high network traffic if you're upgrading a lot of clients.  
 
--   If the Active Directory schema is not extended for Configuration Manager, you must use [Group Policy settings](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) to add client installation properties to computers in your site.  
+- If the Active Directory schema is not extended for Configuration Manager, you must use [Group Policy settings](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) to add client installation properties to computers in your site.  
 
 
 ## Logon script installation  
@@ -45,42 +45,42 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Advantages**  
 
--   Does not require computers to be discovered before the client can be installed.  
+- Does not require computers to be discovered before the client can be installed.  
 
--   Can be used for new client installations or for upgrades.  
+- Can be used for new client installations or for upgrades.  
 
--   Supports using command-line properties for CCMSetup.  
+- Supports using command-line properties for CCMSetup.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   Can cause high network traffic if you're upgrading a lot of clients in a short time.  
+- Can cause high network traffic if you're upgrading a lot of clients in a short time.  
 
--   Can take a long time to upgrade all client computers if users do not frequently log on to the network.  
+- Can take a long time to upgrade all client computers if users do not frequently log on to the network.  
 
- For more information, see [How to Install Configuration Manager Clients by Using Logon Scripts](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
+  For more information, see [How to Install Configuration Manager Clients by Using Logon Scripts](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
 
 ## Manual installation  
  **Supported client platform:** Windows, UNIX/Linus, Mac OS X  
 
  **Advantages**  
 
--   Does not require computers to be discovered before the client can be upgraded.  
+- Does not require computers to be discovered before the client can be upgraded.  
 
--   Can be useful for testing purposes.  
+- Can be useful for testing purposes.  
 
--   Supports using command-line properties for CCMSetup.  
+- Supports using command-line properties for CCMSetup.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   No automation, therefore time consuming.  
+- No automation, therefore time consuming.  
 
- For more information, see the following topics:  
+  For more information, see the following topics:  
 
--   [How to Install Configuration Manager Clients Manually](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
+- [How to Install Configuration Manager Clients Manually](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
 
--   [How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
+- [How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
 
--   [How to upgrade clients on Mac computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
+- [How to upgrade clients on Mac computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
 
 ## Upgrade installation (application management)  
  **Supported client platform:** Windows  
@@ -90,15 +90,15 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Advantages**  
 
--   Supports using command-line properties for CCMSetup.  
+- Supports using command-line properties for CCMSetup.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   Can cause high network traffic if you distribute the client to large collections.  
+- Can cause high network traffic if you distribute the client to large collections.  
 
--   Can only be used to upgrade the client software on computers that have been discovered and assigned to the site.  
+- Can only be used to upgrade the client software on computers that have been discovered and assigned to the site.  
 
- For more information, see [How to Install Configuration Manager Clients by Using a Package and Program](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp).  
+  For more information, see [How to Install Configuration Manager Clients by Using a Package and Program](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp).  
 
 ## Automatic client upgrade  
 
@@ -109,33 +109,33 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Advantages**  
 
--   Can be used to automatically keep clients in your site at the latest version.  
+- Can be used to automatically keep clients in your site at the latest version.  
 
--   Requires minimal administration.  
+- Requires minimal administration.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   Can only be used to upgrade the client software and cannot be used to install a new client.  
+- Can only be used to upgrade the client software and cannot be used to install a new client.  
 
--   Not suitable for upgrading many clients simultaneously.  
+- Not suitable for upgrading many clients simultaneously.  
 
--   Applies to all clients in the hierarchy that are assigned to a site. Cannot be scoped by collection.  
+- Applies to all clients in the hierarchy that are assigned to a site. Cannot be scoped by collection.  
 
--   Limited scheduling options.  
+- Limited scheduling options.  
 
- For more information, see [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+  For more information, see [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 ## Client testing  
  **Supported client platform:** Windows  
 
  **Advantages**  
 
--   Can be used to test new client versions in a smaller pre-production collection.  
+- Can be used to test new client versions in a smaller pre-production collection.  
 
--   When testing is complete, clients in pre-production are promoted to production and automatically upgraded across the Configuration Manager site.  
+- When testing is complete, clients in pre-production are promoted to production and automatically upgraded across the Configuration Manager site.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   Can only be used to upgrade the client software and cannot be used to install a new client.  
+- Can only be used to upgrade the client software and cannot be used to install a new client.  
 
- [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+  [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  

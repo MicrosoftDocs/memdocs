@@ -88,30 +88,30 @@ If client assignment fails, the client software remains installed, but will be u
 
 Configuration Manager also checks that you have assigned the Configuration Manager (current branch) client to a site that supports it. The following scenarios might occur during migration from previous versions of Configuration Manager.  
 
--   Scenario: You have used automatic site assignment and your boundaries overlap with those defined in a previous version of Configuration Manager.  
+- Scenario: You have used automatic site assignment and your boundaries overlap with those defined in a previous version of Configuration Manager.  
 
-     In this case, the client automatically tries to find a Configuration Manager (current branch) site.  
+   In this case, the client automatically tries to find a Configuration Manager (current branch) site.  
 
-     The client first checks Active Directory Domain Services and if it finds a Configuration Manager (current branch) site published, site assignment succeeds. If this fails (for example, the Configuration Manager site is not published or the computer is a workgroup client), the client then checks for site information from its assigned management point.  
+   The client first checks Active Directory Domain Services and if it finds a Configuration Manager (current branch) site published, site assignment succeeds. If this fails (for example, the Configuration Manager site is not published or the computer is a workgroup client), the client then checks for site information from its assigned management point.  
 
-    > [!NOTE]  
-    >  You can assign a management point to the client during client installation by using the Client.msi property **SMSMP=&lt;server_name>**.  
+  > [!NOTE]  
+  >  You can assign a management point to the client during client installation by using the Client.msi property **SMSMP=&lt;server_name>**.  
 
-     If both these methods fail, site assignment fails and you must manually assign the client.  
+   If both these methods fail, site assignment fails and you must manually assign the client.  
 
--   Scenario: You have assigned the Configuration Manager (current branch) client by using a specific site code rather than automatic site assignment, and mistakenly specified a site code for a version of Configuration Manager earlier than System Center 2012 R2 Configuration Manager.  
+- Scenario: You have assigned the Configuration Manager (current branch) client by using a specific site code rather than automatic site assignment, and mistakenly specified a site code for a version of Configuration Manager earlier than System Center 2012 R2 Configuration Manager.  
 
-     In this case, site assignment fails and you must manually reassign the client to a Configuration Manager (current branch) site.  
+   In this case, site assignment fails and you must manually reassign the client to a Configuration Manager (current branch) site.  
 
- The site compatibility check requires one of the following conditions:  
+  The site compatibility check requires one of the following conditions:  
 
--   The client can access site information published to Active Directory Domain Services.  
+- The client can access site information published to Active Directory Domain Services.  
 
--   The client can communicate with a management point in the site.  
+- The client can communicate with a management point in the site.  
 
- If the site compatibility check fails to finish successfully, the site assignment fails, and the client remains unmanaged until the site compatibility check runs again and succeeds.  
+  If the site compatibility check fails to finish successfully, the site assignment fails, and the client remains unmanaged until the site compatibility check runs again and succeeds.  
 
- The exception to performing the site compatibility check occurs when a client is configured for an Internet-based management point. In this case, no site compatibility check is made. If you are assigning clients to a site that contains Internet-based site systems, and you specify an Internet-based management point, ensure that you are assigning the client to the correct site. If you mistakenly assign the client to a Configuration Manager 2007 site,  a System Center 2012 Configuration Manager site, or to a Configuration Manager site that does not have Internet-based site system roles, the client will be unmanaged.  
+  The exception to performing the site compatibility check occurs when a client is configured for an Internet-based management point. In this case, no site compatibility check is made. If you are assigning clients to a site that contains Internet-based site systems, and you specify an Internet-based management point, ensure that you are assigning the client to the correct site. If you mistakenly assign the client to a Configuration Manager 2007 site,  a System Center 2012 Configuration Manager site, or to a Configuration Manager site that does not have Internet-based site system roles, the client will be unmanaged.  
 
 ##  Locating Management Points  
  After a client is successfully assigned to a site, it locates a management point in the site.  

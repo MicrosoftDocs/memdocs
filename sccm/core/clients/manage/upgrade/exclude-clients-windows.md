@@ -37,9 +37,9 @@ Beginning in version 1610, you can exclude a collection of clients from automati
 ## How to upgrade a client that is in an excluded collection
 
 So long as a collection is configured to be excluded, members of that collection can only have their client software upgraded by one of two methods, which override the exclusion:
- - **Client Push Installation** – You can use client push installation to upgrade a client that is in an excluded collection. This is allowed as it is considered to be the intent of the administrator and enables you to upgrade clients without removing the entire collection from exclusion.       
+- **Client Push Installation** – You can use client push installation to upgrade a client that is in an excluded collection. This is allowed as it is considered to be the intent of the administrator and enables you to upgrade clients without removing the entire collection from exclusion.       
 
- - **Manual client installation** – You can manually upgrade clients that are in an excluded collection when you use the following command line switch with ccmsetup:  ***/ignoreskipupgrade***
+- **Manual client installation** – You can manually upgrade clients that are in an excluded collection when you use the following command line switch with ccmsetup:  ***/ignoreskipupgrade***
 
   If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 

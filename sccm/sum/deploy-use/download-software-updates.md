@@ -14,7 +14,10 @@ ms.author: aaroncz
 
 
 
-# Download software updates  *Applies to: System Center Configuration Manager (Current Branch)*
+# Download software updates  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 There are several methods available to you for downloading software updates in Configuration Manager. When you create an automatic deployment rule (ADR) or manually deploy software updates, the software updates are downloaded to the content library on the site server. Then, the software updates are copied to the content library on the distribution points that are associated with the configured deployment package. If you want to download the software updates before you deploy them, you can use the Download Updates Wizard. Doing this will enable you to verify that the software updates are available on distribution points before you deploy the software updates to client computers.  
 
 > [!NOTE]  
@@ -23,7 +26,8 @@ There are several methods available to you for downloading software updates in C
 Use the following procedure to download software updates by using the Download Software Updates Wizard.  
 
 #### To download software updates  
-[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
+[!INCLUDE [downloadupdates](../includes/downloadupdates.md)]
+
 <!---
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 

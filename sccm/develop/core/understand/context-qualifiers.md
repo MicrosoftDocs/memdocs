@@ -39,19 +39,19 @@ Context objects are used, in System Center Configuration Manager, to provide add
 ## ContextHandle  
  The `ContextHandle` context qualifier is a string value that identifies where the SMS Provider has stored your cached context qualifiers. The managed SMS Provider manages data transfer. When using VBScript, You can use the following steps to reduce the amount of data that is passed over the network.  
 
-1.  Create [SWBemNamedValue](https://msdn.microsoft.com/library/aa393731.aspx) value set.
+1. Create [SWBemNamedValue](https://msdn.microsoft.com/library/aa393731.aspx) value set.
 
-2.  Add your qualifiers to the context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  
+2. Add your qualifiers to the context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  
 
-3.  Call the [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx) method to cache your qualifiers on the server. The SMS Provider caches the context object that you pass as a parameter of [ExecMethod](https://msdn.microsoft.com/library/aa392103.aspx) when you call [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx).  
+3. Call the [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx) method to cache your qualifiers on the server. The SMS Provider caches the context object that you pass as a parameter of [ExecMethod](https://msdn.microsoft.com/library/aa392103.aspx) when you call [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx).  
 
-4.  Remove all the qualifiers from your context object.  
+4. Remove all the qualifiers from your context object.  
 
-5.  Add the `ContextHandle` qualifier and value to your context object.  
+5. Add the `ContextHandle` qualifier and value to your context object.  
 
-6.  Pass the context object on all calls to [IWbemServices](https://msdn.microsoft.com/library/aa392093.aspx).  
+6. Pass the context object on all calls to [IWbemServices](https://msdn.microsoft.com/library/aa392093.aspx).  
 
- You must call the [ClearContextHandle](https://msdn.microsoft.com/library/hh458295.aspx) method to remove your cached qualifiers before you exit your application. You can create as many `ContextHandle` values as you want, with each providing varying information for your application.  
+   You must call the [ClearContextHandle](https://msdn.microsoft.com/library/hh458295.aspx) method to remove your cached qualifiers before you exit your application. You can create as many `ContextHandle` values as you want, with each providing varying information for your application.  
 
 > [!NOTE]
 >  After you cache your context qualifiers, you can override your cached values by adding the same context qualifiers, with different values, to your context object.  

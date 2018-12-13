@@ -23,11 +23,11 @@ This method of deployment can reduce network traffic because the boot image and 
 
  You can use prestaged media in the following operating system deployment scenarios:  
 
--   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md)  
+- [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md)  
 
- Complete the steps in one of the operating system deployment scenarios and then use the following sections to prepare for and create the prestaged media.  
+  Complete the steps in one of the operating system deployment scenarios and then use the following sections to prepare for and create the prestaged media.  
 
 ## Configure deployment settings  
  When you use prestaged media to start the operating system deployment process, you must configure the deployment to make the operating system available to media. You can configure this on the **Deployment Settings** page of the Deploy Software Wizard or the **Deployment Settings** tab in the properties for the deployment.  For the **Make available to the following** setting, configure one of the following:  

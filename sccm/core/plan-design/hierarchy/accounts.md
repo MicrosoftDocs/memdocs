@@ -218,14 +218,14 @@ By default, this group has **Full control** to the following folder: `C:\Program
 ### Active Directory group discovery account  
 
  The site uses the **Active Directory group discovery account** to discover the following objects from the locations in Active Directory Domain Services that you specify:
- - Local, global, and universal security groups
- - The membership within these groups
- - The membership within distribution groups
-    - Distribution groups aren't discovered as group resources
+- Local, global, and universal security groups
+- The membership within these groups
+- The membership within distribution groups
+   - Distribution groups aren't discovered as group resources
 
- This account can be a computer account of the site server that runs discovery, or a Windows user account. It must have **Read** access permission to the Active Directory locations that you specify for discovery.  
+  This account can be a computer account of the site server that runs discovery, or a Windows user account. It must have **Read** access permission to the Active Directory locations that you specify for discovery.  
 
- For more information, see [Active Directory group discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
+  For more information, see [Active Directory group discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
 
 
 ### Active Directory system discovery account  

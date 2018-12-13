@@ -20,23 +20,23 @@ ms.author: aaroncz
 
 ## To synchronize Endpoint Protection definition updates in Configuration Manager software updates
 
-1.  In the Configuration Manager console, click **Administration**.
+1. In the Configuration Manager console, click **Administration**.
 
-2.  In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
+2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
 
-3.  Select the site that contains your software update point. In the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**.
+3. Select the site that contains your software update point. In the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**.
 
-4.  On the **Classifications** tab of the **Software Update Point Component Properties** dialog box, select the **Definition Updates** check box.
+4. On the **Classifications** tab of the **Software Update Point Component Properties** dialog box, select the **Definition Updates** check box.
 
-5.  Specify the **Products** updated with WSUS:
+5. Specify the **Products** updated with WSUS:
 
-    -   For Windows 8.1 and earlier, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Forefront Endpoint Protection 2010** check box.
+   -   For Windows 8.1 and earlier, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Forefront Endpoint Protection 2010** check box.
 
-    -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** check boxes.
+   -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** check boxes.
 
-6.  Click **OK** to close the **Software Update Point Component Properties** dialog box.
+6. Click **OK** to close the **Software Update Point Component Properties** dialog box.
 
- Use the following procedure to configure Endpoint Protection updates when your WSUS server is not integrated into your Configuration Manager environment.
+   Use the following procedure to configure Endpoint Protection updates when your WSUS server is not integrated into your Configuration Manager environment.
 
 ## To synchronize Endpoint Protection definition updates in standalone WSUS
 
@@ -55,13 +55,13 @@ ms.author: aaroncz
 
 ### To approve definitions and updates in WSUS
 
-1.  In the WSUS administration console, click **Updates**, and then click **All Updates** or the classification of updates that you want to approve.
+1. In the WSUS administration console, click **Updates**, and then click **All Updates** or the classification of updates that you want to approve.
 
-2.  In the list of updates, right-click the update or updates you want to approve for installation, and then click **Approve**.
+2. In the list of updates, right-click the update or updates you want to approve for installation, and then click **Approve**.
 
-3.  In the **Approve Updates** dialog box, select the computer group for which you want to approve the updates, and then click **Approved for Install**.
+3. In the **Approve Updates** dialog box, select the computer group for which you want to approve the updates, and then click **Approved for Install**.
 
- In addition to manual approval, you can also set an automatic approval rule for definition updates and Endpoint Protection updates. This will configure WSUS to automatically approve Endpoint Protection definition updates downloaded by WSUS.
+   In addition to manual approval, you can also set an automatic approval rule for definition updates and Endpoint Protection updates. This will configure WSUS to automatically approve Endpoint Protection definition updates downloaded by WSUS.
 
 ### To configure an automatic approval rule
 
@@ -87,9 +87,9 @@ ms.author: aaroncz
 
 > [!NOTE]
 >  To maximize performance on your WSUS server and client computers, decline old definition updates. To accomplish this task, you can configure automatic approval for revisions and automatic declining of expired updates. For more information, see [Microsoft Knowledge Base article 938947](http://go.microsoft.com/fwlink/p/?LinkId=204078).
-
+> 
 > [!div class="button"]
-[Next step >](endpoint-antimalware-policies.md)
-
+> [Next step >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Back >](endpoint-configure-alerts.md)
+> [Back >](endpoint-configure-alerts.md)

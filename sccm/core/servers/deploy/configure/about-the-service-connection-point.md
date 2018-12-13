@@ -17,27 +17,27 @@ manager: dougeby
 
 The System Center Configuration Manager service connection point is a site system role that serves several important functions for the hierarchy. Before you set up the service connection point, understand and plan for its range of uses.  Planning for usage might affect how you set up this site system role:  
 
--   **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector that previous versions of Configuration Manager used and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md).  
+- **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector that previous versions of Configuration Manager used and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md).  
 
--   **Manage mobile devices with on-premises MDM** - This role provides support for on-premises devices that you manage and that do not connect to the internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+- **Manage mobile devices with on-premises MDM** - This role provides support for on-premises devices that you manage and that do not connect to the internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
--   **Upload usage data from your Configuration Manager infrastructure** - You can control the level or amount of detail that you upload. Uploaded data helps:  
+- **Upload usage data from your Configuration Manager infrastructure** - You can control the level or amount of detail that you upload. Uploaded data helps:  
 
-    -   Proactively identify and troubleshoot problems  
+  -   Proactively identify and troubleshoot problems  
 
-    -   Improve our products and service  
+  -   Improve our products and service  
 
-    -   Identify updates for Configuration Manager that apply to the version of Configuration Manager that you use  
+  -   Identify updates for Configuration Manager that apply to the version of Configuration Manager that you use  
 
   For information about data that each level collects and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Then follow the link for the version of Configuration Manager that you use.  
 
   For more information, see [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
--   **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available based on usage data you upload.  
+- **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available based on usage data you upload.  
 
 - **Each hierarchy supports a single instance of this role:**  
 
- -   The site system role can only be installed at the top-tier site of your hierarchy, which is a central administration site or stand-alone primary site.  
+  -   The site system role can only be installed at the top-tier site of your hierarchy, which is a central administration site or stand-alone primary site.  
 
   -   If you expand a stand-alone primary site to a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.  
 
@@ -103,9 +103,9 @@ To enable operation, the computer that hosts the service connection point and an
 
 **Microsoft Intune**  
 
--   *manage.microsoft.com  
--   https://bspmts.mp.microsoft.com/V
--   https://login.microsoftonline.com/{TenantID}
+- *manage.microsoft.com  
+- https://bspmts.mp.microsoft.com/V
+- https://login.microsoftonline.com/{TenantID}
 
 
 **Windows 10 servicing**  

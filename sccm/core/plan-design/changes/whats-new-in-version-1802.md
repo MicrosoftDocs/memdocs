@@ -155,7 +155,7 @@ Starting in this release, Silverlight is no longer installed on client devices a
  
 ### Co-management dashboard in System Center Configuration Manager
 <!--1356648-->
-Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](\sccm\core\clients\manage\client-management-dashboard) article. 
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](/sccm/core/clients/manage/client-management-dashboard) article. 
 
 
 ## Compliance settings

@@ -46,12 +46,12 @@ There following operating system deployment scenarios are available in System Ce
 ## Task sequence deployments  
  The task sequence that you create can deploy the operating system image on a Configuration Manager client computer in one of the following ways:  
 
--   Download the image and its content first to the Configuration Manager client cache from a distribution point and then install it.  
+- Download the image and its content first to the Configuration Manager client cache from a distribution point and then install it.  
 
--   Install the image and its content immediately from the distribution point.  
+- Install the image and its content immediately from the distribution point.  
 
--   Install the image and its content as it is required from the distribution point  
+- Install the image and its content as it is required from the distribution point  
 
- By default, when you create the deployment for the task sequence, the image is downloaded first to the Configuration Manager client cache and then installed. If you select to download the image to the Configuration Manager client cache before you run the image, and the task sequence contains a step to repartition the hard drive, the repartition step fails because partitioning the hard drive erases the contents of the Configuration Manager client cache. If the task sequence must repartition the hard drive, you must run the image installation from the distribution point by using the **Run program from distribution point**  option when you deploy the task sequence.  
+  By default, when you create the deployment for the task sequence, the image is downloaded first to the Configuration Manager client cache and then installed. If you select to download the image to the Configuration Manager client cache before you run the image, and the task sequence contains a step to repartition the hard drive, the repartition step fails because partitioning the hard drive erases the contents of the Configuration Manager client cache. If the task sequence must repartition the hard drive, you must run the image installation from the distribution point by using the **Run program from distribution point**  option when you deploy the task sequence.  
 
- For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+  For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  

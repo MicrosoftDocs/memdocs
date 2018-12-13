@@ -106,7 +106,7 @@ You can get a list of all collections that aren’t importable so you can add th
 #### Create the collection mapping file
 The collection mapping file is a comma-separated values (CSV) file where the first column is the Configuration Manager collection name and the second column is the Azure AD group name to use for that collection. To specify more than one Azure AD group for a single Configuration Manager collection, create multiple rows in the CSV file with that collection name. The following example is a CSV file that contains two collections. The first collection is mapped to a single Azure AD group and the second collection is mapped to two Azure AD groups.
 
-![Example of collection mapping csv file](..\media\migrate-collectionmapping.png)
+![Example of collection mapping csv file](../media/migrate-collectionmapping.png)
 
 #### Start the Data Importer tool using collection mapping
 To use a collection mapping file, you must start the Data Importer tool using the *-CollectionMappingFile* command-line parameter and full path to the collection mapping .csv file you create. For example:
@@ -136,26 +136,26 @@ In phase 1, you select the objects to discover and have the tool collect informa
 
 ### Phase 2: Resolve issues and select the objects to import  
 In phase 2, you review the objects found by the tool, resolve issues that prevent the object from being imported to Intune, and select the objects to import. If you fix issues, return to the **Discover environment** page of the wizard to re-discover the objects. 
-5.	Click **Next** to review the collected objects. An item selection page is available for each collected object type. 
- <!--   > [!Tip]     
-    > On each item selection page, you can create a filter to help you find the objects that you want to import. However, take note of the following:
-    > - When you are on an item selection page and the view is filtered, the Select all checkboxes only apply to the displayed items. Any hidden objects because of a filter are not included when using the checkboxes.
-    > - Objects are always grouped under their parent item even when you sort or filter the objects.
--->
-6.	On each item selection page, sort the objects by the Importable column and review the objects that are not importable. The information in the Notes column provides details about why the tool cannot import the object. 
-7.	Now you must decide whether you want to fix any of the issues for non-importable objects. If you fix one or more issues, click Previous until you get to the Select data from Configuration Manager page and collect the data again to see if you resolved the issue. You can continue to fix issues until you are satisfied with the objects that are importable. 
-8.	On each item selection page, select the objects that you want to import. The following columns are listed:
-    - **Name**: Name of the Configuration Manager object. 
-    - **Importable**: Specifies whether an object can be imported. You can only choose objects that have Yes in the Importable column. 
-    - **Platform**: Specifies the platform supported by the object.
-    - **Already imported**: Specifies whether the object has already been imported by using the tool on this computer. 
-    - **Is superseded** (for apps): Specifies whether the app is superseded by another app. You must check the **Show superseded apps** check box at the top of the page for superseded apps to display.
-    - **Notes**: Provides information about why an object can’t be imported. The **Notes** column also displays information about settings that were ignored (for some object types), but the object is still importable without those settings.
-    - **Configuration baselines** (for configuration items): Specifies the configuration baselines that are associated with a configuration item.
-    - **Required certificate** (for profiles and policies): Specifies whether a certificate is associated with the object. When a certificate is associated with the object, you must import the certificate too.
-9.	After you choose the objects to import, they are listed on the Summary page. You have the following actions available: 
-    - **Export details**: Creates a .csv file that contains the information displayed on the screen. It also shows objects that are not importable and the reason why it can't be imported. You can keep this file for your records. 
-    - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import. 
+5. Click **Next** to review the collected objects. An item selection page is available for each collected object type. 
+   <!--   > [!Tip]     
+   > On each item selection page, you can create a filter to help you find the objects that you want to import. However, take note of the following:
+   > - When you are on an item selection page and the view is filtered, the Select all checkboxes only apply to the displayed items. Any hidden objects because of a filter are not included when using the checkboxes.
+   > - Objects are always grouped under their parent item even when you sort or filter the objects.
+   -->
+6. On each item selection page, sort the objects by the Importable column and review the objects that are not importable. The information in the Notes column provides details about why the tool cannot import the object. 
+7. Now you must decide whether you want to fix any of the issues for non-importable objects. If you fix one or more issues, click Previous until you get to the Select data from Configuration Manager page and collect the data again to see if you resolved the issue. You can continue to fix issues until you are satisfied with the objects that are importable. 
+8. On each item selection page, select the objects that you want to import. The following columns are listed:
+   - **Name**: Name of the Configuration Manager object. 
+   - **Importable**: Specifies whether an object can be imported. You can only choose objects that have Yes in the Importable column. 
+   - **Platform**: Specifies the platform supported by the object.
+   - **Already imported**: Specifies whether the object has already been imported by using the tool on this computer. 
+   - **Is superseded** (for apps): Specifies whether the app is superseded by another app. You must check the **Show superseded apps** check box at the top of the page for superseded apps to display.
+   - **Notes**: Provides information about why an object can’t be imported. The **Notes** column also displays information about settings that were ignored (for some object types), but the object is still importable without those settings.
+   - **Configuration baselines** (for configuration items): Specifies the configuration baselines that are associated with a configuration item.
+   - **Required certificate** (for profiles and policies): Specifies whether a certificate is associated with the object. When a certificate is associated with the object, you must import the certificate too.
+9. After you choose the objects to import, they are listed on the Summary page. You have the following actions available: 
+   - **Export details**: Creates a .csv file that contains the information displayed on the screen. It also shows objects that are not importable and the reason why it can't be imported. You can keep this file for your records. 
+   - **Export error data**: Exports a compressed file that contains information about the data that the tool wasn’t able convert or import. 
 
 ### Phase 3: Import selected objects to Intune
 In phase 3, you will sign into Intune and import the selected objects. 

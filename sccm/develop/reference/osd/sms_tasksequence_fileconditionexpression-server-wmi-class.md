@@ -52,56 +52,56 @@ Class SMS_TaskSequence_FileConditionExpression : SMS_TaskSequence_ConditionExpre
 
  The date and time operator. Possible values are:  
 
--   equals  
+- equals  
 
--   notEquals  
+- notEquals  
 
--   less  
+- less  
 
--   lessEqual  
+- lessEqual  
 
--   greater  
+- greater  
 
--   greaterEqual  
+- greaterEqual  
 
- `Path`  
- Data type: `String`  
+  `Path`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- The path on the target computer for the file that is being verified. The path can contain embedded task sequence and system environment variables, for example, %*windir*%\notepad.exe.  
+  The path on the target computer for the file that is being verified. The path can contain embedded task sequence and system environment variables, for example, %*windir*%\notepad.exe.  
 
- `Version`  
- Data type: `String`  
+  `Version`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Value used to evaluate the target computer for a specific, user-specified version of a file.  
+  Value used to evaluate the target computer for a specific, user-specified version of a file.  
 
- `VersionOperator`  
- Data type: `String`  
+  `VersionOperator`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The version operator. Possible values are:  
+  The version operator. Possible values are:  
 
--   equals  
+- equals  
 
--   notEquals  
+- notEquals  
 
--   less  
+- less  
 
--   lessEqual  
+- lessEqual  
 
--   greater  
+- greater  
 
--   greaterEqual  
+- greaterEqual  
 
 ## Remarks  
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  

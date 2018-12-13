@@ -51,38 +51,38 @@ The information in this article provides an overview of the types of Windows con
 ### Roles  
  The following Windows roles are required to support specific functionality, like software updates and operating system deployments, while IIS is required by the most common site system roles.  
 
- -   **Network Device Enrollment Service** (under Active Directory Certificate Services):  This Windows role is a prerequisite to use Certificate Profiles in Configuration Manager.  
+- **Network Device Enrollment Service** (under Active Directory Certificate Services):  This Windows role is a prerequisite to use Certificate Profiles in Configuration Manager.  
 
- -   **Web server (IIS)**: Including:  
-    -   Common HTTP Features >  
-        -   HTTP Redirection  
-    -   Application Development >  
-        -   .NET Extensibility  
-        -   ASP.NET  
-        -   ISAPI Extensions  
-        -   ISAPI Filters  
-    -   Management Tools >  
-        -   IIS 6 Management Compatibility  
-        -   IIS 6 Metabase Compatibility  
-        -   IIS 6 Windows Management Instrumentation (WMI) Compatibility  
-    -   Security >  
-        -   Request Filtering  
-        -   Windows Authentication  
+- **Web server (IIS)**: Including:  
+  - Common HTTP Features >  
+    -   HTTP Redirection  
+  - Application Development >  
+    -   .NET Extensibility  
+    -   ASP.NET  
+    -   ISAPI Extensions  
+    -   ISAPI Filters  
+  - Management Tools >  
+    -   IIS 6 Management Compatibility  
+    -   IIS 6 Metabase Compatibility  
+    -   IIS 6 Windows Management Instrumentation (WMI) Compatibility  
+  - Security >  
+    -   Request Filtering  
+    -   Windows Authentication  
 
- The following site system roles use one or more of the listed IIS configurations:  
-    -   Application Catalog web service point  
-    -   Application Catalog website point  
-    -   Distribution point  
-    -   Enrollment point  
-    -   Enrollment proxy point  
-    -   Fallback status point  
-    -   Management point  
-    -   Software update point  
-    -   State migration point     
+  The following site system roles use one or more of the listed IIS configurations:  
+  -   Application Catalog web service point  
+  -   Application Catalog website point  
+  -   Distribution point  
+  -   Enrollment point  
+  -   Enrollment proxy point  
+  -   Fallback status point  
+  -   Management point  
+  -   Software update point  
+  -   State migration point     
 
-    The minimum version of IIS that is required is the version that is supplied with the operating system of the site server.  
+  The minimum version of IIS that is required is the version that is supplied with the operating system of the site server.  
 
-    In addition to these IIS configurations, you might need to set up [IIS Request Filtering for distribution points](#BKMK_IISFiltering).  
+  In addition to these IIS configurations, you might need to set up [IIS Request Filtering for distribution points](#BKMK_IISFiltering).  
 
 -   **Windows Deployment Services**: This role is used with Operating System Deployment.  
 -   **Windows Server Update Services**: This role is required when you will deploy software updates.  
@@ -107,13 +107,13 @@ For example, source files for a software deployment might include a folder named
 
 -   To let the clients download this content, on each applicable distribution point, edit **Request Filtering** in IIS Manager to allow access to the file extensions and folders that are in the packages and applications that you deploy.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Edits to the Request Filter can increase the attack surface of the computer.  
->   
->  -   Edits that you make at the server level apply to all websites on the server.  
-> -   Edits that you make to individual websites apply to only that website.  
->   
->  The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md).  
+> 
+> - Edits that you make at the server level apply to all websites on the server.  
+>   -   Edits that you make to individual websites apply to only that website.  
+> 
+>   The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md).  
 
 ## HTTP verbs
 **Management points:** To ensure that clients can successfully communicate with a management point, on the management point server ensure the following HTTP verbs are allowed:  

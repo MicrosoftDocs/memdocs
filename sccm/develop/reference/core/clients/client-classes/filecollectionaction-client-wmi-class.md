@@ -123,108 +123,108 @@ Class FileCollectionAction : SMS_FileCollectionAgent_Policy
 
  Type of collected file attachments for a report. Possible values are:  
 
--   FILECOLL  
+- FILECOLL  
 
--   IDMIF  
+- IDMIF  
 
- `MaxTotalFileSize`  
- Data type: `UInt32`  
+  `MaxTotalFileSize`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Cumulative maximum size of collected files in a generated report. The Inventory Agent ensures that the overall file attachment size does not exceed this value.  
+  Cumulative maximum size of collected files in a generated report. The Inventory Agent ensures that the overall file attachment size does not exceed this value.  
 
- `PolicyID`  
- Data type: `String`  
+  `PolicyID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Unique ID of the policy.  
+  Unique ID of the policy.  
 
- `PolicyInstanceID`  
- Data type: `String`  
+  `PolicyInstanceID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Unique ID of the policy instance.  
+  Unique ID of the policy instance.  
 
- `PolicyPrecedence`  
- Data type: `UInt32`  
+  `PolicyPrecedence`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Precedence for the policy.  
+  Precedence for the policy.  
 
- `PolicyRuleID`  
- Data type: `String`  
+  `PolicyRuleID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: Key  
+  Qualifiers: Key  
 
- Unique ID of the rule used to create the policy.  
+  Unique ID of the rule used to create the policy.  
 
- `PolicySource`  
- Data type: `String`  
+  `PolicySource`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Source of the policy.  
+  Source of the policy.  
 
- `PolicyVersion`  
- Data type: `String`  
+  `PolicyVersion`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Version of the policy.  
+  Version of the policy.  
 
- `ReportFileDetails`  
- Data type: `Boolean`  
+  `ReportFileDetails`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- `true` to include external file details for each file attachment in the generated report for software file collection. The generated report contains the original file name, path, size, and modified date.  
+  `true` to include external file details for each file attachment in the generated report for software file collection. The generated report contains the original file name, path, size, and modified date.  
 
- `ReportTimeout`  
- Data type: `UInt32`  
+  `ReportTimeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Timeout value used by the client framework for expiring the inventory report (message) sent by the Inventory Agent to the management point. If the inventory report cannot be sent to the management point, the client framework continues to hold on to the message until the report timeout interval. It periodically tries to resend the message.  
+  Timeout value used by the client framework for expiring the inventory report (message) sent by the Inventory Agent to the management point. If the inventory report cannot be sent to the management point, the client framework continues to hold on to the message until the report timeout interval. It periodically tries to resend the message.  
 
- `ScanInterval`  
- Data type: `UInt32`  
+  `ScanInterval`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Delay, in milliseconds, to pass to the file system inventory provider for the file collection scan.  
+  Delay, in milliseconds, to pass to the file system inventory provider for the file collection scan.  
 
- `SkipScan`  
- Data type: `String`  
+  `SkipScan`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- File name used to prevent the scanning of a directory. This value is typically set to Skpswi.dat for software file collection. It is typically not set for IDMIF collection.  
+  File name used to prevent the scanning of a directory. This value is typically set to Skpswi.dat for software file collection. It is typically not set for IDMIF collection.  
 
 ## Remarks  
  This class is similar to the **InventoryAction**, with the main difference being the type of collection files for file collection and WMI instances for inventory.  

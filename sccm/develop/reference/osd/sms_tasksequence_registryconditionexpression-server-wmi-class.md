@@ -59,53 +59,53 @@ Class SMS_TaskSequence_RegistryConditionExpression : SMS_TaskSequence_ConditionE
 
  The condition operator to use in the comparison. Possible values are:  
 
--   exists  
+- exists  
 
--   nonExists  
+- nonExists  
 
--   equals  
+- equals  
 
--   notEquals  
+- notEquals  
 
--   less  
+- less  
 
--   lessEqual  
+- lessEqual  
 
--   greater  
+- greater  
 
--   greaterEqual  
+- greaterEqual  
 
- `Type`  
- Data type: `String`  
+  `Type`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Registry key type. Possible values are:  
+  Registry key type. Possible values are:  
 
--   REG_BINARY  
+- REG_BINARY  
 
--   REG_DWORD  
+- REG_DWORD  
 
--   REG_EXPAND_SZ  
+- REG_EXPAND_SZ  
 
--   REG_MULTI_SZ  
+- REG_MULTI_SZ  
 
--   REG_NONE  
+- REG_NONE  
 
--   REG_QWORD  
+- REG_QWORD  
 
--   REG_SZ  
+- REG_SZ  
 
- `Value`  
- Data type: `String`  
+  `Value`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [AllowedLen("0-250")]  
+  Qualifiers: [AllowedLen("0-250")]  
 
- Value of the registry key. The value length can be between 0 and 250 characters.  
+  Value of the registry key. The value length can be between 0 and 250 characters.  
 
 ## Remarks  
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  

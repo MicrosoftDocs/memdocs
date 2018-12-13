@@ -21,15 +21,15 @@ The following information can help you plan for how to configure permissions for
 ## Default Security Permissions and Considerations  
  The default security permissions that are required for the certificate templates that System Center Configuration Manager will use to request certificates for users and devices are as follows:  
 
--   Read and Enroll for the account that the Network Device Enrollment Service application pool uses  
+- Read and Enroll for the account that the Network Device Enrollment Service application pool uses  
 
--   Read for the account that runs the System Center Configuration Manager console  
+- Read for the account that runs the System Center Configuration Manager console  
 
- For more information about these security permissions, see [Configuring certificate infrastructure](../deploy-use/certificate-infrastructure.md).  
+  For more information about these security permissions, see [Configuring certificate infrastructure](../deploy-use/certificate-infrastructure.md).  
 
- When you use this default configuration, users and devices cannot directly request certificates from the certificate templates and all requests must be initiated by the Network Device Enrollment Service. This is an important restriction, because these certificate templates must be configured with **Supply in the request** for the certificate Subject, which means that there is a risk of impersonation if a rogue user or a compromised device requests a certificate. In the default configuration, the Network Device Enrollment Service must initiate such a request. However, this risk of impersonation remains if the service that runs the Network Device Enrollment Service is compromised. To help avoid this risk, follow all security best practices for the Network Device Enrollment Service and the computer that runs this role service.  
+  When you use this default configuration, users and devices cannot directly request certificates from the certificate templates and all requests must be initiated by the Network Device Enrollment Service. This is an important restriction, because these certificate templates must be configured with **Supply in the request** for the certificate Subject, which means that there is a risk of impersonation if a rogue user or a compromised device requests a certificate. In the default configuration, the Network Device Enrollment Service must initiate such a request. However, this risk of impersonation remains if the service that runs the Network Device Enrollment Service is compromised. To help avoid this risk, follow all security best practices for the Network Device Enrollment Service and the computer that runs this role service.  
 
- If the default security permissions do not fulfill your business requirements, you have another option for configuring the security permissions on the certificate templates: You can add Read and Enroll permissions for users and computers.  
+  If the default security permissions do not fulfill your business requirements, you have another option for configuring the security permissions on the certificate templates: You can add Read and Enroll permissions for users and computers.  
 
 ## Adding Read and Enroll Permissions for Users and Computers  
  Adding Read and Enroll permissions for users and computers might be appropriate if a separate team manages your certification authority (CA) infrastructure team, and that separate team wants System Center Configuration Manager to verify that users have a valid Active Directory Domain Services account before sending them a certificate profile to request a user certificate. For this configuration, you must specify one or more security groups that contain the users, and then grant those groups Read and Enroll permissions on the certificate templates. In this scenario, the CA administrator manages the security control.  

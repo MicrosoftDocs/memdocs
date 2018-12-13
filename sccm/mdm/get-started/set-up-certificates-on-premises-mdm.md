@@ -105,21 +105,21 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
 ##  <a name="bkmk_requestCert"></a> Request the web server certificate for each site system role  
  Devices enrolled for On\-premises Mobile Device Management must trust SSL endpoints hosting the enrollment point, enrollment proxy point, distribution point, and  device management point.  The steps below describe how to request the web server certificate for IIS. You must do this for each server (SSL endpoint) hosting one of the required site system roles for On\-premises Mobile Device Management.  
 
-1.  On the primary site server, open command prompt with administrator permission, type **MMC** and press **Enter**.  
+1. On the primary site server, open command prompt with administrator permission, type **MMC** and press **Enter**.  
 
-2.  In the MMC, click **File** > **Add/Remove Snap-in**.  
+2. In the MMC, click **File** > **Add/Remove Snap-in**.  
 
-3.  In the Certificates snap-in, select **Certificates**, click **Add**, select **Computer account**, click **Next**, click **Finish**, and then click **OK** to exit the Add or Remove Snap-in window.  
+3. In the Certificates snap-in, select **Certificates**, click **Add**, select **Computer account**, click **Next**, click **Finish**, and then click **OK** to exit the Add or Remove Snap-in window.  
 
-4.  Right-click **Personal**, and then click **All Tasks** > **Request New Certificate**.  
+4. Right-click **Personal**, and then click **All Tasks** > **Request New Certificate**.  
 
-5.  In the Certificate Enrollment wizard, click **Next**, select **Active Directory Enrollment Policy** and click **Next**.  
+5. In the Certificate Enrollment wizard, click **Next**, select **Active Directory Enrollment Policy** and click **Next**.  
 
-6.  Select the checkbox next to the web server certificate (**ConfigMgr MDM Web Server**), and then click **Enroll**.  
+6. Select the checkbox next to the web server certificate (**ConfigMgr MDM Web Server**), and then click **Enroll**.  
 
-7.  Once certificate is enrolled, click **Finish**.  
+7. Once certificate is enrolled, click **Finish**.  
 
- Because each server will need a unique web server certificate, you need to repeat this process for every server hosting one of the required site system roles for On\-premises Mobile Device Management.  If one server hosts all the site system roles, you just need to request one web server certificate.  
+   Because each server will need a unique web server certificate, you need to repeat this process for every server hosting one of the required site system roles for On\-premises Mobile Device Management.  If one server hosts all the site system roles, you just need to request one web server certificate.  
 
 ##  <a name="bkmk_bindCert"></a> Bind the certificate to the web server  
  The new certificate now needs to be bound to the web server of each site system server hosting the required site system roles for On\-premises Mobile Device Management. Follow the steps below for each server hosting the enrollment point and enrollment proxy point site system roles. If one server hosts all the site system roles, you only need to follow these steps once. You do not have to do this task for the distribution point and device management point site system roles since they automatically receive the required certificate during enrollment.  

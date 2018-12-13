@@ -38,11 +38,11 @@ For more information about app installation types, see the [introduction to appl
 1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **App Configuration Policies**.
 2. On the **Home** tab, in the **App Configuration Policies** group, choose **Create new Application Configuration Policy**.
 3. In the Create App Configuration Policy Wizard, on the **General** page, set this policy information:
-  - **Name**. Enter a unique name for the policy.
-  - **Description**. (Optional) To make it easier to identify the policy, you can add a description.
-  - **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
+   - **Name**. Enter a unique name for the policy.
+   - **Description**. (Optional) To make it easier to identify the policy, you can add a description.
+   - **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
 4. On the **iOS Policy** page, choose how to set the configuration policy information:
-  - **Specify name and value pairs**. You can use this option for property list files that do not use nesting.
+   - **Specify name and value pairs**. You can use this option for property list files that do not use nesting.
 
       *To specify a name and value pair*
         1. To add a new pair, choose **New**.
@@ -51,29 +51,29 @@ For more information about app installation types, see the [introduction to appl
             - **Name**. Enter the name of the property list key for which you want to specify a value.
             - **Value**. Enter the value that will be applied to the key you entered.
 
-  - **Browse to a property list file**. Use this option if you already have an app configuration XML file, or for more complex files that use nesting.
+   - **Browse to a property list file**. Use this option if you already have an app configuration XML file, or for more complex files that use nesting.
 
-    *To browse to a property list file*
+     *To browse to a property list file*
 
-      1.  In the **App configuration policy** field, enter the property list information in the correct XML format.
+     1. In the **App configuration policy** field, enter the property list information in the correct XML format.
 
-      To find out more about XML property lists, see [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in the iOS Developer Library.
+        To find out more about XML property lists, see [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in the iOS Developer Library.
 
 The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
 Intune supports the following data types in a property list:
 			
-			```
+            ```
 			<integer>
 			<real>
 			<string>
 			<array>
 			<dict>
 			<true /> or <false />
-			```
+            ```
 For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
 Intune also supports the following token types in the property list:
 			
-			```
+            ```
 			{{userprincipalname}} - (Example: John@contoso.com)
 			{{mail}} - (Example: John@contoso.com)
 			{{partialupn}} - (Example: John)
@@ -83,7 +83,7 @@ Intune also supports the following token types in the property list:
 			{{username}} - (Example: John Doe)
 			{{serialnumber}} - (Example: F4KN99ZUG5V2) for iOS devices
 			{{serialnumberlast4digits}} - (Example: G5V2) for iOS devices
-			```
+            ```
 
 The {{ and }} characters are used by token types only and must not be used for other purposes.
 			

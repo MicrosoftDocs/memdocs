@@ -17,17 +17,17 @@ In System Center Configuration Manager, the software distribution process can ta
 
  The level of status detail that you want determines which of the following package summarizer classes to use:  
 
--   [SMS_PackageStatusDetailSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusdetailsummarizer-server-wmi-class.md)  
+- [SMS_PackageStatusDetailSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusdetailsummarizer-server-wmi-class.md)  
 
--   [SMS_PackageStatusRootSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusrootsummarizer-server-wmi-class.md)  
+- [SMS_PackageStatusRootSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusrootsummarizer-server-wmi-class.md)  
 
--   [SMS_PackageStatusDistPointsSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusdistpointssummarizer-server-wmi-class.md)  
+- [SMS_PackageStatusDistPointsSummarizer Server WMI Class](../../../../develop/reference/core/servers/configure/sms_packagestatusdistpointssummarizer-server-wmi-class.md)  
 
- The `SMS_PackageStatusDetailSummarizer` class gives you package status at the site level and the `SMS_PackageStatusRootSummarizer` class gives you package status for all sites. You can only use the `SMS_PackageStatusDistPointsSummarizer` class if your package contains source files.  
+  The `SMS_PackageStatusDetailSummarizer` class gives you package status at the site level and the `SMS_PackageStatusRootSummarizer` class gives you package status for all sites. You can only use the `SMS_PackageStatusDistPointsSummarizer` class if your package contains source files.  
 
- For packages that do not contain source files, an instance in the root or detail class signifies that the distribution portion of the process is complete (the value for `Targeted` property is 0). For packages that do contain source files, when the value in the `Installed` property equals the value in the `Targeted` property, the source files have been successfully distributed.  
+  For packages that do not contain source files, an instance in the root or detail class signifies that the distribution portion of the process is complete (the value for `Targeted` property is 0). For packages that do contain source files, when the value in the `Installed` property equals the value in the `Targeted` property, the source files have been successfully distributed.  
 
- To determine the status of a package, you can either create your own polling mechanism by using a timer that queries the summarizer for a specific package or you can register for a Windows Management Instrumentation (WMI) temporary intrinsic event that polls for create instance and modify instance events on the summarizer class as the following example shows. You can use your own timer mechanism, or you can create a WMI timer event.  
+  To determine the status of a package, you can either create your own polling mechanism by using a timer that queries the summarizer for a specific package or you can register for a Windows Management Instrumentation (WMI) temporary intrinsic event that polls for create instance and modify instance events on the summarizer class as the following example shows. You can use your own timer mechanism, or you can create a WMI timer event.  
 
 > [!NOTE]
 >  Using WMI to poll for events is expensive and should be used with consideration.  

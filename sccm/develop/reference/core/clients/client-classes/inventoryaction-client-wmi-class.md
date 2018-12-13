@@ -58,20 +58,20 @@ Class InventoryAction : SMS_InventoryAgent_Policy
 
  Text field that describes the inventory action. Possible values are:  
 
--   Hardware  
+- Hardware  
 
--   Software  
+- Software  
 
--   Discovery  
+- Discovery  
 
- `InventoryActionID`  
- Data type: `String`  
+  `InventoryActionID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [realkey]  
+  Qualifiers: [realkey]  
 
- Unique ID for the inventory action. Possible values are:  
+  Unique ID for the inventory action. Possible values are:  
 
 |||  
 |-|-|  

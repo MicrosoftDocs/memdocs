@@ -55,19 +55,19 @@ You can use System Center Configuration Manager to collect hardware and software
 
  IDMIF files are identical to NOIDMIF files, with these exceptions:  
 
--   IDMIF files must have a delta header that provides architecture, and a unique ID. NOIDMIF files are automatically given a similar header by the system during processing on the client.  
+- IDMIF files must have a delta header that provides architecture, and a unique ID. NOIDMIF files are automatically given a similar header by the system during processing on the client.  
 
--   IDMIF files must include a top-level group with the same class as the architecture being added or changed, and that group must include at least one property.  
+- IDMIF files must include a top-level group with the same class as the architecture being added or changed, and that group must include at least one property.  
 
--   Like NOIDMIF files, IDMIF files have key properties that must be unique. Any class that has more than one instance must have at least one key property defined, or subsequent instances overwrite previous instances.  
+- Like NOIDMIF files, IDMIF files have key properties that must be unique. Any class that has more than one instance must have at least one key property defined, or subsequent instances overwrite previous instances.  
 
--   Removing IDMIF files from clients does not cause the associated data in the site database to be deleted during subsequent hardware inventories.  
+- Removing IDMIF files from clients does not cause the associated data in the site database to be deleted during subsequent hardware inventories.  
 
--   IDMIF file information is not added to client inventory reports and sent as MIF files across the network to be processed at the site server.  
+- IDMIF file information is not added to client inventory reports and sent as MIF files across the network to be processed at the site server.  
 
- For IDMIF file information to be inventoried by default, the IDMIF file must be stored in the following directory on Configuration Manager clients:  
+  For IDMIF file information to be inventoried by default, the IDMIF file must be stored in the following directory on Configuration Manager clients:  
 
- %*Windir*%\System32\CCM\Inventory\Idmifs  
+  %*Windir*%\System32\CCM\Inventory\Idmifs  
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   

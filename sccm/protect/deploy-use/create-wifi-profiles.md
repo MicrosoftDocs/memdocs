@@ -39,80 +39,80 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 
 ## Create a Wi-Fi Profile  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Compliance Settings** >  **Company Resource Access** > **Wi-Fi Profiles**.  
+1. In the Configuration Manager console, choose **Assets and Compliance** > **Compliance Settings** >  **Company Resource Access** > **Wi-Fi Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Create Wi-Fi Profile**.  
+2. On the **Home** tab, in the **Create** group, choose **Create Wi-Fi Profile**.  
 
-1.  On the **General** page, enter a unique name and a description for the Wi-Fi profile.  If you want to use the settings from another Wi-Fi profile, select **Import an existing Wi-Fi profile item from a file**.  
+3. On the **General** page, enter a unique name and a description for the Wi-Fi profile.  If you want to use the settings from another Wi-Fi profile, select **Import an existing Wi-Fi profile item from a file**.  
 
-    > [!IMPORTANT]  
-    >  Ensure that the Wi-Fi profile you import contains valid XML for a Wi-Fi profile. Configuration Manager does not validate the profile when you import the file.  
+   > [!IMPORTANT]  
+   >  Ensure that the Wi-Fi profile you import contains valid XML for a Wi-Fi profile. Configuration Manager does not validate the profile when you import the file.  
 
-3.  In  **Noncompliance severity for reports**, specify the severity level that is reported if the Wi-Fi profile is found to be noncompliant on client devices (for example, if the installation of the profile fails). The available severity levels are as follows:  
+4. In  **Noncompliance severity for reports**, specify the severity level that is reported if the Wi-Fi profile is found to be noncompliant on client devices (for example, if the installation of the profile fails). The available severity levels are as follows:  
 
-    -   **None**: Computers that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+   -   **None**: Computers that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
 
-    -   **Information**: Computers that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+   -   **Information**: Computers that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
 
-    -   **Warning**: Computers that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+   -   **Warning**: Computers that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
 
-    -   **Critical**: Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+   -   **Critical**: Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
 
-    -   **Critical with event**: Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.  
+   -   **Critical with event**: Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.  
 
-1.  On the **Wi-Fi Profile** page provide the name that devices will display as the network name.  
+5. On the **Wi-Fi Profile** page provide the name that devices will display as the network name.  
 
-    > [!IMPORTANT]  
-    >  Configuration Manager does not support using the apostrophe (**â€˜**) or comma (**,**) characters in the network name.  
+   > [!IMPORTANT]  
+   >  Configuration Manager does not support using the apostrophe (**â€˜**) or comma (**,**) characters in the network name.  
 
-2.  Specify the case-sensitive **SSID**
-3.  Choose the other appropriate connectivity options, including.   **Connect when the network is not broadcasting its name (SSID)**, if there is a possibility that the SSID is hidden  
+6. Specify the case-sensitive **SSID**
+7. Choose the other appropriate connectivity options, including.   **Connect when the network is not broadcasting its name (SSID)**, if there is a possibility that the SSID is hidden  
 
-4.  On the **Security Configuration** page, select the security protocol that the wireless network uses, or select **No authentication (Open)** if the network is unsecured.
-	> [!IMPORTANT]  
-	>  If you're creating a Wi-Fi profile for On\-premises Mobile Device Management, the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
-	>   
-	>  Security types: **WPA2 Enterprise** or **WPA2 Personal**  
-	> Encryption types: **AES** or **TKIP**  
-	> EAP types: **Smart Card or other certificate** or **PEAP**  
+8. On the **Security Configuration** page, select the security protocol that the wireless network uses, or select **No authentication (Open)** if the network is unsecured.
+   > [!IMPORTANT]
+   >  If you're creating a Wi-Fi profile for On\-premises Mobile Device Management, the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
+   > 
+   >  Security types: **WPA2 Enterprise** or **WPA2 Personal**  
+   > Encryption types: **AES** or **TKIP**  
+   > EAP types: **Smart Card or other certificate** or **PEAP**  
+   > 
+   > For Android devices, the security types **WPA Personal**, **WPA2 Personal** and **WEP** are not supported.  
 
-    > For Android devices, the security types **WPA Personal**, **WPA2 Personal** and **WEP** are not supported.  
+9. Select the encryption method that the wireless network uses.  
 
-2.  Select the encryption method that the wireless network uses.  
-
-3.  Select the EAP type that is used to authenticate with the wireless network.  
+10. Select the EAP type that is used to authenticate with the wireless network.  
 
      For Windows Phone devices only: the EAP types **LEAP** and **EAP-FAST** are not supported.  
 
-4.  Click **Configure** to specify properties for the selected EAP type. This option might not be available for some selected EAP types.  
+11. Click **Configure** to specify properties for the selected EAP type. This option might not be available for some selected EAP types.  
 
     > [!IMPORTANT]  
     >  When you click **Configure**, the dialog box that opens is a Windows dialog box. Because of this, you must ensure that the operating system of the computer that runs the Configuration Manager console supports configuring the selected EAP type.  
     >   
     >  For iOS devices, if you chose a non-EAP method for authentication, regardless of the method you choose, MS-CHAP v2 will be used for the connection.  
 
-5.  If you want to store user credentials so users do not have to enter credentials at each logon, select **Remember the user credentials at each logon**.  
+12. If you want to store user credentials so users do not have to enter credentials at each logon, select **Remember the user credentials at each logon**.  
 
-6. **For iOS devices only:**  
- Configure information for any certificates that are required for the Wi-Fi connection. You must configure the client certificate and either the trusted server certificate name or the root certificate, as follows:  
+13. **For iOS devices only:**  
+    Configure information for any certificates that are required for the Wi-Fi connection. You must configure the client certificate and either the trusted server certificate name or the root certificate, as follows:  
 
-	-   **Trusted server certificate names**: If the server that the device connects to uses a server authentication certificate to identify the server and help secure the communication channel, enter the name or names in that certificateâ€™s subject name or subject alternative name. The name or names are typically the fully qualified domain name of the server. For example, if the server certificate has a common name of srv1.contoso.com in the certificate subject, enter **srv1.contoso.com**. If the server certificate has multiple names that are specified in the subject alternative name, enter each name, separated by a semicolon.  
+    - **Trusted server certificate names**: If the server that the device connects to uses a server authentication certificate to identify the server and help secure the communication channel, enter the name or names in that certificateâ€™s subject name or subject alternative name. The name or names are typically the fully qualified domain name of the server. For example, if the server certificate has a common name of srv1.contoso.com in the certificate subject, enter **srv1.contoso.com**. If the server certificate has multiple names that are specified in the subject alternative name, enter each name, separated by a semicolon.  
 
-    > [!TIP]  
-    >  If the client certificate that you select for EAP or client authentication for an iOS device will be used to authenticate to a Remote Authentication Dial-In User Service (RADIUS) server, such as a server that is running Network Policy Server, you must set the Subject Alternative Name to the User Principal Name.  
+      > [!TIP]  
+      >  If the client certificate that you select for EAP or client authentication for an iOS device will be used to authenticate to a Remote Authentication Dial-In User Service (RADIUS) server, such as a server that is running Network Policy Server, you must set the Subject Alternative Name to the User Principal Name.  
 
-	-   **Select root certificates for server validation**: If the server that the device connects to uses a server authentication certificate that the device does not trust, select the certificate profile that contains the root certificate for the server certificate, to create a certificate chain of trust on the device.  
+    - **Select root certificates for server validation**: If the server that the device connects to uses a server authentication certificate that the device does not trust, select the certificate profile that contains the root certificate for the server certificate, to create a certificate chain of trust on the device.  
 
-	-   **Select a client certificate for client authentication**: If the server or network device requires a client certificate to authenticate the connecting device, select the certificate profile that contains the client authentication certificate.  
+    - **Select a client certificate for client authentication**: If the server or network device requires a client certificate to authenticate the connecting device, select the certificate profile that contains the client authentication certificate.  
 
-	> [!NOTE]  
-	>  Before you can select the root certificate and client certificate, you must first configure and deploy them as a certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+      > [!NOTE]  
+      >  Before you can select the root certificate and client certificate, you must first configure and deploy them as a certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
-7.  On the **Advanced Settings** page, specify advanced settings for the Wi-Fi profile such as the authentication mode, single sign-on options, and Federal Information Processing Standards compliance. For more information about these options, see your Windows documentation. Advanced settings might not be available, or might vary, depending on the options that you selected on the **Security Configuration** page of the wizard.  
+14. On the **Advanced Settings** page, specify advanced settings for the Wi-Fi profile such as the authentication mode, single sign-on options, and Federal Information Processing Standards compliance. For more information about these options, see your Windows documentation. Advanced settings might not be available, or might vary, depending on the options that you selected on the **Security Configuration** page of the wizard.  
 
-1.  On the **Proxy Settings** page, select   **Configure proxy settings for this Wi-Fi profile** if your wireless network uses a proxy server, and then provide the configuration information.  
+15. On the **Proxy Settings** page, select   **Configure proxy settings for this Wi-Fi profile** if your wireless network uses a proxy server, and then provide the configuration information.  
 
-2. On the **Supported Platforms** page, select the operating systems where you want to install the Wi-Fi profile. Alternatively, click **Select all** to install the Wi-Fi profile to all available operating systems.  
+16. On the **Supported Platforms** page, select the operating systems where you want to install the Wi-Fi profile. Alternatively, click **Select all** to install the Wi-Fi profile to all available operating systems.  
 
 ### Next steps
  For information about how to deploy the Wi-Fi profile, see [How to deploy Wi-Fi profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

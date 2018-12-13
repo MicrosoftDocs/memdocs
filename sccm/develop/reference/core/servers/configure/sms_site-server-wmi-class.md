@@ -238,11 +238,11 @@ Class SMS_Site : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- `SMS_Site` can be used to get the site server name from a known site code. For an example, see [How to Create a PXE Service Point Role](../../../../../develop/osd/how-to-enable-a-pxe-service-point-role.md).  
+  `SMS_Site` can be used to get the site server name from a known site code. For an example, see [How to Create a PXE Service Point Role](../../../../../develop/osd/how-to-enable-a-pxe-service-point-role.md).  
 
 ## Requirements  
 

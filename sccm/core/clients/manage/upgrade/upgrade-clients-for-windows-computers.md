@@ -17,17 +17,17 @@ manager: dougeby
 
 You can upgrade the client on Windows computers using client installation methods or the automatic client upgrade features in Configuration Manager. The following client installation methods are valid ways to upgrade client software on Windows computers:  
 
--   Group policy installation  
+- Group policy installation  
 
--   Logon script installation  
+- Logon script installation  
 
--   Manual installation  
+- Manual installation  
 
--   Upgrade installation  
+- Upgrade installation  
 
- If you are interested in upgrading the client using a client installation methods, learn more about using those methods in [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
+  If you are interested in upgrading the client using a client installation methods, learn more about using those methods in [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
 
- Beginning in version 1610, you can exclude clients from being upgraded by specifying an exclusion group. For more information, see [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md).  
+  Beginning in version 1610, you can exclude clients from being upgraded by specifying an exclusion group. For more information, see [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md).  
 
 
 > [!TIP]  

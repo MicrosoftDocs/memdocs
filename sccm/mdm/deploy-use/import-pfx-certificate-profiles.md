@@ -20,11 +20,11 @@ Here, you learn how to create a certificate profile by importing credentials fro
 
 [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provide general information about creating and configuring certificate profiles. This topic highlights some specific information about certificate profiles related to PFX certificates.
 
--  Configuration Manager a variety of certificate stores appropriate for different devices and operating systems.  These include:
+- Configuration Manager a variety of certificate stores appropriate for different devices and operating systems.  These include:
 
- -   iOS and MacOS/OSX
- -   Android and Android for Work
- -   Windows 10, including Windows 10 mobile.
+  -   iOS and MacOS/OSX
+  -   Android and Android for Work
+  -   Windows 10, including Windows 10 mobile.
 
 To learn more, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 

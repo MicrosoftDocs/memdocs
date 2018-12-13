@@ -100,11 +100,11 @@ Site codes cannot be used more than one time in a Configuration Manager hierarch
 
 ## Limits and restrictions for installed sites
 Before you install a site, it's important to understand the following limitations that apply to sites and site hierarchies:
--   After running Setup, you cannot change the following site properties without uninstalling the site and then reinstalling it by using the new values:  
+- After running Setup, you cannot change the following site properties without uninstalling the site and then reinstalling it by using the new values:  
   -   Program Files installation directory  
   -   Site code  
   -   Site description  
--   When your hierarchy includes a central administration site:  
+- When your hierarchy includes a central administration site:  
   -   Configuration Manager does not support moving a child primary site out of a hierarchy to create a stand-alone primary site or to attach it to a different hierarchy. Instead, uninstall the child primary site, and then reinstall it as a new stand-alone primary site or as a child site of the central administration site of a different hierarchy.  
 
 
@@ -125,7 +125,7 @@ To identify and fix problems before you run Setup to install a site and before y
 **Identify optional ports**
 
 You can identify optional ports for site systems and clients to use. Here's additional information:
- -  By default, site systems and clients use predefined ports to communicate.
- -  During Setup, you can configure alternate ports.
+- By default, site systems and clients use predefined ports to communicate.
+- During Setup, you can configure alternate ports.
 
- For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).
+  For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).

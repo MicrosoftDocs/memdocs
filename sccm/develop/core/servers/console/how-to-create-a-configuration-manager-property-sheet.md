@@ -21,11 +21,11 @@ To create a System Center Configuration Manager console property sheet, in Confi
 
  After you have successfully built the dialog box assembly, you must do the following to integrate it into the Configuration Manager console:  
 
-1.  Define and deploy the form XML that links the selected action to the assembly you create in this topic. For more information, see [How to Create the Form XML for a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md).  
+1. Define and deploy the form XML that links the selected action to the assembly you create in this topic. For more information, see [How to Create the Form XML for a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md).  
 
-2.  Define and deploy the action XML for displaying the context menu that the user selects. For more information, see [How to Create Action XML for  a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md).  
+2. Define and deploy the action XML for displaying the context menu that the user selects. For more information, see [How to Create Action XML for  a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md).  
 
- When you have created the property sheet assembly and XML, right-click a package in the Configuration Manager console tree **Packages** node results pane, and select the menu item **Show my Property Sheet**. A property sheet is displayed. You can enhance the control by accessing the package that was selected in the Configuration Manager console. For more information, see [How to Use Objects Passed to a Configuration Manager Forms](../../../../develop/core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md).  
+   When you have created the property sheet assembly and XML, right-click a package in the Configuration Manager console tree **Packages** node results pane, and select the menu item **Show my Property Sheet**. A property sheet is displayed. You can enhance the control by accessing the package that was selected in the Configuration Manager console. For more information, see [How to Use Objects Passed to a Configuration Manager Forms](../../../../develop/core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md).  
 
 ## Create the Control Class  
  The following procedure creates the control for the property sheet.  

@@ -117,8 +117,8 @@ The Configuration Manager documentation library, like most content on docs.micro
 If you're interested in contributing, but don't know where to start, see the following suggestions:  
 
 - Search the list of issues for the community-targeted labels:  
-    - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
-    - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
+  - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
+  - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
 
     These labels are assigned by Microsoft authors to issues that are good candidates for community contribution.  
 

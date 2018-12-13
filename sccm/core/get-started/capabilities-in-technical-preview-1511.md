@@ -50,15 +50,15 @@ When Microsoft publishes a new Office 365 desktop client update to Windows Serve
 ### Try it out!  
  Try to complete the following task and then use the feedback information near the top of this topic to let us know how it worked:  
 
-1.  You can synchronize Office 365 updates to the Configuration Manager site server and view them from the Configuration Manager console.  
+1. You can synchronize Office 365 updates to the Configuration Manager site server and view them from the Configuration Manager console.  
 
-2.  You can approve and successfully deploy Office 365 updates.  
+2. You can approve and successfully deploy Office 365 updates.  
 
-3.  You can download and successfully Office 365 updates to clients.  
+3. You can download and successfully Office 365 updates to clients.  
 
-4.  You can verify compliance for Office 365 updates by using in-console monitoring or reports.  
+4. You can verify compliance for Office 365 updates by using in-console monitoring or reports.  
 
- For detailed steps, see [Manage Office 365 client updates with System Center Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx).  
+   For detailed steps, see [Manage Office 365 client updates with System Center Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx).  
 
 ##  <a name="BKMK_AlwasyOn"></a> Support for SQL Server AlwaysOn for highly available databases  
  Configuration Manager now supports using a SQL Server AlwaysOn availability groups to host the site database.  When you install a new site, you can direct setup to use the availability group instead of a normal instance of SQL Server.  

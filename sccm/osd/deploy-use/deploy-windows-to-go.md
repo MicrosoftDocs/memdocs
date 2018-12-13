@@ -71,70 +71,70 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 #### To create prestaged media  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
 
-4.  On the **Select Media Type** page, specify the following information, and then click **Next**.  
+4. On the **Select Media Type** page, specify the following information, and then click **Next**.  
 
-    -   Select **Prestaged media**.  
+   -   Select **Prestaged media**.  
 
-    -   Select **Allow unattended operating system deployment** to boot to the Windows To Go deployment with no user interaction.  
+   -   Select **Allow unattended operating system deployment** to boot to the Windows To Go deployment with no user interaction.  
 
-        > [!IMPORTANT]  
-        >  When you use this option with the SMSTSPreferredAdvertID custom variable (set later in this procedure), no user interaction is required and the computer will automatically boot to the Windows To Go deployment when it detects a Windows To Go drive. The user is still prompted for a password if the media is configured for password protection. If you use the **Allow unattended operating system deployment** setting without configuring the SMSTSPreferredAdvertID variable, an error will occur when you deploy the task sequence.  
+       > [!IMPORTANT]  
+       >  When you use this option with the SMSTSPreferredAdvertID custom variable (set later in this procedure), no user interaction is required and the computer will automatically boot to the Windows To Go deployment when it detects a Windows To Go drive. The user is still prompted for a password if the media is configured for password protection. If you use the **Allow unattended operating system deployment** setting without configuring the SMSTSPreferredAdvertID variable, an error will occur when you deploy the task sequence.  
 
-5.  On the **Media Management** page, specify the following information, and then click **Next**.  
+5. On the **Media Management** page, specify the following information, and then click **Next**.  
 
-    -   Select **Dynamic media** if you want to allow a management point to redirect the media to another management point, based on the client location in the site boundaries.  
+   -   Select **Dynamic media** if you want to allow a management point to redirect the media to another management point, based on the client location in the site boundaries.  
 
-    -   Select **Site-based media** if you want the media to contact only the specified management point.  
+   -   Select **Site-based media** if you want the media to contact only the specified management point.  
 
-6.  On the **Media Properties**  page, specify the following information, and then click **Next**.  
+6. On the **Media Properties**  page, specify the following information, and then click **Next**.  
 
-    -   **Created by**: Specify who created the media.  
+   -   **Created by**: Specify who created the media.  
 
-    -   **Version**: Specify the version number of the media.  
+   -   **Version**: Specify the version number of the media.  
 
-    -   **Comment**: Specify a unique description of what the media is used for.  
+   -   **Comment**: Specify a unique description of what the media is used for.  
 
-    -   **Media file**: Specify the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.wim**  
+   -   **Media file**: Specify the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.wim**  
 
-7.  On the **Security** page, specify the following information, and then click **Next**.  
+7. On the **Security** page, specify the following information, and then click **Next**.  
 
-    -   Select **Enable unknown computer support** to allow the media to deploy an operating system to a computer that is not managed by Configuration Manager. There is no record of these computers in the Configuration Manager database. Unknown computers include the following:  
+   -   Select **Enable unknown computer support** to allow the media to deploy an operating system to a computer that is not managed by Configuration Manager. There is no record of these computers in the Configuration Manager database. Unknown computers include the following:  
 
-        -   A computer where the Configuration Manager client is not installed  
+       -   A computer where the Configuration Manager client is not installed  
 
-        -   A computer that is not imported into Configuration Manager  
+       -   A computer that is not imported into Configuration Manager  
 
-        -   A computer that is not discovered by Configuration Manager  
+       -   A computer that is not discovered by Configuration Manager  
 
-    -   Select **Protect the media with a password** and enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the prestaged media.  
+   -   Select **Protect the media with a password** and enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the prestaged media.  
 
-        > [!IMPORTANT]  
-        >  As a security best practice, always assign a password to help protect the prestaged media.  
+       > [!IMPORTANT]  
+       >  As a security best practice, always assign a password to help protect the prestaged media.  
 
-        > [!NOTE]  
-        >  When you protect the prestaged media with a password, the user is prompted for the password even when the media is configured with the **Allow unattended operating system deployment** setting.  
+       > [!NOTE]  
+       >  When you protect the prestaged media with a password, the user is prompted for the password even when the media is configured with the **Allow unattended operating system deployment** setting.  
 
-    -   For HTTP communications, select **Create self-signed media certificate**, and then specify the start and expiration date for the certificate.  
+   -   For HTTP communications, select **Create self-signed media certificate**, and then specify the start and expiration date for the certificate.  
 
-    -   For HTTPS communications, select **Import PKI certificate**, and then specify the certificate to import and its password.  
+   -   For HTTPS communications, select **Import PKI certificate**, and then specify the certificate to import and its password.  
 
-         For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
+        For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
+   -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
-        -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
+       -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
 
-        -   Specify **Allow user device affinity pending administrator approval** if you want the media to associate users with the destination computer after approval is granted. This functionality is based on the scope of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and the destination computer, but waits for approval from an administrative user before the operating system is deployed.  
+       -   Specify **Allow user device affinity pending administrator approval** if you want the media to associate users with the destination computer after approval is granted. This functionality is based on the scope of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and the destination computer, but waits for approval from an administrative user before the operating system is deployed.  
 
-        -   Specify **Do not allow user device affinity** if you do not want the media to associate users with the destination computer. In this scenario, the task sequence does not associate users with the destination computer when it deploys the operating system.  
+       -   Specify **Do not allow user device affinity** if you do not want the media to associate users with the destination computer. In this scenario, the task sequence does not associate users with the destination computer when it deploys the operating system.  
 
-8.  On the **Task Sequence** page, specify the Windows 8 task sequence that you created in the previous section.  
+8. On the **Task Sequence** page, specify the Windows 8 task sequence that you created in the previous section.  
 
 9. On the **Boot image** page, specify the following information, and then click **Next**.  
 
@@ -173,30 +173,30 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 15. On the **Customization** page, specify the following information, and then click **Next**.  
 
-    -   **Variables**: Specify the variables that the task sequence uses to deploy the operating system. For Windows To Go, use the SMSTSPreferredAdvertID variable to automatically select the Windows To Go deployment by using the following format:  
+    - **Variables**: Specify the variables that the task sequence uses to deploy the operating system. For Windows To Go, use the SMSTSPreferredAdvertID variable to automatically select the Windows To Go deployment by using the following format:  
 
-         SMSTSPreferredAdvertID = {*DeploymentID*}, where DeploymentID is the deployment ID associated with the task sequence that you will use to complete the provisioning process for the Windows To Go drive.  
+       SMSTSPreferredAdvertID = {*DeploymentID*}, where DeploymentID is the deployment ID associated with the task sequence that you will use to complete the provisioning process for the Windows To Go drive.  
+
+      > [!TIP]  
+      >  When you use this variable with a task sequence that is set to run unattended (set earlier in this procedure), no user interaction is required and the computer automatically boots to the Windows To Go deployment when it detects a Windows To Go drive. The user is still prompted for a password if the media is configured for password protection.  
+
+    - **Prestart commands**: Specify any prestart commands that you want to run before the task sequence runs. Prestart commands can be a script or executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. Configure the following for the Windows To Go deployment:  
+
+      - **OSDBitLockerPIN**: BitLocker for Windows To Go requires a passphrase. Set the **OSDBitLockerPIN** variable as part of a prestart command to set the BitLocker passphrase for the Windows To Go drive.  
+
+        > [!WARNING]  
+        >  After BitLocker is enabled for the passphrase, the user must enter the passphrase each time the computer boots to the Windows To Go drive.  
+
+      - **SMSTSUDAUsers**: Specifies the primary user of the destination computer. Use this variable to collect the user name, which can then be used to associate the user and device. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
         > [!TIP]  
-        >  When you use this variable with a task sequence that is set to run unattended (set earlier in this procedure), no user interaction is required and the computer automatically boots to the Windows To Go deployment when it detects a Windows To Go drive. The user is still prompted for a password if the media is configured for password protection.  
+        >  To retrieve the username, you can create an input box as part of the prestart command, have the user enter their username, and then set the variable with the value. For example, you can add the following lines to the prestart command script file:  
+        >   
+        >  `UserID = inputbox("Enter Username" ,"Enter your username:","",400,0)`  
+        >   
+        >  `env("SMSTSUDAUsers") = UserID`  
 
-    -   **Prestart commands**: Specify any prestart commands that you want to run before the task sequence runs. Prestart commands can be a script or executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. Configure the following for the Windows To Go deployment:  
-
-        -   **OSDBitLockerPIN**: BitLocker for Windows To Go requires a passphrase. Set the **OSDBitLockerPIN** variable as part of a prestart command to set the BitLocker passphrase for the Windows To Go drive.  
-
-            > [!WARNING]  
-            >  After BitLocker is enabled for the passphrase, the user must enter the passphrase each time the computer boots to the Windows To Go drive.  
-
-        -   **SMSTSUDAUsers**: Specifies the primary user of the destination computer. Use this variable to collect the user name, which can then be used to associate the user and device. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
-
-            > [!TIP]  
-            >  To retrieve the username, you can create an input box as part of the prestart command, have the user enter their username, and then set the variable with the value. For example, you can add the following lines to the prestart command script file:  
-            >   
-            >  `UserID = inputbox("Enter Username" ,"Enter your username:","",400,0)`  
-            >   
-            >  `env("SMSTSUDAUsers") = UserID`  
-
-         For more information about how to create a script file to use as your prestart command, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
+        For more information about how to create a script file to use as your prestart command, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
 
 16. Complete the wizard.  
 
@@ -208,24 +208,24 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 #### To create the Windows To Go Creator package  
 
-1.  On the server to host the Windows To Go Creator package files, create a source folder for the package source files.  
+1. On the server to host the Windows To Go Creator package files, create a source folder for the package source files.  
 
-    > [!NOTE]  
-    >  The computer account of the site server must have **Read** access rights to the source folder.  
+   > [!NOTE]  
+   >  The computer account of the site server must have **Read** access rights to the source folder.  
 
-2.  Copy the prestaged media file that you created in the [Create prestaged media](#BKMK_CreatePrestagedMedia) section to the package source folder.  
+2. Copy the prestaged media file that you created in the [Create prestaged media](#BKMK_CreatePrestagedMedia) section to the package source folder.  
 
-3.  Copy the Windows To Go Creator tool (WTGCreator.exe) to the package source folder. The creator tool is available on any primary site server at the following location: <*ConfigMgrInstallationFolder*>\OSD\Tools\WTG\Creator.  
+3. Copy the Windows To Go Creator tool (WTGCreator.exe) to the package source folder. The creator tool is available on any primary site server at the following location: <*ConfigMgrInstallationFolder*>\OSD\Tools\WTG\Creator.  
 
-4.  Create a package and program by using the Create Package and Program Wizard.  
+4. Create a package and program by using the Create Package and Program Wizard.  
 
-5.  In the Configuration Manager console, click **Software Library**.  
+5. In the Configuration Manager console, click **Software Library**.  
 
-6.  In the **Software Library** workspace, expand **Application Management**, and then click **Packages**.  
+6. In the **Software Library** workspace, expand **Application Management**, and then click **Packages**.  
 
-7.  On the **Home** tab, in the **Create** group, click **Create Package**.  
+7. On the **Home** tab, in the **Create** group, click **Create Package**.  
 
-8.  On the **Package** page, specify the name and description of the package. For example, enter **Windows To Go** for the package name and specify **Package to configure a Windows To Go drive using System Center Configuration Manager** for the package description.  
+8. On the **Package** page, specify the name and description of the package. For example, enter **Windows To Go** for the package name and specify **Package to configure a Windows To Go drive using System Center Configuration Manager** for the package description.  
 
 9. Select **This package contains source files**, specify the path to the package source folder that you created in step 1, and then click **Next**.  
 
@@ -251,22 +251,22 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 12. On the Requirements page, specify the following:  
 
-    -   **Platform requirements**: Select the applicable Windows 8 platforms to allow provisioning.  
+    - **Platform requirements**: Select the applicable Windows 8 platforms to allow provisioning.  
 
-    -   **Estimated disk space**: Specify the size of the package source folder for the Windows To Go Creator.  
+    - **Estimated disk space**: Specify the size of the package source folder for the Windows To Go Creator.  
 
-    -   **Maximum allowed run time (minutes)**: Specifies the maximum time that the program is expected to run on the client computer. By default, this value is set to 120 minutes.  
+    - **Maximum allowed run time (minutes)**: Specifies the maximum time that the program is expected to run on the client computer. By default, this value is set to 120 minutes.  
 
-        > [!IMPORTANT]  
-        >  If you are using maintenance windows for the collection on which this program is run, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the maximum run time is set to **Unknown**, it will start during the maintenance window, but will continue to run until it completes or fails after the maintenance window is closed. If you set the maximum run time to a specific period (not set to Unknown) that exceeds the length of any available maintenance window, then that program will not be run.  
+      > [!IMPORTANT]  
+      >  If you are using maintenance windows for the collection on which this program is run, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the maximum run time is set to **Unknown**, it will start during the maintenance window, but will continue to run until it completes or fails after the maintenance window is closed. If you set the maximum run time to a specific period (not set to Unknown) that exceeds the length of any available maintenance window, then that program will not be run.  
 
-        > [!NOTE]  
-        >  If the value is set to **Unknown**, Configuration Manager sets the maximum allowed run time to 12 hours (720 minutes).  
+      > [!NOTE]  
+      >  If the value is set to **Unknown**, Configuration Manager sets the maximum allowed run time to 12 hours (720 minutes).  
 
-        > [!NOTE]  
-        >  If the maximum run time (whether set by the user or as the default value) is exceeded, Configuration Manager stops the program if **run with administrative rights** is selected and **Allow users to view and interact with the program installation** is not selected on the **Standard Program** page.  
+      > [!NOTE]  
+      >  If the maximum run time (whether set by the user or as the default value) is exceeded, Configuration Manager stops the program if **run with administrative rights** is selected and **Allow users to view and interact with the program installation** is not selected on the **Standard Program** page.  
 
-     Click **Next** and complete the wizard.  
+      Click **Next** and complete the wizard.  
 
 ###  <a name="BKMK_UpdateTaskSequence"></a> Update the task sequence to enable BitLocker for Windows To Go  
  Windows To Go enables BitLocker on an external bootable drive without the use of TPM. Therefore, you must use a separate tool to configure BitLocker on the Windows To Go drive. To enable BitLocker, you must add an action to the task sequence after the **Setup Windows and ConfigMgr** step.  

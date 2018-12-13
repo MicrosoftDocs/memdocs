@@ -225,13 +225,13 @@ Class SMS_ComponentSummarizer : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class reports on component health by counting the error, warning, and informational status messages that are produced by each component. It provides a high-level view of the health of server components at a given site. An instance of this class is created for each server component running in the site.  
+  This class reports on component health by counting the error, warning, and informational status messages that are produced by each component. It provides a high-level view of the health of server components at a given site. An instance of this class is created for each server component running in the site.  
 
- Queries must include a `TallyInterval` value.  
+  Queries must include a `TallyInterval` value.  
 
 ## Requirements  
 
