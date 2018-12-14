@@ -24,9 +24,9 @@ This article introduces the features that are available in the Technical Preview
 
 This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager UserVoice feedback website.  
 
->You can find the **Feedback** option:
--  In the ribbon, at the far left of the Home tab of each node.  
-   ![Ribbon](./media/feedback-home.png)
+> You can find the **Feedback** option:
+> -  In the ribbon, at the far left of the Home tab of each node.  
+>    ![Ribbon](./media/feedback-home.png)
 
 -  When you right-click on any object in the console.   
     ![Righ-click option](./media/feedback-option.png)   
@@ -81,8 +81,8 @@ Azure AD for resources:
 For each method you use, edit the LDAP query to search the Azure AD OU structures instead of the containers that are typical to on-premises Active Directory. This requires you to direct the query to search your Active Directory in your Azure subscription.  
 
 The following examples use an Azure AD of *contoso.onmicrosoft.com*:
- - **System Discovery**   
-Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
+- **System Discovery**   
+  Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
   -	*LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
@@ -171,8 +171,8 @@ Use the following procedure to set a task sequence as high-impact.
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **User Notification** tab, select **Use custom text**.
->  [!NOTE]
->  You can only set user notification text when the **This is a high-impact task sequence** is selected.
+   > [!NOTE]
+   >  You can only set user notification text when the **This is a high-impact task sequence** is selected.
 
 4. Configure the following settings (max of 255 characters for each text box):
 
@@ -185,20 +185,20 @@ Use the following procedure to set a task sequence as high-impact.
 
    Let's say you configure the following custom notification in properties.
 
-   ![Custom notification for a task sequence](.\media\user-notification.png)
+   ![Custom notification for a task sequence](./media/user-notification.png)
 
    The following notification message will be displayed when the end-user opens the installation from Software Center.
 
-   ![Custom notification for a task sequence](.\media\user-notification-enduser.png)
+   ![Custom notification for a task sequence](./media/user-notification-enduser.png)
 
 ### Configure Software Center properties
 Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **General** tab, the following settings for Software Center are available:
-  - **Restart required**: Lets the user know whether a restart is required during the installation.
-  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
-  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
+   - **Restart required**: Lets the user know whether a restart is required during the installation.
+   - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+   - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
 
 
 ## Check for running executable files before installing an application
@@ -262,7 +262,7 @@ We've added new settings you can use in your configuration items for iOS devices
 - **Auto-correction** (supervised mode only)
 - **Keyboard spell-check** (supervised mode only)
 - **Keyboard shortcuts** (supervised mode only)
-<!--- - **Enterprise app trust settings modification** --->
+  <!--- - **Enterprise app trust settings modification** --->
 - **Installing apps using Apple Configurator and iTunes only** (supervised mode only)
 - **Automatic app downloads** (supervised mode only)
 - **Make changes to the Find My Friends app settings** (supervised mode only)
@@ -295,17 +295,17 @@ The following sections describe Android for Work management.
 #### Enable Android for Work management
 1. Create a Google account at https://accounts.google.com/SignUp to use as your Android for Work admin account that will be associated with all Android for Work management tasks for this Intune tenant. This could be a Google account shared among the administrators who manage Android devices. This is the Google account that your organization uses to manage and publish apps in the Play for Work console. You will use this account to approve apps in the Play for Work store, so keep track of the account name and password.
 2. Enable Android enrollment by binding the Google account to the Intune tenant managed in Configuration Manager:
-  1. Go to **Administration** > **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions** and select your Intune subscription.
-  2. In the ribbon, click **Configure Platforms** > **Android** and make sure **Enable Android enrollment** is checked.
-  3. In the ribbon, click **Configure Platforms** > **Android for Work**.
-  4. In the dialog box, click **Configure Android for Work in the Intune console**. The Intune console opens in your web browser.
-  5. Use your Intune administrator credentials to log in to the Intune portal.
-  6. Click **Configure** to open Google Play's Android for Work website.
-  7. On Google's sign-in page, enter the Google account credentials from step 1, and then provide your company information.
+   1. Go to **Administration** > **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions** and select your Intune subscription.
+   2. In the ribbon, click **Configure Platforms** > **Android** and make sure **Enable Android enrollment** is checked.
+   3. In the ribbon, click **Configure Platforms** > **Android for Work**.
+   4. In the dialog box, click **Configure Android for Work in the Intune console**. The Intune console opens in your web browser.
+   5. Use your Intune administrator credentials to log in to the Intune portal.
+   6. Click **Configure** to open Google Play's Android for Work website.
+   7. On Google's sign-in page, enter the Google account credentials from step 1, and then provide your company information.
 3. When you return to the Intune portal, Android for Work is enabled and you have three enrollment options for Android for Work devices:
-  - **Manage all devices as Android** - (Disabled) All Android devices, including devices that support Android for Work, will be enrolled as conventional Android devices
-  - **Manage supported devices as Android for Work** - (Enabled) All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
-  - **Manage supported devices for users only in these groups as Android for Work** - (Testing) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
+   - **Manage all devices as Android** - (Disabled) All Android devices, including devices that support Android for Work, will be enrolled as conventional Android devices
+   - **Manage supported devices as Android for Work** - (Enabled) All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
+   - **Manage supported devices for users only in these groups as Android for Work** - (Testing) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
   
 > [!NOTE]
 > A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**.

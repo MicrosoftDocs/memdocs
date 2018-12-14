@@ -74,13 +74,13 @@ manager: dougeby
 ## Servicing plan workflow  
  Windows 10 servicing plans in Configuration Manager are much like automatic deployment rules for software updates. You create a servicing plan with the following criteria that Configuration Manager evaluates:  
 
--   **Upgrades classification**: Only updates that are in the **Upgrades** classification are evaluated.  
+- **Upgrades classification**: Only updates that are in the **Upgrades** classification are evaluated.  
 
--   **Readiness state**: The readiness state defined in the servicing plan is compared with the readiness state for the upgrade. The metadata for the upgrade is retrieved when the service connection point checks for updates.  
+- **Readiness state**: The readiness state defined in the servicing plan is compared with the readiness state for the upgrade. The metadata for the upgrade is retrieved when the service connection point checks for updates.  
 
--   **Time deferral**: The number of days that you specify for **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment** in the servicing plan. If the current date is after the release date plus the configured number of days, Configuration Manager evaluates whether to include an upgrade in the deployment.  
+- **Time deferral**: The number of days that you specify for **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment** in the servicing plan. If the current date is after the release date plus the configured number of days, Configuration Manager evaluates whether to include an upgrade in the deployment.  
 
- When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan. You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
+  When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan. You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  
  As you deploy Windows 10 Semi-Annual Channel, you can create one or more servicing plans to define the deployment rings that you want in your environment, and then monitor them in the Windows 10 servicing dashboard. Servicing plans use only the **Upgrades** software updates classification, not cumulative updates for Windows 10. For those updates, you still need to deploy by using the software updates workflow. The end-user experience with a servicing plan is the same as it is with software updates, including the settings that you configure in the servicing plan.  
@@ -95,79 +95,79 @@ manager: dougeby
 
 #### To create a Windows 10 servicing plan  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the Software Library workspace, expand **Windows 10 Servicing**, and then click **Servicing Plans**.  
+2. In the Software Library workspace, expand **Windows 10 Servicing**, and then click **Servicing Plans**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Servicing Plan**. The Create Servicing Plan Wizard opens.  
+3. On the **Home** tab, in the **Create** group, click **Create Servicing Plan**. The Create Servicing Plan Wizard opens.  
 
-4.  On the **General** page, configure the following settings:  
+4. On the **General** page, configure the following settings:  
 
-    -   **Name**: Specify the name for the servicing plan. The name must be unique, help to describe the objective of the rule, and identify it from others in the Configuration Manager site.  
+   -   **Name**: Specify the name for the servicing plan. The name must be unique, help to describe the objective of the rule, and identify it from others in the Configuration Manager site.  
 
-    -   **Description**: Specify a description for the servicing plan. The description should provide an overview of the servicing plan and any other relevant information that helps to identify and differentiate the plan among others in the Configuration Manager site. The description field is optional, has a limit of 256 characters, and has a blank value by default.  
+   -   **Description**: Specify a description for the servicing plan. The description should provide an overview of the servicing plan and any other relevant information that helps to identify and differentiate the plan among others in the Configuration Manager site. The description field is optional, has a limit of 256 characters, and has a blank value by default.  
 
-5.  On the Servicing Plan page, configure the following settings:  
+5. On the Servicing Plan page, configure the following settings:  
 
-    -   **Target Collection**: Specifies the target collection to be used for the servicing plan. Members of the collection receive the Windows 10 upgrades that are defined in the servicing plan.  
+   -   **Target Collection**: Specifies the target collection to be used for the servicing plan. Members of the collection receive the Windows 10 upgrades that are defined in the servicing plan.  
 
-        > [!NOTE]  
-        >  When you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties.
-        >    
-        > High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
-        >  
-        > The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership is not reevaluated for the high-risk deployment settings.  
-        >  
-        > For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
-        >
-        > When you select a collection that contains a site role, the following criteria applies:    
-        >   
-        >    - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.    
-        >    - If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
+       > [!NOTE]  
+       >  When you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties.
+       >    
+       > High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+       >  
+       > The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership is not reevaluated for the high-risk deployment settings.  
+       >  
+       > For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
+       >
+       > When you select a collection that contains a site role, the following criteria applies:    
+       >   
+       >    - If the collection contains a site system server and in the deployment verification settings you configure to block collections with site system servers, then an error occurs and you cannot continue.    
+       >    - If the collection contains a site system server and in the deployment verification settings you configure to warn you if collections that have site system servers, if the collection exceeds the default size value, or if the collection contains a server, then the Deploy Software Wizard will display a high risk warning. You must agree to create a high risk deployment and an audit status message is created.  
 
-6.  On the Deployment Ring page, configure the following settings:  
+6. On the Deployment Ring page, configure the following settings:  
 
-    -   **Specify the Windows readiness state to which this servicing plan should apply**: Select one of the following options:  
+   -   **Specify the Windows readiness state to which this servicing plan should apply**: Select one of the following options:  
 
-        -   **Semi-Annual Channel (Targeted)**: In this servicing model, feature updates are available as soon as Microsoft releases them.
+       -   **Semi-Annual Channel (Targeted)**: In this servicing model, feature updates are available as soon as Microsoft releases them.
 
-        -   **Semi-Annual Channel**: This servicing channel is typically used for broad deployment. Windows 10 clients in the Semi-Annual Channel receive the same build of Windows 10 as those devices in the targeted channel, just at a later time.
+       -   **Semi-Annual Channel**: This servicing channel is typically used for broad deployment. Windows 10 clients in the Semi-Annual Channel receive the same build of Windows 10 as those devices in the targeted channel, just at a later time.
 
-        For more information about servicing channels and what options are best for you, see [Servicing channels](/windows/deployment/update/waas-overview#servicing-channels).
+       For more information about servicing channels and what options are best for you, see [Servicing channels](/windows/deployment/update/waas-overview#servicing-channels).
 
-    -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: If the current date is after the release date plus the number of days that you configure for this setting, Configuration Manager evaluates whether to include an upgrade in the deployment.
+   -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: If the current date is after the release date plus the number of days that you configure for this setting, Configuration Manager evaluates whether to include an upgrade in the deployment.
 
 
-7.  On the Upgrades page, configure the search criteria to filter the upgrades that are added to the service plan. Only upgrades that meet the specified criteria are added to the associated deployment.   
+7. On the Upgrades page, configure the search criteria to filter the upgrades that are added to the service plan. Only upgrades that meet the specified criteria are added to the associated deployment.   
 
-     > [!Important]    
-     > We recommend that as part of your search criteria, that you set the **Required** field with a value of **>=1**. Using this criteria ensures that only applicable updates added to the service plan.
+    > [!Important]    
+    > We recommend that as part of your search criteria, that you set the **Required** field with a value of **>=1**. Using this criteria ensures that only applicable updates added to the service plan.
 
-     Click **Preview** to view the upgrades that meet the specified criteria.  
+    Click **Preview** to view the upgrades that meet the specified criteria.  
 
-8.  On the Deployment Schedule page, configure the following settings:  
+8. On the Deployment Schedule page, configure the following settings:  
 
-    -   **Schedule evaluation**: Specify whether Configuration Manager evaluates the available time and installation deadline times by using UTC or the local time of the computer that runs the Configuration Manager console.  
+   -   **Schedule evaluation**: Specify whether Configuration Manager evaluates the available time and installation deadline times by using UTC or the local time of the computer that runs the Configuration Manager console.  
 
-        > [!NOTE]  
-        >  When you select local time, and then select **As soon as possible** for the **Software available time** or **Installation deadline**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available or when they are installed on a client. If the client is in a different time zone, these actions will occur when the client's time reaches the evaluation time.  
+       > [!NOTE]  
+       >  When you select local time, and then select **As soon as possible** for the **Software available time** or **Installation deadline**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available or when they are installed on a client. If the client is in a different time zone, these actions will occur when the client's time reaches the evaluation time.  
 
-    -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
+   -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
 
-        -   **As soon as possible**: Select this setting to make the software updates that are included in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become  aware of the deployment and can obtain the updates that are available for installation.  
+       -   **As soon as possible**: Select this setting to make the software updates that are included in the deployment available to the client computers as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become  aware of the deployment and can obtain the updates that are available for installation.  
 
-        -   **Specific time**: Select this setting to make the software updates that are included in the deployment available to the client computers at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment are not available for installation until after the configured date and time.  
+       -   **Specific time**: Select this setting to make the software updates that are included in the deployment available to the client computers at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. Then, at the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment are not available for installation until after the configured date and time.  
 
-    -   **Installation deadline**: Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
+   -   **Installation deadline**: Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
-        -   **As soon as possible**: Select this setting to automatically install the software updates in the deployment as soon as possible.  
+       -   **As soon as possible**: Select this setting to automatically install the software updates in the deployment as soon as possible.  
 
-        -   **Specific time**: Select this setting to automatically install the software updates in the deployment at a specific date and time. Configuration Manager determines the deadline to install software updates by adding the configured **Specific time** interval to the **Software available time**.  
+       -   **Specific time**: Select this setting to automatically install the software updates in the deployment at a specific date and time. Configuration Manager determines the deadline to install software updates by adding the configured **Specific time** interval to the **Software available time**.  
 
-            > [!NOTE]  
-            >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the updates in the deployment at the same time.  
-            >   
-            >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+           > [!NOTE]  
+           >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the updates in the deployment at the same time.  
+           >   
+           >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. On the User Experience page, configure the following settings:  
 
@@ -216,7 +216,7 @@ manager: dougeby
 
 14. On the Summary page, review the settings and click **Next** to create the servicing plan.  
 
- After you have completed the wizard, the servicing plan will run. It adds the updates that meet the specified criteria to a software update group, download the updates to the content library on the site server, distribute the updates to the configured distribution points, and then deploy the software update group to clients in the target collection.  
+    After you have completed the wizard, the servicing plan will run. It adds the updates that meet the specified criteria to a software update group, download the updates to the content library on the site server, distribute the updates to the configured distribution points, and then deploy the software update group to clients in the target collection.  
 
 ##  <a name="BKMK_ModifyServicingPlan"></a> Modify a servicing plan  
 After you create a basic servicing plan from the Windows 10 servicing dashboard or you need to change the settings for an existing servicing plan, you can go to properties for the servicing plan.

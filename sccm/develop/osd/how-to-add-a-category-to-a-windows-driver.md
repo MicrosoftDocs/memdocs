@@ -123,11 +123,12 @@ public void AddDriverCategory(
 
  The example method has the following parameters:  
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager]<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393868.aspx)|A valid connection to the SMS Provider.|  
-|`driver`|-   Managed: `IResultObject`<br />-   VBScript:  `SWbemObject`|The Windows driver. It is an instance of [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md).|  
-|`categoryName`|-   Managed: `String`<br />-   VBScript:  `String`|The name of an existing category. This matches the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)e `LocalizedCategoryInstanceName` property.|  
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `Connection` | - Managed: `WqlConnectionManager`<br /> - VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393868.aspx) | A valid connection to the SMS Provider. |
+| `driver` | - Managed: `IResultObject`<br /> - VBScript: `SWbemObject` | The Windows driver. It is an instance of [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md). |
+| `categoryName` | - Managed: `String`<br /> - VBScript: `String` | The name of an existing category. This matches the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) `LocalizedCategoryInstanceName` property. |
 
 ## Compiling the Code  
  This C# example requires:  

@@ -110,13 +110,13 @@ Class SMS_UINAL_ResourceInfo
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is used in the `ResourceInfo` parameter of [SMS_SIIB_UINALProvider Server WMI Class](../../../develop/reference/misc/sms_siib_uinalprovider-server-wmi-class.md).  
+  This class is used in the `ResourceInfo` parameter of [SMS_SIIB_UINALProvider Server WMI Class](../../../develop/reference/misc/sms_siib_uinalprovider-server-wmi-class.md).  
 
 ## Requirements  
 

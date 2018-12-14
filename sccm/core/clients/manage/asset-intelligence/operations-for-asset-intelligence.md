@@ -23,14 +23,14 @@ This topic contains information to help you manage typical Asset Intelligence ta
 ###  <a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence home page  
  The **Asset Intelligence** home page displays a summary dashboard for Asset Intelligence catalog information. On the home page, you can view information about catalog synchronization and inventoried software status. The **Asset Intelligence** home page is divided into the following sections:  
 
--   **Catalog Synchronization**: Provides information about whether Asset Intelligence is enabled, the current status of the Asset Intelligence synchronization point, the synchronization schedule, whether the customer license statement is imported, when status was last updated and the time for the next scheduled update, and the number of changes that occurred after the Asset Intelligence synchronization point site system was installed.  
+- **Catalog Synchronization**: Provides information about whether Asset Intelligence is enabled, the current status of the Asset Intelligence synchronization point, the synchronization schedule, whether the customer license statement is imported, when status was last updated and the time for the next scheduled update, and the number of changes that occurred after the Asset Intelligence synchronization point site system was installed.  
 
-    > [!NOTE]  
-    >  The Asset Intelligence catalog synchronization section of the **Asset Intelligence** home page is only displayed if an Asset Intelligence synchronization point site system role has been installed.  
+  > [!NOTE]  
+  >  The Asset Intelligence catalog synchronization section of the **Asset Intelligence** home page is only displayed if an Asset Intelligence synchronization point site system role has been installed.  
 
--   **Inventoried Software Status**: Provides the count and percentage of inventoried software, software categories, and software families that are identified by Microsoft, identified by an administrative user, pending online identification, or unidentified and not pending. The information displayed in table format shows the count for each, while the information displayed in the chart shows the percentage for each.  
+- **Inventoried Software Status**: Provides the count and percentage of inventoried software, software categories, and software families that are identified by Microsoft, identified by an administrative user, pending online identification, or unidentified and not pending. The information displayed in table format shows the count for each, while the information displayed in the chart shows the percentage for each.  
 
- Use the following procedure to view Asset Intelligence information on the **Asset Intelligence** home page.  
+  Use the following procedure to view Asset Intelligence information on the **Asset Intelligence** home page.  
 
 ##### To view Asset Intelligence information on the Asset Intelligence home page  
 
@@ -67,20 +67,20 @@ This topic contains information to help you manage typical Asset Intelligence ta
 
 #### To create a synchronization schedule for the Asset Intelligence catalog  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the Configuration Manager console, click **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, click **Asset Intelligence**.  
+2. In the **Assets and Compliance** workspace, click **Asset Intelligence**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Synchronize**, and then click **Schedule Synchronization**.  
+3. On the **Home** tab, in the **Create** group, click **Synchronize**, and then click **Schedule Synchronization**.  
 
-4.  In the **Asset Intelligence Synchronization Point Schedule** dialog box, select **Enable synchronization on a schedule**, and then configure a simple or custom schedule.  
+4. In the **Asset Intelligence Synchronization Point Schedule** dialog box, select **Enable synchronization on a schedule**, and then configure a simple or custom schedule.  
 
-5.  Click **OK** to save the changes.  
+5. Click **OK** to save the changes.  
 
-    > [!NOTE]  
-    >  For information about the synchronization schedule, including the next scheduled synchronization, see the **Asset Intelligence** node in the **Assets and Compliance** workspace on the top-level site of the hierarchy.  
+   > [!NOTE]  
+   >  For information about the synchronization schedule, including the next scheduled synchronization, see the **Asset Intelligence** node in the **Assets and Compliance** workspace on the top-level site of the hierarchy.  
 
- Use the following procedure to manually synchronize the Asset Intelligence catalog.  
+   Use the following procedure to manually synchronize the Asset Intelligence catalog.  
 
 > [!WARNING]  
 >  System Center Online accepts only one manual synchronization request in a 12-hour period.  
@@ -174,31 +174,31 @@ This topic contains information to help you manage typical Asset Intelligence ta
 
 ##### To create a user-defined hardware requirements  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the Configuration Manager console, click **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, click **Asset Intelligence**, and then click **Hardware Requirements**.  
+2. In the **Assets and Compliance** workspace, click **Asset Intelligence**, and then click **Hardware Requirements**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Hardware Requirements**.  
+3. On the **Home** tab, in the **Create** group, click **Create Hardware Requirements**.  
 
-4.  On the **General** page, enter the following information:  
+4. On the **General** page, enter the following information:  
 
-    1.  **Software title**: Specifies the software title for which the hardware requirements are associated. The software title cannot already exist in the Asset Intelligence catalog.  
+   1. **Software title**: Specifies the software title for which the hardware requirements are associated. The software title cannot already exist in the Asset Intelligence catalog.  
 
-    2.  **Validation state**: Lists the validation state as **User Defined** for the hardware requirements. You cannot modify this setting.  
+   2. **Validation state**: Lists the validation state as **User Defined** for the hardware requirements. You cannot modify this setting.  
 
-    3.  **Minimum CPU (MHz)**: Specifies the minimum processor speed, in megahertz (MHz), required by the software title.  
+   3. **Minimum CPU (MHz)**: Specifies the minimum processor speed, in megahertz (MHz), required by the software title.  
 
-    4.  **Minimum RAM (KB)**: Specifies the minimum RAM, in kilobytes (KB), required by the software title.  
+   4. **Minimum RAM (KB)**: Specifies the minimum RAM, in kilobytes (KB), required by the software title.  
 
-    5.  **Minimum Disk Space (KB)**: Specifies the minimum free disk space, in KB, required by the software title.  
+   5. **Minimum Disk Space (KB)**: Specifies the minimum free disk space, in KB, required by the software title.  
 
-    6.  **Minimum Disk Size (KB)**: Specifies the minimum hard disk size, in KB, required by the software title.  
+   6. **Minimum Disk Size (KB)**: Specifies the minimum hard disk size, in KB, required by the software title.  
 
-     Click **Next**.  
+      Click **Next**.  
 
-5.  On the **Summary** page, review the settings, and then click **Next**.  
+5. On the **Summary** page, review the settings, and then click **Next**.  
 
-6.  On the **Completion** page, click **Close** to exit the wizard.  
+6. On the **Completion** page, click **Close** to exit the wizard.  
 
 ###  <a name="BKMK_ModifyCategorization"></a> Modify categorization information for inventoried software  
  Predefined software in the Asset Intelligence catalog is configured with specific categorization information, such as product name, vendor, software category, and software family. When the predefined categorization information does not meet your requirements, you can modify the information in the properties for the software title. When you modify categorization information for predefined software, the validation state for the software changes from **Validated** to **User Defined**.  
@@ -210,27 +210,27 @@ This topic contains information to help you manage typical Asset Intelligence ta
 
 ##### To modify the categorizations for software titles  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the Configuration Manager console, click **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, click **Asset Intelligence**, and then click **Inventoried Software**.  
+2. In the **Assets and Compliance** workspace, click **Asset Intelligence**, and then click **Inventoried Software**.  
 
-3.  Select a software title or select multiple software titles for which you want to modify categorizations.  
+3. Select a software title or select multiple software titles for which you want to modify categorizations.  
 
-4.  On the **Home** tab, in the **Properties** group, click **Properties**.  
+4. On the **Home** tab, in the **Properties** group, click **Properties**.  
 
-5.  On the **General** tab, you can modify the following categorization information:  
+5. On the **General** tab, you can modify the following categorization information:  
 
-    -   **Product Name**: Specifies the name of the inventoried software title.  
+   -   **Product Name**: Specifies the name of the inventoried software title.  
 
-    -   **Vendor**: Specifies the name of the vendor that developed the inventoried software title.  
+   -   **Vendor**: Specifies the name of the vendor that developed the inventoried software title.  
 
-    -   **Category**: Specifies the software category that is currently assigned to the inventoried software title.  
+   -   **Category**: Specifies the software category that is currently assigned to the inventoried software title.  
 
-    -   **Family**: Specifies the software family that is currently assigned to the inventoried software title.  
+   -   **Family**: Specifies the software family that is currently assigned to the inventoried software title.  
 
-6.  Click **OK** to save the changes.  
+6. Click **OK** to save the changes.  
 
- Use the following procedure to revert software to the original categorization information.  
+   Use the following procedure to revert software to the original categorization information.  
 
 ### Revert categorization information to original settings for software  
  Configuration Manager stores categorization information obtained from System Center Online in the database. The information cannot be deleted. After the information has been modified, you can revert the categorization information back to the System Center Online categorization. Inventoried software that is not in the Asset Intelligence catalog can also be reverted back to the original settings.  
@@ -304,24 +304,24 @@ This topic contains information to help you manage typical Asset Intelligence ta
 
 #### To resolve a software details conflict  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the Configuration Manager console, click **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, click **Asset Intelligence**, and then click **Inventoried Software**.  
+2. In the **Assets and Compliance** workspace, click **Asset Intelligence**, and then click **Inventoried Software**.  
 
-3.  Review the **State** column for software titles in the **Updatable** state.  
+3. Review the **State** column for software titles in the **Updatable** state.  
 
-4.  Select the software title for which you have to resolve a conflict, and then on the **Home** tab, in the **Product** group, and click **Resolve Conflict**.  
+4. Select the software title for which you have to resolve a conflict, and then on the **Home** tab, in the **Product** group, and click **Resolve Conflict**.  
 
-5.  Review the following information:  
+5. Review the following information:  
 
-    -   **Local value**: Specifies the existing software categorization information in the Asset Intelligence catalog that conflicts with newer System Center Online software categorization details.  
+   -   **Local value**: Specifies the existing software categorization information in the Asset Intelligence catalog that conflicts with newer System Center Online software categorization details.  
 
-    -   **Downloaded value**: Specifies the new System Center Online software categorization information for conflicting Asset Intelligence catalog software categorization information.  
+   -   **Downloaded value**: Specifies the new System Center Online software categorization information for conflicting Asset Intelligence catalog software categorization information.  
 
-6.  Select one of the following settings to resolve the software details conflict:  
+6. Select one of the following settings to resolve the software details conflict:  
 
-    -   **Do not change the locally edited catalog information value**: Resolves the software details conflict by retaining the existing Asset Intelligence catalog software categorization information. When you select this setting, the software title state changes from **Updatable** to **User Defined**.  
+   - **Do not change the locally edited catalog information value**: Resolves the software details conflict by retaining the existing Asset Intelligence catalog software categorization information. When you select this setting, the software title state changes from **Updatable** to **User Defined**.  
 
-    -   **Overwrite the locally edited catalog information value with the downloaded System Center Online value**: Resolves the software details conflict by overwriting the existing Asset Intelligence catalog software categorization information with new information obtained from System Center Online. When you select this setting, the software title state changes from **Updatable** to **Validated**.  
+   - **Overwrite the locally edited catalog information value with the downloaded System Center Online value**: Resolves the software details conflict by overwriting the existing Asset Intelligence catalog software categorization information with new information obtained from System Center Online. When you select this setting, the software title state changes from **Updatable** to **Validated**.  
 
      Click **OK** to save the conflict resolution.  

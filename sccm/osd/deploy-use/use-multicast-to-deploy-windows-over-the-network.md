@@ -20,11 +20,11 @@ Multicast is a network optimization method that you can use in your System Cente
 
  You can deploy operating systems over the network by using multicast in the following operating system deployment scenarios:  
 
--   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
- Complete the steps in one of the operating system deployment scenarios and then use the following sections to support multicast.  
+  Complete the steps in one of the operating system deployment scenarios and then use the following sections to support multicast.  
 
 ##  <a name="BKMK_Configure"></a> Configure a distribution point to support multicast  
  To use multicast when you   deploy operating systems, you must configure a distribution point to support multicast. For more information, see [Configure distribution points to support multicast](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast).  

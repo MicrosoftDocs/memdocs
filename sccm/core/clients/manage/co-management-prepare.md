@@ -51,6 +51,7 @@ The following are general prerequisites for you to enable co-management:
 ### Prerequisite Azure Resource Manager roles
 <!--SCCMDocs issue #667-->
 For more information about Azure roles, see [Understand the different roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+
 |Action|Role needed|
 |----|----|
 |Set up a cloud management gateway|Azure Subscription Manager|

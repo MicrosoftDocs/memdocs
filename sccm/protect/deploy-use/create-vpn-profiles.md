@@ -21,28 +21,28 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
 
 ### Create a VPN profile   
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles**.  
+1. In the Configuration Manager console, choose **Assets and Compliance** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles**.  
 
-2.  On the **Home** tab, in the **Create** group, choose **Create VPN Profile**.  
-
-
-3.  Complete the **General** page. Note the following:  
-
-    - Select the appropriate **Platform**.
-
-       - If you select the Windows 8.1 platform, you have the option to select **Import an existing VPN profile item from a file** to import VPN profile information that was exported to an XML file.
-
-   	- Do not use the characters \\/:*?&lt;>&#124;, or the space character in the VPN profile name. These characters are not supported by the Windows Server VPN profile.  
+2. On the **Home** tab, in the **Create** group, choose **Create VPN Profile**.  
 
 
-4.  On the **Connection** page, specify:  
+3. Complete the **General** page. Note the following:  
 
-    -   **Connection type**: Choose the VPN connection type. You can choose from the connection types in the following table.  
+   - Select the appropriate **Platform**.
 
-    -   **Server list**: Add a new server to use for the VPN connection. Depending on the connection type, you can add one or more VPN servers and specify the default server.  
+      - If you select the Windows 8.1 platform, you have the option to select **Import an existing VPN profile item from a file** to import VPN profile information that was exported to an XML file.
 
-        > [!NOTE]  
-        >  Devices that run iOS do not support using multiple VPN servers. If you configure multiple VPN servers and then deploy the VPN profile to an iOS device, only the default server is used.  
+   - Do not use the characters \\/:*?&lt;>&#124;, or the space character in the VPN profile name. These characters are not supported by the Windows Server VPN profile.  
+
+
+4. On the **Connection** page, specify:  
+
+   - **Connection type**: Choose the VPN connection type. You can choose from the connection types in the following table.  
+
+   - **Server list**: Add a new server to use for the VPN connection. Depending on the connection type, you can add one or more VPN servers and specify the default server.  
+
+     > [!NOTE]  
+     >  Devices that run iOS do not support using multiple VPN servers. If you configure multiple VPN servers and then deploy the VPN profile to an iOS device, only the default server is used.  
 
      This table provides options for connection types. See your VPN server documentation for more information.
 

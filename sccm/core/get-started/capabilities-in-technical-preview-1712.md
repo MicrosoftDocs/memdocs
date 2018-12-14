@@ -27,14 +27,14 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
 **Known Issues in this Technical Preview:**
 -->
 **Known Issues in this Technical Preview:**
--   **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
   2. In the **Site System Roles** pane, right-click on the **Site server** role, and then choose **Remove Role**.
   3. Right-click on the passive mode site server, and then choose **Delete**.
   4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
-<!--sms489412-->
+  <!--sms489412-->
 
 
 **The following are new features you can try out with this version.**  
@@ -87,18 +87,18 @@ New client settings are now available to enable a PXE responder service on Confi
 Ensure there are no existing PXE-enabled distribution points or other PXE servers in the test environment that may conflict with this client PXE responder.
 
 In the Configuration Manager console:
- 1. In the **Software Library** workspace under **Operating Systems**, **Task Sequences**: create a task sequence using the custom template.
-	1. Click **Add**, select **General**, and then the **Set Task Sequence Variable** step. Enter **SMSTSPersistContent** as the task sequence variable, and enter the value **TRUE**.
-	1. Click **Add**, select **Software**, and then the **Download Package Content** step. Click the gold asterisk and then select a PXE-enabled boot image. Include both x86 and x64 boot images. Configure the step to place it into the **Configuration Manager client cache**.
-	1. Click **Add**, select **General**, and then the **Set Task Sequence Variable** step. Enter **SMSTSPreserveContent** as the task sequence variable, and enter the value **TRUE**.
- 2. In the **Administration** workspace under **Client Settings**: create a custom client device settings policy.
-	1. Select the **Client Cache Settings** group.
-  1. Set the **Enable Configuration Manager client in full OS to share content** setting to **Yes**.
-	1. Set the **Enable PXE responder service** setting to **Yes**.
-  1. For the **Create a self-signed certificate or import a PKI client certificate** setting, click **Provide a certificate**. Select **Import certificate** if your test environment has PKI, otherwise click **OK** to create a self-signed certificate. 
-	1. Configure the remaining settings as necessary for your test environment. (The default settings should work unless there are specific network or security requirements.)
- 3. Deploy the task sequence and custom client settings to a collection of target clients to be PXE responders. Wait for the policies to apply and the task sequence to run.
- 4. Start another client on the same subnet to PXE/network boot as normal.
+1. In the **Software Library** workspace under **Operating Systems**, **Task Sequences**: create a task sequence using the custom template.
+   1. Click **Add**, select **General**, and then the **Set Task Sequence Variable** step. Enter **SMSTSPersistContent** as the task sequence variable, and enter the value **TRUE**.
+   1. Click **Add**, select **Software**, and then the **Download Package Content** step. Click the gold asterisk and then select a PXE-enabled boot image. Include both x86 and x64 boot images. Configure the step to place it into the **Configuration Manager client cache**.
+   1. Click **Add**, select **General**, and then the **Set Task Sequence Variable** step. Enter **SMSTSPreserveContent** as the task sequence variable, and enter the value **TRUE**.
+2. In the **Administration** workspace under **Client Settings**: create a custom client device settings policy.
+   1. Select the **Client Cache Settings** group.
+   1. Set the **Enable Configuration Manager client in full OS to share content** setting to **Yes**.
+   1. Set the **Enable PXE responder service** setting to **Yes**.
+   1. For the **Create a self-signed certificate or import a PKI client certificate** setting, click **Provide a certificate**. Select **Import certificate** if your test environment has PKI, otherwise click **OK** to create a self-signed certificate. 
+   1. Configure the remaining settings as necessary for your test environment. (The default settings should work unless there are specific network or security requirements.)
+3. Deploy the task sequence and custom client settings to a collection of target clients to be PXE responders. Wait for the policies to apply and the task sequence to run.
+4. Start another client on the same subnet to PXE/network boot as normal.
 
 ### Known issues
  - The task sequence editor displays a red error icon for the **Download Package Content** step when you add a boot image, but the task sequence successfully saves. Opening this task sequence again in the editor also shows a harmless warning that referenced objects cannot be found. <!-- sms427542 -->

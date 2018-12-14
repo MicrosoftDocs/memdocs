@@ -13,13 +13,13 @@ manager: dougeby
 # Inventory Agent Client WMI Classes
 In System Center Configuration Manager, the inventory client agent classes can be broken into three categories:  
 
--   Inventory client agent settings  
+- Inventory client agent settings  
 
--   Inventory collection  
+- Inventory collection  
 
--   Report state Configuration Manager inventory provider  
+- Report state Configuration Manager inventory provider  
 
- If the IDMIF class name is more than 32 characters, the IDMIF is collected on the client, but the data is not written to the SQL Server database.  
+  If the IDMIF class name is more than 32 characters, the IDMIF is collected on the client, but the data is not written to the SQL Server database.  
 
 ## Inventory Agent Settings  
  These classes define what an inventory client agent collects and how the collection set should be reported.  

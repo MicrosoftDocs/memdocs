@@ -37,11 +37,11 @@ These support numbers are based on using the recommended hardware for Configurat
 
 ### Primary site  
 
--   Each primary site supports up to 250 secondary sites.  
+- Each primary site supports up to 250 secondary sites.  
 
--   The number of secondary sites per primary site is based on continuously connected and reliable wide area network (WAN) connections. For locations that have fewer than 500 clients, consider a distribution point instead of a secondary site.  
+- The number of secondary sites per primary site is based on continuously connected and reliable wide area network (WAN) connections. For locations that have fewer than 500 clients, consider a distribution point instead of a secondary site.  
 
- For information about the number of clients and devices that a primary site can support, see [Client numbers for sites and hierarchies](#bkmk_clientnumbers).  
+  For information about the number of clients and devices that a primary site can support, see [Client numbers for sites and hierarchies](#bkmk_clientnumbers).  
 
 
 ### Secondary site  
@@ -129,14 +129,14 @@ For more information, see CMG [Performance and scale](/sccm/core/clients/manage/
 
 ### Management point  
 
--   Each primary site supports up to 15 management points.  
+- Each primary site supports up to 15 management points.  
 
-    > [!TIP]  
-    >  Don't install management points on servers that are across a slow link from the primary site server or the site database server.  
+  > [!TIP]  
+  >  Don't install management points on servers that are across a slow link from the primary site server or the site database server.  
 
--   Each secondary site supports a single management point that must be installed on the secondary site server.  
+- Each secondary site supports a single management point that must be installed on the secondary site server.  
 
- For information about the number of clients and devices that a management point can support, see the [Management points](#bkmk_mp) section.  
+  For information about the number of clients and devices that a management point can support, see the [Management points](#bkmk_mp) section.  
 
 
 ### Software update point  
@@ -154,17 +154,17 @@ For more information, see CMG [Performance and scale](/sccm/core/clients/manage/
 ###  <a name="bkmk_cas"></a> Hierarchy with a central administration site  
 A central administration site supports a total number of devices that includes up to the number of devices listed for the following three groups:  
 
--   700,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
+- 700,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
 
--   25,000 devices that run Mac and Windows CE 7.0  
+- 25,000 devices that run Mac and Windows CE 7.0  
 
--   One of the following, depending on how your deployment supports mobile device management (MDM):  
+- One of the following, depending on how your deployment supports mobile device management (MDM):  
 
-    -   100,000 devices that you manage by using on-premises MDM  
+  -   100,000 devices that you manage by using on-premises MDM  
 
-    -   300,000 cloud-based devices  
+  -   300,000 cloud-based devices  
 
- For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 300,000 cloud-based devices when you integrate Microsoft Intune. This hierarchy supports a total of 1,025,000 devices. If you support devices that are managed by on-premises MDM, the total for this hierarchy is 825,000 devices.  
+  For example, in a hierarchy you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 devices, and up to 300,000 cloud-based devices when you integrate Microsoft Intune. This hierarchy supports a total of 1,025,000 devices. If you support devices that are managed by on-premises MDM, the total for this hierarchy is 825,000 devices.  
 
 > [!IMPORTANT]  
 >  In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. To support more than 50,000 desktops and devices, you must use an Enterprise edition of SQL Server. This requirement applies only to a central administration site. It doesn't apply to a stand-alone primary site or a child primary site. The edition of SQL Server you use for a primary site doesn't limit its capacity to support the stated number of clients.   

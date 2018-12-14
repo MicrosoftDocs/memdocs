@@ -48,4 +48,4 @@ When you have created your subscription, you can then install the service connec
 2.  The certificate from step 1 is installed on the service connection point site role and is used to authenticate and authorize all further communication with the Microsoft Intune service.
 
 > [!div class="button"]
-[< Previous step](terms-and-conditions.md)  [Next step >](enable-platform-enrollment.md)
+> [< Previous step](terms-and-conditions.md)  [Next step >](enable-platform-enrollment.md)

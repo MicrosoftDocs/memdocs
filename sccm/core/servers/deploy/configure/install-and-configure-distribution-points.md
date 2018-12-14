@@ -342,13 +342,13 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 
 - **User device affinity**: Specify how you want the distribution point to associate users with the destination computer for PXE deployments. Choose one of the following options:  
 
-    - **Allow user device affinity with auto-approval**: Choose this setting to automatically associate users with the destination computer without waiting for approval.  
+  - **Allow user device affinity with auto-approval**: Choose this setting to automatically associate users with the destination computer without waiting for approval.  
 
-    - **Allow user device affinity pending administrator approval**: Choose this setting to wait for approval from an administrative user before users are associated with the destination computer.  
+  - **Allow user device affinity pending administrator approval**: Choose this setting to wait for approval from an administrative user before users are associated with the destination computer.  
 
-    - **Do not allow user device affinity**: Choose this setting to specify that users aren't associated with the destination computer. This setting is the default.  
+  - **Do not allow user device affinity**: Choose this setting to specify that users aren't associated with the destination computer. This setting is the default.  
 
-     For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+    For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 - **Network interfaces**: Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If the distribution point responds to specific network interfaces, then provide the MAC address for each network interface.  
 

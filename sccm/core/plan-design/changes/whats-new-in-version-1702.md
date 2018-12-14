@@ -57,13 +57,13 @@ The following are improvements to using search in the Configuration Manager cons
  You can use the in-console feedback options to send feedback directly to the development team.
 
  You can find the **Feedback** option:
- -  In the ribbon, at the far left of the Home tab of each node.  
-    ![Ribbon](./media/feedback-home.png)
+- In the ribbon, at the far left of the Home tab of each node.  
+  ![Ribbon](./media/feedback-home.png)
 
- -  When you right-click on any object in the console.   
-     ![Righ-click option](./media/feedback-option.png)   
+- When you right-click on any object in the console.   
+   ![Righ-click option](./media/feedback-option.png)   
 
- Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
+  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
 
 
 ###  Changes for Updates and Servicing

@@ -58,13 +58,13 @@ Class SMS_EmbeddedPropertyList
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- There is no list that defines the properties for each site control item. The best way to determine the properties for each site control item is to follow the steps defined in `Determining Which Site Control Item to Use`. Property names that contain the word Reserved cannot be modified.  
+  There is no list that defines the properties for each site control item. The best way to determine the properties for each site control item is to follow the steps defined in `Determining Which Site Control Item to Use`. Property names that contain the word Reserved cannot be modified.  
 
- Arrays of strings that come from the system registry use the [SMS_Client_Reg_MultiString_List Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md) class.  
+  Arrays of strings that come from the system registry use the [SMS_Client_Reg_MultiString_List Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md) class.  
 
 ## Requirements  
 

@@ -27,42 +27,42 @@ To get started with programming for System Center Configuration Manager, it’s 
 ### More Resources  
  **Books:** There are numerous books available for Configuration Manager. A few example books are listed below.  
 
--   [System Center 2012 Configuration Manager: Mastering the Fundamentals](http://www.amazon.com/System-Center-2012-Configuration-Manager/dp/9197939048)  
+- [System Center 2012 Configuration Manager: Mastering the Fundamentals](http://www.amazon.com/System-Center-2012-Configuration-Manager/dp/9197939048)  
 
--   [System Center 2012 Configuration Manager (SCCM) Unleashed](http://www.amazon.com/System-Center-Configuration-Manager-Unleashed/dp/0672334372/ref=sr_1_1?s=books&ie=UTF8&qid=1382812114&sr=1-1&keywords=System+Center+2012+Configuration+Manager+%28SCCM%29+Unleashed)  
+- [System Center 2012 Configuration Manager (SCCM) Unleashed](http://www.amazon.com/System-Center-Configuration-Manager-Unleashed/dp/0672334372/ref=sr_1_1?s=books&ie=UTF8&qid=1382812114&sr=1-1&keywords=System+Center+2012+Configuration+Manager+%28SCCM%29+Unleashed)  
 
--   [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](http://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
+- [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](http://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
 
- **Videos:** There are numerous videos available for Configuration Manager. A few example videos are listed below.  
+  **Videos:** There are numerous videos available for Configuration Manager. A few example videos are listed below.  
 
--   [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
+- [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
--   [Vimeo: Configuration Manager 2012 &#124; Windows 8 & SP1 Features – Wally Mead](http://vimeo.com/55952501)  
+- [Vimeo: Configuration Manager 2012 &#124; Windows 8 & SP1 Features – Wally Mead](http://vimeo.com/55952501)  
 
--   [YouTube: Technical Deep Dive: System Center Configuration Manager 2012 Technical Overview](http://www.youtube.com/watch?v=qLACm3910_A)  
+- [YouTube: Technical Deep Dive: System Center Configuration Manager 2012 Technical Overview](http://www.youtube.com/watch?v=qLACm3910_A)  
 
- **Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
+  **Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
 
--   [TechNet: Configuration Manager 2012 - General](http://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
+- [TechNet: Configuration Manager 2012 - General](http://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
 
--   [windows-noob.com: Configuration Manager 2012](http://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
+- [windows-noob.com: Configuration Manager 2012](http://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 
 ## Architectural Understanding  
  Configuration Manager is multi-tiered, distributed management system. It’s important to understand the general architecture of Configuration Manager. Below is a link to an overview of the Configuration Manager architecture.  
 
--   [Architectural Overview](../../../develop/core/understand/architectural-overview.md)  
+- [Architectural Overview](../../../develop/core/understand/architectural-overview.md)  
 
- In addition to the architectural information, there are several key points that commonly confuse administrators and programmers new to Configuration Manager.  
+  In addition to the architectural information, there are several key points that commonly confuse administrators and programmers new to Configuration Manager.  
 
--   **Server:** In a general sense, most programming actions (in particular, automation) take place on a Configuration Manager site server. Actions or configuration changes are propagated throughout the Configuration Manager hierarchy to the clients via policy. Policy is pulled down by the client on a configurable polling interval **NOT** pushed immediately to the client by the server. In general, once a client is installed, there is no direct communication from the site server to the client or the client to the site server – all communication takes place through intermediary server roles.  
+- **Server:** In a general sense, most programming actions (in particular, automation) take place on a Configuration Manager site server. Actions or configuration changes are propagated throughout the Configuration Manager hierarchy to the clients via policy. Policy is pulled down by the client on a configurable polling interval **NOT** pushed immediately to the client by the server. In general, once a client is installed, there is no direct communication from the site server to the client or the client to the site server – all communication takes place through intermediary server roles.  
 
--   **Client:**  Configuration Manager clients are systems and devices managed by Configuration Manager. A ‘server’ can be a Configuration Manger client. So, an Exchange Server, an Active Directory Server and Configuration Manager Server can all be Configuration Manager clients – if they are managed by Configuration Manager. In addition, Windows 8.1, Windows Phone and an iPhone can all be Configuration Manager clients – if they are managed by Configuration Manager.  
+- **Client:**  Configuration Manager clients are systems and devices managed by Configuration Manager. A ‘server’ can be a Configuration Manger client. So, an Exchange Server, an Active Directory Server and Configuration Manager Server can all be Configuration Manager clients – if they are managed by Configuration Manager. In addition, Windows 8.1, Windows Phone and an iPhone can all be Configuration Manager clients – if they are managed by Configuration Manager.  
 
-     Configuration Manager clients receive policy by periodically polling a Configuration Manager Management Point. The polling interval for retrieving basic policy is configurable, as are other settings. Because of this, there are inherent delays in client targeted actions initiated from the Configuration Manager site server.  
+   Configuration Manager clients receive policy by periodically polling a Configuration Manager Management Point. The polling interval for retrieving basic policy is configurable, as are other settings. Because of this, there are inherent delays in client targeted actions initiated from the Configuration Manager site server.  
 
--   **Console:** Remote Configuration Manager console binaries and files are not automatically updated when changes are made on the site server. Modifications and extensions must be copied to systems running the Configuration Manager console, either manually or using Configuration Manager Application Management/Software Distribution.  
+- **Console:** Remote Configuration Manager console binaries and files are not automatically updated when changes are made on the site server. Modifications and extensions must be copied to systems running the Configuration Manager console, either manually or using Configuration Manager Application Management/Software Distribution.  
 
--   **SMS Provider vs SQL Server:** Although Configuration Manager leverages SQL Server for data storage, SQL Server is **NOT** the primary programming interface to Configuration Manager. The primary programming interface to Configuration Manager is the SMS Provider (WMI) - object creation and modification **must** be done via the SMS Provider. You should consider SQL Server as providing read-only access to Configuration Manager data for querying and reporting purposes. This is not a matter of permissions, rather matter of maintaining data integrity.  
+- **SMS Provider vs SQL Server:** Although Configuration Manager leverages SQL Server for data storage, SQL Server is **NOT** the primary programming interface to Configuration Manager. The primary programming interface to Configuration Manager is the SMS Provider (WMI) - object creation and modification **must** be done via the SMS Provider. You should consider SQL Server as providing read-only access to Configuration Manager data for querying and reporting purposes. This is not a matter of permissions, rather matter of maintaining data integrity.  
 
 ## Namespaces and Classes  
 
@@ -82,19 +82,19 @@ To get started with programming for System Center Configuration Manager, it’s 
 ### Console  
  **Console-related Managed Classes:**  
 
--   Microsoft.configurationmanagement.exe  
+- Microsoft.configurationmanagement.exe  
 
--   Microsoft.configurationmanagement.managementprovider.dll  
+- Microsoft.configurationmanagement.managementprovider.dll  
 
--   Microsoft.ConfigurationManagement.DialogFoundation.dll  
+- Microsoft.ConfigurationManagement.DialogFoundation.dll  
 
--   AdminUI.DialogFoundation.dll  
+- AdminUI.DialogFoundation.dll  
 
- **Introductory Configuration Manager Console topics:**  
+  **Introductory Configuration Manager Console topics:**  
 
--   [About Configuration Manager Console Extension](../../../develop/core/servers/console/about-configuration-manager-console-extension.md)  
+- [About Configuration Manager Console Extension](../../../develop/core/servers/console/about-configuration-manager-console-extension.md)  
 
--   [Configuration Manager Console Extension Architecture](../../../develop/core/servers/console/console-extension-architecture.md)  
+- [Configuration Manager Console Extension Architecture](../../../develop/core/servers/console/console-extension-architecture.md)  
 
 ## Programming Fundamentals  
  The Configuration Manager Programming Fundamentals section of the SDK provides examples of how to work with the various types of objects and structures available in Configuration Manager. Configuration Manager contains some objects/concepts that can be initially confusing. Of particular interest are **embedded properties** (used primary with the Site Control File) and **lazy properties** (used throughout the Configuration Manager classes). Below are links to the Programming Fundamentals (and other sub-sections) of the SDK. These sections contain code examples showing how to work with the various object types.  

@@ -19,13 +19,13 @@ With System Center Configuration Manager, you use role-based administration to s
 
  The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings by using the following:  
 
--   *Security roles* are assigned to administrative users to provide those users (or groups of users) permission to different Configuration Manager objects. For example, permission to create or change client settings.  
+- *Security roles* are assigned to administrative users to provide those users (or groups of users) permission to different Configuration Manager objects. For example, permission to create or change client settings.  
 
--   *Security scopes* are used to group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft Office 2010.  
+- *Security scopes* are used to group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft Office 2010.  
 
--   *Collections* are used to specify groups of user and device resources that the administrative user can manage.  
+- *Collections* are used to specify groups of user and device resources that the administrative user can manage.  
 
- With the combination of security roles, security scopes, and collections, you segregate the administrative assignments that meet your organization's requirements. Used together, they define the administrative scope of a user, which is what that user can view and manage in your Configuration Manager deployment.  
+  With the combination of security roles, security scopes, and collections, you segregate the administrative assignments that meet your organization's requirements. Used together, they define the administrative scope of a user, which is what that user can view and manage in your Configuration Manager deployment.  
 
 ## Benefits of role-based administration  
 

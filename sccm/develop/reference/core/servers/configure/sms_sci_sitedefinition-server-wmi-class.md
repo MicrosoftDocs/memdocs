@@ -226,18 +226,18 @@ Class SMS_SCI_SiteDefinition : SMS_SiteControlItem
 
  Processor platform of the site server. Possible values are:  
 
--   AMD64  
+- AMD64  
 
- `SiteType`  
- Data type: `UInt32`  
+  `SiteType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [ResIDValueLookup("SiteType")]  
+  Qualifiers: [ResIDValueLookup("SiteType")]  
 
- Type of site. Possible values are listed for the `Type` property of [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
+  Type of site. Possible values are listed for the `Type` property of [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
 
- For this class, the default value is PRIMARY (2).  
+  For this class, the default value is PRIMARY (2).  
 
 |||  
 |-|-|  

@@ -134,15 +134,15 @@ Class SMS_UpdateCategoryInstance : SMS_CategoryInstanceBase
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses the `SMS_UpdateCategoryInstance` class after creating or modifying a software update deployment using [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md). The application can use [SMS_CIAllCategories Server WMI Class](../../../develop/reference/sum/sms_ciallcategories-server-wmi-class.md) to query for all categories associated with the software updates configuration item or for all configuration items associated with a category.  
+  Your application uses the `SMS_UpdateCategoryInstance` class after creating or modifying a software update deployment using [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md). The application can use [SMS_CIAllCategories Server WMI Class](../../../develop/reference/sum/sms_ciallcategories-server-wmi-class.md) to query for all categories associated with the software updates configuration item or for all configuration items associated with a category.  
 
- To use this class, the application obtains an `SMS_SoftwareUpdateSource` object and sets the properties as required for the particular software update and the source.  
+  To use this class, the application obtains an `SMS_SoftwareUpdateSource` object and sets the properties as required for the particular software update and the source.  
 
 ## Requirements  
 

@@ -217,45 +217,45 @@ When you install the Configuration Manager client on mobile devices and enroll t
 
 For more information, see [Determine the site system roles for clients](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients).  
 
--   Management point that's configured for HTTPS client connections and enabled for mobile devices  
+- Management point that's configured for HTTPS client connections and enabled for mobile devices  
 
-     A management point is always required to install the Configuration Manager client on mobile devices. In addition to the configuration requirements of HTTPS and enabled for mobile devices, the management point must be configured with an internet FQDN and accept client connections from the internet.  
+   A management point is always required to install the Configuration Manager client on mobile devices. In addition to the configuration requirements of HTTPS and enabled for mobile devices, the management point must be configured with an internet FQDN and accept client connections from the internet.  
 
--   Enrollment point and enrollment proxy point  
+- Enrollment point and enrollment proxy point  
 
-     An enrollment proxy point manages enrollment requests from mobile devices and the enrollment point completes the enrollment process. The enrollment point must be in the same Active Directory forest as the site server, but the enrollment proxy point can be in another forest.  
+   An enrollment proxy point manages enrollment requests from mobile devices and the enrollment point completes the enrollment process. The enrollment point must be in the same Active Directory forest as the site server, but the enrollment proxy point can be in another forest.  
 
--   Client settings for mobile device enrollment  
+- Client settings for mobile device enrollment  
 
-     Configure client settings to allow users to enroll mobile devices and configure at least one enrollment profile.  
+   Configure client settings to allow users to enroll mobile devices and configure at least one enrollment profile.  
 
--   Reporting services point  
+- Reporting services point  
 
-     The reporting services point is an optional, but recommended site system role that can display reports related to mobile device enrollment and client management.  
+   The reporting services point is an optional, but recommended site system role that can display reports related to mobile device enrollment and client management.  
 
-     For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
+   For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
 
--   To configure enrollment for mobile devices, you must have the following security permissions:  
+- To configure enrollment for mobile devices, you must have the following security permissions:  
 
-    -   To add, modify, and delete the enrollment site system roles: **Modify** permission for the **Site** object.  
+  - To add, modify, and delete the enrollment site system roles: **Modify** permission for the **Site** object.  
 
-    -   To configure client settings for enrollment: Default client settings require **Modify** permission for the **Site** object, and custom client settings require **Client agent**  permissions.  
+  - To configure client settings for enrollment: Default client settings require **Modify** permission for the **Site** object, and custom client settings require **Client agent**  permissions.  
 
-     The **Full Administrator** default security role includes the required permissions to configure the enrollment site system roles.  
+    The **Full Administrator** default security role includes the required permissions to configure the enrollment site system roles.  
 
-     To manage enrolled mobile devices, you must have the following security permissions:  
+    To manage enrolled mobile devices, you must have the following security permissions:  
 
-    -   To wipe or retire a mobile device: **Delete resource** for the **Collection** object.  
+  - To wipe or retire a mobile device: **Delete resource** for the **Collection** object.  
 
-    -   To cancel a wipe or retire command: **Delete resource** for the **Collection** object.  
+  - To cancel a wipe or retire command: **Delete resource** for the **Collection** object.  
 
-    -   To allow and block mobile devices: **Modify resource** for the **Collection** object.  
+  - To allow and block mobile devices: **Modify resource** for the **Collection** object.  
 
-    -   To remote lock, or reset the passcode on a mobile device: **Modify** resource for the **Collection** object.  
+  - To remote lock, or reset the passcode on a mobile device: **Modify** resource for the **Collection** object.  
 
-     The **Operations Administrator** default security role includes the required permissions to manage mobile devices.  
+    The **Operations Administrator** default security role includes the required permissions to manage mobile devices.  
 
-     For more information about how to configure security permissions, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
+    For more information about how to configure security permissions, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
 
 
 ### Firewall requirements  

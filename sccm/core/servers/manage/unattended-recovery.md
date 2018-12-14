@@ -104,77 +104,77 @@ manager: dougeby
 
 **Options**
 
--   **Key name:** ProductID
-    -   **Required:** Yes
-    -   **Values:**   
-         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-         - Eval
-    -   **Details:** The Configuration Manager installation product key, including the dashes. Enter **Eval** can install the evaluation version of Configuration Manager.  
+- **Key name:** ProductID
+  -   **Required:** Yes
+  -   **Values:**   
+       - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+       - Eval
+  -   **Details:** The Configuration Manager installation product key, including the dashes. Enter **Eval** can install the evaluation version of Configuration Manager.  
 
 
--   **Key name:** SiteCode
+- **Key name:** SiteCode
 
-    -   **Required:** Yes
-    -   **Values:** &lt;Site code\>
-    -   **Details:** Three alpha-numeric characters that uniquely identify the site in your hierarchy. Specify the site code that was used by the site before the failure.
-
-
--   **Key name:** SiteName
-
-    -   **Required:** Yes
-    -   **Values:** SiteName
-    -   **Details:** Description for this site.
+  -   **Required:** Yes
+  -   **Values:** &lt;Site code\>
+  -   **Details:** Three alpha-numeric characters that uniquely identify the site in your hierarchy. Specify the site code that was used by the site before the failure.
 
 
--   **Key name:** SMSInstallDir
+- **Key name:** SiteName
 
-    -   **Required:** Yes
-    -   **Values:** &lt;*ConfigMgrInstallationPath*>
-    -   **Details:** Specifies the installation folder for the Configuration Manager program files.
-        > [!NOTE]   
-        >  You can specify the original path or a new  path to use for the Configuration Manager installation.
-
--   **Key name:** SDKServer
-
-    -   **Required:** Yes
-    -   **Values:** &lt;*FQDN of SMS Provider*>
-    -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.
-
-         You can configure additional SMS Providers for the site after the initial installation.
-
--   **Key name:** PrerequisiteComp
-
-    -   **Required:** Yes
-    -   **Values:** 0 or 1  
-         0 = download   
-         1 = already downloaded
-    -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of 0, setup downloads the files.  
+  -   **Required:** Yes
+  -   **Values:** SiteName
+  -   **Details:** Description for this site.
 
 
--   **Key name:** PrerequisitePath
+- **Key name:** SMSInstallDir
 
-    -   **Required:** Yes
-    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>
-    -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.
+  - **Required:** Yes
+  - **Values:** &lt;*ConfigMgrInstallationPath*>
+  - **Details:** Specifies the installation folder for the Configuration Manager program files.
+    > [!NOTE]   
+    >  You can specify the original path or a new  path to use for the Configuration Manager installation.
 
--   **Key name:** AdminConsole
+- **Key name:** SDKServer
 
-    -   **Required:** Maybe
-    -   **Values:** 0 or 1
-         0 = do not install   
-         1 = install
-    -   **Details:** Specifies whether to install the Configuration Manager console. This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.
+  -   **Required:** Yes
+  -   **Values:** &lt;*FQDN of SMS Provider*>
+  -   **Details:** Specifies the FQDN for the server that hosts the SMS Provider. Specify the server that hosted the SMS Provider before the failure.
+
+       You can configure additional SMS Providers for the site after the initial installation.
+
+- **Key name:** PrerequisiteComp
+
+  -   **Required:** Yes
+  -   **Values:** 0 or 1  
+       0 = download   
+       1 = already downloaded
+  -   **Details:** Specifies whether setup prerequisite files have already been downloaded. For example, if you use a value of 0, setup downloads the files.  
 
 
--   **Key name:** JoinCEIP   
-    > [!Note]  
-    > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
+- **Key name:** PrerequisitePath
 
-    -   **Required:** Yes
-    -   **Values:** 0 or 1  
-         0 = do not join  
-         1 = join
-    -   **Details:** Specifies whether to join the Customer Experience Improvement Program.
+  -   **Required:** Yes
+  -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>
+  -   **Details:** Specifies the path to the setup prerequisite files. Depending on the **PrerequisiteComp** value, setup uses this path to store downloaded files or to locate previously downloaded files.
+
+- **Key name:** AdminConsole
+
+  -   **Required:** Maybe
+  -   **Values:** 0 or 1
+       0 = do not install   
+       1 = install
+  -   **Details:** Specifies whether to install the Configuration Manager console. This key is required except when the **ServerRecoveryOptions** setting has a value of **4**.
+
+
+- **Key name:** JoinCEIP   
+  > [!Note]  
+  > Starting in Configuration Manager version 1802 the CEIP feature is removed from the product.
+
+  -   **Required:** Yes
+  -   **Values:** 0 or 1  
+       0 = do not join  
+       1 = join
+  -   **Details:** Specifies whether to join the Customer Experience Improvement Program.
 
 **SQLConfigOptions**
 

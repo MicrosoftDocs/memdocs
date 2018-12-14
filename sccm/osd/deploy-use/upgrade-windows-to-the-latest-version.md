@@ -41,21 +41,21 @@ This article provides the steps in Configuration Manager to upgrade the OS on a 
 
 Review the following requirements and limitations for the task sequence to upgrade an OS to make sure it meets your needs:  
 
-  -   Only add task sequence steps that are related to the core task of upgrading the OS. These steps primarily include installing packages, applications, or updates. Also use steps that run command lines, PowerShell, or set dynamic variables.  
+- Only add task sequence steps that are related to the core task of upgrading the OS. These steps primarily include installing packages, applications, or updates. Also use steps that run command lines, PowerShell, or set dynamic variables.  
 
-  -   Review drivers and applications that are installed on computers to ensure they are compatible with Windows 10 before you deploy the upgrade task sequence.  
+- Review drivers and applications that are installed on computers to ensure they are compatible with Windows 10 before you deploy the upgrade task sequence.  
 
-  -   The following tasks are not compatible with the in-place upgrade. They require you to use traditional OS deployments:  
+- The following tasks are not compatible with the in-place upgrade. They require you to use traditional OS deployments:  
 
-     -   Changing the computer's domain membership, or updating the local Administrators group.  
+  - Changing the computer's domain membership, or updating the local Administrators group.  
 
-     -   Implementing a fundamental change on the computer, such as: 
-         - Changing disk partitions
-         - Changing the system architecture from x86 to x64
-         - Implementing UEFI. (For more information on a possible option, see [Convert from BIOS to UEFI during an in-place upgrade](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
-         - Modifying the base OS language  
+  - Implementing a fundamental change on the computer, such as: 
+    - Changing disk partitions
+    - Changing the system architecture from x86 to x64
+    - Implementing UEFI. (For more information on a possible option, see [Convert from BIOS to UEFI during an in-place upgrade](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+    - Modifying the base OS language  
 
-     -   You have custom requirements including using a custom base image, using third-party disk encryption, or require WinPE offline operations.  
+  - You have custom requirements including using a custom base image, using third-party disk encryption, or require WinPE offline operations.  
 
 ### Infrastructure requirements  
 

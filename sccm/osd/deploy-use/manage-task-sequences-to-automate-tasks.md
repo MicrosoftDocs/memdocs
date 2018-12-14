@@ -86,11 +86,11 @@ You can return to a previous page when you run a task sequence and there's a fai
 
 3. On the **General** tab, the following settings for Software Center are available:  
 
-  - **Restart required**: Lets the user know whether a restart is required during the installation.  
+   - **Restart required**: Lets the user know whether a restart is required during the installation.  
 
-  - **Download size (MB)**: Specifies how many megabytes are displayed in Software Center for the task sequence.  
+   - **Download size (MB)**: Specifies how many megabytes are displayed in Software Center for the task sequence.  
 
-  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.  
+   - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.  
 
 
 
@@ -104,38 +104,38 @@ You can return to a previous page when you run a task sequence and there's a fai
 
 3. On the **Advanced** tab, the following settings are available:  
 
-    - **Run another program first**: Select this option to run a program in another package before the task sequence runs. By default, this check box is cleared. You don't need to separately deploy the program that you specify to run first.  
+   - **Run another program first**: Select this option to run a program in another package before the task sequence runs. By default, this check box is cleared. You don't need to separately deploy the program that you specify to run first.  
 
-        > [!IMPORTANT]     
-        This setting applies only to task sequences that run in the full OS. If you start the task sequence by using PXE or boot media, Configuration Manager ignores this setting.  
+     > [!IMPORTANT]
+     >   This setting applies only to task sequences that run in the full OS. If you start the task sequence by using PXE or boot media, Configuration Manager ignores this setting.  
 
-        - **Package**: Browse for the package that contains the program to run before this task sequence.  
+     - **Package**: Browse for the package that contains the program to run before this task sequence.  
 
-        - **Program**: Select the program to run before this task sequence.  
-
-        > [!NOTE]    
-        > If the selected program fails to run on a client, the task sequence doesn't run. If the selected program runs successfully, it doesn't run again, even if the task sequence is rerun on the same client.  
- 
-    - **Disable this task sequence on computers where it is deployed**: If you select this option, Configuration Manager temporarily disables all deployments that contain this task sequence. It also removes the task sequence from the list of deployments available to run. The task sequence doesn't run until you enable it. By default, this option is cleared.  
-
-    - **Maximum allowed run time**: Specifies the maximum time in minutes that you expect the task sequence to run on the destination computer. Use a whole number equal to or greater than zero. By default, this value is 120 minutes.  
-
-        > [!IMPORTANT]    
-        > If you're using maintenance windows for the collection to which you deploy this task sequence, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If you set the maximum run time to **0**, the task sequence starts during the maintenance window. It continues to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (non-zero) that exceeds the length of any available maintenance window, then that task sequence doesn't run. For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
- 
-       If you set the value as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence starts as long as the countdown duration doesn't exceed the maintenance window value.  
+     - **Program**: Select the program to run before this task sequence.  
 
        > [!NOTE]    
-       > When it reaches the maximum run time, if you set the option to **Run with administrative rights**, and don't set the option to **Allow users to interact with this program**, then Configuration Manager stops the task sequence. If the task sequence itself isn't stopped, Configuration Manager stops monitoring the task sequence after it reaches the maximum allowed run time.  
+       > If the selected program fails to run on a client, the task sequence doesn't run. If the selected program runs successfully, it doesn't run again, even if the task sequence is rerun on the same client.  
+ 
+   - **Disable this task sequence on computers where it is deployed**: If you select this option, Configuration Manager temporarily disables all deployments that contain this task sequence. It also removes the task sequence from the list of deployments available to run. The task sequence doesn't run until you enable it. By default, this option is cleared.  
 
-    - **Use a boot image**: Use the selected boot image when the task sequence is run. Click **Browse** to select a different boot image. Clear this option to disable the use of the selected boot image when the task sequence runs.  
+   - **Maximum allowed run time**: Specifies the maximum time in minutes that you expect the task sequence to run on the destination computer. Use a whole number equal to or greater than zero. By default, this value is 120 minutes.  
 
-    - **This task sequence can run on any platform**: If you select this option, Configuration Manager doesn't check the platform type of the destination computer when the task sequence runs. This option is selected by default.  
+       > [!IMPORTANT]    
+       > If you're using maintenance windows for the collection to which you deploy this task sequence, a conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If you set the maximum run time to **0**, the task sequence starts during the maintenance window. It continues to run until it completes or fails after the maintenance window is closed. As a result, task sequences with a maximum run time set to **0** might run past the end of their maintenance windows. If you set the maximum run time to a specific period (non-zero) that exceeds the length of any available maintenance window, then that task sequence doesn't run. For more information, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+ 
+      If you set the value as **0**, Configuration Manager evaluates the maximum allowed run time as **12** hours (720 minutes) for monitoring progress. However, the task sequence starts as long as the countdown duration doesn't exceed the maintenance window value.  
 
-    - **This task sequence can only run on the specified client platforms**: This option specifies the processors, OS versions, and service packs on which this task sequence can run. When you select this option, select at least one platform from the list. By default, no platforms are selected. Configuration Manager uses this information when is evaluates which destination computers in a collection receive the deployed task sequence.  
+      > [!NOTE]    
+      > When it reaches the maximum run time, if you set the option to **Run with administrative rights**, and don't set the option to **Allow users to interact with this program**, then Configuration Manager stops the task sequence. If the task sequence itself isn't stopped, Configuration Manager stops monitoring the task sequence after it reaches the maximum allowed run time.  
 
-        > [!NOTE]    
-        > When you run a task sequence from boot media or PXE, Configuration Manager ignores this option. The task sequence runs as though the option **This program can run on any platform** is selected.  
+   - **Use a boot image**: Use the selected boot image when the task sequence is run. Click **Browse** to select a different boot image. Clear this option to disable the use of the selected boot image when the task sequence runs.  
+
+   - **This task sequence can run on any platform**: If you select this option, Configuration Manager doesn't check the platform type of the destination computer when the task sequence runs. This option is selected by default.  
+
+   - **This task sequence can only run on the specified client platforms**: This option specifies the processors, OS versions, and service packs on which this task sequence can run. When you select this option, select at least one platform from the list. By default, no platforms are selected. Configuration Manager uses this information when is evaluates which destination computers in a collection receive the deployed task sequence.  
+
+       > [!NOTE]    
+       > When you run a task sequence from boot media or PXE, Configuration Manager ignores this option. The task sequence runs as though the option **This program can run on any platform** is selected.  
 
 
 
@@ -168,8 +168,8 @@ You can return to a previous page when you run a task sequence and there's a fai
 
 3. On the **User Notification** tab, select **Use custom text**.  
 
-    >  [!NOTE]    
-    >  You can only set user notification text when you select the option, **This is a high-impact task sequence**.  
+   > [!NOTE]
+   >  You can only set user notification text when you select the option, **This is a high-impact task sequence**.  
 
 4. Configure the following settings:  
 
@@ -189,11 +189,11 @@ You can return to a previous page when you run a task sequence and there's a fai
 #### Example
 Let's say you configure the following custom notification in properties.
 
-![Customized User Notification tab of task sequence properties](..\media\user-notification.png)
+![Customized User Notification tab of task sequence properties](../media/user-notification.png)
 
 The following notification message displays when the end user opens the installation from Software Center.
 
-![Customized task sequence notification to the end user from Software Center](..\media\user-notification-enduser.png)
+![Customized task sequence notification to the end user from Software Center](../media/user-notification-enduser.png)
 
 
 
@@ -239,134 +239,134 @@ The following notification message displays when the end user opens the installa
 
 #### To deploy a task sequence    
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  In the **Task Sequence** list, select the task sequence that you want to deploy.  
+3. In the **Task Sequence** list, select the task sequence that you want to deploy.  
 
-4.  On the **Home** tab, in the **Deployment** group, click **Deploy**.  
+4. On the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-    > [!NOTE]  
-    >  If **Deploy** isn't available, the task sequence has a reference that's not valid. Correct the reference and then try to deploy the task sequence again.  
+   > [!NOTE]  
+   >  If **Deploy** isn't available, the task sequence has a reference that's not valid. Correct the reference and then try to deploy the task sequence again.  
 
-5.  On the **General** page, specify the following information, and then click **Next**.  
+5. On the **General** page, specify the following information, and then click **Next**.  
 
-    -   **Task sequence**: Specify the task sequence to deploy. By default, this box displays the selected task sequence.  
+   - **Task sequence**: Specify the task sequence to deploy. By default, this box displays the selected task sequence.  
 
-    -   **Collection**: Select the collection that contains the computers to run the task sequence.  
+   - **Collection**: Select the collection that contains the computers to run the task sequence.  
 
-         Don't deploy a task sequence that installs an OS to inappropriate collections, such as a collection of all your data center servers. Be sure that the selected collection contains only those computers that you want to run the task sequence.  
+      Don't deploy a task sequence that installs an OS to inappropriate collections, such as a collection of all your data center servers. Be sure that the selected collection contains only those computers that you want to run the task sequence.  
 
-        > [!NOTE]  
-        >  When you deploy a high-risk deployment, such as an OS, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).  
-        >   
-        >  The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, Configuration Manager doesn't reevaluate the collection membership for the high-risk deployment settings.  
-        >   
-        >  For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window only displays collections that contain fewer than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window displays collections that contain fewer than 1000 clients.  
-        >   
-        >  When you select a collection that contains a site role, the following behavior applies:  
-        >   
-        >  -   If the collection contains a site system server, and you configured the deployment verification settings to block collections with site system servers, then an error occurs. You can't continue creating the deployment.  
-        > -   If one of the following criteria applies, then the Deploy Software Wizard displays a high-risk warning. To continue, you need to agree to create a high-risk deployment. The site generates an audit status message.  
-        >     - If the collection contains a site system server, and you configured the deployment verification settings to warn on collections with site system servers
-        >     - If the collection exceeds the default size value
-        >     - If the collection contains a server  
+     > [!NOTE]
+     >  When you deploy a high-risk deployment, such as an OS, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).  
+     > 
+     >  The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, Configuration Manager doesn't reevaluate the collection membership for the high-risk deployment settings.  
+     > 
+     >  For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window only displays collections that contain fewer than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window displays collections that contain fewer than 1000 clients.  
+     > 
+     >  When you select a collection that contains a site role, the following behavior applies:  
+     > 
+     > - If the collection contains a site system server, and you configured the deployment verification settings to block collections with site system servers, then an error occurs. You can't continue creating the deployment.  
+     >   -   If one of the following criteria applies, then the Deploy Software Wizard displays a high-risk warning. To continue, you need to agree to create a high-risk deployment. The site generates an audit status message.  
+     >   - If the collection contains a site system server, and you configured the deployment verification settings to warn on collections with site system servers
+     >   - If the collection exceeds the default size value
+     >   - If the collection contains a server  
 
-    - **Use default distribution point groups associated to this collection**: Store the task sequence content on the collection's default distribution point group. If you haven't associated the selected collection with a distribution point group, this option is grayed out.  
+   - **Use default distribution point groups associated to this collection**: Store the task sequence content on the collection's default distribution point group. If you haven't associated the selected collection with a distribution point group, this option is grayed out.  
 
-    - **Automatically distribute content for dependencies**: If any referenced content has dependencies, then the site also sends dependent content to distribution points.  
+   - **Automatically distribute content for dependencies**: If any referenced content has dependencies, then the site also sends dependent content to distribution points.  
 
-    - **Pre-download content for this task sequence**: For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+   - **Pre-download content for this task sequence**: For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
 
-    - **Select Deployment Template**: Starting in Configuration Manager version 1802,<!--1357391--> you can save and specify a deployment template for a task sequence.     
-
-         > [!IMPORTANT]  
-         > In Configuration Manager version 1802, some items aren't saved in the template.  <!--510610--> Make sure you apply the following items when you run the deployment wizard:  
-         > - Software Installation 
-         > - Scheduling 
-         > - Pre-download content
- 
-    -   **Comments (optional)**: Specify additional information that describes this deployment of the task sequence.  
-
-6.  On the **Deployment Settings** page, specify the following information, and then click **Next**.  
-
-    -   **Purpose**: From the drop-down list, choose one of the following options:  
-
-        -   **Available**: The user sees the task sequence in Software Center and can install it on demand.  
-
-        -   **Required**: Configuration Manager automatically runs the task sequence according to the configured schedule. If the task sequence isn't hidden, a user can still track its deployment status. They can also use Software Center to install the task sequence before the deadline.  
-
-        >  [!NOTE]  
-        >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.  
-
-    -   **Make available to the following**: Specify whether the task sequence is available to one of the following types:  
-        - Only Configuration Manager clients  
-        - Configuration Manager clients, media, and PXE  
-        - Only media and PXE  
-        - Only media and PXE (hidden)  
+   - **Select Deployment Template**: Starting in Configuration Manager version 1802,<!--1357391--> you can save and specify a deployment template for a task sequence.     
 
         > [!IMPORTANT]  
-        >  Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. To have the computer automatically boot to the deployment with no user interaction, select **Allow unattended operating system deployment** and set the **SMSTSPreferredAdvertID** variable as part of the media. For more information about task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreferredAdvertID).  
+        > In Configuration Manager version 1802, some items aren't saved in the template.  <!--510610--> Make sure you apply the following items when you run the deployment wizard:  
+        > - Software Installation 
+        > - Scheduling 
+        > - Pre-download content
+ 
+   - **Comments (optional)**: Specify additional information that describes this deployment of the task sequence.  
 
-    -   **Send wake-up packets**: If the deployment is **Required** and you select this option, the site sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computer from sleep at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
+6. On the **Deployment Settings** page, specify the following information, and then click **Next**.  
 
-    -   **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for **Required** deployments. When you have a custom task sequence that installs an application but doesn't deploy an OS, you can specify whether to allow clients to download content after an installation deadline when they use metered internet connections. Internet providers sometimes charge by the amount of data that you use when you're on a metered internet connection.  
+   - **Purpose**: From the drop-down list, choose one of the following options:  
 
-        > [!NOTE]  
-        >  While using a metered internet connection might work for task sequences that don't deploy an OS, it's not supported.  
+     -   **Available**: The user sees the task sequence in Software Center and can install it on demand.  
 
-7.  On the **Scheduling** page, specify the following information, and then click **Next**.  
+     -   **Required**: Configuration Manager automatically runs the task sequence according to the configured schedule. If the task sequence isn't hidden, a user can still track its deployment status. They can also use Software Center to install the task sequence before the deadline.  
 
-    > [!IMPORTANT]  
-    >  When a Windows PE client starts from PXE or boot media, the client doesn't evaluate deployment schedules. These schedules include start, expire, and deadline times. Only configure schedules in deployments to clients that start from the full Windows OS. Consider using other methods, such as maintenance windows, to control active task sequences deployed to clients that start from Windows PE.  
+     > [!NOTE]
+     >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.  
 
-    -   **Schedule when this deployment will become available**: Specify the date and time when the task sequence is available to run on the destination computer. When you select the **UTC** check box, the task sequence is available for multiple computers at the same time. Otherwise the deployment is available at different times, according to the local time on each computer.  
+   - **Make available to the following**: Specify whether the task sequence is available to one of the following types:  
+     - Only Configuration Manager clients  
+     - Configuration Manager clients, media, and PXE  
+     - Only media and PXE  
+     - Only media and PXE (hidden)  
 
-         If the start time is earlier than the required time, the client downloads the task sequence content at the start time.  
+     > [!IMPORTANT]  
+     >  Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. To have the computer automatically boot to the deployment with no user interaction, select **Allow unattended operating system deployment** and set the **SMSTSPreferredAdvertID** variable as part of the media. For more information about task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreferredAdvertID).  
 
-    -   **Schedule when this deployment will expire**: Specify the date and time when the task sequence expires on the destination computer. When you select the **UTC** check box, the task sequence expires on multiple destination computers at the same time. Otherwise the deployment expires at different times, according to the local time on each computer.  
+   - **Send wake-up packets**: If the deployment is **Required** and you select this option, the site sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computer from sleep at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
-    -   **Assignment schedule**: For a **Required** deployment, specify when the client runs the task sequence. You can add multiple schedules. The assignment schedule can have one of the following configurations:   
-        - A specific date and time  
-        - Monthly, weekly, or custom recurrence pattern  
-        - As soon as possible  
-        - Log on or log off events  
+   - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for **Required** deployments. When you have a custom task sequence that installs an application but doesn't deploy an OS, you can specify whether to allow clients to download content after an installation deadline when they use metered internet connections. Internet providers sometimes charge by the amount of data that you use when you're on a metered internet connection.  
 
-        > [!NOTE]  
-        >  If you schedule a start time for a required deployment that's earlier than the date and time when the task sequence is available, the Configuration Manager client downloads the content at the assigned start time. This behavior occurs even though you scheduled the task sequence to be available at a later time.<!--SCCMDocs issue 777-->  
+     > [!NOTE]  
+     >  While using a metered internet connection might work for task sequences that don't deploy an OS, it's not supported.  
 
-    -   **Rerun behavior**: Specify when the task sequence reruns. Select one of the following options:  
+7. On the **Scheduling** page, specify the following information, and then click **Next**.  
 
-        -   **Never rerun deployed program**: If the client has previously run the task sequence, it doesn't rerun. The task sequence doesn't rerun even if it originally failed or the task sequence files have changed.  
+   > [!IMPORTANT]  
+   >  When a Windows PE client starts from PXE or boot media, the client doesn't evaluate deployment schedules. These schedules include start, expire, and deadline times. Only configure schedules in deployments to clients that start from the full Windows OS. Consider using other methods, such as maintenance windows, to control active task sequences deployed to clients that start from Windows PE.  
 
-        -   **Always rerun program**: The task sequence always reruns on the client when the deployment is scheduled. It reruns even if the task sequence has already run successfully. This setting is useful when you use recurring deployments in which the task sequence is routinely updated.  
+   -   **Schedule when this deployment will become available**: Specify the date and time when the task sequence is available to run on the destination computer. When you select the **UTC** check box, the task sequence is available for multiple computers at the same time. Otherwise the deployment is available at different times, according to the local time on each computer.  
 
-            > [!IMPORTANT]  
-            >  This option is selected by default. However, it has no effect until you assign a required deployment. A user can always rerun available deployments.  
+        If the start time is earlier than the required time, the client downloads the task sequence content at the start time.  
 
-        -   **Rerun if failed previous attempt**: The task sequence reruns when the deployment is scheduled, only if it previously failed to run. This setting is useful for a required deployment. If the last attempt to run was unsuccessful, it automatically tries to rerun according to the assignment schedule.  
+   -   **Schedule when this deployment will expire**: Specify the date and time when the task sequence expires on the destination computer. When you select the **UTC** check box, the task sequence expires on multiple destination computers at the same time. Otherwise the deployment expires at different times, according to the local time on each computer.  
 
-        -   **Rerun if succeeded on previous attempt**: The task sequence reruns only if it previously ran successfully on the client. This setting is useful when you use recurring deployments in which the task sequence is routinely updated, and each update requires that the previous update is installed successfully.  
+   -   **Assignment schedule**: For a **Required** deployment, specify when the client runs the task sequence. You can add multiple schedules. The assignment schedule can have one of the following configurations:   
+       - A specific date and time  
+       - Monthly, weekly, or custom recurrence pattern  
+       - As soon as possible  
+       - Log on or log off events  
 
-        > [!NOTE]  
-        >  A user can rerun an available task sequence deployment. Before you deploy an available task sequence in a production environment, first test what happens if a user reruns the task sequence multiple times.  
+       > [!NOTE]  
+       >  If you schedule a start time for a required deployment that's earlier than the date and time when the task sequence is available, the Configuration Manager client downloads the content at the assigned start time. This behavior occurs even though you scheduled the task sequence to be available at a later time.<!--SCCMDocs issue 777-->  
 
-8.  On the **User Experience** page, specify the following information, and then click **Next**.  
+   -   **Rerun behavior**: Specify when the task sequence reruns. Select one of the following options:  
 
-    -   **Allow user to run the program independently of assignments**: Specify whether a user can run a required deployment outside of the assignment schedule. This option is always enabled for available deployments.   
+       -   **Never rerun deployed program**: If the client has previously run the task sequence, it doesn't rerun. The task sequence doesn't rerun even if it originally failed or the task sequence files have changed.  
 
-    -   **Show Task Sequence progress**: Specify whether the Configuration Manager client displays the progress of the task sequence.  
+       -   **Always rerun program**: The task sequence always reruns on the client when the deployment is scheduled. It reruns even if the task sequence has already run successfully. This setting is useful when you use recurring deployments in which the task sequence is routinely updated.  
 
-    -   **Software installation**: Specify whether the user is allowed to install software outside a configured maintenance window after the scheduled time.  
+           > [!IMPORTANT]  
+           >  This option is selected by default. However, it has no effect until you assign a required deployment. A user can always rerun available deployments.  
 
-    -   **System restart (if required to complete the installation)**: Specify whether the user is allowed to restart the computer after a software installation outside a configured maintenance window after the assignment time.  
+       -   **Rerun if failed previous attempt**: The task sequence reruns when the deployment is scheduled, only if it previously failed to run. This setting is useful for a required deployment. If the last attempt to run was unsuccessful, it automatically tries to rerun according to the assignment schedule.  
 
-    - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later. When you deploy a task sequence to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
+       -   **Rerun if succeeded on previous attempt**: The task sequence reruns only if it previously ran successfully on the client. This setting is useful when you use recurring deployments in which the task sequence is routinely updated, and each update requires that the previous update is installed successfully.  
 
-    -   **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that install software, such as an OS, aren't supported with this setting. Use this option only for generic script-based task sequences that perform operations in the standard OS.  
+       > [!NOTE]  
+       >  A user can rerun an available task sequence deployment. Before you deploy an available task sequence in a production environment, first test what happens if a user reruns the task sequence multiple times.  
 
-         - Starting in version 1802, this setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).    
+8. On the **User Experience** page, specify the following information, and then click **Next**.  
+
+   -   **Allow user to run the program independently of assignments**: Specify whether a user can run a required deployment outside of the assignment schedule. This option is always enabled for available deployments.   
+
+   -   **Show Task Sequence progress**: Specify whether the Configuration Manager client displays the progress of the task sequence.  
+
+   -   **Software installation**: Specify whether the user is allowed to install software outside a configured maintenance window after the scheduled time.  
+
+   -   **System restart (if required to complete the installation)**: Specify whether the user is allowed to restart the computer after a software installation outside a configured maintenance window after the assignment time.  
+
+   - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later. When you deploy a task sequence to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
+
+   -   **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that install software, such as an OS, aren't supported with this setting. Use this option only for generic script-based task sequences that perform operations in the standard OS.  
+
+        - Starting in version 1802, this setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).    
 
 9. On the **Alerts** page, specify the alert settings that you want for this task sequence deployment, and then click **Next**.  
 

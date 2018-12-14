@@ -18,17 +18,17 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 
  You can use several methods to view the hardware inventory data that Configuration Manager collects. These include the following:  
 
--   [Create queries that return devices that are based on a specific hardware configuration](../../../../core/servers/manage/queries-technical-reference.md).  
+- [Create queries that return devices that are based on a specific hardware configuration](../../../../core/servers/manage/queries-technical-reference.md).  
 
--   [Create query-based collections that are based on a specific hardware configuration](../../../../core/clients/manage/collections/introduction-to-collections.md). Query-based collection memberships automatically update on a schedule. You can use collections for several tasks, which include software deployment. .  
+- [Create query-based collections that are based on a specific hardware configuration](../../../../core/clients/manage/collections/introduction-to-collections.md). Query-based collection memberships automatically update on a schedule. You can use collections for several tasks, which include software deployment. .  
 
--   [Run reports that display specific details about hardware configurations in your organization](../../../../core/servers/manage/reporting.md).   
+- [Run reports that display specific details about hardware configurations in your organization](../../../../core/servers/manage/reporting.md).   
 
--   [Use Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) to view detailed information about the hardware inventory that is collected from client devices.   
+- [Use Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) to view detailed information about the hardware inventory that is collected from client devices.   
 
- When hardware inventory runs on a client device, the first inventory data that the client returns is always a full inventory. Subsequent inventory information contains only delta inventory information. The site server processes delta inventory information in the order in which it is received. If delta information for a client is missing, the site server rejects additional delta  information and instructs the client to run a full inventory cycle.  
+  When hardware inventory runs on a client device, the first inventory data that the client returns is always a full inventory. Subsequent inventory information contains only delta inventory information. The site server processes delta inventory information in the order in which it is received. If delta information for a client is missing, the site server rejects additional delta  information and instructs the client to run a full inventory cycle.  
 
- Configuration Manager provides limited support for dual-boot computers. Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that was active at the time the inventory cycle ran.  
+  Configuration Manager provides limited support for dual-boot computers. Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that was active at the time the inventory cycle ran.  
 
 > [!NOTE]  
 >  For information about how to use hardware inventory with clients that run Linux and UNIX, see [Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md).  
@@ -40,4 +40,4 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 - Use NOIDMIF files to collect information about client devices that cannot be inventoried by Configuration Manager. For example, you might want to collect device asset number information that exists only as a label on the device. NOIDMIF inventory is automatically associated with the client device that it was collected from.  
 - Use IDMIF files to collect information about assets that are not associated with a Configuration Manager client, for example, projectors, photocopiers and network printers.  
 
- For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+  For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  

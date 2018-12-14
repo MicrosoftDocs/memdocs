@@ -39,15 +39,15 @@ This topic can help you determine the site system roles that you need to deploy 
 
  Install a fallback status point if all the following apply:  
 
--   You want client communication errors from Windows computers to be sent to the site, even if these client computers cannot communicate with a management point.  
+- You want client communication errors from Windows computers to be sent to the site, even if these client computers cannot communicate with a management point.  
 
--   You want to use the Configuration Manager client deployment reports, which display the data that is sent by the fallback status point.  
+- You want to use the Configuration Manager client deployment reports, which display the data that is sent by the fallback status point.  
 
--   You have a dedicated server for this site system role and have additional security measures to help protect the server from attack.  
+- You have a dedicated server for this site system role and have additional security measures to help protect the server from attack.  
 
--   The benefits of using a fallback status point outweigh any security risks associated with unauthenticated connections and clear text transfers over HTTP traffic.  
+- The benefits of using a fallback status point outweigh any security risks associated with unauthenticated connections and clear text transfers over HTTP traffic.  
 
- Do not install a fallback status point if the security risks of running a website with unauthenticated connections and clear text transfers outweigh the benefits of identifying client communication problems.  
+  Do not install a fallback status point if the security risks of running a website with unauthenticated connections and clear text transfers outweigh the benefits of identifying client communication problems.  
 
 ##  Determine whether you need a reporting services point  
  Configuration Manager provides many reports to help you monitor the installation, assignment, and management of clients in the Configuration Manager console. Some of the client deployment reports require that clients are assigned to a fallback status point.  

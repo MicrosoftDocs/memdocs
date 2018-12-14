@@ -93,13 +93,13 @@ After you create an ADR, add additional deployments to the rule. This action hel
 
 Each new deployment that you add:  
 
--   Uses the same update group and package, which the ADR creates when it first runs  
--   Can target a different collection  
--   Supports unique deployment properties including:  
-   -   Activation time  
-   -   Deadline  
-   -   User experience  
-   -   Separate alerts for each deployment  
+- Uses the same update group and package, which the ADR creates when it first runs  
+- Can target a different collection  
+- Supports unique deployment properties including:  
+  -   Activation time  
+  -   Deadline  
+  -   User experience  
+  -   Separate alerts for each deployment  
 
 
 For more information and detailed steps, see [Automatically deploy software updates](automatically-deploy-software-updates.md)

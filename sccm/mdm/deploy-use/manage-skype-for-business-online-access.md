@@ -23,24 +23,24 @@ Use conditional access policy for Skype for Business Online to manage access to 
 
 ## Prerequisites  
 
--   Enable [modern authentication](https://aka.ms/SkypeModernAuth) for Skype for Business Online.   
+- Enable [modern authentication](https://aka.ms/SkypeModernAuth) for Skype for Business Online.   
 
--   All of your users must use Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy does not apply to on-premises users.  
+- All of your users must use Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy does not apply to on-premises users.  
 
--   The device that needs access to Skype for Business Online must:  
+- The device that needs access to Skype for Business Online must:  
 
-    -   Be an Android or iOS device
+  -   Be an Android or iOS device
 
-    -   Be enrolled with Microsoft Intune
+  -   Be enrolled with Microsoft Intune
 
-    -   Be compliant with any deployed Microsoft Intune compliance policies
+  -   Be compliant with any deployed Microsoft Intune compliance policies
 
- Azure Active Directory stores the device state, which grants or blocks access based on the conditions you specify.  
-If a condition is not met, the user sees one of the following messages when they log in:  
+  Azure Active Directory stores the device state, which grants or blocks access based on the conditions you specify.  
+  If a condition is not met, the user sees one of the following messages when they log in:  
 
--   If the device is not enrolled with Microsoft Intune, or is not registered in Azure Active Directory, the user sees instructions about how to install the Company Portal app and enroll.  
+- If the device is not enrolled with Microsoft Intune, or is not registered in Azure Active Directory, the user sees instructions about how to install the Company Portal app and enroll.  
 
--   If the device is not compliant, the user sees a message that directs them to the Company Portal website or Company Portal app. The Company Portal has information about the problem and how to remediate it.  
+- If the device is not compliant, the user sees a message that directs them to the Company Portal website or Company Portal app. The Company Portal has information about the problem and how to remediate it.  
 
 ## Configure conditional access for Skype for Business Online  
 
@@ -66,25 +66,25 @@ If a condition is not met, the user sees one of the following messages when they
 ### Step 3: Configure the Skype for Business Online policy  
  Configure the policy to require that only managed and compliant devices can access Skype for Business Online. This policy is stored in Azure Active Directory.  
 
-1.  In the [Microsoft Intune administration console](https://manage.microsoft.com), click **Policy** > **Conditional Access** > **Skype for Business Online Policy**.  
+1. In the [Microsoft Intune administration console](https://manage.microsoft.com), click **Policy** > **Conditional Access** > **Skype for Business Online Policy**.  
 
-     ![ConditionalAccess&#95;SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
+    ![ConditionalAccess&#95;SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
 
-2.  Select **Enable conditional access policy**.  
+2. Select **Enable conditional access policy**.  
 
-3.  Under **Application access**, you can choose to apply conditional access policy to:  
+3. Under **Application access**, you can choose to apply conditional access policy to:  
 
-    -   iOS  
+   -   iOS  
 
-    -   Android  
+   -   Android  
 
-4.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy applies. You can choose to target this policy to all users or just a select group of users.  
+4. Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy applies. You can choose to target this policy to all users or just a select group of users.  
 
-5.  Under **Exempted Groups**, optionally, click **Modify** to select the Azure Active Directory security groups that are exempt from this policy.  
+5. Under **Exempted Groups**, optionally, click **Modify** to select the Azure Active Directory security groups that are exempt from this policy.  
 
-6.  When you are done, click **Save**.  
+6. When you are done, click **Save**.  
 
- You have now configured conditional access for Skype for Business Online. You do not have to deploy the conditional access policy, it takes effect immediately.  
+   You have now configured conditional access for Skype for Business Online. You do not have to deploy the conditional access policy, it takes effect immediately.  
 
 ## Monitor the compliance and conditional access policies  
  In the Groups workspace, you can view the conditional access status of your devices.  

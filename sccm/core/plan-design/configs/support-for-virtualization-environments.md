@@ -19,15 +19,17 @@ Configuration Manager supports installing the client and site system roles on su
 
  For example, if you use Microsoft Hyper-V Server 2012 to host a virtual machine that runs Windows Server 2012, you can install the client or site system roles on the virtual machine (Windows Server 2012), but not on the host (Microsoft Hyper-V Server 2012).  
 
-|Virtualization environment|  
-|--------------------------------|  
-|Windows Server 2008 R2|  
-|Microsoft Hyper-V Server 2008 R2|  
-|Windows Server 2012|  
-|Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|
-|Windows Server 2016 <sup>(See *note 1*)</sup>|
-|Microsoft Hyper-V Server 2016 <sup>(See *note 1*)|
+
+|            Virtualization environment             |
+|---------------------------------------------------|
+|              Windows Server 2008 R2               |
+|         Microsoft Hyper-V Server 2008 R2          |
+|                Windows Server 2012                |
+|           Microsoft Hyper-V Server 2012           |
+|              Windows Server 2012 R2               |
+|   Windows Server 2016 <sup>(See *note 1*)</sup>   |
+| Microsoft Hyper-V Server 2016 <sup>(See *note 1*) |
+
 -  *Note 1*: Configuration Manager does not support [nested virtualization](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), which is new with Windows Server 2016.
 
 

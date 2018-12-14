@@ -25,19 +25,19 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 
 **Upgrade to version 1802**   
 When you have version 1802 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1802:   
--	  An evaluation install of System Center Configuration Manager version 1802
--	  System Center 2012 Configuration Manager with Service Pack 1
--	  System Center 2012 Configuration Manager with Service Pack 2
--	  System Center 2012 R2 Configuration Manager
--	  System Center 2012 R2 Configuration Manager with Service Pack 1
+- An evaluation install of System Center Configuration Manager version 1802
+- System Center 2012 Configuration Manager with Service Pack 1
+- System Center 2012 Configuration Manager with Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager with Service Pack 1
 
 **Upgrade to version 1702**   
 When you have version 1702 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1702:   
--	  An evaluation install of System Center Configuration Manager version 1702
--	  System Center 2012 Configuration Manager with Service Pack 1
--	  System Center 2012 Configuration Manager with Service Pack 2
--	  System Center 2012 R2 Configuration Manager
--	  System Center 2012 R2 Configuration Manager with Service Pack 1
+- An evaluation install of System Center Configuration Manager version 1702
+- System Center 2012 Configuration Manager with Service Pack 1
+- System Center 2012 Configuration Manager with Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager with Service Pack 1
 
 **Upgrade to version 1606**  
 On December 15th, 2016, the baseline media for version 1606 was rereleased to add support for additional upgrade scenarios. This new release supports the upgrade of the following to a fully licensed version of System Center Configuration Manager version 1606:  
@@ -323,33 +323,33 @@ Use the following procedures to upgrade Configuration Manager sites:
 
 #### To upgrade a central administration site or primary site  
 
-1.  Verify that the user who runs Setup has the following security rights:  
+1. Verify that the user who runs Setup has the following security rights:  
 
-    -   Local Administrator rights on the site server computer.  
-    -   Local Administrator rights on the remote site database server for the site, if it is remote.    </br></br>
+   -   Local Administrator rights on the site server computer.  
+   -   Local Administrator rights on the remote site database server for the site, if it is remote.    </br></br>
 
-2.  On the site server computer, open Windows Explorer and browse to **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**.  
+2. On the site server computer, open Windows Explorer and browse to **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**.  
 
-3.  Double-click **Setup.exe**. The Configuration Manager Setup wizard opens.  
+3. Double-click **Setup.exe**. The Configuration Manager Setup wizard opens.  
 
-4.  On the **Before You Begin** page, click **Next**.  
+4. On the **Before You Begin** page, click **Next**.  
 
-5.  On the **Getting Started** page, select **Upgrade this Configuration Manager site**, and then click **Next**.  
+5. On the **Getting Started** page, select **Upgrade this Configuration Manager site**, and then click **Next**.  
 
-6.  On the **Product Key** page, click **Next**.  
+6. On the **Product Key** page, click **Next**.  
 
-     If you previously installed Configuration Manager Evaluation, you can select **Install the licensed edition of this product**, and then enter your product key for the full installation of Configuration Manager to convert the site to the full version.  
+    If you previously installed Configuration Manager Evaluation, you can select **Install the licensed edition of this product**, and then enter your product key for the full installation of Configuration Manager to convert the site to the full version.  
 
-     Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. You also have the option to specify the **Software Assurance expiration date** of your licensing agreement as a convenient reminder to you of that date. If you do not enter this during setup, you can specify it later from within the Configuration Manager console.
+    Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. You also have the option to specify the **Software Assurance expiration date** of your licensing agreement as a convenient reminder to you of that date. If you do not enter this during setup, you can specify it later from within the Configuration Manager console.
 
-     >  [!NOTE]   
-     >  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
+   > [!NOTE]
+   >  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
 
-     For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
+    For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-7.  On the **Microsoft Software License Terms** page, read and accept the license terms, and then click **Next**.  
+7. On the **Microsoft Software License Terms** page, read and accept the license terms, and then click **Next**.  
 
-8.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software, and then click **Next**. Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
+8. On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software, and then click **Next**. Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
 
 9. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest prerequisite redistributable files, language packs, and the latest product updates from the Internet or use previously downloaded files, and then click **Next**. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
 

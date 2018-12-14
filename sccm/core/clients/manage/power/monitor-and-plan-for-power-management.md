@@ -34,17 +34,17 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Activity"></a> Computer Activity report  
  The **Computer Activity** report displays a graph showing the following activity for a specified collection over a specified period:  
 
--   **Computer On** – The computer has been turned on.  
+- **Computer On** – The computer has been turned on.  
 
--   **Monitor On** – The monitor has been turned on.  
+- **Monitor On** – The monitor has been turned on.  
 
--   **User Active** – Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer  
+- **User Active** – Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer  
 
- This report is used during the monitoring and planning and enforcement stages to help you understand the alignment between computer activity, monitor activity and user activity over a 24 hour period. If you run the report over a number of days then the data is aggregated over this period. This report can help you to determine typical business (peak) and nonbusiness (non-peak) hours for a selected collection to help you decide when to apply configured power management plans.  
+  This report is used during the monitoring and planning and enforcement stages to help you understand the alignment between computer activity, monitor activity and user activity over a 24 hour period. If you run the report over a number of days then the data is aggregated over this period. This report can help you to determine typical business (peak) and nonbusiness (non-peak) hours for a selected collection to help you decide when to apply configured power management plans.  
 
- The graph shows time periods where a computer might be turned on, but there is no user activity. Consider applying more restrictive power settings during these times to save on the power costs of computers that are turned on, but are not being used. A computer is counted as being active if there has been computer, user or monitor activity for one minute or more for a displayed hour on the graph. If a computer is not reporting power management data, it will not be included in the **Computer Activity** report.  
+  The graph shows time periods where a computer might be turned on, but there is no user activity. Consider applying more restrictive power settings during these times to save on the power costs of computers that are turned on, but are not being used. A computer is counted as being active if there has been computer, user or monitor activity for one minute or more for a displayed hour on the graph. If a computer is not reporting power management data, it will not be included in the **Computer Activity** report.  
 
- Use the following parameters to configure this report.  
+  Use the following parameters to configure this report.  
 
 #### Required report parameters  
  The following parameters must be specified to run this report.  
@@ -69,13 +69,13 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Comp_Activity_by_computer"></a> Computer Activity by Computer report  
  The **Computer Activity by Computer** report displays a graph showing the following activity for a specified computer on a specified date:  
 
--   **Computer On** – The computer has been turned on.  
+- **Computer On** – The computer has been turned on.  
 
--   **Monitor On** – The monitor has been turned on.  
+- **Monitor On** – The monitor has been turned on.  
 
--   **User Active** – Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer.  
+- **User Active** – Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer.  
 
- This report can be run independently or called by the **Computer Activity Details** report.  
+  This report can be run independently or called by the **Computer Activity Details** report.  
 
 > [!NOTE]  
 >  Information about computer activity is collected from client computers during hardware inventory. Depending on the time at which hardware inventory runs, activity during an applied peak or non-peak power plan might be collected.  
@@ -224,13 +224,13 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Consumption"></a> Energy Consumption report  
  The **Energy Consumption** report displays the following information:  
 
--   A graph showing the total monthly power consumption of computers in kiloWatt per hour (kWh) in the specified collection for the specified time period.  
+- A graph showing the total monthly power consumption of computers in kiloWatt per hour (kWh) in the specified collection for the specified time period.  
 
--   A graph showing the average power consumption in kiloWatt per hour (kWh) of each computer in the specified collection for the specified time period.  
+- A graph showing the average power consumption in kiloWatt per hour (kWh) of each computer in the specified collection for the specified time period.  
 
--   A table showing the total monthly power consumption in kiloWatt per hour (kWh) and the average power consumption of computers in the specified collection for the specified time period.  
+- A table showing the total monthly power consumption in kiloWatt per hour (kWh) and the average power consumption of computers in the specified collection for the specified time period.  
 
- This information can be used to help you to understand power consumption trends in your environment. After applying a power plan to computers in the selected collection, the power consumption of computers should decrease.  
+  This information can be used to help you to understand power consumption trends in your environment. After applying a power plan to computers in the selected collection, the power consumption of computers should decrease.  
 
 > [!NOTE]  
 >  If you add or remove members to the collection after you have applied a power plan, this will affect the results shown by the **Energy Consumption** report and might make it more difficult to compare the results from the monitoring and planning phase and the enforcement phase.  
@@ -267,13 +267,13 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Consumption_by_Day"></a> Energy Consumption by Day report  
  The **Energy Consumption by Day** report displays the following information:  
 
--   A graph showing the total daily power consumption of computers in kiloWatt per hour (kWh) in the specified collection for the last 31 days.  
+- A graph showing the total daily power consumption of computers in kiloWatt per hour (kWh) in the specified collection for the last 31 days.  
 
--   A graph showing the average daily power consumption in kiloWatt per hour (kWh) of each computer in the specified collection for last 31 days.  
+- A graph showing the average daily power consumption in kiloWatt per hour (kWh) of each computer in the specified collection for last 31 days.  
 
--   A table showing the total daily power consumption in kiloWatt per hour (kWh) and the average daily power consumption of computers in the specified collection for the last 31 days.  
+- A table showing the total daily power consumption in kiloWatt per hour (kWh) and the average daily power consumption of computers in the specified collection for the last 31 days.  
 
- This information can be used to help you to understand power consumption trends in your environment. After applying a power plan to computers in the selected collection, the power consumption of computers should decrease.  
+  This information can be used to help you to understand power consumption trends in your environment. After applying a power plan to computers in the selected collection, the power consumption of computers should decrease.  
 
 > [!NOTE]  
 >  If you add or remove members to the collection after you have applied a power plan, this will affect the results shown by the **Energy Consumption** report and might make it more difficult to compare the results from the monitoring and planning phase and the enforcement phase.  
@@ -308,15 +308,15 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Cost"></a> Energy Cost report  
  The **Energy Cost** report displays the following information:  
 
--   A graph showing the total monthly power cost for computers in the specified collection for specified time period.  
+- A graph showing the total monthly power cost for computers in the specified collection for specified time period.  
 
--   A graph showing the average monthly power cost for each computer in the specified collection for the specified time period.  
+- A graph showing the average monthly power cost for each computer in the specified collection for the specified time period.  
 
--   A table showing the total monthly power cost and the average monthly power cost for computers in the specified collection for the last 31 days.  
+- A table showing the total monthly power cost and the average monthly power cost for computers in the specified collection for the last 31 days.  
 
- This information can be used to help you to understand power cost trends in your environment. After applying a power plan to computers in the selected collection, the power cost for computers should decrease.  
+  This information can be used to help you to understand power cost trends in your environment. After applying a power plan to computers in the selected collection, the power cost for computers should decrease.  
 
- Use the following parameters to configure this report.  
+  Use the following parameters to configure this report.  
 
 #### Required report parameters  
  The following parameters must be specified to run this report.  
@@ -350,15 +350,15 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Cost_by_Day"></a> Energy Cost by Day report  
  The **Energy Cost by Day** report displays the following information:  
 
--   A graph showing the total daily power cost for computers in the specified collection for the last 31 days.  
+- A graph showing the total daily power cost for computers in the specified collection for the last 31 days.  
 
--   A graph showing the average daily power cost for each computer in the specified collection for the last 31 days.  
+- A graph showing the average daily power cost for each computer in the specified collection for the last 31 days.  
 
--   A table showing the total daily power cost and the average daily power cost for computers in the specified collection for the last 31 days.  
+- A table showing the total daily power cost and the average daily power cost for computers in the specified collection for the last 31 days.  
 
- This information can be used to help you to understand power cost trends in your environment. After applying a power plan to computers in the selected collection, the power cost for computers should decrease.  
+  This information can be used to help you to understand power cost trends in your environment. After applying a power plan to computers in the selected collection, the power cost for computers should decrease.  
 
- Use the following parameters to configure this report.  
+  Use the following parameters to configure this report.  
 
 #### Required report parameters  
  The following parameters must be specified to run this report.  
@@ -390,15 +390,15 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Environmental_Impact"></a> Environmental Impact report  
  The **Environmental Impact** report displays the following information:  
 
--   A graph showing the total monthly CO2 generated (in tons) for computers in the specified collection for the specified time period.  
+- A graph showing the total monthly CO2 generated (in tons) for computers in the specified collection for the specified time period.  
 
--   A graph showing the average monthly CO2 generated (in tons) for each computer in the specified collection for the specified time period.  
+- A graph showing the average monthly CO2 generated (in tons) for each computer in the specified collection for the specified time period.  
 
--   A table showing the total monthly CO2 generated and the average monthly CO2 generated for computers in the specified collection for specified time period.  
+- A table showing the total monthly CO2 generated and the average monthly CO2 generated for computers in the specified collection for specified time period.  
 
- The **Environmental Impact** report calculates the amount of CO2 generated (in tons) by using the time that a computer or monitor was turned on in a 24 hour period.  
+  The **Environmental Impact** report calculates the amount of CO2 generated (in tons) by using the time that a computer or monitor was turned on in a 24 hour period.  
 
- Use the following parameters to configure this report.  
+  Use the following parameters to configure this report.  
 
 #### Required report parameters  
  The following parameters must be specified to run this report.  
@@ -431,13 +431,13 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Environmental_Impact_by_Day"></a> Environmental Impact by Day report  
  The **Environmental Impact by Day** report displays the following information:  
 
--   A graph showing the total daily CO2 generated (in tons) for computers in the specified collection for the last 31 days.  
+- A graph showing the total daily CO2 generated (in tons) for computers in the specified collection for the last 31 days.  
 
--   A graph showing the average daily CO2 generated (in tons) for each computer in the specified collection for the last 31 days.  
+- A graph showing the average daily CO2 generated (in tons) for each computer in the specified collection for the last 31 days.  
 
--   A table showing the total daily CO2 generated and the average daily CO2 generatedfor computers in the specified collection for the last 31 days.  
+- A table showing the total daily CO2 generated and the average daily CO2 generatedfor computers in the specified collection for the last 31 days.  
 
- The **Environmental Impact by Day** report calculates the amount of CO2 generated (in tons) by using the time that a computer or monitor was turned on in a 24 hour period.  
+  The **Environmental Impact by Day** report calculates the amount of CO2 generated (in tons) by using the time that a computer or monitor was turned on in a 24 hour period.  
 
 #### Required report parameters  
  The following parameters must be specified to run this report.  
@@ -525,17 +525,17 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Capabilites"></a> Power Capabilities report  
  The **Power Capabilities** report displays the power management hardware capabilities of computers in the specified collection. This report is typically used in the monitoring phase of power management to determine the power management capabilities of computers in your organization. The information displayed in the report can then be used to create collections of computers to apply power plans to, or to exclude from power management. The power management capabilities displayed by this report are:  
 
--   **Sleep Capable** - Indicates whether the computer has the capability to enter sleep if it is configured to do so.  
+- **Sleep Capable** - Indicates whether the computer has the capability to enter sleep if it is configured to do so.  
 
--   **Hibernate Capable** – Indicates whether the computer can enter hibernate if it is configured to do so.  
+- **Hibernate Capable** – Indicates whether the computer can enter hibernate if it is configured to do so.  
 
--   **Wake from Sleep** – Indicates whether the computer can wake from sleep if it is configured to do so.  
+- **Wake from Sleep** – Indicates whether the computer can wake from sleep if it is configured to do so.  
 
--   **Wake from Hibernate** – Indicates whether the computer can wake from hibernate if it is configured to do so.  
+- **Wake from Hibernate** – Indicates whether the computer can wake from hibernate if it is configured to do so.  
 
- The values reported by the **Power Capabilities** report indicate the sleep and hibernate capabilities of computers as reported by Windows. However, the reported values do not reflect cases where Windows or BIOS settings prevent these functions from working.  
+  The values reported by the **Power Capabilities** report indicate the sleep and hibernate capabilities of computers as reported by Windows. However, the reported values do not reflect cases where Windows or BIOS settings prevent these functions from working.  
 
- Use the following parameters to configure this report.  
+  Use the following parameters to configure this report.  
 
 #### Required report parameters  
  The following parameters must be specified to run this report.  

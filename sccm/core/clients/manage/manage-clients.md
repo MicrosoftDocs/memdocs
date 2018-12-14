@@ -30,119 +30,119 @@ When the Configuration Manager client installs on a device and successfully assi
 
 Depending on the device type, some of these options might not be available.  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** >  **Devices**.  
+1. In the Configuration Manager console, choose **Assets and Compliance** >  **Devices**.  
 
-3.  Select one or more devices, and then select one of these client management tasks from the ribbon, or by right-clicking the device:  
+2. Select one or more devices, and then select one of these client management tasks from the ribbon, or by right-clicking the device:  
 
-    -   **Manage user device affinity information**  
+   - **Manage user device affinity information**  
 
-         Configure the associations between users and devices, so you can efficiently deploy software to users.  
+      Configure the associations between users and devices, so you can efficiently deploy software to users.  
 
-         See [Link users and devices with user device affinity in System Center Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)  
+      See [Link users and devices with user device affinity in System Center Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)  
 
-    -   **Add the device to a new or existing collection**  
+   - **Add the device to a new or existing collection**  
 
-         Add the device to a collection with a direct rule.  
+      Add the device to a collection with a direct rule.  
 
-    -   **Install and reinstall the client by using the Client Push wizard**  
+   - **Install and reinstall the client by using the Client Push wizard**  
 
-         Install and reinstall the Configuration Manager client to repair or reconfigure it. This option includes site configuration settings and client.msi properties that you set for client push installation.  
+      Install and reinstall the Configuration Manager client to repair or reconfigure it. This option includes site configuration settings and client.msi properties that you set for client push installation.  
 
-        > [!TIP]  
-        >  There are many different ways to install (and reinstall) the Configuration Manager client. Although the Client Push wizard offers a convenient client installation method because you can run it from the console, this method has many dependencies and is not suitable for all environments. For more information about the dependencies, see [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md). For more information about the other client installation methods, see [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).  
+     > [!TIP]  
+     >  There are many different ways to install (and reinstall) the Configuration Manager client. Although the Client Push wizard offers a convenient client installation method because you can run it from the console, this method has many dependencies and is not suitable for all environments. For more information about the dependencies, see [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md). For more information about the other client installation methods, see [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).  
 
-         See [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
+      See [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
 
-    -   **Reassign Site**  
+   - **Reassign Site**  
 
-         Reassign one or more clients, including managed mobile devices, to another primary site in the hierarchy. Clients can be reassigned individually or can be multi-selected and reassigned in bulk to a new site.  
+      Reassign one or more clients, including managed mobile devices, to another primary site in the hierarchy. Clients can be reassigned individually or can be multi-selected and reassigned in bulk to a new site.  
 
-    -   **Remotely administer the client**  
+   - **Remotely administer the client**  
 
-         Run Resource Explorer to see the hardware and software inventory information from a Windows client. Remotely administer the device by using Remote Control, Remote Assistance, or Remote Desktop.  
+      Run Resource Explorer to see the hardware and software inventory information from a Windows client. Remotely administer the device by using Remote Control, Remote Assistance, or Remote Desktop.  
 
-         See [How to use Resource Explorer to view hardware inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) and [How to use Resource Explorer to view software inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+      See [How to use Resource Explorer to view hardware inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) and [How to use Resource Explorer to view software inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
-         See [How to remotely administer a Windows client computer](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
+      See [How to remotely administer a Windows client computer](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
 
-    -   **Approve a client**  
+   - **Approve a client**  
 
-         When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest and trusted forests so you do not have to manually approve each client. However, you must manually approve workgroup computers that you trust, and any other unapproved computers that you trust.  
+      When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest and trusted forests so you do not have to manually approve each client. However, you must manually approve workgroup computers that you trust, and any other unapproved computers that you trust.  
 
-        > [!WARNING]  
-        >  Although some management functions might work for unapproved clients, this is an unsupported scenario for Configuration Manager.  
+     > [!WARNING]  
+     >  Although some management functions might work for unapproved clients, this is an unsupported scenario for Configuration Manager.  
 
-         You do not have to approve clients that always communicate to site systems using HTTPS, or clients that use a PKI certificate when they communicate to site systems using HTTP. These clients establish trust by using the PKI certificates.  
+      You do not have to approve clients that always communicate to site systems using HTTPS, or clients that use a PKI certificate when they communicate to site systems using HTTP. These clients establish trust by using the PKI certificates.  
 
-    -   **Block or unblock a client**  
+   - **Block or unblock a client**  
 
-         Block a client that you no longer trust. Blocking prevents the client from receiving policy, and prevents site systems from communicating with the client.  
+      Block a client that you no longer trust. Blocking prevents the client from receiving policy, and prevents site systems from communicating with the client.  
 
-        > [!WARNING]  
-        >  Blocking a client only prevents communication from the client to Configuration Manager site systems and does not prevent communication to other devices. In addition, when the client communicates to site systems by using HTTP instead of HTTPS, there are some security limitations.  
+     > [!WARNING]  
+     >  Blocking a client only prevents communication from the client to Configuration Manager site systems and does not prevent communication to other devices. In addition, when the client communicates to site systems by using HTTP instead of HTTPS, there are some security limitations.  
 
-         You can also unblock a client that is blocked. 
+      You can also unblock a client that is blocked. 
 
-         See [Determine whether to block clients in System Center Configuration Manager](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md).  
+      See [Determine whether to block clients in System Center Configuration Manager](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md).  
 
-    -   **Clear a required PXE deployment**  
+   - **Clear a required PXE deployment**  
 
-         Redeploy required PXE deployments for the computer.  
+      Redeploy required PXE deployments for the computer.  
 
-         See [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+      See [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-    -   **Manage the client properties**  
+   - **Manage the client properties**  
 
-         View the discovery data and deployments targeted for the client. You can also configure variables that task sequences use to deploy an operating system to the device.  
+      View the discovery data and deployments targeted for the client. You can also configure variables that task sequences use to deploy an operating system to the device.  
 
-    -   **Delete the client**  
+   - **Delete the client**  
 
-        > [!WARNING]  
-        >  Do not delete a client if you want to uninstall the Configuration Manager client or remove it from a collection.  
+     > [!WARNING]  
+     >  Do not delete a client if you want to uninstall the Configuration Manager client or remove it from a collection.  
 
-         The **Delete** action manually deletes the client record from the Configuration Manager database and typically, you should not use this action except in troubleshooting scenarios. If you delete the client record but the client is still installed and communicating with the site, Heartbeat Discovery recreates the client record. The client record reappears in the Configuration Manager console, although the client history and any previous associations are lost.  
+      The **Delete** action manually deletes the client record from the Configuration Manager database and typically, you should not use this action except in troubleshooting scenarios. If you delete the client record but the client is still installed and communicating with the site, Heartbeat Discovery recreates the client record. The client record reappears in the Configuration Manager console, although the client history and any previous associations are lost.  
 
-        > [!NOTE]  
-        >  When you delete a mobile device client that was enrolled by Configuration Manager, this action also revokes the PKI certificate that was issued to the mobile device and this certificate is then rejected by the management point, even if IIS does not check the CRL. Certificates on mobile device legacy clients are not revoked when you delete these clients.  
+     > [!NOTE]  
+     >  When you delete a mobile device client that was enrolled by Configuration Manager, this action also revokes the PKI certificate that was issued to the mobile device and this certificate is then rejected by the management point, even if IIS does not check the CRL. Certificates on mobile device legacy clients are not revoked when you delete these clients.  
 
-         To uninstall the client, see [Uninstall the Configuration Manager Client](#BKMK_UninstalClient).  
+      To uninstall the client, see [Uninstall the Configuration Manager Client](#BKMK_UninstalClient).  
 
-         To assign the client to a new primary site, see [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md).  
+      To assign the client to a new primary site, see [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
-         To remove the client from a collection, reconfigure the collection properties. See [How to manage collections in System Center Configuration Manager](../../../core/clients/manage/collections/manage-collections.md).  
+      To remove the client from a collection, reconfigure the collection properties. See [How to manage collections in System Center Configuration Manager](../../../core/clients/manage/collections/manage-collections.md).  
 
-    -   **Wipe a mobile device**  
+   - **Wipe a mobile device**  
 
-         You can wipe mobile devices that support the wipe command.  
+      You can wipe mobile devices that support the wipe command.  
 
-         This action permanently removes all data on the mobile device, including personal settings and personal data. Typically, this action resets the mobile device back to factory defaults. Wipe a mobile device when the mobile device is no longer trusted. For example, if the device is lost or stolen.  
+      This action permanently removes all data on the mobile device, including personal settings and personal data. Typically, this action resets the mobile device back to factory defaults. Wipe a mobile device when the mobile device is no longer trusted. For example, if the device is lost or stolen.  
 
-        > [!TIP]  
-        >  Check the manufacturer's documentation for more information about how the mobile device processes a remote wipe command.  
+     > [!TIP]  
+     >  Check the manufacturer's documentation for more information about how the mobile device processes a remote wipe command.  
 
-         There is often a delay until the mobile device receives the wipe command:  
+      There is often a delay until the mobile device receives the wipe command:  
 
-        -   If the mobile device is enrolled by Configuration Manager or by Microsoft Intune, the client receives the command when it  downloads its client policy.  
+     - If the mobile device is enrolled by Configuration Manager or by Microsoft Intune, the client receives the command when it  downloads its client policy.  
 
-        -   If the mobile device is managed by the Exchange Server connector, it receives the command when it synchronizes with Exchange.  
+     - If the mobile device is managed by the Exchange Server connector, it receives the command when it synchronizes with Exchange.  
 
-         You can use the **Wipe Status** column to monitor when the device receives the wipe command. Until the device sends a wipe acknowledgment to Configuration Manager, you can cancel the wipe command.  
+       You can use the **Wipe Status** column to monitor when the device receives the wipe command. Until the device sends a wipe acknowledgment to Configuration Manager, you can cancel the wipe command.  
 
-    -   **Retire a mobile device**  
+   - **Retire a mobile device**  
 
-         The **Retire** option is supported only by mobile devices enrolled by Microsoft Intune or on\-premises mobile device management.  
+      The **Retire** option is supported only by mobile devices enrolled by Microsoft Intune or on\-premises mobile device management.  
 
-         For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset using System Center Configuration Manager](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
+      For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset using System Center Configuration Manager](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
-    -   **Change the ownership of a device**  
+   - **Change the ownership of a device**  
 
-         If a device is not domain-joined and does not have the Configuration Manager client installed, use this option to change the ownership to **Company** or **Personal**.  
+      If a device is not domain-joined and does not have the Configuration Manager client installed, use this option to change the ownership to **Company** or **Personal**.  
 
-         You can use this value in application requirements to control deployments, and to control how much inventory is collected from users' devices.  
+      You can use this value in application requirements to control deployments, and to control how much inventory is collected from users' devices.  
 
-        You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
+     You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
 
-         For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
+      For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the Device Collections node  
   Many of the tasks that are available for devices in the **Devices** node are also available on collections. The console automatically applies the operation to all eligible devices in the collection. This action on an entire collection generates additional network packets and increases CPU usage on the site server.  
@@ -230,39 +230,39 @@ Cached content is not automatically deleted but remains in the cache for at leas
 
 Run the CCMSetup.exe command from the install source location and specify the following properties that you require, and separated by spaces:  
 
-   -   DISABLECACHEOPT  
+- DISABLECACHEOPT  
 
-    -   SMSCACHEDIR  
+  - SMSCACHEDIR  
 
-    -   SMSCACHEFLAGS  
+  - SMSCACHEFLAGS  
 
-    -   SMSCACHESIZE  
+  - SMSCACHESIZE  
 
-        > [!NOTE]
-        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
+    > [!NOTE]
+    > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
 For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### To configure the client cache folder when you install clients by using client push installation  
 
-1.  In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites**.  
+1. In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites**.  
 
-3.  Select the appropriate site, and on the **Home** tab, in the **Settings** group, choose **Client Installation Settings** > **Installation Properties tab**.  
+2. Select the appropriate site, and on the **Home** tab, in the **Settings** group, choose **Client Installation Settings** > **Installation Properties tab**.  
 
-5.  Specify the following properties, separated by spaces:  
+3. Specify the following properties, separated by spaces:  
 
-    -   DISABLECACHEOPT  
+   - DISABLECACHEOPT  
 
-    -   SMSCACHEDIR  
+   - SMSCACHEDIR  
 
-    -   SMSCACHEFLAGS  
+   - SMSCACHEFLAGS  
 
-    -   SMSCACHESIZE  
+   - SMSCACHESIZE  
 
-        > [!NOTE]
-        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
+     > [!NOTE]
+     > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
-       For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
+     For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### To configure the client cache folder on the client computer  
 
@@ -279,11 +279,11 @@ Adjust the size of the client cache without having to reinstall the client by co
 1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
 
 2. Double-click **Default Client Settings**.
-  You can also create custom client settings to apply the cache size more selectively. For more information on default and customer client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
+   You can also create custom client settings to apply the cache size more selectively. For more information on default and customer client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
 
- 3. Choose **Client Cache Settings** and choose **Yes** for **Configure client cache size**, then use either the **MB** or **percentage of disk settings**. Cache is adjusted to whichever size is less.
+   3. Choose **Client Cache Settings** and choose **Yes** for **Configure client cache size**, then use either the **MB** or **percentage of disk settings**. Cache is adjusted to whichever size is less.
 
-     The Configuration Manager client will configure the cache size with these settings when the next client policy is downloaded.
+      The Configuration Manager client will configure the cache size with these settings when the next client policy is downloaded.
 
 
 

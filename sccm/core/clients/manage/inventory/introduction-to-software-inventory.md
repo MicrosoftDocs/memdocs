@@ -21,16 +21,16 @@ After software inventory is enabled and the clients run a software inventory cyc
 
  Here are ways to view the software inventory data:  
 
--   [Create queries](../../../../core/servers/manage/queries-technical-reference.md) that return devices with specified files.   
+- [Create queries](../../../../core/servers/manage/queries-technical-reference.md) that return devices with specified files.   
 
--   Create [query-based collections](../../../../core/clients/manage/collections/introduction-to-collections.md) that include devices with specified files.   
+- Create [query-based collections](../../../../core/clients/manage/collections/introduction-to-collections.md) that include devices with specified files.   
 
--   [Run reports](../../../../core/servers/manage/reporting.md) that provide details about files on devices.
+- [Run reports](../../../../core/servers/manage/reporting.md) that provide details about files on devices.
 
--   Use [Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md) to examine detailed information about the files that were inventoried and collected from client devices.   
+- Use [Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md) to examine detailed information about the files that were inventoried and collected from client devices.   
 
- When software inventory runs on a client device, the first report is a full inventory. Subsequent  reports contain only delta inventory information. The site server processes delta information in the order received. If delta information for a client is missing, the site server rejects further delta information and instructs the client to run a full inventory.  
+  When software inventory runs on a client device, the first report is a full inventory. Subsequent  reports contain only delta inventory information. The site server processes delta information in the order received. If delta information for a client is missing, the site server rejects further delta information and instructs the client to run a full inventory.  
 
- Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that was active at the time of inventory.  
+  Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that was active at the time of inventory.  
 
 **Mobile Devices:** See [software inventory for mobile devices enrolled with Microsoft Intune](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)  for information about collecting inventory for apps installed on mobile devices.

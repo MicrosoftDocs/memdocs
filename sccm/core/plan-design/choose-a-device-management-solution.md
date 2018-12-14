@@ -62,7 +62,7 @@ You can use these device management solutions by themselves or in combination wi
 |Windows Phone||Yes||Yes|  
 |Windows Server|Yes|||Yes|  
 
- For a complete list of supported platforms, see [Supported operating systems for clients and devices for System Center Configuration Manager](configs\supported-operating-systems-for-clients-and-devices.md).
+ For a complete list of supported platforms, see [Supported operating systems for clients and devices for System Center Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md).
 
 ##  <a name="bkmk_comp2"></a> Compare mobile device management solutions based on management functionality  
 

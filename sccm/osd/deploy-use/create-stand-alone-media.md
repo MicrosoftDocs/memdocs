@@ -76,55 +76,55 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 ## To create stand-alone media  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
 
-4.  On the **Select Media Type** page, specify the following options, and then click **Next**.  
+4. On the **Select Media Type** page, specify the following options, and then click **Next**.  
 
-    -   Select **Stand-alone media**.  
+   -   Select **Stand-alone media**.  
 
-    -   Optionally, if you want to allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**. When you select this option, the user is not prompted for network configuration information or for optional task sequences. If the media is configured for password protection, the user is still prompted for a password.  
+   -   Optionally, if you want to allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**. When you select this option, the user is not prompted for network configuration information or for optional task sequences. If the media is configured for password protection, the user is still prompted for a password.  
 
-5.  On the **Media Type** page, specify whether the media is a removable USB drive or a CD/DVD set:  
+5. On the **Media Type** page, specify whether the media is a removable USB drive or a CD/DVD set:  
 
-    > [!IMPORTANT]  
-    >  By default, stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a removable USB drive whose content contains a file over 4 GB in size.  
+   > [!IMPORTANT]  
+   >  By default, stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a removable USB drive whose content contains a file over 4 GB in size.  
 
-    -   If you select **Removable USB drive**, specify the drive where you want to store the content.  
+   - If you select **Removable USB drive**, specify the drive where you want to store the content.  
 
-        - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If you have already formatted and configured the removable drive, disable this option. 
+     - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If you have already formatted and configured the removable drive, disable this option. 
 
-    -   If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
+   - If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
 
-         If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.   
+      If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.   
 
-         > [!IMPORTANT]  
-         >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
+      > [!IMPORTANT]  
+      >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
 
      Click **Next**.  
 
-6.  On the **Security** page, choose from the following settings, and then click **Next**:
-    - **Protect media with a password**: Enter a strong password to help protect the media. If you specify a password, the password is required to use the media.  
+6. On the **Security** page, choose from the following settings, and then click **Next**:
+   - **Protect media with a password**: Enter a strong password to help protect the media. If you specify a password, the password is required to use the media.  
 
-        > [!IMPORTANT]  
-        >  On stand-alone media, only the task sequence steps and their variables are encrypted. The remaining content of the media is not encrypted, so do not include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
+       > [!IMPORTANT]  
+       >  On stand-alone media, only the task sequence steps and their variables are encrypted. The remaining content of the media is not encrypted, so do not include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
 
-    - **Select date range for this stand-alone media to be valid** (starting in version 1702): Set optional start and expiration dates on the media. These settings are disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media is not started. These options are also available by using the New-CMStandaloneMedia PowerShell cmdlet.
-7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. To add content to the stand-alone media for application dependencies, choose **Detect associated application dependencies and add them to this media**.
-    > [!TIP]
-    > If you do not see expected application dependencies, deselect and then reselect the **Detect associated application dependencies and add them to this media** setting to refresh the list.
+   - **Select date range for this stand-alone media to be valid** (starting in version 1702): Set optional start and expiration dates on the media. These settings are disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media is not started. These options are also available by using the New-CMStandaloneMedia PowerShell cmdlet.
+7. On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. To add content to the stand-alone media for application dependencies, choose **Detect associated application dependencies and add them to this media**.
+   > [!TIP]
+   > If you do not see expected application dependencies, deselect and then reselect the **Detect associated application dependencies and add them to this media** setting to refresh the list.
 
-    The wizard lets you select only those task sequences that are associated with a boot image.  
+   The wizard lets you select only those task sequences that are associated with a boot image.  
 
 8. On the **Select Application** page (available beginning in version 1702), specify application content to include as part of the media file, and then click **Next**.
 9. On the **Select Package** page (available beginning in version 1702), specify the package content to include as part of the media file, and then click **Next**.
 10. On the **Select Driver Package** page (available beginning in version 1702), specify the driver package content to include as part of the media file, and then click **Next**.
-11.  On the **Distribution Points** page, specify the distribution points that contain the required content, and then click **Next**.  
+11. On the **Distribution Points** page, specify the distribution points that contain the required content, and then click **Next**.  
 
-     Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
     >  You must have **Read** access rights to the content library on the distribution points.  
@@ -142,7 +142,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 13. Complete the wizard.  
 
- The stand-alone media files (.iso) are created in the destination folder. If you selected **Stand-Alone CD/DVD**, you can now copy the output files to a set of CDs or DVDs.  
+    The stand-alone media files (.iso) are created in the destination folder. If you selected **Stand-Alone CD/DVD**, you can now copy the output files to a set of CDs or DVDs.  
 
 ##  <a name="BKMK_StandAloneMediaTSExample"></a> Example task sequence for stand-alone media  
  To create a task sequence to deploy an operating system using stand-alone media, use the following table as a guide. The table helps you decide the general sequence for your task sequence steps. It also helps organize and structure the task sequence steps into logical groups. The task sequence that you create might vary from this sample and can contain more or fewer task sequence steps and groups.  

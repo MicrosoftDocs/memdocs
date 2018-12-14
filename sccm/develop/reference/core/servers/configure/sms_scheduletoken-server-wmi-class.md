@@ -80,15 +80,15 @@ Class SMS_ScheduleToken
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is the abstract base class for a number of derived classes representing schedule tokens used for scheduling events with different frequencies, for example, daily. An example of a derived class is [SMS_ST_RecurWeekly Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_st_recurweekly-server-wmi-class.md).  
+  This class is the abstract base class for a number of derived classes representing schedule tokens used for scheduling events with different frequencies, for example, daily. An example of a derived class is [SMS_ST_RecurWeekly Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_st_recurweekly-server-wmi-class.md).  
 
- This class defines several properties related to duration. Network Discovery is the only System Center Configuration Manager component that uses the duration properties. The following is an example showing the use of classes derived from `SMS_ScheduleToken` with an interval string decoded to make a connection to the site server.  
+  This class defines several properties related to duration. Network Discovery is the only System Center Configuration Manager component that uses the duration properties. The following is an example showing the use of classes derived from `SMS_ScheduleToken` with an interval string decoded to make a connection to the site server.  
 
 ```  
 sInterval = "791378800008000055147880001B200055177880001E2000"  

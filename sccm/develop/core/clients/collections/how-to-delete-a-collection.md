@@ -23,11 +23,11 @@ Your application can delete a collection in System Center Configuration Manager 
 
  These examples require the following values:  
 
--   A Windows Management Instrumentation (WMI) connection object.  
+- A Windows Management Instrumentation (WMI) connection object.  
 
--   An existing collection ID.  
+- An existing collection ID.  
 
- The following code is an example of the subroutine call in Visual Basic:  
+  The following code is an example of the subroutine call in Visual Basic:  
 
 ```  
 Call DeleteCollection(swbemServices,"ABC00010")  

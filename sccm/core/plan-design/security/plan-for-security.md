@@ -173,17 +173,17 @@ Clients that don't have the certificate issuers list when they're first installe
 
 In most cases, the Configuration Manager client correctly identifies a unique and appropriate PKI certificate. However, when this behavior isn't the case, instead of selecting the certificate based on the client authentication capability, you can set up two alternative selection methods:  
 
--   A partial string match on the client certificate subject name. This method is a case-insensitive match. It's appropriate if you're using the fully qualified domain name (FQDN) of a computer in the subject field and want the certificate selection to be based on the domain suffix, for example **contoso.com**. However, you can use this selection method to identify any string of sequential characters in the certificate subject name that differentiates the certificate from others in the client certificate store.  
+- A partial string match on the client certificate subject name. This method is a case-insensitive match. It's appropriate if you're using the fully qualified domain name (FQDN) of a computer in the subject field and want the certificate selection to be based on the domain suffix, for example **contoso.com**. However, you can use this selection method to identify any string of sequential characters in the certificate subject name that differentiates the certificate from others in the client certificate store.  
 
-    > [!NOTE]  
-    >  You can't use the partial string match with the subject alternative name (SAN) as a site setting. Although you can specify a partial string match for the SAN by using CCMSetup, it'll be overwritten by the site properties in the following scenarios:  
-    >   
-    >  -   Clients retrieve site information that's published to Active Directory Domain Services.  
-    > -   Clients are installed by using client push installation.  
-    >   
-    >  Use a partial string match in the SAN only when you install clients manually and when they don't retrieve site information from Active Directory Domain Services. For example, these conditions apply to internet-only clients.  
+  > [!NOTE]
+  >  You can't use the partial string match with the subject alternative name (SAN) as a site setting. Although you can specify a partial string match for the SAN by using CCMSetup, it'll be overwritten by the site properties in the following scenarios:  
+  > 
+  > - Clients retrieve site information that's published to Active Directory Domain Services.  
+  >   -   Clients are installed by using client push installation.  
+  > 
+  >   Use a partial string match in the SAN only when you install clients manually and when they don't retrieve site information from Active Directory Domain Services. For example, these conditions apply to internet-only clients.  
 
--   A match on the client certificate subject name attribute values or the subject alternative name (SAN) attribute values. This method is a case-sensitive match. It's appropriate if you're using an X500 distinguished name or equivalent object ddentifiers (OIDs) in compliance with RFC 3280, and you want the certificate selection to be based on the attribute values. You can specify only the attributes and their values that you require to uniquely identify or validate the certificate and differentiate the certificate from others in the certificate store.  
+- A match on the client certificate subject name attribute values or the subject alternative name (SAN) attribute values. This method is a case-sensitive match. It's appropriate if you're using an X500 distinguished name or equivalent object ddentifiers (OIDs) in compliance with RFC 3280, and you want the certificate selection to be based on the attribute values. You can specify only the attributes and their values that you require to uniquely identify or validate the certificate and differentiate the certificate from others in the certificate store.  
 
 The following table shows the attribute values that Configuration Manager supports for the client certificate selection criteria.  
 
@@ -222,37 +222,37 @@ The flexible configuration options in Configuration Manager let you gradually tr
 
 Because of the number of configuration options and choices in Configuration Manager, there's no single way to transition a site so that all clients use HTTPS connections. However, you can follow these steps as guidance:  
 
-1.  Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.  
+1. Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.  
 
-2.  Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
+2. Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
 
-3.  Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
+3. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
 
-4.  Install clients by using the client push installation method. For more information, see the [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+4. Install clients by using the client push installation method. For more information, see the [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
 
-5.  Monitor client deployment and status by using the reports and information in the Configuration Manager console.  
+5. Monitor client deployment and status by using the reports and information in the Configuration Manager console.  
 
-6.  Track how many clients are using a client PKI certificate by viewing the **Client Certificate** column in the **Assets and Compliance** workspace, **Devices** node.  
+6. Track how many clients are using a client PKI certificate by viewing the **Client Certificate** column in the **Assets and Compliance** workspace, **Devices** node.  
 
-     You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**cmHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.  
+    You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**cmHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.  
 
-    > [!NOTE]  
-    >  When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:  
-    >   
-    > - `/Store:<name>`: This option is the same as the **CCMCERTSTORE** client.msi property  
-    > - `/Issuers:<list>`: This option is the same as the **CCMCERTISSUERS** client.msi property    
-    > - `/Criteria:<criteria>`: This option is the same as the **CCMCERTSEL** client.msi property    
-    > - `/SelectFirstCert`: This option is the same as the **CCMFIRSTCERT** client.msi property    
-    >   
-    >  For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+   > [!NOTE]
+   >  When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:  
+   > 
+   > - `/Store:<name>`: This option is the same as the **CCMCERTSTORE** client.msi property  
+   > - `/Issuers:<list>`: This option is the same as the **CCMCERTISSUERS** client.msi property    
+   > - `/Criteria:<criteria>`: This option is the same as the **CCMCERTSEL** client.msi property    
+   > - `/SelectFirstCert`: This option is the same as the **CCMFIRSTCERT** client.msi property    
+   > 
+   >   For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
 
-7.  When you're confident that enough clients are successfully using their client PKI certificate for authentication over HTTP, follow these steps:  
+7. When you're confident that enough clients are successfully using their client PKI certificate for authentication over HTTP, follow these steps:  
 
-    1.  Deploy a PKI web server certificate to a member server that runs an additional management point for the site, and configure that certificate in IIS. For more information, see [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+   1.  Deploy a PKI web server certificate to a member server that runs an additional management point for the site, and configure that certificate in IIS. For more information, see [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
 
-    2.  Install the management point role on this server and configure the **Client connections** option in the management point properties for **HTTPS**.  
+   2.  Install the management point role on this server and configure the **Client connections** option in the management point properties for **HTTPS**.  
 
-8.  Monitor and verify that clients that have a PKI certificate use the new management point by using HTTPS. You can use IIS logging or performance counters to verify.  
+8. Monitor and verify that clients that have a PKI certificate use the new management point by using HTTPS. You can use IIS logging or performance counters to verify.  
 
 9. Reconfigure other site system roles to use HTTPS client connections. If you want to manage clients on the internet, make sure that site systems have an internet FQDN. Configure individual management points and distribution points to accept client connections from the internet.  
 
@@ -263,7 +263,7 @@ Because of the number of configuration options and choices in Configuration Mana
 
 11. For the highest security: When you're confident that all clients are using a client PKI certificate for authentication and encryption, change the site properties to use HTTPS only.  
 
- This plan first introduces PKI certificates for authentication only over HTTP, and then for authentication and encryption over HTTPS. When you follow this plan to gradually introduce these certificates, you reduce the risk that clients become unmanaged. You'll also benefit from the highest security that Configuration Manager supports.  
+    This plan first introduces PKI certificates for authentication only over HTTP, and then for authentication and encryption over HTTPS. When you follow this plan to gradually introduce these certificates, you reduce the risk that clients become unmanaged. You'll also benefit from the highest security that Configuration Manager supports.  
 
 ##  <a name="BKMK_PlanningForRTK"></a> Plan for the trusted root key  
 
@@ -275,26 +275,26 @@ Because of the number of configuration options and choices in Configuration Mana
 
  Clients automatically retrieve the public copy of the trusted root key by using two mechanisms:  
 
- - You extend the Active Directory schema for Configuration Manager, and publish the site to Active Directory Domain Services. Then clients retrieve this site information from a global catalog server. For more information, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).  
+- You extend the Active Directory schema for Configuration Manager, and publish the site to Active Directory Domain Services. Then clients retrieve this site information from a global catalog server. For more information, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).  
 
- - When you install clients using the client push installation method. For more information, see [Client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation).  
+- When you install clients using the client push installation method. For more information, see [Client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation).  
 
- If clients can't retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that's provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker's management point where it would receive policy from the rogue management point. This action requires a sophisticated attacker. This attack is limited to the short time before the client retrieves the trusted root key from a valid management point. To reduce this risk of an attacker misdirecting clients to a rogue management point, pre-provision the clients with the trusted root key.  
+  If clients can't retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that's provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker's management point where it would receive policy from the rogue management point. This action requires a sophisticated attacker. This attack is limited to the short time before the client retrieves the trusted root key from a valid management point. To reduce this risk of an attacker misdirecting clients to a rogue management point, pre-provision the clients with the trusted root key.  
 
- Use the following procedures to pre-provision and verify the trusted root key for a Configuration Manager client:  
+  Use the following procedures to pre-provision and verify the trusted root key for a Configuration Manager client:  
 
- - [Pre-provision a client with the trusted root key by using a file](#bkmk_trk-provision-file)  
+- [Pre-provision a client with the trusted root key by using a file](#bkmk_trk-provision-file)  
 
- - [Pre-provision a client with the trusted root key without using a file](#bkmk_trk-provision-nofile)  
+- [Pre-provision a client with the trusted root key without using a file](#bkmk_trk-provision-nofile)  
 
- - [Verify the trusted root key on a client](#bkmk_trk-verify)  
+- [Verify the trusted root key on a client](#bkmk_trk-verify)  
 
- - [Remove or replace the trusted root key](#bkmk_trk-reset)  
+- [Remove or replace the trusted root key](#bkmk_trk-reset)  
 
- > [!NOTE]  
- > If clients can get the trusted root key from Active Directory Domain Services or client push, you don't have to pre-provision it. 
- > 
- > When clients use HTTPS communication to management points, you don't have to pre-provision the trusted root key. They establish trust by the PKI certificates.  
+  > [!NOTE]  
+  > If clients can get the trusted root key from Active Directory Domain Services or client push, you don't have to pre-provision it. 
+  > 
+  > When clients use HTTPS communication to management points, you don't have to pre-provision the trusted root key. They establish trust by the PKI certificates.  
 
 
 ### <a name="bkmk_trk-provision-file"></a> Pre-provision a client with the trusted root key by using a file  

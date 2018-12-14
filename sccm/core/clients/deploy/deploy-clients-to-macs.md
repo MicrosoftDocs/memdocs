@@ -112,18 +112,18 @@ To automate enrollment for many clients, use the [CMEnroll tool](#client-and-cer
 
 2. On the second page of the wizard, provide the following information:  
 
-    - **User name**: The user name can be in the following formats:  
+   - **User name**: The user name can be in the following formats:  
 
-        - `domain\name`. For example: `contoso\mnorth`  
+     - `domain\name`. For example: `contoso\mnorth`  
 
-        - `user@domain`. For example: `mnorth@contoso.com`  
+     - `user@domain`. For example: `mnorth@contoso.com`  
 
-            > [!IMPORTANT]  
-            >  When you use an email address to populate the **User name** field, Configuration Manager automatically populates the **Server name** field. It uses the default name of the enrollment proxy point server and the domain name of the email address. If these names don't match the name of the enrollment proxy point server, fix the **Server name** during enrollment.  
+         > [!IMPORTANT]  
+         >  When you use an email address to populate the **User name** field, Configuration Manager automatically populates the **Server name** field. It uses the default name of the enrollment proxy point server and the domain name of the email address. If these names don't match the name of the enrollment proxy point server, fix the **Server name** during enrollment.  
 
-         The user name and corresponding password must match an Active Directory user account that has **Read** and **Enroll** permissions on the Mac client certificate template.  
+       The user name and corresponding password must match an Active Directory user account that has **Read** and **Enroll** permissions on the Mac client certificate template.  
 
-    - **Server name**: The name of the enrollment proxy point server.  
+   - **Server name**: The name of the enrollment proxy point server.  
 
 
 ### Client and certificate automation with CMEnroll  

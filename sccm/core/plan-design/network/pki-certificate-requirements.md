@@ -37,11 +37,11 @@ For information about using Cryptography API: Next Generation (CNG) certificates
 
  With the exception of client certificates that System Center Configuration Manager enrolls on mobile devices and Mac computers, certificates that Microsoft Intune automatically creates to manage mobile devices, and certificates that System Center Configuration Manager installs on AMT-based computers, you can use any PKI to create, deploy, and manage the following certificates. However, when you use Active Directory Certificate Services and certificate templates, this Microsoft PKI solution can ease the management of certificates. Use the **Microsoft certificate template to use** column in the following tables to identify the certificate template that most closely matches the certificate requirements. Only an enterprise certification authority that runs on the Enterprise Edition or Datacenter Edition of the server operating system, like Windows Server 2008 Enterprise and Windows Server 2008 Datacenter, can use template-based certificates.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When you use an enterprise certification authority and certificate templates, do not use the Version 3 templates. These certificate templates create certificates that are incompatible with System Center Configuration Manager. Instead, use Version 2 templates by using the following instructions:  
->   
->  -   For a CA on Windows Server 2012: On the **Compatibility** tab of the certificate template properties, specify **Windows Server 2003** for the **Certification Authority** option, and **Windows XP / Server 2003** for the **Certificate recipient** option.  
-> -   For a CA on Windows Server 2008: When you duplicate a certificate template, keep the default selection, **Windows Server 2003 Enterprise**, when you are prompted by the **Duplicate Template** dialog box. Do not select **Windows Server 2008, Enterprise Edition**.  
+> 
+> - For a CA on Windows Server 2012: On the **Compatibility** tab of the certificate template properties, specify **Windows Server 2003** for the **Certification Authority** option, and **Windows XP / Server 2003** for the **Certificate recipient** option.  
+>   -   For a CA on Windows Server 2008: When you duplicate a certificate template, keep the default selection, **Windows Server 2003 Enterprise**, when you are prompted by the **Duplicate Template** dialog box. Do not select **Windows Server 2008, Enterprise Edition**.  
 
  Use the following sections to view the certificate requirements.  
 

@@ -34,18 +34,18 @@ Beginning with version 1610, you change the data collection level from within th
  For System Center Configuration Manager version 1610, this level includes the following:
 
 
--   Setup Information:
- 	  - Build, install type, language packs, features that you enabled  
+- Setup Information:
+    - Build, install type, language packs, features that you enabled  
 
- 	  - Update pack deployment status and errors, download progress, and prerequisite errors 	
+    - Update pack deployment status and errors, download progress, and prerequisite errors    
 
- 	  - Version of post-upgrade script
+    - Version of post-upgrade script
 
- 	  - Use of update fast ring
+    - Use of update fast ring
 
-    - ***[New]*** Pre-release use, setup media type, branch type
+  - ***[New]*** Pre-release use, setup media type, branch type
 
-    - ***[New]*** Software Assurance expiration date
+  - ***[New]*** Software Assurance expiration date
 
 - Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
