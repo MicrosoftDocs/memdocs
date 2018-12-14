@@ -39,13 +39,13 @@ Class SMS_ScheduleMethods : SMS_BaseClass
 
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- A Configuration Manager interval string is an internal representation of a schedule token, represented by an [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) object. System Center Configuration Manager interval strings are not of the same format as WMI interval strings.  
+  A Configuration Manager interval string is an internal representation of a schedule token, represented by an [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) object. System Center Configuration Manager interval strings are not of the same format as WMI interval strings.  
 
- This class is not used to convert schedule tokens to or from the friendly scheduling strings, for example, "Occurs every 1 day(s) effective 9:27AM Tuesday", found in the System Center Configuration Manager console.  
+  This class is not used to convert schedule tokens to or from the friendly scheduling strings, for example, "Occurs every 1 day(s) effective 9:27AM Tuesday", found in the System Center Configuration Manager console.  
 
 ## Requirements  
 

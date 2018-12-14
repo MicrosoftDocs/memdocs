@@ -33,19 +33,19 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 
 ## Step 4: Create a .cmmac file that can be used to create an application  
 
-1.  Use the **CMAppUtil** tool (found in the **Tools** folder of the Mac client installation files) to create a .cmmac file from the client installation package. This file will be used to create the Configuration Manager application.  
+1. Use the **CMAppUtil** tool (found in the **Tools** folder of the Mac client installation files) to create a .cmmac file from the client installation package. This file will be used to create the Configuration Manager application.  
 
-2.  Copy the new file **CMClient.pkg.cmmac** file to a location that is available to the computer that is running the Configuration Manager console.  
+2. Copy the new file **CMClient.pkg.cmmac** file to a location that is available to the computer that is running the Configuration Manager console.  
 
- For more information, see the [Supplemental procedures to create and deploy applications for Mac computers](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers).  
+   For more information, see the [Supplemental procedures to create and deploy applications for Mac computers](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers).  
 
 ## **Step 5:** Create and deploy an application containing the Mac client files  
 
-1.  In the Configuration Manager console, create an application from the **CMClient.pkg.cmmac** file that contains the client installation files.  
+1. In the Configuration Manager console, create an application from the **CMClient.pkg.cmmac** file that contains the client installation files.  
 
-2.  Deploy this application to Mac computers in your hierarchy.  
+2. Deploy this application to Mac computers in your hierarchy.  
 
- For more information, see  [Creating Mac computer applications with System Center Configuration Manager](../../../../apps/get-started/creating-mac-computer-applications.md).  
+   For more information, see  [Creating Mac computer applications with System Center Configuration Manager](../../../../apps/get-started/creating-mac-computer-applications.md).  
 
 ## Step 6: Users install the latest client  
  Users of Mac clients will be prompted that an update to the Configuration Manager client is available and must be installed. After users install the client, they must restart their Mac computer.  
@@ -57,38 +57,38 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 ##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
  Run the following procedure to prevent the Computer Enrollment Wizard from running and to configure the upgraded client to use an existing client certificate.  
 
--   In the Configuration Manager console, create a configuration item of the type **Mac OS X**.  
+- In the Configuration Manager console, create a configuration item of the type **Mac OS X**.  
 
--   Add a setting to this configuration item with the setting type **Script**.  
+- Add a setting to this configuration item with the setting type **Script**.  
 
--   Add the following script to the setting:  
+- Add the following script to the setting:  
 
-    ```  
-    #!/bin/sh  
-    echo "Starting script\n"  
-    echo "Changing directory to MAC Client\n"  
-    cd /Users/Administrator/Desktop/'MAC Client'/  
-    echo "Import root cert\n"  
-    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
-    echo "Using openssl to convert pfx to a crt\n"  
-    /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
-    echo "Adding trust to root cert\n"  
-    /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
-    echo "Import client cert\n"  
-    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
-    echo "Executing ccmclient with MP\n"  
-    sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
-    echo "Editing Plist file\n"  
-    sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
-    echo "Changing directory to CCM\n"  
-    cd /Library/'Application Support'/Microsoft/CCM/  
-    echo "Making connection to the server\n"  
-    sudo open ./CCMClient  
-    echo "Ending Script\n"  
-    exit  
+  ```  
+  #!/bin/sh  
+  echo "Starting script\n"  
+  echo "Changing directory to MAC Client\n"  
+  cd /Users/Administrator/Desktop/'MAC Client'/  
+  echo "Import root cert\n"  
+  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
+  echo "Using openssl to convert pfx to a crt\n"  
+  /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
+  echo "Adding trust to root cert\n"  
+  /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
+  echo "Import client cert\n"  
+  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
+  echo "Executing ccmclient with MP\n"  
+  sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
+  echo "Editing Plist file\n"  
+  sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
+  echo "Changing directory to CCM\n"  
+  cd /Library/'Application Support'/Microsoft/CCM/  
+  echo "Making connection to the server\n"  
+  sudo open ./CCMClient  
+  echo "Ending Script\n"  
+  exit  
 
-    ```  
+  ```  
 
--   Add the configuration item to a configuration baseline, and then deploy the configuration baseline to all Mac computers that install a certificate independently from Configuration Manager.  
+- Add the configuration item to a configuration baseline, and then deploy the configuration baseline to all Mac computers that install a certificate independently from Configuration Manager.  
 
- For more information about how to create and deploy configuration items for Mac computers, see [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) and [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
+  For more information about how to create and deploy configuration items for Mac computers, see [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) and [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  

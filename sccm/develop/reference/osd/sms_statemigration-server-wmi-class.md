@@ -254,11 +254,11 @@ Class SMS_StateMigration : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class represents state migration that is used in configuring sites for operating system deployment. State migration primarily affects resources, for example, memory, for the state migration point. During migration, user state and settings are copied from one computer to another as part of operating system deployment.  
+  This class represents state migration that is used in configuring sites for operating system deployment. State migration primarily affects resources, for example, memory, for the state migration point. During migration, user state and settings are copied from one computer to another as part of operating system deployment.  
 
 > [!NOTE]
 >  The state migration point requires Internet Information Services (IIS) to be installed.  

@@ -32,13 +32,13 @@ Clients in System Center Configuration Manager must locate a management point to
 
 #### To configure clients for a management point suffix during client installation  
 
--   Install the client with the following CCMSetup Client.msi property:  
+- Install the client with the following CCMSetup Client.msi property:  
 
-    -   **DNSSUFFIX=** *&lt;management point domain\>*  
+  - **DNSSUFFIX=** *&lt;management point domain\>*  
 
-         If the site has more than one management point and they are in more than one domain, specify just one domain. When clients connect to a management point in this domain, they download a list of available management points, which will include the management points from the other domains.  
+     If the site has more than one management point and they are in more than one domain, specify just one domain. When clients connect to a management point in this domain, they download a list of available management points, which will include the management points from the other domains.  
 
-     For more information about the CCMSetup command-line properties, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+    For more information about the CCMSetup command-line properties, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 #### To configure clients for a management point suffix after client installation  
 

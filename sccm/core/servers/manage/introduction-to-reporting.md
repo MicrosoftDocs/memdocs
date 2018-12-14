@@ -19,17 +19,17 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 
  Configuration Manager uses SQL Server Reporting Services as its reporting solution. Integration with Reporting Services provides the following advantages:  
 
--   Uses an industry standard reporting system to query the Configuration Manager database.  
+- Uses an industry standard reporting system to query the Configuration Manager database.  
 
--   Displays reports by using the Configuration Manager Report Viewer or by using Report Manager, which is a web-based connection to the report.  
+- Displays reports by using the Configuration Manager Report Viewer or by using Report Manager, which is a web-based connection to the report.  
 
--   Provides high performance, availability, and scalability.  
+- Provides high performance, availability, and scalability.  
 
--   Provides subscriptions to reports that users can subscribe to; for example, a manager could subscribe to automatically receive an emailed report each day that details the status of a software update rollout.  
+- Provides subscriptions to reports that users can subscribe to; for example, a manager could subscribe to automatically receive an emailed report each day that details the status of a software update rollout.  
 
--   Exports reports that users can select in a variety of popular formats.  
+- Exports reports that users can select in a variety of popular formats.  
 
- For more information about Reporting Services, see [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) in the SQL Server 2008 Books Online.  
+  For more information about Reporting Services, see [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) in the SQL Server 2008 Books Online.  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Reporting Services Point  
  The reporting services point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services. The reporting services point copies the Configuration Manager report definitions to Reporting Services, creates report folders based on report categories, and sets security policy on the report folders and reports based on the role-based permissions for Configuration Manager administrative users. In a 10-minute interval, the reporting services point connects to Reporting Services to reapply the security policy if it has been changed, for example, by using Report Manager. For more information about how to plan for and install a reporting services point, see the following documentation:  
@@ -71,30 +71,30 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 
  The Report Builder installation adds support for over 20 languages. When you run Report Builder, it displays data in the language of the operating system that is running on the local computer. If Report Builder does not support the language, the data is displayed in English. Report Builder supports the full capabilities of SQL Server 2008 Reporting Services, which includes the following capabilities:  
 
--   Delivers an intuitive report authoring environment with an appearance similar to Microsoft Office.  
+- Delivers an intuitive report authoring environment with an appearance similar to Microsoft Office.  
 
--   Offers the flexible report layout of SQL Server 2008 Report Definition Language (RDL).  
+- Offers the flexible report layout of SQL Server 2008 Report Definition Language (RDL).  
 
--   Provides various forms of data visualization including charts and gauges.  
+- Provides various forms of data visualization including charts and gauges.  
 
--   Provides richly formatted text boxes.  
+- Provides richly formatted text boxes.  
 
--   Exports to Microsoft Word format.  
+- Exports to Microsoft Word format.  
 
- You can also open Report Builder from SQL Server Reporting Services.  
+  You can also open Report Builder from SQL Server Reporting Services.  
 
 ##  <a name="BKMK_ReportModels"></a> Report models in SQL Server Reporting Services  
  SQL Reporting Services in Configuration Manager uses report models to help administrative users select items from the database to include in model-based reports. For the administrative user who is building the report, report models expose only specified views and items to choose from. To create model-based reports, at least one report model has to be available. Report models have the following features:  
 
--   You can give database fields and views logical business names to facilitate producing reports. Knowledge of the database structure is not required to produce reports.  
+- You can give database fields and views logical business names to facilitate producing reports. Knowledge of the database structure is not required to produce reports.  
 
--   You can group items logically.  
+- You can group items logically.  
 
--   You can define relationships between items.  
+- You can define relationships between items.  
 
--   You can secure model elements so that administrative users can see only the data that they have permission to see.  
+- You can secure model elements so that administrative users can see only the data that they have permission to see.  
 
- Although Configuration Manager provides sample report models, you can also define report models to meet your own business requirements. For more information about how to create report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
+  Although Configuration Manager provides sample report models, you can also define report models to meet your own business requirements. For more information about how to create report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 ## Next steps
 [Planning for reporting](planning-for-reporting.md)

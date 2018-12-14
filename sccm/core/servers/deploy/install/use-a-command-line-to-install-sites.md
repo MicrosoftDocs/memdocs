@@ -20,41 +20,41 @@ manager: dougeby
 ## Supported tasks for command-line installations
  This method of running Setup supports the following site installation and site maintenance tasks:
 
--   **Install a central administration site or primary site from a command prompt**  
+- **Install a central administration site or primary site from a command prompt**  
   View [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md)
 
--  **Modify the languages in use at a central administration site or primary site**  
-    To modify the languages that are installed at a site from a command prompt (including languages for mobile devices), you must:  
+- **Modify the languages in use at a central administration site or primary site**  
+   To modify the languages that are installed at a site from a command prompt (including languages for mobile devices), you must:  
 
-     -   Run Setup from **&lt;ConfigMgrInstallationPath\>\Bin\X64** on the site server,
-     -   Use the **/MANAGELANGS** command-line option,
-     -   Specify a language script file that specifies the languages you want to add or remove,  
+  - Run Setup from **&lt;ConfigMgrInstallationPath\>\Bin\X64** on the site server,
+  - Use the **/MANAGELANGS** command-line option,
+  - Specify a language script file that specifies the languages you want to add or remove,  
 
     For example, use the following command syntax: **setupwpf.exe /MANAGELANGS &lt;language script file\>**  
 
     To create the language script file, use the information in [Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)  
 
--  **Use an installation script file for unattended site installations or site recovery**  
-    You can run Setup from a command prompt by using an installation script, and you run an unattended site installation. You can also use this option to recover a site.    
+- **Use an installation script file for unattended site installations or site recovery**  
+   You can run Setup from a command prompt by using an installation script, and you run an unattended site installation. You can also use this option to recover a site.    
 
-    To use a script with Setup:  
+   To use a script with Setup:  
 
-    -   Run Setup with the command line-option **/SCRIPT** and specify a script file.  
+  - Run Setup with the command line-option **/SCRIPT** and specify a script file.  
 
-    -   The script file must be configured with required keys and values.  
+  - The script file must be configured with required keys and values.  
 
     For an unattended installation of a central administration site or primary site, the script file must have the following sections:  
 
-    -   Identification    
-    -   Options    
-    -   SQLConfigOptions    
-      -   HierarchyOptions    
-    -   CloudConnectorOptions   
+  - Identification    
+  - Options    
+  - SQLConfigOptions    
+    -   HierarchyOptions    
+  - CloudConnectorOptions   
 
     To recover a site, you must also include the following sections of the script file:  
 
-    -   Identification  
-    -   Recovery
+  - Identification  
+  - Recovery
 
 For more information, see [Unattended site recovery for Configuration Manager](/sccm/protect/understand/unattended-recovery).  
 

@@ -39,17 +39,17 @@ HRESULT ConnectionOptions([out,retval] BSTR* Options);
 ## Remarks  
  Possible values for this property are:  
 
--   `Username`  
+- `Username`  
 
--   `Domain`  
+- `Domain`  
 
--   `Password`  
+- `Password`  
 
--   `Local`  
+- `Local`  
 
--   `Authority`  
+- `Authority`  
 
- For more information about these options, see the MSDN documentation for the method `IWbemLocator::ConnectServer`.  
+  For more information about these options, see the MSDN documentation for the method `IWbemLocator::ConnectServer`.  
 
 ## See Also  
  [ITsMediaClass Interface](../../../develop/reference/misc/itsmediaclass-interface.md)

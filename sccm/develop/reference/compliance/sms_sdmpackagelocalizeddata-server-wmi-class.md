@@ -48,13 +48,13 @@ Class SMS_SDMPackageLocalizedData
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is embedded by the [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md) through the `SDMPackageLocalizedData` property.  
+  This class is embedded by the [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md) through the `SDMPackageLocalizedData` property.  
 
- The application uses this class to add localized string resources to the server database.  
+  The application uses this class to add localized string resources to the server database.  
 
 ## Requirements  
 

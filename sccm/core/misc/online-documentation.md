@@ -64,29 +64,29 @@ Find the documentation library for the product version that you use:
 
 you can view the on-line documentation  in the following guides on TechNet:  
 
--   [Getting Started with System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
+- [Getting Started with System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
 
--   [Site Administration for System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
+- [Site Administration for System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
 
--   [Migrating Hierarchies in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
+- [Migrating Hierarchies in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
 
--   [Deploying Clients for System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
+- [Deploying Clients for System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
 
--   [Managing Mobile Devices with Microsoft Intune and Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=529959)  
+- [Managing Mobile Devices with Microsoft Intune and Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=529959)  
 
--   [Deploying Software and Operating Systems in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
+- [Deploying Software and Operating Systems in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
 
--   [Assets and Compliance in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
+- [Assets and Compliance in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
 
--   [Security and Privacy in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
+- [Security and Privacy in System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
 
--   [Scenarios and Solutions Using System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
+- [Scenarios and Solutions Using System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
 
- **Release notes and technical publications:** The release notes and technical publications supplement the Configuration Manager guides. The release notes contain information that is not available in the product documentation and that is required to successfully install Configuration Manager. Technical publications provide additional information that supports Configuration Manager.  
+  **Release notes and technical publications:** The release notes and technical publications supplement the Configuration Manager guides. The release notes contain information that is not available in the product documentation and that is required to successfully install Configuration Manager. Technical publications provide additional information that supports Configuration Manager.  
 
--   [Release Notes for System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=529437)  
+- [Release Notes for System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=529437)  
 
--   [Technical Publications for System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+- [Technical Publications for System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
 **Accessibility:** See the online topic, [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586), for information about the features, products, and services that make Configuration Manager more accessible for people with disabilities.  
 

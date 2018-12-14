@@ -96,56 +96,56 @@ The following options are available to all connection types on Windows 10:
 
 5. Configure the VPN connection on the **Connection** page. For more information on these options, see the step on the Connection page in [Create a VPN profile](/sccm/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile).  
 
-6.  On the **Authentication Method** page, specify the following settings:  
+6. On the **Authentication Method** page, specify the following settings:  
 
-    -   **Authentication method**: Select the authentication method that the VPN connection uses. Available methods depend on the connection type as shown in this table.  
+   - **Authentication method**: Select the authentication method that the VPN connection uses. Available methods depend on the connection type as shown in this table.  
 
-        |Authentication method|Supported&nbsp;connection&nbsp;types|  
-        |---------------------------|--------------------------------|  
-        |**Certificates**<br /><br /> **Notes:**<ul><li>If the client certificate authenticates to a RADIUS server, like a Network Policy Server, set the Subject Alternative Name in the certificate to the User Principal Name.</li><li>For Android deployments, select the EKU identifier and the certificate issuer thumbprint hash value. Otherwise, users must select the appropriate certificate manually.</li></ul>  |<ul><li>Cisco AnyConnect</li><li>Cisco Legacy AnyConnect</li><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> Check Point Mobile VPN</li></ul>|  
-        |**Username and Password**|<ul><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> Check Point Mobile VPN</li></ul>|  
-        |**Microsoft EAP-TTLS**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>PPTP</li><li>IKEv2</li><li>L2TP</li></ul>|  
-        |**Microsoft protected EAP (PEAP)**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
-        |**Microsoft secured password (EAP-MSCHAP v2)**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
-        |**Smart Card or other certificate**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
-        |**MSCHAP v2**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
-        |**RSA SecurID** (iOS only)|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>PPTP</li><li>L2TP</li></ul>|  
-        |**Use machine certificates**|<ul><li>IKEv2</li></ul>|  
+     |Authentication method|Supported&nbsp;connection&nbsp;types|  
+     |---------------------------|--------------------------------|  
+     |**Certificates**<br /><br /> **Notes:**<ul><li>If the client certificate authenticates to a RADIUS server, like a Network Policy Server, set the Subject Alternative Name in the certificate to the User Principal Name.</li><li>For Android deployments, select the EKU identifier and the certificate issuer thumbprint hash value. Otherwise, users must select the appropriate certificate manually.</li></ul>  |<ul><li>Cisco AnyConnect</li><li>Cisco Legacy AnyConnect</li><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> Check Point Mobile VPN</li></ul>|  
+     |**Username and Password**|<ul><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> Check Point Mobile VPN</li></ul>|  
+     |**Microsoft EAP-TTLS**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>PPTP</li><li>IKEv2</li><li>L2TP</li></ul>|  
+     |**Microsoft protected EAP (PEAP)**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
+     |**Microsoft secured password (EAP-MSCHAP v2)**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
+     |**Smart Card or other certificate**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
+     |**MSCHAP v2**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
+     |**RSA SecurID** (iOS only)|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>PPTP</li><li>L2TP</li></ul>|  
+     |**Use machine certificates**|<ul><li>IKEv2</li></ul>|  
 
-         Depending on the selected options, you might be asked to specify more information, like:  
+      Depending on the selected options, you might be asked to specify more information, like:  
 
-        -   **Remember the user credentials at each logon**: User credentials are remembered so that users don't have to enter them each time they connect.  
+     - **Remember the user credentials at each logon**: User credentials are remembered so that users don't have to enter them each time they connect.  
 
-        -   **Select a client certificate for client authentication**: Select the previously created client [SCEP certificate](create-pfx-certificate-profiles.md) that is used to authenticate the VPN connection.   
+     - **Select a client certificate for client authentication**: Select the previously created client [SCEP certificate](create-pfx-certificate-profiles.md) that is used to authenticate the VPN connection.   
 
-            > [!NOTE]  
-            >  For iOS devices, the SCEP profile that you select is embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile isn't installed if the certificate isn't present or isn't compliant.  
-            >   
-            >  If the SCEP certificate that you specify isn't compliant or hasn't been deployed, then the VPN profile
-            >  isn't installed on the device.
-            >  
-            >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.   
+       > [!NOTE]  
+       >  For iOS devices, the SCEP profile that you select is embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile isn't installed if the certificate isn't present or isn't compliant.  
+       >   
+       >  If the SCEP certificate that you specify isn't compliant or hasn't been deployed, then the VPN profile
+       >  isn't installed on the device.
+       >  
+       >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.   
 
-        - **Conditional access**  
-			- Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. For more information, see [Device compliance policies](/sccm/protect/deploy-use/device-compliance-policies).  
+     - **Conditional access**  
+         - Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. For more information, see [Device compliance policies](/sccm/protect/deploy-use/device-compliance-policies).  
 
-			- Choose **Enable single sign-on (SSO) with alternate certificate** to choose a certificate other than the VPN Authentication certificate for device compliance. If you choose this option, provide the **EKU** (comma-separated list) and **Issuer Hash**, for the correct certificate that the VPN client should locate.  
+         - Choose **Enable single sign-on (SSO) with alternate certificate** to choose a certificate other than the VPN Authentication certificate for device compliance. If you choose this option, provide the **EKU** (comma-separated list) and **Issuer Hash**, for the correct certificate that the VPN client should locate.  
 
-         - For **Windows Information Protection**, provide the enterprise-managed corporate identity, which is usually your organization's primary domain, for example, *contoso.com*. You can specify multiple domains that your organization owns by separating them with the "|" character. For example, *contoso.com|newcontoso.com*. For more information, see [Create and deploy a Windows Information Protection app protection policy with Intune](/intune/windows-information-protection-policy-create).   
+       - For **Windows Information Protection**, provide the enterprise-managed corporate identity, which is usually your organization's primary domain, for example, *contoso.com*. You can specify multiple domains that your organization owns by separating them with the "|" character. For example, *contoso.com|newcontoso.com*. For more information, see [Create and deploy a Windows Information Protection app protection policy with Intune](/intune/windows-information-protection-policy-create).   
 
-         ![Create VPN Profile Wizard, Authentication Method page](media/vpn-conditional-access.png)
+       ![Create VPN Profile Wizard, Authentication Method page](media/vpn-conditional-access.png)
 
-         When the Windows client version supports it, the option to **Configure** the authentication method is available. This option opens the Windows properties dialog box to configure the authentication method. If **Configure** is disabled, use a different means to configure authentication method properties.  
+       When the Windows client version supports it, the option to **Configure** the authentication method is available. This option opens the Windows properties dialog box to configure the authentication method. If **Configure** is disabled, use a different means to configure authentication method properties.  
 
-3.  On the **Proxy Settings** page of the **Create VPN Profile Wizard**, check the **Configure proxy settings for this VPN profile** box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
+7. On the **Proxy Settings** page of the **Create VPN Profile Wizard**, check the **Configure proxy settings for this VPN profile** box if your VPN connection uses a proxy server. Then, provide the proxy server information. For more information, see the Windows Server documentation.  
 
-	> [!NOTE]  
-	>  On Windows 8.1 computers, the VPN profile will not show the proxy information until you connect to the VPN by using that computer.  
+   > [!NOTE]  
+   >  On Windows 8.1 computers, the VPN profile will not show the proxy information until you connect to the VPN by using that computer.  
 
 
-4. Configure further DNS settings, if necessary.  
+8. Configure further DNS settings, if necessary.  
 
-5. Finish the wizard. The **VPN Profiles** node in the **Assets and Compliance** workspace shows the new VPN profile.  
+9. Finish the wizard. The **VPN Profiles** node in the **Assets and Compliance** workspace shows the new VPN profile.  
 
 
 

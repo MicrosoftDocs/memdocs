@@ -73,10 +73,10 @@ Support for a specific SQL Server service pack includes cumulative updates unles
 ### SQL Server 2017: Standard, Enterprise  
 You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites: 
 
--   A central administration site  
--   A primary site  
--   A secondary site  
-<!--SMS.498506-->
+- A central administration site  
+- A primary site  
+- A secondary site  
+  <!--SMS.498506-->
 
 ### SQL Server 2016 SP2: Standard, Enterprise  
 <!--514985-->

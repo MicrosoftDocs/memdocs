@@ -92,11 +92,11 @@ In System Center Configuration Manager, operating system deployment task sequenc
 
  For example, you can form the condition `Exp1 and (Exp2 or Exp3)` by adding the following condition operands to a task sequence step's [SMS_TaskSequence_Condition Server WMI Class](../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md) instance's `Operand` array property.  
 
--   `SMS_TaskSequence_ConditionExpression` (`Exp1`).  
+- `SMS_TaskSequence_ConditionExpression` (`Exp1`).  
 
--   `SMS_TaskSequence_ConditionOperator` (nested expression `Exp2 or Exp3`).  
+- `SMS_TaskSequence_ConditionOperator` (nested expression `Exp2 or Exp3`).  
 
- The [SMS_TaskSequence_ConditionOperator Server WMI Class](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md)`Operands` array property contains the expressions `Exp2` and `Exp3` and the [SMS_TaskSequence_ConditionOperator Server WMI Class](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md)`Operator` property contains the desired operator. In this case `or`.  
+  The [SMS_TaskSequence_ConditionOperator Server WMI Class](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md)`Operands` array property contains the expressions `Exp2` and `Exp3` and the [SMS_TaskSequence_ConditionOperator Server WMI Class](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md)`Operator` property contains the desired operator. In this case `or`.  
 
 > [!NOTE]
 >  The operands in the task sequence step's [SMS_TaskSequence_Condition Server WMI Class](../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md)`Operand` array property are automatically compared with the `and` operator to evaluate the condition. The expressions in the `SMS_TaskSequence_ConditionOperator` must have an operator defined by the `Operator` property.  

@@ -702,38 +702,38 @@ Class SMS_Processor
 
  Current status of the processor. Possible values are:  
 
--   OK  
+- OK  
 
--   Error  
+- Error  
 
--   Degraded  
+- Degraded  
 
--   Unknown  
+- Unknown  
 
--   Pred Fail  
+- Pred Fail  
 
--   Starting  
+- Starting  
 
--   Stopping  
+- Stopping  
 
--   Service  
+- Service  
 
--   Stressed  
+- Stressed  
 
--   NonRecover  
+- NonRecover  
 
--   NoContact  
+- NoContact  
 
--   LostComm  
+- LostComm  
 
- `StatusInfo`  
- Data type: `UInt16`  
+  `StatusInfo`  
+  Data type: `UInt16`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- State of the logical device. Possible values are listed below. If this property does not apply to the logical device, the property is set to "Not Applicable".  
+  State of the logical device. Possible values are listed below. If this property does not apply to the logical device, the property is set to "Not Applicable".  
 
 |||  
 |-|-|  

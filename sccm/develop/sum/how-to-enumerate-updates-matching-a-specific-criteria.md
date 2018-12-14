@@ -26,17 +26,17 @@ This topic explains how to enumerate software updates that match specific criter
 
  Four example queries are demonstrated below:  
 
-1.  A query that displays the software updates that have already been downloaded.  
+1. A query that displays the software updates that have already been downloaded.  
 
-2.  A query that displays the software updates that have already been deployed.  
+2. A query that displays the software updates that have already been deployed.  
 
-3.  A query that displays the software updates that have a particular severity value.  
+3. A query that displays the software updates that have a particular severity value.  
 
-4.  A query that displays the software update CI_IDs that are associated with a specific knowledge base article.  
+4. A query that displays the software update CI_IDs that are associated with a specific knowledge base article.  
 
- Detailed information about the properties that are associated with a software update is in the [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) class reference material.  
+   Detailed information about the properties that are associated with a software update is in the [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) class reference material.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
+   For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

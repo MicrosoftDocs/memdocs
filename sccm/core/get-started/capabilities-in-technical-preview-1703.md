@@ -103,18 +103,18 @@ In Azure Active Directory, register Configuration Manager as a web application o
 4. On the **App** page, specify your Azure environment, and then click **Browse** to open the Server App window.
 
 5. In the **Server App** window, select the server app you want to use, and then click **OK**.
-Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
-  -	**Create**: To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
-  -	**Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.  </br></br>
+   Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
+   - **Create**: To create a new server app, click **Create**. Provide a friendly name for the app and the tenant. Then, after you sign-in to Azure, Configuration Manager creates the web app in Azure for you, including the Client ID and secret key for use with the web app. Later, you can view these from the Azure portal.
+   - **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.  </br></br>
 
 6. Review the **Information** page and complete any additional steps and configurations as directed. These configurations are necessary to use the service with Configuration Manager.
-For example, to configure WSfB:
+   For example, to configure WSfB:
 
-  1. In Azure you must register Configuration Manager as a web application or Web API and record the client ID. You also specify a client key for use by the management tool (which is Configuration Manager).
+   1. In Azure you must register Configuration Manager as a web application or Web API and record the client ID. You also specify a client key for use by the management tool (which is Configuration Manager).
 
-  2.	In the WSfB console you must configure Configuration Manager as the store management tool, enable support for offline licensed apps, and then purchase at least one app.   </br>
+   2.    In the WSfB console you must configure Configuration Manager as the store management tool, enable support for offline licensed apps, and then purchase at least one app.   </br>
 
-  Click **Next** when you are ready to continue.
+   Click **Next** when you are ready to continue.
 
 7. On the **App Configurations** page, complete the app catalog and language configurations for this service, and then click **Next**.
 8. After the wizard completes, the Configuration Manager console shows that you have configured **Windows Store for Business** as a **Cloud Service Type**.

@@ -408,27 +408,27 @@ Class SMS_BaselineAssignment : SMS_CIAssignmentBaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is used to define an assignment for a configuration baseline, which is a configuration item that contains other configuration items with associated rules. The baseline is assigned to computers through collections, together with a compliance evaluation schedule.  
+  This class is used to define an assignment for a configuration baseline, which is a configuration item that contains other configuration items with associated rules. The baseline is assigned to computers through collections, together with a compliance evaluation schedule.  
 
- Your application can create a baseline as an [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md) object with the `CIType_ID` property set to Baseline (2). The types of configuration items that can be included in the baseline are:  
+  Your application can create a baseline as an [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md) object with the `CIType_ID` property set to Baseline (2). The types of configuration items that can be included in the baseline are:  
 
--   OperatingSystem (3)  
+- OperatingSystem (3)  
 
--   BusinessPolicy (4)  
+- BusinessPolicy (4)  
 
--   Application (5)  
+- Application (5)  
 
--   OtherConfigurationItem (7)  
+- OtherConfigurationItem (7)  
 
- The baseline can reference configuration items of type SoftwareUpdate (1) and SoftwareUpdateBundle (2).  
+  The baseline can reference configuration items of type SoftwareUpdate (1) and SoftwareUpdateBundle (2).  
 
- The [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md) object defines an `IsBundle` property. When building a baseline, this property of each contained configuration item is set to `true` to indicate that the configuration item is part of a bundle.  
+  The [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md) object defines an `IsBundle` property. When building a baseline, this property of each contained configuration item is set to `true` to indicate that the configuration item is part of a bundle.  
 
- For information on the use of this class, see [How to List Configuration Assignments](../../../develop/compliance/how-to-list-configuration-assignments.md) and [How to Assign Configuration Baselines](../../../develop/compliance/how-to-assign-configuration-baselines.md).  
+  For information on the use of this class, see [How to List Configuration Assignments](../../../develop/compliance/how-to-list-configuration-assignments.md) and [How to Assign Configuration Baselines](../../../develop/compliance/how-to-assign-configuration-baselines.md).  
 
 ## Requirements  
 

@@ -43,7 +43,7 @@ ms.author: aaroncz
 
 
 > [!div class="button"]
-[Next step >](endpoint-antimalware-policies.md)
-
+> [Next step >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Back >](endpoint-configure-alerts.md)
+> [Back >](endpoint-configure-alerts.md)

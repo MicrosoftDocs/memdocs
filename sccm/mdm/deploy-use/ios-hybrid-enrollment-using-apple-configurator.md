@@ -91,29 +91,29 @@ To prepare iOS devices for enrollment, you connect each device to a Mac computer
 > [!WARNING]  
 >  Apple Configurator wipes and resets devices to factory configurations.  
 
-1.  On a Mac computer, open **Apple Configurator 2**.  
+1. On a Mac computer, open **Apple Configurator 2**.  
 
-2.  In the menu bar, click **Apple Configurator 2** > **Preferences**.  
+2. In the menu bar, click **Apple Configurator 2** > **Preferences**.  
 
-2.  In the preferences pane, select **Servers** and click the "+" symbol below the left pane to launch the MDM Server wizard. Click **Next**.  
+3. In the preferences pane, select **Servers** and click the "+" symbol below the left pane to launch the MDM Server wizard. Click **Next**.  
 
-3.  Enter the **Name** and **Enrollment URL** you saved [earlier](#step-3-export-the-profile-to-deploy-to-ios-devices). Click **Next**.  
+4. Enter the **Name** and **Enrollment URL** you saved [earlier](#step-3-export-the-profile-to-deploy-to-ios-devices). Click **Next**.  
 
    > [!NOTE]
    > If you receive a warning about trust profile requirements for Apple TV, you can safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning.
 
    To continue, click **Next** until the wizard is complete.  
 
-4.  On the **Servers** pane, click “Edit” beside the new server’s profile. Ensure that the Enrollment URL exactly matches the URL you entered earlier. Reenter the URL if it is different, and click **Save**.  
+5. On the **Servers** pane, click “Edit” beside the new server’s profile. Ensure that the Enrollment URL exactly matches the URL you entered earlier. Reenter the URL if it is different, and click **Save**.  
 
-5.  With a USB cable, connect an iOS device to the Mac computer.  
+6. With a USB cable, connect an iOS device to the Mac computer.  
 
-  > [!WARNING]  
-  >  This process resets devices to factory configurations. Prior to connecting the device, reset the device and power it on. As a best practice, the device should be at the Hello screen before continuing.  
+   > [!WARNING]  
+   >  This process resets devices to factory configurations. Prior to connecting the device, reset the device and power it on. As a best practice, the device should be at the Hello screen before continuing.  
 
-6.  Click **Prepare**. On the **Prepare iOS Device** pane, select **Manual**, and then click **Next**.  
+7. Click **Prepare**. On the **Prepare iOS Device** pane, select **Manual**, and then click **Next**.  
 
-7.  On the **Enroll in MDM Server** pane, select the server name you created, and then click **Next**.  
+8. On the **Enroll in MDM Server** pane, select the server name you created, and then click **Next**.  
 
 9. On the **Create an Organization** pane, choose the **Organization** or create a new organization, and then click **Next**.  
 

@@ -172,35 +172,35 @@ Class SMS_SIIB_Configuration : SMS_SiteInstallItemBase
 
  The configuration type. Possible values are:  
 
--   COMPONENT_CONFIGURATION(Component Configuration)  
+- COMPONENT_CONFIGURATION(Component Configuration)  
 
--   DISCOVERY_METHOD(Discovery Method)  
+- DISCOVERY_METHOD(Discovery Method)  
 
--   CLIENT_SETUP_METHOD(Client Setup Method)  
+- CLIENT_SETUP_METHOD(Client Setup Method)  
 
--   INVENTORY_METHOD(Inventory Method)  
+- INVENTORY_METHOD(Inventory Method)  
 
--   CLIENT_AGENT(Client Agent)  
+- CLIENT_AGENT(Client Agent)  
 
--   CLIENT_ACCOUNT_CONFIGURATION(Client Account Configuration)  
+- CLIENT_ACCOUNT_CONFIGURATION(Client Account Configuration)  
 
--   SERVER_ACCOUNT_CONFIGURATION(Server Account Configuration)  
+- SERVER_ACCOUNT_CONFIGURATION(Server Account Configuration)  
 
- `Units`  
- Data type: `String` Array  
+  `Units`  
+  Data type: `String` Array  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_SiteInstallItemBase Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_siteinstallitembase-server-wmi-class.md).  
+  See [SMS_SiteInstallItemBase Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_siteinstallitembase-server-wmi-class.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

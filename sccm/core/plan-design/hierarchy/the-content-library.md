@@ -40,7 +40,7 @@ Configuration Manager copies content files to the drive with the highest priorit
 For more information about how to configure the drive settings for the distribution point, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer** tool in the Configuration Manager tools. For more information, see the [Content Library Transfer tool](/sccm/core/support/content-library-transfer).  
 
 
@@ -108,13 +108,13 @@ A remote content library is a prerequisite for [site server high availability](/
 
 5. Note the **Status** value in the Content Library column on the Summary tab of the details pane. It updates to show the site's progress in moving the content library.  
 
-    - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
+   - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
 
-    - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
+   - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
 
-    - When complete it displays **Complete**.  
+   - When complete it displays **Complete**.  
     
-    See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
+     See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
 
 For more information on this process, see [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart).
 

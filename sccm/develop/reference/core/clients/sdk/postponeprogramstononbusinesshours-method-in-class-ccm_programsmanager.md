@@ -19,8 +19,8 @@ The `PostponeProgramsToNonBusinessHours` WMI class method, in Configuration Mana
 
 ```  
 uint32 PostponeProgramsToNonBusinessHours(  
-     [IN]  CCM_Program CCMPrograms[],  
-     [IN]  Boolean RebootImmediatelyAfterInstall  
+     [IN]  CCM_Program CCMPrograms[],  
+     [IN]  Boolean RebootImmediatelyAfterInstall  
 );  
 ```  
 

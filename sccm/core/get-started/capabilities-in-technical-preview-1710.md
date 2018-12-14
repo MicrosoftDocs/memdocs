@@ -24,8 +24,8 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
--   **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
--   **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Support for Windows 10, version 1709 (also known as the Fall Creators Update)**.  Beginning with this Windows release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **Update to a new preview version fails when you have a site server in passive mode**. When you run a preview version that has a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -106,15 +106,15 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
 | Network protection  |  Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 
 ### Create an Exploit Guard policy  <!--1355468 -->
-1.  In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
-2.  On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
-3.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
-4.  Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
-  - **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
-  - **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
-  - **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
-  - **Network protection:** Set network protection to block or audit access to suspicious domains.
-5.  Complete the wizard to create the policy, which you can later deploy to devices.
+1. In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
+2. On the **Home** tab, in the **Create** group, click **Create Exploit Policy**.
+3. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.
+4. Next, select the Exploit Guard components you want to manage with this policy. For each component you select, you can then configure additional details.
+   - **Attack Surface Reduction:** Configure the Office threat, scripting threats, and email threats you want to block or audit. You can also exclude specific files or folders from this rule.
+   - **Controlled folder access:** Configure blocking or auditing, and then add Apps that can bypass this policy.  You can also specify additional folders that are not protected by default.
+   - **Exploit protection:**  Specify an XML file that contains settings for mitigating exploits of system processes and apps. You can export these settings from the Windows Defender Security Center app on a Windows 10 device.
+   - **Network protection:** Set network protection to block or audit access to suspicious domains.
+5. Complete the wizard to create the policy, which you can later deploy to devices.
 
 ### Deploy an Exploit Guard policy     
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.

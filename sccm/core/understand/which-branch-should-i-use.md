@@ -37,11 +37,11 @@ To install the Current Branch as a new site, use [baseline media](/sccm/core/ser
 
 You can also use the baseline media to install a new site that is an evaluation edition of the current branch. The evaluation edition doesn't require a license. You can use the evaluation edition for 180 days. It supports upgrade to a licensed edition of the current branch. To install only an evaluation edition, get it from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
->  [!NOTE]  
+> [!NOTE]
 > Use baseline media to install sites for a new Configuration Manager hierarchy. If you previously installed a baseline version, use in-console updates to update your sites to a new version.  
->  
+> 
 > Sites that are updated using in-console updates result in sites that are the same as the new site installed using the baseline media.
->
+> 
 > For more information, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).  
 
 

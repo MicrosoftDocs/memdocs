@@ -41,22 +41,22 @@ When you must install an out-of-band release, and the update or hotfix file name
 
 ### To use the update registration tool  
 
-1.  On the computer that hosts the service connection point:  
+1. On the computer that hosts the service connection point:  
 
-    -   Open a command prompt with administrative privileges, and then change directories to the location that contains **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
+   -   Open a command prompt with administrative privileges, and then change directories to the location that contains **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
 
-2.  Run the following command to start the update registration tool:  
+2. Run the following command to start the update registration tool:  
 
-    -   **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
+   -   **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
 
-    After the hotfix is registered, it appears as a new update in the console within 24 hours.  You can accelerate the process:
+   After the hotfix is registered, it appears as a new update in the console within 24 hours.  You can accelerate the process:
 
-    - Open  the Configuration Manager console and go to **Administration** > **Updates and Servicing**, and then click **Check for Updates**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.) 
+   - Open  the Configuration Manager console and go to **Administration** > **Updates and Servicing**, and then click **Check for Updates**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.) 
 
-    The update registration tool logs its actions to a .log file on the local computer. The log file has the same name as the hotfix .exe file and is written to the **%SystemRoot%/Temp** folder.  
+   The update registration tool logs its actions to a .log file on the local computer. The log file has the same name as the hotfix .exe file and is written to the **%SystemRoot%/Temp** folder.  
 
-     After the update is registered, you can close the update registration tool.  
+    After the update is registered, you can close the update registration tool.  
 
-3.  Open the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Hotfixes that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
+3. Open the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Hotfixes that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
- For information about installing updates, see [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
+   For information about installing updates, see [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  

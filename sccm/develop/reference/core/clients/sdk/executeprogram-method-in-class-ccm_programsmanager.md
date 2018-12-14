@@ -19,8 +19,8 @@ The `ExecuteProgram` WMI class method, in Configuration Manager, manages the dow
 
 ```  
 uint32 ExecuteProgram(  
-     [IN]  String ProgramID,  
-     [IN]  String PackageID  
+     [IN]  String ProgramID,  
+     [IN]  String PackageID  
 );  
 ```  
 

@@ -16,24 +16,24 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 ### To create an iOS and Mac OS X configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
+1. In the Configuration Manager console, click **Assets and compliance**.  
   
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
   
-3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
+3. On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
-4.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
+4. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
   
-5.  Under **Specify the type of configuration item that you want to create**, select **iOS and Mac OS X**.  
+5. Under **Specify the type of configuration item that you want to create**, select **iOS and Mac OS X**.  
   
-6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
+6. Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific iOS, or Mac OS X platforms that will evaluate the configuration item.  
+7. On the **Supported Platforms** page of the wizard, select the specific iOS, or Mac OS X platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
   
-    > [!TIP]  
-    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
+   > [!TIP]  
+   >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
   
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
   
@@ -56,7 +56,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 12. Complete the wizard.  
   
- You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+    You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
 ##  iOS and Mac OS X configuration item settings reference  
   
@@ -220,35 +220,35 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 #### To specify the compliant or noncompliant apps list  
   
-1.  On the **Compliant and Noncompliant Apps (iOS)** page, specify the following information:  
+1. On the **Compliant and Noncompliant Apps (iOS)** page, specify the following information:  
   
-    -   **Noncompliant apps list** - Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.  
+   -   **Noncompliant apps list** - Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.  
   
-    -   **Compliant apps list** - Select this option if you want to specify a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.  
+   -   **Compliant apps list** - Select this option if you want to specify a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.  
   
-    -   **Add** - Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.  
+   -   **Add** - Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.  
   
-         To specify the URL, from the iTunes App Store, search for the app you want to use.  
+        To specify the URL, from the iTunes App Store, search for the app you want to use.  
   
-         Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.  
+        Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.  
   
-         **Example:** Search the store for the **Microsoft Word for iPad** app. The URL you use will be **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+        **Example:** Search the store for the **Microsoft Word for iPad** app. The URL you use will be **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
-    -   **Edit** - Let’s you edit the name, publisher and URL of the selected app.  
+   -   **Edit** - Let’s you edit the name, publisher and URL of the selected app.  
   
-    -   **Remove** - Deletes the selected app from the list.  
+   -   **Remove** - Deletes the selected app from the list.  
   
-    -   **Import** - Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.  
+   -   **Import** - Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.  
   
-2.  When you are finished, click **Next**.  
+2. When you are finished, click **Next**.  
   
- You can use one of the following reports monitor compliant and noncompliant apps:  
+   You can use one of the following reports monitor compliant and noncompliant apps:  
   
--   **List of noncompliant Apps and Devices for a specified user** - Displays information about users and devices that have apps installed that are not compliant with a policy you specified.  
+- **List of noncompliant Apps and Devices for a specified user** - Displays information about users and devices that have apps installed that are not compliant with a policy you specified.  
   
--   **Summary of Users who have Noncompliant Apps** - Displays information about users that have apps installed that are not compliant with a policy you specified.  
+- **Summary of Users who have Noncompliant Apps** - Displays information about users that have apps installed that are not compliant with a policy you specified.  
   
- For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
 ###  Compliant and noncompliant apps (Mac OS X)  
  Let’s you specify a list of Mac OS X  apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
@@ -257,39 +257,39 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 #### To specify the compliant or noncompliant apps list  
   
-1.  On the **Compliant and Noncompliant Apps (Mac OS X)** page, specify the following information:  
+1. On the **Compliant and Noncompliant Apps (Mac OS X)** page, specify the following information:  
   
-    -   **Noncompliant apps list** - Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.  
+   - **Noncompliant apps list** - Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.  
   
-    -   **Compliant apps list** - Select this option if you want to specify a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.  
+   - **Compliant apps list** - Select this option if you want to specify a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.  
   
-    -   **Add** - Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the  bundle ID of the app.  
+   - **Add** - Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the  bundle ID of the app.  
   
-        > [!TIP]  
-        >  To find the bundle ID of an app, use the following steps on a Mac computer that has the app installed:  
-        >   
-        >  1.  Open the folder in which the app is installed (for example, **/Applications**)  
-        > 2.  Select the *<App Name\>***.app** bundle, and choose **Show Package Contents**  
-        > 3.  Open the **Info.plist** file  
-        > 4.  Check the value associated with the key **CFBundleIdentifier**  
-        >   
-        >  The format for Bundle ID is **com.contoso.appname**  
+     > [!TIP]
+     >  To find the bundle ID of an app, use the following steps on a Mac computer that has the app installed:  
+     > 
+     > 1. Open the folder in which the app is installed (for example, **/Applications**)  
+     >    2.  Select the *<App Name\>***.app** bundle, and choose **Show Package Contents**  
+     >    3.  Open the **Info.plist** file  
+     >    4.  Check the value associated with the key **CFBundleIdentifier**  
+     > 
+     >    The format for Bundle ID is **com.contoso.appname**  
   
-    -   **Edit** - Let’s you edit the name, publisher and bundle ID of the selected app.  
+   - **Edit** - Let’s you edit the name, publisher and bundle ID of the selected app.  
   
-    -   **Remove** - Deletes the selected app from the list.  
+   - **Remove** - Deletes the selected app from the list.  
   
-    -   **Import** - Imports a list of apps you have specified in a comma-separated values file. Use the format, app name, publisher, app bundle ID in the file.  
+   - **Import** - Imports a list of apps you have specified in a comma-separated values file. Use the format, app name, publisher, app bundle ID in the file.  
   
-2.  When you are finished, click **Next**.  
+2. When you are finished, click **Next**.  
   
- You can use one of the following reports monitor compliant and noncompliant apps:  
+   You can use one of the following reports monitor compliant and noncompliant apps:  
   
--   **List of noncompliant Apps and Devices for a specified user** - Displays information about users and devices that have apps installed that are not compliant with a policy you specified.  
+- **List of noncompliant Apps and Devices for a specified user** - Displays information about users and devices that have apps installed that are not compliant with a policy you specified.  
   
--   **Summary of Users who have Noncompliant Apps** - Displays information about users that have apps installed that are not compliant with a policy you specified.  
+- **Summary of Users who have Noncompliant Apps** - Displays information about users that have apps installed that are not compliant with a policy you specified.  
   
- For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
 ### iOS and Mac OS X custom profile settings  
  Use **iOS and Mac OS X Custom Profiles** to deploy settings that you created using the [Apple Configurator tool](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to iOS and Mac OS X devices. This tool lets you create many settings that control the operation of these devices and export them to a configuration profile. You can then import this configuration profile into an iOS and Mac OS X custom profile and deploy the settings to users and devices in your organization.  
@@ -338,67 +338,67 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 #### To configure kiosk mode for iOS devices  
   
-1.  On the **Configure Kiosk Mode Settings for iOS Devices** page of the **Create Configuration Item Wizard**, specify the following information:  
+1. On the **Configure Kiosk Mode Settings for iOS Devices** page of the **Create Configuration Item Wizard**, specify the following information:  
   
-    -   **Select App** - Select the app that will be allowed to run when the device is in kiosk mode. No other apps will be allowed to run on the device. Choose from:  
+   - **Select App** - Select the app that will be allowed to run when the device is in kiosk mode. No other apps will be allowed to run on the device. Choose from:  
   
-        -   **Managed App** – Click Browse, then select a managed app.  
+     - **Managed App** – Click Browse, then select a managed app.  
   
-        -   **Store App** – specify the URL to an app on the app store then click **Get App ID** to populate the **App ID** field.  
+     - **Store App** – specify the URL to an app on the app store then click **Get App ID** to populate the **App ID** field.  
   
-         To find the app URL:  
+       To find the app URL:  
   
-        -   Using a search engine, find the app you want to use in the iTunes App Store and open the page for the app.  
+     - Using a search engine, find the app you want to use in the iTunes App Store and open the page for the app.  
   
-        -   Copy the URL of the page and use this as the URL to specify the app you want to run in kiosk mode.  
+     - Copy the URL of the page and use this as the URL to specify the app you want to run in kiosk mode.  
   
-        -   **Example:** Search for **Microsoft Word for iPad**. The URL you use will be **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+     - **Example:** Search for **Microsoft Word for iPad**. The URL you use will be **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
-    -   **Touch** - Enables or disables the touch screen on the device.  
+   - **Touch** - Enables or disables the touch screen on the device.  
   
-    -   **Screen rotation** - Enables or disables changing the screen orientation when you rotate the device.  
+   - **Screen rotation** - Enables or disables changing the screen orientation when you rotate the device.  
   
-    -   **Volume buttons** - Enables or disables the use of the volume buttons on the device.  
+   - **Volume buttons** - Enables or disables the use of the volume buttons on the device.  
   
-    -   **Ringer switch** - Enables or disables the ringer (mute) switch on the device.  
+   - **Ringer switch** - Enables or disables the ringer (mute) switch on the device.  
   
-    -   **Screen sleep and wake button** - Enables or disables the screen sleep wake button on the device.  
+   - **Screen sleep and wake button** - Enables or disables the screen sleep wake button on the device.  
   
-    -   **Auto lock** - Enables or disables automatic locking of the device.  
+   - **Auto lock** - Enables or disables automatic locking of the device.  
   
-    -   **Mono audio** - Enables or disables the accessibility setting **Mono audio**.  
+   - **Mono audio** - Enables or disables the accessibility setting **Mono audio**.  
   
-    -   **Voice over** - Enables or disables the accessibility setting **VoiceOver** which reads aloud text on the device display.  
+   - **Voice over** - Enables or disables the accessibility setting **VoiceOver** which reads aloud text on the device display.  
   
-    -   **Voice over adjustments** - Enables or disables voiceover adjustments which let you adjust the VoiceOver function (for example, how fast on-screen text is read aloud).  
+   - **Voice over adjustments** - Enables or disables voiceover adjustments which let you adjust the VoiceOver function (for example, how fast on-screen text is read aloud).  
   
-    -   **Zoom** - Enables or disables the **Zoom** accessibility setting which lets you use touch to zoom into the device display.  
+   - **Zoom** - Enables or disables the **Zoom** accessibility setting which lets you use touch to zoom into the device display.  
   
-    -   **Zoom adjustments** - Enables or disables zoom adjustments which let you adjust the zoom function.  
+   - **Zoom adjustments** - Enables or disables zoom adjustments which let you adjust the zoom function.  
   
-    -   **Invert colors** - Enables or disables the **Invert Colors** accessibility setting which adjusts the display to help users with visual impairments.  
+   - **Invert colors** - Enables or disables the **Invert Colors** accessibility setting which adjusts the display to help users with visual impairments.  
   
-    -   **Invert colors adjustments** - Enables or disables invert colors adjustments which let you adjust the invert colors function.  
+   - **Invert colors adjustments** - Enables or disables invert colors adjustments which let you adjust the invert colors function.  
   
-    -   **Assistive touch** - Enables or disables the **Assistive Touch** accessibility setting which helps users perform on screen gestures which might be difficult for them to perform.  
+   - **Assistive touch** - Enables or disables the **Assistive Touch** accessibility setting which helps users perform on screen gestures which might be difficult for them to perform.  
   
-    -   **Assistive touch adjustments** - Enables or disables assistive touch adjustments which let you adjust the assistive touch function.  
+   - **Assistive touch adjustments** - Enables or disables assistive touch adjustments which let you adjust the assistive touch function.  
   
-    -   **Speech selection** - Enables or disables the **Speak Selection** accessibility settings which can read aloud the text you select.  
+   - **Speech selection** - Enables or disables the **Speak Selection** accessibility settings which can read aloud the text you select.  
   
-    -   **Remediate noncompliant settings** - Select if you want to remediate noncompliant configuration settings (when supported).  
+   - **Remediate noncompliant settings** - Select if you want to remediate noncompliant configuration settings (when supported).  
   
-    -   **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are:  
+   - **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are:  
   
-        -   **None** Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+     -   **None** Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
   
-        -   **Information** Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+     -   **Information** Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
   
-        -   **Warning** Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+     -   **Warning** Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
   
-        -   **Critical** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+     -   **Critical** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
   
-        -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+     -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
 ## See Also  
  [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

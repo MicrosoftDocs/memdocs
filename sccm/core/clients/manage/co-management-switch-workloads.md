@@ -111,10 +111,10 @@ After you enable co-management, monitor co-management devices using the followin
 - [The co-management dashboard](/sccm/core/clients/manage/co-management-dashboard)  
 
 - **SQL view and WMI class**: Query the **v_ClientCoManagementState** SQL view in the Configuration Manager site database or the **SMS_Client_ComanagementState** WMI class. With the information in the WMI class, you can create custom collections in Configuration Manager to help determine the status of your co-management deployment. For details, see [How to create collections](/sccm/core/clients/manage/collections/create-collections). The following fields are available in the SQL view and WMI class:  
-    - **MachineId**: Specifies a unique device ID for the Configuration Manager client  
-    - **MDMEnrolled**: Specifies whether the device is MDM-enrolled  
-    - **Authority**: Specifies the authority for which the device is enrolled  
-    - **ComgmtPolicyPresent**: Specifies whether the Configuration Manager co-management policy exists on the client. If the **MDMEnrolled** value is **0**, the device isn't co-managed regardless whether the co-management policy exists on the client.  
+  - **MachineId**: Specifies a unique device ID for the Configuration Manager client  
+  - **MDMEnrolled**: Specifies whether the device is MDM-enrolled  
+  - **Authority**: Specifies the authority for which the device is enrolled  
+  - **ComgmtPolicyPresent**: Specifies whether the Configuration Manager co-management policy exists on the client. If the **MDMEnrolled** value is **0**, the device isn't co-managed regardless whether the co-management policy exists on the client.  
 
     > [!Note]  
     > A device is co-managed when the **MDMEnrolled** field and **ComgmtPolicyPresent** fields both have a value of **1**.  

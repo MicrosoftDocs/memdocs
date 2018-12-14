@@ -40,71 +40,71 @@ To deploy email profiles to devices, you must enroll the devices in Intune. For 
 
 To create a profile, you use the Create Exchange ActiveSync Email Profile Wizard. 
 
-1.  In the Configuration Manager console, choose **Assets and Compliance**.  
+1. In the Configuration Manager console, choose **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then choose **Email Profiles**.  
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then choose **Email Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Create Exchange ActiveSync Email Profile** to start the wizard.
+3. On the **Home** tab, in the **Create** group, choose **Create Exchange ActiveSync Email Profile** to start the wizard.
 
-4.  On the **General** page of the wizard, configure the following:
+4. On the **General** page of the wizard, configure the following:
 
-	- **Name**. Provide a descriptive name for the email profile.
+   - **Name**. Provide a descriptive name for the email profile.
 
-	- **Description**. Optionally, provide a description for the email profile that will help you identify it in the Configuration Manager console.
+   - **Description**. Optionally, provide a description for the email profile that will help you identify it in the Configuration Manager console.
 
-	- **This email profile is for Android for Work**. Choose this option if you will deploy this email profile to only Android for Work devices. If you check this box, the **Supported Platforms** wizard page is not shown. Only Android for Work email profiles are configured.
+   - **This email profile is for Android for Work**. Choose this option if you will deploy this email profile to only Android for Work devices. If you check this box, the **Supported Platforms** wizard page is not shown. Only Android for Work email profiles are configured.
 
-4.  On the **Exchange ActiveSync** page of the wizard, specify the following information:  
+5. On the **Exchange ActiveSync** page of the wizard, specify the following information:  
 
-    -   **Exchange ActiveSync host**. Specify the host name of your company Exchange server that hosts Exchange ActiveSync services.  
+   - **Exchange ActiveSync host**. Specify the host name of your company Exchange server that hosts Exchange ActiveSync services.  
 
-    -   **Account name**. Specify the display name for the email account as it will be shown to users on their devices.  
+   - **Account name**. Specify the display name for the email account as it will be shown to users on their devices.  
 
-    -   **Account user name**. Choose how the email account username is configured on client devices. You can choose one of the following options from the drop-down list:  
+   - **Account user name**. Choose how the email account username is configured on client devices. You can choose one of the following options from the drop-down list:  
 
-        -   **User Principal Name**. Use the full user principal name to sign in to Exchange.  
+     -   **User Principal Name**. Use the full user principal name to sign in to Exchange.  
 
-        -   **AccountName**. Use the full user account name from Active Directory.
+     -   **AccountName**. Use the full user account name from Active Directory.
 
-        -   **Primary SMTP Address**. Use the user's primary SMTP address to sign in to Exchange.  
+     -   **Primary SMTP Address**. Use the user's primary SMTP address to sign in to Exchange.  
 
-    -   **Email address**. Choose how the email address for the user on each client device is generated. You can choose one of the following options from the drop-down list:  
+   - **Email address**. Choose how the email address for the user on each client device is generated. You can choose one of the following options from the drop-down list:  
 
-        -   **Primary SMTP Address**. Use the user's primary SMTP address to sign in to Exchange.  
+     -   **Primary SMTP Address**. Use the user's primary SMTP address to sign in to Exchange.  
 
-        -   **User Principal Name**. Use the full user principal name as the email address.  
+     -   **User Principal Name**. Use the full user principal name as the email address.  
 
-    -   **Account domain**. Choose one of the following options:  
+   - **Account domain**. Choose one of the following options:  
 
-        -   **Obtain from Active Directory**  
+     - **Obtain from Active Directory**  
 
-        -   **Custom**  
+     - **Custom**  
 
-         This field is applicable only if **sAMAccountName** is selected in the **Account user name** drop-down list.  
+       This field is applicable only if **sAMAccountName** is selected in the **Account user name** drop-down list.  
 
-    -   **Authentication method**. Choose one of the following authentication methods that will be used to authenticate the connection to Exchange ActiveSync:  
+   - **Authentication method**. Choose one of the following authentication methods that will be used to authenticate the connection to Exchange ActiveSync:  
 
-        -   **Certificates**. An identity certificate will be used to authenticate the Exchange ActiveSync connection.  
+     -   **Certificates**. An identity certificate will be used to authenticate the Exchange ActiveSync connection.  
 
-        -   **Username and Password**. The device user must supply a password to connect to Exchange ActiveSync. (The username is configured as part of the email profile.)  
+     -   **Username and Password**. The device user must supply a password to connect to Exchange ActiveSync. (The username is configured as part of the email profile.)  
 
-    -   **Identity certificate**. Choose **Select** and then choose a certificate to use for identity.  
+   - **Identity certificate**. Choose **Select** and then choose a certificate to use for identity.  
 
-         Identity certificates must be SCEP certificates; you cannot use a PFX certificate.  To learn more, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+      Identity certificates must be SCEP certificates; you cannot use a PFX certificate.  To learn more, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
-         This option is available only if you chose **Certificates** under **Authentication method**.  
+      This option is available only if you chose **Certificates** under **Authentication method**.  
 
-    -   **Use S/MIME**. Send outgoing email by using S/MIME encryption. This option is applicable to iOS devices only. Choose from the following options:
+   - **Use S/MIME**. Send outgoing email by using S/MIME encryption. This option is applicable to iOS devices only. Choose from the following options:
 
-        -   **Signing certificates**.  Choose **Select** and then choose a certificate profile to use for encryption.  
+     - **Signing certificates**.  Choose **Select** and then choose a certificate profile to use for encryption.  
 
-            The profile can be either a SCEP or PFX certificate.  However, if both signing and encryption are used, you must select PFX certificate profiles for *both* signing and encryption.
+       The profile can be either a SCEP or PFX certificate.  However, if both signing and encryption are used, you must select PFX certificate profiles for *both* signing and encryption.
 
-    	-   **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. You can choose only a PFX certificate to use as an encryption certificate.
+     - **Encryption certificates**. Choose **Select** and then choose a certificate to use for encryption. You can choose only a PFX certificate to use as an encryption certificate.
 
-        -   To encrypt all mail messages on iOS devices, enable the **Require encryption** checkbox.    
+     - To encrypt all mail messages on iOS devices, enable the **Require encryption** checkbox.    
 
-         You must create certiciate profiles before you can choose them here.  To learn more, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+       You must create certiciate profiles before you can choose them here.  To learn more, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 ## Configure synchronization settings for the Exchange ActiveSync email profile  
 

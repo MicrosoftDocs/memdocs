@@ -11,7 +11,10 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ---
-# Create Mac computer applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create Mac computer applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Keep the following considerations in mind when you create and deploy applications for Mac computers.  
 
 > [!IMPORTANT]  
@@ -37,13 +40,14 @@ Keep the following considerations in mind when you create and deploy application
 ## Steps to create and deploy an application  
  The following table provides the steps, details, and information for creating and deploying applications for Mac computers.  
 
-|Step|Details|  
-|----------|-------------|  
-|**Step 1**: Prepare Mac applications for Configuration Manager|Before you can create Configuration Manager applications from Mac software packages, you must use the **CMAppUtil** tool on a Mac computer to convert the Mac software into a Configuration Manager**.cmmac** file.|  
-|**Step 2**: Create a Configuration Manager application that contains the Mac software|Use the **Create Application Wizard** to create an application for the Mac software.|  
-|**Step 3**: Create a deployment type for the Mac application|This step is required only if you did not automatically import this information from the application.|  
-|**Step 4**: Deploy the Mac application|Use the **Deploy Software Wizard** to deploy the application to Mac computers.|  
-|**Step 5**: Monitor the deployment of the Mac application|Monitor the success of application deployments to Mac computers.|  
+
+|                                         Step                                          |                                                                                                             Details                                                                                                              |
+|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|            **Step 1**: Prepare Mac applications for Configuration Manager             | Before you can create Configuration Manager applications from Mac software packages, you must use the **CMAppUtil** tool on a Mac computer to convert the Mac software into a Configuration Manager<strong>.cmmac</strong> file. |
+| **Step 2**: Create a Configuration Manager application that contains the Mac software |                                                                       Use the **Create Application Wizard** to create an application for the Mac software.                                                                       |
+|             **Step 3**: Create a deployment type for the Mac application              |                                                              This step is required only if you did not automatically import this information from the application.                                                               |
+|                        **Step 4**: Deploy the Mac application                         |                                                                          Use the **Deploy Software Wizard** to deploy the application to Mac computers.                                                                          |
+|               **Step 5**: Monitor the deployment of the Mac application               |                                                                                 Monitor the success of application deployments to Mac computers.                                                                                 |
 
 ## Supplemental procedures to create and deploy applications for Mac computers  
  Use the following procedures to create and deploy applications for Mac computers that are managed by Configuration Manager.  

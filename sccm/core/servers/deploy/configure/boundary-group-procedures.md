@@ -76,17 +76,17 @@ To configure fallback behavior, switch to the **Relationships** tab in the bound
 
 - To create a relationship with another boundary group:  
 
-    - Select **Add**. In the Fallback Boundary Groups window, select the boundary group to configure.  
+  - Select **Add**. In the Fallback Boundary Groups window, select the boundary group to configure.  
 
-    - Set a fallback time for the following site system roles:  
-        - Distribution point  
-        - Software update point  
-        - Management point  
+  - Set a fallback time for the following site system roles:  
+    - Distribution point  
+    - Software update point  
+    - Management point  
 
-        > [!Note]  
-        > For example, you open the Properties window for the Branch Office boundary group. In the Fallback Boundary Groups window, you select the Main Office boundary group. You set the distribution point fallback time to `20`. When you save this configuration, clients in the Branch Office boundary group will start searching for content from the distribution points in the Main Office boundary group after 20 minutes.  
+      > [!Note]  
+      > For example, you open the Properties window for the Branch Office boundary group. In the Fallback Boundary Groups window, you select the Main Office boundary group. You set the distribution point fallback time to `20`. When you save this configuration, clients in the Branch Office boundary group will start searching for content from the distribution points in the Main Office boundary group after 20 minutes.  
 
-    - To prevent fallback to a specific boundary group, select the boundary group, and then select **Never fallback** for the type of site system role. This action can include the *default site boundary group*.  
+  - To prevent fallback to a specific boundary group, select the boundary group, and then select **Never fallback** for the type of site system role. This action can include the *default site boundary group*.  
 
 - To modify the configuration of an existing relationship, select the boundary group in the list, and select **Change**. This action opens the Fallback Boundary Groups window for just this boundary group.  
  

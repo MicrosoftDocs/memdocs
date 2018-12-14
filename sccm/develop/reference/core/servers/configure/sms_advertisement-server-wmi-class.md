@@ -423,11 +423,11 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Although there are no other key properties, the properties `AdvertisementName`, `CollectionID`, `PackageID`, and `ProgramName` are qualified as NOT_NULL, and values must be supplied. Your application cannot update these properties after a class instance is created. To change these values, the application must delete the instance and create a new instance with the correct values.  
+  Although there are no other key properties, the properties `AdvertisementName`, `CollectionID`, `PackageID`, and `ProgramName` are qualified as NOT_NULL, and values must be supplied. Your application cannot update these properties after a class instance is created. To change these values, the application must delete the instance and create a new instance with the correct values.  
 
 ## Requirements  
 

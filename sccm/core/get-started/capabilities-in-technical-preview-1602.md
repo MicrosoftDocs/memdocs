@@ -22,15 +22,15 @@ This article introduces the features that are available in the Technical Preview
 ### iOS Activation Lock  
  System Center Configuration Manager can help you manage iOS Activation Lock, a feature of the Find My iPhone app for iOS 7.1 and later devices. Activation Lock is enabled automatically when the Find My iPhone app is used on a device. After it is enabled, the user's Apple ID and password must be entered before anyone can:  
 
--   Turn off Find My iPhone  
+- Turn off Find My iPhone  
 
--   Erase the device  
+- Erase the device  
 
--   Reactivate the device  
+- Reactivate the device  
 
- Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Intune can retrieve the Activation Lock bypass code and directly issue it to the device.  
+  Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Intune can retrieve the Activation Lock bypass code and directly issue it to the device.  
 
- For details, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
+  For details, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
 
 ##  <a name="BKMK_SC1601"></a> Improvements to Software Center in version 1602  
 

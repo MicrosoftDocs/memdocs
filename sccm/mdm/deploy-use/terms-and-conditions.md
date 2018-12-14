@@ -22,29 +22,29 @@ You can deploy System Center Configuration Manager terms and conditions to user 
 
 ## To create a terms and conditions  
 
-1.  In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **Compliance Settings** > **Terms and Conditions**.  
+1. In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **Compliance Settings** > **Terms and Conditions**.  
 
-2.  Click **Create Terms and Conditions** to create new terms and conditions.  
+2. Click **Create Terms and Conditions** to create new terms and conditions.  
 
-3.  On the **General** page, specify the following information:  
+3. On the **General** page, specify the following information:  
 
-    -   **Name** - A unique name displayed in the Configuration Manager console  
+   - **Name** - A unique name displayed in the Configuration Manager console  
 
-    -   **Description** - Details that help you identify the terms and conditions  in the Configuration Manager console  
-
-     And then click **Next**.  
-
-4.  On the **Terms** page, specify the following information:  
-
-    -   **Title** - The title displayed to users in the Company Portal  
-
-    -   **Text for terms** - The terms and conditions displayed to users in the Company Portal  
-
-    -   **Text to explain what it means if the user accepts** - Label users see regarding acceptance. **Example**: "I agree to the terms and conditions."  
+   - **Description** - Details that help you identify the terms and conditions  in the Configuration Manager console  
 
      And then click **Next**.  
 
-5.  Complete the wizard to create the new terms and conditions. The new terms and conditions are displayed in the Terms and Conditions node of the Assets and Compliance workspace.  
+4. On the **Terms** page, specify the following information:  
+
+   - **Title** - The title displayed to users in the Company Portal  
+
+   - **Text for terms** - The terms and conditions displayed to users in the Company Portal  
+
+   - **Text to explain what it means if the user accepts** - Label users see regarding acceptance. **Example**: "I agree to the terms and conditions."  
+
+     And then click **Next**.  
+
+5. Complete the wizard to create the new terms and conditions. The new terms and conditions are displayed in the Terms and Conditions node of the Assets and Compliance workspace.  
 
 ## To deploy a terms and conditions  
 
@@ -111,4 +111,4 @@ You can deploy System Center Configuration Manager terms and conditions to user 
      We recommend you increase the version number and require acceptance any time you make significant changes to your terms and conditions. Keep the current version number if you are fixing typos or changing formatting, for example.
 
 > [!div class="button"]
-[< Previous step](configure-intune-subscription.md)  [Next step >](create-service-connection-point.md)
+> [< Previous step](configure-intune-subscription.md)  [Next step >](create-service-connection-point.md)

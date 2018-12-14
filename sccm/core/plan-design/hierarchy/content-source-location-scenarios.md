@@ -29,9 +29,9 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 **The following three settings define the behavior when clients request content:**
 
--  **Allow fallback source location for content** (enabled or not enabled): This is an option that you can enable on the **Boundary Groups** tab of a distribution point. This allows the client to use a distribution point that's configured as a fallback location when content is not available on a preferred distribution point.  
+- **Allow fallback source location for content** (enabled or not enabled): This is an option that you can enable on the **Boundary Groups** tab of a distribution point. This allows the client to use a distribution point that's configured as a fallback location when content is not available on a preferred distribution point.  
 
- - **Deployment behavior for network connection speed**: Each deployment is configured with one of the following behaviors to use when the connection to the distribution point is slow:  
+  - **Deployment behavior for network connection speed**: Each deployment is configured with one of the following behaviors to use when the connection to the distribution point is slow:  
 
     -   **Download content from the distribution point and run it locally**  
 
@@ -39,7 +39,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
     The connection speed for a distribution point is configured on the **References** tab of a boundary group, and is specific to that boundary group.  
 
- -  **On-demand package distribution** (to preferred distribution points): This is enabled when you select the option **Distribute the content for this package to preferred distribution points** on the **Distribution Settings** tab of a package's or application's properties. When enabled, this option directs Configuration Manager to automatically copy the content to a preferred distribution point that does not yet have the content after a client requests that content from that distribution point.  
+  - **On-demand package distribution** (to preferred distribution points): This is enabled when you select the option **Distribute the content for this package to preferred distribution points** on the **Distribution Settings** tab of a package's or application's properties. When enabled, this option directs Configuration Manager to automatically copy the content to a preferred distribution point that does not yet have the content after a client requests that content from that distribution point.  
 
 
  **The following requirements apply to all scenarios:**

@@ -44,11 +44,11 @@ ms.author: aaroncz
 
 #### To copy local files from the export server to the disconnected software update point server  
 
-1.  On the export server, navigate to the folder where software updates and the license terms for software updates are stored. By default, the WSUS server stores the files at <*WSUSInstallationDrive*>\WSUS\WSUSContent\\, where *WSUSInstallationDrive* is the drive on which WSUS is installed.  
+1. On the export server, navigate to the folder where software updates and the license terms for software updates are stored. By default, the WSUS server stores the files at <*WSUSInstallationDrive*>\WSUS\WSUSContent\\, where *WSUSInstallationDrive* is the drive on which WSUS is installed.  
 
-2.  Copy all files and folders from this location to the WSUSContent folder on the disconnected software update point server.  
+2. Copy all files and folders from this location to the WSUSContent folder on the disconnected software update point server.  
 
- Use the following procedure to export the software updates metadata from the WSUS database on the export server.  
+   Use the following procedure to export the software updates metadata from the WSUS database on the export server.  
 
 #### To export software updates metadata from the WSUS database on the export server  
 

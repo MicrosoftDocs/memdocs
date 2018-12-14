@@ -24,38 +24,38 @@ For information about each client setting, see [About client settings in System 
 
 ##  Configure the default client settings    
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
 
-3.  On the **Home** tab, choose **Properties**.  
+2. On the **Home** tab, choose **Properties**.  
 
-4.  View and configure the client settings for each group of settings in the navigation pane.  
+3. View and configure the client settings for each group of settings in the navigation pane.  
 
- Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
 ##  Create and deploy custom client settings  
 When you deploy these custom settings, they override the default client settings. Before you begin this procedure, ensure that you have a collection that contains the users or devices that require these custom client settings.  
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings**.  
+1. In the Configuration Manager console, choose **Administration** > **Client Settings**.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Create Custom Client Settings**, and then choose either:  
+2. On the **Home** tab, in the **Create** group, choose **Create Custom Client Settings**, and then choose either:  
 
-    -   **Create Custom Client Device Settings**  
+   -   **Create Custom Client Device Settings**  
 
-    -   **Create Custom Client User Settings**  
+   -   **Create Custom Client User Settings**  
 
-4.  Specify a unique name and option description.  
+3. Specify a unique name and option description.  
 
-5.  Select one or more of the check boxes that display a group of settings.  
+4. Select one or more of the check boxes that display a group of settings.  
 
-6.  Choose each group of  settings from the navigation pane, and configure the available settings, then click **OK**.   
+5. Choose each group of  settings from the navigation pane, and configure the available settings, then click **OK**.   
 
-8.  Select the custom client setting that you created. On the **Home** tab, in the **Client Settings** group, choose **Deploy**.  
+6. Select the custom client setting that you created. On the **Home** tab, in the **Client Settings** group, choose **Deploy**.  
 
-9. In the **Select Collection** dialog box, select the appropriate collection, and then choose **OK**. You can verify the selected collection if you click the **Deployments** tab in the details pane.  
+7. In the **Select Collection** dialog box, select the appropriate collection, and then choose **OK**. You can verify the selected collection if you click the **Deployments** tab in the details pane.  
 
-10. View the order of the custom client setting that you created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
+8. View the order of the custom client setting that you created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
 
- Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
 
 

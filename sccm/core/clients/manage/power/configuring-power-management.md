@@ -19,25 +19,25 @@ Before you can use power management in System Center Configuration Manager, you 
 
 #### To enable power management and configure client settings  
 
-1.  In the Configuration Manager console, click **Administration**.  
+1. In the Configuration Manager console, click **Administration**.  
 
-2.  In the **Administration** workspace, click **Client Settings**.  
+2. In the **Administration** workspace, click **Client Settings**.  
 
-3.  Click **Default Client Settings**.  
+3. Click **Default Client Settings**.  
 
-4.  On the **Home** tab, in the **Properties** group, click **Properties**.  
+4. On the **Home** tab, in the **Properties** group, click **Properties**.  
 
-5.  In the **Default Client Settings** dialog box, click **Power Management**.  
+5. In the **Default Client Settings** dialog box, click **Power Management**.  
 
-6.  Configure the following value for the power management client settings:  
+6. Configure the following value for the power management client settings:  
 
-    -   **Allow power management of devices** – From the drop-down list, select **True** to enable power management.  
+   -   **Allow power management of devices** – From the drop-down list, select **True** to enable power management.  
 
-7.  Configure the client settings that you require. For a list of power management client settings that you can configure, see the [Power Management](../../../../core/clients/deploy/about-client-settings.md#power-management) section in the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic.  
+7. Configure the client settings that you require. For a list of power management client settings that you can configure, see the [Power Management](../../../../core/clients/deploy/about-client-settings.md#power-management) section in the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic.  
 
-8.  Click **OK** to close the **Default Client Settings** dialog box.  
+8. Click **OK** to close the **Default Client Settings** dialog box.  
 
- Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 ## Exclude computers from power management  
  You can prevent collections of computers from receiving power management settings. If a computer is a member of any collection that is excluded from power management settings, that computer does not apply power management settings, even if it is a member of another collection that applies power management settings.  
@@ -62,12 +62,12 @@ Before you can use power management in System Center Configuration Manager, you 
 
 #### To exclude a collection of computers from power management  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the Configuration Manager console, click **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, click **Device Collections**.  
+2. In the **Assets and Compliance** workspace, click **Device Collections**.  
 
-3.  In the **Device Collections** list, select the collection that you want to exclude from power management and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
+3. In the **Device Collections** list, select the collection that you want to exclude from power management and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
 
-4.  In the **Power Management** tab of the *<Collection Name\>***Properties** dialog box, select **Never apply power management settings to computers in this collection**.  
+4. In the **Power Management** tab of the <em><Collection Name\></em>**Properties** dialog box, select **Never apply power management settings to computers in this collection**.  
 
-5.  Click **OK** to close the *<Collection Name\>***Properties** dialog box and to save your settings.  
+5. Click **OK** to close the <em><Collection Name\></em>**Properties** dialog box and to save your settings.  

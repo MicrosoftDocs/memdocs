@@ -92,13 +92,13 @@ There might be malicious software on your computer even if you don't see any sym
 
  Depending on the alert level, you can choose one of the following actions to apply to the detected item:  
 
--   **Remove** - This action permanently deletes the software from your computer.  
+- **Remove** - This action permanently deletes the software from your computer.  
 
--   **Quarantine** - This action quarantines the software so that it can't run. When Windows Defender quarantines software, it moves it to another location on your computer, and then prevents the software from running until you choose to restore it or remove it from your computer.  
+- **Quarantine** - This action quarantines the software so that it can't run. When Windows Defender quarantines software, it moves it to another location on your computer, and then prevents the software from running until you choose to restore it or remove it from your computer.  
 
--   **Allow** - This action adds the software to the Windows Defender allowed list and allows it to run on your computer. Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer.  
+- **Allow** - This action adds the software to the Windows Defender allowed list and allows it to run on your computer. Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer.  
 
- If you choose **Allow** for an item, such as software, Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer. Therefore, add software to the allowed list only if you trust the software and the software publisher.  
+  If you choose **Allow** for an item, such as software, Windows Defender will stop alerting you to risks that the software might pose to your privacy or to your computer. Therefore, add software to the allowed list only if you trust the software and the software publisher.  
 
 ### How to remove potentially harmful software
 
@@ -197,11 +197,11 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
  Whenever real-time protection detects a threat or potential threat, Windows Defender displays a notification. You can now choose from the following options:  
 
--   Click **Clean computer** to remove the detected item. Windows Defender will automatically remove the item from your computer.  
+- Click **Clean computer** to remove the detected item. Windows Defender will automatically remove the item from your computer.  
 
--   Click the **Show details** link to display the Potential threat details window, and then choose which action to apply to the detected item.  
+- Click the **Show details** link to display the Potential threat details window, and then choose which action to apply to the detected item.  
 
- You can choose the software and settings that you want Windows Defender to monitor, but we recommend that you turn on real-time protection and enable all real-time protection options. The following table explains the available options.  
+  You can choose the software and settings that you want Windows Defender to monitor, but we recommend that you turn on real-time protection and enable all real-time protection options. The following table explains the available options.  
 
 |||  
 |-|-|  
@@ -225,9 +225,9 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
  You'll also receive other alert notifications, for example, if for some reason real-time protection has been turned off, if you haven't updated your virus and spyware definitions for a number of days, or when upgrades to the program become available. Windows Defender also briefly displays a notification to let you know that it's scanning your computer.  
 
-> [!TIP]  
-
->If you don't see the Windows Defender icon in the notification area, click the arrow in the notification area to show hidden icons, including the Windows Defender icon.  
+> [!TIP]
+> 
+> If you don't see the Windows Defender icon in the notification area, click the arrow in the notification area to show hidden icons, including the Windows Defender icon.  
 
 
  The icon color depends on your computer's current status:  

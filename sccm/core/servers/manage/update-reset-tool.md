@@ -56,13 +56,15 @@ After the tool runs:
 
 **Command-line parameters:**  
 
-| Parameter        |Description                 |  
-|------------------|----------------------------|  
-|**-S &lt;FQDN of the SQL Server of your top-tier site>** | *Required* <br> Specify the FQDN of the SQL Server that hosts the site database for the top-tier site of your hierarchy.    |  
-| **-D &lt;Database name>**                        | *Required* <br> Specify the name of the database at the top-tier site.  |  
-| **-P &lt;Package GUID>**                         | *Required* <br> Specify the GUID for the update package you want to reset.   |  
-| **-I &lt;SQL Server instance name>**             | *Optional* <br> Identify the instance of SQL Server that hosts the site database. |
-| **-FDELETE**                              | *Optional* <br> Force deletion of a successfully downloaded update package. |  
+
+|                        Parameter                         |                                                       Description                                                        |
+|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;FQDN of the SQL Server of your top-tier site>** | *Required* <br> Specify the FQDN of the SQL Server that hosts the site database for the top-tier site of your hierarchy. |
+|                **-D &lt;Database name>**                 |                          *Required* <br> Specify the name of the database at the top-tier site.                          |
+|                 **-P &lt;Package GUID>**                 |                        *Required* <br> Specify the GUID for the update package you want to reset.                        |
+|           **-I &lt;SQL Server instance name>**           |                    *Optional* <br> Identify the instance of SQL Server that hosts the site database.                     |
+|                       **-FDELETE**                       |                       *Optional* <br> Force deletion of a successfully downloaded update package.                        |
+
  **Examples:**  
  In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 

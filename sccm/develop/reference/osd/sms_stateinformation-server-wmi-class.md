@@ -96,13 +96,13 @@ Class SMS_StateInformation : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.  
+  This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.  
 
- State messages are used with software updates, Network Access Protection (NAP), desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
+  State messages are used with software updates, Network Access Protection (NAP), desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
 
 ## Requirements  
 

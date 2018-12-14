@@ -69,8 +69,7 @@ Before you deploy the software updates, download the content for the software up
 
 
 ### Process to download content for the software update group
-[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
-
+[!INCLUDE [downloadupdates](../includes/downloadupdates.md)]
 
 ### Process to monitor content status
 1. To monitor the content status for the software updates, go to the **Monitoring** workspace in the Configuration Manager console. Expand **Distribution Status**, and then select the **Content Status** node.  
@@ -87,88 +86,88 @@ After you determine the updates you want to deploy, and add them to a software u
 
 ### Process to manually deploy the software updates in a software update group  
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Software Updates**, and select the **Software Update Groups** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Software Updates**, and select the **Software Update Groups** node.  
 
-2.  Select the software update group that you want to deploy. Click **Deploy** in the ribbon.   
+2. Select the software update group that you want to deploy. Click **Deploy** in the ribbon.   
 
-3.  On the **General** page of the Deploy Software Updates Wizard, configure the following settings:  
+3. On the **General** page of the Deploy Software Updates Wizard, configure the following settings:  
 
-    -   **Name**: Specify the name for the deployment. The deployment must have a unique name that describes its purpose, and differentiates it from other deployments in the site. This name field has a limit of 256 characters. By default, Configuration Manager automatically provides a name for the deployment in the following format: `Microsoft Software Updates - YYYY-MM-DD <time>`  
+   -   **Name**: Specify the name for the deployment. The deployment must have a unique name that describes its purpose, and differentiates it from other deployments in the site. This name field has a limit of 256 characters. By default, Configuration Manager automatically provides a name for the deployment in the following format: `Microsoft Software Updates - YYYY-MM-DD <time>`  
 
-    -   **Description**: Specify a description for the deployment. The description is optional, but provides an overview of the deployment. Include any other relevant information that helps to identify and differentiate it among others in the site. The description field has a limit of 256 characters, and has a blank value by default.  
+   -   **Description**: Specify a description for the deployment. The description is optional, but provides an overview of the deployment. Include any other relevant information that helps to identify and differentiate it among others in the site. The description field has a limit of 256 characters, and has a blank value by default.  
 
-    -   **Software Update/Software Update Group**: Verify that the displayed software update group or software update is correct.  
+   -   **Software Update/Software Update Group**: Verify that the displayed software update group or software update is correct.  
 
-    -   **Select Deployment Template**: Specify whether to apply a previously saved deployment template. Configure a deployment template to save common software update deployment properties. Then apply the template when you deploy software updates in the future. These templates save time and help to ensure consistency across similar deployments.  
+   -   **Select Deployment Template**: Specify whether to apply a previously saved deployment template. Configure a deployment template to save common software update deployment properties. Then apply the template when you deploy software updates in the future. These templates save time and help to ensure consistency across similar deployments.  
 
-    -   **Collection**: Specify the collection for the deployment. Devices in the collection receive the software updates in this deployment.  
+   -   **Collection**: Specify the collection for the deployment. Devices in the collection receive the software updates in this deployment.  
 
-4.  On the **Deployment Settings** page, configure the following settings:  
+4. On the **Deployment Settings** page, configure the following settings:  
 
-    -   **Type of deployment**: Specify the deployment type for the software update deployment.  
+   -   **Type of deployment**: Specify the deployment type for the software update deployment.  
 
-        > [!IMPORTANT]  
-        >  After you create the software update deployment, you can't change the type of deployment.  
+       > [!IMPORTANT]  
+       >  After you create the software update deployment, you can't change the type of deployment.  
 
-         - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.  
+        - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.  
 
-         - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center.  
+        - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center.  
 
-        > [!NOTE]  
-        >  When you deploy a software update group as **Required**, clients download the content in background and honor BITS settings, if configured.  
-        > 
-        > For software update groups deployed as **Available**, clients download the content in the foreground and ignore BITS settings.  
+       > [!NOTE]  
+       >  When you deploy a software update group as **Required**, clients download the content in background and honor BITS settings, if configured.  
+       > 
+       > For software update groups deployed as **Available**, clients download the content in the foreground and ignore BITS settings.  
 
-    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. It's only available for **Required** deployments. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+   -   **Use Wake-on-LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. It's only available for **Required** deployments. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-    -   **Detail level**: Specify the level of detail for the state messages that clients report to the site.  
+   -   **Detail level**: Specify the level of detail for the state messages that clients report to the site.  
 
-5.  On the **Scheduling** page, configure the following settings:  
+5. On the **Scheduling** page, configure the following settings:  
 
-    -   **Schedule evaluation**: Specify the time that Configuration Manager evaluates the available time and installation deadline times. Choose to use Coordinated Universal Time (UTC) or the local time of the computer that runs the Configuration Manager console.  
+   -   **Schedule evaluation**: Specify the time that Configuration Manager evaluates the available time and installation deadline times. Choose to use Coordinated Universal Time (UTC) or the local time of the computer that runs the Configuration Manager console.  
 
-        - When you select **Client local time** here, and then select **As soon as possible** for the **Software available time**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available. This behavior is the same with the **Installation deadline** and the time when updates are installed on a client. If the client is in a different time zone, these actions occur when the client's time reaches the evaluation time.  
+       - When you select **Client local time** here, and then select **As soon as possible** for the **Software available time**, the current time on the computer running the Configuration Manager console is used to evaluate when updates are available. This behavior is the same with the **Installation deadline** and the time when updates are installed on a client. If the client is in a different time zone, these actions occur when the client's time reaches the evaluation time.  
 
-    -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
+   -   **Software available time**: Select one of the following settings to specify when the software updates are available to clients:  
 
-        -   **As soon as possible**: Makes the software updates in the deployment available to clients as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment and the software updates are available for installation.  
+       -   **As soon as possible**: Makes the software updates in the deployment available to clients as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment and the software updates are available for installation.  
 
-        -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
+       -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
 
-    -   **Installation deadline**: These options are only available for **Required** deployments. Select one of the following settings to specify the installation deadline for the software updates in the deployment  
+   -   **Installation deadline**: These options are only available for **Required** deployments. Select one of the following settings to specify the installation deadline for the software updates in the deployment  
 
-        -   **As soon as possible**: Select this setting to automatically install the software updates in the deployment as soon as possible.  
+       -   **As soon as possible**: Select this setting to automatically install the software updates in the deployment as soon as possible.  
 
-        -   **Specific time**: Select this setting to automatically install the software updates in the deployment at a specific date and time.  
+       -   **Specific time**: Select this setting to automatically install the software updates in the deployment at a specific date and time.  
 
-            - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.   
+           - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.   
 
-            - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+           - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
-    -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
+   -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 
-        - This behavior is typically required when a computer is turned off for long time, and needs to install many software updates or applications. For example, when a user returns from vacation, they have to wait for a long time as the client installs overdue deployments.  
+       - This behavior is typically required when a computer is turned off for long time, and needs to install many software updates or applications. For example, when a user returns from vacation, they have to wait for a long time as the client installs overdue deployments.  
 
-        - Configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) section. The enforcement grace period applies to all deployments with this option enabled and targeted to devices to which you also deployed the client setting.  
+       - Configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) section. The enforcement grace period applies to all deployments with this option enabled and targeted to devices to which you also deployed the client setting.  
 
-        - After the deadline, the client installs the software updates in the first non-business window, which the user configured, up to this grace period. However, the user can still open Software Center and install the software updates at any time. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.  
+       - After the deadline, the client installs the software updates in the first non-business window, which the user configured, up to this grace period. However, the user can still open Software Center and install the software updates at any time. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.  
 
-6.  On the **User Experience** page, configure the following settings:  
+6. On the **User Experience** page, configure the following settings:  
 
-    -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the client computers. For **Available** deployments, you can't select the option to **Hide in Software Center and all notifications**.  
+   -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the client computers. For **Available** deployments, you can't select the option to **Hide in Software Center and all notifications**.  
 
-    -   **Deadline behavior**: This setting is only configurable for **Required** deployments. Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+   -   **Deadline behavior**: This setting is only configurable for **Required** deployments. Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
-    -   **Device restart behavior**: This setting is only configurable for **Required** deployments. Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
+   -   **Device restart behavior**: This setting is only configurable for **Required** deployments. Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
 
-        > [!WARNING]  
-        >  Suppressing system restarts can be useful in server environments, or when you don't want the target computers to restart by default. However, doing so can leave computers in an insecure state. Allowing a forced restart helps to ensure immediate completion of the software update installation.  
+       > [!WARNING]  
+       >  Suppressing system restarts can be useful in server environments, or when you don't want the target computers to restart by default. However, doing so can leave computers in an insecure state. Allowing a forced restart helps to ensure immediate completion of the software update installation.  
 
-    -   **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the update is installed, applied to the temporary overlay, and committed later.  
+   -   **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the update is installed, applied to the temporary overlay, and committed later.  
 
-        -  When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
+       -  When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
 
-    - **Software updates deployment re-evaluation behavior upon restart**: Select this setting to configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This setting enables the client to check for additional updates that become applicable after the client restarts, then installs them during the same maintenance window.  
+   - **Software updates deployment re-evaluation behavior upon restart**: Select this setting to configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This setting enables the client to check for additional updates that become applicable after the client restarts, then installs them during the same maintenance window.  
 
 7. On the **Alerts** page, configure how Configuration Manager generates alerts for this deployment. Review recent software updates alerts from Configuration Manager in the **Software Updates** node of the **Software Library** workspace. If you're also using System Center Operations Manager, configure its alerts as well. Only configure alerts for **Required** deployments.  
 
@@ -236,9 +235,9 @@ After you determine the updates you want to deploy, and add them to a software u
 
     -  The template name can consist of alphanumeric ASCII characters as well as `\` (backslash) or `'` (single quotation mark).  
 
-17. Click **Next** to deploy the software update.  
+14. Click **Next** to deploy the software update.  
 
- After you complete the wizard, Configuration Manager downloads the software updates to the content library on the site server. It then distributes the content to the configured distribution points, and deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
+    After you complete the wizard, Configuration Manager downloads the software updates to the content library on the site server. It then distributes the content to the configured distribution points, and deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
 
 
 

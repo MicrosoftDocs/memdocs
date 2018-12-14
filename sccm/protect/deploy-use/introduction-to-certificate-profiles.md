@@ -95,10 +95,10 @@ You can monitor certificate profile deployments by viewing compliance results or
 ## Automatic revocation of certificates  
  System Center Configuration Manager automatically revokes user and computer certificates that were deployed by using certificate profiles in the following circumstances:  
 
--   The device is retired from System Center Configuration Manager management.  
+- The device is retired from System Center Configuration Manager management.  
 
--   The device is selectively wiped.  
+- The device is selectively wiped.  
 
--   The device is blocked from the System Center Configuration Manager hierarchy.  
+- The device is blocked from the System Center Configuration Manager hierarchy.  
 
- To revoke the certificates, the site server sends a revocation command to the issuing certification authority. The reason for the revocation is **Cease of Operation**.  
+  To revoke the certificates, the site server sends a revocation command to the issuing certification authority. The reason for the revocation is **Cease of Operation**.  

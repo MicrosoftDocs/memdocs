@@ -135,17 +135,17 @@ A client is online if it is currently connected to a Configuration Manager manag
 
 ### To view client online status  
 
-1.  In the Configuration Manager console, go to **Assets and Compliance > Overview > Devices**.  
+1. In the Configuration Manager console, go to **Assets and Compliance > Overview > Devices**.  
 
-2.  Right-click in the column header, and then click one of the client online status fields to add it to the device view. The fields are  
+2. Right-click in the column header, and then click one of the client online status fields to add it to the device view. The fields are  
 
-    -   **Device Online Status** indicates whether the client is currently online or offline.  
+   -   **Device Online Status** indicates whether the client is currently online or offline.  
 
-    -   **Last Online Time** indicates when the client online status changed from offline to online.  
+   -   **Last Online Time** indicates when the client online status changed from offline to online.  
 
-    -   **Last Offline Time** indicates when the status changed from online to offline.  
+   -   **Last Offline Time** indicates when the status changed from online to offline.  
 
- To show recent changes to client status, refresh the console.  
+   To show recent changes to client status, refresh the console.  
 
 ##  <a name="bkmk_appmgmt1601"></a> Improvements to application management  
  In the 1601 Technical Preview we have added support for the following features:  

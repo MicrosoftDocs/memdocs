@@ -36,37 +36,37 @@ You create capture media by using the Create Task Sequence Media Wizard. Before 
 
 #### To create capture media  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
 
-4.  On the **Select Media Type** page, select **Capture media**, and then click **Next**.  
+4. On the **Select Media Type** page, select **Capture media**, and then click **Next**.  
 
-5.  On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
+5. On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
 
-    -   If you select **USB flash drive**, specify the drive where you want to store the content.  
+   - If you select **USB flash drive**, specify the drive where you want to store the content.  
 
-    -   If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
+   - If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
 
-         If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
+      If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
 
-        > [!IMPORTANT]  
-        >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
+     > [!IMPORTANT]  
+     >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
 
      Click **Next**.  
 
-6.  On the **Boot image** page, specify the following information, and then click **Next**.  
+6. On the **Boot image** page, specify the following information, and then click **Next**.  
 
-    > [!IMPORTANT]  
-    >  The architecture of the boot image that you specify must be appropriate for the architecture of the reference computer. For example, an x64 reference computer can boot and run an x86 or x64 boot image. However, an x86 reference computer can boot and run only an x86 boot image.  
+   > [!IMPORTANT]  
+   >  The architecture of the boot image that you specify must be appropriate for the architecture of the reference computer. For example, an x64 reference computer can boot and run an x86 or x64 boot image. However, an x86 reference computer can boot and run only an x86 boot image.  
 
-    -   In the **Boot image** box, specify the boot image to start the reference computer.  
+   -   In the **Boot image** box, specify the boot image to start the reference computer.  
 
-    -   In the **Distribution point** box, specify the distribution point where the boot image resides. The wizard retrieves the boot image from the distribution point and writes it to the media.  
+   -   In the **Distribution point** box, specify the distribution point where the boot image resides. The wizard retrieves the boot image from the distribution point and writes it to the media.  
 
-        > [!NOTE]  
-        >  You must have Read access rights to the content library on the distribution point.  
+       > [!NOTE]  
+       >  You must have Read access rights to the content library on the distribution point.  
 
-7.  Complete the wizard.  
+7. Complete the wizard.  

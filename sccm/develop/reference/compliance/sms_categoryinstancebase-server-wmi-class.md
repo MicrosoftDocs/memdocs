@@ -62,69 +62,69 @@ Class SMS_CategoryInstanceBase : SMS_BaseClass
 
  The type of category represented by the category instance. Possible values are:  
 
--   Product  
+- Product  
 
--   Locale  
+- Locale  
 
--   Classification  
+- Classification  
 
--   Company  
+- Company  
 
--   Product Family  
+- Product Family  
 
--   User  
+- User  
 
- `LocalizedCategoryInstanceName`  
- Data type: `String`  
+  `LocalizedCategoryInstanceName`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- The localized name of the category instance.  
+  The localized name of the category instance.  
 
- `LocalizedInformation`  
- Data type: `SMS_Category_LocalizedProperties` Array  
+  `LocalizedInformation`  
+  Data type: `SMS_Category_LocalizedProperties` Array  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- Localized properties associated with the category instance.  
+  Localized properties associated with the category instance.  
 
- `LocalizedPropertyLocaleID`  
- Data type: `UInt32`  
+  `LocalizedPropertyLocaleID`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- ID of the locale applying to the localized properties.  
+  ID of the locale applying to the localized properties.  
 
- `ParentCategoryInstanceID`  
- Data type: `UInt32`  
+  `ParentCategoryInstanceID`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- ID of the parent for the category instance.  
+  ID of the parent for the category instance.  
 
- `SourceSite`  
- Data type: `String`  
+  `SourceSite`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- The site code for the site where the category instance is created.  
+  The site code for the site where the category instance is created.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

@@ -19,8 +19,8 @@ The `CancelDownload` WMI class method, in Configuration Manager, cancels jobs th
 
 ```  
 uint32 CancelDownload(  
-     [IN]  String ProgramID,  
-     [IN]  String PackageID  
+     [IN]  String ProgramID,  
+     [IN]  String PackageID  
 );  
 ```  
 

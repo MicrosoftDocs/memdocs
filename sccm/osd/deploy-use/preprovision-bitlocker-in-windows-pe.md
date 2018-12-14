@@ -20,20 +20,20 @@ The **Pre-provision BitLocker** task sequence step in System Center Configuratio
 
  Generally, you must do the following to successfully pre-provision BitLocker on a computer that will install Windows 7:  
 
--   Restart the computer in Windows PE  
+- Restart the computer in Windows PE  
 
-    > [!IMPORTANT]  
-    >  You must use a boot image with Windows PE 4 or later to pre-provision BitLocker. For more information about supported Windows PE versions in Configuration Manager, see [Dependencies External to Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies).  
+  > [!IMPORTANT]  
+  >  You must use a boot image with Windows PE 4 or later to pre-provision BitLocker. For more information about supported Windows PE versions in Configuration Manager, see [Dependencies External to Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies).  
 
--   Partition and format the hard drive  
+- Partition and format the hard drive  
 
--   Pre-provision BitLocker  
+- Pre-provision BitLocker  
 
--   Install Windows 7 with specific operating system and network settings  
+- Install Windows 7 with specific operating system and network settings  
 
--   Add a key protector to BitLocker  
+- Add a key protector to BitLocker  
 
- In Configuration Manager, the recommended way to pre-provision BitLocker on a hard drive and install Windows 7 is to create a new task sequence and select **Install an existing image package** from the **Create New Task Sequence** page of the **Create Task Sequence Wizard**. The wizard creates the task sequence steps listed in following table.  
+  In Configuration Manager, the recommended way to pre-provision BitLocker on a hard drive and install Windows 7 is to create a new task sequence and select **Install an existing image package** from the **Create New Task Sequence** page of the **Create Task Sequence Wizard**. The wizard creates the task sequence steps listed in following table.  
 
 > [!NOTE]  
 >  The task sequence might have additional steps depending on how you configured the settings in the wizard. For example, you might have the **Capture Windows Settings** step if you selected **Captured Microsoft Windows settings** on the **State Migration** page of the wizard.  

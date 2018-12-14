@@ -90,15 +90,15 @@ Class SMS_InstalledSoftwareMS
 ## Remarks  
  This class merges information from as many as five sources. The first source is the Microsoft Windows `MsiEnumProducts` function. This function enumerates through all the products that are currently advertised or installed. Other sources of information for all installed software are the following registry keys:  
 
--   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\\[User SID]\Products  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\\[User SID]\Products  
 
--   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall  
 
- The class also gathers information for operating system software from the following sources:  
+  The class also gathers information for operating system software from the following sources:  
 
--   WMI class root\CIMV2:Win32_OperatingSystem  
+- WMI class root\CIMV2:Win32_OperatingSystem  
 
--   Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion  
+- Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion  
 
 ## Requirements  
 

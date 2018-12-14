@@ -13,15 +13,15 @@ manager: dougeby
 # Status Server WMI Classes
 The status server Windows Management Instrumentation (WMI) classes allow access to the Microsoft System Center Configuration Manager status system. You can use these classes to create and view status messages and to view status summarizers. The status system indicates the health of a Configuration Manager site and the progress of certain actions, such as software distribution. The status system includes three groups of classes:  
 
--   Status summarizer classes, for example, [SMS_ComponentSummarizer Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_componentsummarizer-server-wmi-class.md)  
+- Status summarizer classes, for example, [SMS_ComponentSummarizer Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_componentsummarizer-server-wmi-class.md)  
 
--   Status reporting classes, for example, [SMS_StatMsgAttributes Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statmsgattributes-server-wmi-class.md)  
+- Status reporting classes, for example, [SMS_StatMsgAttributes Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statmsgattributes-server-wmi-class.md)  
 
--   Optimized status reporting classes, for example, [SMS_StatAttr Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statattr-server-wmi-class.md)  
+- Optimized status reporting classes, for example, [SMS_StatAttr Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statattr-server-wmi-class.md)  
 
- For more information about how the Configuration Manager status system works, see About Configuration Manager Status Summarizers.  
+  For more information about how the Configuration Manager status system works, see About Configuration Manager Status Summarizers.  
 
- The Configuration Manager server class schema is a set of WMI classes that represent the objects found on a server running Configuration Manager. Each Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [About Configuration Manager SDK Requirements](../../../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md).  
+  The Configuration Manager server class schema is a set of WMI classes that represent the objects found on a server running Configuration Manager. Each Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [About Configuration Manager SDK Requirements](../../../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md).  
 
 ## Status Server WMI Classes  
 

@@ -48,9 +48,9 @@ This article introduces the features that are available in the Technical Preview
 ## Improved boundary groups for software update points
 <!-- 1324591 -->
 This release includes improvements for how software update points work with boundary groups. The following summarizes the new fallback behavior:
--   Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups, with a minimum time of 120 minutes.
+- Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups, with a minimum time of 120 minutes.
 
--   Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
+- Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 
   -   All software update points in the client's current boundary group are added to the client's pool immediately.
 
@@ -58,9 +58,9 @@ This release includes improvements for how software update points work with boun
 
   -   If fallback to a neighbor group is configured for the minimum of 120 minutes, software update points from that neighbor boundary group will be part of the client's pool of available servers.
 
--   After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point.
+- After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point.
 
-    This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
+  This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
   -   This cycle continues until the client connects to a software update point it can use.
   -   Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.

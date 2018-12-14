@@ -41,15 +41,15 @@ OSDPartitions0Type="Primary"
 
  It is not recommended that you use managed code with the task sequencing environment because you cannot use it in the following environments:  
 
--   Windows PE  
+- Windows PE  
 
--   Windows Server 2008  
+- Windows Server 2008  
 
--   Windows 2000  
+- Windows 2000  
 
- Managed code does work when the full operating system is running with the correct version of .NET Framework installed.  
+  Managed code does work when the full operating system is running with the correct version of .NET Framework installed.  
 
- The version of .NET Framework that is required depends on the version of Visual Studio that you use.  
+  The version of .NET Framework that is required depends on the version of Visual Studio that you use.  
 
 |Visual Studio|.NET Framework Version|  
 |-------------------|----------------------------|  
