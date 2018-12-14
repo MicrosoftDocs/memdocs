@@ -123,10 +123,11 @@ The following features are available with the most recent Configuration Manager 
 
 <!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
 
-- [Improvements to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1812.md) <!--3556028 fka 1359389-->
-- [Improvements to email app approvals](capabilities-in-technical-preview-1812.md) <!--3594063-->
-- [Configure user device affinity in Software Center](capabilities-in-technical-preview-1812.md) <!--3485366-->
-- [MMS DE cabana features](capabilities-in-technical-preview-1812.md) <!--3594151-->
+- [Improvements to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1812.md) <!--3556028 fka 1359389-->  
+- [Improvements to application approvals via email](capabilities-in-technical-preview-1812.md) <!--3594063-->  
+- [Configure user device affinity in Software Center](capabilities-in-technical-preview-1812.md) <!--3485366-->  
+- [Improvements to Configuration Manager console](capabilities-in-technical-preview-1812.md) <!--3594151-->  
+- [Download reports from the Community Hub](capabilities-in-technical-preview-1812.md)<!--3555936-->  
 
 
 > [!Note]  
