@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -75,6 +75,14 @@ With these prerequisites, recipients receive an email with notification of the r
 
 - Configure [email notification for alerts](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts).  
 
+- Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
+
+    - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)  
+
+        > [!Note]  
+        > When the site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, when responding to an application request, you may see a security warning.  
+
+    - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
 
 
 #### To take action from internet
